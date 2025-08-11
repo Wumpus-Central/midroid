@@ -1,14 +1,13 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
 import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class R0 implements Function0 {
-   public final SpoilerView j;
-   public final View k;
+   public final Function1 j;
 
    public final Object invoke() {
-      return SpoilerView.f(this.j, this.k);
+      return SpoilerView.g(this.j);
    }
 }

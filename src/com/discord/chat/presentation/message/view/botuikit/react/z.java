@@ -1,0 +1,13 @@
+package com.discord.chat.presentation.message.view.botuikit.react;
+
+import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
+
+// $VF: synthetic class
+public final class z implements Function1 {
+   public final Function0 j;
+
+   public final Object invoke(Object var1) {
+      return SelectActionComponentViewManager.a(this.j, (String)var1);
+   }
+}

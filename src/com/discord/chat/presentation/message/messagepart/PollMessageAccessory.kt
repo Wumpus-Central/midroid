@@ -167,27 +167,27 @@ public data class PollMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = this.myAvatarUrl;
-      val var7: PollData = this.data;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = this.myAvatarUrl;
+      val var5: PollData = this.data;
       val var2: java.util.List = this.answers;
-      val var4: IPollStyleSet = this.containerStyleSet;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PollMessageAccessory(channelId=");
-      var5.append(var3);
-      var5.append(", messageId=");
-      var5.append(var6);
-      var5.append(", myAvatarUrl=");
-      var5.append(var1);
-      var5.append(", data=");
-      var5.append(var7);
-      var5.append(", answers=");
-      var5.append(var2);
-      var5.append(", containerStyleSet=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var6: IPollStyleSet = this.containerStyleSet;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMessageAccessory(channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var7);
+      var3.append(", myAvatarUrl=");
+      var3.append(var4);
+      var3.append(", data=");
+      var3.append(var5);
+      var3.append(", answers=");
+      var3.append(var2);
+      var3.append(", containerStyleSet=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
@@ -199,17 +199,17 @@ public data class PollMessageAccessory(channelId: ChannelId,
          val var23: java.util.List = var3.getAnswers();
          val var13: ArrayList = new ArrayList(i.v(var23, 10));
 
-         for (PollAnswer var18 : var23) {
+         for (PollAnswer var15 : var23) {
             val var14: java.lang.String = var2.getId-3Eiw7ao();
-            val var15: PollResources = var3.getResources();
+            val var17: PollResources = var3.getResources();
             val var8: Boolean = var3.getCanTapAnswers();
             val var6: Boolean = var3.getCanSelectMultipleAnswers();
-            val var9: Boolean = var3.getCanShowVoteCounts();
-            val var7: Boolean = var3.getHasVoted();
+            val var7: Boolean = var3.getCanShowVoteCounts();
+            val var9: Boolean = var3.getHasVoted();
             val var5: Boolean = var3.isExpired();
-            val var16: PollChatAnswerInteractionType = var3.getAnswersInteraction();
-            val var17: java.lang.String = var3.getAnswerTapAccessibilityLabel();
-            val var24: java.lang.Boolean = var18.getShouldAnimateTransition();
+            val var19: PollChatAnswerInteractionType = var3.getAnswersInteraction();
+            val var16: java.lang.String = var3.getAnswerTapAccessibilityLabel();
+            val var24: java.lang.Boolean = var15.getShouldAnimateTransition();
             val var4: Boolean;
             if (var24 != null) {
                var4 = var24;
@@ -224,9 +224,9 @@ public data class PollMessageAccessory(channelId: ChannelId,
             if (var20 != null) {
                var25 = new ArrayList();
 
-               for (Object var21 : var20) {
-                  if (i.X(var18.getPollMedia().getAttachmentIds(), (var21 as Attachment).getId())) {
-                     var25.add(var21);
+               for (Object var22 : var20) {
+                  if (i.X(var15.getPollMedia().getAttachmentIds(), (var22 as Attachment).getId())) {
+                     var25.add(var22);
                   }
                }
             } else {
@@ -235,7 +235,7 @@ public data class PollMessageAccessory(channelId: ChannelId,
 
             var13.add(
                new PollAnswerAccessory(
-                  var14, var15, var18, (java.util.List)var25, var8, var6, var9, var7, var5, var12, var16, var17, var4, var10, var11, null, 32768, null
+                  var14, var17, var15, (java.util.List)var25, var8, var6, var7, var9, var5, var12, var19, var16, var4, var10, var11, null, 32768, null
                )
             );
          }

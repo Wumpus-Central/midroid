@@ -98,9 +98,9 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
+      val var5: Int = Integer.hashCode(this.type);
       val var4: Int = Integer.hashCode(this.location);
-      val var5: Int = Integer.hashCode(this.length);
+      val var3: Int = Integer.hashCode(this.length);
       var var2: Int = 0;
       val var1: Int;
       if (this.style == null) {
@@ -114,7 +114,7 @@ public data class ChatInputNode(type: Int,
          var2 = this.tapAction.hashCode();
       }
 
-      return (((((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
+      return (((((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
    }
 
    public override fun toString(): String {
@@ -122,9 +122,9 @@ public data class ChatInputNode(type: Int,
       val var2: Int = this.location;
       val var1: Int = this.length;
       val var6: ChatInputNodeStyle = this.style;
-      val var5: Boolean = this.deleteNodeOnBackspace;
+      val var4: Boolean = this.deleteNodeOnBackspace;
       val var8: TapAction = this.tapAction;
-      val var4: Boolean = this.editDisabled;
+      val var5: Boolean = this.editDisabled;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ChatInputNode(type=");
       var7.append(var3);
@@ -135,11 +135,11 @@ public data class ChatInputNode(type: Int,
       var7.append(", style=");
       var7.append(var6);
       var7.append(", deleteNodeOnBackspace=");
-      var7.append(var5);
+      var7.append(var4);
       var7.append(", tapAction=");
       var7.append(var8);
       var7.append(", editDisabled=");
-      var7.append(var4);
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }

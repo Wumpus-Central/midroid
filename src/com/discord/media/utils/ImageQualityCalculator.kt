@@ -138,35 +138,35 @@ public object ImageQualityCalculator {
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
-      var var11: Double = 0.0;
-      var var15: Double = 0.0;
-      var var17: Double = 0.0;
       var var13: Double = 0.0;
+      var var17: Double = 0.0;
+      var var15: Double = 0.0;
+      var var11: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var27 = 0; var27 < var6; var27++) {
-            val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
-            val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
-            var11 += var21;
-            var15 += var19;
-            var17 += var21 * var21;
-            var13 += var19 * var19;
-            var9 += var21 * var19;
+            val var19: Double = var1[(var5 + var25) * var3 + var4 + var27];
+            val var21: Double = var2[(var5 + var25) * var3 + var4 + var27];
+            var13 += var19;
+            var17 += var21;
+            var15 += var19 * var19;
+            var11 += var21 * var21;
+            var9 += var19 * var21;
          }
       }
 
       val var23: Double = var26;
-      val var36: Double = var11 / var26;
-      val var37: Double = var15 / var26;
-      var17 = (var17 - var11 * var36) / var23;
-      var13 = (var13 - var15 * var37) / var23;
-      var15 = (var9 - var11 * var37) / var23;
-      var9 = var7;
-      var11 = var8;
-      var13 = (var36 * var36 + var37 * var37 + var9) * (var17 + var13 + var8);
-      if ((var36 * var36 + var37 * var37 + var9) * (var17 + var13 + var8) > 0.0) {
-         var9 = (var36 * 2.0 * var37 + var9) * (var15 * 2.0 + var11) / var13;
+      val var36: Double = var13 / var26;
+      val var37: Double = var17 / var26;
+      var15 = (var15 - var13 * var36) / var23;
+      var11 = (var11 - var17 * var37) / var23;
+      var13 = (var9 - var13 * var37) / var23;
+      var17 = var7;
+      var9 = var8;
+      var11 = (var36 * var36 + var37 * var37 + var17) * (var15 + var11 + var8);
+      if ((var36 * var36 + var37 * var37 + var17) * (var15 + var11 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var17) * (var13 * 2.0 + var9) / var11;
       } else {
          var9 = 0.0;
       }
@@ -227,15 +227,15 @@ public object ImageQualityCalculator {
       val var3: Int = var1.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var5: Int = var1[var2];
+         val var6: Int = var1[var2];
          val var4: Int = var1[var2] shr 24 and 255;
          if ((var1[var2] shr 24 and 255) != 0) {
             if (var4 != 255) {
-               var8[var2] = kotlin.ranges.d.l((var5 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.d.l(
-                  (var5 shr 16 and 255) * 255 / var4, 0, 255
-               ) shl 16 or kotlin.ranges.d.l((var5 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
+               var8[var2] = kotlin.ranges.d.l((var6 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.d.l(
+                  (var6 shr 16 and 255) * 255 / var4, 0, 255
+               ) shl 16 or kotlin.ranges.d.l((var6 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
             } else {
-               var8[var2] = var5;
+               var8[var2] = var6;
             }
          } else {
             var8[var2] = 0;

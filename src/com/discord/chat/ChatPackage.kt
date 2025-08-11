@@ -2,6 +2,7 @@ package com.discord.chat
 
 import com.discord.chat.messagemanager.MessageViewManagers
 import com.discord.chat.presentation.list.ChatListViewManager
+import com.discord.chat.presentation.message.view.botuikit.react.SelectActionComponentViewManager
 import com.discord.chat.presentation.root.ChatViewManager
 import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
 import com.facebook.react.BaseReactPackage
@@ -21,7 +22,8 @@ public class ChatPackage : BaseReactPackage {
             new ChatListViewManager(),
             new MessageViewManagers.MessageViewManager(),
             new MessageViewManagers.SystemMessageViewManager(),
-            new MessageViewManagers.AutoModerationSystemMessageViewManager()
+            new MessageViewManagers.AutoModerationSystemMessageViewManager(),
+            new SelectActionComponentViewManager()
          }
       );
    }

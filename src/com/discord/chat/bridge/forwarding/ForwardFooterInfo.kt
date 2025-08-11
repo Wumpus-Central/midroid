@@ -84,21 +84,21 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.timestampLabel;
-      val var5: java.lang.String = this.originLabel;
-      val var2: java.lang.String = this.accessibilityLabel;
-      val var4: java.lang.String = this.originIconUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ForwardFooterInfo(timestampLabel=");
-      var1.append(var3);
-      var1.append(", originLabel=");
-      var1.append(var5);
-      var1.append(", accessibilityLabel=");
-      var1.append(var2);
-      var1.append(", originIconUrl=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.timestampLabel;
+      val var4: java.lang.String = this.originLabel;
+      val var1: java.lang.String = this.accessibilityLabel;
+      val var3: java.lang.String = this.originIconUrl;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ForwardFooterInfo(timestampLabel=");
+      var5.append(var2);
+      var5.append(", originLabel=");
+      var5.append(var4);
+      var5.append(", accessibilityLabel=");
+      var5.append(var1);
+      var5.append(", originIconUrl=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

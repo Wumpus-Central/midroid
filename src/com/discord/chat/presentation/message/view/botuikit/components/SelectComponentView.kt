@@ -86,18 +86,34 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = A9.j.b(new h(this));
-      this.postProcessor$delegate = A9.j.b(new i());
-      this.setMaxWidth(SizeUtilsKt.getDpToPx(300));
+      this.progressDots$delegate = A9.j.b(new i(this));
+      this.postProcessor$delegate = A9.j.b(new j());
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
       this.setPadding(var3, var3, var3, var3);
-      this.setLayoutParams(new android.widget.LinearLayout.LayoutParams(SizeUtilsKt.getDpToPx(300), -2));
    }
 
    @JvmStatic
    fun `configure$lambda$3`(var0: ComponentContext, var1: SelectComponent, var2: View) {
       var0.getComponentActionEventHandlers().getOnTapSelectActionComponent().invoke(var1.getId());
+   }
+
+   private fun configureWidth(componentContext: ComponentContext) {
+      if (var1.isInModal() || !var1.getWidthInfo().isLargeWidthRenderingMode()) {
+         this.setMaxWidth(Integer.MAX_VALUE);
+         this.setMinWidth(0);
+         this.setLayoutParams(new android.widget.LinearLayout.LayoutParams(-1, -2));
+      } else if (var1.isInContainerComponent()) {
+         this.setMaxWidth(Integer.MAX_VALUE);
+         this.setMinWidth(SizeUtilsKt.getDpToPx(400));
+         val var2: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(-1, -2);
+         var2.weight = 1.0F;
+         this.setLayoutParams(var2);
+      } else {
+         this.setMaxWidth(SizeUtilsKt.getDpToPx(400));
+         this.setMinWidth(SizeUtilsKt.getDpToPx(400));
+         this.setLayoutParams(new android.widget.LinearLayout.LayoutParams(SizeUtilsKt.getDpToPx(400), -2));
+      }
    }
 
    @JvmStatic
@@ -134,7 +150,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    private fun FlexboxLayout.setSelectedOptions(selectedItems: List<SelectItem>) {
-      ViewGroupUtilsKt.setUpLayoutForList(var1, var2.size(), new g(LayoutInflater.from(var1.getContext())));
+      ViewGroupUtilsKt.setUpLayoutForList(var1, var2.size(), new h(LayoutInflater.from(var1.getContext())));
       val var9: java.util.Iterator = var2.iterator();
 
       for (int var3 = 0; var9.hasNext(); var3++) {
@@ -158,7 +174,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    @JvmStatic
-   fun `setSelectedOptions$lambda$4`(var0: LayoutInflater): View {
+   fun `setSelectedOptions$lambda$5`(var0: LayoutInflater): View {
       val var1: MaterialTextView = MessageComponentSelectPillViewBinding.inflate(var0).getRoot();
       r.g(var1, "getRoot(...)");
       DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimaryMedium);
@@ -167,14 +183,14 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       return var1;
    }
 
-   public open fun configure(component: SelectComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
+   public fun configure(component: SelectComponent, componentContext: ComponentContext) {
       r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentContext");
-      val var15: java.lang.String = var1.getPlaceholder();
+      r.h(var2, "componentContext");
+      val var10: java.lang.String = var1.getPlaceholder();
+      this.configureWidth(var2);
       var var11: View = this.binding.getRoot();
       r.g(var11, "getRoot(...)");
-      var var6: Byte = 4;
+      var var5: Byte = 4;
       RippleUtilsKt.addRipple(var11, true, SizeUtilsKt.getDpToPx(4));
       var11 = this.binding.getRoot();
       r.g(var11, "getRoot(...)");
@@ -185,145 +201,158 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          ThemeManagerKt.getTheme().getBackgroundTertiary(),
          SizeUtilsKt.getDpToPx(1)
       );
-      val var31: MaterialTextView = this.binding.selectComponentSelectionText;
+      val var30: MaterialTextView = this.binding.selectComponentSelectionText;
       r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-      DiscordFontUtilsKt.setDiscordFont(var31, DiscordFont.PrimaryMedium);
-      val var32: SimpleDraweeView = this.binding.selectComponentChevron;
+      DiscordFontUtilsKt.setDiscordFont(var30, DiscordFont.PrimaryMedium);
+      val var31: SimpleDraweeView = this.binding.selectComponentChevron;
       r.g(this.binding.selectComponentChevron, "selectComponentChevron");
-      ReactAssetUtilsKt.setReactAsset(var32, ReactAsset.ArrowRight);
-      val var33: java.util.List = var1.getSelectedItems();
-      if (!var33.isEmpty()) {
+      ReactAssetUtilsKt.setReactAsset(var31, ReactAsset.ArrowRight);
+      val var32: java.util.List = var1.getSelectedItems();
+      if (!var32.isEmpty()) {
          if (var1.getMaxValues() == 1) {
-            val var16: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var18: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var16.setVisibility(0);
-            val var17: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            var18.setVisibility(0);
+            val var19: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            var17.setVisibility(8);
+            var19.setVisibility(8);
             this.binding.selectComponentSelectionText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-            val var34: SelectItem = kotlin.collections.i.j0(var33) as SelectItem;
-            if (var34 != null) {
-               this.binding.selectComponentSelectionText.setText(var34.getLabel());
-               val var18: ComponentEmoji;
-               if (var34 is StringSelectItem) {
-                  var18 = (var34 as StringSelectItem).getEmoji();
+            val var33: SelectItem = kotlin.collections.i.j0(var32) as SelectItem;
+            if (var33 != null) {
+               this.binding.selectComponentSelectionText.setText(var33.getLabel());
+               val var20: ComponentEmoji;
+               if (var33 is StringSelectItem) {
+                  var20 = (var33 as StringSelectItem).getEmoji();
                } else {
-                  if (var34 !is SearchableSelectItem) {
+                  if (var33 !is SearchableSelectItem) {
                      throw new n();
                   }
 
-                  var18 = (var34 as SearchableSelectItem).getIconEmoji();
+                  var20 = (var33 as SearchableSelectItem).getIconEmoji();
                }
 
-               if (var18 != null) {
-                  val var35: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+               if (var20 != null) {
+                  val var34: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                   r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                  ComponentViewKt.setEmojiOrHide(var35, var18);
+                  ComponentViewKt.setEmojiOrHide(var34, var20);
                } else {
                   label71: {
-                     if (var34 is SearchableSelectItem) {
-                        val var36: SearchableSelectItem = var34 as SearchableSelectItem;
-                        if ((var34 as SearchableSelectItem).getIconSrc() != null) {
-                           val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     if (var33 is SearchableSelectItem) {
+                        val var21: SearchableSelectItem = var33 as SearchableSelectItem;
+                        if ((var33 as SearchableSelectItem).getIconSrc() != null) {
+                           val var35: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var20: java.lang.String = var36.getIconSrc();
-                           val var13: Int = var36.getIconColor();
-                           val var28: Boolean;
-                           if (var36.getType() === SelectOptionType.USER) {
-                              var28 = true;
+                           val var12: java.lang.String = var21.getIconSrc();
+                           val var13: Int = var21.getIconColor();
+                           val var16: Boolean;
+                           if (var21.getType() === SelectOptionType.USER) {
+                              var16 = true;
                            } else {
-                              var28 = false;
+                              var16 = false;
                            }
 
-                           this.setImage(var12, var20, var13, var28);
-                           val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           this.setImage(var35, var12, var13, var16);
+                           val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           var21.setVisibility(0);
+                           var23.setVisibility(0);
                            break label71;
                         }
                      }
 
-                     val var19: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                      r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                     var19.setVisibility(8);
+                     var22.setVisibility(8);
                   }
                }
             }
          } else {
-            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var24: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var22.setVisibility(8);
-            var39.setVisibility(0);
-            this.setSelectedOptions(var39, var33);
+            var39.setVisibility(8);
+            val var40: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
+            var40.setVisibility(8);
+            var24.setVisibility(0);
+            this.setSelectedOptions(var24, var32);
          }
       } else {
-         val var37: MaterialTextView = this.binding.selectComponentSelectionText;
+         val var36: MaterialTextView = this.binding.selectComponentSelectionText;
          r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-         var37.setVisibility(0);
+         var36.setVisibility(0);
+         val var37: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+         r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
+         var37.setVisibility(8);
          val var38: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
          r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
          var38.setVisibility(8);
          this.binding.selectComponentSelectionText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-         this.binding.selectComponentSelectionText.setText(var15);
+         this.binding.selectComponentSelectionText.setText(var10);
       }
 
-      val var5: Boolean;
+      val var4: Boolean;
       if (var1.getState() != ActionComponentState.DISABLED && !var1.getDisabled()) {
-         var5 = false;
+         var4 = false;
       } else {
-         var5 = true;
+         var4 = true;
       }
 
-      val var29: Boolean;
+      val var17: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var29 = true;
+         var17 = true;
       } else {
-         var29 = false;
+         var17 = false;
       }
 
-      val var23: SimpleDraweeView = this.binding.selectComponentChevron;
+      val var25: SimpleDraweeView = this.binding.selectComponentChevron;
       r.g(this.binding.selectComponentChevron, "selectComponentChevron");
-      if (!var29) {
-         var6 = 0;
+      if (!var17) {
+         var5 = 0;
       }
 
-      var23.setVisibility(var6);
-      if (var29 != this.currentIsLoading) {
-         val var24: ProgressDots = this.getProgressDots();
-         var6 = 8;
-         if (var29) {
-            var6 = 0;
+      var25.setVisibility(var5);
+      if (var17 != this.currentIsLoading) {
+         val var26: ProgressDots = this.getProgressDots();
+         var5 = 8;
+         if (var17) {
+            var5 = 0;
          }
 
-         var24.setVisibility(var6);
+         var26.setVisibility(var5);
       }
 
-      this.currentIsLoading = var29;
-      val var25: View = this.binding.getRoot();
-      val var4: Float;
-      if (var5) {
-         var4 = 0.3F;
+      this.currentIsLoading = var17;
+      val var27: View = this.binding.getRoot();
+      val var3: Float;
+      if (var4) {
+         var3 = 0.3F;
       } else {
-         var4 = 1.0F;
+         var3 = 1.0F;
       }
 
-      var25.setAlpha(var4);
-      val var26: View = this.binding.getRoot();
-      r.g(var26, "getRoot(...)");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new j(var3, var1), 1, null);
+      var27.setAlpha(var3);
+      val var28: View = this.binding.getRoot();
+      r.g(var28, "getRoot(...)");
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var28, false, new g(var2, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var9: Boolean = false;
-      if (!var29) {
-         var9 = false;
-         if (!var5) {
-            var9 = true;
+      var var8: Boolean = false;
+      if (!var17) {
+         var8 = false;
+         if (!var4) {
+            var8 = true;
          }
       }
 
-      var14.setClickable(var9);
-      this.binding.getRoot().setEnabled(var5 xor true);
+      var14.setClickable(var8);
+      this.binding.getRoot().setEnabled(var4 xor true);
+   }
+
+   public open fun configure(component: SelectComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
+      r.h(var1, "component");
+      r.h(var2, "componentProvider");
+      r.h(var3, "componentContext");
+      this.configure(var1, var3);
    }
 
    public override fun getComponentType(): KClass<SelectComponent> {

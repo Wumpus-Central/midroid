@@ -15,6 +15,14 @@ public abstract class NativeMobileVoiceOverlayModuleSpec extends ReactContextBas
       super(var1);
    }
 
+   protected final void emitOnChannelQueryUpdate(String var1) {
+      super.mEventEmitterCallback.invoke(new Object[]{"onChannelQueryUpdate", var1});
+   }
+
+   protected final void emitOnLayoutTrashed() {
+      super.mEventEmitterCallback.invoke(new Object[]{"onLayoutTrashed"});
+   }
+
    @ReactMethod
    @a
    public abstract void enableOverlay(Promise var1);

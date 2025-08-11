@@ -88,21 +88,21 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.commandId;
-      val var4: java.lang.String = this.commandName;
-      val var3: java.lang.String = this.commandKey;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapCommandData(channelId=");
-      var5.append(var1);
-      var5.append(", commandId=");
-      var5.append(var2);
-      var5.append(", commandName=");
-      var5.append(var4);
-      var5.append(", commandKey=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.commandId;
+      val var3: java.lang.String = this.commandName;
+      val var4: java.lang.String = this.commandKey;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapCommandData(channelId=");
+      var2.append(var5);
+      var2.append(", commandId=");
+      var2.append(var1);
+      var2.append(", commandName=");
+      var2.append(var3);
+      var2.append(", commandKey=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

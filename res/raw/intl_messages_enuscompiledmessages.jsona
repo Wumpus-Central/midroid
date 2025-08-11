@@ -574,7 +574,41 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
-  "ZtuRtr": "This server contains adult content marked as age-restricted. Do you wish to proceed?",
+  "6ejLER": [
+    "Before you can view this age-restricted server, we need to verify your age. We will only ask you for this once. ",
+    [
+      8,
+      "$link",
+      [
+        "Why do I need to provide my birthday?"
+      ],
+      [
+        [
+          1,
+          "helpURL"
+        ]
+      ]
+    ]
+  ],
+  "ZtuRtr": "This server contains sensitive content marked as age-restricted. Do you wish to proceed?",
+  "6++3cX": [
+    "You must be over legal age in order to view age-restricted servers. Learn more about our ",
+    [
+      8,
+      "$link",
+      [
+        "age verification process here"
+      ],
+      [
+        [
+          1,
+          "helpURL"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "H0SG/v": "You do not have access to this age-restricted server",
   "2kHZen": [
     "You need to be 18 or older in order to view age-restricted channels on Discord. ",
     [
@@ -2931,7 +2965,6 @@
     ", view all"
   ],
   "d5YwKy": "Look at my beautiful decoration",
-  "sB3lwM": "Claim",
   "4kp0AA": [
     [
       1,
@@ -3067,14 +3100,6 @@
     ],
     " Profile Effect"
   ],
-  "eWoUGx": [
-    "-",
-    [
-      1,
-      "percent"
-    ],
-    " off"
-  ],
   "DkxLY2": [
     [
       2,
@@ -3094,13 +3119,6 @@
   "gxEIl5": "Nitro members get discounts on everything in the Shop.",
   "Lh3QfX": "New and popular styles include SpongeBob, Anime, Galaxy, Cyberpunk, and more.",
   "RUtg4u": "Shop anywhere, anytime",
-  "7yqdFR": [
-    "Usually ",
-    [
-      1,
-      "price"
-    ]
-  ],
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -3109,13 +3127,6 @@
     ]
   ],
   "gOzMv7": "Your Nameplate is updated!",
-  "W3gIWF": [
-    [
-      1,
-      "price"
-    ],
-    " with Nitro"
-  ],
   "Kxw2LS": [
     [
       1,
@@ -4968,6 +4979,7 @@
   "825cFx": "Create Account",
   "ISN+ND": "Create Category",
   "fUYU+v": "Create Channel",
+  "6Urw1t": "Create DM",
   "qyjZub": "Create Events",
   "CTLgZG": "End Date",
   "j2RuXF": "End Time",
@@ -8149,10 +8161,7 @@
   "7r4OKi": "Allow synced subscribers to use your Twitch Custom Emoticons in Discord.",
   "xc+Ps7": "Enable Video",
   "qaYzPD": "End Event",
-  "1LTC8P": "Enter account details",
   "o4JNrK": "Enter your confirmation code",
-  "ZLRYGR": "Enter email",
-  "j2MWLi": "Enter phone number",
   "WEdDgo": "Enter phone or email",
   "j2d6Ki": "Error",
   "CvQlAA": "We've tracked the error and will get right on it.",
@@ -8302,13 +8311,10 @@
     ]
   ],
   "SEgHFh": "Content Warning: This may contain sensitive content",
-  "jesz8f": "Messages will not be filtered for explicit images.",
   "M6GNsL": "Messages will not be filtered for sensitive image-based media.",
   "VbSyAw": "Do not filter",
-  "dzbET0": "All messages will be filtered for explicit images.",
   "Z+yUWF": "All messages will be filtered for sensitive image-based media.",
   "iHuPEx": "Filter messages from all members",
-  "qZ1eHh": "Messages from server members without a role will be filtered for explicit images.",
   "3fRINz": "Messages from server members without a role will be filtered for sensitive image-based media.",
   "ynfFaG": "Filter messages from server members without roles",
   "SpxcUV": "May contain sensitive content",
@@ -8523,22 +8529,6 @@
   "W3Noi4": "New threads will not show in the channel list after being inactive for the specified duration.",
   "fyXclZ": "New posts will not show in the channel list after being inactive for the specified duration.",
   "PA2MZm": "This will determine whether members who have not explicitly set their notification settings receive a notification for every message sent in this server or not. We highly recommend setting this to only @mentions for a Community Server.",
-  "zOmxND": [
-    "Automatically block messages in this server that may contain explicit images in channels not marked as Age-restricted. Please choose how this filter will apply to members in your server. We recommend enabling this. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more about this setting here."
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ]
-  ],
   "BI4ukJ": [
     "Choose if server members can share image-based media detected by Discord’s sensitive content filters. This setting will apply to channels that are not age-restricted. ",
     [
@@ -8634,9 +8624,9 @@
       ]
     ]
   ],
-  "9eUgwc": "Users will need to confirm they are of over legal age to view in the content in this channel.\nAge-restricted channels are exempt from the explicit content filter.",
+  "9eUgwc": "Users will need to confirm they are of over the legal age to view in the content in this channel.\nAge-restricted channels are exempt from the explicit content filter.",
   "iyQQ6+": [
-    "Users will need to confirm they are of over legal age to view in the content in this server. ",
+    "Users will need to confirm they are over the legal age to view the content in this server ",
     [
       8,
       "$link",
@@ -8747,7 +8737,6 @@
   "dI4d4e": "Email",
   "tUjnxs": "Email or Phone Number",
   "uiXMo6": "Grace Period",
-  "Kd6OQU": "Explicit image filter",
   "bPgfJy": "Sensitive content filters",
   "vceJPj": "Display role members separately from online members",
   "LKCupK": "Input",
@@ -9051,6 +9040,7 @@
   ],
   "nBNJ/P": "Posted >30d ago",
   "Wy5RIS": "Only people you invite and moderators can see this thread.",
+  "eJEUvL": "This field is required.",
   "FGjMZW": "Hide After Inactivity",
   "Nb2/RE": "New Thread",
   "uXA57+": "Thread Name is required",
@@ -9382,23 +9372,6 @@
   "AKBgPz": "Come back for notifications on events, streams, and more.",
   "MwjTvr": "Nothing here yet",
   "B66Z+f": "Active",
-  "kJ1AZG": [
-    "Purchasing is unavailable while ",
-    [
-      8,
-      "$link",
-      [
-        "Nitro credits"
-      ],
-      [
-        [
-          1,
-          "helpCenterLink"
-        ]
-      ]
-    ],
-    " are active"
-  ],
   "07lzz8": "Boosting is unavailable while Nitro credits are active",
   "5nrJDA": "Boost Purchasing Currently Unavailable",
   "DFMPWV": "Nitro Credit",
@@ -12034,6 +12007,7 @@
   "kJwpBQ": "This server's features are limited",
   "y29JXl": "Server Members",
   "oB9gra": "No members were found.",
+  "SaDIpK": "Discord Join Date",
   "/mTqt7": [
     "(Added) ",
     [
@@ -18960,7 +18934,9 @@
   "BzjDQE": "Approve",
   "hDtbs7": "Reject",
   "mFP/q6": "Provide a denial reason to the user (OPTIONAL)",
+  "bv82GR": "There are no approved applications.",
   "/wqiSk": "There are no pending applications.",
+  "7YSJ6e": "There are no rejected applications.",
   "KQeYoK": "Interview",
   "4eQVBA": "Pending",
   "bSZklZ": "Rejected",
@@ -18981,11 +18957,21 @@
           [
             7
           ],
+          "",
+          [
+            1,
+            "decorator"
+          ],
           " Boost"
         ],
         "other": [
           [
             7
+          ],
+          "",
+          [
+            1,
+            "decorator"
           ],
           " Boosts"
         ]
@@ -20076,6 +20062,9 @@
       ]
     ]
   ],
+  "aqlmp6": "Blur image-based media that may contain violent or potentially disturbing visual material in DMs and servers",
+  "SYkEBg": "Blur added to graphic media",
+  "RVX1zc": "Graphic Media Filter",
   "naWE6e": "Get space without letting them know",
   "264qVF": [
     "You ignored ",
@@ -20119,9 +20108,9 @@
     ]
   ],
   "1yxTIC": "Recommended Settings",
-  "Vzp5BA": "Blur potentially sensitive media in DMs and servers",
-  "YdZZtL": "Blur added to sensitive media",
-  "5Qu1IS": "Sensitive content filter",
+  "jcRSp6": "Blur image-based media that may contain sexually explicit or suggestive material involving adults in DMs and servers",
+  "E6UmXV": "Blur added to mature sexual media",
+  "Gtck/v": "Mature Sexual Media Filter",
   "ytCpKi": "Ignore",
   "tFY5ZW": "Ignored",
   "VFWjc3": [
@@ -22510,6 +22499,7 @@
       "episodeNum"
     ]
   ],
+  "Vt4cn5": "Application Date",
   "z3wbj4": "Timed Out",
   "HumZAg": "Bot Invite",
   "Ql/e9f": "Server Discovery",
@@ -24692,9 +24682,7 @@
   "mqn87+": "Oops, something went wrong...",
   "PJ4dKy": "Hide content",
   "G3nQR0": "Why we hide some media",
-  "XW3vjo": "We automatically detect and filter media that may be sensitive. You can manage this filter in your Privacy & Safety settings.",
   "RUw0ZG": "We automatically detect and filter some media that may be sensitive. You can manage this filter in your Content & Social settings. You can learn more about this in our Help Center.",
-  "i4daNj": "We automatically detect and filter media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
   "E/oQYG": "We automatically detect and filter some media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
   "bmbHPD": "Dismiss",
   "Ge0HUl": [
@@ -24716,7 +24704,6 @@
   "sGW77u": "Why we hide some media",
   "2aXnfX": "Why we hide some media",
   "ZH7P2t": "Mark As Not Sensitive",
-  "gg5Dp6": "Help improve our sensitive media filter by forwarding this media to Discord.",
   "z4du/P": "Help improve our sensitive content filters by forwarding this media to Discord.",
   "TPpVkJ": "Mark as not sensitive",
   "gFsTKi": "Thanks for letting us know!",
@@ -24725,30 +24712,12 @@
   "N/oRIy": "Filter",
   "K0OWPz": "Graphic media",
   "aWD+tr": "Sensitive Content",
-  "ZUvrwM": [
-    "Choose what you see when uploaded or linked media may contain sensitive content. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "uEz8JC": "Sensitive Media",
   "D/157e": "Block",
   "S49UaW": "Blur",
   "5k5OFh": "Show",
-  "6k0AgI": "Direct Messages from friends",
   "+uI23N": "Direct messages from friends",
   "FP+a4+": "Messages in server channels",
-  "D2EGSk": "Direct Messages from others",
   "Yh+HX1": "Direct messages from others",
   "UIsxU1": "Show content",
   "9D+zGR": "Go to Settings",
@@ -31740,8 +31709,6 @@
   ],
   "vwMEHR": "Billing is paused in your country",
   "pV8xeX": "Register",
-  "PTHakp": "Create a password",
-  "JumOYm": "Create a username",
   "Hu9dUF": "Add a user/role mention to the media",
   "3N7uLy": "Add sticker to media",
   "WpFYAg": "Add text to media",
@@ -32147,6 +32114,13 @@
   "ItuabG": "Sign into Roblox",
   "no96NT": "Show off your verified Roblox account information right in your profile. You can set this up later from Settings > Connections.",
   "t3asUV": "Connect Roblox to Discord",
+  "G6BGd3": [
+    "Roblox • ",
+    [
+      1,
+      "subgameName"
+    ]
+  ],
   "LPJmLy": "Roles",
   "3OxP4u": [
     "Select up to ",
@@ -33607,6 +33581,10 @@
   ],
   "5LdpkZ": "Active just now",
   "uNkIhY": "Active yesterday",
+  "qCQzBg": "user, bot or webhook",
+  "JL7sRU": "bot",
+  "tPZo4u": "user",
+  "WjkIKS": "webhook",
   "UJxL3d": "true or false",
   "Zbbc1N": "specific date",
   "uAbFDA": "file name",
@@ -33634,8 +33612,10 @@
   "uvDZBQ": "We dropped the magnifying glass. Can you try searching again?",
   "kP6oFx": "Search Filters",
   "KSDx7O": "after",
+  "us8IQk": "authorType",
   "qZ+7BA": "before",
   "hcMwDQ": "After a date",
+  "C4r6xM": "By author type",
   "c9qSBQ": "Before a date",
   "cdPmq6": "In a specific channel",
   "8Fmo4+": "In a specific DM",
@@ -33652,6 +33632,7 @@
   "Qf3ptr": "me",
   "i96lOz": "mentions",
   "hwbB7u": "Filter messages from after a date",
+  "tJPdhY": "Filter messages from users, bots, or webhooks",
   "YEN3ub": "Filter messages from before a date",
   "qDUdlZ": "Filter messages from a particular channel",
   "kkGlw8": "Filter messages from a particular user",
@@ -33821,9 +33802,7 @@
   ],
   "mY3Y39": "Hold Up!",
   "TXNS7e": "Send",
-  "PoyOY2": "Your message could not be sent. It may contain sensitive media, which has been blocked by someone in this conversation.",
   "mktny8": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this conversation.",
-  "bNMQVF": "Your message could not be sent. It may contain explicit media, which has been blocked by the server.",
   "i4AbAQ": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this server.",
   "YrjcgY": "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
   "iS/eFB": "Unable to Mark as Not Sensitive",
@@ -37972,7 +37951,7 @@
   "nkO4Ly": "Follow the steps",
   "5B+npK": "Verify Age",
   "u/xqhY": "This channel is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this channel?",
-  "akjk0d": "This server is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this server?",
+  "akjk0d": "This server is marked as age-restricted. It may contain sensitive content. Do you want to verify your age group to access this server?",
   "x1coPj": [
     "This channel contains adult content marked as age-restricted. We determined you're in the ",
     [
@@ -37985,7 +37964,7 @@
     " age group. If we made a mistake, you can reverify."
   ],
   "7uIWQE": [
-    "This server contains adult content marked as age-restricted. We determined you're in the ",
+    "This server contains sensitive content marked as age-restricted. We determined you're in the ",
     [
       8,
       "$b",
@@ -39168,6 +39147,16 @@
   "CHf9iI": "Use Default",
   "SUnWBA": "Are you sure you want to logout?",
   "aBZ/oa": "Discovery",
+  "OX4ybm": [
+    "Some settings aren't available until you ",
+    [
+      8,
+      "hook",
+      [
+        "verify your age group"
+      ]
+    ]
+  ],
   "EUo0ys": [
     "Some settings are customized for teens by default. ",
     [
@@ -39237,7 +39226,6 @@
   "hg/+aW": "Enter the 2FA Code",
   "x5CoXV": "Nameplate",
   "RJxLnZ": "Tap to edit Nameplate",
-  "OwlOS0": "Edit your Nameplate on a desktop device.",
   "najZCQ": "Suppress background noise from your mic.",
   "wkYAl5": "None",
   "rdoNzs": "Krisp",
@@ -39330,7 +39318,6 @@
     ]
   ],
   "Hj/Bur": "Sensitive content filters",
-  "c/UOwM": "Sensitive media",
   "GYpoAg": "Mature Sexual Media",
   "Wnojv7": "Helps detect image-based media that may contain sexually explicit or suggestive material involving adults.",
   "xbMc8v": "Soundboard",
@@ -39473,13 +39460,11 @@
   ],
   "HO9Lf3": "Error opening survey",
   "shbR1d": "Use Application Commands",
-  "qLzvmp": "Use email instead",
   "rLSGen": "Use Activities",
   "3TzAk5": "Use External Apps",
   "BpBGZW": "Use External Emoji",
   "pwaVJy": "Use External Sounds",
   "UeRs+f": "Use External Stickers",
-  "lnOfAg": "Use phone number instead",
   "Bco7ND": "Use Soundboard",
   "CVxXDA": "Use speaker",
   "08zAV1": "Use Voice Activity",
@@ -40035,7 +40020,6 @@
   "FfjVVl": "Chrome",
   "kEfv8/": "External Browser",
   "YayR6O": "In-App Browser",
-  "T5W6+P": "Safari",
   "q9n0TU": "Invite your friends",
   "7Tj6HR": "Wave to say hi!",
   "Yhi9/P": "Personalize your server",

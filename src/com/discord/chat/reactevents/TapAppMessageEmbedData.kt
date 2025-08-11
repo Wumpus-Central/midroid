@@ -77,21 +77,21 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.actionId;
-      val var5: java.lang.String = this.appId;
-      val var1: java.lang.String = this.embedUrl;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapAppMessageEmbedData(messageId=");
-      var4.append(var3);
-      var4.append(", actionId=");
-      var4.append(var2);
-      var4.append(", appId=");
-      var4.append(var5);
-      var4.append(", embedUrl=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.actionId;
+      val var3: java.lang.String = this.appId;
+      val var5: java.lang.String = this.embedUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapAppMessageEmbedData(messageId=");
+      var2.append(var1);
+      var2.append(", actionId=");
+      var2.append(var4);
+      var2.append(", appId=");
+      var2.append(var3);
+      var2.append(", embedUrl=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

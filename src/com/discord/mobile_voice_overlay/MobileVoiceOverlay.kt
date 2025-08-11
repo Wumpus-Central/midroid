@@ -1,6 +1,5 @@
 package com.discord.mobile_voice_overlay
 
-import A9.s
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.Animator.AnimatorListener
@@ -30,8 +29,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
 import kotlin.jvm.functions.Function1
 
-internal class MobileVoiceOverlay(context: ReactApplicationContext) {
+internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayoutTrashed: () -> Unit, emitOnChannelQueryUpdate: (String) -> Unit) {
    private final val context: ReactApplicationContext
+   private final val emitOnLayoutTrashed: () -> Unit
+   private final val emitOnChannelQueryUpdate: (String) -> Unit
    private final val voiceBubbleProvider: OverlayViewProvider<OverlayVoiceBubble>
    private final val trashWrapProvider: OverlayViewProvider<OverlayTrashWrap>
    private final val menuDialogProvider: OverlayViewProvider<OverlayMenuBubbleDialog>
@@ -39,16 +40,28 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
    init {
       kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "emitOnLayoutTrashed");
+      kotlin.jvm.internal.r.h(var3, "emitOnChannelQueryUpdate");
       super();
       this.context = var1;
-      this.voiceBubbleProvider = new OverlayViewProvider<>(new c(this));
-      this.trashWrapProvider = new OverlayViewProvider<>(new d(this));
-      this.menuDialogProvider = new OverlayViewProvider<>(new e(this));
-      this.selectorDialogProvider = new OverlayViewProvider<>(new f(this));
+      this.emitOnLayoutTrashed = var2;
+      this.emitOnChannelQueryUpdate = var3;
+      this.voiceBubbleProvider = new OverlayViewProvider<>(new e(this));
+      this.trashWrapProvider = new OverlayViewProvider<>(new f(this));
+      this.menuDialogProvider = new OverlayViewProvider<>(new g(this));
+      this.selectorDialogProvider = new OverlayViewProvider<>(new h(this));
    }
 
    private fun closeMenuDialog() {
       this.menuDialogProvider.removeViewFromOverlay();
+   }
+
+   private fun emitOnChannelQueryUpdateEvent(query: String) {
+      this.emitOnChannelQueryUpdate.invoke(var1);
+   }
+
+   private fun emitOnLayoutTrashedEvent() {
+      this.emitOnLayoutTrashed.invoke();
    }
 
    private fun floatBubbleToHorizontalEdge(bubble: OverlayBubbleWrap) {
@@ -134,7 +147,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
          public void onAnimationEnd(Animator var1) {
             if (ThreadUtilsKt.isOnMainThread()) {
-               MobileVoiceOverlay.invokeJs$default(this.this$0, "onLayoutTrashed", null, 2, null);
+               MobileVoiceOverlay.access$emitOnLayoutTrashedEvent(this.this$0);
             } else {
                ThreadUtilsKt.getUiHandler().post(new Runnable(this.this$0) {
                   final MobileVoiceOverlay this$0;
@@ -145,7 +158,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
                   @Override
                   public final void run() {
-                     MobileVoiceOverlay.invokeJs$default(this.this$0, "onLayoutTrashed", null, 2, null);
+                     MobileVoiceOverlay.access$emitOnLayoutTrashedEvent(this.this$0);
                   }
                });
             }
@@ -182,7 +195,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    @JvmStatic
    fun `selectorDialogProvider$lambda$19$lambda$18$lambda$16`(var0: MobileVoiceOverlay, var1: java.lang.String): Unit {
       kotlin.jvm.internal.r.h(var1, "text");
-      var0.invokeJs("onChannelQueryUpdate", var1);
+      var0.emitOnChannelQueryUpdateEvent(var1);
       return Unit.a;
    }
 
@@ -192,7 +205,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
       val var3: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var3, "getContext(...)");
       var2.startHeadlessTask(
-         var3, "SelectChannel", D.d.a(s.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), s.a("connectToVoice", java.lang.Boolean.TRUE))
+         var3, "SelectChannel", D.d.a(A9.s.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), A9.s.a("connectToVoice", java.lang.Boolean.TRUE))
       );
       return Unit.a;
    }
@@ -206,13 +219,13 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
       kotlin.jvm.internal.r.h(var1, "it");
-      val var3: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-      val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var4.getInsetMargins().set(-var3, var3, -var3, var3);
-      var4.setOnClickListener(new l(var4, var0));
-      var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
-      var4.setOnMovingStateChanged(new n(var0, var4));
-      return var4;
+      val var2: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
+      val var5: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
+      var5.getInsetMargins().set(-var2, var2, -var2, var2);
+      var5.setOnClickListener(new l(var5, var0));
+      var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var5));
+      var5.setOnMovingStateChanged(new n(var0, var5));
+      return var5;
    }
 
    @JvmStatic
@@ -277,7 +290,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          var6 = 0;
       }
 
-      var1.menuDialogProvider.withView(new h(var0, new Rect(var3, var4, var5, var6)));
+      var1.menuDialogProvider.withView(new d(var0, new Rect(var3, var4, var5, var6)));
       var0.setBubbleTouchable(false);
    }
 
@@ -353,7 +366,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$8`(var0: MobileVoiceOverlay, var1: OverlayVoiceBubble, var2: Boolean): Unit {
-      var0.trashWrapProvider.withView(new g(var2, var0, var1));
+      var0.trashWrapProvider.withView(new c(var2, var0, var1));
       return Unit.a;
    }
 
@@ -377,11 +390,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -423,11 +436,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
             });
          }
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

@@ -11,7 +11,8 @@ public data class ComponentContext(containerId: String,
    widthInfo: WidthInfo,
    shouldAutoPlayGif: Boolean,
    isForwardedContent: Boolean,
-   isInContainerComponent: Boolean
+   isInContainerComponent: Boolean,
+   isInModal: Boolean
 ) {
    public final val containerId: String
    public final val generalEventHandlers: GeneralEventHandlers
@@ -23,6 +24,7 @@ public data class ComponentContext(containerId: String,
    public final val shouldAutoPlayGif: Boolean
    public final val isForwardedContent: Boolean
    public final val isInContainerComponent: Boolean
+   public final val isInModal: Boolean
 
    init {
       r.h(var1, "containerId");
@@ -43,6 +45,7 @@ public data class ComponentContext(containerId: String,
       this.shouldAutoPlayGif = var8;
       this.isForwardedContent = var9;
       this.isInContainerComponent = var10;
+      this.isInModal = var11;
    }
 
    public operator fun component1(): String {
@@ -51,6 +54,10 @@ public data class ComponentContext(containerId: String,
 
    public operator fun component10(): Boolean {
       return this.isInContainerComponent;
+   }
+
+   public operator fun component11(): Boolean {
+      return this.isInModal;
    }
 
    public operator fun component2(): GeneralEventHandlers {
@@ -95,7 +102,8 @@ public data class ComponentContext(containerId: String,
       widthInfo: WidthInfo = var0.widthInfo,
       shouldAutoPlayGif: Boolean = var0.shouldAutoPlayGif,
       isForwardedContent: Boolean = var0.isForwardedContent,
-      isInContainerComponent: Boolean = var0.isInContainerComponent
+      isInContainerComponent: Boolean = var0.isInContainerComponent,
+      isInModal: Boolean = var0.isInModal
    ): ComponentContext {
       r.h(var1, "containerId");
       r.h(var2, "generalEventHandlers");
@@ -104,7 +112,7 @@ public data class ComponentContext(containerId: String,
       r.h(var5, "mediaItemEventHandlers");
       r.h(var6, "componentActionEventHandlers");
       r.h(var7, "widthInfo");
-      return new ComponentContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
+      return new ComponentContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -132,8 +140,10 @@ public data class ComponentContext(containerId: String,
             return false;
          } else if (this.isForwardedContent != var1.isForwardedContent) {
             return false;
+         } else if (this.isInContainerComponent != var1.isInContainerComponent) {
+            return false;
          } else {
-            return this.isInContainerComponent == var1.isInContainerComponent;
+            return this.isInModal == var1.isInModal;
          }
       }
    }
@@ -146,29 +156,33 @@ public data class ComponentContext(containerId: String,
                                           (
                                                    (
                                                             (
-                                                                     (this.containerId.hashCode() * 31 + this.generalEventHandlers.hashCode()) * 31
-                                                                        + this.markdownTextRenderOptions.hashCode()
+                                                                     (
+                                                                              (this.containerId.hashCode() * 31 + this.generalEventHandlers.hashCode()) * 31
+                                                                                 + this.markdownTextRenderOptions.hashCode()
+                                                                           )
+                                                                           * 31
+                                                                        + this.markdownTextRenderEventHandlers.hashCode()
                                                                   )
                                                                   * 31
-                                                               + this.markdownTextRenderEventHandlers.hashCode()
+                                                               + this.mediaItemEventHandlers.hashCode()
                                                          )
                                                          * 31
-                                                      + this.mediaItemEventHandlers.hashCode()
+                                                      + this.componentActionEventHandlers.hashCode()
                                                 )
                                                 * 31
-                                             + this.componentActionEventHandlers.hashCode()
+                                             + this.widthInfo.hashCode()
                                        )
                                        * 31
-                                    + this.widthInfo.hashCode()
+                                    + java.lang.Boolean.hashCode(this.shouldAutoPlayGif)
                               )
                               * 31
-                           + java.lang.Boolean.hashCode(this.shouldAutoPlayGif)
+                           + java.lang.Boolean.hashCode(this.isForwardedContent)
                      )
                      * 31
-                  + java.lang.Boolean.hashCode(this.isForwardedContent)
+                  + java.lang.Boolean.hashCode(this.isInContainerComponent)
             )
             * 31
-         + java.lang.Boolean.hashCode(this.isInContainerComponent);
+         + java.lang.Boolean.hashCode(this.isInModal);
    }
 
    public fun reduceAvailableWidth(widthReduction: Int): ComponentContext {
@@ -184,43 +198,47 @@ public data class ComponentContext(containerId: String,
          false,
          false,
          false,
-         959,
+         false,
+         1983,
          null
       );
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.containerId;
-      val var7: GeneralEventHandlers = this.generalEventHandlers;
-      val var4: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var9: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var8: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var11: ComponentActionEventHandlers = this.componentActionEventHandlers;
-      val var10: WidthInfo = this.widthInfo;
-      val var1: Boolean = this.shouldAutoPlayGif;
-      val var2: Boolean = this.isForwardedContent;
-      val var3: Boolean = this.isInContainerComponent;
+      val var10: java.lang.String = this.containerId;
+      val var5: GeneralEventHandlers = this.generalEventHandlers;
+      val var11: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var7: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var9: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var12: ComponentActionEventHandlers = this.componentActionEventHandlers;
+      val var8: WidthInfo = this.widthInfo;
+      val var3: Boolean = this.shouldAutoPlayGif;
+      val var1: Boolean = this.isForwardedContent;
+      val var2: Boolean = this.isInContainerComponent;
+      val var4: Boolean = this.isInModal;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ComponentContext(containerId=");
-      var6.append(var5);
-      var6.append(", generalEventHandlers=");
-      var6.append(var7);
-      var6.append(", markdownTextRenderOptions=");
-      var6.append(var4);
-      var6.append(", markdownTextRenderEventHandlers=");
-      var6.append(var9);
-      var6.append(", mediaItemEventHandlers=");
-      var6.append(var8);
-      var6.append(", componentActionEventHandlers=");
-      var6.append(var11);
-      var6.append(", widthInfo=");
       var6.append(var10);
+      var6.append(", generalEventHandlers=");
+      var6.append(var5);
+      var6.append(", markdownTextRenderOptions=");
+      var6.append(var11);
+      var6.append(", markdownTextRenderEventHandlers=");
+      var6.append(var7);
+      var6.append(", mediaItemEventHandlers=");
+      var6.append(var9);
+      var6.append(", componentActionEventHandlers=");
+      var6.append(var12);
+      var6.append(", widthInfo=");
+      var6.append(var8);
       var6.append(", shouldAutoPlayGif=");
-      var6.append(var1);
-      var6.append(", isForwardedContent=");
-      var6.append(var2);
-      var6.append(", isInContainerComponent=");
       var6.append(var3);
+      var6.append(", isForwardedContent=");
+      var6.append(var1);
+      var6.append(", isInContainerComponent=");
+      var6.append(var2);
+      var6.append(", isInModal=");
+      var6.append(var4);
       var6.append(")");
       return var6.toString();
    }

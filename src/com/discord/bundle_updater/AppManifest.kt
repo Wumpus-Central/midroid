@@ -69,18 +69,18 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var4: AppManifestMetadata = this.metadata;
+      val var1: AppManifestMetadata = this.metadata;
       val var2: java.util.Map = this.hashes;
-      val var3: java.util.Map = this.patches;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AppManifest(metadata=");
-      var1.append(var4);
-      var1.append(", hashes=");
-      var1.append(var2);
-      var1.append(", patches=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.util.Map = this.patches;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AppManifest(metadata=");
+      var3.append(var1);
+      var3.append(", hashes=");
+      var3.append(var2);
+      var3.append(", patches=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

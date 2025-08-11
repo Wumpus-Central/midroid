@@ -216,14 +216,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
       val var4: NativeConnection = this.engineConnections.get(var1);
       if (var4 == null) {
-         val var3: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("[");
-         var5.append(var2);
-         var5.append("] no NativeConnection for connectionId=");
-         var5.append(var1);
-         var5.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
+         val var5: Log = Log.INSTANCE;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("[");
+         var3.append(var2);
+         var3.append("] no NativeConnection for connectionId=");
+         var3.append(var1);
+         var3.append(", returning null");
+         Log.w$default(var5, "MediaEngine", var3.toString(), null, 4, null);
       }
 
       return var4;
@@ -936,16 +936,16 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             val var9: MediaCodecInfo = var8.next() as MediaCodecInfo;
             val var10: java.lang.String = var9.getName();
             kotlin.jvm.internal.r.g(var10, "getName(...)");
-            val var11: Array<java.lang.String> = var9.getSupportedTypes();
-            kotlin.jvm.internal.r.g(var11, "getSupportedTypes(...)");
+            val var13: Array<java.lang.String> = var9.getSupportedTypes();
+            kotlin.jvm.internal.r.g(var13, "getSupportedTypes(...)");
             val var12: ArrayList = new ArrayList();
-            val var3: Int = var11.length;
+            val var3: Int = var13.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var13: java.lang.String = var11[var2];
-               kotlin.jvm.internal.r.e(var11[var2]);
-               if (kotlin.text.h.I(var13, "video", false, 2, null)) {
-                  var12.add(var13);
+               val var11: java.lang.String = var13[var2];
+               kotlin.jvm.internal.r.e(var13[var2]);
+               if (kotlin.text.h.I(var11, "video", false, 2, null)) {
+                  var12.add(var11);
                }
             }
 

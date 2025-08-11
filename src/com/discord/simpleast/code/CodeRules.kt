@@ -131,12 +131,12 @@ public object CodeRules {
       val var26: Rule = toMatchGroupRule$default(this, var5, 0, var1.getCommentStyleProvider(), 1, null);
       var6 = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       r.g(var6, "Pattern.compile(\"\"\"^\"[\\s…*?(?<!\\\\)\"(?=\\W|\\s|$)\"\"\")");
-      val var33: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
-      var6 = Pattern.compile("^#!?\\[.*?\\]\\n");
-      r.g(var6, "Pattern.compile(\"\"\"^#!?\\[.*?\\]\\n\"\"\")");
+      val var30: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
+      var7 = Pattern.compile("^#!?\\[.*?\\]\\n");
+      r.g(var7, "Pattern.compile(\"\"\"^#!?\\[.*?\\]\\n\"\"\")");
       val var27: java.util.List = this.createGenericCodeRules(
          var1,
-         i.n(new Rule[]{var26, var33, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
+         i.n(new Rule[]{var26, var30, toMatchGroupRule$default(this, var7, 0, var1.getGenericsStyleProvider(), 1, null)}),
          new java.lang.String[]{"struct", "trait", "mod"},
          new java.lang.String[]{
             "Self|Result|Ok|Err|Option|None|Some",

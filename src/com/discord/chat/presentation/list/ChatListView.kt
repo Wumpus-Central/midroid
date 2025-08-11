@@ -127,12 +127,12 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       val var3: Pair = A9.s.a(RegularMessageDelegate.class, 50);
       var var4: Int = 25;
 
-      for (Entry var7 : B9.q.l(new Pair[]{var3, A9.s.a(SystemMessageDelegate.class, var4), A9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
-         val var5: Class = var7.getKey() as Class;
-         val var1: Int = (var7.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
+      for (Entry var5 : B9.q.l(new Pair[]{var3, A9.s.a(SystemMessageDelegate.class, var4), A9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
+         val var7: Class = var5.getKey() as Class;
+         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
          kotlin.jvm.internal.r.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var1);
+         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
       }
    }
 
@@ -144,14 +144,14 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
          val var3: Any = var2.get(this);
-         val var7: CrashReporting = CrashReporting.INSTANCE;
-         val var4: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var4: CrashReporting = CrashReporting.INSTANCE;
+         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
          val var5: StringBuilder = new StringBuilder();
          var5.append("About to crash because of ChatList, dumping update log:\n");
-         var5.append(var4);
+         var5.append(var7);
          var5.append("\n Recycler State: ");
          var5.append(var3);
-         CrashReporting.addBreadcrumb$default(var7, var5.toString(), null, null, 6, null);
+         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -180,17 +180,17 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                }
 
                public final void invoke(boolean var1) {
-                  val var5: BooleanRef = this.$wasAtBottom;
-                  val var4: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
+                  val var4: BooleanRef = this.$wasAtBottom;
+                  val var5: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
                   var var2: Boolean = false;
-                  if (var4 != null) {
+                  if (var5 != null) {
                      var2 = false;
-                     if (var4.isAtBottom()) {
+                     if (var5.isAtBottom()) {
                         var2 = true;
                      }
                   }
 
-                  var5.j = var2;
+                  var4.j = var2;
                   if (this.$update.getAction() is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).stopWatching();
                      if (!var1) {
@@ -295,11 +295,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

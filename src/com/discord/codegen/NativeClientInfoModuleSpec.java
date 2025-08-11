@@ -34,12 +34,12 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
                "Version"
             )
          );
-         HashSet var1 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var4 = new HashSet(var2.keySet());
-         var4.removeAll(var3);
-         var4.removeAll(var1);
-         if (!var4.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
+         HashSet var4 = new HashSet<>(Arrays.asList("UserSettings"));
+         HashSet var1 = new HashSet(var2.keySet());
+         var1.removeAll(var3);
+         var1.removeAll(var4);
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
          }
 
          var3.removeAll(var2.keySet());

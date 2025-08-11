@@ -8,6 +8,6 @@ public final class f implements Function1 {
    public final MobileVoiceOverlay j;
 
    public final Object invoke(Object var1) {
-      return MobileVoiceOverlay.e(this.j, (OverlayViewProvider)var1);
+      return MobileVoiceOverlay.k(this.j, (OverlayViewProvider)var1);
    }
 }

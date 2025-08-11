@@ -1,7 +1,6 @@
 package com.discord.portals.from_native
 
 import android.app.Activity
-import android.widget.FrameLayout
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
@@ -17,7 +16,6 @@ import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec {
@@ -39,16 +37,16 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
    }
 
    @ReactModule(name = "DCDPortalView")
-   public class ViewManager : ViewGroupManager<FrameLayout>, DCDPortalViewManagerInterface<FrameLayout> {
-      private final val delegate: DCDPortalViewManagerDelegate<FrameLayout, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> =
+   public class ViewManager : ViewGroupManager<PortalHolderViewGroup>, DCDPortalViewManagerInterface<PortalHolderViewGroup> {
+      private final val delegate: DCDPortalViewManagerDelegate<PortalHolderViewGroup, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> =
          new DCDPortalViewManagerDelegate(this)
 
-      protected open fun createViewInstance(reactContext: ThemedReactContext): FrameLayout {
+      protected open fun createViewInstance(reactContext: ThemedReactContext): PortalHolderViewGroup {
          r.h(var1, "reactContext");
-         return new FrameLayout(var1);
+         return new PortalHolderViewGroup(var1);
       }
 
-      protected open fun getDelegate(): DCDPortalViewManagerDelegate<FrameLayout, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> {
+      protected open fun getDelegate(): DCDPortalViewManagerDelegate<PortalHolderViewGroup, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> {
          return this.delegate;
       }
 
@@ -57,11 +55,11 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
       }
 
       @ReactProp(name = "portal")
-      public open fun setPortal(portalView: FrameLayout, portal: Double) {
+      public open fun setPortal(portalView: PortalHolderViewGroup, portal: Double) {
          r.h(var1, "portalView");
          f.d(CoroutineViewUtilsKt.getAttachedScope(var1), null, null, new Function2(var2, var1, null) {
             final double $portal;
-            final FrameLayout $portalView;
+            final PortalHolderViewGroup $portalView;
             int label;
 
             {
@@ -88,8 +86,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2(null) {
                      int label;
 
                      {
@@ -124,7 +122,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var4, var1, this) === var3) {
+                  if (f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

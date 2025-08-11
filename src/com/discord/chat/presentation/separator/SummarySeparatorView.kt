@@ -73,7 +73,7 @@ public class SummarySeparatorView  public constructor(context: Context, attrs: A
       ColorUtilsKt.setTintColor(var13, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var14: FrameLayout = var15.buttonWrapper;
       r.g(var15.buttonWrapper, "buttonWrapper");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new F1.a(var15), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new G1.a(var15), 1, null);
    }
 
    @JvmStatic

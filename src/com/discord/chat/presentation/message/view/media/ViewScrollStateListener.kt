@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.media
 
-import C1.d
+import D1.d
 import android.view.View
 import android.view.ViewTreeObserver.OnScrollChangedListener
 import kotlin.jvm.internal.r

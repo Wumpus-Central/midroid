@@ -1,0 +1,31 @@
+{
+  "o/An3t": [
+    [
+      1,
+      "username"
+    ],
+    " te ha pedido que transmitas ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " te está pidiendo que transmitas ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Has pedido a alguien que transmita ",
+    [
+      1,
+      "applicationName"
+    ]
+  ]
+}

@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.message.view.media
 
 import A9.j
-import C1.a
-import C1.b
-import C1.c
+import D1.a
+import D1.b
+import D1.c
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
