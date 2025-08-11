@@ -49,7 +49,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       var2 = var2.toLowerCase(var9);
       r.g(var2, "toLowerCase(...)");
       val var6: Int = var2.length();
-      var var3: Int = var1.length();
+      val var3: Int = var1.length();
       if (var3 > var6) {
          return false;
       } else if (var3 == var6) {
@@ -57,32 +57,28 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       } else {
          val var7: Int = var1.length();
          var var5: Int = 0;
-         var3 = 0;
 
-         while (var5 < var7) {
+         for (int var12 = 0; var5 < var7; var5++) {
             val var8: Char = var1.charAt(var5);
+            var var4: Int = var12;
 
-            var var4: Int;
             while (true) {
-               var4 = var3;
-               if (var3 >= var6) {
+               var12 = var4;
+               if (var4 >= var6) {
                   break;
                }
 
-               var4 = var3 + 1;
-               if (var2.charAt(var3) == var8) {
+               var12 = var4 + 1;
+               if (var2.charAt(var4) == var8) {
                   break;
                }
 
-               var3 = var4;
+               var4 = var12;
             }
 
-            if (var4 == var6) {
+            if (var12 == var6) {
                return false;
             }
-
-            var5++;
-            var3 = var4;
          }
 
          return true;
@@ -143,8 +139,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          val var10: UserSearchTransformedUser = this.users.get(var11);
          var var14: UserSearchTransformedUser = var6;
          if (var10 != null) {
-            val var13: java.lang.String = var6.getId();
-            val var12: java.lang.String = var6.getUsername();
+            val var12: java.lang.String = var6.getId();
+            val var13: java.lang.String = var6.getUsername();
             var var3: java.lang.Boolean = var6.isBot();
             var var15: java.lang.Boolean = var3;
             if (var3 == null) {
@@ -169,7 +165,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                var5 = var10.getGlobalName();
             }
 
-            var14 = var10.copy(var13, var12, var15, var3, var21, var5, q.p(var10.getNicknames(), var6.getNicknames()));
+            var14 = var10.copy(var12, var13, var15, var3, var21, var5, q.p(var10.getNicknames(), var6.getNicknames()));
             if (var14 == null) {
                var14 = var6;
             }
@@ -265,9 +261,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var29: java.util.List;
                   if (var7) {
-                     val var18: java.lang.String = var26.getUsername();
-                     var10 = var26.getGlobalName();
-                     val var11: java.lang.String = var26.getFriendNickname();
+                     val var11: java.lang.String = var26.getUsername();
+                     val var18: java.lang.String = var26.getGlobalName();
+                     var10 = var26.getFriendNickname();
                      val var19: java.util.Map = var26.getNicknames();
                      val var27: UserSearchQuerySetFilters = var2.getFilters();
                      val var28: java.lang.String;
@@ -277,7 +273,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var28 = null;
                      }
 
-                     var29 = i.n(new java.lang.String[]{var18, var10, var11, (java.lang.String)var19.get(var28)});
+                     var29 = i.n(new java.lang.String[]{var11, var18, var10, (java.lang.String)var19.get(var28)});
                   } else {
                      if (var7) {
                         throw new n();
@@ -428,15 +424,15 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.comparator;
+            val var3: java.lang.String = this.comparator;
             val var1: Double = this.score;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("LocalResult(comparator=");
-            var3.append(var4);
-            var3.append(", score=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("LocalResult(comparator=");
+            var4.append(var3);
+            var4.append(", score=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
       }
    }
