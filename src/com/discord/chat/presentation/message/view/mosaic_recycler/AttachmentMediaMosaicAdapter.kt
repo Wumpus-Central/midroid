@@ -147,11 +147,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
             var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
+               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
             );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
@@ -162,10 +162,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                throw new IllegalStateException(var12.toString().toString());
             }
 
-            var var14: Any = this.items.get(var2);
+            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
             r.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
-            var14 = var14 as VideoAttachmentMessageAccessory;
-            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
+            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -173,15 +173,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var16.bindAttachment(
-               var5,
-               (VideoAttachmentMessageAccessory)var14,
-               var11,
-               new e(this, (VideoAttachmentMessageAccessory)var14, var1),
-               new f(this, (VideoAttachmentMessageAccessory)var14),
-               new g(this, (VideoAttachmentMessageAccessory)var14),
-               new h(this)
-            );
+            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
          }
       }
    }

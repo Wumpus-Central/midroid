@@ -178,18 +178,18 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
 
    private fun clearInlineMedia() {
       val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView;
-      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
-      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
-      val var7: EmbedViewResizingMediaView = this.binding.inlineMediaView4;
+      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
+      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
+      val var6: EmbedViewResizingMediaView = this.binding.inlineMediaView4;
 
       for (int var1 = 0; var1 < 4; var1++) {
-         val var6: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var2, var4, var3, var7}[var1];
+         val var7: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var2, var3, var4, var6}[var1];
          MediaView.setMediaData$default(
-            var6, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262142, null
+            var7, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262142, null
          );
-         var6.setOnMediaClickListeners(null, null);
-         kotlin.jvm.internal.r.e(var6);
-         var6.setVisibility(8);
+         var7.setOnMediaClickListeners(null, null);
+         kotlin.jvm.internal.r.e(var7);
+         var7.setVisibility(8);
       }
    }
 
@@ -506,16 +506,16 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var29 = "";
          }
 
-         var var22: StructurableText = var21.getName();
+         val var23: StructurableText = var21.getName();
          var var31: DraweeSpanStringBuilder;
-         if (var22 != null) {
-            val var23: Context = var20.getContext();
-            kotlin.jvm.internal.r.g(var23, "getContext(...)");
+         if (var23 != null) {
+            val var22: Context = var20.getContext();
+            kotlin.jvm.internal.r.g(var22, "getContext(...)");
             val var18: TextPaint = var20.getBinding().name.getPaint();
             kotlin.jvm.internal.r.g(var18, "getPaint(...)");
             var31 = TextUtilsKt.toSpannable$default(
-               var22,
                var23,
+               var22,
                var2,
                var3,
                var4,
@@ -554,23 +554,23 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var30 = "";
          }
 
-         var22 = var21.getValue();
-         if (var22 != null) {
-            val var34: Context = var20.getContext();
-            kotlin.jvm.internal.r.g(var34, "getContext(...)");
-            val var32: TextPaint = var20.getBinding().value.getPaint();
-            kotlin.jvm.internal.r.g(var32, "getPaint(...)");
-            val var36: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
-            kotlin.jvm.internal.r.g(var36, "getFontMetrics(...)");
+         val var35: StructurableText = var21.getValue();
+         if (var35 != null) {
+            val var36: Context = var20.getContext();
+            kotlin.jvm.internal.r.g(var36, "getContext(...)");
+            val var34: TextPaint = var20.getBinding().value.getPaint();
+            kotlin.jvm.internal.r.g(var34, "getPaint(...)");
+            val var32: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
+            kotlin.jvm.internal.r.g(var32, "getFontMetrics(...)");
             var31 = TextUtilsKt.toSpannable$default(
-               var22,
-               var34,
+               var35,
+               var36,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var32,
+               var34,
                var24,
                var8,
                var12,
@@ -588,7 +588,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var36),
+               TextUtilsKt.getBaselineHeightPx(var32),
                null,
                49011712,
                null
@@ -958,15 +958,15 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
          val var87: StructurableText = var1.getDescription();
          val var72: DraweeSpanStringBuilder;
          if (var87 != null) {
-            val var86: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var86, "getContext(...)");
+            val var83: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var83, "getContext(...)");
             val var81: TextPaint = this.binding.description.getPaint();
             kotlin.jvm.internal.r.g(var81, "getPaint(...)");
-            val var83: FontMetrics = this.binding.description.getPaint().getFontMetrics();
-            kotlin.jvm.internal.r.g(var83, "getFontMetrics(...)");
+            val var86: FontMetrics = this.binding.description.getPaint().getFontMetrics();
+            kotlin.jvm.internal.r.g(var86, "getFontMetrics(...)");
             var72 = TextUtilsKt.toSpannable$default(
                var87,
-               var86,
+               var83,
                var4,
                var9,
                var10,
@@ -990,7 +990,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var83),
+               TextUtilsKt.getBaselineHeightPx(var86),
                null,
                48995328,
                null
@@ -1076,10 +1076,10 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
          if (var60 != null) {
             var6 = (int)(var6 * 0.75);
             var5 = MessageAccessoriesView.Companion.getWidthForEmbedContent(var5, var31);
-            val var39: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-            val var68: ConstraintLayout = this.binding.inlineMediaContainer;
+            val var68: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+            val var39: ConstraintLayout = this.binding.inlineMediaContainer;
             kotlin.jvm.internal.r.g(this.binding.inlineMediaContainer, "inlineMediaContainer");
-            MediaContainingViewResizer.resizeLayoutParams$default(var39, var68, var5, var6, var5, var6, null, 16, null);
+            MediaContainingViewResizer.resizeLayoutParams$default(var68, var39, var5, var6, var5, var6, null, 16, null);
             val var41: java.util.Iterator = kotlin.collections.i.c1(
                   var60,
                   new EmbedViewResizingMediaView[]{

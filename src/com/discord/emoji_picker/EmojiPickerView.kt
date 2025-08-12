@@ -137,11 +137,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -229,6 +229,11 @@ internal class EmojiPickerView(context: Context,
       return Unit.a;
    }
 
+   public open fun endViewTransition(view: View?) {
+      super.endViewTransition(var1);
+      this.getTypedLayoutManager().disableRecycling(false);
+   }
+
    public override fun fling(velocityX: Int, velocityY: Int): Boolean {
       val var3: RecyclerViewScrollLimiter = RecyclerViewScrollLimiter.INSTANCE;
       return super.fling(RecyclerViewScrollLimiter.INSTANCE.getClampedVelocity(var1), var3.getClampedVelocity(var2));
@@ -309,6 +314,11 @@ internal class EmojiPickerView(context: Context,
       val var3: Context = this.getContext();
       kotlin.jvm.internal.r.g(var3, "getContext(...)");
       var2.setUseTier0UpsellContent(var3, var1);
+   }
+
+   public open fun startViewTransition(view: View?) {
+      this.getTypedLayoutManager().disableRecycling(true);
+      super.startViewTransition(var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {

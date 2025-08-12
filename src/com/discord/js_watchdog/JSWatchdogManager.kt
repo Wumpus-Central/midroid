@@ -227,7 +227,7 @@ public object JSWatchdogManager {
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
                         val var20: Timer = new Timer();
-                        val var21: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
+                        val var18: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
                            final java.lang.String $sessionId$inlined;
@@ -245,8 +245,8 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var20.scheduleAtFixedRate(var21, 1500L, 1000L);
-                        JSWatchdogManager.access$setFreezeTimer$p(var21);
+                        var20.scheduleAtFixedRate(var18, 1500L, 1000L);
+                        JSWatchdogManager.access$setFreezeTimer$p(var18);
                      }
                   } catch (var9: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var9);

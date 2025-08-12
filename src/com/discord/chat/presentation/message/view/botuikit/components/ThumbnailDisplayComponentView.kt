@@ -55,14 +55,14 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       r.h(var1, "component");
       r.h(var2, "componentProvider");
       r.h(var3, "componentContext");
-      val var11: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var13: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
       val var16: java.lang.String = var3.getContainerId();
-      var var13: java.lang.String = var1.getId();
+      val var11: java.lang.String = var1.getId();
       val var12: StringBuilder = new StringBuilder();
       var12.append("ThumbnailDisplayComponent(");
-      var12.append(var13);
+      var12.append(var11);
       var12.append(")");
-      val var17: SpoilerAttributes = var11.forGenericMedia(var1, var16, var12.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var17: SpoilerAttributes = var13.forGenericMedia(var1, var16, var12.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var21: UnfurledMediaItem = var1.getMedia();
       val var20: MediaImageViewHolder = this.imageViewHolder;
       val var10: Boolean = var1.isSpoiler();
@@ -74,10 +74,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       val var7: Boolean = var1.isObscure();
-      val var8: Boolean = var1.isObscureAwaitingScan();
-      val var9: Boolean = var1.getObscureHideControls();
+      val var9: Boolean = var1.isObscureAwaitingScan();
+      val var8: Boolean = var1.getObscureHideControls();
       val var6: Boolean = var1.getObscureIsOpaque();
-      var13 = var21.getProxyUrl();
+      val var22: java.lang.String = var21.getProxyUrl();
       var var14: Int = var21.getWidth();
       var var4: Int;
       if (var14 != null) {
@@ -95,7 +95,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       var20.bind(
-         var13,
+         var22,
          var4,
          var5,
          var21.getPlaceholder(),
@@ -103,8 +103,8 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var10,
          var18,
          var7,
-         var8,
          var9,
+         var8,
          var6,
          false,
          var1.getDescription(),

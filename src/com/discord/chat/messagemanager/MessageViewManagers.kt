@@ -107,11 +107,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var8: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var5: Context = var1.getContext();
-            r.g(var5, "getContext(...)");
-            var1.setMessage(var8, var6, MessageViewManagers.access$getEventHandler(var3, var7, var5));
+            val var5: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            r.g(var6, "getContext(...)");
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 
@@ -224,11 +224,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            r.g(var8, "getContext(...)");
-            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var5: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            r.g(var6, "getContext(...)");
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 

@@ -262,10 +262,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var22: Uri = var9.c().getItemAt(var4).getUri();
-            r.g(var22, "getUri(...)");
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            r.g(var8, "getUri(...)");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var22);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -372,14 +372,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
 
-      for (ChatInputNode var5 : var1) {
-         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var6 : var1) {
+         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var17 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         r.g(var18, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var17);
+      for (ChatInputNode var18 : var4) {
+         val var7: Editable = this.editText.getEditableText();
+         r.g(var7, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var7, var18);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -734,19 +734,19 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       public override fun toString(): String {
          val var2: Int = this.selectionStart;
          val var1: Int = this.selectionEnd;
-         val var5: java.lang.String = this.text;
-         val var4: java.lang.String = this.editId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("CurrentTextAndSelection(selectionStart=");
-         var3.append(var2);
-         var3.append(", selectionEnd=");
-         var3.append(var1);
-         var3.append(", text=");
-         var3.append(var5);
-         var3.append(", editId=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var4: java.lang.String = this.text;
+         val var3: java.lang.String = this.editId;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("CurrentTextAndSelection(selectionStart=");
+         var5.append(var2);
+         var5.append(", selectionEnd=");
+         var5.append(var1);
+         var5.append(", text=");
+         var5.append(var4);
+         var5.append(", editId=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

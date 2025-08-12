@@ -204,9 +204,9 @@ public data class ContentInventoryEntry(authorId: UserId,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = UserId.hashCode-impl(this.authorId);
-      val var9: Int = this.contentId.hashCode();
-      val var8: Int = this.imageUrl.hashCode();
+      val var8: Int = UserId.hashCode-impl(this.authorId);
+      val var7: Int = this.contentId.hashCode();
+      val var9: Int = this.imageUrl.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.imageClickable == null) {
@@ -246,8 +246,8 @@ public data class ContentInventoryEntry(authorId: UserId,
          var5 = this.titleClickable.hashCode();
       }
 
-      val var13: Int = this.subtitles.hashCode();
-      val var14: Int = this.gradientColors.hashCode();
+      val var14: Int = this.subtitles.hashCode();
+      val var13: Int = this.gradientColors.hashCode();
       if (this.clickable != null) {
          var6 = this.clickable.hashCode();
       }
@@ -256,7 +256,7 @@ public data class ContentInventoryEntry(authorId: UserId,
                (
                         (
                                  (
-                                          ((((((((var7 * 31 + var9) * 31 + var8) * 31 + var1) * 31 + var10) * 31 + var2) * 31 + var3) * 31 + var11) * 31 + var4)
+                                          ((((((((var8 * 31 + var7) * 31 + var9) * 31 + var1) * 31 + var10) * 31 + var2) * 31 + var3) * 31 + var11) * 31 + var4)
                                                 * 31
                                              + var12
                                        )
@@ -264,59 +264,59 @@ public data class ContentInventoryEntry(authorId: UserId,
                                     + var5
                               )
                               * 31
-                           + var13
+                           + var14
                      )
                      * 31
-                  + var14
+                  + var13
             )
             * 31
          + var6;
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = UserId.toString-impl(this.authorId);
-      val var12: java.lang.String = this.contentId;
-      val var9: java.lang.String = this.imageUrl;
-      val var2: ContentInventoryEntryClickable = this.imageClickable;
-      val var5: java.lang.String = this.avatarUrl;
+      val var9: java.lang.String = UserId.toString-impl(this.authorId);
+      val var14: java.lang.String = this.contentId;
+      val var5: java.lang.String = this.imageUrl;
+      val var11: ContentInventoryEntryClickable = this.imageClickable;
+      val var3: java.lang.String = this.avatarUrl;
       val var10: java.lang.String = this.platformIconUrl;
-      val var14: ContentInventoryEntryClickable = this.platformClickable;
-      val var11: java.lang.String = this.userActionDescription;
-      val var13: ContentInventoryEntryClickable = this.userClickable;
-      val var3: java.lang.String = this.title;
-      val var7: ContentInventoryEntryClickable = this.titleClickable;
-      val var4: java.util.List = this.subtitles;
-      val var1: java.util.List = this.gradientColors;
-      val var15: ContentInventoryEntryClickable = this.clickable;
+      val var12: ContentInventoryEntryClickable = this.platformClickable;
+      val var1: java.lang.String = this.userActionDescription;
+      val var8: ContentInventoryEntryClickable = this.userClickable;
+      val var4: java.lang.String = this.title;
+      val var15: ContentInventoryEntryClickable = this.titleClickable;
+      val var2: java.util.List = this.subtitles;
+      val var7: java.util.List = this.gradientColors;
+      val var13: ContentInventoryEntryClickable = this.clickable;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ContentInventoryEntry(authorId=");
-      var6.append(var8);
-      var6.append(", contentId=");
-      var6.append(var12);
-      var6.append(", imageUrl=");
       var6.append(var9);
-      var6.append(", imageClickable=");
-      var6.append(var2);
-      var6.append(", avatarUrl=");
+      var6.append(", contentId=");
+      var6.append(var14);
+      var6.append(", imageUrl=");
       var6.append(var5);
+      var6.append(", imageClickable=");
+      var6.append(var11);
+      var6.append(", avatarUrl=");
+      var6.append(var3);
       var6.append(", platformIconUrl=");
       var6.append(var10);
       var6.append(", platformClickable=");
-      var6.append(var14);
+      var6.append(var12);
       var6.append(", userActionDescription=");
-      var6.append(var11);
-      var6.append(", userClickable=");
-      var6.append(var13);
-      var6.append(", title=");
-      var6.append(var3);
-      var6.append(", titleClickable=");
-      var6.append(var7);
-      var6.append(", subtitles=");
-      var6.append(var4);
-      var6.append(", gradientColors=");
       var6.append(var1);
-      var6.append(", clickable=");
+      var6.append(", userClickable=");
+      var6.append(var8);
+      var6.append(", title=");
+      var6.append(var4);
+      var6.append(", titleClickable=");
       var6.append(var15);
+      var6.append(", subtitles=");
+      var6.append(var2);
+      var6.append(", gradientColors=");
+      var6.append(var7);
+      var6.append(", clickable=");
+      var6.append(var13);
       var6.append(")");
       return var6.toString();
    }

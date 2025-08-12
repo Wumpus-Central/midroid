@@ -230,12 +230,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var12: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var13: java.lang.String = this.getClass().getSimpleName();
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("Binding ");
-      var12.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var12.toString(), null, 2, null);
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("Binding ");
+      var14.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var12, var14.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.r.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;
@@ -293,15 +293,15 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       var16.setAlpha(var9);
-      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var21: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var17: ShapeDrawable = new ShapeDrawable();
-      val var24: Paint = var17.getPaint();
-      val var21: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var21, "getContext(...)");
-      var24.setColor(ColorUtilsKt.getColorCompat(var21, 17170445));
+      val var22: ShapeDrawable = new ShapeDrawable();
+      val var24: Paint = var22.getPaint();
+      val var17: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var17, "getContext(...)");
+      var24.setColor(ColorUtilsKt.getColorCompat(var17, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var22, null, var17, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var21, null, var22, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!kotlin.jvm.internal.r.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;

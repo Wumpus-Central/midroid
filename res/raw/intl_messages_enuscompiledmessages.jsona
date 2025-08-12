@@ -1499,6 +1499,7 @@
   "YFFVMz": "Receive personalized content and promotions if your Discord settings allow it",
   "mSqazM": "Receive personalized content and promotions if your Discord settings allow it",
   "Nusip6": "Hide Password",
+  "pzCe7u": "Invalid Credentials",
   "euS7r6": "We're so excited to see you again!",
   "x2L32d": [
     "You've been invited to ",
@@ -8483,6 +8484,7 @@
   "37iHbW": "Discord has new password requirements. Please update your password now.",
   "+Joso6": "Force Sync",
   "wWIufn": "Forgot your password?",
+  "+/6Nv7": "Forgot Password?",
   "R04ENT": "Clear Server Name",
   "/+OQEh": "Status updates from people you talk to.",
   "l3yoAQ": "You are receiving notifications from all activity in this server, but you can override it here",
@@ -21738,6 +21740,7 @@
   "Ur/0NT": "Lock Post",
   "HoCqm5": "Lock Thread",
   "7fNJgI": "Welcome back!",
+  "EiwJkJ": "Log in with Passkey",
   "2jxGen": "Log Out",
   "RLch7+": "Join Server",
   "G42YmJ": "You are in preview mode. Join this server to talk.",
@@ -32034,6 +32037,9 @@
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
   "3PBFNz": "Reset Override",
+  "YlfC09": "Reset Password",
+  "4LVWSE": "Would you like to reset your password? We'll send reset instructions to your email.",
+  "Sii1b2": "Would you like to reset your password? We'll send a code to your phone.",
   "b8606O": "Restore Event",
   "qfo6KS": [
     [

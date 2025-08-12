@@ -71,14 +71,14 @@ public final class AudioPlayerViewBinding implements ViewBinding {
       LinearLayout var5 = (LinearLayout)a.a(var0, var1);
       if (var5 != null) {
          var1 = R.id.audio_file_name;
-         TextView var14 = (TextView)a.a(var0, var1);
-         if (var14 != null) {
+         TextView var9 = (TextView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.audio_file_size;
-            TextView var12 = (TextView)a.a(var0, var1);
-            if (var12 != null) {
+            TextView var6 = (TextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.audio_progress_bar;
-               AudioProgressBar var15 = (AudioProgressBar)a.a(var0, var1);
-               if (var15 != null) {
+               AudioProgressBar var14 = (AudioProgressBar)a.a(var0, var1);
+               if (var14 != null) {
                   var1 = R.id.audio_progress_view;
                   LinearLayout var8 = (LinearLayout)a.a(var0, var1);
                   if (var8 != null) {
@@ -86,31 +86,31 @@ public final class AudioPlayerViewBinding implements ViewBinding {
                      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
                      if (var7 != null) {
                         var1 = R.id.button_container;
-                        View var11 = a.a(var0, var1);
-                        if (var11 != null) {
+                        View var13 = a.a(var0, var1);
+                        if (var13 != null) {
                            var1 = R.id.player_container;
-                           LinearLayout var6 = (LinearLayout)a.a(var0, var1);
-                           if (var6 != null) {
+                           LinearLayout var10 = (LinearLayout)a.a(var0, var1);
+                           if (var10 != null) {
                               var1 = R.id.progress;
-                              ProgressBar var3 = (ProgressBar)a.a(var0, var1);
-                              if (var3 != null) {
+                              ProgressBar var11 = (ProgressBar)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.text;
-                                 SimpleDraweeSpanTextView var10 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                                 if (var10 != null) {
+                                 SimpleDraweeSpanTextView var12 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                                 if (var12 != null) {
                                     var1 = R.id.upload_overlay;
                                     AttachmentUploadOverlayView var2 = (AttachmentUploadOverlayView)a.a(var0, var1);
                                     if (var2 != null) {
                                        var1 = R.id.upload_overlay_background;
-                                       LinearLayout var9 = (LinearLayout)a.a(var0, var1);
-                                       if (var9 != null) {
+                                       LinearLayout var15 = (LinearLayout)a.a(var0, var1);
+                                       if (var15 != null) {
                                           var1 = R.id.wave;
-                                          AudioWaveView var4 = (AudioWaveView)a.a(var0, var1);
-                                          if (var4 != null) {
+                                          AudioWaveView var3 = (AudioWaveView)a.a(var0, var1);
+                                          if (var3 != null) {
                                              var1 = R.id.wipe;
-                                             View var13 = a.a(var0, var1);
-                                             if (var13 != null) {
+                                             View var4 = a.a(var0, var1);
+                                             if (var4 != null) {
                                                 return new AudioPlayerViewBinding(
-                                                   var0, var5, var14, var12, var15, var8, var7, var11, var6, var3, var10, var2, var9, var4, var13
+                                                   var0, var5, var9, var6, var14, var8, var7, var13, var10, var11, var12, var2, var15, var3, var4
                                                 );
                                              }
                                           }
