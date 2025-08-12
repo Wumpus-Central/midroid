@@ -163,34 +163,34 @@ public data class AutoModerationContext(headerText: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.headerText;
-      val var4: java.lang.String = this.headerBadgeText;
-      val var3: java.lang.String = this.ruleDisplayText;
-      val var6: java.lang.String = this.keywordDisplayText;
-      val var1: java.lang.String = this.actionsIconURL;
-      val var9: java.lang.String = this.actionsText;
-      val var10: java.lang.String = this.feedbackText;
-      val var2: FlaggedMessageEmbed = this.message;
-      val var5: AutoModerationNotification = this.notification;
+      val var1: java.lang.String = this.headerText;
+      val var2: java.lang.String = this.headerBadgeText;
+      val var8: java.lang.String = this.ruleDisplayText;
+      val var10: java.lang.String = this.keywordDisplayText;
+      val var5: java.lang.String = this.actionsIconURL;
+      val var4: java.lang.String = this.actionsText;
+      val var6: java.lang.String = this.feedbackText;
+      val var3: FlaggedMessageEmbed = this.message;
+      val var9: AutoModerationNotification = this.notification;
       val var7: StringBuilder = new StringBuilder();
       var7.append("AutoModerationContext(headerText=");
-      var7.append(var8);
-      var7.append(", headerBadgeText=");
-      var7.append(var4);
-      var7.append(", ruleDisplayText=");
-      var7.append(var3);
-      var7.append(", keywordDisplayText=");
-      var7.append(var6);
-      var7.append(", actionsIconURL=");
       var7.append(var1);
-      var7.append(", actionsText=");
-      var7.append(var9);
-      var7.append(", feedbackText=");
-      var7.append(var10);
-      var7.append(", message=");
+      var7.append(", headerBadgeText=");
       var7.append(var2);
-      var7.append(", notification=");
+      var7.append(", ruleDisplayText=");
+      var7.append(var8);
+      var7.append(", keywordDisplayText=");
+      var7.append(var10);
+      var7.append(", actionsIconURL=");
       var7.append(var5);
+      var7.append(", actionsText=");
+      var7.append(var4);
+      var7.append(", feedbackText=");
+      var7.append(var6);
+      var7.append(", message=");
+      var7.append(var3);
+      var7.append(", notification=");
+      var7.append(var9);
       var7.append(")");
       return var7.toString();
    }

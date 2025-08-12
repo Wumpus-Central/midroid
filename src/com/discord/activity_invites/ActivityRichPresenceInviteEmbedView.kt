@@ -65,16 +65,16 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          var2.setVisibility(0);
          val var7: ArrayList = new ArrayList(i.v(var1, 10));
 
-         for (RGBAColorModel var3 : var1) {
-            var7.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
+         for (RGBAColorModel var5 : var1) {
+            var7.add(Color.argb((int)(var5.getA() * (float)255), (int)var5.getR(), (int)var5.getG(), (int)var5.getB()));
          }
 
-         val var8: IntArray = i.T0(var7);
-         val var6: GradientDrawable = new GradientDrawable();
-         var6.setColors(var8);
-         var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
-         var6.setOrientation(Orientation.BL_TR);
-         this.binding.gradientBackground.setBackground(var6);
+         val var6: IntArray = i.T0(var7);
+         val var8: GradientDrawable = new GradientDrawable();
+         var8.setColors(var6);
+         var8.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
+         var8.setOrientation(Orientation.BL_TR);
+         this.binding.gradientBackground.setBackground(var8);
       } else {
          val var4: View = this.binding.gradientBackground;
          r.g(this.binding.gradientBackground, "gradientBackground");

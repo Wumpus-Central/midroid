@@ -126,8 +126,8 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
       val var8: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
       val var7: GuildEventInviteEmbedImpl = this.invite;
-      val var5: Boolean = this.shouldAnimateEmoji;
-      val var4: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldAnimateEmoji;
+      val var5: Boolean = this.shouldShowLinkDecorations;
       val var2: Boolean = this.shouldShowRoleDot;
       val var3: Boolean = this.shouldShowRoleOnName;
       val var6: StringBuilder = new StringBuilder();
@@ -138,9 +138,9 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
       var6.append(", invite=");
       var6.append(var7);
       var6.append(", shouldAnimateEmoji=");
-      var6.append(var5);
-      var6.append(", shouldShowLinkDecorations=");
       var6.append(var4);
+      var6.append(", shouldShowLinkDecorations=");
+      var6.append(var5);
       var6.append(", shouldShowRoleDot=");
       var6.append(var2);
       var6.append(", shouldShowRoleOnName=");

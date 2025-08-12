@@ -38,27 +38,27 @@ public final class PollImageOnlyAnswerViewBinding implements ViewBinding {
 
    public static PollImageOnlyAnswerViewBinding bind(View var0) {
       int var1 = R.id.avatar;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.avatar_placeholder;
-         Space var4 = (Space)a.a(var0, var1);
-         if (var4 != null) {
+         Space var3 = (Space)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.image;
-            PollMediaView var3 = (PollMediaView)a.a(var0, var1);
-            if (var3 != null) {
+            PollMediaView var2 = (PollMediaView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.info_bar;
-               Flow var7 = (Flow)a.a(var0, var1);
-               if (var7 != null) {
+               Flow var8 = (Flow)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.selected_icon;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var6 = (TextView)a.a(var0, var1);
-                     if (var6 != null) {
+                     TextView var7 = (TextView)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
-                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var5, var4, var3, var7, var8, var6, var2);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var4, var3, var2, var8, var5, var7, var6);
                         }
                      }
                   }

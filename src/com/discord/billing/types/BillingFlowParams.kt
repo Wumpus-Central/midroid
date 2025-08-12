@@ -107,14 +107,14 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var4: Long = this.getPriceAmountMicros(var1);
-      val var6: Long = this.getPriceAmountMicros(var2);
+      val var6: Long = this.getPriceAmountMicros(var1);
+      val var4: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       r.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       r.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
          var3 = 6;
       } else {
          var3 = 2;

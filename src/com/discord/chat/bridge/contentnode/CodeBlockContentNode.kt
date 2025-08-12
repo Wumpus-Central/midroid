@@ -60,17 +60,17 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
 
    public override fun toString(): String {
       val var2: java.lang.String = this.lang;
-      val var4: java.lang.String = this.content;
+      val var3: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CodeBlockContentNode(lang=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(", inQuote=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CodeBlockContentNode(lang=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
+      var4.append(", inQuote=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

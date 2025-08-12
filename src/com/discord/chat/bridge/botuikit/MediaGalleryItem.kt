@@ -243,8 +243,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = this.media.hashCode();
-      val var8: Int = this.mediaType.hashCode();
+      val var8: Int = this.media.hashCode();
+      val var7: Int = this.mediaType.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.videoPreviewUrl == null) {
@@ -303,7 +303,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                                                      (
                                                                               (
                                                                                        (
-                                                                                                ((((var7 * 31 + var8) * 31 + var1) * 31 + var9) * 31 + var2)
+                                                                                                ((((var8 * 31 + var7) * 31 + var1) * 31 + var9) * 31 + var2)
                                                                                                       * 31
                                                                                                    + var11
                                                                                              )
@@ -339,57 +339,57 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
    }
 
    public override fun toString(): String {
-      val var17: UnfurledMediaItem = this.media;
-      val var16: MediaGalleryItemType = this.mediaType;
-      val var14: java.lang.String = this.videoPreviewUrl;
-      val var6: Boolean = this.isSpoiler;
-      val var8: java.lang.String = this.spoilerDescription;
-      val var1: Boolean = this.isObscure;
-      val var5: Boolean = this.isObscureAwaitingScan;
-      val var12: java.lang.String = this.obscureDescription;
-      val var2: Boolean = this.obscureHideControls;
-      val var3: Boolean = this.obscureIsOpaque;
-      val var7: java.lang.Boolean = this.verifyAge;
-      val var4: Boolean = this.showDescription;
-      val var9: java.lang.String = this.description;
-      val var13: java.lang.String = this.descriptionHint;
-      val var15: java.lang.String = this.accessibilityRole;
+      val var14: UnfurledMediaItem = this.media;
+      val var9: MediaGalleryItemType = this.mediaType;
+      val var12: java.lang.String = this.videoPreviewUrl;
+      val var2: Boolean = this.isSpoiler;
+      val var15: java.lang.String = this.spoilerDescription;
+      val var4: Boolean = this.isObscure;
+      val var1: Boolean = this.isObscureAwaitingScan;
+      val var17: java.lang.String = this.obscureDescription;
+      val var6: Boolean = this.obscureHideControls;
+      val var5: Boolean = this.obscureIsOpaque;
+      val var8: java.lang.Boolean = this.verifyAge;
+      val var3: Boolean = this.showDescription;
+      val var11: java.lang.String = this.description;
+      val var16: java.lang.String = this.descriptionHint;
+      val var13: java.lang.String = this.accessibilityRole;
       val var10: java.lang.String = this.portalIdString;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MediaGalleryItem(media=");
-      var11.append(var17);
-      var11.append(", mediaType=");
-      var11.append(var16);
-      var11.append(", videoPreviewUrl=");
-      var11.append(var14);
-      var11.append(", isSpoiler=");
-      var11.append(var6);
-      var11.append(", spoilerDescription=");
-      var11.append(var8);
-      var11.append(", isObscure=");
-      var11.append(var1);
-      var11.append(", isObscureAwaitingScan=");
-      var11.append(var5);
-      var11.append(", obscureDescription=");
-      var11.append(var12);
-      var11.append(", obscureHideControls=");
-      var11.append(var2);
-      var11.append(", obscureIsOpaque=");
-      var11.append(var3);
-      var11.append(", verifyAge=");
-      var11.append(var7);
-      var11.append(", showDescription=");
-      var11.append(var4);
-      var11.append(", description=");
-      var11.append(var9);
-      var11.append(", descriptionHint=");
-      var11.append(var13);
-      var11.append(", accessibilityRole=");
-      var11.append(var15);
-      var11.append(", portalIdString=");
-      var11.append(var10);
-      var11.append(")");
-      return var11.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MediaGalleryItem(media=");
+      var7.append(var14);
+      var7.append(", mediaType=");
+      var7.append(var9);
+      var7.append(", videoPreviewUrl=");
+      var7.append(var12);
+      var7.append(", isSpoiler=");
+      var7.append(var2);
+      var7.append(", spoilerDescription=");
+      var7.append(var15);
+      var7.append(", isObscure=");
+      var7.append(var4);
+      var7.append(", isObscureAwaitingScan=");
+      var7.append(var1);
+      var7.append(", obscureDescription=");
+      var7.append(var17);
+      var7.append(", obscureHideControls=");
+      var7.append(var6);
+      var7.append(", obscureIsOpaque=");
+      var7.append(var5);
+      var7.append(", verifyAge=");
+      var7.append(var8);
+      var7.append(", showDescription=");
+      var7.append(var3);
+      var7.append(", description=");
+      var7.append(var11);
+      var7.append(", descriptionHint=");
+      var7.append(var16);
+      var7.append(", accessibilityRole=");
+      var7.append(var13);
+      var7.append(", portalIdString=");
+      var7.append(var10);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

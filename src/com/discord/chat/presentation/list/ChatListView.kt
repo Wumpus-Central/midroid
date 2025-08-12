@@ -124,15 +124,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureRecycledViewPoolSizes() {
-      val var3: Pair = A9.s.a(RegularMessageDelegate.class, 50);
-      var var4: Int = 25;
+      var var4: Pair = A9.s.a(RegularMessageDelegate.class, 50);
+      val var3: Int = 25;
 
-      for (Entry var5 : B9.q.l(new Pair[]{var3, A9.s.a(SystemMessageDelegate.class, var4), A9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
-         val var7: Class = var5.getKey() as Class;
-         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
+      for (Entry var7 : B9.q.l(new Pair[]{var4, A9.s.a(SystemMessageDelegate.class, var3), A9.s.a(SeparatorDelegate.class, var3)}).entrySet()) {
+         val var5: Class = var7.getKey() as Class;
+         val var2: Int = (var7.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
          kotlin.jvm.internal.r.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
+         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var2);
       }
    }
 
@@ -145,13 +145,13 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          var2.setAccessible(true);
          val var3: Any = var2.get(this);
          val var4: CrashReporting = CrashReporting.INSTANCE;
-         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("About to crash because of ChatList, dumping update log:\n");
-         var5.append(var7);
-         var5.append("\n Recycler State: ");
-         var5.append(var3);
-         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
+         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("About to crash because of ChatList, dumping update log:\n");
+         var7.append(var5);
+         var7.append("\n Recycler State: ");
+         var7.append(var3);
+         CrashReporting.addBreadcrumb$default(var4, var7.toString(), null, null, 6, null);
          throw var6;
       }
    }

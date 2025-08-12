@@ -28,11 +28,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       if (r.c(var6.e(), "inapp")) {
          val var11: ProductDetails.b = var6.c();
          if (var11 == null) {
-            val var13: java.lang.String = var6.d();
-            val var19: StringBuilder = new StringBuilder();
-            var19.append("Could not find oneTimePurchaseOfferDetails for product: ");
-            var19.append(var13);
-            throw new AssertionError(var19.toString());
+            var3 = var6.d();
+            val var13: StringBuilder = new StringBuilder();
+            var13.append("Could not find oneTimePurchaseOfferDetails for product: ");
+            var13.append(var3);
+            throw new AssertionError(var13.toString());
          }
 
          var1 = var11.b();
@@ -74,12 +74,12 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          var3 = var16.c();
          var4 = var16.b();
          var12 = var16.e();
-         val var23: java.util.Iterator = var9.iterator();
+         val var10: java.util.Iterator = var9.iterator();
 
-         while (var23.hasNext()) {
-            val var10: java.lang.String = (var23.next() as ProductDetails.d).b();
-            if (var10 != null) {
-               var7.add(var10);
+         while (var10.hasNext()) {
+            val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
+            if (var23 != null) {
+               var7.add(var23);
             }
          }
       } else {
@@ -104,9 +104,9 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       );
    }
 
-   val var18: java.lang.String = var6.d();
-   val var22: StringBuilder = new StringBuilder();
-   var22.append("Could not find subscriptionOfferDetails for product: ");
-   var22.append(var18);
-   throw new AssertionError(var22.toString());
+   val var22: java.lang.String = var6.d();
+   val var18: StringBuilder = new StringBuilder();
+   var18.append("Could not find subscriptionOfferDetails for product: ");
+   var18.append(var22);
+   throw new AssertionError(var18.toString());
 }
