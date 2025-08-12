@@ -103,9 +103,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = kotlin.collections.i.k()) {
       if (!var1.isEmpty()) {
-         for (FastestListViewAdapter.DataChanged var5 : var1) {
-            val var2: Int = var5.component1();
-            val var3: Int = var5.component2();
+         for (FastestListViewAdapter.DataChanged var4 : var1) {
+            val var2: Int = var4.component1();
+            val var3: Int = var4.component2();
             if (var3 == 1) {
                this.typedAdapter.notifyItemChanged(var2);
             } else {
@@ -173,6 +173,11 @@ internal class FastestListView(context: Context,
       r.h(var2, "sectionsId");
       var0.invoke(var1, var2, var3, var4, var5, var6);
       return Unit.a;
+   }
+
+   public open fun endViewTransition(view: View?) {
+      super.endViewTransition(var1);
+      this.typedLayoutManager.disableRecycling(false);
    }
 
    public override fun fling(velocityX: Int, velocityY: Int): Boolean {
@@ -297,6 +302,11 @@ internal class FastestListView(context: Context,
       if (this.isVerticalScrollBarEnabled() != var1) {
          this.setVerticalScrollBarEnabled(var1);
       }
+   }
+
+   public open fun startViewTransition(view: View?) {
+      this.typedLayoutManager.disableRecycling(true);
+      super.startViewTransition(var1);
    }
 
    public companion object {

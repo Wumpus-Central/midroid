@@ -50,7 +50,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       try {
          var14 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var1 = Result.k;
+         var14 = Result.k;
          var14 = Result.b(c.a(var3));
          break label36;
       }

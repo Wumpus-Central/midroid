@@ -49,19 +49,19 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
    public fun setAutomodContext(autoModerationContext: AutoModerationContext) {
       kotlin.jvm.internal.r.h(var1, "autoModerationContext");
       val var4: java.lang.String = var1.getKeywordDisplayText();
-      val var5: java.lang.String = var1.getRuleDisplayText();
+      val var6: java.lang.String = var1.getRuleDisplayText();
       if (var4 != null && !kotlin.jvm.internal.r.c(var4, "")) {
          this.binding.flaggedMessageKeyword.setText(var4);
       }
 
-      if (var5 != null && !kotlin.jvm.internal.r.c(var5, "")) {
-         this.binding.flaggedMessageRuleName.setText(var5);
+      if (var6 != null && !kotlin.jvm.internal.r.c(var6, "")) {
+         this.binding.flaggedMessageRuleName.setText(var6);
       }
 
-      val var6: ImageView = this.binding.separatorDot;
+      val var5: ImageView = this.binding.separatorDot;
       kotlin.jvm.internal.r.g(this.binding.separatorDot, "separatorDot");
       var var2: Boolean;
-      if (var4 != null && !kotlin.jvm.internal.r.c(var4, "") && var5 != null && !kotlin.jvm.internal.r.c(var5, "")) {
+      if (var4 != null && !kotlin.jvm.internal.r.c(var4, "") && var6 != null && !kotlin.jvm.internal.r.c(var6, "")) {
          var2 = 1;
       } else {
          var2 = 0;
@@ -73,6 +73,6 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
          var2 = 8;
       }
 
-      var6.setVisibility(var2);
+      var5.setVisibility(var2);
    }
 }

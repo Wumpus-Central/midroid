@@ -126,8 +126,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var7: Int = Integer.hashCode(this.height);
+      val var7: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -147,7 +147,7 @@ public data class EmbedMedia(url: String,
          var4 = this.contentType.hashCode();
       }
 
-      return ((((((var5 * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
+      return ((((((var5 * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
@@ -155,8 +155,8 @@ public data class EmbedMedia(url: String,
       val var7: java.lang.String = this.proxyURL;
       val var2: Int = this.width;
       val var1: Int = this.height;
-      val var5: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.placeholder;
+      val var5: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
       val var8: java.lang.String = this.contentType;
       val var9: StringBuilder = new StringBuilder();
@@ -169,9 +169,9 @@ public data class EmbedMedia(url: String,
       var9.append(", height=");
       var9.append(var1);
       var9.append(", placeholder=");
-      var9.append(var5);
-      var9.append(", placeholderVersion=");
       var9.append(var4);
+      var9.append(", placeholderVersion=");
+      var9.append(var5);
       var9.append(", srcIsAnimated=");
       var9.append(var3);
       var9.append(", contentType=");

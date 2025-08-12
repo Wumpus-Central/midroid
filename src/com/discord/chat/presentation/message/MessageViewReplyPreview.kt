@@ -10,6 +10,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.View.MeasureSpec
+import android.view.View.OnLayoutChangeListener
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -42,6 +43,7 @@ import com.discord.chat.presentation.textutils.LinkStyle
 import com.discord.chat.presentation.textutils.TextUtilsKt
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.primitives.MessageId
@@ -150,28 +152,33 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    @JvmStatic
-   fun `configureExecutedCommand_dB0_bEw$lambda$10`(var0: ChatEventHandler, var1: java.lang.String, var2: LinkContentNode): Unit {
+   fun `configureExecutedCommand_dB0_bEw$lambda$10`(var0: ChatEventHandler, var1: java.lang.String, var2: ExecutedCommand, var3: View) {
+      var0.onTapAvatar-x5gers8(var1, var2.getUserId-re6GcUE());
+   }
+
+   @JvmStatic
+   fun `configureExecutedCommand_dB0_bEw$lambda$11`(var0: ChatEventHandler, var1: java.lang.String, var2: LinkContentNode): Unit {
       kotlin.jvm.internal.r.h(var2, "it");
       var0.onLinkClicked-ntcYbpo(var1, var2);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `configureExecutedCommand_dB0_bEw$lambda$11`(var0: ChatEventHandler, var1: CommandMentionContentNode): Unit {
+   fun `configureExecutedCommand_dB0_bEw$lambda$12`(var0: ChatEventHandler, var1: CommandMentionContentNode): Unit {
       kotlin.jvm.internal.r.h(var1, "it");
       var0.onTapCommand(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `configureExecutedCommand_dB0_bEw$lambda$12`(var0: ChatEventHandler, var1: CommandMentionContentNode): Unit {
+   fun `configureExecutedCommand_dB0_bEw$lambda$13`(var0: ChatEventHandler, var1: CommandMentionContentNode): Unit {
       kotlin.jvm.internal.r.h(var1, "it");
       var0.onLongPressCommand(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `configureExecutedCommand_dB0_bEw$lambda$13`(var0: ExecutedCommand, var1: LinkContentNode): LinkStyle {
+   fun `configureExecutedCommand_dB0_bEw$lambda$14`(var0: ExecutedCommand, var1: LinkContentNode): LinkStyle {
       kotlin.jvm.internal.r.h(var1, "it");
       val var3: LinkContextData = var1.getTarget();
       val var7: LinkStyle;
@@ -212,11 +219,11 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          }
 
          val var11: LinkBackgroundStyle = new LinkBackgroundStyle(var10, var13, var15);
-         val var14: java.lang.Boolean = var0.getShowAppsIcon();
-         val var16: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var16: java.lang.Boolean = var0.getShowAppsIcon();
+         val var14: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var8: ReactAsset;
-         if (kotlin.jvm.internal.r.c(var14, java.lang.Boolean.TRUE)) {
-            if (kotlin.jvm.internal.r.c(var0.getShowControllerIcon(), var16)) {
+         if (kotlin.jvm.internal.r.c(var16, java.lang.Boolean.TRUE)) {
+            if (kotlin.jvm.internal.r.c(var0.getShowControllerIcon(), var14)) {
                var8 = ReactAsset.GameController;
             } else {
                var8 = ReactAsset.AppsIcon;
@@ -233,29 +240,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       return var7;
    }
 
-   @JvmStatic
-   fun `configureExecutedCommand_dB0_bEw$lambda$9`(var0: ChatEventHandler, var1: java.lang.String, var2: ExecutedCommand, var3: View) {
-      var0.onTapAvatar-x5gers8(var1, var2.getUserId-re6GcUE());
-   }
-
    private fun configureLeadingIcon(message: Message) {
-      var var2: Boolean;
+      val var3: Boolean;
       if (var1.getForwardInfo() != null) {
-         var2 = 1;
+         var3 = true;
       } else {
-         var2 = 0;
+         var3 = false;
       }
 
-      var var3: Boolean = true;
+      var var2: Byte = 1;
       if (!var1.isPollResult()) {
-         if (var2) {
-            var3 = true;
+         if (var3) {
+            var2 = 1;
          } else {
-            var3 = false;
+            var2 = 0;
          }
       }
 
-      if (var3) {
+      if (var2) {
          val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
          kotlin.jvm.internal.r.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
          val var7: ReactAsset;
@@ -270,7 +272,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
 
       val var8: SimpleDraweeView = this.binding.replyLeadingIcon;
       kotlin.jvm.internal.r.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
-      if (var3) {
+      if (var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -280,7 +282,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    @JvmStatic
-   fun `configureReply$lambda$4`(var0: Function0, var1: View) {
+   fun `configureReply$lambda$5`(var0: Function0, var1: View) {
       var0.invoke();
    }
 
@@ -314,6 +316,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       }
 
       var7.setVisibility(var2);
+   }
+
+   private fun measureAndSetReplyLeadingViewsHeight() {
+      if (this.binding.replyText.getWidth() > 0) {
+         this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
+         this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
+         val var1: Int = this.replyTextLineBounds.bottom;
+         val var2: Int = this.replyTextLineBounds.top;
+         val var4: LinearLayout = this.binding.replyLeadingViews;
+         kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
+         val var6: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var6 != null) {
+            var6.height = var1 - var2;
+            var4.setLayoutParams(var6);
+         } else {
+            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+         }
+      }
    }
 
    public fun clear() {
@@ -450,9 +470,9 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             kotlin.jvm.internal.r.g(this.binding.replyRoleDot, "replyRoleDot");
             var18.setVisibility(0);
             val var13: RoleDotView = this.binding.replyRoleDot;
-            val var10: RoleColors = RoleColorsKt.toAndroidColors(var11.getRoleColors());
-            var var19: RoleColors = var10;
-            if (var10 == null) {
+            val var40: RoleColors = RoleColorsKt.toAndroidColors(var11.getRoleColors());
+            var var19: RoleColors = var40;
+            if (var40 == null) {
                var19 = new RoleColors(MessageKt.roleDotColor$default(var11, 0, 1, null), null, null, 6, null);
             }
 
@@ -467,12 +487,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          kotlin.jvm.internal.r.g(var21, "getContext(...)");
          val var22: java.lang.String = MessageKt.avatarUrl(var11, var21);
          if (var22 != null && var11.getUsername() != null && var11.getAuthorId-wUX8bhU() != null) {
-            var var45: SimpleDraweeView = this.binding.replyAuthorAvatar;
+            var var41: SimpleDraweeView = this.binding.replyAuthorAvatar;
             kotlin.jvm.internal.r.g(this.binding.replyAuthorAvatar, "replyAuthorAvatar");
-            var45.setVisibility(0);
-            var45 = this.binding.replyIcon;
+            var41.setVisibility(0);
+            var41 = this.binding.replyIcon;
             kotlin.jvm.internal.r.g(this.binding.replyIcon, "replyIcon");
-            var45.setVisibility(8);
+            var41.setVisibility(8);
             this.binding.replyAuthorAvatar.setImageURI(var22);
             val var26: TextView = this.binding.replyAuthorName;
             kotlin.jvm.internal.r.g(this.binding.replyAuthorName, "replyAuthorName");
@@ -492,9 +512,10 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             var24.setVisibility(8);
             val var25: SimpleDraweeView = this.binding.replyIcon;
             kotlin.jvm.internal.r.g(this.binding.replyIcon, "replyIcon");
-            var5 = 8;
             if (!var11.isPollResult()) {
                var5 = 0;
+            } else {
+               var5 = 8;
             }
 
             var25.setVisibility(var5);
@@ -502,30 +523,30 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
 
          if (var12.getSystemContent() != null) {
             val var28: MessageContentView = this.binding.replyText;
-            val var48: LinearLayout = this.binding.replyLeadingViews;
+            val var44: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var74: StructurableText = var12.getSystemContent();
-            val var68: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var68, "getContext(...)");
-            val var14: java.lang.String = var11.getId-3Eiw7ao();
+            val var69: StructurableText = var12.getSystemContent();
+            val var14: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var14, "getContext(...)");
+            val var63: java.lang.String = var11.getId-3Eiw7ao();
             var2 = MessageKt.shouldAnimateEmoji(var11);
-            val var41: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var8: Boolean = var11.getShouldShowRoleDot();
-            val var9: Boolean = var11.getShouldShowRoleOnName();
-            val var60: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
-            kotlin.jvm.internal.r.g(var60, "getFontMetrics(...)");
-            val var4: Float = TextUtilsKt.getBaselineHeightPx(var60);
-            val var61: TextPaint = this.binding.replyText.getPaint();
-            kotlin.jvm.internal.r.g(var61, "getPaint(...)");
-            val var62: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var74,
-               var68,
+            val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var9: Boolean = var11.getShouldShowRoleDot();
+            val var8: Boolean = var11.getShouldShowRoleOnName();
+            val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
+            kotlin.jvm.internal.r.g(var55, "getFontMetrics(...)");
+            val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
+            val var56: TextPaint = this.binding.replyText.getPaint();
+            kotlin.jvm.internal.r.g(var56, "getPaint(...)");
+            val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+               var69,
                var14,
+               var63,
                var2,
-               var41,
-               var8,
+               var7,
                var9,
-               var61,
+               var8,
+               var56,
                null,
                null,
                null,
@@ -548,36 +569,36 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                46137216,
                null
             );
-            val var69: MessageContentView = this.binding.replyText;
+            val var64: MessageContentView = this.binding.replyText;
             kotlin.jvm.internal.r.g(this.binding.replyText, "replyText");
-            SpannableExtensionsKt.coverWithSpan(var62, new BackgroundSpanDrawer(var69));
-            var28.setDraweeSpanStringBuilder(ReplyUtilsKt.createSystemReplyContentFromBuilder(var48, var62));
+            SpannableExtensionsKt.coverWithSpan(var57, new BackgroundSpanDrawer(var64));
+            var28.setDraweeSpanStringBuilder(ReplyUtilsKt.createSystemReplyContentFromBuilder(var44, var57));
          } else if (var11.getContent() != null) {
             val var29: MessageContentView = this.binding.replyText;
-            val var50: LinearLayout = this.binding.replyLeadingViews;
+            val var46: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var75: StructurableText = var11.getContent();
-            val var76: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var76, "getContext(...)");
+            val var66: StructurableText = var11.getContent();
+            val var70: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var70, "getContext(...)");
             val var71: java.lang.String = var11.getId-3Eiw7ao();
-            val var44: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            var2 = MessageKt.shouldShowLinkDecorations(var11);
-            val var43: Boolean = var11.getShouldShowRoleDot();
-            val var42: Boolean = var11.getShouldShowRoleOnName();
-            val var63: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
-            kotlin.jvm.internal.r.g(var63, "getFontMetrics(...)");
-            val var36: Float = TextUtilsKt.getBaselineHeightPx(var63);
-            val var64: TextPaint = this.binding.replyText.getPaint();
-            kotlin.jvm.internal.r.g(var64, "getPaint(...)");
-            val var65: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var75,
-               var76,
+            val var38: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var39: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            var2 = var11.getShouldShowRoleDot();
+            val var37: Boolean = var11.getShouldShowRoleOnName();
+            val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
+            kotlin.jvm.internal.r.g(var58, "getFontMetrics(...)");
+            val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
+            val var59: TextPaint = this.binding.replyText.getPaint();
+            kotlin.jvm.internal.r.g(var59, "getPaint(...)");
+            val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+               var66,
+               var70,
                var71,
-               var44,
+               var38,
+               var39,
                var2,
-               var43,
-               var42,
-               var64,
+               var37,
+               var59,
                null,
                null,
                null,
@@ -595,15 +616,15 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                null,
                true,
                null,
-               var36,
+               var34,
                null,
                46137216,
                null
             );
-            val var72: MessageContentView = this.binding.replyText;
+            val var67: MessageContentView = this.binding.replyText;
             kotlin.jvm.internal.r.g(this.binding.replyText, "replyText");
-            SpannableExtensionsKt.coverWithSpan(var65, new BackgroundSpanDrawer(var72));
-            var29.setDraweeSpanStringBuilder(ReplyUtilsKt.createReplyContent(var50, var65));
+            SpannableExtensionsKt.coverWithSpan(var60, new BackgroundSpanDrawer(var67));
+            var29.setDraweeSpanStringBuilder(ReplyUtilsKt.createReplyContent(var46, var60));
          } else {
             this.binding.replyText.setText(null);
          }
@@ -612,58 +633,64 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             throw new A9.n();
          }
 
-         val var51: ChannelSpineView = this.binding.replySpline;
+         val var47: ChannelSpineView = this.binding.replySpline;
          kotlin.jvm.internal.r.g(this.binding.replySpline, "replySpline");
-         val var38: Byte;
+         val var36: Byte;
          if (var2) {
-            var38 = 0;
+            var36 = 0;
          } else {
-            var38 = 8;
+            var36 = 8;
          }
 
-         var51.setVisibility(var38);
-         val var52: LinearLayout = this.binding.replyLeadingViews;
+         var47.setVisibility(var36);
+         val var48: LinearLayout = this.binding.replyLeadingViews;
          kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-         var52.setVisibility(0);
-         val var53: SimpleDraweeView = this.binding.replyAuthorAvatar;
+         var48.setVisibility(0);
+         val var49: SimpleDraweeView = this.binding.replyAuthorAvatar;
          kotlin.jvm.internal.r.g(this.binding.replyAuthorAvatar, "replyAuthorAvatar");
-         var53.setVisibility(0);
-         val var54: SimpleDraweeView = this.binding.replyAuthorAvatar;
+         var49.setVisibility(0);
+         val var50: SimpleDraweeView = this.binding.replyAuthorAvatar;
          kotlin.jvm.internal.r.g(this.binding.replyAuthorAvatar, "replyAuthorAvatar");
-         ReactAssetUtilsKt.setReactAsset(var54, ReactAsset.DefaultAvatar0);
-         val var55: TextView = this.binding.replyAuthorName;
+         ReactAssetUtilsKt.setReactAsset(var50, ReactAsset.DefaultAvatar0);
+         val var51: TextView = this.binding.replyAuthorName;
          kotlin.jvm.internal.r.g(this.binding.replyAuthorName, "replyAuthorName");
-         var55.setVisibility(8);
-         val var56: SimpleDraweeView = this.binding.replyIcon;
+         var51.setVisibility(8);
+         val var52: SimpleDraweeView = this.binding.replyIcon;
          kotlin.jvm.internal.r.g(this.binding.replyIcon, "replyIcon");
-         var56.setVisibility(8);
+         var52.setVisibility(8);
          this.binding.replyIcon.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
-         val var57: MessageContentView = this.binding.replyText;
+         val var53: MessageContentView = this.binding.replyText;
          kotlin.jvm.internal.r.g(this.binding.replyText, "replyText");
-         var57.setVisibility(0);
-         val var58: MessageContentView = this.binding.replyText;
-         val var67: LinearLayout = this.binding.replyLeadingViews;
+         var53.setVisibility(0);
+         val var54: MessageContentView = this.binding.replyText;
+         val var62: LinearLayout = this.binding.replyLeadingViews;
          kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-         var58.setDraweeSpanStringBuilder(ReplyUtilsKt.createSystemReplyContent(var67, (var1 as SystemReferencedMessage).getContent()));
+         var54.setDraweeSpanStringBuilder(ReplyUtilsKt.createSystemReplyContent(var62, (var1 as SystemReferencedMessage).getContent()));
          val var30: SimpleDraweeView = this.binding.replyTrailingIcon;
          kotlin.jvm.internal.r.g(this.binding.replyTrailingIcon, "replyTrailingIcon");
          var30.setVisibility(8);
       }
 
-      if (this.binding.replyText.isLaidOut() && this.binding.replyText.getWidth() > 0) {
-         this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
-         this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
-         val var40: Int = this.replyTextLineBounds.bottom;
-         val var39: Int = this.replyTextLineBounds.top;
-         val var59: LinearLayout = this.binding.replyLeadingViews;
-         kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-         val var33: android.view.ViewGroup.LayoutParams = var59.getLayoutParams();
-         if (var33 == null) {
-            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
-         }
+      if (this.binding.replyText.isLaidOut() && !this.binding.replyText.isLayoutRequested()) {
+         this.measureAndSetReplyLeadingViewsHeight();
+      } else {
+         val var31: MessageContentView = this.binding.replyText;
+         kotlin.jvm.internal.r.g(this.binding.replyText, "replyText");
+         var31.addOnLayoutChangeListener(new OnLayoutChangeListener(this) {
+            final MessageViewReplyPreview this$0;
 
-         var33.height = var40 - var39;
-         var59.setLayoutParams(var33);
+            {
+               this.this$0 = var1;
+            }
+
+            public void onLayoutChange(View var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
+               var1.removeOnLayoutChangeListener(this);
+               if (MessageViewReplyPreview.access$getBinding$p(this.this$0).replyText.getWidth() > 0) {
+                  MessageViewReplyPreview.access$measureAndSetReplyLeadingViewsHeight(this.this$0);
+                  ViewMeasureExtensionsKt.measureAndLayout(this.this$0);
+               }
+            }
+         });
       }
 
       this.setImportantForAccessibility(1);

@@ -97,20 +97,20 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.results;
+      val var1: java.util.List = this.results;
       val var4: java.lang.String = this.query;
-      val var1: java.lang.String = this.uuid;
-      val var2: java.lang.String = this.type;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ReturnResultsEvent(results=");
-      var5.append(var3);
-      var5.append(", query=");
-      var5.append(var4);
-      var5.append(", uuid=");
-      var5.append(var1);
-      var5.append(", type=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.uuid;
+      val var5: java.lang.String = this.type;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ReturnResultsEvent(results=");
+      var3.append(var1);
+      var3.append(", query=");
+      var3.append(var4);
+      var3.append(", uuid=");
+      var3.append(var2);
+      var3.append(", type=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 }

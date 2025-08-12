@@ -97,13 +97,13 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   .a()
             ) as PipelineDraweeControllerBuilder;
          val var14: java.lang.String = var1.getGiftCode();
-         val var8: java.lang.String = var1.getSplashUrl();
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("splash-");
-         var15.append(var14);
-         var15.append("-");
-         var15.append(var8);
-         var9 = ((var12.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         val var15: java.lang.String = var1.getSplashUrl();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("splash-");
+         var8.append(var14);
+         var8.append("-");
+         var8.append(var15);
+         var9 = ((var12.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }

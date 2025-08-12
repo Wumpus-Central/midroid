@@ -145,10 +145,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
 
       var var26: Any = ((<unrepresentable>)var22).result;
       val var11: Any = b.e();
-      var var8: ExponentialBackoff;
+      val var8: ExponentialBackoff;
       var var13: Function2;
       var var18: Function1;
-      var var33: Any;
+      var var32: Any;
       if (((<unrepresentable>)var22).label != 0) {
          if (((<unrepresentable>)var22).label != 1) {
             if (((<unrepresentable>)var22).label != 2) {
@@ -172,10 +172,9 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                   ((<unrepresentable>)var22).L$1 = var1;
                   ((<unrepresentable>)var22).L$2 = var2;
                   ((<unrepresentable>)var22).label = 4;
-                  var33 = var1.invoke(var22);
-                  var8 = var8;
-                  var26 = var33;
-                  if (var33 === var11) {
+                  var32 = var1.invoke(var22);
+                  var26 = var32;
+                  if (var32 === var11) {
                      return var11;
                   }
 
@@ -189,13 +188,13 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                ((<unrepresentable>)var22).L$3 = var26;
                ((<unrepresentable>)var22).label = 2;
                val var10: Any = var13.invoke(var26, var22);
-               var33 = var26;
+               var32 = var26;
                var26 = var10;
                if (var10 === var11) {
                   return var11;
                }
             } else {
-               var33 = ((<unrepresentable>)var22).L$3;
+               var32 = ((<unrepresentable>)var22).L$3;
                var13 = ((<unrepresentable>)var22).L$2 as Function2;
                var18 = ((<unrepresentable>)var22).L$1 as Function1;
                var8 = ((<unrepresentable>)var22).L$0 as ExponentialBackoff;
@@ -213,10 +212,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
             ((<unrepresentable>)var22).L$2 = var2;
             ((<unrepresentable>)var22).L$3 = var26;
             ((<unrepresentable>)var22).label = 2;
-            val var38: Any = var2.invoke(var26, var22);
-            var33 = var26;
-            var26 = var38;
-            if (var38 === var11) {
+            val var37: Any = var2.invoke(var26, var22);
+            var32 = var26;
+            var26 = var37;
+            if (var37 === var11) {
                return var11;
             }
          }
@@ -239,10 +238,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var22).L$2 = var2;
          ((<unrepresentable>)var22).L$3 = var26;
          ((<unrepresentable>)var22).label = 2;
-         val var39: Any = var2.invoke(var26, var22);
-         var33 = var26;
-         var26 = var39;
-         if (var39 === var11) {
+         val var38: Any = var2.invoke(var26, var22);
+         var32 = var26;
+         var26 = var38;
+         if (var38 === var11) {
             return var11;
          }
       }
@@ -275,29 +274,28 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var22).L$1 = var18;
          ((<unrepresentable>)var22).L$2 = var13;
          ((<unrepresentable>)var22).label = 4;
-         var33 = var18.invoke(var22);
-         var8 = var8;
-         if (var33 === var11) {
+         var32 = var18.invoke(var22);
+         if (var32 === var11) {
             return var11;
          }
 
-         val var37: Function1 = var18;
+         val var36: Function1 = var18;
          var13 = var13;
          var18 = var18;
          ((<unrepresentable>)var22).L$0 = var8;
-         ((<unrepresentable>)var22).L$1 = var37;
+         ((<unrepresentable>)var22).L$1 = var36;
          ((<unrepresentable>)var22).L$2 = var13;
-         ((<unrepresentable>)var22).L$3 = var33;
+         ((<unrepresentable>)var22).L$3 = var32;
          ((<unrepresentable>)var22).label = 2;
-         val var40: Any = var13.invoke(var33, var22);
-         var33 = var33;
-         var26 = var40;
-         if (var40 === var11) {
+         val var39: Any = var13.invoke(var32, var22);
+         var32 = var32;
+         var26 = var39;
+         if (var39 === var11) {
             return var11;
          }
       }
 
-      return var33;
+      return var32;
    }
 
    public fun succeed() {

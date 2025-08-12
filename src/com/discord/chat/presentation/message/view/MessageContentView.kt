@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = A9.j.b(new E0(this));
+      this.shadowView$delegate = A9.j.b(new G0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
@@ -159,7 +159,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
                var3 = ThemeManagerKt.getTheme().getTextLink();
             }
 
-            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new D0(var5, var1), 124, null), var7, var4.length(), 33);
+            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new F0(var5, var1), 124, null), var7, var4.length(), 33);
             var4.setSpan(new BoldSpan(), var7, var4.length(), 33);
          } else {
             var4.delete(var7, var4.length());
@@ -206,7 +206,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          var3.getOnTapEmoji(),
          <unrepresentable>.INSTANCE,
          var3.getOnTapSoundmoji(),
-         new F0(),
+         new H0(),
          0,
          0,
          false,
@@ -356,11 +356,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
             if (!var7.isRevealed()) {
-               val var3: Int = var5.getSpanStart(var7);
-               val var4: Int = var5.getSpanEnd(var7);
+               val var4: Int = var5.getSpanStart(var7);
+               val var3: Int = var5.getSpanEnd(var7);
                val var10: Context = var1.getContext();
                kotlin.jvm.internal.r.g(var10, "getContext(...)");
-               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+               var5.replace(var4, var3, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
             }
          }
 

@@ -99,20 +99,20 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
 
    public override fun toString(): String {
       val var4: java.lang.String = this.rawName;
-      val var3: java.lang.String = this.rawValue;
+      val var1: java.lang.String = this.rawValue;
       val var2: StructurableText = this.name;
-      val var5: StructurableText = this.value;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("EmbedField(rawName=");
-      var1.append(var4);
-      var1.append(", rawValue=");
-      var1.append(var3);
-      var1.append(", name=");
-      var1.append(var2);
-      var1.append(", value=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var3: StructurableText = this.value;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedField(rawName=");
+      var5.append(var4);
+      var5.append(", rawValue=");
+      var5.append(var1);
+      var5.append(", name=");
+      var5.append(var2);
+      var5.append(", value=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

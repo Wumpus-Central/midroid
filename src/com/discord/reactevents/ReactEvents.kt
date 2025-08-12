@@ -6,7 +6,6 @@ import android.view.View
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.EventDispatcher
-import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
@@ -21,17 +20,6 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
 
       for (int var2 = 0; var2 < var3; var2++) {
          this.eventRegistry.registerEvent(var1[var2].a() as java.lang.String, var1[var2].b() as KClass);
-      }
-   }
-
-   private fun ReactEvent.requireEventExporting() {
-      if (!this.eventRegistry.getDidExportEvents()) {
-         val var3: KClass = H.b(var1.getClass());
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("attempting to emit event: ");
-         var2.append(var3);
-         var2.append(" before exporting event constants. see usages of exportEventConstants");
-         throw new IllegalStateException(var2.toString());
       }
    }
 
@@ -64,7 +52,6 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
       r.h(var3, "event");
       val var4: EventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(var1, var2);
       if (var4 != null) {
-         this.requireEventExporting(var3);
          var4.dispatchEvent(new DispatchedEvent(UIManagerHelper.getSurfaceId(var1), var2, this.eventRegistry.getEventName(var3), var3));
       }
    }

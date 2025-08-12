@@ -81,12 +81,12 @@ public sealed class ListOperation protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: IntRange = this.range;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ChangeRange(range=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: IntRange = this.range;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ChangeRange(range=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -168,12 +168,12 @@ public sealed class ListOperation protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: IntRange = this.range;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("InsertRange(range=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: IntRange = this.range;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("InsertRange(range=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -255,12 +255,12 @@ public sealed class ListOperation protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: IntRange = this.range;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("RemoveRange(range=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: IntRange = this.range;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("RemoveRange(range=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

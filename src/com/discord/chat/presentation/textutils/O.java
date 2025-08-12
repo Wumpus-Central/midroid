@@ -13,6 +13,6 @@ public final class O implements Function2 {
    public final boolean m;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextUtilsKt.b(this.j, this.k, this.l, this.m, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
+      return TextUtilsKt.c(this.j, this.k, this.l, this.m, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

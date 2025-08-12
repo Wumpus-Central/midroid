@@ -14,6 +14,6 @@ public final class T implements Function1 {
    public final RenderContext m;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.D(this.j, this.k, this.l, this.m, (SpannableStringBuilder)var1);
+      return TextUtilsKt.j(this.j, this.k, this.l, this.m, (SpannableStringBuilder)var1);
    }
 }

@@ -190,6 +190,12 @@
                 <data android:host="discord.com" android:pathPattern="/connect/authorize" android:scheme="https"/>
                 <data android:host="*.discord.com" android:pathPattern="/connect/authorize" android:scheme="https"/>
             </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="discordapp.onelink.me" android:scheme="https"/>
+            </intent-filter>
             <intent-filter>
                 <action android:name="com.discord.intent.action.SDK"/>
                 <category android:name="android.intent.category.DEFAULT"/>

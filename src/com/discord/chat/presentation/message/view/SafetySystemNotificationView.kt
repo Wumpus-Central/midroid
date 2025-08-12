@@ -60,7 +60,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new M0(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new O0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.r.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -73,7 +73,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new N0(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new P0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.r.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);

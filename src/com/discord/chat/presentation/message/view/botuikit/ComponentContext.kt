@@ -190,38 +190,38 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.containerId;
-      val var5: GeneralEventHandlers = this.generalEventHandlers;
-      val var9: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var11: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var10: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var7: ComponentActionEventHandlers = this.componentActionEventHandlers;
-      val var8: WidthInfo = this.widthInfo;
+      val var5: java.lang.String = this.containerId;
+      val var7: GeneralEventHandlers = this.generalEventHandlers;
+      val var4: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var9: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var8: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var11: ComponentActionEventHandlers = this.componentActionEventHandlers;
+      val var10: WidthInfo = this.widthInfo;
       val var1: Boolean = this.shouldAutoPlayGif;
       val var2: Boolean = this.isForwardedContent;
       val var3: Boolean = this.isInContainerComponent;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ComponentContext(containerId=");
-      var4.append(var6);
-      var4.append(", generalEventHandlers=");
-      var4.append(var5);
-      var4.append(", markdownTextRenderOptions=");
-      var4.append(var9);
-      var4.append(", markdownTextRenderEventHandlers=");
-      var4.append(var11);
-      var4.append(", mediaItemEventHandlers=");
-      var4.append(var10);
-      var4.append(", componentActionEventHandlers=");
-      var4.append(var7);
-      var4.append(", widthInfo=");
-      var4.append(var8);
-      var4.append(", shouldAutoPlayGif=");
-      var4.append(var1);
-      var4.append(", isForwardedContent=");
-      var4.append(var2);
-      var4.append(", isInContainerComponent=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ComponentContext(containerId=");
+      var6.append(var5);
+      var6.append(", generalEventHandlers=");
+      var6.append(var7);
+      var6.append(", markdownTextRenderOptions=");
+      var6.append(var4);
+      var6.append(", markdownTextRenderEventHandlers=");
+      var6.append(var9);
+      var6.append(", mediaItemEventHandlers=");
+      var6.append(var8);
+      var6.append(", componentActionEventHandlers=");
+      var6.append(var11);
+      var6.append(", widthInfo=");
+      var6.append(var10);
+      var6.append(", shouldAutoPlayGif=");
+      var6.append(var1);
+      var6.append(", isForwardedContent=");
+      var6.append(var2);
+      var6.append(", isInContainerComponent=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 }

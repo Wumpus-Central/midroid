@@ -47,6 +47,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ThemedReactContext
 import kotlin.coroutines.Continuation
+import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
@@ -128,8 +129,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       this.mediaViewDetached = true;
       this.mediaCanPlayInline = true;
       this.mediaThumbnailFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      this.mediaOnPlayCallback = new x0();
-      this.onMediaPlayFinishedAnalytics = new y0();
+      this.mediaOnPlayCallback = new B0();
+      this.onMediaPlayFinishedAnalytics = new C0();
       this.playerSettings = MediaPlayer.Factory.getDefaultSettings();
       val var6: Context;
       if (var1 !is ThemedReactContext) {
@@ -147,7 +148,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       }
 
       this.managerModule = var8;
-      val var9: ViewAttachedListener = new ViewAttachedListener(this, new z0(this), new A0(this));
+      val var9: ViewAttachedListener = new ViewAttachedListener(this, new D0(this), new E0(this));
       this.attachStateChangeListener = var9;
       this.lifecycleListener = new LifecycleEventListener(this) {
          final MediaView this$0;
@@ -180,16 +181,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.r.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var13: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
-      val var12: GradientDrawable = new GradientDrawable();
-      var12.setShape(0);
-      var12.setStroke(
-         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var13: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var5: GradientDrawable = new GradientDrawable();
+      var5.setShape(0);
+      var5.setStroke(
+         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var13.z(var12);
+      var13.z(var5);
    }
 
    @JvmStatic
@@ -261,9 +262,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             var10 = var7.acquire(var12, var11, this.playerSettings);
          }
 
-         var10.setEventListener(new p0(this));
-         var10.setVolumeListener(new u0(this));
-         var10.setAnalyticsListener(new v0(this));
+         var10.setEventListener(new x0(this));
+         var10.setVolumeListener(new y0(this));
+         var10.setAnalyticsListener(new z0(this));
          val var3: Float;
          if (var1.isGifv()) {
             var3 = 0.0F;
@@ -334,7 +335,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
 
             val var10: MediaPlayer = var7.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var10), new q0(this, var10, var5), new r0(var5, this));
+               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new q0(this), new r0(this, var5, var10), new s0(this, var10, var5), new t0(var5, this));
          }
       }
    }
@@ -382,7 +383,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    @JvmStatic
-   fun `registerForPortal$lambda$23`(var0: MediaSource, var1: MediaView, var2: View): Unit {
+   fun `registerForPortal$lambda$25`(var0: MediaSource, var1: MediaView, var2: View): Unit {
       kotlin.jvm.internal.r.h(var2, "view");
       val var3: java.lang.Double = var0.getPortal();
       val var5: java.lang.Double;
@@ -393,15 +394,29 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       }
 
       if (kotlin.jvm.internal.r.a(var3, var5)) {
-         setMediaData$default(
-            var1, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262143, null
-         );
-         var1.addView(var2, 0);
-         ViewMeasureExtensionsKt.measureAndLayout(var1);
+         val var6: p0 = new p0(var1, var2);
+         if (var2.getParent() == null) {
+            var6.invoke();
+         } else {
+            var2.post(new w0(var6));
+         }
       }
 
       var1.addOnAttachStateChangeListener(var1.attachStateChangeListener);
       return Unit.a;
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$25$lambda$23`(var0: MediaView, var1: View): Unit {
+      setMediaData$default(var0, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262143, null);
+      var0.addView(var1, 0);
+      ViewMeasureExtensionsKt.measureAndLayout(var0);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$25$lambda$24`(var0: Function0) {
+      var0.invoke();
    }
 
    private fun releasePlayer() {
@@ -568,8 +583,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  val var4: FlowCollector = new FlowCollector(this.this$0) {
+                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  var1 = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -604,7 +619,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var1.collect(var4, this) === var3) {
+                  if (var4.collect(var1, this) === var3) {
                      return var3;
                   }
                }
@@ -644,9 +659,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                kotlin.c.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var6: Flow = var1.getPausePlayerFlow();
-                  if (var6 != null) {
-                     val var4: FlowCollector = new FlowCollector(this.this$0) {
+                  val var4: Flow = var1.getPausePlayerFlow();
+                  if (var4 != null) {
+                     val var6: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -663,7 +678,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var6.collect(var4, this) === var3) {
+                     if (var4.collect(var6, this) === var3) {
                         return var3;
                      }
                   }
@@ -892,9 +907,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var36.setVisibility(var54);
          val var62: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.r.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
-         val var37: s0;
+         val var37: u0;
          if (this.mediaCanPlayInline && !var10 && var1 != null) {
-            var37 = new s0(this, var1);
+            var37 = new u0(this, var1);
          } else {
             var37 = null;
          }
@@ -941,7 +956,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          I18nUtilsKt.i18nContentDescription$default(var64, var41, null, 2, null);
          val var42: SimpleDraweeView = this.binding.inlineMediaVolumeToggle;
          kotlin.jvm.internal.r.g(this.binding.inlineMediaVolumeToggle, "inlineMediaVolumeToggle");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new t0(this, var6, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new v0(this, var6, var1), 1, null);
          val var43: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.r.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
          if (var43.getVisibility() == 0 && var14 != null && var14.length() != 0) {
@@ -1036,9 +1051,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setOnMediaClickListeners(onClickListener: OnClickListener?, onLongClickListener: OnLongClickListener?) {
-      val var3: w0;
+      val var3: A0;
       if (var1 != null) {
-         var3 = new w0(this, var1);
+         var3 = new A0(this, var1);
       } else {
          var3 = null;
       }

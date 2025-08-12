@@ -9,6 +9,6 @@ public final class s0 implements Function1 {
    public final ChatEventHandler j;
 
    public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.j(this.j, (CommandMentionContentNode)var1);
+      return MessageViewReplyPreview.i(this.j, (CommandMentionContentNode)var1);
    }
 }

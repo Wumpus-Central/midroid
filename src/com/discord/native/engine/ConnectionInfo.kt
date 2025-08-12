@@ -97,25 +97,25 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
 
    public override fun toString(): String {
       val var4: Boolean = this.isConnected;
-      val var7: java.lang.String = this.protocol;
+      val var5: java.lang.String = this.protocol;
       val var6: java.lang.String = this.localAddress;
-      val var2: Int = this.localPort;
+      val var1: Int = this.localPort;
       val var3: Int = this.createConnectionTime;
-      val var1: Int = this.connectTime;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ConnectionInfo(isConnected=");
-      var5.append(var4);
-      var5.append(", protocol=");
-      var5.append(var7);
-      var5.append(", localAddress=");
-      var5.append(var6);
-      var5.append(", localPort=");
-      var5.append(var2);
-      var5.append(", createConnectionTime=");
-      var5.append(var3);
-      var5.append(", connectTime=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var2: Int = this.connectTime;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ConnectionInfo(isConnected=");
+      var7.append(var4);
+      var7.append(", protocol=");
+      var7.append(var5);
+      var7.append(", localAddress=");
+      var7.append(var6);
+      var7.append(", localPort=");
+      var7.append(var1);
+      var7.append(", createConnectionTime=");
+      var7.append(var3);
+      var7.append(", connectTime=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 }

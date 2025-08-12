@@ -99,35 +99,35 @@ public final class MessageViewBinding implements ViewBinding {
       MessageAccessoriesView var6 = (MessageAccessoriesView)a.a(var0, var1);
       if (var6 != null) {
          var1 = R.id.author_avatar;
-         SimpleDraweeView var22 = (SimpleDraweeView)a.a(var0, var1);
-         if (var22 != null) {
+         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.author_avatar_decoration;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
+            SimpleDraweeView var18 = (SimpleDraweeView)a.a(var0, var1);
+            if (var18 != null) {
                var1 = R.id.author_name;
-               TextView var16 = (TextView)a.a(var0, var1);
-               if (var16 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.clan_tag_chiplet;
-                  ClanTagChipletView var13 = (ClanTagChipletView)a.a(var0, var1);
-                  if (var13 != null) {
+                  ClanTagChipletView var21 = (ClanTagChipletView)a.a(var0, var1);
+                  if (var21 != null) {
                      var1 = R.id.connections_role_tag;
-                     ConnectionsRoleTagView var9 = (ConnectionsRoleTagView)a.a(var0, var1);
-                     if (var9 != null) {
+                     ConnectionsRoleTagView var13 = (ConnectionsRoleTagView)a.a(var0, var1);
+                     if (var13 != null) {
                         var1 = R.id.game_icon;
-                        GameIconView var8 = (GameIconView)a.a(var0, var1);
-                        if (var8 != null) {
+                        GameIconView var7 = (GameIconView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.guild_communication_disabled_icon;
-                           SimpleDraweeView var21 = (SimpleDraweeView)a.a(var0, var1);
-                           if (var21 != null) {
+                           SimpleDraweeView var22 = (SimpleDraweeView)a.a(var0, var1);
+                           if (var22 != null) {
                               var1 = R.id.header;
-                              LinearLayout var17 = (LinearLayout)a.a(var0, var1);
-                              if (var17 != null) {
+                              LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+                              if (var8 != null) {
                                  var1 = R.id.message_alt_remix_tag_view;
-                                 MessageAltRemixTagView var14 = (MessageAltRemixTagView)a.a(var0, var1);
-                                 if (var14 != null) {
+                                 MessageAltRemixTagView var4 = (MessageAltRemixTagView)a.a(var0, var1);
+                                 if (var4 != null) {
                                     var1 = R.id.message_frame_header;
-                                    MessageFrameHeaderView var11 = (MessageFrameHeaderView)a.a(var0, var1);
-                                    if (var11 != null) {
+                                    MessageFrameHeaderView var10 = (MessageFrameHeaderView)a.a(var0, var1);
+                                    if (var10 != null) {
                                        var1 = R.id.message_header_barrier;
                                        Barrier var19 = (Barrier)a.a(var0, var1);
                                        if (var19 != null) {
@@ -135,52 +135,52 @@ public final class MessageViewBinding implements ViewBinding {
                                           View var2 = a.a(var0, var1);
                                           if (var2 != null) {
                                              var1 = R.id.message_tag_view;
-                                             MessageTagView var18 = (MessageTagView)a.a(var0, var1);
-                                             if (var18 != null) {
+                                             MessageTagView var14 = (MessageTagView)a.a(var0, var1);
+                                             if (var14 != null) {
                                                 var1 = R.id.reply_preview_view;
-                                                ViewStub var10 = (ViewStub)a.a(var0, var1);
-                                                if (var10 != null) {
+                                                ViewStub var9 = (ViewStub)a.a(var0, var1);
+                                                if (var9 != null) {
                                                    var1 = R.id.role_dot;
-                                                   RoleDotView var20 = (RoleDotView)a.a(var0, var1);
-                                                   if (var20 != null) {
+                                                   RoleDotView var15 = (RoleDotView)a.a(var0, var1);
+                                                   if (var15 != null) {
                                                       var1 = R.id.role_icon;
-                                                      RoleIconView var4 = (RoleIconView)a.a(var0, var1);
-                                                      if (var4 != null) {
+                                                      RoleIconView var16 = (RoleIconView)a.a(var0, var1);
+                                                      if (var16 != null) {
                                                          var1 = R.id.shadow_view;
-                                                         MaskedShadowView var15 = (MaskedShadowView)a.a(var0, var1);
-                                                         if (var15 != null) {
+                                                         MaskedShadowView var11 = (MaskedShadowView)a.a(var0, var1);
+                                                         if (var11 != null) {
                                                             var1 = R.id.suppress_notifications_icon;
-                                                            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                                                            if (var7 != null) {
+                                                            SimpleDraweeView var17 = (SimpleDraweeView)a.a(var0, var1);
+                                                            if (var17 != null) {
                                                                var1 = R.id.thread_starter_header_view;
-                                                               ViewStub var5 = (ViewStub)a.a(var0, var1);
-                                                               if (var5 != null) {
+                                                               ViewStub var12 = (ViewStub)a.a(var0, var1);
+                                                               if (var12 != null) {
                                                                   var1 = R.id.timestamp;
-                                                                  TextView var12 = (TextView)a.a(var0, var1);
-                                                                  if (var12 != null) {
+                                                                  TextView var20 = (TextView)a.a(var0, var1);
+                                                                  if (var20 != null) {
                                                                      return new MessageViewBinding(
                                                                         var0,
                                                                         var6,
-                                                                        var22,
+                                                                        var5,
+                                                                        var18,
                                                                         var3,
-                                                                        var16,
-                                                                        var13,
-                                                                        var9,
-                                                                        var8,
                                                                         var21,
-                                                                        var17,
-                                                                        var14,
-                                                                        var11,
+                                                                        var13,
+                                                                        var7,
+                                                                        var22,
+                                                                        var8,
+                                                                        var4,
+                                                                        var10,
                                                                         var19,
                                                                         var2,
-                                                                        var18,
-                                                                        var10,
-                                                                        var20,
-                                                                        var4,
+                                                                        var14,
+                                                                        var9,
                                                                         var15,
-                                                                        var7,
-                                                                        var5,
-                                                                        var12
+                                                                        var16,
+                                                                        var11,
+                                                                        var17,
+                                                                        var12,
+                                                                        var20
                                                                      );
                                                                   }
                                                                }

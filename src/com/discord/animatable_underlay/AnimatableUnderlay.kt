@@ -10,7 +10,7 @@ import android.graphics.RectF
 import android.graphics.Path.Direction
 import android.view.MotionEvent
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react_activities.ReactRootView
+import com.discord.react_activities.RootViewUtils
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
@@ -72,10 +72,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var15: RectF = this.pathRect;
-            val var3: Float = this.height;
-            val var2: Float = this.shapeHeight;
+            val var2: Float = this.height;
+            val var4: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var3 - (var3 - var2) / 2;
+            var15.bottom = var2 - (var2 - var4) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -96,10 +96,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var19: RectF = this.pathRect;
-            val var12: Float = this.width;
-            val var13: Float = this.shapeWidth;
+            val var13: Float = this.width;
+            val var12: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var12 - (var12 - var13) / 2;
+            var19.right = var13 - (var13 - var12) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -160,12 +160,12 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      ReactRootView.Companion.setOnInterceptTouchEvent(this, new a(this));
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new a(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      ReactRootView.Companion.setOnInterceptTouchEvent(this, null);
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, null);
    }
 
    protected open fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

@@ -117,7 +117,7 @@ internal object Transcoder {
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             if (this.$continuation.c()) {
-               val var3: kotlin.Result.a = Result.k;
+               val var4: kotlin.Result.a = Result.k;
                this.$continuation.resumeWith(Result.b(kotlin.c.a(new CancellationException("Video transcoding was cancelled"))));
             }
          }

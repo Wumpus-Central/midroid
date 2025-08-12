@@ -440,33 +440,33 @@ public object UnicodeEmojis {
       }
 
       public override fun toString(): String {
-         val var1: java.util.List = this.people;
-         val var4: java.util.List = this.nature;
-         val var2: java.util.List = this.food;
-         val var8: java.util.List = this.activity;
-         val var5: java.util.List = this.travel;
-         val var7: java.util.List = this.objects;
-         val var9: java.util.List = this.symbols;
-         val var6: java.util.List = this.flags;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("EmojiCategories(people=");
-         var3.append(var1);
-         var3.append(", nature=");
-         var3.append(var4);
-         var3.append(", food=");
-         var3.append(var2);
-         var3.append(", activity=");
-         var3.append(var8);
-         var3.append(", travel=");
-         var3.append(var5);
-         var3.append(", objects=");
-         var3.append(var7);
-         var3.append(", symbols=");
-         var3.append(var9);
-         var3.append(", flags=");
-         var3.append(var6);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.util.List = this.people;
+         val var6: java.util.List = this.nature;
+         val var8: java.util.List = this.food;
+         val var7: java.util.List = this.activity;
+         val var1: java.util.List = this.travel;
+         val var4: java.util.List = this.objects;
+         val var5: java.util.List = this.symbols;
+         val var2: java.util.List = this.flags;
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("EmojiCategories(people=");
+         var9.append(var3);
+         var9.append(", nature=");
+         var9.append(var6);
+         var9.append(", food=");
+         var9.append(var8);
+         var9.append(", activity=");
+         var9.append(var7);
+         var9.append(", travel=");
+         var9.append(var1);
+         var9.append(", objects=");
+         var9.append(var4);
+         var9.append(", symbols=");
+         var9.append(var5);
+         var9.append(", flags=");
+         var9.append(var2);
+         var9.append(")");
+         return var9.toString();
       }
 
       public companion object {

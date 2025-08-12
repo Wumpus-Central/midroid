@@ -137,7 +137,7 @@ public class IncomingCallActivity : AppCompatActivity {
                var var9: Any = H9.b.e();
                val var3x: ImageButton;
                val var4: ContentAction;
-               val var5: DismissCallAction;
+               val var5: TextView;
                val var6: ImageButton;
                val var7: TextView;
                var var8: Any;
@@ -146,15 +146,15 @@ public class IncomingCallActivity : AppCompatActivity {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  var9 = this.L$5 as TextView;
+                  var5 = this.L$5 as TextView;
                   var7 = this.L$4 as TextView;
                   var6 = this.L$3 as ImageButton;
                   var3x = this.L$2 as ImageButton;
-                  var5 = this.L$1 as DismissCallAction;
+                  var9 = this.L$1 as DismissCallAction;
                   var4 = this.L$0 as ContentAction;
                   kotlin.c.b(var1);
                   var8 = var1;
-                  var1 = (TextView)var9;
+                  var1 = (DismissCallAction)var9;
                } else {
                   kotlin.c.b(var1);
                   var8 = this.L$0 as CoroutineScope;
@@ -163,24 +163,24 @@ public class IncomingCallActivity : AppCompatActivity {
                   var4 = var15 as ContentAction;
                   val var16: Any = com.discord.notifications.renderer.e.a(this.this$0.getIntent(), "dismissAction", DismissCallAction.class);
                   r.f(var16, "null cannot be cast to non-null type com.discord.notifications.actions.intents.DismissCallAction");
-                  var5 = var16 as DismissCallAction;
+                  var1 = var16 as DismissCallAction;
                   var3x = this.this$0.findViewById(R.id.acceptCallContainer);
                   var6 = this.this$0.findViewById(R.id.declineCallContainer);
                   var7 = this.this$0.findViewById(R.id.acceptCallText);
-                  var1 = this.this$0.findViewById(R.id.declineCallText);
-                  var var12: Context = this.this$0.getApplicationContext();
-                  r.g(var12, "getApplicationContext(...)");
-                  val var10: ReactAsset = ReactAsset.CallDisconnect;
+                  var5 = this.this$0.findViewById(R.id.declineCallText);
+                  val var10: Context = this.this$0.getApplicationContext();
+                  r.g(var10, "getApplicationContext(...)");
+                  val var12: ReactAsset = ReactAsset.CallDisconnect;
                   val var11: Context = this.this$0.getApplicationContext();
                   r.g(var11, "getApplicationContext(...)");
-                  val var32: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var12, var10.getUri(var11));
-                  var12 = this.this$0.getApplicationContext();
-                  r.g(var12, "getApplicationContext(...)");
-                  val var13: ReactAsset = ReactAsset.CallConnect;
-                  val var30: Context = this.this$0.getApplicationContext();
-                  r.g(var30, "getApplicationContext(...)");
-                  val var31: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var12, var13.getUri(var30));
-                  val var34: G = jb.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var32, null) {
+                  val var30: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var12.getUri(var11));
+                  val var35: Context = this.this$0.getApplicationContext();
+                  r.g(var35, "getApplicationContext(...)");
+                  val var33: ReactAsset = ReactAsset.CallConnect;
+                  val var13: Context = this.this$0.getApplicationContext();
+                  r.g(var13, "getApplicationContext(...)");
+                  val var34: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var35, var33.getUri(var13));
+                  val var32: G = jb.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var30, null) {
                      final java.lang.String $callDisconnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -222,7 +222,7 @@ public class IncomingCallActivity : AppCompatActivity {
                         return var1;
                      }
                   }, 3, null);
-                  var8 = jb.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var31, null) {
+                  var8 = jb.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var34, null) {
                      final java.lang.String $callConnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -265,27 +265,27 @@ public class IncomingCallActivity : AppCompatActivity {
                      }
                   }, 3, null);
                   this.L$0 = var4;
-                  this.L$1 = var5;
+                  this.L$1 = var1;
                   this.L$2 = var3x;
                   this.L$3 = var6;
                   this.L$4 = var7;
-                  this.L$5 = var1;
+                  this.L$5 = var5;
                   this.label = 1;
-                  var8 = jb.d.b(new G[]{var34, (G)var8}, this);
+                  var8 = jb.d.b(new G[]{var32, (G)var8}, this);
                   if (var8 === var9) {
                      return var9;
                   }
                }
 
-               var9 = (var8 as java.util.List).get(0) as Bitmap;
-               var8 = (var8 as java.util.List).get(1) as Bitmap;
-               r.e(var9);
-               var9 = Bitmap.createScaledBitmap((Bitmap)var9, 110, 110, true);
-               r.g(var9, "createScaledBitmap(...)");
-               var6.setImageBitmap((Bitmap)var9);
+               val var20: Bitmap = (var8 as java.util.List).get(0) as Bitmap;
+               var9 = (var8 as java.util.List).get(1) as Bitmap;
+               r.e(var20);
+               var8 = Bitmap.createScaledBitmap(var20, 110, 110, true);
+               r.g(var8, "createScaledBitmap(...)");
+               var6.setImageBitmap((Bitmap)var8);
                var6.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
-               r.e(var8);
-               var8 = Bitmap.createScaledBitmap((Bitmap)var8, 110, 110, true);
+               r.e(var9);
+               var8 = Bitmap.createScaledBitmap((Bitmap)var9, 110, 110, true);
                r.g(var8, "createScaledBitmap(...)");
                var3x.setImageBitmap((Bitmap)var8);
                var3x.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
@@ -306,12 +306,12 @@ public class IncomingCallActivity : AppCompatActivity {
                var7.setTextColor(ThemeManagerKt.getTheme().getWhite());
                val var17: Context = this.this$0.getApplicationContext();
                r.g(var17, "getApplicationContext(...)");
-               var1.setText(I18nUtilsKt.i18nFormat$default(var17, I18nMessage.DECLINE, null, 2, null));
-               r.e(var1);
-               DiscordFontUtilsKt.setDiscordFont(var1, (DiscordFont)var8);
-               var1.setTextColor(ThemeManagerKt.getTheme().getWhite());
+               var5.setText(I18nUtilsKt.i18nFormat$default(var17, I18nMessage.DECLINE, null, 2, null));
+               r.e(var5);
+               DiscordFontUtilsKt.setDiscordFont(var5, (DiscordFont)var8);
+               var5.setTextColor(ThemeManagerKt.getTheme().getWhite());
                var3x.setOnClickListener(new com.discord.notifications.renderer.f(this.this$0, var4));
-               var6.setOnClickListener(new g(this.this$0, var5));
+               var6.setOnClickListener(new g(this.this$0, var1));
                return Unit.a;
             }
          },

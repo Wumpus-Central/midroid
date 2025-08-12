@@ -47,10 +47,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
    @JvmStatic
    fun {
-      val var0: CompletableJob = k0.b(null, 1, null);
-      val var1: ExecutorService = Executors.newSingleThreadExecutor();
-      r.g(var1, "newSingleThreadExecutor(...)");
-      moduleScope = g.a(var0.T(T.b(var1)));
+      val var1: CompletableJob = k0.b(null, 1, null);
+      val var0: ExecutorService = Executors.newSingleThreadExecutor();
+      r.g(var0, "newSingleThreadExecutor(...)");
+      moduleScope = g.a(var1.T(T.b(var0)));
    }
 
    init {
@@ -120,13 +120,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       HACK_iOSForceAnimations: Boolean
    ) {
       r.h(var3, "rowsJSON");
-      val var9: Int = (int)var1;
-      val var10: Int = (int)var6;
+      val var10: Int = (int)var1;
+      val var9: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var9,
-         new Function2(this, var9, var3, var5, var10, null) {
+         var10,
+         new Function2(this, var10, var3, var5, var9, null) {
             final int $changesetUpdateId;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;
@@ -167,15 +167,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           var var43: Json = ChatModule.access$getJson$cp();
-                           val var5: java.lang.String = this.$rowsJSON;
-                           var43.a();
-                           var64 = var43.b(new f(Row.Companion.serializer()), var5) as java.util.List;
+                           val var5: Json = ChatModule.access$getJson$cp();
+                           val var43: java.lang.String = this.$rowsJSON;
+                           var5.a();
+                           var64 = var5.b(new f(Row.Companion.serializer()), var43) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              var43 = ChatModule.access$getJson$cp();
+                              val var44: Json = ChatModule.access$getJson$cp();
                               var1 = this.$scrollDataJSON;
-                              var43.a();
-                              var1 = var43.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
+                              var44.a();
+                              var1 = var44.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -592,22 +592,22 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var3: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
-         val var1: java.lang.String = H.b(ChatModule.class).b();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var1);
-         var2.append(" invalidate()");
-         v.g(var3, new CancellationException(var2.toString()));
+         val var2: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var3: java.lang.String = H.b(ChatModule.class).b();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var3);
+         var1.append(" invalidate()");
+         v.g(var2, new CancellationException(var1.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
-         val var4: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
-         val var5: Int = var2;
-         val var3: Any = var4.get(var5);
+         val var5: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
+         val var4: Int = var2;
+         val var3: Any = var5.get(var4);
          var var6: Any = var3;
          if (var3 == null) {
             var6 = new ReleaseRowLogger();
-            var4.put(var5, var6);
+            var5.put(var4, var6);
          }
 
          return var6 as RowLogger;

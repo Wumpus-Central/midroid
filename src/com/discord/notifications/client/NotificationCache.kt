@@ -44,19 +44,9 @@ internal class NotificationCache {
       return this.getCache(var1).getBoolean("CACHE_KEY_AUTHED", false);
    }
 
-   public fun isFullscreenCallUIEnabled(context: Context): Boolean {
-      r.h(var1, "context");
-      return this.getCache(var1).getBoolean("CACHE_KEY_FULLSCREEN_CALL_UI_ENABLED", false);
-   }
-
    public fun isLightsEnabled(context: Context): Boolean {
       r.h(var1, "context");
       return this.getCache(var1).getBoolean("CACHE_KEY_LIGHTS_ENABLED", true);
-   }
-
-   public fun isMissedCallNotificationsEnabled(context: Context): Boolean {
-      r.h(var1, "context");
-      return this.getCache(var1).getBoolean("CACHE_KEY_MISSED_CALL_NOTIFICATIONS_ENABLED", false);
    }
 
    public fun isSoundsEnabled(context: Context): Boolean {
@@ -90,13 +80,6 @@ internal class NotificationCache {
       var3.apply();
    }
 
-   public fun setFullscreenCallUIEnabled(context: Context, enabled: Boolean) {
-      r.h(var1, "context");
-      val var3: Editor = this.getCache(var1).edit();
-      var3.putBoolean("CACHE_KEY_FULLSCREEN_CALL_UI_ENABLED", var2);
-      var3.apply();
-   }
-
    public fun setIsAuthed(context: Context, isAuthed: Boolean) {
       r.h(var1, "context");
       val var3: Editor = this.getCache(var1).edit();
@@ -108,13 +91,6 @@ internal class NotificationCache {
       r.h(var1, "context");
       val var3: Editor = this.getCache(var1).edit();
       var3.putBoolean("CACHE_KEY_LIGHTS_ENABLED", var2);
-      var3.apply();
-   }
-
-   public fun setMissedCallNotificationsEnabled(context: Context, enabled: Boolean) {
-      r.h(var1, "context");
-      val var3: Editor = this.getCache(var1).edit();
-      var3.putBoolean("CACHE_KEY_MISSED_CALL_NOTIFICATIONS_ENABLED", var2);
       var3.apply();
    }
 
@@ -154,7 +130,5 @@ internal class NotificationCache {
       private const val CACHE_KEY_CURRENT_USER_ID: String
       private const val CACHE_KEY_NOTIFY_EVERY_TIME: String
       private const val CACHE_KEY_LAST_BACKGROUND_SYNC_RAN: String
-      private const val CACHE_KEY_MISSED_CALL_NOTIFICATIONS_ENABLED: String
-      private const val CACHE_KEY_FULLSCREEN_CALL_UI_ENABLED: String
    }
 }

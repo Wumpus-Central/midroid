@@ -69,14 +69,14 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var2: AppManifestMetadata = this.metadata;
-      val var4: java.util.Map = this.hashes;
+      val var4: AppManifestMetadata = this.metadata;
+      val var2: java.util.Map = this.hashes;
       val var3: java.util.Map = this.patches;
       val var1: StringBuilder = new StringBuilder();
       var1.append("AppManifest(metadata=");
-      var1.append(var2);
-      var1.append(", hashes=");
       var1.append(var4);
+      var1.append(", hashes=");
+      var1.append(var2);
       var1.append(", patches=");
       var1.append(var3);
       var1.append(")");

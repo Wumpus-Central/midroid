@@ -52,7 +52,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       val var2: Int = this.getAddReactionIndex();
       var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var4: Long;
+      val var3: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -70,7 +70,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var13.append(var6);
          var13.append("_add_reactions_");
          var13.append(var7);
-         var4 = IdUtilsKt.convertToId(var13.toString());
+         var3 = IdUtilsKt.convertToId(var13.toString());
       } else {
          val var14: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -80,16 +80,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          }
 
          var7 = var14.getEmoji().getEmojiId();
-         val var3: Boolean = var14.isBurstReaction();
+         val var5: Boolean = var14.isBurstReaction();
          val var15: StringBuilder = new StringBuilder();
          var15.append(var6);
          var15.append("_");
          var15.append(var7);
-         var15.append(var3);
-         var4 = IdUtilsKt.convertToId(var15.toString());
+         var15.append(var5);
+         var3 = IdUtilsKt.convertToId(var15.toString());
       }
 
-      return var4;
+      return var3;
    }
 
    public override fun getItemViewType(position: Int): Int {

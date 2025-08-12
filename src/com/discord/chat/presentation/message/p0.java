@@ -12,6 +12,6 @@ public final class p0 implements OnClickListener {
    public final ExecutedCommand l;
 
    public final void onClick(View var1) {
-      MessageViewReplyPreview.g(this.j, this.k, this.l, var1);
+      MessageViewReplyPreview.l(this.j, this.k, this.l, var1);
    }
 }

@@ -222,20 +222,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var34 is SearchableSelectItem) {
-                        val var12: SearchableSelectItem = var34 as SearchableSelectItem;
+                        val var36: SearchableSelectItem = var34 as SearchableSelectItem;
                         if ((var34 as SearchableSelectItem).getIconSrc() != null) {
-                           val var20: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var13: java.lang.String = var12.getIconSrc();
-                           val var36: Int = var12.getIconColor();
+                           val var20: java.lang.String = var36.getIconSrc();
+                           val var13: Int = var36.getIconColor();
                            val var28: Boolean;
-                           if (var12.getType() === SelectOptionType.USER) {
+                           if (var36.getType() === SelectOptionType.USER) {
                               var28 = true;
                            } else {
                               var28 = false;
                            }
 
-                           this.setImage(var20, var13, var36, var28);
+                           this.setImage(var12, var20, var13, var28);
                            val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var21.setVisibility(0);
@@ -250,13 +250,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                }
             }
          } else {
-            val var22: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var39.setVisibility(8);
-            var22.setVisibility(0);
-            this.setSelectedOptions(var22, var33);
+            var22.setVisibility(8);
+            var39.setVisibility(0);
+            this.setSelectedOptions(var39, var33);
          }
       } else {
          val var37: MaterialTextView = this.binding.selectComponentSelectionText;

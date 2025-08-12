@@ -178,38 +178,38 @@ public data class ButtonComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
-      val var4: ActionComponentState = this.state;
-      val var10: java.lang.String = this.customId;
-      val var7: java.lang.String = this.label;
-      val var8: ButtonStyle = this.style;
+      val var10: java.lang.String = this.id;
+      val var7: ActionComponentState = this.state;
+      val var3: java.lang.String = this.customId;
+      val var9: java.lang.String = this.label;
+      val var4: ButtonStyle = this.style;
       val var2: Boolean = this.disabled;
       val var11: ComponentEmoji = this.emoji;
-      val var5: java.lang.String = this.url;
-      val var3: java.lang.String = this.skuId;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ButtonComponent(type=");
-      var9.append(var1);
-      var9.append(", id=");
-      var9.append(var6);
-      var9.append(", state=");
-      var9.append(var4);
-      var9.append(", customId=");
-      var9.append(var10);
-      var9.append(", label=");
-      var9.append(var7);
-      var9.append(", style=");
-      var9.append(var8);
-      var9.append(", disabled=");
-      var9.append(var2);
-      var9.append(", emoji=");
-      var9.append(var11);
-      var9.append(", url=");
-      var9.append(var5);
-      var9.append(", skuId=");
-      var9.append(var3);
-      var9.append(")");
-      return var9.toString();
+      val var8: java.lang.String = this.url;
+      val var5: java.lang.String = this.skuId;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ButtonComponent(type=");
+      var6.append(var1);
+      var6.append(", id=");
+      var6.append(var10);
+      var6.append(", state=");
+      var6.append(var7);
+      var6.append(", customId=");
+      var6.append(var3);
+      var6.append(", label=");
+      var6.append(var9);
+      var6.append(", style=");
+      var6.append(var4);
+      var6.append(", disabled=");
+      var6.append(var2);
+      var6.append(", emoji=");
+      var6.append(var11);
+      var6.append(", url=");
+      var6.append(var8);
+      var6.append(", skuId=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {
