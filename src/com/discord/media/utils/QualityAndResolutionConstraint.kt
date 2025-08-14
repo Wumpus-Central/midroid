@@ -1,9 +1,8 @@
 package com.discord.media.utils
 
 import java.io.File
-import kotlin.jvm.internal.r
 
-public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : i9.a {
+public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : j9.a {
    private final val quality: Int
    private final val shouldResize: Boolean
    private final var isResolved: Boolean
@@ -14,16 +13,14 @@ public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean)
    }
 
    public open fun isSatisfied(imageFile: File): Boolean {
-      r.h(var1, "imageFile");
       return this.isResolved;
    }
 
    public open fun satisfy(imageFile: File): File {
-      r.h(var1, "imageFile");
       if (this.shouldResize) {
-         var1 = h9.c.k(var1, h9.c.f(var1, h9.c.e(var1, 612, 816)), null, this.quality, 4, null);
+         var1 = i9.c.k(var1, i9.c.f(var1, i9.c.e(var1, 612, 816)), null, this.quality, 4, null);
       } else {
-         var1 = h9.c.k(var1, h9.c.i(var1), null, this.quality, 4, null);
+         var1 = i9.c.k(var1, i9.c.i(var1), null, this.quality, 4, null);
       }
 
       this.isResolved = true;

@@ -1,7 +1,6 @@
 package com.discord.external_pip
 
-import A9.s
-import B9.q
+import B9.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -16,22 +15,14 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 @ReactModule(name = "ExternalPip")
-public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val manager: ExternalPipManager
-   private final val reactEvents: ReactEvents
-
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-      this.manager = new ExternalPipManager();
-      this.reactEvents = new ReactEvents(
-         s.a("onPipModeChanged", H.b(OnPipModeChangedEvent.class)), s.a("onPipModeWillChange", H.b(OnPipModeWillChangeEvent.class))
-      );
-   }
+@SourceDebugExtension(["SMAP\nExternalPipModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ExternalPipModule.kt\ncom/discord/external_pip/ExternalPipModule\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,124:1\n22#2,8:125\n*S KotlinDebug\n*F\n+ 1 ExternalPipModule.kt\ncom/discord/external_pip/ExternalPipModule\n*L\n37#1:125,8\n*E\n"])
+public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
+   private final val manager: ExternalPipManager = new ExternalPipManager()
+   private final val reactEvents: ReactEvents =
+      new ReactEvents(s.a("onPipModeChanged", OnPipModeChangedEvent::class), s.a("onPipModeWillChange", OnPipModeWillChangeEvent::class))
 
    private fun enterPipMode(force: Boolean, onResult: (Result<Unit>) -> Unit) {
       if (this.manager.getEnabled(var1)) {
@@ -49,24 +40,22 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var1: ReactEvents = this.reactEvents;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "getReactApplicationContext(...)");
-         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
+         val var2: ReactEvents = this.reactEvents;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return L.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {
@@ -75,10 +64,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setActive(active: Boolean, onResultPromise: Promise) {
-      r.h(var2, "onResultPromise");
       if (ThreadUtilsKt.isOnMainThread()) {
          if (var1) {
-            access$enterPipMode(this, true, new Function1(this, var2) {
+            access$enterPipMode(this, true, new Function1<Result, Unit>(this, var2) {
                final Promise $onResultPromise;
                final ExternalPipModule this$0;
 
@@ -114,7 +102,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
             @Override
             public final void run() {
                if (this.$active$inlined) {
-                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1(this.this$0, this.$onResultPromise$inlined) {
+                  ExternalPipModule.access$enterPipMode(this.this$0, true, new Function1<Result, Unit>(this.this$0, this.$onResultPromise$inlined) {
                      final Promise $onResultPromise;
                      final ExternalPipModule this$0;
 

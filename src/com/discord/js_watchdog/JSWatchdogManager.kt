@@ -1,18 +1,18 @@
 package com.discord.js_watchdog
 
-import H9.b
+import G9.b
 import android.content.Context
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
+import db.U
+import db.f
 import java.io.File
 import java.util.Timer
 import java.util.TimerTask
-import jb.U
-import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -49,7 +49,7 @@ public object JSWatchdogManager {
             if (var3) {
                var var4: JSWatchdogStorage = storage;
                if (storage == null) {
-                  r.y("storage");
+                  Intrinsics.throwUninitializedPropertyAccessException("storage");
                   var4 = null;
                }
 
@@ -57,7 +57,7 @@ public object JSWatchdogManager {
                if (var9 == null || var9.length() == 0) {
                   var var10: File = cacheDir;
                   if (cacheDir == null) {
-                     r.y("cacheDir");
+                     Intrinsics.throwUninitializedPropertyAccessException("cacheDir");
                      var10 = null;
                   }
 
@@ -70,7 +70,7 @@ public object JSWatchdogManager {
          }
 
          if (storage == null) {
-            r.y("storage");
+            Intrinsics.throwUninitializedPropertyAccessException("storage");
          } else {
             var5 = storage;
          }
@@ -94,7 +94,7 @@ public object JSWatchdogManager {
       if (storage != null) {
          var var3: JSWatchdogStorage = storage;
          if (storage == null) {
-            r.y("storage");
+            Intrinsics.throwUninitializedPropertyAccessException("storage");
             var3 = null;
          }
 
@@ -117,7 +117,6 @@ public object JSWatchdogManager {
 
    public fun initialize(context: Context) {
       label13: {
-         r.h(var1, "context");
          synchronized (this){} // $VF: monitorenter 
 
          try {
@@ -132,14 +131,12 @@ public object JSWatchdogManager {
    }
 
    public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
-      r.h(var4, "sessionId");
-      r.h(var6, "promise");
       this.cancelExistingJobs();
       pingCoroutineJob = f.d(
-         U.j,
+         U.d,
          null,
          null,
-         new Function2(var1, var2, var6, var4, var5, null) {
+         new Function2<CoroutineScope, Continuation, Object>(var1, var2, var6, var4, var5, null) {
             final boolean $enableTrace;
             final Promise $promise;
             final boolean $resetTimestamps;
@@ -214,7 +211,7 @@ public object JSWatchdogManager {
                            var19.append("Exceeded JS stall threshold [based on previous ping]: ");
                            var19.append(var15);
                            Log.i$default(var7, "JSWatchdogManager", var19.toString(), null, 4, null);
-                           var1.j = true;
+                           var1.element = true;
                            JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var15, var5, var4);
                         } catch (var10: Exception) {
                            CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var10);
@@ -226,7 +223,7 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var20: Timer = new Timer();
+                        val var21: Timer = new Timer();
                         val var18: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
@@ -245,7 +242,7 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var20.scheduleAtFixedRate(var18, 1500L, 1000L);
+                        var21.scheduleAtFixedRate(var18, 1500L, 1000L);
                         JSWatchdogManager.access$setFreezeTimer$p(var18);
                      }
                   } catch (var9: Exception) {
@@ -255,7 +252,7 @@ public object JSWatchdogManager {
                   }
 
                   try {
-                     this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(var1.j));
+                     this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(var1.element));
                   } catch (var8: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var8);
                      this.$promise.reject(var8);

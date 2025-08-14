@@ -28,7 +28,9 @@ import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nMobileVoiceOverlay.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MobileVoiceOverlay.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlay\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 View.kt\nandroidx/core/view/ViewKt\n+ 5 Animator.kt\nandroidx/core/animation/AnimatorKt\n*L\n1#1,242:1\n14#2,5:243\n14#2,5:248\n14#2,5:253\n1#3:258\n339#4,28:259\n29#5:287\n85#5,18:288\n*S KotlinDebug\n*F\n+ 1 MobileVoiceOverlay.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlay\n*L\n134#1:243,5\n148#1:248,5\n159#1:253,5\n45#1:259,28\n172#1:287\n172#1:288,18\n*E\n"])
 internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayoutTrashed: () -> Unit, emitOnChannelQueryUpdate: (String) -> Unit) {
    private final val context: ReactApplicationContext
    private final val emitOnLayoutTrashed: () -> Unit
@@ -39,10 +41,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    private final val selectorDialogProvider: OverlayViewProvider<OverlayVoiceSelectorBubbleDialog>
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "emitOnLayoutTrashed");
-      kotlin.jvm.internal.r.h(var3, "emitOnChannelQueryUpdate");
-      super();
       this.context = var1;
       this.emitOnLayoutTrashed = var2;
       this.emitOnChannelQueryUpdate = var3;
@@ -103,7 +101,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `menuDialogProvider$lambda$14`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayMenuBubbleDialog {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: OverlayMenuBubbleDialog = new OverlayMenuBubbleDialog(var0.context);
       var2.getInsetMargins().top = var2.getResources().getDimensionPixelOffset(R.dimen.vertical_safe_margin);
       var2.setOnDialogClosed(new i(var0));
@@ -113,7 +110,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `menuDialogProvider$lambda$14$lambda$13$lambda$11`(var0: MobileVoiceOverlay, var1: OverlayDialog): Unit {
-      kotlin.jvm.internal.r.h(var1, "it");
       var0.closeMenuDialog();
       return Unit.a;
    }
@@ -130,11 +126,9 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `onTrashVoiceBubble$lambda$26`(var0: MobileVoiceOverlay, var1: OverlayVoiceBubble): Unit {
-      kotlin.jvm.internal.r.h(var1, "voiceBubble");
       var1.moveToAnchorPoint();
       val var2: Animator = AnimatorInflater.loadAnimator(var1.getContext(), R.animator.fade_out);
       var2.setTarget(var1);
-      kotlin.jvm.internal.r.e(var2);
       var2.addListener(new AnimatorListener(var0) {
          final MobileVoiceOverlay this$0;
 
@@ -177,7 +171,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `selectorDialogProvider$lambda$19`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceSelectorBubbleDialog {
-      kotlin.jvm.internal.r.h(var1, "provider");
       val var2: OverlayVoiceSelectorBubbleDialog = new OverlayVoiceSelectorBubbleDialog(var0.context);
       var2.setOnDialogClosed(new o(var1));
       var2.setOnTextChanged(new p(var0));
@@ -187,14 +180,12 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `selectorDialogProvider$lambda$19$lambda$18$lambda$15`(var0: OverlayViewProvider, var1: OverlayDialog): Unit {
-      kotlin.jvm.internal.r.h(var1, "it");
       var0.removeViewFromOverlay();
       return Unit.a;
    }
 
    @JvmStatic
    fun `selectorDialogProvider$lambda$19$lambda$18$lambda$16`(var0: MobileVoiceOverlay, var1: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var1, "text");
       var0.emitOnChannelQueryUpdateEvent(var1);
       return Unit.a;
    }
@@ -203,35 +194,31 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    fun `selectorDialogProvider$lambda$19$lambda$18$lambda$17`(var0: OverlayVoiceSelectorBubbleDialog, var1: ChannelId): Unit {
       val var2: MobileVoiceOverlay.Companion = Companion;
       val var3: Context = var0.getContext();
-      kotlin.jvm.internal.r.g(var3, "getContext(...)");
       var2.startHeadlessTask(
-         var3, "SelectChannel", D.d.a(A9.s.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), A9.s.a("connectToVoice", java.lang.Boolean.TRUE))
+         var3, "SelectChannel", D.d.a(B9.s.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), B9.s.a("connectToVoice", java.lang.Boolean.TRUE))
       );
       return Unit.a;
    }
 
    @JvmStatic
    fun `trashWrapProvider$lambda$10`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayTrashWrap {
-      kotlin.jvm.internal.r.h(var1, "it");
       return new OverlayTrashWrap(var0.context);
    }
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-      val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var4.getInsetMargins().set(-var2, var2, -var2, var2);
-      var4.setOnClickListener(new l(var4, var0));
-      var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
-      var4.setOnMovingStateChanged(new n(var0, var4));
-      return var4;
+      val var5: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
+      var5.getInsetMargins().set(-var2, var2, -var2, var2);
+      var5.setOnClickListener(new l(var5, var0));
+      var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var5));
+      var5.setOnMovingStateChanged(new n(var0, var5));
+      return var5;
    }
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$4`(var0: OverlayVoiceBubble, var1: MobileVoiceOverlay, var2: View) {
       val var9: SimpleDraweeView = var0.getImageView$mobile_voice_overlay_release();
-      kotlin.jvm.internal.r.f(var9, "null cannot be cast to non-null type android.view.View");
       val var10: LayoutParams = var9.getLayoutParams();
       val var11: MarginLayoutParams;
       if (var10 is MarginLayoutParams) {
@@ -296,7 +283,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$4$lambda$3`(var0: OverlayVoiceBubble, var1: Rect, var2: OverlayMenuBubbleDialog): Unit {
-      kotlin.jvm.internal.r.h(var2, "menuDialog");
       val var3: LayoutParams = var2.getLinkedAnchorView().getLayoutParams();
       var3.width = var0.getWidth() - var1.left - var1.right;
       var3.height = var0.getHeight();
@@ -310,11 +296,9 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
          }
 
          public void onViewAttachedToWindow(View var1) {
-            kotlin.jvm.internal.r.h(var1, "v");
             val var2: OverlayVoiceBubble = this.$voiceBubble;
             if (var1.isLaidOut() && !var1.isLayoutRequested()) {
                var1 = var1.findViewWithTag("Active Voice Bubble");
-               kotlin.jvm.internal.r.g(var1, "findViewWithTag(...)");
                var2.anchorOn(var1);
             } else {
                var1.addOnLayoutChangeListener(new OnLayoutChangeListener(var1, var2) {
@@ -329,7 +313,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
                   public void onLayoutChange(View var1, int var2x, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
                      var1.removeOnLayoutChangeListener(this);
                      var1 = this.$v$inlined.findViewWithTag("Active Voice Bubble");
-                     kotlin.jvm.internal.r.g(var1, "findViewWithTag(...)");
                      this.$voiceBubble$inlined.anchorOn(var1);
                   }
                });
@@ -337,7 +320,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
          }
 
          public void onViewDetachedFromWindow(View var1) {
-            kotlin.jvm.internal.r.h(var1, "v");
             if (this.$voiceBubble.isAttachedToWindow()) {
                this.$voiceBubble.setBubbleTouchable(true);
                this.$voiceBubble.anchorOff(true);
@@ -349,14 +331,12 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$6`(var0: MobileVoiceOverlay, var1: OverlayVoiceBubble, var2: MotionEvent): Unit {
-      kotlin.jvm.internal.r.h(var2, "event");
       var0.trashWrapProvider.withView(new k(var1, var2, var0));
       return Unit.a;
    }
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$6$lambda$5`(var0: OverlayVoiceBubble, var1: MotionEvent, var2: MobileVoiceOverlay, var3: OverlayTrashWrap): Unit {
-      kotlin.jvm.internal.r.h(var3, "trashWrap");
       if (var3.processMotionEvent(var0, var1)) {
          var2.onTrashVoiceBubble();
       }
@@ -372,7 +352,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
 
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9$lambda$8$lambda$7`(var0: Boolean, var1: MobileVoiceOverlay, var2: OverlayVoiceBubble, var3: OverlayTrashWrap): Unit {
-      kotlin.jvm.internal.r.h(var3, "trashWrap");
       if (var0) {
          var3.show();
       } else {
@@ -390,16 +369,15 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
    internal fun setData(data: MobileVoiceOverlayData) {
-      kotlin.jvm.internal.r.h(var1, "data");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$getVoiceBubbleProvider$p(this).setData(var1);
          access$getMenuDialogProvider$p(this).setData(var1);
@@ -415,14 +393,13 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    }
 
    internal fun showOverlay(assets: MobileVoiceOverlayAssets) {
-      kotlin.jvm.internal.r.h(var1, "assets");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$getSelectorDialogProvider$p(this).setAssets(var1);
          access$getMenuDialogProvider$p(this).setAssets(var1);
          access$getVoiceBubbleProvider$p(this).setAssets(var1);
          access$getTrashWrapProvider$p(this).setAssets(var1);
          if (!access$isOverlayShowing(this)) {
-            access$getVoiceBubbleProvider$p(this).withView(new Function1(this) {
+            access$getVoiceBubbleProvider$p(this).withView(new Function1<OverlayVoiceBubble, Unit>(this) {
                final MobileVoiceOverlay this$0;
 
                {
@@ -430,7 +407,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
                }
 
                public final void invoke(OverlayVoiceBubble var1) {
-                  kotlin.jvm.internal.r.h(var1, "it");
                   MobileVoiceOverlay.access$floatBubbleToHorizontalEdge(this.this$0, var1);
                }
             });
@@ -449,9 +425,6 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
       private const val JS_INTERFACE_NAME: String
 
       public fun startHeadlessTask(context: Context, taskName: String, taskParams: Bundle = Bundle.EMPTY) {
-         kotlin.jvm.internal.r.h(var1, "context");
-         kotlin.jvm.internal.r.h(var2, "taskName");
-         kotlin.jvm.internal.r.h(var3, "taskParams");
          HeadlessTasks.Companion.startHeadlessTask$default(HeadlessTasks.Companion, var1, var2, 0L, false, var3, false, 12, null);
       }
    }

@@ -5,7 +5,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 
-public open class ChatListLinearLayout  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout, ChatListChildView {
+public open class ChatListLinearLayout  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2), ChatListChildView {
    public open var lastKey: Any?
       internal final set
 
@@ -13,13 +13,7 @@ public open class ChatListLinearLayout  public constructor(context: Context, att
       internal final set
 
    open fun ChatListLinearLayout(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
-   }
-
-   init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
    }
 
    override fun bindKey(var1: Any) {

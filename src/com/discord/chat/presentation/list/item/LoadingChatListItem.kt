@@ -1,14 +1,12 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.row.LoadMoreButton
-import kotlin.jvm.internal.r
 
 public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean) : ChatListItem {
    public final val button: LoadMoreButton
    public final val isLoading: Boolean
 
    init {
-      r.h(var1, "button");
       val var3: StringBuilder = new StringBuilder();
       var3.append("loading + ");
       var3.append(var2);
@@ -26,7 +24,6 @@ public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean
    }
 
    public fun copy(button: LoadMoreButton = var0.button, isLoading: Boolean = var0.isLoading): LoadingChatListItem {
-      r.h(var1, "button");
       return new LoadingChatListItem(var1, var2);
    }
 
@@ -37,7 +34,7 @@ public data class LoadingChatListItem(button: LoadMoreButton, isLoading: Boolean
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.button, var1.button)) {
+         if (!(this.button == var1.button)) {
             return false;
          } else {
             return this.isLoading == var1.isLoading;

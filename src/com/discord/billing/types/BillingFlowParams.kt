@@ -2,24 +2,24 @@ package com.discord.billing.types
 
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
-import hb.a
 import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nBillingFlowParams.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingFlowParams.kt\ncom/discord/billing/types/BillingFlowParams\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,172:1\n1#2:173\n295#3,2:174\n295#3,2:176\n295#3,2:181\n12834#4,3:178\n*S KotlinDebug\n*F\n+ 1 BillingFlowParams.kt\ncom/discord/billing/types/BillingFlowParams\n*L\n72#1:174,2\n74#1:176,2\n131#1:181,2\n109#1:178,3\n*E\n"])
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {
       val var3: Byte;
-      if (r.c(var1, "P1M") && r.c(var2, "P1Y")) {
+      if (var1 == "P1M" && var2 == "P1Y") {
          var3 = 12;
-      } else if (r.c(var1, "P1M") && r.c(var2, "P6M")) {
+      } else if (var1 == "P1M" && var2 == "P6M") {
          var3 = 6;
-      } else if (r.c(var1, "P1M") && r.c(var2, "P3M")) {
+      } else if (var1 == "P1M" && var2 == "P3M") {
          var3 = 3;
-      } else if (r.c(var1, "P3M") && r.c(var2, "P1Y")) {
+      } else if (var1 == "P3M" && var2 == "P1Y") {
          var3 = 4;
-      } else if ((!r.c(var1, "P3M") || !r.c(var2, "P6M")) && (!r.c(var1, "P6M") || !r.c(var2, "P1Y"))) {
+      } else if ((!(var1 == "P3M") || !(var2 == "P6M")) && (!(var1 == "P6M") || !(var2 == "P1Y"))) {
          var3 = 1;
       } else {
          var3 = 2;
@@ -30,16 +30,13 @@ internal object BillingFlowParams {
 
    private fun getObfuscatedUserId(userId: String): String {
       val var4: MessageDigest = MessageDigest.getInstance("SHA-256");
-      val var7: ByteArray = var1.getBytes(a.b);
-      r.g(var7, "getBytes(...)");
+      val var7: ByteArray = var1.getBytes(Charsets.UTF_8);
       val var9: ByteArray = var4.digest(var7);
-      r.g(var9, "digest(...)");
       val var3: Int = var9.length;
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
          val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         r.g(var6, "format(...)");
          val var5: StringBuilder = new StringBuilder();
          var5.append(var1);
          var5.append(var6);
@@ -50,12 +47,12 @@ internal object BillingFlowParams {
    }
 
    private fun getPriceAmountMicros(productDetails: ProductDetails): Long {
-      if (r.c(var1.e(), "inapp")) {
+      if (var1.e() == "inapp") {
          val var2: ProductDetails.b = var1.c();
          if (var2 != null) {
             return var2.b();
          }
-      } else if (r.c(var1.e(), "subs")) {
+      } else if (var1.e() == "subs") {
          return this.getPricingPhase(var1).d();
       }
 
@@ -63,7 +60,7 @@ internal object BillingFlowParams {
    }
 
    private fun getPricingPhase(productDetails: ProductDetails): PricingPhase {
-      if (r.c(var1.e(), "inapp")) {
+      if (var1.e() == "inapp") {
          throw new AssertionError("Attempted to retrieve pricing phase for one time purchase");
       } else {
          val var4: java.util.List = var1.f();
@@ -107,14 +104,12 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var6: Long = this.getPriceAmountMicros(var1);
-      val var4: Long = this.getPriceAmountMicros(var2);
+      val var4: Long = this.getPriceAmountMicros(var1);
+      val var6: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
-      r.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
-      r.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
+      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
          var3 = 6;
       } else {
          var3 = 2;
@@ -124,8 +119,6 @@ internal object BillingFlowParams {
    }
 
    public fun create(productDetails: List<ProductDetails>?, productId: String, productIdOld: String?, purchaseToken: String?, userId: String): com.android.billingclient.api.BillingFlowParams? {
-      r.h(var2, "productId");
-      r.h(var5, "userId");
       val var11: ProductDetails;
       if (var1 != null) {
          val var7: java.util.Iterator = var1.iterator();
@@ -137,7 +130,7 @@ internal object BillingFlowParams {
             }
 
             val var6: Any = var7.next();
-            if (r.c((var6 as ProductDetails).d(), var2)) {
+            if ((var6 as ProductDetails).d() == var2) {
                var10 = var6;
                break;
             }
@@ -159,7 +152,7 @@ internal object BillingFlowParams {
             }
 
             var8 = var13.next();
-         } while (!r.c(((ProductDetails)var8).d(), var3));
+         } while (!(((ProductDetails)var8).d() == var3));
 
          var9 = var8 as ProductDetails;
       } else {
@@ -168,7 +161,7 @@ internal object BillingFlowParams {
 
       if (var11 != null && (var3 == null || var9 != null)) {
          val var12: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
-            .e(i.e(com.android.billingclient.api.BillingFlowParams.b.a().c(var11).a()))
+            .e(CollectionsKt.e(com.android.billingclient.api.BillingFlowParams.b.a().c(var11).a()))
             .c(this.getObfuscatedUserId(var5));
          if (var9 != null && var4 != null) {
             var12.f(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).d(INSTANCE.getReplacementMode(var9, var11)).a());
@@ -188,15 +181,12 @@ internal object BillingFlowParams {
       userId: String,
       offerId: String?
    ): com.android.billingclient.api.BillingFlowParams? {
-      r.h(var1, "productDetails");
-      r.h(var2, "productId");
-      r.h(var5, "userId");
       val var10: java.util.Iterator = var1.iterator();
 
       while (true) {
          if (var10.hasNext()) {
             val var9: Any = var10.next();
-            if (!r.c((var9 as ProductDetails).d(), var2)) {
+            if (!((var9 as ProductDetails).d() == var2)) {
                continue;
             }
 
@@ -221,7 +211,7 @@ internal object BillingFlowParams {
             }
 
             var12 = var23.next();
-         } while (!r.c(((ProductDetails)var12).d(), var3));
+         } while (!(((ProductDetails)var12).d() == var3));
 
          val var24: ProductDetails = var12 as ProductDetails;
          if (var3 != null && var12 as ProductDetails == null) {
@@ -229,8 +219,7 @@ internal object BillingFlowParams {
          } else {
             val var22: ArrayList = new ArrayList();
             val var25: com.android.billingclient.api.BillingFlowParams.b.a = com.android.billingclient.api.BillingFlowParams.b.a().c(var20);
-            r.g(var25, "setProductDetails(...)");
-            if (r.c(var20.e(), "subs")) {
+            if (var20.e() == "subs") {
                var var13: java.lang.String;
                if (var6 != null) {
                   val var28: java.util.List = var20.f();
@@ -245,7 +234,7 @@ internal object BillingFlowParams {
                         }
 
                         var15 = var29.next();
-                     } while (!r.c(((ProductDetails.d)var15).b(), var6));
+                     } while (!(((ProductDetails.d)var15).b() == var6));
 
                      val var30: ProductDetails.d = var15 as ProductDetails.d;
                      var13 = null;
@@ -277,20 +266,19 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  var2 = var20.d();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Could not find offer token for productId: ");
-                  var18.append(var2);
-                  var18.append(" offerId: ");
-                  var18.append(var6);
-                  throw new AssertionError(var18.toString());
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
                var25.b(var13);
             }
 
             val var16: com.android.billingclient.api.BillingFlowParams.b = var25.a();
-            r.g(var16, "build(...)");
             var22.add(var16);
             val var17: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
                .e(var22)

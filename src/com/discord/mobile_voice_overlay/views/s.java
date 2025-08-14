@@ -5,9 +5,9 @@ import android.view.View.OnClickListener;
 
 // $VF: synthetic class
 public final class s implements OnClickListener {
-   public final OverlayMenuBubbleDialog j;
+   public final OverlayMenuBubbleDialog d;
 
    public final void onClick(View var1) {
-      OverlayMenuBubbleDialog.m(this.j, var1);
+      OverlayMenuBubbleDialog.m(this.d, var1);
    }
 }

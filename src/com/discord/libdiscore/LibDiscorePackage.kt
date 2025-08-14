@@ -4,16 +4,13 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.uimanager.ViewManager
-import kotlin.jvm.internal.r
 
 public class LibDiscorePackage : ReactPackage {
    public open fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-      r.h(var1, "reactContext");
-      return i.e(new LibDiscoreModule(var1));
+      return CollectionsKt.e(new LibDiscoreModule(var1));
    }
 
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-      r.h(var1, "reactContext");
-      return i.k();
+      return CollectionsKt.k();
    }
 }

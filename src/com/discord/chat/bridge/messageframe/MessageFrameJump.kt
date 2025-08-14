@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.messageframe
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class MessageFrameJump(type: MessageFrameType, guildName: String? = null, channelName: String? = null) : MessageFrame {
+public data class MessageFrameJump(type: MessageFrameType, guildName: String? = null, channelName: String? = null) : MessageFrame() {
    public open val type: MessageFrameType
    public final val guildName: String?
    public final val channelName: String?
 
    init {
-      r.h(var1, "type");
-      super(null);
       this.type = var1;
       this.guildName = var2;
       this.channelName = var3;
@@ -31,7 +28,6 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public fun copy(type: MessageFrameType = var0.type, guildName: String? = var0.guildName, channelName: String? = var0.channelName): MessageFrameJump {
-      r.h(var1, "type");
       return new MessageFrameJump(var1, var2, var3);
    }
 
@@ -44,10 +40,10 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.guildName, var1.guildName)) {
+         } else if (!(this.guildName == var1.guildName)) {
             return false;
          } else {
-            return r.c(this.channelName, var1.channelName);
+            return this.channelName == var1.channelName;
          }
       }
    }
@@ -70,18 +66,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var1: MessageFrameType = this.type;
+      val var3: MessageFrameType = this.type;
       val var4: java.lang.String = this.guildName;
       val var2: java.lang.String = this.channelName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageFrameJump(type=");
-      var3.append(var1);
-      var3.append(", guildName=");
-      var3.append(var4);
-      var3.append(", channelName=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MessageFrameJump(type=");
+      var1.append(var3);
+      var1.append(", guildName=");
+      var1.append(var4);
+      var1.append(", channelName=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

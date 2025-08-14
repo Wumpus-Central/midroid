@@ -25,44 +25,37 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ThreadEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nThreadEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThreadEmbedView.kt\ncom/discord/chat/presentation/message/view/ThreadEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,135:1\n257#2,2:136\n257#2,2:138\n257#2,2:140\n257#2,2:142\n*S KotlinDebug\n*F\n+ 1 ThreadEmbedView.kt\ncom/discord/chat/presentation/message/view/ThreadEmbedView\n*L\n75#1:136,2\n97#1:138,2\n109#1:140,2\n111#1:142,2\n*E\n"])
+public class ThreadEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3) {
    public final val binding: ThreadEmbedViewBinding
 
    fun ThreadEmbedView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ThreadEmbedView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var7: ThreadEmbedViewBinding = ThreadEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var7, "inflate(...)");
       this.binding = var7;
       var var4: TextView = var7.threadEmbedName;
-      kotlin.jvm.internal.r.e(var7.threadEmbedName);
       val var5: DiscordFont = DiscordFont.PrimaryBold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       var4 = var7.threadEmbedMessagesCount;
-      kotlin.jvm.internal.r.e(var7.threadEmbedMessagesCount);
       DiscordFontUtilsKt.setDiscordFont(var4, var5);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextLink());
       var4 = var7.threadEmbedMostRecentMessageName;
-      kotlin.jvm.internal.r.e(var7.threadEmbedMostRecentMessageName);
       DiscordFontUtilsKt.setDiscordFont(var4, var5);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       val var6: SimpleDraweeSpanTextView = var7.threadEmbedMostRecentMessageContent;
-      kotlin.jvm.internal.r.e(var7.threadEmbedMostRecentMessageContent);
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var6, 14.0F);
       var6.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
@@ -80,10 +73,8 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
 
    public fun setArchived(archived: Boolean, iconUrl: String? = null) {
       val var4: SimpleDraweeView = this.binding.threadEmbedIcon;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedIcon, "threadEmbedIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var2);
       val var5: SimpleDraweeView = this.binding.threadEmbedIcon;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedIcon, "threadEmbedIcon");
       val var3: Byte;
       if (var1) {
          var3 = 0;
@@ -104,7 +95,6 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
       clanBadgeUrl: String?,
       clanGuildId: GuildId?
    ) {
-      kotlin.jvm.internal.r.h(var4, "message");
       if (var3 != null) {
          this.binding.threadEmbedMostRecentMessageName.setTextColor(var3);
       } else {
@@ -112,7 +102,6 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
       }
 
       val var17: TextView = this.binding.threadEmbedMostRecentMessageName;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedMostRecentMessageName, "threadEmbedMostRecentMessageName");
       ViewUtilsKt.setOptionalText(var17, var2);
       this.binding.threadEmbedMostRecentMessageAvatar.setImageURI(var1);
       val var9: Boolean;
@@ -123,7 +112,6 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
       }
 
       val var11: LinearLayout = this.binding.threadEmbedMostRecentMessageHeader;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedMostRecentMessageHeader, "threadEmbedMostRecentMessageHeader");
       val var10: Byte;
       if (var9) {
          var10 = 0;
@@ -133,7 +121,6 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
 
       var11.setVisibility(var10);
       val var16: SimpleDraweeSpanTextView = this.binding.threadEmbedMostRecentMessageContent;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedMostRecentMessageContent, "threadEmbedMostRecentMessageContent");
       val var12: DiscordFont;
       if (var5) {
          var12 = DiscordFont.PrimaryNormalItalic;
@@ -145,11 +132,9 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
       if (var6 != null && var8 != null) {
          this.binding.tagChiplet.configure-D0ylKIU(var6, var7, var8.unbox-impl(), null, 0.89F);
          val var14: ClanTagChipletView = this.binding.tagChiplet;
-         kotlin.jvm.internal.r.g(this.binding.tagChiplet, "tagChiplet");
          var14.setVisibility(0);
       } else {
          val var13: ClanTagChipletView = this.binding.tagChiplet;
-         kotlin.jvm.internal.r.g(this.binding.tagChiplet, "tagChiplet");
          var13.setVisibility(8);
       }
 
@@ -158,18 +143,14 @@ public class ThreadEmbedView  public constructor(context: Context, attrs: Attrib
       }
 
       val var15: SimpleDraweeSpanTextView = this.binding.threadEmbedMostRecentMessageContent;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedMostRecentMessageContent, "threadEmbedMostRecentMessageContent");
       SpannableExtensionsKt.coverWithSpan(var4, new BackgroundSpanDrawer(var15));
       this.binding.threadEmbedMostRecentMessageContent.setDraweeSpanStringBuilder(var4);
    }
 
    public fun setThread(title: CharSequence?, label: String) {
-      kotlin.jvm.internal.r.h(var2, "label");
       val var3: TextView = this.binding.threadEmbedName;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedName, "threadEmbedName");
       ViewUtilsKt.setOptionalText(var3, var1);
       val var4: TextView = this.binding.threadEmbedMessagesCount;
-      kotlin.jvm.internal.r.g(this.binding.threadEmbedMessagesCount, "threadEmbedMessagesCount");
       ViewUtilsKt.setOptionalText(var4, var2);
    }
 }

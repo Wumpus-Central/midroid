@@ -6,14 +6,11 @@ import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.GuildInviteMessageAccessory
 import com.discord.chat.presentation.message.view.GuildInviteView
 
-public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
+public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandler: ChatEventHandler) : MessagePartViewHolder(var1) {
    private final val guildInviteView: GuildInviteView
    public final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.r.h(var1, "guildInviteView");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
-      super(var1, null);
       this.guildInviteView = var1;
       this.eventHandler = var2;
    }
@@ -29,15 +26,14 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
    }
 
    public fun bind(inviteAccessory: GuildInviteMessageAccessory) {
-      kotlin.jvm.internal.r.h(var1, "inviteAccessory");
       val var4: GuildInviteEmbedImpl = var1.getInvite();
       val var3: GuildInviteView = this.guildInviteView;
       var var2: java.lang.String = var4.getSubtitle();
-      if (var2 != null && !kotlin.text.h.c0(var2)) {
+      if (var2 != null && !StringsKt.c0(var2)) {
          var2 = var4.getSubtitle();
       } else {
          var2 = var4.getChannelIcon();
-         if (var2 != null && !kotlin.text.h.c0(var2)) {
+         if (var2 != null && !StringsKt.c0(var2)) {
             var2 = var4.getChannelName();
          } else {
             var2 = null;

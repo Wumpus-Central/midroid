@@ -2,14 +2,11 @@ package com.discord.react.utilities
 
 import com.discord.codegen.NativeDateFormatUtilsModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
 
-public class DateFormatUtilsModule(reactContext: ReactApplicationContext) : NativeDateFormatUtilsModuleSpec {
+public class DateFormatUtilsModule(reactContext: ReactApplicationContext) : NativeDateFormatUtilsModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 

@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.ctabutton
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class CtaButton(text: String, textColor: Int? = null, backgroundColor: Int? = null, callback: String? = null) {
@@ -12,7 +11,6 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    public final val callback: String?
 
    init {
-      r.h(var1, "text");
       super();
       this.text = var1;
       this.textColor = var2;
@@ -37,7 +35,6 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public fun copy(text: String = var0.text, textColor: Int? = var0.textColor, backgroundColor: Int? = var0.backgroundColor, callback: String? = var0.callback): CtaButton {
-      r.h(var1, "text");
       return new CtaButton(var1, var2, var3, var4);
    }
 
@@ -48,14 +45,14 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.text, var1.text)) {
+         if (!(this.text == var1.text)) {
             return false;
-         } else if (!r.c(this.textColor, var1.textColor)) {
+         } else if (!(this.textColor == var1.textColor)) {
             return false;
-         } else if (!r.c(this.backgroundColor, var1.backgroundColor)) {
+         } else if (!(this.backgroundColor == var1.backgroundColor)) {
             return false;
          } else {
-            return r.c(this.callback, var1.callback);
+            return this.callback == var1.callback;
          }
       }
    }
@@ -85,19 +82,19 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.text;
-      val var2: Int = this.textColor;
-      val var3: Int = this.backgroundColor;
-      val var1: java.lang.String = this.callback;
+      val var3: java.lang.String = this.text;
+      val var5: Int = this.textColor;
+      val var1: Int = this.backgroundColor;
+      val var2: java.lang.String = this.callback;
       val var4: StringBuilder = new StringBuilder();
       var4.append("CtaButton(text=");
-      var4.append(var5);
-      var4.append(", textColor=");
-      var4.append(var2);
-      var4.append(", backgroundColor=");
       var4.append(var3);
-      var4.append(", callback=");
+      var4.append(", textColor=");
+      var4.append(var5);
+      var4.append(", backgroundColor=");
       var4.append(var1);
+      var4.append(", callback=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

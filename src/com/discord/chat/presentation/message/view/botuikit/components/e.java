@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class e implements Function0 {
-   public final ContentInventoryComponentView j;
+   public final ContentInventoryComponentView d;
 
    public final Object invoke() {
-      return ContentInventoryComponentView.g(this.j);
+      return ContentInventoryComponentView.g(this.d);
    }
 }

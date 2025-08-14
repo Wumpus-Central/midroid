@@ -1,8 +1,7 @@
 package com.discord.contact_sync
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ContactSyncBlobEntry(phone: String,
@@ -20,11 +19,6 @@ public data class ContactSyncBlobEntry(phone: String,
    public final val familyName: String
 
    init {
-      r.h(var1, "phone");
-      r.h(var2, "unencryptedName");
-      r.h(var4, "deviceContactId");
-      r.h(var5, "givenName");
-      r.h(var6, "familyName");
       super();
       this.phone = var1;
       this.unencryptedName = var2;
@@ -66,11 +60,6 @@ public data class ContactSyncBlobEntry(phone: String,
       givenName: String = var0.givenName,
       familyName: String = var0.familyName
    ): ContactSyncBlobEntry {
-      r.h(var1, "phone");
-      r.h(var2, "unencryptedName");
-      r.h(var4, "deviceContactId");
-      r.h(var5, "givenName");
-      r.h(var6, "familyName");
       return new ContactSyncBlobEntry(var1, var2, var3, var4, var5, var6);
    }
 
@@ -81,18 +70,18 @@ public data class ContactSyncBlobEntry(phone: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.phone, var1.phone)) {
+         if (!(this.phone == var1.phone)) {
             return false;
-         } else if (!r.c(this.unencryptedName, var1.unencryptedName)) {
+         } else if (!(this.unencryptedName == var1.unencryptedName)) {
             return false;
          } else if (this.hasImageData != var1.hasImageData) {
             return false;
-         } else if (!r.c(this.deviceContactId, var1.deviceContactId)) {
+         } else if (!(this.deviceContactId == var1.deviceContactId)) {
             return false;
-         } else if (!r.c(this.givenName, var1.givenName)) {
+         } else if (!(this.givenName == var1.givenName)) {
             return false;
          } else {
-            return r.c(this.familyName, var1.familyName);
+            return this.familyName == var1.familyName;
          }
       }
    }
@@ -112,26 +101,26 @@ public data class ContactSyncBlobEntry(phone: String,
 
    public override fun toString(): String {
       val var7: java.lang.String = this.phone;
-      val var4: java.lang.String = this.unencryptedName;
+      val var3: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var3: java.lang.String = this.deviceContactId;
-      val var5: java.lang.String = this.givenName;
+      val var4: java.lang.String = this.deviceContactId;
+      val var2: java.lang.String = this.givenName;
       val var6: java.lang.String = this.familyName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContactSyncBlobEntry(phone=");
-      var2.append(var7);
-      var2.append(", unencryptedName=");
-      var2.append(var4);
-      var2.append(", hasImageData=");
-      var2.append(var1);
-      var2.append(", deviceContactId=");
-      var2.append(var3);
-      var2.append(", givenName=");
-      var2.append(var5);
-      var2.append(", familyName=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ContactSyncBlobEntry(phone=");
+      var5.append(var7);
+      var5.append(", unencryptedName=");
+      var5.append(var3);
+      var5.append(", hasImageData=");
+      var5.append(var1);
+      var5.append(", deviceContactId=");
+      var5.append(var4);
+      var5.append(", givenName=");
+      var5.append(var2);
+      var5.append(", familyName=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -6,7 +6,6 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import com.discord.bundle_updater.BundleUpdater
-import com.discord.deep_link.DeepLinkPreprocessor
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
@@ -14,12 +13,11 @@ import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.facebook.react.bridge.ReactContext
-import kotlin.jvm.internal.r
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
    private fun currentReactContext(): ReactContext? {
-      return this.getReactActivityDelegate().getCurrentReactContext();
+      return this.getReactInstanceManager().getCurrentReactContext();
    }
 
    public override fun getActivityDelegate(): ActivityDelegate {
@@ -32,15 +30,12 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            new DeepLinkPreprocessor().handleAndUpdateIntent(var1);
             val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            val var3: Context = this.getContext();
-            r.g(var3, "getContext(...)");
+            var var3: Context = this.getContext();
             var2.handleIntent(var3, var1);
-            val var5: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            val var4: Context = this.getContext();
-            r.g(var4, "getContext(...)");
-            var5.handleIntent(var4, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            var3 = this.getContext();
+            var4.handleIntent(var3, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             BundleUpdater.Companion.instance().handleIntent(var1);
          }
@@ -48,13 +43,12 @@ public class MainActivity : ReactActivity {
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
-            r.g(var2, "getIntent(...)");
             this.parseIntent(var2);
          }
 
          public boolean onNewIntent(Intent var1) {
-            r.h(var1, "intent");
             this.parseIntent(var1);
+            this.this$0.setIntent(var1);
             return super.onNewIntent(var1);
          }
       };
@@ -70,7 +64,6 @@ public class MainActivity : ReactActivity {
    }
 
    public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
-      r.h(var2, "newConfig");
       super.onPictureInPictureModeChanged(var1, var2);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }

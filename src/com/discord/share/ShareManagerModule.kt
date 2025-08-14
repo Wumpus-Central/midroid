@@ -5,23 +5,18 @@ import android.content.Intent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.r
 
-public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val shareBroadcastReceiver: ShareBroadcastReceiver
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.shareBroadcastReceiver = new ShareBroadcastReceiver(var1);
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
       val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
       var3.register(var2, this.shareBroadcastReceiver);
    }
 
@@ -49,17 +44,15 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
    @ReactMethod
    public fun removeListeners(count: Int) {
       try {
-         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var3, "getReactApplicationContext(...)");
-         var2.unregister(var3, this.shareBroadcastReceiver);
+         val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var3.unregister(var2, this.shareBroadcastReceiver);
       } catch (var4: Exception) {
       }
    }
 
    @ReactMethod
    public fun setAuthenticationToken(authenticationToken: String?, superProperties: String) {
-      r.h(var2, "superProperties");
    }
 
    @ReactMethod
@@ -68,11 +61,13 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun share(text: String?, url: String?, chooserText: String?, location: String?) {
-      if (var1 != null && !h.c0(var1) || var2 != null && !h.c0(var2)) {
+      if (var1 != null && !StringsKt.c0(var1) || var2 != null && !StringsKt.c0(var2)) {
          val var5: Intent = new Intent("android.intent.action.SEND");
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");
-         var5.putExtra("android.intent.extra.TEXT", i.q0(i.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null));
+         var5.putExtra(
+            "android.intent.extra.TEXT", CollectionsKt.p0(CollectionsKt.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null)
+         );
          val var8: Activity = this.getReactApplicationContext().getCurrentActivity();
          if (var8 != null) {
             var1 = var3;
@@ -82,7 +77,6 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
             val var6: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
             val var10: ReactApplicationContext = this.getReactApplicationContext();
-            r.g(var10, "getReactApplicationContext(...)");
             var8.startActivity(Intent.createChooser(var5, var1, var6.getPendingIntentSender(var10, var4)));
          }
       } else {

@@ -8,19 +8,16 @@ import com.facebook.react.HeadlessJsTaskService
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.jstasks.HeadlessJsTaskConfig
-import kotlin.jvm.internal.r
 
 public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    public final val taskConfig: HeadlessJsTaskConfig
 
    @JvmStatic
    fun {
-      val var0: Int = HeadlessTasksService.j;
+      val var0: Int = HeadlessTasksService.d;
    }
 
    init {
-      r.h(var1, "taskConfig");
-      super();
       this.taskConfig = var1;
    }
 
@@ -29,7 +26,6 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public fun copy(taskConfig: HeadlessJsTaskConfig = var0.taskConfig): HeadlessTasks {
-      r.h(var1, "taskConfig");
       return new HeadlessTasks(var1);
    }
 
@@ -39,7 +35,7 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
       } else if (var1 !is HeadlessTasks) {
          return false;
       } else {
-         return r.c(this.taskConfig, (var1 as HeadlessTasks).taskConfig);
+         return this.taskConfig == (var1 as HeadlessTasks).taskConfig;
       }
    }
 
@@ -48,12 +44,12 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public override fun toString(): String {
-      val var2: HeadlessJsTaskConfig = this.taskConfig;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("HeadlessTasks(taskConfig=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: HeadlessJsTaskConfig = this.taskConfig;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HeadlessTasks(taskConfig=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
@@ -90,11 +86,10 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
                var5 = "";
             }
 
-            val var2: Long = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
+            val var3: Long = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
             val var8: WritableMap = Arguments.fromBundle(var1.getBundleExtra("intent.discord.headless_tasks_params"));
-            val var4: Boolean = var1.getBooleanExtra("intent.discord.headless_tasks_aif", false);
-            r.e(var8);
-            var7 = new HeadlessTasks(new HeadlessJsTaskConfig(var5, var8, var2, var4, null, 16, null));
+            val var2: Boolean = var1.getBooleanExtra("intent.discord.headless_tasks_aif", false);
+            var7 = new HeadlessTasks(new HeadlessJsTaskConfig(var5, var8, var3, var2, null, 16, null));
          } else {
             var7 = null;
          }
@@ -110,9 +105,6 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
          taskParams: Bundle = new Bundle(),
          taskInvokingFromBroadcastReceiver: Boolean = false
       ) {
-         r.h(var1, "context");
-         r.h(var2, "taskName");
-         r.h(var6, "taskParams");
          var1.startService(this.toIntent(var1, var2, var3, var5, var6));
          if (var7) {
             HeadlessJsTaskService.acquireWakeLockNow(var1);

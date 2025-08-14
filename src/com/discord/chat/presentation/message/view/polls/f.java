@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final PollAction j;
-   public final Function3 k;
-   public final long l;
+   public final PollAction d;
+   public final Function3 e;
+   public final long i;
    public final String m;
 
    public final void onClick(View var1) {
-      PollActionButton.c(this.j, this.k, this.l, this.m, var1);
+      PollActionButton.c(this.d, this.e, this.i, this.m, var1);
    }
 }

@@ -19,11 +19,14 @@ import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
-public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
-   : BaseChatListAdapter {
+@SourceDebugExtension(["SMAP\nChannelChatListAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,231:1\n14#2,5:232\n14#2,5:245\n14#2,5:250\n14#2,5:255\n388#3,7:237\n1863#3,2:260\n1#4:244\n*S KotlinDebug\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n*L\n38#1:232,5\n95#1:245,5\n106#1:250,5\n127#1:255,5\n64#1:237,7\n163#1:260,2\n*E\n"])
+public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider) : BaseChatListAdapter(
+      var2, var3
+   ) {
    public final val doLayout: () -> Unit
    private final var portalChatListItem: PortalViewChatListItem?
    private final var firstMessageItemPosition: Int
@@ -33,10 +36,6 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
    private final var updateCount: Int
 
    init {
-      kotlin.jvm.internal.r.h(var1, "doLayout");
-      kotlin.jvm.internal.r.h(var2, "eventHandlerProvider");
-      kotlin.jvm.internal.r.h(var3, "messageComponentProvider");
-      super(var2, var3);
       this.doLayout = var1;
       this.firstMessageItemPosition = -1;
       this.updateQueue = new LinkedList<>();
@@ -44,11 +43,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var4: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var4);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var5);
+         throw new IllegalStateException(var4.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
@@ -56,7 +55,6 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          } else if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
             val var2: Log = Log.INSTANCE;
             val var3: java.lang.String = access$getLOGGING_TAG$cp();
-            kotlin.jvm.internal.r.g(var3, "access$getLOGGING_TAG$cp(...)");
             Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
@@ -70,11 +68,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          var6 = var1.getItems();
          var var5: Any = this.items;
          if (this.items != null) {
-            kotlin.jvm.internal.r.g(this.items, "items");
             if (!(var5 as java.util.Collection).isEmpty()) {
                var5 = this.items;
-               kotlin.jvm.internal.r.g(this.items, "items");
-               if (kotlin.collections.i.s0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
+               if (CollectionsKt.r0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
                   var2 = true;
                   break label64;
                }
@@ -87,7 +83,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       var var3: Boolean = false;
       if (var2) {
          var3 = false;
-         if (kotlin.collections.i.u0(var6) !is LoadingChatListItem) {
+         if (CollectionsKt.t0(var6) !is LoadingChatListItem) {
             var3 = true;
          }
       }
@@ -95,8 +91,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       var var9: java.util.List = var6;
       if (var3) {
          val var10: PortalViewChatListItem = this.portalChatListItem;
-         kotlin.jvm.internal.r.e(this.portalChatListItem);
-         var9 = kotlin.collections.i.C0(var6, var10);
+         var9 = CollectionsKt.B0(var6, var10);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -120,7 +115,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
                this.notifyItemRangeInserted((var11 as ListOperation.InsertRange).getFirst(), (var11 as ListOperation.InsertRange).getCount());
             } else {
                if (var11 !is ListOperation.RemoveRange) {
-                  throw new A9.n();
+                  throw new B9.n();
                }
 
                this.notifyItemRangeRemoved((var11 as ListOperation.RemoveRange).getFirst(), (var11 as ListOperation.RemoveRange).getCount());
@@ -136,20 +131,19 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       if (ThreadUtilsKt.isOnMainThread()) {
          if (!access$getUpdateQueue$p(this).isEmpty()) {
             val var3: Any = access$getUpdateQueue$p(this).remove();
-            kotlin.jvm.internal.r.g(var3, "remove(...)");
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
    private fun processPortalViewUpdate(update: PortalViewUpdate) {
-      val var3: Boolean = kotlin.collections.i.u0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
+      val var3: Boolean = CollectionsKt.t0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
       var var2: Boolean;
       if (var1.getPortalChatListItem() != null) {
          var2 = 1;
@@ -177,23 +171,21 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new A9.n();
+               throw new B9.n();
             }
 
-            val var5: java.util.List = kotlin.collections.i.W0(this.getChatListItems$chat_release());
-            var2 = kotlin.collections.i.m(this.getChatListItems$chat_release());
+            val var5: java.util.List = CollectionsKt.V0(this.getChatListItems$chat_release());
+            var2 = CollectionsKt.m(this.getChatListItems$chat_release());
             val var7: PortalViewChatListItem = var1.getPortalChatListItem();
-            kotlin.jvm.internal.r.e(var7);
             var5.set(var2, var7);
             var8 = var5;
          } else {
-            var8 = kotlin.collections.i.a0(this.getChatListItems$chat_release(), 1);
+            var8 = CollectionsKt.a0(this.getChatListItems$chat_release(), 1);
          }
       } else {
          val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
-         kotlin.jvm.internal.r.e(var9);
-         var8 = kotlin.collections.i.C0(var13, var9);
+         var8 = CollectionsKt.B0(var13, var9);
       }
 
       this.setChatListItems$chat_release(var8);
@@ -202,15 +194,15 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new A9.n();
+               throw new B9.n();
             }
 
-            this.notifyItemChanged(kotlin.collections.i.m(this.getChatListItems$chat_release()));
+            this.notifyItemChanged(CollectionsKt.m(this.getChatListItems$chat_release()));
          } else {
-            this.notifyItemRemoved(kotlin.collections.i.m(this.getChatListItems$chat_release()) + 1);
+            this.notifyItemRemoved(CollectionsKt.m(this.getChatListItems$chat_release()) + 1);
          }
       } else {
-         this.notifyItemInserted(kotlin.collections.i.m(this.getChatListItems$chat_release()));
+         this.notifyItemInserted(CollectionsKt.m(this.getChatListItems$chat_release()));
       }
    }
 
@@ -229,7 +221,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             access$processPortalViewUpdate(this, var1 as PortalViewUpdate);
          } else {
             if (var1 !is ChatListItemUpdate) {
-               throw new A9.n();
+               throw new B9.n();
             }
 
             access$processChatListItemUpdate(this, var1 as ChatListItemUpdate);
@@ -238,7 +230,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, jb.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
+         access$setProcessNextUpdateJob$p(this, db.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -256,7 +248,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
 
             public final Object invokeSuspend(Object var1) {
-               H9.b.e();
+               G9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -268,11 +260,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
          }, 3, null));
       } else {
-         val var4: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var4);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -336,7 +328,6 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
    }
 
    public open fun setItems(items: List<ChatListItem>) {
-      kotlin.jvm.internal.r.h(var1, "items");
       setItems$default(this, var1, null, new a(), new b(), null, 16, null);
    }
 
@@ -347,9 +338,6 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       postCommit: () -> Unit,
       chatListAction: ChatListAction? = null
    ) {
-      kotlin.jvm.internal.r.h(var1, "items");
-      kotlin.jvm.internal.r.h(var3, "preCommit");
-      kotlin.jvm.internal.r.h(var4, "postCommit");
       val var6: Int = this.updateCount + 1;
       this.updateCount++;
       this.enqueueUpdate(new ChatListItemUpdate(var1, var2, var5, var6, var3, var4));
@@ -359,7 +347,6 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       val var5: PortalViewChatListItem;
       if (var1 != null) {
          val var4: java.lang.String = UUID.randomUUID().toString();
-         kotlin.jvm.internal.r.g(var4, "toString(...)");
          var5 = new PortalViewChatListItem(var4, var1, var2);
       } else {
          var5 = null;
@@ -387,7 +374,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

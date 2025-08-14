@@ -4,17 +4,10 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.widget.FrameLayout
-import kotlin.jvm.internal.r
 
 @SuppressLint(["ViewConstructor"])
-internal class FastestListViewHolderView(context: Context) : FrameLayout {
-   public final var onViewTransitioning: (Boolean) -> Unit
-
-   init {
-      r.h(var1, "context");
-      super(var1);
-      this.onViewTransitioning = new b();
-   }
+internal class FastestListViewHolderView(context: Context) : FrameLayout(var1) {
+   public final var onViewTransitioning: (Boolean) -> Unit = new b()
 
    @JvmStatic
    fun `onViewTransitioning$lambda$0`(var0: Boolean): Unit {

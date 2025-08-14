@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
@@ -60,12 +59,12 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
          var1 = var1;
          if (this.firstVisibleMessageIndex != var1.firstVisibleMessageIndex) {
             return false;
-         } else if (!r.c(this.firstVisibleMessagePercentVisible, var1.firstVisibleMessagePercentVisible)) {
+         } else if (!(this.firstVisibleMessagePercentVisible == var1.firstVisibleMessagePercentVisible)) {
             return false;
          } else if (this.lastVisibleMessageIndex != var1.lastVisibleMessageIndex) {
             return false;
          } else {
-            return r.c(this.lastVisibleMessagePercentVisible, var1.lastVisibleMessagePercentVisible);
+            return this.lastVisibleMessagePercentVisible == var1.lastVisibleMessagePercentVisible;
          }
       }
    }
@@ -93,21 +92,21 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var3: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var2: Int = this.lastVisibleMessageIndex;
+      val var2: Int = this.firstVisibleMessageIndex;
+      val var4: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var1: Int = this.lastVisibleMessageIndex;
       val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var4.append(var1);
-      var4.append(", firstVisibleMessagePercentVisible=");
-      var4.append(var3);
-      var4.append(", lastVisibleMessageIndex=");
-      var4.append(var2);
-      var4.append(", lastVisibleMessagePercentVisible=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("FirstLayoutData(firstVisibleMessageIndex=");
+      var3.append(var2);
+      var3.append(", firstVisibleMessagePercentVisible=");
+      var3.append(var4);
+      var3.append(", lastVisibleMessageIndex=");
+      var3.append(var1);
+      var3.append(", lastVisibleMessagePercentVisible=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

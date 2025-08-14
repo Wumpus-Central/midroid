@@ -2,9 +2,8 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
@@ -12,7 +11,6 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    public final val type: String?
 
    init {
-      r.h(var1, "url");
       super();
       this.url = var1;
       this.type = var2;
@@ -27,7 +25,6 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public fun copy(url: String = var0.url, type: String? = var0.type): OnPasteImageEvent {
-      r.h(var1, "url");
       return new OnPasteImageEvent(var1, var2);
    }
 
@@ -38,10 +35,10 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.url, var1.url)) {
+         if (!(this.url == var1.url)) {
             return false;
          } else {
-            return r.c(this.type, var1.type);
+            return this.type == var1.type;
          }
       }
    }
@@ -63,15 +60,15 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var2: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnPasteImageEvent(url=");
-      var3.append(var1);
-      var3.append(", type=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.url;
+      val var3: java.lang.String = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPasteImageEvent(url=");
+      var1.append(var2);
+      var1.append(", type=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

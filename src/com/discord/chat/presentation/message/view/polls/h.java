@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final PollAnswerAdapter j;
-   public final PollAnswerAccessory k;
+   public final PollAnswerAdapter d;
+   public final PollAnswerAccessory e;
 
    public final Object invoke() {
-      return PollAnswerAdapter.a(this.j, this.k);
+      return PollAnswerAdapter.a(this.d, this.e);
    }
 }

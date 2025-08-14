@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class Q0 implements Function0 {
-   public final Function1 j;
+   public final Function1 d;
 
    public final Object invoke() {
-      return SpoilerView.e(this.j);
+      return SpoilerView.e(this.d);
    }
 }

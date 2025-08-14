@@ -7,27 +7,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 
 private class VoiceUserAdapter : RecyclerView.Adapter {
-   private final var data: List<MobileVoiceOverlayDataUser> = kotlin.collections.i.k()
+   private final var data: List<MobileVoiceOverlayDataUser> = CollectionsKt.k()
 
    public override fun getItemCount(): Int {
       return this.data.size();
    }
 
    public open fun onBindViewHolder(holder: VoiceUserViewHolder, position: Int) {
-      kotlin.jvm.internal.r.h(var1, "holder");
       var1.bind(this.data.get(var2));
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VoiceUserViewHolder {
-      kotlin.jvm.internal.r.h(var1, "parent");
       val var3: Context = var1.getContext();
-      kotlin.jvm.internal.r.g(var3, "getContext(...)");
       return new VoiceUserViewHolder(new OverlayVoiceBubble(var3));
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setData(data: List<MobileVoiceOverlayDataUser>) {
-      kotlin.jvm.internal.r.h(var1, "data");
       this.data = var1;
       this.notifyDataSetChanged();
    }

@@ -5,15 +5,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "JSITrace")
-public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private external fun nativeInstall(jsi: Long) {
    }
 
@@ -27,7 +21,6 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
          return false;
       } else {
          val var5: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var5, "getReactApplicationContext(...)");
          val var8: java.lang.Long = ReactContextExtensionsKt.jsiId(var5);
          var var7: Boolean = false;
          if (var8 != null) {
@@ -49,17 +42,15 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun isEnabled(): Boolean {
-      val var1: JSITraceCache = JSITraceCache.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      return var1.isEnabled(var2);
+      val var2: JSITraceCache = JSITraceCache.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      return var2.isEnabled(var1);
    }
 
    @ReactMethod
    public fun setEnabled(enabled: Boolean) {
       val var2: JSITraceCache = JSITraceCache.INSTANCE;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
       var2.setEnabled(var3, var1);
    }
 

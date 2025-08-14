@@ -1,18 +1,16 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class SearchableSelectItem(label: String,
-      value: String,
-      type: SelectOptionType,
-      iconSrc: String? = null,
-      iconColor: Int? = null,
-      iconEmoji: ComponentEmoji? = null
-   )
-   : SelectItem {
+   value: String,
+   type: SelectOptionType,
+   iconSrc: String? = null,
+   iconColor: Int? = null,
+   iconEmoji: ComponentEmoji? = null
+) : SelectItem() {
    public open val label: String
    public open val value: String
    public final val type: SelectOptionType
@@ -21,10 +19,6 @@ public data class SearchableSelectItem(label: String,
    public final val iconEmoji: ComponentEmoji?
 
    init {
-      r.h(var1, "label");
-      r.h(var2, "value");
-      r.h(var3, "type");
-      super(null);
       this.label = var1;
       this.value = var2;
       this.type = var3;
@@ -65,9 +59,6 @@ public data class SearchableSelectItem(label: String,
       iconColor: Int? = var0.iconColor,
       iconEmoji: ComponentEmoji? = var0.iconEmoji
    ): SearchableSelectItem {
-      r.h(var1, "label");
-      r.h(var2, "value");
-      r.h(var3, "type");
       return new SearchableSelectItem(var1, var2, var3, var4, var5, var6);
    }
 
@@ -78,26 +69,26 @@ public data class SearchableSelectItem(label: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.label, var1.label)) {
+         if (!(this.label == var1.label)) {
             return false;
-         } else if (!r.c(this.value, var1.value)) {
+         } else if (!(this.value == var1.value)) {
             return false;
          } else if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.iconSrc, var1.iconSrc)) {
+         } else if (!(this.iconSrc == var1.iconSrc)) {
             return false;
-         } else if (!r.c(this.iconColor, var1.iconColor)) {
+         } else if (!(this.iconColor == var1.iconColor)) {
             return false;
          } else {
-            return r.c(this.iconEmoji, var1.iconEmoji);
+            return this.iconEmoji == var1.iconEmoji;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
+      val var5: Int = this.label.hashCode();
       val var6: Int = this.value.hashCode();
-      val var5: Int = this.type.hashCode();
+      val var4: Int = this.type.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.iconSrc == null) {
@@ -117,31 +108,31 @@ public data class SearchableSelectItem(label: String,
          var3 = this.iconEmoji.hashCode();
       }
 
-      return ((((var4 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
-      val var4: java.lang.String = this.value;
-      val var2: SelectOptionType = this.type;
-      val var5: java.lang.String = this.iconSrc;
+      val var5: java.lang.String = this.label;
+      val var2: java.lang.String = this.value;
+      val var1: SelectOptionType = this.type;
+      val var3: java.lang.String = this.iconSrc;
       val var6: Int = this.iconColor;
-      val var1: ComponentEmoji = this.iconEmoji;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("SearchableSelectItem(label=");
-      var7.append(var3);
-      var7.append(", value=");
-      var7.append(var4);
-      var7.append(", type=");
-      var7.append(var2);
-      var7.append(", iconSrc=");
-      var7.append(var5);
-      var7.append(", iconColor=");
-      var7.append(var6);
-      var7.append(", iconEmoji=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var7: ComponentEmoji = this.iconEmoji;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SearchableSelectItem(label=");
+      var4.append(var5);
+      var4.append(", value=");
+      var4.append(var2);
+      var4.append(", type=");
+      var4.append(var1);
+      var4.append(", iconSrc=");
+      var4.append(var3);
+      var4.append(", iconColor=");
+      var4.append(var6);
+      var4.append(", iconEmoji=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

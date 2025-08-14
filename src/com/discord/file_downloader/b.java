@@ -7,12 +7,12 @@ import kotlinx.coroutines.channels.ProducerScope;
 
 // $VF: synthetic class
 public final class b implements Function0 {
-   public final LongRef j;
-   public final ProducerScope k;
-   public final DownloadManager l;
+   public final LongRef d;
+   public final ProducerScope e;
+   public final DownloadManager i;
    public final String m;
 
    public final Object invoke() {
-      return <unrepresentable>.f(this.j, this.k, this.l, this.m);
+      return <unrepresentable>.k(this.d, this.e, this.i, this.m);
    }
 }

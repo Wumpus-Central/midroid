@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class n implements Function1 {
-   public final Function2 j;
-   public final EmojiPickerView k;
+   public final Function2 d;
+   public final EmojiPickerView e;
 
    public final Object invoke(Object var1) {
-      return EmojiPickerView.W(this.j, this.k, (Boolean)var1);
+      return EmojiPickerView.W(this.d, this.e, (Boolean)var1);
    }
 }

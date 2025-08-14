@@ -1,14 +1,13 @@
 package com.discord.chat.presentation.message.view.media
 
-import A9.j
-import D1.a
-import D1.b
-import D1.c
+import B9.j
+import C1.a
+import C1.b
+import C1.c
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import kotlin.jvm.internal.r
-import w6.f
+import u6.f
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = new c()) : OnAttachStateChangeListener {
    private final val view: View
@@ -24,10 +23,6 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "viewAttached");
-      r.h(var3, "viewScrolling");
-      super();
       this.view = var1;
       this.viewAttached = var2;
       this.viewScrolling = var3;
@@ -52,7 +47,6 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    }
 
    public open fun onViewAttachedToWindow(view: View) {
-      r.h(var1, "view");
       var1.postDelayed(this.isAttachedRunnable, this.isAttachedDelay);
       val var2: ViewTreeObserver = var1.getViewTreeObserver();
       if (var2 != null) {
@@ -61,7 +55,6 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    }
 
    public open fun onViewDetachedFromWindow(view: View) {
-      r.h(var1, "view");
       var1.removeCallbacks(this.isAttachedRunnable);
       val var3: ViewTreeObserver = var1.getViewTreeObserver();
       if (var3 != null) {

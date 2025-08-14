@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nMessageComponentsView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageComponentsView.kt\ncom/discord/chat/presentation/message/view/botuikit/MessageComponentsViewKt\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,131:1\n1872#2,2:132\n1874#2:142\n327#3,4:134\n327#3,4:138\n*S KotlinDebug\n*F\n+ 1 MessageComponentsView.kt\ncom/discord/chat/presentation/message/view/botuikit/MessageComponentsViewKt\n*L\n81#1:132,2\n81#1:142\n94#1:134,4\n98#1:138,4\n*E\n"])
+
 package com.discord.chat.presentation.message.view.botuikit
 
 import android.view.View
@@ -5,18 +7,12 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import com.discord.chat.bridge.botuikit.Component
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun ViewGroup.recycleChildComponents(componentProvider: ComponentProvider?) {
-   r.h(var0, "<this>");
-
    for (int var2 = var0.getChildCount() - 1; -1 < var2; var2--) {
       if (var1 != null) {
          val var3: View = var0.getChildAt(var2);
-         r.f(
-            var3,
-            "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
-         );
          var1.recycleComponentView(var3 as ComponentView<out Component>);
       }
 
@@ -30,18 +26,15 @@ public fun ViewGroup.replaceViews(
    paddingBottom: Int = 0,
    paddingRight: Int = 0
 ) {
-   r.h(var0, "<this>");
-   r.h(var1, "views");
    val var8: java.util.Iterator = var1.iterator();
 
    for (int var5 = 0; var8.hasNext(); var5++) {
       var var6: Any = var8.next();
       if (var5 < 0) {
-         i.u();
+         CollectionsKt.u();
       }
 
       val var10: ComponentView = var6 as ComponentView;
-      r.f(var6 as ComponentView, "null cannot be cast to non-null type android.view.View");
       val var9: View = var10 as View;
       val var7: LayoutParams = (var10 as View).getLayoutParams();
       var6 = var7;
@@ -74,10 +67,6 @@ public fun ViewGroup.replaceViews(
          if (var0.getChildAt(var5) != var10) {
             if (var2 != null) {
                var6 = var0.getChildAt(var5);
-               r.f(
-                  var6,
-                  "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
-               );
                var2.recycleComponentView(var6 as ComponentView<out Component>);
             }
 
@@ -97,10 +86,6 @@ public fun ViewGroup.replaceViews(
             if (var0.getChildAt(var3) != null) {
                val var11: View = var0.getChildAt(var3);
                if (var2 != null) {
-                  r.f(
-                     var11,
-                     "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
-                  );
                   var2.recycleComponentView(var11 as ComponentView<out Component>);
                }
 

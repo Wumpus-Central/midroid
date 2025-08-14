@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapObscuredMediaToggleData(messageId: String, channelId: String, attachmentId: String, embedId: String, isReveal: Boolean) : ReactEvent {
@@ -15,10 +14,6 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    public final val isReveal: Boolean
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -54,10 +49,6 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
       embedId: String = var0.embedId,
       isReveal: Boolean = var0.isReveal
    ): TapObscuredMediaToggleData {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
       return new TapObscuredMediaToggleData(var1, var2, var3, var4, var5);
    }
 
@@ -68,13 +59,13 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.channelId, var1.channelId)) {
+         } else if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!(this.attachmentId == var1.attachmentId)) {
             return false;
-         } else if (!r.c(this.embedId, var1.embedId)) {
+         } else if (!(this.embedId == var1.embedId)) {
             return false;
          } else {
             return this.isReveal == var1.isReveal;
@@ -92,24 +83,24 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.messageId;
       val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.attachmentId;
       val var6: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapObscuredMediaToggleData(messageId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", attachmentId=");
-      var5.append(var4);
-      var5.append(", embedId=");
-      var5.append(var6);
-      var5.append(", isReveal=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapObscuredMediaToggleData(messageId=");
+      var4.append(var5);
+      var4.append(", channelId=");
+      var4.append(var3);
+      var4.append(", attachmentId=");
+      var4.append(var2);
+      var4.append(", embedId=");
+      var4.append(var6);
+      var4.append(", isReveal=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -11,12 +11,7 @@ public sealed class BillingManagerException protected constructor(reason: String
 
    public class BillingClientNotReadyException : BillingManagerException("Billing client is not ready yet", "999")
 
-   public class BillingException(message: String) : BillingManagerException {
-      init {
-         kotlin.jvm.internal.r.h(var1, "message");
-         super(var1, "5000", null);
-      }
-   }
+   public class BillingException(message: String) : BillingManagerException(var1, "5000")
 
    public class BillingUnavailableException(code: Int) : BillingManagerException {
       init {

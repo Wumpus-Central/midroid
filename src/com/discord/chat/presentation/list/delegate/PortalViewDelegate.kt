@@ -10,14 +10,10 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.PortalViewChatListItem
 import com.discord.portals.utils.ViewRemoveFromParentKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<PortalViewChatListItem, ChatListFrameLayout> {
-   init {
-      r.h(var1, "eventHandlerProvider");
-      super(var1, null, 2, null);
-   }
-
+@SourceDebugExtension(["SMAP\nPortalViewDelegate.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PortalViewDelegate.kt\ncom/discord/chat/presentation/list/delegate/PortalViewDelegate\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,62:1\n257#2,2:63\n327#2,4:65\n*S KotlinDebug\n*F\n+ 1 PortalViewDelegate.kt\ncom/discord/chat/presentation/list/delegate/PortalViewDelegate\n*L\n32#1:63,2\n38#1:65,4\n*E\n"])
+public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    @JvmStatic
    fun `bindView$lambda$2`(var0: PortalViewChatListItem, var1: ChatListFrameLayout) {
       if (var0.getView().getParent() == null) {
@@ -26,24 +22,21 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
    }
 
    public open fun bindView(view: ChatListFrameLayout, item: PortalViewChatListItem, metadata: Metadata<ChatListFrameLayout>) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "metadata");
       var2.getView().setVisibility(0);
       ViewRemoveFromParentKt.removeFromParent(var2.getView());
       if (var2.getMeasuredDimensions() != null) {
          val var7: Pair = var2.getMeasuredDimensions();
-         val var5: Int = (var7.a() as java.lang.Number).intValue();
-         val var4: Int = (var7.b() as java.lang.Number).intValue();
-         val var8: View = var2.getView();
-         val var6: LayoutParams = var8.getLayoutParams();
-         if (var6 == null) {
+         val var4: Int = (var7.a() as java.lang.Number).intValue();
+         val var5: Int = (var7.b() as java.lang.Number).intValue();
+         val var6: View = var2.getView();
+         val var8: LayoutParams = var6.getLayoutParams();
+         if (var8 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var6.width = var5;
-         var6.height = var4;
-         var8.setLayoutParams(var6);
+         var8.width = var4;
+         var8.height = var5;
+         var6.setLayoutParams(var8);
       }
 
       var1.removeAllViews();
@@ -55,14 +48,11 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
    }
 
    public open fun createView(parent: ViewGroup): ChatListFrameLayout {
-      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "getContext(...)");
       return new ChatListFrameLayout(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      r.h(var1, "item");
       return var1 is PortalViewChatListItem;
    }
 }

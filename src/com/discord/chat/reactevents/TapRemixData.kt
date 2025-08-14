@@ -3,16 +3,14 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapRemixData(var1: java.lang.String) {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -22,7 +20,6 @@ public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), React
    }
 
    public fun copy(messageId: MessageId = ...): TapRemixData {
-      r.h(var1, "messageId");
       return new TapRemixData(var1, null);
    }
 
@@ -45,12 +42,12 @@ public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), React
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapRemixData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapRemixData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

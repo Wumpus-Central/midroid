@@ -23,53 +23,42 @@ import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+@SourceDebugExtension(["SMAP\nReactionView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactionView.kt\ncom/discord/reactions/ReactionView\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,292:1\n1#2:293\n*E\n"])
+public class ReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: ReactionViewBinding
    private final var currentCount: Int?
    private final var currentEmojiId: String?
    private final var currentShouldAnimate: Boolean?
 
    fun ReactionView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var6: ReactionViewBinding = ReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
       this.binding = var6;
       this.setOrientation(0);
       this.setGravity(16);
       this.setMinimumWidth(MINIMUM_WIDTH);
       this.setPadding(HORIZ_PADDING, VERT_PADDING, HORIZ_PADDING, VERT_PADDING);
       var var5: TextView = var6.reactionCount1;
-      r.g(var6.reactionCount1, "reactionCount1");
       val var7: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       var5 = var6.reactionCount1;
-      r.g(var6.reactionCount1, "reactionCount1");
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
       var5 = var6.reactionCount2;
-      r.g(var6.reactionCount2, "reactionCount2");
       DiscordFontUtilsKt.setDiscordFont(var5, var7);
       var5 = var6.reactionCount2;
-      r.g(var6.reactionCount2, "reactionCount2");
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
       var5 = var6.reactionLabelLeft;
-      r.g(var6.reactionLabelLeft, "reactionLabelLeft");
       DiscordFontUtilsKt.setDiscordFont(var5, var7);
       var5 = var6.reactionLabelLeft;
-      r.g(var6.reactionLabelLeft, "reactionLabelLeft");
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
       var5 = var6.reactionLabelRight;
-      r.g(var6.reactionLabelRight, "reactionLabelRight");
       DiscordFontUtilsKt.setDiscordFont(var5, var7);
       val var8: TextView = var6.reactionLabelRight;
-      r.g(var6.reactionLabelRight, "reactionLabelRight");
       SetTextSizeSpKt.setTextSizeSp(var8, 14.0F, 14.0F);
       var6.reactionCountSwitcher.setMeasureAllChildren(false);
    }
@@ -77,7 +66,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = Q9.a.c(var2.getOpacity() * (float)255);
+         var3 = O9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -109,7 +98,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var3 = var12;
       } else if (var1) {
          val var13: Context = this.getContext();
-         r.g(var13, "getContext(...)");
          var3 = ColorUtilsKt.getColorCompat(var13, com.discord.theme.R.color.brand_new_500_alpha_20);
       } else {
          var3 = ThemeManagerKt.getTheme().getBackgroundSecondary();
@@ -122,7 +110,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             var4 = var8;
          } else {
             val var9: Context = this.getContext();
-            r.g(var9, "getContext(...)");
             var4 = ColorUtilsKt.getColorCompat(var9, com.discord.theme.R.color.brand_560);
          }
 
@@ -145,7 +132,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             val var12: Context = this.getContext();
-            r.g(var12, "getContext(...)");
             var3 = ColorUtilsKt.getColorCompat(var12, com.discord.theme.R.color.brand_new_500_alpha_20);
          }
 
@@ -162,7 +148,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             val var8: Context = this.getContext();
-            r.g(var8, "getContext(...)");
             var4 = ColorUtilsKt.getColorCompat(var8, com.discord.theme.R.color.brand_560);
          }
 
@@ -227,18 +212,17 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          this.binding.reactionLabelRight.setVisibility(8);
       } else {
          val var2: Context = this.getContext();
-         r.g(var2, "getContext(...)");
-         val var5: java.util.List = h.B0(
+         val var5: java.util.List = StringsKt.split$default(
             I18nUtilsKt.i18nFormat(var2, I18nMessage.REACT_PILL_FULL_LABEL, new a()).toString(), new java.lang.String[]{"{emojiPreview}"}, false, 0, 6, null
          );
-         var var4: java.lang.String = i.k0(var5, 0) as java.lang.String;
+         var var4: java.lang.String = CollectionsKt.j0(var5, 0) as java.lang.String;
          var var3: java.lang.String = "";
          var var6: java.lang.String = var4;
          if (var4 == null) {
             var6 = "";
          }
 
-         var4 = i.k0(var5, 1) as java.lang.String;
+         var4 = CollectionsKt.j0(var5, 1) as java.lang.String;
          if (var4 != null) {
             var3 = var4;
          }
@@ -261,7 +245,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
    @JvmStatic
    fun `configureLabels$lambda$0`(var0: RenderContext): Unit {
-      r.h(var0, "$this$i18nFormat");
       var0.getArgs().put("emojiPreview", "{emojiPreview}");
       return Unit.a;
    }
@@ -322,10 +305,9 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    public fun setReaction(reaction: com.discord.reactions.ReactionView.Reaction, reactionsTheme: com.discord.reactions.ReactionView.ReactionsTheme?) {
-      r.h(var1, "reaction");
       this.binding.getRoot().setContentDescription(var1.getEmoji().getDisplayName());
       val var3: Boolean;
-      if (r.c(this.currentEmojiId, var1.getEmoji().getEmojiId()) && r.c(this.currentShouldAnimate, var1.getEmoji().getShouldAnimate())) {
+      if (this.currentEmojiId == var1.getEmoji().getEmojiId() && this.currentShouldAnimate == var1.getEmoji().getShouldAnimate()) {
          var3 = true;
       } else {
          var3 = false;
@@ -392,7 +374,6 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var11: RenderableEmoji = var1.getEmoji().renderable();
          val var9: Context = this.getContext();
-         r.g(var9, "getContext(...)");
          var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
@@ -435,6 +416,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       }
 
       // $VF: Class flags could not be determined
+      @SourceDebugExtension(["SMAP\nReactionView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactionView.kt\ncom/discord/reactions/ReactionView$Emoji$DefaultImpls\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,292:1\n1#2:293\n*E\n"])
       internal class DefaultImpls {
          @JvmStatic
          fun getEmojiId(var0: ReactionView.Emoji): java.lang.String {
@@ -464,7 +446,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          fun renderable(var0: ReactionView.Emoji): RenderableEmoji {
             var var3: java.lang.String = var0.getId();
             if (var3 != null) {
-               val var7: java.lang.Long = h.o(var3);
+               val var7: java.lang.Long = StringsKt.o(var3);
                if (var7 != null) {
                   val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion
                      .customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());

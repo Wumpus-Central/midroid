@@ -8,15 +8,8 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.SummarySeparatorChatListItem
 import com.discord.chat.presentation.separator.SummarySeparatorView
-import kotlin.jvm.internal.r
 
-public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandler)
-   : BaseChatListItemDelegate<SummarySeparatorChatListItem, SummarySeparatorView> {
-   init {
-      r.h(var1, "eventHandlerProvider");
-      super(var1, null, 2, null);
-   }
-
+public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    @JvmStatic
    fun `bindView$lambda$2$lambda$0`(var0: SummarySeparatorDelegate, var1: SummarySeparatorChatListItem, var2: View) {
       var0.getEventHandler().onTapSummary-sekaTiM(var1.getSummary().getChannelId-o4g7jtM(), var1.getCurrentMsgId-3Eiw7ao(), var1.getSummary().getId());
@@ -28,9 +21,6 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public open fun bindView(view: SummarySeparatorView, item: SummarySeparatorChatListItem, metadata: Metadata<SummarySeparatorView>) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "metadata");
       var1.setDividerColor(var2.getColor());
       var1.setText(var2.getText());
       var1.setIsBeforeContent(var2.isBeforeContent());
@@ -39,14 +29,11 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public open fun createView(parent: ViewGroup): SummarySeparatorView {
-      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "getContext(...)");
       return new SummarySeparatorView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      r.h(var1, "item");
       return var1 is SummarySeparatorChatListItem;
    }
 }

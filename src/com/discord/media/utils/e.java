@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class e implements Function1 {
-   public final int j;
-   public final boolean k;
-   public final MediaResolver l;
+   public final int d;
+   public final boolean e;
+   public final MediaResolver i;
    public final Uri m;
 
    public final Object invoke(Object var1) {
-      return MediaResolver.a(this.j, this.k, this.l, this.m, (Compression)var1);
+      return MediaResolver.a(this.d, this.e, this.i, this.m, (Compression)var1);
    }
 }

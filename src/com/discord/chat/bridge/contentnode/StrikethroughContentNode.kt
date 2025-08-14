@@ -1,16 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class StrikethroughContentNode(content: List<ContentNode>) : ContentNode {
+public data class StrikethroughContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
    }
 
@@ -19,7 +16,6 @@ public data class StrikethroughContentNode(content: List<ContentNode>) : Content
    }
 
    public fun copy(content: List<ContentNode> = var0.content): StrikethroughContentNode {
-      r.h(var1, "content");
       return new StrikethroughContentNode(var1);
    }
 
@@ -29,7 +25,7 @@ public data class StrikethroughContentNode(content: List<ContentNode>) : Content
       } else if (var1 !is StrikethroughContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as StrikethroughContentNode).content);
+         return this.content == (var1 as StrikethroughContentNode).content;
       }
    }
 

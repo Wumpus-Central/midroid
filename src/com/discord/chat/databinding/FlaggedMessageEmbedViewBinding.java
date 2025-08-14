@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
@@ -15,28 +16,38 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class FlaggedMessageEmbedViewBinding implements ViewBinding {
+   @NonNull
    public final SimpleDraweeView authorAvatar;
+   @NonNull
    public final TextView authorName;
+   @NonNull
    public final ConnectionsRoleTagView connectionsRoleTag;
+   @NonNull
    public final FlaggedMessageEmbedFooterView contentFooterView;
+   @NonNull
    public final MessageContentView contentView;
+   @NonNull
    public final SimpleDraweeView guildCommunicationDisabledIcon;
+   @NonNull
    public final Guideline messageEndGuideline;
+   @NonNull
    public final Guideline messageStartGuideline;
+   @NonNull
    public final RoleIconView roleIcon;
+   @NonNull
    private final View rootView;
 
    private FlaggedMessageEmbedViewBinding(
-      View var1,
-      SimpleDraweeView var2,
-      TextView var3,
-      ConnectionsRoleTagView var4,
-      FlaggedMessageEmbedFooterView var5,
-      MessageContentView var6,
-      SimpleDraweeView var7,
-      Guideline var8,
-      Guideline var9,
-      RoleIconView var10
+      @NonNull View var1,
+      @NonNull SimpleDraweeView var2,
+      @NonNull TextView var3,
+      @NonNull ConnectionsRoleTagView var4,
+      @NonNull FlaggedMessageEmbedFooterView var5,
+      @NonNull MessageContentView var6,
+      @NonNull SimpleDraweeView var7,
+      @NonNull Guideline var8,
+      @NonNull Guideline var9,
+      @NonNull RoleIconView var10
    ) {
       this.rootView = var1;
       this.authorAvatar = var2;
@@ -50,35 +61,36 @@ public final class FlaggedMessageEmbedViewBinding implements ViewBinding {
       this.roleIcon = var10;
    }
 
-   public static FlaggedMessageEmbedViewBinding bind(View var0) {
+   @NonNull
+   public static FlaggedMessageEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.author_avatar;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.author_name;
-         TextView var9 = (TextView)a.a(var0, var1);
-         if (var9 != null) {
+         TextView var7 = (TextView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.connections_role_tag;
-            ConnectionsRoleTagView var10 = (ConnectionsRoleTagView)a.a(var0, var1);
-            if (var10 != null) {
+            ConnectionsRoleTagView var8 = (ConnectionsRoleTagView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.content_footer_view;
-               FlaggedMessageEmbedFooterView var3 = (FlaggedMessageEmbedFooterView)a.a(var0, var1);
-               if (var3 != null) {
+               FlaggedMessageEmbedFooterView var5 = (FlaggedMessageEmbedFooterView)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.content_view;
-                  MessageContentView var4 = (MessageContentView)a.a(var0, var1);
-                  if (var4 != null) {
+                  MessageContentView var2 = (MessageContentView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.guild_communication_disabled_icon;
-                     SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var2 != null) {
+                     SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.message_end_guideline;
-                        Guideline var6 = (Guideline)a.a(var0, var1);
-                        if (var6 != null) {
+                        Guideline var10 = (Guideline)a.a(var0, var1);
+                        if (var10 != null) {
                            var1 = R.id.message_start_guideline;
-                           Guideline var8 = (Guideline)a.a(var0, var1);
-                           if (var8 != null) {
+                           Guideline var9 = (Guideline)a.a(var0, var1);
+                           if (var9 != null) {
                               var1 = R.id.role_icon;
-                              RoleIconView var7 = (RoleIconView)a.a(var0, var1);
-                              if (var7 != null) {
-                                 return new FlaggedMessageEmbedViewBinding(var0, var5, var9, var10, var3, var4, var2, var6, var8, var7);
+                              RoleIconView var3 = (RoleIconView)a.a(var0, var1);
+                              if (var3 != null) {
+                                 return new FlaggedMessageEmbedViewBinding(var0, var6, var7, var8, var5, var2, var4, var10, var9, var3);
                               }
                            }
                         }
@@ -92,7 +104,8 @@ public final class FlaggedMessageEmbedViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static FlaggedMessageEmbedViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static FlaggedMessageEmbedViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.flagged_message_embed_view, var1);
          return bind(var1);
@@ -101,6 +114,7 @@ public final class FlaggedMessageEmbedViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

@@ -1,13 +1,15 @@
 package com.discord.mobile_voice_overlay.utils
 
-import S1.a
-import S1.b
-import S1.c
+import R1.a
+import R1.b
+import R1.c
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayData
 import com.discord.mobile_voice_overlay.views.OverlayView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayViewProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayViewProvider.kt\ncom/discord/mobile_voice_overlay/utils/OverlayViewProvider\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,71:1\n1#2:72\n*E\n"])
 internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayViewProvider<Any>) -> Any) {
    private final val initializer: (OverlayViewProvider<Any>) -> Any
    private final lateinit var assets: MobileVoiceOverlayAssets
@@ -15,8 +17,6 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    private final var data: MobileVoiceOverlayData?
 
    init {
-      r.h(var1, "initializer");
-      super();
       this.initializer = var1;
    }
 
@@ -27,7 +27,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
          val var3: OverlayView = this.initializer.invoke(this) as OverlayView;
          var var4: MobileVoiceOverlayAssets = this.assets;
          if (this.assets == null) {
-            r.y("assets");
+            Intrinsics.throwUninitializedPropertyAccessException("assets");
             var4 = null;
          }
 
@@ -44,21 +44,18 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
 
    @JvmStatic
    fun `removeViewFromOverlay$lambda$0`(var0: OverlayView): Unit {
-      r.h(var0, "v");
       var0.removeFromWindowManager();
       return Unit.a;
    }
 
    @JvmStatic
    fun `setAssets$lambda$1`(var0: MobileVoiceOverlayAssets, var1: OverlayView): Unit {
-      r.h(var1, "view");
       var1.setAssets(var0);
       return Unit.a;
    }
 
    @JvmStatic
    fun `setData$lambda$2`(var0: MobileVoiceOverlayData, var1: OverlayView): Unit {
-      r.h(var1, "view");
       var1.setData(var0);
       return Unit.a;
    }
@@ -86,13 +83,11 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
-      r.h(var1, "assets");
       this.assets = var1;
       this.withViewOptional(new c(var1));
    }
 
    public fun setData(data: MobileVoiceOverlayData) {
-      r.h(var1, "data");
       this.data = var1;
       this.withViewOptional(new b(var1));
    }
@@ -102,7 +97,6 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun withView(operation: (Any) -> Unit) {
-      r.h(var1, "operation");
       var1.invoke(this.ensureView());
    }
 }

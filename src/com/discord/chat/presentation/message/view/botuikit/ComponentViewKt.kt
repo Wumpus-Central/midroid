@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,171:1\n257#2,2:172\n257#2,2:174\n1#3:176\n*S KotlinDebug\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n*L\n151#1:172,2\n154#1:174,2\n*E\n"])
+
 package com.discord.chat.presentation.message.view.botuikit
 
 import android.content.Context
@@ -6,13 +8,12 @@ import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun ComponentEmoji.renderable(): RenderableEmoji {
-   r.h(var0, "<this>");
    var var3: java.lang.String = var0.getId();
    if (var3 != null) {
-      val var7: java.lang.Long = h.o(var3);
+      val var7: java.lang.Long = StringsKt.o(var3);
       if (var7 != null) {
          val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var7.longValue(), var0.getAnimated(), var0.getName());
          if (var8 != null) {
@@ -32,14 +33,12 @@ public fun ComponentEmoji.renderable(): RenderableEmoji {
 }
 
 public fun SimpleDraweeSpanTextView.setEmojiOrHide(componentEmoji: ComponentEmoji?) {
-   r.h(var0, "<this>");
    if (var1 == null) {
       var0.setVisibility(8);
    } else {
       var0.setVisibility(0);
       val var2: RenderableEmoji = renderable(var1);
       val var3: Context = var0.getContext();
-      r.g(var3, "getContext(...)");
       var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var2, var3, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
    }
 }

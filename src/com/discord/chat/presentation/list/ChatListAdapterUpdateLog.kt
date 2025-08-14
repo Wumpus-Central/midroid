@@ -2,7 +2,9 @@ package com.discord.chat.presentation.list
 
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
 import java.util.ArrayList
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nChatListAdapterUpdateLog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatListAdapterUpdateLog.kt\ncom/discord/chat/presentation/list/ChatListAdapterUpdateLog\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,99:1\n1827#2,8:100\n*S KotlinDebug\n*F\n+ 1 ChatListAdapterUpdateLog.kt\ncom/discord/chat/presentation/list/ChatListAdapterUpdateLog\n*L\n77#1:100,8\n*E\n"])
 internal object ChatListAdapterUpdateLog {
    private const val MAX_SIZE: Int = 5
    private final val queue: MutableList<ChatListAdapterUpdateLogItem> = new ArrayList()
@@ -16,7 +18,6 @@ internal object ChatListAdapterUpdateLog {
    }
 
    public fun addChatListItemUpdate(chatListItemUpdate: ChatListItemUpdate) {
-      kotlin.jvm.internal.r.h(var1, "chatListItemUpdate");
       this.addInternal(new ChatListAdapterUpdateLogItem.ChatList(var1));
    }
 
@@ -29,7 +30,6 @@ internal object ChatListAdapterUpdateLog {
    }
 
    public fun addPortalUpdate(updateType: PortalViewUpdateType) {
-      kotlin.jvm.internal.r.h(var1, "updateType");
       this.addInternal(new ChatListAdapterUpdateLogItem.PortalView(var1));
    }
 

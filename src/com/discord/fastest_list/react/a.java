@@ -7,11 +7,11 @@ import kotlin.jvm.internal.Ref.IntRef;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final List j;
-   public final List k;
-   public final IntRef l;
+   public final List d;
+   public final List e;
+   public final IntRef i;
 
    public final Object invoke(Object var1) {
-      return FastestListDeserializerSectionsKt.a(this.j, this.k, this.l, (FastestListSections.Entry)var1);
+      return FastestListDeserializerSectionsKt.a(this.d, this.e, this.i, (FastestListSections.Entry)var1);
    }
 }

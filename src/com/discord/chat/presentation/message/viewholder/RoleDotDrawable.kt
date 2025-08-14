@@ -20,8 +20,6 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    private final val roleColorPaint: Paint
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super();
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
       this.pxSize = SizeUtilsKt.getSpToPx(var3) * var4;
@@ -38,12 +36,11 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    }
 
    public open fun draw(canvas: Canvas) {
-      kotlin.jvm.internal.r.h(var1, "canvas");
-      val var2: Float = 2;
-      val var3: Float = (this.pxSize / 2 + 2) / 2;
+      val var3: Float = 2;
+      val var2: Float = (this.pxSize / 2 + 2) / 2;
       var1.drawCircle(this.pxSize / (float)2, this.pxSize / (float)2, (this.pxSize / (float)2 + (float)2) / (float)2, this.borderColorPaint);
-      var1.drawCircle(this.pxSize / var2, this.pxSize / var2, var3, this.roleColorAlphaPaint);
-      var1.drawCircle(this.pxSize / var2, this.pxSize / var2, var3 - var2, this.roleColorPaint);
+      var1.drawCircle(this.pxSize / var3, this.pxSize / var3, var2, this.roleColorAlphaPaint);
+      var1.drawCircle(this.pxSize / var3, this.pxSize / var3, var2 - var3, this.roleColorPaint);
    }
 
    public open fun getOpacity(): Int {
@@ -57,9 +54,8 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    }
 
    public fun setColors(roleColors: RoleColors) {
-      kotlin.jvm.internal.r.h(var1, "roleColors");
       if (var1.getSecondaryColor() != null) {
-         val var5: java.util.List = kotlin.collections.i.q(new Integer[]{var1.getPrimaryColor(), var1.getSecondaryColor()});
+         val var5: java.util.List = CollectionsKt.q(new Integer[]{var1.getPrimaryColor(), var1.getSecondaryColor()});
          if (var1.getTertiaryColor() != null) {
             var5.add(var1.getTertiaryColor());
          }
@@ -71,7 +67,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
                   0.0F,
                   this.pxSize / (float)2 / (float)2 + (this.pxSize / (float)2 + (float)2),
                   0.0F,
-                  kotlin.collections.i.T0(var5),
+                  CollectionsKt.S0(var5),
                   null,
                   TileMode.MIRROR
                )

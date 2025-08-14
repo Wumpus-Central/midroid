@@ -6,12 +6,12 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class S implements OnClickListener {
-   public final ChatEventHandler j;
-   public final String k;
-   public final long l;
+   public final ChatEventHandler d;
+   public final String e;
+   public final long i;
    public final String m;
 
    public final void onClick(View var1) {
-      MessageAltRemixTagView.a(this.j, this.k, this.l, this.m, var1);
+      MessageAltRemixTagView.a(this.d, this.e, this.i, this.m, var1);
    }
 }

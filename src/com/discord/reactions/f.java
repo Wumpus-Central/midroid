@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final Function1 j;
-   public final ReactionView.Reaction k;
+   public final Function1 d;
+   public final ReactionView.Reaction e;
 
    public final void onClick(View var1) {
-      ShortcutsFlexbox.p(this.j, this.k, var1);
+      ShortcutsFlexbox.p(this.d, this.e, var1);
    }
 }

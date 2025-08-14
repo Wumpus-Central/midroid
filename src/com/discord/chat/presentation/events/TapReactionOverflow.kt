@@ -2,9 +2,8 @@ package com.discord.chat.presentation.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapReactionOverflow(messageId: String, channelId: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapReactionOverflow(messageId: String, channelId: String) : Re
    public final val channelId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -28,8 +25,6 @@ public data class TapReactionOverflow(messageId: String, channelId: String) : Re
    }
 
    public fun copy(messageId: String = var0.messageId, channelId: String = var0.channelId): TapReactionOverflow {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       return new TapReactionOverflow(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapReactionOverflow(messageId: String, channelId: String) : Re
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.channelId, var1.channelId);
+            return this.channelId == var1.channelId;
          }
       }
    }
@@ -57,15 +52,15 @@ public data class TapReactionOverflow(messageId: String, channelId: String) : Re
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.messageId;
       val var2: java.lang.String = this.channelId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapReactionOverflow(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapReactionOverflow(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

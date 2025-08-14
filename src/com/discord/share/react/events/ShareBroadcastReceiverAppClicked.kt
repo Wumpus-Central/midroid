@@ -2,9 +2,8 @@ package com.discord.share.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class ShareBroadcastReceiverAppClicked(app: String, location: String?) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    public final val location: String?
 
    init {
-      r.h(var1, "app");
       super();
       this.app = var1;
       this.location = var2;
@@ -27,7 +25,6 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public fun copy(app: String = var0.app, location: String? = var0.location): ShareBroadcastReceiverAppClicked {
-      r.h(var1, "app");
       return new ShareBroadcastReceiverAppClicked(var1, var2);
    }
 
@@ -38,10 +35,10 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.app, var1.app)) {
+         if (!(this.app == var1.app)) {
             return false;
          } else {
-            return r.c(this.location, var1.location);
+            return this.location == var1.location;
          }
       }
    }
@@ -63,13 +60,13 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.app;
-      val var1: java.lang.String = this.location;
+      val var1: java.lang.String = this.app;
+      val var3: java.lang.String = this.location;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ShareBroadcastReceiverAppClicked(app=");
-      var2.append(var3);
-      var2.append(", location=");
       var2.append(var1);
+      var2.append(", location=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

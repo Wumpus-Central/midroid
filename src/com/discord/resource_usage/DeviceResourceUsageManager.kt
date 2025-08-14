@@ -5,9 +5,9 @@ import android.app.ActivityManager.MemoryInfo
 import android.content.Context
 import android.system.Os
 import android.system.OsConstants
-import kotlin.Result.a
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nDeviceResourceUsageManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceResourceUsageManager.kt\ncom/discord/resource_usage/DeviceResourceUsageManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,135:1\n1#2:136\n*E\n"])
 internal class DeviceResourceUsageManager(context: Context) {
    private final val activityManager: ActivityManager
    private final var thread: Thread?
@@ -29,60 +29,58 @@ internal class DeviceResourceUsageManager(context: Context) {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    @JvmStatic
    fun {
-      var var0: Any;
+      var var14: Any;
       label42:
       try {
-         var0 = Result.k;
-         var0 = Result.b(Os.sysconf(OsConstants._SC_CLK_TCK));
+         var14 = Result.e;
+         var14 = Result.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         val var1: a = Result.k;
-         var0 = Result.b(c.a(var4));
+         var14 = Result.e;
+         var14 = Result.b(c.a(var4));
          break label42;
       }
 
-      var var18: Any = var0;
-      if (Result.g(var0)) {
-         var18 = 100L;
+      var var1: Any = var14;
+      if (Result.g(var14)) {
+         var1 = 100L;
       }
 
-      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var1 as java.lang.Number).longValue();
 
       label36:
       try {
-         var0 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
+         var14 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var0 = Result.k;
-         var0 = Result.b(c.a(var3));
+         var1 = Result.e;
+         var14 = Result.b(c.a(var3));
          break label36;
       }
 
-      var18 = var0;
-      if (Result.g(var0)) {
-         var18 = 4096L;
+      var1 = var14;
+      if (Result.g(var14)) {
+         var1 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var1 as java.lang.Number).longValue();
 
       label30:
       try {
-         var0 = Result.b(Runtime.getRuntime().availableProcessors());
+         var14 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var18 = Result.k;
-         var0 = Result.b(c.a(var2));
+         var1 = Result.e;
+         var14 = Result.b(c.a(var2));
          break label30;
       }
 
-      var18 = var0;
-      if (Result.g(var0)) {
-         var18 = 1;
+      var1 = var14;
+      if (Result.g(var14)) {
+         var1 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var1 as java.lang.Number).intValue();
    }
 
    init {
-      r.h(var1, "context");
-      super();
       this.activityManager = var1.getSystemService(ActivityManager.class) as ActivityManager;
       this.threadSync = new Object();
       this.memoryInfo = new MemoryInfo();
@@ -109,9 +107,9 @@ internal class DeviceResourceUsageManager(context: Context) {
       //
       // Bytecode:
       // 00: aconst_null
-      // 01: astore 8
+      // 01: astore 7
       // 03: aconst_null
-      // 04: astore 7
+      // 04: astore 8
       // 06: aload 0
       // 07: getfield com/discord/resource_usage/DeviceResourceUsageManager.threadSync Ljava/lang/Object;
       // 0a: astore 9
@@ -161,14 +159,14 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 6b: astore 9
       // 6d: invokestatic java/lang/System.currentTimeMillis ()J
       // 70: lstore 3
-      // 71: aload 8
+      // 71: aload 7
       // 73: ifnull c5
-      // 76: aload 7
+      // 76: aload 8
       // 78: ifnull c5
       // 7b: aload 9
       // 7d: ifnull c5
       // 80: lload 3
-      // 81: aload 7
+      // 81: aload 8
       // 83: invokevirtual java/lang/Long.longValue ()J
       // 86: lsub
       // 87: l2d
@@ -178,7 +176,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 8d: aload 0
       // 8e: aload 9
       // 90: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
-      // 93: aload 8
+      // 93: aload 7
       // 95: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
       // 98: lsub
       // 99: bipush 100
@@ -209,11 +207,11 @@ internal class DeviceResourceUsageManager(context: Context) {
       // c2: putfield com/discord/resource_usage/DeviceResourceUsageManager.memoryRssKB I
       // c5: lload 3
       // c6: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // c9: astore 7
+      // c9: astore 8
       // cb: ldc2_w 1000
       // ce: invokestatic java/lang/Thread.sleep (J)V
       // d1: aload 9
-      // d3: astore 8
+      // d3: astore 7
       // d5: goto 06
       // d8: astore 7
       // da: aload 9
@@ -251,11 +249,11 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 07: aload 0
       // 08: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
       // 0b: astore 2
-      // 0c: new d2/a
+      // 0c: new c2/a
       // 0f: astore 3
       // 10: aload 3
       // 11: aload 0
-      // 12: invokespecial d2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
+      // 12: invokespecial c2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
       // 15: bipush 1
       // 16: bipush 1
       // 17: aconst_null

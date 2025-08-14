@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.root
 
-import A9.s
+import B9.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -14,18 +14,15 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.flow.Flow
 
-public class ChatView(context: Context) : ReactViewGroup {
+@SourceDebugExtension(["SMAP\nChatView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,129:1\n14#2,5:130\n14#2,5:135\n14#2,5:140\n*S KotlinDebug\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n*L\n49#1:130,5\n54#1:135,5\n64#1:140,5\n*E\n"])
+public class ChatView(context: Context) : ReactViewGroup(var1) {
    private final lateinit var chatList: ChatListView
    private final lateinit var eventHandler: ChatEventHandler
    private final var inverted: Boolean
-
-   init {
-      r.h(var1, "context");
-      super(var1);
-   }
 
    private fun attachPortalViewToChatList(portalView: View) {
       var1.addOnLayoutChangeListener(new a(var1, this));
@@ -39,7 +36,7 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (var0.getMeasuredHeight() > 0 && var0.getMeasuredWidth() > 0) {
          var var14: ChatListView = var1.chatList;
          if (var1.chatList == null) {
-            r.y("chatList");
+            Intrinsics.throwUninitializedPropertyAccessException("chatList");
             var14 = null;
          }
 
@@ -53,13 +50,12 @@ public class ChatView(context: Context) : ReactViewGroup {
 
             if (var0.getParent() is ChatView) {
                val var16: ViewParent = var0.getParent();
-               r.f(var16, "null cannot be cast to non-null type android.view.ViewGroup");
                (var16 as ViewGroup).removeView(var0);
             }
 
             var var13: ChatListView = var1.chatList;
             if (var1.chatList == null) {
-               r.y("chatList");
+               Intrinsics.throwUninitializedPropertyAccessException("chatList");
                var13 = null;
             }
 
@@ -69,7 +65,6 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams?) {
-      r.h(var1, "child");
       super.addView(var1, var2, var3);
       if (var2 != 0) {
          if (var2 == 2) {
@@ -84,7 +79,7 @@ public class ChatView(context: Context) : ReactViewGroup {
          val var4: ChatListView = var1 as ChatListView;
          var var5: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
-            r.y("eventHandler");
+            Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
             var5 = null;
          }
 
@@ -107,12 +102,11 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    public fun scrollTo(index: Int, targetScreenLocation: TargetAlignment, animated: Boolean, highlight: Boolean) {
-      r.h(var2, "targetScreenLocation");
       if (ThreadUtilsKt.isOnMainThread()) {
          val var6: ChatListView = access$getChatList$p(this);
          var var8: ChatListView = var6;
          if (var6 == null) {
-            r.y("chatList");
+            Intrinsics.throwUninitializedPropertyAccessException("chatList");
             var8 = null;
          }
 
@@ -127,15 +121,14 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    public fun setEventHandler(eventHandler: ChatEventHandler) {
-      r.h(var1, "eventHandler");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

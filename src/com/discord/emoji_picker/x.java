@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class x implements Function0 {
-   public final EmojiPickerViewAdapter j;
+   public final EmojiPickerViewAdapter d;
 
    public final Object invoke() {
-      return EmojiPickerViewAdapter.a(this.j);
+      return EmojiPickerViewAdapter.a(this.d);
    }
 }

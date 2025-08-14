@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class M implements OnClickListener {
-   public final Function1 j;
-   public final Sticker k;
+   public final Function1 d;
+   public final Sticker e;
 
    public final void onClick(View var1) {
-      StickerPngViewHolder.b(this.j, this.k, var1);
+      StickerPngViewHolder.b(this.d, this.e, var1);
    }
 }

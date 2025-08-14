@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class c implements Function2 {
-   public final FastestListViewManager j;
+   public final FastestListViewManager d;
 
    public final Object invoke(Object var1, Object var2) {
-      return FastestListViewManager.d(this.j, (FastestListView)var1, (FastestListScrollOffset.Data)var2);
+      return FastestListViewManager.d(this.d, (FastestListView)var1, (FastestListScrollOffset.Data)var2);
    }
 }

@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class A implements Function0 {
-   public final SelectActionComponentViewManager j;
-   public final SelectComponentView k;
+   public final SelectActionComponentViewManager d;
+   public final SelectComponentView e;
 
    public final Object invoke() {
-      return SelectActionComponentViewManager.b(this.j, this.k);
+      return SelectActionComponentViewManager.b(this.d, this.e);
    }
 }

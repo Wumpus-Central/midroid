@@ -16,23 +16,18 @@ import com.discord.chat.presentation.message.decorations.BackgroundHighlightDraw
 import com.discord.chat.presentation.message.decorations.HighlightedMessageDrawer
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.internal.r
 
-public class AutomodSystemMessageWrapperView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
+public class AutomodSystemMessageWrapperView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
    private final val binding: DecoratedMessageViewBinding
    private final val highlightDrawer: BackgroundHighlightDrawer
    private final var drawHighlight: Boolean
 
    fun AutomodSystemMessageWrapperView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var3: DecoratedMessageViewBinding = DecoratedMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var3, "inflate(...)");
       this.binding = var3;
       this.highlightDrawer = new BackgroundHighlightDrawer(var1);
       this.setWillNotDraw(false);
@@ -49,7 +44,6 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
       super.onDraw(var1);
       if (this.drawHighlight) {
          HighlightedMessageDrawer.drawHighlight$default(this.highlightDrawer, var1, this, 0, 0, 12, null);
@@ -57,13 +51,9 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
    }
 
    public fun setMessage(message: Message, messageContext: MessageContext, eventHandler: ChatEventHandler) {
-      r.h(var1, "message");
-      r.h(var2, "messageContext");
-      r.h(var3, "eventHandler");
       MessageView.setMessage$default(this.binding.messageView, var1, var2, null, var3, null, null, false, false, 244, null);
       val var6: b = new b(var3);
       val var4: Context = this.getContext();
-      r.g(var4, "getContext(...)");
       val var7: ComponentProvider = new ComponentProvider(var4, true);
       this.removeAllViews();
       this.addView(

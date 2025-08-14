@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapSummaryData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -13,9 +12,6 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    public final val summaryId: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "summaryId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -35,9 +31,6 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, summaryId: String = var0.summaryId): TapSummaryData {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "summaryId");
       return new TapSummaryData(var1, var2, var3);
    }
 
@@ -48,12 +41,12 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.summaryId, var1.summaryId);
+            return this.summaryId == var1.summaryId;
          }
       }
    }
@@ -67,18 +60,18 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.summaryId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapSummaryData(channelId=");
-      var4.append(var3);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(", summaryId=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.summaryId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSummaryData(channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", summaryId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

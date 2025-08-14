@@ -2,16 +2,14 @@ package com.discord.notifications.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class RegisterEvent(token: String) : ReactEvent {
    public final val token: String
 
    init {
-      r.h(var1, "token");
       super();
       this.token = var1;
    }
@@ -21,7 +19,6 @@ internal data class RegisterEvent(token: String) : ReactEvent {
    }
 
    public fun copy(token: String = var0.token): RegisterEvent {
-      r.h(var1, "token");
       return new RegisterEvent(var1);
    }
 
@@ -31,7 +28,7 @@ internal data class RegisterEvent(token: String) : ReactEvent {
       } else if (var1 !is RegisterEvent) {
          return false;
       } else {
-         return r.c(this.token, (var1 as RegisterEvent).token);
+         return this.token == (var1 as RegisterEvent).token;
       }
    }
 

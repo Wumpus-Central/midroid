@@ -14,54 +14,47 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.theme.ThemeManagerKt
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class FlaggedMessageEmbedFooterView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nFlaggedMessageEmbedFooterView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FlaggedMessageEmbedFooterView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedFooterView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,58:1\n257#2,2:59\n*S KotlinDebug\n*F\n+ 1 FlaggedMessageEmbedFooterView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedFooterView\n*L\n55#1:59,2\n*E\n"])
+public class FlaggedMessageEmbedFooterView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    private final val binding: FlaggedMessageEmbedFooterViewBinding
 
    fun FlaggedMessageEmbedFooterView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
-      val var4: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var6: ImageView = var4.separatorDot;
-      var4.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
-      kotlin.jvm.internal.r.e(var6);
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(4));
-      val var3: TextView = var4.flaggedMessageKeyword;
-      kotlin.jvm.internal.r.e(var4.flaggedMessageKeyword);
-      val var7: DiscordFont = DiscordFont.PrimaryMedium;
+      val var6: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      val var4: ImageView = var6.separatorDot;
+      var6.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
+      val var3: TextView = var6.flaggedMessageKeyword;
+      val var5: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F, 15.0F);
       var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      val var5: TextView = var4.flaggedMessageRuleName;
-      kotlin.jvm.internal.r.e(var4.flaggedMessageRuleName);
-      DiscordFontUtilsKt.setDiscordFont(var5, var7);
-      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F, 15.0F);
-      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      val var7: TextView = var6.flaggedMessageRuleName;
+      DiscordFontUtilsKt.setDiscordFont(var7, var5);
+      SetTextSizeSpKt.setTextSizeSp(var7, 12.0F, 15.0F);
+      var7.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public fun setAutomodContext(autoModerationContext: AutoModerationContext) {
-      kotlin.jvm.internal.r.h(var1, "autoModerationContext");
       val var4: java.lang.String = var1.getKeywordDisplayText();
       val var6: java.lang.String = var1.getRuleDisplayText();
-      if (var4 != null && !kotlin.jvm.internal.r.c(var4, "")) {
+      if (var4 != null && !(var4 == "")) {
          this.binding.flaggedMessageKeyword.setText(var4);
       }
 
-      if (var6 != null && !kotlin.jvm.internal.r.c(var6, "")) {
+      if (var6 != null && !(var6 == "")) {
          this.binding.flaggedMessageRuleName.setText(var6);
       }
 
       val var5: ImageView = this.binding.separatorDot;
-      kotlin.jvm.internal.r.g(this.binding.separatorDot, "separatorDot");
       var var2: Boolean;
-      if (var4 != null && !kotlin.jvm.internal.r.c(var4, "") && var6 != null && !kotlin.jvm.internal.r.c(var6, "")) {
+      if (var4 != null && !(var4 == "") && var6 != null && !(var6 == "")) {
          var2 = 1;
       } else {
          var2 = 0;

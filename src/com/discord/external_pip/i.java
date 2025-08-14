@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class i implements Runnable {
-   public final ExternalPipTransitionView j;
-   public final long k;
-   public final Function0 l;
+   public final ExternalPipTransitionView d;
+   public final long e;
+   public final Function0 i;
 
    @Override
    public final void run() {
-      ExternalPipTransitionView.a(this.j, this.k, this.l);
+      ExternalPipTransitionView.a(this.d, this.e, this.i);
    }
 }

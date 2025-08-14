@@ -14,21 +14,15 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
-public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
+public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout(var1, var2) {
    private final val binding: GameIconViewBinding
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "attrs");
-      super(var1, var2);
       val var3: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       val var5: SimpleDraweeView = var3.gameControllerIcon;
-      kotlin.jvm.internal.r.g(var3.gameControllerIcon, "gameControllerIcon");
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.GameController);
       val var4: SimpleDraweeView = var3.gameControllerIcon;
-      kotlin.jvm.internal.r.g(var3.gameControllerIcon, "gameControllerIcon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
    }
 
@@ -38,11 +32,7 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
    }
 
    public fun configureGameIcon(gameApplicationId: String, timestamp: String, eventHandler: ChatEventHandler) {
-      kotlin.jvm.internal.r.h(var1, "gameApplicationId");
-      kotlin.jvm.internal.r.h(var2, "timestamp");
-      kotlin.jvm.internal.r.h(var3, "eventHandler");
       val var4: SimpleDraweeView = this.binding.gameControllerIcon;
-      kotlin.jvm.internal.r.g(this.binding.gameControllerIcon, "gameControllerIcon");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new e(var3, var1, var2), 1, null);
    }
 }

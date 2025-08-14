@@ -1,22 +1,20 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MentionableSelectComponent(type: Int,
-      id: String,
-      state: ActionComponentState,
-      customId: String,
-      placeholder: String? = null,
-      accessibilityLabel: String? = null,
-      minValues: Int,
-      maxValues: Int,
-      disabled: Boolean = false,
-      selectedOptions: List<SearchableSelectItem>
-   )
-   : SearchableSelectComponent {
+   id: String,
+   state: ActionComponentState,
+   customId: String,
+   placeholder: String? = null,
+   accessibilityLabel: String? = null,
+   minValues: Int,
+   maxValues: Int,
+   disabled: Boolean = false,
+   selectedOptions: List<SearchableSelectItem>
+) : SearchableSelectComponent() {
    public open val type: Int
    public open val id: String
    public open val state: ActionComponentState
@@ -29,11 +27,6 @@ public data class MentionableSelectComponent(type: Int,
    public open val selectedOptions: List<SearchableSelectItem>
 
    init {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.state = var3;
@@ -98,10 +91,6 @@ public data class MentionableSelectComponent(type: Int,
       disabled: Boolean = var0.disabled,
       selectedOptions: List<SearchableSelectItem> = var0.selectedOptions
    ): MentionableSelectComponent {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
       return new MentionableSelectComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -114,15 +103,15 @@ public data class MentionableSelectComponent(type: Int,
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else if (this.state != var1.state) {
             return false;
-         } else if (!r.c(this.customId, var1.customId)) {
+         } else if (!(this.customId == var1.customId)) {
             return false;
-         } else if (!r.c(this.placeholder, var1.placeholder)) {
+         } else if (!(this.placeholder == var1.placeholder)) {
             return false;
-         } else if (!r.c(this.accessibilityLabel, var1.accessibilityLabel)) {
+         } else if (!(this.accessibilityLabel == var1.accessibilityLabel)) {
             return false;
          } else if (this.minValues != var1.minValues) {
             return false;
@@ -131,16 +120,16 @@ public data class MentionableSelectComponent(type: Int,
          } else if (this.disabled != var1.disabled) {
             return false;
          } else {
-            return r.c(this.selectedOptions, var1.selectedOptions);
+            return this.selectedOptions == var1.selectedOptions;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
-      val var4: Int = this.id.hashCode();
-      val var6: Int = this.state.hashCode();
-      val var3: Int = this.customId.hashCode();
+      val var6: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
+      val var4: Int = this.state.hashCode();
+      val var5: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -155,7 +144,7 @@ public data class MentionableSelectComponent(type: Int,
 
       return (
                (
-                        ((((((var5 * 31 + var4) * 31 + var6) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                        ((((((var6 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                            + Integer.hashCode(this.maxValues)
                      )
                      * 31
@@ -169,36 +158,36 @@ public data class MentionableSelectComponent(type: Int,
       val var2: Int = this.type;
       val var10: java.lang.String = this.id;
       val var5: ActionComponentState = this.state;
-      val var8: java.lang.String = this.customId;
+      val var11: java.lang.String = this.customId;
       val var6: java.lang.String = this.placeholder;
-      val var9: java.lang.String = this.accessibilityLabel;
+      val var8: java.lang.String = this.accessibilityLabel;
       val var1: Int = this.minValues;
       val var3: Int = this.maxValues;
       val var4: Boolean = this.disabled;
       val var7: java.util.List = this.selectedOptions;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MentionableSelectComponent(type=");
-      var11.append(var2);
-      var11.append(", id=");
-      var11.append(var10);
-      var11.append(", state=");
-      var11.append(var5);
-      var11.append(", customId=");
-      var11.append(var8);
-      var11.append(", placeholder=");
-      var11.append(var6);
-      var11.append(", accessibilityLabel=");
-      var11.append(var9);
-      var11.append(", minValues=");
-      var11.append(var1);
-      var11.append(", maxValues=");
-      var11.append(var3);
-      var11.append(", disabled=");
-      var11.append(var4);
-      var11.append(", selectedOptions=");
-      var11.append(var7);
-      var11.append(")");
-      return var11.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("MentionableSelectComponent(type=");
+      var9.append(var2);
+      var9.append(", id=");
+      var9.append(var10);
+      var9.append(", state=");
+      var9.append(var5);
+      var9.append(", customId=");
+      var9.append(var11);
+      var9.append(", placeholder=");
+      var9.append(var6);
+      var9.append(", accessibilityLabel=");
+      var9.append(var8);
+      var9.append(", minValues=");
+      var9.append(var1);
+      var9.append(", maxValues=");
+      var9.append(var3);
+      var9.append(", disabled=");
+      var9.append(var4);
+      var9.append(", selectedOptions=");
+      var9.append(var7);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

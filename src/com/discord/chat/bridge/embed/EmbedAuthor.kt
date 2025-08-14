@@ -1,10 +1,9 @@
 package com.discord.chat.bridge.embed
 
-import A9.j
-import kotlin.jvm.internal.r
+import B9.j
 import kotlinx.serialization.KSerializer
-import q1.b
-import tb.g
+import nb.g
+import p1.b
 
 @g
 public data class EmbedAuthor(name: String, url: String? = null, iconURL: String? = null, iconProxyURL: String? = null) {
@@ -20,7 +19,6 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
 
 
    init {
-      r.h(var1, "name");
       super();
       this.name = var1;
       this.url = var2;
@@ -56,7 +54,6 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    }
 
    public fun copy(name: String = var0.name, url: String? = var0.url, iconURL: String? = var0.iconURL, iconProxyURL: String? = var0.iconProxyURL): EmbedAuthor {
-      r.h(var1, "name");
       return new EmbedAuthor(var1, var2, var3, var4);
    }
 
@@ -67,14 +64,14 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.name, var1.name)) {
+         if (!(this.name == var1.name)) {
             return false;
-         } else if (!r.c(this.url, var1.url)) {
+         } else if (!(this.url == var1.url)) {
             return false;
-         } else if (!r.c(this.iconURL, var1.iconURL)) {
+         } else if (!(this.iconURL == var1.iconURL)) {
             return false;
          } else {
-            return r.c(this.iconProxyURL, var1.iconProxyURL);
+            return this.iconProxyURL == var1.iconProxyURL;
          }
       }
    }
@@ -104,21 +101,21 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
-      val var4: java.lang.String = this.url;
-      val var2: java.lang.String = this.iconURL;
-      val var5: java.lang.String = this.iconProxyURL;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedAuthor(name=");
-      var3.append(var1);
-      var3.append(", url=");
-      var3.append(var4);
-      var3.append(", iconURL=");
-      var3.append(var2);
-      var3.append(", iconProxyURL=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.String = this.name;
+      val var3: java.lang.String = this.url;
+      val var4: java.lang.String = this.iconURL;
+      val var1: java.lang.String = this.iconProxyURL;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("EmbedAuthor(name=");
+      var2.append(var5);
+      var2.append(", url=");
+      var2.append(var3);
+      var2.append(", iconURL=");
+      var2.append(var4);
+      var2.append(", iconProxyURL=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

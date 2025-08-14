@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class n0 implements OnClickListener {
-   public final Function0 j;
+   public final Function0 d;
 
    public final void onClick(View var1) {
-      InfoLinkView.a(this.j, var1);
+      InfoLinkView.a(this.d, var1);
    }
 }

@@ -4,15 +4,9 @@ import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
-import k2.X2
-import kotlin.jvm.internal.r
+import j2.X2
 
-public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec(var1) {
    @JvmStatic
    fun `updateTheme$lambda$0`(var0: ThemeModule) {
       val var1: Activity = var0.getCurrentActivity();

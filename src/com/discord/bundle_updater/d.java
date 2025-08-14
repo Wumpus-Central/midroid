@@ -5,9 +5,9 @@ import java.io.File;
 
 // $VF: synthetic class
 public final class d implements Runnable {
-   public final AssetStatus j;
-   public final BundleUpdater k;
-   public final String l;
+   public final AssetStatus d;
+   public final BundleUpdater e;
+   public final String i;
    public final String m;
    public final File n;
    public final Uri o;
@@ -18,6 +18,6 @@ public final class d implements Runnable {
 
    @Override
    public final void run() {
-      BundleUpdater.c(this.j, this.k, this.l, this.m, this.n, this.o, this.p, this.q, this.r, this.s);
+      BundleUpdater.c(this.d, this.e, this.i, this.m, this.n, this.o, this.p, this.q, this.r, this.s);
    }
 }

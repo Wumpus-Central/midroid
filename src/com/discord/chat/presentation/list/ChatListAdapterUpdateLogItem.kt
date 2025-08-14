@@ -3,34 +3,34 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
+import kotlin.jvm.internal.SourceDebugExtension
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
-   public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
+   @SourceDebugExtension(["SMAP\nChatListAdapterUpdateLog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatListAdapterUpdateLog.kt\ncom/discord/chat/presentation/list/ChatListAdapterUpdateLogItem$ChatList\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,99:1\n1812#2,4:100\n*S KotlinDebug\n*F\n+ 1 ChatListAdapterUpdateLog.kt\ncom/discord/chat/presentation/list/ChatListAdapterUpdateLogItem$ChatList\n*L\n12#1:100,4\n*E\n"])
+   public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem() {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         kotlin.jvm.internal.r.h(var1, "chatListItemUpdate");
-         super(null);
          this.chatListItemUpdate = var1;
       }
 
       public override fun toString(): String {
          var var13: java.lang.String;
          label37: {
-            val var4: java.util.List = this.chatListItemUpdate.getListOperations();
-            if (var4 != null) {
-               val var5: java.util.Iterator = var4.iterator();
+            val var5: java.util.List = this.chatListItemUpdate.getListOperations();
+            if (var5 != null) {
+               val var4: java.util.Iterator = var5.iterator();
                var var1: Int = 0;
 
                var var2: java.lang.String;
-               for (var2 = ""; var5.hasNext(); var1++) {
-                  var13 = (java.lang.String)var5.next();
+               for (var2 = ""; var4.hasNext(); var1++) {
+                  var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
-                     kotlin.collections.i.u();
+                     CollectionsKt.u();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
-                  if (var1 != var4.size() - 1) {
+                  if (var1 != var5.size() - 1) {
                      var13 = "-";
                   } else {
                      var13 = "";
@@ -75,19 +75,19 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var16.append("Items: ");
          var16.append(var8);
          val var18: java.lang.String = var16.toString();
-         val var19: StringBuilder = new StringBuilder();
+         var var19: StringBuilder = new StringBuilder();
          var19.append("Operations: ");
          var19.append(var13);
-         val var20: java.lang.String = var19.toString();
-         val var14: StringBuilder = new StringBuilder();
-         var14.append("ChatList - ");
-         var14.append(var10);
-         var14.append(", ");
-         var14.append(var18);
-         var14.append(", ");
-         var14.append(var20);
-         var14.append(", \n");
-         return var14.toString();
+         var13 = var19.toString();
+         var19 = new StringBuilder();
+         var19.append("ChatList - ");
+         var19.append(var10);
+         var19.append(", ");
+         var19.append(var18);
+         var19.append(", ");
+         var19.append(var13);
+         var19.append(", \n");
+         return var19.toString();
       }
    }
 
@@ -97,12 +97,10 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       }
    }
 
-   public class PortalView(updateType: PortalViewUpdateType) : ChatListAdapterUpdateLogItem {
+   public class PortalView(updateType: PortalViewUpdateType) : ChatListAdapterUpdateLogItem() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         kotlin.jvm.internal.r.h(var1, "updateType");
-         super(null);
          this.updateType = var1;
       }
 
@@ -112,7 +110,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new A9.n();
+                  throw new B9.n();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

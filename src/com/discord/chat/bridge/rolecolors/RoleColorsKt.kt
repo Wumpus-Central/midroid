@@ -1,6 +1,9 @@
+@file:SourceDebugExtension(["SMAP\nRoleColors.kt\nKotlin\n*S Kotlin\n*F\n+ 1 RoleColors.kt\ncom/discord/chat/bridge/rolecolors/RoleColorsKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,23:1\n1#2:24\n*E\n"])
+
 package com.discord.chat.bridge.rolecolors
 
 import com.discord.react.utilities.ReactColorToAndroidColorKt
+import kotlin.jvm.internal.SourceDebugExtension
 import y.c
 
 public const val ROLE_COLORS_PATTERN_WIDTH: Float = 150.0F

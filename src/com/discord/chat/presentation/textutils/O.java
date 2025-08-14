@@ -7,12 +7,12 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class O implements Function2 {
-   public final DraweeSpanStringBuilder j;
-   public final ForegroundColorSpan k;
-   public final ContentNode l;
+   public final DraweeSpanStringBuilder d;
+   public final ForegroundColorSpan e;
+   public final ContentNode i;
    public final boolean m;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextUtilsKt.c(this.j, this.k, this.l, this.m, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
+      return TextUtilsKt.c(this.d, this.e, this.i, this.m, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

@@ -3,21 +3,25 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import y0.a;
 
 public final class RoleIconViewBinding implements ViewBinding {
+   @NonNull
    public final SimpleDraweeSpanTextView roleIconViewUnicodeEmoji;
+   @NonNull
    private final View rootView;
 
-   private RoleIconViewBinding(View var1, SimpleDraweeSpanTextView var2) {
+   private RoleIconViewBinding(@NonNull View var1, @NonNull SimpleDraweeSpanTextView var2) {
       this.rootView = var1;
       this.roleIconViewUnicodeEmoji = var2;
    }
 
-   public static RoleIconViewBinding bind(View var0) {
+   @NonNull
+   public static RoleIconViewBinding bind(@NonNull View var0) {
       int var1 = R.id.role_icon_view_unicode_emoji;
       SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
       if (var2 != null) {
@@ -27,7 +31,8 @@ public final class RoleIconViewBinding implements ViewBinding {
       }
    }
 
-   public static RoleIconViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static RoleIconViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.role_icon_view, var1);
          return bind(var1);
@@ -36,6 +41,7 @@ public final class RoleIconViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

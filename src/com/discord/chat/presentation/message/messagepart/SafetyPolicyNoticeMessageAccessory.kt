@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.policynotice.SafetyPolicyNoticeEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safetyPolicyNoticeEmbed: SafetyPolicyNoticeEmbed) : SafetyPolicyNoticeMessageAccessory(
       var1, var2
@@ -11,8 +10,6 @@ public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safet
    public final val safetyPolicyNoticeEmbed: SafetyPolicyNoticeEmbed
 
    fun SafetyPolicyNoticeMessageAccessory(var1: java.lang.String, var2: SafetyPolicyNoticeEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "safetyPolicyNoticeEmbed");
       super(var1, "safety policy notice embed", false, 4, null);
       this.messageId = var1;
       this.safetyPolicyNoticeEmbed = var2;
@@ -27,8 +24,6 @@ public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safet
    }
 
    public fun copy(messageId: MessageId = ..., safetyPolicyNoticeEmbed: SafetyPolicyNoticeEmbed = ...): SafetyPolicyNoticeMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "safetyPolicyNoticeEmbed");
       return new SafetyPolicyNoticeMessageAccessory(var1, var2, null);
    }
 
@@ -42,7 +37,7 @@ public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safet
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.safetyPolicyNoticeEmbed, var1.safetyPolicyNoticeEmbed);
+            return this.safetyPolicyNoticeEmbed == var1.safetyPolicyNoticeEmbed;
          }
       }
    }
@@ -52,14 +47,14 @@ public data class SafetyPolicyNoticeMessageAccessory(messageId: MessageId, safet
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SafetyPolicyNoticeMessageAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", safetyPolicyNoticeEmbed=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SafetyPolicyNoticeMessageAccessory(messageId=");
+      var2.append(var1);
+      var2.append(", safetyPolicyNoticeEmbed=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

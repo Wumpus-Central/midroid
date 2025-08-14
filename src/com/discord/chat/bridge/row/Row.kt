@@ -2,7 +2,7 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = RowSerializer::class)
 public sealed class Row protected constructor() {

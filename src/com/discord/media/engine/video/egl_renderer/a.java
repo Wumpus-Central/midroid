@@ -4,11 +4,11 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class a implements Runnable {
-   public final EglRenderer j;
-   public final Function0 k;
+   public final EglRenderer d;
+   public final Function0 e;
 
    @Override
    public final void run() {
-      EglRenderer.g(this.j, this.k);
+      EglRenderer.g(this.d, this.e);
    }
 }

@@ -1,9 +1,8 @@
 package com.discord.chat.input.bridge
 
 import com.discord.span.utilities.common.BackgroundStyle
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {
@@ -52,11 +51,11 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.fontSize, var1.fontSize)) {
+         if (!(this.fontSize == var1.fontSize)) {
             return false;
          } else if (this.color != var1.color) {
             return false;
-         } else if (!r.c(this.backgroundStyle, var1.backgroundStyle)) {
+         } else if (!(this.backgroundStyle == var1.backgroundStyle)) {
             return false;
          } else {
             return this.fontWeight === var1.fontWeight;
@@ -89,21 +88,21 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var2: Int = this.fontSize;
+      val var3: Int = this.fontSize;
       val var1: Int = this.color;
-      val var3: BackgroundStyle = this.backgroundStyle;
-      val var5: ChatInputNodeFontWeight = this.fontWeight;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatInputNodeStyle(fontSize=");
-      var4.append(var2);
-      var4.append(", color=");
-      var4.append(var1);
-      var4.append(", backgroundStyle=");
-      var4.append(var3);
-      var4.append(", fontWeight=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: BackgroundStyle = this.backgroundStyle;
+      val var4: ChatInputNodeFontWeight = this.fontWeight;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChatInputNodeStyle(fontSize=");
+      var2.append(var3);
+      var2.append(", color=");
+      var2.append(var1);
+      var2.append(", backgroundStyle=");
+      var2.append(var5);
+      var2.append(", fontWeight=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

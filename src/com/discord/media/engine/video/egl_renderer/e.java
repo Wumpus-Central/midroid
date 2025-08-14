@@ -4,11 +4,11 @@ import android.os.Looper;
 
 // $VF: synthetic class
 public final class e implements Runnable {
-   public final EglRenderer j;
-   public final Looper k;
+   public final EglRenderer d;
+   public final Looper e;
 
    @Override
    public final void run() {
-      EglRenderer.e(this.j, this.k);
+      EglRenderer.e(this.d, this.e);
    }
 }

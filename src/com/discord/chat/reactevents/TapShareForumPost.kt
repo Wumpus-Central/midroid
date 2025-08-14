@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapShareForumPost(channelId: String, guildId: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
    public final val guildId: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "guildId");
       super();
       this.channelId = var1;
       this.guildId = var2;
@@ -28,8 +25,6 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
    }
 
    public fun copy(channelId: String = var0.channelId, guildId: String = var0.guildId): TapShareForumPost {
-      r.h(var1, "channelId");
-      r.h(var2, "guildId");
       return new TapShareForumPost(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
          } else {
-            return r.c(this.guildId, var1.guildId);
+            return this.guildId == var1.guildId;
          }
       }
    }
@@ -57,13 +52,13 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.guildId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapShareForumPost(channelId=");
-      var3.append(var1);
-      var3.append(", guildId=");
       var3.append(var2);
+      var3.append(", guildId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

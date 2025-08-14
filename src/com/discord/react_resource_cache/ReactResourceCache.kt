@@ -6,15 +6,15 @@ import android.content.SharedPreferences.Editor
 import java.util.HashMap
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nReactResourceCache.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactResourceCache.kt\ncom/discord/react_resource_cache/ReactResourceCache\n+ 2 SharedPreferences.kt\nandroidx/core/content/SharedPreferencesKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,34:1\n41#2,6:35\n47#2,6:43\n216#3,2:41\n*S KotlinDebug\n*F\n+ 1 ReactResourceCache.kt\ncom/discord/react_resource_cache/ReactResourceCache\n*L\n20#1:35,6\n20#1:43,6\n23#1:41,2\n*E\n"])
 public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public abstract val cacheKey: String
 
    private final val cache: SharedPreferences
       private final get() {
          val var2: SharedPreferences = var1.getSharedPreferences(this.getCacheKey(), 0);
-         r.g(var2, "getSharedPreferences(...)");
          return var2;
       }
 
@@ -22,8 +22,6 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final var reactResources: MutableMap<String, String> = new LinkedHashMap()
 
    public fun get(context: Context, reactResource: Any): String {
-      r.h(var1, "context");
-      r.h(var2, "reactResource");
       val var4: java.lang.String = this.reactResources.get(var2.name());
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -50,13 +48,11 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    }
 
    public fun set(context: Context, newReactResources: Map<String, String>) {
-      r.h(var1, "context");
-      r.h(var2, "newReactResources");
       val var5: Editor = this.getCache(var1).edit();
       var5.clear();
 
-      for (Entry var3 : var2.entrySet()) {
-         var5.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
+      for (Entry var4 : var2.entrySet()) {
+         var5.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);

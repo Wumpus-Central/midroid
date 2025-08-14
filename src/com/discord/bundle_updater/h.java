@@ -5,11 +5,11 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class h implements Runnable {
-   public final Activity j;
-   public final Function1 k;
+   public final Activity d;
+   public final Function1 e;
 
    @Override
    public final void run() {
-      BundleUpdaterManager.b(this.j, this.k);
+      BundleUpdaterManager.f(this.d, this.e);
    }
 }

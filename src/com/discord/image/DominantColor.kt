@@ -4,16 +4,17 @@ import android.graphics.Bitmap
 import com.discord.image.color_quantizer.ColorCutQuantizer
 import com.discord.image.color_quantizer.Swatch
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import y.c
 
+@SourceDebugExtension(["SMAP\nDominantColor.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DominantColor.kt\ncom/discord/image/DominantColor\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,35:1\n1557#2:36\n1628#2,3:37\n1557#2:40\n1628#2,3:41\n*S KotlinDebug\n*F\n+ 1 DominantColor.kt\ncom/discord/image/DominantColor\n*L\n17#1:36\n17#1:37,3\n27#1:40\n27#1:41,3\n*E\n"])
 public object DominantColor {
    private fun getPrimaryColorsForBitmap(bitmap: Bitmap): List<Int> {
       val var2: java.util.List = ColorCutQuantizer.Companion.fromBitmap(var1, 5).getQuantizedColors();
       if (var2.isEmpty()) {
          throw new DominantColor.NoSwatchesFoundException();
       } else {
-         val var3: ArrayList = new ArrayList(i.v(var2, 10));
+         val var3: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
          val var4: java.util.Iterator = var2.iterator();
 
          while (var4.hasNext()) {
@@ -25,8 +26,6 @@ public object DominantColor {
    }
 
    public fun getRepresentativeColors(bitmap: Bitmap): List<Int>? {
-      r.h(var1, "bitmap");
-
       var var3: java.util.List;
       try {
          var3 = this.getPrimaryColorsForBitmap(var1);
@@ -38,7 +37,7 @@ public object DominantColor {
       }
 
       try {
-         var7 = new ArrayList(i.v(var3, 10));
+         var7 = new ArrayList(CollectionsKt.v(var3, 10));
          var8 = var3.iterator();
       } catch (var5: Exception) {
          return null;

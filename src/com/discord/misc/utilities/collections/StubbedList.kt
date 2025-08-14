@@ -1,13 +1,11 @@
 package com.discord.misc.utilities.collections
 
-import P9.a
 import java.util.Comparator
 import java.util.function.UnaryOperator
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.i
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.CollectionToArray
+import kotlin.jvm.internal.markers.KMappedMarker
 
-public open class StubbedList<T> : java.util.List<T>, a {
+public open class StubbedList<T> : java.util.List<T>, KMappedMarker {
    public open val size: Int
       public open get() {
          throw new UnsupportedOperationException(StubbedList.Companion.access$unsupported(Companion, "size"));
@@ -47,7 +45,6 @@ public open class StubbedList<T> : java.util.List<T>, a {
    }
 
    public override fun containsAll(elements: Collection<Any>): Boolean {
-      r.h(var1, "elements");
       throw new UnsupportedOperationException(StubbedList.Companion.access$unsupported(Companion, "containsAll"));
    }
 
@@ -127,22 +124,21 @@ public open class StubbedList<T> : java.util.List<T>, a {
    }
 
    override fun toArray(): Array<Any> {
-      return i.a(this);
+      return CollectionToArray.toArray(this);
    }
 
    override fun <T> toArray(var1: Array<T>): Array<T> {
-      r.h(var1, "array");
-      return (T[])i.b(this, var1);
+      return (T[])CollectionToArray.toArray(this, var1);
    }
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var2: java.lang.String = H.b(StubbedList.class).b();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append(" did not implement ");
-         var3.append(var1);
-         return var3.toString();
+         val var3: java.lang.String = (StubbedList::class).getSimpleName();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var3);
+         var2.append(" did not implement ");
+         var2.append(var1);
+         return var2.toString();
       }
    }
 }

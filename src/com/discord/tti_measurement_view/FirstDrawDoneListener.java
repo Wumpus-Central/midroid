@@ -7,6 +7,7 @@ import android.os.Build.VERSION;
 import android.view.View;
 import android.view.View.OnAttachStateChangeListener;
 import android.view.ViewTreeObserver.OnDrawListener;
+import androidx.annotation.NonNull;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class FirstDrawDoneListener implements OnDrawListener {
@@ -41,12 +42,12 @@ public class FirstDrawDoneListener implements OnDrawListener {
                this.val$listener = var1;
             }
 
-            public void onViewAttachedToWindow(View var1) {
+            public void onViewAttachedToWindow(@NonNull View var1) {
                var1.getViewTreeObserver().addOnDrawListener(this.val$listener);
                var1.removeOnAttachStateChangeListener(this);
             }
 
-            public void onViewDetachedFromWindow(View var1) {
+            public void onViewDetachedFromWindow(@NonNull View var1) {
                var1.removeOnAttachStateChangeListener(this);
             }
          });

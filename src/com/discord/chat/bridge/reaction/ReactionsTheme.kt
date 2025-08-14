@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -76,18 +75,18 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.reactionBackgroundColor, var1.reactionBackgroundColor)) {
+         if (!(this.reactionBackgroundColor == var1.reactionBackgroundColor)) {
             return false;
-         } else if (!r.c(this.reactionBorderColor, var1.reactionBorderColor)) {
+         } else if (!(this.reactionBorderColor == var1.reactionBorderColor)) {
             return false;
-         } else if (!r.c(this.reactionTextColor, var1.reactionTextColor)) {
+         } else if (!(this.reactionTextColor == var1.reactionTextColor)) {
             return false;
-         } else if (!r.c(this.activeReactionBackgroundColor, var1.activeReactionBackgroundColor)) {
+         } else if (!(this.activeReactionBackgroundColor == var1.activeReactionBackgroundColor)) {
             return false;
-         } else if (!r.c(this.activeReactionBorderColor, var1.activeReactionBorderColor)) {
+         } else if (!(this.activeReactionBorderColor == var1.activeReactionBorderColor)) {
             return false;
          } else {
-            return r.c(this.activeReactionTextColor, var1.activeReactionTextColor);
+            return this.activeReactionTextColor == var1.activeReactionTextColor;
          }
       }
    }
@@ -137,27 +136,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var6: Int = this.reactionBackgroundColor;
-      val var1: Int = this.reactionBorderColor;
-      val var5: Int = this.reactionTextColor;
-      val var3: Int = this.activeReactionBackgroundColor;
-      val var2: Int = this.activeReactionBorderColor;
-      val var7: Int = this.activeReactionTextColor;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ReactionsTheme(reactionBackgroundColor=");
-      var4.append(var6);
-      var4.append(", reactionBorderColor=");
-      var4.append(var1);
-      var4.append(", reactionTextColor=");
-      var4.append(var5);
-      var4.append(", activeReactionBackgroundColor=");
-      var4.append(var3);
-      var4.append(", activeReactionBorderColor=");
-      var4.append(var2);
-      var4.append(", activeReactionTextColor=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var7: Int = this.reactionBackgroundColor;
+      val var2: Int = this.reactionBorderColor;
+      val var3: Int = this.reactionTextColor;
+      val var4: Int = this.activeReactionBackgroundColor;
+      val var1: Int = this.activeReactionBorderColor;
+      val var5: Int = this.activeReactionTextColor;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ReactionsTheme(reactionBackgroundColor=");
+      var6.append(var7);
+      var6.append(", reactionBorderColor=");
+      var6.append(var2);
+      var6.append(", reactionTextColor=");
+      var6.append(var3);
+      var6.append(", activeReactionBackgroundColor=");
+      var6.append(var4);
+      var6.append(", activeReactionBorderColor=");
+      var6.append(var1);
+      var6.append(", activeReactionTextColor=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

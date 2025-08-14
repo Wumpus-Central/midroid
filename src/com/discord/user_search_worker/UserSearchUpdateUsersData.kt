@@ -1,16 +1,13 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransformedUser>) : UserSearchData {
+internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransformedUser>) : UserSearchData() {
    public final val payload: List<UserSearchTransformedUser>
 
    init {
-      r.h(var1, "payload");
-      super(null);
       this.payload = var1;
    }
 
@@ -19,7 +16,6 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
    }
 
    public fun copy(payload: List<UserSearchTransformedUser> = var0.payload): UserSearchUpdateUsersData {
-      r.h(var1, "payload");
       return new UserSearchUpdateUsersData(var1);
    }
 
@@ -29,7 +25,7 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
       } else if (var1 !is UserSearchUpdateUsersData) {
          return false;
       } else {
-         return r.c(this.payload, (var1 as UserSearchUpdateUsersData).payload);
+         return this.payload == (var1 as UserSearchUpdateUsersData).payload;
       }
    }
 

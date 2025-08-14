@@ -7,8 +7,9 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import java.util.HashMap
 import java.util.LinkedHashSet
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nInitialPropsViewGroupManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 InitialPropsViewGroupManager.kt\ncom/discord/react/utilities/InitialPropsViewGroupManager\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,55:1\n381#2,7:56\n*S KotlinDebug\n*F\n+ 1 InitialPropsViewGroupManager.kt\ncom/discord/react/utilities/InitialPropsViewGroupManager\n*L\n41#1:56,7\n*E\n"])
 public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGroupManager<T> {
    private final var delegatedInitialProps: ReactStylesDiffMap = defaultInitialProps
    private final val consumedInitialProps: MutableMap<Int, MutableSet<String>>
@@ -18,7 +19,6 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun createViewInstance(reactTag: Int, reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap?, stateWrapper: StateWrapper?): Any {
-      r.h(var2, "reactContext");
       val var5: ReactStylesDiffMap;
       if (var3 == null) {
          var5 = this.delegatedInitialProps;
@@ -31,7 +31,6 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun createViewInstance(reactContext: ThemedReactContext): Any {
-      r.h(var1, "reactContext");
       return this.createViewInstance(var1, this.delegatedInitialProps);
    }
 
@@ -39,8 +38,6 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun Any.isInitialProp(propName: String): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "propName");
       val var5: java.util.Map = this.consumedInitialProps;
       val var6: Int = var1.getId();
       val var4: Any = var5.get(var6);
@@ -63,7 +60,6 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    public open fun onDropViewInstance(view: Any) {
-      r.h(var1, "view");
       super.onDropViewInstance(var1);
       this.consumedInitialProps.remove(var1.getId());
    }

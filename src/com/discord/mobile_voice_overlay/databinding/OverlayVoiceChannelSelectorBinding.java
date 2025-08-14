@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
@@ -14,17 +15,32 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
+   @NonNull
    public final TextView channelSelect;
+   @NonNull
    public final SimpleDraweeView close;
+   @NonNull
    public final CardView dialogCard;
+   @NonNull
    public final TextView emptyResults;
+   @NonNull
    public final LinearLayout menuContainer;
+   @NonNull
    public final EditText overlayChannelSearch;
+   @NonNull
    public final RecyclerView resultsRv;
+   @NonNull
    private final CardView rootView;
 
    private OverlayVoiceChannelSelectorBinding(
-      CardView var1, TextView var2, SimpleDraweeView var3, CardView var4, TextView var5, LinearLayout var6, EditText var7, RecyclerView var8
+      @NonNull CardView var1,
+      @NonNull TextView var2,
+      @NonNull SimpleDraweeView var3,
+      @NonNull CardView var4,
+      @NonNull TextView var5,
+      @NonNull LinearLayout var6,
+      @NonNull EditText var7,
+      @NonNull RecyclerView var8
    ) {
       this.rootView = var1;
       this.channelSelect = var2;
@@ -36,27 +52,28 @@ public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
       this.resultsRv = var8;
    }
 
-   public static OverlayVoiceChannelSelectorBinding bind(View var0) {
+   @NonNull
+   public static OverlayVoiceChannelSelectorBinding bind(@NonNull View var0) {
       int var1 = R.id.channel_select;
-      TextView var6 = (TextView)a.a(var0, var1);
-      if (var6 != null) {
+      TextView var5 = (TextView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.close;
          SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
          if (var2 != null) {
-            CardView var7 = (CardView)var0;
+            CardView var6 = (CardView)var0;
             var1 = R.id.empty_results;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.menu_container;
-               LinearLayout var8 = (LinearLayout)a.a(var0, var1);
-               if (var8 != null) {
+               LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.overlay_channel_search;
-                  EditText var4 = (EditText)a.a(var0, var1);
-                  if (var4 != null) {
+                  EditText var7 = (EditText)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.results_rv;
-                     RecyclerView var3 = (RecyclerView)a.a(var0, var1);
-                     if (var3 != null) {
-                        return new OverlayVoiceChannelSelectorBinding(var7, var6, var2, var7, var5, var8, var4, var3);
+                     RecyclerView var8 = (RecyclerView)a.a(var0, var1);
+                     if (var8 != null) {
+                        return new OverlayVoiceChannelSelectorBinding(var6, var5, var2, var6, var3, var4, var7, var8);
                      }
                   }
                }
@@ -67,11 +84,13 @@ public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static OverlayVoiceChannelSelectorBinding inflate(LayoutInflater var0) {
+   @NonNull
+   public static OverlayVoiceChannelSelectorBinding inflate(@NonNull LayoutInflater var0) {
       return inflate(var0, null, false);
    }
 
-   public static OverlayVoiceChannelSelectorBinding inflate(LayoutInflater var0, ViewGroup var1, boolean var2) {
+   @NonNull
+   public static OverlayVoiceChannelSelectorBinding inflate(@NonNull LayoutInflater var0, ViewGroup var1, boolean var2) {
       View var3 = var0.inflate(R.layout.overlay_voice_channel_selector, var1, false);
       if (var2) {
          var1.addView(var3);
@@ -80,6 +99,7 @@ public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
       return bind(var3);
    }
 
+   @NonNull
    public CardView getRoot() {
       return this.rootView;
    }

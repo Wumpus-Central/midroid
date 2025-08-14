@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public class OnTapViewMoreTextData : ReactEvent {

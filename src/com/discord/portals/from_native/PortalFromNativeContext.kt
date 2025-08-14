@@ -3,7 +3,6 @@ package com.discord.portals.from_native
 import android.view.View
 import java.lang.ref.WeakReference
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
 internal data class PortalFromNativeContext(view: WeakReference<View>,
    removeViewFromParent: (View) -> Unit,
@@ -18,12 +17,6 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
    public final val returnViewToParent: (View) -> Unit
 
    init {
-      r.h(var1, "view");
-      r.h(var2, "removeViewFromParent");
-      r.h(var3, "onViewAddedToPortal");
-      r.h(var4, "onViewRemovedFromPortal");
-      r.h(var5, "returnViewToParent");
-      super();
       this.view = var1;
       this.removeViewFromParent = var2;
       this.onViewAddedToPortal = var3;
@@ -58,11 +51,6 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
       onViewRemovedFromPortal: (View) -> Unit = var0.onViewRemovedFromPortal,
       returnViewToParent: (View) -> Unit = var0.returnViewToParent
    ): PortalFromNativeContext {
-      r.h(var1, "view");
-      r.h(var2, "removeViewFromParent");
-      r.h(var3, "onViewAddedToPortal");
-      r.h(var4, "onViewRemovedFromPortal");
-      r.h(var5, "returnViewToParent");
       return new PortalFromNativeContext(var1, var2, var3, var4, var5);
    }
 
@@ -73,16 +61,16 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.view, var1.view)) {
+         if (!(this.view == var1.view)) {
             return false;
-         } else if (!r.c(this.removeViewFromParent, var1.removeViewFromParent)) {
+         } else if (!(this.removeViewFromParent == var1.removeViewFromParent)) {
             return false;
-         } else if (!r.c(this.onViewAddedToPortal, var1.onViewAddedToPortal)) {
+         } else if (!(this.onViewAddedToPortal == var1.onViewAddedToPortal)) {
             return false;
-         } else if (!r.c(this.onViewRemovedFromPortal, var1.onViewRemovedFromPortal)) {
+         } else if (!(this.onViewRemovedFromPortal == var1.onViewRemovedFromPortal)) {
             return false;
          } else {
-            return r.c(this.returnViewToParent, var1.returnViewToParent);
+            return this.returnViewToParent == var1.returnViewToParent;
          }
       }
    }
@@ -97,23 +85,23 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
    }
 
    public override fun toString(): String {
-      val var6: WeakReference = this.view;
-      val var1: Function1 = this.removeViewFromParent;
+      val var5: WeakReference = this.view;
+      val var6: Function1 = this.removeViewFromParent;
       val var4: Function1 = this.onViewAddedToPortal;
-      val var3: Function1 = this.onViewRemovedFromPortal;
-      val var5: Function1 = this.returnViewToParent;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PortalFromNativeContext(view=");
-      var2.append(var6);
-      var2.append(", removeViewFromParent=");
-      var2.append(var1);
-      var2.append(", onViewAddedToPortal=");
-      var2.append(var4);
-      var2.append(", onViewRemovedFromPortal=");
-      var2.append(var3);
-      var2.append(", returnViewToParent=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var2: Function1 = this.onViewRemovedFromPortal;
+      val var3: Function1 = this.returnViewToParent;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PortalFromNativeContext(view=");
+      var1.append(var5);
+      var1.append(", removeViewFromParent=");
+      var1.append(var6);
+      var1.append(", onViewAddedToPortal=");
+      var1.append(var4);
+      var1.append(", onViewRemovedFromPortal=");
+      var1.append(var2);
+      var1.append(", returnViewToParent=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

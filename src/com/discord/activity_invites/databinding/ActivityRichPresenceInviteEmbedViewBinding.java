@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.activity_invites.R;
@@ -13,46 +14,65 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBinding {
+   @NonNull
    public final SimpleDraweeView activityIcon;
+   @NonNull
    public final ConstraintLayout contentContainer;
+   @NonNull
    public final SimpleDraweeView desktopIcon;
+   @NonNull
    public final ConstraintLayout footerContainer;
+   @NonNull
    public final LinearLayout footerContent;
+   @NonNull
    public final TextView footerLabel;
+   @NonNull
    public final View gradientBackground;
+   @NonNull
    public final TextView headerText;
+   @NonNull
    public final OverlappingCirclesView partyAvatars;
+   @NonNull
    public final ConstraintLayout partyContainer;
+   @NonNull
    public final TextView partySizeText;
+   @NonNull
    public final SimpleDraweeView playstationIcon;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final TextView subtitle;
+   @NonNull
    public final ConstraintLayout subtitleContainer;
+   @NonNull
    public final SimpleDraweeView subtitleIcon;
+   @NonNull
    public final LinearLayout textContentWrapper;
+   @NonNull
    public final TextView title;
+   @NonNull
    public final SimpleDraweeView xboxIcon;
 
    private ActivityRichPresenceInviteEmbedViewBinding(
-      View var1,
-      SimpleDraweeView var2,
-      ConstraintLayout var3,
-      SimpleDraweeView var4,
-      ConstraintLayout var5,
-      LinearLayout var6,
-      TextView var7,
-      View var8,
-      TextView var9,
-      OverlappingCirclesView var10,
-      ConstraintLayout var11,
-      TextView var12,
-      SimpleDraweeView var13,
-      TextView var14,
-      ConstraintLayout var15,
-      SimpleDraweeView var16,
-      LinearLayout var17,
-      TextView var18,
-      SimpleDraweeView var19
+      @NonNull View var1,
+      @NonNull SimpleDraweeView var2,
+      @NonNull ConstraintLayout var3,
+      @NonNull SimpleDraweeView var4,
+      @NonNull ConstraintLayout var5,
+      @NonNull LinearLayout var6,
+      @NonNull TextView var7,
+      @NonNull View var8,
+      @NonNull TextView var9,
+      @NonNull OverlappingCirclesView var10,
+      @NonNull ConstraintLayout var11,
+      @NonNull TextView var12,
+      @NonNull SimpleDraweeView var13,
+      @NonNull TextView var14,
+      @NonNull ConstraintLayout var15,
+      @NonNull SimpleDraweeView var16,
+      @NonNull LinearLayout var17,
+      @NonNull TextView var18,
+      @NonNull SimpleDraweeView var19
    ) {
       this.rootView = var1;
       this.activityIcon = var2;
@@ -75,46 +95,47 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
       this.xboxIcon = var19;
    }
 
-   public static ActivityRichPresenceInviteEmbedViewBinding bind(View var0) {
+   @NonNull
+   public static ActivityRichPresenceInviteEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.activity_icon;
-      SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-      if (var10 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.content_container;
-         ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
-         if (var5 != null) {
+         ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.desktop_icon;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
+            SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+            if (var12 != null) {
                var1 = R.id.footer_container;
-               ConstraintLayout var16 = (ConstraintLayout)a.a(var0, var1);
-               if (var16 != null) {
+               ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.footer_content;
-                  LinearLayout var8 = (LinearLayout)a.a(var0, var1);
-                  if (var8 != null) {
+                  LinearLayout var14 = (LinearLayout)a.a(var0, var1);
+                  if (var14 != null) {
                      var1 = R.id.footer_label;
-                     TextView var19 = (TextView)a.a(var0, var1);
-                     if (var19 != null) {
+                     TextView var17 = (TextView)a.a(var0, var1);
+                     if (var17 != null) {
                         var1 = R.id.gradient_background;
-                        View var6 = a.a(var0, var1);
-                        if (var6 != null) {
+                        View var15 = a.a(var0, var1);
+                        if (var15 != null) {
                            var1 = R.id.header_text;
-                           TextView var2 = (TextView)a.a(var0, var1);
-                           if (var2 != null) {
+                           TextView var16 = (TextView)a.a(var0, var1);
+                           if (var16 != null) {
                               var1 = R.id.party_avatars;
-                              OverlappingCirclesView var11 = (OverlappingCirclesView)a.a(var0, var1);
-                              if (var11 != null) {
+                              OverlappingCirclesView var6 = (OverlappingCirclesView)a.a(var0, var1);
+                              if (var6 != null) {
                                  var1 = R.id.party_container;
-                                 ConstraintLayout var14 = (ConstraintLayout)a.a(var0, var1);
-                                 if (var14 != null) {
+                                 ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
+                                 if (var5 != null) {
                                     var1 = R.id.party_size_text;
-                                    TextView var12 = (TextView)a.a(var0, var1);
-                                    if (var12 != null) {
+                                    TextView var13 = (TextView)a.a(var0, var1);
+                                    if (var13 != null) {
                                        var1 = R.id.playstation_icon;
-                                       SimpleDraweeView var17 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var17 != null) {
+                                       SimpleDraweeView var19 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var19 != null) {
                                           var1 = R.id.subtitle;
-                                          TextView var9 = (TextView)a.a(var0, var1);
-                                          if (var9 != null) {
+                                          TextView var8 = (TextView)a.a(var0, var1);
+                                          if (var8 != null) {
                                              var1 = R.id.subtitle_container;
                                              ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
                                              if (var7 != null) {
@@ -122,34 +143,34 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
                                                 SimpleDraweeView var18 = (SimpleDraweeView)a.a(var0, var1);
                                                 if (var18 != null) {
                                                    var1 = R.id.text_content_wrapper;
-                                                   LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-                                                   if (var4 != null) {
+                                                   LinearLayout var11 = (LinearLayout)a.a(var0, var1);
+                                                   if (var11 != null) {
                                                       var1 = R.id.title;
-                                                      TextView var15 = (TextView)a.a(var0, var1);
-                                                      if (var15 != null) {
+                                                      TextView var10 = (TextView)a.a(var0, var1);
+                                                      if (var10 != null) {
                                                          var1 = R.id.xbox_icon;
-                                                         SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
-                                                         if (var13 != null) {
+                                                         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                                                         if (var3 != null) {
                                                             return new ActivityRichPresenceInviteEmbedViewBinding(
                                                                var0,
-                                                               var10,
-                                                               var5,
-                                                               var3,
-                                                               var16,
-                                                               var8,
-                                                               var19,
-                                                               var6,
                                                                var2,
-                                                               var11,
-                                                               var14,
+                                                               var4,
                                                                var12,
-                                                               var17,
                                                                var9,
+                                                               var14,
+                                                               var17,
+                                                               var15,
+                                                               var16,
+                                                               var6,
+                                                               var5,
+                                                               var13,
+                                                               var19,
+                                                               var8,
                                                                var7,
                                                                var18,
-                                                               var4,
-                                                               var15,
-                                                               var13
+                                                               var11,
+                                                               var10,
+                                                               var3
                                                             );
                                                          }
                                                       }
@@ -173,7 +194,8 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static ActivityRichPresenceInviteEmbedViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static ActivityRichPresenceInviteEmbedViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.activity_rich_presence_invite_embed_view, var1);
          return bind(var1);
@@ -182,6 +204,7 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

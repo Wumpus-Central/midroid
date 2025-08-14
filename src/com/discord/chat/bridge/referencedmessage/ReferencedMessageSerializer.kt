@@ -1,21 +1,18 @@
 package com.discord.chat.bridge.referencedmessage
 
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xb.d
-import xb.g
+import rb.d
+import rb.g
 
-public object ReferencedMessageSerializer : d(H.b(ReferencedMessage.class)) {
+public object ReferencedMessageSerializer : d(ReferencedMessage::class) {
    private const val STATE_LOADED: String = "0"
    private const val STATE_SYSTEM: String = "1"
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<ReferencedMessage> {
       label21: {
-         r.h(var1, "element");
          var1 = g.o(var1).get("state") as JsonElement;
          if (var1 != null) {
             val var4: JsonPrimitive = g.p(var1);
@@ -29,10 +26,10 @@ public object ReferencedMessageSerializer : d(H.b(ReferencedMessage.class)) {
       }
 
       val var6: KSerializer;
-      if (r.c(var5, "0")) {
+      if (var5 == "0") {
          var6 = LoadedReferencedMessage.Companion.serializer();
       } else {
-         if (!r.c(var5, "1")) {
+         if (!(var5 == "1")) {
             val var2: StringBuilder = new StringBuilder();
             var2.append("unsupported state json: ");
             var2.append(var5);

@@ -1,12 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import I9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = PollChatAnswerInteractionType.Serializer::class)
 public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
@@ -43,5 +42,5 @@ public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(H.b(PollChatAnswerInteractionType.class), PollChatAnswerInteractionType.LIST)
+   public object Serializer : IntEnumSerializer(PollChatAnswerInteractionType::class, PollChatAnswerInteractionType.LIST)
 }

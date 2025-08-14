@@ -1,7 +1,7 @@
 package com.discord.chat.reactevents
 
-import A9.n
-import A9.s
+import B9.n
+import B9.s
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -9,14 +9,11 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
 
    init {
-      r.h(var1, "emoji");
-      super();
       this.emoji = var1;
    }
 
@@ -25,7 +22,6 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public fun copy(emoji: EmojiContentNode = var0.emoji): TapEmojiData {
-      r.h(var1, "emoji");
       return new TapEmojiData(var1);
    }
 
@@ -35,7 +31,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       } else if (var1 !is TapEmojiData) {
          return false;
       } else {
-         return r.c(this.emoji, (var1 as TapEmojiData).emoji);
+         return this.emoji == (var1 as TapEmojiData).emoji;
       }
    }
 
@@ -65,11 +61,11 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: EmojiContentNode = this.emoji;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapEmojiData(emoji=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: EmojiContentNode = this.emoji;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapEmojiData(emoji=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

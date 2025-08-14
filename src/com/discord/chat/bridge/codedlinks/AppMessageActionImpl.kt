@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class AppMessageActionImpl(id: String, label: String, disabled: Boolean? = null) : AppMessageEmbedAction {
@@ -11,8 +10,6 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    public open val disabled: Boolean?
 
    init {
-      r.h(var1, "id");
-      r.h(var2, "label");
       super();
       this.id = var1;
       this.label = var2;
@@ -32,8 +29,6 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public fun copy(id: String = var0.id, label: String = var0.label, disabled: Boolean? = var0.disabled): AppMessageActionImpl {
-      r.h(var1, "id");
-      r.h(var2, "label");
       return new AppMessageActionImpl(var1, var2, var3);
    }
 
@@ -44,19 +39,19 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.label, var1.label)) {
+         } else if (!(this.label == var1.label)) {
             return false;
          } else {
-            return r.c(this.disabled, var1.disabled);
+            return this.disabled == var1.disabled;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.id.hashCode();
-      val var3: Int = this.label.hashCode();
+      val var3: Int = this.id.hashCode();
+      val var2: Int = this.label.hashCode();
       val var1: Int;
       if (this.disabled == null) {
          var1 = 0;
@@ -64,22 +59,22 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          var1 = this.disabled.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.id;
-      val var4: java.lang.String = this.label;
-      val var3: java.lang.Boolean = this.disabled;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AppMessageActionImpl(id=");
-      var2.append(var1);
-      var2.append(", label=");
-      var2.append(var4);
-      var2.append(", disabled=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var2: java.lang.Boolean = this.disabled;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AppMessageActionImpl(id=");
+      var4.append(var3);
+      var4.append(", label=");
+      var4.append(var1);
+      var4.append(", disabled=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

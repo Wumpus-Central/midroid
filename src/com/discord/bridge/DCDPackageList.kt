@@ -43,41 +43,30 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.uimanager.ViewManager
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
-public class DCDPackageList(host: ReactNativeHost) : PackageList {
-   init {
-      r.h(var1, "host");
-      super(var1);
-   }
-
+public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
    @JvmStatic
    fun `getPackages$lambda$0`(var0: ReactApplicationContext): ReactContextBaseJavaModule {
-      r.h(var0, "it");
       return new MediaEngineModule(var0);
    }
 
    @JvmStatic
    fun `getPackages$lambda$1`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new VideoStreamViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$10`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new SelfMeasuredViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$11`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new ReanimatedViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$12`(var0: ReactApplicationContext): NativeModule {
-      r.h(var0, "it");
       return new NativeArchitectureProviderSpec(var0) {
          {
             super(var1);
@@ -92,49 +81,41 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
 
    @JvmStatic
    fun `getPackages$lambda$2`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new AnimatableUnderlayViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$3`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new ChannelSpineViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$4`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new ChatInputViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$5`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new ClipViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$6`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new KeyCommandsViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$7`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new LocalImageThumbnailViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$8`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new QRScannerViewManager();
    }
 
    @JvmStatic
    fun `getPackages$lambda$9`(var0: ReactApplicationContext): ViewManager {
-      r.h(var0, "it");
       return new SegmentedControlViewManager();
    }
 
@@ -185,7 +166,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var2.add(
          var1.getTurboPackageForModule(
             "NativeAudioManagerModule",
-            new Function1(AudioManagerModule.Companion) {
+            new Function1<ReactApplicationContext, NativeModule>(AudioManagerModule.Companion) {
                {
                   super(
                      1,
@@ -198,7 +179,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
                }
 
                public final NativeModule invoke(ReactApplicationContext var1) {
-                  r.h(var1, "p0");
                   return (super.receiver as AudioManagerModule.Companion).create(var1);
                }
             }
@@ -227,7 +207,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var2.add(var1.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeArchitectureProvider", new g()));
-      r.e(var2);
       var1.addTurboPackages(
          var2,
          new APNGPackage(),

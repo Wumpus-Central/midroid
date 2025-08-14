@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.stickers
 
-import A9.n
-import H1.a
+import B9.n
+import G1.a
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -24,28 +24,22 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 
-public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: WelcomeStickerViewBinding
 
    fun WelcomeStickerView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var3: WelcomeStickerViewBinding = WelcomeStickerViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var3, "inflate(...)");
       this.binding = var3;
       RippleUtilsKt.addRipple$default(this, true, 0, 2, null);
       this.setOrientation(0);
       this.setLayoutParams(new LayoutParams(-2, -2));
       this.setPadding(SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8), SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8));
       val var4: TextView = var3.welcomeReplyText;
-      r.e(var3.welcomeReplyText);
       var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.white));
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
@@ -79,9 +73,6 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
    }
 
    public fun setSticker(sticker: Sticker, message: Message, onWelcomeReplyClicked: (Sticker, MessageId) -> Unit) {
-      r.h(var1, "sticker");
-      r.h(var2, "message");
-      r.h(var3, "onWelcomeReplyClicked");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new a(var3, var1, var2), 1, null);
       this.binding.welcomeReplyText.setText(var2.getStickerLabel());
       this.bindSticker(var1);

@@ -3,37 +3,43 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import y0.a;
 
 public final class EmbedFieldViewBinding implements ViewBinding {
+   @NonNull
    public final SimpleDraweeSpanTextView name;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final SimpleDraweeSpanTextView value;
 
-   private EmbedFieldViewBinding(View var1, SimpleDraweeSpanTextView var2, SimpleDraweeSpanTextView var3) {
+   private EmbedFieldViewBinding(@NonNull View var1, @NonNull SimpleDraweeSpanTextView var2, @NonNull SimpleDraweeSpanTextView var3) {
       this.rootView = var1;
       this.name = var2;
       this.value = var3;
    }
 
-   public static EmbedFieldViewBinding bind(View var0) {
+   @NonNull
+   public static EmbedFieldViewBinding bind(@NonNull View var0) {
       int var1 = R.id.name;
-      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.value;
-         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new EmbedFieldViewBinding(var0, var2, var3);
+         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new EmbedFieldViewBinding(var0, var3, var2);
          }
       }
 
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static EmbedFieldViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static EmbedFieldViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.embed_field_view, var1);
          return bind(var1);
@@ -42,6 +48,7 @@ public final class EmbedFieldViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

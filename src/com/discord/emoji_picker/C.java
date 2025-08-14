@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class C implements OnClickListener {
-   public final EmojiPickerViewHolder.Emoji j;
-   public final Function2 k;
+   public final EmojiPickerViewHolder.Emoji d;
+   public final Function2 e;
 
    public final void onClick(View var1) {
-      EmojiPickerViewHolder.Emoji.b(this.j, this.k, var1);
+      EmojiPickerViewHolder.Emoji.b(this.d, this.e, var1);
    }
 }

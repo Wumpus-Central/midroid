@@ -7,19 +7,15 @@ import android.graphics.Path
 import android.graphics.Path.Direction
 import android.graphics.Region.Op
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.r
 
-public class ClipView(context: Context) : ReactViewGroup {
-   private final val cutoutPath: Path
+public class ClipView(context: Context) : ReactViewGroup(var1) {
+   private final val cutoutPath: Path = new Path()
    private final val clipPath: Path
    private final val clipPathBackgroundColorPaint: Paint
    private final var clipPathRadius: Float
    private final var clipToCircle: Boolean
 
    init {
-      r.h(var1, "context");
-      super(var1);
-      this.cutoutPath = new Path();
       this.clipPath = new Path();
       val var2: Paint = new Paint();
       var2.setColor(0);
@@ -64,7 +60,6 @@ public class ClipView(context: Context) : ReactViewGroup {
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
       if (!this.clipPath.isEmpty()) {
          ClipPathCompatKt.clipPathCompat(var1, this.clipPath, Op.INTERSECT);
       }

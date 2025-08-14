@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class j implements Function0 {
-   public final ViewGroup j;
-   public final ExternalPipTransitionView k;
+   public final ViewGroup d;
+   public final ExternalPipTransitionView e;
 
    public final Object invoke() {
-      return ExternalPipTransitionView.Companion.a(this.j, this.k);
+      return ExternalPipTransitionView.Companion.a(this.d, this.e);
    }
 }

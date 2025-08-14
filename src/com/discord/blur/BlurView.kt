@@ -8,8 +8,9 @@ import com.discord.theme.utils.ColorUtilsKt
 import java.lang.ref.WeakReference
 
 @SuppressLint(["ViewConstructor"])
-internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float)
-   : eightbitlab.com.blurview.BlurView,
+internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float) : eightbitlab.com.blurview.BlurView(
+         var1
+      ),
    BlurViewAPI {
    private final var blurTargetNativeId: String
    private final var blurTint: Int
@@ -21,9 +22,6 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
    private final val blurTargetChangeListener: () -> Unit
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
-      super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
       this.blurTintIOSParityCompensation = var4;
@@ -51,9 +49,9 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
    private fun maybeUpdate() {
       var var1: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
       if (var1 != null && this.blurViewPropertiesDirty) {
-         if (!kotlin.jvm.internal.r.c(this.blurTarget.get(), var1)) {
+         if (!(this.blurTarget.get() == var1)) {
             this.blurTarget = new WeakReference<>(var1);
-            this.setupWith(var1.getViewRef()).c(var1.getViewRef().getBackground());
+            this.setupWith(var1.getViewRef()).d(var1.getViewRef().getBackground());
          }
 
          this.maybeUpdateBlurEnabled();
@@ -115,8 +113,7 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      kotlin.jvm.internal.r.h(var1, "nativeId");
-      if (!kotlin.jvm.internal.r.c(this.blurTargetNativeId, var1)) {
+      if (!(this.blurTargetNativeId == var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }
@@ -152,8 +149,6 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
       }
 
       internal fun updateListener(blurTargetChangeListener: () -> Unit, attached: Boolean, maybeUpdate: () -> Unit) {
-         kotlin.jvm.internal.r.h(var1, "blurTargetChangeListener");
-         kotlin.jvm.internal.r.h(var3, "maybeUpdate");
          if (var2) {
             BlurViewTargetRegistry.INSTANCE.addChangeListener(var1);
          } else {

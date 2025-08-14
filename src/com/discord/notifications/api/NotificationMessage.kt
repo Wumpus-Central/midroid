@@ -1,16 +1,15 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import tb.g
+import nb.g
 
 @g
-public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
+public data class NotificationMessage(stickerItems: List<Sticker> = CollectionsKt.k(),
    author: JsonObject? = null,
-   mentions: List<JsonObject> = i.k(),
+   mentions: List<JsonObject> = CollectionsKt.k(),
    poll: Poll? = null,
-   embeds: List<Embed> = i.k()
+   embeds: List<Embed> = CollectionsKt.k()
 ) {
    public final val stickerItems: List<Sticker>
    public final val author: JsonObject?
@@ -20,13 +19,13 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
 
    public final val sticker: Sticker?
       public final get() {
-         return i.j0(this.stickerItems) as Sticker;
+         return CollectionsKt.firstOrNull(this.stickerItems) as Sticker;
       }
 
 
    public final val embed: Embed?
       public final get() {
-         return i.j0(this.embeds) as Embed;
+         return CollectionsKt.firstOrNull(this.embeds) as Embed;
       }
 
 
@@ -35,10 +34,6 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    init {
-      r.h(var1, "stickerItems");
-      r.h(var3, "mentions");
-      r.h(var5, "embeds");
-      super();
       this.stickerItems = var1;
       this.author = var2;
       this.mentions = var3;
@@ -73,9 +68,6 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
       poll: Poll? = var0.poll,
       embeds: List<Embed> = var0.embeds
    ): NotificationMessage {
-      r.h(var1, "stickerItems");
-      r.h(var3, "mentions");
-      r.h(var5, "embeds");
       return new NotificationMessage(var1, var2, var3, var4, var5);
    }
 
@@ -86,16 +78,16 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.stickerItems, var1.stickerItems)) {
+         if (!(this.stickerItems == var1.stickerItems)) {
             return false;
-         } else if (!r.c(this.author, var1.author)) {
+         } else if (!(this.author == var1.author)) {
             return false;
-         } else if (!r.c(this.mentions, var1.mentions)) {
+         } else if (!(this.mentions == var1.mentions)) {
             return false;
-         } else if (!r.c(this.poll, var1.poll)) {
+         } else if (!(this.poll == var1.poll)) {
             return false;
          } else {
-            return r.c(this.embeds, var1.embeds);
+            return this.embeds == var1.embeds;
          }
       }
    }
@@ -119,24 +111,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var6: java.util.List = this.stickerItems;
+      val var1: java.util.List = this.stickerItems;
       val var5: JsonObject = this.author;
-      val var2: java.util.List = this.mentions;
-      val var1: Poll = this.poll;
+      val var4: java.util.List = this.mentions;
+      val var2: Poll = this.poll;
       val var3: java.util.List = this.embeds;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NotificationMessage(stickerItems=");
-      var4.append(var6);
-      var4.append(", author=");
-      var4.append(var5);
-      var4.append(", mentions=");
-      var4.append(var2);
-      var4.append(", poll=");
-      var4.append(var1);
-      var4.append(", embeds=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("NotificationMessage(stickerItems=");
+      var6.append(var1);
+      var6.append(", author=");
+      var6.append(var5);
+      var6.append(", mentions=");
+      var6.append(var4);
+      var6.append(", poll=");
+      var6.append(var2);
+      var6.append(", embeds=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

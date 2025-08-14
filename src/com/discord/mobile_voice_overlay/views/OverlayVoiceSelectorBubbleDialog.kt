@@ -28,7 +28,9 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayVoiceSelectorBubbleDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayVoiceSelectorBubbleDialog.kt\ncom/discord/mobile_voice_overlay/views/OverlayVoiceSelectorBubbleDialog\n+ 2 TextView.kt\nandroidx/core/widget/TextViewKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,203:1\n39#2:204\n55#2,12:205\n84#2,3:217\n257#3,2:220\n257#3,2:222\n*S KotlinDebug\n*F\n+ 1 OverlayVoiceSelectorBubbleDialog.kt\ncom/discord/mobile_voice_overlay/views/OverlayVoiceSelectorBubbleDialog\n*L\n60#1:204\n60#1:205,12\n60#1:217,3\n121#1:220,2\n122#1:222,2\n*E\n"])
 public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
    private final var binding: OverlayVoiceChannelSelectorBinding
    private final var data: MobileVoiceOverlayData?
@@ -36,10 +38,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
    public final var onTextChanged: (String) -> Unit
    public final var onChannelSelected: (ChannelId) -> Unit
 
-   public constructor(context: Context) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1);
+   public constructor(context: Context) : super(var1) {
       val var2: OverlayVoiceChannelSelectorBinding = OverlayVoiceChannelSelectorBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.r.g(var2, "inflate(...)");
       this.binding = var2;
       this.adapter = new ResultAdapter(new t(this));
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);
@@ -47,10 +47,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
       this.onChannelSelected = new v();
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2);
+   public constructor(context: Context, attrs: AttributeSet?) : super(var1, var2) {
       val var3: OverlayVoiceChannelSelectorBinding = OverlayVoiceChannelSelectorBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       this.adapter = new ResultAdapter(new t(this));
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);
@@ -58,10 +56,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
       this.onChannelSelected = new v();
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2, var3);
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
       val var4: OverlayVoiceChannelSelectorBinding = OverlayVoiceChannelSelectorBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       this.adapter = new ResultAdapter(new t(this));
       WindowUtils.INSTANCE.removeFlag(this.getWindowLayoutParams(), 8);
@@ -83,10 +79,8 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
          this.binding.overlayChannelSearch.setHint(var1.getSearchChannels());
          this.binding.close.setContentDescription(var1.getCloseWindow());
          val var2: SimpleDraweeView = this.binding.close;
-         kotlin.jvm.internal.r.g(this.binding.close, "close");
          ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getInteractiveNormal());
          val var3: SimpleDraweeView = this.binding.close;
-         kotlin.jvm.internal.r.g(this.binding.close, "close");
          ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Close);
       }
    }
@@ -97,7 +91,6 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
       if (this.data != null) {
          val var3: Boolean = this.data.getChannelSelectorResults().isEmpty();
          val var5: TextView = this.binding.emptyResults;
-         kotlin.jvm.internal.r.g(this.binding.emptyResults, "emptyResults");
          var var1: Byte;
          if (var3) {
             var1 = 0;
@@ -107,7 +100,6 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
 
          var5.setVisibility(var1);
          val var8: RecyclerView = this.binding.resultsRv;
-         kotlin.jvm.internal.r.g(this.binding.resultsRv, "resultsRv");
          var1 = 8;
          if (!var3) {
             var1 = 0;
@@ -133,14 +125,12 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
 
    @JvmStatic
    fun `onTextChanged$lambda$1`(var0: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    private fun onViewBound() {
       this.binding.close.setOnClickListener(new w(this));
       var var1: EditText = this.binding.overlayChannelSearch;
-      kotlin.jvm.internal.r.g(this.binding.overlayChannelSearch, "overlayChannelSearch");
       var1.addTextChangedListener(new TextWatcher(this) {
          final OverlayVoiceSelectorBubbleDialog this$0;
 
@@ -173,24 +163,19 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
          }
       });
       val var3: TextView = this.binding.channelSelect;
-      kotlin.jvm.internal.r.g(this.binding.channelSelect, "channelSelect");
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
       val var2: TextView = this.binding.emptyResults;
-      kotlin.jvm.internal.r.e(this.binding.emptyResults);
       val var4: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
       var2.setVisibility(8);
       val var7: EditText = this.binding.overlayChannelSearch;
-      kotlin.jvm.internal.r.g(this.binding.overlayChannelSearch, "overlayChannelSearch");
       DiscordFontUtilsKt.setDiscordFont(var7, var4);
       val var5: LinearLayout = this.binding.menuContainer;
-      kotlin.jvm.internal.r.g(this.binding.menuContainer, "menuContainer");
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(var5, ThemeManagerKt.getTheme().getBackgroundTertiary(), 4, null, 0, 12, null);
       this.binding.dialogCard.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
       this.binding.channelSelect.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       this.binding.emptyResults.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       var1 = this.binding.overlayChannelSearch;
-      kotlin.jvm.internal.r.e(this.binding.overlayChannelSearch);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(var1, ThemeManagerKt.getTheme().getInteractiveMuted(), 8, null, 0, 12, null);
       var1.setHintTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       var1.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
@@ -207,7 +192,6 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
    public override fun getClosingAnimator(): Animator {
       val var1: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_down_fade_out);
       var1.setTarget(this.binding.dialogCard);
-      kotlin.jvm.internal.r.g(var1, "apply(...)");
       return var1;
    }
 
@@ -227,13 +211,11 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
    }
 
    public override fun setAssets(assets: MobileVoiceOverlayAssets) {
-      kotlin.jvm.internal.r.h(var1, "assets");
       super.setAssets(var1);
       this.bindAssets();
    }
 
    public override fun setData(data: MobileVoiceOverlayData) {
-      kotlin.jvm.internal.r.h(var1, "data");
       this.data = var1;
       this.bindData();
    }

@@ -9,12 +9,10 @@ import com.discord.chat.presentation.message.view.ForumPostActionBarView
 import com.discord.primitives.MessageId
 import com.discord.reactions.ReactionView.Reaction
 
-public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActionBarView) : MessagePartViewHolder {
+public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActionBarView) : MessagePartViewHolder(var1) {
    private final val forumPostActionBarView: ForumPostActionBarView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "forumPostActionBarView");
-      super(var1, null);
       this.forumPostActionBarView = var1;
    }
 
@@ -30,15 +28,6 @@ public class ForumPostActionBarViewHolder(forumPostActionBarView: ForumPostActio
       onTapDismissMediaPostSharePrompt: OnClickListener,
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "forumPostActionBar");
-      kotlin.jvm.internal.r.h(var3, "onTapFollowForumPost");
-      kotlin.jvm.internal.r.h(var4, "onTapShareForumPost");
-      kotlin.jvm.internal.r.h(var5, "onAddReactionClick");
-      kotlin.jvm.internal.r.h(var6, "onTapReactionOverflow");
-      kotlin.jvm.internal.r.h(var7, "onReactionClick");
-      kotlin.jvm.internal.r.h(var8, "onReactionLongPress");
-      kotlin.jvm.internal.r.h(var9, "onTapDismissMediaPostSharePrompt");
-      kotlin.jvm.internal.r.h(var10, "onLinkClicked");
       val var11: ForumPostActions = var1.getPostActions();
       this.forumPostActionBarView
          .configure-CgeVRR0(

@@ -2,9 +2,8 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
@@ -15,9 +14,6 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
    public final val videoStreamParametersJSON: String
 
    init {
-      r.h(var2, "userId");
-      r.h(var5, "streamId");
-      r.h(var6, "videoStreamParametersJSON");
       super();
       this.connectionId = var1;
       this.userId = var2;
@@ -53,9 +49,6 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       streamId: String = var0.streamId,
       videoStreamParametersJSON: String = var0.videoStreamParametersJSON
    ): OnVideoCallbackEvent {
-      r.h(var2, "userId");
-      r.h(var5, "streamId");
-      r.h(var6, "videoStreamParametersJSON");
       return new OnVideoCallbackEvent(var1, var2, var3, var5, var6);
    }
 
@@ -68,14 +61,14 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.userId, var1.userId)) {
+         } else if (!(this.userId == var1.userId)) {
             return false;
          } else if (this.ssrc != var1.ssrc) {
             return false;
-         } else if (!r.c(this.streamId, var1.streamId)) {
+         } else if (!(this.streamId == var1.streamId)) {
             return false;
          } else {
-            return r.c(this.videoStreamParametersJSON, var1.videoStreamParametersJSON);
+            return this.videoStreamParametersJSON == var1.videoStreamParametersJSON;
          }
       }
    }
@@ -92,23 +85,23 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var7: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var6: java.lang.String = this.streamId;
-      val var5: java.lang.String = this.videoStreamParametersJSON;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("OnVideoCallbackEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", userId=");
-      var4.append(var7);
-      var4.append(", ssrc=");
-      var4.append(var2);
-      var4.append(", streamId=");
-      var4.append(var6);
-      var4.append(", videoStreamParametersJSON=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.streamId;
+      val var6: java.lang.String = this.videoStreamParametersJSON;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("OnVideoCallbackEvent(connectionId=");
+      var7.append(var1);
+      var7.append(", userId=");
+      var7.append(var5);
+      var7.append(", ssrc=");
+      var7.append(var2);
+      var7.append(", streamId=");
+      var7.append(var4);
+      var7.append(", videoStreamParametersJSON=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

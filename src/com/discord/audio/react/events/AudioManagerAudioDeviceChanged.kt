@@ -1,20 +1,18 @@
 package com.discord.audio.react.events
 
-import A9.s
+import B9.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
    public final val device: AndroidAudioDevice
 
    init {
-      r.h(var1, "device");
       super();
       this.device = var1;
    }
@@ -24,7 +22,6 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public fun copy(device: AndroidAudioDevice = var0.device): AudioManagerAudioDeviceChanged {
-      r.h(var1, "device");
       return new AudioManagerAudioDeviceChanged(var1);
    }
 
@@ -34,7 +31,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
       } else if (var1 !is AudioManagerAudioDeviceChanged) {
          return false;
       } else {
-         return r.c(this.device, (var1 as AudioManagerAudioDeviceChanged).device);
+         return this.device == (var1 as AudioManagerAudioDeviceChanged).device;
       }
    }
 

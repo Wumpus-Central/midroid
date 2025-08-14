@@ -1,10 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.emoji.RenderableEmoji
-import kotlin.jvm.internal.r
 
 public fun SoundmojiContentNode.toRenderableEmoji(): RenderableEmoji? {
-   r.h(var0, "<this>");
    val var1: Any;
    if (var0.getEmojiId() != null) {
       var1 = RenderableEmoji.Companion.customWithEmojiId(java.lang.Long.parseLong(var0.getEmojiId()), false, "");

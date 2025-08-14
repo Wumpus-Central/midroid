@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class o0 implements Function1 {
-   public final String j;
+   public final String d;
 
    public final Object invoke(Object var1) {
-      return MessageViewAccessibilityDelegate.c(this.j, (RenderContext)var1);
+      return MessageViewAccessibilityDelegate.c(this.d, (RenderContext)var1);
    }
 }

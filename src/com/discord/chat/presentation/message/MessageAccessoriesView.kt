@@ -31,8 +31,10 @@ import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class MessageAccessoriesView  public constructor(context: Context, attrs: AttributeSet? = null) : RecyclerView {
+@SourceDebugExtension(["SMAP\nMessageAccessoriesView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageAccessoriesView.kt\ncom/discord/chat/presentation/message/MessageAccessoriesView\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,245:1\n1317#2,2:246\n1755#3,3:248\n*S KotlinDebug\n*F\n+ 1 MessageAccessoriesView.kt\ncom/discord/chat/presentation/message/MessageAccessoriesView\n*L\n106#1:246,2\n172#1:248,3\n*E\n"])
+public class MessageAccessoriesView  public constructor(context: Context, attrs: AttributeSet? = null) : RecyclerView(var1, var2) {
    private final var threadSpineDecoration: ThreadSpineItemDecoration
    private final val accessoriesAdapter: MessageAccessoriesAdapter
    private final val transitionResilientLinearLayoutManager: TransitionResilientLinearLayoutManager
@@ -54,14 +56,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    fun MessageAccessoriesView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
-      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -70,10 +69,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var3;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
-      this.transitionResilientLinearLayoutManager = var4;
-      this.forwardBarPaint$delegate = A9.j.b(new Q());
+      this.accessoriesAdapter = var4;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
+      this.transitionResilientLinearLayoutManager = var3;
+      this.forwardBarPaint$delegate = B9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -86,8 +85,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var3);
+      this.setLayoutManager(var3);
+      this.setAdapter(var4);
    }
 
    @JvmStatic
@@ -98,7 +97,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : gb.k.J(androidx.core.view.f0.a(this))) {
+      for (Pair var3 : kotlin.sequences.k.J(androidx.core.view.f0.a(this))) {
          val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
@@ -134,15 +133,14 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    public override fun onDraw(c: Canvas) {
-      kotlin.jvm.internal.r.h(var1, "c");
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -164,10 +162,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       renderContentOnly: Boolean,
       drawForward: Boolean
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var5, "items");
-      kotlin.jvm.internal.r.h(var6, "eventHandler");
-      kotlin.jvm.internal.r.h(var8, "messageContext");
       this.setItemAnimator(null);
       if (this.showingForwardBar != var10) {
          this.showingForwardBar = var10;
@@ -175,7 +169,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
       val var12: MessageAccessoriesView.Companion = Companion;
       val var11: Resources = this.getResources();
-      kotlin.jvm.internal.r.g(var11, "getResources(...)");
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
       val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
@@ -221,8 +214,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       public final val FORWARD_BAR_SPACING: Int
 
       public fun getAccessoryLeftMargin(resources: Resources, messageContext: MessageContext, renderContentOnly: Boolean): Int {
-         kotlin.jvm.internal.r.h(var1, "resources");
-         kotlin.jvm.internal.r.h(var2, "messageContext");
          if (var2.getContextType() === MessageContextType.SEARCH) {
             return 0;
          } else {

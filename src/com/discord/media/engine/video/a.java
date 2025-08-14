@@ -7,12 +7,12 @@ import kotlin.jvm.internal.Ref.BooleanRef;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final BooleanRef j;
-   public final VideoSink k;
-   public final MediaEngine l;
+   public final BooleanRef d;
+   public final VideoSink e;
+   public final MediaEngine i;
    public final String m;
 
    public final Object invoke(Object var1) {
-      return AttachedVideoSinks.c(this.j, this.k, this.l, this.m, (String)var1);
+      return AttachedVideoSinks.c(this.d, this.e, this.i, this.m, (String)var1);
    }
 }

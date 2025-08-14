@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public sealed class SelectItem protected constructor() {

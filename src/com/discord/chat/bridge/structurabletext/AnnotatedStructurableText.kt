@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.structurabletext
 
 import com.discord.chat.bridge.contentnode.ContentNode
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = AnnotatedStructurableTextSerializer::class)
-public data class AnnotatedStructurableText(content: List<ContentNode>) : StructurableText {
+public data class AnnotatedStructurableText(content: List<ContentNode>) : StructurableText() {
    public final val content: List<ContentNode>
    public open val hasContent: Boolean
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
       this.hasContent = var1.isEmpty() xor true;
    }
@@ -22,7 +19,6 @@ public data class AnnotatedStructurableText(content: List<ContentNode>) : Struct
    }
 
    public fun copy(content: List<ContentNode> = var0.content): AnnotatedStructurableText {
-      r.h(var1, "content");
       return new AnnotatedStructurableText(var1);
    }
 
@@ -32,7 +28,7 @@ public data class AnnotatedStructurableText(content: List<ContentNode>) : Struct
       } else if (var1 !is AnnotatedStructurableText) {
          return false;
       } else {
-         return r.c(this.content, (var1 as AnnotatedStructurableText).content);
+         return this.content == (var1 as AnnotatedStructurableText).content;
       }
    }
 
@@ -41,12 +37,12 @@ public data class AnnotatedStructurableText(content: List<ContentNode>) : Struct
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AnnotatedStructurableText(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AnnotatedStructurableText(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

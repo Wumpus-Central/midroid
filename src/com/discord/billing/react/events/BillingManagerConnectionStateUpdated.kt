@@ -3,7 +3,7 @@ package com.discord.billing.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class BillingManagerConnectionStateUpdated(connectionState: Int) : ReactEvent {

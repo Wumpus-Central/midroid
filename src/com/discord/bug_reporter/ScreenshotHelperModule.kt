@@ -1,6 +1,6 @@
 package com.discord.bug_reporter
 
-import A9.s
+import B9.s
 import android.content.ContentResolver
 import com.discord.bug_reporter.react.events.ScreenshotTakenEvent
 import com.discord.reactevents.ReactEvents
@@ -8,20 +8,16 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 
-public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
    private final val reactLifecycleEventListener: <unrepresentable>
    private final var screenshotDetector: ScreenshotDetector?
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("screenshotTaken", H.b(ScreenshotTakenEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("screenshotTaken", ScreenshotTakenEvent::class));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 
@@ -56,7 +52,6 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun addListener(type: String) {
-      r.h(var1, "type");
       if (this.screenshotDetector != null) {
          this.screenshotDetector.setScreenshotListener(new b(this));
       }
@@ -69,7 +64,6 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
    public open fun initialize() {
       super.initialize();
       val var1: ContentResolver = this.reactContext.getContentResolver();
-      r.g(var1, "getContentResolver(...)");
       this.screenshotDetector = new ScreenshotDetector(var1);
       this.reactContext.addLifecycleEventListener(this.reactLifecycleEventListener);
    }

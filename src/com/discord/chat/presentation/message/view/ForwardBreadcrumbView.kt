@@ -23,44 +23,36 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function3
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ForwardBreadcrumbView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nForwardBreadcrumbView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ForwardBreadcrumbView.kt\ncom/discord/chat/presentation/message/view/ForwardBreadcrumbView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,72:1\n257#2,2:73\n*S KotlinDebug\n*F\n+ 1 ForwardBreadcrumbView.kt\ncom/discord/chat/presentation/message/view/ForwardBreadcrumbView\n*L\n62#1:73,2\n*E\n"])
+public class ForwardBreadcrumbView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    public final val binding: ForwardBreadcrumbViewBinding
 
    fun ForwardBreadcrumbView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var4: ForwardBreadcrumbViewBinding = ForwardBreadcrumbViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
       var4.getRoot().setPadding(0, SizeUtilsKt.getDpToPx(1), 0, SizeUtilsKt.getDpToPx(1));
       val var6: SimpleDraweeView = var4.icon;
-      kotlin.jvm.internal.r.g(var4.icon, "icon");
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(4));
       var4.label.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
       val var7: TextView = var4.label;
-      kotlin.jvm.internal.r.g(var4.label, "label");
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       var var3: TextView = var4.separator;
-      kotlin.jvm.internal.r.g(var4.separator, "separator");
       val var8: DiscordFont = DiscordFont.PrimaryNormal;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
       var4.separator.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
       var3 = var4.timestamp;
-      kotlin.jvm.internal.r.g(var4.timestamp, "timestamp");
       DiscordFontUtilsKt.setDiscordFont(var3, var8);
       var4.timestamp.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
       val var9: SimpleDraweeView = var4.arrow;
-      kotlin.jvm.internal.r.g(var4.arrow, "arrow");
       ReactAssetUtilsKt.setReactAsset(var9, ReactAsset.ArrowRight);
       val var5: SimpleDraweeView = var4.arrow;
-      kotlin.jvm.internal.r.g(var4.arrow, "arrow");
       ColorUtilsKt.setTintColor(var5, ThemeManagerKt.getTheme().getTextLowContrast());
    }
 
@@ -70,16 +62,12 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
    }
 
    public fun configure(channelId: ChannelId, messageId: MessageId, info: ForwardInfo, onTapForwardFooter: (Int, ChannelId, MessageId) -> Unit) {
-      kotlin.jvm.internal.r.h(var3, "messageId");
-      kotlin.jvm.internal.r.h(var4, "info");
-      kotlin.jvm.internal.r.h(var5, "onTapForwardFooter");
       val var8: ForwardFooterInfo = var4.getFooterInfo();
       if (var8 != null) {
          val var9: h0 = new h0(var5, var4, var1, var3);
          var var6: Byte = 1;
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var9, 1, null);
          val var10: SimpleDraweeView = this.binding.icon;
-         kotlin.jvm.internal.r.g(this.binding.icon, "icon");
          if (var8.getOriginIconUrl() == null) {
             var6 = 0;
          }
@@ -93,7 +81,6 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
          var10.setVisibility(var6);
          if (var8.getOriginIconUrl() != null) {
             val var11: SimpleDraweeView = this.binding.icon;
-            kotlin.jvm.internal.r.g(this.binding.icon, "icon");
             ReactAssetUtilsKt.setReactImageUrl(var11, var8.getOriginIconUrl());
          }
 

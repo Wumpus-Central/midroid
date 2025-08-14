@@ -1,12 +1,11 @@
 package com.discord.chat.bridge.embed
 
-import I9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = EmbedFailureState.Serializer::class)
 public enum class EmbedFailureState(serialNumber: Int) : IntEnum {
@@ -43,5 +42,5 @@ public enum class EmbedFailureState(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(H.b(EmbedFailureState.class), null, 2)
+   public object Serializer : IntEnumSerializer(EmbedFailureState::class, null, 2)
 }

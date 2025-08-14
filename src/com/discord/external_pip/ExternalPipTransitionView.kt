@@ -10,12 +10,9 @@ import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
 
-public class ExternalPipTransitionView(context: Context) : View {
+public class ExternalPipTransitionView(context: Context) : View(var1) {
    init {
-      r.h(var1, "context");
-      super(var1);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.setTag(transitionViewTag);
       this.setLayoutParams(new LayoutParams(-1, -1));
@@ -32,14 +29,13 @@ public class ExternalPipTransitionView(context: Context) : View {
    @JvmStatic
    fun `fadeOut$lambda$0`(var0: ExternalPipTransitionView, var1: Long, var3: Function0) {
       var0.animate().alpha(0.0F).setDuration(var1).setListener(new AnimatorListenerAdapter(var3) {
-         final Function0 $onComplete;
+         final Function0<Unit> $onComplete;
 
          {
             this.$onComplete = var1;
          }
 
          public void onAnimationEnd(Animator var1) {
-            r.h(var1, "animation");
             this.$onComplete.invoke();
          }
       });
@@ -95,7 +91,6 @@ public class ExternalPipTransitionView(context: Context) : View {
 
          if (var4 != null) {
             val var5: Context = var4.getContext();
-            r.g(var5, "getContext(...)");
             var4.addView(new ExternalPipTransitionView(var5));
          }
       }

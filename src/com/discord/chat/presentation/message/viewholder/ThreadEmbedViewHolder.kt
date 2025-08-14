@@ -20,12 +20,10 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import kotlin.jvm.functions.Function1
 
-public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePartViewHolder {
+public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePartViewHolder(var1) {
    private final val threadEmbedView: ThreadEmbedView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "threadEmbedView");
-      super(var1, null);
       this.threadEmbedView = var1;
    }
 
@@ -35,18 +33,16 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
    }
 
    public fun bind(threadItem: ThreadEmbedMessageAccessory, onTapThreadEmbed: (MessageId) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "threadItem");
-      kotlin.jvm.internal.r.h(var2, "onTapThreadEmbed");
-      val var12: ThreadEmbed = var1.getThreadEmbed();
+      val var13: ThreadEmbed = var1.getThreadEmbed();
       val var15: ThreadEmbedView = this.threadEmbedView;
-      this.threadEmbedView.setThread(var12.getTitle(), var12.getMessageCountLabel());
-      val var9: java.lang.Boolean = var12.getArchived();
-      val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
-      var15.setArchived(kotlin.jvm.internal.r.c(var9, java.lang.Boolean.TRUE), var12.getArchivedIconUrl());
+      this.threadEmbedView.setThread(var13.getTitle(), var13.getMessageCountLabel());
+      val var9: java.lang.Boolean = var13.getArchived();
+      val var12: java.lang.Boolean = java.lang.Boolean.TRUE;
+      var15.setArchived(var9 == java.lang.Boolean.TRUE, var13.getArchivedIconUrl());
       val var16: O = new O(var2, var1);
       var var4: Boolean = false;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, var16, 1, null);
-      val var17: ThreadEmbedMessage = var12.getReferencedMessage();
+      val var17: ThreadEmbedMessage = var13.getReferencedMessage();
       val var22: Message;
       if (var17 != null) {
          var22 = var17.getMessage();
@@ -56,34 +52,31 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
       var var18: Any = "";
       if (var22 == null) {
-         val var23: java.lang.String = var12.getMessagePreviewString();
+         val var23: java.lang.String = var13.getMessagePreviewString();
          if (var23 != null) {
             var18 = var23;
          }
 
          var18 = new DraweeSpanStringBuilder((java.lang.CharSequence)var18);
       } else if (var22.getContent() != null) {
-         val var24: StructurableText = var22.getContent();
+         val var10: StructurableText = var22.getContent();
          var18 = var15.getContext();
-         kotlin.jvm.internal.r.g(var18, "getContext(...)");
-         val var10: java.lang.String = var22.getId-3Eiw7ao();
-         val var6: Boolean = MessageKt.shouldAnimateEmoji(var22);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var22);
+         val var24: java.lang.String = var22.getId-3Eiw7ao();
+         val var7: Boolean = MessageKt.shouldAnimateEmoji(var22);
+         val var6: Boolean = MessageKt.shouldShowLinkDecorations(var22);
          val var5: Boolean = var22.getShouldShowRoleDot();
-         val var7: Boolean = var22.getShouldShowRoleOnName();
+         val var8: Boolean = var22.getShouldShowRoleOnName();
          val var11: FontMetrics = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
-         kotlin.jvm.internal.r.g(var11, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
          val var30: TextPaint = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint();
-         kotlin.jvm.internal.r.g(var30, "getPaint(...)");
          var18 = TextUtilsKt.toSpannable$default(
-            var24,
-            (Context)var18,
             var10,
-            var6,
-            var8,
-            var5,
+            (Context)var18,
+            var24,
             var7,
+            var6,
+            var5,
+            var8,
             var30,
             null,
             null,
@@ -109,7 +102,6 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          );
       } else {
          val var25: Context = var15.getContext();
-         kotlin.jvm.internal.r.g(var25, "getContext(...)");
          val var26: java.lang.CharSequence = ThreadEmbedViewHolderKt.access$getContentlessPreviewText(var25, var22);
          if (var26 != null) {
             var18 = var26;
@@ -121,7 +113,6 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
       val var28: java.lang.String;
       if (var22 != null) {
          val var27: Context = var15.getContext();
-         kotlin.jvm.internal.r.g(var27, "getContext(...)");
          var28 = MessageKt.avatarUrl(var22, var27);
       } else {
          var28 = null;
@@ -141,7 +132,7 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          var31 = null;
       }
 
-      if (kotlin.jvm.internal.r.c(var12.getArchived(), var13) || var22 == null || var22.getContent() == null) {
+      if (var13.getArchived() == var12 || var22 == null || var22.getContent() == null) {
          var4 = true;
       }
 
@@ -169,7 +160,6 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
       var15.setMessage-CKTq3AQ(var28, var29, var31, (DraweeSpanStringBuilder)var18, var4, var32, var33, var14);
       if (var22 != null) {
          var18 = var15.getBinding().threadEmbedMostRecentMessageName;
-         kotlin.jvm.internal.r.g(var18, "threadEmbedMostRecentMessageName");
          MessageUtilsKt.clearOrSetRoleColors((TextView)var18, var22);
       }
    }

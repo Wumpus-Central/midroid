@@ -1,6 +1,6 @@
 package com.discord.simpleast.code
 
-import A9.s
+import B9.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -10,7 +10,7 @@ import com.discord.simpleast.core.parser.Rule
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import org.jetbrains.annotations.NotNull
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -22,15 +22,12 @@ public object Xml {
    @JvmStatic
    fun {
       var var0: Pattern = Pattern.compile("^<!--[\\s\\S]*?-->", 32);
-      r.g(var0, "Pattern.compile(\"\"\"^<!--…*?-->\"\"\", Pattern.DOTALL)");
       PATTERN_XML_COMMENT = var0;
       var0 = Pattern.compile("^<([\\s\\S]+?)(?:>(.*?)<\\/([\\s\\S]+?))?>", 32);
-      r.g(var0, "Pattern.compile(\n      \"…?))?>\"\"\", Pattern.DOTALL)");
       PATTERN_XML_TAG = var0;
    }
 
    public fun <RC, S> createTagRule(codeStyleProviders: CodeStyleProviders<RC>): Rule<RC, Node<RC>, S> {
-      r.h(var1, "codeStyleProviders");
       return new Rule<RC, Node<RC>, S>(this, var1, PATTERN_XML_TAG) {
          final CodeStyleProviders $codeStyleProviders;
          final Xml this$0;
@@ -41,18 +38,16 @@ public object Xml {
             this.$codeStyleProviders = var2;
          }
 
+         @NotNull
          @Override
-         public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
-            r.h(var1, "matcher");
-            r.h(var2, "parser");
-            val var4: java.lang.String = var1.group(1);
-            r.e(var4);
-            val var6: java.lang.String = var1.group(3);
+         public ParseSpec<RC, S> parse(@NotNull Matcher var1, @NotNull Parser<RC, ? super Node<RC>, S> var2, S var3) {
+            val var6: java.lang.String = var1.group(1);
+            val var4: java.lang.String = var1.group(3);
             val var5: ParseSpec;
             if (var1.group(2) != null) {
-               var5 = ParseSpec.Companion.createNonterminal(new Xml.TagNode(var4, var6, this.$codeStyleProviders), var3, var1.start(2), var1.end(2));
+               var5 = ParseSpec.Companion.createNonterminal(new Xml.TagNode(var6, var4, this.$codeStyleProviders), var3, var1.start(2), var1.end(2));
             } else {
-               var5 = ParseSpec.Companion.createTerminal(new Xml.TagNode(var4, var6, this.$codeStyleProviders), var3);
+               var5 = ParseSpec.Companion.createTerminal(new Xml.TagNode(var6, var4, this.$codeStyleProviders), var3);
             }
 
             return var5;
@@ -60,22 +55,18 @@ public object Xml {
       };
    }
 
-   public class TagNode<RC>(opening: String, closing: String?, codeStyleProviders: CodeStyleProviders<Any>) : Node.Parent<RC> {
+   public class TagNode<RC>(opening: String, closing: String?, codeStyleProviders: CodeStyleProviders<Any>) : Node.Parent() {
       public final val closing: String?
       private final val codeStyleProviders: CodeStyleProviders<Any>
       public final val opening: String
 
       init {
-         r.h(var1, "opening");
-         r.h(var3, "codeStyleProviders");
-         super();
          this.opening = var1;
          this.closing = var2;
          this.codeStyleProviders = var3;
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         r.h(var1, "builder");
          var var7: java.lang.String = this.opening;
          val var6: Int = this.opening.length();
          var var4: Int = 0;
@@ -89,7 +80,7 @@ public object Xml {
 
             val var3: Char = var7.charAt(var4);
             var5 = var4;
-            if (a.c(var3)) {
+            if (CharsKt.b(var3)) {
                break;
             }
 
@@ -108,13 +99,11 @@ public object Xml {
             }
 
             var7 = this.opening.substring(0, var5);
-            r.g(var7, "(this as java.lang.Strin…ing(startIndex, endIndex)");
             if (this.opening == null) {
                throw new NullPointerException("null cannot be cast to non-null type java.lang.String");
             }
 
             val var19: java.lang.String = this.opening.substring(var5);
-            r.g(var19, "(this as java.lang.String).substring(startIndex)");
             var17 = s.a(var7, var19);
          } else {
             var17 = s.a(this.opening, "");
@@ -122,11 +111,12 @@ public object Xml {
 
          val var9: java.lang.String = var17.a() as java.lang.String;
          val var20: java.lang.String = var17.b() as java.lang.String;
-         val var18: Function1 = new Function1(this.codeStyleProviders.getGenericsStyleProvider()) {
+         val var18: Function1 = new Function1<RC, java.lang.Iterable<?>>(this.codeStyleProviders.getGenericsStyleProvider()) {
             {
                super(1, var1, StyleNode.SpanProvider::class.java, "get", "get(Ljava/lang/Object;)Ljava/lang/Iterable;", 0);
             }
 
+            @NotNull
             public final java.lang.Iterable<?> invoke(RC var1) {
                return (super.receiver as StyleNode.SpanProvider).get(var1);
             }

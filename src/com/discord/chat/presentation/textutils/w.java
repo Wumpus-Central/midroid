@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class w implements Function1 {
-   public final QuoteSpan j;
+   public final QuoteSpan d;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.u(this.j, (RenderContext.Insets)var1);
+      return TextUtilsKt.u(this.d, (RenderContext.Insets)var1);
    }
 }

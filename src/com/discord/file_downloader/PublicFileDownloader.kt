@@ -8,16 +8,15 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Environment
 import com.discord.file_downloader.utils.FilenameSanitizedKt
+import fb.p
+import gb.e
 import java.util.LinkedHashMap
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.flow.Flow
-import lb.p
-import mb.e
 
 public object PublicFileDownloader {
    private final val onDownloadListeners: MutableMap<Long, () -> Unit> = new LinkedHashMap()
@@ -79,38 +78,38 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface lb/t.q (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
       // 46: goto 78
       // 49: astore 1
       // 4a: goto 89
       // 4d: new com/discord/file_downloader/DownloadState$Failure
-      // 50: astore 7
+      // 50: astore 5
       // 52: new java/lang/IllegalStateException
-      // 55: astore 5
+      // 55: astore 8
       // 57: new java/io/FileNotFoundException
-      // 5a: astore 8
-      // 5c: aload 8
+      // 5a: astore 7
+      // 5c: aload 7
       // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 5
-      // 63: aload 8
+      // 61: aload 8
+      // 63: aload 7
       // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 68: aload 7
-      // 6a: aload 5
+      // 68: aload 5
+      // 6a: aload 8
       // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6f: aload 1
-      // 70: aload 7
-      // 72: invokeinterface lb/t.q (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 70: aload 5
+      // 72: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 77: pop
       // 78: aload 1
       // 79: aconst_null
       // 7a: bipush 1
       // 7b: aconst_null
-      // 7c: invokestatic lb/t$a.a (Llb/t;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 7c: invokestatic fb/t$a.a (Lfb/t;Ljava/lang/Throwable;ILjava/lang/Object;)Z
       // 7f: istore 6
       // 81: aload 2
       // 82: aconst_null
-      // 83: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 83: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 86: iload 6
       // 88: ireturn
       // 89: aload 1
@@ -118,17 +117,14 @@ public object PublicFileDownloader {
       // 8b: astore 5
       // 8d: aload 2
       // 8e: aload 1
-      // 8f: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8f: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 92: aload 5
       // 94: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
-      r.h(var1, "context");
-      r.h(var2, "url");
-      r.h(var3, "fileName");
       return e.c(
-         new Function2(var1, var2, var3, var4, null) {
+         new Function2<ProducerScope, Continuation, Object>(var1, var2, var3, var4, null) {
             final Context $context;
             final java.lang.String $description;
             final java.lang.String $fileName;
@@ -146,13 +142,13 @@ public object PublicFileDownloader {
             }
 
             private static final Unit invokeSuspend$lambda$0(LongRef var0, ProducerScope var1x, DownloadManager var2x, java.lang.String var3x) {
-               PublicFileDownloader.access$getOnDownloadListeners$p().remove(var0.j);
-               PublicFileDownloader.access$onFileDownloaded(PublicFileDownloader.INSTANCE, var1x, var2x, var0.j, var3x);
+               PublicFileDownloader.access$getOnDownloadListeners$p().remove(var0.element);
+               PublicFileDownloader.access$onFileDownloaded(PublicFileDownloader.INSTANCE, var1x, var2x, var0.element, var3x);
                return Unit.a;
             }
 
             private static final Unit invokeSuspend$lambda$1(LongRef var0) {
-               PublicFileDownloader.access$getOnDownloadListeners$p().remove(var0.j);
+               PublicFileDownloader.access$getOnDownloadListeners$p().remove(var0.element);
                return Unit.a;
             }
 
@@ -176,7 +172,7 @@ public object PublicFileDownloader {
                      var var7: LongRef;
                      label86: {
                         label87: {
-                           var9 = H9.b.e();
+                           var9 = G9.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {
@@ -220,17 +216,16 @@ public object PublicFileDownloader {
                            }
 
                            val var22: Any = this.$context.getSystemService("download");
-                           r.f(var22, "null cannot be cast to non-null type android.app.DownloadManager");
                            val var26: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
-                           var23.j = -1L;
+                           var23.element = -1L;
 
                            var var3x: Long;
                            try {
                               var3x = var26.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
-                              var23.j = var3x;
+                              var23.element = var3x;
                            } catch (var15: Exception) {
                               var6 = var1;
                               var1 = var15;
@@ -241,7 +236,7 @@ public object PublicFileDownloader {
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var26, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.element), new b(var23, var1, var26, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
                                  var6 = var1;
@@ -270,23 +265,23 @@ public object PublicFileDownloader {
                               return var9;
                            }
 
-                           var1 = var23;
                            var20 = var1;
+                           var1 = var23;
                         }
 
                         var7 = var1;
                         var6 = var20;
 
                         try {
-                           kotlin.coroutines.jvm.internal.b.a(lb.t.a.a(var20, null, 1, null));
+                           kotlin.coroutines.jvm.internal.b.a(fb.t.a.a(var20, null, 1, null));
                            break label80;
                         } catch (var13: Exception) {
                            var1 = var13;
                         }
                      }
 
-                     var6.q(new DownloadState.Failure(var1));
-                     kotlin.coroutines.jvm.internal.b.a(lb.t.a.a(var6, null, 1, null));
+                     var6.i(new DownloadState.Failure(var1));
+                     kotlin.coroutines.jvm.internal.b.a(fb.t.a.a(var6, null, 1, null));
                      var1 = var7;
                      var20 = var6;
                   }
@@ -307,7 +302,6 @@ public object PublicFileDownloader {
 
    public class PublicFileDownloadBroadcastReceiver : BroadcastReceiver {
       public open fun onReceive(context: Context, intent: Intent?) {
-         r.h(var1, "context");
          val var5: java.lang.String;
          if (var2 != null) {
             var5 = var2.getAction();

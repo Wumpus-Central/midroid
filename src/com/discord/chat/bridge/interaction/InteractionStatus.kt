@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -11,8 +10,6 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    public final val text: StructurableText
 
    init {
-      r.h(var1, "state");
-      r.h(var2, "text");
       super();
       this.state = var1;
       this.text = var2;
@@ -27,8 +24,6 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public fun copy(state: InteractionStatusViewState = var0.state, text: StructurableText = var0.text): InteractionStatus {
-      r.h(var1, "state");
-      r.h(var2, "text");
       return new InteractionStatus(var1, var2);
    }
 
@@ -42,7 +37,7 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
          if (this.state != var1.state) {
             return false;
          } else {
-            return r.c(this.text, var1.text);
+            return this.text == var1.text;
          }
       }
    }
@@ -74,13 +69,13 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var3: InteractionStatusViewState = this.state;
-      val var2: StructurableText = this.text;
+      val var2: InteractionStatusViewState = this.state;
+      val var3: StructurableText = this.text;
       val var1: StringBuilder = new StringBuilder();
       var1.append("InteractionStatus(state=");
-      var1.append(var3);
-      var1.append(", text=");
       var1.append(var2);
+      var1.append(", text=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

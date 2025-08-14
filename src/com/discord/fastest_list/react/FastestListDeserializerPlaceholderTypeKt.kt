@@ -8,35 +8,31 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.react.bridge.ReadableMap
-import kotlin.jvm.internal.r
 
 private const val PLACEHOLDER_TYPE_NONE: Int = 0
 private const val PLACEHOLDER_TYPE_SHAPE: Int = 1
 private const val PLACEHOLDER_TYPE_FEED_ITEM: Int = 2
 
 private operator fun Companion.invoke(key: String, value: ReadableMap): Type {
-   r.h(var0, "<this>");
-   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
-   val var4: FastestListPlaceholderType.Shape.Type;
-   if (r.c(var3, "circle")) {
-      var4 = FastestListPlaceholderType.Shape.Type.CIRCLE;
+   var1 = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
+   val var3: FastestListPlaceholderType.Shape.Type;
+   if (var1 == "circle") {
+      var3 = FastestListPlaceholderType.Shape.Type.CIRCLE;
    } else {
-      if (!r.c(var3, "rect")) {
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Unknown placeholder shape type ");
-         var5.append(var3);
-         throw new IllegalArgumentException(var5.toString());
+      if (!(var1 == "rect")) {
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Unknown placeholder shape type ");
+         var4.append(var1);
+         throw new IllegalArgumentException(var4.toString());
       }
 
-      var4 = FastestListPlaceholderType.Shape.Type.RECT;
+      var3 = FastestListPlaceholderType.Shape.Type.RECT;
    }
 
-   return var4;
+   return var3;
 }
 
 internal operator fun com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Companion.invoke(value: ReadableMap): FastestListPlaceholderType {
-   r.h(var0, "<this>");
-   r.h(var1, "value");
    var var15: Int = var1.getInt("placeholderType");
    val var22: Any;
    if (var15 != 0) {
@@ -69,10 +65,10 @@ internal operator fun com.discord.fastest_list.android.placeholder.FastestListPl
             SizeUtilsKt.getDpToPx(var1.getInt("placeholderFeedLabelSecondarySize"))
          );
       } else {
-         val var28: Float = SizeUtilsKt.getDpToPx(var1.getInt("borderRadius"));
-         var15 = ColorUtilsKt.rgbaToArgb(NativeMapExtensionsKt.getNonNullString(var1, "placeholderShapeColorRgba"));
-         val var32: Int = var1.getInt("placeholderShapeCount");
-         val var26: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapeGap"));
+         val var26: Float = SizeUtilsKt.getDpToPx(var1.getInt("borderRadius"));
+         val var32: Int = ColorUtilsKt.rgbaToArgb(NativeMapExtensionsKt.getNonNullString(var1, "placeholderShapeColorRgba"));
+         var15 = var1.getInt("placeholderShapeCount");
+         val var28: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapeGap"));
          val var20: FastestListPlaceholderType.Shape.Type = invoke(FastestListPlaceholderType.Shape.Type.Companion, "placeholderShape", var1);
          val var27: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapePaddingHorizontal"));
          val var29: Float = SizeUtilsKt.getDpToPx(var1.getInt("placeholderShapePaddingVertical"));
@@ -93,10 +89,10 @@ internal operator fun com.discord.fastest_list.android.placeholder.FastestListPl
          }
 
          var22 = new FastestListPlaceholderType.Shape(
-            var28,
-            var15,
-            var32,
             var26,
+            var32,
+            var15,
+            var28,
             var27,
             var29,
             var25,

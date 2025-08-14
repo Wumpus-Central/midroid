@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final Activity j;
+   public final Activity d;
 
    public final Object invoke(Object var1) {
-      return WebAuthn.d(this.j, (PendingIntent)var1);
+      return WebAuthn.d(this.d, (PendingIntent)var1);
    }
 }

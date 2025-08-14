@@ -1,8 +1,7 @@
 package com.discord.chatreplay
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Replay(filename: String, lastModified: Long) {
@@ -10,7 +9,6 @@ public data class Replay(filename: String, lastModified: Long) {
    public final val lastModified: Long
 
    init {
-      r.h(var1, "filename");
       super();
       this.filename = var1;
       this.lastModified = var2;
@@ -25,7 +23,6 @@ public data class Replay(filename: String, lastModified: Long) {
    }
 
    public fun copy(filename: String = var0.filename, lastModified: Long = var0.lastModified): Replay {
-      r.h(var1, "filename");
       return new Replay(var1, var2);
    }
 
@@ -36,7 +33,7 @@ public data class Replay(filename: String, lastModified: Long) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.filename, var1.filename)) {
+         if (!(this.filename == var1.filename)) {
             return false;
          } else {
             return this.lastModified == var1.lastModified;

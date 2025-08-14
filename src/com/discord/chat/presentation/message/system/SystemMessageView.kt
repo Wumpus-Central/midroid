@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.system
 
-import A9.s
+import B9.s
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -48,10 +48,11 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout, SpineParentMessage {
-   private final val normalIconColor: Int
+@SourceDebugExtension(["SMAP\nSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,344:1\n257#2,2:345\n1872#3,3:347\n*S KotlinDebug\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n*L\n111#1:345,2\n213#1:347,3\n*E\n"])
+public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2), SpineParentMessage {
+   private final val normalIconColor: Int = ThemeManagerKt.getTheme().getInteractiveNormal()
    private final val greenIconColor: Int
    private final val redIconColor: Int
    private final val warnIconColor: Int
@@ -62,7 +63,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    public open val spineOriginView: View
       public open get() {
          val var1: SimpleDraweeView = this.binding.icon;
-         r.g(this.binding.icon, "icon");
          return var1;
       }
 
@@ -70,21 +70,16 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    private final var accessories: ArrayList<MessageAccessory>
 
    fun SystemMessageView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
-      this.normalIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
       this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
       this.mutedIconColor = ThemeManagerKt.getTheme().getTextMuted();
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var3, "inflate(...)");
       this.binding = var3;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
       this.accessories = new ArrayList<>(2);
@@ -107,12 +102,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var14: StructurableText = var1.getContent();
-      if (var14 != null) {
+      var var13: StructurableText = var1.getContent();
+      if (var13 != null) {
          val var20: ArrayList = this.accessories;
-         val var13: java.lang.String = var1.getId-3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var14: java.lang.String = var1.getId-3Eiw7ao();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var8: Boolean = var1.getShouldShowRoleDot();
          val var11: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
@@ -140,10 +135,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var20.add(
             new MessageContentAccessory(
-               var13,
                var14,
-               var10,
+               var13,
                var9,
+               var10,
                var8,
                var11,
                var5,
@@ -174,12 +169,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var31: ArrayList = this.accessories;
+         val var23: ArrayList = this.accessories;
          val var28: java.lang.String = var1.getId-3Eiw7ao();
-         val var23: java.lang.String = var1.getUsername();
-         val var33: Context = this.binding.getRoot().getContext();
-         r.g(var33, "getContext(...)");
-         var31.add(new RoleSubscriptionPurchaseAccessory(var28, var23, MessageKt.avatarUrl(var1, var33), var3, false, null));
+         val var33: java.lang.String = var1.getUsername();
+         val var31: Context = this.binding.getRoot().getContext();
+         var23.add(new RoleSubscriptionPurchaseAccessory(var28, var33, MessageKt.avatarUrl(var1, var31), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -187,7 +181,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          this.accessories.add(new WelcomeStickerAccessory(var1, var24));
       }
 
-      if (var1.getType() === MessageType.STAGE_RAISE_HAND && r.c(var1.getShowInviteToSpeakButton(), java.lang.Boolean.TRUE)) {
+      if (var1.getType() === MessageType.STAGE_RAISE_HAND && var1.getShowInviteToSpeakButton() == java.lang.Boolean.TRUE) {
          this.accessories.add(new InviteToSpeakAccessory(var1));
       }
 
@@ -197,9 +191,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var26: java.util.Iterator = var25.iterator();
 
             for (int var19 = 0; var26.hasNext(); var19++) {
-               val var29: Any = var26.next();
+               var13 = (StructurableText)var26.next();
                if (var19 < 0) {
-                  i.u();
+                  CollectionsKt.u();
                }
 
                this.accessories
@@ -210,7 +204,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var29 as Embed,
+                        var13 as Embed,
                         false,
                         false,
                         false,
@@ -390,31 +384,24 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    public fun setAccessoriesRecycledViewPool(recycledViewPool: RecycledViewPool) {
-      r.h(var1, "recycledViewPool");
       this.binding.accessoriesView.setRecycledViewPool(var1);
    }
 
    public fun setMessage(message: Message, context: MessageContext, eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE) {
-      r.h(var1, "message");
-      r.h(var2, "context");
-      r.h(var3, "eventHandler");
       val var5: e = new e(var1, var3);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var5);
       val var7: Pair = this.getIconAndColor(var1.getType());
       val var6: ReactAsset = var7.a() as ReactAsset;
       val var4: Int = (var7.b() as java.lang.Number).intValue();
       val var12: SimpleDraweeView = this.binding.icon;
-      r.g(this.binding.icon, "icon");
       ReactAssetUtilsKt.setReactAsset(var12, var6);
       val var10: SimpleDraweeView = this.binding.icon;
-      r.g(this.binding.icon, "icon");
       ColorUtilsKt.setTintColor(var10, var4);
       val var11: java.util.List = this.generateMessageAccessories(var1, var2);
       this.binding
          .accessoriesView
          .setAccessories-mFdI1tY(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var11, var3, null, var2, false, false);
       val var8: MessageAccessoriesView = this.binding.accessoriesView;
-      r.g(this.binding.accessoriesView, "accessoriesView");
       val var9: Byte;
       if (!var11.isEmpty()) {
          var9 = 0;

@@ -1,12 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.rolecolors.RoleColors
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode {
+@SourceDebugExtension(["SMAP\nLinkContentNode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,268:1\n8#2:269\n*S KotlinDebug\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n*L\n66#1:269\n*E\n"])
+public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode() {
    public final val content: List<ContentNode>
    public final val target: LinkContextData?
    public final val linkColor: Int?
@@ -17,8 +18,6 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    public final val textContent: String?
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
       this.target = var2;
       val var4: Int;
@@ -67,7 +66,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       this.isUrl = var3;
-      val var11: ContentNode = i.j0(var1) as ContentNode;
+      val var11: ContentNode = CollectionsKt.firstOrNull(var1) as ContentNode;
       var var6: java.lang.String = var8;
       if (var11 != null) {
          val var7: ContentNode;
@@ -99,7 +98,6 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public fun copy(content: List<ContentNode> = var0.content, target: LinkContextData? = var0.target): LinkContentNode {
-      r.h(var1, "content");
       return new LinkContentNode(var1, var2);
    }
 
@@ -110,10 +108,10 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.content, var1.content)) {
+         if (!(this.content == var1.content)) {
             return false;
          } else {
-            return r.c(this.target, var1.target);
+            return this.target == var1.target;
          }
       }
    }
@@ -131,15 +129,15 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.content;
-      val var2: LinkContextData = this.target;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LinkContentNode(content=");
-      var1.append(var3);
-      var1.append(", target=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.util.List = this.content;
+      val var1: LinkContextData = this.target;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkContentNode(content=");
+      var3.append(var2);
+      var3.append(", target=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

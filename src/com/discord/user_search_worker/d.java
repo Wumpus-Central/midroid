@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class d implements Function3 {
-   public final UserSearchWorkerManagerModule j;
-   public final ReactApplicationContext k;
+   public final UserSearchWorkerManagerModule d;
+   public final ReactApplicationContext e;
 
    public final Object invoke(Object var1, Object var2, Object var3) {
-      return UserSearchWorkerManagerModule.a(this.j, this.k, (List)var1, (String)var2, (String)var3);
+      return UserSearchWorkerManagerModule.a(this.d, this.e, (List)var1, (String)var2, (String)var3);
    }
 }

@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -14,10 +13,6 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    public final val tappedElement: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "authorId");
-      r.h(var3, "contentId");
-      r.h(var4, "tappedElement");
       super();
       this.messageId = var1;
       this.authorId = var2;
@@ -47,10 +42,6 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
       contentId: String = var0.contentId,
       tappedElement: String = var0.tappedElement
    ): TapContentInventoryEntryEmbedData {
-      r.h(var1, "messageId");
-      r.h(var2, "authorId");
-      r.h(var3, "contentId");
-      r.h(var4, "tappedElement");
       return new TapContentInventoryEntryEmbedData(var1, var2, var3, var4);
    }
 
@@ -61,14 +52,14 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.authorId, var1.authorId)) {
+         } else if (!(this.authorId == var1.authorId)) {
             return false;
-         } else if (!r.c(this.contentId, var1.contentId)) {
+         } else if (!(this.contentId == var1.contentId)) {
             return false;
          } else {
-            return r.c(this.tappedElement, var1.tappedElement);
+            return this.tappedElement == var1.tappedElement;
          }
       }
    }
@@ -82,21 +73,21 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: java.lang.String = this.authorId;
-      val var5: java.lang.String = this.contentId;
-      val var3: java.lang.String = this.tappedElement;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapContentInventoryEntryEmbedData(messageId=");
-      var2.append(var4);
-      var2.append(", authorId=");
-      var2.append(var1);
-      var2.append(", contentId=");
-      var2.append(var5);
-      var2.append(", tappedElement=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.contentId;
+      val var4: java.lang.String = this.tappedElement;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapContentInventoryEntryEmbedData(messageId=");
+      var5.append(var3);
+      var5.append(", authorId=");
+      var5.append(var1);
+      var5.append(", contentId=");
+      var5.append(var2);
+      var5.append(", tappedElement=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

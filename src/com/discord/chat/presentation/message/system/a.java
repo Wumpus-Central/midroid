@@ -7,10 +7,10 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class a implements OnClickListener {
-   public final ChatEventHandler j;
-   public final AutoModerationContext k;
+   public final ChatEventHandler d;
+   public final AutoModerationContext e;
 
    public final void onClick(View var1) {
-      AutomodSystemMessageView.g(this.j, this.k, var1);
+      AutomodSystemMessageView.g(this.d, this.e, var1);
    }
 }

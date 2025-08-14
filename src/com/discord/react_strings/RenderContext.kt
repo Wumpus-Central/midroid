@@ -1,9 +1,8 @@
 package com.discord.react_strings
 
-import a2.g
+import Z1.g
 import java.util.HashMap
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
 
 public class RenderContext {
    public final val args: MutableMap<String, String?> = new HashMap()
@@ -35,7 +34,6 @@ public class RenderContext {
 
       @JvmStatic
       fun `replace$lambda$0`(var0: Function3, var1: MatchResult): java.lang.CharSequence {
-         r.h(var1, "match");
          val var4: RenderContext.Argument = INSTANCE;
          val var3: java.lang.String = INSTANCE.get(var1, 3);
          val var2: Boolean;
@@ -56,9 +54,7 @@ public class RenderContext {
       }
 
       public fun replace(input: CharSequence, onMatch: (String, String?, Boolean) -> CharSequence): String {
-         r.h(var1, "input");
-         r.h(var2, "onMatch");
-         return argumentRegex.i(var1, new g(var2));
+         return argumentRegex.h(var1, new g(var2));
       }
    }
 }

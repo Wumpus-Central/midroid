@@ -1,17 +1,14 @@
 package com.discord.chat.bridge.gift
 
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import xb.d
-import xb.g
+import rb.d
+import rb.g
 
-public object GiftEmbedSerializer : d(H.b(GiftEmbed.class)) {
+public object GiftEmbedSerializer : d(GiftEmbed::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<GiftEmbed> {
-      r.h(var1, "element");
       val var2: JsonObject = g.o(var1);
       val var3: KSerializer;
       if (GiftEmbedKt.access$hasPrimitives(var2, "resolvingGradientStart", "resolvingGradientEnd")) {

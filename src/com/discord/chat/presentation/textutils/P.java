@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class P implements Function2 {
-   public final ContentNode j;
-   public final DraweeSpanStringBuilder k;
+   public final ContentNode d;
+   public final DraweeSpanStringBuilder e;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextUtilsKt.x(this.j, this.k, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
+      return TextUtilsKt.x(this.d, this.e, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

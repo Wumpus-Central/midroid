@@ -3,18 +3,15 @@ package com.discord.image.fresco.config
 import android.app.ActivityManager
 import android.content.Context
 import com.facebook.imagepipeline.cache.MemoryCacheParams
-import kotlin.jvm.internal.r
-import p3.o
+import o3.o
 
 internal class FrescoBitmapSupplier(context: Context) : o {
    init {
-      r.h(var1, "context");
       val var2: Any = var1.getSystemService("activity");
-      r.f(var2, "null cannot be cast to non-null type android.app.ActivityManager");
       super(var2 as ActivityManager);
    }
 
-   public override fun get(): MemoryCacheParams {
+   public open fun get(): MemoryCacheParams {
       val var2: MemoryCacheParams = super.get();
       return new MemoryCacheParams(var2.a, var2.b, var2.c, var2.d, var2.a / 3, 0L, 32, null);
    }

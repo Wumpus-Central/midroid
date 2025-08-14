@@ -3,8 +3,9 @@ package com.discord.async_init
 import com.discord.logging.Log
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nAsyncInitDispatcher.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,100:1\n1863#2,2:101\n*S KotlinDebug\n*F\n+ 1 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n*L\n28#1:101,2\n*E\n"])
 public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1000L) {
    private final val name: String
    private final val longDispatchThresholdMs: Long
@@ -35,8 +36,6 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
    private final var initStartMs: Long
 
    init {
-      r.h(var1, "name");
-      super();
       this.name = var1;
       this.longDispatchThresholdMs = var2;
       this.delayedTasks = new ArrayList<>();
@@ -48,15 +47,15 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          this.initStartMs = System.currentTimeMillis();
       }
 
-      val var3: Log = Log.INSTANCE;
-      val var4: java.lang.String = this.name;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Initializing async dispatcher for ");
-      var2.append(var4);
-      var2.append(", ");
-      var2.append(var1);
-      var2.append(" queued tasks");
-      Log.i$default(var3, var4, var2.toString(), null, 4, null);
+      val var2: Log = Log.INSTANCE;
+      val var3: java.lang.String = this.name;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Initializing async dispatcher for ");
+      var4.append(var3);
+      var4.append(", ");
+      var4.append(var1);
+      var4.append(" queued tasks");
+      Log.i$default(var2, var3, var4.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
@@ -64,31 +63,30 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          val var1: Long = System.currentTimeMillis() - this.initStartMs;
          val var3: Long = this.longDispatchThresholdMs;
          if (var1 < this.longDispatchThresholdMs) {
-            val var7: Log = Log.INSTANCE;
-            val var5: java.lang.String = this.name;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var5);
-            var6.append(": queued tasks  took ");
-            var6.append(var1);
-            var6.append(" ms");
-            Log.i$default(var7, var5, var6.toString(), null, 4, null);
+            val var6: Log = Log.INSTANCE;
+            val var7: java.lang.String = this.name;
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var7);
+            var5.append(": queued tasks  took ");
+            var5.append(var1);
+            var5.append(" ms");
+            Log.i$default(var6, var7, var5.toString(), null, 4, null);
          } else {
-            val var9: Log = Log.INSTANCE;
-            val var8: java.lang.String = this.name;
+            val var8: Log = Log.INSTANCE;
+            val var9: java.lang.String = this.name;
             val var10: StringBuilder = new StringBuilder();
-            var10.append(var8);
+            var10.append(var9);
             var10.append(": running queued tasks on init took ");
             var10.append(var1);
             var10.append(" ms which exceeds threshold=");
             var10.append(var3);
             var10.append(" ms");
-            Log.w$default(var9, var8, var10.toString(), null, 4, null);
+            Log.w$default(var8, var9, var10.toString(), null, 4, null);
          }
       }
    }
 
    public inline fun post(validate: Boolean = true, crossinline task: () -> Unit) {
-      r.h(var2, "task");
       if (var1) {
          this.validateState();
       }
@@ -96,8 +94,8 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
       if (this.getInitialized()) {
          var2.invoke();
       } else {
-         this.getDelayedTasks().add(new Function0(var2) {
-            final Function0 $task;
+         this.getDelayedTasks().add(new Function0<Unit>(var2) {
+            final Function0<Unit> $task;
 
             {
                this.$task = var1;
@@ -111,8 +109,6 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
    }
 
    public inline fun postOrElse(task: () -> Unit, fallback: () -> Unit) {
-      r.h(var1, "task");
-      r.h(var2, "fallback");
       this.validateState();
       if (this.getInitialized()) {
          var1.invoke();

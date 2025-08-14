@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class L implements OnLongClickListener {
-   public final Function1 j;
-   public final Sticker k;
+   public final Function1 d;
+   public final Sticker e;
 
    public final boolean onLongClick(View var1) {
-      return StickerLottieViewHolder.c(this.j, this.k, var1);
+      return StickerLottieViewHolder.c(this.d, this.e, var1);
    }
 }

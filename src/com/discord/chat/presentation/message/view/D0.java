@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class D0 implements Function1 {
-   public final Function1 j;
-   public final String k;
+   public final Function1 d;
+   public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageContentView.a(this.j, this.k, (View)var1);
+      return MessageContentView.a(this.d, this.e, (View)var1);
    }
 }

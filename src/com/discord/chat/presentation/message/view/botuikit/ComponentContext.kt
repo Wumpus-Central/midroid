@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit
 
-import kotlin.jvm.internal.r
-
 public data class ComponentContext(containerId: String,
    generalEventHandlers: GeneralEventHandlers,
    markdownTextRenderOptions: MarkdownTextRenderOptions,
@@ -27,14 +25,6 @@ public data class ComponentContext(containerId: String,
    public final val isInModal: Boolean
 
    init {
-      r.h(var1, "containerId");
-      r.h(var2, "generalEventHandlers");
-      r.h(var3, "markdownTextRenderOptions");
-      r.h(var4, "markdownTextRenderEventHandlers");
-      r.h(var5, "mediaItemEventHandlers");
-      r.h(var6, "componentActionEventHandlers");
-      r.h(var7, "widthInfo");
-      super();
       this.containerId = var1;
       this.generalEventHandlers = var2;
       this.markdownTextRenderOptions = var3;
@@ -105,13 +95,6 @@ public data class ComponentContext(containerId: String,
       isInContainerComponent: Boolean = var0.isInContainerComponent,
       isInModal: Boolean = var0.isInModal
    ): ComponentContext {
-      r.h(var1, "containerId");
-      r.h(var2, "generalEventHandlers");
-      r.h(var3, "markdownTextRenderOptions");
-      r.h(var4, "markdownTextRenderEventHandlers");
-      r.h(var5, "mediaItemEventHandlers");
-      r.h(var6, "componentActionEventHandlers");
-      r.h(var7, "widthInfo");
       return new ComponentContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
    }
 
@@ -122,19 +105,19 @@ public data class ComponentContext(containerId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.containerId, var1.containerId)) {
+         if (!(this.containerId == var1.containerId)) {
             return false;
-         } else if (!r.c(this.generalEventHandlers, var1.generalEventHandlers)) {
+         } else if (!(this.generalEventHandlers == var1.generalEventHandlers)) {
             return false;
-         } else if (!r.c(this.markdownTextRenderOptions, var1.markdownTextRenderOptions)) {
+         } else if (!(this.markdownTextRenderOptions == var1.markdownTextRenderOptions)) {
             return false;
-         } else if (!r.c(this.markdownTextRenderEventHandlers, var1.markdownTextRenderEventHandlers)) {
+         } else if (!(this.markdownTextRenderEventHandlers == var1.markdownTextRenderEventHandlers)) {
             return false;
-         } else if (!r.c(this.mediaItemEventHandlers, var1.mediaItemEventHandlers)) {
+         } else if (!(this.mediaItemEventHandlers == var1.mediaItemEventHandlers)) {
             return false;
-         } else if (!r.c(this.componentActionEventHandlers, var1.componentActionEventHandlers)) {
+         } else if (!(this.componentActionEventHandlers == var1.componentActionEventHandlers)) {
             return false;
-         } else if (!r.c(this.widthInfo, var1.widthInfo)) {
+         } else if (!(this.widthInfo == var1.widthInfo)) {
             return false;
          } else if (this.shouldAutoPlayGif != var1.shouldAutoPlayGif) {
             return false;
@@ -205,41 +188,41 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var12: java.lang.String = this.containerId;
+      val var7: java.lang.String = this.containerId;
       val var9: GeneralEventHandlers = this.generalEventHandlers;
-      val var6: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var7: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var11: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var10: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var11: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var6: MediaItemEventHandlers = this.mediaItemEventHandlers;
       val var8: ComponentActionEventHandlers = this.componentActionEventHandlers;
       val var5: WidthInfo = this.widthInfo;
-      val var4: Boolean = this.shouldAutoPlayGif;
-      val var3: Boolean = this.isForwardedContent;
-      val var1: Boolean = this.isInContainerComponent;
-      val var2: Boolean = this.isInModal;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("ComponentContext(containerId=");
-      var10.append(var12);
-      var10.append(", generalEventHandlers=");
-      var10.append(var9);
-      var10.append(", markdownTextRenderOptions=");
-      var10.append(var6);
-      var10.append(", markdownTextRenderEventHandlers=");
-      var10.append(var7);
-      var10.append(", mediaItemEventHandlers=");
-      var10.append(var11);
-      var10.append(", componentActionEventHandlers=");
-      var10.append(var8);
-      var10.append(", widthInfo=");
-      var10.append(var5);
-      var10.append(", shouldAutoPlayGif=");
-      var10.append(var4);
-      var10.append(", isForwardedContent=");
-      var10.append(var3);
-      var10.append(", isInContainerComponent=");
-      var10.append(var1);
-      var10.append(", isInModal=");
-      var10.append(var2);
-      var10.append(")");
-      return var10.toString();
+      val var3: Boolean = this.shouldAutoPlayGif;
+      val var2: Boolean = this.isForwardedContent;
+      val var4: Boolean = this.isInContainerComponent;
+      val var1: Boolean = this.isInModal;
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("ComponentContext(containerId=");
+      var12.append(var7);
+      var12.append(", generalEventHandlers=");
+      var12.append(var9);
+      var12.append(", markdownTextRenderOptions=");
+      var12.append(var10);
+      var12.append(", markdownTextRenderEventHandlers=");
+      var12.append(var11);
+      var12.append(", mediaItemEventHandlers=");
+      var12.append(var6);
+      var12.append(", componentActionEventHandlers=");
+      var12.append(var8);
+      var12.append(", widthInfo=");
+      var12.append(var5);
+      var12.append(", shouldAutoPlayGif=");
+      var12.append(var3);
+      var12.append(", isForwardedContent=");
+      var12.append(var2);
+      var12.append(", isInContainerComponent=");
+      var12.append(var4);
+      var12.append(", isInModal=");
+      var12.append(var1);
+      var12.append(")");
+      return var12.toString();
    }
 }

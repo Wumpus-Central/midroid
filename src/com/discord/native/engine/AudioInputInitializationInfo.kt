@@ -1,14 +1,10 @@
 package com.discord.native.engine
 
-import kotlin.jvm.internal.r
-
 public data class AudioInputInitializationInfo(description: AudioInputDeviceDescription, timeToInitializedNanos: Long) {
    public final val description: AudioInputDeviceDescription
    public final val timeToInitializedNanos: Long
 
    init {
-      r.h(var1, "description");
-      super();
       this.description = var1;
       this.timeToInitializedNanos = var2;
    }
@@ -22,7 +18,6 @@ public data class AudioInputInitializationInfo(description: AudioInputDeviceDesc
    }
 
    public fun copy(description: AudioInputDeviceDescription = var0.description, timeToInitializedNanos: Long = var0.timeToInitializedNanos): AudioInputInitializationInfo {
-      r.h(var1, "description");
       return new AudioInputInitializationInfo(var1, var2);
    }
 
@@ -33,7 +28,7 @@ public data class AudioInputInitializationInfo(description: AudioInputDeviceDesc
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.description, var1.description)) {
+         if (!(this.description == var1.description)) {
             return false;
          } else {
             return this.timeToInitializedNanos == var1.timeToInitializedNanos;
@@ -46,14 +41,14 @@ public data class AudioInputInitializationInfo(description: AudioInputDeviceDesc
    }
 
    public override fun toString(): String {
-      val var4: AudioInputDeviceDescription = this.description;
+      val var3: AudioInputDeviceDescription = this.description;
       val var1: Long = this.timeToInitializedNanos;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioInputInitializationInfo(description=");
-      var3.append(var4);
-      var3.append(", timeToInitializedNanos=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AudioInputInitializationInfo(description=");
+      var4.append(var3);
+      var4.append(", timeToInitializedNanos=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

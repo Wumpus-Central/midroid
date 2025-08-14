@@ -1,7 +1,8 @@
+@file:SourceDebugExtension(["SMAP\nNotificationDataDeserializationUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationDataDeserializationUtils.kt\ncom/discord/notifications/api/NotificationDataDeserializationUtilsKt\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 3 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,36:1\n535#2:37\n520#2,6:38\n126#3:44\n153#3,3:45\n*S KotlinDebug\n*F\n+ 1 NotificationDataDeserializationUtils.kt\ncom/discord/notifications/api/NotificationDataDeserializationUtilsKt\n*L\n9#1:37\n9#1:38,6\n10#1:44\n10#1:45,3\n*E\n"])
+
 package com.discord.notifications.api
 
-import A9.s
-import B9.q
+import B9.s
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -9,11 +10,9 @@ import com.discord.snowflake.SnowflakeUtils
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
-   r.h(var0, "<this>");
-   r.h(var1, "notification");
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
    if (var9 is java.util.Map) {
       var9 = var9;
@@ -33,22 +32,20 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var20 : var3.entrySet()) {
-            var var24: Any = var20.getKey();
-            val var21: Any = var20.getValue();
-            r.f(var24, "null cannot be cast to non-null type kotlin.String");
-            var24 = var24 as java.lang.String;
-            r.f(var21, "null cannot be cast to non-null type kotlin.String");
-            var12.add(s.a(var24, var21 as java.lang.String));
+         for (Entry var24 : var3.entrySet()) {
+            var var20: Any = var24.getKey();
+            val var25: Any = var24.getValue();
+            var20 = var20 as java.lang.String;
+            var12.add(s.a(var20, var25 as java.lang.String));
          }
 
-         var9 = q.t(var12);
+         var9 = L.t(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = q.h();
+      var9 = L.h();
    }
 
    var var19: ChannelId;

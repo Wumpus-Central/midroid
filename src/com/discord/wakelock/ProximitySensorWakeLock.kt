@@ -3,7 +3,6 @@ package com.discord.wakelock
 import android.content.Context
 import android.os.PowerManager
 import android.os.PowerManager.WakeLock
-import kotlin.jvm.internal.r
 
 internal class ProximitySensorWakeLock private constructor(powerManager: PowerManager, timeout: Long, tag: String) {
    private final val powerManager: PowerManager
@@ -11,10 +10,8 @@ internal class ProximitySensorWakeLock private constructor(powerManager: PowerMa
    private final val tag: String
    private final var systemWakeLock: WakeLock?
 
-   public constructor(context: Context, timeout: Long, tag: String) : r.h(var1, "context") {
-      r.h(var4, "tag");
+   public constructor(context: Context, timeout: Long, tag: String)  {
       val var5: Any = var1.getSystemService(PowerManager.class);
-      r.g(var5, "getSystemService(...)");
       this(var5 as PowerManager, var2, var4);
    }
 

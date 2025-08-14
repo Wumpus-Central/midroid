@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.helper.widget.Flow;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.Guideline;
@@ -17,42 +18,59 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class AutomodSystemMessageViewBinding implements ViewBinding {
+   @NonNull
    public final MessageAccessoriesView accessoriesView;
+   @NonNull
    public final SimpleDraweeView authorAvatar;
+   @NonNull
    public final TextView authorName;
+   @NonNull
    public final TextView automodMessageChannel;
+   @NonNull
    public final TextView automodMessageContextHeader;
+   @NonNull
    public final SimpleDraweeView guildCommunicationDisabledIcon;
+   @NonNull
    public final Flow headerSection;
+   @NonNull
    public final Guideline messageEndGuideline;
+   @NonNull
    public final Barrier messageHeaderBarrier;
+   @NonNull
    public final View messageHeaderDivider;
+   @NonNull
    public final TextView messageHeaderSubtitle;
+   @NonNull
    public final TextView messageHeaderTitle;
+   @NonNull
    public final MessageTagView messageTagView;
+   @NonNull
    public final MessageViewReplyPreview replyPreview;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final ThreadStarterMessageHeaderView threadStarterHeader;
+   @NonNull
    public final TextView timestamp;
 
    private AutomodSystemMessageViewBinding(
-      View var1,
-      MessageAccessoriesView var2,
-      SimpleDraweeView var3,
-      TextView var4,
-      TextView var5,
-      TextView var6,
-      SimpleDraweeView var7,
-      Flow var8,
-      Guideline var9,
-      Barrier var10,
-      View var11,
-      TextView var12,
-      TextView var13,
-      MessageTagView var14,
-      MessageViewReplyPreview var15,
-      ThreadStarterMessageHeaderView var16,
-      TextView var17
+      @NonNull View var1,
+      @NonNull MessageAccessoriesView var2,
+      @NonNull SimpleDraweeView var3,
+      @NonNull TextView var4,
+      @NonNull TextView var5,
+      @NonNull TextView var6,
+      @NonNull SimpleDraweeView var7,
+      @NonNull Flow var8,
+      @NonNull Guideline var9,
+      @NonNull Barrier var10,
+      @NonNull View var11,
+      @NonNull TextView var12,
+      @NonNull TextView var13,
+      @NonNull MessageTagView var14,
+      @NonNull MessageViewReplyPreview var15,
+      @NonNull ThreadStarterMessageHeaderView var16,
+      @NonNull TextView var17
    ) {
       this.rootView = var1;
       this.accessoriesView = var2;
@@ -73,22 +91,23 @@ public final class AutomodSystemMessageViewBinding implements ViewBinding {
       this.timestamp = var17;
    }
 
-   public static AutomodSystemMessageViewBinding bind(View var0) {
+   @NonNull
+   public static AutomodSystemMessageViewBinding bind(@NonNull View var0) {
       int var1 = R.id.accessories_view;
-      MessageAccessoriesView var16 = (MessageAccessoriesView)a.a(var0, var1);
-      if (var16 != null) {
+      MessageAccessoriesView var5 = (MessageAccessoriesView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.author_avatar;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.author_name;
-            TextView var11 = (TextView)a.a(var0, var1);
-            if (var11 != null) {
+            TextView var17 = (TextView)a.a(var0, var1);
+            if (var17 != null) {
                var1 = R.id.automod_message_channel;
-               TextView var8 = (TextView)a.a(var0, var1);
-               if (var8 != null) {
+               TextView var9 = (TextView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.automod_message_context_header;
-                  TextView var9 = (TextView)a.a(var0, var1);
-                  if (var9 != null) {
+                  TextView var13 = (TextView)a.a(var0, var1);
+                  if (var13 != null) {
                      var1 = R.id.guild_communication_disabled_icon;
                      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
                      if (var4 != null) {
@@ -96,50 +115,50 @@ public final class AutomodSystemMessageViewBinding implements ViewBinding {
                         Flow var10 = (Flow)a.a(var0, var1);
                         if (var10 != null) {
                            var1 = R.id.message_end_guideline;
-                           Guideline var13 = (Guideline)a.a(var0, var1);
-                           if (var13 != null) {
+                           Guideline var6 = (Guideline)a.a(var0, var1);
+                           if (var6 != null) {
                               var1 = R.id.message_header_barrier;
-                              Barrier var14 = (Barrier)a.a(var0, var1);
-                              if (var14 != null) {
+                              Barrier var7 = (Barrier)a.a(var0, var1);
+                              if (var7 != null) {
                                  var1 = R.id.message_header_divider;
-                                 View var17 = a.a(var0, var1);
-                                 if (var17 != null) {
+                                 View var12 = a.a(var0, var1);
+                                 if (var12 != null) {
                                     var1 = R.id.message_header_subtitle;
-                                    TextView var6 = (TextView)a.a(var0, var1);
-                                    if (var6 != null) {
+                                    TextView var11 = (TextView)a.a(var0, var1);
+                                    if (var11 != null) {
                                        var1 = R.id.message_header_title;
-                                       TextView var2 = (TextView)a.a(var0, var1);
-                                       if (var2 != null) {
+                                       TextView var16 = (TextView)a.a(var0, var1);
+                                       if (var16 != null) {
                                           var1 = R.id.message_tag_view;
                                           MessageTagView var15 = (MessageTagView)a.a(var0, var1);
                                           if (var15 != null) {
                                              var1 = R.id.reply_preview;
-                                             MessageViewReplyPreview var3 = (MessageViewReplyPreview)a.a(var0, var1);
-                                             if (var3 != null) {
+                                             MessageViewReplyPreview var8 = (MessageViewReplyPreview)a.a(var0, var1);
+                                             if (var8 != null) {
                                                 var1 = R.id.thread_starter_header;
-                                                ThreadStarterMessageHeaderView var12 = (ThreadStarterMessageHeaderView)a.a(var0, var1);
-                                                if (var12 != null) {
+                                                ThreadStarterMessageHeaderView var14 = (ThreadStarterMessageHeaderView)a.a(var0, var1);
+                                                if (var14 != null) {
                                                    var1 = R.id.timestamp;
-                                                   TextView var7 = (TextView)a.a(var0, var1);
-                                                   if (var7 != null) {
+                                                   TextView var3 = (TextView)a.a(var0, var1);
+                                                   if (var3 != null) {
                                                       return new AutomodSystemMessageViewBinding(
                                                          var0,
-                                                         var16,
                                                          var5,
-                                                         var11,
-                                                         var8,
+                                                         var2,
+                                                         var17,
                                                          var9,
+                                                         var13,
                                                          var4,
                                                          var10,
-                                                         var13,
-                                                         var14,
-                                                         var17,
                                                          var6,
-                                                         var2,
-                                                         var15,
-                                                         var3,
+                                                         var7,
                                                          var12,
-                                                         var7
+                                                         var11,
+                                                         var16,
+                                                         var15,
+                                                         var8,
+                                                         var14,
+                                                         var3
                                                       );
                                                    }
                                                 }
@@ -161,7 +180,8 @@ public final class AutomodSystemMessageViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static AutomodSystemMessageViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static AutomodSystemMessageViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.automod_system_message_view, var1);
          return bind(var1);
@@ -170,6 +190,7 @@ public final class AutomodSystemMessageViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

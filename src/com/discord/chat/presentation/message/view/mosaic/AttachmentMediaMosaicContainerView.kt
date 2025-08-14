@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.message.view.mosaic
 
-import E1.b
-import E1.c
-import E1.d
+import D1.b
+import D1.c
+import D1.d
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -22,9 +22,8 @@ import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutMa
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import kotlin.jvm.internal.r
 
-public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout {
+public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    private final val binding: AttachmentMediaMosaicContainerViewBinding
    private final val mosaicLayoutManager: MosaicLayoutManager
    private final val attachmentAdapter: AttachmentMediaMosaicAdapter
@@ -34,22 +33,17 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
    private final var onAttachmentObscureToggle: ((Boolean) -> Unit)?
 
    fun AttachmentMediaMosaicContainerView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(...)");
       this.binding = var4;
       val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
       this.mosaicLayoutManager = var3;
-      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new E1.a(this), new b(this), new c(this), new d(this));
+      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new D1.a(this), new b(this), new c(this), new d(this));
       this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
-      r.e(var4.mosaic);
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
       var6.setLayoutManager(var3);
@@ -58,8 +52,6 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
 
    @JvmStatic
    fun `attachmentAdapter$lambda$0`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory, var2: MessagePartViewHolder): Unit {
-      r.h(var1, "item");
-      r.h(var2, "viewHolder");
       if (var0.onAttachmentClicked != null) {
          var0.onAttachmentClicked.invoke(var0.getAttachmentIndex(var1), var1, var2);
       }
@@ -69,7 +61,6 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
 
    @JvmStatic
    fun `attachmentAdapter$lambda$1`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory): Unit {
-      r.h(var1, "item");
       if (var0.onAttachmentLongClicked != null) {
          var0.onAttachmentLongClicked.invoke(var0.getAttachmentIndex(var1));
       }
@@ -79,7 +70,6 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
 
    @JvmStatic
    fun `attachmentAdapter$lambda$2`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory): Unit {
-      r.h(var1, "<unused var>");
       if (var0.onAttachmentSpoilerClicked != null) {
          var0.onAttachmentSpoilerClicked.invoke();
       }
@@ -125,13 +115,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       constrainedWidth: Int,
       shouldAutoPlayGif: Boolean
    ) {
-      r.h(var1, "attachments");
-      r.h(var2, "eventHandler");
-      r.h(var3, "onAttachmentClicked");
-      r.h(var5, "onAttachmentSpoilerClicked");
-      r.h(var6, "onAttachmentObscureToggle");
       val var10: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
-      r.f(var10, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
       (var10 as MosaicLayoutManager).setAvailableWidth(Math.min(MessageAccessoriesView.Companion.getWidth(var8, var7), SizeUtilsKt.getDpToPx(550)));
       this.onAttachmentClicked = var3;
       this.onAttachmentLongClicked = var4;

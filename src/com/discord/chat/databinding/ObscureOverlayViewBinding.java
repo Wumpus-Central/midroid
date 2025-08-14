@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
@@ -15,26 +16,35 @@ import eightbitlab.com.blurview.BlurView;
 import y0.a;
 
 public final class ObscureOverlayViewBinding implements ViewBinding {
+   @NonNull
    public final BlurView blurView;
+   @NonNull
    public final TextView descriptionLabel;
+   @NonNull
    public final IconButtonView hideButton;
+   @NonNull
    public final SimpleDraweeView mediaWarningIcon;
+   @NonNull
    public final FrameLayout opaqueBackground;
+   @NonNull
    public final LinearLayout overlayCenteredContainer;
+   @NonNull
    public final ConstraintLayout overlayLayout;
+   @NonNull
    public final IconButtonView revealButton;
+   @NonNull
    private final View rootView;
 
    private ObscureOverlayViewBinding(
-      View var1,
-      BlurView var2,
-      TextView var3,
-      IconButtonView var4,
-      SimpleDraweeView var5,
-      FrameLayout var6,
-      LinearLayout var7,
-      ConstraintLayout var8,
-      IconButtonView var9
+      @NonNull View var1,
+      @NonNull BlurView var2,
+      @NonNull TextView var3,
+      @NonNull IconButtonView var4,
+      @NonNull SimpleDraweeView var5,
+      @NonNull FrameLayout var6,
+      @NonNull LinearLayout var7,
+      @NonNull ConstraintLayout var8,
+      @NonNull IconButtonView var9
    ) {
       this.rootView = var1;
       this.blurView = var2;
@@ -47,32 +57,33 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       this.revealButton = var9;
    }
 
-   public static ObscureOverlayViewBinding bind(View var0) {
+   @NonNull
+   public static ObscureOverlayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.blur_view;
-      BlurView var9 = (BlurView)a.a(var0, var1);
-      if (var9 != null) {
+      BlurView var4 = (BlurView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.description_label;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
+         TextView var9 = (TextView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var6 = (IconButtonView)a.a(var0, var1);
-            if (var6 != null) {
+            IconButtonView var3 = (IconButtonView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.opaque_background;
-                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-                  if (var3 != null) {
+                  FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.overlay_centered_container;
-                     LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                     if (var7 != null) {
+                     LinearLayout var6 = (LinearLayout)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.overlay_layout;
-                        ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-                        if (var4 != null) {
+                        ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.reveal_button;
-                           IconButtonView var5 = (IconButtonView)a.a(var0, var1);
-                           if (var5 != null) {
-                              return new ObscureOverlayViewBinding(var0, var9, var2, var6, var8, var3, var7, var4, var5);
+                           IconButtonView var7 = (IconButtonView)a.a(var0, var1);
+                           if (var7 != null) {
+                              return new ObscureOverlayViewBinding(var0, var4, var9, var3, var5, var2, var6, var8, var7);
                            }
                         }
                      }
@@ -85,7 +96,8 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static ObscureOverlayViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static ObscureOverlayViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.obscure_overlay_view, var1);
          return bind(var1);
@@ -94,6 +106,7 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

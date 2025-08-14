@@ -12,18 +12,16 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class AltTextButtonView(context: Context, attrs: AttributeSet? = null) : FrameLayout {
+@SourceDebugExtension(["SMAP\nAltTextButtonView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AltTextButtonView.kt\ncom/discord/chat/presentation/message/view/AltTextButtonView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,41:1\n257#2,2:42\n257#2,2:44\n*S KotlinDebug\n*F\n+ 1 AltTextButtonView.kt\ncom/discord/chat/presentation/message/view/AltTextButtonView\n*L\n31#1:42,2\n36#1:44,2\n*E\n"])
+public class AltTextButtonView(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
    private final val binding: AltTextButtonViewBinding
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var3: AltTextButtonViewBinding = AltTextButtonViewBinding.inflate(LayoutInflater.from(var1), this, true);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       val var4: FrameLayout = var3.altTextContainer;
-      kotlin.jvm.internal.r.g(var3.altTextContainer, "altTextContainer");
       ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
       var3.altTextLabel.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_CTA, null, 2, null));
       var3.altTextLabel.setContentDescription(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MEDIA_MOSAIC_ALT_TEXT_POPOUT_TITLE, null, 2, null));

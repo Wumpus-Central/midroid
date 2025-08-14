@@ -3,12 +3,10 @@ package com.discord.chat.presentation.message.view.voicemessages
 import com.discord.codegen.NativeAudioPlayerModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
 
-public class AudioPlayerModule(reactContext: ReactApplicationContext) : NativeAudioPlayerModuleSpec {
+public class AudioPlayerModule(reactContext: ReactApplicationContext) : NativeAudioPlayerModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      kotlin.jvm.internal.r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 

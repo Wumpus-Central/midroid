@@ -5941,23 +5941,6 @@
     ],
     "."
   ],
-  "CyLYKS": "Use third-party data to personalize Sponsored Content",
-  "2QFDU1": [
-    "Allows us to personalize Sponsored Content, like Quests, using data we receive from advertisers and third-party data providers. If you opt out, you may still see Quests, but they won’t be personalized using data from third parties. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ]
-  ],
   "R5N31N": [
     "We need to store and process some data in order to provide you the basic Discord service, such as your messages, what servers you’re in and your Direct Messages. By using Discord, you allow us to provide this basic service. You can stop this by ",
     [
@@ -12130,7 +12113,6 @@
   "7XdMW1": "Apply to Join",
   "4yfIDg": "View Application Status",
   "IRoQXl": "Go to Server",
-  "eb9gDA": "Join Server",
   "zb2Q5+": [
     "Est. ",
     [
@@ -21739,6 +21721,7 @@
   "iYQlws": "This application may not support screensharing.",
   "Ur/0NT": "Lock Post",
   "HoCqm5": "Lock Thread",
+  "ayvCBg": "Your login or password is incorrect.",
   "7fNJgI": "Welcome back!",
   "EiwJkJ": "Log in with Passkey",
   "2jxGen": "Log Out",
@@ -22803,6 +22786,7 @@
   ],
   "roMu1N": "Remind Me",
   "VKsXpa": "Set Custom Reminder",
+  "FnFI3t": "Today at 9:00am",
   "7MKr2N": "Tomorrow at 9:00am",
   "Whs8tL": "Message Reminder",
   "e7GWjY": "Message Requests",
@@ -31424,39 +31408,6 @@
     " a trial. Please try again later."
   ],
   "7VBEub": "Hmm... Something went wrong",
-  "L/leCw": [
-    [
-      1,
-      "receiver"
-    ],
-    " start your 2 weeks of Nitro"
-  ],
-  "febG6u": [
-    [
-      1,
-      "receiver"
-    ],
-    " enjoy a 2-week Nitro trial"
-  ],
-  "zz1MYm": [
-    [
-      1,
-      "sender"
-    ],
-    " gave ",
-    [
-      1,
-      "receiver"
-    ],
-    " a Nitro trial"
-  ],
-  "PVQOi4": [
-    [
-      1,
-      "receiver"
-    ],
-    " start your 2-week Nitro trial"
-  ],
   "eEz1Nz": "Uh-oh, something went wrong. Try restarting the app to fix it!",
   "IiWKws": [
     [
@@ -31584,83 +31535,6 @@
   "Y1q7jo": "Trial Activated",
   "Gs9Aam": "Start 2-Week Trial",
   "uO4bXl": "Unlocked",
-  "M47CJS": "Trials Shared. Nice work.",
-  "FjrXCg": [
-    "Share a 2-week trial with up to ",
-    [
-      1,
-      "numFriends"
-    ],
-    " friends and give the gift of Discord without limits! ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "3OYZMT": [
-    "You will get more trials in the future. While you wait, you can Gift Nitro to give the gift of Discord without limits. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "EkWiZm": [
-    "We have lift off! You can share trials with ",
-    [
-      1,
-      "numFriends"
-    ],
-    " more ",
-    [
-      6,
-      "numFriends",
-      {
-        "one": [
-          "friend"
-        ],
-        "other": [
-          "friends"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
   "SY9tyM": "Remind Friends",
   "eBIGBw": "Congratulations, you’ve found the lonely cactus. Try a different search to find your friends.",
   "Lm2nFR": "Select Friends",
@@ -32040,6 +31914,7 @@
   "YlfC09": "Reset Password",
   "4LVWSE": "Would you like to reset your password? We'll send reset instructions to your email.",
   "Sii1b2": "Would you like to reset your password? We'll send a code to your phone.",
+  "1q02lZ": "Reset your password?",
   "b8606O": "Restore Event",
   "qfo6KS": [
     [
@@ -37807,7 +37682,6 @@
     "\""
   ],
   "OCs36O": "Sorry, we couldn't load the first message in this thread",
-  "uBid4u": "Original message from channel",
   "StKTho": [
     [
       8,
@@ -38829,23 +38703,6 @@
       ]
     ]
   ],
-  "cf9mvb": [
-    "Allows us to personalize Sponsored Content, like Quests, using your Discord activity, such as the games you play.  If you opt out you may still see Quests, but they won’t be personalized. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ]
-  ],
-  "sJYh5u": "Use my Discord activity to personalize Sponsored Content",
   "MoZlaG": "Direct messages will not be filtered for explicit images.",
   "FLfuhI": "Do not filter direct messages",
   "Fw+Lvr": "All direct messages will be filtered for explicit images.",

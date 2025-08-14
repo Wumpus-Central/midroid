@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapGameIconData(gameApplicationId: String, timestamp: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    public final val timestamp: String
 
    init {
-      r.h(var1, "gameApplicationId");
-      r.h(var2, "timestamp");
       super();
       this.gameApplicationId = var1;
       this.timestamp = var2;
@@ -28,8 +25,6 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    }
 
    public fun copy(gameApplicationId: String = var0.gameApplicationId, timestamp: String = var0.timestamp): TapGameIconData {
-      r.h(var1, "gameApplicationId");
-      r.h(var2, "timestamp");
       return new TapGameIconData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.gameApplicationId, var1.gameApplicationId)) {
+         if (!(this.gameApplicationId == var1.gameApplicationId)) {
             return false;
          } else {
-            return r.c(this.timestamp, var1.timestamp);
+            return this.timestamp == var1.timestamp;
          }
       }
    }

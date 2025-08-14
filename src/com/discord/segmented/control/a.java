@@ -5,11 +5,11 @@ import android.view.View.OnClickListener;
 
 // $VF: synthetic class
 public final class a implements OnClickListener {
-   public final SegmentedControlView j;
-   public final int k;
-   public final String l;
+   public final SegmentedControlView d;
+   public final int e;
+   public final String i;
 
    public final void onClick(View var1) {
-      SegmentedControlView.a(this.j, this.k, this.l, var1);
+      SegmentedControlView.a(this.d, this.e, this.i, var1);
    }
 }

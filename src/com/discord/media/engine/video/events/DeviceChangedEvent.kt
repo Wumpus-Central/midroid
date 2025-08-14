@@ -1,11 +1,10 @@
 package com.discord.media.engine.video.events
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 
 internal class DeviceChangedEvent(inputDevices: List<Map<String, Any>>, outputDevices: List<Map<String, Any>>, videoInputDevices: List<Map<String, Any>>) :
    ReactEvent {
@@ -14,10 +13,6 @@ internal class DeviceChangedEvent(inputDevices: List<Map<String, Any>>, outputDe
    private final val videoInputDevices: List<Map<String, Any>>
 
    init {
-      r.h(var1, "inputDevices");
-      r.h(var2, "outputDevices");
-      r.h(var3, "videoInputDevices");
-      super();
       this.inputDevices = var1;
       this.outputDevices = var2;
       this.videoInputDevices = var3;

@@ -2,11 +2,12 @@ package com.discord.chat.bridge.embed
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
+@SourceDebugExtension(["SMAP\nEmbed.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Embed.kt\ncom/discord/chat/bridge/embed/Embed\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,46:1\n1#2:47\n*E\n"])
 public data class Embed(type: EmbedType,
       id: String? = ...,
       author: EmbedAuthor? = ...,
@@ -78,7 +79,6 @@ public data class Embed(type: EmbedType,
 
    init {
       var var33: java.lang.String = var20;
-      r.h(var1, "type");
       super();
       this.type = var1;
       this.id = var2;
@@ -112,7 +112,7 @@ public data class Embed(type: EmbedType,
       this.headerTextColor = var30;
       this.bodyTextColor = var31;
       this.backgroundColor = var32;
-      if (var20 == null || h.c0(var20)) {
+      if (var20 == null || StringsKt.c0(var20)) {
          var33 = null;
       }
 
@@ -120,7 +120,7 @@ public data class Embed(type: EmbedType,
       var var34: java.lang.String = null;
       if (var21 != null) {
          var34 = null;
-         if (!h.c0(var21)) {
+         if (!StringsKt.c0(var21)) {
             var34 = var21;
          }
       }
@@ -290,7 +290,6 @@ public data class Embed(type: EmbedType,
       bodyTextColor: Int = ...,
       backgroundColor: Int? = ...
    ): Embed {
-      r.h(var1, "type");
       return new Embed(
          var1,
          var2,
@@ -336,68 +335,68 @@ public data class Embed(type: EmbedType,
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.author, var1.author)) {
+         } else if (!(this.author == var1.author)) {
             return false;
-         } else if (!r.c(this.provider, var1.provider)) {
+         } else if (!(this.provider == var1.provider)) {
             return false;
-         } else if (!r.c(this.rawTitle, var1.rawTitle)) {
+         } else if (!(this.rawTitle == var1.rawTitle)) {
             return false;
-         } else if (!r.c(this.title, var1.title)) {
+         } else if (!(this.title == var1.title)) {
             return false;
-         } else if (!r.c(this.fields, var1.fields)) {
+         } else if (!(this.fields == var1.fields)) {
             return false;
-         } else if (!r.c(this.url, var1.url)) {
+         } else if (!(this.url == var1.url)) {
             return false;
-         } else if (!r.c(this.rawDescription, var1.rawDescription)) {
+         } else if (!(this.rawDescription == var1.rawDescription)) {
             return false;
-         } else if (!r.c(this.description, var1.description)) {
+         } else if (!(this.description == var1.description)) {
             return false;
-         } else if (!r.c(this.image, var1.image)) {
+         } else if (!(this.image == var1.image)) {
             return false;
-         } else if (!r.c(this.images, var1.images)) {
+         } else if (!(this.images == var1.images)) {
             return false;
-         } else if (!r.c(this.video, var1.video)) {
+         } else if (!(this.video == var1.video)) {
             return false;
-         } else if (!r.c(this.thumbnail, var1.thumbnail)) {
+         } else if (!(this.thumbnail == var1.thumbnail)) {
             return false;
-         } else if (!r.c(this.numAttachments, var1.numAttachments)) {
+         } else if (!(this.numAttachments == var1.numAttachments)) {
             return false;
-         } else if (!r.c(this.attachmentsSize, var1.attachmentsSize)) {
+         } else if (!(this.attachmentsSize == var1.attachmentsSize)) {
             return false;
-         } else if (!r.c(this.messageSendError, var1.messageSendError)) {
+         } else if (!(this.messageSendError == var1.messageSendError)) {
             return false;
-         } else if (!r.c(this.disableBackgroundColor, var1.disableBackgroundColor)) {
+         } else if (!(this.disableBackgroundColor == var1.disableBackgroundColor)) {
             return false;
-         } else if (!r.c(this.footer, var1.footer)) {
+         } else if (!(this.footer == var1.footer)) {
             return false;
-         } else if (!r.c(this.spoiler, var1.spoiler)) {
+         } else if (!(this.spoiler == var1.spoiler)) {
             return false;
-         } else if (!r.c(this.obscure, var1.obscure)) {
+         } else if (!(this.obscure == var1.obscure)) {
             return false;
-         } else if (!r.c(this.obscureAwaitingScan, var1.obscureAwaitingScan)) {
+         } else if (!(this.obscureAwaitingScan == var1.obscureAwaitingScan)) {
             return false;
-         } else if (!r.c(this.obscureHideControls, var1.obscureHideControls)) {
+         } else if (!(this.obscureHideControls == var1.obscureHideControls)) {
             return false;
-         } else if (!r.c(this.obscureIsOpaque, var1.obscureIsOpaque)) {
+         } else if (!(this.obscureIsOpaque == var1.obscureIsOpaque)) {
             return false;
-         } else if (!r.c(this.verifyAge, var1.verifyAge)) {
+         } else if (!(this.verifyAge == var1.verifyAge)) {
             return false;
-         } else if (!r.c(this.iconURL, var1.iconURL)) {
+         } else if (!(this.iconURL == var1.iconURL)) {
             return false;
          } else if (this.failureState != var1.failureState) {
             return false;
-         } else if (!r.c(this.providerColor, var1.providerColor)) {
+         } else if (!(this.providerColor == var1.providerColor)) {
             return false;
-         } else if (!r.c(this.borderLeftColor, var1.borderLeftColor)) {
+         } else if (!(this.borderLeftColor == var1.borderLeftColor)) {
             return false;
-         } else if (!r.c(this.headerTextColor, var1.headerTextColor)) {
+         } else if (!(this.headerTextColor == var1.headerTextColor)) {
             return false;
          } else if (this.bodyTextColor != var1.bodyTextColor) {
             return false;
          } else {
-            return r.c(this.backgroundColor, var1.backgroundColor);
+            return this.backgroundColor == var1.backgroundColor;
          }
       }
    }
@@ -739,105 +738,105 @@ public data class Embed(type: EmbedType,
    }
 
    public override fun toString(): String {
-      val var16: EmbedType = this.type;
-      val var21: java.lang.String = this.id;
+      val var2: EmbedType = this.type;
+      val var32: java.lang.String = this.id;
       val var6: EmbedAuthor = this.author;
-      val var17: EmbedProvider = this.provider;
-      val var8: java.lang.String = this.rawTitle;
-      val var26: StructurableText = this.title;
-      val var28: java.util.List = this.fields;
-      val var27: java.lang.String = this.url;
-      val var2: java.lang.String = this.rawDescription;
-      val var24: StructurableText = this.description;
-      val var11: EmbedMedia = this.image;
-      val var5: java.util.List = this.images;
-      val var10: EmbedMedia = this.video;
-      val var32: EmbedThumbnail = this.thumbnail;
-      val var20: java.lang.String = this.numAttachments;
-      val var22: java.lang.String = this.attachmentsSize;
-      val var18: java.lang.String = this.messageSendError;
-      val var23: java.lang.Boolean = this.disableBackgroundColor;
-      val var30: EmbedFooter = this.footer;
+      val var29: EmbedProvider = this.provider;
+      val var19: java.lang.String = this.rawTitle;
+      val var8: StructurableText = this.title;
+      val var30: java.util.List = this.fields;
+      val var14: java.lang.String = this.url;
+      val var27: java.lang.String = this.rawDescription;
+      val var3: StructurableText = this.description;
+      val var9: EmbedMedia = this.image;
+      val var18: java.util.List = this.images;
+      val var22: EmbedMedia = this.video;
+      val var23: EmbedThumbnail = this.thumbnail;
+      val var4: java.lang.String = this.numAttachments;
+      val var33: java.lang.String = this.attachmentsSize;
+      val var10: java.lang.String = this.messageSendError;
+      val var26: java.lang.Boolean = this.disableBackgroundColor;
+      val var31: EmbedFooter = this.footer;
       val var12: java.lang.String = this.spoiler;
-      val var31: java.lang.String = this.obscure;
-      val var4: java.lang.String = this.obscureAwaitingScan;
-      val var29: java.lang.Boolean = this.obscureHideControls;
-      val var9: java.lang.Boolean = this.obscureIsOpaque;
-      val var33: java.lang.Boolean = this.verifyAge;
-      val var13: java.lang.String = this.iconURL;
-      val var25: EmbedFailureState = this.failureState;
-      val var7: Int = this.providerColor;
-      val var15: Int = this.borderLeftColor;
-      val var14: Int = this.headerTextColor;
+      val var25: java.lang.String = this.obscure;
+      val var11: java.lang.String = this.obscureAwaitingScan;
+      val var13: java.lang.Boolean = this.obscureHideControls;
+      val var24: java.lang.Boolean = this.obscureIsOpaque;
+      val var17: java.lang.Boolean = this.verifyAge;
+      val var20: java.lang.String = this.iconURL;
+      val var15: EmbedFailureState = this.failureState;
+      val var21: Int = this.providerColor;
+      val var28: Int = this.borderLeftColor;
+      val var7: Int = this.headerTextColor;
       val var1: Int = this.bodyTextColor;
-      val var19: Int = this.backgroundColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Embed(type=");
-      var3.append(var16);
-      var3.append(", id=");
-      var3.append(var21);
-      var3.append(", author=");
-      var3.append(var6);
-      var3.append(", provider=");
-      var3.append(var17);
-      var3.append(", rawTitle=");
-      var3.append(var8);
-      var3.append(", title=");
-      var3.append(var26);
-      var3.append(", fields=");
-      var3.append(var28);
-      var3.append(", url=");
-      var3.append(var27);
-      var3.append(", rawDescription=");
-      var3.append(var2);
-      var3.append(", description=");
-      var3.append(var24);
-      var3.append(", image=");
-      var3.append(var11);
-      var3.append(", images=");
-      var3.append(var5);
-      var3.append(", video=");
-      var3.append(var10);
-      var3.append(", thumbnail=");
-      var3.append(var32);
-      var3.append(", numAttachments=");
-      var3.append(var20);
-      var3.append(", attachmentsSize=");
-      var3.append(var22);
-      var3.append(", messageSendError=");
-      var3.append(var18);
-      var3.append(", disableBackgroundColor=");
-      var3.append(var23);
-      var3.append(", footer=");
-      var3.append(var30);
-      var3.append(", spoiler=");
-      var3.append(var12);
-      var3.append(", obscure=");
-      var3.append(var31);
-      var3.append(", obscureAwaitingScan=");
-      var3.append(var4);
-      var3.append(", obscureHideControls=");
-      var3.append(var29);
-      var3.append(", obscureIsOpaque=");
-      var3.append(var9);
-      var3.append(", verifyAge=");
-      var3.append(var33);
-      var3.append(", iconURL=");
-      var3.append(var13);
-      var3.append(", failureState=");
-      var3.append(var25);
-      var3.append(", providerColor=");
-      var3.append(var7);
-      var3.append(", borderLeftColor=");
-      var3.append(var15);
-      var3.append(", headerTextColor=");
-      var3.append(var14);
-      var3.append(", bodyTextColor=");
-      var3.append(var1);
-      var3.append(", backgroundColor=");
-      var3.append(var19);
-      var3.append(")");
-      return var3.toString();
+      val var16: Int = this.backgroundColor;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Embed(type=");
+      var5.append(var2);
+      var5.append(", id=");
+      var5.append(var32);
+      var5.append(", author=");
+      var5.append(var6);
+      var5.append(", provider=");
+      var5.append(var29);
+      var5.append(", rawTitle=");
+      var5.append(var19);
+      var5.append(", title=");
+      var5.append(var8);
+      var5.append(", fields=");
+      var5.append(var30);
+      var5.append(", url=");
+      var5.append(var14);
+      var5.append(", rawDescription=");
+      var5.append(var27);
+      var5.append(", description=");
+      var5.append(var3);
+      var5.append(", image=");
+      var5.append(var9);
+      var5.append(", images=");
+      var5.append(var18);
+      var5.append(", video=");
+      var5.append(var22);
+      var5.append(", thumbnail=");
+      var5.append(var23);
+      var5.append(", numAttachments=");
+      var5.append(var4);
+      var5.append(", attachmentsSize=");
+      var5.append(var33);
+      var5.append(", messageSendError=");
+      var5.append(var10);
+      var5.append(", disableBackgroundColor=");
+      var5.append(var26);
+      var5.append(", footer=");
+      var5.append(var31);
+      var5.append(", spoiler=");
+      var5.append(var12);
+      var5.append(", obscure=");
+      var5.append(var25);
+      var5.append(", obscureAwaitingScan=");
+      var5.append(var11);
+      var5.append(", obscureHideControls=");
+      var5.append(var13);
+      var5.append(", obscureIsOpaque=");
+      var5.append(var24);
+      var5.append(", verifyAge=");
+      var5.append(var17);
+      var5.append(", iconURL=");
+      var5.append(var20);
+      var5.append(", failureState=");
+      var5.append(var15);
+      var5.append(", providerColor=");
+      var5.append(var21);
+      var5.append(", borderLeftColor=");
+      var5.append(var28);
+      var5.append(", headerTextColor=");
+      var5.append(var7);
+      var5.append(", bodyTextColor=");
+      var5.append(var1);
+      var5.append(", backgroundColor=");
+      var5.append(var16);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

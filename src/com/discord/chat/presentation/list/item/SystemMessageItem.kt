@@ -4,17 +4,17 @@ import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public data class SystemMessageItem(message: Message, messageContext: MessageContext, backgroundHighlight: BackgroundHighlight? = null) : ChatListItem {
+@SourceDebugExtension(["SMAP\nSystemMessageItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageItem.kt\ncom/discord/chat/presentation/list/item/SystemMessageItem\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,17:1\n1#2:18\n*E\n"])
+public data class SystemMessageItem(message: Message, messageContext: MessageContext, backgroundHighlight: BackgroundHighlight? = null) : ChatListItem(
+      var1.getId-3Eiw7ao()
+   ) {
    public final val message: Message
    public final val messageContext: MessageContext
    public final val backgroundHighlight: BackgroundHighlight?
 
    init {
-      r.h(var1, "message");
-      r.h(var2, "messageContext");
-      super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
       this.messageContext = var2;
       this.backgroundHighlight = var3;
@@ -40,8 +40,6 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
       messageContext: MessageContext = var0.messageContext,
       backgroundHighlight: BackgroundHighlight? = var0.backgroundHighlight
    ): SystemMessageItem {
-      r.h(var1, "message");
-      r.h(var2, "messageContext");
       return new SystemMessageItem(var1, var2, var3);
    }
 
@@ -52,12 +50,12 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!(this.message == var1.message)) {
             return false;
-         } else if (!r.c(this.messageContext, var1.messageContext)) {
+         } else if (!(this.messageContext == var1.messageContext)) {
             return false;
          } else {
-            return r.c(this.backgroundHighlight, var1.backgroundHighlight);
+            return this.backgroundHighlight == var1.backgroundHighlight;
          }
       }
    }
@@ -76,16 +74,16 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun toString(): String {
-      val var4: Message = this.message;
+      val var3: Message = this.message;
       val var2: MessageContext = this.messageContext;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
+      val var4: BackgroundHighlight = this.backgroundHighlight;
       val var1: StringBuilder = new StringBuilder();
       var1.append("SystemMessageItem(message=");
-      var1.append(var4);
+      var1.append(var3);
       var1.append(", messageContext=");
       var1.append(var2);
       var1.append(", backgroundHighlight=");
-      var1.append(var3);
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

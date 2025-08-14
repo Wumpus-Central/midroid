@@ -1,12 +1,11 @@
 package com.discord.fastest_list.react_events
 
-import A9.s
+import B9.s
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
    private final val x: Float
@@ -25,17 +24,14 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
       this.contentHeight = var6;
    }
 
-   public constructor(data: Data) : r.h(var1, "data") {
-      this(
+   public constructor(data: Data) : this(
          SizeUtilsKt.getPxToDp(var1.getX()),
          SizeUtilsKt.getPxToDp(var1.getY()),
          SizeUtilsKt.getPxToDp(var1.getWidth()),
          SizeUtilsKt.getPxToDp(var1.getHeight()),
          SizeUtilsKt.getPxToDp(var1.getContentWidth()),
          SizeUtilsKt.getPxToDp(var1.getContentHeight())
-      );
-   }
-
+      )
    public override fun serialize(): WritableMap {
       val var1: Int = 0;
       return NativeMapExtensionsKt.nativeMapOf(

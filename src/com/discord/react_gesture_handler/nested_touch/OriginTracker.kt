@@ -3,7 +3,6 @@ package com.discord.react_gesture_handler.nested_touch
 import android.content.Context
 import android.view.MotionEvent
 import android.view.ViewConfiguration
-import kotlin.jvm.internal.r
 
 internal class OriginTracker(context: Context) {
    public final val context: Context
@@ -12,8 +11,6 @@ internal class OriginTracker(context: Context) {
    private final var originSupplemental: com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin?
 
    init {
-      r.h(var1, "context");
-      super();
       this.context = var1;
       this.scaledTouchSlopPx = ViewConfiguration.get(var1).getScaledTouchSlop();
    }
@@ -35,7 +32,6 @@ internal class OriginTracker(context: Context) {
    }
 
    public fun hasOriginMoved(isSupplementalEvent: Boolean, event: MotionEvent): Boolean {
-      r.h(var2, "event");
       if (var1) {
          if (this.originSupplemental == null) {
             this.originSupplemental = new OriginTracker.Origin(var2.getX(), var2.getY());
@@ -98,13 +94,13 @@ internal class OriginTracker(context: Context) {
       }
 
       public override fun toString(): String {
-         val var2: Float = this.xOrigin;
-         val var1: Float = this.yOrigin;
+         val var1: Float = this.xOrigin;
+         val var2: Float = this.yOrigin;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Origin(xOrigin=");
-         var3.append(var2);
-         var3.append(", yOrigin=");
          var3.append(var1);
+         var3.append(", yOrigin=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

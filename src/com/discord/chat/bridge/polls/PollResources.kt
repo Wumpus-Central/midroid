@@ -1,12 +1,10 @@
 package com.discord.chat.bridge.polls
 
-import B9.q
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = q.h()) {
+public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = L.h()) {
    public final val selectedIcon: String
    public final val checkmarkIcon: String
    public final val styles: Map<String, PollStyleSet>
@@ -24,9 +22,6 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
 
    init {
-      r.h(var1, "selectedIcon");
-      r.h(var2, "checkmarkIcon");
-      r.h(var3, "styles");
       super();
       this.selectedIcon = var1;
       this.checkmarkIcon = var2;
@@ -46,9 +41,6 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public fun copy(selectedIcon: String = var0.selectedIcon, checkmarkIcon: String = var0.checkmarkIcon, styles: Map<String, PollStyleSet> = var0.styles): PollResources {
-      r.h(var1, "selectedIcon");
-      r.h(var2, "checkmarkIcon");
-      r.h(var3, "styles");
       return new PollResources(var1, var2, var3);
    }
 
@@ -59,12 +51,12 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.selectedIcon, var1.selectedIcon)) {
+         if (!(this.selectedIcon == var1.selectedIcon)) {
             return false;
-         } else if (!r.c(this.checkmarkIcon, var1.checkmarkIcon)) {
+         } else if (!(this.checkmarkIcon == var1.checkmarkIcon)) {
             return false;
          } else {
-            return r.c(this.styles, var1.styles);
+            return this.styles == var1.styles;
          }
       }
    }
@@ -75,17 +67,17 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
    public override fun toString(): String {
       val var3: java.lang.String = this.selectedIcon;
-      val var2: java.lang.String = this.checkmarkIcon;
-      val var1: java.util.Map = this.styles;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollResources(selectedIcon=");
-      var4.append(var3);
-      var4.append(", checkmarkIcon=");
-      var4.append(var2);
-      var4.append(", styles=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.checkmarkIcon;
+      val var4: java.util.Map = this.styles;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollResources(selectedIcon=");
+      var2.append(var3);
+      var2.append(", checkmarkIcon=");
+      var2.append(var1);
+      var2.append(", styles=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

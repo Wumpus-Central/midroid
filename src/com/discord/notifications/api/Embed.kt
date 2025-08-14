@@ -1,8 +1,7 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -30,7 +29,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       } else if (var1 !is Embed) {
          return false;
       } else {
-         return r.c(this.fields, (var1 as Embed).fields);
+         return this.fields == (var1 as Embed).fields;
       }
    }
 

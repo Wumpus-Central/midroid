@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.GuildProfileInviteEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class GuildProfileInviteMessageAccessory(messageId: MessageId, codedLinkIndex: Int, invite: GuildProfileInviteEmbedImpl) : GuildProfileInviteMessageAccessory(
       var1, var2, var3
@@ -12,8 +11,6 @@ public data class GuildProfileInviteMessageAccessory(messageId: MessageId, coded
    public final val invite: GuildProfileInviteEmbedImpl
 
    fun GuildProfileInviteMessageAccessory(var1: java.lang.String, var2: Int, var3: GuildProfileInviteEmbedImpl) {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       val var4: StringBuilder = new StringBuilder();
       var4.append("embedded guild profile invite ");
       var4.append(var2);
@@ -36,8 +33,6 @@ public data class GuildProfileInviteMessageAccessory(messageId: MessageId, coded
    }
 
    public fun copy(messageId: MessageId = ..., codedLinkIndex: Int = ..., invite: GuildProfileInviteEmbedImpl = ...): GuildProfileInviteMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       return new GuildProfileInviteMessageAccessory(var1, var2, var3, null);
    }
 
@@ -53,7 +48,7 @@ public data class GuildProfileInviteMessageAccessory(messageId: MessageId, coded
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
          } else {
-            return r.c(this.invite, var1.invite);
+            return this.invite == var1.invite;
          }
       }
    }

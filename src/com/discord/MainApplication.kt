@@ -9,6 +9,7 @@ import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManag
 import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.CrashReporting
 import com.discord.crash_reporting.PerformanceTracing
+import com.discord.deep_link.DeepLinks
 import com.discord.lifecycle.AppLifecycle
 import com.discord.media_player.CacheDataSourceFactory
 import com.discord.networking.ReactNetworking
@@ -30,7 +31,6 @@ import com.facebook.react.defaults.DefaultReactHost
 import com.facebook.react.modules.i18nmanager.I18nUtil
 import com.facebook.react.uimanager.UIManagerConstantsCache
 import java.util.concurrent.CountDownLatch
-import kotlin.jvm.internal.r
 
 public class MainApplication : TTILoggingApplication, ReactApplication {
    public open val reactNativeHost: ReactNativeHost = new DCDReactNativeHost(this)
@@ -38,7 +38,6 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    public open val reactHost: ReactHost
       public open get() {
          val var1: Context = this.getApplicationContext();
-         r.g(var1, "getApplicationContext(...)");
          return DefaultReactHost.getDefaultReactHost(var1, this.getReactNativeHost());
       }
 
@@ -71,7 +70,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "294.3", 294203, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "294.5", 294205, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -84,7 +83,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@294.3.0-2+294203";
+         var5 = "discord_android@294.5.0-2+294205";
       }
 
       CrashReporting.INSTANCE.init(this, var5);
@@ -106,5 +105,6 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    public override fun onCreate() {
       super.onCreate();
       UIManagerConstantsCache.getInstance().init(this);
+      DeepLinks.INSTANCE.init(this);
    }
 }

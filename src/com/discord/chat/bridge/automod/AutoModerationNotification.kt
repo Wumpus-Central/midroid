@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.automod
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class AutoModerationNotification(header: String,
@@ -34,8 +33,6 @@ public data class AutoModerationNotification(header: String,
    public final val startTime: String?
 
    init {
-      r.h(var1, "header");
-      r.h(var3, "headerIconURL");
       super();
       this.header = var1;
       this.headerColor = var2;
@@ -119,8 +116,6 @@ public data class AutoModerationNotification(header: String,
       severity: String? = var0.severity,
       startTime: String? = var0.startTime
    ): AutoModerationNotification {
-      r.h(var1, "header");
-      r.h(var3, "headerIconURL");
       return new AutoModerationNotification(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13);
    }
 
@@ -131,41 +126,41 @@ public data class AutoModerationNotification(header: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.header, var1.header)) {
+         if (!(this.header == var1.header)) {
             return false;
          } else if (this.headerColor != var1.headerColor) {
             return false;
-         } else if (!r.c(this.headerIconURL, var1.headerIconURL)) {
+         } else if (!(this.headerIconURL == var1.headerIconURL)) {
             return false;
          } else if (this.headerIconColor != var1.headerIconColor) {
             return false;
-         } else if (!r.c(this.subtitleLeft, var1.subtitleLeft)) {
+         } else if (!(this.subtitleLeft == var1.subtitleLeft)) {
             return false;
-         } else if (!r.c(this.subtitleRight, var1.subtitleRight)) {
+         } else if (!(this.subtitleRight == var1.subtitleRight)) {
             return false;
-         } else if (!r.c(this.body, var1.body)) {
+         } else if (!(this.body == var1.body)) {
             return false;
          } else if (this.shouldShowActions != var1.shouldShowActions) {
             return false;
-         } else if (!r.c(this.enabledByUsername, var1.enabledByUsername)) {
+         } else if (!(this.enabledByUsername == var1.enabledByUsername)) {
             return false;
-         } else if (!r.c(this.enabledByAvatarURL, var1.enabledByAvatarURL)) {
+         } else if (!(this.enabledByAvatarURL == var1.enabledByAvatarURL)) {
             return false;
-         } else if (!r.c(this.enabledByColor, var1.enabledByColor)) {
+         } else if (!(this.enabledByColor == var1.enabledByColor)) {
             return false;
-         } else if (!r.c(this.severity, var1.severity)) {
+         } else if (!(this.severity == var1.severity)) {
             return false;
          } else {
-            return r.c(this.startTime, var1.startTime);
+            return this.startTime == var1.startTime;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.header.hashCode();
+      val var11: Int = this.header.hashCode();
       val var9: Int = Integer.hashCode(this.headerColor);
-      val var11: Int = this.headerIconURL.hashCode();
-      val var12: Int = Integer.hashCode(this.headerIconColor);
+      val var12: Int = this.headerIconURL.hashCode();
+      val var10: Int = Integer.hashCode(this.headerIconColor);
       var var8: Int = 0;
       val var1: Int;
       if (this.subtitleLeft == null) {
@@ -223,7 +218,7 @@ public data class AutoModerationNotification(header: String,
 
       return (
                (
-                        (((((((((var10 * 31 + var9) * 31 + var11) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
+                        (((((((((var11 * 31 + var9) * 31 + var12) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
                            + var6
                      )
@@ -235,48 +230,48 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.header;
+      val var4: java.lang.String = this.header;
       val var1: Int = this.headerColor;
-      val var8: java.lang.String = this.headerIconURL;
+      val var12: java.lang.String = this.headerIconURL;
       val var2: Int = this.headerIconColor;
-      val var10: java.lang.String = this.subtitleLeft;
-      val var6: java.lang.String = this.subtitleRight;
-      val var4: java.lang.String = this.body;
+      val var9: java.lang.String = this.subtitleLeft;
+      val var7: java.lang.String = this.subtitleRight;
+      val var6: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var5: java.lang.String = this.enabledByUsername;
-      val var14: java.lang.String = this.enabledByAvatarURL;
-      val var11: Int = this.enabledByColor;
-      val var12: java.lang.String = this.severity;
-      val var7: java.lang.String = this.startTime;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("AutoModerationNotification(header=");
-      var13.append(var9);
-      var13.append(", headerColor=");
-      var13.append(var1);
-      var13.append(", headerIconURL=");
-      var13.append(var8);
-      var13.append(", headerIconColor=");
-      var13.append(var2);
-      var13.append(", subtitleLeft=");
-      var13.append(var10);
-      var13.append(", subtitleRight=");
-      var13.append(var6);
-      var13.append(", body=");
-      var13.append(var4);
-      var13.append(", shouldShowActions=");
-      var13.append(var3);
-      var13.append(", enabledByUsername=");
-      var13.append(var5);
-      var13.append(", enabledByAvatarURL=");
-      var13.append(var14);
-      var13.append(", enabledByColor=");
-      var13.append(var11);
-      var13.append(", severity=");
-      var13.append(var12);
-      var13.append(", startTime=");
-      var13.append(var7);
-      var13.append(")");
-      return var13.toString();
+      val var13: java.lang.String = this.enabledByUsername;
+      val var5: java.lang.String = this.enabledByAvatarURL;
+      val var14: Int = this.enabledByColor;
+      val var11: java.lang.String = this.severity;
+      val var10: java.lang.String = this.startTime;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("AutoModerationNotification(header=");
+      var8.append(var4);
+      var8.append(", headerColor=");
+      var8.append(var1);
+      var8.append(", headerIconURL=");
+      var8.append(var12);
+      var8.append(", headerIconColor=");
+      var8.append(var2);
+      var8.append(", subtitleLeft=");
+      var8.append(var9);
+      var8.append(", subtitleRight=");
+      var8.append(var7);
+      var8.append(", body=");
+      var8.append(var6);
+      var8.append(", shouldShowActions=");
+      var8.append(var3);
+      var8.append(", enabledByUsername=");
+      var8.append(var13);
+      var8.append(", enabledByAvatarURL=");
+      var8.append(var5);
+      var8.append(", enabledByColor=");
+      var8.append(var14);
+      var8.append(", severity=");
+      var8.append(var11);
+      var8.append(", startTime=");
+      var8.append(var10);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

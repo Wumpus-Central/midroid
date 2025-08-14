@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import Q9.a
+import O9.a
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.R
-import kotlin.jvm.internal.r
 
 public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager {
    public final val context: Context
@@ -17,8 +16,6 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
    private final var availableWidth: Int
 
    init {
-      r.h(var1, "context");
-      super();
       this.context = var1;
       this.spacingPx = var1.getResources().getDimensionPixelSize(R.dimen.message_media_grid_spacing);
       this.mediaMaxHeight = var1.getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
@@ -70,7 +67,6 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
             val var13: Int = (var17.a() as java.lang.Number).intValue();
             val var15: Int = (var17.b() as java.lang.Number).intValue();
             val var19: View = var1.o(var11);
-            r.g(var19, "getViewForPosition(...)");
             val var16: Boolean = var19 is MosaicView;
             val var36: MosaicView;
             if (var19 is MosaicView) {
@@ -211,7 +207,6 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
    }
 
    public override fun onLayoutChildren(recycler: Recycler, state: State?) {
-      r.h(var1, "recycler");
       this.fill(var1);
    }
 

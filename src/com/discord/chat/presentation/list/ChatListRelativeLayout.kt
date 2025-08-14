@@ -5,7 +5,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 
-public open class ChatListRelativeLayout  public constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout, ChatListChildView {
+public open class ChatListRelativeLayout  public constructor(context: Context, attrs: AttributeSet? = null) : RelativeLayout(var1, var2), ChatListChildView {
    public open var lastKey: Any?
       internal final set
 
@@ -13,13 +13,7 @@ public open class ChatListRelativeLayout  public constructor(context: Context, a
       internal final set
 
    open fun ChatListRelativeLayout(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
-   }
-
-   init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
    }
 
    override fun bindKey(var1: Any) {

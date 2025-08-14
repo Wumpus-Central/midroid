@@ -22,56 +22,47 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class GuildInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nGuildInviteView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GuildInviteView.kt\ncom/discord/chat/presentation/message/view/GuildInviteView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,179:1\n257#2,2:180\n257#2,2:182\n257#2,2:185\n257#2,2:187\n257#2,2:189\n257#2,2:191\n1#3:184\n*S KotlinDebug\n*F\n+ 1 GuildInviteView.kt\ncom/discord/chat/presentation/message/view/GuildInviteView\n*L\n80#1:180,2\n85#1:182,2\n133#1:185,2\n136#1:187,2\n140#1:189,2\n146#1:191,2\n*E\n"])
+public class GuildInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3) {
    private final val binding: GuildInviteViewBinding
 
    fun GuildInviteView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun GuildInviteView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var7: GuildInviteViewBinding = GuildInviteViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var7, "inflate(...)");
       this.binding = var7;
       var var4: TextView = var7.itemInviteHeader;
       var7.itemInviteHeader.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
-      var4 = var7.itemInviteTitle;
+      val var5: TextView = var7.itemInviteTitle;
       var7.itemInviteTitle.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.r.e(var4);
-      SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
-      val var5: DiscordFont = DiscordFont.PrimarySemibold;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
+      val var8: DiscordFont = DiscordFont.PrimarySemibold;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       var var6: TextView = var7.itemInviteSubtitle;
       var7.itemInviteSubtitle.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.e(var6);
-      val var9: DiscordFont = DiscordFont.PrimaryMedium;
+      val var10: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryMedium);
       var6 = var7.itemInviteOnlineText;
       var7.itemInviteOnlineText.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.e(var6);
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var6, var5);
+      DiscordFontUtilsKt.setDiscordFont(var6, var8);
       var6 = var7.itemInviteTotalMemberText;
       var7.itemInviteTotalMemberText.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.e(var6);
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var6, var5);
-      val var10: TextView = var7.itemInviteHubLink;
+      DiscordFontUtilsKt.setDiscordFont(var6, var8);
+      var4 = var7.itemInviteHubLink;
       var7.itemInviteHubLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      kotlin.jvm.internal.r.e(var10);
-      DiscordFontUtilsKt.setDiscordFont(var10, var9);
+      DiscordFontUtilsKt.setDiscordFont(var4, var10);
       var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.brand));
    }
 
@@ -81,7 +72,6 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          var2 = var1;
       } else {
          val var3: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var3, "getContext(...)");
          var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(R.color.primary_100, R.color.primary_630));
       }
 
@@ -94,9 +84,8 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setButtonText(text: CharSequence?) {
       val var4: DCDButton = this.binding.itemInviteJoinedButton;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteJoinedButton, "itemInviteJoinedButton");
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.h.c0(var1)) {
+      if (var1 != null && !StringsKt.c0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
@@ -118,10 +107,9 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setClickListeners(canBeAccepted: Boolean?, tapEmbedListener: OnClickListener?, tapAcceptListener: OnClickListener?) {
       val var4: ConstraintLayout = this.binding.itemBottomContainer;
-      kotlin.jvm.internal.r.g(this.binding.itemBottomContainer, "itemBottomContainer");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(var4, true, var2);
       val var5: DCDButton = this.binding.itemInviteJoinedButton;
-      if (kotlin.jvm.internal.r.c(var1, java.lang.Boolean.TRUE)) {
+      if (var1 == java.lang.Boolean.TRUE) {
          var5.setOnClickButtonListener(var3);
       } else {
          var5.setOnClickButtonListener(var2);
@@ -130,7 +118,6 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setGuildBadge(url: String?) {
       val var2: SimpleDraweeView = this.binding.itemGuildBadge;
-      kotlin.jvm.internal.r.g(this.binding.itemGuildBadge, "itemGuildBadge");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var2, var1);
    }
 
@@ -152,7 +139,6 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setHeaderText(headerText: CharSequence?) {
       val var4: TextView = this.binding.itemInviteHeader;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteHeader, "itemInviteHeader");
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -172,7 +158,6 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setInviteSplash(url: String?) {
       val var4: SimpleDraweeView = this.binding.itemInviteSplash;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSplash, "itemInviteSplash");
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -196,9 +181,8 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
       var var6: View = this.binding.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.h.c0(var1)) {
+      if (var1 != null && !StringsKt.c0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -212,13 +196,11 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
       var6.setVisibility(var3);
       var6 = this.binding.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, R.color.green_360), 0, 2, null);
       this.binding.itemInviteOnlineText.setText(var1);
       var6 = this.binding.itemInviteTotalMemberDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
       var var8: Boolean;
-      if (var2 != null && !kotlin.text.h.c0(var2)) {
+      if (var2 != null && !StringsKt.c0(var2)) {
          var8 = 0;
       } else {
          var8 = 1;
@@ -233,21 +215,19 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       label55: {
          var6.setVisibility(var8);
          val var14: ImageView = this.binding.itemInviteTotalMemberDot;
-         kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
          ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, R.color.primary_500), 0, 2, null);
          this.binding.itemInviteTotalMemberText.setText(var2);
          var6 = this.binding.itemInviteMemberContainer;
-         kotlin.jvm.internal.r.g(this.binding.itemInviteMemberContainer, "itemInviteMemberContainer");
          if (var1 != null) {
             var10 = true;
-            if (!kotlin.text.h.c0(var1)) {
+            if (!StringsKt.c0(var1)) {
                break label55;
             }
          }
 
          if (var2 != null) {
             var10 = true;
-            if (!kotlin.text.h.c0(var2)) {
+            if (!StringsKt.c0(var2)) {
                break label55;
             }
          }
@@ -266,7 +246,6 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
    public fun setSubtitle(subtitle: CharSequence?) {
       val var2: TextView = this.binding.itemInviteSubtitle;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSubtitle, "itemInviteSubtitle");
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
@@ -276,13 +255,11 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       }
 
       val var3: SimpleDraweeView = this.binding.itemInviteSubtitleIcon;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteSubtitleIcon, "itemInviteSubtitleIcon");
       ColorUtilsKt.setTintColor(var3, var1);
    }
 
    public fun setSubtitleIcon(subtitleIconUrl: String?) {
       val var2: SimpleDraweeView = this.binding.itemInviteSubtitleIcon;
-      kotlin.jvm.internal.r.e(this.binding.itemInviteSubtitleIcon);
       ReactAssetUtilsKt.setOptionalReactImageUrl(var2, var1);
    }
 

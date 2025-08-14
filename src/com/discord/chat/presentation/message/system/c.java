@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class c implements Function0 {
-   public final ComponentProvider j;
+   public final ComponentProvider d;
 
    public final Object invoke() {
-      return AutomodSystemMessageWrapperView.b(this.j);
+      return AutomodSystemMessageWrapperView.b(this.d);
    }
 }

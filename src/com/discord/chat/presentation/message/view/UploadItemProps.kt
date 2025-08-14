@@ -7,9 +7,6 @@ public class UploadItemProps(uploadProgress: Int, uploadContext: UploadContext, 
    public final val onCancelUploadItem: () -> Unit
 
    init {
-      kotlin.jvm.internal.r.h(var2, "uploadContext");
-      kotlin.jvm.internal.r.h(var4, "onCancelUploadItem");
-      super();
       this.uploadProgress = var1;
       this.uploadContext = var2;
       this.uploadOpacity = var3;

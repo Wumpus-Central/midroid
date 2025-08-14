@@ -1,12 +1,11 @@
 package com.discord.chat.bridge.media
 
-import I9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = UnfurledMediaLoadingState.Serializer::class)
 public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
@@ -44,5 +43,5 @@ public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(H.b(UnfurledMediaLoadingState.class), UnfurledMediaLoadingState.UNKNOWN)
+   public object Serializer : IntEnumSerializer(UnfurledMediaLoadingState::class, UnfurledMediaLoadingState.UNKNOWN)
 }

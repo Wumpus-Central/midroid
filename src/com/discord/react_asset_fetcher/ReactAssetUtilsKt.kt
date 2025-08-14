@@ -1,6 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import H9.b
+import G9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -13,27 +13,22 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
+import db.K
+import db.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
-import jb.K
-import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
    val var2: java.lang.String = new ImageSource(var0, var1, 0.0, 0.0, null, false, 60, null).getUri().toString();
-   r.g(var2, "toString(...)");
    return var2;
 }
 
 public fun Context.inflateUrl(url: String?): String? {
-   r.h(var0, "<this>");
    if (var1 == null) {
       var1 = null;
    } else if (!URLUtil.isNetworkUrl(var1)) {
@@ -44,8 +39,7 @@ public fun Context.inflateUrl(url: String?): String? {
 }
 
 public fun SimpleDraweeView.setOptionalReactImageUrl(url: String?) {
-   r.h(var0, "<this>");
-   if (var1 != null && !h.c0(var1)) {
+   if (var1 != null && !StringsKt.c0(var1)) {
       var0.setVisibility(0);
       setReactImageUrl(var0, var1);
    } else {
@@ -55,21 +49,16 @@ public fun SimpleDraweeView.setOptionalReactImageUrl(url: String?) {
 }
 
 public fun SimpleDraweeView.setReactAsset(asset: ReactAsset) {
-   r.h(var0, "<this>");
-   r.h(var1, "asset");
    val var2: Context = var0.getContext();
-   r.g(var2, "getContext(...)");
    setReactImageUrl(var0, var1.getUri(var2));
 }
 
 public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
    var0.setIconSize(var2);
    val var3: ShapeDrawable = new ShapeDrawable(new RectShape());
    var3.getPaint().setColor(0);
    var0.setIcon(var3);
-   f.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2(var0, var1, null) {
+   f.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2<CoroutineScope, Continuation, Object>(var0, var1, null) {
       final java.lang.String $assetUrl;
       final MaterialButton $this_setReactIcon;
       Object L$0;
@@ -104,7 +93,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             c.b(var1);
             var1 = this.$this_setReactIcon;
             var3 = K.b();
-            val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -128,21 +117,16 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                   if (this.label == 0) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
-                     r.g(var1, "getContext(...)");
                      val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
                      if (var3.isResource()) {
                         val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
-                        r.g(var6, "getContext(...)");
                         var1 = var2x.getResourceDrawable(var6, var3.getSource());
-                        r.e(var1);
-                     } else if (r.c(var3.getUri().getScheme(), "file")) {
+                     } else if (var3.getUri().getScheme() == "file") {
                         var1 = Drawable.createFromPath(var3.getUri().getPath());
-                        r.e(var1);
                      } else {
                         val var8: URLConnection = new URL(var3.getSource()).openConnection();
-                        r.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();
                         var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));
@@ -171,9 +155,6 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
 }
 
 public fun SimpleDraweeView.setReactImageUrl(assetUrl: String) {
-   r.h(var0, "<this>");
-   r.h(var1, "assetUrl");
    val var2: Context = var0.getContext();
-   r.g(var2, "getContext(...)");
    var0.setImageURI(getReactImageUrl(var2, var1));
 }

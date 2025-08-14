@@ -1,14 +1,13 @@
 package com.discord.metric_monitor
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -16,7 +15,6 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    public final val tags: List<String>?
 
    init {
-      r.h(var1, "name");
       super();
       this.name = var1;
       this.tags = var2;
@@ -31,7 +29,6 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public fun copy(name: String = var0.name, tags: List<String>? = var0.tags): MetricEvent {
-      r.h(var1, "name");
       return new MetricEvent(var1, var2);
    }
 
@@ -42,10 +39,10 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.name, var1.name)) {
+         if (!(this.name == var1.name)) {
             return false;
          } else {
-            return r.c(this.tags, var1.tags);
+            return this.tags == var1.tags;
          }
       }
    }
@@ -73,15 +70,15 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
+      val var1: java.lang.String = this.name;
       val var2: java.util.List = this.tags;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MetricEvent(name=");
-      var1.append(var3);
-      var1.append(", tags=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MetricEvent(name=");
+      var3.append(var1);
+      var3.append(", tags=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

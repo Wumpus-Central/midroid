@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class C implements Function1 {
-   public final MessageContentAccessory j;
+   public final MessageContentAccessory d;
 
    public final Object invoke(Object var1) {
-      return MessageContentViewHolder.b(this.j, (LinkContentNode)var1);
+      return MessageContentViewHolder.b(this.d, (LinkContentNode)var1);
    }
 }

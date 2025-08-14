@@ -6,10 +6,10 @@ import com.discord.notifications.actions.intents.ContentAction;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final IncomingCallActivity j;
-   public final ContentAction k;
+   public final IncomingCallActivity d;
+   public final ContentAction e;
 
    public final void onClick(View var1) {
-      <unrepresentable>.e(this.j, this.k, var1);
+      <unrepresentable>.a(this.d, this.e, var1);
    }
 }

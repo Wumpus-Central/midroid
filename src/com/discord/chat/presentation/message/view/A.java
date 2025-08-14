@@ -7,11 +7,11 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class A implements OnClickListener {
-   public final Function2 j;
-   public final MediaSource k;
-   public final int l;
+   public final Function2 d;
+   public final MediaSource e;
+   public final int i;
 
    public final void onClick(View var1) {
-      EmbedView.e(this.j, this.k, this.l, var1);
+      EmbedView.e(this.d, this.e, this.i, var1);
    }
 }

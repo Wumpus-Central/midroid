@@ -1,19 +1,16 @@
 package com.discord.bundle_updater
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 
-@tb.g
+@nb.g
 public data class BuildOverrideCookieBuild(type: String, id: String) {
    public final val type: String
    public final val id: String
 
    init {
-      r.h(var1, "type");
-      r.h(var2, "id");
       super();
       this.type = var1;
       this.id = var2;
@@ -28,8 +25,6 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public fun copy(type: String = var0.type, id: String = var0.id): BuildOverrideCookieBuild {
-      r.h(var1, "type");
-      r.h(var2, "id");
       return new BuildOverrideCookieBuild(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.type, var1.type)) {
+         if (!(this.type == var1.type)) {
             return false;
          } else {
-            return r.c(this.id, var1.id);
+            return this.id == var1.id;
          }
       }
    }
@@ -58,14 +53,14 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
 
    public override fun toString(): String {
       val var2: java.lang.String = this.type;
-      val var1: java.lang.String = this.id;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BuildOverrideCookieBuild(type=");
-      var3.append(var2);
-      var3.append(", id=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.id;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BuildOverrideCookieBuild(type=");
+      var1.append(var2);
+      var1.append(", id=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

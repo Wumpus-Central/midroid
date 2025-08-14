@@ -7,12 +7,10 @@ import com.discord.chat.reactevents.ViewResizeMode
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 
-public class PollViewHolder(pollView: PollPresenter) : MessagePartViewHolder, PollPresenter {
+public class PollViewHolder(pollView: PollPresenter) : MessagePartViewHolder(var1 as View), PollPresenter {
    private final val pollView: PollPresenter
 
    init {
-      kotlin.jvm.internal.r.h(var1, "pollView");
-      super(var1 as View, null);
       this.pollView = var1;
    }
 
@@ -22,10 +20,6 @@ public class PollViewHolder(pollView: PollPresenter) : MessagePartViewHolder, Po
       onTapPollAction: (ChannelId, MessageId, String) -> Unit,
       onLongPressImage: (ChannelId, MessageId, String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      kotlin.jvm.internal.r.h(var2, "onTapAnswer");
-      kotlin.jvm.internal.r.h(var3, "onTapPollAction");
-      kotlin.jvm.internal.r.h(var4, "onLongPressImage");
       this.pollView.bind(var1, var2, var3, var4);
    }
 }

@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final NestedScrollOnTouchListener j;
+   public final NestedScrollOnTouchListener d;
 
    public final Object invoke(Object var1) {
-      return NestedScrollOnTouchListener.b(this.j, (View)var1);
+      return NestedScrollOnTouchListener.b(this.d, (View)var1);
    }
 }

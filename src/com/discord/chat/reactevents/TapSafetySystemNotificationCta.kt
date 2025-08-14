@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
    public final val ctaKey: String
 
    init {
-      r.h(var1, "ctaType");
-      r.h(var2, "ctaKey");
       super();
       this.ctaType = var1;
       this.ctaKey = var2;
@@ -28,8 +25,6 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
    }
 
    public fun copy(ctaType: String = var0.ctaType, ctaKey: String = var0.ctaKey): TapSafetySystemNotificationCta {
-      r.h(var1, "ctaType");
-      r.h(var2, "ctaKey");
       return new TapSafetySystemNotificationCta(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.ctaType, var1.ctaType)) {
+         if (!(this.ctaType == var1.ctaType)) {
             return false;
          } else {
-            return r.c(this.ctaKey, var1.ctaKey);
+            return this.ctaKey == var1.ctaKey;
          }
       }
    }

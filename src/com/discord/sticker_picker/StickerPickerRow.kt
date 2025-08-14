@@ -1,8 +1,7 @@
 package com.discord.sticker_picker
 
-import I9.a
+import H9.a
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
 
 internal data class StickerPickerRow(rowContentWidth: Double,
    rowContentPaddingVertical: Int,
@@ -15,8 +14,6 @@ internal data class StickerPickerRow(rowContentWidth: Double,
    public final val items: List<com.discord.sticker_picker.StickerPickerRow.Sticker?>
 
    init {
-      r.h(var5, "items");
-      super();
       this.rowContentWidth = var1;
       this.rowContentPaddingVertical = var3;
       this.itemSize = var4;
@@ -45,7 +42,6 @@ internal data class StickerPickerRow(rowContentWidth: Double,
       itemSize: Int = var0.itemSize,
       items: List<com.discord.sticker_picker.StickerPickerRow.Sticker?> = var0.items
    ): StickerPickerRow {
-      r.h(var5, "items");
       return new StickerPickerRow(var1, var3, var4, var5);
    }
 
@@ -63,7 +59,7 @@ internal data class StickerPickerRow(rowContentWidth: Double,
          } else if (this.itemSize != var1.itemSize) {
             return false;
          } else {
-            return r.c(this.items, var1.items);
+            return this.items == var1.items;
          }
       }
    }
@@ -76,20 +72,20 @@ internal data class StickerPickerRow(rowContentWidth: Double,
 
    public override fun toString(): String {
       val var1: Double = this.rowContentWidth;
-      val var3: Int = this.rowContentPaddingVertical;
-      val var4: Int = this.itemSize;
-      val var5: java.util.List = this.items;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("StickerPickerRow(rowContentWidth=");
-      var6.append(var1);
-      var6.append(", rowContentPaddingVertical=");
-      var6.append(var3);
-      var6.append(", itemSize=");
-      var6.append(var4);
-      var6.append(", items=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: Int = this.rowContentPaddingVertical;
+      val var3: Int = this.itemSize;
+      val var6: java.util.List = this.items;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("StickerPickerRow(rowContentWidth=");
+      var5.append(var1);
+      var5.append(", rowContentPaddingVertical=");
+      var5.append(var4);
+      var5.append(", itemSize=");
+      var5.append(var3);
+      var5.append(", items=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Sticker(id: String,
@@ -109,11 +105,6 @@ internal data class StickerPickerRow(rowContentWidth: Double,
       public final val opaque: Boolean
 
       init {
-         r.h(var1, "id");
-         r.h(var2, "name");
-         r.h(var3, "type");
-         r.h(var5, "url");
-         super();
          this.id = var1;
          this.name = var2;
          this.type = var3;
@@ -160,10 +151,6 @@ internal data class StickerPickerRow(rowContentWidth: Double,
          disabled: Boolean = var0.disabled,
          opaque: Boolean = var0.opaque
       ): com.discord.sticker_picker.StickerPickerRow.Sticker {
-         r.h(var1, "id");
-         r.h(var2, "name");
-         r.h(var3, "type");
-         r.h(var5, "url");
          return new StickerPickerRow.Sticker(var1, var2, var3, var4, var5, var6, var7);
       }
 
@@ -174,15 +161,15 @@ internal data class StickerPickerRow(rowContentWidth: Double,
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.id, var1.id)) {
+            if (!(this.id == var1.id)) {
                return false;
-            } else if (!r.c(this.name, var1.name)) {
+            } else if (!(this.name == var1.name)) {
                return false;
             } else if (this.type != var1.type) {
                return false;
             } else if (this.animated != var1.animated) {
                return false;
-            } else if (!r.c(this.url, var1.url)) {
+            } else if (!(this.url == var1.url)) {
                return false;
             } else if (this.disabled != var1.disabled) {
                return false;
@@ -207,30 +194,30 @@ internal data class StickerPickerRow(rowContentWidth: Double,
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.id;
-         val var7: java.lang.String = this.name;
-         val var6: StickerPickerRow.Sticker.Type = this.type;
-         val var2: Boolean = this.animated;
-         val var8: java.lang.String = this.url;
-         val var3: Boolean = this.disabled;
-         val var1: Boolean = this.opaque;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Sticker(id=");
-         var4.append(var5);
-         var4.append(", name=");
-         var4.append(var7);
-         var4.append(", type=");
-         var4.append(var6);
-         var4.append(", animated=");
-         var4.append(var2);
-         var4.append(", url=");
-         var4.append(var8);
-         var4.append(", disabled=");
-         var4.append(var3);
-         var4.append(", opaque=");
-         var4.append(var1);
-         var4.append(")");
-         return var4.toString();
+         val var8: java.lang.String = this.id;
+         val var5: java.lang.String = this.name;
+         val var4: StickerPickerRow.Sticker.Type = this.type;
+         val var1: Boolean = this.animated;
+         val var7: java.lang.String = this.url;
+         val var2: Boolean = this.disabled;
+         val var3: Boolean = this.opaque;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Sticker(id=");
+         var6.append(var8);
+         var6.append(", name=");
+         var6.append(var5);
+         var6.append(", type=");
+         var6.append(var4);
+         var6.append(", animated=");
+         var6.append(var1);
+         var6.append(", url=");
+         var6.append(var7);
+         var6.append(", disabled=");
+         var6.append(var2);
+         var6.append(", opaque=");
+         var6.append(var3);
+         var6.append(")");
+         return var6.toString();
       }
 
       public enum class Type {

@@ -2,9 +2,8 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
@@ -13,7 +12,6 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    public final val isSpeaking: Int
 
    init {
-      r.h(var2, "userId");
       super();
       this.connectionId = var1;
       this.userId = var2;
@@ -33,7 +31,6 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public fun copy(connectionId: Int = var0.connectionId, userId: String = var0.userId, isSpeaking: Int = var0.isSpeaking): UserSpeakingEvent {
-      r.h(var2, "userId");
       return new UserSpeakingEvent(var1, var2, var3);
    }
 
@@ -46,7 +43,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.userId, var1.userId)) {
+         } else if (!(this.userId == var1.userId)) {
             return false;
          } else {
             return this.isSpeaking == var1.isSpeaking;
@@ -64,17 +61,17 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
 
    public override fun toString(): String {
       val var2: Int = this.connectionId;
-      val var4: java.lang.String = this.userId;
+      val var3: java.lang.String = this.userId;
       val var1: Int = this.isSpeaking;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSpeakingEvent(connectionId=");
-      var3.append(var2);
-      var3.append(", userId=");
-      var3.append(var4);
-      var3.append(", isSpeaking=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSpeakingEvent(connectionId=");
+      var4.append(var2);
+      var4.append(", userId=");
+      var4.append(var3);
+      var4.append(", isSpeaking=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

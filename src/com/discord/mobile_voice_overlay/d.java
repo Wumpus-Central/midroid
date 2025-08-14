@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class d implements Function1 {
-   public final OverlayVoiceBubble j;
-   public final Rect k;
+   public final OverlayVoiceBubble d;
+   public final Rect e;
 
    public final Object invoke(Object var1) {
-      return MobileVoiceOverlay.p(this.j, this.k, (OverlayMenuBubbleDialog)var1);
+      return MobileVoiceOverlay.p(this.d, this.e, (OverlayMenuBubbleDialog)var1);
    }
 }

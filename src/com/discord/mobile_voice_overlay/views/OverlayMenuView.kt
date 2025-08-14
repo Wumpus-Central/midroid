@@ -16,28 +16,24 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayMenuView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayMenuView.kt\ncom/discord/mobile_voice_overlay/views/OverlayMenuView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,82:1\n257#2,2:83\n*S KotlinDebug\n*F\n+ 1 OverlayMenuView.kt\ncom/discord/mobile_voice_overlay/views/OverlayMenuView\n*L\n66#1:83,2\n*E\n"])
 public class OverlayMenuView : LinearLayout {
    public final val binding: ViewOverlayMenuBinding
    private final lateinit var assets: MobileVoiceOverlayAssets
 
-   public constructor(context: Context) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1);
+   public constructor(context: Context) : super(var1) {
       val var4: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       var var3: TextView = var4.overlayGuildName;
-      kotlin.jvm.internal.r.g(var4.overlayGuildName, "overlayGuildName");
       val var2: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
       var3 = var4.overlayInviteLink;
-      kotlin.jvm.internal.r.g(var4.overlayInviteLink, "overlayInviteLink");
       DiscordFontUtilsKt.setDiscordFont(var3, var2);
       var3 = var4.overlaySwitchChannels;
-      kotlin.jvm.internal.r.g(var4.overlaySwitchChannels, "overlaySwitchChannels");
       DiscordFontUtilsKt.setDiscordFont(var3, var2);
       var3 = var4.overlayOpenApp;
-      kotlin.jvm.internal.r.g(var4.overlayOpenApp, "overlayOpenApp");
       DiscordFontUtilsKt.setDiscordFont(var3, var2);
       var4.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       var4.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
@@ -50,52 +46,40 @@ public class OverlayMenuView : LinearLayout {
       var4.overlayChannelName.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2);
-      val var4: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
-      this.binding = var4;
-      var var3: TextView = var4.overlayGuildName;
-      kotlin.jvm.internal.r.g(var4.overlayGuildName, "overlayGuildName");
-      val var5: DiscordFont = DiscordFont.PrimarySemibold;
+   public constructor(context: Context, attrs: AttributeSet?) : super(var1, var2) {
+      val var5: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
+      this.binding = var5;
+      var var3: TextView = var5.overlayGuildName;
+      val var4: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      var3 = var4.overlayInviteLink;
-      kotlin.jvm.internal.r.g(var4.overlayInviteLink, "overlayInviteLink");
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var3 = var4.overlaySwitchChannels;
-      kotlin.jvm.internal.r.g(var4.overlaySwitchChannels, "overlaySwitchChannels");
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var3 = var4.overlayOpenApp;
-      kotlin.jvm.internal.r.g(var4.overlayOpenApp, "overlayOpenApp");
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var4.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      var4.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
-      var4.menuTopStatusContainer.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundTertiary()));
-      var4.menuBottom.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
-      var4.overlayInviteLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlaySwitchChannels.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlayOpenApp.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlayGuildName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      var4.overlayChannelName.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var3 = var5.overlayInviteLink;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var3 = var5.overlaySwitchChannels;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var3 = var5.overlayOpenApp;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var5.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      var5.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
+      var5.menuTopStatusContainer.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundTertiary()));
+      var5.menuBottom.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
+      var5.overlayInviteLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlaySwitchChannels.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlayOpenApp.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlayGuildName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      var5.overlayChannelName.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2, var3);
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
       val var6: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       var var4: TextView = var6.overlayGuildName;
-      kotlin.jvm.internal.r.g(var6.overlayGuildName, "overlayGuildName");
       val var5: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4 = var6.overlayInviteLink;
-      kotlin.jvm.internal.r.g(var6.overlayInviteLink, "overlayInviteLink");
       DiscordFontUtilsKt.setDiscordFont(var4, var5);
       var4 = var6.overlaySwitchChannels;
-      kotlin.jvm.internal.r.g(var6.overlaySwitchChannels, "overlaySwitchChannels");
       DiscordFontUtilsKt.setDiscordFont(var4, var5);
       var4 = var6.overlayOpenApp;
-      kotlin.jvm.internal.r.g(var6.overlayOpenApp, "overlayOpenApp");
       DiscordFontUtilsKt.setDiscordFont(var4, var5);
       var6.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       var6.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
@@ -109,16 +93,13 @@ public class OverlayMenuView : LinearLayout {
    }
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
-      kotlin.jvm.internal.r.h(var1, "assets");
       this.assets = var1;
       var var2: SimpleDraweeView = this.binding.muteToggle;
       this.binding.muteToggle.setContentDescription(var1.getMute());
-      kotlin.jvm.internal.r.e(var2);
       ReactAssetUtilsKt.setReactAsset(var2, ReactAsset.Mic);
       ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getInteractiveNormal());
       var2 = this.binding.disconnectBtn;
       this.binding.disconnectBtn.setContentDescription(var1.getDisconnectFromVoice());
-      kotlin.jvm.internal.r.e(var2);
       ReactAssetUtilsKt.setReactAsset(var2, ReactAsset.Disconnect);
       ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getInteractiveNormal());
       this.binding.overlayInviteLink.setText(var1.getGetInvite());
@@ -127,9 +108,7 @@ public class OverlayMenuView : LinearLayout {
    }
 
    public fun setData(data: MobileVoiceOverlayData) {
-      kotlin.jvm.internal.r.h(var1, "data");
       val var3: TextView = this.binding.overlayInviteLink;
-      kotlin.jvm.internal.r.g(this.binding.overlayInviteLink, "overlayInviteLink");
       var var2: Byte;
       if (var1.getCanGenerateInvite()) {
          var2 = 0;
@@ -139,7 +118,6 @@ public class OverlayMenuView : LinearLayout {
 
       var3.setVisibility(var2);
       var var4: SimpleDraweeView = this.binding.muteToggle;
-      kotlin.jvm.internal.r.g(this.binding.muteToggle, "muteToggle");
       val var6: ReactAsset;
       if (var1.getMuted()) {
          var6 = ReactAsset.MicMutedDark;
@@ -149,14 +127,13 @@ public class OverlayMenuView : LinearLayout {
 
       ReactAssetUtilsKt.setReactAsset(var4, var6);
       var4 = this.binding.overlayNetworkIcon;
-      kotlin.jvm.internal.r.g(this.binding.overlayNetworkIcon, "overlayNetworkIcon");
       var2 = OverlayMenuView.WhenMappings.$EnumSwitchMapping$0[var1.getConnectionQuality().ordinal()];
       val var8: ReactAsset;
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new A9.n();
+                  throw new B9.n();
                }
 
                var8 = ReactAsset.CallStatusUnknown;

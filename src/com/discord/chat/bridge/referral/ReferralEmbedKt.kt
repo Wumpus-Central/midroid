@@ -1,9 +1,12 @@
+@file:SourceDebugExtension(["SMAP\nReferralEmbed.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReferralEmbed.kt\ncom/discord/chat/bridge/referral/ReferralEmbedKt\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,83:1\n12371#2,2:84\n*S KotlinDebug\n*F\n+ 1 ReferralEmbed.kt\ncom/discord/chat/bridge/referral/ReferralEmbedKt\n*L\n82#1:84,2\n*E\n"])
+
 package com.discord.chat.bridge.referral
 
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import xb.g
+import rb.g
 
 @JvmSynthetic
 fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boolean {
@@ -21,7 +24,7 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
          var2 = false;
          if (var6 != null) {
             var2 = false;
-            if (h.c0(var6) xor true) {
+            if (StringsKt.c0(var6) xor true) {
                var2 = true;
             }
          }

@@ -1,19 +1,16 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
 public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : TapWelcomeReplyData(var1, var3), ReactEvent {
    public final val stickerId: Long
    public final val messageId: MessageId
 
    fun TapWelcomeReplyData(var1: Long, var3: java.lang.String) {
-      r.h(var3, "messageId");
-      super();
       this.stickerId = var1;
       this.messageId = var3;
    }
@@ -27,7 +24,6 @@ public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : T
    }
 
    public fun copy(stickerId: Long = ..., messageId: MessageId = ...): TapWelcomeReplyData {
-      r.h(var3, "messageId");
       return new TapWelcomeReplyData(var1, var3, null);
    }
 

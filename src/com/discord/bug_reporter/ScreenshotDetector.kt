@@ -1,7 +1,6 @@
 package com.discord.bug_reporter
 
 import android.content.ContentResolver
-import kotlin.jvm.internal.r
 
 internal class ScreenshotDetector(contentResolver: ContentResolver) {
    private final val screenshotContentObserver: ScreenshotContentObserver
@@ -21,8 +20,6 @@ internal class ScreenshotDetector(contentResolver: ContentResolver) {
 
 
    init {
-      r.h(var1, "contentResolver");
-      super();
       this.screenshotContentObserver = new ScreenshotContentObserver(var1, new a(this));
    }
 

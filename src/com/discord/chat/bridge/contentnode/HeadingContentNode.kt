@@ -1,17 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode {
+public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode() {
    public final val level: Int
    public final val content: List<ContentNode>
 
    init {
-      r.h(var2, "content");
-      super(null);
       this.level = var1;
       this.content = var2;
    }
@@ -25,7 +22,6 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
    }
 
    public fun copy(level: Int = var0.level, content: List<ContentNode> = var0.content): HeadingContentNode {
-      r.h(var2, "content");
       return new HeadingContentNode(var1, var2);
    }
 
@@ -39,7 +35,7 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
          if (this.level != var1.level) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -50,14 +46,14 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("HeadingContentNode(level=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HeadingContentNode(level=");
+      var2.append(var1);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

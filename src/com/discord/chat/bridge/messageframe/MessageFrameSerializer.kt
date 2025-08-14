@@ -1,18 +1,18 @@
 package com.discord.chat.bridge.messageframe
 
 import java.util.ArrayList
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xb.d
-import xb.g
+import rb.d
+import rb.g
 
-public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
+@SourceDebugExtension(["SMAP\nMessageFrameSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,41:1\n11165#2:42\n11500#2,3:43\n*S KotlinDebug\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n*L\n13#1:42\n13#1:43,3\n*E\n"])
+public object MessageFrameSerializer : d(MessageFrame::class) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
@@ -29,8 +29,8 @@ public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
       knownTypes = var3;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
-         H.b(MessageFrame.class),
-         new KClass[]{H.b(UnknownMessageFrame.class), H.b(MessageFrameJump.class), H.b(MessageFrameMediaViewer.class)},
+         MessageFrame::class,
+         new KClass[]{UnknownMessageFrame::class, MessageFrameJump::class, MessageFrameMediaViewer::class},
          new KSerializer[]{UnknownMessageFrame.Companion.serializer(), MessageFrameJump.Companion.serializer(), MessageFrameMediaViewer.Companion.serializer()}
       );
    }
@@ -38,7 +38,6 @@ public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<MessageFrame> {
       var var2: java.util.List;
       label17: {
-         r.h(var1, "element");
          var2 = knownTypes;
          var1 = g.o(var1).get("type") as JsonElement;
          if (var1 != null) {
@@ -53,7 +52,7 @@ public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
       }
 
       val var6: Any;
-      if (i.X(var2, var5)) {
+      if (CollectionsKt.X(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

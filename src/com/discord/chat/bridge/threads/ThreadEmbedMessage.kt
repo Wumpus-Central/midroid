@@ -1,16 +1,14 @@
 package com.discord.chat.bridge.threads
 
 import com.discord.chat.bridge.Message
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ThreadEmbedMessage(message: Message) {
    public final val message: Message
 
    init {
-      r.h(var1, "message");
       super();
       this.message = var1;
    }
@@ -20,7 +18,6 @@ public data class ThreadEmbedMessage(message: Message) {
    }
 
    public fun copy(message: Message = var0.message): ThreadEmbedMessage {
-      r.h(var1, "message");
       return new ThreadEmbedMessage(var1);
    }
 
@@ -30,7 +27,7 @@ public data class ThreadEmbedMessage(message: Message) {
       } else if (var1 !is ThreadEmbedMessage) {
          return false;
       } else {
-         return r.c(this.message, (var1 as ThreadEmbedMessage).message);
+         return this.message == (var1 as ThreadEmbedMessage).message;
       }
    }
 

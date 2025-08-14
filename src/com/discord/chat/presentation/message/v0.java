@@ -8,11 +8,11 @@ import com.discord.emoji.RenderableEmoji;
 
 // $VF: synthetic class
 public final class v0 implements OnClickListener {
-   public final ChatEventHandler j;
-   public final RoleIcon k;
-   public final RenderableEmoji l;
+   public final ChatEventHandler d;
+   public final RoleIcon e;
+   public final RenderableEmoji i;
 
    public final void onClick(View var1) {
-      RoleIconView.a(this.j, this.k, this.l, var1);
+      RoleIconView.a(this.d, this.e, this.i, var1);
    }
 }

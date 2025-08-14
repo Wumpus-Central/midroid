@@ -15,32 +15,23 @@ import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.modules.permissions.PermissionsModule
 import java.util.Locale
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "NativePermissionManager")
-public class NativePermissionManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class NativePermissionManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val permissionsModule: PermissionsModule
       private final get() {
          val var1: NativeModule = this.getReactApplicationContext().getNativeModule(PermissionsModule.class);
-         r.e(var1);
          return var1 as PermissionsModule;
       }
 
 
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
    private fun requestForegroundServicePermissionPreU(promise: Promise) {
       val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-      r.g(var2, "toLowerCase(...)");
       var1.resolve(var2);
    }
 
    @JvmStatic
    fun `requestForegroundServicePermissionVoiceCall$lambda$3`(var0: NativePermissionManagerModule, var1: Promise, var2: Promise): Unit {
-      r.h(var2, "it");
       var0.requestMicrophoneAuthorization(NativePermissionPromise.INSTANCE.generate(new a(var0, var1), new b(var1)));
       return Unit.a;
    }
@@ -53,7 +44,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @JvmStatic
    fun `requestForegroundServicePermissionVoiceCall$lambda$3$lambda$1$lambda$0`(var0: NativePermissionManagerModule, var1: Promise, var2: Promise): Unit {
-      r.h(var2, "it");
       var0.getPermissionsModule()
          .requestPermission(
             "android.permission.FOREGROUND_SERVICE_MICROPHONE", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
@@ -65,7 +55,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    fun `requestForegroundServicePermissionVoiceCall$lambda$3$lambda$2`(var0: Promise): Unit {
       CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "requestForegroundServicePermissionVoiceCall: Permission Rejected", null, null, 6, null);
       val var1: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
-      r.g(var1, "toLowerCase(...)");
       var0.resolve(var1);
       return Unit.a;
    }
@@ -73,7 +62,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {
       if (!AppLifecycle.INSTANCE.isForegrounded()) {
          val var3: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
-         r.g(var3, "toLowerCase(...)");
          var1.resolve(var3);
       } else {
          var2.invoke(var1);
@@ -86,7 +74,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun getNotificationAuthorizationStatus(promise: Promise) {
-      r.h(var1, "promise");
       if (NotificationManagerCompat.g(this.getReactApplicationContext()).a()) {
          var1.resolve(2);
       } else {
@@ -96,28 +83,24 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun hasBluetoothAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission("android.permission.BLUETOOTH", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1));
    }
 
    @ReactMethod
    public fun hasCameraAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission("android.permission.CAMERA", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1));
    }
 
    @ReactMethod
    public fun hasContactAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission("android.permission.READ_CONTACTS", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1));
    }
 
    @ReactMethod
    public fun hasExternalStorageAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission(
             "android.permission.WRITE_EXTERNAL_STORAGE", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1)
@@ -126,14 +109,12 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun hasMicrophoneAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission("android.permission.RECORD_AUDIO", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1));
    }
 
    @ReactMethod
    public fun hasModifyAudioAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .checkPermission(
             "android.permission.MODIFY_AUDIO_SETTINGS", NativePermissionManagerModule.Companion.access$transformHasAuthorizationResult(Companion, var1)
@@ -142,7 +123,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun hasPhotoAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       if (VERSION.SDK_INT >= 33) {
          this.getPermissionsModule()
             .checkPermission(
@@ -158,34 +138,29 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun requestBluetoothAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.BLUETOOTH", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    @ReactMethod
    public fun requestCameraAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.CAMERA", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    @ReactMethod
    public fun requestContactsAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.READ_CONTACTS", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    @ReactMethod
    public fun requestExternalStorageAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.WRITE_EXTERNAL_STORAGE", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    public fun requestForegroundServicePermissionFileUpload(promise: Promise) {
-      r.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
          this.getPermissionsModule()
             .requestPermission(
@@ -197,7 +172,6 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    }
 
    public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
-      r.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
          this.requireAppInForeground(var1, new c(this, var1));
       } else {
@@ -207,39 +181,34 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
 
    @ReactMethod
    public fun requestMicrophoneAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.RECORD_AUDIO", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    @ReactMethod
    public fun requestModifyAudioAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       this.getPermissionsModule()
          .requestPermission("android.permission.MODIFY_AUDIO_SETTINGS", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
    }
 
    @ReactMethod
    public fun requestNotificationAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       if (VERSION.SDK_INT >= 33) {
          this.getPermissionsModule()
             .requestPermission("android.permission.POST_NOTIFICATIONS", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1));
       } else {
          val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-         r.g(var2, "toLowerCase(...)");
          var1.resolve(var2);
       }
    }
 
    @ReactMethod
    public fun requestPhotoAuthorization(promise: Promise) {
-      r.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray$default(
-                  i.n(
+                  CollectionsKt.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES",
                         "android.permission.READ_MEDIA_VIDEO",
@@ -257,7 +226,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
          this.getPermissionsModule()
             .requestMultiplePermissions(
                NativeArrayExtensionsKt.toNativeArray$default(
-                  i.n(
+                  CollectionsKt.n(
                      new java.lang.String[]{
                         "android.permission.READ_MEDIA_IMAGES", "android.permission.READ_MEDIA_VIDEO", "android.permission.READ_MEDIA_AUDIO"
                      }
@@ -280,7 +249,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       private fun Promise.transformHasAuthorizationResult(): PromiseWrapper {
          return new PromiseWrapper(
             var1,
-            new Function1(NativePermissionStatus.Companion) {
+            new Function1<Object, java.lang.String>(NativePermissionStatus.Companion) {
                {
                   super(
                      1,
@@ -305,7 +274,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       private fun Promise.transformRequestResult(): PromiseWrapper {
          return new PromiseWrapper(
             var1,
-            new Function1(NativePermissionStatus.Companion) {
+            new Function1<Object, java.lang.String>(NativePermissionStatus.Companion) {
                {
                   super(
                      1,

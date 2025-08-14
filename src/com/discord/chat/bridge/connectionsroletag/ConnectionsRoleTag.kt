@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.connectionsroletag
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: Int, iconColor: Int) {
@@ -12,8 +11,6 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    public final val iconColor: Int
 
    init {
-      r.h(var1, "id");
-      r.h(var2, "name");
       super();
       this.id = var1;
       this.name = var2;
@@ -38,8 +35,6 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public fun copy(id: String = var0.id, name: String = var0.name, backgroundColor: Int = var0.backgroundColor, iconColor: Int = var0.iconColor): ConnectionsRoleTag {
-      r.h(var1, "id");
-      r.h(var2, "name");
       return new ConnectionsRoleTag(var1, var2, var3, var4);
    }
 
@@ -50,9 +45,9 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!(this.name == var1.name)) {
             return false;
          } else if (this.backgroundColor != var1.backgroundColor) {
             return false;
@@ -67,21 +62,21 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var5: java.lang.String = this.name;
       val var2: Int = this.backgroundColor;
       val var1: Int = this.iconColor;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ConnectionsRoleTag(id=");
-      var4.append(var3);
-      var4.append(", name=");
-      var4.append(var5);
-      var4.append(", backgroundColor=");
-      var4.append(var2);
-      var4.append(", iconColor=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ConnectionsRoleTag(id=");
+      var3.append(var4);
+      var3.append(", name=");
+      var3.append(var5);
+      var3.append(", backgroundColor=");
+      var3.append(var2);
+      var3.append(", iconColor=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -1,23 +1,21 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ChannelSelectComponent(type: Int,
-      id: String,
-      state: ActionComponentState,
-      customId: String,
-      placeholder: String? = null,
-      accessibilityLabel: String? = null,
-      minValues: Int,
-      maxValues: Int,
-      disabled: Boolean = false,
-      selectedOptions: List<SearchableSelectItem>,
-      channelTypes: List<Int>? = null
-   )
-   : SearchableSelectComponent {
+   id: String,
+   state: ActionComponentState,
+   customId: String,
+   placeholder: String? = null,
+   accessibilityLabel: String? = null,
+   minValues: Int,
+   maxValues: Int,
+   disabled: Boolean = false,
+   selectedOptions: List<SearchableSelectItem>,
+   channelTypes: List<Int>? = null
+) : SearchableSelectComponent() {
    public open val type: Int
    public open val id: String
    public open val state: ActionComponentState
@@ -31,11 +29,6 @@ public data class ChannelSelectComponent(type: Int,
    public final val channelTypes: List<Int>?
 
    init {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.state = var3;
@@ -106,10 +99,6 @@ public data class ChannelSelectComponent(type: Int,
       selectedOptions: List<SearchableSelectItem> = var0.selectedOptions,
       channelTypes: List<Int>? = var0.channelTypes
    ): ChannelSelectComponent {
-      r.h(var2, "id");
-      r.h(var3, "state");
-      r.h(var4, "customId");
-      r.h(var10, "selectedOptions");
       return new ChannelSelectComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
    }
 
@@ -122,15 +111,15 @@ public data class ChannelSelectComponent(type: Int,
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else if (this.state != var1.state) {
             return false;
-         } else if (!r.c(this.customId, var1.customId)) {
+         } else if (!(this.customId == var1.customId)) {
             return false;
-         } else if (!r.c(this.placeholder, var1.placeholder)) {
+         } else if (!(this.placeholder == var1.placeholder)) {
             return false;
-         } else if (!r.c(this.accessibilityLabel, var1.accessibilityLabel)) {
+         } else if (!(this.accessibilityLabel == var1.accessibilityLabel)) {
             return false;
          } else if (this.minValues != var1.minValues) {
             return false;
@@ -138,19 +127,19 @@ public data class ChannelSelectComponent(type: Int,
             return false;
          } else if (this.disabled != var1.disabled) {
             return false;
-         } else if (!r.c(this.selectedOptions, var1.selectedOptions)) {
+         } else if (!(this.selectedOptions == var1.selectedOptions)) {
             return false;
          } else {
-            return r.c(this.channelTypes, var1.channelTypes);
+            return this.channelTypes == var1.channelTypes;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = Integer.hashCode(this.type);
-      val var5: Int = this.id.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var7: Int = this.id.hashCode();
       val var6: Int = this.state.hashCode();
-      val var7: Int = this.customId.hashCode();
+      val var4: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -166,54 +155,54 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var11: Int = Integer.hashCode(this.minValues);
-      val var9: Int = Integer.hashCode(this.maxValues);
-      val var10: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var8: Int = this.selectedOptions.hashCode();
+      val var9: Int = Integer.hashCode(this.minValues);
+      val var10: Int = Integer.hashCode(this.maxValues);
+      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var11: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var4 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var11) * 31 + var9) * 31 + var10) * 31 + var8) * 31 + var3;
+      return (((((((((var5 * 31 + var7) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var8) * 31 + var11) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var12: java.lang.String = this.id;
-      val var7: ActionComponentState = this.state;
-      val var10: java.lang.String = this.customId;
-      val var8: java.lang.String = this.placeholder;
-      val var9: java.lang.String = this.accessibilityLabel;
-      val var2: Int = this.minValues;
-      val var3: Int = this.maxValues;
+      val var10: java.lang.String = this.id;
+      val var8: ActionComponentState = this.state;
+      val var11: java.lang.String = this.customId;
+      val var9: java.lang.String = this.placeholder;
+      val var6: java.lang.String = this.accessibilityLabel;
+      val var3: Int = this.minValues;
+      val var2: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var11: java.util.List = this.selectedOptions;
-      val var6: java.util.List = this.channelTypes;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ChannelSelectComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var12);
-      var5.append(", state=");
-      var5.append(var7);
-      var5.append(", customId=");
-      var5.append(var10);
-      var5.append(", placeholder=");
-      var5.append(var8);
-      var5.append(", accessibilityLabel=");
-      var5.append(var9);
-      var5.append(", minValues=");
-      var5.append(var2);
-      var5.append(", maxValues=");
-      var5.append(var3);
-      var5.append(", disabled=");
-      var5.append(var4);
-      var5.append(", selectedOptions=");
-      var5.append(var11);
-      var5.append(", channelTypes=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.util.List = this.selectedOptions;
+      val var12: java.util.List = this.channelTypes;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ChannelSelectComponent(type=");
+      var7.append(var1);
+      var7.append(", id=");
+      var7.append(var10);
+      var7.append(", state=");
+      var7.append(var8);
+      var7.append(", customId=");
+      var7.append(var11);
+      var7.append(", placeholder=");
+      var7.append(var9);
+      var7.append(", accessibilityLabel=");
+      var7.append(var6);
+      var7.append(", minValues=");
+      var7.append(var3);
+      var7.append(", maxValues=");
+      var7.append(var2);
+      var7.append(", disabled=");
+      var7.append(var4);
+      var7.append(", selectedOptions=");
+      var7.append(var5);
+      var7.append(", channelTypes=");
+      var7.append(var12);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

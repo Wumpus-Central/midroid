@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class a implements Function0 {
-   public final BlurView j;
+   public final BlurView d;
 
    public final Object invoke() {
-      return BlurView.e(this.j);
+      return BlurView.e(this.d);
    }
 }

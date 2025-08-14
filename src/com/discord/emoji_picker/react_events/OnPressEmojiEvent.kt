@@ -2,9 +2,8 @@ package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null
    public final val emojiId: String?
 
    init {
-      r.h(var1, "emojiName");
       super();
       this.emojiName = var1;
       this.emojiId = var2;
@@ -27,7 +25,6 @@ internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null
    }
 
    public fun copy(emojiName: String = var0.emojiName, emojiId: String? = var0.emojiId): OnPressEmojiEvent {
-      r.h(var1, "emojiName");
       return new OnPressEmojiEvent(var1, var2);
    }
 
@@ -38,10 +35,10 @@ internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.emojiName, var1.emojiName)) {
+         if (!(this.emojiName == var1.emojiName)) {
             return false;
          } else {
-            return r.c(this.emojiId, var1.emojiId);
+            return this.emojiId == var1.emojiId;
          }
       }
    }

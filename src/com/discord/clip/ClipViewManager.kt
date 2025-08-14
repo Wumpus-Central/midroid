@@ -1,6 +1,5 @@
 package com.discord.clip
 
-import B9.n
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.ReadableArray
@@ -11,14 +10,14 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 @ReactModule(name = "ClipView")
+@SourceDebugExtension(["SMAP\nClipViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ClipViewManager.kt\ncom/discord/clip/ClipViewManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,101:1\n1863#2,2:102\n*S KotlinDebug\n*F\n+ 1 ClipViewManager.kt\ncom/discord/clip/ClipViewManager\n*L\n29#1:102,2\n*E\n"])
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
    private final val delegate: ClipViewManagerDelegate<ClipView, ClipViewManager> = new ClipViewManagerDelegate(this)
 
    protected open fun createViewInstance(context: ThemedReactContext): ClipView {
-      r.h(var1, "context");
       return new ClipView(var1);
    }
 
@@ -32,48 +31,43 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
 
    @ReactProp(name = "backgroundColor")
    public open fun setBackgroundColor(view: ClipView, backgroundColor: Int) {
-      r.h(var1, "view");
       var1.setBackgroundColor(var2);
    }
 
    @ReactProp(name = "borderRadius")
    public open fun setBorderRadius(view: ClipView, borderRadius: Int) {
-      r.h(var1, "view");
       var1.clipToBorderRadius((float)SizeUtilsKt.getDpToPx(var2));
    }
 
    @ReactProp(name = "clipToCircle")
    public open fun setClipToCircle(view: ClipView, clipToCircle: Boolean) {
-      r.h(var1, "view");
       var1.clipToCircle(var2);
    }
 
    @ReactProp(name = "cutouts")
    public open fun setCutouts(view: ClipView, cutouts: ReadableArray?) {
-      r.h(var1, "view");
       var1.resetCutouts();
       if (var2 != null) {
          val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          if (var3 != null) {
-            val var6: java.util.Iterator = var3.iterator();
+            val var4: java.util.Iterator = var3.iterator();
 
-            while (var6.hasNext()) {
-               val var5: ReadableMap = var2.getMap((var6 as n).a());
-               r.e(var5);
-               val var4: java.lang.String = var5.getString("shape");
-               if (r.c(var4, "circle")) {
+            while (var4.hasNext()) {
+               val var6: ReadableMap = var2.getMap((var4 as I).nextInt());
+               val var5: java.lang.String = var6.getString("shape");
+               if (var5 == "circle") {
                   var1.addCircleCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("size"))
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("size"))
                   );
-               } else if (r.c(var4, "rounded-rect")) {
+               } else if (var5 == "rounded-rect") {
                   var1.addRoundedRectCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("width")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("height")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("cornerRadius"))
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("width")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("height")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("cornerRadius"))
                   );
                }
             }

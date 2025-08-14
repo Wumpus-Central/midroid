@@ -5,11 +5,11 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class p implements Function1 {
-   public final AudioPlayerView j;
-   public final int k;
-   public final int l;
+   public final AudioPlayerView d;
+   public final int e;
+   public final int i;
 
    public final Object invoke(Object var1) {
-      return AudioPlayerView.j(this.j, this.k, this.l, (RenderContext)var1);
+      return AudioPlayerView.j(this.d, this.e, this.i, (RenderContext)var1);
    }
 }

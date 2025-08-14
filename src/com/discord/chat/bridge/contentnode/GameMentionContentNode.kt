@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class GameMentionContentNode(channelId: ChannelId, icon: String? = ..., applicationId: String, content: List<ContentNode>) : GameMentionContentNode(
@@ -15,8 +14,6 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
    public open val content: List<ContentNode>
 
    fun GameMentionContentNode(var1: Long, var3: java.lang.String, var4: java.lang.String, var5: MutableList<ContentNode>) {
-      r.h(var4, "applicationId");
-      r.h(var5, "content");
       super(null);
       this.channelId = var1;
       this.icon = var3;
@@ -41,8 +38,6 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
    }
 
    public fun copy(channelId: ChannelId = ..., icon: String? = ..., applicationId: String = ..., content: List<ContentNode> = ...): GameMentionContentNode {
-      r.h(var4, "applicationId");
-      r.h(var5, "content");
       return new GameMentionContentNode(var1, var3, var4, var5, null);
    }
 
@@ -55,12 +50,12 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
          var1 = var1;
          if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!r.c(this.icon, var1.icon)) {
+         } else if (!(this.icon == var1.icon)) {
             return false;
-         } else if (!r.c(this.applicationId, var1.applicationId)) {
+         } else if (!(this.applicationId == var1.applicationId)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -78,21 +73,21 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = this.icon;
-      val var3: java.lang.String = this.applicationId;
-      val var5: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GameMentionContentNode(channelId=");
-      var2.append(var4);
-      var2.append(", icon=");
-      var2.append(var1);
-      var2.append(", applicationId=");
-      var2.append(var3);
-      var2.append(", content=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = this.icon;
+      val var1: java.lang.String = this.applicationId;
+      val var2: java.util.List = this.content;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("GameMentionContentNode(channelId=");
+      var5.append(var3);
+      var5.append(", icon=");
+      var5.append(var4);
+      var5.append(", applicationId=");
+      var5.append(var1);
+      var5.append(", content=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

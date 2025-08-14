@@ -6,7 +6,6 @@ import android.content.Intent
 import android.os.Parcel
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
 
 public data class ContentAction(tag: String, data: Map<String, String?>) : NotificationAction {
    public open val tag: String
@@ -14,14 +13,11 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
 
    public final val isLocal: Boolean
       public final get() {
-         return r.c(this.data.get("category"), "local");
+         return this.data.get("category") == "local";
       }
 
 
    init {
-      r.h(var1, "tag");
-      r.h(var2, "data");
-      super();
       this.tag = var1;
       this.data = var2;
    }
@@ -35,8 +31,6 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public fun copy(tag: String = var0.tag, data: Map<String, String?> = var0.data): ContentAction {
-      r.h(var1, "tag");
-      r.h(var2, "data");
       return new ContentAction(var1, var2);
    }
 
@@ -51,10 +45,10 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.tag, var1.tag)) {
+         if (!(this.tag == var1.tag)) {
             return false;
          } else {
-            return r.c(this.data, var1.data);
+            return this.data == var1.data;
          }
       }
    }
@@ -80,19 +74,18 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var1: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContentAction(tag=");
-      var2.append(var3);
-      var2.append(", data=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentAction(tag=");
+      var3.append(var1);
+      var3.append(", data=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      r.h(var1, "dest");
       var1.writeString(this.tag);
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
@@ -106,7 +99,6 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<ContentAction> {
       fun createFromParcel(var1: Parcel): ContentAction {
-         r.h(var1, "parcel");
          val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
          val var5: LinkedHashMap = new LinkedHashMap(var3);

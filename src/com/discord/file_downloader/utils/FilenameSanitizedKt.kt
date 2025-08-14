@@ -1,15 +1,13 @@
 package com.discord.file_downloader.utils
 
-import A9.s
-import B9.q
+import B9.s
 import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
-import kotlin.jvm.internal.r
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
-   q.l(
+   L.l(
       new Pair[]{
          s.a("avif", "image/avif"),
          s.a("gif", "image/gif"),
@@ -31,12 +29,10 @@ private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
 
 private fun decodeUrlSafely(filename: String): String {
    var0 = URLDecoder.decode(var0, "UTF-8");
-   r.g(var0, "decode(...)");
    return var0;
 }
 
 public fun CharSequence.filenameSanitized(): String {
-   r.h(var0, "<this>");
    val var1: java.lang.String = var0.toString();
 
    try {
@@ -59,19 +55,17 @@ private fun fixAtSeparatorExtensions(filename: String, useUrlEncoded: Boolean): 
    }
 
    val var5: FilenamePatterns = FilenamePatterns.INSTANCE;
-   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var3).h(var0, "$1.$2");
+   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var3).replace(var0, "$1.$2");
    var var2: java.lang.String = var4;
-   if (r.c(var4, var0)) {
-      var2 = var5.atSeparatorPattern(var3).h(var0, "$1.$2");
+   if (var4 == var0) {
+      var2 = var5.atSeparatorPattern(var3).replace(var0, "$1.$2");
    }
 
    return var2;
 }
 
 public fun String.getMimeTypeFromFilename(): String? {
-   r.h(var0, "<this>");
-   val var2: java.lang.String = h.N0(var0, '.', "").toLowerCase(Locale.ROOT);
-   r.g(var2, "toLowerCase(...)");
+   val var2: java.lang.String = StringsKt.M0(var0, '.', "").toLowerCase(Locale.ROOT);
    if (var2.length() == 0) {
       return null;
    } else {
@@ -107,9 +101,9 @@ private fun removeFileSizeModifiers(filename: String, useUrlEncoded: Boolean): S
       var2 = ":";
    }
 
-   return FilenamePatterns.INSTANCE.sizeModifierPattern(var2).h(var0, "$1");
+   return FilenamePatterns.INSTANCE.sizeModifierPattern(var2).replace(var0, "$1");
 }
 
 private fun sanitizeInvalidCharacters(filename: String): String {
-   return FilenamePatterns.INSTANCE.getINVALID_FILENAME_CHARS().h(var0, "_");
+   return FilenamePatterns.INSTANCE.getINVALID_FILENAME_CHARS().replace(var0, "_");
 }

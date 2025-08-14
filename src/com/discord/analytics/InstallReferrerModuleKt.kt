@@ -1,13 +1,17 @@
+@file:SourceDebugExtension(["SMAP\nInstallReferrerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 InstallReferrerModule.kt\ncom/discord/analytics/InstallReferrerModuleKt\n+ 2 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,98:1\n314#2,11:99\n*S KotlinDebug\n*F\n+ 1 InstallReferrerModule.kt\ncom/discord/analytics/InstallReferrerModuleKt\n*L\n74#1:99,11\n*E\n"])
+
 package com.discord.analytics
 
-import H9.b
+import G9.b
 import com.android.installreferrer.api.InstallReferrerClient
-import e1.a
+import com.android.installreferrer.api.InstallReferrerStateListener
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import kotlinx.coroutines.CancellableContinuation.a
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -17,7 +21,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.C();
-   val var4: a = new a(var2) {
+   val var4: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -27,7 +31,7 @@ private suspend fun InstallReferrerClient.await(): Int {
       @Override
       public void onInstallReferrerServiceDisconnected() {
          if (this.$continuation.c()) {
-            kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
+            a.a(this.$continuation, null, 1, null);
          }
       }
 
@@ -36,8 +40,8 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.h(
-      new Function1(var0) {
+   var2.e(
+      new Function1<java.lang.Throwable, Unit>(var0) {
          final InstallReferrerClient $this_await;
 
          {
@@ -50,11 +54,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var5: kotlin.Result.a = Result.k;
-               var2.a();
+               val var6: kotlin.Result.a = Result.e;
+               var2.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: kotlin.Result.a = Result.k;
+               val var5: kotlin.Result.a = Result.e;
                Result.b(c.a(var3));
                return;
             }
@@ -64,11 +68,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var3: kotlin.Result.a = Result.k;
-      var0.d(var4);
+      val var3: kotlin.Result.a = Result.e;
+      var0.startConnection(var4);
       var8 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: kotlin.Result.a = Result.k;
+      val var7: kotlin.Result.a = Result.e;
       var8 = Result.b(c.a(var5));
       break label20;
    }

@@ -3,20 +3,13 @@ package com.discord.chat.presentation.message.decorations
 import android.content.Context
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.presentation.list.item.ChatListItem
-import kotlin.jvm.internal.r
-import z1.a
-import z1.b
-import z1.c
+import y1.a
+import y1.b
+import y1.c
 
-public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer {
-   init {
-      r.h(var1, "context");
-      super(var1, new a(), new b(), new c());
-   }
-
+public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer(var1, new a(), new b(), new c()) {
    @JvmStatic
    fun `_init_$lambda$0`(var0: ChatListItem): Int {
-      r.h(var0, "it");
       val var1: BackgroundHighlight = BackgroundHighlightDecorationKt.access$getBackgroundHighlight(var0);
       val var2: Int;
       if (var1 != null) {
@@ -30,7 +23,6 @@ public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDra
 
    @JvmStatic
    fun `_init_$lambda$1`(var0: ChatListItem): Int {
-      r.h(var0, "it");
       val var1: BackgroundHighlight = BackgroundHighlightDecorationKt.access$getBackgroundHighlight(var0);
       val var2: Int;
       if (var1 != null) {
@@ -44,7 +36,6 @@ public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDra
 
    @JvmStatic
    fun `_init_$lambda$2`(var0: ChatListItem): Boolean {
-      r.h(var0, "it");
       val var1: Boolean;
       if (BackgroundHighlightDecorationKt.access$getBackgroundHighlight(var0) != null) {
          var1 = true;
