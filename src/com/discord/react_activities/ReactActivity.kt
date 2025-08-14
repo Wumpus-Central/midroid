@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
+import c4.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
@@ -20,6 +21,8 @@ import java.util.concurrent.Future
 import kotlin.jvm.internal.r
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
+   internal final lateinit var rootView: ReactRootView
+
    @JvmStatic
    fun {
       r.g(MainActivity::class.java, "forName(...)");
@@ -51,17 +54,17 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public open fun onConfigurationChanged(newConfig: Configuration) {
       r.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
-      c4.b.m.a(this, var1);
+      b.m.a(this, var1);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      r.g(var2, "getWindow(...)");
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var3: Window = this.getWindow();
+      r.g(var3, "getWindow(...)");
+      var2.initialize(var3);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -96,11 +99,12 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected open fun createRootView(): com.facebook.react.ReactRootView? {
+      protected open fun createRootView(): com.facebook.react.ReactRootView {
          val var1: Context = this.getContext();
          r.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
-         var2.setIsFabric(this.isFabricEnabled());
+         var2.setIsFabric(DefaultNewArchitectureEntryPoint.getFabricEnabled());
+         this.this$0.setRootView$react_activity_release(var2);
          return var2;
       }
 

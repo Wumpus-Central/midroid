@@ -121,15 +121,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.J(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (I2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      r.g(var9, "build(...)");
-      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
-      r.g(var7, "setActualImageScaleType(...)");
+      val var7: com.facebook.drawee.controller.a = (I2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      r.g(var7, "build(...)");
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
+      r.g(var9, "setActualImageScaleType(...)");
       if (var3 != null) {
-         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
@@ -226,8 +226,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                         if ((var34 as SearchableSelectItem).getIconSrc() != null) {
                            val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var20: java.lang.String = var36.getIconSrc();
-                           val var13: Int = var36.getIconColor();
+                           val var13: java.lang.String = var36.getIconSrc();
+                           val var20: Int = var36.getIconColor();
                            val var28: Boolean;
                            if (var36.getType() === SelectOptionType.USER) {
                               var28 = true;
@@ -235,7 +235,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                               var28 = false;
                            }
 
-                           this.setImage(var12, var20, var13, var28);
+                           this.setImage(var12, var13, var20, var28);
                            val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var21.setVisibility(0);
@@ -250,13 +250,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                }
             }
          } else {
-            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var22: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var22.setVisibility(8);
-            var39.setVisibility(0);
-            this.setSelectedOptions(var39, var33);
+            var39.setVisibility(8);
+            var22.setVisibility(0);
+            this.setSelectedOptions(var22, var33);
          }
       } else {
          val var37: MaterialTextView = this.binding.selectComponentSelectionText;

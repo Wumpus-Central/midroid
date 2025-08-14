@@ -129,8 +129,8 @@ public data class ContainerComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
-      val var6: Int = this.id.hashCode();
+      val var6: Int = Integer.hashCode(this.type);
+      val var5: Int = this.id.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.errorText == null) {
@@ -159,37 +159,37 @@ public data class ContainerComponent(type: Int,
          var4 = this.themedBackgroundColor.hashCode();
       }
 
-      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var8: java.lang.String = this.errorText;
+      val var9: java.lang.String = this.id;
+      val var4: java.lang.String = this.errorText;
       val var6: java.util.List = this.components;
       val var7: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var9: java.lang.String = this.spoilerDescription;
-      val var4: Int = this.themedBackgroundColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ContainerComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var3);
-      var5.append(", errorText=");
-      var5.append(var8);
-      var5.append(", components=");
-      var5.append(var6);
-      var5.append(", accentColor=");
-      var5.append(var7);
-      var5.append(", isSpoiler=");
-      var5.append(var2);
-      var5.append(", spoilerDescription=");
-      var5.append(var9);
-      var5.append(", themedBackgroundColor=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.spoilerDescription;
+      val var5: Int = this.themedBackgroundColor;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ContainerComponent(type=");
+      var8.append(var1);
+      var8.append(", id=");
+      var8.append(var9);
+      var8.append(", errorText=");
+      var8.append(var4);
+      var8.append(", components=");
+      var8.append(var6);
+      var8.append(", accentColor=");
+      var8.append(var7);
+      var8.append(", isSpoiler=");
+      var8.append(var2);
+      var8.append(", spoilerDescription=");
+      var8.append(var3);
+      var8.append(", themedBackgroundColor=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

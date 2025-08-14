@@ -85,19 +85,19 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var4: Int = this.textColor;
-      val var3: Int = this.backgroundColor;
-      val var5: java.lang.String = this.callback;
+      val var3: java.lang.String = this.text;
+      val var1: Int = this.textColor;
+      val var5: Int = this.backgroundColor;
+      val var4: java.lang.String = this.callback;
       val var2: StringBuilder = new StringBuilder();
       var2.append("CtaButton(text=");
-      var2.append(var1);
-      var2.append(", textColor=");
-      var2.append(var4);
-      var2.append(", backgroundColor=");
       var2.append(var3);
-      var2.append(", callback=");
+      var2.append(", textColor=");
+      var2.append(var1);
+      var2.append(", backgroundColor=");
       var2.append(var5);
+      var2.append(", callback=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

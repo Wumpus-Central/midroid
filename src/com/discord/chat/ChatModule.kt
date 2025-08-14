@@ -120,13 +120,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       HACK_iOSForceAnimations: Boolean
    ) {
       r.h(var3, "rowsJSON");
-      val var10: Int = (int)var1;
-      val var9: Int = (int)var6;
+      val var9: Int = (int)var1;
+      val var10: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var10,
-         new Function2(this, var10, var3, var5, var9, null) {
+         var9,
+         new Function2(this, var9, var3, var5, var10, null) {
             final int $changesetUpdateId;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;
@@ -530,13 +530,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            try {
                               val var69: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var67, null, 4, null);
-                              val var70: java.lang.String = i.q0(
+                              val var40: java.lang.String = i.q0(
                                  (var1 as SerializerUtils.SerializerError.Data).getData().keySet(), ",", null, null, 0, null, null, 62, null
                               );
-                              val var40: StringBuilder = new StringBuilder();
-                              var40.append("Could not deserialize message. Bad Fields: ");
-                              var40.append(var70);
-                              CrashReporting.captureException$default(var69, new Exception(var40.toString()), false, 2, null);
+                              val var70: StringBuilder = new StringBuilder();
+                              var70.append("Could not deserialize message. Bad Fields: ");
+                              var70.append(var40);
+                              CrashReporting.captureException$default(var69, new Exception(var70.toString()), false, 2, null);
                            } catch (var12: Exception) {
                               val var62: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -592,22 +592,22 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var2: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var1: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
          val var3: java.lang.String = H.b(ChatModule.class).b();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append(var3);
-         var1.append(" invalidate()");
-         v.g(var2, new CancellationException(var1.toString()));
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var3);
+         var2.append(" invalidate()");
+         v.g(var1, new CancellationException(var2.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
-         val var5: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
-         val var4: Int = var2;
-         val var3: Any = var5.get(var4);
+         val var4: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
+         val var5: Int = var2;
+         val var3: Any = var4.get(var5);
          var var6: Any = var3;
          if (var3 == null) {
             var6 = new ReleaseRowLogger();
-            var5.put(var4, var6);
+            var4.put(var5, var6);
          }
 
          return var6 as RowLogger;
@@ -673,12 +673,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
          // 00: aload 0
          // 01: monitorenter
          // 02: invokestatic com/discord/chat/ChatModule.access$getListManagers$cp ()Ljava/util/Map;
-         // 05: astore 4
+         // 05: astore 5
          // 07: iload 1
          // 08: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-         // 0b: astore 5
-         // 0d: aload 4
-         // 0f: aload 5
+         // 0b: astore 4
+         // 0d: aload 5
+         // 0f: aload 4
          // 11: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
          // 16: astore 3
          // 17: aload 3
@@ -690,8 +690,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
          // 21: aload 2
          // 22: invokestatic com/discord/chat/ChatModule.access$getModuleScope$cp ()Lkotlinx/coroutines/CoroutineScope;
          // 25: invokespecial com/discord/chat/listmanager/ChatListManager.<init> (Lkotlinx/coroutines/CoroutineScope;)V
-         // 28: aload 4
-         // 2a: aload 5
+         // 28: aload 5
+         // 2a: aload 4
          // 2c: aload 2
          // 2d: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
          // 32: pop

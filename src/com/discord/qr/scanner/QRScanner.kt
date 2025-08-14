@@ -38,23 +38,23 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    init {
       r.h(var1, "context");
       super(var1, var2, var3);
-      val var4: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var5: CodeScanner = new CodeScanner(var1, var4.qrScanner);
-      this.codeScanner = var5;
+      val var6: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var6, "inflate(...)");
+      this.binding = var6;
+      val var4: CodeScanner = new CodeScanner(var1, var6.qrScanner);
+      this.codeScanner = var4;
       this.runnable = new a(this);
       this.onCodeFound = new b();
       this.onCodeNotFound = new c();
-      var4.getRoot().setBackgroundColor(-16777216);
-      val var6: CodeScannerView = var4.qrScanner;
-      r.g(var4.qrScanner, "qrScanner");
-      var6.setVisibility(0);
-      var4.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
-      var5.a0(-1);
-      var5.f0(CodeScanner.K);
-      var5.b0(this);
-      var5.c0(this);
+      var6.getRoot().setBackgroundColor(-16777216);
+      val var5: CodeScannerView = var6.qrScanner;
+      r.g(var6.qrScanner, "qrScanner");
+      var5.setVisibility(0);
+      var6.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
+      var4.a0(-1);
+      var4.f0(CodeScanner.K);
+      var4.b0(this);
+      var4.c0(this);
    }
 
    @JvmStatic

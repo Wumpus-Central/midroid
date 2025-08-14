@@ -48,12 +48,12 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
                LinearLayout var5 = (LinearLayout)a.a(var0, var1);
                if (var5 != null) {
                   var1 = R.id.link_icon;
-                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.loading_dots;
-                     ViewStub var7 = (ViewStub)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new MessageComponentButtonViewBinding(var0, var2, var4, var6, var5, var3, var7);
+                     ViewStub var3 = (ViewStub)a.a(var0, var1);
+                     if (var3 != null) {
+                        return new MessageComponentButtonViewBinding(var0, var2, var4, var6, var5, var7, var3);
                      }
                   }
                }

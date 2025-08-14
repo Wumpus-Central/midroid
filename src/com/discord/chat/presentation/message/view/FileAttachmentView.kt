@@ -126,10 +126,10 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = PublicFileDownloader.INSTANCE;
-               val var4: Context = this.this$0.getContext();
-               kotlin.jvm.internal.r.g(var4, "getContext(...)");
-               val var6: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
+               val var4: PublicFileDownloader = PublicFileDownloader.INSTANCE;
+               var1 = this.this$0.getContext();
+               kotlin.jvm.internal.r.g(var1, "getContext(...)");
+               val var6: Flow = var4.downloadFile(var1, this.$url, this.$attachmentName, this.$attachmentDescription);
                val var7: FlowCollector = new FlowCollector(this.this$0) {
                   final FileAttachmentView this$0;
 
@@ -230,12 +230,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var12: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var14: java.lang.String = this.getClass().getSimpleName();
+      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var12: java.lang.String = this.getClass().getSimpleName();
       val var13: StringBuilder = new StringBuilder();
       var13.append("Binding ");
-      var13.append(var14);
-      AttachedViewCoroutineScope.cancelAllWork$default(var12, var13.toString(), null, 2, null);
+      var13.append(var12);
+      AttachedViewCoroutineScope.cancelAllWork$default(var14, var13.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.r.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;

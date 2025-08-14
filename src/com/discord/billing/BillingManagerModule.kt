@@ -74,9 +74,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 

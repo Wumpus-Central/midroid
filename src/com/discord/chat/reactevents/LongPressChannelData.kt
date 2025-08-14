@@ -113,21 +113,21 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.originalLink;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressChannelData(guildId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var5);
-      var4.append(", originalLink=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.guildId;
+      val var5: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.originalLink;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressChannelData(guildId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var5);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", originalLink=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

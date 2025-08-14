@@ -295,22 +295,22 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a {
    }
 
    private fun getAVCBitrate(width: Int, height: Int, frameRate: Int): Int {
-      var var4: Int = -1;
-      var var5: Int = 0;
+      var var5: Int = -1;
+      var var4: Int = 0;
 
-      while (var5 < 2) {
+      while (var4 < 2) {
          var var6: Int = 0;
 
          var var7: Int;
          while (true) {
-            var7 = var4;
+            var7 = var5;
             if (var6 >= 5) {
                break;
             }
 
             var7 = new int[]{8, 6, 5, 4, 0}[var6];
-            if (CamcorderProfile.hasProfile(var5, var7)) {
-               val var10: CamcorderProfile = CamcorderProfile.get(var5, var7);
+            if (CamcorderProfile.hasProfile(var4, var7)) {
+               val var10: CamcorderProfile = CamcorderProfile.get(var4, var7);
                var var8: Boolean = true;
                val var14: Boolean;
                if (var1 == var10.videoFrameWidth && var2 == var10.videoFrameHeight) {
@@ -324,8 +324,8 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a {
                }
 
                if ((var14 || var8) && var3 == var10.videoFrameRate && var10.videoCodec == 2) {
-                  var7 = var4;
-                  if (var4 < var10.videoBitRate) {
+                  var7 = var5;
+                  if (var5 < var10.videoBitRate) {
                      var7 = var10.videoBitRate;
                   }
                   break;
@@ -335,11 +335,11 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a {
             var6++;
          }
 
-         var5++;
-         var4 = var7;
+         var4++;
+         var5 = var7;
       }
 
-      var var15: Int = var4;
+      var var15: Int = var5;
       if (var15.intValue() == -1) {
          var15 = null;
       }
@@ -511,19 +511,19 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a {
       }
 
       public override fun toString(): String {
-         val var3: Int = this.colorTransfer;
-         val var1: Int = this.colorStandard;
-         val var2: Int = this.colorRange;
-         val var5: ByteBuffer = this.hdrStaticInfo;
+         val var1: Int = this.colorTransfer;
+         val var3: Int = this.colorStandard;
+         val var5: Int = this.colorRange;
+         val var2: ByteBuffer = this.hdrStaticInfo;
          val var4: StringBuilder = new StringBuilder();
          var4.append("ColorFormatSettings(colorTransfer=");
-         var4.append(var3);
-         var4.append(", colorStandard=");
          var4.append(var1);
+         var4.append(", colorStandard=");
+         var4.append(var3);
          var4.append(", colorRange=");
-         var4.append(var2);
-         var4.append(", hdrStaticInfo=");
          var4.append(var5);
+         var4.append(", hdrStaticInfo=");
+         var4.append(var2);
          var4.append(")");
          return var4.toString();
       }

@@ -11,16 +11,16 @@ import kotlin.jvm.internal.r
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    r.h(var0, "<this>");
    val var5: ArrayList = new ArrayList(i.v(var0, 10));
-   val var6: java.util.Iterator = var0.iterator();
+   val var7: java.util.Iterator = var0.iterator();
 
    val var8: ProductDetails;
    while (true) {
-      if (!var6.hasNext()) {
+      if (!var7.hasNext()) {
          return NativeArrayExtensionsKt.toNativeArray$default(var5, null, 1, null);
       }
 
-      var8 = var6.next() as ProductDetails;
-      val var7: ArrayList = new ArrayList();
+      var8 = var7.next() as ProductDetails;
+      val var6: ArrayList = new ArrayList();
       val var1: Long;
       var var3: java.lang.String;
       val var4: java.lang.String;
@@ -63,11 +63,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            var3 = var8.d();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Could not find pricingPhase for product: ");
-            var17.append(var3);
-            throw new AssertionError(var17.toString());
+            val var17: java.lang.String = var8.d();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Could not find pricingPhase for product: ");
+            var21.append(var17);
+            throw new AssertionError(var21.toString());
          }
 
          var1 = var16.d();
@@ -79,7 +79,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          while (var10.hasNext()) {
             val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
             if (var23 != null) {
-               var7.add(var23);
+               var6.add(var23);
             }
          }
       } else {
@@ -98,7 +98,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
             s.a("currencyCode", var12),
             s.a("price", (int)(var1 / (long)10000)),
             s.a("type", var8.e()),
-            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var7, null, 1, null)),
+            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var6, null, 1, null)),
             s.a("billingPeriod", var4)
          )
       );

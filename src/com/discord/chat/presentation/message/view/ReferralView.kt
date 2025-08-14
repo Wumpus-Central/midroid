@@ -92,15 +92,15 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun initTextStyling() {
-      val var2: TextView = this.binding.imageCopy;
+      val var1: TextView = this.binding.imageCopy;
       kotlin.jvm.internal.r.e(this.binding.imageCopy);
-      SetTextSizeSpKt.setTextSizeSp(var2, 14.0F);
-      val var1: DiscordFont = DiscordFont.PrimarySemibold;
-      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var1, 14.0F);
+      val var2: DiscordFont = DiscordFont.PrimarySemibold;
+      DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimarySemibold);
       var var3: TextView = this.binding.title;
       kotlin.jvm.internal.r.e(this.binding.title);
       SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
-      val var5: DiscordFont = DiscordFont.PrimaryMedium;
+      val var4: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       val var6: SimpleDraweeSpanTextView = this.binding.subtitle;
       kotlin.jvm.internal.r.e(this.binding.subtitle);
@@ -110,11 +110,11 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
       val var8: DCDButton = this.binding.acceptButton;
       this.binding.acceptButton.setTextSizeSp(14.0F);
-      var8.setDiscordFont(var1);
-      val var4: TextView = this.binding.footer;
+      var8.setDiscordFont(var2);
+      val var5: TextView = this.binding.footer;
       kotlin.jvm.internal.r.e(this.binding.footer);
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var4, var5);
+      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
+      DiscordFontUtilsKt.setDiscordFont(var5, var4);
    }
 
    public fun bind(accessory: ReferralMessageAccessory, onTapAccept: (String?) -> Unit, onTapLink: (MessageId, LinkContentNode) -> Unit) {
@@ -144,20 +144,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          kotlin.jvm.internal.r.g(this.binding.nitroLogoBanner, "nitroLogoBanner");
          val var34: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as ReferralEmbed.Resolved).getHeaderLogoUrl());
-         val var35: TextView = this.binding.imageCopy;
+         val var43: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var34.getHeaderText());
-         var35.setTextColor(var34.getHeaderColor());
-         kotlin.jvm.internal.r.e(var35);
-         val var43: java.lang.CharSequence = var35.getText();
-         kotlin.jvm.internal.r.g(var43, "getText(...)");
+         var43.setTextColor(var34.getHeaderColor());
+         kotlin.jvm.internal.r.e(var43);
+         val var35: java.lang.CharSequence = var43.getText();
+         kotlin.jvm.internal.r.g(var35, "getText(...)");
          var var5: Byte;
-         if (!kotlin.text.h.c0(var43)) {
+         if (!kotlin.text.h.c0(var35)) {
             var5 = 0;
          } else {
             var5 = 8;
          }
 
-         var35.setVisibility(var5);
+         var43.setVisibility(var5);
          val var36: SimpleDraweeView = this.binding.nitroTicket;
          kotlin.jvm.internal.r.g(this.binding.nitroTicket, "nitroTicket");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var36, var34.getThumbnailUrl());
@@ -184,9 +184,9 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
             val var11: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var47: Context = var38.getContext();
-            kotlin.jvm.internal.r.g(var47, "getContext(...)");
-            val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
+            val var12: Context = var38.getContext();
+            kotlin.jvm.internal.r.g(var12, "getContext(...)");
+            val var47: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             kotlin.jvm.internal.r.g(var13, "getFontMetrics(...)");
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
@@ -195,8 +195,8 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
                   var11,
-                  var47,
                   var12,
+                  var47,
                   false,
                   true,
                   false,

@@ -150,11 +150,11 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
 
          // $VF: monitorexit
       } else {
-         val var5: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var5);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var2);
+         throw new IllegalStateException(var5.toString().toString());
       }
    }
 
@@ -171,28 +171,28 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       r.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var5: Log = Log.INSTANCE;
-         val var6: java.lang.String = access$getName(this);
+         val var6: Log = Log.INSTANCE;
+         val var5: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
          val var9: StringBuilder = new StringBuilder();
          var9.append("createEglSurface (");
          var9.append(var2);
          var9.append(" total)");
-         Log.i$default(var5, var6, var9.toString(), null, 4, null);
+         Log.i$default(var6, var5, var9.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var4: Thread = Thread.currentThread();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Expected to be on android main thread. Current: ");
-         var7.append(var4);
-         throw new IllegalStateException(var7.toString().toString());
+         val var7: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var7);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
    public open fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
       r.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var3: Long = System.currentTimeMillis();
+         val var5: Long = System.currentTimeMillis();
          val var10: CountDownLatch = new CountDownLatch(1);
          this.releaseEglSurface(new Function0(var10) {
             final CountDownLatch $completionLatch;
@@ -206,13 +206,13 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
             }
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
-         val var5: Long = System.currentTimeMillis();
+         val var3: Long = System.currentTimeMillis();
          val var12: Log = Log.INSTANCE;
          val var8: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
          val var11: StringBuilder = new StringBuilder();
          var11.append("releaseEglSurface (");
-         var11.append(var5 - var3);
+         var11.append(var3 - var5);
          var11.append(" ms) (");
          var11.append(var2);
          var11.append(" total)");

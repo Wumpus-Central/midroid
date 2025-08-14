@@ -217,9 +217,9 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
          val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
          val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
-         val var3: Int = var11.getColor();
-         val var4: Int = var11.getBackgroundColor();
-         val var2: Int = var11.getBorderColor();
+         val var4: Int = var11.getColor();
+         val var2: Int = var11.getBackgroundColor();
+         val var3: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -246,7 +246,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var3, var4, var2, var5, i.O(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var4, var2, var3, var5, i.O(var14));
       }
 
       return (ChatListItem)var9;
@@ -378,8 +378,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       public override fun hashCode(): Int {
-         val var2: Int = this.rows.hashCode();
-         val var3: Int = java.lang.Boolean.hashCode(this.didInsertAtBottom);
+         val var3: Int = this.rows.hashCode();
+         val var2: Int = java.lang.Boolean.hashCode(this.didInsertAtBottom);
          val var1: Int;
          if (this.listOperations == null) {
             var1 = 0;
@@ -387,20 +387,20 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             var1 = this.listOperations.hashCode();
          }
 
-         return (var2 * 31 + var3) * 31 + var1;
+         return (var3 * 31 + var2) * 31 + var1;
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.rows;
+         val var4: java.util.List = this.rows;
          val var1: Boolean = this.didInsertAtBottom;
-         val var4: java.util.List = this.listOperations;
+         val var2: java.util.List = this.listOperations;
          val var3: StringBuilder = new StringBuilder();
          var3.append("RowsModificationResult(rows=");
-         var3.append(var2);
+         var3.append(var4);
          var3.append(", didInsertAtBottom=");
          var3.append(var1);
          var3.append(", listOperations=");
-         var3.append(var4);
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
