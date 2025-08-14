@@ -8,8 +8,9 @@ import android.os.Parcel
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.react.headless_tasks.api.HeadlessTasks
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nMuteAction.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MuteAction.kt\ncom/discord/notifications/actions/intents/MuteAction\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,31:1\n1#2:32\n*E\n"])
 public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, muteTime: Int?) : MuteAction(var1, var2, var3, var5), NotificationAction {
    public open val tag: String
    private final val guildId: GuildId?
@@ -17,8 +18,6 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    private final val muteTime: Int?
 
    fun MuteAction(var1: java.lang.String, var2: GuildId, var3: Long, var5: Int) {
-      r.h(var1, "tag");
-      super();
       this.tag = var1;
       this.guildId = var2;
       this.channelId = var3;
@@ -34,20 +33,18 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
-      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
+      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var5: Bundle = new Bundle();
       if (this.guildId != null) {
-         var3.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var5.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
       }
 
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
       if (this.muteTime != null) {
-         var3.putInt("muteTime", this.muteTime);
+         var5.putInt("muteTime", this.muteTime);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var3, true, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MuteAction", 0L, false, var5, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -59,7 +56,6 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      r.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(this.guildId, var2);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
@@ -77,7 +73,6 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MuteAction> {
       fun createFromParcel(var1: Parcel): MuteAction {
-         r.h(var1, "parcel");
          val var4: java.lang.String = var1.readString();
          val var5: GuildId = var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId;
          val var2: Long = (var1.readParcelable(MuteAction.class.getClassLoader()) as ChannelId).unbox-impl();

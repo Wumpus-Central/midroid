@@ -19,50 +19,43 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 
-public class MessageFrameFeedHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nMessageFrameFeedHeaderView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameFeedHeaderView.kt\ncom/discord/chat/presentation/message/MessageFrameFeedHeaderView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,88:1\n257#2,2:89\n257#2,2:95\n1557#3:91\n1628#3,3:92\n*S KotlinDebug\n*F\n+ 1 MessageFrameFeedHeaderView.kt\ncom/discord/chat/presentation/message/MessageFrameFeedHeaderView\n*L\n58#1:89,2\n84#1:95,2\n81#1:91\n81#1:92,3\n*E\n"])
+public class MessageFrameFeedHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
+      var1, var2, var3
+   ) {
    private final val binding: MessageFrameFeedHeaderBinding
 
    fun MessageFrameFeedHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MessageFrameFeedHeaderView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var5: MessageFrameFeedHeaderBinding = MessageFrameFeedHeaderBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(...)");
       this.binding = var5;
       var var4: TextView = var5.feedChannelText;
       var5.feedChannelText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.e(var4);
       val var7: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryMedium);
       var4 = var5.feedReplyCount;
       var5.feedReplyCount.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var7);
       val var8: SimpleDraweeView = var5.feedChannelIcon;
-      kotlin.jvm.internal.r.g(var5.feedChannelIcon, "feedChannelIcon");
       ColorUtilsKt.setTintColor(var8, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var6: SimpleDraweeView = var5.feedReplyIcon;
-      kotlin.jvm.internal.r.g(var5.feedReplyIcon, "feedReplyIcon");
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getTextNormal());
       this.setPadding(SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8), SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(12));
    }
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
-      kotlin.jvm.internal.r.h(var1, "messageFrame");
-      var var7: TextView = this.binding.feedChannelText;
-      kotlin.jvm.internal.r.e(this.binding.feedChannelText);
-      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
+      val var6: TextView = this.binding.feedChannelText;
+      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -76,12 +69,10 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var7.setVisibility(var3);
+      var6.setVisibility(var3);
       val var19: SimpleDraweeView = this.binding.feedChannelIcon;
-      kotlin.jvm.internal.r.g(this.binding.feedChannelIcon, "feedChannelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var1.getChannelIconURL());
       val var22: SimpleDraweeView = this.binding.feedReplyIcon;
-      kotlin.jvm.internal.r.e(this.binding.feedReplyIcon);
       ReactAssetUtilsKt.setOptionalReactImageUrl(var22, var1.getChatIconURL());
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var22, false, var2, 1, null);
       val var10: ArrayList = var1.getAvatarURLs();
@@ -91,8 +82,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      var7 = this.binding.feedReplyCount;
-      kotlin.jvm.internal.r.g(this.binding.feedReplyCount, "feedReplyCount");
+      val var23: TextView = this.binding.feedReplyCount;
       val var11: java.lang.String;
       if (var3 > 3) {
          var11 = "3+";
@@ -102,15 +92,15 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var7, var11);
+      ViewUtilsKt.setOptionalText(var23, var11);
       val var24: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
       if (var12 != null) {
-         val var8: java.util.List = kotlin.collections.i.N0(var12, 3);
+         val var8: java.util.List = CollectionsKt.M0(var12, 3);
          var9 = null;
          if (var8 != null) {
-            val var13: ArrayList = new ArrayList(kotlin.collections.i.v(var8, 10));
+            val var13: ArrayList = new ArrayList(CollectionsKt.v(var8, 10));
             val var21: java.util.Iterator = var8.iterator();
 
             while (true) {
@@ -126,11 +116,10 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
       var var14: Any = var9;
       if (var9 == null) {
-         var14 = kotlin.collections.i.k();
+         var14 = CollectionsKt.k();
       }
 
       var24.setItems((java.util.List<OverlappingItem>)var14);
-      kotlin.jvm.internal.r.e(var24);
       var var17: Boolean;
       if (var3 > 0) {
          var17 = 1;
@@ -147,7 +136,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @tb.g
+   @nb.g
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -201,14 +190,14 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.channelIconURL, var1.channelIconURL)) {
+            if (!(this.channelIconURL == var1.channelIconURL)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.chatIconURL, var1.chatIconURL)) {
+            } else if (!(this.chatIconURL == var1.chatIconURL)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.avatarURLs, var1.avatarURLs)) {
+            } else if (!(this.avatarURLs == var1.avatarURLs)) {
                return false;
             } else {
-               return kotlin.jvm.internal.r.c(this.channelName, var1.channelName);
+               return this.channelName == var1.channelName;
             }
          }
       }
@@ -244,21 +233,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.channelIconURL;
+         val var2: java.lang.String = this.channelIconURL;
          val var5: java.lang.String = this.chatIconURL;
-         val var3: ArrayList = this.avatarURLs;
+         val var4: ArrayList = this.avatarURLs;
          val var1: java.lang.String = this.channelName;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("MessageBundleHeader(channelIconURL=");
-         var2.append(var4);
-         var2.append(", chatIconURL=");
-         var2.append(var5);
-         var2.append(", avatarURLs=");
-         var2.append(var3);
-         var2.append(", channelName=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MessageBundleHeader(channelIconURL=");
+         var3.append(var2);
+         var3.append(", chatIconURL=");
+         var3.append(var5);
+         var3.append(", avatarURLs=");
+         var3.append(var4);
+         var3.append(", channelName=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
 
       public companion object {

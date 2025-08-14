@@ -8,7 +8,6 @@ import android.graphics.Path.Direction
 import android.text.Layout
 import android.text.Spanned
 import android.text.style.LeadingMarginSpan
-import kotlin.jvm.internal.r
 
 public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true, bulletRadius: Int = 4, strokeWidth: Float = 4.0F, style: Style = Style.FILL) :
    LeadingMarginSpan {
@@ -20,8 +19,6 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
    private final val mStyle: Style
 
    init {
-      r.h(var6, "style");
-      super();
       this.mGapWidth = var2;
       this.mBulletRadius = var4;
       this.mWantColor = var3;
@@ -44,10 +41,6 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
       first: Boolean,
       l: Layout
    ) {
-      r.h(var1, "c");
-      r.h(var2, "p");
-      r.h(var8, "text");
-      r.h(var12, "l");
       if ((var8 as Spanned).getSpanStart(this) == var9) {
          val var14: Style = var2.getStyle();
          if (this.mWantColor) {
@@ -72,7 +65,6 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
             var1.save();
             var1.translate((float)var3 + (float)var4 * 1.2F * (float)this.mBulletRadius, (float)(var5 + var7) / 2.0F);
             val var18: Path = sBulletPath;
-            r.e(sBulletPath);
             var1.drawPath(var18, var2);
             var1.restore();
          } else {

@@ -26,25 +26,24 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class GuildProfileInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nGuildProfileInviteView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GuildProfileInviteView.kt\ncom/discord/chat/presentation/message/view/GuildProfileInviteView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,213:1\n257#2,2:214\n257#2,2:216\n257#2,2:218\n67#2,4:220\n37#2,2:224\n55#2:226\n72#2:227\n257#2,2:228\n257#2,2:230\n257#2,2:232\n257#2,2:234\n257#2,2:236\n257#2,2:238\n*S KotlinDebug\n*F\n+ 1 GuildProfileInviteView.kt\ncom/discord/chat/presentation/message/view/GuildProfileInviteView\n*L\n104#1:214,2\n134#1:216,2\n145#1:218,2\n156#1:220,4\n156#1:224,2\n156#1:226\n156#1:227\n173#1:228,2\n181#1:230,2\n187#1:232,2\n188#1:234,2\n190#1:236,2\n191#1:238,2\n*E\n"])
+public class GuildProfileInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
+      var1, var2, var3
+   ) {
    private final val binding: GuildProfileInviteViewBinding
 
    fun GuildProfileInviteView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun GuildProfileInviteView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var6: GuildProfileInviteViewBinding = GuildProfileInviteViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       this.setMaxWidth(SizeUtilsKt.getDpToPx(375));
       ViewBackgroundUtilsKt.setBackgroundRectangle(
@@ -56,34 +55,28 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       );
       var var4: TextView = var6.headerText;
       var6.headerText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
-      kotlin.jvm.internal.r.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4 = var6.titleText;
       var6.titleText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.r.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, var8);
       var var5: TextView = var6.itemInviteOnlineText;
       var6.itemInviteOnlineText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
-      kotlin.jvm.internal.r.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       val var14: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5 = var6.itemInviteTotalMemberText;
       var6.itemInviteTotalMemberText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
-      kotlin.jvm.internal.r.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, var14);
       var5 = var6.establishedText;
       var6.establishedText.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      kotlin.jvm.internal.r.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, var14);
       var5 = var6.bodyText;
       var6.bodyText.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-      kotlin.jvm.internal.r.e(var5);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, var14);
       val var15: DCDButton = var6.acceptButton;
@@ -95,12 +88,10 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       var15.setTextColor(ThemeManagerKt.getTheme().getWhite());
       val var9: FrameLayout = var6.avatarContainer;
       var6.avatarContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      kotlin.jvm.internal.r.e(var9);
       ViewClippingUtilsKt.clipToRoundedRectangle(var9, SizeUtilsKt.getDpToPx(16));
-      val var10: View = var6.overlayGradient;
-      kotlin.jvm.internal.r.g(var6.overlayGradient, "overlayGradient");
+      val var16: View = var6.overlayGradient;
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-         var10,
+         var16,
          new int[]{ColorUtilsKt.argbWithAdjustedAlpha(ThemeManagerKt.getTheme().getBackgroundSecondary(), 0.9F), 0},
          Orientation.BOTTOM_TOP,
          0.0F,
@@ -113,18 +104,15 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
          null
       );
       val var11: ImageView = var6.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(var6.itemInviteOnlineDot, "itemInviteOnlineDot");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var11, ThemeManagerKt.getTheme().getStatusPositive(), 0, 2, null);
       val var7: ImageView = var6.itemInviteTotalMemberDot;
-      kotlin.jvm.internal.r.g(var6.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var7, ThemeManagerKt.getTheme().getInteractiveMuted(), 0, 2, null);
    }
 
    public fun setAcceptButton(text: CharSequence?, backgroundColor: Int?) {
       val var5: DCDButton = this.binding.acceptButton;
-      kotlin.jvm.internal.r.e(this.binding.acceptButton);
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.h.c0(var1)) {
+      if (var1 != null && !StringsKt.c0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -163,7 +151,6 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a(var5, var5, 0.0F, 0.0F));
       var6.setImageURI(var1);
       if (var1 == null) {
-         kotlin.jvm.internal.r.e(var6);
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(var6, new int[]{var2, var3}, Orientation.TL_BR, var5, var5, 0.0F, 0.0F, null, 0, 240, null);
       } else {
          var6.setBackground(null);
@@ -172,7 +159,6 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
    public fun setBody(bodyText: CharSequence?, hasProfileOverflow: Boolean) {
       val var5: TextView = this.binding.bodyText;
-      kotlin.jvm.internal.r.e(this.binding.bodyText);
       var var3: Boolean;
       if (var1 != null && var1.length() != 0) {
          var3 = 0;
@@ -238,7 +224,6 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
    public fun setEstablished(establishedText: CharSequence?) {
       val var4: TextView = this.binding.establishedText;
-      kotlin.jvm.internal.r.e(this.binding.establishedText);
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -258,13 +243,11 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
    public fun setGuildBadge(url: String?) {
       val var2: SimpleDraweeView = this.binding.guildBadge;
-      kotlin.jvm.internal.r.g(this.binding.guildBadge, "guildBadge");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var2, var1);
    }
 
    public fun setHeader(headerText: CharSequence?) {
       val var4: TextView = this.binding.headerText;
-      kotlin.jvm.internal.r.e(this.binding.headerText);
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;
@@ -284,9 +267,8 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
       val var6: ImageView = this.binding.itemInviteOnlineDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.h.c0(var1)) {
+      if (var1 != null && !StringsKt.c0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -300,9 +282,8 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
       var6.setVisibility(var3);
       val var16: TextView = this.binding.itemInviteOnlineText;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteOnlineText, "itemInviteOnlineText");
       var var10: Boolean;
-      if (var1 != null && !kotlin.text.h.c0(var1)) {
+      if (var1 != null && !StringsKt.c0(var1)) {
          var10 = 0;
       } else {
          var10 = 1;
@@ -317,9 +298,8 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       var16.setVisibility(var10);
       this.binding.itemInviteOnlineText.setText(var1);
       val var7: ImageView = this.binding.itemInviteTotalMemberDot;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
       var var12: Boolean;
-      if (var2 != null && !kotlin.text.h.c0(var2)) {
+      if (var2 != null && !StringsKt.c0(var2)) {
          var12 = 0;
       } else {
          var12 = 1;
@@ -333,10 +313,9 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
       var7.setVisibility(var12);
       val var8: TextView = this.binding.itemInviteTotalMemberText;
-      kotlin.jvm.internal.r.g(this.binding.itemInviteTotalMemberText, "itemInviteTotalMemberText");
       var var14: Byte = 1;
       if (var2 != null) {
-         if (kotlin.text.h.c0(var2)) {
+         if (StringsKt.c0(var2)) {
             var14 = 1;
          } else {
             var14 = 0;
@@ -355,7 +334,6 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
 
    public fun setTitle(titleText: CharSequence?) {
       val var4: TextView = this.binding.titleText;
-      kotlin.jvm.internal.r.e(this.binding.titleText);
       var var2: Boolean;
       if (var1 != null && var1.length() != 0) {
          var2 = 0;

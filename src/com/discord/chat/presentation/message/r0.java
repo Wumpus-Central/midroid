@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class r0 implements Function1 {
-   public final ChatEventHandler j;
+   public final ChatEventHandler d;
 
    public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.j(this.j, (CommandMentionContentNode)var1);
+      return MessageViewReplyPreview.j(this.d, (CommandMentionContentNode)var1);
    }
 }

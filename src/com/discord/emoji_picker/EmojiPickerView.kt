@@ -29,8 +29,7 @@ internal class EmojiPickerView(context: Context,
       onShowNitroUpsell: (View, Boolean) -> Unit,
       useTier0UpsellContent: Boolean,
       config: com.discord.emoji_picker.EmojiPickerView.Config
-   )
-   : RecyclerView,
+   ) : RecyclerView(var1),
    EmojiPickerCache.Listener {
    private final val visibilityTracker: EmojiPickerVisibilityTracker
       private final get() {
@@ -49,7 +48,6 @@ internal class EmojiPickerView(context: Context,
    private final val typedAdapter: EmojiPickerViewAdapter
       private final get() {
          val var1: RecyclerView.Adapter = this.getAdapter();
-         kotlin.jvm.internal.r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerViewAdapter");
          return var1 as EmojiPickerViewAdapter;
       }
 
@@ -57,25 +55,13 @@ internal class EmojiPickerView(context: Context,
    private final val typedLayoutManager: EmojiPickerLayoutManager
       private final get() {
          val var1: RecyclerView.LayoutManager = this.getLayoutManager();
-         kotlin.jvm.internal.r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerLayoutManager");
          return var1 as EmojiPickerLayoutManager;
       }
 
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var4, "coreData");
-      kotlin.jvm.internal.r.h(var5, "onPressEmoji");
-      kotlin.jvm.internal.r.h(var6, "onScroll");
-      kotlin.jvm.internal.r.h(var7, "onScrollBeginDrag");
-      kotlin.jvm.internal.r.h(var8, "onScrollEndDrag");
-      kotlin.jvm.internal.r.h(var9, "onLongPressEmoji");
-      kotlin.jvm.internal.r.h(var10, "onStickyHeaderRender");
-      kotlin.jvm.internal.r.h(var11, "onShowNitroUpsell");
-      kotlin.jvm.internal.r.h(var13, "config");
-      super(var1);
-      this.visibilityTracker$delegate = A9.j.b(new o(var11, this));
-      this.scroller$delegate = A9.j.b(new p(this, var13, var10, var6, var7, var8));
+      this.visibilityTracker$delegate = B9.j.b(new o(var11, this));
+      this.scroller$delegate = B9.j.b(new p(this, var13, var10, var6, var7, var8));
       this.premiumUpsellGradientDecoration = new EmojiPickerPremiumUpsellGradientBackground(var1, var12);
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -105,14 +91,12 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `_init_$lambda$8`(var0: Function3, var1: EmojiPickerView, var2: java.lang.Long, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var3, "emojiName");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
 
    @JvmStatic
    fun `_init_$lambda$9`(var0: Function3, var1: EmojiPickerView, var2: java.lang.Long, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var3, "emojiName");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
@@ -137,11 +121,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var1: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var2 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
+      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var2: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var1 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -153,7 +137,7 @@ internal class EmojiPickerView(context: Context,
             && var1 !is EmojiPickerItem.FooterUpsell
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
-            throw new A9.n();
+            throw new B9.n();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
@@ -195,7 +179,6 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `scroller_delegate$lambda$5$lambda$2`(var0: Function2, var1: EmojiPickerView, var2: EmojiPickerScroller.ScrollEvent): Unit {
-      kotlin.jvm.internal.r.h(var2, "scrollEvent");
       var0.invoke(var1, var2);
       return Unit.a;
    }
@@ -208,7 +191,6 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `scroller_delegate$lambda$5$lambda$4`(var0: Function2, var1: EmojiPickerView, var2: Function2, var3: EmojiPickerScroller.ScrollEvent, var4: Boolean): Unit {
-      kotlin.jvm.internal.r.h(var3, "scrollEvent");
       if (var4) {
          var0.invoke(var1, var3);
       } else {
@@ -240,21 +222,18 @@ internal class EmojiPickerView(context: Context,
    }
 
    public override fun onChildAttachedToWindow(child: View) {
-      kotlin.jvm.internal.r.h(var1, "child");
       super.onChildAttachedToWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, true);
       this.configureMountedChild(var1);
    }
 
    public override fun onChildDetachedFromWindow(child: View) {
-      kotlin.jvm.internal.r.h(var1, "child");
       super.onChildDetachedFromWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, false);
    }
 
    public override fun onContext(): Context {
       val var1: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var1, "getContext(...)");
       return var1;
    }
 
@@ -263,13 +242,10 @@ internal class EmojiPickerView(context: Context,
    }
 
    public override fun onEmojisUpdated(emojis: List<EmojiPickerItem>, emojisUnicode: List<EmojiPickerItem>) {
-      kotlin.jvm.internal.r.h(var1, "emojis");
-      kotlin.jvm.internal.r.h(var2, "emojisUnicode");
       this.getTypedAdapter().setEmojis(var1, var2);
    }
 
    public fun scrollToItemAtIndex(index: Int, animated: Boolean, itemType: ItemType) {
-      kotlin.jvm.internal.r.h(var3, "itemType");
       this.getScroller().scrollToItemAtIndex(var1, var2, var3.ordinal());
    }
 
@@ -278,7 +254,6 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setConfig(config: com.discord.emoji_picker.EmojiPickerView.Config) {
-      kotlin.jvm.internal.r.h(var1, "config");
       this.getTypedAdapter().setConfig(var1);
       this.getScroller().setScrollFastVelocity(var1.getScrollFastVelocity());
    }
@@ -292,7 +267,6 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setCoreData(coreData: CoreData) {
-      kotlin.jvm.internal.r.h(var1, "coreData");
       this.getTypedAdapter().setCoreData(var1);
       this.getTypedLayoutManager().setSpanCount(var1.getRowSize());
       this.getVisibilityTracker().setTrackingEnabled(var1.getHasPremiumInlineRoadblock());
@@ -312,7 +286,6 @@ internal class EmojiPickerView(context: Context,
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
       val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
       val var3: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var3, "getContext(...)");
       var2.setUseTier0UpsellContent(var3, var1);
    }
 
@@ -388,15 +361,15 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var4: Boolean = this.animateEmoji;
-         val var2: Boolean = this.scrollFastOptimizationEnabled;
+         val var2: Boolean = this.animateEmoji;
+         val var4: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
          val var3: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var4);
-         var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var2);
+         var5.append(", scrollFastOptimizationEnabled=");
+         var5.append(var4);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");

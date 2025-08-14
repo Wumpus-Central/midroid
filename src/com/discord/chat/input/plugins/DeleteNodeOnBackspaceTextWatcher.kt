@@ -4,7 +4,9 @@ import android.text.Editable
 import android.text.Spanned
 import android.text.TextWatcher
 import com.discord.chat.input.spans.DCDDeleteOnBackspaceSpan
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nDeleteNodeOnBackspaceTextWatcher.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeleteNodeOnBackspaceTextWatcher.kt\ncom/discord/chat/input/plugins/DeleteNodeOnBackspaceTextWatcher\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,95:1\n18#2:96\n*S KotlinDebug\n*F\n+ 1 DeleteNodeOnBackspaceTextWatcher.kt\ncom/discord/chat/input/plugins/DeleteNodeOnBackspaceTextWatcher\n*L\n36#1:96\n*E\n"])
 internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
    public final var deleteEvent: com.discord.chat.input.plugins.DeleteNodeOnBackspaceTextWatcher.DeleteEvent?
       internal set
@@ -36,7 +38,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
 
       if (!this.ignoreUpdate && var10 != null && var3 - var4 > 0) {
          var4 = var4 + var2;
-         val var5: Int = var2 + var3;
+         val var18: Int = var2 + var3;
          val var9: Array<Any> = var10.getSpans(var4, var2 + var3, DCDDeleteOnBackspaceSpan.class);
          var2 = 0;
          var var14: Any = var9;
@@ -45,28 +47,28 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
          }
 
          val var13: Array<DCDDeleteOnBackspaceSpan> = var14 as Array<DCDDeleteOnBackspaceSpan>;
-         var3 = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
+         val var5: Int = (var14 as Array<DCDDeleteOnBackspaceSpan>).length;
          var var11: Int = null;
 
-         while (var2 < var3) {
-            val var6: Int = var10.getSpanStart(var13[var2]);
-            val var7: Int = var10.getSpanEnd(var13[var2]);
+         while (var2 < var5) {
+            val var7: Int = var10.getSpanStart(var13[var2]);
+            val var6: Int = var10.getSpanEnd(var13[var2]);
             if (var12 == null) {
-               var14 = var6;
+               var14 = var7;
             } else {
                var14 = var12;
-               if (var12 > var6) {
-                  var14 = var6;
+               if (var12 > var7) {
+                  var14 = var7;
                }
             }
 
             var var20: Int;
             if (var11 == null) {
-               var20 = var7;
+               var20 = var6;
             } else {
                var20 = var11;
-               if (var11 < var7) {
-                  var20 = var7;
+               if (var11 < var6) {
+                  var20 = var6;
                }
             }
 
@@ -76,7 +78,7 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
          }
 
          if (var12 != null && var11 != null) {
-            this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var5) - (var5 - var4));
+            this.deleteEvent = new DeleteNodeOnBackspaceTextWatcher.DeleteEvent(Math.min(var12, var4), Math.max(var11, var18) - (var18 - var4));
          }
       }
    }

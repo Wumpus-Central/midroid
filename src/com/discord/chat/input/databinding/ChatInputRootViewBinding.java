@@ -3,21 +3,25 @@ package com.discord.chat.input.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
 import y0.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
+   @NonNull
    public final DCDChatInput chatInputEditText;
+   @NonNull
    private final View rootView;
 
-   private ChatInputRootViewBinding(View var1, DCDChatInput var2) {
+   private ChatInputRootViewBinding(@NonNull View var1, @NonNull DCDChatInput var2) {
       this.rootView = var1;
       this.chatInputEditText = var2;
    }
 
-   public static ChatInputRootViewBinding bind(View var0) {
+   @NonNull
+   public static ChatInputRootViewBinding bind(@NonNull View var0) {
       int var1 = R.id.chat_input_edit_text;
       DCDChatInput var2 = (DCDChatInput)a.a(var0, var1);
       if (var2 != null) {
@@ -27,7 +31,8 @@ public final class ChatInputRootViewBinding implements ViewBinding {
       }
    }
 
-   public static ChatInputRootViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static ChatInputRootViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.chat_input_root_view, var1);
          return bind(var1);
@@ -36,6 +41,7 @@ public final class ChatInputRootViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

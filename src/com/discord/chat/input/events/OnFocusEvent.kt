@@ -3,7 +3,7 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactEvent {
@@ -60,15 +60,15 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
 
    public override fun toString(): String {
       val var1: Int = this.start;
-      val var2: Int = this.end;
-      val var3: Int = this.target;
+      val var3: Int = this.end;
+      val var2: Int = this.target;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnFocusEvent(start=");
       var4.append(var1);
       var4.append(", end=");
-      var4.append(var2);
-      var4.append(", target=");
       var4.append(var3);
+      var4.append(", target=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

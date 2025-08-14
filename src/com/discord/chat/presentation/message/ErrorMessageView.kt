@@ -18,19 +18,15 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function1
 
 @SuppressLint(["SetTextI18n"])
-public class ErrorMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout {
+public class ErrorMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout(var1, var2) {
    private final val binding: ErrorMessageViewBinding
 
    fun ErrorMessageView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var8: ErrorMessageViewBinding = ErrorMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var8, "inflate(...)");
       this.binding = var8;
       this.setOrientation(1);
       ViewBackgroundUtilsKt.setBackgroundRectangle(
@@ -43,16 +39,13 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
       var8.header.setText("Something went wrong here.");
       var8.header.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       var var6: TextView = var8.header;
-      kotlin.jvm.internal.r.g(var8.header, "header");
       val var7: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
       var8.errorLabel.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       var6 = var8.errorLabel;
-      kotlin.jvm.internal.r.g(var8.errorLabel, "errorLabel");
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryMedium);
       var8.seeMoreButton.setTextColor(ThemeManagerKt.getTheme().getTextLink());
       val var9: TextView = var8.seeMoreButton;
-      kotlin.jvm.internal.r.g(var8.seeMoreButton, "seeMoreButton");
       DiscordFontUtilsKt.setDiscordFont(var9, var7);
    }
 
@@ -62,12 +55,10 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
    }
 
    public fun setErrorMessage(message: ErrorMessage) {
-      kotlin.jvm.internal.r.h(var1, "message");
       this.binding.errorLabel.setText(var1.getStackTrace());
    }
 
    public fun setExpandInfo(isExpanded: Boolean, onExpandChange: (Boolean) -> Unit) {
-      kotlin.jvm.internal.r.h(var2, "onExpandChange");
       if (var1) {
          this.binding.seeMoreButton.setText("Show less");
          this.binding.errorLabel.setSingleLine(false);
@@ -81,7 +72,6 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
       }
 
       val var3: TextView = this.binding.seeMoreButton;
-      kotlin.jvm.internal.r.g(this.binding.seeMoreButton, "seeMoreButton");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new d(var2, var1), 1, null);
    }
 }

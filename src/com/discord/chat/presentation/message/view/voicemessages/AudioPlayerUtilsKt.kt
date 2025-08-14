@@ -10,18 +10,16 @@ internal const val EMIT_EVENT_FREQUENCY_MS: Long = 50L
 internal const val ANIMATION_LENGTH_MS: Int = 500
 
 internal fun AudioAttachmentMessageAccessory.toAudioSource(): AudioSource {
-   kotlin.jvm.internal.r.h(var0, "<this>");
    return new AudioPlayerManager.AudioSource(
       ChannelId.box-impl(var0.getChannelId-o4g7jtM()), var0.getMessageId-3Eiw7ao(), var0.getAttachment().getUrl(), var0.getAttachmentIndex(), null
    );
 }
 
 internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource {
-   kotlin.jvm.internal.r.h(var0, "<this>");
-   val var3: ChannelId = var0.getChannelId-qMVnFVQ();
-   val var2: java.lang.String = var0.getMessageId-3Eiw7ao();
-   val var5: Int = var0.getIndex();
-   val var4: java.lang.String = var0.getUrl();
+   val var2: ChannelId = var0.getChannelId-qMVnFVQ();
+   val var3: java.lang.String = var0.getMessageId-3Eiw7ao();
+   val var4: Int = var0.getIndex();
+   val var5: java.lang.String = var0.getUrl();
    val var7: java.lang.String;
    if (var1 == null) {
       var1 = var0.getUrl();
@@ -33,7 +31,7 @@ internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource 
       var7 = var1;
    }
 
-   return new MediaSource(var4, null, null, null, var7, MediaType.AUDIO, false, var3, var2, var5, null, null, 3150, null);
+   return new MediaSource(var5, null, null, null, var7, MediaType.AUDIO, false, var2, var3, var4, null, null, 3150, null);
 }
 
 @JvmSynthetic

@@ -1,6 +1,6 @@
 package com.discord.animatable_underlay
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -10,14 +10,13 @@ import android.graphics.RectF
 import android.graphics.Path.Direction
 import android.view.MotionEvent
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react_activities.RootViewUtils
+import com.discord.react_activities.ReactRootView
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
 
-public class AnimatableUnderlay(context: Context) : ReactViewGroup {
+public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
    private final var height: Float
    private final var width: Float
 
@@ -27,13 +26,13 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    public final var shapeHeight: Float
       internal set
 
-   public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX
+   public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX = AnimatableUnderlay.ClipDirectionX.CENTERED
       internal set
 
-   public final var clipDirectionY: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionY
+   public final var clipDirectionY: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionY = AnimatableUnderlay.ClipDirectionY.CENTERED
       internal set
 
-   internal final var shapeBorderConfig: AnimatableUnderlayBorders
+   internal final var shapeBorderConfig: AnimatableUnderlayBorders = new AnimatableUnderlayBorders()
    public final var shapeBackgroundColor: Int
    private final var shadowColor: String
    private final var shadowElevation: Float
@@ -43,11 +42,6 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final val pathRect: RectF
 
    init {
-      r.h(var1, "context");
-      super(var1);
-      this.clipDirectionX = AnimatableUnderlay.ClipDirectionX.CENTERED;
-      this.clipDirectionY = AnimatableUnderlay.ClipDirectionY.CENTERED;
-      this.shapeBorderConfig = new AnimatableUnderlayBorders();
       this.shadowColor = "#14000000";
       this.shadowElevation = SizeUtilsKt.getDpToPx(3);
       val var3: Paint = new Paint();
@@ -72,10 +66,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var15: RectF = this.pathRect;
-            val var2: Float = this.height;
+            val var3: Float = this.height;
             val var4: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var2 - (var2 - var4) / 2;
+            var15.bottom = var3 - (var3 - var4) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -96,10 +90,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var19: RectF = this.pathRect;
-            val var9: Float = this.width;
-            val var13: Float = this.shapeWidth;
+            val var13: Float = this.width;
+            val var9: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var9 - (var9 - var13) / 2;
+            var19.right = var13 - (var13 - var9) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -121,7 +115,6 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
 
    @JvmStatic
    fun `onAttachedToWindow$lambda$2`(var0: AnimatableUnderlay, var1: MotionEvent): Unit {
-      r.h(var1, "e");
       val var2: Int = var1.getAction();
       if (var2 != 0) {
          if (var2 == 1 || var2 == 3) {
@@ -152,7 +145,6 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    }
 
    protected open fun dispatchDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
       this.drawCustomShape(var1);
       var1.clipPath(this.path);
       super.dispatchDraw(var1);
@@ -160,12 +152,12 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new a(this));
+      ReactRootView.Companion.setOnInterceptTouchEvent(this, new a(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, null);
+      ReactRootView.Companion.setOnInterceptTouchEvent(this, null);
    }
 
    protected open fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -188,7 +180,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic
@@ -235,7 +227,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

@@ -2,15 +2,12 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.referral.ReferralEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ReferralMessageAccessory(messageId: MessageId, referral: ReferralEmbed) : ReferralMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val referral: ReferralEmbed
 
    fun ReferralMessageAccessory(var1: java.lang.String, var2: ReferralEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "referral");
       super(var1, "referral", false, 4, null);
       this.messageId = var1;
       this.referral = var2;
@@ -25,8 +22,6 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
    }
 
    public fun copy(messageId: MessageId = ..., referral: ReferralEmbed = ...): ReferralMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "referral");
       return new ReferralMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +35,7 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.referral, var1.referral);
+            return this.referral == var1.referral;
          }
       }
    }
@@ -50,14 +45,14 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ReferralEmbed = this.referral;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ReferralMessageAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", referral=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: ReferralEmbed = this.referral;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ReferralMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", referral=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

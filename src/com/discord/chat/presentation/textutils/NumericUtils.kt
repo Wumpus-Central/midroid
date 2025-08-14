@@ -2,14 +2,16 @@ package com.discord.chat.presentation.textutils
 
 import java.util.ArrayList
 import java.util.TreeMap
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nNumericUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NumericUtils.kt\ncom/discord/chat/presentation/textutils/NumericUtils\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,65:1\n1#2:66\n827#3:67\n855#3,2:68\n*S KotlinDebug\n*F\n+ 1 NumericUtils.kt\ncom/discord/chat/presentation/textutils/NumericUtils\n*L\n6#1:67\n6#1:68,2\n*E\n"])
 public object NumericUtils {
    private final val letters: List<String>
    private final val romanNumeralMap: TreeMap<Long, String>
 
    @JvmStatic
    fun {
-      val var1: java.util.List = kotlin.text.h.B0("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
+      val var1: java.util.List = StringsKt.split$default("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var0: ArrayList = new ArrayList();
 
       for (Object var2 : var1) {
@@ -42,11 +44,11 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.d.e(var1 % (long)26, 1L);
-            val var9: java.lang.String = this.toLetter(var1 / (long)26);
-            val var8: java.lang.String = this.toLetter(var10);
+            val var8: java.lang.String = this.toLetter(var1 / (long)26);
+            val var9: java.lang.String = this.toLetter(var10);
             val var11: StringBuilder = new StringBuilder();
-            var11.append(var9);
             var11.append(var8);
+            var11.append(var9);
             return var11.toString();
          }
       } else {
@@ -59,25 +61,22 @@ public object NumericUtils {
 
    public fun toRomanNumeral(number: Long): String {
       if (var1 >= 1L) {
-         val var8: TreeMap = romanNumeralMap;
-         var var6: Any = romanNumeralMap.floorKey(var1);
-         kotlin.jvm.internal.r.e(var6);
-         val var3: Long = (var6 as java.lang.Number).longValue();
-         val var10: java.lang.String;
+         val var6: TreeMap = romanNumeralMap;
+         var var8: java.lang.String = romanNumeralMap.floorKey(var1);
+         val var3: Long = (var8 as java.lang.Number).longValue();
          if (var1 == var3) {
-            val var9: Any = var8.get(var1);
-            kotlin.jvm.internal.r.e(var9);
-            var10 = var9 as java.lang.String;
+            var8 = (java.lang.String)var6.get(var1);
+            var8 = var8;
          } else {
-            var6 = var8.get(var3);
+            var8 = (java.lang.String)var6.get(var3);
             val var7: java.lang.String = this.toRomanNumeral(var1 - var3);
-            val var11: StringBuilder = new StringBuilder();
-            var11.append(var6);
-            var11.append(var7);
-            var10 = var11.toString();
+            val var12: StringBuilder = new StringBuilder();
+            var12.append((Object)var8);
+            var12.append(var7);
+            var8 = var12.toString();
          }
 
-         return var10;
+         return var8;
       } else {
          val var5: StringBuilder = new StringBuilder();
          var5.append("Number must be at least 1. Provided: ");

@@ -2,9 +2,8 @@ package com.discord.media.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class CompressionProgressEvent(uri: String, progress: Int) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
    public final val progress: Int
 
    init {
-      r.h(var1, "uri");
       super();
       this.uri = var1;
       this.progress = var2;
@@ -27,7 +25,6 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
    }
 
    public fun copy(uri: String = var0.uri, progress: Int = var0.progress): CompressionProgressEvent {
-      r.h(var1, "uri");
       return new CompressionProgressEvent(var1, var2);
    }
 
@@ -38,7 +35,7 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.uri, var1.uri)) {
+         if (!(this.uri == var1.uri)) {
             return false;
          } else {
             return this.progress == var1.progress;

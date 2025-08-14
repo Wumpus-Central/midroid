@@ -5,11 +5,11 @@ import com.discord.chat.presentation.list.item.PortalViewChatListItem;
 
 // $VF: synthetic class
 public final class d implements Runnable {
-   public final PortalViewChatListItem j;
-   public final ChatListFrameLayout k;
+   public final PortalViewChatListItem d;
+   public final ChatListFrameLayout e;
 
    @Override
    public final void run() {
-      PortalViewDelegate.b(this.j, this.k);
+      PortalViewDelegate.b(this.d, this.e);
    }
 }

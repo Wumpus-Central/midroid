@@ -4,12 +4,12 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class e implements Runnable {
-   public final int j;
-   public final BundleUpdater k;
-   public final Function0 l;
+   public final int d;
+   public final BundleUpdater e;
+   public final Function0 i;
 
    @Override
    public final void run() {
-      BundleUpdater.a(this.j, this.k, this.l);
+      BundleUpdater.a(this.d, this.e, this.i);
    }
 }

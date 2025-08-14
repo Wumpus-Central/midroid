@@ -9,9 +9,11 @@ import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import android.view.WindowManager.LayoutParams
 import com.discord.mobile_voice_overlay.utils.WindowUtils
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayDialog.kt\ncom/discord/mobile_voice_overlay/views/OverlayDialog\n+ 2 Animator.kt\nandroidx/core/animation/AnimatorKt\n*L\n1#1,86:1\n29#2:87\n85#2,18:88\n*S KotlinDebug\n*F\n+ 1 OverlayDialog.kt\ncom/discord/mobile_voice_overlay/views/OverlayDialog\n*L\n49#1:87\n49#1:88,18\n*E\n"])
 public abstract class OverlayDialog : OverlayBubbleWrap {
-   public final var onDialogClosed: (OverlayDialog) -> Unit
+   public final var onDialogClosed: (OverlayDialog) -> Unit = new b()
       internal set
 
    public open var isMoving: Boolean
@@ -24,9 +26,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
 
    open fun OverlayDialog(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       super(var1);
-      this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
       val var2: LayoutParams = this.getWindowLayoutParams();
       var2.width = -1;
@@ -39,9 +39,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
       val var3: LayoutParams = this.getWindowLayoutParams();
       var3.width = -1;
@@ -54,9 +52,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet, var3: Int) {
-      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
-      this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
       val var4: LayoutParams = this.getWindowLayoutParams();
       var4.width = -1;
@@ -75,7 +71,6 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    @JvmStatic
    fun `onDialogClosed$lambda$0`(var0: OverlayDialog): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -113,11 +108,9 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
             }
 
             public void onViewAttachedToWindow(View var1) {
-               kotlin.jvm.internal.r.h(var1, "v");
             }
 
             public void onViewDetachedFromWindow(View var1) {
-               kotlin.jvm.internal.r.h(var1, "v");
                this.$closingAnimator.end();
             }
          });

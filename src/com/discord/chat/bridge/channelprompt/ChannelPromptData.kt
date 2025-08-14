@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.channelprompt
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ChannelPromptData(cameraButtonIcon: String? = null,
@@ -82,20 +81,20 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.cameraButtonIcon, var1.cameraButtonIcon)) {
+         if (!(this.cameraButtonIcon == var1.cameraButtonIcon)) {
             return false;
-         } else if (!r.c(this.gifButtonIcon, var1.gifButtonIcon)) {
+         } else if (!(this.gifButtonIcon == var1.gifButtonIcon)) {
             return false;
-         } else if (!r.c(this.emojiButtonIcon, var1.emojiButtonIcon)) {
+         } else if (!(this.emojiButtonIcon == var1.emojiButtonIcon)) {
             return false;
-         } else if (!r.c(this.gamingStatsButtonText, var1.gamingStatsButtonText)) {
+         } else if (!(this.gamingStatsButtonText == var1.gamingStatsButtonText)) {
             return false;
-         } else if (!r.c(this.cameraButtonText, var1.cameraButtonText)) {
+         } else if (!(this.cameraButtonText == var1.cameraButtonText)) {
             return false;
-         } else if (!r.c(this.gifButtonText, var1.gifButtonText)) {
+         } else if (!(this.gifButtonText == var1.gifButtonText)) {
             return false;
          } else {
-            return r.c(this.emojiButtonText, var1.emojiButtonText);
+            return this.emojiButtonText == var1.emojiButtonText;
          }
       }
    }
@@ -152,30 +151,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.cameraButtonIcon;
-      val var7: java.lang.String = this.gifButtonIcon;
+      val var1: java.lang.String = this.cameraButtonIcon;
+      val var6: java.lang.String = this.gifButtonIcon;
       val var3: java.lang.String = this.emojiButtonIcon;
-      val var8: java.lang.String = this.gamingStatsButtonText;
-      val var6: java.lang.String = this.cameraButtonText;
+      val var4: java.lang.String = this.gamingStatsButtonText;
+      val var7: java.lang.String = this.cameraButtonText;
       val var5: java.lang.String = this.gifButtonText;
-      val var4: java.lang.String = this.emojiButtonText;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ChannelPromptData(cameraButtonIcon=");
-      var1.append(var2);
-      var1.append(", gifButtonIcon=");
-      var1.append(var7);
-      var1.append(", emojiButtonIcon=");
-      var1.append(var3);
-      var1.append(", gamingStatsButtonText=");
-      var1.append(var8);
-      var1.append(", cameraButtonText=");
-      var1.append(var6);
-      var1.append(", gifButtonText=");
-      var1.append(var5);
-      var1.append(", emojiButtonText=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.emojiButtonText;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ChannelPromptData(cameraButtonIcon=");
+      var8.append(var1);
+      var8.append(", gifButtonIcon=");
+      var8.append(var6);
+      var8.append(", emojiButtonIcon=");
+      var8.append(var3);
+      var8.append(", gamingStatsButtonText=");
+      var8.append(var4);
+      var8.append(", cameraButtonText=");
+      var8.append(var7);
+      var8.append(", gifButtonText=");
+      var8.append(var5);
+      var8.append(", emojiButtonText=");
+      var8.append(var2);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

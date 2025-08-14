@@ -2,9 +2,8 @@ package com.discord.qr.scanner.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnQRCodeFoundEvent(status: String, result: String? = null) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
    public final val result: String?
 
    init {
-      r.h(var1, "status");
       super();
       this.status = var1;
       this.result = var2;
@@ -27,7 +25,6 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
    }
 
    public fun copy(status: String = var0.status, result: String? = var0.result): OnQRCodeFoundEvent {
-      r.h(var1, "status");
       return new OnQRCodeFoundEvent(var1, var2);
    }
 
@@ -38,10 +35,10 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.status, var1.status)) {
+         if (!(this.status == var1.status)) {
             return false;
          } else {
-            return r.c(this.result, var1.result);
+            return this.result == var1.result;
          }
       }
    }
@@ -64,14 +61,14 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
 
    public override fun toString(): String {
       val var1: java.lang.String = this.status;
-      val var3: java.lang.String = this.result;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnQRCodeFoundEvent(status=");
-      var2.append(var1);
-      var2.append(", result=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.result;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("OnQRCodeFoundEvent(status=");
+      var3.append(var1);
+      var3.append(", result=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

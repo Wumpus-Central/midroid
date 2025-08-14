@@ -7,7 +7,6 @@ import com.discord.chat.bridge.botuikit.ButtonStyle
 import com.discord.misc.utilities.view.ButtonBackgroundUtilsKt
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.internal.r
 
 @JvmSynthetic
 fun `access$hasEmoji`(var0: ButtonComponent): Boolean {
@@ -75,10 +74,8 @@ private fun Button.setDangerColor() {
 
 private fun Button.setSecondaryColor() {
    var var2: Context = var0.getContext();
-   r.g(var2, "getContext(...)");
    val var1: Int = ColorUtilsKt.getThemeColor(var2, R.color.primary_400, R.color.primary_500);
    var2 = var0.getContext();
-   r.g(var2, "getContext(...)");
    ButtonBackgroundUtilsKt.setBackgroundColors(
       var0, var1, ColorUtilsKt.getThemeColor(var2, R.color.primary_light_500_alpha_20, R.color.primary_dark_500_alpha_20)
    );

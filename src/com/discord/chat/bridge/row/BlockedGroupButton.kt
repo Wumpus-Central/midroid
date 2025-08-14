@@ -1,15 +1,13 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
    public final val action: BlockedGroupButtonAction
 
    init {
-      r.h(var1, "action");
       super();
       this.action = var1;
    }
@@ -19,7 +17,6 @@ public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
    }
 
    public fun copy(action: BlockedGroupButtonAction = var0.action): BlockedGroupButton {
-      r.h(var1, "action");
       return new BlockedGroupButton(var1);
    }
 
@@ -29,7 +26,7 @@ public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
       } else if (var1 !is BlockedGroupButton) {
          return false;
       } else {
-         return r.c(this.action, (var1 as BlockedGroupButton).action);
+         return this.action == (var1 as BlockedGroupButton).action;
       }
    }
 

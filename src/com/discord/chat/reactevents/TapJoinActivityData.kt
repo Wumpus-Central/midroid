@@ -3,16 +3,14 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapJoinActivityData(var1: java.lang.String) {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -22,7 +20,6 @@ internal data class TapJoinActivityData(messageId: MessageId) : TapJoinActivityD
    }
 
    public fun copy(messageId: MessageId = ...): TapJoinActivityData {
-      r.h(var1, "messageId");
       return new TapJoinActivityData(var1, null);
    }
 

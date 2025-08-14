@@ -3,16 +3,14 @@ package com.discord.notifications.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class LocalNotificationEvent(locationNotification: Map<String, String?>) : ReactEvent {
    public final val locationNotification: Map<String, String?>
 
    init {
-      r.h(var1, "locationNotification");
       super();
       this.locationNotification = var1;
    }
@@ -22,7 +20,6 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public fun copy(locationNotification: Map<String, String?> = var0.locationNotification): LocalNotificationEvent {
-      r.h(var1, "locationNotification");
       return new LocalNotificationEvent(var1);
    }
 
@@ -32,7 +29,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
       } else if (var1 !is LocalNotificationEvent) {
          return false;
       } else {
-         return r.c(this.locationNotification, (var1 as LocalNotificationEvent).locationNotification);
+         return this.locationNotification == (var1 as LocalNotificationEvent).locationNotification;
       }
    }
 

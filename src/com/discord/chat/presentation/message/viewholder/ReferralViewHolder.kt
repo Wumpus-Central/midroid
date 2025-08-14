@@ -5,19 +5,14 @@ import com.discord.chat.presentation.message.messagepart.ReferralMessageAccessor
 import com.discord.chat.presentation.message.view.ReferralView
 import com.discord.primitives.MessageId
 
-public class ReferralViewHolder(referralView: ReferralView) : MessagePartViewHolder {
+public class ReferralViewHolder(referralView: ReferralView) : MessagePartViewHolder(var1) {
    private final val referralView: ReferralView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "referralView");
-      super(var1, null);
       this.referralView = var1;
    }
 
    public fun bind(accessory: ReferralMessageAccessory, onTapAccept: (String?) -> Unit, onTapLink: (MessageId, LinkContentNode) -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "accessory");
-      kotlin.jvm.internal.r.h(var2, "onTapAccept");
-      kotlin.jvm.internal.r.h(var3, "onTapLink");
       this.referralView.bind(var1, var2, var3);
    }
 }

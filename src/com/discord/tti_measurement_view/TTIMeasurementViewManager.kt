@@ -1,6 +1,6 @@
 package com.discord.tti_measurement_view
 
-import A9.s
+import B9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.tti_measurement_view.events.OnMeasurementEvent
 import com.facebook.react.module.annotations.ReactModule
@@ -9,35 +9,29 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", H.b(OnMeasurementEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", OnMeasurementEvent::class))
 
    private fun onMeasurement(view: TTIMeasurementView, timestamp: Double) {
       this.reactEvents.emitEvent(var1, new OnMeasurementEvent(var2));
    }
 
    protected open fun addEventEmitters(reactContext: ThemedReactContext, view: TTIMeasurementView) {
-      r.h(var1, "reactContext");
-      r.h(var2, "view");
       super.addEventEmitters(var1, var2);
-      var2.setOnMeasurementListener(new Function2(this) {
+      var2.setOnMeasurementListener(new Function2<TTIMeasurementView, java.lang.Double, Unit>(this) {
          {
             super(2, var1, TTIMeasurementViewManager::class.java, "onMeasurement", "onMeasurement(Lcom/discord/tti_measurement_view/TTIMeasurementView;D)V", 0);
          }
 
          public final void invoke(TTIMeasurementView var1, double var2) {
-            r.h(var1, "p0");
             TTIMeasurementViewManager.access$onMeasurement(super.receiver as TTIMeasurementViewManager, var1, var2);
          }
       });
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): TTIMeasurementView {
-      r.h(var1, "reactContext");
       return new TTIMeasurementView(var1);
    }
 

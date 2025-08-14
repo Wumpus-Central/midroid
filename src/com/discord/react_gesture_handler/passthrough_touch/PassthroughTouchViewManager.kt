@@ -1,6 +1,6 @@
 package com.discord.react_gesture_handler.passthrough_touch
 
-import A9.s
+import B9.s
 import com.discord.react_gesture_handler.passthrough_touch.events.OnTouchDownData
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -8,14 +8,12 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerDelegate
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerInterface
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "PassthroughTouchView")
 internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchViewGroup>, PassthroughTouchViewManagerInterface<PassthroughTouchViewGroup> {
    private final val mDelegate: PassthroughTouchViewManagerDelegate<PassthroughTouchViewGroup, PassthroughTouchViewManager> =
       new PassthroughTouchViewManagerDelegate(this)
-      private final val reactEvents: ReactEvents = new ReactEvents(s.a("onTouchDown", H.b(OnTouchDownData.class)))
+      private final val reactEvents: ReactEvents = new ReactEvents(s.a("onTouchDown", OnTouchDownData::class))
 
    @JvmStatic
    fun `createViewInstance$lambda$1$lambda$0`(var0: PassthroughTouchViewManager, var1: ThemedReactContext, var2: PassthroughTouchViewGroup): Unit {
@@ -24,7 +22,6 @@ internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchVi
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): PassthroughTouchViewGroup {
-      r.h(var1, "reactContext");
       val var2: PassthroughTouchViewGroup = new PassthroughTouchViewGroup(var1);
       var2.setOnTouchDown(new b(this, var1, var2));
       return var2;

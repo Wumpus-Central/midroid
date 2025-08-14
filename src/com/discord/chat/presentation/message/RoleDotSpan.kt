@@ -21,8 +21,6 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    private final val layerDrawable: LayerDrawable
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super();
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
       this.pxSize = (int)(SizeUtilsKt.getSpToPx(var3) * var4);
@@ -42,7 +40,6 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    }
 
    public fun setColors(roleColors: RoleColors) {
-      kotlin.jvm.internal.r.h(var1, "roleColors");
       this.roleDot.setColors(var1);
    }
 }

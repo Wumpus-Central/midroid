@@ -1,12 +1,12 @@
 package com.discord.notifications.api
 
-import I9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.H
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = StickerType.Serializer::class)
 public enum class StickerType(serialNumber: Int) : IntEnum {
@@ -37,6 +37,7 @@ public enum class StickerType(serialNumber: Int) : IntEnum {
       return $ENTRIES;
    }
 
+   @SourceDebugExtension(["SMAP\nStickerType.kt\nKotlin\n*S Kotlin\n*F\n+ 1 StickerType.kt\ncom/discord/notifications/api/StickerType$Companion\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,25:1\n1310#2,2:26\n*S KotlinDebug\n*F\n+ 1 StickerType.kt\ncom/discord/notifications/api/StickerType$Companion\n*L\n20#1:26,2\n*E\n"])
    public companion object {
       public fun fromInt(int: Int): StickerType {
          val var5: Array<StickerType> = StickerType.values();
@@ -71,5 +72,5 @@ public enum class StickerType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(H.b(StickerType.class), null, 2)
+   public object Serializer : IntEnumSerializer(StickerType::class, null, 2)
 }

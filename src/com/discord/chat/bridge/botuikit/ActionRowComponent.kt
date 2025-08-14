@@ -1,20 +1,16 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent {
+public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent() {
    public open val type: Int
    public open val id: String
    public open val errorText: String?
    public final val components: List<Component>
 
    init {
-      r.h(var2, "id");
-      r.h(var4, "components");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.errorText = var3;
@@ -38,8 +34,6 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, errorText: String? = var0.errorText, components: List<Component> = var0.components): ActionRowComponent {
-      r.h(var2, "id");
-      r.h(var4, "components");
       return new ActionRowComponent(var1, var2, var3, var4);
    }
 
@@ -52,12 +46,12 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.errorText, var1.errorText)) {
+         } else if (!(this.errorText == var1.errorText)) {
             return false;
          } else {
-            return r.c(this.components, var1.components);
+            return this.components == var1.components;
          }
       }
    }
@@ -78,19 +72,19 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    public override fun toString(): String {
       val var1: Int = this.type;
       val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActionRowComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", errorText=");
-      var2.append(var5);
-      var2.append(", components=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.errorText;
+      val var2: java.util.List = this.components;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ActionRowComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var4);
+      var5.append(", errorText=");
+      var5.append(var3);
+      var5.append(", components=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -1,15 +1,13 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class EmbedProvider(name: String) {
    public final val name: String
 
    init {
-      r.h(var1, "name");
       super();
       this.name = var1;
    }
@@ -19,7 +17,6 @@ public data class EmbedProvider(name: String) {
    }
 
    public fun copy(name: String = var0.name): EmbedProvider {
-      r.h(var1, "name");
       return new EmbedProvider(var1);
    }
 
@@ -29,7 +26,7 @@ public data class EmbedProvider(name: String) {
       } else if (var1 !is EmbedProvider) {
          return false;
       } else {
-         return r.c(this.name, (var1 as EmbedProvider).name);
+         return this.name == (var1 as EmbedProvider).name;
       }
    }
 
@@ -38,12 +35,12 @@ public data class EmbedProvider(name: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("EmbedProvider(name=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.name;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("EmbedProvider(name=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

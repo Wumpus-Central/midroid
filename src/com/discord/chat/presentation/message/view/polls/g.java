@@ -6,10 +6,10 @@ import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccesso
 
 // $VF: synthetic class
 public final class g implements OnClickListener {
-   public final PollAnswerAdapter j;
-   public final PollAnswerAccessory k;
+   public final PollAnswerAdapter d;
+   public final PollAnswerAccessory e;
 
    public final void onClick(View var1) {
-      PollAnswerAdapter.c(this.j, this.k, var1);
+      PollAnswerAdapter.c(this.d, this.e, var1);
    }
 }

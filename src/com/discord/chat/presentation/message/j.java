@@ -5,9 +5,9 @@ import android.view.View.OnClickListener;
 
 // $VF: synthetic class
 public final class j implements OnClickListener {
-   public final MessageAccessoriesAdapter j;
+   public final MessageAccessoriesAdapter d;
 
    public final void onClick(View var1) {
-      MessageAccessoriesAdapter.H(this.j, var1);
+      MessageAccessoriesAdapter.H(this.d, var1);
    }
 }

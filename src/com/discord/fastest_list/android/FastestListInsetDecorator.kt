@@ -4,7 +4,6 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
-import kotlin.jvm.internal.r
 
 internal class FastestListInsetDecorator(horizontal: Boolean, insetEnd: Int, insetStart: Int) : RecyclerView.ItemDecoration {
    public final var horizontal: Boolean
@@ -23,10 +22,6 @@ internal class FastestListInsetDecorator(horizontal: Boolean, insetEnd: Int, ins
    }
 
    public override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      r.h(var1, "outRect");
-      r.h(var2, "view");
-      r.h(var3, "parent");
-      r.h(var4, "state");
       super.getItemOffsets(var1, var2, var3, var4);
       val var5: Int = var3.getChildAdapterPosition(var2);
       if (var5 == 0) {

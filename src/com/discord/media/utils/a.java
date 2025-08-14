@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final Context j;
-   public final ContentResolverMedia.QueryType k;
-   public final int l;
+   public final Context d;
+   public final ContentResolverMedia.QueryType e;
+   public final int i;
    public final Integer m;
 
    public final Object invoke(Object var1) {
-      return ContentResolverMedia.Companion.a(this.j, this.k, this.l, this.m, (Uri)var1);
+      return ContentResolverMedia.Companion.a(this.d, this.e, this.i, this.m, (Uri)var1);
    }
 }

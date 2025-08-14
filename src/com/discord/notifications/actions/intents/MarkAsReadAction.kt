@@ -8,7 +8,6 @@ import android.os.Parcel
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.headless_tasks.api.HeadlessTasks
-import kotlin.jvm.internal.r
 
 public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId: MessageId) : MarkAsReadAction(var1, var2, var4), NotificationAction {
    public open val tag: String
@@ -16,9 +15,6 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    private final val messageId: MessageId
 
    fun MarkAsReadAction(var1: java.lang.String, var2: Long, var4: java.lang.String) {
-      r.h(var1, "tag");
-      r.h(var4, "messageId");
-      super();
       this.tag = var1;
       this.channelId = var2;
       this.messageId = var4;
@@ -37,8 +33,6 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    }
 
    public fun copy(tag: String = ..., channelId: ChannelId = ..., messageId: MessageId = ...): MarkAsReadAction {
-      r.h(var1, "tag");
-      r.h(var4, "messageId");
       return new MarkAsReadAction(var1, var2, var4, null);
    }
 
@@ -53,7 +47,7 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.tag, var1.tag)) {
+         if (!(this.tag == var1.tag)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
@@ -72,13 +66,11 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: Bundle = new Bundle();
-      var4.putString("channelId", ChannelId.toString-impl(this.channelId));
-      var4.putString("messageId", MessageId.toString-impl(this.messageId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MarkAsRead", 0L, false, var4, true, 12, null);
+      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", ChannelId.toString-impl(this.channelId));
+      var3.putString("messageId", MessageId.toString-impl(this.messageId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MarkAsRead", 0L, false, var3, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -90,22 +82,21 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = this.tag;
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MarkAsReadAction(tag=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MarkAsReadAction(tag=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      r.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
       var1.writeParcelable(MessageId.box-impl(this.messageId), var2);
@@ -114,7 +105,6 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MarkAsReadAction> {
       fun createFromParcel(var1: Parcel): MarkAsReadAction {
-         r.h(var1, "parcel");
          return new MarkAsReadAction(
             var1.readString(),
             (var1.readParcelable(MarkAsReadAction.class.getClassLoader()) as ChannelId).unbox-impl(),

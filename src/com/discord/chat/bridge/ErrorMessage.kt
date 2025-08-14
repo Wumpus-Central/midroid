@@ -1,9 +1,8 @@
 package com.discord.chat.bridge
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
@@ -11,8 +10,6 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    public final val stackTrace: String
 
    fun ErrorMessage(var1: java.lang.String, var2: java.lang.String) {
-      r.h(var1, "id");
-      r.h(var2, "stackTrace");
       super(null);
       this.id = var1;
       this.stackTrace = var2;
@@ -27,8 +24,6 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public fun copy(id: MessageId = ..., stackTrace: String = ...): ErrorMessage {
-      r.h(var1, "id");
-      r.h(var2, "stackTrace");
       return new ErrorMessage(var1, var2, null);
    }
 
@@ -42,7 +37,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
          } else {
-            return r.c(this.stackTrace, var1.stackTrace);
+            return this.stackTrace == var1.stackTrace;
          }
       }
    }
@@ -52,13 +47,13 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = this.stackTrace;
+      val var3: java.lang.String = MessageId.toString-impl(this.id);
+      val var2: java.lang.String = this.stackTrace;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ErrorMessage(id=");
-      var1.append(var2);
-      var1.append(", stackTrace=");
       var1.append(var3);
+      var1.append(", stackTrace=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

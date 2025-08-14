@@ -1,22 +1,17 @@
 package com.discord.app_icon
 
-import A9.s
+import B9.s
 import com.discord.codegen.NativeAppIconModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIconModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+@SourceDebugExtension(["SMAP\nAppIconModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppIconModule.kt\ncom/discord/app_icon/AppIconModule\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,38:1\n11165#2:39\n11500#2,3:40\n*S KotlinDebug\n*F\n+ 1 AppIconModule.kt\ncom/discord/app_icon/AppIconModule\n*L\n33#1:39\n33#1:40,3\n*E\n"])
+public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIconModuleSpec(var1) {
    public override fun getAvailableIcons(promise: Promise) {
-      r.h(var1, "promise");
       val var5: Array<AppIcon> = AppIconUtil.INSTANCE.getAvailableIcons();
       val var4: ArrayList = new ArrayList(var5.length);
       val var3: Int = var5.length;
@@ -29,21 +24,15 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
    }
 
    public override fun getCurrentIcon(promise: Promise) {
-      r.h(var1, "promise");
-      val var3: AppIconUtil = AppIconUtil.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var3.getCurrentAppIcon(var2).getId())));
+      val var2: AppIconUtil = AppIconUtil.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var2.getCurrentAppIcon(var3).getId())));
    }
 
    public override fun setIcon(id: String, promise: Promise) {
-      r.h(var1, "id");
-      r.h(var2, "promise");
-
       try {
          val var3: AppIconUtil = AppIconUtil.INSTANCE;
          val var4: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var4, "getReactApplicationContext(...)");
          var3.setAppIcon(var4, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {

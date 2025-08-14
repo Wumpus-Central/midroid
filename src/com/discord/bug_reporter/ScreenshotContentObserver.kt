@@ -8,17 +8,15 @@ import android.os.Build.VERSION
 import android.provider.MediaStore.Images.Media
 import com.discord.logging.Log
 import java.util.Locale
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScreenshot: () -> Unit) : ContentObserver {
+@SourceDebugExtension(["SMAP\nScreenshotContentObserver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScreenshotContentObserver.kt\ncom/discord/bug_reporter/ScreenshotContentObserver\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,152:1\n1#2:153\n*E\n"])
+internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScreenshot: () -> Unit) : ContentObserver(null) {
    private final val contentResolver: ContentResolver
    private final val onScreenshot: () -> Unit
    private final var lastProcessedPath: String?
 
    init {
-      r.h(var1, "contentResolver");
-      r.h(var2, "onScreenshot");
-      super(null);
       this.contentResolver = var1;
       this.onScreenshot = var2;
    }
@@ -39,7 +37,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return c.w(c.w(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
+      return h.w(h.w(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])
@@ -106,7 +104,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 078
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 6
@@ -129,13 +127,13 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 0a3: astore 6
       // 0a5: aload 6
       // 0a7: ldc "getString(...)"
-      // 0a9: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0a9: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 0ac: aload 6
       // 0ae: bipush 47
       // 0b0: aconst_null
       // 0b1: bipush 2
       // 0b2: aconst_null
-      // 0b3: invokestatic kotlin/text/h.X0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+      // 0b3: invokestatic kotlin/text/StringsKt.W0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
       // 0b6: astore 6
       // 0b8: goto 090
       // 0bb: aload 7
@@ -152,9 +150,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 0dd: astore 8
       // 0df: aload 8
       // 0e1: ldc "getString(...)"
-      // 0e3: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0e3: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 0e6: aload 6
-      // 0e8: invokestatic kotlin/jvm/internal/r.e (Ljava/lang/Object;)V
+      // 0e8: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
       // 0eb: new com/discord/bug_reporter/ScreenshotContentObserver$ScreenshotData
       // 0ee: dup
       // 0ef: lload 4
@@ -170,7 +168,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 109: astore 1
       // 10a: aload 7
       // 10c: aconst_null
-      // 10d: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 110: aload 1
       // 111: areturn
       // 112: aload 6
@@ -178,12 +176,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 115: astore 1
       // 116: aload 7
       // 118: aload 6
-      // 11a: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11d: aload 1
       // 11e: athrow
       // 11f: aload 7
       // 121: aconst_null
-      // 122: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 122: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 125: aconst_null
       // 126: areturn
    }
@@ -202,7 +200,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    private fun process(uri: Uri) {
       val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
       if (var3 != null) {
-         if (this.lastProcessedPath == null || !h.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
+         if (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
             if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
                && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
                this.lastProcessedPath = var3.getPath();
@@ -223,11 +221,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var4: java.lang.String = var2.toString();
-         r.g(var4, "toString(...)");
-         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         r.g(var3, "toString(...)");
-         if (h.I(var4, var3, false, 2, null)) {
+         val var3: java.lang.String = var2.toString();
+         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         if (StringsKt.I(var3, var4, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -244,10 +240,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       private fun String.isScreenshotPath(): Boolean {
          val var2: Locale = Locale.getDefault();
-         r.g(var2, "getDefault(...)");
          var1 = var1.toLowerCase(var2);
-         r.g(var1, "toLowerCase(...)");
-         return h.N(var1, "screenshots/", false, 2, null);
+         return StringsKt.N(var1, "screenshots/", false, 2, null);
       }
    }
 
@@ -260,10 +254,6 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       public final val path: String
 
       init {
-         r.h(var3, "fileName");
-         r.h(var4, "relativePath");
-         r.h(var5, "uri");
-         super();
          this.id = var1;
          this.fileName = var3;
          this.relativePath = var4;
@@ -303,9 +293,6 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          uri: Uri = var0.uri,
          dateAdded: Long = var0.dateAdded
       ): com.discord.bug_reporter.ScreenshotContentObserver.ScreenshotData {
-         r.h(var3, "fileName");
-         r.h(var4, "relativePath");
-         r.h(var5, "uri");
          return new ScreenshotContentObserver.ScreenshotData(var1, var3, var4, var5, var6);
       }
 
@@ -318,11 +305,11 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
             var1 = var1;
             if (this.id != var1.id) {
                return false;
-            } else if (!r.c(this.fileName, var1.fileName)) {
+            } else if (!(this.fileName == var1.fileName)) {
                return false;
-            } else if (!r.c(this.relativePath, var1.relativePath)) {
+            } else if (!(this.relativePath == var1.relativePath)) {
                return false;
-            } else if (!r.c(this.uri, var1.uri)) {
+            } else if (!(this.uri == var1.uri)) {
                return false;
             } else {
                return this.dateAdded == var1.dateAdded;
@@ -337,19 +324,19 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var3: Long = this.id;
-         val var8: java.lang.String = this.fileName;
-         val var6: java.lang.String = this.relativePath;
-         val var5: Uri = this.uri;
+         val var6: java.lang.String = this.fileName;
+         val var5: java.lang.String = this.relativePath;
+         val var8: Uri = this.uri;
          val var1: Long = this.dateAdded;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScreenshotData(id=");
          var7.append(var3);
          var7.append(", fileName=");
-         var7.append(var8);
-         var7.append(", relativePath=");
          var7.append(var6);
-         var7.append(", uri=");
+         var7.append(", relativePath=");
          var7.append(var5);
+         var7.append(", uri=");
+         var7.append(var8);
          var7.append(", dateAdded=");
          var7.append(var1);
          var7.append(")");

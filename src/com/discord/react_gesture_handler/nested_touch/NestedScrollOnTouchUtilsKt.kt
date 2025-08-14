@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nNestedScrollOnTouchUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n+ 2 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,80:1\n33#2,2:81\n21#2,19:83\n1863#3,2:102\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n*L\n75#1:81,2\n75#1:83,19\n75#1:102,2\n*E\n"])
+
 package com.discord.react_gesture_handler.nested_touch
 
 import android.view.View
@@ -10,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import java.util.ArrayList
 import java.util.WeakHashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal final var viewClickListeners: WeakHashMap<View, OnClickListener> = new WeakHashMap()
 internal final var viewLongClickListeners: WeakHashMap<View, OnLongClickListener> = new WeakHashMap()
@@ -21,7 +23,6 @@ fun a(var0: OnLongClickListener, var1: View): Boolean {
 }
 
 public fun TextView.enableNestedSpanClickListener(viewManagesAccessibility: Boolean = false) {
-   r.h(var0, "<this>");
    var0.setOnTouchListener(new NestedScrollOnTouchListener(var0, var1));
 }
 
@@ -35,7 +36,6 @@ fun `enableNestedSpanClickListener$default`(var0: TextView, var1: Boolean, var2:
 }
 
 public fun View.setOnClickListenerNested(viewManagesAccessibility: Boolean = false, onClickListener: OnClickListener?) {
-   r.h(var0, "<this>");
    if (var2 == null) {
       viewClickListeners.remove(var0);
    } else {
@@ -56,7 +56,6 @@ fun `setOnClickListenerNested$default`(var0: View, var1: Boolean, var2: OnClickL
 }
 
 public fun View.setOnLongClickListenerNested(viewManagesAccessibility: Boolean = false, onLongPress: OnLongClickListener?) {
-   r.h(var0, "<this>");
    if (var2 == null) {
       viewLongClickListeners.remove(var0);
    } else {
@@ -94,7 +93,6 @@ private fun OnLongClickListener.updateWithOngoingGestureCancelling(): OnLongClic
 
 // $VF: Irreducible bytecode was duplicated to produce valid code
 fun `updateWithOngoingGestureCancelling$lambda$1`(var0: OnLongClickListener, var1: View): Boolean {
-   r.e(var1);
    val var4: ArrayList = new ArrayList();
    var var2: ViewParent = var1.getParent();
    var var5: ViewGroup;

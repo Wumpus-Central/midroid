@@ -2,9 +2,8 @@ package com.discord.recycler_view.utils
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView.Recycler
-import c2.o
+import b2.o
 import com.discord.crash_reporting.CrashReporting
-import kotlin.jvm.internal.r
 
 public class TransitionResilientRecyclingDelegate(onModifyCapturedException: (Exception) -> Exception = new o()) {
    private final val onModifyCapturedException: (Exception) -> Exception
@@ -15,14 +14,11 @@ public class TransitionResilientRecyclingDelegate(onModifyCapturedException: (Ex
    }
 
    init {
-      r.h(var1, "onModifyCapturedException");
-      super();
       this.onModifyCapturedException = var1;
    }
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: Exception): Exception {
-      r.h(var0, "e");
       return var0;
    }
 
@@ -35,10 +31,6 @@ public class TransitionResilientRecyclingDelegate(onModifyCapturedException: (Ex
    }
 
    public fun safeRemoveAndRecycleAllViews(recycler: Recycler, fallbackRemoveAllViews: () -> Unit, superRemoveAndRecycleAllViews: (Recycler) -> Unit) {
-      r.h(var1, "recycler");
-      r.h(var2, "fallbackRemoveAllViews");
-      r.h(var3, "superRemoveAndRecycleAllViews");
-
       try {
          if (this.disableRecycling) {
             var2.invoke();
@@ -51,11 +43,6 @@ public class TransitionResilientRecyclingDelegate(onModifyCapturedException: (Ex
    }
 
    public fun safeRemoveAndRecycleView(child: View, recycler: Recycler, fallbackRemoveView: (View) -> Unit, superRemoveAndRecycleView: (View, Recycler) -> Unit) {
-      r.h(var1, "child");
-      r.h(var2, "recycler");
-      r.h(var3, "fallbackRemoveView");
-      r.h(var4, "superRemoveAndRecycleView");
-
       try {
          if (this.disableRecycling) {
             var3.invoke(var1);
@@ -73,10 +60,6 @@ public class TransitionResilientRecyclingDelegate(onModifyCapturedException: (Ex
       fallbackRemoveViewAt: (Int) -> Unit,
       superRemoveAndRecycleViewAt: (Int, Recycler) -> Unit
    ) {
-      r.h(var2, "recycler");
-      r.h(var3, "fallbackRemoveViewAt");
-      r.h(var4, "superRemoveAndRecycleViewAt");
-
       try {
          if (this.disableRecycling) {
             var3.invoke(var1);

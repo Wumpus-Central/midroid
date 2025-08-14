@@ -1,21 +1,17 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
 public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) : LongPressStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val sticker: Sticker
 
    fun LongPressStickerData(var1: java.lang.String, var2: Sticker) {
-      r.h(var1, "messageId");
-      r.h(var2, "sticker");
-      super();
       this.messageId = var1;
       this.sticker = var2;
    }
@@ -29,8 +25,6 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
    }
 
    public fun copy(messageId: MessageId = ..., sticker: Sticker = ...): LongPressStickerData {
-      r.h(var1, "messageId");
-      r.h(var2, "sticker");
       return new LongPressStickerData(var1, var2, null);
    }
 
@@ -44,7 +38,7 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.sticker, var1.sticker);
+            return this.sticker == var1.sticker;
          }
       }
    }
@@ -61,13 +55,13 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Sticker = this.sticker;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Sticker = this.sticker;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressStickerData(messageId=");
-      var2.append(var3);
-      var2.append(", sticker=");
       var2.append(var1);
+      var2.append(", sticker=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

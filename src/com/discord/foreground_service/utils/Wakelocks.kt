@@ -7,8 +7,9 @@ import android.os.PowerManager
 import android.os.Build.VERSION
 import android.os.PowerManager.WakeLock
 import androidx.core.content.b
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nWakelocks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Wakelocks.kt\ncom/discord/foreground_service/utils/Wakelocks\n+ 2 Context.kt\nandroidx/core/content/ContextKt\n*L\n1#1,46:1\n31#2:47\n31#2:48\n*S KotlinDebug\n*F\n+ 1 Wakelocks.kt\ncom/discord/foreground_service/utils/Wakelocks\n*L\n16#1:47\n27#1:48\n*E\n"])
 internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
    private final val tag: String
    private final val timeout: Long
@@ -16,14 +17,11 @@ internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
    private final var wakeLockWifi: WifiLock?
 
    init {
-      r.h(var1, "tag");
-      super();
       this.tag = var1;
       this.timeout = var2;
    }
 
    public fun acquire(context: Context) {
-      r.h(var1, "context");
       val var2: WifiManager = b.i(var1, WifiManager.class) as WifiManager;
       if (var2 != null) {
          if (VERSION.SDK_INT >= 34) {

@@ -30,55 +30,46 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class GuildEventInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nGuildEventInviteView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GuildEventInviteView.kt\ncom/discord/chat/presentation/message/view/GuildEventInviteView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,212:1\n176#2,2:213\n257#2,2:216\n257#2,2:218\n1#3:215\n*S KotlinDebug\n*F\n+ 1 GuildEventInviteView.kt\ncom/discord/chat/presentation/message/view/GuildEventInviteView\n*L\n88#1:213,2\n167#1:216,2\n174#1:218,2\n*E\n"])
+public class GuildEventInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3) {
    private final val binding: GuildEventInviteViewBinding
 
    fun GuildEventInviteView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun GuildEventInviteView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var6: GuildEventInviteViewBinding = GuildEventInviteViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       var var4: TextView = var6.headerText;
       var6.headerText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
-      kotlin.jvm.internal.r.e(var4);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       val var13: ConstraintLayout = var6.badgeContainer;
-      kotlin.jvm.internal.r.g(var6.badgeContainer, "badgeContainer");
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          var13, ThemeManagerKt.getTheme().getBackgroundTertiary(), SizeUtilsKt.getDpToPx(1000), null, 0, 12, null
       );
       var6.badgeText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       var4 = var6.titleText;
-      kotlin.jvm.internal.r.e(var6.titleText);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryExtraBold);
       var4.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       SetTextSizeSpKt.setTextSizeSp(var4, 18.0F);
       val var5: MessageContentView = var6.descriptionText;
-      kotlin.jvm.internal.r.e(var6.descriptionText);
       val var15: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       val var16: TextView = var6.guildName;
-      kotlin.jvm.internal.r.e(var6.guildName);
       DiscordFontUtilsKt.setDiscordFont(var16, var8);
       var16.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       SetTextSizeSpKt.setTextSizeSp(var16, 14.0F);
       val var9: TextView = var6.channelName;
-      kotlin.jvm.internal.r.e(var6.channelName);
       DiscordFontUtilsKt.setDiscordFont(var9, var15);
       var9.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       SetTextSizeSpKt.setTextSizeSp(var9, 12.0F);
@@ -87,7 +78,6 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
       var10.setMaxLines(1);
       var10.ellipsize(TruncateAt.END);
       val var11: SimpleDraweeView = var6.secondaryButton;
-      kotlin.jvm.internal.r.g(var6.secondaryButton, "secondaryButton");
       ViewBackgroundUtilsKt.setBackgroundRectangle(
          var11,
          ThemeManagerKt.getTheme().getBackgroundAccent(),
@@ -96,7 +86,6 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
          SizeUtilsKt.getDpToPx(1)
       );
       val var7: SimpleDraweeView = var6.guildIcon;
-      kotlin.jvm.internal.r.g(var6.guildIcon, "guildIcon");
       ViewClippingUtilsKt.clipToRoundedRectangle(var7, SizeUtilsKt.getDpToPx(8));
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this, ThemeManagerKt.getTheme().getBackgroundSecondary(), SizeUtilsKt.getDpToPx(4), null, 0, 12, null
@@ -107,7 +96,6 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
 
    @JvmStatic
    fun `setDescription_iRUqyQU$lambda$12$lambda$11`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
-      kotlin.jvm.internal.r.h(var2, "node");
       var0.invoke(MessageId.box-impl(var1), var2);
       return Unit.a;
    }
@@ -126,27 +114,23 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setBadge(iconUrl: String?, count: String?) {
-      val var4: GuildEventInviteViewBinding = this.binding;
-      val var3: SimpleDraweeView = this.binding.badgeIcon;
-      kotlin.jvm.internal.r.g(this.binding.badgeIcon, "badgeIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var3, var1);
-      var4.badgeText.setText(var2);
+      val var3: GuildEventInviteViewBinding = this.binding;
+      val var4: SimpleDraweeView = this.binding.badgeIcon;
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
+      var3.badgeText.setText(var2);
    }
 
    public fun setChannel(iconUrl: String?, text: String?) {
       val var3: GuildEventInviteViewBinding = this.binding;
       val var4: SimpleDraweeView = this.binding.channelIcon;
-      kotlin.jvm.internal.r.g(this.binding.channelIcon, "channelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
       val var5: TextView = var3.channelName;
-      kotlin.jvm.internal.r.g(var3.channelName, "channelName");
       ViewUtilsKt.setOptionalText(var5, var2);
       var3.channelIcon.setColorFilter(new PorterDuffColorFilter(ThemeManagerKt.getTheme().getHeaderSecondary(), Mode.SRC_ATOP));
    }
 
    public fun setCreatorAvatar(iconUrl: String?) {
       val var2: SimpleDraweeView = this.binding.creatorAvatar;
-      kotlin.jvm.internal.r.g(this.binding.creatorAvatar, "creatorAvatar");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var2, var1);
    }
 
@@ -173,22 +157,6 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
       onTapSeeMore: (MessageId) -> Unit,
       onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var2, "messageId");
-      kotlin.jvm.internal.r.h(var7, "onTapLink");
-      kotlin.jvm.internal.r.h(var8, "onLongTapLink");
-      kotlin.jvm.internal.r.h(var9, "onTapChannel");
-      kotlin.jvm.internal.r.h(var10, "onLongPressChannel");
-      kotlin.jvm.internal.r.h(var11, "onTapAttachmentLink");
-      kotlin.jvm.internal.r.h(var12, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.r.h(var13, "onTapMention");
-      kotlin.jvm.internal.r.h(var14, "onTapCommand");
-      kotlin.jvm.internal.r.h(var15, "onLongPressCommand");
-      kotlin.jvm.internal.r.h(var16, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var17, "onTapTimestamp");
-      kotlin.jvm.internal.r.h(var18, "onTapInlineCode");
-      kotlin.jvm.internal.r.h(var19, "onTapEmoji");
-      kotlin.jvm.internal.r.h(var20, "onTapSeeMore");
-      kotlin.jvm.internal.r.h(var21, "onTapSoundmoji");
       if (var1 != null) {
          MessageContentView.setMessageContent-AeCz66Y$default(
             this.binding.descriptionText,
@@ -228,7 +196,6 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
       }
 
       val var24: MessageContentView = this.binding.descriptionText;
-      kotlin.jvm.internal.r.g(this.binding.descriptionText, "descriptionText");
       var var22: Boolean;
       if (var1 != null) {
          var22 = 1;
@@ -248,13 +215,10 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    public fun setGuild(name: String?, iconUrl: String?) {
       val var5: GuildEventInviteViewBinding = this.binding;
       val var6: TextView = this.binding.guildName;
-      kotlin.jvm.internal.r.g(this.binding.guildName, "guildName");
       ViewUtilsKt.setOptionalText(var6, var1);
       val var7: SimpleDraweeView = var5.guildIcon;
-      kotlin.jvm.internal.r.g(var5.guildIcon, "guildIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var7, var2);
       val var8: SimpleDraweeView = var5.guildIcon;
-      kotlin.jvm.internal.r.g(var5.guildIcon, "guildIcon");
       var var3: Boolean;
       if (var2 != null) {
          var3 = 1;
@@ -272,25 +236,21 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setHeader(iconUrl: String?, text: String, color: Int) {
-      kotlin.jvm.internal.r.h(var2, "text");
-      val var4: GuildEventInviteViewBinding = this.binding;
-      val var5: SimpleDraweeView = this.binding.headerIcon;
-      kotlin.jvm.internal.r.g(this.binding.headerIcon, "headerIcon");
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var5, var1);
-      var4.headerText.setText(var2);
-      var4.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
+      val var5: GuildEventInviteViewBinding = this.binding;
+      val var4: SimpleDraweeView = this.binding.headerIcon;
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
+      var5.headerText.setText(var2);
+      var5.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
    }
 
    public fun setSecondaryButton(iconUrl: String?, listener: OnClickListener?) {
       val var3: SimpleDraweeView = this.binding.secondaryButton;
-      kotlin.jvm.internal.r.e(this.binding.secondaryButton);
       ReactAssetUtilsKt.setOptionalReactImageUrl(var3, var1);
       var3.setOnClickListener(var2);
    }
 
    public fun setTitle(text: String?, color: Int?): Unit? {
       val var4: TextView = this.binding.titleText;
-      kotlin.jvm.internal.r.g(this.binding.titleText, "titleText");
       ViewUtilsKt.setOptionalText(var4, var1);
       val var5: Unit;
       if (var2 != null) {

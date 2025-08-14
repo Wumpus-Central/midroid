@@ -7,12 +7,10 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function2
 
-public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: AutoModerationNotificationEmbedView) : MessagePartViewHolder {
+public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: AutoModerationNotificationEmbedView) : MessagePartViewHolder(var1) {
    private final val notificationEmbedView: AutoModerationNotificationEmbedView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "notificationEmbedView");
-      super(var1, null);
       this.notificationEmbedView = var1;
    }
 
@@ -31,9 +29,6 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
       onTapAutoModerationActions: (MessageId, ChannelId) -> Unit,
       onTapAutoModerationFeedback: (MessageId, ChannelId) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "notificationEmbedAccessory");
-      kotlin.jvm.internal.r.h(var2, "onTapAutoModerationActions");
-      kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var6: java.lang.String = var1.getMessage().getId-3Eiw7ao();
       this.notificationEmbedView.configure(var1.getModerationContext(), new c(var2, var6, var4), new d(var3, var6, var4));

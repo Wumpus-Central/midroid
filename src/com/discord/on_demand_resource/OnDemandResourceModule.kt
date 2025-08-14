@@ -1,18 +1,12 @@
 package com.discord.on_demand_resource
 
-import Y1.a
+import X1.a
 import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
 
-public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceModuleSpec(var1) {
    @JvmStatic
    fun `fetchOnDemandResource$lambda$1$lambda$0`(var0: Promise, var1: Boolean): Unit {
       var0.resolve(var1);

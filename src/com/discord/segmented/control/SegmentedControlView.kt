@@ -17,12 +17,13 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.properties.ReadWriteProperty
 import kotlin.properties.c
 import kotlin.reflect.KProperty
 
-public class SegmentedControlView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
+@SourceDebugExtension(["SMAP\nSegmentedControlView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SegmentedControlView.kt\ncom/discord/segmented/control/SegmentedControlView\n+ 2 Delegates.kt\nkotlin/properties/Delegates\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,160:1\n33#2,3:161\n1872#3,3:164\n311#4:167\n327#4,4:168\n312#4:172\n*S KotlinDebug\n*F\n+ 1 SegmentedControlView.kt\ncom/discord/segmented/control/SegmentedControlView\n*L\n32#1:161,3\n88#1:164,3\n150#1:167\n150#1:168,4\n150#1:172\n*E\n"])
+public class SegmentedControlView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(var1, var2, var3) {
    private final val binding: SegmentedControlBinding
    public final var onSegmentSelected: ((Int, String) -> Unit)?
 
@@ -112,7 +113,6 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       }
 
       public final set(<set-?>) {
-         r.h(var1, "<set-?>");
          this.labels$delegate.setValue(this, $$delegatedProperties[8], var1);
       }
 
@@ -123,7 +123,6 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       }
 
       public final set(<set-?>) {
-         r.h(var1, "<set-?>");
          this.accessibilityRoleDescriptions$delegate.setValue(this, $$delegatedProperties[9], var1);
       }
 
@@ -131,20 +130,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
    private final var segmentWidth: Int
 
    fun SegmentedControlView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SegmentedControlView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2, var3);
       val var6: SegmentedControlBinding = SegmentedControlBinding.inflate(LayoutInflater.from(var1), this, true);
-      r.g(var6, "inflate(...)");
       this.binding = var6;
       val var4: Float = var1.getResources().getDisplayMetrics().density * 2.0F;
       var6.selectedSegmentBg.setElevation(var4);
@@ -160,8 +154,8 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.labels$delegate = this.updateViewOnChange(i.k(), true);
-      this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(i.k(), true);
+      this.labels$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
+      this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
    }
 
    private fun animateSelection(animate: Boolean) {
@@ -201,8 +195,6 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
             @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
-               r.h(var1, "host");
-               r.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var var3: Boolean = true;
                var2.D0(true);
@@ -232,7 +224,6 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
          val var4: CardView = this.binding.selectedSegmentBg;
-         r.g(this.binding.selectedSegmentBg, "selectedSegmentBg");
          val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
          if (var3 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
@@ -256,22 +247,22 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       val var3: java.util.Iterator = this.getLabels().iterator();
 
       for (int var2 = 0; var3.hasNext(); var2++) {
-         var var4: Any = var3.next();
+         var var4: TextView = (TextView)var3.next();
          if (var2 < 0) {
-            i.u();
+            CollectionsKt.u();
          }
 
-         var4 = var4 as java.lang.String;
-         val var5: TextView = this.getLabelView(var2);
-         var5.setText((java.lang.CharSequence)var4);
-         var5.setGravity(17);
-         DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-         var5.setTextSize(this.getSegmentFontSizeSp());
-         var5.setTextColor(this.getSegmentTextColor());
-         var5.setOnClickListener(new a(this, var2, (java.lang.String)var4));
+         val var5: java.lang.String = var4 as java.lang.String;
+         var4 = this.getLabelView(var2);
+         var4.setText(var5);
+         var4.setGravity(17);
+         DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+         var4.setTextSize(this.getSegmentFontSizeSp());
+         var4.setTextColor(this.getSegmentTextColor());
+         var4.setOnClickListener(new a(this, var2, var5));
          if (var2 == this.getSelectedIndex()) {
-            var5.setTextSize(this.getSelectedSegmentFontSizeSp());
-            var5.setTextColor(this.getSelectedSegmentTextColor());
+            var4.setTextSize(this.getSelectedSegmentFontSizeSp());
+            var4.setTextColor(this.getSelectedSegmentTextColor());
          }
       }
 
@@ -298,10 +289,8 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
             this.$labelsChanged$inlined = var3;
          }
 
-         @Override
          protected void afterChange(KProperty var1, T var2, T var3) {
-            r.h(var1, "property");
-            if (!r.c(var3, var2)) {
+            if (!(var3 == var2)) {
                SegmentedControlView.access$updateView(this.this$0, this.$labelsChanged$inlined);
             }
          }

@@ -1,14 +1,13 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : TapCallData(var1, var2), ReactEvent {
@@ -16,7 +15,6 @@ internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : Ta
    public final val channelId: ChannelId
 
    fun TapCallData(var1: java.lang.String, var2: Long) {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -31,7 +29,6 @@ internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : Ta
    }
 
    public fun copy(messageId: MessageId = ..., channelId: ChannelId = ...): TapCallData {
-      r.h(var1, "messageId");
       return new TapCallData(var1, var2, null);
    }
 

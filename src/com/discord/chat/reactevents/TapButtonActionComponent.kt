@@ -3,9 +3,8 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapButtonActionComponent(messageId: MessageId, componentId: String) : TapButtonActionComponent(var1, var2), ReactEvent {
@@ -13,8 +12,6 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
    public final val componentId: String
 
    fun TapButtonActionComponent(var1: java.lang.String, var2: java.lang.String) {
-      r.h(var1, "messageId");
-      r.h(var2, "componentId");
       super();
       this.messageId = var1;
       this.componentId = var2;
@@ -29,8 +26,6 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
    }
 
    public fun copy(messageId: MessageId = ..., componentId: String = ...): TapButtonActionComponent {
-      r.h(var1, "messageId");
-      r.h(var2, "componentId");
       return new TapButtonActionComponent(var1, var2, null);
    }
 
@@ -44,7 +39,7 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.componentId, var1.componentId);
+            return this.componentId == var1.componentId;
          }
       }
    }

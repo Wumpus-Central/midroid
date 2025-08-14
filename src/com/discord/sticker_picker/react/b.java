@@ -6,11 +6,11 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class b implements Function1 {
-   public final StickerPickerRowViewManager j;
-   public final ThemedReactContext k;
-   public final StickerPickerRowView l;
+   public final StickerPickerRowViewManager d;
+   public final ThemedReactContext e;
+   public final StickerPickerRowView i;
 
    public final Object invoke(Object var1) {
-      return StickerPickerRowViewManager.b(this.j, this.k, this.l, (String)var1);
+      return StickerPickerRowViewManager.b(this.d, this.e, this.i, (String)var1);
    }
 }

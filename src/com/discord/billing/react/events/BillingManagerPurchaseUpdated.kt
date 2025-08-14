@@ -1,12 +1,11 @@
 package com.discord.billing.react.events
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {
@@ -15,9 +14,6 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
    private final val sku: String
 
    init {
-      r.h(var1, "purchaseToken");
-      r.h(var2, "packageName");
-      r.h(var3, "sku");
       super();
       this.purchaseToken = var1;
       this.packageName = var2;

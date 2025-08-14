@@ -6,9 +6,9 @@ import kotlin.text.Regex;
 
 // $VF: synthetic class
 public final class i implements Function1 {
-   public final Regex j;
+   public final Regex d;
 
    public final Object invoke(Object var1) {
-      return SystemLogUtils.b(this.j, (MatchResult)var1);
+      return SystemLogUtils.b(this.d, (MatchResult)var1);
    }
 }

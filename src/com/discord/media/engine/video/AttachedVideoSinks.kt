@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArraySet
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.jvm.internal.Ref.BooleanRef
 import org.webrtc.VideoFrame
 
@@ -15,16 +15,14 @@ internal object AttachedVideoSinks {
 
    @JvmStatic
    fun `addSink$lambda$1`(var0: BooleanRef, var1: VideoSink, var2: MediaEngine, var3: java.lang.String, var4: java.lang.String): AttachedVideoSinks.VideoOutputSinks {
-      r.h(var4, "it");
-      var0.j = true;
+      var0.element = true;
       val var5: AttachedVideoSinks.VideoOutputSinks = new AttachedVideoSinks.VideoOutputSinks(var1);
-      var2.setVideoOutputSink$media_engine_release(var3, new Function2(var5) {
+      var2.setVideoOutputSink$media_engine_release(var3, new Function2<VideoFrame, java.lang.Boolean, java.lang.Boolean>(var5) {
          {
             super(2, var1, AttachedVideoSinks.VideoOutputSinks::class.java, "onFrame", "onFrame(Lorg/webrtc/VideoFrame;Z)Z", 0);
          }
 
          public final java.lang.Boolean invoke(VideoFrame var1, boolean var2) {
-            r.h(var1, "p0");
             return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1, var2);
          }
       });
@@ -38,7 +36,6 @@ internal object AttachedVideoSinks {
 
    @JvmStatic
    fun `removeSink$lambda$4`(var0: VideoSink, var1: MediaEngine, var2: java.lang.String, var3: java.lang.String, var4: AttachedVideoSinks.VideoOutputSinks): AttachedVideoSinks.VideoOutputSinks {
-      r.h(var3, "<unused var>");
       var var6: AttachedVideoSinks.VideoOutputSinks = null;
       if (var4 != null) {
          var4.remove(var0);
@@ -60,14 +57,10 @@ internal object AttachedVideoSinks {
    }
 
    public fun addSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      r.h(var1, "mediaEngine");
-      r.h(var2, "sink");
-      r.h(var3, "streamId");
       val var4: BooleanRef = new BooleanRef();
       val var5: Any = streamOutputMap.computeIfAbsent(var3, new b(new a(var4, var2, var1, var3)));
-      r.g(var5, "computeIfAbsent(...)");
       (var5 as AttachedVideoSinks.VideoOutputSinks).add(var2);
-      return var4.j;
+      return var4.element;
    }
 
    public fun anySinksActive(): Boolean {
@@ -75,9 +68,6 @@ internal object AttachedVideoSinks {
    }
 
    public fun removeSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      r.h(var1, "mediaEngine");
-      r.h(var2, "sink");
-      r.h(var3, "streamId");
       val var4: Boolean;
       if (streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null) {
          var4 = true;
@@ -88,19 +78,17 @@ internal object AttachedVideoSinks {
       return var4;
    }
 
+   @SourceDebugExtension(["SMAP\nAttachedVideoSinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,77:1\n1863#2,2:78\n*S KotlinDebug\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n*L\n71#1:78,2\n*E\n"])
    private class VideoOutputSinks(sink: VideoSink) {
       private final val sinks: MutableSet<VideoSink>
 
       init {
-         r.h(var1, "sink");
-         super();
          val var2: CopyOnWriteArraySet = new CopyOnWriteArraySet();
          this.sinks = var2;
          var2.add(var1);
       }
 
       public fun add(sink: VideoSink): Boolean {
-         r.h(var1, "sink");
          return this.sinks.add(var1);
       }
 
@@ -109,7 +97,6 @@ internal object AttachedVideoSinks {
       }
 
       public fun onFrame(frame: VideoFrame, mirror: Boolean): Boolean {
-         r.h(var1, "frame");
          val var3: java.util.Iterator = this.sinks.iterator();
 
          while (var3.hasNext()) {
@@ -121,7 +108,6 @@ internal object AttachedVideoSinks {
       }
 
       public fun remove(sink: VideoSink): Boolean {
-         r.h(var1, "sink");
          return this.sinks.remove(var1);
       }
    }

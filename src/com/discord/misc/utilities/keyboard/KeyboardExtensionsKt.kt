@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.keyboard
 
-import H9.b
+import G9.b
 import android.app.Activity
 import android.view.View
 import android.view.Window
@@ -10,10 +10,9 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.n0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import jb.f
+import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 
 @JvmSynthetic
@@ -23,24 +22,19 @@ fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControll
 
 private fun Window.getInsetsController(view: View): WindowInsetsControllerCompat {
    val var2: WindowInsetsControllerCompat = n0.a(var0, var1);
-   r.g(var2, "getInsetsController(...)");
    return var2;
 }
 
 public fun Activity.hideKeyboard() {
-   r.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getContentView(var0);
    if (var1 != null) {
       val var2: Window = var0.getWindow();
-      r.g(var2, "getWindow(...)");
       hideKeyboard(var1, var2);
    }
 }
 
 public fun View.hideKeyboard(window: Window) {
-   r.h(var0, "<this>");
-   r.h(var1, "window");
-   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2(var1, var0, null) {
+   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;
@@ -73,19 +67,15 @@ public fun View.hideKeyboard(window: Window) {
 }
 
 public fun Activity.showKeyboard() {
-   r.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getContentView(var0);
    if (var1 != null) {
       val var2: Window = var0.getWindow();
-      r.g(var2, "getWindow(...)");
       showKeyboard(var1, var2);
    }
 }
 
 public fun View.showKeyboard(window: Window) {
-   r.h(var0, "<this>");
-   r.h(var1, "window");
-   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2(var1, var0, null) {
+   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;

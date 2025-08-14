@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean?, secondary: Boolean?) : ReactEvent {
@@ -14,7 +13,6 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    public final val secondary: Boolean?
 
    init {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.index = var2;
@@ -39,7 +37,6 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public fun copy(messageId: String = var0.messageId, index: Int = var0.index, primary: Boolean? = var0.primary, secondary: Boolean? = var0.secondary): TapInviteEvent {
-      r.h(var1, "messageId");
       return new TapInviteEvent(var1, var2, var3, var4);
    }
 
@@ -50,21 +47,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else if (this.index != var1.index) {
             return false;
-         } else if (!r.c(this.primary, var1.primary)) {
+         } else if (!(this.primary == var1.primary)) {
             return false;
          } else {
-            return r.c(this.secondary, var1.secondary);
+            return this.secondary == var1.secondary;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.messageId.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var4: Int = this.messageId.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -77,7 +74,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -85,21 +82,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var3: java.lang.Boolean = this.primary;
+      val var5: java.lang.Boolean = this.primary;
       val var2: java.lang.Boolean = this.secondary;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapInviteEvent(messageId=");
-      var4.append(var5);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", primary=");
-      var4.append(var3);
-      var4.append(", secondary=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapInviteEvent(messageId=");
+      var3.append(var4);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", primary=");
+      var3.append(var5);
+      var3.append(", secondary=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

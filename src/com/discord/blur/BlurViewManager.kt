@@ -16,8 +16,6 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
    private final val delegate: DCDVisualEffectViewManagerDelegate<ViewGroup, BlurViewManager> = new DCDVisualEffectViewManagerDelegate(this)
 
    public override fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ViewGroup {
-      kotlin.jvm.internal.r.h(var1, "reactContext");
-      kotlin.jvm.internal.r.h(var2, "initialProps");
       val var5: java.lang.String = var2.getString("blurTargetViewNativeId");
       val var6: java.lang.String = var2.getString("blurTintRgba");
       val var3: Float = var2.getFloat("blurAmount", -1.0F);
@@ -57,7 +55,6 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
 
    @ReactProp(name = "blurAmount")
    public open fun setBlurAmount(blurView: ViewGroup, blurAmount: Float) {
-      kotlin.jvm.internal.r.h(var1, "blurView");
       if (var1 is BlurViewAPI) {
          (var1 as BlurViewAPIBase).setBlurAmount(var1.getId(), var2);
       } else {
@@ -67,7 +64,6 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
 
    @ReactProp(name = "blurTargetViewNativeId")
    public open fun setBlurTargetViewNativeId(blurView: ViewGroup, blurTargetViewNativeId: String?) {
-      kotlin.jvm.internal.r.h(var1, "blurView");
       if (var1 is BlurViewAPI) {
          if (var2 != null) {
             (var1 as BlurViewAPIBase).setBlurTargetNativeId(var2);
@@ -90,7 +86,6 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
 
    @ReactProp(name = "blurTintRgba")
    public open fun setBlurTintRgba(blurView: ViewGroup, blurTintRgba: String?) {
-      kotlin.jvm.internal.r.h(var1, "blurView");
       if (var1 is BlurViewAPI) {
          (var1 as BlurViewAPI).setBlurTint(ColorUtilsKt.rgbaToArgb(var2));
       } else {

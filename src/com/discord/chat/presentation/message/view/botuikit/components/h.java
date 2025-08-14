@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final LayoutInflater j;
+   public final LayoutInflater d;
 
    public final Object invoke() {
-      return SelectComponentView.h(this.j);
+      return SelectComponentView.h(this.d);
    }
 }

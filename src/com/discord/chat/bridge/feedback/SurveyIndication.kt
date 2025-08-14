@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.feedback
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -11,8 +10,6 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    public final val feedbackIconUrl: String
 
    init {
-      r.h(var1, "content");
-      r.h(var2, "feedbackIconUrl");
       super();
       this.content = var1;
       this.feedbackIconUrl = var2;
@@ -27,8 +24,6 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    }
 
    public fun copy(content: StructurableText = var0.content, feedbackIconUrl: String = var0.feedbackIconUrl): SurveyIndication {
-      r.h(var1, "content");
-      r.h(var2, "feedbackIconUrl");
       return new SurveyIndication(var1, var2);
    }
 
@@ -39,10 +34,10 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.content, var1.content)) {
+         if (!(this.content == var1.content)) {
             return false;
          } else {
-            return r.c(this.feedbackIconUrl, var1.feedbackIconUrl);
+            return this.feedbackIconUrl == var1.feedbackIconUrl;
          }
       }
    }
@@ -53,14 +48,14 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
 
    public override fun toString(): String {
       val var3: StructurableText = this.content;
-      val var2: java.lang.String = this.feedbackIconUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SurveyIndication(content=");
-      var1.append(var3);
-      var1.append(", feedbackIconUrl=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.feedbackIconUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SurveyIndication(content=");
+      var2.append(var3);
+      var2.append(", feedbackIconUrl=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

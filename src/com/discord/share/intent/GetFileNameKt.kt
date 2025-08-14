@@ -4,19 +4,15 @@ import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
 import kotlin.Result.a
-import kotlin.jvm.internal.r
 
 internal fun ContentResolver.getFileName(uri: Uri): String {
    label44: {
-      r.h(var0, "<this>");
-      r.h(var1, "uri");
-
       label41:
       try {
-         val var2: a = Result.k;
+         val var2: a = Result.e;
          var16 = Result.b(var0.query(var1, new java.lang.String[]{"_display_name"}, null, null, null));
       } catch (var5: java.lang.Throwable) {
-         val var15: a = Result.k;
+         val var15: a = Result.e;
          var16 = Result.b(c.a(var5));
          break label41;
       }
@@ -41,14 +37,14 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                try {
                   throw var18;
                } catch (var3: java.lang.Throwable) {
-                  M9.c.a(var21, var4);
+                  L9.c.a(var21, var4);
                }
             }
 
             var17 = "";
          }
 
-         M9.c.a(var21, null);
+         L9.c.a(var21, null);
          if (var17 == null) {
             var17 = "";
          }

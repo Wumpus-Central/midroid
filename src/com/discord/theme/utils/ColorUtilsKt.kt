@@ -1,6 +1,8 @@
+@file:SourceDebugExtension(["SMAP\nColorUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ColorUtils.kt\ncom/discord/theme/utils/ColorUtilsKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,150:1\n1#2:151\n*E\n"])
+
 package com.discord.theme.utils
 
-import Q9.a
+import O9.a
 import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.Resources
@@ -14,7 +16,7 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.text.MatchResult.b
 
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
@@ -54,31 +56,23 @@ public fun argbWithAdjustedAlpha(color: Int, alpha: Float): Int {
 }
 
 public fun Context.getColorCompat(id: Int): Int {
-   r.h(var0, "<this>");
    return applySaturationFactor(var0.getColor(var1));
 }
 
 public fun Resources.getColorCompat(id: Int, theme: Theme): Int {
-   r.h(var0, "<this>");
-   r.h(var2, "theme");
    return applySaturationFactor(var0.getColor(var1, var2));
 }
 
 public fun View.getColorCompat(colorRes: Int): Int {
-   r.h(var0, "<this>");
    val var2: Context = var0.getContext();
-   r.g(var2, "getContext(...)");
    return getColorCompat(var2, var1);
 }
 
 public fun Context.getThemeColor(lightColorRes: Int, darkColorRes: Int): Int {
-   r.h(var0, "<this>");
    return getThemeColor(var0, var1, var2, ThemeManagerKt.getTheme());
 }
 
 public fun Context.getThemeColor(lightColorRes: Int, darkColorRes: Int, theme: DiscordThemeObject): Int {
-   r.h(var0, "<this>");
-   r.h(var3, "theme");
    return getColorCompat(var0, var3.getColorRes(var1, var2));
 }
 
@@ -88,13 +82,13 @@ public fun interpolateColors(colorA: Int, colorB: Int, t: Float, minT: Float = 0
    } else if (var2 >= var4) {
       return var1;
    } else {
-      val var9: Int = Color.red(var0);
+      val var8: Int = Color.red(var0);
       val var7: Int = Color.green(var0);
       val var5: Int = Color.blue(var0);
       var0 = Color.alpha(var0);
       return Color.argb(
          d.l((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         d.l((int)((float)var9 + (float)(Color.red(var1) - var9) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         d.l((int)((float)var8 + (float)(Color.red(var1) - var8) * ((var2 - var3) / (var4 - var3))), 0, 255),
          d.l((int)((float)var7 + (float)(Color.green(var1) - var7) * ((var2 - var3) / (var4 - var3))), 0, 255),
          d.l((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
       );
@@ -119,12 +113,12 @@ public fun rgbaToArgb(rgbaString: String?): Int {
    if (var0 != null) {
       val var5: MatchResult = rgbaPattern.f(var0);
       if (var5 != null) {
-         val var6: b = var5.a();
+         val var3: b = var5.a();
          var1 = Color.argb(
-            (int)(java.lang.Double.parseDouble(var6.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var6.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var6.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var6.a().b().get(3) as java.lang.String)
+            (int)(java.lang.Double.parseDouble(var3.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var3.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(3) as java.lang.String)
          );
       } else {
          var1 = -16777216;
@@ -137,7 +131,6 @@ public fun rgbaToArgb(rgbaString: String?): Int {
 }
 
 public fun ImageView.setTintColor(colorInt: Int?) {
-   r.h(var0, "<this>");
    val var2: ColorStateList;
    if (var1 != null) {
       var2 = ColorStateList.valueOf(var1.intValue());
@@ -149,7 +142,6 @@ public fun ImageView.setTintColor(colorInt: Int?) {
 }
 
 public fun SimpleDraweeView.setTintColor(colorInt: Int?) {
-   r.h(var0, "<this>");
    if (var1 == null) {
       var0.clearColorFilter();
    } else {

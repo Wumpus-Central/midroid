@@ -1,6 +1,6 @@
 package com.discord.share
 
-import A9.s
+import B9.s
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -15,18 +15,16 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nShareBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n+ 2 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n*L\n1#1,69:1\n14#2:70\n*S KotlinDebug\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n*L\n28#1:70\n*E\n"])
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
    private final val reactApplicationContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
 
    init {
-      r.h(var1, "reactContext");
-      super();
       this.reactApplicationContext = var1;
-      this.reactEvents = new ReactEvents(s.a("share-broadcast-receiver-app-clicked", H.b(ShareBroadcastReceiverAppClicked.class)));
+      this.reactEvents = new ReactEvents(s.a("share-broadcast-receiver-app-clicked", ShareBroadcastReceiverAppClicked::class));
    }
 
    public open fun onReceive(context: Context?, intent: Intent?) {
@@ -43,40 +41,33 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var4: ReactEvents = this.reactEvents;
-         val var7: ReactApplicationContext = this.reactApplicationContext;
+         val var7: ReactEvents = this.reactEvents;
+         val var4: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
-         r.g(var6, "getPackageName(...)");
-         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 
+   @SourceDebugExtension(["SMAP\nShareBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,69:1\n1#2:70\n*E\n"])
    public companion object {
       private const val SHARE_SHEET_LOCATION: String
       private const val SHARE_SHEET_CLICK: String
 
       public fun getPendingIntentSender(context: Context, location: String?): IntentSender {
-         r.h(var1, "context");
          val var3: Intent = new Intent("share_sheet_click");
          var3.putExtra("share_sheet_location", var2);
          val var4: IntentSender = PendingIntent.getBroadcast(
                var1, 0, var3, PendingIntentUtils.immutablePendingIntentFlag$default(PendingIntentUtils.INSTANCE, 0, 1, null)
             )
             .getIntentSender();
-         r.g(var4, "getIntentSender(...)");
          return var4;
       }
 
       public fun register(context: Context, receiver: ShareBroadcastReceiver) {
-         r.h(var1, "context");
-         r.h(var2, "receiver");
          b.k(var1, var2, new IntentFilter("share_sheet_click"), 4);
       }
 
       public fun unregister(context: Context, receiver: ShareBroadcastReceiver) {
-         r.h(var1, "context");
-         r.h(var2, "receiver");
-
          try {
             var1.unregisterReceiver(var2);
          } catch (var3: Exception) {

@@ -1,13 +1,12 @@
 package com.discord.simpleast.core.parser
 
-import A9.s
+import B9.s
 import android.util.Log
 import com.discord.simpleast.core.node.Node
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
-import kotlin.jvm.internal.N
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.TypeIntrinsics
 
 public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebugging: Boolean = false) {
    private final val enableDebugging: Boolean
@@ -45,20 +44,17 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    }
 
    public fun addRule(rule: Rule<Any, out Any, Any>): Parser<Any, Any, Any> {
-      r.h(var1, "rule");
       this.rules.add(var1);
       return this;
    }
 
    public fun addRules(newRules: Collection<Rule<Any, out Any, Any>>): Parser<Any, Any, Any> {
-      r.h(var1, "newRules");
       this.rules.addAll(var1);
       return this;
    }
 
    public fun addRules(vararg newRules: Rule<Any, out Any, Any>): Parser<Any, Any, Any> {
-      r.h(var1, "newRules");
-      return this.addRules(c.e(var1));
+      return this.addRules(h.e(var1));
    }
 
    fun parse(var1: java.lang.CharSequence, var2: S): MutableList<T> {
@@ -66,24 +62,22 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    }
 
    public fun parse(source: CharSequence, initialState: Any, rules: List<Rule<Any, out Any, Any>> = var0.rules): MutableList<Any> {
-      r.h(var1, "source");
-      r.h(var3, "rules");
-      val var8: Stack = new Stack();
-      val var9: Node = new Node(null, 1, null);
+      val var9: Stack = new Stack();
+      val var8: Node = new Node(null, 1, null);
       if (var1.length() > 0) {
-         var8.add(new ParseSpec<>(var9, var2, 0, var1.length()));
+         var9.add(new ParseSpec<>(var8, var2, 0, var1.length()));
       }
 
       var var6: java.lang.String = null;
 
-      while (!var8.isEmpty()) {
-         val var10: ParseSpec = var8.pop() as ParseSpec;
+      while (!var9.isEmpty()) {
+         val var10: ParseSpec = var9.pop() as ParseSpec;
          if (var10.getStartIndex() >= var10.getEndIndex()) {
             break;
          }
 
          val var12: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var5: Int = var10.getStartIndex();
+         val var4: Int = var10.getStartIndex();
          val var11: java.util.Iterator = var3.iterator();
 
          while (true) {
@@ -111,17 +105,17 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var4: Int = var20.end() + var5;
-            val var23: ParseSpec = var21.parse(var20, this, (S)var10.getState());
-            val var22: Node = var10.getRoot();
-            var22.addChild(var23.getRoot());
-            if (var4 != var10.getEndIndex()) {
-               var8.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var4, var10.getEndIndex()));
+            val var5: Int = var20.end() + var4;
+            val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
+            val var23: Node = var10.getRoot();
+            var23.addChild(var22.getRoot());
+            if (var5 != var10.getEndIndex()) {
+               var9.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var5, var10.getEndIndex()));
             }
 
-            if (!var23.isTerminal()) {
-               var23.applyOffset(var5);
-               var8.push(var23);
+            if (!var22.isTerminal()) {
+               var22.applyOffset(var4);
+               var9.push(var22);
             }
 
             try {
@@ -133,15 +127,15 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
       }
 
-      val var16: java.util.Collection = var9.getChildren();
+      val var16: java.util.Collection = var8.getChildren();
       var var17: Any;
       if (var16 != null) {
-         var17 = i.W0(var16);
+         var17 = CollectionsKt.V0(var16);
       } else {
          var17 = null;
       }
 
-      if (!N.j(var17)) {
+      if (!TypeIntrinsics.isMutableList(var17)) {
          var17 = null;
       }
 
@@ -158,7 +152,6 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
    public class ParseException(message: String, source: CharSequence?, cause: Throwable? = null) : RuntimeException {
       init {
-         r.h(var1, "message");
          val var4: StringBuilder = new StringBuilder();
          var4.append("Error while parsing: ");
          var4.append(var1);

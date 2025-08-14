@@ -1,12 +1,11 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -34,7 +33,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       } else if (var1 !is TapAttachmentLinkData) {
          return false;
       } else {
-         return r.c(this.attachmentUrl, (var1 as TapAttachmentLinkData).attachmentUrl);
+         return this.attachmentUrl == (var1 as TapAttachmentLinkData).attachmentUrl;
       }
    }
 
@@ -54,12 +53,12 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.attachmentUrl;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapAttachmentLinkData(attachmentUrl=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.attachmentUrl;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapAttachmentLinkData(attachmentUrl=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

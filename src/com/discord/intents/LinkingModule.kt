@@ -6,20 +6,15 @@ import android.net.Uri
 import android.os.Build.VERSION
 import com.discord.codegen.NativeLinkingModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
 
-internal class LinkingModule(reactContext: ReactApplicationContext) : NativeLinkingModuleSpec {
+internal class LinkingModule(reactContext: ReactApplicationContext) : NativeLinkingModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 
    public override fun tryOpenScheme(scheme: String): Boolean {
-      r.h(var1, "scheme");
-
       try {
          var4 = Uri.parse(var1);
       } catch (var3: Exception) {
@@ -38,7 +33,6 @@ internal class LinkingModule(reactContext: ReactApplicationContext) : NativeLink
    }
 
    public override fun tryOpenUrlAsUniversalLink(urlString: String): Boolean {
-      r.h(var1, "urlString");
       if (VERSION.SDK_INT < 30) {
          return false;
       } else {

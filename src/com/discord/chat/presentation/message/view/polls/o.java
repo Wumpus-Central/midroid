@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class o implements OnClickListener {
-   public final Function0 j;
+   public final Function0 d;
 
    public final void onClick(View var1) {
-      PollMediaView.e(this.j, var1);
+      PollMediaView.e(this.d, var1);
    }
 }

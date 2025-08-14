@@ -7,7 +7,6 @@ import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.foreground_service.utils.Log
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import kotlin.jvm.internal.r
 
 internal class ForegroundService : Service {
    public open fun onBind(intent: Intent?): Nothing {
@@ -20,16 +19,15 @@ internal class ForegroundService : Service {
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
       val var4: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
-      r.g(tag, "tag");
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("onStartCommand: intent ");
-      var6.append(var1);
-      var6.append(", flags ");
-      var6.append(var2);
-      var6.append(", startId ");
-      var6.append(var3);
-      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
+      val var6: java.lang.String = tag;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("onStartCommand: intent ");
+      var5.append(var1);
+      var5.append(", flags ");
+      var5.append(var2);
+      var5.append(", startId ");
+      var5.append(var3);
+      Log.i$foreground_service_release$default(var4, var6, var5.toString(), null, 4, null);
       var var7: Byte = 1;
       if (var1 == null) {
          if (!ForegroundServiceManager.INSTANCE.onServiceRecoveryAttempt$foreground_service_release(this)) {
@@ -67,9 +65,6 @@ internal class ForegroundService : Service {
       }
 
       public fun start(context: Context, onError: (Exception) -> Unit) {
-         r.h(var1, "context");
-         r.h(var2, "onError");
-
          try {
             ForegroundServiceUtilsKt.startForegroundServiceCompat(var1, this.getServiceIntent(var1));
             ForegroundService.access$setLastServiceStartTime$cp(System.currentTimeMillis());
@@ -79,7 +74,6 @@ internal class ForegroundService : Service {
       }
 
       public fun stop(context: Context?, service: Service) {
-         r.h(var2, "service");
          val var3: Long = System.currentTimeMillis() - ForegroundService.access$getLastServiceStartTime$cp();
          if (var3 > 3000L) {
             this.stopInternal(var1, var2);

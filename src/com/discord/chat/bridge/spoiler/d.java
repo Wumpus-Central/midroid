@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class d implements Function1 {
-   public final String j;
+   public final String d;
 
    public final Object invoke(Object var1) {
-      return SpoilerAttributes.Companion.a(this.j, (Context)var1);
+      return SpoilerAttributes.Companion.a(this.d, (Context)var1);
    }
 }

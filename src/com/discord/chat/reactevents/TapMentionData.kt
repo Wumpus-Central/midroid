@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapMentionData(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) : ReactEvent {
@@ -14,7 +13,6 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    public final val parsedUserId: String?
 
    init {
-      r.h(var2, "channelId");
       super();
       this.userId = var1;
       this.channelId = var2;
@@ -44,7 +42,6 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       roleName: String? = var0.roleName,
       parsedUserId: String? = var0.parsedUserId
    ): TapMentionData {
-      r.h(var2, "channelId");
       return new TapMentionData(var1, var2, var3, var4);
    }
 
@@ -55,14 +52,14 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.userId, var1.userId)) {
+         if (!(this.userId == var1.userId)) {
             return false;
-         } else if (!r.c(this.channelId, var1.channelId)) {
+         } else if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.roleName, var1.roleName)) {
+         } else if (!(this.roleName == var1.roleName)) {
             return false;
          } else {
-            return r.c(this.parsedUserId, var1.parsedUserId);
+            return this.parsedUserId == var1.parsedUserId;
          }
       }
    }

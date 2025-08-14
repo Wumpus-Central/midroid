@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function6;
 
 // $VF: synthetic class
 public final class b implements Function5 {
-   public final Function6 j;
-   public final FastestListView k;
+   public final Function6 d;
+   public final FastestListView e;
 
-   public final Object m(Object var1, Object var2, Object var3, Object var4, Object var5) {
-      return FastestListView.Q(this.j, this.k, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5);
+   public final Object invoke(Object var1, Object var2, Object var3, Object var4, Object var5) {
+      return FastestListView.Q(this.d, this.e, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5);
    }
 }

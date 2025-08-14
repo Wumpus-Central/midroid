@@ -13,8 +13,10 @@ import com.discord.recycler_view.utils.ItemDiffer
 import com.discord.theme.DiscordTheme
 import com.discord.theme.ThemeManager
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nReactionsViewAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactionsViewAdapter.kt\ncom/discord/reactions/ReactionsViewAdapter\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,147:1\n1#2:148\n*E\n"])
 internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter {
    private final val reactionHeight: Int
    private final var reactions: List<Reaction>
@@ -30,7 +32,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    init {
       this.reactionHeight = var1;
-      this.reactions = i.k();
+      this.reactions = CollectionsKt.k();
       this.setHasStableIds(true);
    }
 
@@ -56,12 +58,12 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
-            r.y("messageId");
+            Intrinsics.throwUninitializedPropertyAccessException("messageId");
             var6 = null;
          }
 
          if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
+            Intrinsics.throwUninitializedPropertyAccessException("addReactionLabel");
          } else {
             var7 = this.addReactionLabel;
          }
@@ -74,7 +76,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       } else {
          val var14: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
-            r.y("messageId");
+            Intrinsics.throwUninitializedPropertyAccessException("messageId");
          } else {
             var6 = this.messageId;
          }
@@ -106,7 +108,6 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
    }
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      r.h(var1, "holder");
       val var7: ThemeManager = ThemeManager.INSTANCE;
       val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var7.setThemeOverride(this.theme);
@@ -118,12 +119,12 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          val var9: ReactionViewHolder = var1 as ReactionViewHolder;
          var var10: Function1 = this.onReactionClick;
          if (this.onReactionClick == null) {
-            r.y("onReactionClick");
+            Intrinsics.throwUninitializedPropertyAccessException("onReactionClick");
             var10 = null;
          }
 
          if (this.onReactionLongPress == null) {
-            r.y("onReactionLongPress");
+            Intrinsics.throwUninitializedPropertyAccessException("onReactionLongPress");
          } else {
             var4 = this.onReactionLongPress;
          }
@@ -141,18 +142,18 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          val var20: AddReactionViewHolder = var1 as AddReactionViewHolder;
          var var11: java.lang.String = this.addReactionLabel;
          if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
+            Intrinsics.throwUninitializedPropertyAccessException("addReactionLabel");
             var11 = null;
          }
 
          var var14: java.lang.String = this.addNewReactionAccessibilityLabel;
          if (this.addNewReactionAccessibilityLabel == null) {
-            r.y("addNewReactionAccessibilityLabel");
+            Intrinsics.throwUninitializedPropertyAccessException("addNewReactionAccessibilityLabel");
             var14 = null;
          }
 
          if (this.onAddReactionClick == null) {
-            r.y("onAddReactionClick");
+            Intrinsics.throwUninitializedPropertyAccessException("onAddReactionClick");
          } else {
             var5 = this.onAddReactionClick;
          }
@@ -164,7 +165,6 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      r.h(var1, "parent");
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
@@ -179,13 +179,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          }
 
          val var6: Context = var1.getContext();
-         r.g(var6, "getContext(...)");
          val var7: AddReactionView = new AddReactionView(var6, null, 2, null);
          var7.setLayoutParams(var5);
          var8 = new AddReactionViewHolder(var7);
       } else {
          val var10: Context = var1.getContext();
-         r.g(var10, "getContext(...)");
          val var11: ReactionView = new ReactionView(var10, null, 2, null);
          var11.setLayoutParams(var5);
          var8 = new ReactionViewHolder(var11);
@@ -209,13 +207,6 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       theme: DiscordTheme? = null,
       areChatAnimationsEnabled: Boolean = false
    ) {
-      r.h(var1, "messageId");
-      r.h(var2, "reactions");
-      r.h(var4, "addReactionLabel");
-      r.h(var5, "addNewReactionAccessibilityLabel");
-      r.h(var7, "onAddReactionClick");
-      r.h(var8, "onReactionClick");
-      r.h(var9, "onReactionLongPress");
       this.messageId = var1;
       this.canAddNewReactions = var3;
       this.addReactionLabel = var4;
@@ -229,7 +220,6 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          val var12: java.util.List = this.reactions;
          this.reactions = var2;
          val var13: androidx.recyclerview.widget.c.e = androidx.recyclerview.widget.c.b(new ItemDiffer(var12, var2), true);
-         r.g(var13, "calculateDiff(...)");
          var13.c(this);
       } else {
          this.reactions = var2;

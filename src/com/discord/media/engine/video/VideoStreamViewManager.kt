@@ -12,7 +12,6 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerDelegate
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerInterface
 import java.util.HashMap
-import kotlin.jvm.internal.r
 import org.webrtc.RendererCommon.RendererEvents
 
 @ReactModule(name = "DCDVideoRenderer")
@@ -21,7 +20,6 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
    private final val prevStreamIdByViewId: HashMap<Int, String?> = new HashMap()
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): VideoStreamTextureView {
-      r.h(var1, "reactContext");
       return new VideoStreamTextureView(var1, null, 2, null);
    }
 
@@ -38,7 +36,6 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
    }
 
    public open fun onDropViewInstance(view: VideoStreamTextureView) {
-      r.h(var1, "view");
       this.setStreamId(var1, null);
    }
 
@@ -59,7 +56,7 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // Bytecode:
       // 00: aload 1
       // 01: ldc "view"
-      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 0
       // 07: getfield com/discord/media/engine/video/VideoStreamViewManager.prevStreamIdByViewId Ljava/util/HashMap;
       // 0a: aload 1
@@ -72,7 +69,7 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // 19: ifnull 25
       // 1c: aload 2
       // 1d: aload 3
-      // 1e: invokestatic kotlin/jvm/internal/r.c (Ljava/lang/Object;Ljava/lang/Object;)Z
+      // 1e: invokestatic kotlin/jvm/internal/Intrinsics.areEqual (Ljava/lang/Object;Ljava/lang/Object;)Z
       // 21: ifeq 25
       // 24: return
       // 25: aload 0
@@ -102,30 +99,30 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // 55: astore 1
       // 56: aload 1
       // 57: ldc "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext"
-      // 59: invokestatic kotlin/jvm/internal/r.f (Ljava/lang/Object;Ljava/lang/String;)V
+      // 59: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V
       // 5c: aload 1
       // 5d: checkcast com/facebook/react/bridge/ReactContext
       // 60: invokevirtual com/facebook/react/bridge/ReactContext.getCurrentActivity ()Landroid/app/Activity;
-      // 63: astore 2
-      // 64: aload 2
+      // 63: astore 1
+      // 64: aload 1
       // 65: ifnull 93
       // 68: getstatic com/discord/media/engine/video/AttachedVideoSinks.INSTANCE Lcom/discord/media/engine/video/AttachedVideoSinks;
-      // 6b: astore 1
-      // 6c: aload 1
+      // 6b: astore 2
+      // 6c: aload 2
       // 6d: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 70: ifeq 83
       // 73: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 76: aload 2
+      // 76: aload 1
       // 77: ldc "DCDVideoRenderer"
       // 79: invokevirtual com/discord/wakelock/ScreenWakeLock.requestLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 7c: goto 93
       // 7f: astore 1
       // 80: goto 9a
-      // 83: aload 1
+      // 83: aload 2
       // 84: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 87: ifne 93
       // 8a: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 8d: aload 2
+      // 8d: aload 1
       // 8e: ldc "DCDVideoRenderer"
       // 90: invokevirtual com/discord/wakelock/ScreenWakeLock.releaseLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 93: getstatic kotlin/Unit.a Lkotlin/Unit;
@@ -149,8 +146,6 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       private final val view: View
 
       init {
-         r.h(var1, "view");
-         super();
          this.view = var1;
       }
 

@@ -1,17 +1,15 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class StringSelectItem(label: String,
-      value: String,
-      emoji: ComponentEmoji? = null,
-      description: String? = null,
-      default: Boolean? = java.lang.Boolean.FALSE
-   )
-   : SelectItem {
+   value: String,
+   emoji: ComponentEmoji? = null,
+   description: String? = null,
+   default: Boolean? = java.lang.Boolean.FALSE
+) : SelectItem() {
    public open val label: String
    public open val value: String
    public final val emoji: ComponentEmoji?
@@ -19,9 +17,6 @@ public data class StringSelectItem(label: String,
    public final val default: Boolean?
 
    init {
-      r.h(var1, "label");
-      r.h(var2, "value");
-      super(null);
       this.label = var1;
       this.value = var2;
       this.emoji = var3;
@@ -56,8 +51,6 @@ public data class StringSelectItem(label: String,
       description: String? = var0.description,
       default: Boolean? = var0.default
    ): StringSelectItem {
-      r.h(var1, "label");
-      r.h(var2, "value");
       return new StringSelectItem(var1, var2, var3, var4, var5);
    }
 
@@ -68,23 +61,23 @@ public data class StringSelectItem(label: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.label, var1.label)) {
+         if (!(this.label == var1.label)) {
             return false;
-         } else if (!r.c(this.value, var1.value)) {
+         } else if (!(this.value == var1.value)) {
             return false;
-         } else if (!r.c(this.emoji, var1.emoji)) {
+         } else if (!(this.emoji == var1.emoji)) {
             return false;
-         } else if (!r.c(this.description, var1.description)) {
+         } else if (!(this.description == var1.description)) {
             return false;
          } else {
-            return r.c(this.default, var1.default);
+            return this.default == var1.default;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.label.hashCode();
-      val var4: Int = this.value.hashCode();
+      val var4: Int = this.label.hashCode();
+      val var5: Int = this.value.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.emoji == null) {
@@ -104,28 +97,28 @@ public data class StringSelectItem(label: String,
          var3 = this.default.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.label;
-      val var1: java.lang.String = this.value;
-      val var2: ComponentEmoji = this.emoji;
+      val var2: java.lang.String = this.label;
+      val var3: java.lang.String = this.value;
+      val var1: ComponentEmoji = this.emoji;
       val var6: java.lang.String = this.description;
-      val var3: java.lang.Boolean = this.default;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("StringSelectItem(label=");
-      var5.append(var4);
-      var5.append(", value=");
-      var5.append(var1);
-      var5.append(", emoji=");
-      var5.append(var2);
-      var5.append(", description=");
-      var5.append(var6);
-      var5.append(", default=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.default;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("StringSelectItem(label=");
+      var4.append(var2);
+      var4.append(", value=");
+      var4.append(var3);
+      var4.append(", emoji=");
+      var4.append(var1);
+      var4.append(", description=");
+      var4.append(var6);
+      var4.append(", default=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

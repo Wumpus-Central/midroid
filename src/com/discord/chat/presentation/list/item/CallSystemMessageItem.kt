@@ -2,14 +2,13 @@ package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public data class CallSystemMessageItem(message: Message) : ChatListItem {
+@SourceDebugExtension(["SMAP\nCallSystemMessageItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CallSystemMessageItem.kt\ncom/discord/chat/presentation/list/item/CallSystemMessageItem\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,13:1\n1#2:14\n*E\n"])
+public data class CallSystemMessageItem(message: Message) : ChatListItem(var1.getId-3Eiw7ao()) {
    public final val message: Message
 
    init {
-      r.h(var1, "message");
-      super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
       if (!MessageKt.isCallMessage(var1)) {
          throw new IllegalArgumentException("Only \"call\" system messages are allowed");
@@ -21,7 +20,6 @@ public data class CallSystemMessageItem(message: Message) : ChatListItem {
    }
 
    public fun copy(message: Message = var0.message): CallSystemMessageItem {
-      r.h(var1, "message");
       return new CallSystemMessageItem(var1);
    }
 
@@ -31,7 +29,7 @@ public data class CallSystemMessageItem(message: Message) : ChatListItem {
       } else if (var1 !is CallSystemMessageItem) {
          return false;
       } else {
-         return r.c(this.message, (var1 as CallSystemMessageItem).message);
+         return this.message == (var1 as CallSystemMessageItem).message;
       }
    }
 

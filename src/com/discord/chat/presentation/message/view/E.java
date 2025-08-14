@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class E implements OnLongClickListener {
-   public final Function1 j;
-   public final CharSequence k;
+   public final Function1 d;
+   public final CharSequence e;
 
    public final boolean onLongClick(View var1) {
-      return EmbedView.b(this.j, this.k, var1);
+      return EmbedView.b(this.d, this.e, var1);
    }
 }

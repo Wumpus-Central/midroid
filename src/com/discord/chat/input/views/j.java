@@ -7,10 +7,10 @@ import kotlin.jvm.internal.Ref.BooleanRef;
 
 // $VF: synthetic class
 public final class j implements OnKeyListener {
-   public final BooleanRef j;
-   public final DCDChatInput k;
+   public final BooleanRef d;
+   public final DCDChatInput e;
 
    public final boolean onKey(View var1, int var2, KeyEvent var3) {
-      return DCDChatInput.b(this.j, this.k, var1, var2, var3);
+      return DCDChatInput.b(this.d, this.e, var1, var2, var3);
    }
 }

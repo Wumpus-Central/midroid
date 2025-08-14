@@ -1,21 +1,17 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.ChannelType
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
+public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode() {
    public final val channelType: ChannelType?
    public final val iconType: String
    public final val icon: String?
    public final val content: List<ContentNode>
 
    init {
-      r.h(var2, "iconType");
-      r.h(var4, "content");
-      super(null);
       this.channelType = var1;
       this.iconType = var2;
       this.icon = var3;
@@ -44,8 +40,6 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       icon: String? = var0.icon,
       content: List<ContentNode> = var0.content
    ): ChannelNameContentNode {
-      r.h(var2, "iconType");
-      r.h(var4, "content");
       return new ChannelNameContentNode(var1, var2, var3, var4);
    }
 
@@ -58,12 +52,12 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
          var1 = var1;
          if (this.channelType != var1.channelType) {
             return false;
-         } else if (!r.c(this.iconType, var1.iconType)) {
+         } else if (!(this.iconType == var1.iconType)) {
             return false;
-         } else if (!r.c(this.icon, var1.icon)) {
+         } else if (!(this.icon == var1.icon)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }

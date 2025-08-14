@@ -6,17 +6,11 @@ import android.view.ViewGroup.LayoutParams
 import android.view.accessibility.AccessibilityEvent
 import com.facebook.react.views.view.ReactViewGroup
 import java.util.ArrayList
-import kotlin.jvm.internal.r
 
-internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
+internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    internal final lateinit var portalId: String
    private final var portalIdPrev: String?
    private final var childView: View?
-
-   init {
-      r.h(var1, "context");
-      super(var1);
-   }
 
    private fun addChildView(child: View) {
       this.childView = var1;
@@ -46,7 +40,6 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams?) {
-      r.h(var1, "child");
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
@@ -63,20 +56,20 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    }
 
    public open fun getChildAt(index: Int): View {
-      val var3: View = this.childView;
+      val var2: View = this.childView;
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var2: java.lang.String = this.getPortalId$portals_release();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Requesting non-existent child or invalid index: ");
-         var4.append(var1);
-         var4.append(", ");
-         var4.append(var2);
-         var4.append(", ");
-         var4.append(var3);
-         var4.append(".");
-         throw new IllegalArgumentException(var4.toString().toString());
+         val var4: java.lang.String = this.getPortalId$portals_release();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Requesting non-existent child or invalid index: ");
+         var3.append(var1);
+         var3.append(", ");
+         var3.append(var4);
+         var3.append(", ");
+         var3.append(var2);
+         var3.append(".");
+         throw new IllegalArgumentException(var3.toString().toString());
       }
    }
 
@@ -116,10 +109,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    }
 
    public fun setPortalId(portalId: String) {
-      r.h(var1, "portalId");
       if (this.portalId == null) {
          this.setPortalId$portals_release(var1);
-      } else if (!r.c(this.getPortalId$portals_release(), var1)) {
+      } else if (!(this.getPortalId$portals_release() == var1)) {
          this.portalIdPrev = this.getPortalId$portals_release();
          this.setPortalId$portals_release(var1);
       }

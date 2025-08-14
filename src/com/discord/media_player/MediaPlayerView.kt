@@ -9,8 +9,9 @@ import com.discord.media_player.databinding.PlayerViewWithSurfaceViewBinding
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerControlView
 import com.google.android.exoplayer2.ui.PlayerView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nMediaPlayerView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaPlayerView.kt\ncom/discord/media_player/MediaPlayerView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,91:1\n255#2:92\n257#2,2:93\n1#3:95\n*S KotlinDebug\n*F\n+ 1 MediaPlayerView.kt\ncom/discord/media_player/MediaPlayerView\n*L\n39#1:92\n41#1:93,2\n*E\n"])
 public class MediaPlayerView(context: Context) {
    public final var view: View
       internal set
@@ -18,7 +19,6 @@ public class MediaPlayerView(context: Context) {
    private final val playerView: PlayerView
       private final get() {
          val var1: View = this.view;
-         r.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
          return var1 as PlayerView;
       }
 
@@ -58,10 +58,7 @@ public class MediaPlayerView(context: Context) {
 
 
    init {
-      r.h(var1, "context");
-      super();
       val var2: PlayerView = PlayerViewWithSurfaceViewBinding.inflate(LayoutInflater.from(var1)).getRoot();
-      r.g(var2, "getRoot(...)");
       this.view = var2;
       this.getPlayerView().setResizeMode(3);
       this.getPlayerView().setUseController(false);
@@ -72,11 +69,11 @@ public class MediaPlayerView(context: Context) {
       val var2: View = this.getPlayerView().getVideoSurfaceView();
       if (var2 is SurfaceView) {
          if (var1 != null) {
-            var1.v(var2 as SurfaceView);
+            var1.k(var2 as SurfaceView);
          }
       } else if (var2 is TextureView) {
          if (var1 != null) {
-            var1.Y(var2 as TextureView);
+            var1.z(var2 as TextureView);
          }
       } else if (var2 != null) {
          val var3: java.lang.String;
@@ -111,8 +108,6 @@ public class MediaPlayerView(context: Context) {
 
 
       init {
-         r.h(var1, "context");
-         super();
          this.playerControlView = new PlayerControlView(var1);
       }
    }

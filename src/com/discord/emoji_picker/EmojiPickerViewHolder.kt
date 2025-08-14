@@ -26,24 +26,23 @@ import com.discord.portals.from_js.PortalFromJsContextManager
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils$ScaleType
+import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
-   public class Category(context: Context) : EmojiPickerViewHolder {
+   @SourceDebugExtension(["SMAP\nEmojiPickerViewHolder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Category\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,326:1\n176#2,2:327\n*S KotlinDebug\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Category\n*L\n71#1:327,2\n*E\n"])
+   public class Category(context: Context) : EmojiPickerViewHolder(new TextView(var1)) {
       private final val categoryTextView: TextView
 
       public final var isInsidePremiumRoadblock: Boolean
          internal set
 
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         super(new TextView(var1), null);
          val var2: View = this.itemView;
-         kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type android.widget.TextView");
          val var3: TextView = var2 as TextView;
          this.categoryTextView = var2 as TextView;
          DiscordFontUtilsKt.setDiscordFont(var2 as TextView, DiscordFont.PrimarySemibold);
@@ -53,9 +52,8 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(category: EmojiPickerItem.Category) {
-         kotlin.jvm.internal.r.h(var1, "category");
          this.isInsidePremiumRoadblock = var1.isInsidePremiumRoadBlock();
-         if (!kotlin.text.h.c0(var1.getTitle())) {
+         if (!StringsKt.c0(var1.getTitle())) {
             this.categoryTextView.setPadding(0, SizeUtilsKt.getDpToPx(8), 0, 0);
             this.categoryTextView.setLayoutParams(layoutParams);
             this.categoryTextView.setText(var1.getTitle());
@@ -74,7 +72,6 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
    public companion object {
       public fun EmojiPickerViewHolder.isNitroLocked(): Boolean {
-         kotlin.jvm.internal.r.h(var1, "<this>");
          val var2: Boolean;
          if (var1 is EmojiPickerViewHolder.Emoji) {
             var2 = (var1 as EmojiPickerViewHolder.Emoji).isInsidePremiumRoadblock();
@@ -88,8 +85,11 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
    }
 
-   public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder {
-      private final val placeholder: Drawable
+   @SourceDebugExtension(["SMAP\nEmojiPickerViewHolder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Emoji\n+ 2 ViewGroup.kt\nandroidx/core/view/ViewGroupKt\n*L\n1#1,326:1\n190#2,2:327\n*S KotlinDebug\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Emoji\n*L\n238#1:327,2\n*E\n"])
+   public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
+         new SimpleDraweeView(var1)
+      ) {
+      private final val placeholder: Drawable by B9.j.b(new B())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }
@@ -117,19 +117,13 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
 
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         kotlin.jvm.internal.r.h(var2, "onPressEmoji");
-         kotlin.jvm.internal.r.h(var3, "onLongPressEmoji");
-         super(new SimpleDraweeView(var1), null);
-         this.placeholder$delegate = A9.j.b(new B());
          val var4: View = this.itemView;
-         kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var5: SimpleDraweeView = var4 as SimpleDraweeView;
          this.emojiView = var4 as SimpleDraweeView;
          this.emojiLoadListener = new EmojiPickerViewHolder.Emoji.EmojiLoadListener(false);
          RippleUtilsKt.addCircleRipple(var5, true);
          (var5.getHierarchy() as GenericDraweeHierarchy).x(var1.getResources().getInteger(com.discord.image.fresco.R.integer.image_fade_duration) / 3);
-         (var5.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
+         (var5.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new C(this, var2), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new D(this, var3), 1, null);
       }
@@ -205,21 +199,19 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          scrolling: Boolean,
          scrollingFast: Boolean
       ) {
-         kotlin.jvm.internal.r.h(var1, "item");
          this.emojiAnimated = var2;
          this.emojiItem = var1;
          this.emojiSize = var3;
          this.emojiMargin = var4;
-         val var7: SimpleDraweeView = this.emojiView;
-         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
-         var8.setMargins(var4, var4, var4, var4);
-         var7.setLayoutParams(var8);
+         val var8: SimpleDraweeView = this.emojiView;
+         val var7: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         var7.setMargins(var4, var4, var4, var4);
+         var8.setLayoutParams(var7);
          this.emojiView.setContentDescription(var1.getName());
          val var11: GenericDraweeHierarchy = this.emojiView.getHierarchy() as GenericDraweeHierarchy;
          val var10: Drawable;
          if (var1.getDisabled() === EmojiPickerItem.Emoji.DisabledType.ICON) {
             val var9: Context = this.itemView.getContext();
-            kotlin.jvm.internal.r.g(var9, "getContext(...)");
             var10 = GetDrawableCompatKt.getDrawableCompat(var9, R.drawable.lock_overlay);
          } else {
             var10 = null;
@@ -241,12 +233,12 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
             var var7: Animatable = null;
             if (var2) {
-               if (!kotlin.jvm.internal.r.c(this.emojiUrl, var4)) {
+               if (!(this.emojiUrl == var4)) {
                   this.emojiUrl = null;
                   this.emojiView.setImageURI(null);
                   this.emojiView.setBackground(this.getPlaceholder());
                }
-            } else if (!kotlin.jvm.internal.r.c(this.emojiUrl, var4)) {
+            } else if (!(this.emojiUrl == var4)) {
                this.emojiUrl = var4;
                (this.emojiView.getHierarchy() as GenericDraweeHierarchy).A(this.getPlaceholder());
                this.emojiView.setBackground(null);
@@ -272,7 +264,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : M2.a {
+      private class EmojiLoadListener(animating: Boolean) : L2.a {
          private final var animating: Boolean
 
          init {
@@ -294,53 +286,41 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
    }
 
-   public class EmojiPlaceholder(context: Context) : EmojiPickerViewHolder {
+   @SourceDebugExtension(["SMAP\nEmojiPickerViewHolder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$EmojiPlaceholder\n+ 2 ViewGroup.kt\nandroidx/core/view/ViewGroupKt\n*L\n1#1,326:1\n190#2,2:327\n*S KotlinDebug\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$EmojiPlaceholder\n*L\n171#1:327,2\n*E\n"])
+   public class EmojiPlaceholder(context: Context) : EmojiPickerViewHolder(new View(var1)) {
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         super(new View(var1), null);
          this.itemView.setBackground(EmojiPickerViewHolder.Emoji.Companion.createPlaceholderDrawable());
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var4: View = this.itemView;
-         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
-         var3.setMargins(var2, var2, var2, var2);
-         var4.setLayoutParams(var3);
+         val var3: View = this.itemView;
+         val var4: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         var4.setMargins(var2, var2, var2, var2);
+         var3.setLayoutParams(var4);
       }
    }
 
-   public class FooterUpsell(context: Context) : EmojiPickerViewHolder, PortalFromJsContext {
+   public class FooterUpsell(context: Context) : EmojiPickerViewHolder(new FrameLayout(var1)), PortalFromJsContext {
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         super(new FrameLayout(var1), null);
          this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, SizeUtilsKt.getDpToPx(64)));
       }
 
       public override fun getPortalViewIndex(portalView: View): Int {
-         kotlin.jvm.internal.r.h(var1, "portalView");
          val var2: View = this.itemView;
-         kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type android.widget.FrameLayout");
          return (var2 as FrameLayout).indexOfChild(var1);
       }
 
       public fun onBindViewHolder(footerUpsell: EmojiPickerItem.FooterUpsell) {
-         kotlin.jvm.internal.r.h(var1, "footerUpsell");
          PortalFromJsContextManager.INSTANCE.addContext(var1.getId(), this);
       }
 
       public override fun onPortalFromJsAdded(portalId: String, portalView: View) {
-         kotlin.jvm.internal.r.h(var1, "portalId");
-         kotlin.jvm.internal.r.h(var2, "portalView");
          val var3: View = this.itemView;
-         kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type android.widget.FrameLayout");
          (var3 as FrameLayout).addView(var2);
       }
 
       public override fun onPortalFromJsRemoved(portalId: String, portalView: View) {
-         kotlin.jvm.internal.r.h(var1, "portalId");
-         kotlin.jvm.internal.r.h(var2, "portalView");
          val var3: View = this.itemView;
-         kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type android.widget.FrameLayout");
          (var3 as FrameLayout).removeView(var2);
       }
    }
@@ -352,17 +332,13 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       private final val binding: PremiumInlineRoadblockFooterBinding
 
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         kotlin.jvm.internal.r.h(var2, "binding");
          val var3: RelativeLayout = var2.getRoot();
-         kotlin.jvm.internal.r.g(var3, "getRoot(...)");
          super(var3, null);
          this.binding = var2;
       }
 
       public fun onBindViewHolder(useTier0UpsellContent: Boolean) {
          var var3: View = this.binding.gradient;
-         kotlin.jvm.internal.r.g(this.binding.gradient, "gradient");
          val var2: EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion = EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion;
          ViewBackgroundUtilsKt.setBackgroundDrawableRes(
             var3,
@@ -371,7 +347,6 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
             )
          );
          var3 = this.binding.gradientDivider;
-         kotlin.jvm.internal.r.g(this.binding.gradientDivider, "gradientDivider");
          ViewBackgroundUtilsKt.setBackgroundDrawableRes(
             var3, EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion.getGradient$default(var2, var1, false, 2, null)
          );
@@ -385,28 +360,22 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       private final val binding: PremiumInlineRoadblockHeaderBinding
 
       init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         kotlin.jvm.internal.r.h(var2, "binding");
          val var3: RelativeLayout = var2.getRoot();
-         kotlin.jvm.internal.r.g(var3, "getRoot(...)");
          super(var3, null);
          this.binding = var2;
       }
 
       public fun onBindViewHolder(useTier0UpsellContent: Boolean) {
          var var3: View = this.binding.gradient;
-         kotlin.jvm.internal.r.g(this.binding.gradient, "gradient");
          val var2: EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion = Companion;
          ViewBackgroundUtilsKt.setBackgroundDrawableRes(
             var3, EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion.getGradient$default(Companion, var1, false, 2, null)
          );
          var3 = this.binding.gradientDivider;
-         kotlin.jvm.internal.r.g(this.binding.gradientDivider, "gradientDivider");
          ViewBackgroundUtilsKt.setBackgroundDrawableRes(
             var3, EmojiPickerViewHolder.PremiumInlineRoadblockHeader.Companion.getGradient$default(var2, var1, false, 2, null)
          );
          val var5: FrameLayout = this.binding.gradientIcon;
-         kotlin.jvm.internal.r.g(this.binding.gradientIcon, "gradientIcon");
          ViewBackgroundUtilsKt.setBackgroundDrawableRes(var5, var2.getGradient(var1, true));
       }
 
@@ -430,14 +399,8 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
    }
 
-   public class Spacer(context: Context) : EmojiPickerViewHolder {
-      init {
-         kotlin.jvm.internal.r.h(var1, "context");
-         super(new View(var1), null);
-      }
-
+   public class Spacer(context: Context) : EmojiPickerViewHolder(new View(var1)) {
       public fun onBindViewHolder(item: EmojiPickerItem.Spacer) {
-         kotlin.jvm.internal.r.h(var1, "item");
          this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-2, var1.getHeight()));
       }
    }

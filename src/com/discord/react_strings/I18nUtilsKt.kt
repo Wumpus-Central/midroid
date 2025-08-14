@@ -1,15 +1,17 @@
+@file:SourceDebugExtension(["SMAP\nI18nUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 I18nUtils.kt\ncom/discord/react_strings/I18nUtilsKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,89:1\n1#2:90\n*E\n"])
+
 package com.discord.react_strings
 
-import a2.b
-import a2.c
-import a2.d
-import a2.e
-import a2.f
+import Z1.b
+import Z1.c
+import Z1.d
+import Z1.e
+import Z1.f
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 @JvmSynthetic
 fun a(var0: RenderContext): Unit {
@@ -37,20 +39,12 @@ fun e(var0: RenderContext, var1: java.lang.String, var2: java.lang.String, var3:
 }
 
 public fun ImageView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new c()) {
-   r.h(var0, "<this>");
-   r.h(var1, "i18nMessage");
-   r.h(var2, "initializer");
    val var3: Context = var0.getContext();
-   r.g(var3, "getContext(...)");
    var0.setContentDescription(i18nFormat(var3, var1, var2));
 }
 
 public fun TextView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new d()) {
-   r.h(var0, "<this>");
-   r.h(var1, "i18nMessage");
-   r.h(var2, "initializer");
    val var3: Context = var0.getContext();
-   r.g(var3, "getContext(...)");
    var0.setContentDescription(i18nFormat(var3, var1, var2));
 }
 
@@ -60,7 +54,7 @@ fun `i18nContentDescription$default`(var0: ImageView, var1: I18nMessage, var2: F
       var2 = new c();
    }
 
-   i18nContentDescription(var0, var1, (Function1)var2);
+   i18nContentDescription(var0, var1, (Function1<? super RenderContext, Unit>)var2);
 }
 
 @JvmSynthetic
@@ -69,23 +63,18 @@ fun `i18nContentDescription$default`(var0: TextView, var1: I18nMessage, var2: Fu
       var2 = new d();
    }
 
-   i18nContentDescription(var0, var1, (Function1)var2);
+   i18nContentDescription(var0, var1, (Function1<? super RenderContext, Unit>)var2);
 }
 
 fun `i18nContentDescription$lambda$0`(var0: RenderContext): Unit {
-   r.h(var0, "<this>");
    return Unit.a;
 }
 
 fun `i18nContentDescription$lambda$2`(var0: RenderContext): Unit {
-   r.h(var0, "<this>");
    return Unit.a;
 }
 
 public fun Context.i18nFormat(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new b()): CharSequence {
-   r.h(var0, "<this>");
-   r.h(var1, "i18nMessage");
-   r.h(var2, "initializer");
    val var3: RenderContext = new RenderContext();
    var2.invoke(var3);
    return RenderContext.Argument.INSTANCE.replace(var1.format$react_strings_release(var0), new e(var3));
@@ -97,16 +86,14 @@ fun `i18nFormat$default`(var0: Context, var1: I18nMessage, var2: Function1, var3
       var2 = new b();
    }
 
-   return i18nFormat(var0, var1, (Function1)var2);
+   return i18nFormat(var0, var1, (Function1<? super RenderContext, Unit>)var2);
 }
 
 fun `i18nFormat$lambda$3`(var0: RenderContext): Unit {
-   r.h(var0, "<this>");
    return Unit.a;
 }
 
 fun `i18nFormat$lambda$5`(var0: RenderContext, var1: java.lang.String, var2: java.lang.String, var3: Boolean): java.lang.CharSequence {
-   r.h(var1, "argName");
    val var4: java.lang.String = var0.getArgs().get(var1);
    if (var4 != null) {
       var1 = var4;
@@ -116,11 +103,7 @@ fun `i18nFormat$lambda$5`(var0: RenderContext, var1: java.lang.String, var2: jav
 }
 
 public fun TextView.i18nSetText(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new f()) {
-   r.h(var0, "<this>");
-   r.h(var1, "i18nMessage");
-   r.h(var2, "initializer");
    val var3: Context = var0.getContext();
-   r.g(var3, "getContext(...)");
    var0.setText(i18nFormat(var3, var1, var2));
 }
 
@@ -130,10 +113,9 @@ fun `i18nSetText$default`(var0: TextView, var1: I18nMessage, var2: Function1, va
       var2 = new f();
    }
 
-   i18nSetText(var0, var1, (Function1)var2);
+   i18nSetText(var0, var1, (Function1<? super RenderContext, Unit>)var2);
 }
 
 fun `i18nSetText$lambda$1`(var0: RenderContext): Unit {
-   r.h(var0, "<this>");
    return Unit.a;
 }

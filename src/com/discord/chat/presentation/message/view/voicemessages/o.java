@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class o implements Function1 {
-   public final AudioPlayerView j;
+   public final AudioPlayerView d;
 
    public final Object invoke(Object var1) {
-      return AudioPlayerView.d(this.j, (MediaPlayer.Event)var1);
+      return AudioPlayerView.d(this.d, (MediaPlayer.Event)var1);
    }
 }

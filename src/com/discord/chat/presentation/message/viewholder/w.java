@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class w implements Function1 {
-   public final ChatEventHandler j;
-   public final String k;
+   public final ChatEventHandler d;
+   public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageComponentsViewHolder.e(this.j, this.k, (LinkContentNode)var1);
+      return MessageComponentsViewHolder.e(this.d, this.e, (LinkContentNode)var1);
    }
 }

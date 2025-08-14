@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.GuildInviteDisabledEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, codedLinkIndex: Int, invite: GuildInviteDisabledEmbedImpl) : GuildInviteDisabledMessageAccessory(
       var1, var2, var3
@@ -12,8 +11,6 @@ public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, code
    public final val invite: GuildInviteDisabledEmbedImpl
 
    fun GuildInviteDisabledMessageAccessory(var1: java.lang.String, var2: Int, var3: GuildInviteDisabledEmbedImpl) {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       val var4: StringBuilder = new StringBuilder();
       var4.append("guild invite disabled ");
       var4.append(var2);
@@ -36,8 +33,6 @@ public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, code
    }
 
    public fun copy(messageId: MessageId = ..., codedLinkIndex: Int = ..., invite: GuildInviteDisabledEmbedImpl = ...): GuildInviteDisabledMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       return new GuildInviteDisabledMessageAccessory(var1, var2, var3, null);
    }
 
@@ -53,7 +48,7 @@ public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, code
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
          } else {
-            return r.c(this.invite, var1.invite);
+            return this.invite == var1.invite;
          }
       }
    }

@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class e implements Function1 {
-   public final MobileVoiceOverlay j;
+   public final MobileVoiceOverlay d;
 
    public final Object invoke(Object var1) {
-      return MobileVoiceOverlay.h(this.j, (OverlayViewProvider)var1);
+      return MobileVoiceOverlay.h(this.d, (OverlayViewProvider)var1);
    }
 }

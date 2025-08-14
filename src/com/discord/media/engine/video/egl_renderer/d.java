@@ -4,11 +4,11 @@ import java.util.concurrent.CountDownLatch;
 
 // $VF: synthetic class
 public final class d implements Runnable {
-   public final EglRenderer j;
-   public final CountDownLatch k;
+   public final EglRenderer d;
+   public final CountDownLatch e;
 
    @Override
    public final void run() {
-      EglRenderer.a(this.j, this.k);
+      EglRenderer.a(this.d, this.e);
    }
 }

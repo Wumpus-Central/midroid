@@ -1,11 +1,10 @@
 package com.discord.image.fresco
 
-import A2.f
 import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
+import z2.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(
    imageUrl: String?,
@@ -13,8 +12,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
    srcIsAnimated: Boolean? = java.lang.Boolean.FALSE,
    controllerListener: ControllerListener<in Any>? = null
 ) {
-   r.h(var0, "<this>");
-   if (var1 != null && !h.c0(var1)) {
+   if (var1 != null && !StringsKt.c0(var1)) {
       val var8: Uri = f.r(var1);
       if (var8 != null) {
          var var5: Boolean;
@@ -22,14 +20,14 @@ public fun SimpleDraweeView.setOptionalImageUrl(
          label58: {
             label57: {
                var7 = java.lang.Boolean.TRUE;
-               if (r.c(var3, java.lang.Boolean.TRUE)) {
+               if (var3 == java.lang.Boolean.TRUE) {
                   val var13: java.lang.String = var8.getLastPathSegment();
-                  if (var13 != null && h.s(var13, ".webp", true)) {
+                  if (var13 != null && StringsKt.s(var13, ".webp", true)) {
                      break label57;
                   }
 
                   val var14: java.lang.String = var8.getLastPathSegment();
-                  if (var14 != null && h.s(var14, ".avif", true)) {
+                  if (var14 != null && StringsKt.s(var14, ".avif", true)) {
                      break label57;
                   }
                }
@@ -43,9 +41,9 @@ public fun SimpleDraweeView.setOptionalImageUrl(
 
          var var6: Boolean;
          label47: {
-            if (!r.c(var2, var7)) {
+            if (!(var2 == var7)) {
                val var11: java.lang.String = var8.getLastPathSegment();
-               if ((var11 == null || !h.s(var11, ".gif", true)) && !var5) {
+               if ((var11 == null || !StringsKt.s(var11, ".gif", true)) && !var5) {
                   var6 = false;
                   break label47;
                }
@@ -56,7 +54,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
 
          val var12: Builder = var8.buildUpon();
          var1 = var8.getLastPathSegment();
-         if (var1 != null && h.s(var1, ".avif", true)) {
+         if (var1 != null && StringsKt.s(var1, ".avif", true)) {
             var12.appendQueryParameter("format", "webp");
          }
 

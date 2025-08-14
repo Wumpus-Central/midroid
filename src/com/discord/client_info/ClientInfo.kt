@@ -1,10 +1,12 @@
 package com.discord.client_info
 
-import A9.j
+import B9.j
 import android.content.Context
 import java.util.Locale
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nClientInfo.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ClientInfo.kt\ncom/discord/client_info/ClientInfo\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,64:1\n1#2:65\n*E\n"])
 public object ClientInfo {
    public final lateinit var versionName: String
       internal set
@@ -29,12 +31,12 @@ public object ClientInfo {
          var var1: java.lang.String = null;
          var var2: java.lang.String = flavor;
          if (flavor == null) {
-            r.y("flavor");
+            Intrinsics.throwUninitializedPropertyAccessException("flavor");
             var2 = null;
          }
 
          if (buildType == null) {
-            r.y("buildType");
+            Intrinsics.throwUninitializedPropertyAccessException("buildType");
          } else {
             var1 = buildType;
          }
@@ -43,12 +45,9 @@ public object ClientInfo {
          if (var1.length() > 0) {
             val var9: StringBuilder = new StringBuilder();
             var var4: java.lang.String = java.lang.String.valueOf(var1.charAt(0));
-            r.f(var4, "null cannot be cast to non-null type java.lang.String");
             var4 = var4.toUpperCase(Locale.ROOT);
-            r.g(var4, "toUpperCase(...)");
             var9.append((Object)var4);
             var1 = var1.substring(1);
-            r.g(var1, "substring(...)");
             var9.append(var1);
             var8 = var9.toString();
          }
@@ -63,17 +62,17 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@293.11.0-1+293111"
+   public const val SENTRY_RELEASE: String = "discord_android@293.12.0-1+293112"
 
    public final val isDebugBuild: Boolean
       public final get() {
          var var1: java.lang.String = buildType;
          if (buildType == null) {
-            r.y("buildType");
+            Intrinsics.throwUninitializedPropertyAccessException("buildType");
             var1 = null;
          }
 
-         return r.c(var1, "debug");
+         return var1 == "debug";
       }
 
 
@@ -81,11 +80,11 @@ public object ClientInfo {
       public final get() {
          var var1: java.lang.String = flavor;
          if (flavor == null) {
-            r.y("flavor");
+            Intrinsics.throwUninitializedPropertyAccessException("flavor");
             var1 = null;
          }
 
-         return r.c(var1, "developer");
+         return var1 == "developer";
       }
 
 
@@ -98,7 +97,7 @@ public object ClientInfo {
    public final val isPreProdRelease: Boolean
       public final get() {
          val var1: Boolean;
-         if (!r.c(this.getReleaseChannel(), "canaryRelease") && !r.c(this.getReleaseChannel(), "betaRelease")) {
+         if (!(this.getReleaseChannel() == "canaryRelease") && !(this.getReleaseChannel() == "betaRelease")) {
             var1 = false;
          } else {
             var1 = true;
@@ -108,7 +107,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "900b5213-af12-43cf-bb5c-69d8cacaf6d2"
+   public const val PROGUARD_UUID: String = "dbd62ebc-b339-4d23-af3f-e2f473c7ec56"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
@@ -117,20 +116,20 @@ public object ClientInfo {
       if (!var2) {
          var var3: java.lang.String = flavor;
          if (flavor == null) {
-            r.y("flavor");
+            Intrinsics.throwUninitializedPropertyAccessException("flavor");
             var3 = null;
          }
 
          var0 = false;
-         if (!h.N(var3, "beta", false, 2, null)) {
+         if (!StringsKt.N(var3, "beta", false, 2, null)) {
             var3 = flavor;
             if (flavor == null) {
-               r.y("flavor");
+               Intrinsics.throwUninitializedPropertyAccessException("flavor");
                var3 = null;
             }
 
             var0 = false;
-            if (!h.N(var3, "canary", false, 2, null)) {
+            if (!StringsKt.N(var3, "canary", false, 2, null)) {
                var0 = true;
             }
          }
@@ -140,12 +139,6 @@ public object ClientInfo {
    }
 
    public fun init(context: Context, versionName: String, versionCode: Int, flavor: String, buildType: String, otaManifest: String, otaVersion: String) {
-      r.h(var1, "context");
-      r.h(var2, "versionName");
-      r.h(var4, "flavor");
-      r.h(var5, "buildType");
-      r.h(var6, "otaManifest");
-      r.h(var7, "otaVersion");
       this.setVersionName(var2);
       this.setVersionCode(java.lang.String.valueOf(var3));
       this.setOtaManifestETag(var6);

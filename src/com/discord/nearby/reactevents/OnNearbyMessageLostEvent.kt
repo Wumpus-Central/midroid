@@ -2,16 +2,14 @@ package com.discord.nearby.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class OnNearbyMessageLostEvent(body: String) : ReactEvent {
    public final val body: String
 
    init {
-      r.h(var1, "body");
       super();
       this.body = var1;
    }
@@ -21,7 +19,6 @@ public data class OnNearbyMessageLostEvent(body: String) : ReactEvent {
    }
 
    public fun copy(body: String = var0.body): OnNearbyMessageLostEvent {
-      r.h(var1, "body");
       return new OnNearbyMessageLostEvent(var1);
    }
 
@@ -31,7 +28,7 @@ public data class OnNearbyMessageLostEvent(body: String) : ReactEvent {
       } else if (var1 !is OnNearbyMessageLostEvent) {
          return false;
       } else {
-         return r.c(this.body, (var1 as OnNearbyMessageLostEvent).body);
+         return this.body == (var1 as OnNearbyMessageLostEvent).body;
       }
    }
 
@@ -44,12 +41,12 @@ public data class OnNearbyMessageLostEvent(body: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.body;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnNearbyMessageLostEvent(body=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.body;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnNearbyMessageLostEvent(body=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

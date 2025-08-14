@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class g0 implements Function1 {
-   public final int j;
+   public final int d;
 
    public final Object invoke(Object var1) {
-      return ForumPostActionBarView.h(this.j, (RenderContext)var1);
+      return ForumPostActionBarView.h(this.d, (RenderContext)var1);
    }
 }

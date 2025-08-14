@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
+import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
@@ -13,15 +14,26 @@ import com.google.android.material.textview.MaterialTextView;
 import y0.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
+   @NonNull
    public final ViewStub loadingDots;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final SimpleDraweeView selectComponentChevron;
+   @NonNull
    public final SimpleDraweeSpanTextView selectComponentSelectionIcon;
+   @NonNull
    public final MaterialTextView selectComponentSelectionText;
+   @NonNull
    public final FlexboxLayout selectComponentSelectionsRoot;
 
    private MessageComponentSelectViewBinding(
-      View var1, ViewStub var2, SimpleDraweeView var3, SimpleDraweeSpanTextView var4, MaterialTextView var5, FlexboxLayout var6
+      @NonNull View var1,
+      @NonNull ViewStub var2,
+      @NonNull SimpleDraweeView var3,
+      @NonNull SimpleDraweeSpanTextView var4,
+      @NonNull MaterialTextView var5,
+      @NonNull FlexboxLayout var6
    ) {
       this.rootView = var1;
       this.loadingDots = var2;
@@ -31,23 +43,24 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
       this.selectComponentSelectionsRoot = var6;
    }
 
-   public static MessageComponentSelectViewBinding bind(View var0) {
+   @NonNull
+   public static MessageComponentSelectViewBinding bind(@NonNull View var0) {
       int var1 = R.id.loading_dots;
-      ViewStub var4 = (ViewStub)a.a(var0, var1);
-      if (var4 != null) {
+      ViewStub var3 = (ViewStub)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.select_component_chevron;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.select_component_selection_icon;
-            SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.select_component_selection_text;
                MaterialTextView var6 = (MaterialTextView)a.a(var0, var1);
                if (var6 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageComponentSelectViewBinding(var0, var4, var2, var5, var6, var3);
+                  FlexboxLayout var4 = (FlexboxLayout)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new MessageComponentSelectViewBinding(var0, var3, var5, var2, var6, var4);
                   }
                }
             }
@@ -57,7 +70,8 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static MessageComponentSelectViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static MessageComponentSelectViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.message_component_select_view, var1);
          return bind(var1);
@@ -66,6 +80,7 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

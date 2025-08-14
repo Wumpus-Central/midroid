@@ -8,12 +8,10 @@ import com.discord.chat.presentation.message.view.MediaImageView
 import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 
-public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHolder {
+public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHolder(var1) {
    private final val view: MediaImageView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
-      super(var1, null);
       this.view = var1;
    }
 
@@ -45,8 +43,6 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       filename: String?,
       srcIsAnimated: Boolean
    ) {
-      kotlin.jvm.internal.r.h(var1, "url");
-      kotlin.jvm.internal.r.h(var18, "resizeMode");
       this.view.setContent(var1, var2, var3, var18, var4, var5, var6, var7, var17, var22, var8, var9, var10, var11, var19, var24, var25, var26);
       if (var20 != null) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var20, 1, null);

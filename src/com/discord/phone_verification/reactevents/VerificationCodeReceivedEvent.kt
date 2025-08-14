@@ -2,16 +2,14 @@ package com.discord.phone_verification.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
    public final val code: String
 
    init {
-      r.h(var1, "code");
       super();
       this.code = var1;
    }
@@ -21,7 +19,6 @@ internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
    }
 
    public fun copy(code: String = var0.code): VerificationCodeReceivedEvent {
-      r.h(var1, "code");
       return new VerificationCodeReceivedEvent(var1);
    }
 
@@ -31,7 +28,7 @@ internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
       } else if (var1 !is VerificationCodeReceivedEvent) {
          return false;
       } else {
-         return r.c(this.code, (var1 as VerificationCodeReceivedEvent).code);
+         return this.code == (var1 as VerificationCodeReceivedEvent).code;
       }
    }
 
@@ -44,12 +41,12 @@ internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.code;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("VerificationCodeReceivedEvent(code=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.code;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("VerificationCodeReceivedEvent(code=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

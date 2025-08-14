@@ -7,10 +7,8 @@ import com.discord.chat.bridge.messageframe.MessageFrameType
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.bridge.row.MessageRow
 import com.discord.chat.bridge.truncation.Truncation
-import kotlin.jvm.internal.r
 
 public fun MessageRow.getMessageContext(): MessageContext {
-   r.h(var0, "<this>");
    val var8: MessageFrame = var0.getMessageFrame();
    val var15: MessageFrameType;
    if (var8 != null) {
@@ -28,7 +26,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
 
    val var16: java.lang.Boolean = var0.getCanAddNewReactions();
    val var11: java.lang.Boolean = java.lang.Boolean.TRUE;
-   val var7: Boolean = r.c(var16, java.lang.Boolean.TRUE);
+   val var7: Boolean = var16 == java.lang.Boolean.TRUE;
    var var10: java.lang.String = var0.getAddReactionLabel();
    var var9: java.lang.String = "";
    var var17: java.lang.String = var10;
@@ -43,7 +41,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
 
    val var13: ReactionsTheme = var0.getReactionsTheme();
    val var2: Boolean;
-   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUsingGradientTheme(), var11)) {
+   if (var0.getMessage() is Message && (var0.getMessage() as Message).getUsingGradientTheme() == var11) {
       var2 = true;
    } else {
       var2 = false;
@@ -51,14 +49,14 @@ public fun MessageRow.getMessageContext(): MessageContext {
 
    val var12: Truncation = var0.getTruncation();
    val var3: Boolean;
-   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAttachmentGridLayout(), var11)) {
+   if (var0.getMessage() is Message && (var0.getMessage() as Message).getUseAttachmentGridLayout() == var11) {
       var3 = true;
    } else {
       var3 = false;
    }
 
    val var4: Boolean;
-   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAttachmentUploadPreview(), var11)) {
+   if (var0.getMessage() is Message && (var0.getMessage() as Message).getUseAttachmentUploadPreview() == var11) {
       var4 = true;
    } else {
       var4 = false;

@@ -13,25 +13,21 @@ import com.discord.primitives.MessageId
 import com.discord.theme.R
 import kotlin.jvm.functions.Function3
 
-public class CtaButtonView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+public class CtaButtonView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    public final val binding: CtaButtonBinding
 
    fun CtaButtonView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var3: CtaButtonBinding = CtaButtonBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       var3.ctaButton.setDiscordFont(DiscordFont.PrimarySemibold);
    }
 
    private fun setButtonCallback(channelId: ChannelId, messageId: MessageId, callback: String?, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
-      if (var4 != null && !kotlin.text.h.c0(var4)) {
+      if (var4 != null && !StringsKt.c0(var4)) {
          this.binding.ctaButton.setOnClickButtonListener(new n(var5, var1, var3, var4));
          this.binding.ctaButton.setEnabled(true);
          this.binding.ctaButton.setAlpha(1.0F);
@@ -60,9 +56,6 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
       callback: String? = ...,
       onTapCtaButton: (ChannelId, MessageId, String) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var3, "messageId");
-      kotlin.jvm.internal.r.h(var4, "text");
-      kotlin.jvm.internal.r.h(var8, "onTapCtaButton");
       this.binding.ctaButton.setText(var4);
       var var9: Int;
       if (var5 != null) {

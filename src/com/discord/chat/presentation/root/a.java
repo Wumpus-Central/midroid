@@ -5,10 +5,10 @@ import android.view.View.OnLayoutChangeListener;
 
 // $VF: synthetic class
 public final class a implements OnLayoutChangeListener {
-   public final View j;
-   public final ChatView k;
+   public final View d;
+   public final ChatView e;
 
    public final void onLayoutChange(View var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
-      ChatView.b(this.j, this.k, var1, var2, var3, var4, var5, var6, var7, var8, var9);
+      ChatView.b(this.d, this.e, var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 }

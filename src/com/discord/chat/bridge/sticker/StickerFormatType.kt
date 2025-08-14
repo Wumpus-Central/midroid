@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.sticker
 
-import I9.a
+import H9.a
 import java.util.NoSuchElementException
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import tb.g
-import vb.e.f
+import nb.g
+import pb.e.f
 
 @g(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
@@ -47,16 +47,16 @@ public enum class StickerFormatType(intType: Int) {
       }
    }
 
+   @SourceDebugExtension(["SMAP\nStickerFormatType.kt\nKotlin\n*S Kotlin\n*F\n+ 1 StickerFormatType.kt\ncom/discord/chat/bridge/sticker/StickerFormatType$StickerFormatTypeSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,35:1\n1137#2,2:36\n*S KotlinDebug\n*F\n+ 1 StickerFormatType.kt\ncom/discord/chat/bridge/sticker/StickerFormatType$StickerFormatTypeSerializer\n*L\n27#1:36,2\n*E\n"])
    public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return vb.g.a("StickerFormatType", f.a);
+            return pb.g.a("StickerFormatType", f.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
-         r.h(var1, "decoder");
-         val var4: Int = var1.j();
+         val var4: Int = var1.h();
          val var6: Array<StickerFormatType> = StickerFormatType.values();
          val var3: Int = var6.length;
 
@@ -71,9 +71,7 @@ public enum class StickerFormatType(intType: Int) {
       }
 
       public open fun serialize(encoder: Encoder, value: StickerFormatType) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
-         var1.x(var2.getIntType());
+         var1.B(var2.getIntType());
       }
    }
 }

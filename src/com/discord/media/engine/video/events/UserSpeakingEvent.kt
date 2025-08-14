@@ -2,9 +2,8 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
@@ -13,7 +12,6 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    public final val isSpeaking: Int
 
    init {
-      r.h(var2, "userId");
       super();
       this.connectionId = var1;
       this.userId = var2;
@@ -33,7 +31,6 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public fun copy(connectionId: Int = var0.connectionId, userId: String = var0.userId, isSpeaking: Int = var0.isSpeaking): UserSpeakingEvent {
-      r.h(var2, "userId");
       return new UserSpeakingEvent(var1, var2, var3);
    }
 
@@ -46,7 +43,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!r.c(this.userId, var1.userId)) {
+         } else if (!(this.userId == var1.userId)) {
             return false;
          } else {
             return this.isSpeaking == var1.isSpeaking;

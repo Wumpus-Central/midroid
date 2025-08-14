@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapAppMessageEmbedData(messageId: String, actionId: String, appId: String, embedUrl: String) : ReactEvent {
@@ -14,10 +13,6 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    public final val embedUrl: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "actionId");
-      r.h(var3, "appId");
-      r.h(var4, "embedUrl");
       super();
       this.messageId = var1;
       this.actionId = var2;
@@ -42,10 +37,6 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public fun copy(messageId: String = var0.messageId, actionId: String = var0.actionId, appId: String = var0.appId, embedUrl: String = var0.embedUrl): TapAppMessageEmbedData {
-      r.h(var1, "messageId");
-      r.h(var2, "actionId");
-      r.h(var3, "appId");
-      r.h(var4, "embedUrl");
       return new TapAppMessageEmbedData(var1, var2, var3, var4);
    }
 
@@ -56,14 +47,14 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.actionId, var1.actionId)) {
+         } else if (!(this.actionId == var1.actionId)) {
             return false;
-         } else if (!r.c(this.appId, var1.appId)) {
+         } else if (!(this.appId == var1.appId)) {
             return false;
          } else {
-            return r.c(this.embedUrl, var1.embedUrl);
+            return this.embedUrl == var1.embedUrl;
          }
       }
    }
@@ -77,21 +68,21 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.actionId;
+      val var4: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.actionId;
       val var5: java.lang.String = this.appId;
-      val var2: java.lang.String = this.embedUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapAppMessageEmbedData(messageId=");
-      var1.append(var3);
-      var1.append(", actionId=");
-      var1.append(var4);
-      var1.append(", appId=");
-      var1.append(var5);
-      var1.append(", embedUrl=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.embedUrl;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapAppMessageEmbedData(messageId=");
+      var3.append(var4);
+      var3.append(", actionId=");
+      var3.append(var2);
+      var3.append(", appId=");
+      var3.append(var5);
+      var3.append(", embedUrl=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

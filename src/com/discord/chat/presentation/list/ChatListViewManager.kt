@@ -11,7 +11,6 @@ public class ChatListViewManager : SimpleViewManager<ChatListView>, DCDChatListM
    private final val mDelegate: DCDChatListManagerDelegate<ChatListView, ChatListViewManager> = new DCDChatListManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatListView {
-      kotlin.jvm.internal.r.h(var1, "reactContext");
       return new ChatListView(var1, null, 0, 6, null);
    }
 
@@ -24,7 +23,6 @@ public class ChatListViewManager : SimpleViewManager<ChatListView>, DCDChatListM
    }
 
    public open fun onDropViewInstance(view: ChatListView) {
-      kotlin.jvm.internal.r.h(var1, "view");
       var1.cleanup();
       super.onDropViewInstance(var1);
    }

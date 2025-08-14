@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list.delegate
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
@@ -10,18 +10,9 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
 
-public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
-   init {
-      r.h(var1, "eventHandlerProvider");
-      super(var1, null, 2, null);
-   }
-
+public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "metadata");
       if (var2.isLoading()) {
          var1.showProgress();
       } else {
@@ -33,7 +24,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
                throw new n();
             }
 
-            var6 = new Function0(this.getEventHandler()) {
+            var6 = new Function0<Unit>(this.getEventHandler()) {
                {
                   super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesAfter", "onTapLoadMessagesAfter()V", 0);
                }
@@ -43,7 +34,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
                }
             };
          } else {
-            var6 = new Function0(this.getEventHandler()) {
+            var6 = new Function0<Unit>(this.getEventHandler()) {
                {
                   super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesBefore", "onTapLoadMessagesBefore()V", 0);
                }
@@ -59,14 +50,11 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
    }
 
    public open fun createView(parent: ViewGroup): ChatLoadingView {
-      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "getContext(...)");
       return new ChatLoadingView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      r.h(var1, "item");
       return var1 is LoadingChatListItem;
    }
 }

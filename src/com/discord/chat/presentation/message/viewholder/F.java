@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class F implements Function1 {
-   public final Function1 j;
+   public final Function1 d;
 
    public final Object invoke(Object var1) {
-      return ReactionsViewHolder.c(this.j, (ReactionView.Reaction)var1);
+      return ReactionsViewHolder.c(this.d, (ReactionView.Reaction)var1);
    }
 }

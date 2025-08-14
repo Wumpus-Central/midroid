@@ -1,15 +1,15 @@
 package com.discord.misc.utilities.backoff
 
-import H9.b
-import jb.I
-import jb.f
+import G9.b
+import db.I
+import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
+import org.jetbrains.annotations.NotNull
 
 public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000L, maxDelay: Long = 300000L, maxAttempts: Int = 10) {
    private final val scope: CoroutineScope
@@ -21,8 +21,6 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    private final var job: Job?
 
    init {
-      r.h(var1, "scope");
-      super();
       this.scope = var1;
       this.initialDelay = var2;
       this.maxDelay = var4;
@@ -47,7 +45,6 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    }
 
    public fun fail(action: (Continuation<Unit>) -> Any?) {
-      r.h(var1, "action");
       this.cancelCurrentJob();
       if (this.currentAttempt <= this.maxAttempts) {
          val var4: Long;
@@ -59,8 +56,8 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
 
          this.currentDelay = d.i(var4, this.maxDelay);
          this.currentAttempt++;
-         this.job = f.d(this.scope, null, null, new Function2(this, var1, null) {
-            final Function1 $action;
+         this.job = f.d(this.scope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, var1, null) {
+            final Function1<Continuation, Object> $action;
             int label;
             final ExponentialBackoff this$0;
 
@@ -135,7 +132,7 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                this.this$0 = var1;
             }
 
-            public final Object invokeSuspend(Object var1) {
+            public final Object invokeSuspend(@NotNull Object var1) {
                this.result = var1;
                this.label |= Integer.MIN_VALUE;
                return this.this$0.performBackoff(null, null, this);

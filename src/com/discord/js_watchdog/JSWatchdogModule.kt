@@ -4,14 +4,8 @@ import com.discord.codegen.NativeJSWatchdogModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
-public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogModuleSpec(var1) {
    public override fun checkForStallReport(): WritableMap? {
       val var1: StallReport = JSWatchdogManager.INSTANCE.checkForExistingReport();
       val var2: WritableMap;
@@ -29,7 +23,6 @@ public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSW
    }
 
    public override fun ping(sentTimestamp: Double, sessionId: String?, resetTimestamps: Boolean?, enableTrace: Boolean?, promise: Promise) {
-      r.h(var6, "promise");
       val var7: Boolean;
       if (var4 != null) {
          var7 = var4;

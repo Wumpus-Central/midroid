@@ -1,9 +1,12 @@
+@file:SourceDebugExtension(["SMAP\nGiftEmbed.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GiftEmbed.kt\ncom/discord/chat/bridge/gift/GiftEmbedKt\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,94:1\n12371#2,2:95\n*S KotlinDebug\n*F\n+ 1 GiftEmbed.kt\ncom/discord/chat/bridge/gift/GiftEmbedKt\n*L\n93#1:95,2\n*E\n"])
+
 package com.discord.chat.bridge.gift
 
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import xb.g
+import rb.g
 
 @JvmSynthetic
 fun `access$hasPrimitive`(var0: JsonObject, var1: java.lang.String): Boolean {
@@ -26,7 +29,7 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
          var2 = false;
          if (var6 != null) {
             var2 = false;
-            if (h.c0(var6) xor true) {
+            if (StringsKt.c0(var6) xor true) {
                var2 = true;
             }
          }

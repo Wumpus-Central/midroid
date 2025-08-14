@@ -5,11 +5,11 @@ import android.content.Context;
 
 // $VF: synthetic class
 public final class a implements Runnable {
-   public final Context j;
-   public final Service k;
+   public final Context d;
+   public final Service e;
 
    @Override
    public final void run() {
-      ForegroundService.Companion.a(this.j, this.k);
+      ForegroundService.Companion.a(this.d, this.e);
    }
 }

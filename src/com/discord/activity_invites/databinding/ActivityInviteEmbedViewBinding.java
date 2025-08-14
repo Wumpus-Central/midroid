@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.viewbinding.ViewBinding;
 import com.discord.activity_invites.R;
@@ -13,30 +14,41 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class ActivityInviteEmbedViewBinding implements ViewBinding {
+   @NonNull
    public final Barrier aboveBottomRowBarrier;
+   @NonNull
    public final OverlappingCirclesView avatars;
+   @NonNull
    public final View bgGradient;
+   @NonNull
    public final TextView bottomEndLabel;
+   @NonNull
    public final DCDButton button;
+   @NonNull
    public final SimpleDraweeView endImage;
+   @NonNull
    public final TextView header;
+   @NonNull
    public final TextView heroText;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final SimpleDraweeView startImage;
+   @NonNull
    public final TextView subtext;
 
    private ActivityInviteEmbedViewBinding(
-      View var1,
-      Barrier var2,
-      OverlappingCirclesView var3,
-      View var4,
-      TextView var5,
-      DCDButton var6,
-      SimpleDraweeView var7,
-      TextView var8,
-      TextView var9,
-      SimpleDraweeView var10,
-      TextView var11
+      @NonNull View var1,
+      @NonNull Barrier var2,
+      @NonNull OverlappingCirclesView var3,
+      @NonNull View var4,
+      @NonNull TextView var5,
+      @NonNull DCDButton var6,
+      @NonNull SimpleDraweeView var7,
+      @NonNull TextView var8,
+      @NonNull TextView var9,
+      @NonNull SimpleDraweeView var10,
+      @NonNull TextView var11
    ) {
       this.rootView = var1;
       this.aboveBottomRowBarrier = var2;
@@ -51,38 +63,39 @@ public final class ActivityInviteEmbedViewBinding implements ViewBinding {
       this.subtext = var11;
    }
 
-   public static ActivityInviteEmbedViewBinding bind(View var0) {
+   @NonNull
+   public static ActivityInviteEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.above_bottom_row_barrier;
-      Barrier var3 = (Barrier)a.a(var0, var1);
-      if (var3 != null) {
+      Barrier var5 = (Barrier)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.avatars;
-         OverlappingCirclesView var10 = (OverlappingCirclesView)a.a(var0, var1);
-         if (var10 != null) {
+         OverlappingCirclesView var2 = (OverlappingCirclesView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.bg_gradient;
-            View var11 = a.a(var0, var1);
-            if (var11 != null) {
+            View var7 = a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.bottom_end_label;
-               TextView var4 = (TextView)a.a(var0, var1);
-               if (var4 != null) {
+               TextView var8 = (TextView)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.button;
-                  DCDButton var8 = (DCDButton)a.a(var0, var1);
-                  if (var8 != null) {
+                  DCDButton var9 = (DCDButton)a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.end_image;
-                     SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var2 != null) {
+                     SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.header;
-                        TextView var9 = (TextView)a.a(var0, var1);
-                        if (var9 != null) {
+                        TextView var3 = (TextView)a.a(var0, var1);
+                        if (var3 != null) {
                            var1 = R.id.hero_text;
-                           TextView var7 = (TextView)a.a(var0, var1);
-                           if (var7 != null) {
+                           TextView var4 = (TextView)a.a(var0, var1);
+                           if (var4 != null) {
                               var1 = R.id.start_image;
-                              SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var6 != null) {
+                              SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.subtext;
-                                 TextView var5 = (TextView)a.a(var0, var1);
-                                 if (var5 != null) {
-                                    return new ActivityInviteEmbedViewBinding(var0, var3, var10, var11, var4, var8, var2, var9, var7, var6, var5);
+                                 TextView var10 = (TextView)a.a(var0, var1);
+                                 if (var10 != null) {
+                                    return new ActivityInviteEmbedViewBinding(var0, var5, var2, var7, var8, var9, var6, var3, var4, var11, var10);
                                  }
                               }
                            }
@@ -97,7 +110,8 @@ public final class ActivityInviteEmbedViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static ActivityInviteEmbedViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static ActivityInviteEmbedViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.activity_invite_embed_view, var1);
          return bind(var1);
@@ -106,6 +120,7 @@ public final class ActivityInviteEmbedViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

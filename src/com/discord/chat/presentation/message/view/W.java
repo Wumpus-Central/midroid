@@ -7,10 +7,10 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class W implements OnClickListener {
-   public final Message j;
-   public final ChatEventHandler k;
+   public final Message d;
+   public final ChatEventHandler e;
 
    public final void onClick(View var1) {
-      FlaggedMessageEmbedView.l(this.j, this.k, var1);
+      FlaggedMessageEmbedView.l(this.d, this.e, var1);
    }
 }

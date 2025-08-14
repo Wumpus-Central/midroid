@@ -1,7 +1,7 @@
 package com.discord.media.utils
 
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public enum class VideoCompressionQuality(value: String, targetResolution: Int, targetBitrate: Int) {
    High("high", 720, 2500000),
@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = I9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    init {
@@ -39,6 +39,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
       return $ENTRIES;
    }
 
+   @SourceDebugExtension(["SMAP\nVideoCompressionQuality.kt\nKotlin\n*S Kotlin\n*F\n+ 1 VideoCompressionQuality.kt\ncom/discord/media/utils/VideoCompressionQuality$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,22:1\n295#2,2:23\n*S KotlinDebug\n*F\n+ 1 VideoCompressionQuality.kt\ncom/discord/media/utils/VideoCompressionQuality$Companion\n*L\n19#1:23,2\n*E\n"])
    public companion object {
       public fun fromString(value: String?): VideoCompressionQuality {
          val var3: java.util.Iterator = VideoCompressionQuality.getEntries().iterator();
@@ -46,7 +47,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
          while (true) {
             if (var3.hasNext()) {
                val var2: Any = var3.next();
-               if (!r.c((var2 as VideoCompressionQuality).getValue(), var1)) {
+               if (!((var2 as VideoCompressionQuality).getValue() == var1)) {
                   continue;
                }
 

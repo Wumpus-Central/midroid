@@ -8,12 +8,12 @@ import kotlin.jvm.functions.Function6;
 
 // $VF: synthetic class
 public final class b0 implements OnLongClickListener {
-   public final Function6 j;
-   public final Message k;
-   public final int l;
+   public final Function6 d;
+   public final Message e;
+   public final int i;
    public final MediaType m;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.k(this.j, this.k, this.l, this.m, var1);
+      return MessageView.k(this.d, this.e, this.i, this.m, var1);
    }
 }

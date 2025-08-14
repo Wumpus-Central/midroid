@@ -17,55 +17,41 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.r
-import v1.a
+import u1.a
 
-public class DeserializationErrorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout {
+public class DeserializationErrorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout(var1, var2) {
    private final val binding: DeserializationErrorViewBinding
 
    fun DeserializationErrorView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var6: DeserializationErrorViewBinding = DeserializationErrorViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
       this.binding = var6;
       var6.json.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       var var3: TextView = var6.json;
-      r.g(var6.json, "json");
       val var5: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       var6.exception.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       var3 = var6.exception;
-      r.g(var6.exception, "exception");
       DiscordFontUtilsKt.setDiscordFont(var3, var5);
       var6.causeHeader.setTextColor(ThemeManagerKt.getTheme().getInteractiveActive());
       var3 = var6.causeHeader;
-      r.g(var6.causeHeader, "causeHeader");
       SetTextSizeSpKt.setTextSizeSp(var3, 24.0F);
       var var4: TextView = var6.causeHeader;
-      r.g(var6.causeHeader, "causeHeader");
       val var10: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var6.jsonHeader.setTextColor(ThemeManagerKt.getTheme().getInteractiveActive());
       var4 = var6.jsonHeader;
-      r.g(var6.jsonHeader, "jsonHeader");
       SetTextSizeSpKt.setTextSizeSp(var4, 24.0F);
       var4 = var6.jsonHeader;
-      r.g(var6.jsonHeader, "jsonHeader");
       DiscordFontUtilsKt.setDiscordFont(var4, var10);
       var3 = var6.header;
-      r.g(var6.header, "header");
       DiscordFontUtilsKt.setDiscordFont(var3, var5);
       var3 = var6.header;
-      r.g(var6.header, "header");
       SetTextSizeSpKt.setTextSizeSp(var3, 24.0F);
       val var7: Button = var6.copyButton;
-      r.g(var6.copyButton, "copyButton");
       DiscordFontUtilsKt.setDiscordFont(var7, var5);
       this.setOrientation(1);
    }
@@ -73,18 +59,14 @@ public class DeserializationErrorView  public constructor(context: Context, attr
    @JvmStatic
    fun `configure$lambda$0`(var0: DeserializationErrorView, var1: java.lang.String, var2: View) {
       val var3: Any = b.i(var0.getContext(), ClipboardManager.class);
-      r.e(var3);
       (var3 as ClipboardManager).setPrimaryClip(ClipData.newPlainText("Error JSON", var1));
       Toast.makeText(var0.getContext(), "Copied error json to clipboard", 0).show();
    }
 
    public fun configure(json: String, causeMessage: String) {
-      r.h(var1, "json");
-      r.h(var2, "causeMessage");
       this.binding.json.setText(var1);
       this.binding.exception.setText(var2);
       val var3: Button = this.binding.copyButton;
-      r.g(this.binding.copyButton, "copyButton");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new a(this, var1), 1, null);
    }
 }

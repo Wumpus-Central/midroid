@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class g0 implements Function0 {
-   public final ChatEventHandler j;
-   public final Message k;
+   public final ChatEventHandler d;
+   public final Message e;
 
    public final Object invoke() {
-      return MessageView.h(this.j, this.k);
+      return MessageView.h(this.d, this.e);
    }
 }

@@ -1,27 +1,22 @@
 package com.discord.chat.presentation.message.view.polls.a11y
 
-import A9.n
+import B9.n
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.bridge.polls.PollChatAnswerInteractionType
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
-import kotlin.jvm.internal.r
 
 public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : androidx.core.view.a {
    private final val accessory: PollAnswerAccessory
 
    init {
-      r.h(var1, "accessory");
-      super();
       this.accessory = var1;
    }
 
    public override fun onInitializeAccessibilityEvent(host: View, event: AccessibilityEvent) {
-      r.h(var1, "host");
-      r.h(var2, "event");
       super.onInitializeAccessibilityEvent(var1, var2);
-      val var4: Boolean = r.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
+      val var4: Boolean = this.accessory.getAnswer().isSelected() == java.lang.Boolean.TRUE;
       val var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getInteractionType().ordinal()];
       if (var3 != 1 && var3 != 2) {
          if (var3 != 3) {
@@ -33,8 +28,6 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
    }
 
    public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-      r.h(var1, "host");
-      r.h(var2, "info");
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       var var4: Boolean;
       if (this.accessory.getInteractionType() === PollChatAnswerInteractionType.CHECKBOXES) {
@@ -44,10 +37,10 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       }
 
       var2.p0(var4);
-      var4 = r.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
-      val var5: PollChatAnswerInteractionType = this.accessory.getInteractionType();
-      val var6: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
-      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var5.ordinal()];
+      var4 = this.accessory.getAnswer().isSelected() == java.lang.Boolean.TRUE;
+      val var6: PollChatAnswerInteractionType = this.accessory.getInteractionType();
+      val var5: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
+      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
       if (var3 != 1) {
          if (var3 != 2) {
             if (var3 != 3) {
@@ -60,7 +53,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          }
       }
 
-      var3 = var6[this.accessory.getInteractionType().ordinal()];
+      var3 = var5[this.accessory.getInteractionType().ordinal()];
       val var7: java.lang.String;
       if (var3 != 1) {
          if (var3 != 2) {

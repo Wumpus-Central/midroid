@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.automod.AutoModerationContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId, message: Message, moderationContext: AutoModerationContext) : AutoModerationNotificationEmbedAccessory(
       var1, var2, var3
@@ -13,9 +12,6 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
    public final val moderationContext: AutoModerationContext
 
    fun AutoModerationNotificationEmbedAccessory(var1: java.lang.String, var2: Message, var3: AutoModerationContext) {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "moderationContext");
       super(var1, "auto moderation notification message", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -35,9 +31,6 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., moderationContext: AutoModerationContext = ...): AutoModerationNotificationEmbedAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "moderationContext");
       return new AutoModerationNotificationEmbedAccessory(var1, var2, var3, null);
    }
 
@@ -50,10 +43,10 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
          } else {
-            return r.c(this.moderationContext, var1.moderationContext);
+            return this.moderationContext == var1.moderationContext;
          }
       }
    }
@@ -63,16 +56,16 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Message = this.message;
-      val var1: AutoModerationContext = this.moderationContext;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Message = this.message;
+      val var3: AutoModerationContext = this.moderationContext;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AutoModerationNotificationEmbedAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", message=");
       var2.append(var4);
-      var2.append(", moderationContext=");
+      var2.append(", message=");
       var2.append(var1);
+      var2.append(", moderationContext=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

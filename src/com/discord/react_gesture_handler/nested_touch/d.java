@@ -5,9 +5,9 @@ import android.view.View.OnLongClickListener;
 
 // $VF: synthetic class
 public final class d implements OnLongClickListener {
-   public final OnLongClickListener j;
+   public final OnLongClickListener d;
 
    public final boolean onLongClick(View var1) {
-      return NestedScrollOnTouchUtilsKt.a(this.j, var1);
+      return NestedScrollOnTouchUtilsKt.a(this.d, var1);
    }
 }

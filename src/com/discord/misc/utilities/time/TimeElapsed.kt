@@ -1,10 +1,9 @@
 package com.discord.misc.utilities.time
 
-import A9.j
+import B9.j
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import kotlin.jvm.internal.r
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    private final val startTime: Long
@@ -18,7 +17,6 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    public final val duration: String
       public final get() {
          val var1: Any = this.duration$delegate.getValue();
-         r.g(var1, "getValue(...)");
          return var1 as java.lang.String;
       }
 

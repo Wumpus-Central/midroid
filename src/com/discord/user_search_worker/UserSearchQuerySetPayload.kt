@@ -1,12 +1,11 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
-import wb.E0
-import wb.U
-import wb.f
-import wb.y
+import nb.g
+import qb.E0
+import qb.U
+import qb.f
+import qb.y
 
 @g
 internal data class UserSearchQuerySetPayload(query: String,
@@ -32,8 +31,6 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    init {
-      r.h(var1, "query");
-      r.h(var5, "boosters");
       super();
       this.query = var1;
       this.filters = var2;
@@ -81,8 +78,6 @@ internal data class UserSearchQuerySetPayload(query: String,
       boosterFallback: Double = var0.boosterFallback,
       limit: Int = var0.limit
    ): UserSearchQuerySetPayload {
-      r.h(var1, "query");
-      r.h(var5, "boosters");
       return new UserSearchQuerySetPayload(var1, var2, var3, var4, var5, var6, var8);
    }
 
@@ -93,15 +88,15 @@ internal data class UserSearchQuerySetPayload(query: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.query, var1.query)) {
+         if (!(this.query == var1.query)) {
             return false;
-         } else if (!r.c(this.filters, var1.filters)) {
+         } else if (!(this.filters == var1.filters)) {
             return false;
-         } else if (!r.c(this.blacklist, var1.blacklist)) {
+         } else if (!(this.blacklist == var1.blacklist)) {
             return false;
-         } else if (!r.c(this.whitelist, var1.whitelist)) {
+         } else if (!(this.whitelist == var1.whitelist)) {
             return false;
-         } else if (!r.c(this.boosters, var1.boosters)) {
+         } else if (!(this.boosters == var1.boosters)) {
             return false;
          } else if (java.lang.Double.compare(this.boosterFallback, var1.boosterFallback) != 0) {
             return false;
@@ -138,29 +133,29 @@ internal data class UserSearchQuerySetPayload(query: String,
 
    public override fun toString(): String {
       val var6: java.lang.String = this.query;
-      val var7: UserSearchQuerySetFilters = this.filters;
-      val var9: java.util.List = this.blacklist;
-      val var5: java.util.List = this.whitelist;
-      val var8: java.util.Map = this.boosters;
+      val var5: UserSearchQuerySetFilters = this.filters;
+      val var8: java.util.List = this.blacklist;
+      val var4: java.util.List = this.whitelist;
+      val var7: java.util.Map = this.boosters;
       val var1: Double = this.boosterFallback;
       val var3: Int = this.limit;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSearchQuerySetPayload(query=");
-      var4.append(var6);
-      var4.append(", filters=");
-      var4.append(var7);
-      var4.append(", blacklist=");
-      var4.append(var9);
-      var4.append(", whitelist=");
-      var4.append(var5);
-      var4.append(", boosters=");
-      var4.append(var8);
-      var4.append(", boosterFallback=");
-      var4.append(var1);
-      var4.append(", limit=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("UserSearchQuerySetPayload(query=");
+      var9.append(var6);
+      var9.append(", filters=");
+      var9.append(var5);
+      var9.append(", blacklist=");
+      var9.append(var8);
+      var9.append(", whitelist=");
+      var9.append(var4);
+      var9.append(", boosters=");
+      var9.append(var7);
+      var9.append(", boosterFallback=");
+      var9.append(var1);
+      var9.append(", limit=");
+      var9.append(var3);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

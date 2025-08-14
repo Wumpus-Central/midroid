@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class i implements Function1 {
-   public final BundleUpdaterManager j;
+   public final BundleUpdaterManager d;
 
    public final Object invoke(Object var1) {
-      return BundleUpdaterManager.a(this.j, (ViewGroup)var1);
+      return BundleUpdaterManager.c(this.d, (ViewGroup)var1);
    }
 }

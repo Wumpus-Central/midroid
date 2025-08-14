@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final Function3 j;
-   public final ChannelPromptActionsAccessory k;
+   public final Function3 d;
+   public final ChannelPromptActionsAccessory e;
 
    public final void onClick(View var1) {
-      ChannelPromptActionsViewHolder.e(this.j, this.k, var1);
+      ChannelPromptActionsViewHolder.e(this.d, this.e, var1);
    }
 }

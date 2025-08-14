@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.activities.ActivityInviteEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ActivityInviteEmbedMessageAccessory(messageId: MessageId, activityInviteEmbed: ActivityInviteEmbed) : ActivityInviteEmbedMessageAccessory(
       var1, var2
@@ -11,8 +10,6 @@ public data class ActivityInviteEmbedMessageAccessory(messageId: MessageId, acti
    public final val activityInviteEmbed: ActivityInviteEmbed
 
    fun ActivityInviteEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInviteEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "activityInviteEmbed");
       super(var1, "activity invite embed message", false, 4, null);
       this.messageId = var1;
       this.activityInviteEmbed = var2;
@@ -27,8 +24,6 @@ public data class ActivityInviteEmbedMessageAccessory(messageId: MessageId, acti
    }
 
    public fun copy(messageId: MessageId = ..., activityInviteEmbed: ActivityInviteEmbed = ...): ActivityInviteEmbedMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "activityInviteEmbed");
       return new ActivityInviteEmbedMessageAccessory(var1, var2, null);
    }
 
@@ -42,7 +37,7 @@ public data class ActivityInviteEmbedMessageAccessory(messageId: MessageId, acti
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.activityInviteEmbed, var1.activityInviteEmbed);
+            return this.activityInviteEmbed == var1.activityInviteEmbed;
          }
       }
    }

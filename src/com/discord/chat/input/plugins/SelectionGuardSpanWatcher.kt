@@ -4,8 +4,9 @@ import android.text.Selection
 import android.text.SpanWatcher
 import android.text.Spannable
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nSelectionGuardSpanWatcher.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectionGuardSpanWatcher.kt\ncom/discord/chat/input/plugins/SelectionGuardSpanWatcher\n+ 2 SpannedString.kt\nandroidx/core/text/SpannedStringKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,80:1\n34#2:81\n13409#3,2:82\n*S KotlinDebug\n*F\n+ 1 SelectionGuardSpanWatcher.kt\ncom/discord/chat/input/plugins/SelectionGuardSpanWatcher\n*L\n49#1:81\n58#1:82,2\n*E\n"])
 public class SelectionGuardSpanWatcher : SpanWatcher {
    private fun checkSelections(text: Spannable, selectionStart: Int?, selectionEnd: Int?) {
       if (var2 != null || var3 != null) {
@@ -18,7 +19,7 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var4 = 0;
          }
 
-         var var5: Int;
+         val var5: Int;
          if (var3 != null) {
             var5 = var3;
          } else if (var2 != null) {
@@ -39,20 +40,20 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
             val var12: Int = var13.length;
             var var7: Int = 0;
-            var var6: Boolean = false;
-            var5 = var4;
+            var var19: Boolean = false;
+            var var6: Int = var4;
 
             while (var7 < var12) {
                val var10: Int = var1.getSpanEnd(var13[var7]);
                val var11: Int = var1.getSpanStart(var13[var7]);
-               var var8: Int = var5;
-               var var16: Int = var6;
-               if (var5 > var11) {
-                  var8 = var5;
-                  var16 = var6;
-                  if (var5 < var10) {
+               var var8: Int = var6;
+               var var16: Int = var19;
+               if (var6 > var11) {
+                  var8 = var6;
+                  var16 = var19;
+                  if (var6 < var10) {
                      var16 = var10;
-                     if (var10 - var5 > var5 - var11) {
+                     if (var10 - var6 > var6 - var11) {
                         var16 = var11;
                      }
 
@@ -62,12 +63,12 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
                }
 
                var7++;
-               var5 = var8;
-               var6 = (boolean)var16;
+               var6 = var8;
+               var19 = (boolean)var16;
             }
 
             val var18: Boolean;
-            if (var2 != null && var2 != var5) {
+            if (var2 != null && var2 != var6) {
                var18 = true;
             } else {
                var18 = false;
@@ -76,13 +77,13 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var var21: Boolean = false;
             if (var3 != null) {
                var21 = false;
-               if (var3 != var5) {
+               if (var3 != var6) {
                   var21 = true;
                }
             }
 
-            if (var6 && (var21 || var18)) {
-               Selection.setSelection(var1, var5);
+            if (var19 && (var21 || var18)) {
+               Selection.setSelection(var1, var6);
             }
          }
       }
@@ -98,9 +99,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
    public open fun onSpanChanged(text: Spannable?, what: Any?, ostart: Int, oend: Int, nstart: Int, nend: Int) {
       if (var1 != null) {
-         if (r.c(var2, Selection.SELECTION_START)) {
+         if (var2 == Selection.SELECTION_START) {
             this.checkSelections(var1, var5, null);
-         } else if (r.c(var2, Selection.SELECTION_END)) {
+         } else if (var2 == Selection.SELECTION_END) {
             this.checkSelections(var1, null, var5);
          }
       }

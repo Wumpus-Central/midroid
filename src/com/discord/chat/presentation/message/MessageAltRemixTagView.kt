@@ -22,22 +22,18 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : FrameLayout {
+@SourceDebugExtension(["SMAP\nMessageAltRemixTagView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageAltRemixTagView.kt\ncom/discord/chat/presentation/message/MessageAltRemixTagView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,61:1\n257#2,2:62\n*S KotlinDebug\n*F\n+ 1 MessageAltRemixTagView.kt\ncom/discord/chat/presentation/message/MessageAltRemixTagView\n*L\n52#1:62,2\n*E\n"])
+public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : FrameLayout(var1, var2) {
    private final val binding: MessageAltRemixTagViewBinding
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "attrs");
-      super(var1, var2);
-      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var3: TextView = var5.altRemixTag;
-      kotlin.jvm.internal.r.g(var5.altRemixTag, "altRemixTag");
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var5.remixIcon;
-      kotlin.jvm.internal.r.g(var5.remixIcon, "remixIcon");
+      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var5: TextView = var3.altRemixTag;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var3.remixIcon;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
@@ -55,8 +51,6 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       channelId: ChannelId,
       tagType: String?
    ) {
-      kotlin.jvm.internal.r.h(var4, "eventHandler");
-      kotlin.jvm.internal.r.h(var5, "messageId");
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
          val var10: TextView = this.binding.altRemixTag;
@@ -65,37 +59,30 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
             var9 = var2;
          } else {
             val var11: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var11, "getContext(...)");
             var9 = ColorUtilsKt.getColorCompat(var11, R.color.white);
          }
 
          var10.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
-         kotlin.jvm.internal.r.g(this.binding.remixIcon, "remixIcon");
          if (var2 != null) {
             var9 = var2;
          } else {
             val var17: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var17, "getContext(...)");
             var9 = ColorUtilsKt.getColorCompat(var17, R.color.white);
          }
 
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
-         kotlin.jvm.internal.r.g(this.binding.layout, "layout");
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new S(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
-         kotlin.jvm.internal.r.g(this.binding.remixIcon, "remixIcon");
          var14.setVisibility(0);
          if (var3 != null) {
             val var15: ConstraintLayout = this.binding.layout;
-            kotlin.jvm.internal.r.g(this.binding.layout, "layout");
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
                var15, ReactColorToAndroidColorKt.reactColorToAndroidColor(var3), SizeUtilsKt.getDpToPx(3), null, 0, 12, null
             );
          } else {
             val var16: ConstraintLayout = this.binding.layout;
-            kotlin.jvm.internal.r.g(this.binding.layout, "layout");
             ViewBackgroundUtilsKt.setBackgroundDrawableRes(var16, com.discord.chat.R.drawable.drawable_message_author_tag_bg);
          }
       }

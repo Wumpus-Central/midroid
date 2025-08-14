@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class b implements Function0 {
-   public final ServiceNotificationConfiguration.Type j;
-   public final ReactApplicationContext k;
+   public final ServiceNotificationConfiguration.Type d;
+   public final ReactApplicationContext e;
 
    public final Object invoke() {
-      return ForegroundServiceManager.a(this.j, this.k);
+      return ForegroundServiceManager.a(this.d, this.e);
    }
 }

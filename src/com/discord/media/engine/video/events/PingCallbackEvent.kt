@@ -2,9 +2,8 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: String, port: Int, seq: Int) : ReactEvent {
@@ -15,7 +14,6 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    public final val seq: Int
 
    init {
-      r.h(var3, "server");
       super();
       this.connectionId = var1;
       this.ping = var2;
@@ -45,7 +43,6 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    }
 
    public fun copy(connectionId: Int = var0.connectionId, ping: Int = var0.ping, server: String = var0.server, port: Int = var0.port, seq: Int = var0.seq): PingCallbackEvent {
-      r.h(var3, "server");
       return new PingCallbackEvent(var1, var2, var3, var4, var5);
    }
 
@@ -60,7 +57,7 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
             return false;
          } else if (this.ping != var1.ping) {
             return false;
-         } else if (!r.c(this.server, var1.server)) {
+         } else if (!(this.server == var1.server)) {
             return false;
          } else if (this.port != var1.port) {
             return false;
@@ -80,22 +77,22 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    }
 
    public override fun toString(): String {
-      val var4: Int = this.connectionId;
-      val var1: Int = this.ping;
+      val var3: Int = this.connectionId;
+      val var4: Int = this.ping;
       val var5: java.lang.String = this.server;
       val var2: Int = this.port;
-      val var3: Int = this.seq;
+      val var1: Int = this.seq;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PingCallbackEvent(connectionId=");
-      var6.append(var4);
+      var6.append(var3);
       var6.append(", ping=");
-      var6.append(var1);
+      var6.append(var4);
       var6.append(", server=");
       var6.append(var5);
       var6.append(", port=");
       var6.append(var2);
       var6.append(", seq=");
-      var6.append(var3);
+      var6.append(var1);
       var6.append(")");
       return var6.toString();
    }

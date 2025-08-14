@@ -1,21 +1,17 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row {
+public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row() {
    public open val index: Int
    public open val changeType: ChangeType
    public final val button: LoadMoreButton
    public final val isLoading: Boolean
 
    init {
-      r.h(var2, "changeType");
-      r.h(var3, "button");
-      super(null);
       this.index = var1;
       this.changeType = var2;
       this.button = var3;
@@ -39,8 +35,6 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
    }
 
    public fun copy(index: Int = var0.index, changeType: ChangeType = var0.changeType, button: LoadMoreButton = var0.button, isLoading: Boolean = var0.isLoading): LoadingRow {
-      r.h(var2, "changeType");
-      r.h(var3, "button");
       return new LoadingRow(var1, var2, var3, var4);
    }
 
@@ -55,7 +49,7 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
             return false;
          } else if (this.changeType != var1.changeType) {
             return false;
-         } else if (!r.c(this.button, var1.button)) {
+         } else if (!(this.button == var1.button)) {
             return false;
          } else {
             return this.isLoading == var1.isLoading;
@@ -70,19 +64,19 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
    public override fun toString(): String {
       val var1: Int = this.index;
       val var4: ChangeType = this.changeType;
-      val var5: LoadMoreButton = this.button;
+      val var3: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadingRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var4);
-      var3.append(", button=");
-      var3.append(var5);
-      var3.append(", isLoading=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("LoadingRow(index=");
+      var5.append(var1);
+      var5.append(", changeType=");
+      var5.append(var4);
+      var5.append(", button=");
+      var5.append(var3);
+      var5.append(", isLoading=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

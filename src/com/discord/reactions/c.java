@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class c implements OnLongClickListener {
-   public final Function1 j;
-   public final ReactionView.Reaction k;
+   public final Function1 d;
+   public final ReactionView.Reaction e;
 
    public final boolean onLongClick(View var1) {
-      return ReactionViewHolder.c(this.j, this.k, var1);
+      return ReactionViewHolder.c(this.d, this.e, var1);
    }
 }

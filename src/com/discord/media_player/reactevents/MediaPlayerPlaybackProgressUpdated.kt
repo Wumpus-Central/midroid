@@ -1,15 +1,14 @@
 package com.discord.media_player.reactevents
 
-import A9.s
-import Ab.a
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
-import tb.k
+import nb.g
+import nb.k
+import ub.a
 
 @g
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -47,7 +46,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.source, var1.source)) {
+         if (!(this.source == var1.source)) {
             return false;
          } else if (this.time != var1.time) {
             return false;
@@ -78,18 +77,18 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    }
 
    public override fun toString(): String {
-      val var5: MediaPlayerPlaybackSource = this.source;
+      val var6: MediaPlayerPlaybackSource = this.source;
       val var3: Long = this.time;
       val var1: Long = this.duration;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaPlayerPlaybackProgressUpdated(source=");
-      var6.append(var5);
-      var6.append(", time=");
-      var6.append(var3);
-      var6.append(", duration=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaPlayerPlaybackProgressUpdated(source=");
+      var5.append(var6);
+      var5.append(", time=");
+      var5.append(var3);
+      var5.append(", duration=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

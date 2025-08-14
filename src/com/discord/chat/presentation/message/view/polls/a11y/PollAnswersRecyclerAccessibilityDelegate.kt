@@ -7,20 +7,15 @@ import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.facebook.react.R.string
-import kotlin.jvm.internal.r
 
 public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAccessory) : androidx.core.view.a {
    private final val accessory: PollMessageAccessory
 
    init {
-      r.h(var1, "accessory");
-      super();
       this.accessory = var1;
    }
 
    public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-      r.h(var1, "host");
-      r.h(var2, "info");
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       var2.r0("android.view.ViewGroup");
       val var5: java.lang.String;
@@ -32,7 +27,6 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
 
       var2.N0(var5);
       val var4: Context = var1.getContext();
-      r.g(var4, "getContext(...)");
       var2.V0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
    }
 }

@@ -2,12 +2,11 @@ package com.discord.portals.from_native
 
 import android.view.View
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import gb.x
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import mb.x
 
 public object PortalFromNativeContextManager {
    private final var portalContextMap: MutableMap<Double, PortalFromNativeContext> = new LinkedHashMap()
@@ -23,13 +22,11 @@ public object PortalFromNativeContextManager {
 
    @JvmStatic
    fun `addPortal$lambda$0`(var0: View): Unit {
-      r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `addPortal$lambda$1`(var0: View): Unit {
-      r.h(var0, "it");
       return Unit.a;
    }
 
@@ -41,11 +38,6 @@ public object PortalFromNativeContextManager {
       onViewRemovedFromPortal: (View) -> Unit = new b(),
       returnViewToParent: (View) -> Unit
    ) {
-      r.h(var3, "view");
-      r.h(var4, "removeViewFromParent");
-      r.h(var5, "onViewAddedToPortal");
-      r.h(var6, "onViewRemovedFromPortal");
-      r.h(var7, "returnViewToParent");
       if (portalContextMap.get(var1) == null) {
          portalContextMap.put(var1, new PortalFromNativeContext(new WeakReference<>(var3), var4, var5, var6, var7));
       }
@@ -75,7 +67,6 @@ public object PortalFromNativeContextManager {
    }
 
    public fun registerView(portal: Double, portalView: PortalHolderViewGroup) {
-      r.h(var3, "portalView");
       val var4: PortalFromNativeContext = portalContextMap.get(var1);
       if (var4 != null) {
          val var5: View = var4.getView().get();
@@ -90,17 +81,17 @@ public object PortalFromNativeContextManager {
    }
 
    public fun unregisterView(portal: Double) {
-      val var4: PortalFromNativeContext = portalContextMap.remove(var1);
-      if (var4 != null) {
+      val var3: PortalFromNativeContext = portalContextMap.remove(var1);
+      if (var3 != null) {
          _portalContextIdsFlow.setValue(null);
-         val var3: View = var4.getView().get();
-         if (var3 == null) {
+         val var4: View = var3.getView().get();
+         if (var4 == null) {
             return;
          }
 
-         var4.getRemoveViewFromParent().invoke(var3);
-         var4.getOnViewRemovedFromPortal().invoke(var3);
-         var4.getReturnViewToParent().invoke(var3);
+         var3.getRemoveViewFromParent().invoke(var4);
+         var3.getOnViewRemovedFromPortal().invoke(var4);
+         var3.getReturnViewToParent().invoke(var4);
       }
    }
 

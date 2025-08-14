@@ -9,7 +9,6 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.UserId
 import com.discord.react.headless_tasks.api.HeadlessTasks
-import kotlin.jvm.internal.r
 
 public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscreenCallUI: Boolean, guildId: GuildId?, userId: UserId) : DismissCallAction(
          var1, var2, var4, var5, var6
@@ -22,8 +21,6 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    private final val userId: UserId
 
    fun DismissCallAction(var1: java.lang.String, var2: Long, var4: Boolean, var5: GuildId, var6: Long) {
-      r.h(var1, "tag");
-      super();
       this.tag = var1;
       this.channelId = var2;
       this.isFullscreenCallUI = var4;
@@ -52,7 +49,6 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public fun copy(tag: String = ..., channelId: ChannelId = ..., isFullscreenCallUI: Boolean = ..., guildId: GuildId? = ..., userId: UserId = ...): DismissCallAction {
-      r.h(var1, "tag");
       return new DismissCallAction(var1, var2, var4, var5, var6, null);
    }
 
@@ -67,13 +63,13 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.tag, var1.tag)) {
+         if (!(this.tag == var1.tag)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else if (this.isFullscreenCallUI != var1.isFullscreenCallUI) {
             return false;
-         } else if (!r.c(this.guildId, var1.guildId)) {
+         } else if (!(this.guildId == var1.guildId)) {
             return false;
          } else {
             return UserId.equals-impl0(this.userId, var1.userId);
@@ -100,12 +96,10 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var3.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
+      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var4.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
       val var6: java.lang.Long;
       if (this.guildId != null) {
          var6 = this.guildId.unbox-impl();
@@ -113,9 +107,9 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var6 = null;
       }
 
-      var3.putString("guildId", java.lang.String.valueOf(var6));
-      var3.putString("userId", java.lang.String.valueOf(this.userId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "DismissCallAction", 0L, false, var3, true, 12, null);
+      var4.putString("guildId", java.lang.String.valueOf(var6));
+      var4.putString("userId", java.lang.String.valueOf(this.userId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DismissCallAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -127,28 +121,27 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.tag;
+      val var2: java.lang.String = this.tag;
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
-      val var5: GuildId = this.guildId;
+      val var6: GuildId = this.guildId;
       val var4: java.lang.String = UserId.toString-impl(this.userId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DismissCallAction(tag=");
-      var2.append(var6);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(", isFullscreenCallUI=");
-      var2.append(var1);
-      var2.append(", guildId=");
-      var2.append(var5);
-      var2.append(", userId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("DismissCallAction(tag=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var3);
+      var5.append(", isFullscreenCallUI=");
+      var5.append(var1);
+      var5.append(", guildId=");
+      var5.append(var6);
+      var5.append(", userId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      r.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
       var1.writeInt(this.isFullscreenCallUI);
@@ -159,7 +152,6 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<DismissCallAction> {
       fun createFromParcel(var1: Parcel): DismissCallAction {
-         r.h(var1, "parcel");
          val var5: java.lang.String = var1.readString();
          val var2: Long = (var1.readParcelable(DismissCallAction.class.getClassLoader()) as ChannelId).unbox-impl();
          val var4: Boolean;

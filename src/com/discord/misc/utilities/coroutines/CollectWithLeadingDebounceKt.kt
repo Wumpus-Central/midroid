@@ -1,13 +1,14 @@
 package com.discord.misc.utilities.coroutines
 
-import A9.f
-import H9.b
-import jb.I
+import B9.f
+import G9.b
+import db.I
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
+import org.jetbrains.annotations.NotNull
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -28,7 +29,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             super(var1);
          }
 
-         public final Object invokeSuspend(Object var1) {
+         public final Object invokeSuspend(@NotNull Object var1) {
             this.result = var1;
             this.label |= Integer.MIN_VALUE;
             return CollectWithLeadingDebounceKt.collectWithLeadingDebounce(null, 0L, null, this);
@@ -109,11 +110,11 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                var14 = var16;
             } else {
                c.b(var11);
-               val var8: Long = System.currentTimeMillis();
-               val var4: Long = var8 - this.$timeLastEmitted.j;
-               val var6: Long = this.$timeoutMillis;
-               if (var4 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var8;
+               val var6: Long = System.currentTimeMillis();
+               val var8: Long = var6 - this.$timeLastEmitted.element;
+               val var4: Long = this.$timeoutMillis;
+               if (var8 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.element = var6;
                   var11 = this.$collector;
                   ((<unrepresentable>)var13).label = 1;
                   if (var11.emit(var1, (Continuation)var13) === var16) {
@@ -126,7 +127,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var13).L$0 = this;
                ((<unrepresentable>)var13).L$1 = var1;
                ((<unrepresentable>)var13).label = 2;
-               if (I.a(var6 - var4, (Continuation)var13) === var16) {
+               if (I.a(var4 - var8, (Continuation)var13) === var16) {
                   return var16;
                }
 

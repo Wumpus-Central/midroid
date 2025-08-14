@@ -6,10 +6,10 @@ import com.discord.mobile_voice_overlay.views.OverlayVoiceBubble;
 
 // $VF: synthetic class
 public final class l implements OnClickListener {
-   public final OverlayVoiceBubble j;
-   public final MobileVoiceOverlay k;
+   public final OverlayVoiceBubble d;
+   public final MobileVoiceOverlay e;
 
    public final void onClick(View var1) {
-      MobileVoiceOverlay.f(this.j, this.k, var1);
+      MobileVoiceOverlay.f(this.d, this.e, var1);
    }
 }

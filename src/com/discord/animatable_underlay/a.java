@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final AnimatableUnderlay j;
+   public final AnimatableUnderlay d;
 
    public final Object invoke(Object var1) {
-      return AnimatableUnderlay.b(this.j, (MotionEvent)var1);
+      return AnimatableUnderlay.b(this.d, (MotionEvent)var1);
    }
 }

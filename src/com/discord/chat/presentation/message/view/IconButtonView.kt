@@ -17,22 +17,17 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function0
 
-public class IconButtonView  public constructor(context: Context, attributeSet: AttributeSet? = null) : FrameLayout {
+public class IconButtonView  public constructor(context: Context, attributeSet: AttributeSet? = null) : FrameLayout(var1, var2) {
    private final val binding: IconButtonViewBinding
 
    fun IconButtonView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var4: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       val var3: FrameLayout = var4.iconContainer;
-      kotlin.jvm.internal.r.g(var4.iconContainer, "iconContainer");
       ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
       (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).x(0);
    }
@@ -43,15 +38,10 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
    }
 
    public fun configure(icon: ReactAsset, alt: I18nMessage, onClick: () -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "icon");
-      kotlin.jvm.internal.r.h(var2, "alt");
-      kotlin.jvm.internal.r.h(var3, "onClick");
       val var4: SimpleDraweeView = this.binding.iconButton;
-      kotlin.jvm.internal.r.e(this.binding.iconButton);
       ReactAssetUtilsKt.setReactAsset(var4, var1);
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
-      kotlin.jvm.internal.r.g(this.binding.iconContainer, "iconContainer");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new m0(var3), 1, null);
    }
 }

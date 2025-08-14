@@ -4,12 +4,10 @@ import com.discord.crash_reporting.CrashReporting
 import com.facebook.react.bridge.PromiseImpl
 import java.util.Locale
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
 
 public object NativePermissionPromise {
    @JvmStatic
    fun `generate$lambda$0`(var0: Function0, var1: Function0, var2: Any) {
-      r.h(var2, "result");
       var var3: Any;
       if (var2 is Array<Any>) {
          var3 = (var2 as Array<Any>)[0];
@@ -24,8 +22,7 @@ public object NativePermissionPromise {
       }
 
       val var4: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-      r.g(var4, "toLowerCase(...)");
-      if (r.c(var3, var4)) {
+      if (var3 == var4) {
          var0.invoke();
       } else {
          var3 = CrashReporting.INSTANCE;
@@ -39,7 +36,6 @@ public object NativePermissionPromise {
 
    @JvmStatic
    fun `generate$lambda$1`(var0: Function0, var1: Array<Any>) {
-      r.h(var1, "result");
       val var2: CrashReporting = CrashReporting.INSTANCE;
       val var3: StringBuilder = new StringBuilder();
       var3.append("NativePermissionPromise: Rejection: ");
@@ -49,8 +45,6 @@ public object NativePermissionPromise {
    }
 
    public fun generate(onAuthorized: () -> Unit, onRejected: () -> Unit): PromiseImpl {
-      r.h(var1, "onAuthorized");
-      r.h(var2, "onRejected");
       return new PromiseImpl(new e(var1, var2), new f(var2));
    }
 }

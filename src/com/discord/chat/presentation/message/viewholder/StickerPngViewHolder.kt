@@ -6,13 +6,11 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.sticker.StickerView
 import kotlin.jvm.functions.Function1
 
-public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHolder {
+public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHolder(var1) {
    private final val stickerView: StickerView
    private final var sticker: Sticker?
 
    init {
-      kotlin.jvm.internal.r.h(var1, "stickerView");
-      super(var1);
       this.stickerView = var1;
    }
 
@@ -28,10 +26,7 @@ public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHol
    }
 
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
-      kotlin.jvm.internal.r.h(var1, "sticker");
-      kotlin.jvm.internal.r.h(var2, "onStickerClicked");
-      kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
-      if (!kotlin.jvm.internal.r.c(var1, this.sticker)) {
+      if (!(var1 == this.sticker)) {
          this.sticker = var1;
          this.stickerView.asPng(var1.getUrl(), var4, var5, var1.getAccessibilityLabel());
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new M(var2, var1), 1, null);

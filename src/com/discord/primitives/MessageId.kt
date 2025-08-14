@@ -3,9 +3,8 @@ package com.discord.primitives
 import android.os.Parcel
 import android.os.Parcelable
 import com.discord.snowflake.SnowflakeUtils
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public inline class MessageId : Parcelable {
@@ -13,7 +12,6 @@ public inline class MessageId : Parcelable {
 
    @JvmStatic
    fun `constructor-impl`(var0: java.lang.String): java.lang.String {
-      r.h(var0, "value");
       return var0;
    }
 
@@ -27,13 +25,13 @@ public inline class MessageId : Parcelable {
       if (var1 !is MessageId) {
          return false;
       } else {
-         return r.c(var0, (var1 as MessageId).unbox-impl());
+         return var0 == (var1 as MessageId).unbox-impl();
       }
    }
 
    @JvmStatic
    fun `equals-impl0`(var0: java.lang.String, var1: java.lang.String): Boolean {
-      return r.c(var0, var1);
+      return var0 == var1;
    }
 
    @JvmStatic
@@ -61,7 +59,6 @@ public inline class MessageId : Parcelable {
 
    @JvmStatic
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      r.h(var1, "dest");
       var1.writeString(var0);
    }
 
@@ -82,7 +79,6 @@ public inline class MessageId : Parcelable {
    }
 
    fun writeToParcel(var1: Parcel, var2: Int) {
-      r.h(var1, "dest");
       writeToParcel-impl(this.value, var1, var2);
    }
 
@@ -95,7 +91,6 @@ public inline class MessageId : Parcelable {
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MessageId> {
       fun `createFromParcel-MpY7Jxs`(var1: Parcel): java.lang.String {
-         r.h(var1, "parcel");
          return MessageId.constructor-impl(var1.readString());
       }
 

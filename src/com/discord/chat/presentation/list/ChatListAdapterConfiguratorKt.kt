@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nChatListAdapterConfigurator.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatListAdapterConfigurator.kt\ncom/discord/chat/presentation/list/ChatListAdapterConfiguratorKt\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,66:1\n1863#2,2:67\n*S KotlinDebug\n*F\n+ 1 ChatListAdapterConfigurator.kt\ncom/discord/chat/presentation/list/ChatListAdapterConfiguratorKt\n*L\n59#1:67,2\n*E\n"])
+
 package com.discord.chat.presentation.list
 
 import android.view.View
@@ -19,6 +21,7 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
 import java.util.HashMap
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun chatListAdapterConfigurator(
    delegatesManager: AdapterDelegatesManager<List<ChatListItem>>,
@@ -26,13 +29,9 @@ public fun chatListAdapterConfigurator(
    messageComponentProvider: () -> ComponentProvider,
    messageAccessoriesRecycledViewPool: RecycledViewPool
 ): Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int> {
-   kotlin.jvm.internal.r.h(var0, "delegatesManager");
-   kotlin.jvm.internal.r.h(var1, "eventHandlerProvider");
-   kotlin.jvm.internal.r.h(var2, "messageComponentProvider");
-   kotlin.jvm.internal.r.h(var3, "messageAccessoriesRecycledViewPool");
    val var4: HashMap = new HashMap();
 
-   for (BaseChatListItemDelegate var6 : kotlin.collections.i.n(
+   for (BaseChatListItemDelegate var6 : CollectionsKt.n(
       new BaseChatListItemDelegate[]{
          new RegularMessageDelegate(var1, var2, var3),
          new SystemMessageDelegate(var1, var3),

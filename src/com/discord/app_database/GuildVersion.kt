@@ -1,8 +1,7 @@
 package com.discord.app_database
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class GuildVersion(id: String, version: Long) {
@@ -10,7 +9,6 @@ public data class GuildVersion(id: String, version: Long) {
    public final val version: Long
 
    init {
-      r.h(var1, "id");
       super();
       this.id = var1;
       this.version = var2;
@@ -25,7 +23,6 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public fun copy(id: String = var0.id, version: Long = var0.version): GuildVersion {
-      r.h(var1, "id");
       return new GuildVersion(var1, var2);
    }
 
@@ -36,7 +33,7 @@ public data class GuildVersion(id: String, version: Long) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
          } else {
             return this.version == var1.version;
@@ -49,15 +46,15 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GuildVersion(id=");
-      var3.append(var4);
-      var3.append(", version=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GuildVersion(id=");
+      var4.append(var3);
+      var4.append(", version=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

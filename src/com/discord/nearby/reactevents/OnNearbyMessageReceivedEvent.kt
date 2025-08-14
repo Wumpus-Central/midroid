@@ -2,16 +2,14 @@ package com.discord.nearby.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
    public final val body: String
 
    init {
-      r.h(var1, "body");
       super();
       this.body = var1;
    }
@@ -21,7 +19,6 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
    }
 
    public fun copy(body: String = var0.body): OnNearbyMessageReceivedEvent {
-      r.h(var1, "body");
       return new OnNearbyMessageReceivedEvent(var1);
    }
 
@@ -31,7 +28,7 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
       } else if (var1 !is OnNearbyMessageReceivedEvent) {
          return false;
       } else {
-         return r.c(this.body, (var1 as OnNearbyMessageReceivedEvent).body);
+         return this.body == (var1 as OnNearbyMessageReceivedEvent).body;
       }
    }
 

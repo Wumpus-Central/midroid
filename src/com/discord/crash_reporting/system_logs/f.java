@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class f implements Function1 {
-   public final Context j;
-   public final Function3 k;
+   public final Context d;
+   public final Function3 e;
 
    public final Object invoke(Object var1) {
-      return SystemLogReport.a(this.j, this.k, (SystemLogUtils.Tombstone)var1);
+      return SystemLogReport.a(this.d, this.e, (SystemLogUtils.Tombstone)var1);
    }
 }

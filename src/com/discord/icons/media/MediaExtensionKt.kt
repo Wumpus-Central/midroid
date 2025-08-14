@@ -15,5 +15,5 @@ internal fun getMediaExtension(allowAnimation: Boolean): String {
 }
 
 internal fun isImageHashAnimated(imageHash: String?): Boolean {
-   return var0 == null || h.I(var0, "a_", false, 2, null);
+   return var0 == null || StringsKt.I(var0, "a_", false, 2, null);
 }

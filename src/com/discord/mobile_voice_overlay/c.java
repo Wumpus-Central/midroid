@@ -6,11 +6,11 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class c implements Function1 {
-   public final boolean j;
-   public final MobileVoiceOverlay k;
-   public final OverlayVoiceBubble l;
+   public final boolean d;
+   public final MobileVoiceOverlay e;
+   public final OverlayVoiceBubble i;
 
    public final Object invoke(Object var1) {
-      return MobileVoiceOverlay.o(this.j, this.k, this.l, (OverlayTrashWrap)var1);
+      return MobileVoiceOverlay.o(this.d, this.e, this.i, (OverlayTrashWrap)var1);
    }
 }

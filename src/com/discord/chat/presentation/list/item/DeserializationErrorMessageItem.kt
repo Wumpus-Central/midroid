@@ -1,15 +1,12 @@
 package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.ErrorMessage
-import kotlin.jvm.internal.r
 
-public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpanded: Boolean = false) : ChatListItem {
+public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpanded: Boolean = false) : ChatListItem(var1.getId-3Eiw7ao()) {
    public final val message: ErrorMessage
    public final val isExpanded: Boolean
 
    init {
-      r.h(var1, "message");
-      super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
       this.isExpanded = var2;
    }
@@ -23,7 +20,6 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpan
    }
 
    public fun copy(message: ErrorMessage = var0.message, isExpanded: Boolean = var0.isExpanded): DeserializationErrorMessageItem {
-      r.h(var1, "message");
       return new DeserializationErrorMessageItem(var1, var2);
    }
 
@@ -34,7 +30,7 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpan
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!(this.message == var1.message)) {
             return false;
          } else {
             return this.isExpanded == var1.isExpanded;

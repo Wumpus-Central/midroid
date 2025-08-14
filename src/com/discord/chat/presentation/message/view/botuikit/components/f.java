@@ -7,11 +7,11 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentContext;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final ComponentContext j;
-   public final ContentInventoryEntry k;
-   public final String l;
+   public final ComponentContext d;
+   public final ContentInventoryEntry e;
+   public final String i;
 
    public final void onClick(View var1) {
-      ContentInventoryComponentViewKt.a(this.j, this.k, this.l, var1);
+      ContentInventoryComponentViewKt.a(this.d, this.e, this.i, var1);
    }
 }

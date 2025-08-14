@@ -6,10 +6,10 @@ import com.discord.chat.presentation.list.item.SummarySeparatorChatListItem;
 
 // $VF: synthetic class
 public final class f implements OnClickListener {
-   public final SummarySeparatorDelegate j;
-   public final SummarySeparatorChatListItem k;
+   public final SummarySeparatorDelegate d;
+   public final SummarySeparatorChatListItem e;
 
    public final void onClick(View var1) {
-      SummarySeparatorDelegate.b(this.j, this.k, var1);
+      SummarySeparatorDelegate.b(this.d, this.e, var1);
    }
 }

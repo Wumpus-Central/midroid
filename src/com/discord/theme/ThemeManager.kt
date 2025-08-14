@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import A9.n
+import B9.n
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -10,8 +10,10 @@ import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nThemeManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThemeManager.kt\ncom/discord/theme/ThemeManager\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,131:1\n381#2,7:132\n*S KotlinDebug\n*F\n+ 1 ThemeManager.kt\ncom/discord/theme/ThemeManager\n*L\n38#1:132,7\n*E\n"])
 public object ThemeManager {
    private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
    private final lateinit var theme: DiscordTheme
@@ -34,13 +36,13 @@ public object ThemeManager {
 
                var var7: Resources = resources;
                if (resources == null) {
-                  r.y("resources");
+                  Intrinsics.throwUninitializedPropertyAccessException("resources");
                   var7 = null;
                }
 
                var3 = resourceTheme;
                if (resourceTheme == null) {
-                  r.y("resourceTheme");
+                  Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
                   var3 = null;
                }
 
@@ -48,13 +50,13 @@ public object ThemeManager {
             } else {
                var var9: Resources = resources;
                if (resources == null) {
-                  r.y("resources");
+                  Intrinsics.throwUninitializedPropertyAccessException("resources");
                   var9 = null;
                }
 
                var3 = resourceTheme;
                if (resourceTheme == null) {
-                  r.y("resourceTheme");
+                  Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
                   var3 = null;
                }
 
@@ -63,14 +65,14 @@ public object ThemeManager {
          } else {
             var var10: Resources = resources;
             if (resources == null) {
-               r.y("resources");
+               Intrinsics.throwUninitializedPropertyAccessException("resources");
                var10 = null;
             }
 
+            var3 = resourceTheme;
             if (resourceTheme == null) {
-               r.y("resourceTheme");
-            } else {
-               var3 = resourceTheme;
+               Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
+               var3 = null;
             }
 
             var8 = new LightTheme(var10, var3);
@@ -78,14 +80,14 @@ public object ThemeManager {
       } else {
          var var11: Resources = resources;
          if (resources == null) {
-            r.y("resources");
+            Intrinsics.throwUninitializedPropertyAccessException("resources");
             var11 = null;
          }
 
-         var3 = resourceTheme;
          if (resourceTheme == null) {
-            r.y("resourceTheme");
-            var3 = null;
+            Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
+         } else {
+            var3 = resourceTheme;
          }
 
          var8 = new DarkTheme(var11, var3);
@@ -111,7 +113,7 @@ public object ThemeManager {
       if (theme != null) {
          var1 = theme;
          if (theme == null) {
-            r.y("theme");
+            Intrinsics.throwUninitializedPropertyAccessException("theme");
             var1 = null;
          }
       } else {
@@ -126,7 +128,6 @@ public object ThemeManager {
          var4.put(var1, var5);
       }
 
-      r.g(var5, "getOrPut(...)");
       return var5 as DiscordThemeObject;
    }
 
@@ -135,7 +136,6 @@ public object ThemeManager {
    }
 
    public fun init(context: Context) {
-      r.h(var1, "context");
       resources = var1.getResources();
       resourceTheme = var1.getTheme();
       this.setTheme(DiscordTheme.DARK);
@@ -155,7 +155,7 @@ public object ThemeManager {
    public fun isThemeDark(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         r.y("theme");
+         Intrinsics.throwUninitializedPropertyAccessException("theme");
          var2 = null;
       }
 
@@ -172,7 +172,7 @@ public object ThemeManager {
    public fun isThemeLight(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         r.y("theme");
+         Intrinsics.throwUninitializedPropertyAccessException("theme");
          var2 = null;
       }
 
@@ -220,17 +220,14 @@ public object ThemeManager {
    }
 
    public fun updateSystemUi(activity: Activity) {
-      r.h(var1, "activity");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateSystemUi(view: View) {
-      r.h(var1, "view");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateWindowBackground(context: Context, showSplashImage: Boolean) {
-      r.h(var1, "context");
       showSplashImage = var2;
       val var3: Activity;
       if (var1 is Activity) {

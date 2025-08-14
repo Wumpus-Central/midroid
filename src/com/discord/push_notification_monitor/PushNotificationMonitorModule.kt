@@ -5,16 +5,15 @@ import android.content.SharedPreferences
 import com.discord.codegen.NativePushNotificationMonitorModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
 
-public class PushNotificationMonitorModule(reactContext: ReactApplicationContext) : NativePushNotificationMonitorModuleSpec {
+@SourceDebugExtension(["SMAP\nPushNotificationMonitorModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PushNotificationMonitorModule.kt\ncom/discord/push_notification_monitor/PushNotificationMonitorModule\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,29:1\n113#2:30\n*S KotlinDebug\n*F\n+ 1 PushNotificationMonitorModule.kt\ncom/discord/push_notification_monitor/PushNotificationMonitorModule\n*L\n15#1:30\n*E\n"])
+public class PushNotificationMonitorModule(reactContext: ReactApplicationContext) : NativePushNotificationMonitorModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 
@@ -23,8 +22,6 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
    }
 
    public override fun getPushNotificationLogs(userId: String, promise: Promise) {
-      r.h(var1, "userId");
-      r.h(var2, "promise");
       val var3: a = Json.d;
       val var4: PushNotificationLog = PushNotificationMonitor.INSTANCE.getPushLog(this.reactContext, var1);
       var3.a();
@@ -33,9 +30,7 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
 
    public companion object {
       public fun getPushNotificationLogStorage(context: Context): SharedPreferences {
-         r.h(var1, "context");
          val var2: SharedPreferences = var1.getSharedPreferences("push_notification_monitor", 0);
-         r.g(var2, "getSharedPreferences(...)");
          return var2;
       }
    }

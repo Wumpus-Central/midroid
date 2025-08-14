@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row {
+public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row() {
    public open val index: Int
    public open val changeType: ChangeType
 
    init {
-      r.h(var2, "changeType");
-      super(null);
       this.index = var1;
       this.changeType = var2;
    }
@@ -26,7 +23,6 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
    }
 
    public fun copy(index: Int = var0.index, changeType: ChangeType = var0.changeType): DeleteRow {
-      r.h(var2, "changeType");
       return new DeleteRow(var1, var2);
    }
 

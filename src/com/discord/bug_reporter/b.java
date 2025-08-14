@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class b implements Function0 {
-   public final ScreenshotHelperModule j;
+   public final ScreenshotHelperModule d;
 
    public final Object invoke() {
-      return ScreenshotHelperModule.a(this.j);
+      return ScreenshotHelperModule.a(this.d);
    }
 }

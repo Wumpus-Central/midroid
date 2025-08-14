@@ -4,16 +4,15 @@ import android.content.Context
 import android.os.Handler
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nTimersManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TimersManager.kt\ncom/discord/timers/TimersManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,53:1\n1#2:54\n*E\n"])
 internal class TimersManager(context: Context) {
    private final val timeoutHandler: Handler
    private final val timeouts: ConcurrentHashMap<Int, Runnable>
    private final val intervals: ConcurrentHashMap<Int, Runnable>
 
    init {
-      r.h(var1, "context");
-      super();
       this.timeoutHandler = new Handler(var1.getMainLooper());
       this.timeouts = new ConcurrentHashMap<>();
       this.intervals = new ConcurrentHashMap<>();
@@ -46,10 +45,9 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setInterval(id: Int, timeout: Double, onInterval: () -> Unit) {
-      r.h(var4, "onInterval");
       val var5: Long = (long)var2;
       val var7: Runnable = new Runnable(var4, this, (long)var2) {
-         final Function0 $onInterval;
+         final Function0<Unit> $onInterval;
          final long $timeoutLong;
          final TimersManager this$0;
 
@@ -70,7 +68,6 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setTimeout(id: Int, timeout: Double, onTimeout: () -> Unit) {
-      r.h(var4, "onTimeout");
       val var5: Long = (long)var2;
       val var7: a = new a(this, var1, var4);
       this.timeouts.put(var1, var7);

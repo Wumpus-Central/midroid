@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class h implements Function1 {
-   public final boolean j;
+   public final boolean d;
 
    public final Object invoke(Object var1) {
-      return MediaPlayerManagerModule.d(this.j, (SimpleExoPlayer)var1);
+      return MediaPlayerManagerModule.d(this.d, (SimpleExoPlayer)var1);
    }
 }

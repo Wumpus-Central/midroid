@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -12,8 +12,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nTapLinkData.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TapLinkData.kt\ncom/discord/chat/reactevents/TapLinkData\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,136:1\n1#2:137\n*E\n"])
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
          var1, var2, var3, var4
       ),
@@ -24,8 +25,6 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    public final val content: String
 
    fun TapLinkData(var1: java.lang.String, var2: LinkContentNode) {
-      r.h(var1, "messageId");
-      r.h(var2, "node");
       val var4: LinkContextData = var2.getTarget();
       val var3: java.lang.String = var2.getTextContent();
       var var5: java.lang.String = var3;
@@ -37,8 +36,6 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    fun TapLinkData(var1: java.lang.String, var2: java.lang.String, var3: LinkContextData, var4: java.lang.String) {
-      r.h(var4, "content");
-      super();
       this.messageId = var1;
       this.title = var2;
       this.target = var3;
@@ -144,11 +141,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             NativeMapExtensionsKt.put(var5, "addSpace", var7);
          }
       } else {
-         val var11: Log = Log.INSTANCE;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("Missing target type data: ");
-         var8.append(var4);
-         Log.e$default(var11, "TapLink", var8.toString(), null, 4, null);
+         val var8: Log = Log.INSTANCE;
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("Missing target type data: ");
+         var11.append(var4);
+         Log.e$default(var8, "TapLink", var11.toString(), null, 4, null);
       }
 
       return var5;
@@ -171,7 +168,6 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    public fun copy(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...): TapLinkData {
-      r.h(var4, "content");
       return new TapLinkData(var1, var2, var3, var4, null);
    }
 
@@ -200,12 +196,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!r.c(this.title, var3.title)) {
+         } else if (!(this.title == var3.title)) {
             return false;
-         } else if (!r.c(this.target, var3.target)) {
+         } else if (!(this.target == var3.target)) {
             return false;
          } else {
-            return r.c(this.content, var3.content);
+            return this.content == var3.content;
          }
       }
    }
@@ -268,19 +264,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var2: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapLinkData(messageId=");
-      var5.append(var6);
-      var5.append(", title=");
-      var5.append(var4);
-      var5.append(", target=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.title;
+      val var3: LinkContextData = this.target;
+      val var4: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapLinkData(messageId=");
+      var2.append(var6);
+      var2.append(", title=");
+      var2.append(var5);
+      var2.append(", target=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

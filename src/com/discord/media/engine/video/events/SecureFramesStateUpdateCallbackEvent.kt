@@ -2,9 +2,8 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
    public final val stateUpdateJSON: String
 
    init {
-      r.h(var2, "stateUpdateJSON");
       super();
       this.connectionId = var1;
       this.stateUpdateJSON = var2;
@@ -27,7 +25,6 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
    }
 
    public fun copy(connectionId: Int = var0.connectionId, stateUpdateJSON: String = var0.stateUpdateJSON): SecureFramesStateUpdateCallbackEvent {
-      r.h(var2, "stateUpdateJSON");
       return new SecureFramesStateUpdateCallbackEvent(var1, var2);
    }
 
@@ -41,7 +38,7 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
          if (this.connectionId != var1.connectionId) {
             return false;
          } else {
-            return r.c(this.stateUpdateJSON, var1.stateUpdateJSON);
+            return this.stateUpdateJSON == var1.stateUpdateJSON;
          }
       }
    }

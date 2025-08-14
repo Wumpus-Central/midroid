@@ -1,11 +1,10 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.chat.reactevents.TapImageData.Layout
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
 internal data class LongPressPollImageData(channelId: String, messageId: String, attachmentId: String, layout: Layout) : ReactEvent {
    public final val channelId: String
@@ -14,11 +13,6 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
    public final val layout: Layout
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "layout");
-      super();
       this.channelId = var1;
       this.messageId = var2;
       this.attachmentId = var3;
@@ -47,10 +41,6 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
       attachmentId: String = var0.attachmentId,
       layout: Layout = var0.layout
    ): LongPressPollImageData {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "layout");
       return new LongPressPollImageData(var1, var2, var3, var4);
    }
 
@@ -61,14 +51,14 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!(this.attachmentId == var1.attachmentId)) {
             return false;
          } else {
-            return r.c(this.layout, var1.layout);
+            return this.layout == var1.layout;
          }
       }
    }
@@ -84,19 +74,19 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.channelId;
       val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.attachmentId;
-      val var5: TapImageData.Layout = this.layout;
+      val var3: java.lang.String = this.attachmentId;
+      val var1: TapImageData.Layout = this.layout;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressPollImageData(channelId=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(", messageId=");
       var2.append(var4);
       var2.append(", attachmentId=");
-      var2.append(var1);
+      var2.append(var3);
       var2.append(", layout=");
-      var2.append(var5);
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

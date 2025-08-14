@@ -13,8 +13,6 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
    public final val isSectionNitroLocked: Boolean
 
    init {
-      kotlin.jvm.internal.r.h(var5, "items");
-      super();
       this.rowContentWidth = var1;
       this.rowContentPaddingVertical = var3;
       this.itemSize = var4;
@@ -49,7 +47,6 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
       items: List<com.discord.emoji_picker.EmojiPickerRow.Emoji?> = var0.items,
       isSectionNitroLocked: Boolean = var0.isSectionNitroLocked
    ): EmojiPickerRow {
-      kotlin.jvm.internal.r.h(var5, "items");
       return new EmojiPickerRow(var1, var3, var4, var5, var6);
    }
 
@@ -66,7 +63,7 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
             return false;
          } else if (this.itemSize != var1.itemSize) {
             return false;
-         } else if (!kotlin.jvm.internal.r.c(this.items, var1.items)) {
+         } else if (!(this.items == var1.items)) {
             return false;
          } else {
             return this.isSectionNitroLocked == var1.isSectionNitroLocked;
@@ -116,9 +113,6 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
       public final val disabled: Boolean
 
       init {
-         kotlin.jvm.internal.r.h(var2, "name");
-         kotlin.jvm.internal.r.h(var3, "url");
-         super();
          this.id = var1;
          this.name = var2;
          this.url = var3;
@@ -153,8 +147,6 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
          animated: Boolean = var0.animated,
          disabled: Boolean = var0.disabled
       ): com.discord.emoji_picker.EmojiPickerRow.Emoji {
-         kotlin.jvm.internal.r.h(var2, "name");
-         kotlin.jvm.internal.r.h(var3, "url");
          return new EmojiPickerRow.Emoji(var1, var2, var3, var4, var5);
       }
 
@@ -165,11 +157,11 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.id, var1.id)) {
+            if (!(this.id == var1.id)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.name, var1.name)) {
+            } else if (!(this.name == var1.name)) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.url, var1.url)) {
+            } else if (!(this.url == var1.url)) {
                return false;
             } else if (this.animated != var1.animated) {
                return false;
@@ -192,24 +184,24 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.id;
-         val var4: java.lang.String = this.name;
-         val var5: java.lang.String = this.url;
-         val var1: Boolean = this.animated;
-         val var2: Boolean = this.disabled;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Emoji(id=");
-         var6.append(var3);
-         var6.append(", name=");
-         var6.append(var4);
-         var6.append(", url=");
-         var6.append(var5);
-         var6.append(", animated=");
-         var6.append(var1);
-         var6.append(", disabled=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var5: java.lang.String = this.id;
+         val var6: java.lang.String = this.name;
+         val var3: java.lang.String = this.url;
+         val var2: Boolean = this.animated;
+         val var1: Boolean = this.disabled;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Emoji(id=");
+         var4.append(var5);
+         var4.append(", name=");
+         var4.append(var6);
+         var4.append(", url=");
+         var4.append(var3);
+         var4.append(", animated=");
+         var4.append(var2);
+         var4.append(", disabled=");
+         var4.append(var1);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

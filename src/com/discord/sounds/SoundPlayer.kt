@@ -8,7 +8,6 @@ import android.net.Uri
 import com.discord.logging.Log
 import java.io.IOException
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
 internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    private final var mediaPlayer: MediaPlayer?
@@ -16,14 +15,10 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
    private final var volume: Float
    public final var numberOfLoops: Int
 
-   public constructor(context: Context, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) : r.h(var1, "context") {
-      r.h(var5, "soundResIdPrepared");
-      this(SoundPlayer.Companion.access$createMediaPlayer(Companion, var1, var2, var3, var4), var2, var5);
-   }
-
+   public constructor(context: Context, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) : this(
+         SoundPlayer.Companion.access$createMediaPlayer(Companion, var1, var2, var3, var4), var2, var5
+      )
    init {
-      r.h(var3, "soundResIdPrepared");
-      super();
       this.mediaPlayer = var1;
       this.usage = var2;
       this.volume = 1.0F;
@@ -158,16 +153,17 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
    public fun setPan(pan: Float) {
       val var15: Float;
       val var4: Byte = (byte)(if ((var15 = var1 - 0.5F) == 0.0F) 0 else (if (var15 < 0.0F) -1 else 1));
-      var var13: Float;
+      val var13: Float;
       if (var1 >= 0.5F) {
+         var var3: Float;
          try {
-            var13 = this.volume;
+            var3 = this.volume;
          } catch (var11: Exception) {
             Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to pan.", var11);
             return;
          }
 
-         var13 = var13 * (2 - var1 * 2);
+         var13 = var3 * (2 - var1 * 2);
       } else {
          try {
             var13 = this.volume;

@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class e implements Function0 {
-   public final SystemLogCapture j;
+   public final SystemLogCapture d;
 
    public final Object invoke() {
-      return SystemLogCapture.b(this.j);
+      return SystemLogCapture.b(this.d);
    }
 }

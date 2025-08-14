@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 293111
-  versionName: 293.11 - Beta
+  versionCode: 293112
+  versionName: 293.12 - Beta
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -91,10 +91,14 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/aa.b
-- META-INF/services/jb.z
-- META-INF/services/ob.t
+- META-INF/services/W9.b
+- META-INF/services/db.z
+- META-INF/services/ib.t
 - META-INF/version-control-info.textproto
+- assets/com/appsflyer/internal/392b6bfdf82f3e03d-
+- assets/com/appsflyer/internal/984fc711844b5d07b-
+- assets/com/appsflyer/internal/a93b0d229b3f9136c-
+- assets/com/appsflyer/internal/f41e387df0b2f88a-
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
 - assets/index.android.bundle

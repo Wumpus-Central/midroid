@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class C implements Function0 {
-   public final MessageAccessoriesAdapter j;
-   public final MessageAccessory k;
+   public final MessageAccessoriesAdapter d;
+   public final MessageAccessory e;
 
    public final Object invoke() {
-      return MessageAccessoriesAdapter.i(this.j, this.k);
+      return MessageAccessoriesAdapter.i(this.d, this.e);
    }
 }

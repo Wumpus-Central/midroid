@@ -3,9 +3,8 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: String, threadId: String, messageId: MessageId) : TapPostPreviewEmbedData(
@@ -18,10 +17,6 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
    public final val messageId: MessageId
 
    fun TapPostPreviewEmbedData(var1: java.lang.String, var2: java.lang.String, var3: java.lang.String, var4: java.lang.String) {
-      r.h(var1, "guildId");
-      r.h(var2, "parentChannelId");
-      r.h(var3, "threadId");
-      r.h(var4, "messageId");
       super();
       this.guildId = var1;
       this.parentChannelId = var2;
@@ -46,10 +41,6 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
    }
 
    public fun copy(guildId: String = ..., parentChannelId: String = ..., threadId: String = ..., messageId: MessageId = ...): TapPostPreviewEmbedData {
-      r.h(var1, "guildId");
-      r.h(var2, "parentChannelId");
-      r.h(var3, "threadId");
-      r.h(var4, "messageId");
       return new TapPostPreviewEmbedData(var1, var2, var3, var4, null);
    }
 
@@ -60,11 +51,11 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.guildId, var1.guildId)) {
+         if (!(this.guildId == var1.guildId)) {
             return false;
-         } else if (!r.c(this.parentChannelId, var1.parentChannelId)) {
+         } else if (!(this.parentChannelId == var1.parentChannelId)) {
             return false;
-         } else if (!r.c(this.threadId, var1.threadId)) {
+         } else if (!(this.threadId == var1.threadId)) {
             return false;
          } else {
             return MessageId.equals-impl0(this.messageId, var1.messageId);
@@ -82,20 +73,20 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
 
    public override fun toString(): String {
       val var3: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.parentChannelId;
-      val var2: java.lang.String = this.threadId;
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapPostPreviewEmbedData(guildId=");
-      var5.append(var3);
-      var5.append(", parentChannelId=");
-      var5.append(var4);
-      var5.append(", threadId=");
-      var5.append(var2);
-      var5.append(", messageId=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.parentChannelId;
+      val var4: java.lang.String = this.threadId;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapPostPreviewEmbedData(guildId=");
+      var1.append(var3);
+      var1.append(", parentChannelId=");
+      var1.append(var5);
+      var1.append(", threadId=");
+      var1.append(var4);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

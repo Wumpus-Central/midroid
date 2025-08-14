@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class a implements Function0 {
-   public final Context j;
+   public final Context d;
 
    public final Object invoke() {
-      return AppDatabase.a(this.j);
+      return AppDatabase.a(this.d);
    }
 }

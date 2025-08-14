@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
+public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component() {
    public open val type: Int
    public open val id: String
    public final val contentInventoryEntry: ContentInventoryEntry?
 
    init {
-      r.h(var2, "id");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.contentInventoryEntry = var3;
@@ -31,7 +28,6 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, contentInventoryEntry: ContentInventoryEntry? = var0.contentInventoryEntry): ContentInventoryEntryComponent {
-      r.h(var2, "id");
       return new ContentInventoryEntryComponent(var1, var2, var3);
    }
 
@@ -44,10 +40,10 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else {
-            return r.c(this.contentInventoryEntry, var1.contentInventoryEntry);
+            return this.contentInventoryEntry == var1.contentInventoryEntry;
          }
       }
    }
@@ -67,15 +63,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: ContentInventoryEntry = this.contentInventoryEntry;
+      val var4: java.lang.String = this.id;
+      val var3: ContentInventoryEntry = this.contentInventoryEntry;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ContentInventoryEntryComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var3);
-      var2.append(", contentInventoryEntry=");
       var2.append(var4);
+      var2.append(", contentInventoryEntry=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

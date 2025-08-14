@@ -1,7 +1,9 @@
 package com.discord.keyboard
 
 import java.util.ArrayList
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nKeyboardManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 KeyboardManager.kt\ncom/discord/keyboard/KeyboardManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,24:1\n1863#2,2:25\n*S KotlinDebug\n*F\n+ 1 KeyboardManager.kt\ncom/discord/keyboard/KeyboardManager\n*L\n20#1:25,2\n*E\n"])
 public object KeyboardManager {
    private final val keyboardListeners: MutableList<KeyboardEvent> = new ArrayList()
 
@@ -23,7 +25,7 @@ public object KeyboardManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "listener"
-      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
       // 0b: aload 1
       // 0c: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
@@ -95,7 +97,7 @@ public object KeyboardManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "listener"
-      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
       // 0b: aload 1
       // 0c: invokeinterface java/util/List.remove (Ljava/lang/Object;)Z 2

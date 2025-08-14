@@ -5,7 +5,6 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewManager
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "SuspenseVisibleView")
 internal class SuspenseVisibleViewManager : ReactViewManager {
@@ -14,7 +13,6 @@ internal class SuspenseVisibleViewManager : ReactViewManager {
    }
 
    public open fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
-      r.h(var1, "context");
       return new SuspenseVisibleView(var1);
    }
 

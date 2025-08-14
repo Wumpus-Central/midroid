@@ -5,9 +5,9 @@ import kotlin.jvm.internal.Ref.LongRef;
 
 // $VF: synthetic class
 public final class c implements Function0 {
-   public final LongRef j;
+   public final LongRef d;
 
    public final Object invoke() {
-      return <unrepresentable>.e(this.j);
+      return <unrepresentable>.a(this.d);
    }
 }

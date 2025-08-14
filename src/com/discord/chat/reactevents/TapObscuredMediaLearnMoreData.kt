@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: String, attachmentId: String, embedId: String) : ReactEvent {
@@ -14,10 +13,6 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    public final val embedId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -47,10 +42,6 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
       attachmentId: String = var0.attachmentId,
       embedId: String = var0.embedId
    ): TapObscuredMediaLearnMoreData {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
-      r.h(var3, "attachmentId");
-      r.h(var4, "embedId");
       return new TapObscuredMediaLearnMoreData(var1, var2, var3, var4);
    }
 
@@ -61,14 +52,14 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.channelId, var1.channelId)) {
+         } else if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!(this.attachmentId == var1.attachmentId)) {
             return false;
          } else {
-            return r.c(this.embedId, var1.embedId);
+            return this.embedId == var1.embedId;
          }
       }
    }
@@ -82,21 +73,21 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.attachmentId;
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.attachmentId;
       val var5: java.lang.String = this.embedId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapObscuredMediaLearnMoreData(messageId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", attachmentId=");
-      var4.append(var2);
-      var4.append(", embedId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapObscuredMediaLearnMoreData(messageId=");
+      var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(", attachmentId=");
+      var2.append(var4);
+      var2.append(", embedId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

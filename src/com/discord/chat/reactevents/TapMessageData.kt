@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapMessageData(messageId: String, channelId: String) : ReactEvent {
@@ -12,8 +11,6 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
    public final val channelId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -28,8 +25,6 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
    }
 
    public fun copy(messageId: String = var0.messageId, channelId: String = var0.channelId): TapMessageData {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       return new TapMessageData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.channelId, var1.channelId);
+            return this.channelId == var1.channelId;
          }
       }
    }
@@ -57,13 +52,13 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapMessageData(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

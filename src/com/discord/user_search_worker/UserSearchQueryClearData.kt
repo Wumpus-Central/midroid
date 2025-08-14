@@ -1,16 +1,13 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
+internal data class UserSearchQueryClearData(uuid: String) : UserSearchData() {
    public final val uuid: String
 
    init {
-      r.h(var1, "uuid");
-      super(null);
       this.uuid = var1;
    }
 
@@ -19,7 +16,6 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
    }
 
    public fun copy(uuid: String = var0.uuid): UserSearchQueryClearData {
-      r.h(var1, "uuid");
       return new UserSearchQueryClearData(var1);
    }
 
@@ -29,7 +25,7 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
       } else if (var1 !is UserSearchQueryClearData) {
          return false;
       } else {
-         return r.c(this.uuid, (var1 as UserSearchQueryClearData).uuid);
+         return this.uuid == (var1 as UserSearchQueryClearData).uuid;
       }
    }
 
@@ -38,12 +34,12 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uuid;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UserSearchQueryClearData(uuid=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.uuid;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UserSearchQueryClearData(uuid=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

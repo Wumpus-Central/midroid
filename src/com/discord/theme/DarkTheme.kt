@@ -1,61 +1,61 @@
 package com.discord.theme
 
-import A9.j
+import B9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import k2.A
-import k2.B
-import k2.C
-import k2.D
-import k2.E
-import k2.F
-import k2.G
-import k2.H
-import k2.I
-import k2.J
-import k2.K
-import k2.L
-import k2.M
-import k2.N
-import k2.O
-import k2.P
-import k2.Q
-import k2.S
-import k2.T
-import k2.U
-import k2.V
-import k2.W
-import k2.X
-import k2.Y
-import k2.Z
-import k2.a
-import k2.b
-import k2.c
-import k2.d
-import k2.e
-import k2.f
-import k2.g
-import k2.h
-import k2.i
-import k2.k
-import k2.l
-import k2.m
-import k2.n
-import k2.o
-import k2.p
-import k2.q
-import k2.s
-import k2.t
-import k2.u
-import k2.v
-import k2.w
-import k2.x
-import k2.y
-import k2.z
-import kotlin.jvm.internal.r
+import j2.A
+import j2.B
+import j2.C
+import j2.D
+import j2.E
+import j2.F
+import j2.G
+import j2.H
+import j2.I
+import j2.J
+import j2.K
+import j2.L
+import j2.M
+import j2.N
+import j2.O
+import j2.P
+import j2.Q
+import j2.S
+import j2.T
+import j2.U
+import j2.V
+import j2.W
+import j2.X
+import j2.Y
+import j2.Z
+import j2.a
+import j2.b
+import j2.c
+import j2.d
+import j2.e
+import j2.f
+import j2.g
+import j2.h
+import j2.i
+import j2.k
+import j2.l
+import j2.m
+import j2.n
+import j2.o
+import j2.p
+import j2.q
+import j2.r
+import j2.s
+import j2.t
+import j2.u
+import j2.v
+import j2.w
+import j2.x
+import j2.y
+import j2.z
 
-internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
+internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject() {
    public open val androidRipple: Int
       public open get() {
          return (this.androidRipple$delegate.getValue() as java.lang.Number).intValue();
@@ -363,9 +363,6 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
 
 
    init {
-      r.h(var1, "resources");
-      r.h(var2, "theme");
-      super(null);
       this.androidRipple$delegate = j.b(new a(var1, var2));
       this.backgroundAccent$delegate = j.b(new c(var1, var2));
       this.backgroundFloating$delegate = j.b(new o(var1, var2));
@@ -392,13 +389,13 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.infoDangerForeground$delegate = j.b(new g(var1, var2));
       this.interactiveActive$delegate = j.b(new h(var1, var2));
       this.interactiveMuted$delegate = j.b(new i(var1, var2));
-      this.interactiveNormal$delegate = j.b(new k2.j(var1, var2));
+      this.interactiveNormal$delegate = j.b(new j2.j(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = j.b(new k(var1, var2));
       this.redesignButtonPrimaryOverlayBackground$delegate = j.b(new m(var1, var2));
       this.redesignButtonPrimaryOverlayPressedBackground$delegate = j.b(new n(var1, var2));
       this.redesignButtonPrimaryOverlayText$delegate = j.b(new p(var1, var2));
       this.redesignButtonTertiaryBackground$delegate = j.b(new q(var1, var2));
-      this.redesignButtonTertiaryText$delegate = j.b(new k2.r(var1, var2));
+      this.redesignButtonTertiaryText$delegate = j.b(new r(var1, var2));
       this.spoilerHiddenBackground$delegate = j.b(new s(var1, var2));
       this.spoilerRevealedBackground$delegate = j.b(new t(var1, var2));
       this.statusDanger$delegate = j.b(new u(var1, var2));

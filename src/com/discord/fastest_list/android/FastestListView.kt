@@ -26,28 +26,28 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 @SuppressLint(["ViewConstructor"])
+@SourceDebugExtension(["SMAP\nFastestListView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListView.kt\ncom/discord/fastest_list/android/FastestListView\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,334:1\n1#2:335\n1863#3,2:336\n*S KotlinDebug\n*F\n+ 1 FastestListView.kt\ncom/discord/fastest_list/android/FastestListView\n*L\n291#1:336,2\n*E\n"])
 internal class FastestListView(context: Context,
-      horizontal: Boolean,
-      insetEnd: Int,
-      insetStart: Int,
-      keyboardDismissOnDrag: Boolean,
-      onLayout: (FastestListView, Int, Int, Int, Int) -> Unit,
-      onScrollEventThrottle: Long,
-      onScroll: (FastestListView, Data) -> Unit,
-      onScrollBeginDrag: (FastestListView, Data) -> Unit,
-      onScrollEndDrag: (FastestListView, Data) -> Unit,
-      onUnexpectedItemSize: (FastestListView, Entry, Int) -> Unit,
-      onVisibleItemsChanged: (FastestListView, String, Int, Int, Int, Int) -> Unit,
-      placeholderConfig: FastestListPlaceholderConfig,
-      renderAhead: RenderAhead,
-      sectionsVersioned: Versioned,
-      showsHorizontalScrollIndicator: Boolean,
-      showsVerticalScrollIndicator: Boolean
-   )
-   : RecyclerView {
+   horizontal: Boolean,
+   insetEnd: Int,
+   insetStart: Int,
+   keyboardDismissOnDrag: Boolean,
+   onLayout: (FastestListView, Int, Int, Int, Int) -> Unit,
+   onScrollEventThrottle: Long,
+   onScroll: (FastestListView, Data) -> Unit,
+   onScrollBeginDrag: (FastestListView, Data) -> Unit,
+   onScrollEndDrag: (FastestListView, Data) -> Unit,
+   onUnexpectedItemSize: (FastestListView, Entry, Int) -> Unit,
+   onVisibleItemsChanged: (FastestListView, String, Int, Int, Int, Int) -> Unit,
+   placeholderConfig: FastestListPlaceholderConfig,
+   renderAhead: RenderAhead,
+   sectionsVersioned: Versioned,
+   showsHorizontalScrollIndicator: Boolean,
+   showsVerticalScrollIndicator: Boolean
+) : RecyclerView(FastestListView.Companion.access$withThemeWrapper(Companion, var1, var2)) {
    private final val insetDecorator: FastestListInsetDecorator
    private final val sections: FastestListSections
    private final val typedLayoutManager: FastestListLayoutManager
@@ -59,17 +59,6 @@ internal class FastestListView(context: Context,
    private final val onLayoutChangeListener: OnLayoutChangeListener
 
    init {
-      r.h(var1, "context");
-      r.h(var6, "onLayout");
-      r.h(var9, "onScroll");
-      r.h(var10, "onScrollBeginDrag");
-      r.h(var11, "onScrollEndDrag");
-      r.h(var12, "onUnexpectedItemSize");
-      r.h(var13, "onVisibleItemsChanged");
-      r.h(var14, "placeholderConfig");
-      r.h(var15, "renderAhead");
-      r.h(var16, "sectionsVersioned");
-      super(FastestListView.Companion.access$withThemeWrapper(Companion, var1, var2));
       val var19: FastestListInsetDecorator = new FastestListInsetDecorator(var2, var3, var4);
       this.insetDecorator = var19;
       val var25: FastestListSections = new FastestListSections(var16);
@@ -101,7 +90,7 @@ internal class FastestListView(context: Context,
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
-   private fun onItemDataChanged(positions: List<DataChanged> = kotlin.collections.i.k()) {
+   private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.k()) {
       if (!var1.isEmpty()) {
          for (FastestListViewAdapter.DataChanged var4 : var1) {
             val var2: Int = var4.component1();
@@ -126,14 +115,13 @@ internal class FastestListView(context: Context,
       var5 = var5 - var3;
       var6 = var6 - var4;
       if ((!var0.typedLayoutManager.getHorizontal() || var5 != 0) && (var0.typedLayoutManager.getHorizontal() || var6 - var4 != 0)) {
-         var1.m(var0, var3, var4, var5, var6);
+         var1.invoke(var0, var3, var4, var5, var6);
          var0.typedVisibleItemsTracker.updateVisibleItemPositions();
       }
    }
 
    @JvmStatic
    fun `onScrollListener$lambda$2`(var0: FastestListView, var1: Function2, var2: RecyclerView, var3: Int, var4: Int): Unit {
-      r.h(var2, "<unused var>");
       val var5: FastestListScrollOffset.Data = var0.scrollOffset.compute();
       if (var5 != null) {
          var1.invoke(var0, var5);
@@ -163,14 +151,12 @@ internal class FastestListView(context: Context,
 
    @JvmStatic
    fun `typedAdapter$lambda$1`(var0: Function3, var1: FastestListView, var2: FastestListSections.Entry, var3: Int): Unit {
-      r.h(var2, "entry");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
 
    @JvmStatic
    fun `typedVisibleItemsTracker$lambda$0`(var0: Function6, var1: FastestListView, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int): Unit {
-      r.h(var2, "sectionsId");
       var0.invoke(var1, var2, var3, var4, var5, var6);
       return Unit.a;
    }
@@ -192,7 +178,6 @@ internal class FastestListView(context: Context,
    }
 
    public override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
-      r.h(var1, "e");
       val var2: Boolean = super.onInterceptTouchEvent(var1);
       if (var2) {
          NativeGestureUtil.notifyNativeGestureStarted(this, var1);
@@ -265,14 +250,12 @@ internal class FastestListView(context: Context,
    }
 
    public fun setPlaceholderConfig(placeholderConfig: FastestListPlaceholderConfig) {
-      r.h(var1, "placeholderConfig");
       if (this.typedAdapter.setPlaceholderConfig(var1)) {
          onItemDataChanged$default(this, null, 1, null);
       }
    }
 
    public fun setRenderAhead(renderAhead: RenderAhead) {
-      r.h(var1, "renderAhead");
       if (this.typedLayoutManager.getRenderAhead() != var1) {
          this.typedLayoutManager.setRenderAhead(var1);
          onItemDataChanged$default(this, null, 1, null);
@@ -286,7 +269,6 @@ internal class FastestListView(context: Context,
    }
 
    public fun setSectionsVersioned(sectionsVersioned: Versioned) {
-      r.h(var1, "sectionsVersioned");
       if (this.sections.setSectionsVersioned(var1)) {
          onItemDataChanged$default(this, null, 1, null);
       }

@@ -1,12 +1,10 @@
 package com.discord.notifications.renderer.utils
 
-import X1.v
-import X1.w
+import W1.v
+import W1.w
 import android.text.format.DateUtils
-import hb.b
 import java.text.DateFormat
 import java.util.Date
-import kotlin.jvm.internal.r
 
 @JvmSynthetic
 fun a(var0: MatchResult): java.lang.CharSequence {
@@ -19,31 +17,29 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   r.h(var0, "content");
    val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
    val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var4.i(var3.i(var0, new v()), new w());
-   var var14: java.lang.String = var0;
+   var var14: java.lang.String = var4.h(var3.h(var0, new v()), new w());
+   var var13: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.c(var5, var13, 0, 2, null);
+      val var6: MatchResult = Regex.c(var5, var14, 0, 2, null);
       if (var6 == null) {
-         return var14;
+         return var13;
       }
 
-      val var7: b = var6.c().get(1);
-      r.e(var7);
+      val var7: MatchGroup = var6.d().get(1);
       val var15: java.lang.String = var7.a();
-      val var8: b = var6.c().get(2);
+      val var8: MatchGroup = var6.d().get(2);
       if (var8 != null) {
          var0 = var8.a();
       }
 
       val var16: Date = new Date(java.lang.Long.parseLong(var15) * 1000);
       var var10: Any;
-      if (r.c(var0, "R")) {
+      if (var0 == "R") {
          var10 = DateUtils.getRelativeTimeSpanString(var16.getTime());
       } else {
          label58: {
@@ -86,24 +82,19 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.d().a();
-      val var12: Int = var6.d().j();
-      r.e(var10);
-      var14 = h.v0(var14, var2, var12 + 1, var10).toString();
-      var13 = h.v0(var13, var6.d().a(), var6.d().j() + 1, var10).toString();
+      val var2: Int = var6.c().a();
+      val var12: Int = var6.c().g();
+      var13 = StringsKt.v0(var13, var2, var12 + 1, var10).toString();
+      var14 = StringsKt.v0(var14, var6.c().a(), var6.c().g() + 1, var10).toString();
    }
 }
 
 fun `renderNotificationMessageContent$lambda$0`(var0: MatchResult): java.lang.CharSequence {
-   r.h(var0, "it");
-   val var1: b = var0.c().get(1);
-   r.e(var1);
-   return h.y("X", var1.a().length());
+   val var1: MatchGroup = var0.d().get(1);
+   return StringsKt.y("X", var1.a().length());
 }
 
 fun `renderNotificationMessageContent$lambda$1`(var0: MatchResult): java.lang.CharSequence {
-   r.h(var0, "it");
-   val var1: b = var0.c().get(1);
-   r.e(var1);
-   return h.y("X", var1.a().length());
+   val var1: MatchGroup = var0.d().get(1);
+   return StringsKt.y("X", var1.a().length());
 }

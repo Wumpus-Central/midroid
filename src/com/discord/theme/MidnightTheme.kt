@@ -1,63 +1,62 @@
 package com.discord.theme
 
-import A9.j
+import B9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import k2.A2
-import k2.B2
-import k2.C2
-import k2.D2
-import k2.E2
-import k2.F2
-import k2.G2
-import k2.H2
-import k2.I2
-import k2.J2
-import k2.K2
-import k2.L2
-import k2.M2
-import k2.N2
-import k2.O2
-import k2.P2
-import k2.Q2
-import k2.R2
-import k2.S2
-import k2.T2
-import k2.U2
-import k2.V2
-import k2.W2
-import k2.Y1
-import k2.Z1
-import k2.a2
-import k2.b2
-import k2.c2
-import k2.d2
-import k2.e2
-import k2.f2
-import k2.g2
-import k2.h2
-import k2.i2
-import k2.j2
-import k2.k2
-import k2.l2
-import k2.m2
-import k2.n2
-import k2.o2
-import k2.p2
-import k2.q2
-import k2.r2
-import k2.s2
-import k2.t2
-import k2.u2
-import k2.v2
-import k2.w2
-import k2.x2
-import k2.y2
-import k2.z2
-import kotlin.jvm.internal.r
+import j2.A2
+import j2.B2
+import j2.C2
+import j2.D2
+import j2.E2
+import j2.F2
+import j2.G2
+import j2.H2
+import j2.I2
+import j2.J2
+import j2.K2
+import j2.L2
+import j2.M2
+import j2.N2
+import j2.O2
+import j2.P2
+import j2.Q2
+import j2.R2
+import j2.S2
+import j2.T2
+import j2.U2
+import j2.V2
+import j2.W2
+import j2.Y1
+import j2.Z1
+import j2.a2
+import j2.b2
+import j2.c2
+import j2.d2
+import j2.e2
+import j2.f2
+import j2.g2
+import j2.h2
+import j2.i2
+import j2.j2
+import j2.k2
+import j2.l2
+import j2.m2
+import j2.n2
+import j2.o2
+import j2.p2
+import j2.q2
+import j2.r2
+import j2.s2
+import j2.t2
+import j2.u2
+import j2.v2
+import j2.w2
+import j2.x2
+import j2.y2
+import j2.z2
 
-internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
+internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject() {
    public open val androidRipple: Int
       public open get() {
          return (this.androidRipple$delegate.getValue() as java.lang.Number).intValue();
@@ -365,9 +364,6 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
 
 
    init {
-      r.h(var1, "resources");
-      r.h(var2, "theme");
-      super(null);
       this.androidRipple$delegate = j.b(new Y1(var1, var2));
       this.backgroundAccent$delegate = j.b(new a2(var1, var2));
       this.backgroundFloating$delegate = j.b(new m2(var1, var2));

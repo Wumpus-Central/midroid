@@ -4,11 +4,11 @@ import com.facebook.react.bridge.ReactContext;
 
 // $VF: synthetic class
 public final class f implements Runnable {
-   public final ReactContext j;
-   public final int k;
+   public final ReactContext d;
+   public final int e;
 
    @Override
    public final void run() {
-      ReactViewExtensionsKt.b(this.j, this.k);
+      ReactViewExtensionsKt.b(this.d, this.e);
    }
 }

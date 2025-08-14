@@ -1,37 +1,33 @@
 package com.discord.media.engine.types
 
-import A9.s
-import B9.q
+import B9.s
 import com.discord.native.engine.AudioInputDeviceDescription
 import com.discord.native.engine.AudioOutputDeviceDescription
 import com.discord.native.engine.ConnectionInfo
 import com.discord.native.engine.VideoInputDeviceDescription
 import com.discord.native.engine.VideoInputDeviceFacing
 import java.util.ArrayList
-import kotlin.jvm.internal.r
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   r.h(var0, "<this>");
-   val var5: ArrayList = new ArrayList(var0.length);
-   val var3: Int = var0.length;
-   var var2: Int = 0;
-
-   for (int var1 = 0; var2 < var3; var1++) {
-      var5.add(q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
-      var2++;
-   }
-
-   return var5;
-}
-
-internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   r.h(var0, "<this>");
    val var4: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
+      var4.add(L.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
+      var2++;
+   }
+
+   return var4;
+}
+
+internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
+   val var4: ArrayList = new ArrayList(var0.length);
+   val var3: Int = var0.length;
+   var var2: Int = 0;
+
+   for (int var1 = 0; var2 < var3; var1++) {
+      var4.add(L.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
       var2++;
    }
 
@@ -39,35 +35,35 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
 }
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   r.h(var0, "<this>");
    val var6: ArrayList = new ArrayList();
-   var var4: ArrayList = new ArrayList();
+   val var5: ArrayList = new ArrayList();
    val var3: Int = var0.length;
 
    for (int var1 = 0; var1 < var3; var1++) {
-      val var5: VideoInputDeviceDescription = var0[var1];
+      val var4: VideoInputDeviceDescription = var0[var1];
       if (var0[var1].getFacing() === VideoInputDeviceFacing.Front) {
-         var6.add(var5);
+         var6.add(var4);
       } else {
-         var4.add(var5);
+         var5.add(var4);
       }
    }
 
-   val var14: Pair = new Pair(var6, var4);
-   val var8: java.util.List = i.e0(
-      i.n(
+   val var14: Pair = new Pair(var6, var5);
+   val var8: java.util.List = CollectionsKt.e0(
+      CollectionsKt.n(
          new VideoInputDeviceDescription[]{
-            (VideoInputDeviceDescription)i.j0(var14.a() as java.util.List), (VideoInputDeviceDescription)i.j0(var14.b() as java.util.List)
+            (VideoInputDeviceDescription)CollectionsKt.firstOrNull(var14.a() as java.util.List),
+            (VideoInputDeviceDescription)CollectionsKt.firstOrNull(var14.b() as java.util.List)
          }
       )
    );
-   var4 = new ArrayList(i.v(var8, 10));
+   val var16: ArrayList = new ArrayList(CollectionsKt.v(var8, 10));
    val var17: java.util.Iterator = var8.iterator();
 
    for (int var12 = 0; var17.hasNext(); var12++) {
       var var9: Any = var17.next();
       if (var12 < 0) {
-         i.u();
+         CollectionsKt.u();
       }
 
       val var18: VideoInputDeviceDescription = var9 as VideoInputDeviceDescription;
@@ -82,20 +78,18 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
          var9 = "front";
       }
 
-      var4.add(q.l(new Pair[]{s.a("name", var18.getName()), s.a("guid", var18.getGuid()), s.a("facing", var9), s.a("index", var12)}));
+      var16.add(L.l(new Pair[]{s.a("name", var18.getName()), s.a("guid", var18.getGuid()), s.a("facing", var9), s.a("index", var12)}));
    }
 
-   return var4;
+   return var16;
 }
 
 internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
-   r.h(var0, "<this>");
-   return q.l(new Pair[]{s.a("name", var0.getName()), s.a("guid", var0.getGuid())});
+   return L.l(new Pair[]{s.a("name", var0.getName()), s.a("guid", var0.getGuid())});
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
-   r.h(var0, "<this>");
-   return q.l(
+   return L.l(
       new Pair[]{
          s.a("protocol", var0.getProtocol()),
          s.a("address", var0.getLocalAddress()),

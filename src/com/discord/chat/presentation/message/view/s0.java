@@ -6,10 +6,10 @@ import com.discord.media_player.MediaSource;
 
 // $VF: synthetic class
 public final class s0 implements OnClickListener {
-   public final MediaView j;
-   public final MediaSource k;
+   public final MediaView d;
+   public final MediaSource e;
 
    public final void onClick(View var1) {
-      MediaView.a(this.j, this.k, var1);
+      MediaView.a(this.d, this.e, var1);
    }
 }

@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
@@ -14,24 +15,32 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import y0.a;
 
 public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
+   @NonNull
    public final PollCheckboxView checkbox;
+   @NonNull
    public final PollMediaView image;
+   @NonNull
    public final SimpleDraweeSpanTextView label;
+   @NonNull
    public final View percentageBarBackground;
+   @NonNull
    public final FrameLayout percentageBarContainer;
+   @NonNull
    private final ConstraintLayout rootView;
+   @NonNull
    public final TextView voteCounts;
+   @NonNull
    public final TextView votePercentage;
 
    private PollTextAndImageAnswerViewBinding(
-      ConstraintLayout var1,
-      PollCheckboxView var2,
-      PollMediaView var3,
-      SimpleDraweeSpanTextView var4,
-      View var5,
-      FrameLayout var6,
-      TextView var7,
-      TextView var8
+      @NonNull ConstraintLayout var1,
+      @NonNull PollCheckboxView var2,
+      @NonNull PollMediaView var3,
+      @NonNull SimpleDraweeSpanTextView var4,
+      @NonNull View var5,
+      @NonNull FrameLayout var6,
+      @NonNull TextView var7,
+      @NonNull TextView var8
    ) {
       this.rootView = var1;
       this.checkbox = var2;
@@ -43,29 +52,30 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
       this.votePercentage = var8;
    }
 
-   public static PollTextAndImageAnswerViewBinding bind(View var0) {
+   @NonNull
+   public static PollTextAndImageAnswerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var7 = (PollCheckboxView)a.a(var0, var1);
-      if (var7 != null) {
+      PollCheckboxView var4 = (PollCheckboxView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.image;
-         PollMediaView var4 = (PollMediaView)a.a(var0, var1);
-         if (var4 != null) {
+         PollMediaView var5 = (PollMediaView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.percentage_bar_background;
-               View var5 = a.a(var0, var1);
-               if (var5 != null) {
+               View var3 = a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var2 = (FrameLayout)a.a(var0, var1);
-                  if (var2 != null) {
+                  FrameLayout var7 = (FrameLayout)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var3 = (TextView)a.a(var0, var1);
-                     if (var3 != null) {
+                     TextView var2 = (TextView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var6 = (TextView)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var7, var4, var8, var5, var2, var3, var6);
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var4, var5, var6, var3, var7, var2, var8);
                         }
                      }
                   }
@@ -77,11 +87,13 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static PollTextAndImageAnswerViewBinding inflate(LayoutInflater var0) {
+   @NonNull
+   public static PollTextAndImageAnswerViewBinding inflate(@NonNull LayoutInflater var0) {
       return inflate(var0, null, false);
    }
 
-   public static PollTextAndImageAnswerViewBinding inflate(LayoutInflater var0, ViewGroup var1, boolean var2) {
+   @NonNull
+   public static PollTextAndImageAnswerViewBinding inflate(@NonNull LayoutInflater var0, ViewGroup var1, boolean var2) {
       View var3 = var0.inflate(R.layout.poll_text_and_image_answer_view, var1, false);
       if (var2) {
          var1.addView(var3);
@@ -90,6 +102,7 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
       return bind(var3);
    }
 
+   @NonNull
    public ConstraintLayout getRoot() {
       return this.rootView;
    }

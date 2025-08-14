@@ -7,10 +7,10 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class a0 implements OnLongClickListener {
-   public final Message j;
-   public final ChatEventHandler k;
+   public final Message d;
+   public final ChatEventHandler e;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.o(this.j, this.k, var1);
+      return MessageView.o(this.d, this.e, var1);
    }
 }

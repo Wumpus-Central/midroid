@@ -1,15 +1,13 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Poll(question: PollMedia) {
    public final val question: PollMedia
 
    init {
-      r.h(var1, "question");
       super();
       this.question = var1;
    }
@@ -19,7 +17,6 @@ public data class Poll(question: PollMedia) {
    }
 
    public fun copy(question: PollMedia = var0.question): Poll {
-      r.h(var1, "question");
       return new Poll(var1);
    }
 
@@ -29,7 +26,7 @@ public data class Poll(question: PollMedia) {
       } else if (var1 !is Poll) {
          return false;
       } else {
-         return r.c(this.question, (var1 as Poll).question);
+         return this.question == (var1 as Poll).question;
       }
    }
 

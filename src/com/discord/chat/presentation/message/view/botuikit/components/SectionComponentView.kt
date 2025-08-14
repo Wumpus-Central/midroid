@@ -24,32 +24,26 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
 import java.util.ArrayList
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
-public class SectionComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : LinearLayout,
+@SourceDebugExtension(["SMAP\nSectionComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SectionComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SectionComponentView\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,176:1\n1755#2,3:177\n1567#2:184\n1598#2,4:185\n257#3,2:180\n257#3,2:182\n257#3,2:189\n257#3,2:191\n*S KotlinDebug\n*F\n+ 1 SectionComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SectionComponentView\n*L\n84#1:177,3\n93#1:184\n93#1:185,4\n87#1:180,2\n90#1:182,2\n111#1:189,2\n130#1:191,2\n*E\n"])
+public class SectionComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(var1, var2, var3),
    ComponentView<SectionComponent> {
    private final val binding: MessageComponentSectionViewBinding
    private final val textComponentViews: LinearLayout
    private final var componentProvider: ComponentProvider?
 
    fun SectionComponentView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SectionComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2, var3);
       val var6: MessageComponentSectionViewBinding = MessageComponentSectionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
       this.binding = var6;
       val var5: LinearLayout = new LinearLayout(var1);
       this.textComponentViews = var5;
@@ -74,17 +68,17 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var2: View = this.getCurrentAccessoryView();
-      if (var2 != null) {
-         this.binding.sectionLayoutBox.removeView(var2);
+      val var1: View = this.getCurrentAccessoryView();
+      if (var1 != null) {
+         this.binding.sectionLayoutBox.removeView(var1);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
          }
       }
    }
 
    private fun setAccessoryView(newView: View) {
-      if (!r.c(var1, this.getCurrentAccessoryView())) {
+      if (!(var1 == this.getCurrentAccessoryView())) {
          this.removeAndRecycleAccessoryView();
          this.binding.sectionLayoutBox.addView(var1);
       }
@@ -92,9 +86,6 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
 
    public open fun configure(component: SectionComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       label75: {
-         r.h(var1, "component");
-         r.h(var2, "componentProvider");
-         r.h(var3, "componentContext");
          this.componentProvider = var2;
          var var8: java.util.List = var1.getComponents();
          var var5: Byte = 8;
@@ -111,25 +102,22 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
          if (var1.getAccessory() !is SectionAccessory.Unknown) {
             this.setVisibility(0);
             val var9: java.util.List = var1.getComponents();
-            val var20: ArrayList = new ArrayList(kotlin.collections.i.v(var9, 10));
+            val var20: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
             val var22: java.util.Iterator = var9.iterator();
 
             for (int var4 = 0; var22.hasNext(); var4++) {
                var var10: Any = var22.next();
                if (var4 < 0) {
-                  kotlin.collections.i.u();
+                  CollectionsKt.u();
                }
 
                var10 = (var10 as SectionChildComponent).getComponent();
-               r.e(var10);
                var20.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
             }
 
-            var8 = kotlin.collections.i.e0(var20);
+            var8 = CollectionsKt.e0(var20);
             val var23: Component = var1.getAccessory().getComponent();
-            r.e(var23);
             val var26: FlexboxLayout = this.binding.sectionLayoutBox;
-            r.g(this.binding.sectionLayoutBox, "sectionLayoutBox");
             val var24: ComponentView = var2.getConfiguredComponentView(var23, var3, var26, 1);
             if (!var8.isEmpty() && var24 != null) {
                MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
@@ -137,19 +125,18 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
-                  val var16: FlexboxLayout = this.binding.sectionLayoutBox;
-                  val var12: SectionAccessory = var1.getAccessory();
-                  val var7: Boolean = var12 is SectionAccessory.Button;
+                  val var12: FlexboxLayout = this.binding.sectionLayoutBox;
+                  val var16: SectionAccessory = var1.getAccessory();
+                  val var7: Boolean = var16 is SectionAccessory.Button;
                   var var17: Byte = 2;
-                  if (!var7 && var12 is SectionAccessory.Thumbnail) {
+                  if (!var7 && var16 is SectionAccessory.Thumbnail) {
                      var17 = 0;
                   }
 
-                  var16.setFlexDirection(var17);
+                  var12.setFlexDirection(var17);
                }
 
                val var13: ConstraintLayout = this.binding.sectionComponentViewGroupErrorRow.getRoot();
-               r.g(var13, "getRoot(...)");
                val var18: Boolean;
                if (var1.getErrorText() != null) {
                   var18 = true;
@@ -165,10 +152,8 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                val var11: java.lang.String = var1.getErrorText();
                if (var11 != null) {
                   val var14: SimpleDraweeView = this.binding.sectionComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
-                  r.g(this.binding.sectionComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
                   ReactAssetUtilsKt.setReactAsset(var14, ReactAsset.Warning);
                   val var15: SimpleDraweeView = this.binding.sectionComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
-                  r.g(this.binding.sectionComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
                   ColorUtilsKt.setTintColor(var15, ThemeManagerKt.getTheme().getInfoDangerForeground());
                   this.binding.sectionComponentViewGroupErrorRow.viewInteractionFailedLabelMessage.setText(var11);
                   this.binding
@@ -189,18 +174,16 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    public override fun getComponentType(): KClass<SectionComponent> {
-      return H.b(SectionComponent.class);
+      return SectionComponent::class;
    }
 
    public override fun onRecycle(componentProvider: ComponentProvider) {
-      r.h(var1, "componentProvider");
       MessageComponentsViewKt.recycleChildComponents(this.textComponentViews, var1);
       this.removeAndRecycleAccessoryView();
    }
 
    public companion object {
       public fun inflateComponent(context: Context): SectionComponentView {
-         r.h(var1, "context");
          return new SectionComponentView(var1, null, 0, 6, null);
       }
    }

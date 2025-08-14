@@ -3,16 +3,14 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapSeeMoreData(var1: java.lang.String) {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -22,7 +20,6 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
    }
 
    public fun copy(messageId: MessageId = ...): TapSeeMoreData {
-      r.h(var1, "messageId");
       return new TapSeeMoreData(var1, null);
    }
 
@@ -45,12 +42,12 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSeeMoreData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapSeeMoreData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -5,11 +5,11 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class b implements Function0 {
-   public final PassthroughTouchViewManager j;
-   public final ThemedReactContext k;
-   public final PassthroughTouchViewGroup l;
+   public final PassthroughTouchViewManager d;
+   public final ThemedReactContext e;
+   public final PassthroughTouchViewGroup i;
 
    public final Object invoke() {
-      return PassthroughTouchViewManager.a(this.j, this.k, this.l);
+      return PassthroughTouchViewManager.a(this.d, this.e, this.i);
    }
 }

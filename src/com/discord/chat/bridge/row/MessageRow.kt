@@ -8,28 +8,26 @@ import com.discord.chat.bridge.messageframe.MessageFrame
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.bridge.truncation.Truncation
 import com.discord.chat.presentation.root.MessageContextType
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MessageRow(index: Int,
-      changeType: ChangeType,
-      jumped: Boolean? = null,
-      message: MessageBase,
-      canAddNewReactions: Boolean? = null,
-      addReactionLabel: String? = null,
-      addNewReactionAccessibilityLabel: String? = null,
-      reactionsTheme: ReactionsTheme? = null,
-      renderContentOnly: Boolean = false,
-      messageFrame: MessageFrame? = null,
-      reactTag: Int? = null,
-      truncation: Truncation? = null,
-      backgroundHighlight: BackgroundHighlight? = null,
-      swipeActions: SwipeActionsType = SwipeActionsType.NONE,
-      contextType: MessageContextType? = null
-   )
-   : Row {
+   changeType: ChangeType,
+   jumped: Boolean? = null,
+   message: MessageBase,
+   canAddNewReactions: Boolean? = null,
+   addReactionLabel: String? = null,
+   addNewReactionAccessibilityLabel: String? = null,
+   reactionsTheme: ReactionsTheme? = null,
+   renderContentOnly: Boolean = false,
+   messageFrame: MessageFrame? = null,
+   reactTag: Int? = null,
+   truncation: Truncation? = null,
+   backgroundHighlight: BackgroundHighlight? = null,
+   swipeActions: SwipeActionsType = SwipeActionsType.NONE,
+   contextType: MessageContextType? = null
+) : Row() {
    public open val index: Int
    public open val changeType: ChangeType
    public final val jumped: Boolean?
@@ -52,10 +50,6 @@ public data class MessageRow(index: Int,
    public final val contextType: MessageContextType?
 
    init {
-      r.h(var2, "changeType");
-      r.h(var4, "message");
-      r.h(var14, "swipeActions");
-      super(null);
       this.index = var1;
       this.changeType = var2;
       this.jumped = var3;
@@ -150,9 +144,6 @@ public data class MessageRow(index: Int,
       swipeActions: SwipeActionsType = var0.swipeActions,
       contextType: MessageContextType? = var0.contextType
    ): MessageRow {
-      r.h(var2, "changeType");
-      r.h(var4, "message");
-      r.h(var14, "swipeActions");
       return new MessageRow(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15);
    }
 
@@ -167,27 +158,27 @@ public data class MessageRow(index: Int,
             return false;
          } else if (this.changeType != var1.changeType) {
             return false;
-         } else if (!r.c(this.jumped, var1.jumped)) {
+         } else if (!(this.jumped == var1.jumped)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
-         } else if (!r.c(this.canAddNewReactions, var1.canAddNewReactions)) {
+         } else if (!(this.canAddNewReactions == var1.canAddNewReactions)) {
             return false;
-         } else if (!r.c(this.addReactionLabel, var1.addReactionLabel)) {
+         } else if (!(this.addReactionLabel == var1.addReactionLabel)) {
             return false;
-         } else if (!r.c(this.addNewReactionAccessibilityLabel, var1.addNewReactionAccessibilityLabel)) {
+         } else if (!(this.addNewReactionAccessibilityLabel == var1.addNewReactionAccessibilityLabel)) {
             return false;
-         } else if (!r.c(this.reactionsTheme, var1.reactionsTheme)) {
+         } else if (!(this.reactionsTheme == var1.reactionsTheme)) {
             return false;
          } else if (this.renderContentOnly != var1.renderContentOnly) {
             return false;
-         } else if (!r.c(this.messageFrame, var1.messageFrame)) {
+         } else if (!(this.messageFrame == var1.messageFrame)) {
             return false;
-         } else if (!r.c(this.reactTag, var1.reactTag)) {
+         } else if (!(this.reactTag == var1.reactTag)) {
             return false;
-         } else if (!r.c(this.truncation, var1.truncation)) {
+         } else if (!(this.truncation == var1.truncation)) {
             return false;
-         } else if (!r.c(this.backgroundHighlight, var1.backgroundHighlight)) {
+         } else if (!(this.backgroundHighlight == var1.backgroundHighlight)) {
             return false;
          } else if (this.swipeActions != var1.swipeActions) {
             return false;
@@ -198,8 +189,8 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var11: Int = Integer.hashCode(this.index);
-      val var12: Int = this.changeType.hashCode();
+      val var12: Int = Integer.hashCode(this.index);
+      val var11: Int = this.changeType.hashCode();
       var var10: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
@@ -278,7 +269,7 @@ public data class MessageRow(index: Int,
                                           (
                                                    (
                                                             (
-                                                                     ((((((var11 * 31 + var12) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
+                                                                     ((((((var12 * 31 + var11) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
                                                                            * 31
                                                                         + var5
                                                                   )
@@ -306,53 +297,53 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var8: java.lang.Boolean = this.jumped;
-      val var11: MessageBase = this.message;
+      val var9: ChangeType = this.changeType;
+      val var12: java.lang.Boolean = this.jumped;
+      val var6: MessageBase = this.message;
       val var15: java.lang.Boolean = this.canAddNewReactions;
-      val var7: java.lang.String = this.addReactionLabel;
-      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var16: ReactionsTheme = this.reactionsTheme;
+      val var8: java.lang.String = this.addReactionLabel;
+      val var7: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var5: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var10: MessageFrame = this.messageFrame;
-      val var4: Int = this.reactTag;
-      val var14: Truncation = this.truncation;
-      val var13: BackgroundHighlight = this.backgroundHighlight;
-      val var6: SwipeActionsType = this.swipeActions;
-      val var12: MessageContextType = this.contextType;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("MessageRow(index=");
-      var9.append(var1);
-      var9.append(", changeType=");
-      var9.append(var3);
-      var9.append(", jumped=");
-      var9.append(var8);
-      var9.append(", message=");
-      var9.append(var11);
-      var9.append(", canAddNewReactions=");
-      var9.append(var15);
-      var9.append(", addReactionLabel=");
-      var9.append(var7);
-      var9.append(", addNewReactionAccessibilityLabel=");
-      var9.append(var5);
-      var9.append(", reactionsTheme=");
-      var9.append(var16);
-      var9.append(", renderContentOnly=");
-      var9.append(var2);
-      var9.append(", messageFrame=");
-      var9.append(var10);
-      var9.append(", reactTag=");
-      var9.append(var4);
-      var9.append(", truncation=");
-      var9.append(var14);
-      var9.append(", backgroundHighlight=");
-      var9.append(var13);
-      var9.append(", swipeActions=");
-      var9.append(var6);
-      var9.append(", contextType=");
-      var9.append(var12);
-      var9.append(")");
-      return var9.toString();
+      val var14: MessageFrame = this.messageFrame;
+      val var3: Int = this.reactTag;
+      val var4: Truncation = this.truncation;
+      val var16: BackgroundHighlight = this.backgroundHighlight;
+      val var13: SwipeActionsType = this.swipeActions;
+      val var10: MessageContextType = this.contextType;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("MessageRow(index=");
+      var11.append(var1);
+      var11.append(", changeType=");
+      var11.append(var9);
+      var11.append(", jumped=");
+      var11.append(var12);
+      var11.append(", message=");
+      var11.append(var6);
+      var11.append(", canAddNewReactions=");
+      var11.append(var15);
+      var11.append(", addReactionLabel=");
+      var11.append(var8);
+      var11.append(", addNewReactionAccessibilityLabel=");
+      var11.append(var7);
+      var11.append(", reactionsTheme=");
+      var11.append(var5);
+      var11.append(", renderContentOnly=");
+      var11.append(var2);
+      var11.append(", messageFrame=");
+      var11.append(var14);
+      var11.append(", reactTag=");
+      var11.append(var3);
+      var11.append(", truncation=");
+      var11.append(var4);
+      var11.append(", backgroundHighlight=");
+      var11.append(var16);
+      var11.append(", swipeActions=");
+      var11.append(var13);
+      var11.append(", contextType=");
+      var11.append(var10);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

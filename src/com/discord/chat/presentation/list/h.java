@@ -4,11 +4,11 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final ChatListView j;
-   public final boolean k;
-   public final int l;
+   public final ChatListView d;
+   public final boolean e;
+   public final int i;
 
    public final Object invoke() {
-      return ChatListView.W(this.j, this.k, this.l);
+      return ChatListView.W(this.d, this.e, this.i);
    }
 }

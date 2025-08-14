@@ -8224,18 +8224,20 @@
     <public type="style" name="ucrop_TextViewWidgetText" id="0x7f1404b7" />
     <public type="style" name="ucrop_WrapperIconState" id="0x7f1404b8" />
     <public type="style" name="ucrop_WrapperRotateButton" id="0x7f1404b9" />
-    <public type="xml" name="automotive_app_desc" id="0x7f160000" />
-    <public type="xml" name="com_android_billingclient_phenotype" id="0x7f160001" />
-    <public type="xml" name="data_extraction_rules" id="0x7f160002" />
-    <public type="xml" name="data_extraction_rules_legacy" id="0x7f160003" />
-    <public type="xml" name="file_paths" id="0x7f160004" />
-    <public type="xml" name="file_provider_paths" id="0x7f160005" />
-    <public type="xml" name="image_share_filepaths" id="0x7f160006" />
-    <public type="xml" name="imagepicker_provider_paths" id="0x7f160007" />
-    <public type="xml" name="ivpusic_imagepicker_provider_paths" id="0x7f160008" />
-    <public type="xml" name="network_security_config" id="0x7f160009" />
-    <public type="xml" name="replay_paths" id="0x7f16000a" />
-    <public type="xml" name="rn_dev_preferences" id="0x7f16000b" />
-    <public type="xml" name="shortcuts" id="0x7f16000c" />
-    <public type="xml" name="splits0" id="0x7f16000d" />
+    <public type="xml" name="appsflyer_backup_rules" id="0x7f160000" />
+    <public type="xml" name="appsflyer_data_extraction_rules" id="0x7f160001" />
+    <public type="xml" name="automotive_app_desc" id="0x7f160002" />
+    <public type="xml" name="com_android_billingclient_phenotype" id="0x7f160003" />
+    <public type="xml" name="data_extraction_rules" id="0x7f160004" />
+    <public type="xml" name="data_extraction_rules_legacy" id="0x7f160005" />
+    <public type="xml" name="file_paths" id="0x7f160006" />
+    <public type="xml" name="file_provider_paths" id="0x7f160007" />
+    <public type="xml" name="image_share_filepaths" id="0x7f160008" />
+    <public type="xml" name="imagepicker_provider_paths" id="0x7f160009" />
+    <public type="xml" name="ivpusic_imagepicker_provider_paths" id="0x7f16000a" />
+    <public type="xml" name="network_security_config" id="0x7f16000b" />
+    <public type="xml" name="replay_paths" id="0x7f16000c" />
+    <public type="xml" name="rn_dev_preferences" id="0x7f16000d" />
+    <public type="xml" name="shortcuts" id="0x7f16000e" />
+    <public type="xml" name="splits0" id="0x7f16000f" />
 </resources>

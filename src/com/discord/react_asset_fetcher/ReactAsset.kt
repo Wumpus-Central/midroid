@@ -2,7 +2,6 @@ package com.discord.react_asset_fetcher
 
 import android.content.Context
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
 
 public enum class ReactAsset {
    Activity,
@@ -113,7 +112,7 @@ public enum class ReactAsset {
    fun {
       val var0: Array<ReactAsset> = $values();
       $VALUES = var0;
-      $ENTRIES = I9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    @JvmStatic
@@ -122,7 +121,6 @@ public enum class ReactAsset {
    }
 
    public fun getUri(context: Context): String {
-      r.h(var1, "context");
       return ReactAssetCache.INSTANCE.get(var1, this);
    }
 }

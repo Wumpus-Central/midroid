@@ -9,7 +9,6 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.n0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManager
-import kotlin.jvm.internal.r
 
 private fun WindowInsetsControllerCompat.setLightTheme(isLightTheme: Boolean) {
    var0.d(var1);
@@ -17,21 +16,18 @@ private fun WindowInsetsControllerCompat.setLightTheme(isLightTheme: Boolean) {
 }
 
 internal fun Activity.updateSystemUi() {
-   r.h(var0, "<this>");
    val var2: ThemeManager = ThemeManager.INSTANCE;
    if (ThemeManager.INSTANCE.isInitialized()) {
       val var1: Boolean = var2.isThemeLight();
       val var4: View = ActivityExtensionsKt.getRootView(var0);
       if (var4 != null) {
          val var3: WindowInsetsControllerCompat = n0.a(var0.getWindow(), var4);
-         r.g(var3, "getInsetsController(...)");
          setLightTheme(var3, var1);
       }
    }
 }
 
 internal fun View.updateSystemUi() {
-   r.h(var0, "<this>");
    val var2: ThemeManager = ThemeManager.INSTANCE;
    if (ThemeManager.INSTANCE.isInitialized()) {
       val var1: Boolean = var2.isThemeLight();
@@ -39,7 +35,6 @@ internal fun View.updateSystemUi() {
          val var3: WindowInsetsController = N.a(var0);
          if (var3 != null) {
             val var4: WindowInsetsControllerCompat = WindowInsetsControllerCompat.g(var3);
-            r.g(var4, "toWindowInsetsControllerCompat(...)");
             setLightTheme(var4, var1);
          }
       }

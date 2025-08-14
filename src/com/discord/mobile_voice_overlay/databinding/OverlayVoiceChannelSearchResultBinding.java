@@ -4,19 +4,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import y0.a;
 
 public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding {
+   @NonNull
    public final TextView categoryName;
+   @NonNull
    public final TextView channelName;
+   @NonNull
    public final ConstraintLayout container;
+   @NonNull
    public final TextView guildName;
+   @NonNull
    private final ConstraintLayout rootView;
 
-   private OverlayVoiceChannelSearchResultBinding(ConstraintLayout var1, TextView var2, TextView var3, ConstraintLayout var4, TextView var5) {
+   private OverlayVoiceChannelSearchResultBinding(
+      @NonNull ConstraintLayout var1, @NonNull TextView var2, @NonNull TextView var3, @NonNull ConstraintLayout var4, @NonNull TextView var5
+   ) {
       this.rootView = var1;
       this.categoryName = var2;
       this.channelName = var3;
@@ -24,18 +32,19 @@ public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding
       this.guildName = var5;
    }
 
-   public static OverlayVoiceChannelSearchResultBinding bind(View var0) {
+   @NonNull
+   public static OverlayVoiceChannelSearchResultBinding bind(@NonNull View var0) {
       int var1 = R.id.category_name;
-      TextView var4 = (TextView)a.a(var0, var1);
-      if (var4 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.channel_name;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var5 = (TextView)a.a(var0, var1);
+         if (var5 != null) {
             ConstraintLayout var2 = (ConstraintLayout)var0;
             var1 = R.id.guild_name;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
-               return new OverlayVoiceChannelSearchResultBinding(var2, var4, var3, var2, var5);
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
+               return new OverlayVoiceChannelSearchResultBinding(var2, var3, var5, var2, var4);
             }
          }
       }
@@ -43,11 +52,13 @@ public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static OverlayVoiceChannelSearchResultBinding inflate(LayoutInflater var0) {
+   @NonNull
+   public static OverlayVoiceChannelSearchResultBinding inflate(@NonNull LayoutInflater var0) {
       return inflate(var0, null, false);
    }
 
-   public static OverlayVoiceChannelSearchResultBinding inflate(LayoutInflater var0, ViewGroup var1, boolean var2) {
+   @NonNull
+   public static OverlayVoiceChannelSearchResultBinding inflate(@NonNull LayoutInflater var0, ViewGroup var1, boolean var2) {
       View var3 = var0.inflate(R.layout.overlay_voice_channel_search_result, var1, false);
       if (var2) {
          var1.addView(var3);
@@ -56,6 +67,7 @@ public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding
       return bind(var3);
    }
 
+   @NonNull
    public ConstraintLayout getRoot() {
       return this.rootView;
    }

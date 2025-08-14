@@ -19,40 +19,33 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ThreadStarterMessageHeaderView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+@SourceDebugExtension(["SMAP\nThreadStarterMessageHeaderView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThreadStarterMessageHeaderView.kt\ncom/discord/chat/presentation/message/ThreadStarterMessageHeaderView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,57:1\n257#2,2:58\n327#2,4:60\n*S KotlinDebug\n*F\n+ 1 ThreadStarterMessageHeaderView.kt\ncom/discord/chat/presentation/message/ThreadStarterMessageHeaderView\n*L\n43#1:58,2\n47#1:60,4\n*E\n"])
+public class ThreadStarterMessageHeaderView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: ThreadStarterMessageHeaderViewBinding
 
    fun ThreadStarterMessageHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var3: ThreadStarterMessageHeaderViewBinding = ThreadStarterMessageHeaderViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       this.setOrientation(0);
       val var5: SimpleDraweeView = var3.threadStarterHeaderIcon;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderIcon, "threadStarterHeaderIcon");
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.TextChannel);
       val var6: SimpleDraweeView = var3.threadStarterHeaderIcon;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderIcon, "threadStarterHeaderIcon");
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getInteractiveNormal());
       var3.threadStarterHeaderText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       val var7: TextView = var3.threadStarterHeaderText;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderText, "threadStarterHeaderText");
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       val var4: TextView = var3.threadStarterHeaderText;
-      kotlin.jvm.internal.r.g(var3.threadStarterHeaderText, "threadStarterHeaderText");
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
    }
 
    public fun configure(headerText: String?, hasMessageReference: Boolean) {
       val var6: View = this.binding.getRoot();
-      kotlin.jvm.internal.r.g(var6, "getRoot(...)");
       var var4: Boolean;
       if (var1 != null) {
          var4 = 1;
@@ -70,7 +63,6 @@ public class ThreadStarterMessageHeaderView  public constructor(context: Context
       this.binding.threadStarterHeaderText.setText(var1);
       val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
       val var7: View = this.binding.getRoot();
-      kotlin.jvm.internal.r.g(var7, "getRoot(...)");
       val var10: LayoutParams = var7.getLayoutParams();
       if (var10 != null) {
          val var11: MarginLayoutParams = var10 as MarginLayoutParams;

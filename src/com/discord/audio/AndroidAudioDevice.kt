@@ -1,14 +1,13 @@
 package com.discord.audio
 
-import A9.s
+import B9.s
 import android.media.AudioDeviceInfo
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 
-@tb.g
+@nb.g
 public class AndroidAudioDevice {
    public final var deviceType: Int
       internal set
@@ -39,7 +38,6 @@ public class AndroidAudioDevice {
 
    public companion object {
       public fun fromAudioDeviceInfo(deviceInfo: AudioDeviceInfo): AndroidAudioDevice {
-         r.h(var1, "deviceInfo");
          val var4: AndroidAudioDevice = new AndroidAudioDevice();
          var4.setDeviceName(var1.getProductName().toString());
          var4.setDeviceType(var1.getType());
@@ -55,7 +53,6 @@ public class AndroidAudioDevice {
       }
 
       public fun fromReadableMap(map: ReadableMap): AndroidAudioDevice {
-         r.h(var1, "map");
          val var4: AndroidAudioDevice = new AndroidAudioDevice();
          val var3: java.lang.String = var1.getString("deviceName");
          var var2: java.lang.String = var3;
@@ -98,7 +95,6 @@ public class AndroidAudioDevice {
       }
 
       public fun fromSimpleDeviceType(deviceType: SimpleDeviceType): AndroidAudioDevice {
-         r.h(var1, "deviceType");
          val var2: AndroidAudioDevice = new AndroidAudioDevice();
          var2.setSimpleDeviceType(var1);
          var2.setDeviceId(var1.ordinal());

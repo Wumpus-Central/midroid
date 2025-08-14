@@ -2,7 +2,6 @@ package com.discord.simpleast.core.node
 
 import android.text.SpannableStringBuilder
 import java.util.ArrayList
-import kotlin.jvm.internal.r
 
 public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    private final var children: MutableCollection<Node<Any>>?
@@ -16,7 +15,6 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public fun addChild(child: Node<Any>) {
-      r.h(var1, "child");
       var var2: Any = this.children;
       if (this.children == null) {
          var2 = new ArrayList();
@@ -35,12 +33,10 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public open fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      r.h(var1, "builder");
    }
 
    public open class Parent<R>(vararg children: Node<Any>?) : Node<R> {
       init {
-         r.h(var1, "children");
          val var5: ArrayList = new ArrayList();
          val var3: Int = var1.length;
 
@@ -51,11 +47,10 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
             }
          }
 
-         super(i.W0(var5));
+         super(CollectionsKt.V0(var5));
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         r.h(var1, "builder");
          val var3: java.util.Collection = this.getChildren();
          if (var3 != null) {
             val var4: java.util.Iterator = var3.iterator();
@@ -73,7 +68,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
          val var1: java.util.Collection = this.getChildren();
          val var3: java.lang.String;
          if (var1 != null) {
-            var3 = i.q0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
+            var3 = CollectionsKt.p0(var1, "\n->", ">>", "\n>|", 0, null, <unrepresentable>.INSTANCE, 24, null);
          } else {
             var3 = null;
          }

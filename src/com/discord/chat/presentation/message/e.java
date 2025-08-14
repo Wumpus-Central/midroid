@@ -6,11 +6,11 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class e implements OnClickListener {
-   public final ChatEventHandler j;
-   public final String k;
-   public final String l;
+   public final ChatEventHandler d;
+   public final String e;
+   public final String i;
 
    public final void onClick(View var1) {
-      GameIconView.a(this.j, this.k, this.l, var1);
+      GameIconView.a(this.d, this.e, this.i, var1);
    }
 }

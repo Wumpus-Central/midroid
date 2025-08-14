@@ -2,15 +2,12 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.sticker.Sticker
-import kotlin.jvm.internal.r
 
 public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : MessageAccessory {
    public final val message: Message
    public final val sticker: Sticker
 
    init {
-      r.h(var1, "message");
-      r.h(var2, "sticker");
       val var5: java.lang.String = var1.getId-3Eiw7ao();
       val var3: Long = var2.getId();
       val var6: StringBuilder = new StringBuilder();
@@ -30,8 +27,6 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    }
 
    public fun copy(message: Message = var0.message, sticker: Sticker = var0.sticker): WelcomeStickerAccessory {
-      r.h(var1, "message");
-      r.h(var2, "sticker");
       return new WelcomeStickerAccessory(var1, var2);
    }
 
@@ -42,10 +37,10 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!(this.message == var1.message)) {
             return false;
          } else {
-            return r.c(this.sticker, var1.sticker);
+            return this.sticker == var1.sticker;
          }
       }
    }
@@ -56,13 +51,13 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
 
    public override fun toString(): String {
       val var1: Message = this.message;
-      val var3: Sticker = this.sticker;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("WelcomeStickerAccessory(message=");
-      var2.append(var1);
-      var2.append(", sticker=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: Sticker = this.sticker;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("WelcomeStickerAccessory(message=");
+      var3.append(var1);
+      var3.append(", sticker=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

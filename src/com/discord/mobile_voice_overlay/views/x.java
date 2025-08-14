@@ -5,9 +5,9 @@ import android.view.View.OnClickListener;
 
 // $VF: synthetic class
 public final class x implements OnClickListener {
-   public final ResultViewHolder j;
+   public final ResultViewHolder d;
 
    public final void onClick(View var1) {
-      ResultViewHolder.b(this.j, var1);
+      ResultViewHolder.b(this.d, var1);
    }
 }
