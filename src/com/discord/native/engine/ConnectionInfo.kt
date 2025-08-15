@@ -93,8 +93,8 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       val var5: java.lang.String = this.protocol;
       val var6: java.lang.String = this.localAddress;
       val var3: Int = this.localPort;
-      val var2: Int = this.createConnectionTime;
-      val var1: Int = this.connectTime;
+      val var1: Int = this.createConnectionTime;
+      val var2: Int = this.connectTime;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ConnectionInfo(isConnected=");
       var7.append(var4);
@@ -105,9 +105,9 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       var7.append(", localPort=");
       var7.append(var3);
       var7.append(", createConnectionTime=");
-      var7.append(var2);
-      var7.append(", connectTime=");
       var7.append(var1);
+      var7.append(", connectTime=");
+      var7.append(var2);
       var7.append(")");
       return var7.toString();
    }

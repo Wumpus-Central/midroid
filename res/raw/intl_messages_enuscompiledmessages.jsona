@@ -1199,6 +1199,7 @@
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
+  "KUsDND": "Manage",
   "eGZFws": "Notifications are disabled for this DM.",
   "7Sbhqa": [
     "Notifications are disabled until ",
@@ -2953,6 +2954,8 @@
       "itemName"
     ]
   ],
+  "aVCcr6": "Decoration",
+  "s+YSgo": "Profile",
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
   "H3vhqa": "Buy Nameplate",
@@ -19777,6 +19780,7 @@
   "M4ddeX": "Programs",
   "0dO1t7": "Messages",
   "rfe/x8": "Account",
+  "yaLeEB": "Support Tickets",
   "psXQHB": "Help Desk",
   "nOtPMD": "You cannot modify this permission because none of your roles have it.",
   "5MstTk": "Hide chat",
@@ -30407,6 +30411,39 @@
         [
           1,
           "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "BfgxRk": [
+    "Play any of ",
+    [
+      8,
+      "$link",
+      [
+        "these select games"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
+    ],
+    " for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
         ]
       ]
     ],

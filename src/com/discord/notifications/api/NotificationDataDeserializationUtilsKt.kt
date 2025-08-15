@@ -32,11 +32,11 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var24 : var3.entrySet()) {
-            var var20: Any = var24.getKey();
-            val var25: Any = var24.getValue();
-            var20 = var20 as java.lang.String;
-            var12.add(s.a(var20, var25 as java.lang.String));
+         for (Entry var20 : var3.entrySet()) {
+            var var24: Any = var20.getKey();
+            val var21: Any = var20.getValue();
+            var24 = var24 as java.lang.String;
+            var12.add(s.a(var24, var21 as java.lang.String));
          }
 
          var9 = L.t(var12);
