@@ -75,7 +75,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       this.instanceCreationNs = System.nanoTime();
       this.engineConnections = new MediaEngineNativeConnections();
       this.dispatcher = new AsyncInitDispatcher("MediaEngine", 0L, 2, null);
-      this.coroutineScope = kotlinx.coroutines.g.a(var2.V0(new db.B("MediaEngine")));
+      this.coroutineScope = kotlinx.coroutines.g.a(var2.R(new db.B("MediaEngine")));
    }
 
    @JvmStatic
@@ -262,10 +262,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var var3: MediaEngine.Companion = MediaEngine.Companion;
-               var1 = this.$bitmap;
+               var1 = MediaEngine.Companion;
+               var var3: Bitmap = this.$bitmap;
                this.label = 1;
-               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
+               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -879,7 +879,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 01a: new org/json/JSONObject
       // 01d: dup
       // 01e: invokespecial org/json/JSONObject.<init> ()V
-      // 021: astore 8
+      // 021: astore 7
       // 023: bipush 0
       // 024: anewarray 363
       // 027: astore 6
@@ -892,11 +892,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 034: invokespecial android/media/MediaCodecList.<init> (I)V
       // 037: invokevirtual android/media/MediaCodecList.getCodecInfos ()[Landroid/media/MediaCodecInfo;
       // 03a: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
-      // 03d: astore 7
-      // 03f: aload 7
+      // 03d: astore 8
+      // 03f: aload 8
       // 041: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 046: ifeq 143
-      // 049: aload 7
+      // 049: aload 8
       // 04b: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 050: checkcast android/media/MediaCodecInfo
       // 053: astore 10
@@ -908,15 +908,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 061: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 064: aload 10
       // 066: invokevirtual android/media/MediaCodecInfo.getSupportedTypes ()[Ljava/lang/String;
-      // 069: astore 12
-      // 06b: aload 12
+      // 069: astore 11
+      // 06b: aload 11
       // 06d: ldc_w "getSupportedTypes(...)"
       // 070: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
       // 07a: astore 4
-      // 07c: aload 12
+      // 07c: aload 11
       // 07e: arraylength
       // 07f: istore 3
       // 080: bipush 0
@@ -924,13 +924,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 082: iload 2
       // 083: iload 3
       // 084: if_icmpge 0b0
-      // 087: aload 12
+      // 087: aload 11
       // 089: iload 2
       // 08a: aaload
-      // 08b: astore 11
-      // 08d: aload 11
+      // 08b: astore 12
+      // 08d: aload 12
       // 08f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 092: aload 11
+      // 092: aload 12
       // 094: ldc_w "video"
       // 097: bipush 0
       // 098: bipush 2
@@ -938,7 +938,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
       // 0a0: aload 4
-      // 0a2: aload 11
+      // 0a2: aload 12
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1
@@ -1008,7 +1008,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 13b: astore 5
       // 13d: goto 0b9
       // 140: goto 03f
-      // 143: aload 8
+      // 143: aload 7
       // 145: ldc_w "available_video_encoders"
       // 148: new org/json/JSONArray
       // 14b: dup
@@ -1016,7 +1016,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 14e: invokespecial org/json/JSONArray.<init> (Ljava/lang/Object;)V
       // 151: invokevirtual org/json/JSONObject.put (Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
       // 154: pop
-      // 155: aload 8
+      // 155: aload 7
       // 157: ldc_w "available_video_decoders"
       // 15a: new org/json/JSONArray
       // 15d: dup
@@ -1024,7 +1024,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 160: invokespecial org/json/JSONArray.<init> (Ljava/lang/Object;)V
       // 163: invokevirtual org/json/JSONObject.put (Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
       // 166: pop
-      // 167: aload 8
+      // 167: aload 7
       // 169: invokevirtual org/json/JSONObject.toString ()Ljava/lang/String;
       // 16c: astore 4
       // 16e: aload 4
@@ -1806,15 +1806,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var2: ScreenCapturer = this.screenCapturer;
+         val var3: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScreenCapturerForConnection(screenCapturer=");
-         var3.append(var2);
-         var3.append(", connectionId=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ScreenCapturerForConnection(screenCapturer=");
+         var2.append(var3);
+         var2.append(", connectionId=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

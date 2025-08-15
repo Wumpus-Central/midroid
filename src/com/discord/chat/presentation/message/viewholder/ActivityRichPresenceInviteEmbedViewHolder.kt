@@ -12,22 +12,22 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
    }
 
    public fun bind(accessory: ActivityRichPresenceInviteEmbedMessageAccessory) {
-      val var9: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
+      val var10: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
       val var15: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
-      val var6: java.lang.String = var9.getHeaderText();
-      val var5: java.lang.String = var9.getTitle();
-      val var8: java.lang.String = var9.getSubtitle();
-      val var7: java.lang.String = var9.getIconSrc();
-      val var10: java.lang.Boolean = var9.isSpotifyParty();
+      val var6: java.lang.String = var10.getHeaderText();
+      val var8: java.lang.String = var10.getTitle();
+      val var7: java.lang.String = var10.getSubtitle();
+      val var5: java.lang.String = var10.getIconSrc();
+      val var9: java.lang.Boolean = var10.isSpotifyParty();
       val var3: Boolean;
-      if (var10 != null) {
-         var3 = var10;
+      if (var9 != null) {
+         var3 = var9;
       } else {
          var3 = false;
       }
 
-      val var17: java.lang.String = var9.getFooterLabel();
-      val var11: Int = var9.getMaxPartySize();
+      val var16: java.lang.String = var10.getFooterLabel();
+      val var11: Int = var10.getMaxPartySize();
       val var2: Int;
       if (var11 != null) {
          var2 = var11;
@@ -35,18 +35,18 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var2 = 0;
       }
 
-      val var14: java.lang.String = var9.getPartySizeText();
-      val var12: java.util.List = var9.getPartyMemberAvatarURIs();
-      val var18: java.util.List = var9.getPlatformIconKeys();
-      val var13: java.util.List = var9.getGradientColors();
-      val var16: java.lang.Boolean = var9.isActive();
+      val var13: java.lang.String = var10.getPartySizeText();
+      val var12: java.util.List = var10.getPartyMemberAvatarURIs();
+      val var18: java.util.List = var10.getPlatformIconKeys();
+      val var14: java.util.List = var10.getGradientColors();
+      val var17: java.lang.Boolean = var10.isActive();
       val var4: Boolean;
-      if (var16 != null) {
-         var4 = var16;
+      if (var17 != null) {
+         var4 = var17;
       } else {
          var4 = false;
       }
 
-      var15.setActivityRichPresenceInviteEmbed(var6, var5, var8, var7, var3, var17, var2, var14, var12, var18, var13, var4);
+      var15.setActivityRichPresenceInviteEmbed(var6, var8, var7, var5, var3, var16, var2, var13, var12, var18, var14, var4);
    }
 }

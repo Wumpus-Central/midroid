@@ -181,10 +181,10 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun hashCode(): Int {
-         val var4: Int = java.lang.Long.hashCode(this.id);
-         val var3: Int = this.name.hashCode();
-         val var2: Int = java.lang.Boolean.hashCode(this.animated);
-         val var5: Int = this.disabled.hashCode();
+         val var5: Int = java.lang.Long.hashCode(this.id);
+         val var4: Int = this.name.hashCode();
+         val var3: Int = java.lang.Boolean.hashCode(this.animated);
+         val var2: Int = this.disabled.hashCode();
          val var1: Int;
          if (this.unicode == null) {
             var1 = 0;
@@ -192,7 +192,7 @@ internal sealed class EmojiPickerItem protected constructor() {
             var1 = this.unicode.hashCode();
          }
 
-         return ((((var4 * 31 + var3) * 31 + var2) * 31 + var5) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.isInsidePremiumRoadBlock);
+         return ((((var5 * 31 + var4) * 31 + var3) * 31 + var2) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.isInsidePremiumRoadBlock);
       }
 
       public override fun itemId(): Long {
@@ -348,12 +348,12 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.id;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("FooterUpsell(id=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = this.id;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("FooterUpsell(id=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -545,15 +545,15 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.id;
+         val var2: java.lang.String = this.id;
          val var1: Int = this.height;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Spacer(id=");
-         var2.append(var3);
-         var2.append(", height=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Spacer(id=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

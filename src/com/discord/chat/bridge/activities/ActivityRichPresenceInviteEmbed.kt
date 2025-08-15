@@ -36,9 +36,9 @@ public data class ActivityRichPresenceInviteEmbed(footerLabel: String? = null,
 
    @JvmStatic
    fun {
-      val var1: f = new f(new a(RGBAColorModel::class, RGBAColorModel.$serializer.INSTANCE, new KSerializer[0]));
-      val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, var1, null, null, null, null, null, new f(E0.a), null, new f(var0), null, null};
+      val var0: f = new f(new a(RGBAColorModel::class, RGBAColorModel.$serializer.INSTANCE, new KSerializer[0]));
+      val var1: E0 = E0.a;
+      $childSerializers = new KSerializer[]{null, var0, null, null, null, null, null, new f(E0.a), null, new f(var1), null, null};
    }
 
    fun ActivityRichPresenceInviteEmbed() {
@@ -249,45 +249,45 @@ public data class ActivityRichPresenceInviteEmbed(footerLabel: String? = null,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.footerLabel;
-      val var6: java.util.List = this.gradientColors;
-      val var12: java.lang.String = this.headerText;
-      val var3: java.lang.String = this.iconSrc;
-      val var13: java.lang.Boolean = this.isActive;
-      val var10: java.lang.Boolean = this.isSpotifyParty;
-      val var8: Int = this.maxPartySize;
-      val var11: java.util.List = this.partyMemberAvatarURIs;
-      val var9: java.lang.String = this.partySizeText;
-      val var2: java.util.List = this.platformIconKeys;
-      val var4: java.lang.String = this.subtitle;
-      val var1: java.lang.String = this.title;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ActivityRichPresenceInviteEmbed(footerLabel=");
-      var7.append(var5);
-      var7.append(", gradientColors=");
-      var7.append(var6);
-      var7.append(", headerText=");
-      var7.append(var12);
-      var7.append(", iconSrc=");
-      var7.append(var3);
-      var7.append(", isActive=");
-      var7.append(var13);
-      var7.append(", isSpotifyParty=");
-      var7.append(var10);
-      var7.append(", maxPartySize=");
-      var7.append(var8);
-      var7.append(", partyMemberAvatarURIs=");
-      var7.append(var11);
-      var7.append(", partySizeText=");
-      var7.append(var9);
-      var7.append(", platformIconKeys=");
-      var7.append(var2);
-      var7.append(", subtitle=");
-      var7.append(var4);
-      var7.append(", title=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var8: java.lang.String = this.footerLabel;
+      val var4: java.util.List = this.gradientColors;
+      val var5: java.lang.String = this.headerText;
+      val var9: java.lang.String = this.iconSrc;
+      val var6: java.lang.Boolean = this.isActive;
+      val var7: java.lang.Boolean = this.isSpotifyParty;
+      val var12: Int = this.maxPartySize;
+      val var13: java.util.List = this.partyMemberAvatarURIs;
+      val var10: java.lang.String = this.partySizeText;
+      val var3: java.util.List = this.platformIconKeys;
+      val var1: java.lang.String = this.subtitle;
+      val var11: java.lang.String = this.title;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActivityRichPresenceInviteEmbed(footerLabel=");
+      var2.append(var8);
+      var2.append(", gradientColors=");
+      var2.append(var4);
+      var2.append(", headerText=");
+      var2.append(var5);
+      var2.append(", iconSrc=");
+      var2.append(var9);
+      var2.append(", isActive=");
+      var2.append(var6);
+      var2.append(", isSpotifyParty=");
+      var2.append(var7);
+      var2.append(", maxPartySize=");
+      var2.append(var12);
+      var2.append(", partyMemberAvatarURIs=");
+      var2.append(var13);
+      var2.append(", partySizeText=");
+      var2.append(var10);
+      var2.append(", platformIconKeys=");
+      var2.append(var3);
+      var2.append(", subtitle=");
+      var2.append(var1);
+      var2.append(", title=");
+      var2.append(var11);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

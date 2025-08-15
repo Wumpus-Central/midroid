@@ -166,7 +166,7 @@ public object HermesSamplingProfilerUtil {
       // 109: invokevirtual java/lang/Integer.intValue ()I
       // 10c: istore 2
       // 10d: goto 117
-      // 110: astore 10
+      // 110: astore 8
       // 112: goto 154
       // 115: bipush -1
       // 116: istore 2
@@ -206,10 +206,10 @@ public object HermesSamplingProfilerUtil {
       // 154: aload 9
       // 156: astore 1
       // 157: getstatic kotlin/Result.e Lkotlin/Result$a;
-      // 15a: astore 8
+      // 15a: astore 10
       // 15c: aload 9
       // 15e: astore 1
-      // 15f: aload 10
+      // 15f: aload 8
       // 161: invokestatic kotlin/c.a (Ljava/lang/Throwable;)Ljava/lang/Object;
       // 164: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 167: astore 8
@@ -317,15 +317,15 @@ public object HermesSamplingProfilerUtil {
       // 23a: aload 12
       // 23c: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 241: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 246: astore 12
+      // 246: astore 13
       // 248: aload 9
       // 24a: astore 1
-      // 24b: aload 12
+      // 24b: aload 13
       // 24d: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 252: ifeq 2be
       // 255: aload 9
       // 257: astore 1
-      // 258: aload 12
+      // 258: aload 13
       // 25a: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 25f: checkcast java/util/Map$Entry
       // 262: astore 14
@@ -335,12 +335,12 @@ public object HermesSamplingProfilerUtil {
       // 269: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 26e: checkcast java/lang/String
       // 271: invokestatic kotlin/text/StringsKt.toIntOrNull (Ljava/lang/String;)Ljava/lang/Integer;
-      // 274: astore 13
-      // 276: aload 13
+      // 274: astore 12
+      // 276: aload 12
       // 278: ifnull 29c
       // 27b: aload 9
       // 27d: astore 1
-      // 27e: aload 13
+      // 27e: aload 12
       // 280: invokevirtual java/lang/Number.intValue ()I
       // 283: aload 11
       // 285: invokevirtual java/lang/Integer.intValue ()I

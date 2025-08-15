@@ -159,32 +159,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var7: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var8: Int = this.accentColor;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var6: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var4: java.lang.String = this.spoilerDescription;
+      val var7: java.lang.String = this.spoilerDescription;
       val var9: Int = this.themedBackgroundColor;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ContainerComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", errorText=");
-      var6.append(var7);
-      var6.append(", components=");
-      var6.append(var3);
-      var6.append(", accentColor=");
-      var6.append(var8);
-      var6.append(", isSpoiler=");
-      var6.append(var2);
-      var6.append(", spoilerDescription=");
-      var6.append(var4);
-      var6.append(", themedBackgroundColor=");
-      var6.append(var9);
-      var6.append(")");
-      return var6.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ContainerComponent(type=");
+      var8.append(var1);
+      var8.append(", id=");
+      var8.append(var3);
+      var8.append(", errorText=");
+      var8.append(var4);
+      var8.append(", components=");
+      var8.append(var5);
+      var8.append(", accentColor=");
+      var8.append(var6);
+      var8.append(", isSpoiler=");
+      var8.append(var2);
+      var8.append(", spoilerDescription=");
+      var8.append(var7);
+      var8.append(", themedBackgroundColor=");
+      var8.append(var9);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

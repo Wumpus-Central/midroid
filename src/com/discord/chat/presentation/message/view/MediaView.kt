@@ -175,16 +175,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       I18nUtilsKt.i18nContentDescription$default(var10, I18nMessage.PLAY_FULL_VIDEO, null, 2, null);
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
-      val var12: GradientDrawable = new GradientDrawable();
-      var12.setShape(0);
-      var12.setStroke(
-         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var5: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var13: GradientDrawable = new GradientDrawable();
+      var13.setShape(0);
+      var13.setStroke(
+         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var12);
+      var5.z(var13);
    }
 
    @JvmStatic
@@ -246,10 +246,10 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var11: Context = this.getContext();
-            val var7: java.lang.Double = var1.getPortal();
-            var10 = var12.acquire(var11, var7, this.playerSettings);
+            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var7: Context = this.getContext();
+            val var12: java.lang.Double = var1.getPortal();
+            var10 = var11.acquire(var7, var12, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -302,26 +302,26 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
-               val var9: MediaPlayerView = this.mediaPlayerView;
-               var7 = new Pair(var6, var9);
+               val var7: MediaPlayerView = this.mediaPlayerView;
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var10), new q0(this, var10, var5), new r0(var5, this));
+               .addPortal(var1, (var6.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var4), new q0(this, var4, var5), new r0(var5, this));
          }
       }
    }
@@ -547,8 +547,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  var1 = new FlowCollector(this.this$0) {
+                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  val var4: FlowCollector = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -583,7 +583,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var4.collect(var1, this) === var3) {
+                  if (var1.collect(var4, this) === var3) {
                      return var3;
                   }
                }

@@ -126,28 +126,28 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    public override fun toString(): String {
       val var2: Long = this.receivedTimestamp;
       val var1: Boolean = this.silent;
-      val var7: java.lang.String = this.type;
-      val var4: java.lang.String = this.title;
-      val var9: java.lang.String = this.content;
-      val var6: java.lang.String = this.channelId;
-      val var8: java.lang.String = this.messageId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PushNotificationMeta(receivedTimestamp=");
-      var5.append(var2);
-      var5.append(", silent=");
-      var5.append(var1);
-      var5.append(", type=");
-      var5.append(var7);
-      var5.append(", title=");
-      var5.append(var4);
-      var5.append(", content=");
-      var5.append(var9);
-      var5.append(", channelId=");
-      var5.append(var6);
-      var5.append(", messageId=");
-      var5.append(var8);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.type;
+      val var9: java.lang.String = this.title;
+      val var5: java.lang.String = this.content;
+      val var7: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.messageId;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("PushNotificationMeta(receivedTimestamp=");
+      var8.append(var2);
+      var8.append(", silent=");
+      var8.append(var1);
+      var8.append(", type=");
+      var8.append(var4);
+      var8.append(", title=");
+      var8.append(var9);
+      var8.append(", content=");
+      var8.append(var5);
+      var8.append(", channelId=");
+      var8.append(var7);
+      var8.append(", messageId=");
+      var8.append(var6);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

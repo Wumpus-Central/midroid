@@ -51,7 +51,7 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
       if (var1 != null && this.blurViewPropertiesDirty) {
          if (!(this.blurTarget.get() == var1)) {
             this.blurTarget = new WeakReference<>(var1);
-            this.setupWith(var1.getViewRef()).d(var1.getViewRef().getBackground());
+            this.setupWith(var1.getViewRef()).c(var1.getViewRef().getBackground());
          }
 
          this.maybeUpdateBlurEnabled();

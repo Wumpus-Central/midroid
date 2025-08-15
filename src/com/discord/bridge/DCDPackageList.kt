@@ -74,7 +74,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
 
          @Override
          public boolean isFabric() {
-            return true;
+            return false;
          }
       };
    }

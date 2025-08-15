@@ -52,14 +52,14 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
    @NonNull
    public static MessageComponentContentInventoryViewBinding bind(@NonNull View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
-         SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.content_inventory_component_media_image;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
+            SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
                SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
                if (var2 != null) {
@@ -67,12 +67,12 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
                   TextView var7 = (TextView)a.a(var0, var1);
                   if (var7 != null) {
                      var1 = R.id.content_inventory_component_title;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.content_inventory_component_username;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var8, var6, var3, var2, var7, var5, var4);
+                        TextView var3 = (TextView)a.a(var0, var1);
+                        if (var3 != null) {
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var5, var4, var8, var2, var7, var6, var3);
                         }
                      }
                   }

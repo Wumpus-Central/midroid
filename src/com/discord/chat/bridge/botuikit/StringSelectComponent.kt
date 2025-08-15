@@ -151,8 +151,8 @@ public data class StringSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var5: Int = this.id.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var4: Int = this.state.hashCode();
       val var6: Int = this.customId.hashCode();
       var var2: Int = 0;
@@ -170,7 +170,7 @@ public data class StringSelectComponent(type: Int,
       return (
                (
                         (
-                                 ((((((var3 * 31 + var5) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                                 ((((((var5 * 31 + var3) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                                     + Integer.hashCode(this.maxValues)
                               )
                               * 31
@@ -184,40 +184,40 @@ public data class StringSelectComponent(type: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var11: ActionComponentState = this.state;
-      val var8: java.lang.String = this.customId;
-      val var9: java.lang.String = this.placeholder;
+      val var2: Int = this.type;
+      val var9: java.lang.String = this.id;
+      val var10: ActionComponentState = this.state;
+      val var7: java.lang.String = this.customId;
+      val var5: java.lang.String = this.placeholder;
       val var6: java.lang.String = this.accessibilityLabel;
-      val var2: Int = this.minValues;
-      val var3: Int = this.maxValues;
+      val var3: Int = this.minValues;
+      val var1: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var10: java.util.List = this.options;
-      val var7: java.util.List = this.selectedOptions;
+      val var11: java.util.List = this.options;
+      val var8: java.util.List = this.selectedOptions;
       val var12: StringBuilder = new StringBuilder();
       var12.append("StringSelectComponent(type=");
-      var12.append(var1);
+      var12.append(var2);
       var12.append(", id=");
-      var12.append(var5);
-      var12.append(", state=");
-      var12.append(var11);
-      var12.append(", customId=");
-      var12.append(var8);
-      var12.append(", placeholder=");
       var12.append(var9);
+      var12.append(", state=");
+      var12.append(var10);
+      var12.append(", customId=");
+      var12.append(var7);
+      var12.append(", placeholder=");
+      var12.append(var5);
       var12.append(", accessibilityLabel=");
       var12.append(var6);
       var12.append(", minValues=");
-      var12.append(var2);
-      var12.append(", maxValues=");
       var12.append(var3);
+      var12.append(", maxValues=");
+      var12.append(var1);
       var12.append(", disabled=");
       var12.append(var4);
       var12.append(", options=");
-      var12.append(var10);
+      var12.append(var11);
       var12.append(", selectedOptions=");
-      var12.append(var7);
+      var12.append(var8);
       var12.append(")");
       return var12.toString();
    }

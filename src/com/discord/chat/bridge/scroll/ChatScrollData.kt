@@ -72,10 +72,10 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.type.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
-      val var5: Int = java.lang.Boolean.hashCode(this.animate);
-      val var3: Int = java.lang.Boolean.hashCode(this.highlight);
+      val var3: Int = this.type.hashCode();
+      val var2: Int = Integer.hashCode(this.index);
+      val var4: Int = java.lang.Boolean.hashCode(this.animate);
+      val var5: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
       if (this.position == null) {
          var1 = 0;
@@ -83,14 +83,14 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var2 * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1;
+      return (((var3 * 31 + var2) * 31 + var4) * 31 + var5) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var5: ChatScrollType = this.type;
       val var1: Int = this.index;
-      val var2: Boolean = this.animate;
-      val var3: Boolean = this.highlight;
+      val var3: Boolean = this.animate;
+      val var2: Boolean = this.highlight;
       val var4: Int = this.position;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ChatScrollData(type=");
@@ -98,9 +98,9 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
       var6.append(", index=");
       var6.append(var1);
       var6.append(", animate=");
-      var6.append(var2);
-      var6.append(", highlight=");
       var6.append(var3);
+      var6.append(", highlight=");
+      var6.append(var2);
       var6.append(", position=");
       var6.append(var4);
       var6.append(")");

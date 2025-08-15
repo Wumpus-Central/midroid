@@ -74,16 +74,16 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
 
    public override fun toString(): String {
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.icon;
-      val var1: java.lang.String = this.applicationId;
+      val var1: java.lang.String = this.icon;
+      val var4: java.lang.String = this.applicationId;
       val var2: java.util.List = this.content;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GameMentionContentNode(channelId=");
       var5.append(var3);
       var5.append(", icon=");
-      var5.append(var4);
-      var5.append(", applicationId=");
       var5.append(var1);
+      var5.append(", applicationId=");
+      var5.append(var4);
       var5.append(", content=");
       var5.append(var2);
       var5.append(")");

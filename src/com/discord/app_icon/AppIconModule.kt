@@ -31,9 +31,9 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
 
    public override fun setIcon(id: String, promise: Promise) {
       try {
-         val var3: AppIconUtil = AppIconUtil.INSTANCE;
-         val var4: ReactApplicationContext = this.getReactApplicationContext();
-         var3.setAppIcon(var4, var1);
+         val var4: AppIconUtil = AppIconUtil.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         var4.setAppIcon(var3, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

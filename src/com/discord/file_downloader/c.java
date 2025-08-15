@@ -8,6 +8,6 @@ public final class c implements Function0 {
    public final LongRef d;
 
    public final Object invoke() {
-      return <unrepresentable>.a(this.d);
+      return <unrepresentable>.e(this.d);
    }
 }

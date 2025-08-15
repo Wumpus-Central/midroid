@@ -21,7 +21,7 @@ internal class ReactEventRegistry {
       val var3: LinkedHashMap = new LinkedHashMap();
 
       for (java.lang.String var1 : this.events.values()) {
-         var3.put(this.prefixWithTop(var1), L.m(new Pair[]{s.a("registrationName", var1)}));
+         var3.put(var1, L.m(new Pair[]{s.a("registrationName", var1)}));
       }
 
       return var3;

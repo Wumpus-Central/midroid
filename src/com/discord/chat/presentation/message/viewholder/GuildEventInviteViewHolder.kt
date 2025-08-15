@@ -48,12 +48,12 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       val var8: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var13: GuildEventInviteView = this.guildEventInviteView;
+      val var20: GuildEventInviteView = this.guildEventInviteView;
       this.guildEventInviteView.setHeader(var8.getHeaderIcon(), var8.getHeaderText(), var8.getHeaderColor());
-      var13.setCreatorAvatar(var8.getCreatorAvatar());
-      var13.setBadge(var8.getBadgeIcon(), var8.getBadgeCount());
-      var13.setTitle(var8.getTitleText(), var8.getTitleColor());
-      var13.setDescription-iRUqyQU(
+      var20.setCreatorAvatar(var8.getCreatorAvatar());
+      var20.setBadge(var8.getBadgeIcon(), var8.getBadgeCount());
+      var20.setTitle(var8.getTitleText(), var8.getTitleColor());
+      var20.setDescription-iRUqyQU(
          var8.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
@@ -218,9 +218,9 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var13.setGuild(var8.getGuildName(), var8.getGuildIcon());
-      var13.setChannel(var8.getChannelIcon(), var8.getChannelName());
-      var13.setAcceptButton(
+      var20.setGuild(var8.getGuildName(), var8.getGuildIcon());
+      var20.setChannel(var8.getChannelIcon(), var8.getChannelName());
+      var20.setAcceptButton(
          var8.getAcceptLabelIcon(),
          var8.getAcceptLabelText(),
          var8.getAcceptLabelColor(),
@@ -228,6 +228,6 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          var8.getAcceptLabelBackgroundColor(),
          new o(this, var1)
       );
-      var13.setSecondaryButton(var8.getSecondaryActionIcon(), new p(this, var1));
+      var20.setSecondaryButton(var8.getSecondaryActionIcon(), new p(this, var1));
    }
 }

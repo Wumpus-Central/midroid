@@ -23,25 +23,25 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
    }
 
    public open fun configure(component: FileDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var7: java.lang.String = var3.getContainerId();
-      val var10: java.lang.String = var1.getId();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("FileDisplayComponent(");
-      var6.append(var10);
-      var6.append(")");
-      val var8: SpoilerAttributes = var5.forGenericMedia(var1, var7, var6.toString(), var1.getFile().getUrl(), null);
-      val var13: java.lang.String = var1.getName();
-      val var12: java.lang.String = var1.getSize();
-      val var11: java.lang.String = var1.getFile().getUrl();
+      val var7: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var10: java.lang.String = var3.getContainerId();
+      var var6: java.lang.String = var1.getId();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FileDisplayComponent(");
+      var5.append(var6);
+      var5.append(")");
+      val var14: SpoilerAttributes = var7.forGenericMedia(var1, var10, var5.toString(), var1.getFile().getUrl(), null);
+      val var12: java.lang.String = var1.getName();
+      val var11: java.lang.String = var1.getSize();
+      var6 = var1.getFile().getUrl();
       val var4: Boolean = var1.isSpoiler();
-      val var14: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
+      val var8: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
       var var9: SpoilerConfig = null;
-      if (var8 != null) {
-         var9 = SpoilerAttributes.configure$default(var8, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
+      if (var14 != null) {
+         var9 = SpoilerAttributes.configure$default(var14, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
       }
 
-      this.setContent(var13, var12, var11, var14, var4, var9, null, null);
+      this.setContent(var12, var11, var6, var8, var4, var9, null, null);
    }
 
    public override fun getComponentType(): KClass<FileDisplayComponent> {

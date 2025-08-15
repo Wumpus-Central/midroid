@@ -49,8 +49,8 @@ public sealed class ListOperation protected constructor() {
       init {
          this.range = var1;
          this.first = var1.a();
-         this.last = var1.g();
-         this.count = var1.g() - var1.a() + 1;
+         this.last = var1.m();
+         this.count = var1.m() - var1.a() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -133,8 +133,8 @@ public sealed class ListOperation protected constructor() {
       init {
          this.range = var1;
          this.first = var1.a();
-         this.last = var1.g();
-         this.count = var1.g() - var1.a() + 1;
+         this.last = var1.m();
+         this.count = var1.m() - var1.a() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -217,8 +217,8 @@ public sealed class ListOperation protected constructor() {
       init {
          this.range = var1;
          this.first = var1.a();
-         this.last = var1.g();
-         this.count = var1.g() - var1.a() + 1;
+         this.last = var1.m();
+         this.count = var1.m() - var1.a() + 1;
       }
 
       public operator fun component1(): IntRange {

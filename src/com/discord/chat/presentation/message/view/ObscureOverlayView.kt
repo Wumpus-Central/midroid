@@ -78,7 +78,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
 
    public fun configure(header: String, description: String, parent: ViewGroup, isOverlayVisible: Boolean, onReveal: () -> Unit, onHide: () -> Unit) {
       this.handleRevealedState(var4);
-      this.binding.blurView.setupWith(var3).g(24.0F).a(Color.argb(80, 0, 0, 0)).d(var3.getBackground()).c(true);
+      this.binding.blurView.setupWith(var3).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var3.getBackground()).a(true);
       this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var6, this));
       this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var5);
       this.binding.descriptionLabel.setText(var1);

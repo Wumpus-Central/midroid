@@ -46,7 +46,7 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
    }
 
    public fun deserialize(decoder: Decoder): Any {
-      var var3: Int = var1.h();
+      var var3: Int = var1.j();
       val var2: Int = h.W(this.choicesNumbers, var3);
       if ((var2 == -1 || var2 < 0 || var2 >= this.choices.length) && this.default != null) {
          return this.default;
@@ -78,19 +78,19 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
    public fun serialize(encoder: Encoder, value: Any) {
       val var3: Int = h.W(this.choices, var2);
       if (var3 == -1 && this.default != null) {
-         var1.B(this.default.getSerialNumber());
+         var1.x(this.default.getSerialNumber());
          return;
       } else if (var3 != -1) {
-         var1.B(this.choicesNumbers[var3]);
+         var1.x(this.choicesNumbers[var3]);
       } else {
-         val var6: java.lang.String = this.serialName;
-         val var7: Array<IntEnum> = this.choices;
+         val var7: java.lang.String = this.serialName;
+         val var6: Array<IntEnum> = this.choices;
          val var5: StringBuilder = new StringBuilder();
          var5.append(var2);
          var5.append(" is not a valid enum ");
-         var5.append(var6);
-         var5.append(", choices are ");
          var5.append(var7);
+         var5.append(", choices are ");
+         var5.append(var6);
          throw new IllegalStateException(var5.toString().toString());
       }
    }

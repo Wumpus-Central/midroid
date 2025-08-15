@@ -28,8 +28,8 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
       if (!(var1 == this.sticker)) {
          this.sticker = var1;
-         val var8: StickerView = this.stickerView;
-         val var7: java.lang.String = var1.getUrl();
+         val var7: StickerView = this.stickerView;
+         val var8: java.lang.String = var1.getUrl();
          val var6: Boolean;
          if (var1.getRenderMode() == 0) {
             var6 = true;
@@ -37,7 +37,7 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
             var6 = false;
          }
 
-         var8.asLottie(var7, var4, var5, var6, var1.getAsset(), var1.getRenderMode(), var1.getAccessibilityLabel());
+         var7.asLottie(var8, var4, var5, var6, var1.getAsset(), var1.getRenderMode(), var1.getAccessibilityLabel());
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new K(var2, var1), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new L(var3, var1), 1, null);
       }

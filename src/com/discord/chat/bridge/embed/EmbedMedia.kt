@@ -123,8 +123,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var7: Int = Integer.hashCode(this.height);
+      val var7: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -144,37 +144,37 @@ public data class EmbedMedia(url: String,
          var4 = this.contentType.hashCode();
       }
 
-      return ((((((var5 * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
+      return ((((((var5 * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var8: java.lang.String = this.proxyURL;
+      val var7: java.lang.String = this.url;
+      val var6: java.lang.String = this.proxyURL;
       val var2: Int = this.width;
       val var1: Int = this.height;
-      val var7: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
+      val var5: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var5: java.lang.String = this.contentType;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("EmbedMedia(url=");
-      var9.append(var4);
-      var9.append(", proxyURL=");
-      var9.append(var8);
-      var9.append(", width=");
-      var9.append(var2);
-      var9.append(", height=");
-      var9.append(var1);
-      var9.append(", placeholder=");
-      var9.append(var7);
-      var9.append(", placeholderVersion=");
-      var9.append(var6);
-      var9.append(", srcIsAnimated=");
-      var9.append(var3);
-      var9.append(", contentType=");
-      var9.append(var5);
-      var9.append(")");
-      return var9.toString();
+      val var8: java.lang.String = this.contentType;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbedMedia(url=");
+      var4.append(var7);
+      var4.append(", proxyURL=");
+      var4.append(var6);
+      var4.append(", width=");
+      var4.append(var2);
+      var4.append(", height=");
+      var4.append(var1);
+      var4.append(", placeholder=");
+      var4.append(var5);
+      var4.append(", placeholderVersion=");
+      var4.append(var9);
+      var4.append(", srcIsAnimated=");
+      var4.append(var3);
+      var4.append(", contentType=");
+      var4.append(var8);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

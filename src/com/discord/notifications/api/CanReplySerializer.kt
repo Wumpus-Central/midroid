@@ -15,7 +15,7 @@ public object CanReplySerializer : KSerializer {
 
 
    public open fun deserialize(decoder: Decoder): Boolean {
-      return var1.z() == "can_reply";
+      return var1.n() == "can_reply";
    }
 
    public open fun serialize(encoder: Encoder, value: Boolean) {

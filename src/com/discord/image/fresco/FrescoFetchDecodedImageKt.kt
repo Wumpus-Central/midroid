@@ -65,8 +65,8 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 
             this.$continuation.resumeWith(Result.b(var4));
          }
-      }, access$getExecutorSupplier$p().d());
-      var6.e(new Function1<java.lang.Throwable, Unit>(var8) {
+      }, access$getExecutorSupplier$p().a());
+      var6.f(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -90,16 +90,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var9: a = Result.e;
-      var8 = Result.b(Uri.parse(var1));
-   } catch (var6: java.lang.Throwable) {
       val var5: a = Result.e;
-      var8 = Result.b(c.a(var6));
+      var9 = Result.b(Uri.parse(var1));
+   } catch (var6: java.lang.Throwable) {
+      val var8: a = Result.e;
+      var9 = Result.b(c.a(var6));
       break label15;
    }
 
-   var var10: Any = var8;
-   if (Result.g(var8)) {
+   var var10: Any = var9;
+   if (Result.g(var9)) {
       var10 = null;
    }
 
@@ -130,23 +130,23 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
-      }, executorSupplier.d());
+      }, executorSupplier.a());
    }
 }
 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
    label16:
    try {
-      val var8: a = Result.e;
-      var7 = Result.b(Uri.parse(var1));
-   } catch (var5: java.lang.Throwable) {
       val var4: a = Result.e;
-      var7 = Result.b(c.a(var5));
+      var8 = Result.b(Uri.parse(var1));
+   } catch (var5: java.lang.Throwable) {
+      val var7: a = Result.e;
+      var8 = Result.b(c.a(var5));
       break label16;
    }
 
-   var var9: Any = var7;
-   if (Result.g(var7)) {
+   var var9: Any = var8;
+   if (Result.g(var8)) {
       var9 = null;
    }
 

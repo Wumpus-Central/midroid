@@ -55,11 +55,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    }
 
    private fun emitOnChannelQueryUpdateEvent(query: String) {
-      this.emitOnChannelQueryUpdate.invoke(var1);
+      this.invokeJs("onChannelQueryUpdate", var1);
    }
 
    private fun emitOnLayoutTrashedEvent() {
-      this.emitOnLayoutTrashed.invoke();
+      invokeJs$default(this, "onLayoutTrashed", null, 2, null);
    }
 
    private fun floatBubbleToHorizontalEdge(bubble: OverlayBubbleWrap) {
@@ -412,11 +412,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
             });
          }
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

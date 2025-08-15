@@ -44,12 +44,12 @@ public class DeviceResourceUsageRecorder {
       private final val initialAppSendBytes: Long
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
-         val var4: Response = var1.a(var1.q());
+         val var4: Response = var1.a(var1.w());
          val var3: ResponseBody = var4.a();
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.n(java.lang.Long.MAX_VALUE);
+            var5.s(java.lang.Long.MAX_VALUE);
             var2.setBytesReceived(var2.getBytesReceived() + var5.j().W1());
          }
 

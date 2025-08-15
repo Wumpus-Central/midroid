@@ -82,10 +82,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var5: Int = GIF_INDICATOR_PADDING;
+         val var6: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -208,9 +208,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var33: SpoilerViewManager = this.spoilerViewManager;
-      val var34: ConstraintLayout = this.binding.container;
-      val var28: SimpleDraweeView = this.binding.image;
+      val var31: SpoilerViewManager = this.spoilerViewManager;
+      val var28: ConstraintLayout = this.binding.container;
+      val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,10 +223,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var33.configureSpoiler(var8, this, var34, var28, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var29: ConstraintLayout = this.binding.container;
-      var32.configureAttachmentOverlay(this, var29, var9, var10);
+      var31.configureSpoiler(var8, this, var28, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var32: ConstraintLayout = this.binding.container;
+      var29.configureAttachmentOverlay(this, var32, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -358,18 +358,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
-         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
-         var3.append(var1);
-         var3.append(", resizeMode=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var1: Int = this.width;
+         val var2: Int = this.height;
+         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TargetSize(width=");
+         var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
+         var4.append(", resizeMode=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }
