@@ -50,7 +50,7 @@ import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
-@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,262:1\n176#2,2:263\n257#2,2:265\n257#2,2:267\n257#2,2:269\n257#2,2:271\n257#2,2:273\n257#2,2:275\n257#2,2:277\n257#2,2:279\n257#2,2:281\n257#2,2:283\n278#2,2:285\n257#2,2:287\n1872#3,3:289\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n66#1:263,2\n102#1:265,2\n103#1:267,2\n124#1:269,2\n126#1:271,2\n133#1:273,2\n134#1:275,2\n135#1:277,2\n140#1:279,2\n141#1:281,2\n142#1:283,2\n150#1:285,2\n153#1:287,2\n257#1:289,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n1872#3,3:292\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n260#1:292,3\n*E\n"])
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
    ComponentView<SelectComponent> {
    public final val binding: MessageComponentSelectViewBinding
@@ -96,7 +96,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       if (var1.isInModal() || !var1.getWidthInfo().isLargeWidthRenderingMode()) {
          this.setMaxWidth(Integer.MAX_VALUE);
          this.setMinWidth(0);
-         this.setLayoutParams(new android.widget.LinearLayout.LayoutParams(-1, -2));
+         this.setLayoutParams(new android.widget.FrameLayout.LayoutParams(-1, -2));
       } else if (var1.isInContainerComponent()) {
          this.setMaxWidth(Integer.MAX_VALUE);
          this.setMinWidth(SizeUtilsKt.getDpToPx(400));

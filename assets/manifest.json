@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4494",
-    "commit": "cbfef1c2a1ccfdec741b21beb0d7aa85405a16c8",
+    "build": "4500",
+    "commit": "70ae1db9f454e755450be11579e67f43178e3618",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "68c6886c44251ca5c54e39a5f61e5e88",
+    "app/src/main/assets/index.android.bundle": "c07c132e212134e562c6c9616f9ab8e0",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1331_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
