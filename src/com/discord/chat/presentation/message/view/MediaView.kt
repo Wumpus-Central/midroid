@@ -30,10 +30,10 @@ import com.discord.media_player.MediaPlayer.Event
 import com.discord.media_player.MediaPlayer.PlayerSettings
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.portals.from_native.PortalFromNativeContextManager
 import com.discord.portals.utils.ViewRemoveFromParentKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
@@ -175,16 +175,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       I18nUtilsKt.i18nContentDescription$default(var10, I18nMessage.PLAY_FULL_VIDEO, null, 2, null);
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
-      val var12: GradientDrawable = new GradientDrawable();
-      var12.setShape(0);
-      var12.setStroke(
-         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var13: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var5: GradientDrawable = new GradientDrawable();
+      var5.setShape(0);
+      var5.setStroke(
+         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var12);
+      var13.z(var5);
    }
 
    @JvmStatic
@@ -266,7 +266,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          MediaPlayer.preparePlayer$default(var10, var1, true, var2, 0L, var4, null, 40, null);
          this.mediaPlayer = var10;
          this.mediaPlayerView = var4;
-         ViewMeasureExtensionsKt.measureAndLayout(this);
+         ReactViewExtensionsKt.measureAndLayout(this);
          return new Pair(var10, var4);
       }
    }
@@ -380,7 +380,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             var1, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262143, null
          );
          var1.addView(var2, 0);
-         ViewMeasureExtensionsKt.measureAndLayout(var1);
+         ReactViewExtensionsKt.measureAndLayout(var1);
       }
 
       var1.addOnAttachStateChangeListener(var1.attachStateChangeListener);
@@ -547,8 +547,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  var1 = new FlowCollector(this.this$0) {
+                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  val var4: FlowCollector = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -583,7 +583,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var4.collect(var1, this) === var3) {
+                  if (var1.collect(var4, this) === var3) {
                      return var3;
                   }
                }

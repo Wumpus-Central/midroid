@@ -3119,10 +3119,28 @@
     "H LEFT"
   ],
   "nHOGt7": "Visit Shop",
-  "MQkmBQ": "Buy Avatar Decorations and Profile Effects to personalize your profile.",
   "gxEIl5": "Nitro members get discounts on everything in the Shop.",
-  "Lh3QfX": "New and popular styles include SpongeBob, Anime, Galaxy, Cyberpunk, and more.",
-  "RUtg4u": "Shop anywhere, anytime",
+  "gzTLCQ": [
+    [
+      8,
+      "$b",
+      [
+        "NEW!"
+      ]
+    ],
+    " Surprise (or troll) your friends with the perfect gift from the redesigned mobile Shop."
+  ],
+  "WbQm//": [
+    [
+      8,
+      "$b",
+      [
+        "NEW!"
+      ]
+    ],
+    " Make your name stand out no matter where you are. Nameplates are now available for purchase on mobile!"
+  ],
+  "4wA9a2": "Shop Anywhere, Anytime",
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -32055,6 +32073,13 @@
       1,
       "subgameName"
     ]
+  ],
+  "HjVwGx": [
+    [
+      1,
+      "subgameName"
+    ],
+    " • Roblox"
   ],
   "LPJmLy": "Roles",
   "3OxP4u": [

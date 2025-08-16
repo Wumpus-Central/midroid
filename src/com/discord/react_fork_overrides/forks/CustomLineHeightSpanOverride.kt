@@ -6,11 +6,11 @@ import com.facebook.react.views.text.internal.span.CustomLineHeightSpan
 internal object CustomLineHeightSpanOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: Array<Any>) {
-      var var2: Any = ((Object[])var0)[0];
-      var0 = ((Object[])var0)[1];
-      val var1: CustomLineHeightSpanOverride = INSTANCE;
-      var2 = var2 as FontMetricsInt;
-      var1.overrideLineHeight((FontMetricsInt)var2, var0 as Int);
+      var var1: Any = var0[0];
+      val var2: Any = var0[1];
+      val var3: CustomLineHeightSpanOverride = INSTANCE;
+      var1 = var1 as FontMetricsInt;
+      var3.overrideLineHeight((FontMetricsInt)var1, var2 as Int);
    }
 
    private fun overrideLineHeight(fm: FontMetricsInt, mHeight: Int) {

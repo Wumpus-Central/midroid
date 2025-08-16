@@ -18,7 +18,7 @@ public abstract class NativeKeyCommandsModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var3 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var2 = new HashSet<>(
             Arrays.asList(
@@ -26,20 +26,20 @@ public abstract class NativeKeyCommandsModuleSpec extends ReactContextBaseJavaMo
             )
          );
          HashSet var4 = new HashSet();
-         HashSet var1 = new HashSet(var3.keySet());
-         var1.removeAll(var2);
-         var1.removeAll(var4);
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
+         HashSet var3 = new HashSet(var1.keySet());
+         var3.removeAll(var2);
+         var3.removeAll(var4);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var2.removeAll(var3.keySet());
+         var2.removeAll(var1.keySet());
          if (!var2.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
          }
       }
 
-      return var3;
+      return var1;
    }
 
    public String getName() {

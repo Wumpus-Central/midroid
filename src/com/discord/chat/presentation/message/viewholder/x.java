@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.viewholder;
 
+import com.discord.chat.bridge.contentnode.LinkContentNode;
 import com.discord.chat.presentation.events.ChatEventHandler;
 import kotlin.jvm.functions.Function1;
 
@@ -9,6 +10,6 @@ public final class x implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageComponentsViewHolder.b(this.d, this.e, (String)var1);
+      return MessageComponentsViewHolder.e(this.d, this.e, (LinkContentNode)var1);
    }
 }

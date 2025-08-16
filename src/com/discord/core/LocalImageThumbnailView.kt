@@ -174,10 +174,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var3 != 0 && var22 != 0) {
-                     var1 = new Size(var3, var22);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var22 != 0 && var3 != 0) {
+                     var1 = new Size(var22, var3);
                   } else {
                      var1 = new Size(200, 200);
                   }

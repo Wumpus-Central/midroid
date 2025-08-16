@@ -127,30 +127,30 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Float = this.totalDurationSecs;
-      val var2: Float = this.endDurationSecs;
-      val var8: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Float = this.totalDurationSecs;
+      val var3: Float = this.endDurationSecs;
+      val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var1: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var7: java.lang.String = this.attachmentId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var6.append(var5);
-      var6.append(", totalDurationSecs=");
-      var6.append(var3);
-      var6.append(", endDurationSecs=");
-      var6.append(var2);
-      var6.append(", senderUserId=");
-      var6.append(var8);
-      var6.append(", durationListeningSecs=");
-      var6.append(var1);
-      var6.append(", isVoiceMessage=");
-      var6.append(var4);
-      var6.append(", attachmentId=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.attachmentId;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("MediaAttachmentPlaybackEndedData(messageId=");
+      var8.append(var6);
+      var8.append(", totalDurationSecs=");
+      var8.append(var2);
+      var8.append(", endDurationSecs=");
+      var8.append(var3);
+      var8.append(", senderUserId=");
+      var8.append(var7);
+      var8.append(", durationListeningSecs=");
+      var8.append(var1);
+      var8.append(", isVoiceMessage=");
+      var8.append(var4);
+      var8.append(", attachmentId=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

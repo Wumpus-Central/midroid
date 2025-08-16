@@ -165,16 +165,16 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          if (var46 != null && !StringsKt.c0(var46)) {
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
-            val var12: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var11: Context = var38.getContext();
+            val var11: AnnotatedStructurableText = var34.getStructuredBodyText();
+            val var12: Context = var38.getContext();
             val var47: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
-                  var12,
                   var11,
+                  var12,
                   var47,
                   false,
                   true,

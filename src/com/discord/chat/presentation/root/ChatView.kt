@@ -112,11 +112,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 

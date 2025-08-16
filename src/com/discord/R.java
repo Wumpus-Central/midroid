@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_wqjqosmk7bpfvij34z6345xnvy_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_x5na67bm6vl3ahbvmm64d52xdi_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_x5na67bm6vl3ahbvmm64d52xdi_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_x5na67bm6vl3ahbvmm64d52xdi_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_x5na67bm6vl3ahbvmm64d52xdi_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -280,8 +280,8 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_slashicon;
       public static int design_components_icon_native_redesign_generated_images_soundboardicon;
       public static int design_components_icon_native_redesign_generated_images_soundboardslashicon;
-      public static int design_components_icon_native_redesign_generated_images_sparklesicon;
       public static int design_components_icon_native_redesign_generated_images_spoilericon;
+      public static int design_components_icon_native_redesign_generated_images_spotifyneutralicon;
       public static int design_components_icon_native_redesign_generated_images_staffbadgeicon;
       public static int design_components_icon_native_redesign_generated_images_stageicon;
       public static int design_components_icon_native_redesign_generated_images_stagelockicon;
@@ -877,7 +877,6 @@ public final class R {
       public static int images_native_main_tabs_examplevoicechatactivity;
       public static int images_native_main_tabs_notificationcenter;
       public static int images_native_mfaserver;
-      public static int images_native_mobile_shop_marketing_banner;
       public static int images_native_notifications_feedback;
       public static int images_native_oauth2_background;
       public static int images_native_oauth2_failureheader;
@@ -2124,7 +2123,6 @@ public final class R {
       public static int intl_messages_internationalcompiledmessages;
       public static int intl_messages_untranslatedcompiledmessages;
       public static int modules_activity_privacy_activityprivacycompiledmessages;
-      public static int modules_clicker_game_clickergamecompiledmessages;
       public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_display_name_styles_intl_displaynamestylescompiledmessages;

@@ -174,7 +174,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    public fun configure(component: SelectComponent, componentContext: ComponentContext) {
-      var var10: java.lang.String = var1.getPlaceholder();
+      val var10: java.lang.String = var1.getPlaceholder();
       this.configureWidth(var2);
       var var11: View = this.binding.getRoot();
       var var5: Byte = 4;
@@ -219,19 +219,19 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var13: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var35: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
-                           val var35: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           var10 = var13.getIconSrc();
-                           val var12: Int = var13.getIconColor();
+                           val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var13: java.lang.String = var35.getIconSrc();
+                           val var12: Int = var35.getIconColor();
                            val var16: Boolean;
-                           if (var13.getType() === SelectOptionType.USER) {
+                           if (var35.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var35, var10, var12, var16);
+                           this.setImage(var22, var13, var12, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;

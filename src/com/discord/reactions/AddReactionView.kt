@@ -29,8 +29,8 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
    }
 
    init {
-      val var8: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var8;
+      val var5: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var5;
       this.setOrientation(0);
       this.setGravity(16);
       val var6: ReactionView.Companion = ReactionView.Companion;
@@ -38,12 +38,12 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       val var3: Int = VERTICAL_PADDING;
       this.setPadding(var4, VERTICAL_PADDING, var6.getHORIZ_PADDING(), var3);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var6.getCORNER_RADIUS(), null, 0, 12, null);
-      val var5: TextView = var8.addReactionText;
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
-      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      var5.setPadding(var6.getHORIZ_PADDING(), 0, var6.getHORIZ_PADDING(), 0);
-      val var7: SimpleDraweeView = var8.addReactionImage;
+      val var8: TextView = var5.addReactionText;
+      DiscordFontUtilsKt.setDiscordFont(var8, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var8, 14.0F, 14.0F);
+      var8.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var8.setPadding(var6.getHORIZ_PADDING(), 0, var6.getHORIZ_PADDING(), 0);
+      val var7: SimpleDraweeView = var5.addReactionImage;
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.AddReaction);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getInteractiveNormal());
       var7.setScaleType(ScaleType.FIT_CENTER);

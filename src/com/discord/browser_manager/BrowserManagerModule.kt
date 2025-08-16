@@ -43,9 +43,9 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
    }
 
    public override fun openInChromeURL(url: String, promise: Promise) {
-      val var4: BrowserManager = BrowserManager.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var4.tryOpenUrlExternally(var3, var1, new d(var2));
+      val var3: BrowserManager = BrowserManager.INSTANCE;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      var3.tryOpenUrlExternally(var4, var1, new d(var2));
    }
 
    public override fun selectBrowser(browser: Double) {

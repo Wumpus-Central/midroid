@@ -323,24 +323,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var3: Long = this.id;
-         val var6: java.lang.String = this.fileName;
-         val var5: java.lang.String = this.relativePath;
+         val var1: Long = this.id;
+         val var5: java.lang.String = this.fileName;
+         val var7: java.lang.String = this.relativePath;
          val var8: Uri = this.uri;
-         val var1: Long = this.dateAdded;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("ScreenshotData(id=");
-         var7.append(var3);
-         var7.append(", fileName=");
-         var7.append(var6);
-         var7.append(", relativePath=");
-         var7.append(var5);
-         var7.append(", uri=");
-         var7.append(var8);
-         var7.append(", dateAdded=");
-         var7.append(var1);
-         var7.append(")");
-         return var7.toString();
+         val var3: Long = this.dateAdded;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("ScreenshotData(id=");
+         var6.append(var1);
+         var6.append(", fileName=");
+         var6.append(var5);
+         var6.append(", relativePath=");
+         var6.append(var7);
+         var6.append(", uri=");
+         var6.append(var8);
+         var6.append(", dateAdded=");
+         var6.append(var3);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

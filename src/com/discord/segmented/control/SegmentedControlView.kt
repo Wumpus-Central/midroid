@@ -14,8 +14,8 @@ import androidx.core.view.Z
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.properties.ReadWriteProperty
@@ -231,7 +231,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
          var3.width = var1;
          var4.setLayoutParams(var3);
-         ViewMeasureExtensionsKt.measureAndLayout(this);
+         ReactViewExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }
    }
@@ -266,7 +266,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
          }
       }
 
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      ReactViewExtensionsKt.measureAndLayout(this);
       this.animateSelection(var1 xor true);
    }
 

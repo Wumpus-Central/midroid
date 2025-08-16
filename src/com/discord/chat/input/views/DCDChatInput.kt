@@ -10,8 +10,8 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.appcompat.widget.AppCompatEditText
 import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.jvm.internal.Ref.BooleanRef
@@ -32,7 +32,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @JvmStatic
    fun `measureAndLayoutRunnable$lambda$0`(var0: DCDChatInput) {
-      ViewMeasureExtensionsKt.measureAndLayout(var0);
+      ReactViewExtensionsKt.measureAndLayout(var0);
    }
 
    private fun setupExternalKeyboardSendRequests() {

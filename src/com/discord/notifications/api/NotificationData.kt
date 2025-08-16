@@ -660,19 +660,19 @@ public data class NotificationData(type: String,
       } else if (var1 !is NotificationData) {
          return false;
       } else {
-         var1 = var1;
-         if (!(this.type == var1.type)) {
+         val var4: NotificationData = var1 as NotificationData;
+         if (!(this.type == (var1 as NotificationData).type)) {
             return false;
          } else {
             var var2: Boolean;
             label244: {
                if (this.messageId == null) {
-                  if (var1.messageId == null) {
+                  if (var4.messageId == null) {
                      var2 = true;
                      break label244;
                   }
-               } else if (var1.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+               } else if (var4.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                   break label244;
                }
 
@@ -681,114 +681,114 @@ public data class NotificationData(type: String,
 
             if (!var2) {
                return false;
-            } else if (!(this.messageActivityType == var1.messageActivityType)) {
+            } else if (!(this.messageActivityType == var4.messageActivityType)) {
                return false;
-            } else if (!(this.messageApplicationName == var1.messageApplicationName)) {
+            } else if (!(this.messageApplicationName == var4.messageApplicationName)) {
                return false;
-            } else if (!(this.messageType == var1.messageType)) {
+            } else if (!(this.messageType == var4.messageType)) {
                return false;
-            } else if (!(this.messageContent == var1.messageContent)) {
+            } else if (!(this.messageContent == var4.messageContent)) {
                return false;
-            } else if (!(this.messageFlags == var1.messageFlags)) {
+            } else if (!(this.messageFlags == var4.messageFlags)) {
                return false;
-            } else if (!(this.channelType == var1.channelType)) {
+            } else if (!(this.channelType == var4.channelType)) {
                return false;
-            } else if (!(this.channelName == var1.channelName)) {
+            } else if (!(this.channelName == var4.channelName)) {
                return false;
-            } else if (!(this.channelId == var1.channelId)) {
+            } else if (!(this.channelId == var4.channelId)) {
                return false;
-            } else if (!(this.channelIcon == var1.channelIcon)) {
+            } else if (!(this.channelIcon == var4.channelIcon)) {
                return false;
-            } else if (!(this.parentName == var1.parentName)) {
+            } else if (!(this.parentName == var4.parentName)) {
                return false;
-            } else if (!(this.parentId == var1.parentId)) {
+            } else if (!(this.parentId == var4.parentId)) {
                return false;
-            } else if (!(this.messageReferenceType == var1.messageReferenceType)) {
+            } else if (!(this.messageReferenceType == var4.messageReferenceType)) {
                return false;
-            } else if (!(this.channelRtcRegion == var1.channelRtcRegion)) {
+            } else if (!(this.channelRtcRegion == var4.channelRtcRegion)) {
                return false;
-            } else if (!(this.ackChannelIds == var1.ackChannelIds)) {
+            } else if (!(this.ackChannelIds == var4.ackChannelIds)) {
                return false;
-            } else if (!(this.userId == var1.userId)) {
+            } else if (!(this.userId == var4.userId)) {
                return false;
-            } else if (!(this.userUsername == var1.userUsername)) {
+            } else if (!(this.userUsername == var4.userUsername)) {
                return false;
-            } else if (!(this.userGlobalName == var1.userGlobalName)) {
+            } else if (!(this.userGlobalName == var4.userGlobalName)) {
                return false;
-            } else if (!(this.userDiscriminator == var1.userDiscriminator)) {
+            } else if (!(this.userDiscriminator == var4.userDiscriminator)) {
                return false;
-            } else if (!(this.userAvatar == var1.userAvatar)) {
+            } else if (!(this.userAvatar == var4.userAvatar)) {
                return false;
-            } else if (!(this.userGuildAvatar == var1.userGuildAvatar)) {
+            } else if (!(this.userGuildAvatar == var4.userGuildAvatar)) {
                return false;
-            } else if (!(this.platformUserUsername == var1.platformUserUsername)) {
+            } else if (!(this.platformUserUsername == var4.platformUserUsername)) {
                return false;
-            } else if (!(this.relationshipType == var1.relationshipType)) {
+            } else if (!(this.relationshipType == var4.relationshipType)) {
                return false;
-            } else if (!(this.guildId == var1.guildId)) {
+            } else if (!(this.guildId == var4.guildId)) {
                return false;
-            } else if (!(this.guildName == var1.guildName)) {
+            } else if (!(this.guildName == var4.guildName)) {
                return false;
-            } else if (!(this.guildIcon == var1.guildIcon)) {
+            } else if (!(this.guildIcon == var4.guildIcon)) {
                return false;
-            } else if (!(this.activityInstanceId == var1.activityInstanceId)) {
+            } else if (!(this.activityInstanceId == var4.activityInstanceId)) {
                return false;
-            } else if (!(this.activityType == var1.activityType)) {
+            } else if (!(this.activityType == var4.activityType)) {
                return false;
-            } else if (!(this.activityName == var1.activityName)) {
+            } else if (!(this.activityName == var4.activityName)) {
                return false;
-            } else if (!(this.applicationId == var1.applicationId)) {
+            } else if (!(this.applicationId == var4.applicationId)) {
                return false;
-            } else if (!(this.applicationName == var1.applicationName)) {
+            } else if (!(this.applicationName == var4.applicationName)) {
                return false;
-            } else if (!(this.applicationIcon == var1.applicationIcon)) {
+            } else if (!(this.applicationIcon == var4.applicationIcon)) {
                return false;
-            } else if (!(this.message == var1.message)) {
+            } else if (!(this.message == var4.message)) {
                return false;
-            } else if (!(this.stageInstanceTopic == var1.stageInstanceTopic)) {
+            } else if (!(this.stageInstanceTopic == var4.stageInstanceTopic)) {
                return false;
-            } else if (!(this.guildScheduledEventEntityType == var1.guildScheduledEventEntityType)) {
+            } else if (!(this.guildScheduledEventEntityType == var4.guildScheduledEventEntityType)) {
                return false;
-            } else if (this.canReply != var1.canReply) {
+            } else if (this.canReply != var4.canReply) {
                return false;
-            } else if (this.isFromCurrentUser != var1.isFromCurrentUser) {
+            } else if (this.isFromCurrentUser != var4.isFromCurrentUser) {
                return false;
-            } else if (!(this.receivingUserId == var1.receivingUserId)) {
+            } else if (!(this.receivingUserId == var4.receivingUserId)) {
                return false;
-            } else if (!(this.title == var1.title)) {
+            } else if (!(this.title == var4.title)) {
                return false;
-            } else if (!(this.subtitle == var1.subtitle)) {
+            } else if (!(this.subtitle == var4.subtitle)) {
                return false;
-            } else if (!(this.iconUrl == var1.iconUrl)) {
+            } else if (!(this.iconUrl == var4.iconUrl)) {
                return false;
-            } else if (!(this.notificationChannel == var1.notificationChannel)) {
+            } else if (!(this.notificationChannel == var4.notificationChannel)) {
                return false;
-            } else if (!(this.trackingType == var1.trackingType)) {
+            } else if (!(this.trackingType == var4.trackingType)) {
                return false;
-            } else if (!(this.deeplink == var1.deeplink)) {
+            } else if (!(this.deeplink == var4.deeplink)) {
                return false;
-            } else if (!(this.expandSubtitle == var1.expandSubtitle)) {
+            } else if (!(this.expandSubtitle == var4.expandSubtitle)) {
                return false;
-            } else if (!(this.imageAttachmentUrl == var1.imageAttachmentUrl)) {
+            } else if (!(this.imageAttachmentUrl == var4.imageAttachmentUrl)) {
                return false;
-            } else if (!(this.timeReceived == var1.timeReceived)) {
+            } else if (!(this.timeReceived == var4.timeReceived)) {
                return false;
-            } else if (this.silent != var1.silent) {
+            } else if (this.silent != var4.silent) {
                return false;
-            } else if (!(this.userInfo == var1.userInfo)) {
+            } else if (!(this.userInfo == var4.userInfo)) {
                return false;
-            } else if (this.appDm != var1.appDm) {
+            } else if (this.appDm != var4.appDm) {
                return false;
-            } else if (!(this.notifTypeId == var1.notifTypeId)) {
+            } else if (!(this.notifTypeId == var4.notifTypeId)) {
                return false;
-            } else if (!(this.notifInstanceId == var1.notifInstanceId)) {
+            } else if (!(this.notifInstanceId == var4.notifInstanceId)) {
                return false;
-            } else if (!(this.joinId == var1.joinId)) {
+            } else if (!(this.joinId == var4.joinId)) {
                return false;
-            } else if (!(this.mentionType == var1.mentionType)) {
+            } else if (!(this.mentionType == var4.mentionType)) {
                return false;
             } else {
-               return this.appState == var1.appState;
+               return this.appState == var4.appState;
             }
          }
       }
@@ -1036,8 +1036,8 @@ public data class NotificationData(type: String,
          var34 = this.guildScheduledEventEntityType.hashCode();
       }
 
-      val var53: Int = java.lang.Boolean.hashCode(this.canReply);
-      val var52: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
+      val var52: Int = java.lang.Boolean.hashCode(this.canReply);
+      val var53: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
       val var35: Int;
       if (this.receivingUserId == null) {
          var35 = 0;
@@ -1108,9 +1108,9 @@ public data class NotificationData(type: String,
          var44 = this.timeReceived.hashCode();
       }
 
-      val var54: Int = java.lang.Boolean.hashCode(this.silent);
-      val var56: Int = this.userInfo.hashCode();
-      val var55: Int = java.lang.Boolean.hashCode(this.appDm);
+      val var56: Int = java.lang.Boolean.hashCode(this.silent);
+      val var55: Int = this.userInfo.hashCode();
+      val var54: Int = java.lang.Boolean.hashCode(this.appDm);
       val var45: Int;
       if (this.notifTypeId == null) {
          var45 = 0;
@@ -1304,10 +1304,10 @@ public data class NotificationData(type: String,
                                                                                                                                                                                              + var34
                                                                                                                                                                                        )
                                                                                                                                                                                        * 31
-                                                                                                                                                                                    + var53
+                                                                                                                                                                                    + var52
                                                                                                                                                                               )
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var52
+                                                                                                                                                                           + var53
                                                                                                                                                                      )
                                                                                                                                                                      * 31
                                                                                                                                                                   + var35
@@ -1340,13 +1340,13 @@ public data class NotificationData(type: String,
                                                                                  + var44
                                                                            )
                                                                            * 31
-                                                                        + var54
+                                                                        + var56
                                                                   )
                                                                   * 31
-                                                               + var56
+                                                               + var55
                                                          )
                                                          * 31
-                                                      + var55
+                                                      + var54
                                                 )
                                                 * 31
                                              + var45
@@ -1373,175 +1373,175 @@ public data class NotificationData(type: String,
          var58 = MessageId.toString-impl(this.messageId);
       }
 
-      val var17: Int = this.messageActivityType;
-      val var36: java.lang.String = this.messageApplicationName;
-      val var24: Int = this.messageType;
-      val var29: java.lang.String = this.messageContent;
-      val var39: java.lang.Long = this.messageFlags;
-      val var18: Int = this.channelType;
-      val var54: java.lang.String = this.channelName;
-      val var49: ChannelId = this.channelId;
-      val var16: java.lang.String = this.channelIcon;
-      val var35: java.lang.String = this.parentName;
-      val var25: ChannelId = this.parentId;
-      val var44: Int = this.messageReferenceType;
-      val var34: java.lang.String = this.channelRtcRegion;
-      val var53: java.util.List = this.ackChannelIds;
-      val var51: UserId = this.userId;
-      val var20: java.lang.String = this.userUsername;
-      val var21: java.lang.String = this.userGlobalName;
-      val var57: Int = this.userDiscriminator;
-      val var50: java.lang.String = this.userAvatar;
-      val var33: java.lang.String = this.userGuildAvatar;
-      val var7: java.lang.String = this.platformUserUsername;
-      val var31: Int = this.relationshipType;
-      val var13: GuildId = this.guildId;
-      val var52: java.lang.String = this.guildName;
-      val var22: java.lang.String = this.guildIcon;
-      val var40: java.lang.String = this.activityInstanceId;
-      val var26: Int = this.activityType;
-      val var15: java.lang.String = this.activityName;
-      val var19: ApplicationId = this.applicationId;
-      val var48: java.lang.String = this.applicationName;
-      val var10: java.lang.String = this.applicationIcon;
-      val var8: NotificationMessage = this.message;
-      val var41: java.lang.String = this.stageInstanceTopic;
-      val var45: Int = this.guildScheduledEventEntityType;
-      val var2: Boolean = this.canReply;
-      val var1: Boolean = this.isFromCurrentUser;
-      val var30: UserId = this.receivingUserId;
-      val var11: java.lang.String = this.title;
-      val var14: java.lang.String = this.subtitle;
-      val var28: java.lang.String = this.iconUrl;
-      val var23: java.lang.String = this.notificationChannel;
-      val var56: java.lang.String = this.trackingType;
-      val var27: java.lang.String = this.deeplink;
-      val var43: java.lang.Boolean = this.expandSubtitle;
-      val var12: java.lang.String = this.imageAttachmentUrl;
-      val var42: java.lang.String = this.timeReceived;
-      val var3: Boolean = this.silent;
-      val var9: java.util.Map = this.userInfo;
-      val var4: Boolean = this.appDm;
-      val var37: java.lang.String = this.notifTypeId;
-      val var47: java.lang.String = this.notifInstanceId;
-      val var46: java.lang.String = this.joinId;
-      val var38: java.lang.String = this.mentionType;
-      val var32: java.lang.String = this.appState;
-      val var55: StringBuilder = new StringBuilder();
-      var55.append("NotificationData(type=");
-      var55.append(var6);
-      var55.append(", messageId=");
-      var55.append(var58);
-      var55.append(", messageActivityType=");
-      var55.append(var17);
-      var55.append(", messageApplicationName=");
-      var55.append(var36);
-      var55.append(", messageType=");
-      var55.append(var24);
-      var55.append(", messageContent=");
-      var55.append(var29);
-      var55.append(", messageFlags=");
-      var55.append(var39);
-      var55.append(", channelType=");
-      var55.append(var18);
-      var55.append(", channelName=");
-      var55.append(var54);
-      var55.append(", channelId=");
-      var55.append(var49);
-      var55.append(", channelIcon=");
-      var55.append(var16);
-      var55.append(", parentName=");
-      var55.append(var35);
-      var55.append(", parentId=");
-      var55.append(var25);
-      var55.append(", messageReferenceType=");
-      var55.append(var44);
-      var55.append(", channelRtcRegion=");
-      var55.append(var34);
-      var55.append(", ackChannelIds=");
-      var55.append(var53);
-      var55.append(", userId=");
-      var55.append(var51);
-      var55.append(", userUsername=");
-      var55.append(var20);
-      var55.append(", userGlobalName=");
-      var55.append(var21);
-      var55.append(", userDiscriminator=");
-      var55.append(var57);
-      var55.append(", userAvatar=");
-      var55.append(var50);
-      var55.append(", userGuildAvatar=");
-      var55.append(var33);
-      var55.append(", platformUserUsername=");
-      var55.append(var7);
-      var55.append(", relationshipType=");
-      var55.append(var31);
-      var55.append(", guildId=");
-      var55.append(var13);
-      var55.append(", guildName=");
-      var55.append(var52);
-      var55.append(", guildIcon=");
-      var55.append(var22);
-      var55.append(", activityInstanceId=");
-      var55.append(var40);
-      var55.append(", activityType=");
-      var55.append(var26);
-      var55.append(", activityName=");
-      var55.append(var15);
-      var55.append(", applicationId=");
-      var55.append(var19);
-      var55.append(", applicationName=");
-      var55.append(var48);
-      var55.append(", applicationIcon=");
-      var55.append(var10);
-      var55.append(", message=");
-      var55.append(var8);
-      var55.append(", stageInstanceTopic=");
-      var55.append(var41);
-      var55.append(", guildScheduledEventEntityType=");
-      var55.append(var45);
-      var55.append(", canReply=");
-      var55.append(var2);
-      var55.append(", isFromCurrentUser=");
-      var55.append(var1);
-      var55.append(", receivingUserId=");
-      var55.append(var30);
-      var55.append(", title=");
-      var55.append(var11);
-      var55.append(", subtitle=");
-      var55.append(var14);
-      var55.append(", iconUrl=");
-      var55.append(var28);
-      var55.append(", notificationChannel=");
-      var55.append(var23);
-      var55.append(", trackingType=");
-      var55.append(var56);
-      var55.append(", deeplink=");
-      var55.append(var27);
-      var55.append(", expandSubtitle=");
-      var55.append(var43);
-      var55.append(", imageAttachmentUrl=");
-      var55.append(var12);
-      var55.append(", timeReceived=");
-      var55.append(var42);
-      var55.append(", silent=");
-      var55.append(var3);
-      var55.append(", userInfo=");
-      var55.append(var9);
-      var55.append(", appDm=");
-      var55.append(var4);
-      var55.append(", notifTypeId=");
-      var55.append(var37);
-      var55.append(", notifInstanceId=");
-      var55.append(var47);
-      var55.append(", joinId=");
-      var55.append(var46);
-      var55.append(", mentionType=");
-      var55.append(var38);
-      var55.append(", appState=");
-      var55.append(var32);
-      var55.append(")");
-      return var55.toString();
+      val var29: Int = this.messageActivityType;
+      val var33: java.lang.String = this.messageApplicationName;
+      val var15: Int = this.messageType;
+      val var30: java.lang.String = this.messageContent;
+      val var21: java.lang.Long = this.messageFlags;
+      val var47: Int = this.channelType;
+      val var24: java.lang.String = this.channelName;
+      val var36: ChannelId = this.channelId;
+      val var43: java.lang.String = this.channelIcon;
+      val var56: java.lang.String = this.parentName;
+      val var54: ChannelId = this.parentId;
+      val var34: Int = this.messageReferenceType;
+      val var12: java.lang.String = this.channelRtcRegion;
+      val var7: java.util.List = this.ackChannelIds;
+      val var49: UserId = this.userId;
+      val var46: java.lang.String = this.userUsername;
+      val var41: java.lang.String = this.userGlobalName;
+      val var48: Int = this.userDiscriminator;
+      val var37: java.lang.String = this.userAvatar;
+      val var18: java.lang.String = this.userGuildAvatar;
+      val var16: java.lang.String = this.platformUserUsername;
+      val var13: Int = this.relationshipType;
+      val var14: GuildId = this.guildId;
+      val var25: java.lang.String = this.guildName;
+      val var23: java.lang.String = this.guildIcon;
+      val var44: java.lang.String = this.activityInstanceId;
+      val var19: Int = this.activityType;
+      val var26: java.lang.String = this.activityName;
+      val var38: ApplicationId = this.applicationId;
+      val var52: java.lang.String = this.applicationName;
+      val var8: java.lang.String = this.applicationIcon;
+      val var20: NotificationMessage = this.message;
+      val var11: java.lang.String = this.stageInstanceTopic;
+      val var39: Int = this.guildScheduledEventEntityType;
+      val var3: Boolean = this.canReply;
+      val var2: Boolean = this.isFromCurrentUser;
+      val var27: UserId = this.receivingUserId;
+      val var45: java.lang.String = this.title;
+      val var53: java.lang.String = this.subtitle;
+      val var55: java.lang.String = this.iconUrl;
+      val var50: java.lang.String = this.notificationChannel;
+      val var9: java.lang.String = this.trackingType;
+      val var35: java.lang.String = this.deeplink;
+      val var57: java.lang.Boolean = this.expandSubtitle;
+      val var31: java.lang.String = this.imageAttachmentUrl;
+      val var17: java.lang.String = this.timeReceived;
+      val var4: Boolean = this.silent;
+      val var40: java.util.Map = this.userInfo;
+      val var1: Boolean = this.appDm;
+      val var51: java.lang.String = this.notifTypeId;
+      val var32: java.lang.String = this.notifInstanceId;
+      val var42: java.lang.String = this.joinId;
+      val var22: java.lang.String = this.mentionType;
+      val var10: java.lang.String = this.appState;
+      val var28: StringBuilder = new StringBuilder();
+      var28.append("NotificationData(type=");
+      var28.append(var6);
+      var28.append(", messageId=");
+      var28.append(var58);
+      var28.append(", messageActivityType=");
+      var28.append(var29);
+      var28.append(", messageApplicationName=");
+      var28.append(var33);
+      var28.append(", messageType=");
+      var28.append(var15);
+      var28.append(", messageContent=");
+      var28.append(var30);
+      var28.append(", messageFlags=");
+      var28.append(var21);
+      var28.append(", channelType=");
+      var28.append(var47);
+      var28.append(", channelName=");
+      var28.append(var24);
+      var28.append(", channelId=");
+      var28.append(var36);
+      var28.append(", channelIcon=");
+      var28.append(var43);
+      var28.append(", parentName=");
+      var28.append(var56);
+      var28.append(", parentId=");
+      var28.append(var54);
+      var28.append(", messageReferenceType=");
+      var28.append(var34);
+      var28.append(", channelRtcRegion=");
+      var28.append(var12);
+      var28.append(", ackChannelIds=");
+      var28.append(var7);
+      var28.append(", userId=");
+      var28.append(var49);
+      var28.append(", userUsername=");
+      var28.append(var46);
+      var28.append(", userGlobalName=");
+      var28.append(var41);
+      var28.append(", userDiscriminator=");
+      var28.append(var48);
+      var28.append(", userAvatar=");
+      var28.append(var37);
+      var28.append(", userGuildAvatar=");
+      var28.append(var18);
+      var28.append(", platformUserUsername=");
+      var28.append(var16);
+      var28.append(", relationshipType=");
+      var28.append(var13);
+      var28.append(", guildId=");
+      var28.append(var14);
+      var28.append(", guildName=");
+      var28.append(var25);
+      var28.append(", guildIcon=");
+      var28.append(var23);
+      var28.append(", activityInstanceId=");
+      var28.append(var44);
+      var28.append(", activityType=");
+      var28.append(var19);
+      var28.append(", activityName=");
+      var28.append(var26);
+      var28.append(", applicationId=");
+      var28.append(var38);
+      var28.append(", applicationName=");
+      var28.append(var52);
+      var28.append(", applicationIcon=");
+      var28.append(var8);
+      var28.append(", message=");
+      var28.append(var20);
+      var28.append(", stageInstanceTopic=");
+      var28.append(var11);
+      var28.append(", guildScheduledEventEntityType=");
+      var28.append(var39);
+      var28.append(", canReply=");
+      var28.append(var3);
+      var28.append(", isFromCurrentUser=");
+      var28.append(var2);
+      var28.append(", receivingUserId=");
+      var28.append(var27);
+      var28.append(", title=");
+      var28.append(var45);
+      var28.append(", subtitle=");
+      var28.append(var53);
+      var28.append(", iconUrl=");
+      var28.append(var55);
+      var28.append(", notificationChannel=");
+      var28.append(var50);
+      var28.append(", trackingType=");
+      var28.append(var9);
+      var28.append(", deeplink=");
+      var28.append(var35);
+      var28.append(", expandSubtitle=");
+      var28.append(var57);
+      var28.append(", imageAttachmentUrl=");
+      var28.append(var31);
+      var28.append(", timeReceived=");
+      var28.append(var17);
+      var28.append(", silent=");
+      var28.append(var4);
+      var28.append(", userInfo=");
+      var28.append(var40);
+      var28.append(", appDm=");
+      var28.append(var1);
+      var28.append(", notifTypeId=");
+      var28.append(var51);
+      var28.append(", notifInstanceId=");
+      var28.append(var32);
+      var28.append(", joinId=");
+      var28.append(var42);
+      var28.append(", mentionType=");
+      var28.append(var22);
+      var28.append(", appState=");
+      var28.append(var10);
+      var28.append(")");
+      return var28.toString();
    }
 
    public companion object {

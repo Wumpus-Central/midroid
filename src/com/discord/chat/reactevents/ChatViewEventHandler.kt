@@ -45,8 +45,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             java.lang.String var1, long var2, Integer var4, MediaType var5, java.lang.String var6, Integer var7
          ) {
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var10: java.lang.String = MessageId.toString-impl(var1);
-            val var11: java.lang.String = ChannelId.toString-impl(var2);
+            val var11: java.lang.String = MessageId.toString-impl(var1);
+            val var10: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -66,7 +66,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2<MessageId, ChannelId, Unit>(this) {
@@ -219,8 +219,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       val var9: Function1 = this.emitReactEvent;
       val var8: Boolean = var1.isAtBottom();
-      val var6: Boolean = var1.isDragging();
-      val var7: Boolean = var1.isSettling();
+      val var7: Boolean = var1.isDragging();
+      val var6: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -233,8 +233,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             var8,
             var3,
             var4,
-            var6,
             var7,
+            var6,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),
@@ -393,6 +393,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
    public override fun onTapJoinActivity(messageId: MessageId) {
       this.emitReactEvent.invoke(new TapJoinActivityData(var1, null));
+   }
+
+   public override fun onTapJoinRichPresence(messageId: MessageId) {
+      this.emitReactEvent.invoke(new TapJoinRichPresenceData(var1, null));
    }
 
    public override fun onTapLoadMessagesAfter() {

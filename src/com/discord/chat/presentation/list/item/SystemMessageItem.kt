@@ -61,8 +61,8 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.message.hashCode();
-      val var2: Int = this.messageContext.hashCode();
+      val var2: Int = this.message.hashCode();
+      val var3: Int = this.messageContext.hashCode();
       val var1: Int;
       if (this.backgroundHighlight == null) {
          var1 = 0;
@@ -70,7 +70,7 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
          var1 = this.backgroundHighlight.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {

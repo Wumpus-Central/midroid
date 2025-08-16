@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 294207
-  versionName: 294.7 - Alpha
+  versionCode: 294208
+  versionName: 294.8 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -483,7 +483,6 @@ doNotCompress:
 - res/raw/design_intl_manacompiledmessages.jsona
 - res/raw/emojis_json.gz
 - res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
-- res/raw/modules_clicker_game_clickergamecompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
 - res/raw/modules_display_name_styles_intl_displaynamestylescompiledmessages.jsona
 - res/raw/modules_go_live_web_modal_golivemodalcompiledmessages.jsona

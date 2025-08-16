@@ -15,12 +15,12 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun <T : Component> getConfiguredComponentView(component: T, componentContext: ComponentContext, root: ViewGroup, childIndex: Int): ComponentView<T>? {
-      val var6: View = var3.getChildAt(var4);
-      val var5: Boolean = var6 is ComponentView;
-      var var7: ComponentView = null;
+      val var7: View = var3.getChildAt(var4);
+      val var5: Boolean = var7 is ComponentView;
+      var var6: ComponentView = null;
       val var8: ComponentView;
       if (var5) {
-         var8 = var6 as ComponentView;
+         var8 = var7 as ComponentView;
       } else {
          var8 = null;
       }
@@ -28,11 +28,11 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
       label23: {
          if (var8 != null) {
             if (var8.getComponentType() == var1.getClass()::class) {
-               var7 = var8;
+               var6 = var8;
             }
 
-            var9 = var7;
-            if (var7 != null) {
+            var9 = var6;
+            if (var6 != null) {
                break label23;
             }
          }

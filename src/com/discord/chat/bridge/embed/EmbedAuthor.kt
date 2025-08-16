@@ -103,17 +103,17 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    public override fun toString(): String {
       val var5: java.lang.String = this.name;
       val var3: java.lang.String = this.url;
-      val var4: java.lang.String = this.iconURL;
-      val var1: java.lang.String = this.iconProxyURL;
+      val var1: java.lang.String = this.iconURL;
+      val var4: java.lang.String = this.iconProxyURL;
       val var2: StringBuilder = new StringBuilder();
       var2.append("EmbedAuthor(name=");
       var2.append(var5);
       var2.append(", url=");
       var2.append(var3);
       var2.append(", iconURL=");
-      var2.append(var4);
-      var2.append(", iconProxyURL=");
       var2.append(var1);
+      var2.append(", iconProxyURL=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

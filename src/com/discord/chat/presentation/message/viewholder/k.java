@@ -1,14 +1,15 @@
 package com.discord.chat.presentation.message.viewholder;
 
-import com.discord.chat.presentation.message.messagepart.EphemeralIndicationMessageAccessory;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.presentation.message.messagepart.EmbeddedActivityInviteMessageAccessory;
 
 // $VF: synthetic class
-public final class k implements Function1 {
-   public final EphemeralIndicationViewHolder d;
-   public final EphemeralIndicationMessageAccessory e;
+public final class k implements OnClickListener {
+   public final EmbeddedActivityInviteViewHolder d;
+   public final EmbeddedActivityInviteMessageAccessory e;
 
-   public final Object invoke(Object var1) {
-      return EphemeralIndicationViewHolder.b(this.d, this.e, (String)var1);
+   public final void onClick(View var1) {
+      EmbeddedActivityInviteViewHolder.c(this.d, this.e, var1);
    }
 }

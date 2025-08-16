@@ -3,7 +3,7 @@ package com.discord.fastest_list.react
 import B9.n
 import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
 
 internal class FastestListShadowNode : LayoutShadowNode {
@@ -18,7 +18,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
          if (!this.nextUpdateNeedsMeasureAndLayout) {
             this.nextUpdateNeedsMeasureAndLayout = true;
          } else {
-            ViewMeasureExtensionsKt.measureAndLayout(var1);
+            ReactViewExtensionsKt.measureAndLayout(var1);
          }
 
          this.isDirty = false;

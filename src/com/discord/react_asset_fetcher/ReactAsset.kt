@@ -91,6 +91,7 @@ public enum class ReactAsset {
    ShowMedia,
    ShowPassword,
    Speaker,
+   SpotifyBrandNeutral,
    StageChannel,
    Summary,
    SummaryIndicatorEnd,

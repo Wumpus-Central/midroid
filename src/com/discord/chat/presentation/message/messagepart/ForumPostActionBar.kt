@@ -100,36 +100,36 @@ public data class ForumPostActionBar(messageId: MessageId,
          var1 = this.reactions.hashCode();
       }
 
-      val var6: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var5: Int = this.addNewReactionAccessibilityLabel.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var6: Int = this.addNewReactionAccessibilityLabel.hashCode();
       if (this.reactionsTheme != null) {
          var2 = this.reactionsTheme.hashCode();
       }
 
-      return ((((var3 * 31 + var4) * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2;
+      return ((((var3 * 31 + var4) * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: ForumPostActions = this.postActions;
-      val var3: java.util.List = this.reactions;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: ForumPostActions = this.postActions;
+      val var5: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var4: ReactionsTheme = this.reactionsTheme;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ForumPostActionBar(messageId=");
-      var7.append(var6);
-      var7.append(", postActions=");
-      var7.append(var2);
-      var7.append(", reactions=");
-      var7.append(var3);
-      var7.append(", canAddNewReactions=");
-      var7.append(var1);
-      var7.append(", addNewReactionAccessibilityLabel=");
-      var7.append(var5);
-      var7.append(", reactionsTheme=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var2: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var7: ReactionsTheme = this.reactionsTheme;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ForumPostActionBar(messageId=");
+      var6.append(var4);
+      var6.append(", postActions=");
+      var6.append(var3);
+      var6.append(", reactions=");
+      var6.append(var5);
+      var6.append(", canAddNewReactions=");
+      var6.append(var1);
+      var6.append(", addNewReactionAccessibilityLabel=");
+      var6.append(var2);
+      var6.append(", reactionsTheme=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 }
