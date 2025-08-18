@@ -1,7 +1,44 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.RuntimeException: Constructor com/discord/chat/presentation/list/delegate/BaseChatListItemDelegate.<init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;I)V not found
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
-*/
+package com.discord.chat.presentation.list.delegate
+
+import android.content.Context
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
+import com.discord.chat.bridge.Message
+import com.discord.chat.presentation.events.ChatEventHandler
+import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
+import com.discord.chat.presentation.list.item.ChatListItem
+import com.discord.chat.presentation.list.item.SystemMessageItem
+import com.discord.chat.presentation.message.system.SystemMessageView
+import com.discord.chat.presentation.root.MessageContext
+
+public class SystemMessageDelegate(eventHandlerProvider: () -> ChatEventHandler, messageAccessoriesRecycledViewPool: RecycledViewPool) : BaseChatListItemDelegate(
+      var1, null, 2
+   ) {
+   private final val messageAccessoriesRecycledViewPool: RecycledViewPool
+
+   init {
+      this.messageAccessoriesRecycledViewPool = var2;
+   }
+
+   public open fun bindView(view: SystemMessageView, item: SystemMessageItem, metadata: Metadata<SystemMessageView>) {
+      var1.setMessage(var2.getMessage(), var2.getMessageContext(), this.getEventHandler());
+   }
+
+   public fun createAndBindStandaloneView(parent: ViewGroup, message: Message, messageContext: MessageContext): SystemMessageView {
+      val var4: SystemMessageView = this.createView(var1);
+      val var5: SystemMessageItem = new SystemMessageItem(var2, var3, null, 4, null);
+      var4.setMessage(var5.getMessage(), var5.getMessageContext(), this.getEventHandler());
+      return var4;
+   }
+
+   public open fun createView(parent: ViewGroup): SystemMessageView {
+      val var2: Context = var1.getContext();
+      val var3: SystemMessageView = new SystemMessageView(var2, null, 2, null);
+      var3.setAccessoriesRecycledViewPool(this.messageAccessoriesRecycledViewPool);
+      return var3;
+   }
+
+   public override fun isForItem(item: ChatListItem, position: Int): Boolean {
+      return var1 is SystemMessageItem;
+   }
+}

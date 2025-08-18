@@ -67,9 +67,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                } else {
                   kotlin.c.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
+                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     var1 = new FlowCollector(this.$onEvent) {
+                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -112,7 +112,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
                         return var5;
                      }
                   } else {
