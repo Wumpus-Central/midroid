@@ -1199,6 +1199,7 @@
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
+  "KUsDND": "Manage",
   "eGZFws": "Notifications are disabled for this DM.",
   "7Sbhqa": [
     "Notifications are disabled until ",
@@ -1499,6 +1500,7 @@
   "YFFVMz": "Receive personalized content and promotions if your Discord settings allow it",
   "mSqazM": "Receive personalized content and promotions if your Discord settings allow it",
   "Nusip6": "Hide Password",
+  "pzCe7u": "Invalid Credentials",
   "euS7r6": "We're so excited to see you again!",
   "x2L32d": [
     "You've been invited to ",
@@ -2952,6 +2954,8 @@
       "itemName"
     ]
   ],
+  "aVCcr6": "Decoration",
+  "s+YSgo": "Profile",
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
   "H3vhqa": "Buy Nameplate",
@@ -3115,10 +3119,28 @@
     "H LEFT"
   ],
   "nHOGt7": "Visit Shop",
-  "MQkmBQ": "Buy Avatar Decorations and Profile Effects to personalize your profile.",
   "gxEIl5": "Nitro members get discounts on everything in the Shop.",
-  "Lh3QfX": "New and popular styles include SpongeBob, Anime, Galaxy, Cyberpunk, and more.",
-  "RUtg4u": "Shop anywhere, anytime",
+  "gzTLCQ": [
+    [
+      8,
+      "$b",
+      [
+        "NEW!"
+      ]
+    ],
+    " Surprise (or troll) your friends with the perfect gift from the redesigned mobile Shop."
+  ],
+  "WbQm//": [
+    [
+      8,
+      "$b",
+      [
+        "NEW!"
+      ]
+    ],
+    " Make your name stand out no matter where you are. Nameplates are now available for purchase on mobile!"
+  ],
+  "4wA9a2": "Shop Anywhere, Anytime",
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -8466,6 +8488,7 @@
   "37iHbW": "Discord has new password requirements. Please update your password now.",
   "+Joso6": "Force Sync",
   "wWIufn": "Forgot your password?",
+  "+/6Nv7": "Forgot Password?",
   "R04ENT": "Clear Server Name",
   "/+OQEh": "Status updates from people you talk to.",
   "l3yoAQ": "You are receiving notifications from all activity in this server, but you can override it here",
@@ -12111,7 +12134,6 @@
   "7XdMW1": "Apply to Join",
   "4yfIDg": "View Application Status",
   "IRoQXl": "Go to Server",
-  "eb9gDA": "Join Server",
   "zb2Q5+": [
     "Est. ",
     [
@@ -19776,6 +19798,7 @@
   "M4ddeX": "Programs",
   "0dO1t7": "Messages",
   "rfe/x8": "Account",
+  "yaLeEB": "Support Tickets",
   "psXQHB": "Help Desk",
   "nOtPMD": "You cannot modify this permission because none of your roles have it.",
   "5MstTk": "Hide chat",
@@ -21720,7 +21743,9 @@
   "iYQlws": "This application may not support screensharing.",
   "Ur/0NT": "Lock Post",
   "HoCqm5": "Lock Thread",
+  "ayvCBg": "Your login or password is incorrect.",
   "7fNJgI": "Welcome back!",
+  "EiwJkJ": "Log in with Passkey",
   "2jxGen": "Log Out",
   "RLch7+": "Join Server",
   "G42YmJ": "You are in preview mode. Join this server to talk.",
@@ -22783,6 +22808,7 @@
   ],
   "roMu1N": "Remind Me",
   "VKsXpa": "Set Custom Reminder",
+  "FnFI3t": "Today at 9:00am",
   "7MKr2N": "Tomorrow at 9:00am",
   "Whs8tL": "Message Reminder",
   "e7GWjY": "Message Requests",
@@ -30408,6 +30434,39 @@
     ],
     "."
   ],
+  "BfgxRk": [
+    "Play any of ",
+    [
+      8,
+      "$link",
+      [
+        "these select games"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
+    ],
+    " for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "a/ia7O": [
     "Stream ",
     [
@@ -31404,39 +31463,6 @@
     " a trial. Please try again later."
   ],
   "7VBEub": "Hmm... Something went wrong",
-  "L/leCw": [
-    [
-      1,
-      "receiver"
-    ],
-    " start your 2 weeks of Nitro"
-  ],
-  "febG6u": [
-    [
-      1,
-      "receiver"
-    ],
-    " enjoy a 2-week Nitro trial"
-  ],
-  "zz1MYm": [
-    [
-      1,
-      "sender"
-    ],
-    " gave ",
-    [
-      1,
-      "receiver"
-    ],
-    " a Nitro trial"
-  ],
-  "PVQOi4": [
-    [
-      1,
-      "receiver"
-    ],
-    " start your 2-week Nitro trial"
-  ],
   "eEz1Nz": "Uh-oh, something went wrong. Try restarting the app to fix it!",
   "IiWKws": [
     [
@@ -31564,83 +31590,6 @@
   "Y1q7jo": "Trial Activated",
   "Gs9Aam": "Start 2-Week Trial",
   "uO4bXl": "Unlocked",
-  "M47CJS": "Trials Shared. Nice work.",
-  "FjrXCg": [
-    "Share a 2-week trial with up to ",
-    [
-      1,
-      "numFriends"
-    ],
-    " friends and give the gift of Discord without limits! ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "3OYZMT": [
-    "You will get more trials in the future. While you wait, you can Gift Nitro to give the gift of Discord without limits. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "EkWiZm": [
-    "We have lift off! You can share trials with ",
-    [
-      1,
-      "numFriends"
-    ],
-    " more ",
-    [
-      6,
-      "numFriends",
-      {
-        "one": [
-          "friend"
-        ],
-        "other": [
-          "friends"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ],
-    "."
-  ],
   "SY9tyM": "Remind Friends",
   "eBIGBw": "Congratulations, you’ve found the lonely cactus. Try a different search to find your friends.",
   "Lm2nFR": "Select Friends",
@@ -32017,6 +31966,10 @@
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
   "3PBFNz": "Reset Override",
+  "YlfC09": "Reset Password",
+  "4LVWSE": "Would you like to reset your password? We'll send reset instructions to your email.",
+  "Sii1b2": "Would you like to reset your password? We'll send a code to your phone.",
+  "1q02lZ": "Reset your password?",
   "b8606O": "Restore Event",
   "qfo6KS": [
     [
@@ -32120,6 +32073,13 @@
       1,
       "subgameName"
     ]
+  ],
+  "HjVwGx": [
+    [
+      1,
+      "subgameName"
+    ],
+    " • Roblox"
   ],
   "LPJmLy": "Roles",
   "3OxP4u": [
@@ -33477,6 +33437,7 @@
   "mxeq6u": "Update commands",
   "xeNgGB": "Manage entitlements",
   "Rba/Xl": "Manage store SKUs, listings, and assets",
+  "1zioRE": "Link external accounts, and allow their data to be used in Discord.",
   "pRpdo6": "Add a bot to a server",
   "1AwaU1": "Access your third-party connections",
   "FHeB8v": "Read your direct messages",
@@ -37783,7 +37744,6 @@
     "\""
   ],
   "OCs36O": "Sorry, we couldn't load the first message in this thread",
-  "uBid4u": "Original message from channel",
   "StKTho": [
     [
       8,

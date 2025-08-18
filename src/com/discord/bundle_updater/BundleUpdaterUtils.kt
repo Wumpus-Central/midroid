@@ -51,7 +51,7 @@ public object BundleUpdaterUtils {
          var var11: java.lang.String;
          try {
             val var2: Xb.j = Xb.j.m.a(Xb.m.b());
-            var10.F1(var2);
+            var10.N1(var2);
             var11 = var2.a().r();
          } catch (var5: java.lang.Throwable) {
             val var3: java.lang.Throwable = var5;

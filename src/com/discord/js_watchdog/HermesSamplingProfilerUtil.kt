@@ -389,12 +389,12 @@ public object HermesSamplingProfilerUtil {
       // 2df: aload 9
       // 2e1: astore 1
       // 2e2: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 2e5: astore 10
+      // 2e5: astore 12
       // 2e7: aload 9
       // 2e9: astore 1
       // 2ea: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
       // 2ed: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
-      // 2f0: astore 12
+      // 2f0: astore 10
       // 2f2: aload 9
       // 2f4: astore 1
       // 2f5: new kotlinx/serialization/json/JsonObject
@@ -406,8 +406,8 @@ public object HermesSamplingProfilerUtil {
       // 301: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 304: aload 9
       // 306: astore 1
-      // 307: aload 10
-      // 309: aload 12
+      // 307: aload 12
+      // 309: aload 10
       // 30b: aload 11
       // 30d: invokevirtual kotlinx/serialization/json/Json.c (Lnb/i;Ljava/lang/Object;)Ljava/lang/String;
       // 310: astore 8

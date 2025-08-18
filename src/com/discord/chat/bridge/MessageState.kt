@@ -83,7 +83,7 @@ public enum class MessageState(key: String) {
 
 
       public open fun deserialize(decoder: Decoder): MessageState {
-         return MessageState.Companion.fromValue(var1.n());
+         return MessageState.Companion.fromValue(var1.z());
       }
 
       public open fun serialize(encoder: Encoder, value: MessageState) {

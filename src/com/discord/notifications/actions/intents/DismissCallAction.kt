@@ -121,24 +121,24 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.tag;
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
-      val var5: GuildId = this.guildId;
+      val var4: GuildId = this.guildId;
       val var2: java.lang.String = UserId.toString-impl(this.userId);
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("DismissCallAction(tag=");
-      var6.append(var3);
-      var6.append(", channelId=");
-      var6.append(var4);
-      var6.append(", isFullscreenCallUI=");
-      var6.append(var1);
-      var6.append(", guildId=");
-      var6.append(var5);
-      var6.append(", userId=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DismissCallAction(tag=");
+      var3.append(var5);
+      var3.append(", channelId=");
+      var3.append(var6);
+      var3.append(", isFullscreenCallUI=");
+      var3.append(var1);
+      var3.append(", guildId=");
+      var3.append(var4);
+      var3.append(", userId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
@@ -153,18 +153,18 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    internal class Creator : android.os.Parcelable.Creator<DismissCallAction> {
       fun createFromParcel(var1: Parcel): DismissCallAction {
          val var5: java.lang.String = var1.readString();
-         val var2: Long = (var1.readParcelable(DismissCallAction.class.getClassLoader()) as ChannelId).unbox-impl();
-         val var4: Boolean;
+         val var3: Long = (var1.readParcelable(DismissCallAction.class.getClassLoader()) as ChannelId).unbox-impl();
+         val var2: Boolean;
          if (var1.readInt() != 0) {
-            var4 = true;
+            var2 = true;
          } else {
-            var4 = false;
+            var2 = false;
          }
 
          return new DismissCallAction(
             var5,
+            var3,
             var2,
-            var4,
             var1.readParcelable(DismissCallAction.class.getClassLoader()) as GuildId,
             (var1.readParcelable(DismissCallAction.class.getClassLoader()) as UserId).unbox-impl(),
             null

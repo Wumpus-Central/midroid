@@ -60,8 +60,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.messageId.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
+      val var4: Int = this.messageId.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -74,7 +74,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {

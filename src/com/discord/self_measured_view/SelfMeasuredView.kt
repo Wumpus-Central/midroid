@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
@@ -30,6 +31,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
 
    init {
       this.reactContext = var1 as ReactContext;
+      this.fabricEnabled = true;
       this.runnable = new a(this);
    }
 
@@ -60,7 +62,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: SelfMeasuredView) {
-      ViewMeasureExtensionsKt.measureAndLayout(var0);
+      ReactViewExtensionsKt.measureAndLayout(var0);
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {

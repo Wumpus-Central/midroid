@@ -65,8 +65,8 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 
             this.$continuation.resumeWith(Result.b(var4));
          }
-      }, access$getExecutorSupplier$p().a());
-      var6.f(new Function1<java.lang.Throwable, Unit>(var8) {
+      }, access$getExecutorSupplier$p().d());
+      var6.e(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -130,7 +130,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
-      }, executorSupplier.a());
+      }, executorSupplier.d());
    }
 }
 

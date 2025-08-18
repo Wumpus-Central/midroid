@@ -13,7 +13,7 @@ internal object AnnotatedStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("AnnotatedStructurableText", i.a)
 
    public open fun deserialize(decoder: Decoder): AnnotatedStructurableText {
-      return new AnnotatedStructurableText(var1.C(new f(ContentNode.Companion.serializer())) as MutableList<ContentNode>);
+      return new AnnotatedStructurableText(var1.G(new f(ContentNode.Companion.serializer())) as MutableList<ContentNode>);
    }
 
    public open fun serialize(encoder: Encoder, value: AnnotatedStructurableText) {

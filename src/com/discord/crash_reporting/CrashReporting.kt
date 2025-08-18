@@ -49,7 +49,7 @@ public object CrashReporting {
 
    @JvmStatic
    fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
-      var3.s(CollectionsKt.e(var0));
+      var3.l(CollectionsKt.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: e2;
       if (var4 != 1) {
@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("cb846846-429a-49e6-88a5-81c8d5f407ce");
+      var5.setProguardUuid("a4266389-7198-4ed2-8ce5-3d5b92322d86");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -103,8 +103,8 @@ public object CrashReporting {
    public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = L.h(), breadcrumbCategory: String? = null) {
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.n(var3);

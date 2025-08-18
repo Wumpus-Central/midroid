@@ -65,9 +65,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
-      val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
+      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
    }
 
    public open fun getName(): String {
@@ -95,8 +95,8 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun setUser(user: ReadableMap) {
       val var2: Boolean = var1.getBoolean("staff");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.getInstance(var4).setStaff(var2);
+      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.getInstance(var3).setStaff(var2);
    }
 }

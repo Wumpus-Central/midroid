@@ -24,7 +24,7 @@ public class GuildInviteDisabledViewHolder(guildInviteDisabledView: GuildInviteD
       val var3: GuildInviteDisabledEmbedImpl = var1.getInvite();
       val var2: GuildInviteDisabledView = this.guildInviteDisabledView;
       this.guildInviteDisabledView.setHeaderText(var3.getHeaderText());
-      var2.setHelpIcon(var3.getHelpCenterArticleLabel(), var3.getHelpCenterArticleURL(), new q(this, var1));
+      var2.setHelpIcon(var3.getHelpCenterArticleLabel(), var3.getHelpCenterArticleURL(), new r(this, var1));
       var2.setHeaderColor(var3.getHeaderColor());
       var2.setTitleText(var3.getTitleText());
       var2.setTitleColor(var3.getTitleColor());

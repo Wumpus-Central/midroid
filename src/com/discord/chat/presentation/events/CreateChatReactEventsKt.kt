@@ -49,6 +49,7 @@ import com.discord.chat.reactevents.TapInviteAcceptEvent
 import com.discord.chat.reactevents.TapInviteEvent
 import com.discord.chat.reactevents.TapInviteToSpeakData
 import com.discord.chat.reactevents.TapJoinActivityData
+import com.discord.chat.reactevents.TapJoinRichPresenceData
 import com.discord.chat.reactevents.TapLinkData
 import com.discord.chat.reactevents.TapMentionData
 import com.discord.chat.reactevents.TapMessageData
@@ -109,6 +110,7 @@ internal fun createChatReactEvents(): ReactEvents {
       s.a("onTapInviteEmbed", TapInviteEvent::class),
       s.a("onTapInviteEmbedAccept", TapInviteAcceptEvent::class),
       s.a("onTapJoinActivity", TapJoinActivityData::class),
+      s.a("onTapJoinRichPresence", TapJoinRichPresenceData::class),
       s.a("onTapLink", TapLinkData::class),
       s.a("onLongPressLink", LongPressLinkData::class),
       s.a("onTapMention", TapMentionData::class),

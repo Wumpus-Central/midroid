@@ -19,26 +19,23 @@ internal class ForegroundService : Service {
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
       val var5: Log = Log.INSTANCE;
-      val var6: java.lang.String = tag;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("onStartCommand: intent ");
-      var4.append(var1);
-      var4.append(", flags ");
-      var4.append(var2);
-      var4.append(", startId ");
-      var4.append(var3);
-      Log.i$foreground_service_release$default(var5, var6, var4.toString(), null, 4, null);
-      var var7: Byte = 1;
-      if (var1 == null) {
-         if (!ForegroundServiceManager.INSTANCE.onServiceRecoveryAttempt$foreground_service_release(this)) {
-            var7 = 2;
-         }
-
-         return var7;
+      val var4: java.lang.String = tag;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("onStartCommand: intent ");
+      var6.append(var1);
+      var6.append(", flags ");
+      var6.append(var2);
+      var6.append(", startId ");
+      var6.append(var3);
+      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
+      val var7: Byte;
+      if (ForegroundServiceManager.INSTANCE.onServiceStartCommandReceived$foreground_service_release(this, var1)) {
+         var7 = 1;
       } else {
-         ForegroundServiceManager.INSTANCE.onServiceCreatedOrUpdated$foreground_service_release(this);
-         return 1;
+         var7 = 2;
       }
+
+      return var7;
    }
 
    public companion object {

@@ -3,7 +3,7 @@ package com.discord.fastest_list.react
 import B9.n
 import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
 
 internal class FastestListShadowNode : LayoutShadowNode {
@@ -18,7 +18,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
          if (!this.nextUpdateNeedsMeasureAndLayout) {
             this.nextUpdateNeedsMeasureAndLayout = true;
          } else {
-            ViewMeasureExtensionsKt.measureAndLayout(var1);
+            ReactViewExtensionsKt.measureAndLayout(var1);
          }
 
          this.isDirty = false;
@@ -91,11 +91,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setPaddingPercent(spacingType: Int, percent: Float): Nothing {
-      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append(" does not support percentage based padding");
-      throw new IllegalStateException(var3.toString().toString());
+      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append(" does not support percentage based padding");
+      throw new IllegalStateException(var4.toString().toString());
    }
 
    public open fun setReactTag(reactTag: Int) {

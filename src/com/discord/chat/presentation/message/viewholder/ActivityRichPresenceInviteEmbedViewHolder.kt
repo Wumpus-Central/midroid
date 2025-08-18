@@ -1,8 +1,11 @@
 package com.discord.chat.presentation.message.viewholder
 
+import android.view.View
 import com.discord.activity_invites.ActivityRichPresenceInviteEmbedView
 import com.discord.chat.bridge.activities.ActivityRichPresenceInviteEmbed
 import com.discord.chat.presentation.message.messagepart.ActivityRichPresenceInviteEmbedMessageAccessory
+import com.discord.primitives.MessageId
+import kotlin.jvm.functions.Function1
 
 public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInviteEmbedView: ActivityRichPresenceInviteEmbedView) : MessagePartViewHolder(var1) {
    private final val activityRichPresenceInviteEmbedView: ActivityRichPresenceInviteEmbedView
@@ -11,42 +14,65 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
       this.activityRichPresenceInviteEmbedView = var1;
    }
 
-   public fun bind(accessory: ActivityRichPresenceInviteEmbedMessageAccessory) {
-      val var10: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
-      val var15: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
-      val var6: java.lang.String = var10.getHeaderText();
-      val var8: java.lang.String = var10.getTitle();
-      val var7: java.lang.String = var10.getSubtitle();
-      val var5: java.lang.String = var10.getIconSrc();
-      val var9: java.lang.Boolean = var10.isSpotifyParty();
-      val var3: Boolean;
-      if (var9 != null) {
-         var3 = var9;
-      } else {
-         var3 = false;
-      }
+   @JvmStatic
+   fun `bind$lambda$0`(var0: Function1, var1: ActivityRichPresenceInviteEmbedMessageAccessory, var2: View) {
+      var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()));
+   }
 
-      val var16: java.lang.String = var10.getFooterLabel();
-      val var11: Int = var10.getMaxPartySize();
-      val var2: Int;
-      if (var11 != null) {
-         var2 = var11;
-      } else {
-         var2 = 0;
-      }
-
-      val var13: java.lang.String = var10.getPartySizeText();
-      val var12: java.util.List = var10.getPartyMemberAvatarURIs();
-      val var18: java.util.List = var10.getPlatformIconKeys();
-      val var14: java.util.List = var10.getGradientColors();
-      val var17: java.lang.Boolean = var10.isActive();
+   public fun bind(accessory: ActivityRichPresenceInviteEmbedMessageAccessory, onTapJoinRichPresence: (MessageId) -> Unit) {
+      val var7: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
+      val var8: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
+      val var9: java.lang.Boolean = var7.getCtaButtonEnabled();
+      var var3: Int = 0;
       val var4: Boolean;
-      if (var17 != null) {
-         var4 = var17;
+      if (var9 != null) {
+         var4 = var9;
       } else {
          var4 = false;
       }
 
-      var15.setActivityRichPresenceInviteEmbed(var6, var8, var7, var5, var3, var16, var2, var13, var12, var18, var14, var4);
+      val var10: java.lang.String = var7.getCtaButtonText();
+      val var11: java.lang.String = var7.getFooterLabel();
+      val var15: java.util.List = var7.getGradientColors();
+      val var12: java.lang.String = var7.getHeaderText();
+      val var13: java.lang.String = var7.getIconSrc();
+      var var14: java.lang.Boolean = var7.isActive();
+      val var5: Boolean;
+      if (var14 != null) {
+         var5 = var14;
+      } else {
+         var5 = false;
+      }
+
+      var14 = var7.isSpotifyParty();
+      val var6: Boolean;
+      if (var14 != null) {
+         var6 = var14;
+      } else {
+         var6 = false;
+      }
+
+      val var17: Int = var7.getMaxPartySize();
+      if (var17 != null) {
+         var3 = var17;
+      }
+
+      var8.setActivityRichPresenceInviteEmbed(
+         var4,
+         var10,
+         var11,
+         var15,
+         var12,
+         var13,
+         var5,
+         var6,
+         var3,
+         new b(var2, var1),
+         var7.getPartyMemberAvatarURIs(),
+         var7.getPartySizeText(),
+         var7.getPlatformIconKeys(),
+         var7.getSubtitle(),
+         var7.getTitle()
+      );
    }
 }

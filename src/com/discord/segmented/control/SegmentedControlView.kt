@@ -14,8 +14,8 @@ import androidx.core.view.Z
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.properties.ReadWriteProperty
@@ -144,16 +144,16 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var6.selectedSegmentBg.setElevation(var4);
       var6.segmentContainer.setElevation(var4);
       var6.segmentContainer.setOutlineProvider(null);
-      val var7: Int = 0;
-      this.containerBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      val var5: Int = 0;
+      this.containerBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.cornerRadiusPx$delegate = updateViewOnChange$default(this, (float)SizeUtilsKt.getDpToPx(4), false, 2, null);
-      this.selectedIndex$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.segmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      val var5: java.lang.Float = 0.0F;
-      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedIndex$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.segmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      val var7: java.lang.Float = 0.0F;
+      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.labels$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
       this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
    }
@@ -231,7 +231,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
          var4.width = var1;
          var3.setLayoutParams(var4);
-         ViewMeasureExtensionsKt.measureAndLayout(this);
+         ReactViewExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }
    }
@@ -266,7 +266,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
          }
       }
 
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      ReactViewExtensionsKt.measureAndLayout(this);
       this.animateSelection(var1 xor true);
    }
 

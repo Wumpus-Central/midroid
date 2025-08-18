@@ -149,8 +149,8 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
 
    public override fun hashCode(): Int {
       val var2: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.description.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.description.hashCode();
       val var3: Int = this.type.hashCode();
       val var1: Int;
       if (this.verifyAge == null) {
@@ -159,26 +159,26 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var1 = this.verifyAge.hashCode();
       }
 
-      return (((var2 * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1;
+      return (((var2 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
-      val var3: Function1 = this.label;
+      val var4: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
+      val var2: Function1 = this.label;
       val var1: Function1 = this.description;
-      val var2: SpoilerType = this.type;
-      val var4: java.lang.Boolean = this.verifyAge;
+      val var3: SpoilerType = this.type;
+      val var6: java.lang.Boolean = this.verifyAge;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SpoilerAttributes(identifier=");
-      var5.append(var6);
+      var5.append(var4);
       var5.append(", label=");
-      var5.append(var3);
+      var5.append(var2);
       var5.append(", description=");
       var5.append(var1);
       var5.append(", type=");
-      var5.append(var2);
+      var5.append(var3);
       var5.append(", verifyAge=");
-      var5.append(var4);
+      var5.append(var6);
       var5.append(")");
       return var5.toString();
    }
@@ -233,19 +233,19 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
       }
 
       public fun forAttachment(attachment: Attachment, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
-         val var7: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("messageId(");
-         var5.append(var7);
-         var5.append(")");
-         val var6: java.lang.String = var5.toString();
-         val var9: java.lang.String = var1.type().getIndexLabel();
+         var var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("messageId(");
+         var7.append(var5);
+         var7.append(")");
+         var5 = var7.toString();
+         val var6: java.lang.String = var1.type().getIndexLabel();
          val var8: StringBuilder = new StringBuilder();
-         var8.append(var9);
+         var8.append(var6);
          var8.append("(");
          var8.append(var3);
          var8.append(")");
-         return this.forItem(var1, var6, var8.toString(), var4);
+         return this.forItem(var1, var5, var8.toString(), var4);
       }
 
       public fun forEmbed(embed: Embed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
@@ -272,17 +272,17 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
       }
 
       public fun forMediaPostPreviewEmbed(embed: PostPreviewEmbed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
-         val var6: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
-         var var5: StringBuilder = new StringBuilder();
-         var5.append("messageId(");
-         var5.append(var6);
-         var5.append(")");
-         val var7: java.lang.String = var5.toString();
-         var5 = new StringBuilder();
-         var5.append("mediaPostPreviewEmbed(");
-         var5.append(var3);
-         var5.append(")");
-         return this.forItem(var1, var7, var5.toString(), var4);
+         val var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("messageId(");
+         var6.append(var5);
+         var6.append(")");
+         val var7: java.lang.String = var6.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("mediaPostPreviewEmbed(");
+         var8.append(var3);
+         var8.append(")");
+         return this.forItem(var1, var7, var8.toString(), var4);
       }
    }
 }

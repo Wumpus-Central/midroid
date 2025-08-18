@@ -102,12 +102,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var20: StructurableText = var1.getContent();
-      if (var20 != null) {
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
          val var13: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var20: java.lang.String = var1.getId-3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var9: Boolean = var1.getShouldShowRoleDot();
          val var8: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
@@ -135,10 +135,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var13.add(
             new MessageContentAccessory(
-               var14,
                var20,
-               var11,
+               var14,
                var10,
+               var11,
                var9,
                var8,
                var5,
@@ -171,9 +171,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       if (var12 != null && var12.intValue() <= 1) {
          val var23: ArrayList = this.accessories;
          val var31: java.lang.String = var1.getId-3Eiw7ao();
-         val var28: java.lang.String = var1.getUsername();
-         val var33: Context = this.binding.getRoot().getContext();
-         var23.add(new RoleSubscriptionPurchaseAccessory(var31, var28, MessageKt.avatarUrl(var1, var33), var3, false, null));
+         val var33: java.lang.String = var1.getUsername();
+         val var28: Context = this.binding.getRoot().getContext();
+         var23.add(new RoleSubscriptionPurchaseAccessory(var31, var33, MessageKt.avatarUrl(var1, var28), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();

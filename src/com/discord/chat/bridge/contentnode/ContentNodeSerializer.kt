@@ -23,7 +23,7 @@ public object ContentNodeSerializer : KSerializer {
             throw new IllegalArgumentException("Failed requirement.");
          }
 
-         val var2: JsonElement = (var1 as e).i();
+         val var2: JsonElement = (var1 as e).g();
          if (var2 is JsonPrimitive) {
             var4 = new TextContentNode((var2 as JsonPrimitive).a());
          } else {

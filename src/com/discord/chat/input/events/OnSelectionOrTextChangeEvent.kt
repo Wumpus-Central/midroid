@@ -68,19 +68,19 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    }
 
    public override fun toString(): String {
-      val var1: Int = this.start;
-      val var2: Int = this.end;
-      val var5: java.lang.String = this.text;
-      val var4: java.lang.String = this.editId;
+      val var2: Int = this.start;
+      val var1: Int = this.end;
+      val var4: java.lang.String = this.text;
+      val var5: java.lang.String = this.editId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnSelectionOrTextChangeEvent(start=");
-      var3.append(var1);
-      var3.append(", end=");
       var3.append(var2);
+      var3.append(", end=");
+      var3.append(var1);
       var3.append(", text=");
-      var3.append(var5);
-      var3.append(", editId=");
       var3.append(var4);
+      var3.append(", editId=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }

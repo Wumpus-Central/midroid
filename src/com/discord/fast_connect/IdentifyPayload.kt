@@ -21,14 +21,14 @@ internal object IdentifyPayload {
          throw new IllegalArgumentException("path cannot have zero elements");
       } else {
          if (var4 != 1) {
-            val var7: java.lang.String = var2.get(0) as java.lang.String;
-            val var6: JsonElement = var1.get(var7) as JsonElement;
-            if (var6 !is JsonObject) {
+            val var6: java.lang.String = var2.get(0) as java.lang.String;
+            val var7: JsonElement = var1.get(var6) as JsonElement;
+            if (var7 !is JsonObject) {
                return var1;
             }
 
             val var8: java.util.Map = L.x(var1);
-            var8.put(var7, INSTANCE.put(var6 as JsonObject, var2.subList(1, var2.size()), var3));
+            var8.put(var6, INSTANCE.put(var7 as JsonObject, var2.subList(1, var2.size()), var3));
             var1 = new JsonObject(var8);
          } else {
             val var11: java.lang.String = var2.get(0) as java.lang.String;
@@ -80,17 +80,17 @@ internal object IdentifyPayload {
          return var1;
       } else {
          var7 = var17 as JsonObject;
-         val var8: java.util.List = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         var17 = var2.getGuildVersions();
-         val var12: LinkedHashMap = new LinkedHashMap(d.d(L.d(((Object[])var17).length), 16));
-         var var5: Int = ((Object[])var17).length;
+         var17 = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var12: Array<GuildVersion> = var2.getGuildVersions();
+         val var8: LinkedHashMap = new LinkedHashMap(d.d(L.d(var12.length), 16));
+         var var5: Int = var12.length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(((GuildVersion)((Object[])var17)[var3]).getId(), g.c(((GuildVersion)((Object[])var17)[var3]).getVersion()));
-            var12.put(var24.c(), var24.d());
+            val var24: Pair = s.a(var12[var3].getId(), g.c(var12[var3].getVersion()));
+            var8.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var7, var8, new JsonObject(var12));
+         var var13: JsonObject = this.put((JsonObject)var7, (java.util.List<java.lang.String>)var17, new JsonObject(var8));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 

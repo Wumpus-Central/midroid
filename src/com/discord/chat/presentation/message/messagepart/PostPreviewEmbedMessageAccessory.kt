@@ -80,18 +80,18 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
 
    public override fun toString(): String {
       val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: PostPreviewEmbed = this.postPreviewEmbed;
+      val var3: PostPreviewEmbed = this.postPreviewEmbed;
       val var1: Int = this.index;
-      val var3: SpoilerAttributes = this.spoilerAttributes;
+      val var5: SpoilerAttributes = this.spoilerAttributes;
       val var2: StringBuilder = new StringBuilder();
       var2.append("PostPreviewEmbedMessageAccessory(messageId=");
       var2.append(var4);
       var2.append(", postPreviewEmbed=");
-      var2.append(var5);
+      var2.append(var3);
       var2.append(", index=");
       var2.append(var1);
       var2.append(", spoilerAttributes=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

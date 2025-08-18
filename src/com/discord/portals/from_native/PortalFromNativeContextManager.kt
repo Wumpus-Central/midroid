@@ -1,7 +1,7 @@
 package com.discord.portals.from_native
 
 import android.view.View
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import gb.x
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
@@ -73,7 +73,7 @@ public object PortalFromNativeContextManager {
          if (var5 != null) {
             var4.getRemoveViewFromParent().invoke(var5);
             var3.addView(var5);
-            ViewMeasureExtensionsKt.measureAndLayout(var3);
+            ReactViewExtensionsKt.measureAndLayout(var3);
             var4.getOnViewAddedToPortal().invoke(var5);
             _portalContextIdsFlow.setValue(PortalFromNativeContextManager.Event.PortalRegistered.INSTANCE);
          }

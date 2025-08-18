@@ -183,6 +183,6 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    }
 
    public fun tryEmit(event: Any) {
-      this.events.d(var1);
+      this.events.b(var1);
    }
 }

@@ -60,13 +60,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var1: Long = this.totalTime;
-      val var3: Long = this.rssPages;
+      val var3: Long = this.totalTime;
+      val var1: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var1);
-      var5.append(", rssPages=");
       var5.append(var3);
+      var5.append(", rssPages=");
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -101,7 +101,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 005: astore 10
          // 007: aload 1
          // 008: invokevirtual java/io/File.exists ()Z
-         // 00b: ifeq 111
+         // 00b: ifeq 112
          // 00e: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
          // 011: astore 13
          // 013: new java/io/InputStreamReader
@@ -141,7 +141,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 060: istore 3
          // 061: iload 3
          // 062: bipush -1
-         // 063: if_icmpeq 08b
+         // 063: if_icmpeq 08c
          // 066: iload 2
          // 067: iload 3
          // 068: iadd
@@ -151,7 +151,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 06d: if_icmple 075
          // 070: aconst_null
          // 071: astore 1
-         // 072: goto 090
+         // 072: goto 091
          // 075: aload 1
          // 076: aload 12
          // 078: bipush 0
@@ -162,80 +162,80 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 07f: ldc "append(...)"
          // 081: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
          // 084: goto 059
-         // 087: astore 1
-         // 088: goto 104
-         // 08b: aload 1
-         // 08c: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-         // 08f: astore 1
-         // 090: aload 10
-         // 092: aconst_null
-         // 093: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-         // 096: aload 11
-         // 098: astore 10
-         // 09a: aload 1
-         // 09b: ifnull 111
-         // 09e: aload 11
-         // 0a0: astore 10
-         // 0a2: aload 1
-         // 0a3: invokeinterface java/lang/CharSequence.length ()I 1
-         // 0a8: ifle 111
-         // 0ab: aload 1
-         // 0ac: bipush 1
-         // 0ad: newarray 5
-         // 0af: dup
-         // 0b0: bipush 0
-         // 0b1: bipush 32
-         // 0b3: castore
-         // 0b4: bipush 0
+         // 087: astore 12
+         // 089: goto 105
+         // 08c: aload 1
+         // 08d: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+         // 090: astore 1
+         // 091: aload 10
+         // 093: aconst_null
+         // 094: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+         // 097: aload 11
+         // 099: astore 10
+         // 09b: aload 1
+         // 09c: ifnull 112
+         // 09f: aload 11
+         // 0a1: astore 10
+         // 0a3: aload 1
+         // 0a4: invokeinterface java/lang/CharSequence.length ()I 1
+         // 0a9: ifle 112
+         // 0ac: aload 1
+         // 0ad: bipush 1
+         // 0ae: newarray 5
+         // 0b0: dup
+         // 0b1: bipush 0
+         // 0b2: bipush 32
+         // 0b4: castore
          // 0b5: bipush 0
-         // 0b6: bipush 6
-         // 0b8: aconst_null
-         // 0b9: invokestatic kotlin/text/StringsKt.A0 (Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Ljava/util/List;
-         // 0bc: astore 1
-         // 0bd: aload 1
-         // 0be: bipush 13
-         // 0c0: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-         // 0c5: checkcast java/lang/String
-         // 0c8: lconst_0
-         // 0c9: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0cc: lstore 4
-         // 0ce: aload 1
-         // 0cf: bipush 14
-         // 0d1: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-         // 0d6: checkcast java/lang/String
-         // 0d9: lconst_0
-         // 0da: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0dd: lstore 6
-         // 0df: aload 1
-         // 0e0: bipush 23
-         // 0e2: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-         // 0e7: checkcast java/lang/String
-         // 0ea: lconst_0
-         // 0eb: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0ee: lstore 8
-         // 0f0: new com/discord/resource_usage/utils/ProcfsStats
-         // 0f3: astore 10
-         // 0f5: aload 10
-         // 0f7: lload 4
-         // 0f9: lload 6
-         // 0fb: ladd
-         // 0fc: lload 8
-         // 0fe: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V
-         // 101: goto 111
-         // 104: aload 1
-         // 105: athrow
-         // 106: astore 12
-         // 108: aload 10
-         // 10a: aload 1
-         // 10b: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-         // 10e: aload 12
-         // 110: athrow
-         // 111: aload 10
-         // 113: areturn
-         // 114: astore 1
-         // 115: aload 11
-         // 117: astore 10
-         // 119: goto 111
+         // 0b6: bipush 0
+         // 0b7: bipush 6
+         // 0b9: aconst_null
+         // 0ba: invokestatic kotlin/text/StringsKt.A0 (Ljava/lang/CharSequence;[CZIILjava/lang/Object;)Ljava/util/List;
+         // 0bd: astore 1
+         // 0be: aload 1
+         // 0bf: bipush 13
+         // 0c1: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
+         // 0c6: checkcast java/lang/String
+         // 0c9: lconst_0
+         // 0ca: invokestatic Jb/c.T (Ljava/lang/String;J)J
+         // 0cd: lstore 6
+         // 0cf: aload 1
+         // 0d0: bipush 14
+         // 0d2: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
+         // 0d7: checkcast java/lang/String
+         // 0da: lconst_0
+         // 0db: invokestatic Jb/c.T (Ljava/lang/String;J)J
+         // 0de: lstore 8
+         // 0e0: aload 1
+         // 0e1: bipush 23
+         // 0e3: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
+         // 0e8: checkcast java/lang/String
+         // 0eb: lconst_0
+         // 0ec: invokestatic Jb/c.T (Ljava/lang/String;J)J
+         // 0ef: lstore 4
+         // 0f1: new com/discord/resource_usage/utils/ProcfsStats
+         // 0f4: astore 10
+         // 0f6: aload 10
+         // 0f8: lload 6
+         // 0fa: lload 8
+         // 0fc: ladd
+         // 0fd: lload 4
+         // 0ff: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V
+         // 102: goto 112
+         // 105: aload 12
+         // 107: athrow
+         // 108: astore 1
+         // 109: aload 10
+         // 10b: aload 12
+         // 10d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+         // 110: aload 1
+         // 111: athrow
+         // 112: aload 10
+         // 114: areturn
+         // 115: astore 1
+         // 116: aload 11
+         // 118: astore 10
+         // 11a: goto 112
       }
 
       public fun readStatFile(): ProcfsStats? {

@@ -142,9 +142,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     var1 = this.this$0;
+                     val var4: CallSystemMessageView = this.this$0;
                      val var5: Lifecycle.State = Lifecycle.State.m;
-                     val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
+                     var1 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -242,8 +242,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                       var1 = var1;
                                                       val var7: kotlin.time.Duration.a = Duration.e;
                                                       val var8: java.lang.Comparable = kotlin.ranges.d.f(
-                                                         Duration.k(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, cb.b.m)),
-                                                         Duration.k(Duration.e.c())
+                                                         Duration.m(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, cb.b.m)),
+                                                         Duration.m(Duration.e.c())
                                                       );
                                                       ((<unrepresentable>)var9).label = 1;
                                                       if (var5.emit(var8, (Continuation)var9) === var11) {
@@ -271,26 +271,26 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
 
                                  public final Object emit_VtjQ1oo/* $VF was: emit-VtjQ1oo*/(long var1, Continuation var3x) {
-                                    val var9: CallSystemMessageView = this.this$0;
-                                    val var8: Message = this.$message;
+                                    val var8: CallSystemMessageView = this.this$0;
+                                    val var9: Message = this.$message;
                                     val var6x: Long = Duration.v(var1);
                                     val var5: Int = Duration.z(var1);
                                     val var4x: Int = Duration.B(var1);
                                     Duration.A(var1);
-                                    val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
-                                    val var11: java.lang.String = java.lang.String.format(
+                                    val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
+                                    val var10: java.lang.String = java.lang.String.format(
                                        "%02d:%02d:%02d%s",
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.e(var6x),
                                              kotlin.coroutines.jvm.internal.b.d(var5),
                                              kotlin.coroutines.jvm.internal.b.d(var4x),
-                                             var8.getDescription()
+                                             var9.getDescription()
                                           },
                                           4
                                        )
                                     );
-                                    var10.setText(var11);
+                                    var11.setText(var10);
                                     return Unit.a;
                                  }
                               };
@@ -304,7 +304,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var5, var4, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var4, var5, var1, this) === var3) {
                         return var3;
                      }
                   }

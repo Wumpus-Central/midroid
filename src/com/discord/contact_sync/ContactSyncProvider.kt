@@ -31,12 +31,12 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 59
+      // 0e: ifnull 5a
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 43
+      // 17: ifnull 44
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
       // 1e: astore 4
@@ -55,25 +55,25 @@ public object ContactSyncProvider {
       // 37: bipush 0
       // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
       // 3b: astore 1
-      // 3c: goto 45
-      // 3f: astore 1
-      // 40: goto 4d
-      // 43: aconst_null
-      // 44: astore 1
-      // 45: aload 2
-      // 46: aconst_null
-      // 47: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4a: goto 59
-      // 4d: aload 1
-      // 4e: athrow
-      // 4f: astore 4
-      // 51: aload 2
-      // 52: aload 1
-      // 53: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 56: aload 4
-      // 58: athrow
-      // 59: aload 1
-      // 5a: areturn
+      // 3c: goto 46
+      // 3f: astore 4
+      // 41: goto 4e
+      // 44: aconst_null
+      // 45: astore 1
+      // 46: aload 2
+      // 47: aconst_null
+      // 48: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4b: goto 5a
+      // 4e: aload 4
+      // 50: athrow
+      // 51: astore 1
+      // 52: aload 2
+      // 53: aload 4
+      // 55: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 1
+      // 59: athrow
+      // 5a: aload 1
+      // 5b: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -141,18 +141,18 @@ public object ContactSyncProvider {
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      val var8: LinkedHashMap = new LinkedHashMap();
-      val var7: Cursor = var1.getContentResolver()
+      val var7: LinkedHashMap = new LinkedHashMap();
+      val var8: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
-      if (var7 == null) {
-         return var8;
+      if (var8 == null) {
+         return var7;
       } else {
-         while (var7.moveToNext()) {
-            val var6: java.lang.String = this.getColumnString(var7, "display_name");
-            val var10: java.lang.String = this.getColumnString(var7, "data4");
-            val var9: java.lang.String = this.getColumnString(var7, "_id");
-            var var3: java.lang.String = this.getColumnString(var7, "contact_id");
-            if (var9 != null && var3 != null) {
+         while (var8.moveToNext()) {
+            val var6: java.lang.String = this.getColumnString(var8, "display_name");
+            val var9: java.lang.String = this.getColumnString(var8, "data4");
+            val var10: java.lang.String = this.getColumnString(var8, "_id");
+            var var3: java.lang.String = this.getColumnString(var8, "contact_id");
+            if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -178,25 +178,25 @@ public object ContactSyncProvider {
                }
 
                val var2: Boolean;
-               if (this.getColumnString(var7, "photo_file_id") != null) {
+               if (this.getColumnString(var8, "photo_file_id") != null) {
                   var2 = true;
                } else {
                   var2 = false;
                }
 
-               if (var10 != null) {
+               if (var9 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
 
-         var7.close();
-         return var8;
+         var8.close();
+         return var7;
       }
    }
 

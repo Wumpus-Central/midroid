@@ -54,8 +54,8 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.tagType == null) {
          var1 = 0;
@@ -63,7 +63,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          var1 = this.tagType.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {

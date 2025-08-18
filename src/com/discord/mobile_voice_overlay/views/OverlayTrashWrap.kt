@@ -50,7 +50,7 @@ public class OverlayTrashWrap : OverlayView {
       val var3: AnimatorSet = new AnimatorSet();
       val var7: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
       var7.setTarget(this);
-      var var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
+      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
       var10.setTarget(var6.trashWrapTargetZone);
       var3.playTogether(new Animator[]{var7, var10});
       var3.addListener(new AnimatorListener(this) {
@@ -74,13 +74,13 @@ public class OverlayTrashWrap : OverlayView {
          }
       });
       this.showAnimator = var3;
-      val var8: AnimatorSet = new AnimatorSet();
-      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var10.setTarget(this);
+      val var11: AnimatorSet = new AnimatorSet();
+      val var8: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var8.setTarget(this);
       val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
       var9.setTarget(var6.trashWrapTargetZone);
-      var8.playTogether(new Animator[]{var10, var9});
-      var8.addListener(new AnimatorListener(this) {
+      var11.playTogether(new Animator[]{var8, var9});
+      var11.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -100,18 +100,18 @@ public class OverlayTrashWrap : OverlayView {
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.hideAnimator = var8;
+      this.hideAnimator = var11;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }
 
    public constructor(context: Context, attrs: AttributeSet?) : super(var1, var2) {
-      val var5: WindowUtils = WindowUtils.INSTANCE;
-      val var7: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
-      var7.width = -1;
-      var7.gravity = 81;
-      var5.addFlag(var7, 16);
-      this.windowLayoutParams = var7;
+      val var7: WindowUtils = WindowUtils.INSTANCE;
+      val var5: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
+      var5.width = -1;
+      var5.gravity = 81;
+      var7.addFlag(var5, 16);
+      this.windowLayoutParams = var5;
       val var6: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
       this.binding = var6;
       this.setBackgroundResource(R.drawable.trash_bg);

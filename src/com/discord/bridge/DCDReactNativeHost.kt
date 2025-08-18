@@ -10,7 +10,7 @@ import java.util.ArrayList
 public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost(var1) {
    protected open val isNewArchEnabled: Boolean
       protected open get() {
-         return false;
+         return true;
       }
 
 

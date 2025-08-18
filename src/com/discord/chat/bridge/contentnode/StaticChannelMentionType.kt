@@ -84,7 +84,7 @@ public enum class StaticChannelMentionType(id: String) {
 
 
       public open fun deserialize(decoder: Decoder): StaticChannelMentionType {
-         return StaticChannelMentionType.Companion.fromValue(var1.n());
+         return StaticChannelMentionType.Companion.fromValue(var1.z());
       }
 
       public open fun serialize(encoder: Encoder, value: StaticChannelMentionType) {

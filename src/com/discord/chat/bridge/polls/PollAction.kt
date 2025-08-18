@@ -87,22 +87,22 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var1: java.lang.String = this.secondaryLabel;
+      val var2: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var3: java.lang.String = this.label;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var3);
-         var2.append("  •  ");
-         var2.append(var1);
-         return var2.toString();
+         val var1: java.lang.String = this.label;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var1);
+         var3.append("  •  ");
+         var3.append(var2);
+         return var3.toString();
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.label.hashCode();
-      val var5: Int = this.presentation.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var6: Int = this.presentation.hashCode();
       val var4: Int = java.lang.Boolean.hashCode(this.enabled);
       var var3: Int = 0;
       val var1: Int;
@@ -123,31 +123,31 @@ public data class PollAction(label: String,
          var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = this.label;
-      val var6: PollActionPresentation = this.presentation;
+      val var5: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var7: java.lang.String = this.type;
-      val var3: java.lang.String = this.secondaryLabel;
-      val var5: java.lang.String = this.accessibilityHint;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollAction(label=");
-      var4.append(var2);
-      var4.append(", presentation=");
-      var4.append(var6);
-      var4.append(", enabled=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var7);
-      var4.append(", secondaryLabel=");
-      var4.append(var3);
-      var4.append(", accessibilityHint=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.type;
+      val var4: java.lang.String = this.secondaryLabel;
+      val var7: java.lang.String = this.accessibilityHint;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PollAction(label=");
+      var6.append(var2);
+      var6.append(", presentation=");
+      var6.append(var5);
+      var6.append(", enabled=");
+      var6.append(var1);
+      var6.append(", type=");
+      var6.append(var3);
+      var6.append(", secondaryLabel=");
+      var6.append(var4);
+      var6.append(", accessibilityHint=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

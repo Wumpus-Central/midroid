@@ -95,18 +95,18 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.iconURL;
-      val var4: java.lang.String = this.iconProxyURL;
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EmbedFooter(iconURL=");
-      var2.append(var3);
-      var2.append(", iconProxyURL=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.iconURL;
+      val var3: java.lang.String = this.iconProxyURL;
+      val var2: java.lang.String = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbedFooter(iconURL=");
+      var4.append(var1);
+      var4.append(", iconProxyURL=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

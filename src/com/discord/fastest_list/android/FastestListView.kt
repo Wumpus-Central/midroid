@@ -16,8 +16,8 @@ import com.discord.fastest_list.android.placeholder.FastestListPlaceholderConfig
 import com.discord.fastest_list.android.scroll.FastestListScrollListener
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
-import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
@@ -92,9 +92,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.k()) {
       if (!var1.isEmpty()) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var2: Int = var4.component1();
-            val var3: Int = var4.component2();
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var2: Int = var5.component1();
+            val var3: Int = var5.component2();
             if (var3 == 1) {
                this.typedAdapter.notifyItemChanged(var2);
             } else {
@@ -105,7 +105,7 @@ internal class FastestListView(context: Context,
          this.typedAdapter.notifyDataSetChanged();
       }
 
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      ReactViewExtensionsKt.measureAndLayout(this);
    }
 
    @JvmStatic
@@ -146,7 +146,7 @@ internal class FastestListView(context: Context,
 
    private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
       Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      ReactViewExtensionsKt.measureAndLayout(this);
    }
 
    @JvmStatic
@@ -193,7 +193,7 @@ internal class FastestListView(context: Context,
       }
 
       this.scrollToPosition(var3.getItemPosition(var1));
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      ReactViewExtensionsKt.measureAndLayout(this);
    }
 
    public fun scrollTo(section: Int, item: Int, animated: Boolean, paddingStart: Int) {

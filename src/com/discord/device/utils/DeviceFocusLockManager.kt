@@ -15,17 +15,17 @@ public object DeviceFocusLockManager {
    private final val focusExcludedViewPreviousImportantForAccessibilityValue: MutableMap<Int, Int> = new LinkedHashMap()
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
-      val var6: LinkedHashSet = new LinkedHashSet();
       val var7: LinkedHashSet = new LinkedHashSet();
+      val var6: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var8: ArrayList = new ArrayList();
+         val var9: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var7.contains(var5 as ViewGroup)) {
-               var8.clear();
+            if (var6.contains(var5 as ViewGroup)) {
+               var9.clear();
                break;
             }
 
@@ -34,34 +34,34 @@ public object DeviceFocusLockManager {
             for (int var2 = 0; var2 < var3; var2++) {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
-                  var8.add(var4);
+                  var9.add(var4);
                }
             }
 
-            var7.add(var11);
+            var6.add(var11);
             var4 = var11;
          }
 
-         var6.addAll(var8);
+         var7.addAll(var9);
       }
 
-      return CollectionsKt.T0(var6);
+      return CollectionsKt.T0(var7);
    }
 
    public fun disableFocusLock() {
-      val var4: java.util.Iterator = focusExcludedViews.entrySet().iterator();
+      val var3: java.util.Iterator = focusExcludedViews.entrySet().iterator();
 
-      while (var4.hasNext()) {
-         val var2: View = (var4.next() as Entry).getValue() as View;
-         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
+      while (var3.hasNext()) {
+         val var4: View = (var3.next() as Entry).getValue() as View;
+         val var2: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var4.getId());
          val var1: Int;
-         if (var3 != null) {
-            var1 = var3;
+         if (var2 != null) {
+            var1 = var2;
          } else {
             var1 = 0;
          }
 
-         var2.setImportantForAccessibility(var1);
+         var4.setImportantForAccessibility(var1);
       }
 
       focusExcludedViews.clear();
