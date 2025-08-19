@@ -8975,6 +8975,7 @@
   ],
   "mi5+Vl": "Já existe uma postagem fixada. Fixar esta postagem vai remover a postagem existente.",
   "IMbjxs": "Fixar essa postagem?",
+  "Y4REmJ": "Postagem de fórum",
   "ipgKDg": "Esta postagem não pode ser enviada por ter conteúdo bloqueado nesta comunidade. Revise sua postagem e tente novamente.",
   "Lkp2fH": "A postagem contém uma mensagem bloqueada",
   "YBgep6": "Salvar suas alterações como rascunho?",
@@ -33570,25 +33571,6 @@
   "6C6PJy": "Sair do palco",
   "r23NoK": "Remova do palco",
   "jMLfp6": "Continuar sem começar",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " falando"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Estamos com problemas para conectar você a este palco. Tente novamente.",
   "8/uDSE": "Este servidor precisa ser impulsionado para o próximo nível para poder comportar mais pessoas.",
   "tJmOu7": "Este servidor precisa ser impulsionado para o próximo nível para poder comportar mais pessoas. Cada impulso adicional concede mais 30 assentos para eventos do palco de vídeo.",
@@ -33630,26 +33612,6 @@
         ],
         "other": [
           "Contas ignoradas presentes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Orador"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Oradores"
         ]
       },
       0,

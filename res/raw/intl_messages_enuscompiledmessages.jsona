@@ -9235,6 +9235,7 @@
   ],
   "mi5+Vl": "There’s a post that’s pinned already. Pinning this post will remove the existing pinned post.",
   "IMbjxs": "Pin this post?",
+  "Y4REmJ": "Forum Post",
   "ipgKDg": "This post cannot be sent because it contains content blocked by this community. Please revise your post and try again.",
   "Lkp2fH": "Post contains a blocked message",
   "YBgep6": "Do you want to save your changes as a draft?",
@@ -22311,10 +22312,26 @@
   ],
   "KkvKho": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "d"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "d"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "d ago"
+    " ago"
   ],
   "Lru1ra": [
     [
@@ -22348,10 +22365,26 @@
   ],
   "raJpz8": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "h"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "h"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "h ago"
+    " ago"
   ],
   "AfXezs": [
     [
@@ -22385,10 +22418,26 @@
   ],
   "LRNgHh": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "m"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "m"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "m ago"
+    " ago"
   ],
   "DmvRVF": [
     [
@@ -22415,10 +22464,26 @@
   ],
   "ITymoq": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "mo"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "mo"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "mo ago"
+    " ago"
   ],
   "nmSbSU": [
     [
@@ -22445,10 +22510,26 @@
   ],
   "EOrEJi": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "s"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "s"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "s ago"
+    " ago"
   ],
   "jfUoRU": [
     [
@@ -22475,10 +22556,26 @@
   ],
   "sDtO6O": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "w"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "w"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "w ago"
+    " ago"
   ],
   "jovF+/": [
     [
@@ -34319,25 +34416,6 @@
   "6C6PJy": "Leave the Stage",
   "r23NoK": "Remove from Stage",
   "jMLfp6": "Continue without starting",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " speaking"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "We are having problems connecting you to this Stage. Please try later.",
   "8/uDSE": "This server will need to be Boosted to the next level to support more people.",
   "tJmOu7": "This server will need to be Boosted to the next level to support more people. Each additional Boost grants 30 more seats in Video Stage events.",
@@ -34386,26 +34464,6 @@
       "cardinal"
     ],
     " Present"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Speaker"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Speakers"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Join Audience",
   "Q8o/tb": "Join as Speaker",

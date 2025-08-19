@@ -8938,6 +8938,7 @@
   ],
   "mi5+Vl": "Zaten sabitlenmiş bir gönderi var. Bu gönderiyi sabitlersen, şu anda sabitlenmiş olan gönderi kaldırılır.",
   "IMbjxs": "Bu gönderi sabitlensin mi?",
+  "Y4REmJ": "Forum Gönderisi",
   "ipgKDg": "Bu topluluk tarafından engellenen içeriğe sahip olduğu için bu gönderi gönderilemez. Lütfen gönderini düzenleyip tekrar dene.",
   "Lkp2fH": "Gönderide engellenmiş bir mesaj var",
   "YBgep6": "Değişikliklerini taslak olarak kaydetmek ister misin?",
@@ -33524,25 +33525,6 @@
   "6C6PJy": "Sahneden Ayrıl",
   "r23NoK": "Sahneden kaldır",
   "jMLfp6": "Başlamadan devam et",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " konuşuyor"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Seni bu Sahne'ye bağlarken sorun yaşıyoruz. Lütfen daha sonra tekrar dene.",
   "8/uDSE": "Daha fazla kişi destekleyebilmek için bu sunucunun bir sonraki takviye seviyesine ulaşması gerekiyor.",
   "tJmOu7": "Daha fazla kişiye hizmet verebilmesi için bu sunucunun bir sonraki takviye seviyesine ulaşması gerekiyor. Her takviye, Görüntülü Sahne etkinliklerinde 30 veya daha fazla kişilik yer sağlar.",
@@ -33591,26 +33573,6 @@
       "cardinal"
     ],
     " mevcut"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Konuşmacı"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Konuşmacı"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Dinleyicilere Katıl",
   "Q8o/tb": "Konuşmacı Olarak Katıl",

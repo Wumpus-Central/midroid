@@ -9,8 +9,8 @@ import com.discord.crash_reporting.CrashReporting
 import com.discord.emoji_picker.EmojiPickerItem.ItemType
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function2
@@ -163,14 +163,14 @@ internal class EmojiPickerView(context: Context,
       }
 
       try {
-         ReactViewExtensionsKt.measureAndLayout(this);
+         ViewMeasureExtensionsKt.measureAndLayout(this);
       } catch (var5: Exception) {
-         val var7: CrashReporting = CrashReporting.INSTANCE;
+         val var4: CrashReporting = CrashReporting.INSTANCE;
          val var3: Boolean = this.isInViewTransition;
          val var6: StringBuilder = new StringBuilder();
          var6.append("About to crash from EmojiPickerView. isInViewTransition: ");
          var6.append(var3);
-         CrashReporting.addBreadcrumb$default(var7, var6.toString(), null, null, 6, null);
+         CrashReporting.addBreadcrumb$default(var4, var6.toString(), null, null, 6, null);
          throw var5;
       }
    }
@@ -376,18 +376,18 @@ internal class EmojiPickerView(context: Context,
 
       public override fun toString(): String {
          val var4: Boolean = this.animateEmoji;
-         val var3: Boolean = this.scrollFastOptimizationEnabled;
+         val var2: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var2: Boolean = this.disableAnimationsOnScroll;
+         val var3: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
          var5.append(var4);
          var5.append(", scrollFastOptimizationEnabled=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var2);
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

@@ -3,6 +3,7 @@ package com.discord.chat.presentation.events
 import B9.s
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
+import com.discord.chat.reactevents.DoubleTapMessageEvent
 import com.discord.chat.reactevents.FirstLayoutData
 import com.discord.chat.reactevents.InitiateEditData
 import com.discord.chat.reactevents.InitiateReplyData
@@ -116,6 +117,7 @@ internal fun createChatReactEvents(): ReactEvents {
       s.a("onTapMention", TapMentionData::class),
       s.a("onTapCommandMention", TapCommandData::class),
       s.a("onTapMessage", TapMessageData::class),
+      s.a("onDoubleTapMessage", DoubleTapMessageEvent::class),
       s.a("onTapMessageReply", TapMessageReplyData::class),
       s.a("onTapSummary", TapSummaryData::class),
       s.a("onTapSummaryJump", TapSummaryJumpData::class),

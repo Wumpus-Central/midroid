@@ -14,8 +14,8 @@ import androidx.core.view.Z
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.properties.ReadWriteProperty
@@ -223,15 +223,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var3: CardView = this.binding.selectedSegmentBg;
-         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
-         if (var4 == null) {
+         val var4: CardView = this.binding.selectedSegmentBg;
+         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var3 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var4.width = var1;
-         var3.setLayoutParams(var4);
-         ReactViewExtensionsKt.measureAndLayout(this);
+         var3.width = var1;
+         var4.setLayoutParams(var3);
+         ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }
    }
@@ -266,7 +266,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
          }
       }
 
-      ReactViewExtensionsKt.measureAndLayout(this);
+      ViewMeasureExtensionsKt.measureAndLayout(this);
       this.animateSelection(var1 xor true);
    }
 

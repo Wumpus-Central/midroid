@@ -8937,6 +8937,7 @@
   ],
   "mi5+Vl": "Es ist bereits ein Post angepinnt. Durch Anpinnen dieses Posts wird der bereits angepinnte entfernt.",
   "IMbjxs": "Diesen Post anpinnen?",
+  "Y4REmJ": "Foren-Post",
   "ipgKDg": "Dieser Post kann nicht gesendet werden, da er Inhalte enthält, die von dieser Community blockiert sind. Bitte überarbeite deinen Post und versuche es erneut.",
   "Lkp2fH": "Post enthält eine blockierte Nachricht",
   "YBgep6": "Möchtest du deine Änderungen als Entwurf speichern?",
@@ -33563,25 +33564,6 @@
   "6C6PJy": "Stage verlassen",
   "r23NoK": "Von Stage entfernen",
   "jMLfp6": "Ohne Starten fortfahren",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " sprechen"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Es gibt Probleme bei der Verbindung mit dieser Stage. Versuche es später noch einmal.",
   "8/uDSE": "Dieser Server muss auf das nächste Level geboostet werden, um mehr Nutzer zu unterstützen.",
   "tJmOu7": "Dieser Server muss auf das nächste Level geboostet werden, um mehr Nutzer zu unterstützen. Jeder zusätzliche Boost gestattet 30 weitere Sitze in Video-Stage-Events.",
@@ -33629,26 +33611,6 @@
       "cardinal"
     ],
     " anwesend"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Sprecher"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Sprecher"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Als Zuhörer beitreten",
   "Q8o/tb": "Als Sprecher beitreten",

@@ -25,13 +25,13 @@ public class ConnectionsRoleTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: ConnectionsRoleTagViewBinding
 
    init {
-      val var3: ConnectionsRoleTagViewBinding = ConnectionsRoleTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
-      var3.connectionsRoleTagContainer.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
-      var3.roleName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var5: TextView = var3.roleName;
-      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
-      val var4: TextView = var3.roleName;
+      val var5: ConnectionsRoleTagViewBinding = ConnectionsRoleTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var5;
+      var5.connectionsRoleTagContainer.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
+      var5.roleName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var3: TextView = var5.roleName;
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      val var4: TextView = var5.roleName;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
    }
 

@@ -8951,6 +8951,7 @@
   ],
   "mi5+Vl": "Un autre post est déjà épinglé. Si tu épingles ce nouveau post, il remplacera celui qui est déjà épinglé.",
   "IMbjxs": "Épingler ce post ?",
+  "Y4REmJ": "Post de forum",
   "ipgKDg": "Il est impossible d'envoyer ce post, car il contient du contenu bloqué par cette communauté. Merci de bien vouloir modifier ton post et de réessayer.",
   "Lkp2fH": "Le post contient un message bloqué",
   "YBgep6": "Veux-tu enregistrer tes modifications dans un brouillon ?",
@@ -33592,25 +33593,6 @@
   "6C6PJy": "Cesser la prise de parole",
   "r23NoK": "Retirer de la conférence",
   "jMLfp6": "Continuer sans commencer",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " en train de parler"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Nous avons du mal à te connecter à cette conférence. Réessaie plus tard.",
   "8/uDSE": "Pour supporter plus de gens, ce serveur doit être boosté au niveau supérieur.",
   "tJmOu7": "Pour supporter plus de gens, ce serveur doit être boosté au niveau supérieur. Chaque boost supplémentaire permet d'accueillir 30 spectateurs de plus lors des événements de conférence vidéo.",
@@ -33652,26 +33634,6 @@
         ],
         "other": [
           "Comptes ignorés présents"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 intervenant"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " intervenants"
         ]
       },
       0,

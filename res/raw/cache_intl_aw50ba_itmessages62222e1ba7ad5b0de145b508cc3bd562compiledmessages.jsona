@@ -8981,6 +8981,7 @@
   ],
   "mi5+Vl": "C'è già un post attaccato. Attaccare questo post rimuoverà il post precedente.",
   "IMbjxs": "Attaccare questo post?",
+  "Y4REmJ": "Post del forum",
   "ipgKDg": "Impossibile inviare questo post perché contiene contenuti bloccati da questa community. Correggi il tuo post e riprova.",
   "Lkp2fH": "Il post contiene un messaggio bloccato",
   "YBgep6": "Vuoi salvare le modifiche come bozza?",
@@ -33522,25 +33523,6 @@
   "6C6PJy": "Abbandona la conferenza",
   "r23NoK": "Rimuovi dalla conferenza",
   "jMLfp6": "Continua senza avviare",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " stanno parlando"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Stiamo riscontrando dei problemi nel connetterti a questo palco. Riprova più tardi.",
   "8/uDSE": "Questo server deve essere potenziato al livello successivo per poter supportare altre persone.",
   "tJmOu7": "Questo server deve essere potenziato al livello successivo per poter supportare altre persone. Ogni potenziamento aggiuntivo conferisce 30 posti in più nelle conferenze video.",
@@ -33582,26 +33564,6 @@
         ],
         "other": [
           "Sono presenti account ignorati"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 relatore"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " relatori"
         ]
       },
       0,

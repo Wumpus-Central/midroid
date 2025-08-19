@@ -9,6 +9,6 @@ public final class C implements Function0 {
    public final MessageAccessory e;
 
    public final Object invoke() {
-      return MessageAccessoriesAdapter.i(this.d, this.e);
+      return MessageAccessoriesAdapter.h(this.d, this.e);
    }
 }

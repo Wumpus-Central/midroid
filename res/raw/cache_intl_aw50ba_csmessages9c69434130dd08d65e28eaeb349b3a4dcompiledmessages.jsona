@@ -9278,6 +9278,7 @@
   ],
   "mi5+Vl": "Nějaký příspěvek už je připnutý. Když připneš tento příspěvek, původní příspěvek se odepne.",
   "IMbjxs": "Připnout tento příspěvek?",
+  "Y4REmJ": "Příspěvek ve fóru",
   "ipgKDg": "Tento příspěvek nelze odeslat, protože v něm je obsah blokovaný touto komunitou. Uprav svůj příspěvek a zkus to znovu.",
   "Lkp2fH": "Příspěvek obsahuje blokovanou zprávu",
   "YBgep6": "Chceš uložit změny jako koncept?",
@@ -34689,25 +34690,6 @@
   "6C6PJy": "Opustit pódium",
   "r23NoK": "Odebrat z pódia",
   "jMLfp6": "Pokračovat bez otevření",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " právě mluví"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Nedaří se nám připojit tě k tomuto pódiu. Zkus to později.",
   "8/uDSE": "Jestli chceš, aby se k pódiu mohlo připojit více lidí, musíš vylepšit server na další úroveň.",
   "tJmOu7": "Jestli chceš, aby se k pódiu mohlo připojit více lidí, musíš vylepšit server na další úroveň. Každé další vylepšení ti u událostí na videopódiu přidá 30 míst navíc.",
@@ -34750,33 +34732,6 @@
         ],
         "other": [
           "ignorované účty"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 řečník"
-        ],
-        "few": [
-          [
-            1,
-            "count"
-          ],
-          " řečníci"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " řečníků"
         ]
       },
       0,

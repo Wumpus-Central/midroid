@@ -223,7 +223,7 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var21: Timer = new Timer();
+                        val var20: Timer = new Timer();
                         val var18: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
@@ -242,7 +242,7 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var21.scheduleAtFixedRate(var18, 1500L, 1000L);
+                        var20.scheduleAtFixedRate(var18, 1500L, 1000L);
                         JSWatchdogManager.access$setFreezeTimer$p(var18);
                      }
                   } catch (var9: Exception) {

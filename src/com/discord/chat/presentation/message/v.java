@@ -9,6 +9,6 @@ public final class v implements Function1 {
    public final MessageAccessory e;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.h(this.d, this.e, (Boolean)var1);
+      return MessageAccessoriesAdapter.g(this.d, this.e, (Boolean)var1);
    }
 }

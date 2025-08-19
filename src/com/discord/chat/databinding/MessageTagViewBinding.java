@@ -31,15 +31,15 @@ public final class MessageTagViewBinding implements ViewBinding {
    @NonNull
    public static MessageTagViewBinding bind(@NonNull View var0) {
       int var1 = R.id.layout;
-      ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-      if (var4 != null) {
+      ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.tag;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.verified_bot_icon;
             SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
             if (var3 != null) {
-               return new MessageTagViewBinding(var0, var4, var2, var3);
+               return new MessageTagViewBinding(var0, var2, var4, var3);
             }
          }
       }

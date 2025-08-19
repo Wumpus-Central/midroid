@@ -8929,6 +8929,7 @@
   ],
   "mi5+Vl": "Et innlegg er allerede festet. Det å feste dette innlegget gjør at det tidligere festede innlegget fjernes.",
   "IMbjxs": "Feste dette innlegget?",
+  "Y4REmJ": "Foruminnlegg",
   "ipgKDg": "Dette innlegget kan ikke sendes fordi det har innhold som er blokkert av dette fellesskapet. Se gjennom innlegget og prøv igjen.",
   "Lkp2fH": "Innlegget inneholder en blokkert melding",
   "YBgep6": "Vil du lagre endringene som et utkast?",
@@ -33429,25 +33430,6 @@
   "6C6PJy": "Forlat scenen",
   "r23NoK": "Fjern fra scene",
   "jMLfp6": "Fortsett uten å starte",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " snakker"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Vi har problemer med å koble deg til denne scenen. Prøv senere.",
   "8/uDSE": "Serveren må boostes til neste nivå for å få plass til flere personer.",
   "tJmOu7": "Serveren må boostes til neste nivå for å ha plass til flere personer. Hver påfølgende boost gir 30 ekstra seter i videosceneeventer.",
@@ -33495,26 +33477,6 @@
       "cardinal"
     ],
     " er til stede"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 taler"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " talere"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Sitt blant publikum",
   "Q8o/tb": "Bli med som taler",

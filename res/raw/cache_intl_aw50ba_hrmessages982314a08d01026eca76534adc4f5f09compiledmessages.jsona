@@ -9195,6 +9195,7 @@
   ],
   "mi5+Vl": "Već imaš neki post koji je prikvačen. Ako prikvačiš ovaj, otkvačit će se onaj.",
   "IMbjxs": "Prikvačiti ovaj post?",
+  "Y4REmJ": "Post na forumu",
   "ipgKDg": "Ovaj post se ne može poslati jer sadrži sadržaj koji je blokirala ova zajednica. Pregledaj svoj post još jednom i pokušaj ponovno.",
   "Lkp2fH": "Post sadrži blokiranu poruku",
   "YBgep6": "Želiš li promjene spremiti kao skicu?",
@@ -34600,25 +34601,6 @@
   "6C6PJy": "Napusti pozornicu",
   "r23NoK": "Ukloni s pozornice",
   "jMLfp6": "Nastaviti bez pokretanja",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " govore"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Imamo problema s povezivanjem s ovom pozornicom. Pokušaj kasnije.",
   "8/uDSE": "Ovaj server će trebati boostati na sljedeću razinu da bi mogao podnijeti više ljudi.",
   "tJmOu7": "Ovaj server će trebati boostati na sljedeću razinu da bi mogao podnijeti više ljudi. Svaki sljedeći Boost daje dodatnih 30 mjesta za događaje s Video pozornicom.",
@@ -34673,26 +34655,6 @@
         ],
         "other": [
           "prisutnih računa"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 govornik"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " govornika"
         ]
       },
       0,

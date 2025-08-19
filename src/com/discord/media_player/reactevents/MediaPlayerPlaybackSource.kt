@@ -134,20 +134,20 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var5: Int = this.attachmentIndex;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaPlayerPlaybackSource(id=");
-      var6.append(var3);
-      var6.append(", assetUrl=");
-      var6.append(var2);
-      var6.append(", channelId=");
-      var6.append(var4);
-      var6.append(", messageId=");
-      var6.append(var7);
-      var6.append(", attachmentIndex=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var6: Int = this.attachmentIndex;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaPlayerPlaybackSource(id=");
+      var5.append(var3);
+      var5.append(", assetUrl=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", messageId=");
+      var5.append(var7);
+      var5.append(", attachmentIndex=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

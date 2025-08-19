@@ -31,6 +31,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
    private final val emitReactEvent: (ReactEvent) -> Unit
    public open val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
    public open val onMessageTapped: ((MessageId, ChannelId) -> Unit)?
+   public open val onMessageDoubleTapped: ((MessageId, ChannelId) -> Unit)?
 
    init {
       this.emitReactEvent = new a(var2, var1, var3);
@@ -45,8 +46,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             java.lang.String var1, long var2, Integer var4, MediaType var5, java.lang.String var6, Integer var7
          ) {
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var11: java.lang.String = MessageId.toString-impl(var1);
-            val var10: java.lang.String = ChannelId.toString-impl(var2);
+            val var10: java.lang.String = MessageId.toString-impl(var1);
+            val var11: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -66,7 +67,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2<MessageId, ChannelId, Unit>(this) {
@@ -79,6 +80,18 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          public final void invoke_pfaIj0E/* $VF was: invoke-pfaIj0E*/(java.lang.String var1, long var2) {
             ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0)
                .invoke(new TapMessageData(MessageId.toString-impl(var1), ChannelId.toString-impl(var2)));
+         }
+      };
+      this.onMessageDoubleTapped = new Function2<MessageId, ChannelId, Unit>(this) {
+         final ChatViewEventHandler this$0;
+
+         {
+            this.this$0 = var1;
+         }
+
+         public final void invoke_pfaIj0E/* $VF was: invoke-pfaIj0E*/(java.lang.String var1, long var2) {
+            ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0)
+               .invoke(new DoubleTapMessageEvent(MessageId.toString-impl(var1), ChannelId.toString-impl(var2)));
          }
       };
    }
@@ -218,8 +231,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var8: Boolean = var1.isAtBottom();
-      val var7: Boolean = var1.isDragging();
+      val var7: Boolean = var1.isAtBottom();
+      val var8: Boolean = var1.isDragging();
       val var6: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
@@ -230,10 +243,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var8,
+            var7,
             var3,
             var4,
-            var7,
+            var8,
             var6,
             var5,
             var1.isFirstMessageVisible(),

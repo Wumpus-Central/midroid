@@ -9259,6 +9259,7 @@
   ],
   "mi5+Vl": "Już przypięto tu post. Przypięcie tego posta spowoduje usunięcie obecnie przypiętego.",
   "IMbjxs": "Przypiąć ten post?",
+  "Y4REmJ": "Post na forum",
   "ipgKDg": "Nie można wysłać posta, ponieważ zawiera on treści zablokowane przez tę społeczność. Zredaguj post i spróbuj ponownie.",
   "Lkp2fH": "Post zawiera zablokowaną wiadomość",
   "YBgep6": "Czy chcesz zapisać zmiany jako wersję roboczą?",
@@ -34498,25 +34499,6 @@
   "6C6PJy": "Opuść podium",
   "r23NoK": "Usuń z podium",
   "jMLfp6": "Kontynuuj bez inicjowania",
-  "jBS1r6": [
-    "Przemawia ",
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ]
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Mamy problem z połączeniem Cię z tym podium. Spróbuj ponownie później.",
   "8/uDSE": "Zwiększ poziom wzmocnienia serwera, aby obsługiwał więcej osób.",
   "tJmOu7": "Zwiększ poziom serwera wzmocnieniami, aby móc obsługiwać więcej osób. Każde dodatkowe wzmocnienie daje 30 miejsc na wydarzeniach podium wideo.",
@@ -34565,26 +34547,6 @@
         ],
         "other": [
           "konta"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 mówca"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " mówców"
         ]
       },
       0,

@@ -78,21 +78,21 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.channelId;
       val var4: java.lang.String = this.commandId;
-      val var2: java.lang.String = this.commandName;
-      val var5: java.lang.String = this.commandKey;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressCommandData(channelId=");
-      var1.append(var3);
-      var1.append(", commandId=");
-      var1.append(var4);
-      var1.append(", commandName=");
-      var1.append(var2);
-      var1.append(", commandKey=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandKey;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressCommandData(channelId=");
+      var3.append(var2);
+      var3.append(", commandId=");
+      var3.append(var4);
+      var3.append(", commandName=");
+      var3.append(var5);
+      var3.append(", commandKey=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

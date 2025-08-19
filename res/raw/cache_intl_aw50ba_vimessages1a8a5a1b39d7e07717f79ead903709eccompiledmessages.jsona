@@ -8972,6 +8972,7 @@
   ],
   "mi5+Vl": "Có một bài đăng đã được ghim sẵn. Ghim bài đăng này sẽ xóa bài đăng hiện đang được ghim.",
   "IMbjxs": "Ghim bài đăng này?",
+  "Y4REmJ": "Bài Đăng Diễn Đàn",
   "ipgKDg": "Không thể gửi bài đăng này vì nội dung của bài đăng đã bị cộng đồng này chặn. Vui lòng sửa lại bài đăng của bạn và thử lại.",
   "Lkp2fH": "Bài đăng chứa một tin nhắn bị chặn",
   "YBgep6": "Bạn có muốn lưu các thay đổi của mình dưới dạng bản nháp không?",
@@ -33555,25 +33556,6 @@
   "6C6PJy": "Rời khỏi Sân khấu",
   "r23NoK": "Gỡ bỏ khỏi Sân Khấu",
   "jMLfp6": "Tiếp tục nhưng không bắt đầu",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " đang nói"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Chúng tôi đang gặp sự cố khi kết nối bạn với Sân khấu này. Hãy thử lại sau.",
   "8/uDSE": "Cần phải Nâng Cấp máy chủ này lên cấp tiếp theo để hỗ trợ nhiều người hơn.",
   "tJmOu7": "Cần phải Nâng Cấp máy chủ này lên cấp tiếp theo để hỗ trợ nhiều người hơn. Mỗi lượt Nâng Cấp sẽ tăng thêm 30 vị trí khán giả cho các sự kiện Sân Khấu Video.",
@@ -33621,26 +33603,6 @@
       "cardinal"
     ],
     " Bị Bỏ Qua Đang Hiện Diện"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Người nói"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Người nói"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Tham gia cùng khán giả",
   "Q8o/tb": "Tham gia với tư cách là Người nói",

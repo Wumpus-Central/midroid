@@ -106,10 +106,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       if (var14 != null) {
          val var13: ArrayList = this.accessories;
          val var20: java.lang.String = var1.getId-3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var9: Boolean = var1.getShouldShowRoleDot();
-         val var8: Boolean = var1.getShouldShowRoleOnName();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var11: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
@@ -137,10 +137,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             new MessageContentAccessory(
                var20,
                var14,
+               var8,
                var10,
                var11,
                var9,
-               var8,
                var5,
                var6,
                var7,
@@ -170,10 +170,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
          val var23: ArrayList = this.accessories;
-         val var31: java.lang.String = var1.getId-3Eiw7ao();
-         val var33: java.lang.String = var1.getUsername();
-         val var28: Context = this.binding.getRoot().getContext();
-         var23.add(new RoleSubscriptionPurchaseAccessory(var31, var33, MessageKt.avatarUrl(var1, var28), var3, false, null));
+         val var33: java.lang.String = var1.getId-3Eiw7ao();
+         val var28: java.lang.String = var1.getUsername();
+         val var31: Context = this.binding.getRoot().getContext();
+         var23.add(new RoleSubscriptionPurchaseAccessory(var33, var28, MessageKt.avatarUrl(var1, var31), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();

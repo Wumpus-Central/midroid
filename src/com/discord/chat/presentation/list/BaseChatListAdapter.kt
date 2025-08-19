@@ -17,11 +17,11 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    public final val delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>
 
    init {
-      val var4: AccessoriesViewPool = new AccessoriesViewPool();
-      this.messageAccessoriesRecycledViewPool = var4;
+      val var3: AccessoriesViewPool = new AccessoriesViewPool();
+      this.messageAccessoriesRecycledViewPool = var3;
       this.chatListItems = CollectionsKt.k();
-      val var3: AdapterDelegatesManager = this.delegatesManager;
-      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
+      val var4: AdapterDelegatesManager = this.delegatesManager;
+      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
       this.setHasStableIds(true);
    }
 

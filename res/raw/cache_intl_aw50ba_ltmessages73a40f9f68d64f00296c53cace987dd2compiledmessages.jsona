@@ -9245,6 +9245,7 @@
   ],
   "mi5+Vl": "Vienas įrašas jau buvo prisegtas. Prisegus šį įrašą bus pašalintas ankstesnis prisegtas įrašas.",
   "IMbjxs": "Prisegti įrašą?",
+  "Y4REmJ": "Forumo įrašas",
   "ipgKDg": "Šio įrašo išsiųsti negalima, nes jame yra šios bendruomenės blokuojamo turinio. Peržiūrėk įrašą ir pabandyk dar kartą.",
   "Lkp2fH": "Įraše yra užblokuota žinutė",
   "YBgep6": "Ar nori įrašyti pakeitimus kaip juodraštinį variantą?",
@@ -34618,25 +34619,6 @@
   "6C6PJy": "Palikti scenos kanalą",
   "r23NoK": "Pašalink iš scenos kanalo",
   "jMLfp6": "Tęsti nepradėjus",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " kalba"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Nepavyksta prisijungti prie šio scenos kanalo. Bandyk dar kartą vėliau.",
   "8/uDSE": "Kad galėtų prisijungti daugiau žmonių, šį serverį reikės stiprinti iki kito lygio.",
   "tJmOu7": "Kad galėtų prisijungti daugiau žmonių, šį serverį reikės stiprinti iki kito lygio. Kiekvienas papildomas stiprinimas suteikia 30 papildomų vietų vaizdo scenos kanalų renginiuose.",
@@ -34685,26 +34667,6 @@
         ],
         "other": [
           "ignoruojamų paskyrų"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 kalbėtojas"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " kalbėtoj."
         ]
       },
       0,

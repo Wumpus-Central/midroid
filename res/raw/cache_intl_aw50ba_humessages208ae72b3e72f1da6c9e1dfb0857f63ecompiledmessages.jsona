@@ -8939,6 +8939,7 @@
   ],
   "mi5+Vl": "Van már egy kitűzött bejegyzés. A bejegyzés kitűzésével eltávolítod a jelenleg kitűzött bejegyzést.",
   "IMbjxs": "Kitűzöd ezt a bejegyzést?",
+  "Y4REmJ": "Fórumbejegyzés",
   "ipgKDg": "Ez a bejegyzés nem küldhető el, mivel ennél a közösségnél letiltott tartalom szerepel benne. Kérjük, nézd át a bejegyzésedet, majd próbáld újra.",
   "Lkp2fH": "A bejegyzés letiltott üzenetet tartalmaz",
   "YBgep6": "Szeretnéd piszkozatként menteni a módosításokat?",
@@ -33447,25 +33448,6 @@
   "6C6PJy": "Pódium elhagyása",
   "r23NoK": "Eltávolítás a pódiumról",
   "jMLfp6": "Folytatás indítás nélkül",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " beszél"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Problémába ütközünk a pódiumhoz való csatlakozás során. Próbáld újra később.",
   "8/uDSE": "A szervert a következő szintre kell gyorsítani, ha azt szeretnéd, hogy több embert támogasson.",
   "tJmOu7": "A szervert a következő szintre kell gyorsítani, ha azt szeretnéd, hogy több embert támogasson. Minden további gyorsításért 30 újabb férőhely jár a videós pódiumeseményeknél.",
@@ -33513,26 +33495,6 @@
       "cardinal"
     ],
     " van jelen"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 beszélő"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " beszélő"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Csatlakozás közönségként",
   "Q8o/tb": "Csatlakozás beszélőként",

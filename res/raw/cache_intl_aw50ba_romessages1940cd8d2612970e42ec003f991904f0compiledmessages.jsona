@@ -8910,6 +8910,7 @@
   ],
   "mi5+Vl": "Există deja o postare fixată. Dacă fixezi postarea, vei elimina postarea fixată existentă.",
   "IMbjxs": "Fixezi această postare?",
+  "Y4REmJ": "Postare pe forum",
   "ipgKDg": "Această postare nu se poate trimite deoarece cuprinde conținut blocat de această comunitate. Revizuiește postarea și încearcă din nou.",
   "Lkp2fH": "Postarea conține un mesaj blocat",
   "YBgep6": "Vrei să salvezi modificările ca ciornă?",
@@ -33468,25 +33469,6 @@
   "6C6PJy": "Părăsește podiumul",
   "r23NoK": "Elimină de pe podium",
   "jMLfp6": "Continuă fără să deschizi",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " vorbesc"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Avem probleme cu conectarea la acest podium. Încearcă mai târziu.",
   "8/uDSE": "Acest server va trebui stimulat până la următorul nivel pentru a accepta mai mulți utilizatori.",
   "tJmOu7": "Acest server va trebui stimulat până la următorul nivel pentru a accepta mai mulți utilizatori. Fiecare Boost suplimentar acordă încă 30 de locuri în cadrul evenimentelor organizate pe podiumurile video.",
@@ -33528,26 +33510,6 @@
         ],
         "other": [
           "Sunt prezente conturi ignorate"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 vorbitor"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " vorbitori"
         ]
       },
       0,

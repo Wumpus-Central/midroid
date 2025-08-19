@@ -56,15 +56,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var6: java.lang.String = var2.getMessageId();
-      val var5: java.lang.String = var2.getAppId();
+      val var5: java.lang.String = var2.getMessageId();
+      val var6: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
+      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
    }
 
    @JvmStatic
@@ -212,18 +212,18 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var28 / var4;
-         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var38: SimpleDraweeView = this.view.banner;
+         var52.resizeLayoutParams(var38, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         val var40: TextView = this.view.title;
-         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var40.setText(var53);
+         var14 = this.view.title;
+         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var14.setText(var40);
       } else {
          val var41: TextView = this.view.title;
          var41.setVisibility(8);

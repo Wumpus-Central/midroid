@@ -8936,6 +8936,7 @@
   ],
   "mi5+Vl": "Ya hay una publicación fijada. Si fijas esta publicación, se quitará la publicación que está fijada actualmente.",
   "IMbjxs": "¿Fijar esta publicación?",
+  "Y4REmJ": "Publicación en el foro",
   "ipgKDg": "No se puede enviar esta publicación porque incluye contenido bloqueado por esta comunidad. Revisa tu publicación e inténtalo de nuevo.",
   "Lkp2fH": "La publicación contiene un mensaje bloqueado",
   "YBgep6": "¿Quieres guardar tus cambios como un borrador?",
@@ -33225,25 +33226,6 @@
   "6C6PJy": "Abandonar el escenario",
   "r23NoK": "Eliminar del escenario",
   "jMLfp6": "Continuar sin iniciar",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " hablando"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Tenemos problemas para conectarte a este escenario. Inténtalo más tarde.",
   "8/uDSE": "Este servidor necesita mejorar al siguiente nivel para admitir a más personas.",
   "tJmOu7": "Este servidor necesita mejorar al siguiente nivel para admitir a más personas. Cada mejora adicional otorga 30 lugares más en eventos de escenario de video.",
@@ -33285,26 +33267,6 @@
         ],
         "other": [
           "Cuentas ignoradas presentes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 orador"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " oradores"
         ]
       },
       0,

@@ -8990,6 +8990,7 @@
   ],
   "mi5+Vl": "Der er allerede et fastgjort opslag. Hvis du fastgør dette opslag, fjernes det nuværende fastgjorte opslag.",
   "IMbjxs": "Fastgør dette opslag?",
+  "Y4REmJ": "Forumopslag",
   "ipgKDg": "Opslaget kan ikke sendes, da det indeholder indhold, der er blokeret af dette community. Du bedes revidere dit opslag og prøve igen.",
   "Lkp2fH": "Opslag indeholder en blokeret besked",
   "YBgep6": "Ønsker du at gemme ændringerne som en kladde?",
@@ -33647,25 +33648,6 @@
   "6C6PJy": "Forlad podiet",
   "r23NoK": "Fjern fra scene",
   "jMLfp6": "Fortsæt uden at begynde",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " taler"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Vi oplever problemer med at tilslutte dig til dette podie. Prøv igen senere.",
   "8/uDSE": "Du skal booste serveren til det næste niveau for at kunne lukke flere ind.",
   "tJmOu7": "Du skal booste serveren til det næste niveau for at kunne lukke flere ind. For hver ekstra boost får du 30 flere sæder i videoscene-begivenheder.",
@@ -33714,27 +33696,6 @@
       "cardinal"
     ],
     " til stede"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Taler"
-        ],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " Talere"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Join publikum",
   "Q8o/tb": "Join som taler",

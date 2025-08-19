@@ -44,7 +44,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getPhotos(params: ReadableMap, promise: Promise) {
-      val var4: Int = var1.getInt("first");
+      val var3: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -52,26 +52,26 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var3: Int;
+      var var4: Int;
       try {
-         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var7: ReactApplicationContext = this.getReactApplicationContext();
-         var16 = CollectionsKt.M0(CollectionsKt.K0(var12.getMedia(var7, var6, var4, var5), new Comparator() {
+         var16 = CollectionsKt.M0(CollectionsKt.K0(var6.getMedia(var7, var12, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return E9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var4);
-         var3 = var16.size();
+         }), var3);
+         var4 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var3 == var4) {
+      if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                s.a("start_cursor", java.lang.String.valueOf((CollectionsKt.h0(var16) as ContentResolverMedia).getUri())),

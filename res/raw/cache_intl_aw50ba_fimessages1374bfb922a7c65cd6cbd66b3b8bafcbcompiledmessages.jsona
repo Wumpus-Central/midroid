@@ -8956,6 +8956,7 @@
   ],
   "mi5+Vl": "Jokin foorumiviesti on jo kiinnitettynä. Tämän foorumiviestin kiinnittäminen poistaa aiemman kiinnityksen.",
   "IMbjxs": "Kiinnitetäänkö tämä foorumiviesti?",
+  "Y4REmJ": "Foorumiviesti",
   "ipgKDg": "Tätä foorumiviestiä ei voida lähettää, koska siinä on sisältöä, joka on estetty tässä yhteisössä. Muuta foorumiviestiäsi ja yritä uudelleen.",
   "Lkp2fH": "Foorumiviesti sisältää estetyn viestin",
   "YBgep6": "Haluatko tallentaa muutoksesi luonnokseksi?",
@@ -33522,25 +33523,6 @@
   "6C6PJy": "Poistu esityksestä",
   "r23NoK": "Poista esityksestä",
   "jMLfp6": "Jatka aloittamatta",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " puhuu"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Tähän esitykseen yhdistämisessä on ongelmia. Yritä myöhemmin uudelleen.",
   "8/uDSE": "Tämä palvelin on nostatettava seuraavalle tasolle, jotta enimmäismäärää voidaan nostaa.",
   "tJmOu7": "Tämä palvelin on nostatettava seuraavalle tasolle, jotta enimmäismäärää voidaan nostaa. Kukin lisänostatus antaa 30 lisäpaikkaa videoesitystapahtumiin.",
@@ -33588,26 +33570,6 @@
       "cardinal"
     ],
     " läsnä"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 puhuja"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " puhujaa"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Liity yleisöön",
   "Q8o/tb": "Liity puhujana",

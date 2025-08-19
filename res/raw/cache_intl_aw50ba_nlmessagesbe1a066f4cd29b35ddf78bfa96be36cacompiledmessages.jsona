@@ -8943,6 +8943,7 @@
   ],
   "mi5+Vl": "Er is al een post vastgepind. Als je deze post vastpint, wordt de eerder vastgepinde post verwijderd.",
   "IMbjxs": "Deze post vastpinnen?",
+  "Y4REmJ": "Forumbericht",
   "ipgKDg": "Je kunt deze post niet versturen omdat het inhoud bevat die is geblokkeerd door deze community. Kijk nog eens goed naar je post en probeer het nog eens.",
   "Lkp2fH": "Post bevat een geblokkeerd bericht",
   "YBgep6": "Wil je je wijzigingen opslaan als een concept?",
@@ -33510,25 +33511,6 @@
   "6C6PJy": "Verlaat het podium",
   "r23NoK": "Verwijderen van podium",
   "jMLfp6": "Doorgaan zonder starten",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " zijn aan het praten"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Het lukt niet om je met dit podium te verbinden. Probeer het later opnieuw.",
   "8/uDSE": "Deze server moet worden geboost om het volgende niveau te bereiken en meer mensen toe te laten.",
   "tJmOu7": "Deze server moet worden geboost om het volgende niveau te bereiken en meer mensen toe te laten. Elke extra boost levert nog eens 30 zitplaatsen op voor elk videopodiumevenement.",
@@ -33577,26 +33559,6 @@
       "cardinal"
     ],
     " aanwezig"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 spreker"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " sprekers"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Neem deel als publiek",
   "Q8o/tb": "Neem deel als spreker",

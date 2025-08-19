@@ -42,10 +42,10 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
             val var8: Field = var6.getDeclaredField("mUIViewOperationQueue");
             var8.setAccessible(true);
-            var6 = (Class)var8.get(var15);
-            if (var6 is UIViewOperationQueue) {
-               val var17: UIViewOperationQueue = var6 as UIViewOperationQueue;
-               if ((var6 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
+            var2 = (UIImplementation)var8.get(var15);
+            if (var2 is UIViewOperationQueue) {
+               val var17: UIViewOperationQueue = var2 as UIViewOperationQueue;
+               if ((var2 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
                   var6 = var17.getClass().getSuperclass();
                } else {
                   var6 = var17.getClass();
@@ -67,13 +67,13 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
                   throw new IllegalStateException(var12.toString().toString());
                }
             } else {
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("Field ");
-               var16.append(var6);
-               var16.append(" not instance of ");
-               var16.append(UIViewOperationQueue::class.java);
-               var16.append(".");
-               throw new IllegalStateException(var16.toString().toString());
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Field ");
+               var9.append(var2);
+               var9.append(" not instance of ");
+               var9.append(UIViewOperationQueue::class.java);
+               var9.append(".");
+               throw new IllegalStateException(var9.toString().toString());
             }
          } else {
             val var14: StringBuilder = new StringBuilder();

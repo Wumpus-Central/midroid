@@ -8963,6 +8963,7 @@
   ],
   "mi5+Vl": "Det finns redan en fäst post. Om du fäster den här posten, tas den existerande fästa posten bort.",
   "IMbjxs": "Fäst denna post?",
+  "Y4REmJ": "Forumpost",
   "ipgKDg": "Den här posten kan inte skickas eftersom den har innehåll som är blockerat av den här communityn. Ändra din post and försök igen.",
   "Lkp2fH": "Posten innehåller ett blockerat meddelande",
   "YBgep6": "Vill du spara dina ändringar som ett utkast?",
@@ -33465,25 +33466,6 @@
   "6C6PJy": "Lämna podium",
   "r23NoK": "Ta bort från podium",
   "jMLfp6": "Fortsätt utan att starta",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " talar"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "Vi har problem med att ansluta till det här podiet. Försök igen senare.",
   "8/uDSE": "Den här servern måste boostas till nästa nivå för att få stöd för fler personer.",
   "tJmOu7": "Den här servern måste boostas till nästa nivå för att få stöd för fler personer. Varje extraboost ger 30 platser till för varje videopodieevent.",
@@ -33532,26 +33514,6 @@
       "cardinal"
     ],
     " närvarande"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 talare"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " talare"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Ställ dig i publiken",
   "Q8o/tb": "Gå med som talare",

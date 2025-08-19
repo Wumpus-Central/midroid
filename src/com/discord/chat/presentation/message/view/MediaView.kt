@@ -30,10 +30,10 @@ import com.discord.media_player.MediaPlayer.Event
 import com.discord.media_player.MediaPlayer.PlayerSettings
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.portals.from_native.PortalFromNativeContextManager
 import com.discord.portals.utils.ViewRemoveFromParentKt
-import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
@@ -175,16 +175,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       I18nUtilsKt.i18nContentDescription$default(var10, I18nMessage.PLAY_FULL_VIDEO, null, 2, null);
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var13: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var12: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
       val var5: GradientDrawable = new GradientDrawable();
       var5.setShape(0);
       var5.setStroke(
-         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var13.z(var5);
+      var12.z(var5);
    }
 
    @JvmStatic
@@ -246,10 +246,10 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var11: Context = this.getContext();
-            val var7: java.lang.Double = var1.getPortal();
-            var10 = var12.acquire(var11, var7, this.playerSettings);
+            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var7: Context = this.getContext();
+            val var12: java.lang.Double = var1.getPortal();
+            var10 = var11.acquire(var7, var12, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -266,7 +266,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          MediaPlayer.preparePlayer$default(var10, var1, true, var2, 0L, var4, null, 40, null);
          this.mediaPlayer = var10;
          this.mediaPlayerView = var4;
-         ReactViewExtensionsKt.measureAndLayout(this);
+         ViewMeasureExtensionsKt.measureAndLayout(this);
          return new Pair(var10, var4);
       }
    }
@@ -302,26 +302,26 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
-               val var9: MediaPlayerView = this.mediaPlayerView;
-               var7 = new Pair(var6, var9);
+               val var7: MediaPlayerView = this.mediaPlayerView;
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var10), new q0(this, var10, var5), new r0(var5, this));
+               .addPortal(var1, (var6.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var4), new q0(this, var4, var5), new r0(var5, this));
          }
       }
    }
@@ -380,7 +380,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             var1, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262143, null
          );
          var1.addView(var2, 0);
-         ReactViewExtensionsKt.measureAndLayout(var1);
+         ViewMeasureExtensionsKt.measureAndLayout(var1);
       }
 
       var1.addOnAttachStateChangeListener(var1.attachStateChangeListener);
@@ -623,9 +623,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                kotlin.c.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var4: Flow = var1.getPausePlayerFlow();
-                  if (var4 != null) {
-                     val var6: FlowCollector = new FlowCollector(this.this$0) {
+                  val var6: Flow = var1.getPausePlayerFlow();
+                  if (var6 != null) {
+                     val var4: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -642,7 +642,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var4.collect(var6, this) === var3) {
+                     if (var6.collect(var4, this) === var3) {
                         return var3;
                      }
                   }
