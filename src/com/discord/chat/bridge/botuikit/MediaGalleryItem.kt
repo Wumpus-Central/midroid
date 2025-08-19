@@ -280,8 +280,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var5 = this.description.hashCode();
       }
 
-      val var16: Int = this.descriptionHint.hashCode();
-      val var15: Int = this.accessibilityRole.hashCode();
+      val var15: Int = this.descriptionHint.hashCode();
+      val var16: Int = this.accessibilityRole.hashCode();
       if (this.portalIdString != null) {
          var6 = this.portalIdString.hashCode();
       }
@@ -322,67 +322,67 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                     + var5
                               )
                               * 31
-                           + var16
+                           + var15
                      )
                      * 31
-                  + var15
+                  + var16
             )
             * 31
          + var6;
    }
 
    public override fun toString(): String {
-      val var10: UnfurledMediaItem = this.media;
-      val var11: MediaGalleryItemType = this.mediaType;
+      val var13: UnfurledMediaItem = this.media;
+      val var14: MediaGalleryItemType = this.mediaType;
       val var12: java.lang.String = this.videoPreviewUrl;
-      val var3: Boolean = this.isSpoiler;
-      val var17: java.lang.String = this.spoilerDescription;
-      val var6: Boolean = this.isObscure;
+      val var6: Boolean = this.isSpoiler;
+      val var7: java.lang.String = this.spoilerDescription;
+      val var4: Boolean = this.isObscure;
       val var5: Boolean = this.isObscureAwaitingScan;
-      val var16: java.lang.String = this.obscureDescription;
-      val var4: Boolean = this.obscureHideControls;
-      val var2: Boolean = this.obscureIsOpaque;
-      val var13: java.lang.Boolean = this.verifyAge;
-      val var1: Boolean = this.showDescription;
-      val var8: java.lang.String = this.description;
-      val var9: java.lang.String = this.descriptionHint;
+      val var9: java.lang.String = this.obscureDescription;
+      val var2: Boolean = this.obscureHideControls;
+      val var1: Boolean = this.obscureIsOpaque;
+      val var10: java.lang.Boolean = this.verifyAge;
+      val var3: Boolean = this.showDescription;
+      val var11: java.lang.String = this.description;
+      val var17: java.lang.String = this.descriptionHint;
       val var15: java.lang.String = this.accessibilityRole;
-      val var14: java.lang.String = this.portalIdString;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MediaGalleryItem(media=");
-      var7.append(var10);
-      var7.append(", mediaType=");
-      var7.append(var11);
-      var7.append(", videoPreviewUrl=");
-      var7.append(var12);
-      var7.append(", isSpoiler=");
-      var7.append(var3);
-      var7.append(", spoilerDescription=");
-      var7.append(var17);
-      var7.append(", isObscure=");
-      var7.append(var6);
-      var7.append(", isObscureAwaitingScan=");
-      var7.append(var5);
-      var7.append(", obscureDescription=");
-      var7.append(var16);
-      var7.append(", obscureHideControls=");
-      var7.append(var4);
-      var7.append(", obscureIsOpaque=");
-      var7.append(var2);
-      var7.append(", verifyAge=");
-      var7.append(var13);
-      var7.append(", showDescription=");
-      var7.append(var1);
-      var7.append(", description=");
-      var7.append(var8);
-      var7.append(", descriptionHint=");
-      var7.append(var9);
-      var7.append(", accessibilityRole=");
-      var7.append(var15);
-      var7.append(", portalIdString=");
-      var7.append(var14);
-      var7.append(")");
-      return var7.toString();
+      val var16: java.lang.String = this.portalIdString;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("MediaGalleryItem(media=");
+      var8.append(var13);
+      var8.append(", mediaType=");
+      var8.append(var14);
+      var8.append(", videoPreviewUrl=");
+      var8.append(var12);
+      var8.append(", isSpoiler=");
+      var8.append(var6);
+      var8.append(", spoilerDescription=");
+      var8.append(var7);
+      var8.append(", isObscure=");
+      var8.append(var4);
+      var8.append(", isObscureAwaitingScan=");
+      var8.append(var5);
+      var8.append(", obscureDescription=");
+      var8.append(var9);
+      var8.append(", obscureHideControls=");
+      var8.append(var2);
+      var8.append(", obscureIsOpaque=");
+      var8.append(var1);
+      var8.append(", verifyAge=");
+      var8.append(var10);
+      var8.append(", showDescription=");
+      var8.append(var3);
+      var8.append(", description=");
+      var8.append(var11);
+      var8.append(", descriptionHint=");
+      var8.append(var17);
+      var8.append(", accessibilityRole=");
+      var8.append(var15);
+      var8.append(", portalIdString=");
+      var8.append(var16);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

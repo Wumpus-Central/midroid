@@ -139,8 +139,8 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       val var4: Int = this.reactionBackgroundColor;
       val var1: Int = this.reactionBorderColor;
       val var5: Int = this.reactionTextColor;
-      val var3: Int = this.activeReactionBackgroundColor;
-      val var2: Int = this.activeReactionBorderColor;
+      val var2: Int = this.activeReactionBackgroundColor;
+      val var3: Int = this.activeReactionBorderColor;
       val var6: Int = this.activeReactionTextColor;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ReactionsTheme(reactionBackgroundColor=");
@@ -150,9 +150,9 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       var7.append(", reactionTextColor=");
       var7.append(var5);
       var7.append(", activeReactionBackgroundColor=");
-      var7.append(var3);
-      var7.append(", activeReactionBorderColor=");
       var7.append(var2);
+      var7.append(", activeReactionBorderColor=");
+      var7.append(var3);
       var7.append(", activeReactionTextColor=");
       var7.append(var6);
       var7.append(")");

@@ -75,9 +75,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var9: j = new j(var4);
-      val var10: ReactApplicationContext = this.getReactApplicationContext();
-      var1.getProducts(var7, var3, var4, var9, var10);
+      val var10: j = new j(var4);
+      val var9: ReactApplicationContext = this.getReactApplicationContext();
+      var1.getProducts(var7, var3, var4, var10, var9);
    }
 
    @JvmStatic
@@ -157,9 +157,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      var2.open(var1);
    }
 
    @ReactMethod

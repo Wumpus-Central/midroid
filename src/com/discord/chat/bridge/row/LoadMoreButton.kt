@@ -91,22 +91,22 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
    }
 
    public override fun toString(): String {
-      val var3: LoadingAction = this.action;
-      val var6: java.lang.String = this.text;
+      val var5: LoadingAction = this.action;
+      val var3: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var5: Int = this.cornerRadius;
-      val var4: Int = this.color;
+      val var4: Int = this.cornerRadius;
+      val var6: Int = this.color;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LoadMoreButton(action=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(", text=");
-      var2.append(var6);
+      var2.append(var3);
       var2.append(", backgroundColor=");
       var2.append(var1);
       var2.append(", cornerRadius=");
-      var2.append(var5);
-      var2.append(", color=");
       var2.append(var4);
+      var2.append(", color=");
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }

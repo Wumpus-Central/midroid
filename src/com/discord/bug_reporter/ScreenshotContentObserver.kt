@@ -221,9 +221,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var3: java.lang.String = var2.toString();
-         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         if (StringsKt.I(var3, var4, false, 2, null)) {
+         val var4: java.lang.String = var2.toString();
+         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         if (StringsKt.I(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -325,22 +325,22 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       public override fun toString(): String {
          val var1: Long = this.id;
          val var5: java.lang.String = this.fileName;
-         val var7: java.lang.String = this.relativePath;
-         val var8: Uri = this.uri;
+         val var6: java.lang.String = this.relativePath;
+         val var7: Uri = this.uri;
          val var3: Long = this.dateAdded;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("ScreenshotData(id=");
-         var6.append(var1);
-         var6.append(", fileName=");
-         var6.append(var5);
-         var6.append(", relativePath=");
-         var6.append(var7);
-         var6.append(", uri=");
-         var6.append(var8);
-         var6.append(", dateAdded=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("ScreenshotData(id=");
+         var8.append(var1);
+         var8.append(", fileName=");
+         var8.append(var5);
+         var8.append(", relativePath=");
+         var8.append(var6);
+         var8.append(", uri=");
+         var8.append(var7);
+         var8.append(", dateAdded=");
+         var8.append(var3);
+         var8.append(")");
+         return var8.toString();
       }
    }
 }

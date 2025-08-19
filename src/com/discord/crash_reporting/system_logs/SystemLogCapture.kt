@@ -16,15 +16,15 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var5: Array<StackTraceElement> = var1.getStackTrace();
-      val var3: Int = var5.length;
+      val var7: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var7.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var7: StackTraceElement = var5[var2];
+         val var5: StackTraceElement = var7[var2];
          val var6: CircularByteBuffer = this.buffer;
          val var4: StringBuilder = new StringBuilder();
          var4.append("    ");
-         var4.append(var7);
+         var4.append(var5);
          var6.addLine(var4.toString());
       }
    }
@@ -112,32 +112,32 @@ internal class SystemLogCapture {
       // 5e: invokevirtual java/lang/Process.destroy ()V
       // 61: aload 2
       // 62: athrow
-      // 63: astore 3
+      // 63: astore 2
       // 64: aload 0
       // 65: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
-      // 68: astore 1
+      // 68: astore 3
       // 69: new java/lang/StringBuilder
       // 6c: dup
       // 6d: invokespecial java/lang/StringBuilder.<init> ()V
-      // 70: astore 2
-      // 71: aload 2
+      // 70: astore 1
+      // 71: aload 1
       // 72: ldc "Exception starting logcat process '"
       // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 77: pop
-      // 78: aload 2
-      // 79: aload 3
+      // 78: aload 1
+      // 79: aload 2
       // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 7d: pop
-      // 7e: aload 2
+      // 7e: aload 1
       // 7f: ldc "'"
       // 81: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 84: pop
-      // 85: aload 1
-      // 86: aload 2
+      // 85: aload 3
+      // 86: aload 1
       // 87: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 8a: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
       // 8d: aload 0
-      // 8e: aload 3
+      // 8e: aload 2
       // 8f: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
       // 92: return
    }
@@ -168,13 +168,13 @@ internal class SystemLogCapture {
                      this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
                   }
                } catch (var4: Exception) {
-                  val var1: CircularByteBuffer = this.buffer;
-                  val var3: StringBuilder = new StringBuilder();
-                  var3.append("Exception getting system logs, will restart logcat. '");
+                  val var3: CircularByteBuffer = this.buffer;
+                  val var1: StringBuilder = new StringBuilder();
+                  var1.append("Exception getting system logs, will restart logcat. '");
                   val var2: Any;
-                  var3.append(var2);
-                  var3.append("'");
-                  var1.addLine(var3.toString());
+                  var1.append(var2);
+                  var1.append("'");
+                  var3.addLine(var1.toString());
                   this.addExceptionToBuffer((Exception)var2);
                }
             } catch (var5: java.lang.Throwable) {

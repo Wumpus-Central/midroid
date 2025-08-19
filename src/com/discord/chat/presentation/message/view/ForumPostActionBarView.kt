@@ -230,10 +230,10 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = CollectionsKt.M0(var8, --var2);
-         val var23: ShortcutsFlexbox = this.binding.reactionsView;
-         var23.setVisibility(0);
-         this.setReactions(var35, var12, var13, var14, var15);
+         val var23: java.util.List = CollectionsKt.M0(var8, --var2);
+         val var35: ShortcutsFlexbox = this.binding.reactionsView;
+         var35.setVisibility(0);
+         this.setReactions(var23, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
          val var36: DCDButton = this.binding.otherReactionsCount;
          var var25: Boolean;

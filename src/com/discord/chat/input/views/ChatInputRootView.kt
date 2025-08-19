@@ -40,6 +40,7 @@ import java.util.UUID
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -284,9 +285,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
             for (int var20 = 0; var20 < var21; var20++) {
                val var13: Intent = var17.c().getItemAt(var20).getIntent();
-               val var18: java.lang.String = var13.getStringExtra("data");
-               if (var18 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var18);
+               val var14: java.lang.String = var13.getStringExtra("data");
+               if (var14 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var14);
                }
             }
 
@@ -362,8 +363,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       for (ChatInputNode var17 : var4) {
-         val var7: Editable = this.editText.getEditableText();
-         EditTextUtilsKt.setChatInputNodeStyle(var7, var17);
+         val var18: Editable = this.editText.getEditableText();
+         EditTextUtilsKt.setChatInputNodeStyle(var18, var17);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -451,11 +452,11 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             G9.b.e();
             if (this.label == 0) {
                kotlin.c.b(var1);
-               var1 = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
+               val var2x: ChatInputRootView.CurrentTextAndSelection = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
                if (this.L$0 as ChatInputRootView.CurrentTextAndSelection != null) {
-                  val var2x: ChatInputRootView.ChatInputListener = this.this$0.getListener();
-                  if (var2x != null) {
-                     var2x.onTextOrSelectionChanged(var1.getSelectionStart(), var1.getSelectionEnd(), var1.getText(), var1.getEditId());
+                  var1 = this.this$0.getListener();
+                  if (var1 != null) {
+                     var1.onTextOrSelectionChanged(var2x.getSelectionStart(), var2x.getSelectionEnd(), var2x.getText(), var2x.getEditId());
                   }
                }
 
@@ -528,8 +529,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = K.a();
-                  val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                  val var4: CoroutineDispatcher = K.a();
+                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
                      int label;
 
                      {
@@ -564,7 +565,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (db.f.g(var1, var4, this) === var3) {
+                  if (db.f.g(var4, var1, this) === var3) {
                      return var3;
                   }
                }
@@ -700,15 +701,15 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var1: Int = this.selectionStart;
-         val var2: Int = this.selectionEnd;
+         val var2: Int = this.selectionStart;
+         val var1: Int = this.selectionEnd;
          val var5: java.lang.String = this.text;
          val var4: java.lang.String = this.editId;
          val var3: StringBuilder = new StringBuilder();
          var3.append("CurrentTextAndSelection(selectionStart=");
-         var3.append(var1);
-         var3.append(", selectionEnd=");
          var3.append(var2);
+         var3.append(", selectionEnd=");
+         var3.append(var1);
          var3.append(", text=");
          var3.append(var5);
          var3.append(", editId=");

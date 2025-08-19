@@ -103,11 +103,11 @@ public class APNGView(context: Context) : m(var1) {
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: FileDownloader = FileDownloader.INSTANCE;
-                  var1 = this.this$0.getContext();
-                  val var7: Flow = FileDownloader.downloadFile$default(
-                     var4,
+                  var1 = FileDownloader.INSTANCE;
+                  val var4: Context = this.this$0.getContext();
+                  val var6: Flow = FileDownloader.downloadFile$default(
                      var1,
+                     var4,
                      this.$config.getUrl(),
                      APNGView.Companion.access$getFilename(APNGView.Companion, this.$config.getUrl()),
                      new File(this.this$0.getContext().getCacheDir(), this.$config.getCacheDirectory()),
@@ -115,7 +115,7 @@ public class APNGView(context: Context) : m(var1) {
                      16,
                      null
                   );
-                  val var6: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+                  val var7: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                      final APNGView.Config $config;
                      final APNGView this$0;
 
@@ -184,8 +184,8 @@ public class APNGView(context: Context) : m(var1) {
                               kotlin.c.b(var5);
                               if (var1 !is DownloadState.Completed) {
                                  if (var1 is DownloadState.Failure) {
-                                    val var13: d0 = K.c();
-                                    var5 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
+                                    var5 = K.c();
+                                    val var13: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
                                        int label;
                                        final APNGView this$0;
 
@@ -216,7 +216,7 @@ public class APNGView(context: Context) : m(var1) {
                                        }
                                     };
                                     ((<unrepresentable>)var14).label = 3;
-                                    if (db.f.g(var13, (Function2)var5, (Continuation)var14) === var16) {
+                                    if (db.f.g((CoroutineContext)var5, var13, (Continuation)var14) === var16) {
                                        return var16;
                                     }
 
@@ -323,7 +323,7 @@ public class APNGView(context: Context) : m(var1) {
                      }
                   };
                   this.label = 1;
-                  if (var7.collect(var6, this) === var3) {
+                  if (var6.collect(var7, this) === var3) {
                      return var3;
                   }
                }
@@ -443,11 +443,11 @@ public class APNGView(context: Context) : m(var1) {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var1);
-            var6.append(var5);
-            var1 = var6.toString();
+            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var1);
+            var5.append(var6);
+            var1 = var5.toString();
          }
 
          return var1;
@@ -553,27 +553,27 @@ public class APNGView(context: Context) : m(var1) {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.url;
+         val var3: java.lang.String = this.url;
          val var1: Boolean = this.animate;
          val var2: Boolean = this.showLoading;
-         val var3: Int = this.widthDp;
-         val var6: Int = this.heightDp;
+         val var4: Int = this.widthDp;
+         val var7: Int = this.heightDp;
          val var5: java.lang.String = this.cacheDirectory;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Config(url=");
-         var7.append(var4);
-         var7.append(", animate=");
-         var7.append(var1);
-         var7.append(", showLoading=");
-         var7.append(var2);
-         var7.append(", widthDp=");
-         var7.append(var3);
-         var7.append(", heightDp=");
-         var7.append(var6);
-         var7.append(", cacheDirectory=");
-         var7.append(var5);
-         var7.append(")");
-         return var7.toString();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var3);
+         var6.append(", animate=");
+         var6.append(var1);
+         var6.append(", showLoading=");
+         var6.append(var2);
+         var6.append(", widthDp=");
+         var6.append(var4);
+         var6.append(", heightDp=");
+         var6.append(var7);
+         var6.append(", cacheDirectory=");
+         var6.append(var5);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

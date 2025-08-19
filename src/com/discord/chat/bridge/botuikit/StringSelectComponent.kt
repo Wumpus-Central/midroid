@@ -151,10 +151,10 @@ public data class StringSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
-      val var4: Int = this.state.hashCode();
-      val var5: Int = this.customId.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var4: Int = this.id.hashCode();
+      val var3: Int = this.state.hashCode();
+      val var6: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -170,7 +170,7 @@ public data class StringSelectComponent(type: Int,
       return (
                (
                         (
-                                 ((((((var6 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                                 ((((((var5 * 31 + var4) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                                     + Integer.hashCode(this.maxValues)
                               )
                               * 31
@@ -184,42 +184,42 @@ public data class StringSelectComponent(type: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.type;
-      val var8: java.lang.String = this.id;
-      val var6: ActionComponentState = this.state;
-      val var5: java.lang.String = this.customId;
-      val var9: java.lang.String = this.placeholder;
-      val var12: java.lang.String = this.accessibilityLabel;
-      val var1: Int = this.minValues;
-      val var3: Int = this.maxValues;
+      val var1: Int = this.type;
+      val var11: java.lang.String = this.id;
+      val var7: ActionComponentState = this.state;
+      val var12: java.lang.String = this.customId;
+      val var5: java.lang.String = this.placeholder;
+      val var9: java.lang.String = this.accessibilityLabel;
+      val var3: Int = this.minValues;
+      val var2: Int = this.maxValues;
       val var4: Boolean = this.disabled;
       val var10: java.util.List = this.options;
-      val var11: java.util.List = this.selectedOptions;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("StringSelectComponent(type=");
-      var7.append(var2);
-      var7.append(", id=");
-      var7.append(var8);
-      var7.append(", state=");
-      var7.append(var6);
-      var7.append(", customId=");
-      var7.append(var5);
-      var7.append(", placeholder=");
-      var7.append(var9);
-      var7.append(", accessibilityLabel=");
-      var7.append(var12);
-      var7.append(", minValues=");
-      var7.append(var1);
-      var7.append(", maxValues=");
-      var7.append(var3);
-      var7.append(", disabled=");
-      var7.append(var4);
-      var7.append(", options=");
-      var7.append(var10);
-      var7.append(", selectedOptions=");
-      var7.append(var11);
-      var7.append(")");
-      return var7.toString();
+      val var8: java.util.List = this.selectedOptions;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("StringSelectComponent(type=");
+      var6.append(var1);
+      var6.append(", id=");
+      var6.append(var11);
+      var6.append(", state=");
+      var6.append(var7);
+      var6.append(", customId=");
+      var6.append(var12);
+      var6.append(", placeholder=");
+      var6.append(var5);
+      var6.append(", accessibilityLabel=");
+      var6.append(var9);
+      var6.append(", minValues=");
+      var6.append(var3);
+      var6.append(", maxValues=");
+      var6.append(var2);
+      var6.append(", disabled=");
+      var6.append(var4);
+      var6.append(", options=");
+      var6.append(var10);
+      var6.append(", selectedOptions=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

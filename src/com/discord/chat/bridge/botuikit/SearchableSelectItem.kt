@@ -86,9 +86,9 @@ public data class SearchableSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.value.hashCode();
-      val var6: Int = this.type.hashCode();
+      val var6: Int = this.label.hashCode();
+      val var4: Int = this.value.hashCode();
+      val var5: Int = this.type.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.iconSrc == null) {
@@ -108,31 +108,31 @@ public data class SearchableSelectItem(label: String,
          var3 = this.iconEmoji.hashCode();
       }
 
-      return ((((var4 * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.label;
-      val var3: java.lang.String = this.value;
-      val var5: SelectOptionType = this.type;
-      val var1: java.lang.String = this.iconSrc;
-      val var7: Int = this.iconColor;
-      val var2: ComponentEmoji = this.iconEmoji;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SearchableSelectItem(label=");
-      var6.append(var4);
-      var6.append(", value=");
-      var6.append(var3);
-      var6.append(", type=");
-      var6.append(var5);
-      var6.append(", iconSrc=");
-      var6.append(var1);
-      var6.append(", iconColor=");
-      var6.append(var7);
-      var6.append(", iconEmoji=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var1: java.lang.String = this.value;
+      val var2: SelectOptionType = this.type;
+      val var5: java.lang.String = this.iconSrc;
+      val var3: Int = this.iconColor;
+      val var6: ComponentEmoji = this.iconEmoji;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("SearchableSelectItem(label=");
+      var7.append(var4);
+      var7.append(", value=");
+      var7.append(var1);
+      var7.append(", type=");
+      var7.append(var2);
+      var7.append(", iconSrc=");
+      var7.append(var5);
+      var7.append(", iconColor=");
+      var7.append(var3);
+      var7.append(", iconEmoji=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

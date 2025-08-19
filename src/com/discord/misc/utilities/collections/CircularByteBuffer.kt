@@ -27,13 +27,13 @@ public class CircularByteBuffer(maxByteCount: Int) {
    }
 
    private fun addLineBytes(lineBytes: ByteArray) {
-      val var2: Int = var1.length + 1;
+      val var3: Int = var1.length + 1;
       this.makeSpace(var1.length + 1);
-      val var3: Int = this.tail;
+      val var2: Int = this.tail;
       this.writeBytes(var1);
       this.writeByte(this.newlineByte);
-      this.lines.addLast(s.a(var3, var1.length));
-      this.size += var2;
+      this.lines.addLast(s.a(var2, var1.length));
+      this.size += var3;
       this.isEmpty = false;
    }
 
@@ -126,21 +126,21 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 0d: aload 0
       // 0e: getfield com/discord/misc/utilities/collections/CircularByteBuffer.lines Lkotlin/collections/ArrayDeque;
       // 11: invokevirtual java/util/AbstractCollection.iterator ()Ljava/util/Iterator;
-      // 14: astore 4
-      // 16: aload 4
-      // 18: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 1d: ifeq 62
-      // 20: aload 4
-      // 22: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 27: checkcast kotlin/Pair
-      // 2a: astore 3
-      // 2b: aload 1
-      // 2c: aload 0
-      // 2d: aload 3
-      // 2e: invokevirtual kotlin/Pair.a ()Ljava/lang/Object;
-      // 31: checkcast java/lang/Number
-      // 34: invokevirtual java/lang/Number.intValue ()I
-      // 37: aload 3
+      // 14: astore 3
+      // 15: aload 3
+      // 16: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 1b: ifeq 62
+      // 1e: aload 3
+      // 1f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 24: checkcast kotlin/Pair
+      // 27: astore 4
+      // 29: aload 1
+      // 2a: aload 0
+      // 2b: aload 4
+      // 2d: invokevirtual kotlin/Pair.a ()Ljava/lang/Object;
+      // 30: checkcast java/lang/Number
+      // 33: invokevirtual java/lang/Number.intValue ()I
+      // 36: aload 4
       // 38: invokevirtual kotlin/Pair.b ()Ljava/lang/Object;
       // 3b: checkcast java/lang/Number
       // 3e: invokevirtual java/lang/Number.intValue ()I
@@ -157,7 +157,7 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 55: aload 1
       // 56: ldc "append(...)"
       // 58: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 5b: goto 16
+      // 5b: goto 15
       // 5e: astore 1
       // 5f: goto 69
       // 62: getstatic kotlin/Unit.a Lkotlin/Unit;
@@ -215,15 +215,15 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 10: istore 4
       // 12: aload 0
       // 13: getfield com/discord/misc/utilities/collections/CircularByteBuffer.size I
-      // 16: istore 3
+      // 16: istore 2
       // 17: aload 0
       // 18: getfield com/discord/misc/utilities/collections/CircularByteBuffer.maxByteCount I
-      // 1b: istore 2
-      // 1c: iload 2
+      // 1b: istore 3
+      // 1c: iload 3
       // 1d: ifle 29
-      // 20: iload 3
+      // 20: iload 2
       // 21: i2f
-      // 22: iload 2
+      // 22: iload 3
       // 23: i2f
       // 24: fdiv
       // 25: fstore 1
@@ -234,8 +234,8 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 2e: new com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats
       // 31: dup
       // 32: iload 4
-      // 34: iload 3
-      // 35: iload 2
+      // 34: iload 2
+      // 35: iload 3
       // 36: fload 1
       // 37: aload 0
       // 38: getfield com/discord/misc/utilities/collections/CircularByteBuffer.head I
@@ -343,28 +343,28 @@ public class CircularByteBuffer(maxByteCount: Int) {
       }
 
       public override fun toString(): String {
-         val var4: Int = this.linesCount;
-         val var1: Int = this.bytesUsed;
-         val var2: Int = this.bytesCapacity;
+         val var2: Int = this.linesCount;
+         val var5: Int = this.bytesUsed;
+         val var1: Int = this.bytesCapacity;
          val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
-         val var8: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
-         val var5: Int = this.headPosition;
-         val var3: Int = this.tailPosition;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("BufferStats(lines=");
-         var7.append(var4);
-         var7.append(", used=");
-         var7.append(var1);
-         var7.append("B/");
-         var7.append(var2);
-         var7.append("B (");
-         var7.append(var8);
-         var7.append("%), head=");
-         var7.append(var5);
-         var7.append(", tail=");
-         var7.append(var3);
-         var7.append(")");
-         return var7.toString();
+         val var7: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
+         val var3: Int = this.headPosition;
+         val var4: Int = this.tailPosition;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("BufferStats(lines=");
+         var8.append(var2);
+         var8.append(", used=");
+         var8.append(var5);
+         var8.append("B/");
+         var8.append(var1);
+         var8.append("B (");
+         var8.append(var7);
+         var8.append("%), head=");
+         var8.append(var3);
+         var8.append(", tail=");
+         var8.append(var4);
+         var8.append(")");
+         return var8.toString();
       }
    }
 

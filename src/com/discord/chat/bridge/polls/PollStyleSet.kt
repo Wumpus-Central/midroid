@@ -298,39 +298,39 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var5: Int = this.border;
+      val var3: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var6: Int = this.fill;
-      val var10: Int = this.label;
+      val var11: Int = this.fill;
+      val var7: Int = this.label;
       val var1: Float = this.opacity;
-      val var9: Int = this.answerBackground;
-      val var3: Int = this.answerFill;
-      val var11: PollRadioStyle = this.radioStyle;
-      val var7: Int = this.radioBackground;
+      val var4: Int = this.answerBackground;
+      val var9: Int = this.answerFill;
+      val var5: PollRadioStyle = this.radioStyle;
+      val var10: Int = this.radioBackground;
       val var8: Int = this.radioForeground;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollStyleSet(border=");
-      var4.append(var5);
-      var4.append(", borderWidth=");
-      var4.append(var2);
-      var4.append(", fill=");
-      var4.append(var6);
-      var4.append(", label=");
-      var4.append(var10);
-      var4.append(", opacity=");
-      var4.append(var1);
-      var4.append(", answerBackground=");
-      var4.append(var9);
-      var4.append(", answerFill=");
-      var4.append(var3);
-      var4.append(", radioStyle=");
-      var4.append(var11);
-      var4.append(", radioBackground=");
-      var4.append(var7);
-      var4.append(", radioForeground=");
-      var4.append(var8);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PollStyleSet(border=");
+      var6.append(var3);
+      var6.append(", borderWidth=");
+      var6.append(var2);
+      var6.append(", fill=");
+      var6.append(var11);
+      var6.append(", label=");
+      var6.append(var7);
+      var6.append(", opacity=");
+      var6.append(var1);
+      var6.append(", answerBackground=");
+      var6.append(var4);
+      var6.append(", answerFill=");
+      var6.append(var9);
+      var6.append(", radioStyle=");
+      var6.append(var5);
+      var6.append(", radioBackground=");
+      var6.append(var10);
+      var6.append(", radioForeground=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

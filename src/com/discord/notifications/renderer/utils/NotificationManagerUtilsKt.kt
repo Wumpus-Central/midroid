@@ -184,16 +184,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var14: a = Result.e;
-         var13 = Result.b(var6.getActiveNotifications());
-      } catch (var10: java.lang.Throwable) {
          val var15: a = Result.e;
-         var13 = Result.b(c.a(var10));
+         var14 = Result.b(var6.getActiveNotifications());
+      } catch (var10: java.lang.Throwable) {
+         val var13: a = Result.e;
+         var14 = Result.b(c.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var13;
-      if (Result.g(var13)) {
+      var6 = (NotificationManager)var14;
+      if (Result.g(var14)) {
          var6 = null;
       }
 
@@ -209,13 +209,13 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
             if (var17[var3].getTag() == null) {
                var5 = false;
             } else {
-               var var9: java.lang.String = ChannelId.toString-impl(var1);
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("CALL_RING");
-               var8.append(var9);
-               var9 = var8.toString();
-               val var19: java.lang.String = var18.getTag();
-               var5 = StringsKt.I(var19, var9, false, 2, null);
+               var var8: java.lang.String = ChannelId.toString-impl(var1);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("CALL_RING");
+               var9.append(var8);
+               val var20: java.lang.String = var9.toString();
+               var8 = var18.getTag();
+               var5 = StringsKt.I(var8, var20, false, 2, null);
             }
 
             if (var5) {

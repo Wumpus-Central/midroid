@@ -54,11 +54,11 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
       MaterialButton var4 = (MaterialButton)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.emoji;
-         SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.label;
-            MaterialTextView var6 = (MaterialTextView)a.a(var0, var1);
-            if (var6 != null) {
+            MaterialTextView var7 = (MaterialTextView)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.label_container;
                LinearLayout var2 = (LinearLayout)a.a(var0, var1);
                if (var2 != null) {
@@ -66,9 +66,9 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
                   SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.loading_dots;
-                     ViewStub var7 = (ViewStub)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new MessageComponentButtonViewBinding(var0, var4, var5, var6, var2, var3, var7);
+                     ViewStub var5 = (ViewStub)a.a(var0, var1);
+                     if (var5 != null) {
+                        return new MessageComponentButtonViewBinding(var0, var4, var6, var7, var2, var3, var5);
                      }
                   }
                }

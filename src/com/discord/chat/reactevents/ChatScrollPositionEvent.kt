@@ -150,14 +150,14 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var9: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var10: Int = java.lang.Boolean.hashCode(this.isAtBottom);
+      val var4: Int = java.lang.Boolean.hashCode(this.isNearBottom);
       val var5: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var3: Int = java.lang.Boolean.hashCode(this.dragging);
-      val var6: Int = java.lang.Boolean.hashCode(this.decelerating);
-      val var10: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
+      val var6: Int = java.lang.Boolean.hashCode(this.dragging);
+      val var9: Int = java.lang.Boolean.hashCode(this.decelerating);
+      val var8: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
       val var7: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
-      val var4: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      val var3: Int = Integer.hashCode(this.firstVisibleMessageIndex);
       var var2: Int = 0;
       val var1: Int;
       if (this.firstVisibleMessagePercentVisible == null) {
@@ -171,7 +171,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var2 = this.lastVisibleMessagePercentVisible.hashCode();
       }
 
-      return ((((((((((var8 * 31 + var9) * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var10) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var11) * 31 + var2)
+      return ((((((((((var10 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var9) * 31 + var8) * 31 + var7) * 31 + var3) * 31 + var1) * 31 + var11) * 31 + var2)
             * 31
          + Integer.hashCode(this.changesetUpdateId);
    }
@@ -181,45 +181,45 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var7: Boolean = this.isAtBottom;
-      val var6: Boolean = this.isNearBottom;
-      val var9: Boolean = this.isNearTop;
-      val var8: Boolean = this.dragging;
-      val var10: Boolean = this.decelerating;
-      val var5: Boolean = this.shouldShowJumpToPresent;
-      val var4: Boolean = this.isFirstMessageVisible;
-      val var1: Int = this.firstVisibleMessageIndex;
-      val var12: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var3: Int = this.lastVisibleMessageIndex;
-      val var11: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var2: Int = this.changesetUpdateId;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ChatScrollPositionEvent(isAtBottom=");
-      var13.append(var7);
-      var13.append(", isNearBottom=");
-      var13.append(var6);
-      var13.append(", isNearTop=");
-      var13.append(var9);
-      var13.append(", dragging=");
-      var13.append(var8);
-      var13.append(", decelerating=");
-      var13.append(var10);
-      var13.append(", shouldShowJumpToPresent=");
-      var13.append(var5);
-      var13.append(", isFirstMessageVisible=");
-      var13.append(var4);
-      var13.append(", firstVisibleMessageIndex=");
-      var13.append(var1);
-      var13.append(", firstVisibleMessagePercentVisible=");
-      var13.append(var12);
-      var13.append(", lastVisibleMessageIndex=");
-      var13.append(var3);
-      var13.append(", lastVisibleMessagePercentVisible=");
-      var13.append(var11);
-      var13.append(", changesetUpdateId=");
-      var13.append(var2);
-      var13.append(")");
-      return var13.toString();
+      val var8: Boolean = this.isAtBottom;
+      val var10: Boolean = this.isNearBottom;
+      val var4: Boolean = this.isNearTop;
+      val var9: Boolean = this.dragging;
+      val var5: Boolean = this.decelerating;
+      val var6: Boolean = this.shouldShowJumpToPresent;
+      val var7: Boolean = this.isFirstMessageVisible;
+      val var2: Int = this.firstVisibleMessageIndex;
+      val var13: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var1: Int = this.lastVisibleMessageIndex;
+      val var12: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var3: Int = this.changesetUpdateId;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("ChatScrollPositionEvent(isAtBottom=");
+      var11.append(var8);
+      var11.append(", isNearBottom=");
+      var11.append(var10);
+      var11.append(", isNearTop=");
+      var11.append(var4);
+      var11.append(", dragging=");
+      var11.append(var9);
+      var11.append(", decelerating=");
+      var11.append(var5);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var6);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var7);
+      var11.append(", firstVisibleMessageIndex=");
+      var11.append(var2);
+      var11.append(", firstVisibleMessagePercentVisible=");
+      var11.append(var13);
+      var11.append(", lastVisibleMessageIndex=");
+      var11.append(var1);
+      var11.append(", lastVisibleMessagePercentVisible=");
+      var11.append(var12);
+      var11.append(", changesetUpdateId=");
+      var11.append(var3);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

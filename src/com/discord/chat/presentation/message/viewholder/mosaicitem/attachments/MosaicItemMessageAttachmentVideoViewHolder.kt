@@ -44,17 +44,17 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var14: Long = var2.getChannelId-o4g7jtM();
+      val var22: Long = var2.getChannelId-o4g7jtM();
       val var27: java.lang.String = var2.getMessageId-3Eiw7ao();
-      val var10: Int = var2.getAttachmentIndex();
+      val var11: Int = var2.getAttachmentIndex();
       val var29: java.lang.String = var30.getVideoUrl();
       val var25: java.lang.String = var30.getUrl();
-      val var11: Int = var30.getWidth();
-      val var13: Int = var30.getHeight();
+      val var13: Int = var30.getWidth();
+      val var10: Int = var30.getHeight();
       val var24: java.lang.String = var30.getPlaceholder();
       val var28: Int = var30.getPlaceholderVersion();
       val var12: Int = var2.getRadiusPx();
-      val var20: Boolean = var30.isSpoiler();
+      val var18: Boolean = var30.isSpoiler();
       val var31: SpoilerAttributes = var2.getSpoilerAttributes();
       val var40: SpoilerConfig;
       if (var31 != null) {
@@ -64,53 +64,53 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       }
 
       val var41: java.lang.Boolean = var30.getObscure();
-      val var16: Boolean;
+      val var14: Boolean;
       if (var41 != null) {
-         var16 = var41;
+         var14 = var41;
+      } else {
+         var14 = false;
+      }
+
+      val var42: java.lang.Boolean = var30.getObscureAwaitingScan();
+      val var15: Boolean;
+      if (var42 != null) {
+         var15 = var42;
+      } else {
+         var15 = false;
+      }
+
+      val var43: java.lang.Boolean = var30.getObscureHideControls();
+      val var16: Boolean;
+      if (var43 != null) {
+         var16 = var43;
       } else {
          var16 = false;
       }
 
-      val var42: java.lang.Boolean = var30.getObscureAwaitingScan();
+      val var44: java.lang.Boolean = var30.getObscureIsOpaque();
       val var17: Boolean;
-      if (var42 != null) {
-         var17 = var42;
+      if (var44 != null) {
+         var17 = var44;
       } else {
          var17 = false;
       }
 
-      val var43: java.lang.Boolean = var30.getObscureHideControls();
-      val var18: Boolean;
-      if (var43 != null) {
-         var18 = var43;
-      } else {
-         var18 = false;
-      }
-
-      val var44: java.lang.Boolean = var30.getObscureIsOpaque();
-      val var19: Boolean;
-      if (var44 != null) {
-         var19 = var44;
-      } else {
-         var19 = false;
-      }
-
       super.bind-l_cVQvE(
-         ChannelId.box-impl(var14),
+         ChannelId.box-impl(var22),
          var27,
-         var10,
+         var11,
          var29,
          var25,
+         var10,
          var13,
-         var11,
          var24,
          var28,
-         var20,
+         var18,
          var40,
+         var14,
+         var15,
          var16,
          var17,
-         var18,
-         var19,
          var30.getShowDescription(),
          var30.getDescription(),
          var30.getHint(),
@@ -169,12 +169,12 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       onAltTextButtonClicked: (String) -> Unit
    ) {
       val var24: UnfurledMediaItem = var3.getMedia();
-      val var22: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var23: StringBuilder = new StringBuilder();
-      var23.append("MediaGalleryDisplayComponent(");
-      var23.append(var2);
-      var23.append(").item[image]");
-      val var26: SpoilerAttributes = var22.forGenericMedia(var3, var1, var23.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
+      val var23: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var22: StringBuilder = new StringBuilder();
+      var22.append("MediaGalleryDisplayComponent(");
+      var22.append(var2);
+      var22.append(").item[image]");
+      val var26: SpoilerAttributes = var23.forGenericMedia(var3, var1, var22.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
       var2 = var24.getProxyUrl();
       val var33: java.lang.String = var3.getVideoPreviewUrl();
       val var34: Int = var24.getWidth();
@@ -196,7 +196,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       val var36: java.lang.String = var24.getPlaceholder();
       val var37: Int = var24.getPlaceholderVersion();
       val var14: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
-      val var19: Boolean = var3.isSpoiler();
+      val var15: Boolean = var3.isSpoiler();
       val var27: SpoilerConfig;
       if (var26 != null) {
          var27 = var26.configure(var7, var8);
@@ -204,14 +204,14 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var27 = null;
       }
 
-      val var20: Boolean = var3.isObscure();
-      val var21: Boolean = var3.isObscureAwaitingScan();
-      val var15: Boolean = var3.getObscureHideControls();
-      val var17: Boolean = var3.getObscureIsOpaque();
-      val var18: Boolean = var3.getShowDescription();
+      val var21: Boolean = var3.isObscure();
+      val var16: Boolean = var3.isObscureAwaitingScan();
+      val var17: Boolean = var3.getObscureHideControls();
+      val var18: Boolean = var3.getObscureIsOpaque();
+      val var20: Boolean = var3.getShowDescription();
       val var32: java.lang.String = var3.getDescription();
       val var31: java.lang.String = var3.getDescriptionHint();
-      val var16: Boolean = var3.getShowDescription();
+      val var19: Boolean = var3.getShowDescription();
       val var25: java.lang.String = var3.getAccessibilityRole();
       val var29: java.lang.Double = var3.getPortalId();
       super.bind-l_cVQvE(
@@ -224,16 +224,16 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var12,
          var36,
          var37,
-         var19,
-         var27,
-         var20,
-         var21,
          var15,
+         var27,
+         var21,
+         var16,
          var17,
          var18,
+         var20,
          var32,
          var31,
-         var16,
+         var19,
          var9,
          var14,
          var4 xor true,

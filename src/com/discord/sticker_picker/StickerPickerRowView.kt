@@ -7,8 +7,8 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.core.view.f0
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
@@ -169,7 +169,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
       if (this.firstRenderPass) {
          this.firstRenderPass = false;
       } else {
-         ReactViewExtensionsKt.measureAndLayout(this);
+         ViewMeasureExtensionsKt.measureAndLayout(this);
       }
    }
 }

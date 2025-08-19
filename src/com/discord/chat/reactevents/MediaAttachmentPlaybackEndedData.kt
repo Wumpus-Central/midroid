@@ -128,29 +128,29 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
 
    public override fun toString(): String {
       val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
-      val var3: Float = this.endDurationSecs;
-      val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
-      val var1: Float = this.durationListeningSecs;
+      val var1: Float = this.totalDurationSecs;
+      val var2: Float = this.endDurationSecs;
+      val var8: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var3: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var5: java.lang.String = this.attachmentId;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var8.append(var6);
-      var8.append(", totalDurationSecs=");
-      var8.append(var2);
-      var8.append(", endDurationSecs=");
-      var8.append(var3);
-      var8.append(", senderUserId=");
-      var8.append(var7);
-      var8.append(", durationListeningSecs=");
-      var8.append(var1);
-      var8.append(", isVoiceMessage=");
-      var8.append(var4);
-      var8.append(", attachmentId=");
-      var8.append(var5);
-      var8.append(")");
-      return var8.toString();
+      val var7: java.lang.String = this.attachmentId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaAttachmentPlaybackEndedData(messageId=");
+      var5.append(var6);
+      var5.append(", totalDurationSecs=");
+      var5.append(var1);
+      var5.append(", endDurationSecs=");
+      var5.append(var2);
+      var5.append(", senderUserId=");
+      var5.append(var8);
+      var5.append(", durationListeningSecs=");
+      var5.append(var3);
+      var5.append(", isVoiceMessage=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

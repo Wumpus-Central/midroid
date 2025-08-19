@@ -16,8 +16,8 @@ import com.discord.fastest_list.android.placeholder.FastestListPlaceholderConfig
 import com.discord.fastest_list.android.scroll.FastestListScrollListener
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
+import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react.utilities.ReactViewExtensionsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
@@ -105,7 +105,7 @@ internal class FastestListView(context: Context,
          this.typedAdapter.notifyDataSetChanged();
       }
 
-      ReactViewExtensionsKt.measureAndLayout(this);
+      ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
    @JvmStatic
@@ -146,7 +146,7 @@ internal class FastestListView(context: Context,
 
    private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
       Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
-      ReactViewExtensionsKt.measureAndLayout(this);
+      ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
    @JvmStatic
@@ -193,7 +193,7 @@ internal class FastestListView(context: Context,
       }
 
       this.scrollToPosition(var3.getItemPosition(var1));
-      ReactViewExtensionsKt.measureAndLayout(this);
+      ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
    public fun scrollTo(section: Int, item: Int, animated: Boolean, paddingStart: Int) {

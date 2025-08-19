@@ -23,21 +23,21 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var4.append(var2);
       var4.append(".replay");
       new File(var3, var4.toString()).delete();
-      val var9: java.lang.String = var1.toString();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var2);
-      var6.append(".json");
-      new File(var9, var6.toString()).delete();
+      var3 = var1.toString();
+      var4 = new StringBuilder();
+      var4.append(var2);
+      var4.append(".json");
+      new File(var3, var4.toString()).delete();
       var3 = var1.toString();
       var4 = new StringBuilder();
       var4.append(var2);
       var4.append(".replay");
       this.replayFile = new File(var3, var4.toString());
-      val var5: java.lang.String = var1.toString();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var2);
-      var8.append(".json");
-      this.jsonFile = new File(var5, var8.toString());
+      var3 = var1.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append(var2);
+      var5.append(".json");
+      this.jsonFile = new File(var3, var5.toString());
    }
 
    private fun appendLine(line: String) {
@@ -68,36 +68,36 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    }
 
    private fun maybeInsertDelay() {
-      val var1: Long = System.currentTimeMillis();
+      val var3: Long = System.currentTimeMillis();
       if (this.lastUpdateTimestamp != null) {
-         val var3: Long = this.lastUpdateTimestamp.longValue();
+         val var1: Long = this.lastUpdateTimestamp.longValue();
          val var6: StringBuilder = new StringBuilder();
          var6.append("{\"delayMs\":");
-         var6.append(var1 - var3);
+         var6.append(var3 - var1);
          var6.append("}");
          this.appendLine(var6.toString());
       }
 
-      this.lastUpdateTimestamp = var1;
+      this.lastUpdateTimestamp = var3;
    }
 
    private fun writeJson() {
       label18: {
          val var2: BooleanRef = new BooleanRef();
          val var1: FileOutputStream = new FileOutputStream(this.jsonFile);
-         val var4: Charset = Charsets.UTF_8;
+         val var3: Charset = Charsets.UTF_8;
          val var12: OutputStreamWriter = new OutputStreamWriter(var1, Charsets.UTF_8);
 
          try {
             var12.write("[\n");
-            p.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new a(var2, var12));
+            p.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var7;
+            val var14: java.lang.Throwable = var7;
 
             try {
-               throw var3;
+               throw var14;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

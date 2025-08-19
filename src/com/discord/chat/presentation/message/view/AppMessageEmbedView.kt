@@ -56,15 +56,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var6: java.lang.String = var2.getMessageId();
-      val var5: java.lang.String = var2.getAppId();
+      val var5: java.lang.String = var2.getMessageId();
+      val var6: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
+      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
    }
 
    @JvmStatic
@@ -83,13 +83,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var2: Int = var1.get("r") as Int;
-      val var3: Int = var1.get("g") as Int;
+      val var3: Int = var1.get("r") as Int;
+      val var2: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var2 == null || var3 == null || var4 == null) {
+      if (var3 == null || var2 == null || var4 == null) {
          return null;
       } else {
-         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
+         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
       }
    }
 
@@ -193,9 +193,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = (byte)0;
+         var28 = 0;
       } else {
-         var28 = (byte)8;
+         var28 = 8;
       }
 
       var36.setVisibility(var28);
@@ -203,7 +203,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var37: SimpleDraweeView = this.view.banner;
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,19 +211,19 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var28 / var4;
-         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var4 = var3 / var4;
+         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var38: SimpleDraweeView = this.view.banner;
+         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         val var40: TextView = this.view.title;
-         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var40.setText(var53);
+         var14 = this.view.title;
+         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var14.setText(var40);
       } else {
          val var41: TextView = this.view.title;
          var41.setVisibility(8);
@@ -284,18 +284,18 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             val var65: Context = this.getContext();
-            var var10: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
+            var var9: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
             val var66: Context = this.getContext();
             val var11: Int = ColorUtilsKt.getColorCompat(var66, R.color.black_500);
-            val var9: Int;
+            val var10: Int;
             if (var31) {
-               var9 = var10;
+               var10 = var9;
             } else {
-               var9 = y.c.k(var10, 30);
+               var10 = y.c.k(var9, 30);
             }
 
             if (var31) {
-               var10 = var11;
+               var9 = var11;
             }
 
             val var67: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(0, -2);
@@ -315,8 +315,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
 
             var71.setAlpha(var7);
             var71.setText(var55);
-            var71.setBackgroundColor(var9);
-            var71.setTextColor(var10);
+            var71.setBackgroundColor(var10);
+            var71.setTextColor(var9);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
