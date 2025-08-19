@@ -13,9 +13,6 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    private final val typeface: Typeface
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "discordFont");
-      super();
       this.context = var1;
       this.discordFont = var2;
       this.typeface = var2.typeface(var1);
@@ -86,12 +83,10 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    }
 
    public open fun updateDrawState(paint: TextPaint) {
-      kotlin.jvm.internal.r.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      kotlin.jvm.internal.r.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 }

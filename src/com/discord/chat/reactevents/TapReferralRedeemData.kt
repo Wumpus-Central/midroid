@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
@@ -29,7 +28,7 @@ public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
       } else if (var1 !is TapReferralRedeemData) {
          return false;
       } else {
-         return r.c(this.referralId, (var1 as TapReferralRedeemData).referralId);
+         return this.referralId == (var1 as TapReferralRedeemData).referralId;
       }
    }
 

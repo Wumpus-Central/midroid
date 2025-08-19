@@ -1,6 +1,6 @@
 package com.discord.ads
 
-import A9.s
+import B9.s
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -17,18 +17,10 @@ import java.util.concurrent.CancellationException
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicReference
-import kotlin.jvm.internal.r
 
-public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleSpec {
-   private final val adExecutor: ExecutorService
-   private final val currentOperation: AtomicReference<ListenableFuture<Info>>
-
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-      this.adExecutor = Executors.newSingleThreadExecutor();
-      this.currentOperation = new AtomicReference<>(null);
-   }
+public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleSpec(var1) {
+   private final val adExecutor: ExecutorService = Executors.newSingleThreadExecutor()
+   private final val currentOperation: AtomicReference<ListenableFuture<Info>> = new AtomicReference(null)
 
    private fun cleanupCurrentOperation() {
       val var1: ListenableFuture = this.currentOperation.getAndSet(null);
@@ -43,7 +35,6 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
    private fun getAdvertisingIdInfoAsync(): ListenableFuture<Info> {
       val var1: SettableFuture = SettableFuture.z();
       this.adExecutor.execute(new a(var1, this));
-      r.g(var1, "also(...)");
       return var1;
    }
 
@@ -52,11 +43,11 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var3: java.lang.String = var4.getMessage();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Error getting google advertising ID info: ");
-         var5.append(var3);
-         var0.y(new Exception(var5.toString(), var4));
+         val var2: java.lang.String = var4.getMessage();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Error getting google advertising ID info: ");
+         var3.append(var2);
+         var0.y(new Exception(var3.toString(), var4));
       }
    }
 
@@ -65,7 +56,6 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
    }
 
    public override fun getGoogleAdvertisingId(promise: Promise) {
-      r.h(var1, "promise");
       this.cleanupCurrentOperation();
       val var2: ListenableFuture = this.getAdvertisingIdInfoAsync();
       this.currentOperation.set(var2);
@@ -79,24 +69,22 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
          }
 
          public void onFailure(java.lang.Throwable var1) {
-            r.h(var1, "t");
             AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
             if (var1 is CancellationException) {
                Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
                AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
             } else {
                val var2: Log = Log.INSTANCE;
-               val var4: java.lang.String = var1.getMessage();
-               val var3: StringBuilder = new StringBuilder();
-               var3.append("Error getting google advertising ID: ");
-               var3.append(var4);
-               var2.e("AdsModule", var3.toString(), var1);
+               val var3: java.lang.String = var1.getMessage();
+               val var4: StringBuilder = new StringBuilder();
+               var4.append("Error getting google advertising ID: ");
+               var4.append(var3);
+               var2.e("AdsModule", var4.toString(), var1);
                this.$promise.reject("err", "Failed to get google advertising ID", var1);
             }
          }
 
          public void onSuccess(Info var1) {
-            r.h(var1, "adInfo");
             AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
             val var7: java.lang.String = var1.a();
             val var2: Boolean = var1.b();

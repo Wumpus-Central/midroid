@@ -1,6 +1,6 @@
 package com.discord.thumbhash
 
-import I2.d
+import H2.d
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -10,21 +10,14 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.controller.a
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import kotlin.jvm.internal.r
 
-internal class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
+internal class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView(var1, var2) {
    private final var uri: String?
    private final var placeholder: String?
    private final var placeholderVersion: Int?
 
    fun ImageWithThumbhashPlaceholderView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
-   }
-
-   init {
-      r.h(var1, "context");
-      super(var1, var2);
    }
 
    public fun setAlt(alt: String?) {
@@ -55,7 +48,6 @@ internal class ImageWithThumbhashPlaceholderView  public constructor(context: Co
                   )
                ) as PipelineDraweeControllerBuilder)
             .d();
-         r.g(var3, "build(...)");
          this.setController(var3);
       }
    }

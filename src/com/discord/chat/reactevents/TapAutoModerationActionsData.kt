@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapAutoModerationActionsData(messageId: String, channelId: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
    public final val channelId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -28,8 +25,6 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
    }
 
    public fun copy(messageId: String = var0.messageId, channelId: String = var0.channelId): TapAutoModerationActionsData {
-      r.h(var1, "messageId");
-      r.h(var2, "channelId");
       return new TapAutoModerationActionsData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.channelId, var1.channelId);
+            return this.channelId == var1.channelId;
          }
       }
    }
@@ -57,13 +52,13 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapAutoModerationActionsData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
       var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

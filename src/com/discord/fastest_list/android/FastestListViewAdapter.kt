@@ -11,7 +11,6 @@ import com.discord.fastest_list.android.view_holder.FastestListViewHolderListHea
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionFooter
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionHeader
 import com.discord.misc.utilities.ids.IdUtilsKt
-import kotlin.jvm.internal.r
 
 internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       placeholderConfig: FastestListPlaceholderConfig,
@@ -25,11 +24,6 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    private final val onUnexpectedItemSize: (Entry, Int) -> Unit
 
    init {
-      r.h(var1, "layoutManager");
-      r.h(var2, "placeholderConfig");
-      r.h(var3, "sections");
-      r.h(var4, "onUnexpectedItemSize");
-      super();
       this.layoutManager = var1;
       this.placeholderConfig = var2;
       this.sections = var3;
@@ -50,12 +44,10 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public open fun onBindViewHolder(holder: FastestListViewHolder, position: Int) {
-      r.h(var1, "holder");
       var1.onBindViewHolder(this.sections.getItem(var2), this.layoutManager.getHorizontal(), this.placeholderConfig);
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastestListViewHolder {
-      r.h(var1, "parent");
       val var3: Any;
       if (var2 != 0) {
          if (var2 != 1) {
@@ -86,14 +78,12 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public open fun onViewRecycled(holder: FastestListViewHolder) {
-      r.h(var1, "holder");
       super.onViewRecycled(var1);
       var1.onViewRecycled();
    }
 
    public fun setPlaceholderConfig(placeholderConfig: FastestListPlaceholderConfig): Boolean {
-      r.h(var1, "placeholderConfig");
-      if (!r.c(this.placeholderConfig, var1)) {
+      if (!(this.placeholderConfig == var1)) {
          this.placeholderConfig = var1;
          return true;
       } else {
@@ -142,13 +132,13 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.position;
-         val var2: Int = this.count;
+         val var2: Int = this.position;
+         val var1: Int = this.count;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DataChanged(position=");
-         var3.append(var1);
-         var3.append(", count=");
          var3.append(var2);
+         var3.append(", count=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

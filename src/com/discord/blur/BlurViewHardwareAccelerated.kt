@@ -5,8 +5,9 @@ import android.content.Context
 import android.widget.FrameLayout
 
 @SuppressLint(["ViewConstructor"])
-internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float)
-   : FrameLayout,
+internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float) : FrameLayout(
+         var1
+      ),
    BlurViewAPI {
    private final var blurTargetNativeId: String
    private final var blurTint: Int
@@ -19,9 +20,6 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    private final val blurTargetChangeListener: () -> Unit
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
-      super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
       this.blurTintIOSParityCompensation = var4;
@@ -55,10 +53,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var1 = true;
       }
 
-      val var2: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
-      if (var2 != null && !var1 && this.blurViewPropertiesDirty) {
-         var2.setBlurAmount(this.getId(), this.blurAmount);
-         var2.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
+      val var3: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
+      if (var3 != null && !var1 && this.blurViewPropertiesDirty) {
+         var3.setBlurAmount(this.getId(), this.blurAmount);
+         var3.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
          this.setBackgroundColor(BlurView.Companion.mapBlurTint$blur_release(this.blurTintIOSParityCompensation, this.blurTint, this.blurAmount));
          this.blurViewPropertiesDirty = false;
       }
@@ -99,10 +97,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var7 = true;
       }
 
-      var4 = this.blurViewLocation[0];
-      var3 = this.blurViewLocation[1];
+      var3 = this.blurViewLocation[0];
+      var4 = this.blurViewLocation[1];
       this.getLocationInWindow(this.blurViewLocation);
-      if (this.blurViewLocation[0] != var4 || this.blurViewLocation[1] != var3 || var7) {
+      if (this.blurViewLocation[0] != var3 || this.blurViewLocation[1] != var4 || var7) {
          this.blurViewWidth = this.getWidth();
          this.blurViewHeight = this.getHeight();
          this.blurViewPropertiesDirty = true;
@@ -121,8 +119,7 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      kotlin.jvm.internal.r.h(var1, "nativeId");
-      if (!kotlin.jvm.internal.r.c(this.blurTargetNativeId, var1)) {
+      if (!(this.blurTargetNativeId == var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }

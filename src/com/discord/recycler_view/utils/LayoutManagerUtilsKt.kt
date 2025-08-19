@@ -1,12 +1,13 @@
+@file:SourceDebugExtension(["SMAP\nLayoutManagerUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LayoutManagerUtils.kt\ncom/discord/recycler_view/utils/LayoutManagerUtilsKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,32:1\n1#2:33\n*E\n"])
+
 package com.discord.recycler_view.utils
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun LinearLayoutManager.isPositionVisible(position: Int, prioritizeCompletelyVisible: Boolean): Boolean? {
    var var3: Int;
    label48: {
-      r.h(var0, "<this>");
       if (var2) {
          var var4: Int = var0.findFirstCompletelyVisibleItemPosition();
          if (var4.intValue() == -1) {

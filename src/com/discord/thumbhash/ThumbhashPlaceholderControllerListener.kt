@@ -1,6 +1,6 @@
 package com.discord.thumbhash
 
-import H9.b
+import G9.b
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -9,12 +9,11 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import jb.K
-import jb.f
+import db.K
+import db.f
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
@@ -26,9 +25,6 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
    private final val placeholderVersion: Int?
 
    init {
-      r.h(var1, "draweeView");
-      r.h(var2, "background");
-      super();
       this.draweeView = var1;
       this.background = var2;
       this.placeholder = var3;
@@ -49,7 +45,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
             CoroutineViewUtilsKt.getAttachedScope(this.draweeView),
             null,
             null,
-            new Function2(this, null) {
+            new Function2<CoroutineScope, Continuation, Object>(this, null) {
                private Object L$0;
                int label;
                final ThumbhashPlaceholderControllerListener this$0;
@@ -84,7 +80,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      c.b(var1);
                      var1 = this.L$0 as CoroutineScope;
                      var4 = K.a();
-                     val var5: Function2 = new Function2(this.this$0, null) {
+                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 

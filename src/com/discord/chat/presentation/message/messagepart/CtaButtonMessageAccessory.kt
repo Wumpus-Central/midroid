@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.ctabutton.CtaButton
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: MessageId, ctaButton: CtaButton) : CtaButtonMessageAccessory(var1, var3, var4) {
    public final val channelId: ChannelId
@@ -11,8 +10,6 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
    public final val ctaButton: CtaButton
 
    fun CtaButtonMessageAccessory(var1: Long, var3: java.lang.String, var4: CtaButton) {
-      r.h(var3, "messageId");
-      r.h(var4, "ctaButton");
       super(var3, "cta button", false, 4, null);
       this.channelId = var1;
       this.messageId = var3;
@@ -32,8 +29,6 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
    }
 
    public fun copy(channelId: ChannelId = ..., messageId: MessageId = ..., ctaButton: CtaButton = ...): CtaButtonMessageAccessory {
-      r.h(var3, "messageId");
-      r.h(var4, "ctaButton");
       return new CtaButtonMessageAccessory(var1, var3, var4, null);
    }
 
@@ -49,7 +44,7 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
          } else if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.ctaButton, var1.ctaButton);
+            return this.ctaButton == var1.ctaButton;
          }
       }
    }
@@ -59,17 +54,17 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: CtaButton = this.ctaButton;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CtaButtonMessageAccessory(channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(", ctaButton=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: CtaButton = this.ctaButton;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CtaButtonMessageAccessory(channelId=");
+      var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", ctaButton=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

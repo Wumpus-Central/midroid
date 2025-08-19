@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class m implements Function1 {
-   public final Attachment j;
+   public final Attachment d;
 
    public final Object invoke(Object var1) {
-      return AudioPlayerView.b(this.j, (RenderContext)var1);
+      return AudioPlayerView.b(this.d, (RenderContext)var1);
    }
 }

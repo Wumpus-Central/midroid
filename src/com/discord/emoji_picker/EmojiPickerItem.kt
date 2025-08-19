@@ -4,6 +4,7 @@ import com.discord.emoji.Surrogates
 import com.discord.emoji.UnicodeEmojis
 import com.discord.misc.utilities.ids.IdUtilsKt
 import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal sealed class EmojiPickerItem protected constructor() {
    public abstract fun itemId(): Long {
@@ -12,14 +13,12 @@ internal sealed class EmojiPickerItem protected constructor() {
    public abstract fun itemType(): Int {
    }
 
-   public data class Category(title: String, id: Long = IdUtilsKt.convertToId(var1), isInsidePremiumRoadBlock: Boolean = false) : EmojiPickerItem {
+   public data class Category(title: String, id: Long = IdUtilsKt.convertToId(var1), isInsidePremiumRoadBlock: Boolean = false) : EmojiPickerItem() {
       public final val title: String
       public final val id: Long
       public final val isInsidePremiumRoadBlock: Boolean
 
       init {
-         kotlin.jvm.internal.r.h(var1, "title");
-         super(null);
          this.title = var1;
          this.id = var2;
          this.isInsidePremiumRoadBlock = var4;
@@ -38,7 +37,6 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public fun copy(title: String = var0.title, id: Long = var0.id, isInsidePremiumRoadBlock: Boolean = var0.isInsidePremiumRoadBlock): com.discord.emoji_picker.EmojiPickerItem.Category {
-         kotlin.jvm.internal.r.h(var1, "title");
          return new EmojiPickerItem.Category(var1, var2, var4);
       }
 
@@ -49,7 +47,7 @@ internal sealed class EmojiPickerItem protected constructor() {
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.title, var1.title)) {
+            if (!(this.title == var1.title)) {
                return false;
             } else if (this.id != var1.id) {
                return false;
@@ -73,28 +71,28 @@ internal sealed class EmojiPickerItem protected constructor() {
 
       public override fun toString(): String {
          val var5: java.lang.String = this.title;
-         val var2: Long = this.id;
-         val var1: Boolean = this.isInsidePremiumRoadBlock;
+         val var1: Long = this.id;
+         val var3: Boolean = this.isInsidePremiumRoadBlock;
          val var4: StringBuilder = new StringBuilder();
          var4.append("Category(title=");
          var4.append(var5);
          var4.append(", id=");
-         var4.append(var2);
-         var4.append(", isInsidePremiumRoadBlock=");
          var4.append(var1);
+         var4.append(", isInsidePremiumRoadBlock=");
+         var4.append(var3);
          var4.append(")");
          return var4.toString();
       }
    }
 
+   @SourceDebugExtension(["SMAP\nEmojiPickerItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerItem.kt\ncom/discord/emoji_picker/EmojiPickerItem$Emoji\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,117:1\n1#2:118\n*E\n"])
    public data class Emoji(id: Long,
-         name: String,
-         animated: Boolean = false,
-         disabled: com.discord.emoji_picker.EmojiPickerItem.Emoji.DisabledType = EmojiPickerItem.Emoji.DisabledType.NONE,
-         unicode: UnicodeEmojis.Emoji? = null,
-         isInsidePremiumRoadBlock: Boolean = false
-      )
-      : EmojiPickerItem {
+      name: String,
+      animated: Boolean = false,
+      disabled: com.discord.emoji_picker.EmojiPickerItem.Emoji.DisabledType = EmojiPickerItem.Emoji.DisabledType.NONE,
+      unicode: UnicodeEmojis.Emoji? = null,
+      isInsidePremiumRoadBlock: Boolean = false
+   ) : EmojiPickerItem() {
       public final val id: Long
       public final val name: String
       public final val animated: Boolean
@@ -116,9 +114,6 @@ internal sealed class EmojiPickerItem protected constructor() {
 
 
       init {
-         kotlin.jvm.internal.r.h(var3, "name");
-         kotlin.jvm.internal.r.h(var5, "disabled");
-         super(null);
          this.id = var1;
          this.name = var3;
          this.animated = var4;
@@ -159,8 +154,6 @@ internal sealed class EmojiPickerItem protected constructor() {
          unicode: UnicodeEmojis.Emoji? = var0.unicode,
          isInsidePremiumRoadBlock: Boolean = var0.isInsidePremiumRoadBlock
       ): com.discord.emoji_picker.EmojiPickerItem.Emoji {
-         kotlin.jvm.internal.r.h(var3, "name");
-         kotlin.jvm.internal.r.h(var5, "disabled");
          return new EmojiPickerItem.Emoji(var1, var3, var4, var5, var6, var7);
       }
 
@@ -173,13 +166,13 @@ internal sealed class EmojiPickerItem protected constructor() {
             var1 = var1;
             if (this.id != var1.id) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.name, var1.name)) {
+            } else if (!(this.name == var1.name)) {
                return false;
             } else if (this.animated != var1.animated) {
                return false;
             } else if (this.disabled != var1.disabled) {
                return false;
-            } else if (!kotlin.jvm.internal.r.c(this.unicode, var1.unicode)) {
+            } else if (!(this.unicode == var1.unicode)) {
                return false;
             } else {
                return this.isInsidePremiumRoadBlock == var1.isInsidePremiumRoadBlock;
@@ -189,8 +182,8 @@ internal sealed class EmojiPickerItem protected constructor() {
 
       public override fun hashCode(): Int {
          val var5: Int = java.lang.Long.hashCode(this.id);
-         val var3: Int = this.name.hashCode();
-         val var4: Int = java.lang.Boolean.hashCode(this.animated);
+         val var4: Int = this.name.hashCode();
+         val var3: Int = java.lang.Boolean.hashCode(this.animated);
          val var2: Int = this.disabled.hashCode();
          val var1: Int;
          if (this.unicode == null) {
@@ -199,7 +192,7 @@ internal sealed class EmojiPickerItem protected constructor() {
             var1 = this.unicode.hashCode();
          }
 
-         return ((((var5 * 31 + var3) * 31 + var4) * 31 + var2) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.isInsidePremiumRoadBlock);
+         return ((((var5 * 31 + var4) * 31 + var3) * 31 + var2) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.isInsidePremiumRoadBlock);
       }
 
       public override fun itemId(): Long {
@@ -212,26 +205,26 @@ internal sealed class EmojiPickerItem protected constructor() {
 
       public override fun toString(): String {
          val var3: Long = this.id;
-         val var8: java.lang.String = this.name;
-         val var2: Boolean = this.animated;
-         val var5: EmojiPickerItem.Emoji.DisabledType = this.disabled;
+         val var5: java.lang.String = this.name;
+         val var1: Boolean = this.animated;
+         val var6: EmojiPickerItem.Emoji.DisabledType = this.disabled;
          val var7: UnicodeEmojis.Emoji = this.unicode;
-         val var1: Boolean = this.isInsidePremiumRoadBlock;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Emoji(id=");
-         var6.append(var3);
-         var6.append(", name=");
-         var6.append(var8);
-         var6.append(", animated=");
-         var6.append(var2);
-         var6.append(", disabled=");
-         var6.append(var5);
-         var6.append(", unicode=");
-         var6.append(var7);
-         var6.append(", isInsidePremiumRoadBlock=");
-         var6.append(var1);
-         var6.append(")");
-         return var6.toString();
+         val var2: Boolean = this.isInsidePremiumRoadBlock;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Emoji(id=");
+         var8.append(var3);
+         var8.append(", name=");
+         var8.append(var5);
+         var8.append(", animated=");
+         var8.append(var1);
+         var8.append(", disabled=");
+         var8.append(var6);
+         var8.append(", unicode=");
+         var8.append(var7);
+         var8.append(", isInsidePremiumRoadBlock=");
+         var8.append(var2);
+         var8.append(")");
+         return var8.toString();
       }
 
       public enum class DisabledType {
@@ -247,7 +240,7 @@ internal sealed class EmojiPickerItem protected constructor() {
          fun {
             val var0: Array<EmojiPickerItem.Emoji.DisabledType> = $values();
             $VALUES = var0;
-            $ENTRIES = I9.a.a(var0);
+            $ENTRIES = H9.a.a(var0);
          }
 
          @JvmStatic
@@ -317,12 +310,10 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
    }
 
-   public data class FooterUpsell(id: String) : EmojiPickerItem {
+   public data class FooterUpsell(id: String) : EmojiPickerItem() {
       public final val id: String
 
       init {
-         kotlin.jvm.internal.r.h(var1, "id");
-         super(null);
          this.id = var1;
       }
 
@@ -331,7 +322,6 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public fun copy(id: String = var0.id): com.discord.emoji_picker.EmojiPickerItem.FooterUpsell {
-         kotlin.jvm.internal.r.h(var1, "id");
          return new EmojiPickerItem.FooterUpsell(var1);
       }
 
@@ -341,7 +331,7 @@ internal sealed class EmojiPickerItem protected constructor() {
          } else if (var1 !is EmojiPickerItem.FooterUpsell) {
             return false;
          } else {
-            return kotlin.jvm.internal.r.c(this.id, (var1 as EmojiPickerItem.FooterUpsell).id);
+            return this.id == (var1 as EmojiPickerItem.FooterUpsell).id;
          }
       }
 
@@ -358,12 +348,12 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.id;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("FooterUpsell(id=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = this.id;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("FooterUpsell(id=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -387,7 +377,7 @@ internal sealed class EmojiPickerItem protected constructor() {
       fun {
          val var0: Array<EmojiPickerItem.ItemType> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic
@@ -412,12 +402,10 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
    }
 
-   public data class PremiumInlineRoadblockFooter(id: String) : EmojiPickerItem {
+   public data class PremiumInlineRoadblockFooter(id: String) : EmojiPickerItem() {
       public final val id: String
 
       init {
-         kotlin.jvm.internal.r.h(var1, "id");
-         super(null);
          this.id = var1;
       }
 
@@ -426,7 +414,6 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public fun copy(id: String = var0.id): com.discord.emoji_picker.EmojiPickerItem.PremiumInlineRoadblockFooter {
-         kotlin.jvm.internal.r.h(var1, "id");
          return new EmojiPickerItem.PremiumInlineRoadblockFooter(var1);
       }
 
@@ -436,7 +423,7 @@ internal sealed class EmojiPickerItem protected constructor() {
          } else if (var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
             return false;
          } else {
-            return kotlin.jvm.internal.r.c(this.id, (var1 as EmojiPickerItem.PremiumInlineRoadblockFooter).id);
+            return this.id == (var1 as EmojiPickerItem.PremiumInlineRoadblockFooter).id;
          }
       }
 
@@ -462,12 +449,10 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
    }
 
-   public data class PremiumInlineRoadblockHeader(id: String) : EmojiPickerItem {
+   public data class PremiumInlineRoadblockHeader(id: String) : EmojiPickerItem() {
       public final val id: String
 
       init {
-         kotlin.jvm.internal.r.h(var1, "id");
-         super(null);
          this.id = var1;
       }
 
@@ -476,7 +461,6 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public fun copy(id: String = var0.id): com.discord.emoji_picker.EmojiPickerItem.PremiumInlineRoadblockHeader {
-         kotlin.jvm.internal.r.h(var1, "id");
          return new EmojiPickerItem.PremiumInlineRoadblockHeader(var1);
       }
 
@@ -486,7 +470,7 @@ internal sealed class EmojiPickerItem protected constructor() {
          } else if (var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader) {
             return false;
          } else {
-            return kotlin.jvm.internal.r.c(this.id, (var1 as EmojiPickerItem.PremiumInlineRoadblockHeader).id);
+            return this.id == (var1 as EmojiPickerItem.PremiumInlineRoadblockHeader).id;
          }
       }
 
@@ -503,22 +487,20 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.id;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("PremiumInlineRoadblockHeader(id=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.id;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("PremiumInlineRoadblockHeader(id=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
-   public data class Spacer(id: String, height: Int) : EmojiPickerItem {
+   public data class Spacer(id: String, height: Int) : EmojiPickerItem() {
       public final val id: String
       public final val height: Int
 
       init {
-         kotlin.jvm.internal.r.h(var1, "id");
-         super(null);
          this.id = var1;
          this.height = var2;
       }
@@ -532,7 +514,6 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public fun copy(id: String = var0.id, height: Int = var0.height): com.discord.emoji_picker.EmojiPickerItem.Spacer {
-         kotlin.jvm.internal.r.h(var1, "id");
          return new EmojiPickerItem.Spacer(var1, var2);
       }
 
@@ -543,7 +524,7 @@ internal sealed class EmojiPickerItem protected constructor() {
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.r.c(this.id, var1.id)) {
+            if (!(this.id == var1.id)) {
                return false;
             } else {
                return this.height == var1.height;
@@ -564,15 +545,15 @@ internal sealed class EmojiPickerItem protected constructor() {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.id;
+         val var2: java.lang.String = this.id;
          val var1: Int = this.height;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Spacer(id=");
-         var2.append(var3);
-         var2.append(", height=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Spacer(id=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

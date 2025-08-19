@@ -1,7 +1,7 @@
 package com.discord.image.fresco.postprocessors
 
-import A9.n
-import I9.a
+import B9.n
+import H9.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
@@ -9,7 +9,7 @@ import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostp
 import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -37,16 +37,16 @@ public sealed interface PostProcessor {
       }
    }
 
+   @SourceDebugExtension(["SMAP\nPostProcessor.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PostProcessor.kt\ncom/discord/image/fresco/postprocessors/PostProcessor$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,48:1\n1557#2:49\n1628#2,3:50\n*S KotlinDebug\n*F\n+ 1 PostProcessor.kt\ncom/discord/image/fresco/postprocessors/PostProcessor$Companion\n*L\n41#1:49\n41#1:50,3\n*E\n"])
    public companion object {
       public fun create(processor: PostProcessor): BasePostprocessor {
-         r.h(var1, "processor");
          val var5: Any;
          if (var1 is PostProcessor.Composite) {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
-            val var4: ArrayList = new ArrayList(i.v(var2, 10));
+            val var4: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
 
-            for (PostProcessor var3 : var2) {
-               var4.add($$INSTANCE.create(var3));
+            for (PostProcessor var6 : var2) {
+               var4.add($$INSTANCE.create(var6));
             }
 
             var5 = new CompositePostprocessor(var4);
@@ -70,21 +70,15 @@ public sealed interface PostProcessor {
       public final val postprocessors: List<PostProcessor>
 
       init {
-         r.h(var1, "postprocessors");
-         super();
          this.postprocessors = var1;
       }
 
-      public constructor(vararg postprocessors: PostProcessor) : r.h(var1, "postprocessors") {
-         this(c.F0(var1));
-      }
-
+      public constructor(vararg postprocessors: PostProcessor) : this(h.F0(var1))
       public operator fun component1(): List<PostProcessor> {
          return this.postprocessors;
       }
 
       public fun copy(postprocessors: List<PostProcessor> = var0.postprocessors): com.discord.image.fresco.postprocessors.PostProcessor.Composite {
-         r.h(var1, "postprocessors");
          return new PostProcessor.Composite(var1);
       }
 
@@ -98,7 +92,7 @@ public sealed interface PostProcessor {
          } else if (var1 !is PostProcessor.Composite) {
             return false;
          } else {
-            return r.c(this.postprocessors, (var1 as PostProcessor.Composite).postprocessors);
+            return this.postprocessors == (var1 as PostProcessor.Composite).postprocessors;
          }
       }
 
@@ -107,12 +101,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var1: java.util.List = this.postprocessors;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Composite(postprocessors=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.util.List = this.postprocessors;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Composite(postprocessors=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -138,8 +132,6 @@ public sealed interface PostProcessor {
       public final val endPosition: Float
 
       init {
-         r.h(var1, "direction");
-         super();
          this.direction = var1;
          this.startColor = var2;
          this.endColor = var3;
@@ -174,7 +166,6 @@ public sealed interface PostProcessor {
          startPosition: Float = var0.startPosition,
          endPosition: Float = var0.endPosition
       ): com.discord.image.fresco.postprocessors.PostProcessor.Gradient {
-         r.h(var1, "direction");
          return new PostProcessor.Gradient(var1, var2, var3, var4, var5);
       }
 
@@ -213,24 +204,24 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var5: PostProcessor.Gradient.Direction = this.direction;
+         val var6: PostProcessor.Gradient.Direction = this.direction;
          val var3: Int = this.startColor;
          val var4: Int = this.endColor;
          val var1: Float = this.startPosition;
          val var2: Float = this.endPosition;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Gradient(direction=");
-         var6.append(var5);
-         var6.append(", startColor=");
-         var6.append(var3);
-         var6.append(", endColor=");
-         var6.append(var4);
-         var6.append(", startPosition=");
-         var6.append(var1);
-         var6.append(", endPosition=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Gradient(direction=");
+         var5.append(var6);
+         var5.append(", startColor=");
+         var5.append(var3);
+         var5.append(", endColor=");
+         var5.append(var4);
+         var5.append(", startPosition=");
+         var5.append(var1);
+         var5.append(", endPosition=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
 
       public enum class Direction {

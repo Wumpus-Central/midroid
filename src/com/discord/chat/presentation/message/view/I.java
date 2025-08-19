@@ -6,11 +6,11 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class I implements OnClickListener {
-   public final Function2 j;
-   public final String k;
-   public final String l;
+   public final Function2 d;
+   public final String e;
+   public final String i;
 
    public final void onClick(View var1) {
-      FileAttachmentView.h(this.j, this.k, this.l, var1);
+      FileAttachmentView.h(this.d, this.e, this.i, var1);
    }
 }

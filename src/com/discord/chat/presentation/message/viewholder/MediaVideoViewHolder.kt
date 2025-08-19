@@ -11,12 +11,10 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAsset
 
-public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHolder {
+public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHolder(var1) {
    private final val view: MediaVideoView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "view");
-      super(var1, null);
       this.view = var1;
    }
 
@@ -57,11 +55,6 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
       onMediaPlayFinishedAnalytics: (MediaPlayFinishedAnalytics) -> Unit,
       playerSettings: PlayerSettings
    ) {
-      kotlin.jvm.internal.r.h(var4, "url");
-      kotlin.jvm.internal.r.h(var5, "previewUrl");
-      kotlin.jvm.internal.r.h(var33, "onClicked");
-      kotlin.jvm.internal.r.h(var35, "onMediaPlayFinishedAnalytics");
-      kotlin.jvm.internal.r.h(var36, "playerSettings");
       this.view
          .setContent-w--JTRs(
             var1,

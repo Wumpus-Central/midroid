@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.activities.ActivityRichPresenceInviteEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: MessageId, activityRichPresenceInviteEmbed: ActivityRichPresenceInviteEmbed) : ActivityRichPresenceInviteEmbedMessageAccessory(
       var1, var2
@@ -11,8 +10,6 @@ public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: Mes
    public final val activityRichPresenceInviteEmbed: ActivityRichPresenceInviteEmbed
 
    fun ActivityRichPresenceInviteEmbedMessageAccessory(var1: java.lang.String, var2: ActivityRichPresenceInviteEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "activityRichPresenceInviteEmbed");
       super(var1, "activity rich presence invite embed message", false, 4, null);
       this.messageId = var1;
       this.activityRichPresenceInviteEmbed = var2;
@@ -27,8 +24,6 @@ public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: Mes
    }
 
    public fun copy(messageId: MessageId = ..., activityRichPresenceInviteEmbed: ActivityRichPresenceInviteEmbed = ...): ActivityRichPresenceInviteEmbedMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "activityRichPresenceInviteEmbed");
       return new ActivityRichPresenceInviteEmbedMessageAccessory(var1, var2, null);
    }
 
@@ -42,7 +37,7 @@ public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: Mes
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.activityRichPresenceInviteEmbed, var1.activityRichPresenceInviteEmbed);
+            return this.activityRichPresenceInviteEmbed == var1.activityRichPresenceInviteEmbed;
          }
       }
    }
@@ -52,14 +47,14 @@ public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: Mes
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActivityRichPresenceInviteEmbedMessageAccessory(messageId=");
-      var2.append(var1);
-      var2.append(", activityRichPresenceInviteEmbed=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ActivityRichPresenceInviteEmbedMessageAccessory(messageId=");
+      var1.append(var2);
+      var1.append(", activityRichPresenceInviteEmbed=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

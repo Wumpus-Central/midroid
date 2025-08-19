@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nViewUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,49:1\n21#1,9:52\n21#1,9:61\n257#2,2:50\n*S KotlinDebug\n*F\n+ 1 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n*L\n34#1:52,9\n37#1:61,9\n17#1:50,2\n*E\n"])
+
 package com.discord.misc.utilities.view
 
 import android.app.Activity
@@ -9,11 +11,11 @@ import android.view.ViewParent
 import android.view.Window
 import android.widget.TextView
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
 @JvmSynthetic
 public inline fun <reified T : ViewGroup> View.findParentView(): T? {
-   r.h(var0, "<this>");
    val var1: ViewParent = var0.getParent();
    val var2: ViewGroup;
    if (var1 is ViewGroup) {
@@ -23,7 +25,7 @@ public inline fun <reified T : ViewGroup> View.findParentView(): T? {
    }
 
    if (var2 != null) {
-      r.m(2, "T");
+      Intrinsics.reifiedOperationMarker(2, "T");
       return (T)var2;
    } else {
       return null;
@@ -32,7 +34,6 @@ public inline fun <reified T : ViewGroup> View.findParentView(): T? {
 
 @JvmSynthetic
 public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
-   r.h(var0, "<this>");
    val var1: ArrayList = new ArrayList();
    val var2: ViewParent = var0.getParent();
    var var3: ViewGroup;
@@ -43,7 +44,7 @@ public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
    }
 
    if (var3 != null) {
-      r.m(2, "T");
+      Intrinsics.reifiedOperationMarker(2, "T");
    } else {
       var3 = null;
    }
@@ -58,7 +59,7 @@ public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
       }
 
       if (var3 != null) {
-         r.m(2, "T");
+         Intrinsics.reifiedOperationMarker(2, "T");
       } else {
          var3 = null;
       }
@@ -98,7 +99,6 @@ public tailrec fun getWindow(context: Context?): Window? {
 }
 
 public fun View.isLtr(): Boolean {
-   r.h(var0, "<this>");
    val var1: Boolean;
    if (var0.getLayoutDirection() == 0) {
       var1 = true;
@@ -110,10 +110,9 @@ public fun View.isLtr(): Boolean {
 }
 
 public fun TextView.setOptionalText(text: CharSequence?) {
-   r.h(var0, "<this>");
    var0.setText(var1);
    var var2: Boolean;
-   if (var1 != null && !h.c0(var1)) {
+   if (var1 != null && !StringsKt.c0(var1)) {
       var2 = 0;
    } else {
       var2 = 1;

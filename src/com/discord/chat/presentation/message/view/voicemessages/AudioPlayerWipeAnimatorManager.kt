@@ -20,7 +20,9 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nAudioPlayerWipeAnimatorManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 Animator.kt\nandroidx/core/animation/AnimatorKt\n*L\n1#1,184:1\n1#2:185\n85#3,18:186\n*S KotlinDebug\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n*L\n177#1:186,18\n*E\n"])
 public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlayerViewBinding) {
    private final val brand500: Int
    private final val argbEvaluator: ArgbEvaluator
@@ -65,17 +67,14 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    private final var animatorSet: AnimatorSet?
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      kotlin.jvm.internal.r.h(var2, "binding");
-      super();
       this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = A9.j.b(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = A9.j.b(new E());
-      this.scaleAnimator$delegate = A9.j.b(new F(var2, this));
-      this.textColorAnimator$delegate = A9.j.b(new G(var2));
-      this.buttonIconColorAnimator$delegate = A9.j.b(new H(var2));
-      this.progressColorAnimator$delegate = A9.j.b(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = B9.j.b(new D(var1));
+      this.buttonContainerActiveDrawable$delegate = B9.j.b(new E());
+      this.scaleAnimator$delegate = B9.j.b(new F(var2, this));
+      this.textColorAnimator$delegate = B9.j.b(new G(var2));
+      this.buttonIconColorAnimator$delegate = B9.j.b(new H(var2));
+      this.progressColorAnimator$delegate = B9.j.b(new I(var2));
    }
 
    @JvmStatic
@@ -106,11 +105,8 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `buttonIconColorAnimator_delegate$lambda$13$lambda$12$lambda$11`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: SimpleDraweeView = var0.button;
-      kotlin.jvm.internal.r.g(var0.button, "button");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       ColorUtilsKt.setTintColor(var2, var3 as Int);
    }
 
@@ -212,10 +208,8 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `progressColorAnimator_delegate$lambda$17$lambda$16$lambda$15`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: AudioWaveView = var0.wave;
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       var2.setAudioProgressPaintColor(var3 as Int);
    }
 
@@ -228,9 +222,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `scaleAnimator_delegate$lambda$5$lambda$4$lambda$3`(var0: AudioPlayerViewBinding, var1: AudioPlayerWipeAnimatorManager, var2: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var2, "it");
       var var7: Drawable = (Drawable)var2.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type kotlin.Float");
       val var4: Float = var7 as java.lang.Float;
       val var3: Float;
       if (var0.playerContainer.getWidth() > 0 && var0.wipe.getWidth() > 0) {
@@ -251,7 +243,6 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       var1.getButtonContainerActiveDrawable().setAlpha((int)(var4 * (float)255));
       var0.buttonContainer.setBackground(new LayerDrawable(new Drawable[]{var1.getButtonContainerDefaultDrawable(), var1.getButtonContainerActiveDrawable()}));
       val var6: View = var0.buttonContainer;
-      kotlin.jvm.internal.r.g(var0.buttonContainer, "buttonContainer");
       ViewClippingUtilsKt.clipToCircle(var6);
    }
 
@@ -264,10 +255,8 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `textColorAnimator_delegate$lambda$9$lambda$8$lambda$7`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: SimpleDraweeSpanTextView = var0.text;
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       var2.setTextColor(var3 as Int);
    }
 

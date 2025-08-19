@@ -4,7 +4,6 @@ import com.discord.chat.bridge.forums.ForumPostActions
 import com.discord.chat.bridge.reaction.MessageReaction
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ForumPostActionBar(messageId: MessageId,
    postActions: ForumPostActions,
@@ -23,9 +22,6 @@ public data class ForumPostActionBar(messageId: MessageId,
    fun ForumPostActionBar(
       var1: java.lang.String, var2: ForumPostActions, var3: MutableList<MessageReaction>, var4: Boolean, var5: java.lang.String, var6: ReactionsTheme
    ) {
-      r.h(var1, "messageId");
-      r.h(var2, "postActions");
-      r.h(var5, "addNewReactionAccessibilityLabel");
       super(var1, "post-actions", false, 4, null);
       this.messageId = var1;
       this.postActions = var2;
@@ -67,9 +63,6 @@ public data class ForumPostActionBar(messageId: MessageId,
       addNewReactionAccessibilityLabel: String = ...,
       reactionsTheme: ReactionsTheme? = ...
    ): ForumPostActionBar {
-      r.h(var1, "messageId");
-      r.h(var2, "postActions");
-      r.h(var5, "addNewReactionAccessibilityLabel");
       return new ForumPostActionBar(var1, var2, var3, var4, var5, var6, null);
    }
 
@@ -82,16 +75,16 @@ public data class ForumPostActionBar(messageId: MessageId,
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.postActions, var1.postActions)) {
+         } else if (!(this.postActions == var1.postActions)) {
             return false;
-         } else if (!r.c(this.reactions, var1.reactions)) {
+         } else if (!(this.reactions == var1.reactions)) {
             return false;
          } else if (this.canAddNewReactions != var1.canAddNewReactions) {
             return false;
-         } else if (!r.c(this.addNewReactionAccessibilityLabel, var1.addNewReactionAccessibilityLabel)) {
+         } else if (!(this.addNewReactionAccessibilityLabel == var1.addNewReactionAccessibilityLabel)) {
             return false;
          } else {
-            return r.c(this.reactionsTheme, var1.reactionsTheme);
+            return this.reactionsTheme == var1.reactionsTheme;
          }
       }
    }
@@ -117,26 +110,26 @@ public data class ForumPostActionBar(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: ForumPostActions = this.postActions;
-      val var6: java.util.List = this.reactions;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: ForumPostActions = this.postActions;
+      val var5: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var4: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var3: ReactionsTheme = this.reactionsTheme;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ForumPostActionBar(messageId=");
-      var5.append(var2);
-      var5.append(", postActions=");
-      var5.append(var7);
-      var5.append(", reactions=");
-      var5.append(var6);
-      var5.append(", canAddNewReactions=");
-      var5.append(var1);
-      var5.append(", addNewReactionAccessibilityLabel=");
-      var5.append(var4);
-      var5.append(", reactionsTheme=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var7: ReactionsTheme = this.reactionsTheme;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ForumPostActionBar(messageId=");
+      var2.append(var3);
+      var2.append(", postActions=");
+      var2.append(var4);
+      var2.append(", reactions=");
+      var2.append(var5);
+      var2.append(", canAddNewReactions=");
+      var2.append(var1);
+      var2.append(", addNewReactionAccessibilityLabel=");
+      var2.append(var6);
+      var2.append(", reactionsTheme=");
+      var2.append(var7);
+      var2.append(")");
+      return var2.toString();
    }
 }

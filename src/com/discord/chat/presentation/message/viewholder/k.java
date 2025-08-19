@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class k implements Function1 {
-   public final EphemeralIndicationViewHolder j;
-   public final EphemeralIndicationMessageAccessory k;
+   public final EphemeralIndicationViewHolder d;
+   public final EphemeralIndicationMessageAccessory e;
 
    public final Object invoke(Object var1) {
-      return EphemeralIndicationViewHolder.b(this.j, this.k, (String)var1);
+      return EphemeralIndicationViewHolder.b(this.d, this.e, (String)var1);
    }
 }

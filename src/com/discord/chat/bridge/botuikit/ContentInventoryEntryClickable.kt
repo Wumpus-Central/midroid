@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ContentInventoryEntryClickable(ariaDescription: String? = null) {
@@ -30,7 +29,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
       } else if (var1 !is ContentInventoryEntryClickable) {
          return false;
       } else {
-         return r.c(this.ariaDescription, (var1 as ContentInventoryEntryClickable).ariaDescription);
+         return this.ariaDescription == (var1 as ContentInventoryEntryClickable).ariaDescription;
       }
    }
 

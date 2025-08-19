@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.rolecolors
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, tertiaryColor: Int? = null) {
@@ -42,10 +41,10 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          var1 = var1;
          if (this.primaryColor != var1.primaryColor) {
             return false;
-         } else if (!r.c(this.secondaryColor, var1.secondaryColor)) {
+         } else if (!(this.secondaryColor == var1.secondaryColor)) {
             return false;
          } else {
-            return r.c(this.tertiaryColor, var1.tertiaryColor);
+            return this.tertiaryColor == var1.tertiaryColor;
          }
       }
    }

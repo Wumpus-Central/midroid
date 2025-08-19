@@ -7,12 +7,12 @@ import kotlin.text.Regex;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final LinkedList j;
-   public final Regex k;
-   public final boolean l;
+   public final LinkedList d;
+   public final Regex e;
+   public final boolean i;
    public final Function1 m;
 
    public final Object invoke() {
-      return SystemLogUtils.d(this.j, this.k, this.l, this.m);
+      return SystemLogUtils.d(this.d, this.e, this.i, this.m);
    }
 }

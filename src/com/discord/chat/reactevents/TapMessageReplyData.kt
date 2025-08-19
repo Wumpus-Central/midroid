@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapMessageReplyData(channelId: String, originId: String) : ReactEvent {
@@ -12,8 +11,6 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
    public final val originId: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "originId");
       super();
       this.channelId = var1;
       this.originId = var2;
@@ -28,8 +25,6 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
    }
 
    public fun copy(channelId: String = var0.channelId, originId: String = var0.originId): TapMessageReplyData {
-      r.h(var1, "channelId");
-      r.h(var2, "originId");
       return new TapMessageReplyData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
          } else {
-            return r.c(this.originId, var1.originId);
+            return this.originId == var1.originId;
          }
       }
    }
@@ -58,14 +53,14 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.originId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapMessageReplyData(channelId=");
-      var1.append(var2);
-      var1.append(", originId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.originId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapMessageReplyData(channelId=");
+      var3.append(var2);
+      var3.append(", originId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

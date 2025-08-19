@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class v implements Function0 {
-   public final LinearLayout j;
+   public final LinearLayout d;
 
    public final Object invoke() {
-      return EmbedView.f(this.j);
+      return EmbedView.f(this.d);
    }
 }

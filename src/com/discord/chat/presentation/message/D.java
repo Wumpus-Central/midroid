@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class D implements Function1 {
-   public final MessageAccessoriesAdapter j;
+   public final MessageAccessoriesAdapter d;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.m(this.j, (String)var1);
+      return MessageAccessoriesAdapter.m(this.d, (String)var1);
    }
 }

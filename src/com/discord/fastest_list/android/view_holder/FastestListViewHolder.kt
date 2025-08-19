@@ -14,8 +14,10 @@ import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType
 import com.discord.portals.from_js.PortalFromJsContext
 import com.discord.portals.from_js.PortalFromJsContextManager
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nFastestListViewHolder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListViewHolder.kt\ncom/discord/fastest_list/android/view_holder/FastestListViewHolder\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,161:1\n327#2,4:162\n*S KotlinDebug\n*F\n+ 1 FastestListViewHolder.kt\ncom/discord/fastest_list/android/view_holder/FastestListViewHolder\n*L\n117#1:162,4\n*E\n"])
 internal sealed class FastestListViewHolder protected constructor(view: View, onUnexpectedItemSize: (Entry, Int) -> Unit)
    : RecyclerView.ViewHolder,
    PortalFromJsContext {
@@ -30,10 +32,8 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
 
    init {
       val var3: Context = var1.getContext();
-      r.g(var3, "getContext(...)");
       super(new FastestListViewHolderView(var3));
       var1 = this.itemView;
-      r.f(this.itemView, "null cannot be cast to non-null type com.discord.fastest_list.android.view_holder.FastestListViewHolderView");
       val var5: FastestListViewHolderView = var1 as FastestListViewHolderView;
       this.view = var1 as FastestListViewHolderView;
       this.viewPortalSizeValidator = new FastestListViewHolder.ViewPortalSizeValidator(this, var2);
@@ -75,7 +75,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       if (!this.viewTransitioning) {
          if (var2 != null) {
             val var3: FastestListPlaceholder.Companion = FastestListPlaceholder.Companion;
-            if (!r.c(this.viewPlaceholder, FastestListPlaceholder.Companion.get(var2))) {
+            if (!(this.viewPlaceholder == FastestListPlaceholder.Companion.get(var2))) {
                if (this.viewPlaceholder != null) {
                   this.viewPlaceholder.onPlaceholderShouldUnbind(var1);
                }
@@ -92,7 +92,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
             if (this.viewPlaceholder != null) {
                var var5: FastestListSections.Entry = this.item;
                if (this.item == null) {
-                  r.y("item");
+                  Intrinsics.throwUninitializedPropertyAccessException("item");
                   var5 = null;
                }
 
@@ -105,13 +105,10 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    }
 
    public override fun getPortalViewIndex(portalView: View): Int {
-      r.h(var1, "portalView");
       return this.view.indexOfChild(var1);
    }
 
    public open fun onBindViewHolder(item: Entry, horizontal: Boolean, placeholderConfig: FastestListPlaceholderConfig) {
-      r.h(var1, "item");
-      r.h(var3, "placeholderConfig");
       this.item = var1;
       this.horizontal = var2;
       this.viewPortalId = var1.getKey();
@@ -121,9 +118,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    }
 
    public override fun onPortalFromJsAdded(portalId: String, portalView: View) {
-      r.h(var1, "portalId");
-      r.h(var2, "portalView");
-      if (r.c(this.viewPortalId, var1)) {
+      if (this.viewPortalId == var1) {
          this.viewPortalBound = true;
          updatePlaceholder$default(this, this.view, null, 1, null);
          val var3: FastestListViewHolderView = this.view;
@@ -133,9 +128,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    }
 
    public override fun onPortalFromJsRemoved(portalId: String, portalView: View) {
-      r.h(var1, "portalId");
-      r.h(var2, "portalView");
-      if (r.c(this.viewPortalId, var1)) {
+      if (this.viewPortalId == var1) {
          this.viewPortalBound = false;
       }
 
@@ -157,14 +150,11 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       private final val onUnexpectedItemSize: (Entry, Int) -> Unit
 
       init {
-         r.h(var2, "onUnexpectedItemSize");
          this.this$0 = var1;
-         super();
          this.onUnexpectedItemSize = var2;
       }
 
       public open fun onLayoutChange(v: View, left: Int, top: Int, right: Int, bottom: Int, oldLeft: Int, oldTop: Int, oldRight: Int, oldBottom: Int) {
-         r.h(var1, "v");
          var1.removeOnLayoutChangeListener(this);
          if (FastestListViewHolder.access$getHorizontal$p(this.this$0)) {
             var2 = var4 - var2;
@@ -175,7 +165,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
          var var11: FastestListSections.Entry = FastestListViewHolder.access$getItem$p(this.this$0);
          var var12: FastestListSections.Entry = var11;
          if (var11 == null) {
-            r.y("item");
+            Intrinsics.throwUninitializedPropertyAccessException("item");
             var12 = null;
          }
 
@@ -183,7 +173,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
             var11 = FastestListViewHolder.access$getItem$p(this.this$0);
             var var13: FastestListSections.Entry = var11;
             if (var11 == null) {
-               r.y("item");
+               Intrinsics.throwUninitializedPropertyAccessException("item");
                var13 = null;
             }
 
@@ -191,7 +181,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
                val var17: Function2 = this.onUnexpectedItemSize;
                var var14: FastestListSections.Entry = FastestListViewHolder.access$getItem$p(this.this$0);
                if (var14 == null) {
-                  r.y("item");
+                  Intrinsics.throwUninitializedPropertyAccessException("item");
                   var14 = null;
                }
 

@@ -1,19 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
+public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode() {
    public final val attachmentUrl: String
    public final val attachmentName: String
    public open val content: List<ContentNode>?
 
    init {
-      r.h(var1, "attachmentUrl");
-      r.h(var2, "attachmentName");
-      super(null);
       this.attachmentUrl = var1;
       this.attachmentName = var2;
       this.content = var3;
@@ -32,8 +28,6 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public fun copy(attachmentUrl: String = var0.attachmentUrl, attachmentName: String = var0.attachmentName, content: List<ContentNode>? = var0.content): AttachmentLinkContentNode {
-      r.h(var1, "attachmentUrl");
-      r.h(var2, "attachmentName");
       return new AttachmentLinkContentNode(var1, var2, var3);
    }
 
@@ -44,12 +38,12 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.attachmentUrl, var1.attachmentUrl)) {
+         if (!(this.attachmentUrl == var1.attachmentUrl)) {
             return false;
-         } else if (!r.c(this.attachmentName, var1.attachmentName)) {
+         } else if (!(this.attachmentName == var1.attachmentName)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -68,18 +62,18 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.attachmentUrl;
-      val var4: java.lang.String = this.attachmentName;
+      val var3: java.lang.String = this.attachmentUrl;
+      val var1: java.lang.String = this.attachmentName;
       val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AttachmentLinkContentNode(attachmentUrl=");
-      var3.append(var1);
-      var3.append(", attachmentName=");
-      var3.append(var4);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AttachmentLinkContentNode(attachmentUrl=");
+      var4.append(var3);
+      var4.append(", attachmentName=");
+      var4.append(var1);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

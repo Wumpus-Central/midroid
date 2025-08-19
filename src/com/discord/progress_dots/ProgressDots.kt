@@ -7,29 +7,25 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.progress_dots.databinding.ProgressDotsViewBinding
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ProgressDots  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nProgressDots.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ProgressDots.kt\ncom/discord/progress_dots/ProgressDots\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,98:1\n1863#2,2:99\n255#3:101\n255#3:102\n*S KotlinDebug\n*F\n+ 1 ProgressDots.kt\ncom/discord/progress_dots/ProgressDots\n*L\n68#1:99,2\n91#1:101\n36#1:102\n*E\n"])
+public class ProgressDots  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3) {
    private final val binding: ProgressDotsViewBinding
    private final val dotsAnimationTimeMs: Int
    private final val dotsAnimationStaggerTimeMs: Long
    private final var isRunning: Boolean
 
    fun ProgressDots(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ProgressDots(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2, var3);
       val var4: ProgressDotsViewBinding = ProgressDotsViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(...)");
       this.binding = var4;
       var3 = this.getResources().getInteger(R.integer.progress_dots_animation_time);
       this.dotsAnimationTimeMs = var3;
@@ -64,7 +60,9 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
    }
 
    private fun stop() {
-      val var2: java.util.Iterator = i.n(new ProgressDot[]{this.binding.viewProgressDots1, this.binding.viewProgressDots2, this.binding.viewProgressDots3})
+      val var2: java.util.Iterator = CollectionsKt.n(
+            new ProgressDot[]{this.binding.viewProgressDots1, this.binding.viewProgressDots2, this.binding.viewProgressDots3}
+         )
          .iterator();
 
       while (var2.hasNext()) {
@@ -99,13 +97,10 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
 
    public fun setupColors() {
       var var1: ProgressDot = this.binding.viewProgressDots1;
-      r.g(this.binding.viewProgressDots1, "viewProgressDots1");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
       var1 = this.binding.viewProgressDots2;
-      r.g(this.binding.viewProgressDots2, "viewProgressDots2");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
       var1 = this.binding.viewProgressDots3;
-      r.g(this.binding.viewProgressDots3, "viewProgressDots3");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
    }
 }

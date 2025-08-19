@@ -7,14 +7,8 @@ import android.content.ClipData.Item
 import androidx.core.content.b
 import com.discord.codegen.NativeCommandClipboardModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
 
-public class CommandClipboardModule(reactContext: ReactApplicationContext) : NativeCommandClipboardModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class CommandClipboardModule(reactContext: ReactApplicationContext) : NativeCommandClipboardModuleSpec(var1) {
    public override fun setItem(item: String?, type: String?, text: String?) {
       val var4: ClipboardManager = b.i(this.getReactApplicationContext().getApplicationContext(), ClipboardManager.class) as ClipboardManager;
       if (var4 != null && var1 != null && var2 != null && var3 != null) {

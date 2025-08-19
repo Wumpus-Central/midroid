@@ -1,13 +1,12 @@
 package com.discord.media_player.reactevents
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -15,8 +14,6 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
    public final val mediaItemIds: List<String>
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "mediaItemIds");
       super();
       this.channelId = var1;
       this.mediaItemIds = var2;
@@ -31,8 +28,6 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
    }
 
    public fun copy(channelId: String = var0.channelId, mediaItemIds: List<String> = var0.mediaItemIds): MediaPlayerViewDidDisappear {
-      r.h(var1, "channelId");
-      r.h(var2, "mediaItemIds");
       return new MediaPlayerViewDidDisappear(var1, var2);
    }
 
@@ -43,10 +38,10 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
          } else {
-            return r.c(this.mediaItemIds, var1.mediaItemIds);
+            return this.mediaItemIds == var1.mediaItemIds;
          }
       }
    }

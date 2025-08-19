@@ -19,8 +19,6 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "font");
-      super();
       this.font = var1;
       this.linkColor = var2;
       this.backgroundStyle = var3;
@@ -49,7 +47,6 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
       backgroundStyle: LinkBackgroundStyle? = var0.backgroundStyle,
       icon: ReactAsset? = var0.icon
    ): LinkStyle {
-      kotlin.jvm.internal.r.h(var1, "font");
       return new LinkStyle(var1, var2, var3, var4);
    }
 
@@ -64,7 +61,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
             return false;
          } else if (this.linkColor != var1.linkColor) {
             return false;
-         } else if (!kotlin.jvm.internal.r.c(this.backgroundStyle, var1.backgroundStyle)) {
+         } else if (!(this.backgroundStyle == var1.backgroundStyle)) {
             return false;
          } else {
             return this.icon === var1.icon;
@@ -91,20 +88,20 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun toString(): String {
-      val var5: DiscordFont = this.font;
+      val var2: DiscordFont = this.font;
       val var1: Int = this.linkColor;
-      val var2: LinkBackgroundStyle = this.backgroundStyle;
-      val var3: ReactAsset = this.icon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LinkStyle(font=");
-      var4.append(var5);
-      var4.append(", linkColor=");
-      var4.append(var1);
-      var4.append(", backgroundStyle=");
-      var4.append(var2);
-      var4.append(", icon=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var5: LinkBackgroundStyle = this.backgroundStyle;
+      val var4: ReactAsset = this.icon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkStyle(font=");
+      var3.append(var2);
+      var3.append(", linkColor=");
+      var3.append(var1);
+      var3.append(", backgroundStyle=");
+      var3.append(var5);
+      var3.append(", icon=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

@@ -5,15 +5,12 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import kotlin.jvm.internal.r
 
 @ReactModule(name = "DCDShortcutManager")
-public class ShortcutManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class ShortcutManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 

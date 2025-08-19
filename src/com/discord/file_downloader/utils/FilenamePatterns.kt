@@ -1,12 +1,9 @@
 package com.discord.file_downloader.utils
 
-import kotlin.jvm.internal.r
-
 private object FilenamePatterns {
    public final val INVALID_FILENAME_CHARS: Regex = new Regex("[<>:\"/\\\\|?*@]")
 
    public fun atSeparatorPattern(atPattern: String): Regex {
-      r.h(var1, "atPattern");
       val var2: StringBuilder = new StringBuilder();
       var2.append("(.+)");
       var2.append(var1);
@@ -15,7 +12,6 @@ private object FilenamePatterns {
    }
 
    public fun binExtensionFixPattern(atPattern: String): Regex {
-      r.h(var1, "atPattern");
       val var2: StringBuilder = new StringBuilder();
       var2.append("(.+)");
       var2.append(var1);
@@ -24,7 +20,6 @@ private object FilenamePatterns {
    }
 
    public fun sizeModifierPattern(colonPattern: String): Regex {
-      r.h(var1, "colonPattern");
       val var2: StringBuilder = new StringBuilder();
       var2.append("(\\.[a-zA-Z0-9]+)");
       var2.append(var1);

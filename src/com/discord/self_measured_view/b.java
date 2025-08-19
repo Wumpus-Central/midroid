@@ -4,11 +4,11 @@ import com.facebook.react.uimanager.UIManagerModule;
 
 // $VF: synthetic class
 public final class b implements Runnable {
-   public final UIManagerModule j;
-   public final SelfMeasuredView k;
+   public final UIManagerModule d;
+   public final SelfMeasuredView e;
 
    @Override
    public final void run() {
-      SelfMeasuredView.a(this.j, this.k);
+      SelfMeasuredView.a(this.d, this.e);
    }
 }

@@ -5,10 +5,10 @@ import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 
 // $VF: synthetic class
 public final class a implements OnGlobalLayoutListener {
-   public final FirstDrawDoneListener j;
-   public final View k;
+   public final FirstDrawDoneListener d;
+   public final View e;
 
    public final void onGlobalLayout() {
-      FirstDrawDoneListener.a(this.j, this.k);
+      FirstDrawDoneListener.a(this.d, this.e);
    }
 }

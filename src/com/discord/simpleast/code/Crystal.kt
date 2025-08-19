@@ -7,7 +7,7 @@ import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
 import java.util.regex.Matcher
 import java.util.regex.Pattern
-import kotlin.jvm.internal.r
+import org.jetbrains.annotations.NotNull
 
 public object Crystal {
    public final val BUILT_INS: Array<String>
@@ -22,23 +22,17 @@ public object Crystal {
       )
 
    internal fun <RC, S> createCrystalCodeRules(codeStyleProviders: CodeStyleProviders<RC>): List<Rule<RC, Node<RC>, S>> {
-      r.h(var1, "codeStyleProviders");
       val var2: CodeRules = CodeRules.INSTANCE;
       val var3: Pattern = PATTERN_CRYSTAL_COMMENTS;
-      r.g(PATTERN_CRYSTAL_COMMENTS, "PATTERN_CRYSTAL_COMMENTS");
       val var8: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
       val var4: Pattern = PATTERN_CRYSTAL_STRINGS;
-      r.g(PATTERN_CRYSTAL_STRINGS, "PATTERN_CRYSTAL_STRINGS");
       val var9: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
       val var5: Pattern = PATTERN_CRYSTAL_REGEX;
-      r.g(PATTERN_CRYSTAL_REGEX, "PATTERN_CRYSTAL_REGEX");
       val var10: Rule = CodeRules.toMatchGroupRule$default(var2, var5, 0, var1.getLiteralStyleProvider(), 1, null);
       var var6: Pattern = PATTERN_CRYSTAL_ANNOTATION;
-      r.g(PATTERN_CRYSTAL_ANNOTATION, "PATTERN_CRYSTAL_ANNOTATION");
       val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
       var6 = PATTERN_CRYSTAL_SYMBOL;
-      r.g(PATTERN_CRYSTAL_SYMBOL, "PATTERN_CRYSTAL_SYMBOL");
-      return i.n(
+      return CollectionsKt.n(
          new Rule[]{
             var8,
             var9,
@@ -52,9 +46,6 @@ public object Crystal {
 
    public class FunctionNode<RC>(pre: String, signature: String, params: String?, codeStyleProviders: CodeStyleProviders<Any>) : Node.Parent<RC> {
       init {
-         r.h(var1, "pre");
-         r.h(var2, "signature");
-         r.h(var4, "codeStyleProviders");
          val var5: StyleNode.TextStyledNode = new StyleNode.TextStyledNode(var1, var4.getKeywordStyleProvider());
          val var7: StyleNode.TextStyledNode = new StyleNode.TextStyledNode(var2, var4.getIdentifierStyleProvider());
          val var6: StyleNode.TextStyledNode;
@@ -71,9 +62,7 @@ public object Crystal {
          private final val PATTERN_CRYSTAL_FUNC: Pattern
 
          public fun <RC, S> createFunctionRule(codeStyleProviders: CodeStyleProviders<RC>): Rule<RC, Node<RC>, S> {
-            r.h(var1, "codeStyleProviders");
             val var2: Pattern = Crystal.FunctionNode.access$getPATTERN_CRYSTAL_FUNC$cp();
-            r.g(var2, "PATTERN_CRYSTAL_FUNC");
             return new Rule<RC, Node<RC>, S>(this, var1, var2) {
                final CodeStyleProviders $codeStyleProviders;
                final Crystal.FunctionNode.Companion this$0;
@@ -84,17 +73,14 @@ public object Crystal {
                   this.$codeStyleProviders = var2;
                }
 
+               @NotNull
                @Override
-               public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
-                  r.h(var1, "matcher");
-                  r.h(var2, "parser");
-                  val var4: java.lang.String = var1.group(1);
-                  val var7: java.lang.String = var1.group(2);
-                  val var5: java.lang.String = var1.group(3);
-                  val var6: ParseSpec.Companion = ParseSpec.Companion;
-                  r.e(var4);
-                  r.e(var7);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new Crystal.FunctionNode<>(var4, var7, var5, this.$codeStyleProviders), var3);
+               public ParseSpec<RC, S> parse(@NotNull Matcher var1, @NotNull Parser<RC, ? super Node<RC>, S> var2, S var3) {
+                  val var7: java.lang.String = var1.group(1);
+                  val var4: java.lang.String = var1.group(2);
+                  val var6: java.lang.String = var1.group(3);
+                  val var5: ParseSpec.Companion = ParseSpec.Companion;
+                  return (ParseSpec<RC, S>)var5.createTerminal(new Crystal.FunctionNode<>(var7, var4, var6, this.$codeStyleProviders), var3);
                }
             };
          }

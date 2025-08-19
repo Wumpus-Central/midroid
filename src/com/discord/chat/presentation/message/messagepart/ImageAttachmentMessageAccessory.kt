@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ImageAttachmentMessageAccessory(messageId: MessageId,
    attachment: Attachment,
@@ -26,8 +25,6 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
    fun ImageAttachmentMessageAccessory(
       var1: java.lang.String, var2: Attachment, var3: Int, var4: java.lang.Float, var5: Int, var6: Int, var7: SpoilerAttributes, var8: Boolean
    ) {
-      r.h(var1, "messageId");
-      r.h(var2, "attachment");
       super(var1, var2, var3, var4, null);
       this.messageId = var1;
       this.attachment = var2;
@@ -81,8 +78,6 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
       spoilerAttributes: SpoilerAttributes? = ...,
       useNewAltTextButton: Boolean = ...
    ): ImageAttachmentMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "attachment");
       return new ImageAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6, var7, var8, null);
    }
 
@@ -95,17 +90,17 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.attachment, var1.attachment)) {
+         } else if (!(this.attachment == var1.attachment)) {
             return false;
          } else if (this.attachmentIndex != var1.attachmentIndex) {
             return false;
-         } else if (!r.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
+         } else if (!(this.attachmentsOpacity == var1.attachmentsOpacity)) {
             return false;
          } else if (this.constrainedWidth != var1.constrainedWidth) {
             return false;
          } else if (this.radiusPx != var1.radiusPx) {
             return false;
-         } else if (!r.c(this.spoilerAttributes, var1.spoilerAttributes)) {
+         } else if (!(this.spoilerAttributes == var1.spoilerAttributes)) {
             return false;
          } else {
             return this.useNewAltTextButton == var1.useNewAltTextButton;
@@ -115,8 +110,8 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
 
    public override fun hashCode(): Int {
       val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var4: Int = this.attachment.hashCode();
-      val var5: Int = Integer.hashCode(this.attachmentIndex);
+      val var5: Int = this.attachment.hashCode();
+      val var4: Int = Integer.hashCode(this.attachmentIndex);
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -131,37 +126,37 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
          var2 = this.spoilerAttributes.hashCode();
       }
 
-      return ((((((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31
+      return ((((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31
          + java.lang.Boolean.hashCode(this.useNewAltTextButton);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
       val var8: Attachment = this.attachment;
-      val var3: Int = this.attachmentIndex;
-      val var9: java.lang.Float = this.attachmentsOpacity;
-      val var1: Int = this.constrainedWidth;
+      val var1: Int = this.attachmentIndex;
+      val var7: java.lang.Float = this.attachmentsOpacity;
+      val var3: Int = this.constrainedWidth;
       val var2: Int = this.radiusPx;
-      val var7: SpoilerAttributes = this.spoilerAttributes;
+      val var6: SpoilerAttributes = this.spoilerAttributes;
       val var4: Boolean = this.useNewAltTextButton;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ImageAttachmentMessageAccessory(messageId=");
-      var6.append(var5);
-      var6.append(", attachment=");
-      var6.append(var8);
-      var6.append(", attachmentIndex=");
-      var6.append(var3);
-      var6.append(", attachmentsOpacity=");
-      var6.append(var9);
-      var6.append(", constrainedWidth=");
-      var6.append(var1);
-      var6.append(", radiusPx=");
-      var6.append(var2);
-      var6.append(", spoilerAttributes=");
-      var6.append(var7);
-      var6.append(", useNewAltTextButton=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ImageAttachmentMessageAccessory(messageId=");
+      var5.append(var9);
+      var5.append(", attachment=");
+      var5.append(var8);
+      var5.append(", attachmentIndex=");
+      var5.append(var1);
+      var5.append(", attachmentsOpacity=");
+      var5.append(var7);
+      var5.append(", constrainedWidth=");
+      var5.append(var3);
+      var5.append(", radiusPx=");
+      var5.append(var2);
+      var5.append(", spoilerAttributes=");
+      var5.append(var6);
+      var5.append(", useNewAltTextButton=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 }

@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.gift.GiftEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: GiftEmbed) : GiftMessageAccessory(var1, var2, var3) {
    public open val messageId: MessageId
@@ -10,8 +9,6 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    public final val gift: GiftEmbed
 
    fun GiftMessageAccessory(var1: java.lang.String, var2: Int, var3: GiftEmbed) {
-      r.h(var1, "messageId");
-      r.h(var3, "gift");
       val var4: StringBuilder = new StringBuilder();
       var4.append("gift ");
       var4.append(var2);
@@ -34,8 +31,6 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    }
 
    public fun copy(messageId: MessageId = ..., index: Int = ..., gift: GiftEmbed = ...): GiftMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var3, "gift");
       return new GiftMessageAccessory(var1, var2, var3, null);
    }
 
@@ -51,7 +46,7 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
          } else if (this.index != var1.index) {
             return false;
          } else {
-            return r.c(this.gift, var1.gift);
+            return this.gift == var1.gift;
          }
       }
    }

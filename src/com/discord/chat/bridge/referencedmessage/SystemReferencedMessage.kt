@@ -1,16 +1,13 @@
 package com.discord.chat.bridge.referencedmessage
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class SystemReferencedMessage(content: String) : ReferencedMessage {
+public data class SystemReferencedMessage(content: String) : ReferencedMessage() {
    public final val content: String
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
    }
 
@@ -19,7 +16,6 @@ public data class SystemReferencedMessage(content: String) : ReferencedMessage {
    }
 
    public fun copy(content: String = var0.content): SystemReferencedMessage {
-      r.h(var1, "content");
       return new SystemReferencedMessage(var1);
    }
 
@@ -29,7 +25,7 @@ public data class SystemReferencedMessage(content: String) : ReferencedMessage {
       } else if (var1 !is SystemReferencedMessage) {
          return false;
       } else {
-         return r.c(this.content, (var1 as SystemReferencedMessage).content);
+         return this.content == (var1 as SystemReferencedMessage).content;
       }
    }
 

@@ -9,13 +9,10 @@ import com.facebook.react.uimanager.ViewManager
 
 public class BlurViewPackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      kotlin.jvm.internal.r.h(var1, "reactContext");
-      return kotlin.collections.i.n(new ViewManager[]{new BlurViewManager(), new BlurViewTargetManager()});
+      return CollectionsKt.n(new ViewManager[]{new BlurViewManager(), new BlurViewTargetManager()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): Nothing? {
-      kotlin.jvm.internal.r.h(var1, "name");
-      kotlin.jvm.internal.r.h(var2, "reactContext");
       return null;
    }
 

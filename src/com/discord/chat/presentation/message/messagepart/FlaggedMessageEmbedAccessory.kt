@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Message, messageContext: MessageContext) : FlaggedMessageEmbedAccessory(
       var1, var2, var3
@@ -13,9 +12,6 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    public final val messageContext: MessageContext
 
    fun FlaggedMessageEmbedAccessory(var1: java.lang.String, var2: Message, var3: MessageContext) {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "messageContext");
       super(var1, "flagged-message-embed", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -35,9 +31,6 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., messageContext: MessageContext = ...): FlaggedMessageEmbedAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "messageContext");
       return new FlaggedMessageEmbedAccessory(var1, var2, var3, null);
    }
 
@@ -50,10 +43,10 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
          } else {
-            return r.c(this.messageContext, var1.messageContext);
+            return this.messageContext == var1.messageContext;
          }
       }
    }
@@ -65,15 +58,15 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var4: Message = this.message;
-      val var2: MessageContext = this.messageContext;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FlaggedMessageEmbedAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", message=");
-      var3.append(var4);
-      var3.append(", messageContext=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: MessageContext = this.messageContext;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("FlaggedMessageEmbedAccessory(messageId=");
+      var2.append(var1);
+      var2.append(", message=");
+      var2.append(var4);
+      var2.append(", messageContext=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

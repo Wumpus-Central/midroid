@@ -6,7 +6,6 @@ import android.os.Build.VERSION
 import java.lang.ref.WeakReference
 import java.util.ArrayList
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
 
 public class DebugPrintableCollection {
    private final var idCounter: Long = 1L
@@ -75,19 +74,19 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 14
+      // 58: astore 12
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
       // 5d: astore 13
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 12
-      // 64: aload 12
+      // 62: astore 14
+      // 64: aload 14
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
       // 6a: aload 13
       // 6c: aload 2
-      // 6d: aload 12
+      // 6d: aload 14
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 14
+      // 72: aload 12
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
       // 79: aload 13
@@ -122,16 +121,16 @@ public class DebugPrintableCollection {
    }
 
    private fun removeDeadReferencesLocked() {
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
 
-      for (Entry var4 : this.collection.entrySet()) {
-         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
-         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
-            var3.add(var1);
+      for (Entry var3 : this.collection.entrySet()) {
+         val var1: Long = (var3.getKey() as java.lang.Number).longValue();
+         if ((var3.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+            var4.add(var1);
          }
       }
 
-      val var7: java.util.Iterator = var3.iterator();
+      val var7: java.util.Iterator = var4.iterator();
 
       while (var7.hasNext()) {
          this.collection.remove((var7.next() as java.lang.Number).longValue());
@@ -149,10 +148,10 @@ public class DebugPrintableCollection {
       // Bytecode:
       // 000: aload 1
       // 001: ldc "context"
-      // 003: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 003: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 006: aload 2
       // 007: ldc "sb"
-      // 009: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 009: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 00c: new com/discord/crash_reporting/system_logs/DebugPrintBuilder
       // 00f: dup
       // 010: aload 2
@@ -187,20 +186,20 @@ public class DebugPrintableCollection {
       // 057: aload 7
       // 059: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 05e: checkcast com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 061: astore 7
-      // 063: aload 7
+      // 061: astore 8
+      // 063: aload 8
       // 065: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getReference ()Ljava/lang/ref/WeakReference;
       // 068: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
       // 06b: checkcast com/discord/crash_reporting/system_logs/DebugPrintable
-      // 06e: astore 8
-      // 070: aload 8
+      // 06e: astore 7
+      // 070: aload 7
       // 072: ifnonnull 078
       // 075: goto 035
       // 078: aload 2
       // 079: lload 3
       // 07a: invokevirtual java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;
       // 07d: pop
-      // 07e: aload 7
+      // 07e: aload 8
       // 080: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 083: ifnull 09e
       // 086: aload 2
@@ -208,7 +207,7 @@ public class DebugPrintableCollection {
       // 089: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 08c: pop
       // 08d: aload 2
-      // 08e: aload 7
+      // 08e: aload 8
       // 090: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 093: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 096: pop
@@ -221,15 +220,15 @@ public class DebugPrintableCollection {
       // 0a4: pop
       // 0a5: aload 2
       // 0a6: ldc "append(...)"
-      // 0a8: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0a8: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 0ab: aload 2
       // 0ac: bipush 10
       // 0ae: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 0b1: pop
       // 0b2: aload 2
       // 0b3: ldc "append(...)"
-      // 0b5: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0b8: aload 8
+      // 0b5: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0b8: aload 7
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
@@ -257,7 +256,7 @@ public class DebugPrintableCollection {
       // 0f1: pop
       // 0f2: aload 2
       // 0f3: ldc "append(...)"
-      // 0f5: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0f5: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f8: aload 2
       // 0f9: invokevirtual java/lang/StringBuilder.length ()I
       // 0fc: ldc 524288
@@ -289,7 +288,6 @@ public class DebugPrintableCollection {
       private const val MAX_DEBUG_PRINTABLE_STRING_LENGTH: Int
 
       public fun libdiscordVersion(context: Context): String {
-         r.h(var1, "context");
          val var2: ApplicationInfo;
          if (VERSION.SDK_INT >= 33) {
             var2 = b.a(var1.getPackageManager(), var1.getPackageName(), a.a(128L));
@@ -313,8 +311,6 @@ public class DebugPrintableCollection {
       public final val reference: WeakReference<DebugPrintable>
 
       init {
-         r.h(var2, "reference");
-         super();
          this.tag = var1;
          this.reference = var2;
       }
@@ -328,7 +324,6 @@ public class DebugPrintableCollection {
       }
 
       public fun copy(tag: String? = var0.tag, reference: WeakReference<DebugPrintable> = var0.reference): com.discord.crash_reporting.system_logs.DebugPrintableCollection.DebugPrintableRef {
-         r.h(var2, "reference");
          return new DebugPrintableCollection.DebugPrintableRef(var1, var2);
       }
 
@@ -339,10 +334,10 @@ public class DebugPrintableCollection {
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.tag, var1.tag)) {
+            if (!(this.tag == var1.tag)) {
                return false;
             } else {
-               return r.c(this.reference, var1.reference);
+               return this.reference == var1.reference;
             }
          }
       }
@@ -359,15 +354,15 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.tag;
-         val var3: WeakReference = this.reference;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("DebugPrintableRef(tag=");
-         var1.append(var2);
-         var1.append(", reference=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.tag;
+         val var1: WeakReference = this.reference;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("DebugPrintableRef(tag=");
+         var2.append(var3);
+         var2.append(", reference=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

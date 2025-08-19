@@ -1,19 +1,15 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class MediaGalleryDisplayComponent(type: Int, id: String, items: List<MediaGalleryItem>) : Component {
+public data class MediaGalleryDisplayComponent(type: Int, id: String, items: List<MediaGalleryItem>) : Component() {
    public open val type: Int
    public open val id: String
    public final val items: List<MediaGalleryItem>
 
    init {
-      r.h(var2, "id");
-      r.h(var3, "items");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.items = var3;
@@ -32,8 +28,6 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, items: List<MediaGalleryItem> = var0.items): MediaGalleryDisplayComponent {
-      r.h(var2, "id");
-      r.h(var3, "items");
       return new MediaGalleryDisplayComponent(var1, var2, var3);
    }
 
@@ -46,10 +40,10 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else {
-            return r.c(this.items, var1.items);
+            return this.items == var1.items;
          }
       }
    }
@@ -60,17 +54,17 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.util.List = this.items;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MediaGalleryDisplayComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(", items=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var3: java.util.List = this.items;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaGalleryDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var2);
+      var4.append(", items=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

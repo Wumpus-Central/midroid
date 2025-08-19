@@ -1,16 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode {
+public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
    }
 
@@ -19,7 +16,6 @@ public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode
    }
 
    public fun copy(content: List<ContentNode> = var0.content): UnderlineContentNode {
-      r.h(var1, "content");
       return new UnderlineContentNode(var1);
    }
 
@@ -29,7 +25,7 @@ public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode
       } else if (var1 !is UnderlineContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as UnderlineContentNode).content);
+         return this.content == (var1 as UnderlineContentNode).content;
       }
    }
 
@@ -38,12 +34,12 @@ public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UnderlineContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UnderlineContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

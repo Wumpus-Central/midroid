@@ -6,12 +6,10 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.sticker.StickerView
 import kotlin.jvm.functions.Function1
 
-public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHolder {
+public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHolder(var1) {
    private final val stickerView: StickerView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "stickerView");
-      super(var1);
       this.stickerView = var1;
    }
 
@@ -27,9 +25,6 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
    }
 
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
-      kotlin.jvm.internal.r.h(var1, "sticker");
-      kotlin.jvm.internal.r.h(var2, "onStickerClicked");
-      kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
       val var7: StickerView = this.stickerView;
       val var8: java.lang.String = var1.getUrl();
       val var6: Boolean;

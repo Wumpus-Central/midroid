@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.fonts.DiscordFont
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class TimestampMessageAccessory(messageId: MessageId, timestamp: String, textColor: Int, discordFont: DiscordFont) : TimestampMessageAccessory(
       var1, var2, var3, var4
@@ -13,9 +12,6 @@ public data class TimestampMessageAccessory(messageId: MessageId, timestamp: Str
    public final val discordFont: DiscordFont
 
    fun TimestampMessageAccessory(var1: java.lang.String, var2: java.lang.String, var3: Int, var4: DiscordFont) {
-      r.h(var1, "messageId");
-      r.h(var2, "timestamp");
-      r.h(var4, "discordFont");
       val var5: StringBuilder = new StringBuilder();
       var5.append("timestamp ");
       var5.append(var2);
@@ -43,9 +39,6 @@ public data class TimestampMessageAccessory(messageId: MessageId, timestamp: Str
    }
 
    public fun copy(messageId: MessageId = ..., timestamp: String = ..., textColor: Int = ..., discordFont: DiscordFont = ...): TimestampMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "timestamp");
-      r.h(var4, "discordFont");
       return new TimestampMessageAccessory(var1, var2, var3, var4, null);
    }
 
@@ -58,7 +51,7 @@ public data class TimestampMessageAccessory(messageId: MessageId, timestamp: Str
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.timestamp, var1.timestamp)) {
+         } else if (!(this.timestamp == var1.timestamp)) {
             return false;
          } else if (this.textColor != var1.textColor) {
             return false;
@@ -74,20 +67,20 @@ public data class TimestampMessageAccessory(messageId: MessageId, timestamp: Str
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = this.timestamp;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = this.timestamp;
       val var1: Int = this.textColor;
       val var4: DiscordFont = this.discordFont;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TimestampMessageAccessory(messageId=");
-      var3.append(var5);
-      var3.append(", timestamp=");
-      var3.append(var2);
-      var3.append(", textColor=");
-      var3.append(var1);
-      var3.append(", discordFont=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TimestampMessageAccessory(messageId=");
+      var5.append(var2);
+      var5.append(", timestamp=");
+      var5.append(var3);
+      var5.append(", textColor=");
+      var5.append(var1);
+      var5.append(", discordFont=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 }

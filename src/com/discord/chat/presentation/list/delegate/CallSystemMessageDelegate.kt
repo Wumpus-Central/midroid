@@ -11,14 +11,10 @@ import com.discord.chat.presentation.list.item.CallSystemMessageItem
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.system.CallSystemMessageView
 import com.discord.misc.utilities.size.SizeUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class CallSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<CallSystemMessageItem, CallSystemMessageView> {
-   init {
-      r.h(var1, "eventHandlerProvider");
-      super(var1, null, 2, null);
-   }
-
+@SourceDebugExtension(["SMAP\nCallSystemMessageDelegate.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CallSystemMessageDelegate.kt\ncom/discord/chat/presentation/list/delegate/CallSystemMessageDelegate\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,46:1\n327#2,4:47\n*S KotlinDebug\n*F\n+ 1 CallSystemMessageDelegate.kt\ncom/discord/chat/presentation/list/delegate/CallSystemMessageDelegate\n*L\n38#1:47,4\n*E\n"])
+public class CallSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    private fun bindViewInternal(view: CallSystemMessageView, item: CallSystemMessageItem) {
       val var3: LayoutParams = var1.getLayoutParams();
       if (var3 != null) {
@@ -33,29 +29,21 @@ public class CallSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHand
    }
 
    public open fun bindView(view: CallSystemMessageView, item: CallSystemMessageItem, metadata: Metadata<CallSystemMessageView>) {
-      r.h(var1, "view");
-      r.h(var2, "item");
-      r.h(var3, "metadata");
       this.bindViewInternal(var1, var2);
    }
 
    public fun createAndBindStandaloneView(parent: ViewGroup, message: Message): CallSystemMessageView {
-      r.h(var1, "parent");
-      r.h(var2, "message");
       val var3: CallSystemMessageView = this.createView(var1);
       this.bindViewInternal(var3, new CallSystemMessageItem(var2));
       return var3;
    }
 
    public open fun createView(parent: ViewGroup): CallSystemMessageView {
-      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      r.g(var2, "getContext(...)");
       return new CallSystemMessageView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      r.h(var1, "item");
       return var1 is CallSystemMessageItem;
    }
 }

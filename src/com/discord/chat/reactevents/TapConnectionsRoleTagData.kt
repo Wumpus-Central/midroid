@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapConnectionsRoleTagData(userId: String, guildId: String, channelId: String, roleId: String) : ReactEvent {
@@ -14,10 +13,6 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    public final val roleId: String
 
    init {
-      r.h(var1, "userId");
-      r.h(var2, "guildId");
-      r.h(var3, "channelId");
-      r.h(var4, "roleId");
       super();
       this.userId = var1;
       this.guildId = var2;
@@ -42,10 +37,6 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public fun copy(userId: String = var0.userId, guildId: String = var0.guildId, channelId: String = var0.channelId, roleId: String = var0.roleId): TapConnectionsRoleTagData {
-      r.h(var1, "userId");
-      r.h(var2, "guildId");
-      r.h(var3, "channelId");
-      r.h(var4, "roleId");
       return new TapConnectionsRoleTagData(var1, var2, var3, var4);
    }
 
@@ -56,14 +47,14 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.userId, var1.userId)) {
+         if (!(this.userId == var1.userId)) {
             return false;
-         } else if (!r.c(this.guildId, var1.guildId)) {
+         } else if (!(this.guildId == var1.guildId)) {
             return false;
-         } else if (!r.c(this.channelId, var1.channelId)) {
+         } else if (!(this.channelId == var1.channelId)) {
             return false;
          } else {
-            return r.c(this.roleId, var1.roleId);
+            return this.roleId == var1.roleId;
          }
       }
    }
@@ -77,21 +68,21 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.userId;
-      val var5: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapConnectionsRoleTagData(userId=");
-      var4.append(var3);
-      var4.append(", guildId=");
-      var4.append(var5);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", roleId=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.userId;
+      val var1: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.roleId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapConnectionsRoleTagData(userId=");
+      var5.append(var2);
+      var5.append(", guildId=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", roleId=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

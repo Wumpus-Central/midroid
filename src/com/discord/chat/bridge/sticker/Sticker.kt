@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.sticker
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Sticker(id: Long,
@@ -26,11 +25,6 @@ public data class Sticker(id: Long,
    public final val accessibilityLabel: String
 
    init {
-      r.h(var3, "formatType");
-      r.h(var4, "name");
-      r.h(var5, "asset");
-      r.h(var6, "url");
-      r.h(var10, "accessibilityLabel");
       super();
       this.id = var1;
       this.formatType = var3;
@@ -90,11 +84,6 @@ public data class Sticker(id: Long,
       renderMode: Int = var0.renderMode,
       accessibilityLabel: String = var0.accessibilityLabel
    ): Sticker {
-      r.h(var3, "formatType");
-      r.h(var4, "name");
-      r.h(var5, "asset");
-      r.h(var6, "url");
-      r.h(var10, "accessibilityLabel");
       return new Sticker(var1, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -109,28 +98,28 @@ public data class Sticker(id: Long,
             return false;
          } else if (this.formatType != var1.formatType) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!(this.name == var1.name)) {
             return false;
-         } else if (!r.c(this.asset, var1.asset)) {
+         } else if (!(this.asset == var1.asset)) {
             return false;
-         } else if (!r.c(this.url, var1.url)) {
+         } else if (!(this.url == var1.url)) {
             return false;
-         } else if (!r.c(this.width, var1.width)) {
+         } else if (!(this.width == var1.width)) {
             return false;
-         } else if (!r.c(this.height, var1.height)) {
+         } else if (!(this.height == var1.height)) {
             return false;
          } else if (this.renderMode != var1.renderMode) {
             return false;
          } else {
-            return r.c(this.accessibilityLabel, var1.accessibilityLabel);
+            return this.accessibilityLabel == var1.accessibilityLabel;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = java.lang.Long.hashCode(this.id);
-      val var3: Int = this.formatType.hashCode();
-      val var6: Int = this.name.hashCode();
+      val var6: Int = java.lang.Long.hashCode(this.id);
+      val var5: Int = this.formatType.hashCode();
+      val var3: Int = this.name.hashCode();
       val var7: Int = this.asset.hashCode();
       val var4: Int = this.url.hashCode();
       var var2: Int = 0;
@@ -145,17 +134,17 @@ public data class Sticker(id: Long,
          var2 = this.height.hashCode();
       }
 
-      return (((((((var5 * 31 + var3) * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
+      return (((((((var6 * 31 + var5) * 31 + var3) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
          + this.accessibilityLabel.hashCode();
    }
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var4: StickerFormatType = this.formatType;
-      val var5: java.lang.String = this.name;
-      val var6: java.lang.String = this.asset;
-      val var9: java.lang.String = this.url;
-      val var10: Int = this.width;
+      val var5: StickerFormatType = this.formatType;
+      val var10: java.lang.String = this.name;
+      val var4: java.lang.String = this.asset;
+      val var6: java.lang.String = this.url;
+      val var9: Int = this.width;
       val var7: Int = this.height;
       val var1: Int = this.renderMode;
       val var11: java.lang.String = this.accessibilityLabel;
@@ -163,15 +152,15 @@ public data class Sticker(id: Long,
       var8.append("Sticker(id=");
       var8.append(var2);
       var8.append(", formatType=");
-      var8.append(var4);
-      var8.append(", name=");
       var8.append(var5);
-      var8.append(", asset=");
-      var8.append(var6);
-      var8.append(", url=");
-      var8.append(var9);
-      var8.append(", width=");
+      var8.append(", name=");
       var8.append(var10);
+      var8.append(", asset=");
+      var8.append(var4);
+      var8.append(", url=");
+      var8.append(var6);
+      var8.append(", width=");
+      var8.append(var9);
       var8.append(", height=");
       var8.append(var7);
       var8.append(", renderMode=");

@@ -26,13 +26,14 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
-import wb.f
+import qb.f
 
 @ReactModule(name = "DCDChatInput")
+@SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,323:1\n123#2:324\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n321#1:324\n*E\n"])
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
    private final val json: Json = b.b(null, new a(), 1, null)
    private final val delegate: DCDChatInputManagerDelegate<ChatInputRootView, ChatInputViewManager>
@@ -46,23 +47,19 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
    @JvmStatic
    fun `json$lambda$0`(var0: JsonBuilder): Unit {
-      r.h(var0, "$this$Json");
       var0.c(true);
       return Unit.a;
    }
 
    public open fun backspace(view: ChatInputRootView) {
-      r.h(var1, "view");
       var1.backspace();
    }
 
    public open fun blur(view: ChatInputRootView) {
-      r.h(var1, "view");
       var1.clearInputFocus();
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatInputRootView {
-      r.h(var1, "reactContext");
       val var2: ChatInputRootView = new ChatInputRootView(var1, null, 0, 6, null);
       var2.setListener(new ChatInputRootView.ChatInputListener(this, var1, var2) {
          final ThemedReactContext $reactContext;
@@ -77,7 +74,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onCommandInserted(java.lang.String var1) {
-            r.h(var1, "data");
             this.this$0.getReactEvents$chat_input_release().emitEvent(this.$reactContext, this.$view, new OnPasteCommandEvent(var1));
          }
 
@@ -88,7 +84,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onEndBlur(java.lang.String var1) {
-            r.h(var1, "text");
             this.this$0.getReactEvents$chat_input_release().emitEvent(this.$reactContext, this.$view, new OnEndBlurEvent(var1));
          }
 
@@ -99,12 +94,10 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            r.h(var1, "uri");
             val var2: ReactEvents = this.this$0.getReactEvents$chat_input_release();
             val var5: ThemedReactContext = this.$reactContext;
             val var4: ChatInputRootView = this.$view;
             val var3: java.lang.String = var1.toString();
-            r.g(var3, "toString(...)");
             var2.emitEvent(var5, var4, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
          }
 
@@ -115,8 +108,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onTextOrSelectionChanged(int var1, int var2, java.lang.String var3, java.lang.String var4) {
-            r.h(var3, "text");
-            r.h(var4, "editId");
             this.this$0.getReactEvents$chat_input_release().emitEvent(this.$reactContext, this.$view, new OnSelectionOrTextChangeEvent(var1, var2, var3, var4));
          }
       });
@@ -125,13 +116,10 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    }
 
    public open fun flushText(view: ChatInputRootView, requestId: String) {
-      r.h(var1, "view");
-      r.h(var2, "requestId");
       this.reactEvents.emitEvent(var1, new OnTextFlushedEvent(var1.getText(), var2));
    }
 
    public open fun focus(view: ChatInputRootView) {
-      r.h(var1, "view");
       var1.requestInputFocus();
    }
 
@@ -148,14 +136,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    }
 
    public open fun onDropViewInstance(view: ChatInputRootView) {
-      r.h(var1, "view");
       KeyboardManager.INSTANCE.removeKeyboardListener(var1);
    }
 
    public open fun openCustomKeyboard(view: ChatInputRootView) {
-      r.h(var1, "view");
       val var2: Context = var1.getContext();
-      r.f(var2, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
       val var3: Activity = (var2 as ReactContext).getCurrentActivity();
       if (var3 != null) {
          val var4: Window = var3.getWindow();
@@ -166,9 +151,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    }
 
    public open fun openSystemKeyboard(view: ChatInputRootView) {
-      r.h(var1, "view");
       val var2: Context = var1.getContext();
-      r.f(var2, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
       val var3: Activity = (var2 as ReactContext).getCurrentActivity();
       if (var3 != null) {
          val var4: Window = var3.getWindow();
@@ -179,8 +162,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    }
 
    public open fun receiveCommand(view: ChatInputRootView, commandId: String, args: ReadableArray?) {
-      r.h(var1, "view");
-      r.h(var2, "commandId");
       switch (var2.hashCode()) {
          case -1505238496:
             if (var2.equals("setSelectedRange")) {
@@ -203,7 +184,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                }
 
                var2 = var3.getString(0);
-               r.e(var2);
                this.flushText(var1, var2);
             }
             break;
@@ -219,7 +199,6 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                }
 
                var2 = var3.getString(0);
-               r.e(var2);
                this.updateTextBlocks(var1, var2, var3.getString(1));
             }
             break;
@@ -234,13 +213,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               val var4: Int = var3.getInt(0);
-               val var5: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               r.e(var2);
-               val var6: java.lang.String = var3.getString(3);
-               r.e(var6);
-               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
+               val var5: Int = var3.getInt(0);
+               val var4: Int = var3.getInt(1);
+               val var6: java.lang.String = var3.getString(2);
+               var2 = var3.getString(3);
+               this.replaceRange(var1, var5, var4, var6, var2, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:
@@ -274,69 +251,55 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
       keepCursorPosition: Boolean,
       editId: String?
    ) {
-      r.h(var1, "view");
-      r.h(var4, "text");
-      r.h(var5, "styleBlocks");
       var1.replaceRange(var2, var3, var4, this.decodeStyleBlocks(var5), var6, var7);
    }
 
    @ReactProp(name = "editable")
    public open fun setEditable(view: ChatInputRootView, editable: Boolean) {
-      r.h(var1, "view");
       var1.setEditTextEnabled(var2);
    }
 
    @ReactProp(name = "keyboardAppearance")
    public open fun setKeyboardAppearance(view: ChatInputRootView, keyboardAppearance: Int) {
-      r.h(var1, "view");
    }
 
    @ReactProp(name = "keyboardType")
    public open fun setKeyboardType(view: ChatInputRootView, keyboardType: String?) {
-      r.h(var1, "view");
    }
 
    @ReactProp(name = "markAsSpoilerTitle")
    public open fun setMarkAsSpoilerTitle(view: ChatInputRootView, spoilerTitle: String?) {
-      r.h(var1, "view");
    }
 
    @ReactProp(name = "placeholder")
    public open fun setPlaceholder(view: ChatInputRootView, placeholder: String?) {
-      r.h(var1, "view");
       var1.setHint(var2);
    }
 
    @ReactProp(name = "placeholderColor")
    public open fun setPlaceholderColor(view: ChatInputRootView, placeholderColor: String?) {
-      r.h(var1, "view");
       var1.setHintTextColor(Color.parseColor(var2));
    }
 
    public open fun setSelectedRange(view: ChatInputRootView, location: Int, length: Int) {
-      r.h(var1, "view");
       var1.setSelection(var2, var3 + var2);
    }
 
    @ReactProp(name = "selectionColor")
    public open fun setSelectionColor(view: ChatInputRootView, selectionColor: String?) {
-      r.h(var1, "view");
    }
 
    @ReactProp(name = "setNoExtractUI")
    public open fun setSetNoExtractUI(view: ChatInputRootView, value: Boolean) {
-      r.h(var1, "view");
       var1.setNoExtractUI(var2);
    }
 
    @ReactProp(name = "shouldShowCursor")
    public open fun setShouldShowCursor(view: ChatInputRootView, shouldShowCursor: Boolean) {
-      r.h(var1, "view");
       var1.setCursorVisible(var2);
    }
 
    public open fun setText(view: ChatInputRootView, text: String?) {
-      r.h(var1, "view");
       if (var2 != null) {
          var1.setText(var2);
          ChatInputRootView.setSelection$default(var1, var2.length(), 0, 2, null);
@@ -345,13 +308,10 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
    @ReactProp(name = "textColor")
    public open fun setTextColor(view: ChatInputRootView, textColor: String?) {
-      r.h(var1, "view");
       var1.setTextColor(Color.parseColor(var2));
    }
 
    public open fun updateTextBlocks(view: ChatInputRootView, blocks: String, editId: String?) {
-      r.h(var1, "view");
-      r.h(var2, "blocks");
       var var4: java.lang.String = var3;
       if (var3 == null) {
          var4 = "";

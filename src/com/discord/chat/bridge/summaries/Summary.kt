@@ -3,9 +3,8 @@ package com.discord.chat.bridge.summaries
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Summary(id: String,
@@ -36,12 +35,6 @@ public data class Summary(id: String,
       var7: Int,
       var8: Long
    ) {
-      r.h(var1, "id");
-      r.h(var2, "topic");
-      r.h(var3, "summShort");
-      r.h(var4, "people");
-      r.h(var5, "startId");
-      r.h(var6, "endId");
       super();
       this.id = var1;
       this.topic = var2;
@@ -95,12 +88,6 @@ public data class Summary(id: String,
       count: Int = ...,
       channelId: ChannelId = ...
    ): Summary {
-      r.h(var1, "id");
-      r.h(var2, "topic");
-      r.h(var3, "summShort");
-      r.h(var4, "people");
-      r.h(var5, "startId");
-      r.h(var6, "endId");
       return new Summary(var1, var2, var3, var4, var5, var6, var7, var8, null);
    }
 
@@ -111,13 +98,13 @@ public data class Summary(id: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.topic, var1.topic)) {
+         } else if (!(this.topic == var1.topic)) {
             return false;
-         } else if (!r.c(this.summShort, var1.summShort)) {
+         } else if (!(this.summShort == var1.summShort)) {
             return false;
-         } else if (!r.c(this.people, var1.people)) {
+         } else if (!(this.people == var1.people)) {
             return false;
          } else if (!MessageId.equals-impl0(this.startId, var1.startId)) {
             return false;
@@ -149,33 +136,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.id;
-      val var2: java.lang.String = this.topic;
-      val var6: java.lang.String = this.summShort;
-      val var5: java.util.List = this.people;
-      val var9: java.lang.String = MessageId.toString-impl(this.startId);
-      val var4: java.lang.String = MessageId.toString-impl(this.endId);
+      val var6: java.lang.String = this.id;
+      val var4: java.lang.String = this.topic;
+      val var7: java.lang.String = this.summShort;
+      val var9: java.util.List = this.people;
+      val var3: java.lang.String = MessageId.toString-impl(this.startId);
+      val var5: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("Summary(id=");
-      var7.append(var8);
-      var7.append(", topic=");
-      var7.append(var2);
-      var7.append(", summShort=");
-      var7.append(var6);
-      var7.append(", people=");
-      var7.append(var5);
-      var7.append(", startId=");
-      var7.append(var9);
-      var7.append(", endId=");
-      var7.append(var4);
-      var7.append(", count=");
-      var7.append(var1);
-      var7.append(", channelId=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("Summary(id=");
+      var8.append(var6);
+      var8.append(", topic=");
+      var8.append(var4);
+      var8.append(", summShort=");
+      var8.append(var7);
+      var8.append(", people=");
+      var8.append(var9);
+      var8.append(", startId=");
+      var8.append(var3);
+      var8.append(", endId=");
+      var8.append(var5);
+      var8.append(", count=");
+      var8.append(var1);
+      var8.append(", channelId=");
+      var8.append(var2);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

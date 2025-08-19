@@ -1,15 +1,13 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class LoadingAction(type: LoadingActionType) {
    public final val type: LoadingActionType
 
    init {
-      r.h(var1, "type");
       super();
       this.type = var1;
    }
@@ -19,7 +17,6 @@ public data class LoadingAction(type: LoadingActionType) {
    }
 
    public fun copy(type: LoadingActionType = var0.type): LoadingAction {
-      r.h(var1, "type");
       return new LoadingAction(var1);
    }
 
@@ -38,12 +35,12 @@ public data class LoadingAction(type: LoadingActionType) {
    }
 
    public override fun toString(): String {
-      val var1: LoadingActionType = this.type;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LoadingAction(type=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: LoadingActionType = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LoadingAction(type=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

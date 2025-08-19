@@ -4,9 +4,8 @@ import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
@@ -25,8 +24,6 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
    public final val attachmentId: String
 
    fun MediaAttachmentPlaybackStartedData(var1: java.lang.String, var2: Float, var3: Float, var4: Long, var6: Boolean, var7: java.lang.String) {
-      r.h(var1, "messageId");
-      r.h(var7, "attachmentId");
       super();
       this.messageId = var1;
       this.totalDurationSecs = var2;
@@ -68,8 +65,6 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       isVoiceMessage: Boolean = ...,
       attachmentId: String = ...
    ): MediaAttachmentPlaybackStartedData {
-      r.h(var1, "messageId");
-      r.h(var7, "attachmentId");
       return new MediaAttachmentPlaybackStartedData(var1, var2, var3, var4, var6, var7, null);
    }
 
@@ -91,7 +86,7 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
          } else if (this.isVoiceMessage != var1.isVoiceMessage) {
             return false;
          } else {
-            return r.c(this.attachmentId, var1.attachmentId);
+            return this.attachmentId == var1.attachmentId;
          }
       }
    }
@@ -119,8 +114,8 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
 
    public override fun toString(): String {
       val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
-      val var1: Float = this.startDurationSecs;
+      val var1: Float = this.totalDurationSecs;
+      val var2: Float = this.startDurationSecs;
       val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
       val var4: java.lang.String = this.attachmentId;
@@ -128,9 +123,9 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       var7.append("MediaAttachmentPlaybackStartedData(messageId=");
       var7.append(var5);
       var7.append(", totalDurationSecs=");
-      var7.append(var2);
-      var7.append(", startDurationSecs=");
       var7.append(var1);
+      var7.append(", startDurationSecs=");
+      var7.append(var2);
       var7.append(", senderUserId=");
       var7.append(var6);
       var7.append(", isVoiceMessage=");

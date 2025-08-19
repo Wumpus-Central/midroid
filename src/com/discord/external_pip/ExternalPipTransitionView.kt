@@ -10,12 +10,9 @@ import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.r
 
-public class ExternalPipTransitionView(context: Context) : View {
+public class ExternalPipTransitionView(context: Context) : View(var1) {
    init {
-      r.h(var1, "context");
-      super(var1);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.setTag(transitionViewTag);
       this.setLayoutParams(new LayoutParams(-1, -1));
@@ -32,14 +29,13 @@ public class ExternalPipTransitionView(context: Context) : View {
    @JvmStatic
    fun `fadeOut$lambda$0`(var0: ExternalPipTransitionView, var1: Long, var3: Function0) {
       var0.animate().alpha(0.0F).setDuration(var1).setListener(new AnimatorListenerAdapter(var3) {
-         final Function0 $onComplete;
+         final Function0<Unit> $onComplete;
 
          {
             this.$onComplete = var1;
          }
 
          public void onAnimationEnd(Animator var1) {
-            r.h(var1, "animation");
             this.$onComplete.invoke();
          }
       });
@@ -81,22 +77,21 @@ public class ExternalPipTransitionView(context: Context) : View {
 
       public fun tryShow(activity: Activity?) {
          this.tryHide(var1, false);
-         val var2: View;
+         var var2: ViewGroup = null;
+         val var3: View;
          if (var1 != null) {
-            var2 = ActivityExtensionsKt.getRootView(var1);
+            var3 = ActivityExtensionsKt.getRootView(var1);
          } else {
-            var2 = null;
+            var3 = null;
          }
 
-         var var4: ViewGroup = null;
-         if (var2 is ViewGroup) {
-            var4 = var2 as ViewGroup;
+         if (var3 is ViewGroup) {
+            var2 = var3 as ViewGroup;
          }
 
-         if (var4 != null) {
-            val var5: Context = var4.getContext();
-            r.g(var5, "getContext(...)");
-            var4.addView(new ExternalPipTransitionView(var5));
+         if (var2 != null) {
+            val var4: Context = var2.getContext();
+            var2.addView(new ExternalPipTransitionView(var4));
          }
       }
    }

@@ -6,10 +6,10 @@ import com.discord.chat.presentation.message.messagepart.EmbeddedActivityInviteM
 
 // $VF: synthetic class
 public final class j implements OnClickListener {
-   public final EmbeddedActivityInviteViewHolder j;
-   public final EmbeddedActivityInviteMessageAccessory k;
+   public final EmbeddedActivityInviteViewHolder d;
+   public final EmbeddedActivityInviteMessageAccessory e;
 
    public final void onClick(View var1) {
-      EmbeddedActivityInviteViewHolder.c(this.j, this.k, var1);
+      EmbeddedActivityInviteViewHolder.c(this.d, this.e, var1);
    }
 }

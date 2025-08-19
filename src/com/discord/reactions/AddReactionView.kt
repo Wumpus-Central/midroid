@@ -19,23 +19,18 @@ import com.discord.reactions.databinding.AddReactionViewBinding
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
 
 @SuppressLint(["SetTextI18n"])
-public class AddReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+public class AddReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: AddReactionViewBinding
 
    fun AddReactionView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
-      val var6: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
-      this.binding = var6;
+      val var8: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var8;
       this.setOrientation(0);
       this.setGravity(16);
       val var5: ReactionView.Companion = ReactionView.Companion;
@@ -43,14 +38,12 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       val var3: Int = VERTICAL_PADDING;
       this.setPadding(var4, VERTICAL_PADDING, var5.getHORIZ_PADDING(), var3);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var5.getCORNER_RADIUS(), null, 0, 12, null);
-      val var8: TextView = var6.addReactionText;
-      r.e(var6.addReactionText);
-      DiscordFontUtilsKt.setDiscordFont(var8, DiscordFont.PrimarySemibold);
-      SetTextSizeSpKt.setTextSizeSp(var8, 14.0F, 14.0F);
-      var8.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      var8.setPadding(var5.getHORIZ_PADDING(), 0, var5.getHORIZ_PADDING(), 0);
-      val var7: SimpleDraweeView = var6.addReactionImage;
-      r.e(var6.addReactionImage);
+      val var6: TextView = var8.addReactionText;
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var6, 14.0F, 14.0F);
+      var6.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var6.setPadding(var5.getHORIZ_PADDING(), 0, var5.getHORIZ_PADDING(), 0);
+      val var7: SimpleDraweeView = var8.addReactionImage;
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.AddReaction);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getInteractiveNormal());
       var7.setScaleType(ScaleType.FIT_CENTER);
@@ -63,8 +56,6 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
    }
 
    public fun configure(addReactionLabel: String, reactionsTheme: ReactionsTheme?, isBurst: Boolean, imageAsset: ReactAsset = ReactAsset.AddReaction) {
-      r.h(var1, "addReactionLabel");
-      r.h(var4, "imageAsset");
       val var7: TextView = this.binding.addReactionText;
       this.binding.addReactionText.setText(var1);
       if (var1.length() == 0) {
@@ -93,7 +84,6 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       }
 
       label28: {
-         r.e(this.binding.addReactionImage);
          ReactAssetUtilsKt.setReactAsset(var9, var4);
          if (var2 != null) {
             val var10: Int = var2.getReactionBackgroundColor();

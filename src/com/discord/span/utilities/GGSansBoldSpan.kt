@@ -5,16 +5,13 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import h2.a
-import h2.b
-import kotlin.jvm.internal.r
+import g2.a
+import g2.b
 
-public class GGSansBoldSpan(context: Context) : StyleSpan {
+public class GGSansBoldSpan(context: Context) : StyleSpan(1) {
    private final val context: Context
 
    init {
-      r.h(var1, "context");
-      super(1);
       this.context = var1;
    }
 
@@ -47,12 +44,10 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
    }
 
    public open fun updateDrawState(ds: TextPaint) {
-      r.h(var1, "ds");
       this.apply(var1, new a(this, var1));
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      r.h(var1, "paint");
       this.apply(var1, new b(this, var1));
    }
 }

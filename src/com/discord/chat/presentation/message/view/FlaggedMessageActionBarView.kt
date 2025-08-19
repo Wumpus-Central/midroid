@@ -15,44 +15,39 @@ import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.theme.ThemeManagerKt
 
-public class FlaggedMessageActionBarView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : LinearLayout,
+public class FlaggedMessageActionBarView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(
+         var1, var2, var3
+      ),
    VerticalSpacingItemDecoration.SpacingProviderView {
    private final val binding: FlaggedMessageActionBarViewBinding
 
    fun FlaggedMessageActionBarView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun FlaggedMessageActionBarView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
-      val var5: FlaggedMessageActionBarViewBinding = FlaggedMessageActionBarViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var7: ImageView = var5.separatorDot;
-      var5.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
-      kotlin.jvm.internal.r.e(var7);
-      ViewClippingUtilsKt.clipToRoundedRectangle(var7, SizeUtilsKt.getDpToPx(4));
-      val var4: DCDButton = var5.actionsButton;
-      var5.actionsButton.setCornerRadius(SizeUtilsKt.getDpToPx(8));
+      val var7: FlaggedMessageActionBarViewBinding = FlaggedMessageActionBarViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var7;
+      val var5: ImageView = var7.separatorDot;
+      var7.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
+      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(4));
+      val var4: DCDButton = var7.actionsButton;
+      var7.actionsButton.setCornerRadius(SizeUtilsKt.getDpToPx(8));
       var4.setTextSizeSp(12.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-      val var8: DiscordFont = DiscordFont.PrimaryMedium;
+      val var6: DiscordFont = DiscordFont.PrimaryMedium;
       var4.setDiscordFont(DiscordFont.PrimaryMedium);
       var4.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundPrimary());
-      val var6: DCDButton = var5.feedbackButton;
-      var5.feedbackButton.setCornerRadius(SizeUtilsKt.getDpToPx(8));
-      var6.setTextSizeSp(12.0F);
-      var6.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-      var6.setDiscordFont(var8);
-      var6.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundPrimary());
+      val var8: DCDButton = var7.feedbackButton;
+      var7.feedbackButton.setCornerRadius(SizeUtilsKt.getDpToPx(8));
+      var8.setTextSizeSp(12.0F);
+      var8.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
+      var8.setDiscordFont(var6);
+      var8.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundPrimary());
    }
 
    public fun setActions(
@@ -60,9 +55,6 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
       onTapAutoModerationActions: OnClickListener,
       onTapAutoModerationFeedback: OnClickListener
    ) {
-      kotlin.jvm.internal.r.h(var1, "autoModerationContext");
-      kotlin.jvm.internal.r.h(var2, "onTapAutoModerationActions");
-      kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
       val var5: java.lang.String = var1.getActionsIconURL();
       val var6: java.lang.String = var1.getActionsText();
       val var4: DCDButton = this.binding.actionsButton;

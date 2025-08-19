@@ -7,21 +7,16 @@ import android.widget.FrameLayout
 import android.widget.FrameLayout.LayoutParams
 import com.discord.chat.bridge.messageframe.MessageFrame
 import com.discord.chat.bridge.messageframe.MessageFrameJump
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class MessageFrameHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
+@SourceDebugExtension(["SMAP\nMessageFrameHeaderView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameHeaderView.kt\ncom/discord/chat/presentation/message/MessageFrameHeaderView\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,50:1\n33#1,15:52\n1#2:51\n*S KotlinDebug\n*F\n+ 1 MessageFrameHeaderView.kt\ncom/discord/chat/presentation/message/MessageFrameHeaderView\n*L\n29#1:52,15\n*E\n"])
+public class MessageFrameHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(var1, var2, var3) {
    fun MessageFrameHeaderView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MessageFrameHeaderView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
-   }
-
-   init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
    }
 
    private fun configureMessageFrameJump(messageFrame: MessageFrameJump) {
@@ -32,7 +27,6 @@ public class MessageFrameHeaderView  public constructor(context: Context, attrs:
          }
 
          val var3: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var3, "getContext(...)");
          var2 = new MessageFrameJumpHeaderView(var3, null, 0, 6, null);
          var2.setLayoutParams(new LayoutParams(-1, -2));
          this.addView((View)var2);
@@ -42,7 +36,6 @@ public class MessageFrameHeaderView  public constructor(context: Context, attrs:
    }
 
    public fun configure(messageFrame: MessageFrame) {
-      kotlin.jvm.internal.r.h(var1, "messageFrame");
       if (this.getChildCount() <= 1) {
          if (var1 is MessageFrameJump) {
             this.configureMessageFrameJump(var1 as MessageFrameJump);

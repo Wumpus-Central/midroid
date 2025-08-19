@@ -1,7 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit
 
 import com.discord.chat.bridge.botuikit.Component
-import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
 public interface ComponentView<T extends Component> {
@@ -18,7 +17,6 @@ public interface ComponentView<T extends Component> {
    internal class DefaultImpls {
       @JvmStatic
       fun <T extends Component> onRecycle(var0: ComponentView<T>, var1: ComponentProvider) {
-         r.h(var1, "componentProvider");
       }
    }
 }

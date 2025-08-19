@@ -1,14 +1,14 @@
 package com.discord.chat.bridge
 
-import I9.a
+import H9.a
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import tb.g
-import vb.e.i
+import nb.g
+import pb.e.i
 
 @g(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
@@ -40,9 +40,9 @@ public enum class MessageState(key: String) {
       return $ENTRIES;
    }
 
+   @SourceDebugExtension(["SMAP\nMessageState.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageState.kt\ncom/discord/chat/bridge/MessageState$Companion\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,35:1\n1310#2,2:36\n*S KotlinDebug\n*F\n+ 1 MessageState.kt\ncom/discord/chat/bridge/MessageState$Companion\n*L\n23#1:36,2\n*E\n"])
    public companion object {
       public fun fromValue(key: String): MessageState {
-         r.h(var1, "key");
          val var5: Array<MessageState> = MessageState.values();
          val var3: Int = var5.length;
          var var2: Int = 0;
@@ -54,7 +54,7 @@ public enum class MessageState(key: String) {
             }
 
             val var4: MessageState = var5[var2];
-            if (r.c(var5[var2].getKey(), var1)) {
+            if (var5[var2].getKey() == var1) {
                var6 = var4;
                break;
             }
@@ -78,18 +78,15 @@ public enum class MessageState(key: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return vb.g.a("MessageState", i.a);
+            return pb.g.a("MessageState", i.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): MessageState {
-         r.h(var1, "decoder");
          return MessageState.Companion.fromValue(var1.n());
       }
 
       public open fun serialize(encoder: Encoder, value: MessageState) {
-         r.h(var1, "encoder");
-         r.h(var2, "value");
          throw new UnsupportedOperationException();
       }
    }

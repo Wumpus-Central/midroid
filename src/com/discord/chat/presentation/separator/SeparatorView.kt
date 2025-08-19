@@ -11,31 +11,25 @@ import com.discord.chat.databinding.SeparatorViewBinding
 import com.discord.chat.presentation.list.ChatListConstraintLayout
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class SeparatorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
+@SourceDebugExtension(["SMAP\nSeparatorView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SeparatorView.kt\ncom/discord/chat/presentation/separator/SeparatorView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,41:1\n146#2,8:42\n*S KotlinDebug\n*F\n+ 1 SeparatorView.kt\ncom/discord/chat/presentation/separator/SeparatorView\n*L\n26#1:42,8\n*E\n"])
+public class SeparatorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2) {
    private final val binding: SeparatorViewBinding
 
    fun SeparatorView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var7: SeparatorViewBinding = SeparatorViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var7, "inflate(...)");
       this.binding = var7;
       val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
       val var4: View = var7.getRoot();
-      r.g(var4, "getRoot(...)");
       var4.setPaddingRelative(var3, var4.getPaddingTop(), var3, var4.getPaddingBottom());
       val var5: TextView = var7.middleText;
-      r.g(var7.middleText, "middleText");
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       val var6: TextView = var7.middleText;
-      r.g(var7.middleText, "middleText");
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
    }
 
@@ -46,7 +40,6 @@ public class SeparatorView  public constructor(context: Context, attrs: Attribut
    }
 
    public fun setText(text: CharSequence) {
-      r.h(var1, "text");
       this.binding.middleText.setText(var1);
    }
 }

@@ -6,7 +6,6 @@ import android.graphics.Path
 import android.graphics.RectF
 import android.graphics.Paint.Style
 import android.graphics.Path.Direction
-import kotlin.jvm.internal.r
 
 internal class AnimatableUnderlayBorders {
    private final val path: Path = new Path()
@@ -71,9 +70,6 @@ internal class AnimatableUnderlayBorders {
    private final val borderStrokeRadiusRadii: FloatArray
 
    internal fun drawBorderStroke(canvas: Canvas, paint: Paint, pathRect: RectF) {
-      r.h(var1, "canvas");
-      r.h(var2, "paint");
-      r.h(var3, "pathRect");
       val var4: Float = this.borderWidth;
       if (!(this.borderWidth <= 0.0F)) {
          var3.left = var3.left + this.borderWidth / 2.0F;

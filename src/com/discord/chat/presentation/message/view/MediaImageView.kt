@@ -27,8 +27,11 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
-public open class MediaImageView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout, MosaicView {
+@SourceDebugExtension(["SMAP\nMediaImageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaImageView.kt\ncom/discord/chat/presentation/message/view/MediaImageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,258:1\n311#2:259\n327#2,4:260\n312#2:264\n257#2,2:265\n257#2,2:267\n*S KotlinDebug\n*F\n+ 1 MediaImageView.kt\ncom/discord/chat/presentation/message/view/MediaImageView\n*L\n155#1:259\n155#1:260,4\n155#1:264\n189#1:265,2\n249#1:267,2\n*E\n"])
+public open class MediaImageView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2), MosaicView {
    public final val binding: MediaImageViewBinding
    private final val spoilerViewManager: SpoilerViewManager
    private final val attachmentUploadOverlay: AttachmentUploadOverlayViewManager
@@ -37,15 +40,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    private final lateinit var targetUrl: String
 
    open fun MediaImageView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       this.spoilerViewManager = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
@@ -53,7 +52,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
       val var3: TextView = var4.imageAltText;
       var4.imageAltText.setImportantForAccessibility(4);
-      kotlin.jvm.internal.r.e(var3);
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
       var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
@@ -62,7 +60,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?, srcIsAnimated: Boolean) {
       val var5: SimpleDraweeView = this.binding.gifIndicator;
-      kotlin.jvm.internal.r.g(this.binding.gifIndicator, "gifIndicator");
       val var4: Byte;
       if (this.shouldShowGifIndicator(var1, var2, var3)) {
          var4 = 0;
@@ -95,8 +92,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
                   return false;
                }
 
-               if (!kotlin.text.h.s(var2, ".gif", true) && !kotlin.text.h.s(var2, ".gifv", true) && (!kotlin.text.h.s(var2, ".webp", false) || !var3)) {
-                  if (!kotlin.text.h.s(var2, ".avif", false)) {
+               if (!StringsKt.s(var2, ".gif", true) && !StringsKt.s(var2, ".gifv", true) && (!StringsKt.s(var2, ".webp", false) || !var3)) {
+                  if (!StringsKt.s(var2, ".avif", false)) {
                      return false;
                   }
 
@@ -116,14 +113,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    public override fun getSingleAspectRatio(): Float {
       var var2: MediaImageView.TargetSize = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.r.y("targetSize");
+         Intrinsics.throwUninitializedPropertyAccessException("targetSize");
          var2 = null;
       }
 
       val var1: Float = var2.getWidth();
       var2 = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.r.y("targetSize");
+         Intrinsics.throwUninitializedPropertyAccessException("targetSize");
          var2 = null;
       }
 
@@ -151,16 +148,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       srcIsAnimated: Boolean
    ) {
       label67: {
-         kotlin.jvm.internal.r.h(var1, "url");
-         kotlin.jvm.internal.r.h(var4, "resizeMode");
          if (this.targetUrl != null) {
             var var21: java.lang.String = this.targetUrl;
             if (this.targetUrl == null) {
-               kotlin.jvm.internal.r.y("targetUrl");
+               Intrinsics.throwUninitializedPropertyAccessException("targetUrl");
                var21 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var21, var1)) {
+            if (var21 == var1) {
                break label67;
             }
          }
@@ -175,13 +170,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var39: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.r.g(this.binding.image, "image");
-         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var24: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.r.g(this.binding.image, "image");
+         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var38: SimpleDraweeView = this.binding.image;
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var39, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
+            var24, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
          );
       }
 
@@ -197,11 +190,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var var25: MediaImageView.TargetSize = this.targetSize;
          if (this.targetSize != null) {
             if (this.targetSize == null) {
-               kotlin.jvm.internal.r.y("targetSize");
+               Intrinsics.throwUninitializedPropertyAccessException("targetSize");
                var25 = null;
             }
 
-            if (kotlin.jvm.internal.r.c(var25, var30)) {
+            if (var25 == var30) {
                break label50;
             }
          }
@@ -211,17 +204,13 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
       this.binding.image.setBackgroundColor(0);
       val var26: SimpleDraweeView = this.binding.image;
-      kotlin.jvm.internal.r.g(this.binding.image, "image");
       ViewClippingUtilsKt.clipToRoundedRectangle(var26, var9);
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
-      kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var28: SpoilerViewManager = this.spoilerViewManager;
-      val var31: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "container");
+      val var31: SpoilerViewManager = this.spoilerViewManager;
+      val var28: ConstraintLayout = this.binding.container;
       val var33: SimpleDraweeView = this.binding.image;
-      kotlin.jvm.internal.r.g(this.binding.image, "image");
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -234,10 +223,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var31, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      var31.configureSpoiler(var8, this, var28, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
       val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var32: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "container");
       var29.configureAttachmentOverlay(this, var32, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
@@ -260,7 +248,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public override fun setMosaicSize(width: Int, height: Int) {
       val var4: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "container");
       val var3: LayoutParams = var4.getLayoutParams();
       if (var3 != null) {
          var3.width = var1;
@@ -282,8 +269,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
             @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
-               kotlin.jvm.internal.r.h(var1, "host");
-               kotlin.jvm.internal.r.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var2.N0(this.$role);
             }
@@ -301,7 +286,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public fun showDescription(show: Boolean, description: String?) {
       val var5: TextView = this.binding.imageAltText;
-      kotlin.jvm.internal.r.e(this.binding.imageAltText);
       ViewUtilsKt.setOptionalText(var5, var2);
       var var3: Boolean;
       if (var2 != null && var1) {
@@ -331,8 +315,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       public final val resizeMode: ResizeMode
 
       init {
-         kotlin.jvm.internal.r.h(var3, "resizeMode");
-         super();
          this.width = var1;
          this.height = var2;
          this.resizeMode = var3;
@@ -351,7 +333,6 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public fun copy(width: Int = var0.width, height: Int = var0.height, resizeMode: ResizeMode = var0.resizeMode): com.discord.chat.presentation.message.view.MediaImageView.TargetSize {
-         kotlin.jvm.internal.r.h(var3, "resizeMode");
          return new MediaImageView.TargetSize(var1, var2, var3);
       }
 
@@ -377,14 +358,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
          var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
          var4.append(", resizeMode=");
          var4.append(var3);
          var4.append(")");

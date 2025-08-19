@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.activities
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ActivityInviteEmbed(coverImage: String? = null,
@@ -28,9 +27,6 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    public final val ctaText: String
 
    init {
-      r.h(var3, "headerText");
-      r.h(var4, "partyStatus");
-      r.h(var10, "ctaText");
       super();
       this.coverImage = var1;
       this.isListening = var2;
@@ -96,9 +92,6 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       joinable: Boolean = var0.joinable,
       ctaText: String = var0.ctaText
    ): ActivityInviteEmbed {
-      r.h(var3, "headerText");
-      r.h(var4, "partyStatus");
-      r.h(var10, "ctaText");
       return new ActivityInviteEmbed(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -109,26 +102,26 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.coverImage, var1.coverImage)) {
+         if (!(this.coverImage == var1.coverImage)) {
             return false;
          } else if (this.isListening != var1.isListening) {
             return false;
-         } else if (!r.c(this.headerText, var1.headerText)) {
+         } else if (!(this.headerText == var1.headerText)) {
             return false;
-         } else if (!r.c(this.partyStatus, var1.partyStatus)) {
+         } else if (!(this.partyStatus == var1.partyStatus)) {
             return false;
-         } else if (!r.c(this.avatarsToRender, var1.avatarsToRender)) {
+         } else if (!(this.avatarsToRender == var1.avatarsToRender)) {
             return false;
          } else if (this.maxPartySize != var1.maxPartySize) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!(this.name == var1.name)) {
             return false;
-         } else if (!r.c(this.subtext, var1.subtext)) {
+         } else if (!(this.subtext == var1.subtext)) {
             return false;
          } else if (this.joinable != var1.joinable) {
             return false;
          } else {
-            return r.c(this.ctaText, var1.ctaText);
+            return this.ctaText == var1.ctaText;
          }
       }
    }
@@ -143,8 +136,8 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       val var6: Int = java.lang.Boolean.hashCode(this.isListening);
-      val var7: Int = this.headerText.hashCode();
-      val var5: Int = this.partyStatus.hashCode();
+      val var5: Int = this.headerText.hashCode();
+      val var7: Int = this.partyStatus.hashCode();
       val var2: Int;
       if (this.avatarsToRender == null) {
          var2 = 0;
@@ -165,7 +158,7 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       return (
-               (((((((var1 * 31 + var6) * 31 + var7) * 31 + var5) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
+               (((((((var1 * 31 + var6) * 31 + var5) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
                   + java.lang.Boolean.hashCode(this.joinable)
             )
             * 31
@@ -175,9 +168,9 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    public override fun toString(): String {
       val var9: java.lang.String = this.coverImage;
       val var2: Boolean = this.isListening;
-      val var5: java.lang.String = this.headerText;
-      val var4: java.lang.String = this.partyStatus;
-      val var7: java.util.List = this.avatarsToRender;
+      val var4: java.lang.String = this.headerText;
+      val var7: java.lang.String = this.partyStatus;
+      val var5: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
       val var6: java.lang.String = this.name;
       val var11: java.lang.String = this.subtext;
@@ -189,11 +182,11 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       var10.append(", isListening=");
       var10.append(var2);
       var10.append(", headerText=");
-      var10.append(var5);
-      var10.append(", partyStatus=");
       var10.append(var4);
-      var10.append(", avatarsToRender=");
+      var10.append(", partyStatus=");
       var10.append(var7);
+      var10.append(", avatarsToRender=");
+      var10.append(var5);
       var10.append(", maxPartySize=");
       var10.append(var1);
       var10.append(", name=");

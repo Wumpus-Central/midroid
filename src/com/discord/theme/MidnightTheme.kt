@@ -1,60 +1,62 @@
 package com.discord.theme
 
-import A9.j
+import B9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import k2.A2
-import k2.B2
-import k2.C2
-import k2.D2
-import k2.E2
-import k2.F2
-import k2.G2
-import k2.H2
-import k2.I2
-import k2.J2
-import k2.K2
-import k2.P1
-import k2.Q1
-import k2.R1
-import k2.S1
-import k2.T1
-import k2.U1
-import k2.V1
-import k2.W1
-import k2.X1
-import k2.Y1
-import k2.Z1
-import k2.a2
-import k2.b2
-import k2.c2
-import k2.d2
-import k2.e2
-import k2.f2
-import k2.g2
-import k2.h2
-import k2.i2
-import k2.j2
-import k2.k2
-import k2.l2
-import k2.m2
-import k2.n2
-import k2.o2
-import k2.p2
-import k2.q2
-import k2.r2
-import k2.s2
-import k2.t2
-import k2.u2
-import k2.v2
-import k2.w2
-import k2.x2
-import k2.y2
-import k2.z2
-import kotlin.jvm.internal.r
+import j2.A2
+import j2.B2
+import j2.C2
+import j2.D2
+import j2.E2
+import j2.F2
+import j2.G2
+import j2.H2
+import j2.I2
+import j2.J2
+import j2.K2
+import j2.L2
+import j2.M2
+import j2.N2
+import j2.O2
+import j2.P2
+import j2.Q2
+import j2.R2
+import j2.S2
+import j2.T2
+import j2.U2
+import j2.V2
+import j2.W2
+import j2.Y1
+import j2.Z1
+import j2.a2
+import j2.b2
+import j2.c2
+import j2.d2
+import j2.e2
+import j2.f2
+import j2.g2
+import j2.h2
+import j2.i2
+import j2.j2
+import j2.k2
+import j2.l2
+import j2.m2
+import j2.n2
+import j2.o2
+import j2.p2
+import j2.q2
+import j2.r2
+import j2.s2
+import j2.t2
+import j2.u2
+import j2.v2
+import j2.w2
+import j2.x2
+import j2.y2
+import j2.z2
 
-internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
+internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject() {
    public open val androidRipple: Int
       public open get() {
          return (this.androidRipple$delegate.getValue() as java.lang.Number).intValue();
@@ -223,6 +225,24 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
       }
 
 
+   public open val redesignButtonPrimaryOverlayBackground: Int
+      public open get() {
+         return (this.redesignButtonPrimaryOverlayBackground$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
+   public open val redesignButtonPrimaryOverlayPressedBackground: Int
+      public open get() {
+         return (this.redesignButtonPrimaryOverlayPressedBackground$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
+   public open val redesignButtonPrimaryOverlayText: Int
+      public open get() {
+         return (this.redesignButtonPrimaryOverlayText$delegate.getValue() as java.lang.Number).intValue();
+      }
+
+
    public open val redesignButtonTertiaryBackground: Int
       public open get() {
          return (this.redesignButtonTertiaryBackground$delegate.getValue() as java.lang.Number).intValue();
@@ -344,57 +364,57 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
 
 
    init {
-      r.h(var1, "resources");
-      r.h(var2, "theme");
-      super(null);
-      this.androidRipple$delegate = j.b(new P1(var1, var2));
-      this.backgroundAccent$delegate = j.b(new R1(var1, var2));
-      this.backgroundFloating$delegate = j.b(new d2(var1, var2));
-      this.backgroundMessageHighlight$delegate = j.b(new p2(var1, var2));
-      this.backgroundMobilePrimary$delegate = j.b(new z2(var1, var2));
-      this.backgroundMobileSecondary$delegate = j.b(new A2(var1, var2));
-      this.backgroundModifierAccent$delegate = j.b(new B2(var1, var2));
-      this.backgroundModifierSelected$delegate = j.b(new C2(var1, var2));
-      this.backgroundPrimary$delegate = j.b(new D2(var1, var2));
-      this.backgroundSecondary$delegate = j.b(new E2(var1, var2));
-      this.backgroundSecondaryAlt$delegate = j.b(new a2(var1, var2));
-      this.backgroundTertiary$delegate = j.b(new l2(var1, var2));
-      this.bgModStrong$delegate = j.b(new w2(var1, var2));
-      this.bgSurfaceOverlay$delegate = j.b(new F2(var1, var2));
-      this.borderStrong$delegate = j.b(new G2(var1, var2));
-      this.borderSubtle$delegate = j.b(new H2(var1, var2));
-      this.buttonSecondaryBackground$delegate = j.b(new I2(var1, var2));
-      this.cardPrimaryBg$delegate = j.b(new J2(var1, var2));
-      this.chatSwipeToReplyBackground$delegate = j.b(new K2(var1, var2));
-      this.chatSwipeToReplyGradientBackground$delegate = j.b(new Q1(var1, var2));
-      this.embedBackground$delegate = j.b(new S1(var1, var2));
-      this.headerPrimary$delegate = j.b(new T1(var1, var2));
-      this.headerSecondary$delegate = j.b(new U1(var1, var2));
-      this.infoDangerForeground$delegate = j.b(new V1(var1, var2));
-      this.interactiveActive$delegate = j.b(new W1(var1, var2));
-      this.interactiveMuted$delegate = j.b(new X1(var1, var2));
-      this.interactiveNormal$delegate = j.b(new Y1(var1, var2));
-      this.redesignButtonPrimaryBackground$delegate = j.b(new Z1(var1, var2));
-      this.redesignButtonTertiaryBackground$delegate = j.b(new b2(var1, var2));
-      this.redesignButtonTertiaryText$delegate = j.b(new c2(var1, var2));
-      this.spoilerHiddenBackground$delegate = j.b(new e2(var1, var2));
-      this.spoilerRevealedBackground$delegate = j.b(new f2(var1, var2));
-      this.statusDanger$delegate = j.b(new g2(var1, var2));
-      this.statusDangerBackground$delegate = j.b(new h2(var1, var2));
-      this.statusPositive$delegate = j.b(new i2(var1, var2));
-      this.statusPositiveText$delegate = j.b(new j2(var1, var2));
-      this.statusWarning$delegate = j.b(new k2(var1, var2));
-      this.textBrand$delegate = j.b(new m2(var1, var2));
-      this.textDanger$delegate = j.b(new n2(var1, var2));
-      this.textLink$delegate = j.b(new o2(var1, var2));
-      this.textLowContrast$delegate = j.b(new q2(var1, var2));
-      this.textMuted$delegate = j.b(new r2(var1, var2));
-      this.textNormal$delegate = j.b(new s2(var1, var2));
-      this.textPositive$delegate = j.b(new t2(var1, var2));
-      this.textPrimary$delegate = j.b(new u2(var1, var2));
-      this.textSecondary$delegate = j.b(new v2(var1, var2));
-      this.textWarning$delegate = j.b(new x2(var1, var2));
-      this.white$delegate = j.b(new y2(var1, var2));
+      this.androidRipple$delegate = j.b(new Y1(var1, var2));
+      this.backgroundAccent$delegate = j.b(new a2(var1, var2));
+      this.backgroundFloating$delegate = j.b(new m2(var1, var2));
+      this.backgroundMessageHighlight$delegate = j.b(new y2(var1, var2));
+      this.backgroundMobilePrimary$delegate = j.b(new K2(var1, var2));
+      this.backgroundMobileSecondary$delegate = j.b(new M2(var1, var2));
+      this.backgroundModifierAccent$delegate = j.b(new N2(var1, var2));
+      this.backgroundModifierSelected$delegate = j.b(new O2(var1, var2));
+      this.backgroundPrimary$delegate = j.b(new P2(var1, var2));
+      this.backgroundSecondary$delegate = j.b(new R2(var1, var2));
+      this.backgroundSecondaryAlt$delegate = j.b(new j2(var1, var2));
+      this.backgroundTertiary$delegate = j.b(new u2(var1, var2));
+      this.bgModStrong$delegate = j.b(new F2(var1, var2));
+      this.bgSurfaceOverlay$delegate = j.b(new Q2(var1, var2));
+      this.borderStrong$delegate = j.b(new S2(var1, var2));
+      this.borderSubtle$delegate = j.b(new T2(var1, var2));
+      this.buttonSecondaryBackground$delegate = j.b(new U2(var1, var2));
+      this.cardPrimaryBg$delegate = j.b(new V2(var1, var2));
+      this.chatSwipeToReplyBackground$delegate = j.b(new W2(var1, var2));
+      this.chatSwipeToReplyGradientBackground$delegate = j.b(new Z1(var1, var2));
+      this.embedBackground$delegate = j.b(new b2(var1, var2));
+      this.headerPrimary$delegate = j.b(new c2(var1, var2));
+      this.headerSecondary$delegate = j.b(new d2(var1, var2));
+      this.infoDangerForeground$delegate = j.b(new e2(var1, var2));
+      this.interactiveActive$delegate = j.b(new f2(var1, var2));
+      this.interactiveMuted$delegate = j.b(new g2(var1, var2));
+      this.interactiveNormal$delegate = j.b(new h2(var1, var2));
+      this.redesignButtonPrimaryBackground$delegate = j.b(new i2(var1, var2));
+      this.redesignButtonPrimaryOverlayBackground$delegate = j.b(new k2(var1, var2));
+      this.redesignButtonPrimaryOverlayPressedBackground$delegate = j.b(new l2(var1, var2));
+      this.redesignButtonPrimaryOverlayText$delegate = j.b(new n2(var1, var2));
+      this.redesignButtonTertiaryBackground$delegate = j.b(new o2(var1, var2));
+      this.redesignButtonTertiaryText$delegate = j.b(new p2(var1, var2));
+      this.spoilerHiddenBackground$delegate = j.b(new q2(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.b(new r2(var1, var2));
+      this.statusDanger$delegate = j.b(new s2(var1, var2));
+      this.statusDangerBackground$delegate = j.b(new t2(var1, var2));
+      this.statusPositive$delegate = j.b(new v2(var1, var2));
+      this.statusPositiveText$delegate = j.b(new w2(var1, var2));
+      this.statusWarning$delegate = j.b(new x2(var1, var2));
+      this.textBrand$delegate = j.b(new z2(var1, var2));
+      this.textDanger$delegate = j.b(new A2(var1, var2));
+      this.textLink$delegate = j.b(new B2(var1, var2));
+      this.textLowContrast$delegate = j.b(new C2(var1, var2));
+      this.textMuted$delegate = j.b(new D2(var1, var2));
+      this.textNormal$delegate = j.b(new E2(var1, var2));
+      this.textPositive$delegate = j.b(new G2(var1, var2));
+      this.textPrimary$delegate = j.b(new H2(var1, var2));
+      this.textSecondary$delegate = j.b(new I2(var1, var2));
+      this.textWarning$delegate = j.b(new J2(var1, var2));
+      this.white$delegate = j.b(new L2(var1, var2));
    }
 
    @JvmStatic
@@ -538,102 +558,117 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
    }
 
    @JvmStatic
-   fun `redesignButtonTertiaryBackground_delegate$lambda$28`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.redesign_button_tertiary_background_midnight, var1);
-   }
-
-   @JvmStatic
-   fun `redesignButtonTertiaryText_delegate$lambda$29`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
-   }
-
-   @JvmStatic
-   fun `spoilerHiddenBackground_delegate$lambda$30`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.plum_14, var1);
-   }
-
-   @JvmStatic
-   fun `spoilerRevealedBackground_delegate$lambda$31`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.spoiler_revealed_background_midnight, var1);
-   }
-
-   @JvmStatic
-   fun `statusDangerBackground_delegate$lambda$33`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.red_430, var1);
-   }
-
-   @JvmStatic
-   fun `statusDanger_delegate$lambda$32`(var0: Resources, var1: Theme): Int {
-      return ColorUtilsKt.getColorCompat(var0, R.color.red_400, var1);
-   }
-
-   @JvmStatic
-   fun `statusPositiveText_delegate$lambda$35`(var0: Resources, var1: Theme): Int {
+   fun `redesignButtonPrimaryOverlayBackground_delegate$lambda$28`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.white, var1);
    }
 
    @JvmStatic
-   fun `statusPositive_delegate$lambda$34`(var0: Resources, var1: Theme): Int {
+   fun `redesignButtonPrimaryOverlayPressedBackground_delegate$lambda$29`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonPrimaryOverlayText_delegate$lambda$30`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_25, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonTertiaryBackground_delegate$lambda$31`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.redesign_button_tertiary_background_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonTertiaryText_delegate$lambda$32`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
+   }
+
+   @JvmStatic
+   fun `spoilerHiddenBackground_delegate$lambda$33`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_14, var1);
+   }
+
+   @JvmStatic
+   fun `spoilerRevealedBackground_delegate$lambda$34`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.spoiler_revealed_background_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `statusDangerBackground_delegate$lambda$36`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_430, var1);
+   }
+
+   @JvmStatic
+   fun `statusDanger_delegate$lambda$35`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_400, var1);
+   }
+
+   @JvmStatic
+   fun `statusPositiveText_delegate$lambda$38`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.white, var1);
+   }
+
+   @JvmStatic
+   fun `statusPositive_delegate$lambda$37`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.green_360, var1);
    }
 
    @JvmStatic
-   fun `statusWarning_delegate$lambda$36`(var0: Resources, var1: Theme): Int {
+   fun `statusWarning_delegate$lambda$39`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.yellow_300, var1);
    }
 
    @JvmStatic
-   fun `textBrand_delegate$lambda$37`(var0: Resources, var1: Theme): Int {
+   fun `textBrand_delegate$lambda$40`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.brand_400, var1);
    }
 
    @JvmStatic
-   fun `textDanger_delegate$lambda$38`(var0: Resources, var1: Theme): Int {
+   fun `textDanger_delegate$lambda$41`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.red_345, var1);
    }
 
    @JvmStatic
-   fun `textLink_delegate$lambda$39`(var0: Resources, var1: Theme): Int {
+   fun `textLink_delegate$lambda$42`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.blue_345, var1);
    }
 
    @JvmStatic
-   fun `textLowContrast_delegate$lambda$40`(var0: Resources, var1: Theme): Int {
+   fun `textLowContrast_delegate$lambda$43`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.plum_12, var1);
    }
 
    @JvmStatic
-   fun `textMuted_delegate$lambda$41`(var0: Resources, var1: Theme): Int {
+   fun `textMuted_delegate$lambda$44`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.plum_10, var1);
    }
 
    @JvmStatic
-   fun `textNormal_delegate$lambda$42`(var0: Resources, var1: Theme): Int {
+   fun `textNormal_delegate$lambda$45`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
    }
 
    @JvmStatic
-   fun `textPositive_delegate$lambda$43`(var0: Resources, var1: Theme): Int {
+   fun `textPositive_delegate$lambda$46`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.green_330, var1);
    }
 
    @JvmStatic
-   fun `textPrimary_delegate$lambda$44`(var0: Resources, var1: Theme): Int {
+   fun `textPrimary_delegate$lambda$47`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
    }
 
    @JvmStatic
-   fun `textSecondary_delegate$lambda$45`(var0: Resources, var1: Theme): Int {
+   fun `textSecondary_delegate$lambda$48`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.plum_8, var1);
    }
 
    @JvmStatic
-   fun `textWarning_delegate$lambda$46`(var0: Resources, var1: Theme): Int {
+   fun `textWarning_delegate$lambda$49`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.yellow_300, var1);
    }
 
    @JvmStatic
-   fun `white_delegate$lambda$47`(var0: Resources, var1: Theme): Int {
+   fun `white_delegate$lambda$50`(var0: Resources, var1: Theme): Int {
       return ColorUtilsKt.getColorCompat(var0, R.color.white, var1);
    }
 

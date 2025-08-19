@@ -2,7 +2,6 @@ package com.discord.client_info
 
 import android.content.Context
 import com.facebook.react.modules.network.OkHttpClientProvider
-import kotlin.jvm.internal.r
 import okhttp3.Dispatcher
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -23,8 +22,6 @@ internal object ClientUserAgent {
    }
 
    public fun init(context: Context, userAgent: String) {
-      r.h(var1, "context");
-      r.h(var2, "userAgent");
       OkHttpClientProvider.setOkHttpClientFactory(new b(var1, var2));
    }
 
@@ -32,13 +29,10 @@ internal object ClientUserAgent {
       private final val userAgent: String
 
       init {
-         r.h(var1, "userAgent");
-         super();
          this.userAgent = var1;
       }
 
       public open fun intercept(chain: Chain): Response {
-         r.h(var1, "chain");
          return var1.a(var1.w().i().i("User-Agent").a("User-Agent", this.userAgent).b());
       }
    }

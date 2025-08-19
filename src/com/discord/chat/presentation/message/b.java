@@ -10,13 +10,13 @@ import com.discord.primitives.UserId;
 
 // $VF: synthetic class
 public final class b implements OnClickListener {
-   public final ChatEventHandler j;
-   public final UserId k;
-   public final GuildId l;
+   public final ChatEventHandler d;
+   public final UserId e;
+   public final GuildId i;
    public final ChannelId m;
    public final ConnectionsRoleTag n;
 
    public final void onClick(View var1) {
-      ConnectionsRoleTagView.a(this.j, this.k, this.l, this.m, this.n, var1);
+      ConnectionsRoleTagView.a(this.d, this.e, this.i, this.m, this.n, var1);
    }
 }

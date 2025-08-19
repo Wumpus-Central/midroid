@@ -16,22 +16,17 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function0
 
-public class SpoilerOverlayView  public constructor(context: Context, attributeSet: AttributeSet? = null) : FrameLayout, SpoilerViewOverlay {
+public class SpoilerOverlayView  public constructor(context: Context, attributeSet: AttributeSet? = null) : FrameLayout(var1, var2), SpoilerViewOverlay {
    private final val binding: SpoilerOverlayViewBinding
 
    fun SpoilerOverlayView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var3: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       val var4: TextView = var3.label;
-      kotlin.jvm.internal.r.e(var3.label);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
       var4.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
       ViewClippingUtilsKt.clipToCircle(var4);
@@ -44,19 +39,14 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
    }
 
    public fun configure(label: String, description: String, onReveal: () -> Unit) {
-      kotlin.jvm.internal.r.h(var1, "label");
-      kotlin.jvm.internal.r.h(var2, "description");
-      kotlin.jvm.internal.r.h(var3, "onReveal");
       this.binding.label.setText(var1);
       this.binding.label.setContentDescription(var2);
       val var4: FrameLayout = this.binding.overlayContainer;
-      kotlin.jvm.internal.r.g(this.binding.overlayContainer, "overlayContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new Q0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new O0(var3), 1, null);
    }
 
    public override fun getOverlayView(): View {
       val var1: FrameLayout = this.binding.overlayContainer;
-      kotlin.jvm.internal.r.g(this.binding.overlayContainer, "overlayContainer");
       return var1;
    }
 }

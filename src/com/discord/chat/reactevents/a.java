@@ -8,11 +8,11 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final ReactEvents j;
-   public final Context k;
-   public final Function0 l;
+   public final ReactEvents d;
+   public final Context e;
+   public final Function0 i;
 
    public final Object invoke(Object var1) {
-      return ChatViewEventHandler.a(this.j, this.k, this.l, (ReactEvent)var1);
+      return ChatViewEventHandler.a(this.d, this.e, this.i, (ReactEvent)var1);
    }
 }

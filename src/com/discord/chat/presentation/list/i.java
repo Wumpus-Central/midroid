@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class i implements Function0 {
-   public final ChatListView j;
+   public final ChatListView d;
 
    public final Object invoke() {
-      return ChatListView.Y(this.j);
+      return ChatListView.Y(this.d);
    }
 }

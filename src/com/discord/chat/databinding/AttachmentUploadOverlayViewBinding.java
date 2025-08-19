@@ -3,6 +3,7 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
@@ -12,24 +13,32 @@ import com.google.android.material.progressindicator.CircularProgressIndicator;
 import y0.a;
 
 public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
+   @NonNull
    private final View rootView;
+   @NonNull
    public final SimpleDraweeView uploadCancel;
+   @NonNull
    public final SimpleDraweeView uploadComplete;
+   @NonNull
    public final MaterialCardView uploadCompleteBackground;
+   @NonNull
    public final ConstraintLayout uploadCompleteLayout;
+   @NonNull
    public final CircularProgressIndicator uploadProgress;
+   @NonNull
    public final View uploadProgressBackground;
+   @NonNull
    public final ConstraintLayout uploadProgressLayout;
 
    private AttachmentUploadOverlayViewBinding(
-      View var1,
-      SimpleDraweeView var2,
-      SimpleDraweeView var3,
-      MaterialCardView var4,
-      ConstraintLayout var5,
-      CircularProgressIndicator var6,
-      View var7,
-      ConstraintLayout var8
+      @NonNull View var1,
+      @NonNull SimpleDraweeView var2,
+      @NonNull SimpleDraweeView var3,
+      @NonNull MaterialCardView var4,
+      @NonNull ConstraintLayout var5,
+      @NonNull CircularProgressIndicator var6,
+      @NonNull View var7,
+      @NonNull ConstraintLayout var8
    ) {
       this.rootView = var1;
       this.uploadCancel = var2;
@@ -41,29 +50,30 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
       this.uploadProgressLayout = var8;
    }
 
-   public static AttachmentUploadOverlayViewBinding bind(View var0) {
+   @NonNull
+   public static AttachmentUploadOverlayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.upload_cancel;
-      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-      if (var6 != null) {
+      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.upload_complete;
          SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.upload_complete_background;
-            MaterialCardView var4 = (MaterialCardView)a.a(var0, var1);
-            if (var4 != null) {
+            MaterialCardView var3 = (MaterialCardView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.upload_complete_layout;
-               ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-               if (var3 != null) {
+               ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.upload_progress;
-                  CircularProgressIndicator var2 = (CircularProgressIndicator)a.a(var0, var1);
-                  if (var2 != null) {
+                  CircularProgressIndicator var8 = (CircularProgressIndicator)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.upload_progress_background;
-                     View var8 = a.a(var0, var1);
-                     if (var8 != null) {
+                     View var6 = a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.upload_progress_layout;
-                        ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
-                        if (var7 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var6, var5, var4, var3, var2, var8, var7);
+                        ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+                        if (var4 != null) {
+                           return new AttachmentUploadOverlayViewBinding(var0, var7, var5, var3, var2, var8, var6, var4);
                         }
                      }
                   }
@@ -75,7 +85,8 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static AttachmentUploadOverlayViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static AttachmentUploadOverlayViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.attachment_upload_overlay_view, var1);
          return bind(var1);
@@ -84,6 +95,7 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

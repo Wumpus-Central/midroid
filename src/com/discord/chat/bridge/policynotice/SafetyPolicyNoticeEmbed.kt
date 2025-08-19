@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.policynotice
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -20,12 +19,6 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    public final val ctaText: String
 
    init {
-      r.h(var1, "classificationId");
-      r.h(var2, "titleText");
-      r.h(var3, "titleIcon");
-      r.h(var4, "subtitleText");
-      r.h(var5, "descriptionText");
-      r.h(var6, "ctaText");
       super();
       this.classificationId = var1;
       this.titleText = var2;
@@ -67,12 +60,6 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       descriptionText: String = var0.descriptionText,
       ctaText: String = var0.ctaText
    ): SafetyPolicyNoticeEmbed {
-      r.h(var1, "classificationId");
-      r.h(var2, "titleText");
-      r.h(var3, "titleIcon");
-      r.h(var4, "subtitleText");
-      r.h(var5, "descriptionText");
-      r.h(var6, "ctaText");
       return new SafetyPolicyNoticeEmbed(var1, var2, var3, var4, var5, var6);
    }
 
@@ -83,18 +70,18 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.classificationId, var1.classificationId)) {
+         if (!(this.classificationId == var1.classificationId)) {
             return false;
-         } else if (!r.c(this.titleText, var1.titleText)) {
+         } else if (!(this.titleText == var1.titleText)) {
             return false;
-         } else if (!r.c(this.titleIcon, var1.titleIcon)) {
+         } else if (!(this.titleIcon == var1.titleIcon)) {
             return false;
-         } else if (!r.c(this.subtitleText, var1.subtitleText)) {
+         } else if (!(this.subtitleText == var1.subtitleText)) {
             return false;
-         } else if (!r.c(this.descriptionText, var1.descriptionText)) {
+         } else if (!(this.descriptionText == var1.descriptionText)) {
             return false;
          } else {
-            return r.c(this.ctaText, var1.ctaText);
+            return this.ctaText == var1.ctaText;
          }
       }
    }
@@ -110,27 +97,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.classificationId;
+      val var3: java.lang.String = this.classificationId;
       val var1: java.lang.String = this.titleText;
-      val var6: java.lang.String = this.titleIcon;
-      val var2: java.lang.String = this.subtitleText;
-      val var5: java.lang.String = this.descriptionText;
-      val var7: java.lang.String = this.ctaText;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var3.append(var4);
-      var3.append(", titleText=");
-      var3.append(var1);
-      var3.append(", titleIcon=");
-      var3.append(var6);
-      var3.append(", subtitleText=");
-      var3.append(var2);
-      var3.append(", descriptionText=");
-      var3.append(var5);
-      var3.append(", ctaText=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.String = this.titleIcon;
+      val var7: java.lang.String = this.subtitleText;
+      val var6: java.lang.String = this.descriptionText;
+      val var2: java.lang.String = this.ctaText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var4.append(var3);
+      var4.append(", titleText=");
+      var4.append(var1);
+      var4.append(", titleIcon=");
+      var4.append(var5);
+      var4.append(", subtitleText=");
+      var4.append(var7);
+      var4.append(", descriptionText=");
+      var4.append(var6);
+      var4.append(", ctaText=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -22,45 +22,39 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.theme.ThemeManagerKt
 import java.util.ArrayList
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
-public class ContainerComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : FrameLayout,
+@SourceDebugExtension(["SMAP\nContainerComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContainerComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContainerComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,117:1\n257#2,2:118\n257#2,2:120\n255#2:127\n1567#3:122\n1598#3,4:123\n*S KotlinDebug\n*F\n+ 1 ContainerComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContainerComponentView\n*L\n59#1:118,2\n61#1:120,2\n101#1:127\n70#1:122\n70#1:123,4\n*E\n"])
+public class ContainerComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(var1, var2, var3),
    ComponentView<ContainerComponent> {
    public final val binding: MessageComponentContainerViewBinding
    private final var componentProvider: ComponentProvider?
 
    fun ContainerComponentView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ContainerComponentView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2, var3);
       val var4: MessageComponentContainerViewBinding = MessageComponentContainerViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(...)");
       this.binding = var4;
       this.setLayoutParams(new LayoutParams(-1, -2));
       ViewClippingUtilsKt.clipToRoundedRectangle(this, var1.getResources().getDimensionPixelSize(R.dimen.message_media_non_mosaic_radius));
    }
 
    private fun configureSpoiler(component: ContainerComponent, componentContext: ComponentContext) {
-      val var6: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var4: java.lang.String = var2.getContainerId();
-      val var3: java.lang.String = var1.getId();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ContainerComponent(");
-      var5.append(var3);
-      var5.append(")");
-      val var9: SpoilerAttributes = var6.forGenericMedia(var1, var4, var5.toString(), "content", null);
+      val var4: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var5: java.lang.String = var2.getContainerId();
+      val var6: java.lang.String = var1.getId();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContainerComponent(");
+      var3.append(var6);
+      var3.append(")");
+      val var9: SpoilerAttributes = var4.forGenericMedia(var1, var5, var3.toString(), "content", null);
       val var7: SpoilerConfig;
       if (var9 != null) {
          var7 = SpoilerAttributes.configure$default(var9, new d(var2, this), null, 2, null);
@@ -71,7 +65,6 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
       this.binding.spoiler.configure(var7, this);
       if (var1.isSpoiler()) {
          val var8: SpoilerView = this.binding.spoiler;
-         r.g(this.binding.spoiler, "spoiler");
          if (var8.getVisibility() == 0) {
             this.setContentDescription(var1.getSpoilerDescription());
             this.binding.childrenViews.setImportantForAccessibility(4);
@@ -91,9 +84,6 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
    }
 
    public open fun configure(component: ContainerComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentContext");
       this.componentProvider = var2;
       val var5: Int = var1.getThemedBackgroundColor();
       val var4: Int;
@@ -107,50 +97,44 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
       if (var1.getAccentColor() != null) {
          this.binding.accentBorder.setBackgroundColor(var1.getAccentColor());
          val var10: View = this.binding.accentBorder;
-         r.g(this.binding.accentBorder, "accentBorder");
          var10.setVisibility(0);
       } else {
          val var11: View = this.binding.accentBorder;
-         r.g(this.binding.accentBorder, "accentBorder");
          var11.setVisibility(8);
       }
 
-      val var12: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, 511, null)
+      val var6: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, false, 1535, null)
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
-      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
-      val var15: java.util.Iterator = var7.iterator();
+      val var12: ArrayList = new ArrayList(CollectionsKt.v(var7, 10));
+      val var8: java.util.Iterator = var7.iterator();
 
-      for (int var9 = 0; var15.hasNext(); var9++) {
-         val var8: Any = var15.next();
+      for (int var9 = 0; var8.hasNext(); var9++) {
+         val var15: Any = var8.next();
          if (var9 < 0) {
-            kotlin.collections.i.u();
+            CollectionsKt.u();
          }
 
-         var6.add(var2.getConfiguredComponentView(var8 as Component, var12, this, var9));
+         var12.add(var2.getConfiguredComponentView(var15 as Component, var6, this, var9));
       }
 
-      val var13: java.util.List = kotlin.collections.i.e0(var6);
+      val var13: java.util.List = CollectionsKt.e0(var12);
       val var14: LinearLayout = this.binding.childrenViews;
-      r.g(this.binding.childrenViews, "childrenViews");
       MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
       this.configureSpoiler(var1, var3);
    }
 
    public override fun getComponentType(): KClass<ContainerComponent> {
-      return H.b(ContainerComponent.class);
+      return ContainerComponent::class;
    }
 
    public override fun onRecycle(componentProvider: ComponentProvider) {
-      r.h(var1, "componentProvider");
       val var2: LinearLayout = this.binding.childrenViews;
-      r.g(this.binding.childrenViews, "childrenViews");
       MessageComponentsViewKt.recycleChildComponents(var2, var1);
    }
 
    public companion object {
       public fun inflateComponent(context: Context): ContainerComponentView {
-         r.h(var1, "context");
          return new ContainerComponentView(var1, null, 0, 6, null);
       }
    }

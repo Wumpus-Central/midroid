@@ -1,20 +1,16 @@
 package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
+public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component() {
    public open val type: Int
    public open val id: String
    public final val content: StructurableText
 
    init {
-      r.h(var2, "id");
-      r.h(var3, "content");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.content = var3;
@@ -33,8 +29,6 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, content: StructurableText = var0.content): TextDisplayComponent {
-      r.h(var2, "id");
-      r.h(var3, "content");
       return new TextDisplayComponent(var1, var2, var3);
    }
 
@@ -47,10 +41,10 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -61,15 +55,15 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: StructurableText = this.content;
+      val var2: java.lang.String = this.id;
+      val var3: StructurableText = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TextDisplayComponent(type=");
       var4.append(var1);
       var4.append(", id=");
-      var4.append(var3);
-      var4.append(", content=");
       var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

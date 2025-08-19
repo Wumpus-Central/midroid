@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.activities.ActivityInstanceEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, activityInstanceEmbed: ActivityInstanceEmbed, constrainedWidth: Int) : ActivityInstanceEmbedMessageAccessory(
       var1, var2, var3
@@ -12,8 +11,6 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    public final val constrainedWidth: Int
 
    fun ActivityInstanceEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInstanceEmbed, var3: Int) {
-      r.h(var1, "messageId");
-      r.h(var2, "activityInstanceEmbed");
       val var4: java.lang.String = var2.getInstanceId();
       val var5: StringBuilder = new StringBuilder();
       var5.append("activity instance ");
@@ -37,8 +34,6 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    }
 
    public fun copy(messageId: MessageId = ..., activityInstanceEmbed: ActivityInstanceEmbed = ..., constrainedWidth: Int = ...): ActivityInstanceEmbedMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "activityInstanceEmbed");
       return new ActivityInstanceEmbedMessageAccessory(var1, var2, var3, null);
    }
 
@@ -51,7 +46,7 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
+         } else if (!(this.activityInstanceEmbed == var1.activityInstanceEmbed)) {
             return false;
          } else {
             return this.constrainedWidth == var1.constrainedWidth;

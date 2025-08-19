@@ -2,9 +2,8 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactEvent {
@@ -12,8 +11,6 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
    public final val requestId: String
 
    init {
-      r.h(var1, "text");
-      r.h(var2, "requestId");
       super();
       this.text = var1;
       this.requestId = var2;
@@ -28,8 +25,6 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
    }
 
    public fun copy(text: String = var0.text, requestId: String = var0.requestId): OnTextFlushedEvent {
-      r.h(var1, "text");
-      r.h(var2, "requestId");
       return new OnTextFlushedEvent(var1, var2);
    }
 
@@ -40,10 +35,10 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.text, var1.text)) {
+         if (!(this.text == var1.text)) {
             return false;
          } else {
-            return r.c(this.requestId, var1.requestId);
+            return this.requestId == var1.requestId;
          }
       }
    }

@@ -6,12 +6,12 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class n implements OnClickListener {
-   public final Function3 j;
-   public final long k;
-   public final String l;
+   public final Function3 d;
+   public final long e;
+   public final String i;
    public final String m;
 
    public final void onClick(View var1) {
-      CtaButtonView.b(this.j, this.k, this.l, this.m, var1);
+      CtaButtonView.b(this.d, this.e, this.i, this.m, var1);
    }
 }

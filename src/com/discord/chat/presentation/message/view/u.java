@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class u implements Function1 {
-   public final Function2 j;
-   public final String k;
+   public final Function2 d;
+   public final String e;
 
    public final Object invoke(Object var1) {
-      return EmbedView.i(this.j, this.k, (LinkContentNode)var1);
+      return EmbedView.i(this.d, this.e, (LinkContentNode)var1);
    }
 }

@@ -1,8 +1,7 @@
 package com.discord.chat.bridge
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {
@@ -37,10 +36,10 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.backgroundColor, var1.backgroundColor)) {
+         if (!(this.backgroundColor == var1.backgroundColor)) {
             return false;
          } else {
-            return r.c(this.gutterColor, var1.gutterColor);
+            return this.gutterColor == var1.gutterColor;
          }
       }
    }
@@ -63,14 +62,14 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
 
    public override fun toString(): String {
       val var3: Int = this.backgroundColor;
-      val var1: Int = this.gutterColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var3);
-      var2.append(", gutterColor=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: Int = this.gutterColor;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BackgroundHighlight(backgroundColor=");
+      var1.append(var3);
+      var1.append(", gutterColor=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

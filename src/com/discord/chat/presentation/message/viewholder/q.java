@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class q implements Function1 {
-   public final GuildInviteDisabledViewHolder j;
-   public final GuildInviteDisabledMessageAccessory k;
+   public final GuildInviteDisabledViewHolder d;
+   public final GuildInviteDisabledMessageAccessory e;
 
    public final Object invoke(Object var1) {
-      return GuildInviteDisabledViewHolder.b(this.j, this.k, (String)var1);
+      return GuildInviteDisabledViewHolder.b(this.d, this.e, (String)var1);
    }
 }

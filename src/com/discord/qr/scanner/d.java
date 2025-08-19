@@ -4,10 +4,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class d implements Function1 {
-   public final QRScannerViewManager j;
-   public final QRScanner k;
+   public final QRScannerViewManager d;
+   public final QRScanner e;
 
    public final Object invoke(Object var1) {
-      return QRScannerViewManager.b(this.j, this.k, (String)var1);
+      return QRScannerViewManager.b(this.d, this.e, (String)var1);
    }
 }

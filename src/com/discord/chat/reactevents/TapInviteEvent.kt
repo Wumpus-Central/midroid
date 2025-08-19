@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean?, secondary: Boolean?) : ReactEvent {
@@ -14,7 +13,6 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    public final val secondary: Boolean?
 
    init {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.index = var2;
@@ -39,7 +37,6 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public fun copy(messageId: String = var0.messageId, index: Int = var0.index, primary: Boolean? = var0.primary, secondary: Boolean? = var0.secondary): TapInviteEvent {
-      r.h(var1, "messageId");
       return new TapInviteEvent(var1, var2, var3, var4);
    }
 
@@ -50,14 +47,14 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else if (this.index != var1.index) {
             return false;
-         } else if (!r.c(this.primary, var1.primary)) {
+         } else if (!(this.primary == var1.primary)) {
             return false;
          } else {
-            return r.c(this.secondary, var1.secondary);
+            return this.secondary == var1.secondary;
          }
       }
    }
@@ -87,19 +84,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    public override fun toString(): String {
       val var4: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var3: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapInviteEvent(messageId=");
-      var5.append(var4);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", primary=");
-      var5.append(var3);
-      var5.append(", secondary=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.Boolean = this.primary;
+      val var5: java.lang.Boolean = this.secondary;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapInviteEvent(messageId=");
+      var3.append(var4);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", primary=");
+      var3.append(var2);
+      var3.append(", secondary=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

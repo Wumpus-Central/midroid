@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.GuildInviteEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkIndex: Int, invite: GuildInviteEmbedImpl) : GuildInviteMessageAccessory(
       var1, var2, var3
@@ -12,8 +11,6 @@ public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkInd
    public final val invite: GuildInviteEmbedImpl
 
    fun GuildInviteMessageAccessory(var1: java.lang.String, var2: Int, var3: GuildInviteEmbedImpl) {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       val var4: StringBuilder = new StringBuilder();
       var4.append("guild invite ");
       var4.append(var2);
@@ -36,8 +33,6 @@ public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkInd
    }
 
    public fun copy(messageId: MessageId = ..., codedLinkIndex: Int = ..., invite: GuildInviteEmbedImpl = ...): GuildInviteMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var3, "invite");
       return new GuildInviteMessageAccessory(var1, var2, var3, null);
    }
 
@@ -53,7 +48,7 @@ public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkInd
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
          } else {
-            return r.c(this.invite, var1.invite);
+            return this.invite == var1.invite;
          }
       }
    }
@@ -63,17 +58,17 @@ public data class GuildInviteMessageAccessory(messageId: MessageId, codedLinkInd
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
       val var4: GuildInviteEmbedImpl = this.invite;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GuildInviteMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", codedLinkIndex=");
-      var3.append(var1);
-      var3.append(", invite=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("GuildInviteMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", codedLinkIndex=");
+      var2.append(var1);
+      var2.append(", invite=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

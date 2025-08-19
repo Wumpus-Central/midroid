@@ -1,16 +1,14 @@
 package com.discord.image.fresco.config
 
-import I2.d
+import H2.d
 import android.app.ActivityManager
 import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
-import kotlin.jvm.internal.r
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {
-      r.h(var1, "context");
       var1.registerComponentCallbacks(new ComponentCallbacks2(var1) {
          private final ActivityManager activityManager;
          private final MemoryInfo memoryInfo;
@@ -30,7 +28,6 @@ internal object FrescoMemoryTrimmer {
          }
 
          public void onConfigurationChanged(Configuration var1) {
-            r.h(var1, "newConfig");
          }
 
          public void onLowMemory() {

@@ -1,14 +1,14 @@
+@file:SourceDebugExtension(["SMAP\nViewRemoveFromParent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ViewRemoveFromParent.kt\ncom/discord/portals/utils/ViewRemoveFromParentKt\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,18:1\n8#2:19\n*S KotlinDebug\n*F\n+ 1 ViewRemoveFromParent.kt\ncom/discord/portals/utils/ViewRemoveFromParentKt\n*L\n8#1:19\n*E\n"])
+
 package com.discord.portals.utils
 
-import android.transition.TransitionManager
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewParent
-import android.view.ViewPropertyAnimator
-import kotlin.jvm.internal.r
+import android.view.animation.Animation
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun View.removeFromParent() {
-   r.h(var0, "<this>");
    val var2: ViewParent = var0.getParent();
    if (var2 != null) {
       var var1: ViewParent = var2;
@@ -16,18 +16,16 @@ public fun View.removeFromParent() {
          var1 = null;
       }
 
-      val var3: ViewGroup = var1 as ViewGroup;
+      val var4: ViewGroup = var1 as ViewGroup;
       if (var1 as ViewGroup != null) {
-         val var4: ViewPropertyAnimator = var0.animate();
-         if (var4 != null) {
-            var4.cancel();
+         val var3: Animation = var0.getAnimation();
+         if (var3 != null) {
+            var3.cancel();
          }
 
          var0.clearAnimation();
-         var3.endViewTransition(var0);
-         TransitionManager.endTransitions(var3);
-         var3.setLayoutTransition(null);
-         var3.removeView(var0);
+         var4.removeView(var0);
+         var4.endViewTransition(var0);
       }
    }
 }

@@ -4,21 +4,18 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nAutomodSystemMessageItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AutomodSystemMessageItem.kt\ncom/discord/chat/presentation/list/item/AutomodSystemMessageItem\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,16:1\n1#2:17\n*E\n"])
 public data class AutomodSystemMessageItem(message: Message,
-      messageContext: MessageContext = new MessageContext(false, false, null, null, null, false, null, false, false, false, false, null, null, 8191, null),
-      allowChildGestures: Boolean = true
-   )
-   : ChatListItem {
+   messageContext: MessageContext = new MessageContext(false, false, null, null, null, false, null, false, false, false, false, null, null, 8191, null),
+   allowChildGestures: Boolean = true
+) : ChatListItem(MessageId.toString-impl(var1.getId-3Eiw7ao())) {
    public final val message: Message
    public final val messageContext: MessageContext
    public final val allowChildGestures: Boolean
 
    init {
-      r.h(var1, "message");
-      r.h(var2, "messageContext");
-      super(MessageId.toString-impl(var1.getId-3Eiw7ao()), null);
       this.message = var1;
       this.messageContext = var2;
       this.allowChildGestures = var3;
@@ -40,8 +37,6 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public fun copy(message: Message = var0.message, messageContext: MessageContext = var0.messageContext, allowChildGestures: Boolean = var0.allowChildGestures): AutomodSystemMessageItem {
-      r.h(var1, "message");
-      r.h(var2, "messageContext");
       return new AutomodSystemMessageItem(var1, var2, var3);
    }
 
@@ -52,9 +47,9 @@ public data class AutomodSystemMessageItem(message: Message,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.message, var1.message)) {
+         if (!(this.message == var1.message)) {
             return false;
-         } else if (!r.c(this.messageContext, var1.messageContext)) {
+         } else if (!(this.messageContext == var1.messageContext)) {
             return false;
          } else {
             return this.allowChildGestures == var1.allowChildGestures;
@@ -67,17 +62,17 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
+      val var4: Message = this.message;
       val var3: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AutomodSystemMessageItem(message=");
-      var4.append(var2);
-      var4.append(", messageContext=");
-      var4.append(var3);
-      var4.append(", allowChildGestures=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AutomodSystemMessageItem(message=");
+      var2.append(var4);
+      var2.append(", messageContext=");
+      var2.append(var3);
+      var2.append(", allowChildGestures=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

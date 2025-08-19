@@ -1,11 +1,10 @@
 package com.discord.push_notification_monitor
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = i.k()) {
+public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = CollectionsKt.k()) {
    public final val pushNotifications: List<PushNotificationMeta>
 
    fun PushNotificationLog() {
@@ -13,8 +12,6 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    init {
-      r.h(var1, "pushNotifications");
-      super();
       this.pushNotifications = var1;
    }
 
@@ -23,7 +20,6 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    public fun copy(pushNotifications: List<PushNotificationMeta> = var0.pushNotifications): PushNotificationLog {
-      r.h(var1, "pushNotifications");
       return new PushNotificationLog(var1);
    }
 
@@ -33,7 +29,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
       } else if (var1 !is PushNotificationLog) {
          return false;
       } else {
-         return r.c(this.pushNotifications, (var1 as PushNotificationLog).pushNotifications);
+         return this.pushNotifications == (var1 as PushNotificationLog).pushNotifications;
       }
    }
 
@@ -42,12 +38,12 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.pushNotifications;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PushNotificationLog(pushNotifications=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.pushNotifications;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PushNotificationLog(pushNotifications=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

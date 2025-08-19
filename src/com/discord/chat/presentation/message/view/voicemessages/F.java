@@ -5,10 +5,10 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class F implements Function0 {
-   public final AudioPlayerViewBinding j;
-   public final AudioPlayerWipeAnimatorManager k;
+   public final AudioPlayerViewBinding d;
+   public final AudioPlayerWipeAnimatorManager e;
 
    public final Object invoke() {
-      return AudioPlayerWipeAnimatorManager.a(this.j, this.k);
+      return AudioPlayerWipeAnimatorManager.a(this.d, this.e);
    }
 }

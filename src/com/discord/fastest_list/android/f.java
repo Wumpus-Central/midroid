@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function5;
 
 // $VF: synthetic class
 public final class f implements OnLayoutChangeListener {
-   public final FastestListView j;
-   public final Function5 k;
+   public final FastestListView d;
+   public final Function5 e;
 
    public final void onLayoutChange(View var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
-      FastestListView.U(this.j, this.k, var1, var2, var3, var4, var5, var6, var7, var8, var9);
+      FastestListView.U(this.d, this.e, var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 }

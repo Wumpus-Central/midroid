@@ -2,9 +2,8 @@ package com.discord.audio.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
@@ -12,7 +11,6 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    public final val multipleRoutesAvailable: Boolean
 
    init {
-      r.h(var1, "routeType");
       super();
       this.routeType = var1;
       this.multipleRoutesAvailable = var2;
@@ -27,7 +25,6 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public fun copy(routeType: String = var0.routeType, multipleRoutesAvailable: Boolean = var0.multipleRoutesAvailable): AudioRouteEmitterAudioRouteChanged {
-      r.h(var1, "routeType");
       return new AudioRouteEmitterAudioRouteChanged(var1, var2);
    }
 
@@ -38,7 +35,7 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.routeType, var1.routeType)) {
+         if (!(this.routeType == var1.routeType)) {
             return false;
          } else {
             return this.multipleRoutesAvailable == var1.multipleRoutesAvailable;

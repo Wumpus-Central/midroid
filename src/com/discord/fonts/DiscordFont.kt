@@ -1,6 +1,6 @@
 package com.discord.fonts
 
-import I9.a
+import H9.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -8,7 +8,7 @@ import com.facebook.react.views.text.ReactFontManager
 import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -56,12 +56,10 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
    }
 
    public fun typeface(context: Context): Typeface {
-      r.h(var1, "context");
       val var2: ConcurrentHashMap = typefaces;
       val var4: Typeface;
       if (typefaces.get(this) != null) {
          val var3: Any = var2.get(this);
-         r.e(var3);
          var4 = var3 as Typeface;
       } else {
          var4 = DiscordFont.Companion.access$getFontFromRN(Companion, var1, this);
@@ -71,6 +69,7 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       return var4;
    }
 
+   @SourceDebugExtension(["SMAP\nDiscordFont.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DiscordFont.kt\ncom/discord/fonts/DiscordFont$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,115:1\n1#2:116\n*E\n"])
    public companion object {
       private final val typefaces: ConcurrentHashMap<DiscordFont, Typeface>
 
@@ -78,9 +77,8 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          val var3: ReactFontManager = ReactFontManager.Companion.getInstance();
          val var6: java.lang.String = var2.getRawName();
          val var4: AssetManager = var1.getAssets();
-         r.g(var4, "getAssets(...)");
          val var5: Typeface = var3.getTypeface(var6, 0, var4);
-         if (!r.c(var5, Typeface.DEFAULT)) {
+         if (!(var5 == Typeface.DEFAULT)) {
             return var5;
          } else {
             val var7: StringBuilder = new StringBuilder();
@@ -92,16 +90,16 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var6: java.util.Iterator = DiscordFont.getEntries().iterator();
+         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
 
          var var4: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var4 = null;
                break;
             }
 
-            var4 = var6.next();
+            var4 = var5.next();
          } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
          return var4 as DiscordFont;
@@ -112,13 +110,12 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
             return null;
          } else {
             val var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
-            r.g(var3, "<get-entries>(...)");
             val var4: java.util.Iterator = var3.iterator();
 
             while (true) {
                if (var4.hasNext()) {
                   val var7: Any = var4.next();
-                  if (!r.c((var7 as Entry).getValue(), var1)) {
+                  if (!((var7 as Entry).getValue() == var1)) {
                      continue;
                   }
 

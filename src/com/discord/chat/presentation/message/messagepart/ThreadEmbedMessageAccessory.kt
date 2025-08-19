@@ -2,15 +2,12 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.threads.ThreadEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class ThreadEmbedMessageAccessory(messageId: MessageId, threadEmbed: ThreadEmbed) : ThreadEmbedMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val threadEmbed: ThreadEmbed
 
    fun ThreadEmbedMessageAccessory(var1: java.lang.String, var2: ThreadEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "threadEmbed");
       super(var1, "thread-embed", false, null);
       this.messageId = var1;
       this.threadEmbed = var2;
@@ -25,8 +22,6 @@ public data class ThreadEmbedMessageAccessory(messageId: MessageId, threadEmbed:
    }
 
    public fun copy(messageId: MessageId = ..., threadEmbed: ThreadEmbed = ...): ThreadEmbedMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "threadEmbed");
       return new ThreadEmbedMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +35,7 @@ public data class ThreadEmbedMessageAccessory(messageId: MessageId, threadEmbed:
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.threadEmbed, var1.threadEmbed);
+            return this.threadEmbed == var1.threadEmbed;
          }
       }
    }
@@ -50,14 +45,14 @@ public data class ThreadEmbedMessageAccessory(messageId: MessageId, threadEmbed:
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: ThreadEmbed = this.threadEmbed;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThreadEmbedMessageAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", threadEmbed=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbedMessageAccessory(messageId=");
+      var2.append(var1);
+      var2.append(", threadEmbed=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

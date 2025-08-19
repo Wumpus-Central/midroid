@@ -11,20 +11,18 @@ import com.discord.chat.databinding.ChannelPromptActionsViewBinding
 import com.discord.core.DCDButton
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ChannelPromptActionsView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
+@SourceDebugExtension(["SMAP\nChannelPromptActionsView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelPromptActionsView.kt\ncom/discord/chat/presentation/message/view/ChannelPromptActionsView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,75:1\n257#2,2:76\n257#2,2:78\n257#2,2:80\n257#2,2:82\n257#2,2:84\n257#2,2:86\n257#2,2:88\n257#2,2:90\n*S KotlinDebug\n*F\n+ 1 ChannelPromptActionsView.kt\ncom/discord/chat/presentation/message/view/ChannelPromptActionsView\n*L\n31#1:76,2\n33#1:78,2\n43#1:80,2\n45#1:82,2\n55#1:84,2\n57#1:86,2\n66#1:88,2\n68#1:90,2\n*E\n"])
+public class ChannelPromptActionsView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: ChannelPromptActionsViewBinding
 
    fun ChannelPromptActionsView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var3: ChannelPromptActionsViewBinding = ChannelPromptActionsViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
@@ -35,11 +33,6 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       onTapGamingStatsButton: OnClickListener,
       onTapGifButton: OnClickListener
    ) {
-      kotlin.jvm.internal.r.h(var1, "message");
-      kotlin.jvm.internal.r.h(var2, "onTapCameraButton");
-      kotlin.jvm.internal.r.h(var3, "onTapEmojiButton");
-      kotlin.jvm.internal.r.h(var4, "onTapGamingStatsButton");
-      kotlin.jvm.internal.r.h(var5, "onTapGifButton");
       val var8: DCDButton = this.binding.cameraButton;
       val var6: ChannelPromptData = var1.getChannelPromptData();
       val var17: java.lang.String;
@@ -52,10 +45,8 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var17 != null) {
          var8.setIcon(var1.getChannelPromptData().getCameraButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var8.setText(var1.getChannelPromptData().getCameraButtonText());
-         kotlin.jvm.internal.r.e(var8);
          var8.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.e(var8);
          var8.setVisibility(8);
       }
 
@@ -73,10 +64,8 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var10 != null) {
          var18.setIcon(var1.getChannelPromptData().getGifButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var18.setText(var1.getChannelPromptData().getGifButtonText());
-         kotlin.jvm.internal.r.e(var18);
          var18.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.e(var18);
          var18.setVisibility(8);
       }
 
@@ -94,10 +83,8 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
       if (var12 != null) {
          var15.setIcon(var1.getChannelPromptData().getEmojiButtonIcon(), SizeUtilsKt.getDpToPx(24));
          var15.setText(var1.getChannelPromptData().getEmojiButtonText());
-         kotlin.jvm.internal.r.e(var15);
          var15.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.e(var15);
          var15.setVisibility(8);
       }
 
@@ -112,10 +99,8 @@ public class ChannelPromptActionsView  public constructor(context: Context, attr
 
       if (var13 != null) {
          var14.setText(var1.getChannelPromptData().getGamingStatsButtonText());
-         kotlin.jvm.internal.r.e(var14);
          var14.setVisibility(0);
       } else {
-         kotlin.jvm.internal.r.e(var14);
          var14.setVisibility(8);
       }
 

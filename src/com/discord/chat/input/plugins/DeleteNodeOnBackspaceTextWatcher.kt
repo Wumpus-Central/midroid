@@ -4,7 +4,9 @@ import android.text.Editable
 import android.text.Spanned
 import android.text.TextWatcher
 import com.discord.chat.input.spans.DCDDeleteOnBackspaceSpan
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nDeleteNodeOnBackspaceTextWatcher.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeleteNodeOnBackspaceTextWatcher.kt\ncom/discord/chat/input/plugins/DeleteNodeOnBackspaceTextWatcher\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,95:1\n18#2:96\n*S KotlinDebug\n*F\n+ 1 DeleteNodeOnBackspaceTextWatcher.kt\ncom/discord/chat/input/plugins/DeleteNodeOnBackspaceTextWatcher\n*L\n36#1:96\n*E\n"])
 internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
    public final var deleteEvent: com.discord.chat.input.plugins.DeleteNodeOnBackspaceTextWatcher.DeleteEvent?
       internal set
@@ -125,13 +127,13 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
       }
 
       public override fun toString(): String {
-         val var2: Int = this.start;
-         val var1: Int = this.end;
+         val var1: Int = this.start;
+         val var2: Int = this.end;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DeleteEvent(start=");
-         var3.append(var2);
-         var3.append(", end=");
          var3.append(var1);
+         var3.append(", end=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

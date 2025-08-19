@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class MessageComponentsAccessory(messageId: MessageId, message: Message, messageComponents: List<Component>, constrainedWidth: Int) : MessageComponentsAccessory(
       var1, var2, var3, var4
@@ -14,9 +13,6 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
    public final val constrainedWidth: Int
 
    fun MessageComponentsAccessory(var1: java.lang.String, var2: Message, var3: MutableList<Component>, var4: Int) {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "messageComponents");
       super(var1, "bot component", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -41,9 +37,6 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., messageComponents: List<Component> = ..., constrainedWidth: Int = ...): MessageComponentsAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "messageComponents");
       return new MessageComponentsAccessory(var1, var2, var3, var4, null);
    }
 
@@ -56,9 +49,9 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
-         } else if (!r.c(this.messageComponents, var1.messageComponents)) {
+         } else if (!(this.messageComponents == var1.messageComponents)) {
             return false;
          } else {
             return this.constrainedWidth == var1.constrainedWidth;
@@ -72,20 +65,20 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Message = this.message;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Message = this.message;
       val var2: java.util.List = this.messageComponents;
       val var1: Int = this.constrainedWidth;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageComponentsAccessory(messageId=");
-      var3.append(var5);
-      var3.append(", message=");
-      var3.append(var4);
-      var3.append(", messageComponents=");
-      var3.append(var2);
-      var3.append(", constrainedWidth=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageComponentsAccessory(messageId=");
+      var5.append(var4);
+      var5.append(", message=");
+      var5.append(var3);
+      var5.append(", messageComponents=");
+      var5.append(var2);
+      var5.append(", constrainedWidth=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 }

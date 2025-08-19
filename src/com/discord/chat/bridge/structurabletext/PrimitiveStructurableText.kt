@@ -1,17 +1,14 @@
 package com.discord.chat.bridge.structurabletext
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = PrimitiveStructurableTextSerializer::class)
-public data class PrimitiveStructurableText(content: String) : StructurableText {
+public data class PrimitiveStructurableText(content: String) : StructurableText() {
    public final val content: String
    public open val hasContent: Boolean
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
       val var2: Boolean;
       if (var1.length() > 0) {
@@ -28,7 +25,6 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
    }
 
    public fun copy(content: String = var0.content): PrimitiveStructurableText {
-      r.h(var1, "content");
       return new PrimitiveStructurableText(var1);
    }
 
@@ -38,7 +34,7 @@ public data class PrimitiveStructurableText(content: String) : StructurableText 
       } else if (var1 !is PrimitiveStructurableText) {
          return false;
       } else {
-         return r.c(this.content, (var1 as PrimitiveStructurableText).content);
+         return this.content == (var1 as PrimitiveStructurableText).content;
       }
    }
 

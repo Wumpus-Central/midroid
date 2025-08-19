@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class B implements Function1 {
-   public final Function2 j;
-   public final MessageContentAccessory k;
+   public final Function2 d;
+   public final MessageContentAccessory e;
 
    public final Object invoke(Object var1) {
-      return MessageContentViewHolder.c(this.j, this.k, (LinkContentNode)var1);
+      return MessageContentViewHolder.c(this.d, this.e, (LinkContentNode)var1);
    }
 }

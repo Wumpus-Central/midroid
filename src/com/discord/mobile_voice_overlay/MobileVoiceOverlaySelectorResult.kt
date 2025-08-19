@@ -4,7 +4,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlinx.serialization.KSerializer
 
-@tb.g
+@nb.g
 public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: ChannelId, channelName: String, guildName: String, categoryName: String) : MobileVoiceOverlaySelectorResult(
       var1, var3, var5, var6, var7
    ) {
@@ -15,9 +15,6 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    public final val categoryName: String
 
    fun MobileVoiceOverlaySelectorResult(var1: Long, var3: Long, var5: java.lang.String, var6: java.lang.String, var7: java.lang.String) {
-      kotlin.jvm.internal.r.h(var5, "channelName");
-      kotlin.jvm.internal.r.h(var6, "guildName");
-      kotlin.jvm.internal.r.h(var7, "categoryName");
       super();
       this.guildId = var1;
       this.channelId = var3;
@@ -47,9 +44,6 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public fun copy(guildId: GuildId = ..., channelId: ChannelId = ..., channelName: String = ..., guildName: String = ..., categoryName: String = ...): MobileVoiceOverlaySelectorResult {
-      kotlin.jvm.internal.r.h(var5, "channelName");
-      kotlin.jvm.internal.r.h(var6, "guildName");
-      kotlin.jvm.internal.r.h(var7, "categoryName");
       return new MobileVoiceOverlaySelectorResult(var1, var3, var5, var6, var7, null);
    }
 
@@ -64,12 +58,12 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!kotlin.jvm.internal.r.c(this.channelName, var1.channelName)) {
+         } else if (!(this.channelName == var1.channelName)) {
             return false;
-         } else if (!kotlin.jvm.internal.r.c(this.guildName, var1.guildName)) {
+         } else if (!(this.guildName == var1.guildName)) {
             return false;
          } else {
-            return kotlin.jvm.internal.r.c(this.categoryName, var1.categoryName);
+            return this.categoryName == var1.categoryName;
          }
       }
    }
@@ -84,24 +78,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.channelName;
-      val var6: java.lang.String = this.guildName;
-      val var3: java.lang.String = this.categoryName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var5);
-      var4.append(", channelName=");
-      var4.append(var2);
-      var4.append(", guildName=");
-      var4.append(var6);
-      var4.append(", categoryName=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = this.channelName;
+      val var2: java.lang.String = this.guildName;
+      val var5: java.lang.String = this.categoryName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var3.append(var6);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(", channelName=");
+      var3.append(var4);
+      var3.append(", guildName=");
+      var3.append(var2);
+      var3.append(", categoryName=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

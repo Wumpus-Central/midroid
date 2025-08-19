@@ -7,10 +7,10 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentContext;
 
 // $VF: synthetic class
 public final class l implements OnLongClickListener {
-   public final ComponentContext j;
-   public final ThumbnailDisplayComponent k;
+   public final ComponentContext d;
+   public final ThumbnailDisplayComponent e;
 
    public final boolean onLongClick(View var1) {
-      return ThumbnailDisplayComponentView.a(this.j, this.k, var1);
+      return ThumbnailDisplayComponentView.a(this.d, this.e, var1);
    }
 }

@@ -2,9 +2,8 @@ package com.discord.chat.bridge.reaction
 
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
@@ -16,8 +15,6 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    public open val animated: Boolean?
 
    init {
-      r.h(var2, "src");
-      r.h(var3, "displayName");
       super();
       this.name = var1;
       this.src = var2;
@@ -53,8 +50,6 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       id: String? = var0.id,
       animated: Boolean? = var0.animated
    ): MessageReactionEmoji {
-      r.h(var2, "src");
-      r.h(var3, "displayName");
       return new MessageReactionEmoji(var1, var2, var3, var4, var5);
    }
 
@@ -65,16 +60,16 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.name, var1.name)) {
+         if (!(this.name == var1.name)) {
             return false;
-         } else if (!r.c(this.src, var1.src)) {
+         } else if (!(this.src == var1.src)) {
             return false;
-         } else if (!r.c(this.displayName, var1.displayName)) {
+         } else if (!(this.displayName == var1.displayName)) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else {
-            return r.c(this.animated, var1.animated);
+            return this.animated == var1.animated;
          }
       }
    }
@@ -96,8 +91,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var1 = this.name.hashCode();
       }
 
-      val var5: Int = this.src.hashCode();
-      val var4: Int = this.displayName.hashCode();
+      val var4: Int = this.src.hashCode();
+      val var5: Int = this.displayName.hashCode();
       val var2: Int;
       if (this.id == null) {
          var2 = 0;
@@ -109,7 +104,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var3 = this.animated.hashCode();
       }
 
-      return (((var1 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var3;
+      return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
    override fun renderable(): RenderableEmoji {
@@ -117,24 +112,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var2: java.lang.String = this.name;
+      val var5: java.lang.String = this.src;
       val var6: java.lang.String = this.displayName;
       val var3: java.lang.String = this.id;
-      val var5: java.lang.Boolean = this.animated;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageReactionEmoji(name=");
-      var1.append(var4);
-      var1.append(", src=");
-      var1.append(var2);
-      var1.append(", displayName=");
-      var1.append(var6);
-      var1.append(", id=");
-      var1.append(var3);
-      var1.append(", animated=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.Boolean = this.animated;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageReactionEmoji(name=");
+      var4.append(var2);
+      var4.append(", src=");
+      var4.append(var5);
+      var4.append(", displayName=");
+      var4.append(var6);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", animated=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

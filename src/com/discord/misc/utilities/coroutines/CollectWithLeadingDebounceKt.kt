@@ -1,13 +1,14 @@
 package com.discord.misc.utilities.coroutines
 
-import A9.f
-import H9.b
-import jb.I
+import B9.f
+import G9.b
+import db.I
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
+import org.jetbrains.annotations.NotNull
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -28,7 +29,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             super(var1);
          }
 
-         public final Object invokeSuspend(Object var1) {
+         public final Object invokeSuspend(@NotNull Object var1) {
             this.result = var1;
             this.label |= Integer.MIN_VALUE;
             return CollectWithLeadingDebounceKt.collectWithLeadingDebounce(null, 0L, null, this);
@@ -108,11 +109,11 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                c.b(var11);
             } else {
                c.b(var11);
-               val var4: Long = System.currentTimeMillis();
-               val var8: Long = var4 - this.$timeLastEmitted.j;
-               val var6: Long = this.$timeoutMillis;
-               if (var8 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var4;
+               val var8: Long = System.currentTimeMillis();
+               val var6: Long = var8 - this.$timeLastEmitted.element;
+               val var4: Long = this.$timeoutMillis;
+               if (var6 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.element = var8;
                   var11 = this.$collector;
                   ((<unrepresentable>)var12).label = 1;
                   if (var11.emit(var1, (Continuation)var12) === var15) {
@@ -125,14 +126,14 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var12).L$0 = this;
                ((<unrepresentable>)var12).L$1 = var1;
                ((<unrepresentable>)var12).label = 2;
-               if (I.a(var6 - var8, (Continuation)var12) === var15) {
+               if (I.a(var4 - var6, (Continuation)var12) === var15) {
                   return var15;
                }
 
                var13 = this;
             }
 
-            var13.$this_collectWithLeadingDebounce.b(var1);
+            var13.$this_collectWithLeadingDebounce.d(var1);
             return Unit.a;
          }
       };

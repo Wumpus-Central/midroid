@@ -1,19 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
+public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode() {
    public final val timestamp: Long
    public final val full: String
    public final val formatted: String
 
    init {
-      r.h(var3, "full");
-      r.h(var4, "formatted");
-      super(null);
       this.timestamp = var1;
       this.full = var3;
       this.formatted = var4;
@@ -32,8 +28,6 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
    }
 
    public fun copy(timestamp: Long = var0.timestamp, full: String = var0.full, formatted: String = var0.formatted): TimestampContentNode {
-      r.h(var3, "full");
-      r.h(var4, "formatted");
       return new TimestampContentNode(var1, var3, var4);
    }
 
@@ -46,10 +40,10 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
          var1 = var1;
          if (this.timestamp != var1.timestamp) {
             return false;
-         } else if (!r.c(this.full, var1.full)) {
+         } else if (!(this.full == var1.full)) {
             return false;
          } else {
-            return r.c(this.formatted, var1.formatted);
+            return this.formatted == var1.formatted;
          }
       }
    }
@@ -60,15 +54,15 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var5: java.lang.String = this.formatted;
+      val var5: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TimestampContentNode(timestamp=");
       var3.append(var1);
       var3.append(", full=");
-      var3.append(var4);
-      var3.append(", formatted=");
       var3.append(var5);
+      var3.append(", formatted=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

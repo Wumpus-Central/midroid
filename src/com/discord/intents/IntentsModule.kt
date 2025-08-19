@@ -6,18 +6,17 @@ import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
 import android.net.Uri
 import android.os.Build.VERSION
+import com.appsflyer.internal.p
+import com.appsflyer.internal.q
 import com.discord.codegen.NativeIntentsModuleSpec
 import com.discord.intents.packages.InstalledPackage
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
-import kotlin.jvm.internal.r
 
-internal class IntentsModule(reactContext: ReactApplicationContext) : NativeIntentsModuleSpec {
+internal class IntentsModule(reactContext: ReactApplicationContext) : NativeIntentsModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 
@@ -83,15 +82,14 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    public override fun canOpenUrlScheme(urlScheme: String): Boolean {
-      r.h(var1, "urlScheme");
-      var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
-      val var2: PackageManager = this.reactContext.getPackageManager();
-      if (var1 != null) {
+      val var2: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
+      val var4: PackageManager = this.reactContext.getPackageManager();
+      if (var2 != null) {
          try {
             if (VERSION.SDK_INT >= 33) {
-               b.a(var2, var1, a.a(0L));
+               q.a(var4, var2, p.a(0L));
             } else {
-               var2.getPackageInfo(var1, 0);
+               var4.getPackageInfo(var2, 0);
             }
 
             return true;
@@ -111,15 +109,10 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    public override fun sendMail(subject: String, body: String, recipients: ReadableArray): Boolean {
-      r.h(var1, "subject");
-      r.h(var2, "body");
-      r.h(var3, "recipients");
       return this.startActivityWithIntent(this.createEmailIntent(var1, var2));
    }
 
    public override fun sendSMS(body: String, recipients: ReadableArray): Boolean {
-      r.h(var1, "body");
-      r.h(var2, "recipients");
       return this.startActivityWithIntent(this.createSmsIntent(var1));
    }
 }

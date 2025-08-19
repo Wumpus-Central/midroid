@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.view.botuikit
 import com.discord.primitives.UserId
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
 
 public data class ComponentActionEventHandlers(onTapButtonActionComponent: (String) -> Unit,
    onTapButtonLinkComponent: (String) -> Unit,
@@ -16,11 +15,6 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
    public final val onTapContentInventoryEntry: (UserId, String, String) -> Unit
 
    init {
-      r.h(var1, "onTapButtonActionComponent");
-      r.h(var2, "onTapButtonLinkComponent");
-      r.h(var3, "onTapSelectActionComponent");
-      r.h(var4, "onTapContentInventoryEntry");
-      super();
       this.onTapButtonActionComponent = var1;
       this.onTapButtonLinkComponent = var2;
       this.onTapSelectActionComponent = var3;
@@ -49,10 +43,6 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
       onTapSelectActionComponent: (String) -> Unit = var0.onTapSelectActionComponent,
       onTapContentInventoryEntry: (UserId, String, String) -> Unit = var0.onTapContentInventoryEntry
    ): ComponentActionEventHandlers {
-      r.h(var1, "onTapButtonActionComponent");
-      r.h(var2, "onTapButtonLinkComponent");
-      r.h(var3, "onTapSelectActionComponent");
-      r.h(var4, "onTapContentInventoryEntry");
       return new ComponentActionEventHandlers(var1, var2, var3, var4);
    }
 
@@ -63,14 +53,14 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.onTapButtonActionComponent, var1.onTapButtonActionComponent)) {
+         if (!(this.onTapButtonActionComponent == var1.onTapButtonActionComponent)) {
             return false;
-         } else if (!r.c(this.onTapButtonLinkComponent, var1.onTapButtonLinkComponent)) {
+         } else if (!(this.onTapButtonLinkComponent == var1.onTapButtonLinkComponent)) {
             return false;
-         } else if (!r.c(this.onTapSelectActionComponent, var1.onTapSelectActionComponent)) {
+         } else if (!(this.onTapSelectActionComponent == var1.onTapSelectActionComponent)) {
             return false;
          } else {
-            return r.c(this.onTapContentInventoryEntry, var1.onTapContentInventoryEntry);
+            return this.onTapContentInventoryEntry == var1.onTapContentInventoryEntry;
          }
       }
    }
@@ -83,19 +73,19 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
 
    public override fun toString(): String {
       val var3: Function1 = this.onTapButtonActionComponent;
-      val var2: Function1 = this.onTapButtonLinkComponent;
-      val var5: Function1 = this.onTapSelectActionComponent;
-      val var1: Function3 = this.onTapContentInventoryEntry;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ComponentActionEventHandlers(onTapButtonActionComponent=");
-      var4.append(var3);
-      var4.append(", onTapButtonLinkComponent=");
-      var4.append(var2);
-      var4.append(", onTapSelectActionComponent=");
-      var4.append(var5);
-      var4.append(", onTapContentInventoryEntry=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: Function1 = this.onTapButtonLinkComponent;
+      val var4: Function1 = this.onTapSelectActionComponent;
+      val var5: Function3 = this.onTapContentInventoryEntry;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ComponentActionEventHandlers(onTapButtonActionComponent=");
+      var2.append(var3);
+      var2.append(", onTapButtonLinkComponent=");
+      var2.append(var1);
+      var2.append(", onTapSelectActionComponent=");
+      var2.append(var4);
+      var2.append(", onTapContentInventoryEntry=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 }

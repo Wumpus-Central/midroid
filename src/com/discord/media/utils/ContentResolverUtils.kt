@@ -8,13 +8,9 @@ import android.os.Bundle
 import android.os.Build.VERSION
 import android.webkit.MimeTypeMap
 import java.io.File
-import kotlin.jvm.internal.r
 
 internal object ContentResolverUtils {
    public fun ContentResolver.createTempFile(uri: Uri, prefix: String = "temp_", extension: String? = null): File {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
-      r.h(var3, "prefix");
       var var5: java.lang.String = var4;
       if (var4 == null) {
          var5 = MimeTypeMap.getSingleton().getExtensionFromMimeType(var1.getType(var2));
@@ -25,15 +21,12 @@ internal object ContentResolverUtils {
       var6.append(var5);
       val var7: File = File.createTempFile(var3, var6.toString());
       var7.deleteOnExit();
-      r.g(var7, "also(...)");
       return var7;
    }
 
    public fun ContentResolver.isHeif(uri: Uri): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
       val var3: Boolean;
-      if (!r.c(var1.getType(var2), "image/heif") && !r.c(var1.getType(var2), "image/heic")) {
+      if (!(var1.getType(var2) == "image/heif") && !(var1.getType(var2) == "image/heic")) {
          var3 = false;
       } else {
          var3 = true;
@@ -43,13 +36,11 @@ internal object ContentResolverUtils {
    }
 
    public fun ContentResolver.isImage(uri: Uri): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
       val var5: java.lang.String = var1.getType(var2);
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.I(var5, "image", false, 2, null)) {
+         if (StringsKt.I(var5, "image", false, 2, null)) {
             var3 = true;
          }
       }
@@ -58,10 +49,8 @@ internal object ContentResolverUtils {
    }
 
    public fun ContentResolver.isJpeg(uri: Uri): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
       val var3: Boolean;
-      if (!r.c(var1.getType(var2), "image/jpeg") && !r.c(var1.getType(var2), "image/jpg")) {
+      if (!(var1.getType(var2) == "image/jpeg") && !(var1.getType(var2) == "image/jpg")) {
          var3 = false;
       } else {
          var3 = true;
@@ -71,19 +60,15 @@ internal object ContentResolverUtils {
    }
 
    public fun ContentResolver.isPng(uri: Uri): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
-      return r.c(var1.getType(var2), "image/png");
+      return var1.getType(var2) == "image/png";
    }
 
    public fun ContentResolver.isVideo(uri: Uri): Boolean {
-      r.h(var1, "<this>");
-      r.h(var2, "uri");
       val var5: java.lang.String = var1.getType(var2);
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.I(var5, "video", false, 2, null)) {
+         if (StringsKt.I(var5, "video", false, 2, null)) {
             var3 = true;
          }
       }
@@ -99,10 +84,6 @@ internal object ContentResolverUtils {
       querySelection: String? = null,
       queryOffset: Int? = null
    ): Cursor? {
-      r.h(var1, "<this>");
-      r.h(var2, "queryUri");
-      r.h(var3, "queryProjection");
-      r.h(var5, "querySort");
       val var10: Cursor;
       if (VERSION.SDK_INT > 29) {
          val var9: Bundle = new Bundle();

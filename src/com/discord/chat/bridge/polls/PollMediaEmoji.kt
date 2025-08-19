@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -13,7 +12,6 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    public final val animated: Boolean
 
    init {
-      r.h(var2, "name");
       super();
       this.id = var1;
       this.name = var2;
@@ -38,7 +36,6 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public fun copy(id: String? = var0.id, name: String = var0.name, displayName: String? = var0.displayName, animated: Boolean = var0.animated): PollMediaEmoji {
-      r.h(var2, "name");
       return new PollMediaEmoji(var1, var2, var3, var4);
    }
 
@@ -49,11 +46,11 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!(this.name == var1.name)) {
             return false;
-         } else if (!r.c(this.displayName, var1.displayName)) {
+         } else if (!(this.displayName == var1.displayName)) {
             return false;
          } else {
             return this.animated == var1.animated;
@@ -80,7 +77,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
    public fun renderable(): RenderableEmoji {
       if (this.id != null) {
-         val var7: java.lang.Long = h.o(this.id);
+         val var7: java.lang.Long = StringsKt.o(this.id);
          if (var7 != null) {
             val var1: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
@@ -99,21 +96,21 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
-      val var5: java.lang.String = this.displayName;
+      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
+      val var4: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMediaEmoji(id=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", displayName=");
-      var4.append(var5);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMediaEmoji(id=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var2);
+      var5.append(", displayName=");
+      var5.append(var4);
+      var5.append(", animated=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

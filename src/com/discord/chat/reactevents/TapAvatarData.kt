@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapAvatarData(messageId: String, userId: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
    public final val userId: String
 
    init {
-      r.h(var1, "messageId");
-      r.h(var2, "userId");
       super();
       this.messageId = var1;
       this.userId = var2;
@@ -28,8 +25,6 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
    }
 
    public fun copy(messageId: String = var0.messageId, userId: String = var0.userId): TapAvatarData {
-      r.h(var1, "messageId");
-      r.h(var2, "userId");
       return new TapAvatarData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.messageId, var1.messageId)) {
+         if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.userId, var1.userId);
+            return this.userId == var1.userId;
          }
       }
    }

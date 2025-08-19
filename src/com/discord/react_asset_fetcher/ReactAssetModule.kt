@@ -6,47 +6,42 @@ import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import java.util.HashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeReactAssetModuleSpec {
+@SourceDebugExtension(["SMAP\nReactAssetModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactAssetModule.kt\ncom/discord/react_asset_fetcher/ReactAssetModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,36:1\n1872#2,3:37\n*S KotlinDebug\n*F\n+ 1 ReactAssetModule.kt\ncom/discord/react_asset_fetcher/ReactAssetModule\n*L\n29#1:37,3\n*E\n"])
+public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeReactAssetModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
       this.reactContext = var1;
    }
 
    @JvmStatic
    fun `keysRequest$lambda$0`(var0: ReactAsset): Any {
-      r.h(var0, "key");
       return var0.name();
    }
 
    public override fun keysRequest(callback: Callback) {
-      r.h(var1, "callback");
       var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), new a())});
    }
 
    public override fun valuesResult(values: ReadableArray) {
-      r.h(var1, "values");
       val var5: ReactAssetCache = ReactAssetCache.INSTANCE;
-      val var4: ReactApplicationContext = this.reactContext;
-      val var3: HashMap = new HashMap();
+      val var3: ReactApplicationContext = this.reactContext;
+      val var4: HashMap = new HashMap();
       val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
          var var7: Any = var6.next();
          if (var2 < 0) {
-            i.u();
+            CollectionsKt.u();
          }
 
          val var8: java.lang.String = (var7 as ReactAsset).name();
          var7 = var1.getString(var2);
-         r.e(var7);
-         var3.put(var8, var7);
+         var4.put(var8, var7);
       }
 
-      var5.set(var4, var3);
+      var5.set(var3, var4);
    }
 }

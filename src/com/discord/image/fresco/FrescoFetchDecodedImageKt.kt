@@ -1,7 +1,9 @@
+@file:SourceDebugExtension(["SMAP\nFrescoFetchDecodedImage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,108:1\n1#2:109\n314#3,11:110\n*S KotlinDebug\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n*L\n74#1:110,11\n*E\n"])
+
 package com.discord.image.fresco
 
-import H9.b
-import I2.d
+import G9.b
+import H2.d
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -14,7 +16,7 @@ import kotlin.Result.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
 
@@ -38,7 +40,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.f(new s3.b(var6, var3) {
+      var8.f(new r3.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -47,15 +49,12 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$copyBitmap = var2;
          }
 
-         @Override
          protected void onFailureImpl(DataSource var1) {
-            r.h(var1, "dataSource");
             this.$continuation.resumeWith(Result.b(null));
          }
 
-         @Override
          protected void onNewResultImpl(Bitmap var1) {
-            val var2: a = Result.k;
+            val var2: a = Result.e;
             var var4: Bitmap = var1;
             if (this.$copyBitmap) {
                var4 = var1;
@@ -67,7 +66,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
-      var6.h(new Function1(var8) {
+      var6.f(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -91,10 +90,10 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var5: a = Result.k;
+      val var5: a = Result.e;
       var9 = Result.b(Uri.parse(var1));
    } catch (var6: java.lang.Throwable) {
-      val var8: a = Result.k;
+      val var8: a = Result.e;
       var9 = Result.b(c.a(var6));
       break label15;
    }
@@ -108,8 +107,6 @@ public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostPr
 }
 
 public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
-   r.h(var0, "<this>");
-   r.h(var3, "onDecodedImage");
    if (var1 == null) {
       var3.invoke(null);
    } else {
@@ -119,20 +116,17 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).f(new s3.b(var3) {
-         final Function1 $onDecodedImage;
+      d.a().k(var5.J(var6).a(), var0).f(new r3.b(var3) {
+         final Function1<Bitmap, Unit> $onDecodedImage;
 
          {
             this.$onDecodedImage = var1;
          }
 
-         @Override
          protected void onFailureImpl(DataSource var1) {
-            r.h(var1, "dataSource");
             this.$onDecodedImage.invoke(null);
          }
 
-         @Override
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
@@ -141,21 +135,18 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 }
 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
-   r.h(var0, "<this>");
-   r.h(var3, "onDecodedImage");
-
    label16:
    try {
-      val var8: a = Result.k;
-      var7 = Result.b(Uri.parse(var1));
+      val var4: a = Result.e;
+      var8 = Result.b(Uri.parse(var1));
    } catch (var5: java.lang.Throwable) {
-      val var4: a = Result.k;
-      var7 = Result.b(c.a(var5));
+      val var7: a = Result.e;
+      var8 = Result.b(c.a(var5));
       break label16;
    }
 
-   var var9: Any = var7;
-   if (Result.g(var7)) {
+   var var9: Any = var8;
+   if (Result.g(var8)) {
       var9 = null;
    }
 

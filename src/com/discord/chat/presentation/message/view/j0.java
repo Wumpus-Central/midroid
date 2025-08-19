@@ -7,10 +7,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class j0 implements OnClickListener {
-   public final Function1 j;
-   public final GiftEmbed k;
+   public final Function1 d;
+   public final GiftEmbed e;
 
    public final void onClick(View var1) {
-      GiftView.a(this.j, this.k, var1);
+      GiftView.a(this.d, this.e, var1);
    }
 }

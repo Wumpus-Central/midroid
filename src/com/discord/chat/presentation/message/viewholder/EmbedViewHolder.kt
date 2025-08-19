@@ -9,17 +9,16 @@ import com.discord.chat.bridge.spoiler.SpoilerConfig
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.EmbedMessageAccessory
 import com.discord.chat.presentation.message.view.EmbedView
+import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 
-public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
+public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder(var1) {
    private final val embedView: EmbedView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "embedView");
-      super(var1, null);
       this.embedView = var1;
    }
 
@@ -34,20 +33,16 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
       onMediaLongClicked: OnLongClickListener?,
       portal: Double
    ) {
-      kotlin.jvm.internal.r.h(var1, "eventHandler");
-      kotlin.jvm.internal.r.h(var2, "accessory");
-      kotlin.jvm.internal.r.h(var5, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var7, "onMediaClicked");
       val var22: java.lang.String = var2.getEmbed().getObscure();
       val var11: Boolean;
-      if (var22 != null && !kotlin.text.h.c0(var22)) {
+      if (var22 != null && !StringsKt.c0(var22)) {
          var11 = false;
       } else {
          var11 = true;
       }
 
       val var24: EmbedView = this.embedView;
-      val var28: Embed = var2.getEmbed();
+      val var25: Embed = var2.getEmbed();
       val var20: Long = var2.getChannelId-o4g7jtM();
       val var31: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var12: Int = var2.getConstrainedWidth();
@@ -58,33 +53,29 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var13 = false;
       }
 
-      val var16: Boolean = var2.getShouldAnimateEmoji();
-      val var17: Boolean = var2.getShouldShowLinkDecorations();
-      val var19: Boolean = var2.getShouldShowRoleDot();
-      val var18: Boolean = var2.getShouldShowRoleOnName();
-      val var30: Function3 = new Function3(var1) {
+      val var19: Boolean = var2.getShouldAnimateEmoji();
+      val var16: Boolean = var2.getShouldShowLinkDecorations();
+      val var18: Boolean = var2.getShouldShowRoleDot();
+      val var17: Boolean = var2.getShouldShowRoleOnName();
+      val var27: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
 
          public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-            kotlin.jvm.internal.r.h(var1, "p0");
-            kotlin.jvm.internal.r.h(var2, "p1");
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var23: Function3 = new Function3(var1) {
+      val var26: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
 
          public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-            kotlin.jvm.internal.r.h(var1, "p0");
-            kotlin.jvm.internal.r.h(var2, "p1");
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var32: Function2 = new Function2(var1) {
+      val var28: Function2 = new Function2<MessageId, LinkContentNode, Unit>(var1) {
          {
             super(
                2,
@@ -97,38 +88,33 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          }
 
          public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
-            kotlin.jvm.internal.r.h(var1, "p0");
-            kotlin.jvm.internal.r.h(var2, "p1");
             (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
          }
       };
-      val var29: Function1 = new Function1(var1) {
+      val var32: Function1 = new Function1<LinkContentNode, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
          }
 
          public final void invoke(LinkContentNode var1) {
-            kotlin.jvm.internal.r.h(var1, "p0");
             (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
          }
       };
-      val var25: Function1 = new Function1(var1) {
+      val var23: Function1 = new Function1<java.lang.CharSequence, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
          }
 
          public final void invoke(java.lang.CharSequence var1) {
-            kotlin.jvm.internal.r.h(var1, "p0");
             (super.receiver as ChatEventHandler).onTapCopyText(var1);
          }
       };
-      val var26: Function1 = new Function1(var1) {
+      val var30: Function1 = new Function1<EmojiContentNode, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
          }
 
          public final void invoke(EmojiContentNode var1) {
-            kotlin.jvm.internal.r.h(var1, "p0");
             (super.receiver as ChatEventHandler).onTapEmoji(var1);
          }
       };
@@ -138,11 +124,10 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-            kotlin.jvm.internal.r.h(var1, "p0");
             (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
          }
       };
-      val var27: Function4 = new Function4(var1) {
+      val var29: Function4 = new Function4(var1) {
          {
             super(
                4,
@@ -155,17 +140,15 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-            kotlin.jvm.internal.r.h(var2, "p1");
             (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
          }
       };
-      val var34: Function1 = new Function1(var1) {
+      val var34: Function1 = new Function1<CommandMentionContentNode, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
          }
 
          public final void invoke(CommandMentionContentNode var1) {
-            kotlin.jvm.internal.r.h(var1, "p0");
             (super.receiver as ChatEventHandler).onTapCommand(var1);
          }
       };
@@ -186,28 +169,28 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
       }
 
       var24.setEmbed-0qg1u9A(
-         var28,
+         var25,
          var20,
          var31,
          var12,
          var3,
          var4,
          var13,
-         var16,
-         var17,
          var19,
+         var16,
          var18,
-         var30,
-         var23,
+         var17,
+         var27,
+         var26,
          var7,
          var8,
+         var28,
          var32,
-         var29,
-         var25,
+         var23,
          var5,
-         var26,
+         var30,
          var35,
-         var27,
+         var29,
          var34,
          var6,
          var9,

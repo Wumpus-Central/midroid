@@ -28,10 +28,11 @@ import com.facebook.react.viewmanagers.DCDMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDMessageViewManagerInterface
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDSystemMessageViewManagerInterface
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 
+@SourceDebugExtension(["SMAP\nMessageViewManagers.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageViewManagers.kt\ncom/discord/chat/messagemanager/MessageViewManagers\n+ 2 Json.kt\nkotlinx/serialization/json/Json\n*L\n1#1,153:1\n96#2:154\n*S KotlinDebug\n*F\n+ 1 MessageViewManagers.kt\ncom/discord/chat/messagemanager/MessageViewManagers\n*L\n151#1:154\n*E\n"])
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, new b(), 1, null)
    private final val reactEvents: ReactEvents
@@ -47,7 +48,6 @@ public object MessageViewManagers {
       val var2: Json = json;
       json.a();
       val var3: Any = var2.b(Row.Companion.serializer(), var1);
-      r.f(var3, "null cannot be cast to non-null type com.discord.chat.bridge.row.MessageRow");
       return var3 as MessageRow;
    }
 
@@ -69,7 +69,6 @@ public object MessageViewManagers {
 
    @JvmStatic
    fun `json$lambda$0`(var0: JsonBuilder): Unit {
-      r.h(var0, "$this$Json");
       var0.c(true);
       return Unit.a;
    }
@@ -84,7 +83,6 @@ public object MessageViewManagers {
       > = new DCDAutoModerationSystemMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): AutomodSystemMessageWrapperView {
-         r.h(var1, "reactContext");
          return new AutomodSystemMessageWrapperView(var1, null, 2, null);
       }
 
@@ -101,17 +99,14 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: AutomodSystemMessageWrapperView, value: String?) {
-         r.h(var1, "view");
          if (var2 != null) {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var8: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var6: Context = var1.getContext();
-            r.g(var6, "getContext(...)");
-            var1.setMessage(var8, var5, MessageViewManagers.access$getEventHandler(var3, var7, var6));
+            val var5: Message = var4 as Message;
+            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var8: Context = var1.getContext();
+            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
          }
       }
 
@@ -127,7 +122,6 @@ public object MessageViewManagers {
          private final var componentProvider: ComponentProvider?
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): DecoratedMessageView {
-         r.h(var1, "reactContext");
          if (this.componentProvider != null) {
             val var3: Context;
             if (this.componentProvider != null) {
@@ -136,7 +130,7 @@ public object MessageViewManagers {
                var3 = null;
             }
 
-            if (r.c(var3, var1)) {
+            if (var3 == var1) {
                return new DecoratedMessageView(var1, null, 2, null);
             }
          }
@@ -158,7 +152,6 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: DecoratedMessageView, value: String?) {
-         r.h(var1, "view");
          if (var2 != null) {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var4: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
@@ -175,14 +168,12 @@ public object MessageViewManagers {
             }
 
             val var10: MessageBase = var4.getMessage();
-            r.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var6: Message = var10 as Message;
-            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var7: MessageFrame = var4.getMessageFrame();
+            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var11: MessageFrame = var4.getMessageFrame();
             val var5: Context = var1.getContext();
-            r.g(var5, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var11, var7, MessageViewManagers.access$getEventHandler(var3, var4, var5), this.componentProvider, null, false, false, 224, null
+               var1, var6, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -201,7 +192,6 @@ public object MessageViewManagers {
       > = new DCDSystemMessageViewManagerDelegate(this)
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): SystemMessageWrapperView {
-         r.h(var1, "reactContext");
          return new SystemMessageWrapperView(var1, null, 2, null);
       }
 
@@ -218,17 +208,14 @@ public object MessageViewManagers {
 
       @ReactProp(name = "row")
       public open fun setRow(view: SystemMessageWrapperView, value: String?) {
-         r.h(var1, "view");
          if (var2 != null) {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            r.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var5: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Message = var4 as Message;
+            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
             val var8: Context = var1.getContext();
-            r.g(var8, "getContext(...)");
-            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
          }
       }
 

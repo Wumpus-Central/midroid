@@ -1,9 +1,8 @@
 package com.discord.notifications.api
 
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -51,12 +50,12 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
          var1 = var1;
          if (!UserId.equals-impl0(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.username, var1.username)) {
+         } else if (!(this.username == var1.username)) {
             return false;
-         } else if (!r.c(this.discriminator, var1.discriminator)) {
+         } else if (!(this.discriminator == var1.discriminator)) {
             return false;
          } else {
-            return r.c(this.avatar, var1.avatar);
+            return this.avatar == var1.avatar;
          }
       }
    }
@@ -86,19 +85,19 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.id);
-      val var3: java.lang.String = this.username;
+      val var4: java.lang.String = UserId.toString-impl(this.id);
+      val var5: java.lang.String = this.username;
       val var1: java.lang.String = this.discriminator;
-      val var4: java.lang.String = this.avatar;
+      val var3: java.lang.String = this.avatar;
       val var2: StringBuilder = new StringBuilder();
       var2.append("DirectReplyUser(id=");
-      var2.append(var5);
+      var2.append(var4);
       var2.append(", username=");
-      var2.append(var3);
+      var2.append(var5);
       var2.append(", discriminator=");
       var2.append(var1);
       var2.append(", avatar=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

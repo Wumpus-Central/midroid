@@ -1,19 +1,16 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {
+public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode(), SpoilerableData {
    public final val content: List<ContentNode>
    public open val spoilerOrNull: String
    public open val obscureOrNull: String
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
       this.spoilerOrNull = "";
       this.obscureOrNull = "";
@@ -24,7 +21,6 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public fun copy(content: List<ContentNode> = var0.content): SpoilerContentNode {
-      r.h(var1, "content");
       return new SpoilerContentNode(var1);
    }
 
@@ -34,7 +30,7 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
       } else if (var1 !is SpoilerContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as SpoilerContentNode).content);
+         return this.content == (var1 as SpoilerContentNode).content;
       }
    }
 

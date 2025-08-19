@@ -1,19 +1,17 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    public final val timestamp: String
 
    init {
-      r.h(var1, "timestamp");
       super();
       this.timestamp = var1;
    }
@@ -23,7 +21,6 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    }
 
    public fun copy(timestamp: String = var0.timestamp): TapTimestampEvent {
-      r.h(var1, "timestamp");
       return new TapTimestampEvent(var1);
    }
 
@@ -33,7 +30,7 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
       } else if (var1 !is TapTimestampEvent) {
          return false;
       } else {
-         return r.c(this.timestamp, (var1 as TapTimestampEvent).timestamp);
+         return this.timestamp == (var1 as TapTimestampEvent).timestamp;
       }
    }
 
@@ -46,12 +43,12 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.timestamp;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapTimestampEvent(timestamp=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.timestamp;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapTimestampEvent(timestamp=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

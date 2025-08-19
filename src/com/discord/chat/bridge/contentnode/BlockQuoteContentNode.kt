@@ -1,16 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class BlockQuoteContentNode(content: List<ContentNode>) : ContentNode {
+public data class BlockQuoteContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 
    init {
-      r.h(var1, "content");
-      super(null);
       this.content = var1;
    }
 
@@ -19,7 +16,6 @@ public data class BlockQuoteContentNode(content: List<ContentNode>) : ContentNod
    }
 
    public fun copy(content: List<ContentNode> = var0.content): BlockQuoteContentNode {
-      r.h(var1, "content");
       return new BlockQuoteContentNode(var1);
    }
 
@@ -29,7 +25,7 @@ public data class BlockQuoteContentNode(content: List<ContentNode>) : ContentNod
       } else if (var1 !is BlockQuoteContentNode) {
          return false;
       } else {
-         return r.c(this.content, (var1 as BlockQuoteContentNode).content);
+         return this.content == (var1 as BlockQuoteContentNode).content;
       }
    }
 

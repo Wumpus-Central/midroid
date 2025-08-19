@@ -1,6 +1,6 @@
 package com.discord.device.react_events
 
-import A9.s
+import B9.s
 import android.util.DisplayMetrics
 import androidx.window.layout.WindowMetrics
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -8,7 +8,6 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
-import kotlin.jvm.internal.r
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -19,14 +18,8 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
       this.heightPixels = var2;
    }
 
-   public constructor(metrics: DisplayMetrics) : r.h(var1, "metrics") {
-      this(var1.widthPixels, var1.heightPixels);
-   }
-
-   public constructor(metrics: WindowMetrics) : r.h(var1, "metrics") {
-      this(var1.a().width(), var1.a().height());
-   }
-
+   public constructor(metrics: DisplayMetrics) : this(var1.widthPixels, var1.heightPixels)
+   public constructor(metrics: WindowMetrics) : this(var1.a().width(), var1.a().height())
    private operator fun component1(): Int {
       return this.widthPixels;
    }

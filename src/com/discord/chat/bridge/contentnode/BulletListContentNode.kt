@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode {
+public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode() {
    public final val start: Long?
    public final val ordered: Boolean
    public final val items: List<List<ContentNode>>
 
    init {
-      r.h(var3, "items");
-      super(null);
       this.start = var1;
       this.ordered = var2;
       this.items = var3;
@@ -31,7 +28,6 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public fun copy(start: Long? = var0.start, ordered: Boolean = var0.ordered, items: List<List<ContentNode>> = var0.items): BulletListContentNode {
-      r.h(var3, "items");
       return new BulletListContentNode(var1, var2, var3);
    }
 
@@ -42,12 +38,12 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.start, var1.start)) {
+         if (!(this.start == var1.start)) {
             return false;
          } else if (this.ordered != var1.ordered) {
             return false;
          } else {
-            return r.c(this.items, var1.items);
+            return this.items == var1.items;
          }
       }
    }

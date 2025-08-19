@@ -20,21 +20,18 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
+@SourceDebugExtension(["SMAP\nPollActionButton.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,134:1\n257#2,2:135\n257#2,2:137\n257#2,2:139\n257#2,2:141\n257#2,2:143\n257#2,2:145\n257#2,2:147\n*S KotlinDebug\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n*L\n34#1:135,2\n41#1:137,2\n43#1:139,2\n62#1:141,2\n82#1:143,2\n99#1:145,2\n121#1:147,2\n*E\n"])
+public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
    private final val binding: PollActionButtonBinding
 
    fun PollActionButton(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var3: PollActionButtonBinding = PollActionButtonBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
@@ -67,10 +64,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
    }
 
    public fun bind(action: PollAction?, channelId: ChannelId, messageId: MessageId, onTapPollAction: (ChannelId, MessageId, String) -> Unit) {
-      r.h(var4, "messageId");
-      r.h(var5, "onTapPollAction");
       val var9: View = this.binding.getRoot();
-      r.g(var9, "getRoot(...)");
       var var8: Boolean = true;
       var var7: Boolean;
       if (var1 != null) {
@@ -88,16 +82,15 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
       var9.setVisibility(var7);
       if (var1 != null) {
          var7 = PollActionButton.WhenMappings.$EnumSwitchMapping$0[var1.getPresentation().ordinal()];
-         val var11: Any;
+         val var12: Any;
          if (var7 != 1) {
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new A9.n();
+                     throw new B9.n();
                   }
 
                   val var18: TextView = this.binding.actionText;
-                  r.g(this.binding.actionText, "actionText");
                   var18.setVisibility(8);
                   val var19: DCDButton = this.binding.actionButton;
                   DCDButton.setBackgroundRectangle$default(
@@ -106,75 +99,65 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   var19.setTextColor(ThemeManagerKt.getTheme().getRedesignButtonTertiaryText());
                   var19.setText(var1.getLabel());
                   var19.setOnClickButtonListener(new f(var1, var5, var2, var4));
-                  r.e(var19);
-                  var11 = var19;
+                  var12 = var19;
                } else {
                   val var20: TextView = this.binding.actionText;
-                  r.g(this.binding.actionText, "actionText");
                   var20.setVisibility(8);
                   val var21: DCDButton = this.binding.actionButton;
                   DCDButton.setBackgroundRectangle$default(
                      this.binding.actionButton, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  r.e(var21);
                   var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new e(var1, var5, var2, var4));
-                  r.e(var21);
-                  var11 = var21;
+                  var12 = var21;
                }
             } else {
-               val var24: DCDButton = this.binding.actionButton;
-               r.g(this.binding.actionButton, "actionButton");
-               var24.setVisibility(8);
-               val var25: TextView = this.binding.actionText;
+               val var22: DCDButton = this.binding.actionButton;
+               var22.setVisibility(8);
+               val var23: TextView = this.binding.actionText;
                this.binding.actionText.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-               r.e(var25);
-               DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimarySemibold);
-               var25.setText(var1.getLabel());
-               var25.setClickable(true);
-               var25.setOnClickListener(new d(var1, var5, var2, var4));
-               var var12: PollsActionAccessibilityDelegate = null;
+               DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimarySemibold);
+               var23.setText(var1.getLabel());
+               var23.setClickable(true);
+               var23.setOnClickListener(new d(var1, var5, var2, var4));
+               var var13: PollsActionAccessibilityDelegate = null;
                if (var1.getType() != null) {
-                  var12 = new PollsActionAccessibilityDelegate(var1);
+                  var13 = new PollsActionAccessibilityDelegate(var1);
                }
 
-               var25.setAccessibilityDelegate(var12);
-               r.e(var25);
-               var11 = var25;
+               var23.setAccessibilityDelegate(var13);
+               var12 = var23;
             }
          } else {
-            val var22: DCDButton = this.binding.actionButton;
-            r.g(this.binding.actionButton, "actionButton");
-            var22.setVisibility(8);
-            val var23: TextView = this.binding.actionText;
-            r.e(this.binding.actionText);
-            var23.setVisibility(0);
-            var23.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-            DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
-            var23.setText(var1.getFullTextLabel());
+            val var24: DCDButton = this.binding.actionButton;
+            var24.setVisibility(8);
+            val var25: TextView = this.binding.actionText;
+            var25.setVisibility(0);
+            var25.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+            DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimaryMedium);
+            var25.setText(var1.getFullTextLabel());
             if (var1.getType() == null) {
                var8 = false;
             }
 
-            var23.setClickable(var8);
-            var23.setOnClickListener(new c(var1, var5, var2, var4));
-            var var13: PollsActionAccessibilityDelegate = null;
+            var25.setClickable(var8);
+            var25.setOnClickListener(new c(var1, var5, var2, var4));
+            var var14: PollsActionAccessibilityDelegate = null;
             if (var1.getType() != null) {
-               var13 = new PollsActionAccessibilityDelegate(var1);
+               var14 = new PollsActionAccessibilityDelegate(var1);
             }
 
-            var23.setAccessibilityDelegate(var13);
-            r.e(var23);
-            var11 = var23;
+            var25.setAccessibilityDelegate(var14);
+            var12 = var25;
          }
 
-         var11.setEnabled(var1.getEnabled());
+         var12.setEnabled(var1.getEnabled());
          if (!var1.getEnabled()) {
-            var11.setPressed(false);
+            var12.setPressed(false);
          }
 
-         var11.setVisibility(0);
+         var12.setVisibility(0);
          val var6: Float;
          if (!var1.getEnabled() && var1.getPresentation() != PollActionPresentation.TEXT) {
             var6 = 0.5F;
@@ -182,7 +165,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             var6 = 1.0F;
          }
 
-         var11.setAlpha(var6);
+         var12.setAlpha(var6);
       }
    }
 

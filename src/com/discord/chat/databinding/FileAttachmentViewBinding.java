@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
@@ -16,30 +17,41 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class FileAttachmentViewBinding implements ViewBinding {
+   @NonNull
    public final ConstraintLayout fileActionGroup;
+   @NonNull
    public final TextView fileAttachmentDescription;
+   @NonNull
    public final SimpleDraweeView fileAttachmentDownload;
+   @NonNull
    public final Barrier fileAttachmentDownloadIconBarrier;
+   @NonNull
    public final ProgressBar fileAttachmentDownloadProgressBar;
+   @NonNull
    public final SimpleDraweeView fileAttachmentIcon;
+   @NonNull
    public final TextView fileAttachmentName;
+   @NonNull
    private final View rootView;
+   @NonNull
    public final SpoilerView spoiler;
+   @NonNull
    public final AttachmentUploadOverlayView uploadOverlay;
+   @NonNull
    public final LinearLayout uploadOverlayBackground;
 
    private FileAttachmentViewBinding(
-      View var1,
-      ConstraintLayout var2,
-      TextView var3,
-      SimpleDraweeView var4,
-      Barrier var5,
-      ProgressBar var6,
-      SimpleDraweeView var7,
-      TextView var8,
-      SpoilerView var9,
-      AttachmentUploadOverlayView var10,
-      LinearLayout var11
+      @NonNull View var1,
+      @NonNull ConstraintLayout var2,
+      @NonNull TextView var3,
+      @NonNull SimpleDraweeView var4,
+      @NonNull Barrier var5,
+      @NonNull ProgressBar var6,
+      @NonNull SimpleDraweeView var7,
+      @NonNull TextView var8,
+      @NonNull SpoilerView var9,
+      @NonNull AttachmentUploadOverlayView var10,
+      @NonNull LinearLayout var11
    ) {
       this.rootView = var1;
       this.fileActionGroup = var2;
@@ -54,38 +66,39 @@ public final class FileAttachmentViewBinding implements ViewBinding {
       this.uploadOverlayBackground = var11;
    }
 
-   public static FileAttachmentViewBinding bind(View var0) {
+   @NonNull
+   public static FileAttachmentViewBinding bind(@NonNull View var0) {
       int var1 = R.id.file_action_group;
-      ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
-      if (var10 != null) {
+      ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.file_attachment_description;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.file_attachment_download;
-            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.file_attachment_download_icon_barrier;
-               Barrier var11 = (Barrier)a.a(var0, var1);
-               if (var11 != null) {
+               Barrier var6 = (Barrier)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.file_attachment_download_progress_bar;
                   ProgressBar var3 = (ProgressBar)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.file_attachment_icon;
-                     SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var7 != null) {
+                     SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.file_attachment_name;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.spoiler;
                            SpoilerView var9 = (SpoilerView)a.a(var0, var1);
                            if (var9 != null) {
                               var1 = R.id.upload_overlay;
-                              AttachmentUploadOverlayView var8 = (AttachmentUploadOverlayView)a.a(var0, var1);
-                              if (var8 != null) {
+                              AttachmentUploadOverlayView var11 = (AttachmentUploadOverlayView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.upload_overlay_background;
-                                 LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-                                 if (var2 != null) {
-                                    return new FileAttachmentViewBinding(var0, var10, var5, var6, var11, var3, var7, var4, var9, var8, var2);
+                                 LinearLayout var10 = (LinearLayout)a.a(var0, var1);
+                                 if (var10 != null) {
+                                    return new FileAttachmentViewBinding(var0, var7, var2, var4, var6, var3, var5, var8, var9, var11, var10);
                                  }
                               }
                            }
@@ -100,7 +113,8 @@ public final class FileAttachmentViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static FileAttachmentViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+   @NonNull
+   public static FileAttachmentViewBinding inflate(@NonNull LayoutInflater var0, @NonNull ViewGroup var1) {
       if (var1 != null) {
          var0.inflate(R.layout.file_attachment_view, var1);
          return bind(var1);
@@ -109,6 +123,7 @@ public final class FileAttachmentViewBinding implements ViewBinding {
       }
    }
 
+   @NonNull
    @Override
    public View getRoot() {
       return this.rootView;

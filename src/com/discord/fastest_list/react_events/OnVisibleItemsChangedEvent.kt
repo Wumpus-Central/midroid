@@ -1,10 +1,9 @@
 package com.discord.fastest_list.react_events
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 
 internal class OnVisibleItemsChangedEvent private constructor(data: WritableMap) : ReactEvent {
    private final val data: WritableMap
@@ -13,14 +12,11 @@ internal class OnVisibleItemsChangedEvent private constructor(data: WritableMap)
       this.data = var1;
    }
 
-   public constructor(sectionsId: String, sectionStart: Int, sectionEnd: Int, itemStart: Int, itemEnd: Int) : r.h(var1, "sectionsId") {
-      this(
+   public constructor(sectionsId: String, sectionStart: Int, sectionEnd: Int, itemStart: Int, itemEnd: Int) : this(
          NativeMapExtensionsKt.nativeMapOf(
             s.a("sectionsId", var1), s.a("sectionStart", var2), s.a("sectionEnd", var3), s.a("itemStart", var4), s.a("itemEnd", var5)
          )
-      );
-   }
-
+      )
    public override fun serialize(): WritableMap {
       return this.data;
    }

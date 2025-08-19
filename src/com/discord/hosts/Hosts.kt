@@ -3,8 +3,10 @@ package com.discord.hosts
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nHosts.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Hosts.kt\ncom/discord/hosts/Hosts\n+ 2 SharedPreferences.kt\nandroidx/core/content/SharedPreferencesKt\n*L\n1#1,36:1\n41#2,12:37\n*S KotlinDebug\n*F\n+ 1 Hosts.kt\ncom/discord/hosts/Hosts\n*L\n26#1:37,12\n*E\n"])
 public object Hosts {
    private final lateinit var prefs: SharedPreferences
 
@@ -31,7 +33,7 @@ public object Hosts {
    private fun requireHost(key: String): String {
       var var2: SharedPreferences = prefs;
       if (prefs == null) {
-         r.y("prefs");
+         Intrinsics.throwUninitializedPropertyAccessException("prefs");
          var2 = null;
       }
 
@@ -50,7 +52,7 @@ public object Hosts {
    private fun setHost(key: String, value: String) {
       var var3: SharedPreferences = prefs;
       if (prefs == null) {
-         r.y("prefs");
+         Intrinsics.throwUninitializedPropertyAccessException("prefs");
          var3 = null;
       }
 
@@ -60,7 +62,6 @@ public object Hosts {
    }
 
    public fun init(context: Context, api: String? = null, cdn: String? = null) {
-      r.h(var1, "context");
       if (prefs == null) {
          prefs = var1.getSharedPreferences("discord_hosts", 0);
       }

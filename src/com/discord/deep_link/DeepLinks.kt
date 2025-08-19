@@ -1,0 +1,94 @@
+package com.discord.deep_link
+
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.net.Uri.Builder
+import com.appsflyer.AppsFlyerLib
+import com.appsflyer.deeplink.DeepLink
+import com.appsflyer.deeplink.DeepLinkListener
+import com.appsflyer.deeplink.DeepLinkResult
+import com.discord.crash_reporting.CrashReporting
+
+public object DeepLinks {
+   private final var initialUrl: Pair<String, Boolean>?
+
+   private fun getDeepLinkDestinationWithAppsFlyerParam(deepLinkObj: DeepLink): String? {
+      val var4: java.lang.String = var1.getDeepLinkValue();
+      if (var4 == null) {
+         return null;
+      } else {
+         val var2: Boolean = var1.isDeferred() == java.lang.Boolean.TRUE;
+         val var3: java.lang.String = var1.getStringValue("host");
+         var var8: java.lang.String = var3;
+         if (var3 == null) {
+            var8 = "";
+         }
+
+         val var9: java.lang.String;
+         if (!var2 && !(var8 == "discordapp.onelink.me")) {
+            var9 = "false";
+         } else {
+            var9 = "true";
+         }
+
+         val var10: Builder = Uri.parse(var4).buildUpon();
+         val var11: Uri = var10.build();
+         var10.clearQuery();
+
+         for (java.lang.String var7 : var11.getQueryParameterNames()) {
+            if (!(var7 == "fromAppsFlyer")) {
+               val var5: java.util.Iterator = var11.getQueryParameters(var7).iterator();
+
+               while (var5.hasNext()) {
+                  var10.appendQueryParameter(var7, var5.next() as java.lang.String);
+               }
+            }
+         }
+
+         var10.appendQueryParameter("fromAppsFlyer", var9);
+         return var10.toString();
+      }
+   }
+
+   public fun getInitialUrl(): Pair<String, Boolean>? {
+      return initialUrl;
+   }
+
+   public fun init(context: Context) {
+      AppsFlyerLib.getInstance().subscribeForDeepLink(new DeepLinkListener(var1) {
+         final Context $context;
+
+         {
+            this.$context = var1;
+         }
+
+         @Override
+         public void onDeepLinking(DeepLinkResult var1) {
+            if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
+               val var4: DeepLink = var1.getDeepLink();
+               if (var4 != null) {
+                  val var2: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var4);
+                  if (var2 != null) {
+                     if (DeepLinks.access$getInitialUrl$p() == null) {
+                        DeepLinks.access$setInitialUrl$p(new Pair(var2, var4.isDeferred() == java.lang.Boolean.TRUE));
+                     }
+
+                     try {
+                        val var5: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var2));
+                        val var6: Context = this.$context;
+                        var5.addFlags(268435456);
+                        var5.setPackage(var6.getPackageName());
+                        this.$context.startActivity(var5);
+                     } catch (var3: Exception) {
+                        CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
+                     }
+                  }
+               }
+            }
+         }
+      });
+      AppsFlyerLib.getInstance().init("GtHaVQcNmvxMT8zPNShJWJ", null, var1);
+      AppsFlyerLib.getInstance().start(var1);
+   }
+}

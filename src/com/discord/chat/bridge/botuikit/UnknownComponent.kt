@@ -1,11 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component {
+public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component() {
    public open val type: Int
    public open val id: String
 
@@ -14,8 +13,6 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
    }
 
    init {
-      r.h(var2, "id");
-      super(null);
       this.type = var1;
       this.id = var2;
    }
@@ -29,7 +26,6 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id): UnknownComponent {
-      r.h(var2, "id");
       return new UnknownComponent(var1, var2);
    }
 
@@ -43,7 +39,7 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
          if (this.type != var1.type) {
             return false;
          } else {
-            return r.c(this.id, var1.id);
+            return this.id == var1.id;
          }
       }
    }
@@ -54,14 +50,14 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UnknownComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UnknownComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

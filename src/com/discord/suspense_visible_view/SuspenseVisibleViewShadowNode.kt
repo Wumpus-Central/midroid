@@ -5,7 +5,7 @@ import com.facebook.yoga.YogaDisplay
 
 internal class SuspenseVisibleViewShadowNode : LayoutShadowNode {
    public open fun setDisplay(display: YogaDisplay?) {
-      if (var1 != YogaDisplay.l) {
+      if (var1 != YogaDisplay.i) {
          super.setDisplay(var1);
       }
    }

@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class d implements Function3 {
-   public final CrashReportingModule j;
+   public final CrashReportingModule d;
 
    public final Object invoke(Object var1, Object var2, Object var3) {
-      return CrashReportingModule.a(this.j, (HistoricalProcessExitReason.Reason)var1, (SystemLogUtils.Tombstone)var2, (SystemLogReport.SentryCrashData)var3);
+      return CrashReportingModule.a(this.d, (HistoricalProcessExitReason.Reason)var1, (SystemLogUtils.Tombstone)var2, (SystemLogReport.SentryCrashData)var3);
    }
 }

@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.forwarding
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null) {
@@ -37,7 +36,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
          if (this.snapshotIndex != var1.snapshotIndex) {
             return false;
          } else {
-            return r.c(this.footerInfo, var1.footerInfo);
+            return this.footerInfo == var1.footerInfo;
          }
       }
    }

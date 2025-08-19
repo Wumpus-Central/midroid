@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class a implements Function0 {
-   public final TimeElapsed j;
+   public final TimeElapsed d;
 
    public final Object invoke() {
-      return TimeElapsed.a(this.j);
+      return TimeElapsed.a(this.d);
    }
 }

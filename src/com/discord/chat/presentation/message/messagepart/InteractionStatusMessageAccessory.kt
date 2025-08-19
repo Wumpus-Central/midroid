@@ -2,15 +2,12 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.interaction.InteractionStatus
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class InteractionStatusMessageAccessory(messageId: MessageId, interactionStatus: InteractionStatus) : InteractionStatusMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val interactionStatus: InteractionStatus
 
    fun InteractionStatusMessageAccessory(var1: java.lang.String, var2: InteractionStatus) {
-      r.h(var1, "messageId");
-      r.h(var2, "interactionStatus");
       super(var1, "interaction status", false, 4, null);
       this.messageId = var1;
       this.interactionStatus = var2;
@@ -25,8 +22,6 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public fun copy(messageId: MessageId = ..., interactionStatus: InteractionStatus = ...): InteractionStatusMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "interactionStatus");
       return new InteractionStatusMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +35,7 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.interactionStatus, var1.interactionStatus);
+            return this.interactionStatus == var1.interactionStatus;
          }
       }
    }
@@ -50,13 +45,13 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: InteractionStatus = this.interactionStatus;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: InteractionStatus = this.interactionStatus;
       val var2: StringBuilder = new StringBuilder();
       var2.append("InteractionStatusMessageAccessory(messageId=");
-      var2.append(var1);
-      var2.append(", interactionStatus=");
       var2.append(var3);
+      var2.append(", interactionStatus=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

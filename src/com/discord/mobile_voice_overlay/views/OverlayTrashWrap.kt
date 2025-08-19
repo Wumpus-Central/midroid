@@ -23,7 +23,9 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayTrashWrap.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayTrashWrap.kt\ncom/discord/mobile_voice_overlay/views/OverlayTrashWrap\n+ 2 Animator.kt\nandroidx/core/animation/AnimatorKt\n*L\n1#1,179:1\n39#2:180\n85#2,18:181\n29#2:199\n85#2,18:200\n85#2,18:218\n29#2:236\n85#2,18:237\n85#2,18:255\n29#2:273\n85#2,18:274\n*S KotlinDebug\n*F\n+ 1 OverlayTrashWrap.kt\ncom/discord/mobile_voice_overlay/views/OverlayTrashWrap\n*L\n64#1:180\n64#1:181,18\n76#1:199\n76#1:200,18\n64#1:218,18\n76#1:236\n76#1:237,18\n64#1:255,18\n76#1:273\n76#1:274,18\n*E\n"])
 public class OverlayTrashWrap : OverlayView {
    private final var windowLayoutParams: LayoutParams
    private final val binding: TrashWrapBinding
@@ -33,16 +35,14 @@ public class OverlayTrashWrap : OverlayView {
    private final val locationOnScreen: IntArray
    private final var previousBubbleOverTrashZone: OverlayBubbleWrap?
 
-   public constructor(context: Context) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1);
-      val var5: WindowUtils = WindowUtils.INSTANCE;
-      val var2: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
-      var2.width = -1;
-      var2.gravity = 81;
-      var5.addFlag(var2, 16);
-      this.windowLayoutParams = var2;
+   public constructor(context: Context) : super(var1) {
+      val var2: WindowUtils = WindowUtils.INSTANCE;
+      val var5: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
+      var5.width = -1;
+      var5.gravity = 81;
+      var2.addFlag(var5, 16);
+      this.windowLayoutParams = var5;
       val var6: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       this.setBackgroundResource(R.drawable.trash_bg);
       this.setVisibility(4);
@@ -75,11 +75,11 @@ public class OverlayTrashWrap : OverlayView {
       });
       this.showAnimator = var3;
       val var8: AnimatorSet = new AnimatorSet();
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var9.setTarget(this);
-      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var10.setTarget(var6.trashWrapTargetZone);
-      var8.playTogether(new Animator[]{var9, var10});
+      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var9.setTarget(var6.trashWrapTargetZone);
+      var8.playTogether(new Animator[]{var10, var9});
       var8.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
@@ -105,21 +105,19 @@ public class OverlayTrashWrap : OverlayView {
       this.locationOnScreen = new int[]{0, 0};
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2);
-      val var7: WindowUtils = WindowUtils.INSTANCE;
-      val var5: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
-      var5.width = -1;
-      var5.gravity = 81;
-      var7.addFlag(var5, 16);
-      this.windowLayoutParams = var5;
+   public constructor(context: Context, attrs: AttributeSet?) : super(var1, var2) {
+      val var5: WindowUtils = WindowUtils.INSTANCE;
+      val var7: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
+      var7.width = -1;
+      var7.gravity = 81;
+      var5.addFlag(var7, 16);
+      this.windowLayoutParams = var7;
       val var6: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       this.setBackgroundResource(R.drawable.trash_bg);
       this.setVisibility(4);
       var6.trashWrapTargetContainer.setActivated(false);
-      var var3: AnimatorSet = new AnimatorSet();
+      val var3: AnimatorSet = new AnimatorSet();
       val var8: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
       var8.setTarget(this);
       var var11: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
@@ -146,13 +144,13 @@ public class OverlayTrashWrap : OverlayView {
          }
       });
       this.showAnimator = var3;
-      var3 = new AnimatorSet();
-      var11 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var11.setTarget(this);
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var9.setTarget(var6.trashWrapTargetZone);
-      var3.playTogether(new Animator[]{var11, var9});
-      var3.addListener(new AnimatorListener(this) {
+      val var9: AnimatorSet = new AnimatorSet();
+      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      var11 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var11.setTarget(var6.trashWrapTargetZone);
+      var9.playTogether(new Animator[]{var10, var11});
+      var9.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -172,13 +170,12 @@ public class OverlayTrashWrap : OverlayView {
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.hideAnimator = var3;
+      this.hideAnimator = var9;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.r.h(var1, "context") {
-      super(var1, var2, var3);
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
       val var6: WindowUtils = WindowUtils.INSTANCE;
       val var8: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
       var8.width = -1;
@@ -186,12 +183,11 @@ public class OverlayTrashWrap : OverlayView {
       var6.addFlag(var8, 16);
       this.windowLayoutParams = var8;
       val var7: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      kotlin.jvm.internal.r.g(var7, "inflate(...)");
       this.binding = var7;
       this.setBackgroundResource(R.drawable.trash_bg);
       this.setVisibility(4);
       var7.trashWrapTargetContainer.setActivated(false);
-      val var4: AnimatorSet = new AnimatorSet();
+      var var4: AnimatorSet = new AnimatorSet();
       val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
       var9.setTarget(this);
       var var12: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
@@ -218,13 +214,13 @@ public class OverlayTrashWrap : OverlayView {
          }
       });
       this.showAnimator = var4;
-      val var10: AnimatorSet = new AnimatorSet();
-      var12 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var12.setTarget(this);
-      val var11: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var11.setTarget(var7.trashWrapTargetZone);
-      var10.playTogether(new Animator[]{var12, var11});
-      var10.addListener(new AnimatorListener(this) {
+      var4 = new AnimatorSet();
+      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      var12 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var12.setTarget(var7.trashWrapTargetZone);
+      var4.playTogether(new Animator[]{var10, var12});
+      var4.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -244,7 +240,7 @@ public class OverlayTrashWrap : OverlayView {
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.hideAnimator = var10;
+      this.hideAnimator = var4;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }
@@ -300,8 +296,6 @@ public class OverlayTrashWrap : OverlayView {
    }
 
    public fun processMotionEvent(bubble: OverlayBubbleWrap, motionEvent: MotionEvent): Boolean {
-      kotlin.jvm.internal.r.h(var1, "bubble");
-      kotlin.jvm.internal.r.h(var2, "motionEvent");
       if (!this.trashZoneRect.contains((int)var2.getRawX(), (int)var2.getRawY())) {
          var1 = null;
       }
@@ -313,10 +307,9 @@ public class OverlayTrashWrap : OverlayView {
          this.handleViewDraggedOutOfTrashZone();
       }
 
-      if (!kotlin.jvm.internal.r.c(var1, this.previousBubbleOverTrashZone)) {
+      if (!(var1 == this.previousBubbleOverTrashZone)) {
          if (var1 != null) {
             val var5: SimpleDraweeView = this.binding.trashWrapIcon;
-            kotlin.jvm.internal.r.g(this.binding.trashWrapIcon, "trashWrapIcon");
             var1.anchorOn(var5);
          }
 
@@ -340,18 +333,14 @@ public class OverlayTrashWrap : OverlayView {
    }
 
    public override fun setAssets(assets: MobileVoiceOverlayAssets) {
-      kotlin.jvm.internal.r.h(var1, "assets");
       super.setAssets(var1);
       val var2: SimpleDraweeView = this.binding.trashWrapIcon;
-      kotlin.jvm.internal.r.g(this.binding.trashWrapIcon, "trashWrapIcon");
       ReactAssetUtilsKt.setReactAsset(var2, ReactAsset.Close);
       val var3: SimpleDraweeView = this.binding.trashWrapIcon;
-      kotlin.jvm.internal.r.g(this.binding.trashWrapIcon, "trashWrapIcon");
       ColorUtilsKt.setTintColor(var3, ThemeManagerKt.getTheme().getInteractiveNormal());
    }
 
    public override fun setData(data: MobileVoiceOverlayData) {
-      kotlin.jvm.internal.r.h(var1, "data");
    }
 
    public fun show() {

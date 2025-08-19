@@ -1,8 +1,7 @@
 package com.discord.app_database
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class GuildVersion(id: String, version: Long) {
@@ -10,7 +9,6 @@ public data class GuildVersion(id: String, version: Long) {
    public final val version: Long
 
    init {
-      r.h(var1, "id");
       super();
       this.id = var1;
       this.version = var2;
@@ -25,7 +23,6 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public fun copy(id: String = var0.id, version: Long = var0.version): GuildVersion {
-      r.h(var1, "id");
       return new GuildVersion(var1, var2);
    }
 
@@ -36,7 +33,7 @@ public data class GuildVersion(id: String, version: Long) {
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.id, var1.id)) {
+         if (!(this.id == var1.id)) {
             return false;
          } else {
             return this.version == var1.version;

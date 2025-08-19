@@ -1,6 +1,6 @@
 package com.discord.rlottie
 
-import A9.t
+import B9.t
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION
@@ -13,7 +13,7 @@ import com.discord.rlottie.RLottieDrawable.PlaybackMode
 import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
 
 public open class RLottieImageView : m {
    private final var layerColors: HashMap<String, Int>?
@@ -23,17 +23,17 @@ public open class RLottieImageView : m {
    private final var playing: Boolean
    private final var startOnAttach: Boolean
 
-   public constructor(context: Context) : r.i(var1, "context") {
+   public constructor(context: Context) : Intrinsics.checkParameterIsNotNull(var1, "context") {
       super(var1);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : r.i(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?) : Intrinsics.checkParameterIsNotNull(var1, "context") {
       super(var1, var2);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : r.i(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : Intrinsics.checkParameterIsNotNull(var1, "context") {
       super(var1, var2, var3);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
@@ -44,10 +44,10 @@ public open class RLottieImageView : m {
       if (VERSION.SDK_INT >= 30) {
          var2 = a.a(var1);
          if (var2 == null) {
-            r.s();
+            Intrinsics.throwNpe();
          }
 
-         r.d(var2, "display!!");
+         Intrinsics.checkExpressionValueIsNotNull(var2, "display!!");
       } else {
          val var3: Any = var1.getSystemService("window");
          if (var3 == null) {
@@ -55,7 +55,7 @@ public open class RLottieImageView : m {
          }
 
          var2 = (var3 as WindowManager).getDefaultDisplay();
-         r.d(var2, "(getSystemService(Contex…owManager).defaultDisplay");
+         Intrinsics.checkExpressionValueIsNotNull(var2, "(getSystemService(Contex…owManager).defaultDisplay");
       }
 
       return var2;
@@ -143,13 +143,13 @@ public open class RLottieImageView : m {
       colorReplacement: IntArray? = null,
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
-      r.i(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      r.d(var6, "context");
+      Intrinsics.checkParameterIsNotNull(var5, "playbackMode");
       val var7: Context = this.getContext();
-      r.d(var7, "context");
+      Intrinsics.checkExpressionValueIsNotNull(var7, "context");
+      val var6: Context = this.getContext();
+      Intrinsics.checkExpressionValueIsNotNull(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;
@@ -180,9 +180,9 @@ public open class RLottieImageView : m {
    }
 
    public fun setAnimation(context: Context, file: File, width: Int, height: Int, playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP) {
-      r.i(var1, "context");
-      r.i(var2, "file");
-      r.i(var5, "playbackMode");
+      Intrinsics.checkParameterIsNotNull(var1, "context");
+      Intrinsics.checkParameterIsNotNull(var2, "file");
+      Intrinsics.checkParameterIsNotNull(var5, "playbackMode");
       val var6: RLottieDrawable = new RLottieDrawable(var2, var3, var4, false, true, this.getDisplayCompat(var1).getRefreshRate(), null, 64, null);
       this.drawable = var6;
       this.playbackMode = var5;
@@ -195,13 +195,13 @@ public open class RLottieImageView : m {
    }
 
    public fun setLayerColor(layer: String, color: Int) {
-      r.i(var1, "layer");
+      Intrinsics.checkParameterIsNotNull(var1, "layer");
       if (this.layerColors == null) {
          this.layerColors = new HashMap<>();
       }
 
       if (this.layerColors == null) {
-         r.s();
+         Intrinsics.throwNpe();
       }
 
       this.layerColors.put(var1, var2);
@@ -211,7 +211,7 @@ public open class RLottieImageView : m {
    }
 
    public fun setPlaybackMode(playbackMode: PlaybackMode) {
-      r.i(var1, "playbackMode");
+      Intrinsics.checkParameterIsNotNull(var1, "playbackMode");
       this.playbackMode = var1;
       if (this.drawable != null) {
          this.drawable.setPlaybackMode(var1);

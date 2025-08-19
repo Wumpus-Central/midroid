@@ -4,7 +4,6 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
-import kotlin.jvm.internal.r
 
 public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.ItemDecoration {
    private final val spanCount: Int
@@ -16,18 +15,14 @@ public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.It
    }
 
    public override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      r.h(var1, "outRect");
-      r.h(var2, "view");
-      r.h(var3, "parent");
-      r.h(var4, "state");
-      val var7: Int = var3.getChildAdapterPosition(var2);
+      val var5: Int = var3.getChildAdapterPosition(var2);
       val var6: Int = this.spanCount;
-      val var8: Int = var7 % this.spanCount;
-      val var5: Int = this.gapPx;
-      var1.left = var8 * this.gapPx / this.spanCount;
-      var1.right = var5 - (var8 + 1) * var5 / var6;
-      if (var7 >= var6) {
-         var1.top = var5;
+      val var7: Int = var5 % this.spanCount;
+      val var8: Int = this.gapPx;
+      var1.left = var7 * this.gapPx / this.spanCount;
+      var1.right = var8 - (var7 + 1) * var8 / var6;
+      if (var5 >= var6) {
+         var1.top = var8;
       }
    }
 }

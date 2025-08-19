@@ -1,7 +1,7 @@
 package com.discord.image.dominant_color
 
-import N1.a
-import N1.b
+import M1.a
+import M1.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
@@ -15,14 +15,10 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+@SourceDebugExtension(["SMAP\nImageManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,64:1\n1557#2:65\n1628#2,2:66\n1630#2:87\n105#3,19:68\n*S KotlinDebug\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n*L\n52#1:65\n52#1:66,2\n52#1:87\n52#1:68,19\n*E\n"])
+public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    @JvmStatic
    fun `getAvatarBase64$lambda$0`(var0: Promise, var1: Bitmap): Unit {
       if (var1 != null) {
@@ -38,7 +34,6 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    private fun getDominantColors(uri: String?, promise: Promise) {
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
       FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new a(var2), 2, null);
    }
 
@@ -47,7 +42,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
       if (var1 != null) {
          val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
          if (var3 != null) {
-            val var4: ArrayList = new ArrayList(i.v(var3, 10));
+            val var4: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
             val var5: java.util.Iterator = var3.iterator();
 
             while (var5.hasNext()) {
@@ -68,24 +63,17 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getAvatarBase64(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
       FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new b(var2), 2, null);
    }
 
    @ReactMethod
    public fun getDominantColors(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 
    @ReactMethod
    public fun getDominantColorsLocalAsset(imageSource: ReadableMap, promise: Promise) {
-      r.h(var1, "imageSource");
-      r.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 

@@ -1,12 +1,11 @@
 package com.discord.bundle_updater
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 
-@tb.g
+@nb.g
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -14,8 +13,6 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    public final val confirmUpdate: Boolean
 
    init {
-      r.h(var1, "build");
-      r.h(var3, "commit");
       super();
       this.build = var1;
       this.releaseName = var2;
@@ -45,8 +42,6 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
       commit: String = var0.commit,
       confirmUpdate: Boolean = var0.confirmUpdate
    ): AppManifestMetadata {
-      r.h(var1, "build");
-      r.h(var3, "commit");
       return new AppManifestMetadata(var1, var2, var3, var4);
    }
 
@@ -57,11 +52,11 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.build, var1.build)) {
+         if (!(this.build == var1.build)) {
             return false;
-         } else if (!r.c(this.releaseName, var1.releaseName)) {
+         } else if (!(this.releaseName == var1.releaseName)) {
             return false;
-         } else if (!r.c(this.commit, var1.commit)) {
+         } else if (!(this.commit == var1.commit)) {
             return false;
          } else {
             return this.confirmUpdate == var1.confirmUpdate;
@@ -88,21 +83,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.build;
-      val var3: java.lang.String = this.releaseName;
-      val var2: java.lang.String = this.commit;
+      val var2: java.lang.String = this.build;
+      val var4: java.lang.String = this.releaseName;
+      val var5: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifestMetadata(build=");
-      var4.append(var5);
-      var4.append(", releaseName=");
-      var4.append(var3);
-      var4.append(", commit=");
-      var4.append(var2);
-      var4.append(", confirmUpdate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AppManifestMetadata(build=");
+      var3.append(var2);
+      var3.append(", releaseName=");
+      var3.append(var4);
+      var3.append(", commit=");
+      var3.append(var5);
+      var3.append(", confirmUpdate=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

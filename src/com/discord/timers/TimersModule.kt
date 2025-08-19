@@ -1,22 +1,17 @@
 package com.discord.timers
 
-import A9.s
+import B9.s
 import com.discord.codegen.NativeTimersModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 
-public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec {
-   private final val reactEvents: ReactEvents
+public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec(var1) {
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("timer", TimerEvent::class), s.a("interval", IntervalEvent::class))
    private final val timersManager: TimersManager
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
-      this.reactEvents = new ReactEvents(s.a("timer", H.b(TimerEvent.class)), s.a("interval", H.b(IntervalEvent.class)));
       this.timersManager = new TimersManager(var1);
    }
 
@@ -24,7 +19,6 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersM
    fun `setInterval$lambda$1`(var0: TimersModule, var1: Double): Unit {
       val var3: ReactEvents = var0.reactEvents;
       val var4: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var4, "getReactApplicationContext(...)");
       var3.emitModuleEvent(var4, new IntervalEvent((int)var1));
       return Unit.a;
    }
@@ -33,13 +27,11 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersM
    fun `setTimeout$lambda$0`(var0: TimersModule, var1: Double): Unit {
       val var3: ReactEvents = var0.reactEvents;
       val var4: ReactApplicationContext = var0.getReactApplicationContext();
-      r.g(var4, "getReactApplicationContext(...)");
       var3.emitModuleEvent(var4, new TimerEvent((int)var1));
       return Unit.a;
    }
 
    public override fun addListener(type: String) {
-      r.h(var1, "type");
    }
 
    public override fun clearInterval(id: Double) {

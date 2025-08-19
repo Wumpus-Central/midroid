@@ -18,25 +18,21 @@ import com.discord.primitives.MessageId
 import com.discord.react.FontManager
 import kotlin.jvm.functions.Function2
 
-public class MessageContentViewHolder(messageContentView: MessageContentView) : MessagePartViewHolder {
+public class MessageContentViewHolder(messageContentView: MessageContentView) : MessagePartViewHolder(var1) {
    public final val messageContentView: MessageContentView
 
    init {
-      kotlin.jvm.internal.r.h(var1, "messageContentView");
-      super(var1, null);
       this.messageContentView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function2, var1: MessageContentAccessory, var2: LinkContentNode): Unit {
-      kotlin.jvm.internal.r.h(var2, "node");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), var2);
       return Unit.a;
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: MessageContentAccessory, var1: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.r.h(var1, "it");
       val var2: DiscordFont;
       if (var0.getBoldLinkText()) {
          var2 = DiscordFont.PrimarySemibold;
@@ -65,30 +61,12 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       onTapSeeMore: (MessageId) -> Unit,
       onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContentItem");
-      kotlin.jvm.internal.r.h(var2, "onLinkClicked");
-      kotlin.jvm.internal.r.h(var3, "onLinkLongClicked");
-      kotlin.jvm.internal.r.h(var4, "onTapChannel");
-      kotlin.jvm.internal.r.h(var5, "onLongPressChannel");
-      kotlin.jvm.internal.r.h(var6, "onTapAttachmentLink");
-      kotlin.jvm.internal.r.h(var7, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.r.h(var8, "onTapMention");
-      kotlin.jvm.internal.r.h(var9, "onTapCommand");
-      kotlin.jvm.internal.r.h(var10, "onLongPressCommand");
-      kotlin.jvm.internal.r.h(var11, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var12, "onTapTimestamp");
-      kotlin.jvm.internal.r.h(var13, "onTapInlineCode");
-      kotlin.jvm.internal.r.h(var14, "onTapEmoji");
-      kotlin.jvm.internal.r.h(var15, "onTapSeeMore");
-      kotlin.jvm.internal.r.h(var16, "onTapSoundmoji");
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
       val var27: TextPaint = this.messageContentView.getPaint();
-      kotlin.jvm.internal.r.g(var27, "getPaint(...)");
       val var26: FontManager = FontManager.INSTANCE;
       val var25: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.r.g(var25, "getContext(...)");
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),

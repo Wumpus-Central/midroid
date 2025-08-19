@@ -1,15 +1,13 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class PollMedia(text: String) {
    public final val text: String
 
    init {
-      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -19,7 +17,6 @@ public data class PollMedia(text: String) {
    }
 
    public fun copy(text: String = var0.text): PollMedia {
-      r.h(var1, "text");
       return new PollMedia(var1);
    }
 
@@ -29,7 +26,7 @@ public data class PollMedia(text: String) {
       } else if (var1 !is PollMedia) {
          return false;
       } else {
-         return r.c(this.text, (var1 as PollMedia).text);
+         return this.text == (var1 as PollMedia).text;
       }
    }
 
@@ -38,12 +35,12 @@ public data class PollMedia(text: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PollMedia(text=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.text;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollMedia(text=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

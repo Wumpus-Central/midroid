@@ -1,7 +1,6 @@
 package com.discord.chat.listmanager
 
 import com.discord.chat.presentation.list.item.ChatListItem
-import kotlin.jvm.internal.r
 
 public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListAction, listOperations: List<ListOperation>?, changesetUpdateId: Int) {
    public final val items: List<ChatListItem>
@@ -10,9 +9,6 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
    public final val changesetUpdateId: Int
 
    init {
-      r.h(var1, "items");
-      r.h(var2, "action");
-      super();
       this.items = var1;
       this.action = var2;
       this.listOperations = var3;
@@ -41,8 +37,6 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
       listOperations: List<ListOperation>? = var0.listOperations,
       changesetUpdateId: Int = var0.changesetUpdateId
    ): ChatListUpdate {
-      r.h(var1, "items");
-      r.h(var2, "action");
       return new ChatListUpdate(var1, var2, var3, var4);
    }
 
@@ -53,11 +47,11 @@ public data class ChatListUpdate(items: List<ChatListItem>, action: ChatListActi
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.items, var1.items)) {
+         if (!(this.items == var1.items)) {
             return false;
-         } else if (!r.c(this.action, var1.action)) {
+         } else if (!(this.action == var1.action)) {
             return false;
-         } else if (!r.c(this.listOperations, var1.listOperations)) {
+         } else if (!(this.listOperations == var1.listOperations)) {
             return false;
          } else {
             return this.changesetUpdateId == var1.changesetUpdateId;

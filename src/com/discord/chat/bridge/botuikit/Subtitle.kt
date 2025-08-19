@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescription: String? = null, clickable: ContentInventoryEntryClickable? = null) {
@@ -12,7 +11,6 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    public final val clickable: ContentInventoryEntryClickable?
 
    init {
-      r.h(var2, "text");
       super();
       this.badgeUrl = var1;
       this.text = var2;
@@ -42,7 +40,6 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       ariaDescription: String? = var0.ariaDescription,
       clickable: ContentInventoryEntryClickable? = var0.clickable
    ): Subtitle {
-      r.h(var2, "text");
       return new Subtitle(var1, var2, var3, var4);
    }
 
@@ -53,14 +50,14 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.badgeUrl, var1.badgeUrl)) {
+         if (!(this.badgeUrl == var1.badgeUrl)) {
             return false;
-         } else if (!r.c(this.text, var1.text)) {
+         } else if (!(this.text == var1.text)) {
             return false;
-         } else if (!r.c(this.ariaDescription, var1.ariaDescription)) {
+         } else if (!(this.ariaDescription == var1.ariaDescription)) {
             return false;
          } else {
-            return r.c(this.clickable, var1.clickable);
+            return this.clickable == var1.clickable;
          }
       }
    }
@@ -90,21 +87,21 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.badgeUrl;
-      val var1: java.lang.String = this.text;
-      val var5: java.lang.String = this.ariaDescription;
-      val var2: ContentInventoryEntryClickable = this.clickable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Subtitle(badgeUrl=");
-      var3.append(var4);
-      var3.append(", text=");
-      var3.append(var1);
-      var3.append(", ariaDescription=");
-      var3.append(var5);
-      var3.append(", clickable=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.badgeUrl;
+      val var3: java.lang.String = this.text;
+      val var2: java.lang.String = this.ariaDescription;
+      val var5: ContentInventoryEntryClickable = this.clickable;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Subtitle(badgeUrl=");
+      var4.append(var1);
+      var4.append(", text=");
+      var4.append(var3);
+      var4.append(", ariaDescription=");
+      var4.append(var2);
+      var4.append(", clickable=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

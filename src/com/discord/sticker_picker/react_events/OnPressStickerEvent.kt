@@ -2,16 +2,14 @@ package com.discord.sticker_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnPressStickerEvent(stickerId: String) : ReactEvent {
    public final val stickerId: String
 
    init {
-      r.h(var1, "stickerId");
       super();
       this.stickerId = var1;
    }
@@ -21,7 +19,6 @@ internal data class OnPressStickerEvent(stickerId: String) : ReactEvent {
    }
 
    public fun copy(stickerId: String = var0.stickerId): OnPressStickerEvent {
-      r.h(var1, "stickerId");
       return new OnPressStickerEvent(var1);
    }
 
@@ -31,7 +28,7 @@ internal data class OnPressStickerEvent(stickerId: String) : ReactEvent {
       } else if (var1 !is OnPressStickerEvent) {
          return false;
       } else {
-         return r.c(this.stickerId, (var1 as OnPressStickerEvent).stickerId);
+         return this.stickerId == (var1 as OnPressStickerEvent).stickerId;
       }
    }
 

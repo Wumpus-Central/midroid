@@ -16,24 +16,14 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.chat.presentation.message.viewholder.MediaImageViewHolder
 import com.google.android.flexbox.FlexboxLayout.LayoutParams
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
-public class ThumbnailDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null)
-   : MediaImageView,
+public class ThumbnailDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null) : MediaImageView(var1, var2),
    ComponentView<ThumbnailDisplayComponent> {
-   private final val imageViewHolder: MediaImageViewHolder
+   private final val imageViewHolder: MediaImageViewHolder = new MediaImageViewHolder(this)
 
    fun ThumbnailDisplayComponentView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
-   }
-
-   init {
-      r.h(var1, "context");
-      super(var1, var2);
-      this.imageViewHolder = new MediaImageViewHolder(this);
    }
 
    @JvmStatic
@@ -52,20 +42,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
    }
 
    public open fun configure(component: ThumbnailDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      r.h(var1, "component");
-      r.h(var2, "componentProvider");
-      r.h(var3, "componentContext");
-      val var13: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var16: java.lang.String = var3.getContainerId();
+      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      var var13: java.lang.String = var3.getContainerId();
       val var12: java.lang.String = var1.getId();
       val var11: StringBuilder = new StringBuilder();
       var11.append("ThumbnailDisplayComponent(");
       var11.append(var12);
       var11.append(")");
-      val var17: SpoilerAttributes = var13.forGenericMedia(var1, var16, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var17: SpoilerAttributes = var16.forGenericMedia(var1, var13, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var21: UnfurledMediaItem = var1.getMedia();
       val var20: MediaImageViewHolder = this.imageViewHolder;
-      val var10: Boolean = var1.isSpoiler();
+      val var6: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
          var18 = SpoilerAttributes.configure$default(var17, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
@@ -74,10 +61,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       val var9: Boolean = var1.isObscure();
-      val var7: Boolean = var1.isObscureAwaitingScan();
-      val var6: Boolean = var1.getObscureHideControls();
-      val var8: Boolean = var1.getObscureIsOpaque();
-      val var22: java.lang.String = var21.getProxyUrl();
+      val var10: Boolean = var1.isObscureAwaitingScan();
+      val var8: Boolean = var1.getObscureHideControls();
+      val var7: Boolean = var1.getObscureIsOpaque();
+      var13 = var21.getProxyUrl();
       var var14: Int = var21.getWidth();
       var var4: Int;
       if (var14 != null) {
@@ -95,17 +82,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       var20.bind(
-         var22,
+         var13,
          var4,
          var5,
          var21.getPlaceholder(),
          var21.getPlaceholderVersion(),
-         var10,
+         var6,
          var18,
          var9,
-         var7,
-         var6,
+         var10,
          var8,
+         var7,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),
@@ -134,7 +121,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<ThumbnailDisplayComponent> {
-      return H.b(ThumbnailDisplayComponent.class);
+      return ThumbnailDisplayComponent::class;
    }
 
    override fun onRecycle(var1: ComponentProvider) {
@@ -143,7 +130,6 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
 
    public companion object {
       public fun inflateComponent(context: Context): ThumbnailDisplayComponentView {
-         r.h(var1, "context");
          return new ThumbnailDisplayComponentView(var1, null, 2, null);
       }
    }

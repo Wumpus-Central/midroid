@@ -1,7 +1,6 @@
 package com.discord.chat.presentation.message.view.polls
 
 import android.animation.ObjectAnimator
-import kotlin.jvm.internal.r
 
 private data class AnimateElevationContext(tagValue: Any, elevation: Float, animator: ObjectAnimator? = null) {
    public final val tagValue: Any
@@ -13,8 +12,6 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
       internal set
 
    init {
-      r.h(var1, "tagValue");
-      super();
       this.tagValue = var1;
       this.elevation = var2;
       this.animator = var3;
@@ -33,7 +30,6 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public fun copy(tagValue: Any = var0.tagValue, elevation: Float = var0.elevation, animator: ObjectAnimator? = var0.animator): AnimateElevationContext {
-      r.h(var1, "tagValue");
       return new AnimateElevationContext(var1, var2, var3);
    }
 
@@ -44,19 +40,19 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.tagValue, var1.tagValue)) {
+         if (!(this.tagValue == var1.tagValue)) {
             return false;
          } else if (java.lang.Float.compare(this.elevation, var1.elevation) != 0) {
             return false;
          } else {
-            return r.c(this.animator, var1.animator);
+            return this.animator == var1.animator;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.tagValue.hashCode();
-      val var3: Int = java.lang.Float.hashCode(this.elevation);
+      val var3: Int = this.tagValue.hashCode();
+      val var2: Int = java.lang.Float.hashCode(this.elevation);
       val var1: Int;
       if (this.animator == null) {
          var1 = 0;
@@ -64,7 +60,7 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
          var1 = this.animator.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {

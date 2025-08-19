@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = SectionChildComponent.Serializer::class)
 public sealed interface SectionChildComponent<T extends Component> {
@@ -10,7 +9,6 @@ public sealed interface SectionChildComponent<T extends Component> {
 
    public companion object {
       public fun <T> serializer(typeSerial0: KSerializer<T>): KSerializer<SectionChildComponent<T>> {
-         r.h(var1, "typeSerial0");
          return SectionChildComponent.Serializer.INSTANCE;
       }
    }
@@ -19,12 +17,10 @@ public sealed interface SectionChildComponent<T extends Component> {
       public open val unionName: String = "SectionAccessory"
 
       public open fun fromValue(value: SectionChildComponent<*>): Component? {
-         r.h(var1, "value");
          return var1.getComponent();
       }
 
       public open fun toValue(component: Component): SectionChildComponent<*> {
-         r.h(var1, "component");
          val var2: Any;
          if (var1 is TextDisplayComponent) {
             var2 = SectionChildComponent.TextDisplay.box-impl(SectionChildComponent.TextDisplay.constructor-impl(var1 as TextDisplayComponent));
@@ -41,7 +37,6 @@ public sealed interface SectionChildComponent<T extends Component> {
 
       @JvmStatic
       fun `constructor-impl`(var0: TextDisplayComponent): TextDisplayComponent {
-         r.h(var0, "component");
          return var0;
       }
 
@@ -50,13 +45,13 @@ public sealed interface SectionChildComponent<T extends Component> {
          if (var1 !is SectionChildComponent.TextDisplay) {
             return false;
          } else {
-            return r.c(var0, (var1 as SectionChildComponent.TextDisplay).unbox-impl());
+            return var0 == (var1 as SectionChildComponent.TextDisplay).unbox-impl();
          }
       }
 
       @JvmStatic
       fun `equals-impl0`(var0: TextDisplayComponent, var1: TextDisplayComponent): Boolean {
-         return r.c(var0, var1);
+         return var0 == var1;
       }
 
       @JvmStatic

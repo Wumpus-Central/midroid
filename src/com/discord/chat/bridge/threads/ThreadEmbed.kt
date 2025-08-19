@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.threads
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ThreadEmbed(title: String,
@@ -20,8 +19,6 @@ public data class ThreadEmbed(title: String,
    public final val referencedMessage: ThreadEmbedMessage?
 
    init {
-      r.h(var1, "title");
-      r.h(var2, "messageCountLabel");
       super();
       this.title = var1;
       this.messageCountLabel = var2;
@@ -63,8 +60,6 @@ public data class ThreadEmbed(title: String,
       archivedIconUrl: String? = var0.archivedIconUrl,
       referencedMessage: ThreadEmbedMessage? = var0.referencedMessage
    ): ThreadEmbed {
-      r.h(var1, "title");
-      r.h(var2, "messageCountLabel");
       return new ThreadEmbed(var1, var2, var3, var4, var5, var6);
    }
 
@@ -75,18 +70,18 @@ public data class ThreadEmbed(title: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.title, var1.title)) {
+         if (!(this.title == var1.title)) {
             return false;
-         } else if (!r.c(this.messageCountLabel, var1.messageCountLabel)) {
+         } else if (!(this.messageCountLabel == var1.messageCountLabel)) {
             return false;
-         } else if (!r.c(this.messagePreviewString, var1.messagePreviewString)) {
+         } else if (!(this.messagePreviewString == var1.messagePreviewString)) {
             return false;
-         } else if (!r.c(this.archived, var1.archived)) {
+         } else if (!(this.archived == var1.archived)) {
             return false;
-         } else if (!r.c(this.archivedIconUrl, var1.archivedIconUrl)) {
+         } else if (!(this.archivedIconUrl == var1.archivedIconUrl)) {
             return false;
          } else {
-            return r.c(this.referencedMessage, var1.referencedMessage);
+            return this.referencedMessage == var1.referencedMessage;
          }
       }
    }
@@ -124,27 +119,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.title;
-      val var2: java.lang.String = this.messageCountLabel;
-      val var7: java.lang.String = this.messagePreviewString;
-      val var3: java.lang.Boolean = this.archived;
-      val var1: java.lang.String = this.archivedIconUrl;
+      val var1: java.lang.String = this.title;
+      val var6: java.lang.String = this.messageCountLabel;
+      val var4: java.lang.String = this.messagePreviewString;
+      val var7: java.lang.Boolean = this.archived;
+      val var3: java.lang.String = this.archivedIconUrl;
       val var5: ThreadEmbedMessage = this.referencedMessage;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ThreadEmbed(title=");
-      var4.append(var6);
-      var4.append(", messageCountLabel=");
-      var4.append(var2);
-      var4.append(", messagePreviewString=");
-      var4.append(var7);
-      var4.append(", archived=");
-      var4.append(var3);
-      var4.append(", archivedIconUrl=");
-      var4.append(var1);
-      var4.append(", referencedMessage=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThreadEmbed(title=");
+      var2.append(var1);
+      var2.append(", messageCountLabel=");
+      var2.append(var6);
+      var2.append(", messagePreviewString=");
+      var2.append(var4);
+      var2.append(", archived=");
+      var2.append(var7);
+      var2.append(", archivedIconUrl=");
+      var2.append(var3);
+      var2.append(", referencedMessage=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

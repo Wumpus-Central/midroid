@@ -3,15 +3,9 @@ package com.discord.app_ready
 import com.discord.codegen.NativeApplicationReadyModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
-import l1.a
+import k1.a
 
-public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec(var1) {
    @JvmStatic
    fun `applicationReady$lambda$0`(var0: Promise) {
       if (var0 != null) {

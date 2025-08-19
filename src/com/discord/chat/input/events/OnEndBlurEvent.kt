@@ -2,16 +2,14 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class OnEndBlurEvent(text: String) : ReactEvent {
    public final val text: String
 
    init {
-      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -21,7 +19,6 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
    }
 
    public fun copy(text: String = var0.text): OnEndBlurEvent {
-      r.h(var1, "text");
       return new OnEndBlurEvent(var1);
    }
 
@@ -31,7 +28,7 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
       } else if (var1 !is OnEndBlurEvent) {
          return false;
       } else {
-         return r.c(this.text, (var1 as OnEndBlurEvent).text);
+         return this.text == (var1 as OnEndBlurEvent).text;
       }
    }
 

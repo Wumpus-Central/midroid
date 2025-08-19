@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.embed
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class EmbedField(rawName: String? = null, rawValue: String? = null, name: StructurableText? = null, value: StructurableText? = null) {
@@ -55,14 +54,14 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.rawName, var1.rawName)) {
+         if (!(this.rawName == var1.rawName)) {
             return false;
-         } else if (!r.c(this.rawValue, var1.rawValue)) {
+         } else if (!(this.rawValue == var1.rawValue)) {
             return false;
-         } else if (!r.c(this.name, var1.name)) {
+         } else if (!(this.name == var1.name)) {
             return false;
          } else {
-            return r.c(this.value, var1.value);
+            return this.value == var1.value;
          }
       }
    }
@@ -99,20 +98,20 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
 
    public override fun toString(): String {
       val var1: java.lang.String = this.rawName;
-      val var5: java.lang.String = this.rawValue;
-      val var4: StructurableText = this.name;
-      val var3: StructurableText = this.value;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EmbedField(rawName=");
-      var2.append(var1);
-      var2.append(", rawValue=");
-      var2.append(var5);
-      var2.append(", name=");
-      var2.append(var4);
-      var2.append(", value=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.rawValue;
+      val var2: StructurableText = this.name;
+      val var5: StructurableText = this.value;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EmbedField(rawName=");
+      var3.append(var1);
+      var3.append(", rawValue=");
+      var3.append(var4);
+      var3.append(", name=");
+      var3.append(var2);
+      var3.append(", value=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

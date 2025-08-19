@@ -2,16 +2,14 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapThreadEmbedEvent(messageId: String) : ReactEvent {
    public final val messageId: String
 
    init {
-      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -21,7 +19,6 @@ public data class TapThreadEmbedEvent(messageId: String) : ReactEvent {
    }
 
    public fun copy(messageId: String = var0.messageId): TapThreadEmbedEvent {
-      r.h(var1, "messageId");
       return new TapThreadEmbedEvent(var1);
    }
 
@@ -31,7 +28,7 @@ public data class TapThreadEmbedEvent(messageId: String) : ReactEvent {
       } else if (var1 !is TapThreadEmbedEvent) {
          return false;
       } else {
-         return r.c(this.messageId, (var1 as TapThreadEmbedEvent).messageId);
+         return this.messageId == (var1 as TapThreadEmbedEvent).messageId;
       }
    }
 

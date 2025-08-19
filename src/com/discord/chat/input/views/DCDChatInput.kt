@@ -13,23 +13,20 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.jvm.internal.Ref.BooleanRef
 
-public class DCDChatInput  public constructor(context: Context, attrs: AttributeSet? = null) : AppCompatEditText {
+@SourceDebugExtension(["SMAP\nDCDChatInput.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DCDChatInput.kt\ncom/discord/chat/input/views/DCDChatInput\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,175:1\n1#2:176\n*E\n"])
+public class DCDChatInput  public constructor(context: Context, attrs: AttributeSet? = null) : AppCompatEditText(var1, var2) {
    private final var onRequestSend: (() -> Unit)?
    private final var onSelectionChanged: ((Int, Int) -> Unit)?
-   private final val measureAndLayoutRunnable: Runnable
+   private final val measureAndLayoutRunnable: Runnable = new k(this)
 
    fun DCDChatInput(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
-      this.measureAndLayoutRunnable = new k(this);
       this.setupExternalKeyboardSendRequests();
    }
 
@@ -44,14 +41,13 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @JvmStatic
    fun `setupExternalKeyboardSendRequests$lambda$2`(var0: BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
-      r.h(var4, "event");
       if ((var4.getFlags() and 2) == 2) {
          return false;
       } else {
          if (var3 == 66) {
-            val var5: Boolean = var0.j;
+            val var5: Boolean = var0.element;
             if (var4.getAction() == 0) {
-               var0.j = true;
+               var0.element = true;
                if (var4.hasModifiers(1)) {
                   return false;
                }
@@ -64,7 +60,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
             }
 
             if (var4.getAction() == 1) {
-               var0.j = false;
+               var0.element = false;
             }
          }
 
@@ -111,7 +107,6 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(event: MotionEvent): Boolean {
-      r.h(var1, "event");
       if (var1.getAction() == 0) {
          val var2: ViewGroup = GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this);
          if (var2 != null) {
@@ -142,12 +137,10 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    public fun setOnRequestSend(onRequestSend: () -> Unit) {
-      r.h(var1, "onRequestSend");
       this.onRequestSend = var1;
    }
 
    public fun setOnSelectionChanged(onSelectionChanged: (Int, Int) -> Unit) {
-      r.h(var1, "onSelectionChanged");
       this.onSelectionChanged = var1;
    }
 }

@@ -4,10 +4,10 @@ import android.content.Context
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead
 import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
-import kotlin.jvm.internal.r
 
-internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false)
-   : TransitionResilientLinearLayoutManager {
+internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false) : TransitionResilientLinearLayoutManager(
+      var2, FastestListLayoutManager.Companion.access$getOrientation(Companion, var3), var4, new a()
+   ) {
    public final var renderAhead: RenderAhead
       internal set
 
@@ -26,21 +26,18 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
          val var1: Float;
          val var2: Float;
          if (this.horizontal) {
-            var2 = this.getWidth();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getWidth();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          } else {
-            var2 = this.getHeight();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getHeight();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          }
 
-         return (int)(var2 * var1);
+         return (int)(var1 * var2);
       }
 
 
    init {
-      r.h(var1, "renderAhead");
-      r.h(var2, "context");
-      super(var2, FastestListLayoutManager.Companion.access$getOrientation(Companion, var3), var4, new a());
       this.renderAhead = var1;
       this.scrollingForward = true;
       this.horizontal = var3;
@@ -48,13 +45,10 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: Exception): Exception {
-      r.h(var0, "e");
       return new FastestListLayoutManager.FastestListLayoutManagerException(var0);
    }
 
    protected override fun calculateExtraLayoutSpace(state: State, extraLayoutSpace: IntArray) {
-      r.h(var1, "state");
-      r.h(var2, "extraLayoutSpace");
       if (this.scrollingForward) {
          var2[1] = this.getExtraLayoutSpace();
       } else {
@@ -71,10 +65,5 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
       }
    }
 
-   private class FastestListLayoutManagerException(e: Exception) : IllegalStateException {
-      init {
-         r.h(var1, "e");
-         super(var1);
-      }
-   }
+   private class FastestListLayoutManagerException(e: Exception) : IllegalStateException(var1)
 }

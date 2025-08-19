@@ -1,8 +1,7 @@
 package com.discord.foreground_service.service
 
-import I9.a
+import H9.a
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
 
 internal data class ServiceNotificationConfiguration(title: String,
    content: String?,
@@ -19,11 +18,6 @@ internal data class ServiceNotificationConfiguration(title: String,
    public final val type: com.discord.foreground_service.service.ServiceNotificationConfiguration.Type
 
    init {
-      r.h(var1, "title");
-      r.h(var3, "priority");
-      r.h(var5, "auxiliaryActions");
-      r.h(var6, "type");
-      super();
       this.title = var1;
       this.content = var2;
       this.priority = var3;
@@ -64,10 +58,6 @@ internal data class ServiceNotificationConfiguration(title: String,
       auxiliaryActions: List<com.discord.foreground_service.service.ServiceNotificationConfiguration.Action> = var0.auxiliaryActions,
       type: com.discord.foreground_service.service.ServiceNotificationConfiguration.Type = var0.type
    ): ServiceNotificationConfiguration {
-      r.h(var1, "title");
-      r.h(var3, "priority");
-      r.h(var5, "auxiliaryActions");
-      r.h(var6, "type");
       return new ServiceNotificationConfiguration(var1, var2, var3, var4, var5, var6);
    }
 
@@ -78,15 +68,15 @@ internal data class ServiceNotificationConfiguration(title: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.title, var1.title)) {
+         if (!(this.title == var1.title)) {
             return false;
-         } else if (!r.c(this.content, var1.content)) {
+         } else if (!(this.content == var1.content)) {
             return false;
          } else if (this.priority != var1.priority) {
             return false;
-         } else if (!r.c(this.contentAction, var1.contentAction)) {
+         } else if (!(this.contentAction == var1.contentAction)) {
             return false;
-         } else if (!r.c(this.auxiliaryActions, var1.auxiliaryActions)) {
+         } else if (!(this.auxiliaryActions == var1.auxiliaryActions)) {
             return false;
          } else {
             return this.type === var1.type;
@@ -113,27 +103,27 @@ internal data class ServiceNotificationConfiguration(title: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.title;
-      val var2: java.lang.String = this.content;
-      val var3: ServiceNotificationConfiguration.Priority = this.priority;
-      val var1: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var4: java.util.List = this.auxiliaryActions;
-      val var5: ServiceNotificationConfiguration.Type = this.type;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ServiceNotificationConfiguration(title=");
-      var6.append(var7);
-      var6.append(", content=");
-      var6.append(var2);
-      var6.append(", priority=");
-      var6.append(var3);
-      var6.append(", contentAction=");
-      var6.append(var1);
-      var6.append(", auxiliaryActions=");
-      var6.append(var4);
-      var6.append(", type=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.title;
+      val var1: java.lang.String = this.content;
+      val var2: ServiceNotificationConfiguration.Priority = this.priority;
+      val var7: ServiceNotificationConfiguration.Action = this.contentAction;
+      val var6: java.util.List = this.auxiliaryActions;
+      val var4: ServiceNotificationConfiguration.Type = this.type;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ServiceNotificationConfiguration(title=");
+      var3.append(var5);
+      var3.append(", content=");
+      var3.append(var1);
+      var3.append(", priority=");
+      var3.append(var2);
+      var3.append(", contentAction=");
+      var3.append(var7);
+      var3.append(", auxiliaryActions=");
+      var3.append(var6);
+      var3.append(", type=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public data class Action(tag: String, taskName: String, title: String?, data: Map<String, String>) {
@@ -143,10 +133,6 @@ internal data class ServiceNotificationConfiguration(title: String,
       public final val data: Map<String, String>
 
       init {
-         r.h(var1, "tag");
-         r.h(var2, "taskName");
-         r.h(var4, "data");
-         super();
          this.tag = var1;
          this.taskName = var2;
          this.title = var3;
@@ -170,9 +156,6 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public fun copy(tag: String = var0.tag, taskName: String = var0.taskName, title: String? = var0.title, data: Map<String, String> = var0.data): com.discord.foreground_service.service.ServiceNotificationConfiguration.Action {
-         r.h(var1, "tag");
-         r.h(var2, "taskName");
-         r.h(var4, "data");
          return new ServiceNotificationConfiguration.Action(var1, var2, var3, var4);
       }
 
@@ -183,14 +166,14 @@ internal data class ServiceNotificationConfiguration(title: String,
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.tag, var1.tag)) {
+            if (!(this.tag == var1.tag)) {
                return false;
-            } else if (!r.c(this.taskName, var1.taskName)) {
+            } else if (!(this.taskName == var1.taskName)) {
                return false;
-            } else if (!r.c(this.title, var1.title)) {
+            } else if (!(this.title == var1.title)) {
                return false;
             } else {
-               return r.c(this.data, var1.data);
+               return this.data == var1.data;
             }
          }
       }
@@ -209,21 +192,21 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.tag;
-         val var3: java.lang.String = this.taskName;
+         val var3: java.lang.String = this.tag;
+         val var2: java.lang.String = this.taskName;
          val var4: java.lang.String = this.title;
-         val var5: java.util.Map = this.data;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Action(tag=");
-         var2.append(var1);
-         var2.append(", taskName=");
-         var2.append(var3);
-         var2.append(", title=");
-         var2.append(var4);
-         var2.append(", data=");
-         var2.append(var5);
-         var2.append(")");
-         return var2.toString();
+         val var1: java.util.Map = this.data;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Action(tag=");
+         var5.append(var3);
+         var5.append(", taskName=");
+         var5.append(var2);
+         var5.append(", title=");
+         var5.append(var4);
+         var5.append(", data=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
    }
 

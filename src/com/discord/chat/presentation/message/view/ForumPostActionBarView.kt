@@ -36,25 +36,24 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ForumPostActionBarView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nForumPostActionBarView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ForumPostActionBarView.kt\ncom/discord/chat/presentation/message/view/ForumPostActionBarView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,265:1\n257#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n255#2:274\n257#2,2:275\n255#2:277\n257#2,2:278\n257#2,2:280\n*S KotlinDebug\n*F\n+ 1 ForumPostActionBarView.kt\ncom/discord/chat/presentation/message/view/ForumPostActionBarView\n*L\n114#1:266,2\n124#1:268,2\n129#1:270,2\n143#1:272,2\n144#1:274\n179#1:275,2\n180#1:277\n207#1:278,2\n229#1:280,2\n*E\n"])
+public class ForumPostActionBarView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
+      var1, var2, var3
+   ) {
    private final val binding: ForumPostActionBarViewBinding
 
    fun ForumPostActionBarView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ForumPostActionBarView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var6: ForumPostActionBarViewBinding = ForumPostActionBarViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       var6.footerDivider.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       var6.headerDivider.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
@@ -76,12 +75,10 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       var5.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       val var11: TextView = var6.sharePromptTitle;
       var6.sharePromptTitle.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.r.e(var11);
       SetTextSizeSpKt.setTextSizeSp(var11, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var11, var9);
       val var12: SimpleDraweeSpanTextView = var6.sharePromptSubtitle;
       var6.sharePromptSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.e(var12);
       SetTextSizeSpKt.setTextSizeSp(var12, 14.0F);
       val var10: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var12, DiscordFont.PrimaryMedium);
@@ -100,7 +97,6 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
 
    @JvmStatic
    fun `configure_CgeVRR0$lambda$8$lambda$7`(var0: Int, var1: RenderContext): Unit {
-      kotlin.jvm.internal.r.h(var1, "$this$i18nFormat");
       var1.getArgs().put("count", java.lang.String.valueOf(var0));
       return Unit.a;
    }
@@ -113,14 +109,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onReactionLongPress: (Reaction) -> Unit = new e0()
    ) {
       val var6: ShortcutsFlexbox = this.binding.reactionsView;
-      kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
       var6.setVisibility(0);
       ShortcutsFlexbox.setReactions$default(this.binding.reactionsView, var1, false, "", "", var2, var3, var4, var5, null, 256, null);
    }
 
    @JvmStatic
    fun `setReactions$lambda$12`(var0: ReactionView.Reaction): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -133,7 +127,6 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       val var9: ConstraintLayout = this.binding.sharePromptContainer;
-      kotlin.jvm.internal.r.g(this.binding.sharePromptContainer, "sharePromptContainer");
       var var8: Boolean;
       if (var2 != null) {
          var8 = 1;
@@ -162,23 +155,18 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          this.binding.sharePromptCloseButton.setIcon(var2.getCloseIcon(), SizeUtilsKt.getDpToPx(16));
          var11.setOnClickButtonListener(var5);
          val var12: SimpleDraweeView = this.binding.sharePromptIcon;
-         kotlin.jvm.internal.r.g(this.binding.sharePromptIcon, "sharePromptIcon");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
-         kotlin.jvm.internal.r.e(this.binding.sharePromptSubtitle);
-         val var10: StructurableText = var2.getSubtitle();
-         val var14: Context = var13.getContext();
-         kotlin.jvm.internal.r.g(var14, "getContext(...)");
+         val var14: StructurableText = var2.getSubtitle();
+         val var10: Context = var13.getContext();
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
-         kotlin.jvm.internal.r.g(var15, "getFontMetrics(...)");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var16: TextPaint = var13.getPaint();
-         kotlin.jvm.internal.r.g(var16, "getPaint(...)");
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var10,
                var14,
+               var10,
                var1,
                false,
                false,
@@ -214,7 +202,6 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
 
    @JvmStatic
    fun `setSharePrompt_LdU2QRA$lambda$16$lambda$15`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
-      kotlin.jvm.internal.r.h(var2, "node");
       var0.invoke(MessageId.box-impl(var1), var2);
       return Unit.a;
    }
@@ -242,27 +229,13 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onDismissSharePromptClick: OnClickListener,
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageId");
-      kotlin.jvm.internal.r.h(var5, "followLabel");
-      kotlin.jvm.internal.r.h(var7, "shareLabel");
-      kotlin.jvm.internal.r.h(var11, "addNewReactionAccessibilityLabel");
-      kotlin.jvm.internal.r.h(var13, "onAddReactionClick");
-      kotlin.jvm.internal.r.h(var14, "onReactionClick");
-      kotlin.jvm.internal.r.h(var15, "onReactionLongPress");
-      kotlin.jvm.internal.r.h(var16, "onTapFollowForumPost");
-      kotlin.jvm.internal.r.h(var17, "onTapShareForumPost");
-      kotlin.jvm.internal.r.h(var18, "onTapReactionOverflow");
-      kotlin.jvm.internal.r.h(var20, "onDismissSharePromptClick");
-      kotlin.jvm.internal.r.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = kotlin.collections.i.N0(var8, --var2);
+         val var35: java.util.List = CollectionsKt.M0(var8, --var2);
          val var23: ShortcutsFlexbox = this.binding.reactionsView;
-         kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
          var23.setVisibility(0);
          this.setReactions(var35, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
          val var36: DCDButton = this.binding.otherReactionsCount;
-         kotlin.jvm.internal.r.e(this.binding.otherReactionsCount);
          var var25: Boolean;
          if (var22 != 0) {
             var25 = 1;
@@ -279,22 +252,17 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          var36.setVisibility(var25);
          if (var36.getVisibility() == 0) {
             val var33: Context = var36.getContext();
-            kotlin.jvm.internal.r.g(var33, "getContext(...)");
             var36.setText(I18nUtilsKt.i18nFormat(var33, I18nMessage.FORUM_REACTIONS_OVERFLOW, new g0(var22)));
             RippleUtilsKt.addRipple$default(var36, true, 0, 2, null);
             var36.setOnClickButtonListener(var18);
          }
-
-         kotlin.jvm.internal.r.e(var36);
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;
-         kotlin.jvm.internal.r.g(this.binding.otherReactionsCount, "otherReactionsCount");
          var31.setVisibility(8);
          if (var9 != null && var10) {
-            setReactions$default(this, kotlin.collections.i.e(var9), var12, var13, var14, null, 16, null);
+            setReactions$default(this, CollectionsKt.e(var9), var12, var13, var14, null, 16, null);
          } else {
             val var32: ShortcutsFlexbox = this.binding.reactionsView;
-            kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
             var32.setVisibility(8);
          }
       }
@@ -322,7 +290,6 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       this.binding.shareButton.setOnClickButtonListener(var17);
       var29.setContentDescription(var7);
       val var30: AddReactionView = this.binding.addReaction;
-      kotlin.jvm.internal.r.e(this.binding.addReaction);
       val var28: Byte;
       if (var10) {
          var28 = 0;

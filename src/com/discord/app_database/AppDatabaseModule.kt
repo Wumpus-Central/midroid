@@ -1,20 +1,13 @@
 package com.discord.app_database
 
-import A9.s
-import B9.q
+import B9.s
 import com.discord.cache.Cache
 import com.discord.codegen.NativeAppDatabaseModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.r
 
-public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAppDatabaseModuleSpec {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAppDatabaseModuleSpec(var1) {
    protected override fun getTypedExportedConstants(): Map<String, String?> {
-      return q.e(s.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
+      return L.e(s.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
    }
 
    public override fun setUserId(userId: String?) {

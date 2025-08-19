@@ -5,5 +5,9 @@
         <exclude domain="root" path="./data/data/com.discord.debug/lib-0/" />
         <exclude domain="root" path="./data/user/0/com.discord/lib-0/" />
         <exclude domain="root" path="./data/data/com.discord/lib-0/" />
+        <exclude domain="sharedpref" path="appsflyer-data" />
     </cloud-backup>
+    <device-transfer>
+        <exclude domain="sharedpref" path="appsflyer-data" />
+    </device-transfer>
 </data-extraction-rules>

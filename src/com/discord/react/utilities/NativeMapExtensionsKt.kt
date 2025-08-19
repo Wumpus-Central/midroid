@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import A9.n
+import B9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
@@ -8,12 +8,12 @@ import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.HashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.r
-import kotlin.jvm.internal.v
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.MagicApiIntrinsics
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
+import nb.k
 import org.json.JSONObject
-import tb.k
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
 
@@ -23,7 +23,6 @@ fun a(var0: JsonBuilder): Unit {
 }
 
 public fun ReadableMap?.getBoolean(key: String, default: Boolean = false): Boolean {
-   r.h(var1, "key");
    var var3: Boolean = var2;
    if (var0 != null) {
       var3 = var2;
@@ -45,47 +44,31 @@ fun `getBoolean$default`(var0: ReadableMap, var1: java.lang.String, var2: Boolea
 }
 
 public fun ReadableMap?.getDouble(key: String, default: Double): Double {
-   r.h(var1, "key");
    val var4: java.lang.Double = getNullableDouble(var0, var1, var2);
-   r.e(var4);
    return var4;
 }
 
 public fun ReadableMap?.getInt(key: String, default: Int): Int {
-   r.h(var1, "key");
    val var3: Int = getNullableInt(var0, var1, var2);
-   r.e(var3);
    return var3;
 }
 
 public fun ReadableMap.getNonNullArray(key: String): ReadableArray {
-   r.h(var0, "<this>");
-   r.h(var1, "key");
    val var2: ReadableArray = var0.getArray(var1);
-   r.e(var2);
    return var2;
 }
 
 public fun ReadableMap.getNonNullMap(key: String): ReadableMap {
-   r.h(var0, "<this>");
-   r.h(var1, "key");
    var0 = var0.getMap(var1);
-   r.e(var0);
    return var0;
 }
 
 public fun ReadableMap.getNonNullString(key: String): String {
-   r.h(var0, "<this>");
-   r.h(var1, "key");
    val var2: java.lang.String = var0.getString(var1);
-   r.e(var2);
    return var2;
 }
 
 public fun ReadableMap.getNonNullString(key: String, default: String): String {
-   r.h(var0, "<this>");
-   r.h(var1, "key");
-   r.h(var2, "default");
    if (var0.hasKey(var1)) {
       var2 = getNonNullString(var0, var1);
    }
@@ -94,7 +77,6 @@ public fun ReadableMap.getNonNullString(key: String, default: String): String {
 }
 
 public fun ReadableMap?.getNullableDouble(key: String, default: Double? = null): Double? {
-   r.h(var1, "key");
    var var3: java.lang.Double = var2;
    if (var0 != null) {
       var3 = var2;
@@ -116,7 +98,6 @@ fun `getNullableDouble$default`(var0: ReadableMap, var1: java.lang.String, var2:
 }
 
 public fun ReadableMap?.getNullableInt(key: String, default: Int? = null): Int? {
-   r.h(var1, "key");
    var var3: Int = var2;
    if (var0 != null) {
       var3 = var2;
@@ -138,19 +119,15 @@ fun `getNullableInt$default`(var0: ReadableMap, var1: java.lang.String, var2: In
 }
 
 public fun ReadableMap.getStringOrEmpty(name: String): String {
-   r.h(var0, "<this>");
-   r.h(var1, "name");
    return getNonNullString(var0, var1, "");
 }
 
 fun `json$lambda$0`(var0: JsonBuilder): Unit {
-   r.h(var0, "$this$Json");
    var0.c(true);
    return Unit.a;
 }
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
-   r.h(var0, "pairs");
    val var4: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
@@ -162,8 +139,6 @@ public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
-   r.h(var0, "<this>");
-   r.h(var1, "key");
    if (var2 is java.lang.String) {
       var0.putString(var1, var2 as java.lang.String);
    } else if (var2 is Int) {
@@ -192,7 +167,6 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 }
 
 public fun ReadableMap.toJson(): JSONObject {
-   r.h(var0, "<this>");
    val var1: JSONObject = new JSONObject();
    val var2: ReadableMapKeySetIterator = var0.keySetIterator();
 
@@ -213,12 +187,10 @@ public fun ReadableMap.toJson(): JSONObject {
             break;
          case 5:
             val var6: ReadableMap = var0.getMap(var3);
-            r.e(var6);
             var1.put(var3, toJson(var6));
             break;
          case 6:
             val var5: ReadableArray = var0.getArray(var3);
-            r.e(var5);
             var1.put(var3, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
@@ -230,38 +202,32 @@ public fun ReadableMap.toJson(): JSONObject {
 }
 
 public fun ReadableMap.toJsonString(): String {
-   r.h(var0, "<this>");
    val var1: java.lang.String = toJson(var0).toString();
-   r.g(var1, "toString(...)");
    return var1;
 }
 
 @JvmSynthetic
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
-   r.h(var0, "<this>");
    val var1: Json = getJson();
    val var2: java.lang.String = toJsonString(var0);
-   val var3: zb.b = var1.a();
-   r.m(6, "T");
-   v.a("kotlinx.serialization.serializer.withModule");
+   val var3: tb.b = var1.a();
+   Intrinsics.reifiedOperationMarker(6, "T");
+   MagicApiIntrinsics.voidMagicApiCall("kotlinx.serialization.serializer.withModule");
    return (T)var1.b(k.d(var3, null), var2);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
-   r.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;
 }
 
 public fun ReadableMap.toStringMap(): Map<String, String> {
-   r.h(var0, "<this>");
    val var1: HashMap = var0.toHashMap();
-   r.f(var1, "null cannot be cast to non-null type kotlin.collections.Map<kotlin.String, kotlin.String>");
    return var1;
 }
 // $VF: Class flags could not be determined

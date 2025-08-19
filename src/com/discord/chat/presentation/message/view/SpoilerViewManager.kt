@@ -4,7 +4,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.chat.bridge.spoiler.SpoilerConfig
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nSpoilerViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpoilerViewManager.kt\ncom/discord/chat/presentation/message/view/SpoilerViewManager\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,72:1\n257#2,2:73\n257#2,2:75\n*S KotlinDebug\n*F\n+ 1 SpoilerViewManager.kt\ncom/discord/chat/presentation/message/view/SpoilerViewManager\n*L\n50#1:73,2\n58#1:75,2\n*E\n"])
 public class SpoilerViewManager {
    public final var spoilerView: SpoilerView?
       internal set
@@ -22,9 +24,6 @@ public class SpoilerViewManager {
       obscureHideControls: Boolean,
       obscureIsOpaque: Boolean
    ) {
-      kotlin.jvm.internal.r.h(var2, "parentView");
-      kotlin.jvm.internal.r.h(var3, "containerView");
-      kotlin.jvm.internal.r.h(var4, "viewToHide");
       if (var1 != null || this.spoilerView != null) {
          if (this.spoilerView == null) {
             this.spoilerView = SpoilerView.Companion.createAndAttachSpoilerView(var3, var9);

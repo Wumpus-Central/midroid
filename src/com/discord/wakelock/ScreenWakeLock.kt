@@ -3,14 +3,13 @@ package com.discord.wakelock
 import android.app.Activity
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import java.util.LinkedHashSet
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nScreenWakeLock.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ScreenWakeLock.kt\ncom/discord/wakelock/ScreenWakeLock\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,30:1\n22#2,8:31\n22#2,8:39\n*S KotlinDebug\n*F\n+ 1 ScreenWakeLock.kt\ncom/discord/wakelock/ScreenWakeLock\n*L\n13#1:31,8\n22#1:39,8\n*E\n"])
 public object ScreenWakeLock {
    private final var keys: MutableSet<String> = new LinkedHashSet()
 
    public fun releaseLock(activity: Activity, key: String) {
-      r.h(var1, "activity");
-      r.h(var2, "key");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$getKeys$p().remove(var2);
          if (access$getKeys$p().isEmpty()) {
@@ -38,8 +37,6 @@ public object ScreenWakeLock {
    }
 
    public fun requestLock(activity: Activity, key: String) {
-      r.h(var1, "activity");
-      r.h(var2, "key");
       if (ThreadUtilsKt.isOnMainThread()) {
          if (access$getKeys$p().add(var2)) {
             var1.getWindow().addFlags(128);

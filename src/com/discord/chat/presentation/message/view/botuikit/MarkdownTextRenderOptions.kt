@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit
 
-import kotlin.jvm.internal.r
-
 public data class MarkdownTextRenderOptions(containerId: String,
    shouldAnimateEmoji: Boolean,
    shouldShowLinkDecorations: Boolean,
@@ -15,8 +13,6 @@ public data class MarkdownTextRenderOptions(containerId: String,
    public final val shouldShowRoleOnName: Boolean
 
    init {
-      r.h(var1, "containerId");
-      super();
       this.containerId = var1;
       this.shouldAnimateEmoji = var2;
       this.shouldShowLinkDecorations = var3;
@@ -51,7 +47,6 @@ public data class MarkdownTextRenderOptions(containerId: String,
       shouldShowRoleDot: Boolean = var0.shouldShowRoleDot,
       shouldShowRoleOnName: Boolean = var0.shouldShowRoleOnName
    ): MarkdownTextRenderOptions {
-      r.h(var1, "containerId");
       return new MarkdownTextRenderOptions(var1, var2, var3, var4, var5);
    }
 
@@ -62,7 +57,7 @@ public data class MarkdownTextRenderOptions(containerId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.containerId, var1.containerId)) {
+         if (!(this.containerId == var1.containerId)) {
             return false;
          } else if (this.shouldAnimateEmoji != var1.shouldAnimateEmoji) {
             return false;
@@ -91,21 +86,21 @@ public data class MarkdownTextRenderOptions(containerId: String,
 
    public override fun toString(): String {
       val var5: java.lang.String = this.containerId;
-      val var3: Boolean = this.shouldAnimateEmoji;
-      val var1: Boolean = this.shouldShowLinkDecorations;
-      val var2: Boolean = this.shouldShowRoleDot;
-      val var4: Boolean = this.shouldShowRoleOnName;
+      val var1: Boolean = this.shouldAnimateEmoji;
+      val var2: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowRoleDot;
+      val var3: Boolean = this.shouldShowRoleOnName;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MarkdownTextRenderOptions(containerId=");
       var6.append(var5);
       var6.append(", shouldAnimateEmoji=");
-      var6.append(var3);
-      var6.append(", shouldShowLinkDecorations=");
       var6.append(var1);
-      var6.append(", shouldShowRoleDot=");
+      var6.append(", shouldShowLinkDecorations=");
       var6.append(var2);
-      var6.append(", shouldShowRoleOnName=");
+      var6.append(", shouldShowRoleDot=");
       var6.append(var4);
+      var6.append(", shouldShowRoleOnName=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

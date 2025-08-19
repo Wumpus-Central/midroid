@@ -27,27 +27,24 @@ import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class BlockedMessageGroupView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout {
+@SourceDebugExtension(["SMAP\nBlockedMessageGroupView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,91:1\n146#2,8:92\n257#2,2:100\n*S KotlinDebug\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n*L\n40#1:92,8\n75#1:100,2\n*E\n"])
+public class BlockedMessageGroupView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2) {
    public final val binding: BlockedMessageGroupViewBinding
    private final lateinit var listAdapter: BaseChatListAdapter
 
    fun BlockedMessageGroupView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var6: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
       this.binding = var6;
       val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
       this.setPaddingRelative(var3, this.getPaddingTop(), var3, this.getPaddingBottom());
       val var4: TextView = var6.blockedMessageGroupButton;
-      r.g(var6.blockedMessageGroupButton, "blockedMessageGroupButton");
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       val var7: RecyclerView = var6.blockedMessages;
       var6.blockedMessages.setItemAnimator(null);
@@ -65,9 +62,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
-      r.h(var1, "item");
-      r.h(var2, "eventHandler");
-      this.setOnClickListener(new u1.a(var2, var1));
+      this.setOnClickListener(new t1.a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();
@@ -77,15 +72,12 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var3, SizeUtilsKt.getDpToPx(8), null, 0, 12, null);
       val var9: SimpleDraweeView = this.binding.closeIcon;
-      r.g(this.binding.closeIcon, "closeIcon");
       ReactAssetUtilsKt.setReactAsset(var9, ReactAsset.Close);
       val var10: SimpleDraweeView = this.binding.closeIcon;
-      r.g(this.binding.closeIcon, "closeIcon");
       ColorUtilsKt.setTintColor(var10, ThemeManagerKt.getTheme().getTextMuted());
       this.binding.blockedMessageGroupButton.setText(var1.getText());
       this.binding.blockedMessageGroupButton.setTextColor(var1.getTextColor());
       val var11: RecyclerView = this.binding.blockedMessages;
-      r.g(this.binding.blockedMessages, "blockedMessages");
       val var13: Byte;
       if (var1.isRevealed()) {
          var13 = 0;
@@ -96,14 +88,14 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
       var11.setVisibility(var13);
       var var12: BaseChatListAdapter = this.listAdapter;
       if (this.listAdapter == null) {
-         r.y("listAdapter");
+         Intrinsics.throwUninitializedPropertyAccessException("listAdapter");
          var12 = null;
       }
 
       var12.setItems(var1.getContent());
       var var8: BaseChatListAdapter = this.listAdapter;
       if (this.listAdapter == null) {
-         r.y("listAdapter");
+         Intrinsics.throwUninitializedPropertyAccessException("listAdapter");
          var8 = null;
       }
 
@@ -111,8 +103,6 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    }
 
    public fun setupUI(eventHandler: () -> ChatEventHandler, componentProvider: () -> ComponentProvider) {
-      r.h(var1, "eventHandler");
-      r.h(var2, "componentProvider");
       val var3: BaseChatListAdapter = new BaseChatListAdapter(var1, var2);
       this.listAdapter = var3;
       this.binding.blockedMessages.setAdapter(var3);

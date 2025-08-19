@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nFindViewByReactTag.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FindViewByReactTag.kt\ncom/discord/react/utilities/FindViewByReactTagKt\n*L\n1#1,84:1\n67#1,4:85\n66#1,16:89\n67#1,4:105\n66#1,16:109\n67#1,4:125\n66#1,16:129\n*S KotlinDebug\n*F\n+ 1 FindViewByReactTag.kt\ncom/discord/react/utilities/FindViewByReactTagKt\n*L\n50#1:85,4\n50#1:89,16\n54#1:105,4\n54#1:109,16\n58#1:125,4\n58#1:129,16\n*E\n"])
+
 package com.discord.react.utilities
 
 import android.view.View
@@ -9,7 +11,8 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import java.lang.reflect.Field
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
 private const val REACT_UPDATED_ERROR: String =
    "\n        findViewByReactTag failed likely due to a changed React Native internal implementation\n        from a version bump, please inspect this method and update as needed.\n    "
@@ -40,21 +43,21 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
             val var8: Field = var7.getDeclaredField("mUIViewOperationQueue");
             var8.setAccessible(true);
-            var var9: Class = (Class)var8.get(var15);
-            if (var9 is UIViewOperationQueue) {
-               val var17: UIViewOperationQueue = var9 as UIViewOperationQueue;
-               if ((var9 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
-                  var9 = var17.getClass().getSuperclass();
+            var2 = (UIImplementation)var8.get(var15);
+            if (var2 is UIViewOperationQueue) {
+               val var17: UIViewOperationQueue = var2 as UIViewOperationQueue;
+               val var10: Class;
+               if ((var2 as UIViewOperationQueue).getClass().getSuperclass() === UIViewOperationQueue::class.java) {
+                  var10 = var17.getClass().getSuperclass();
                } else {
-                  var9 = var17.getClass();
+                  var10 = var17.getClass();
                }
 
-               val var11: Field = var9.getDeclaredField("mNativeViewHierarchyManager");
+               val var11: Field = var10.getDeclaredField("mNativeViewHierarchyManager");
                var11.setAccessible(true);
                var2 = (UIImplementation)var11.get(var17);
                if (var2 is NativeViewHierarchyManager) {
                   val var13: View = (var2 as NativeViewHierarchyManager).resolveView(var1);
-                  r.g(var13, "resolveView(...)");
                   return var13;
                } else {
                   val var12: StringBuilder = new StringBuilder();
@@ -66,13 +69,13 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
                   throw new IllegalStateException(var12.toString().toString());
                }
             } else {
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("Field ");
-               var16.append(var9);
-               var16.append(" not instance of ");
-               var16.append(UIViewOperationQueue::class.java);
-               var16.append(".");
-               throw new IllegalStateException(var16.toString().toString());
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Field ");
+               var9.append(var2);
+               var9.append(" not instance of ");
+               var9.append(UIViewOperationQueue::class.java);
+               var9.append(".");
+               throw new IllegalStateException(var9.toString().toString());
             }
          } else {
             val var6: StringBuilder = new StringBuilder();
@@ -92,9 +95,6 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 }
 
 public fun ReactContext.findViewByReactTag(tag: Int, onError: (Exception) -> Unit): View? {
-   r.h(var0, "<this>");
-   r.h(var2, "onError");
-
    try {
       var6 = findViewByReactTag(var0, var1);
    } catch (var3: IllegalViewOperationException) {
@@ -113,7 +113,7 @@ public fun ReactContext.findViewByReactTag(tag: Int, onError: (Exception) -> Uni
 @JvmSynthetic
 private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String): Any {
    var var2: Class = var0.getClass().getSuperclass();
-   r.m(4, "T");
+   Intrinsics.reifiedOperationMarker(4, "T");
    if (var2 === Object::class.java) {
       var2 = var0.getClass().getSuperclass();
    } else {
@@ -123,11 +123,11 @@ private inline fun <reified T : Any, reified V> Any.getPrivateField(name: String
    val var4: Field = var2.getDeclaredField(var1);
    var4.setAccessible(true);
    val var5: Any = var4.get(var0);
-   r.m(3, "V");
+   Intrinsics.reifiedOperationMarker(3, "V");
    if (var5 != null) {
       return (V)var5;
    } else {
-      r.m(4, "V");
+      Intrinsics.reifiedOperationMarker(4, "V");
       var0 = new StringBuilder();
       var0.append("Field ");
       var0.append(var5);

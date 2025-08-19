@@ -4,9 +4,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final BlurViewHardwareAccelerated j;
+   public final BlurViewHardwareAccelerated d;
 
    public final Object invoke() {
-      return BlurViewHardwareAccelerated.b(this.j);
+      return BlurViewHardwareAccelerated.b(this.d);
    }
 }

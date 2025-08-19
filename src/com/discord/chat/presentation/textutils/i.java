@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class i implements Function1 {
-   public final RenderContext j;
-   public final EmojiContentNode k;
+   public final RenderContext d;
+   public final EmojiContentNode e;
 
    public final Object invoke(Object var1) {
-      return EmojiRendererKt.a(this.j, this.k, (View)var1);
+      return EmojiRendererKt.a(this.d, this.e, (View)var1);
    }
 }

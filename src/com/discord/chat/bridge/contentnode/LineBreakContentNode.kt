@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public class LineBreakContentNode : ContentNode() {

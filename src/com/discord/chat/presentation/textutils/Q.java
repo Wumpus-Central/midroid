@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class Q implements Function1 {
-   public final RenderContext j;
-   public final ContentNode k;
+   public final RenderContext d;
+   public final ContentNode e;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.h(this.j, this.k, (View)var1);
+      return TextUtilsKt.h(this.d, this.e, (View)var1);
    }
 }

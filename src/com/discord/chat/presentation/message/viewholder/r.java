@@ -6,10 +6,10 @@ import com.discord.chat.presentation.message.messagepart.GuildInviteMessageAcces
 
 // $VF: synthetic class
 public final class r implements OnClickListener {
-   public final GuildInviteViewHolder j;
-   public final GuildInviteMessageAccessory k;
+   public final GuildInviteViewHolder d;
+   public final GuildInviteMessageAccessory e;
 
    public final void onClick(View var1) {
-      GuildInviteViewHolder.b(this.j, this.k, var1);
+      GuildInviteViewHolder.b(this.d, this.e, var1);
    }
 }

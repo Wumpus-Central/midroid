@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.automod
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class AutoModerationContext(headerText: String,
@@ -26,11 +25,6 @@ public data class AutoModerationContext(headerText: String,
    public final val notification: AutoModerationNotification?
 
    init {
-      r.h(var1, "headerText");
-      r.h(var2, "headerBadgeText");
-      r.h(var6, "actionsText");
-      r.h(var7, "feedbackText");
-      r.h(var8, "message");
       super();
       this.headerText = var1;
       this.headerBadgeText = var2;
@@ -90,11 +84,6 @@ public data class AutoModerationContext(headerText: String,
       message: FlaggedMessageEmbed = var0.message,
       notification: AutoModerationNotification? = var0.notification
    ): AutoModerationContext {
-      r.h(var1, "headerText");
-      r.h(var2, "headerBadgeText");
-      r.h(var6, "actionsText");
-      r.h(var7, "feedbackText");
-      r.h(var8, "message");
       return new AutoModerationContext(var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 
@@ -105,24 +94,24 @@ public data class AutoModerationContext(headerText: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.headerText, var1.headerText)) {
+         if (!(this.headerText == var1.headerText)) {
             return false;
-         } else if (!r.c(this.headerBadgeText, var1.headerBadgeText)) {
+         } else if (!(this.headerBadgeText == var1.headerBadgeText)) {
             return false;
-         } else if (!r.c(this.ruleDisplayText, var1.ruleDisplayText)) {
+         } else if (!(this.ruleDisplayText == var1.ruleDisplayText)) {
             return false;
-         } else if (!r.c(this.keywordDisplayText, var1.keywordDisplayText)) {
+         } else if (!(this.keywordDisplayText == var1.keywordDisplayText)) {
             return false;
-         } else if (!r.c(this.actionsIconURL, var1.actionsIconURL)) {
+         } else if (!(this.actionsIconURL == var1.actionsIconURL)) {
             return false;
-         } else if (!r.c(this.actionsText, var1.actionsText)) {
+         } else if (!(this.actionsText == var1.actionsText)) {
             return false;
-         } else if (!r.c(this.feedbackText, var1.feedbackText)) {
+         } else if (!(this.feedbackText == var1.feedbackText)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
          } else {
-            return r.c(this.notification, var1.notification);
+            return this.notification == var1.notification;
          }
       }
    }
@@ -152,47 +141,47 @@ public data class AutoModerationContext(headerText: String,
          var3 = this.actionsIconURL.hashCode();
       }
 
-      val var7: Int = this.actionsText.hashCode();
-      val var8: Int = this.feedbackText.hashCode();
+      val var8: Int = this.actionsText.hashCode();
+      val var7: Int = this.feedbackText.hashCode();
       val var9: Int = this.message.hashCode();
       if (this.notification != null) {
          var4 = this.notification.hashCode();
       }
 
-      return (((((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var7) * 31 + var8) * 31 + var9) * 31 + var4;
+      return (((((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var7) * 31 + var9) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.headerText;
-      val var6: java.lang.String = this.headerBadgeText;
-      val var5: java.lang.String = this.ruleDisplayText;
-      val var9: java.lang.String = this.keywordDisplayText;
-      val var10: java.lang.String = this.actionsIconURL;
-      val var8: java.lang.String = this.actionsText;
-      val var1: java.lang.String = this.feedbackText;
-      val var2: FlaggedMessageEmbed = this.message;
-      val var4: AutoModerationNotification = this.notification;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AutoModerationContext(headerText=");
-      var3.append(var7);
-      var3.append(", headerBadgeText=");
-      var3.append(var6);
-      var3.append(", ruleDisplayText=");
-      var3.append(var5);
-      var3.append(", keywordDisplayText=");
-      var3.append(var9);
-      var3.append(", actionsIconURL=");
-      var3.append(var10);
-      var3.append(", actionsText=");
-      var3.append(var8);
-      var3.append(", feedbackText=");
-      var3.append(var1);
-      var3.append(", message=");
-      var3.append(var2);
-      var3.append(", notification=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.headerText;
+      val var4: java.lang.String = this.headerBadgeText;
+      val var3: java.lang.String = this.ruleDisplayText;
+      val var5: java.lang.String = this.keywordDisplayText;
+      val var1: java.lang.String = this.actionsIconURL;
+      val var9: java.lang.String = this.actionsText;
+      val var10: java.lang.String = this.feedbackText;
+      val var7: FlaggedMessageEmbed = this.message;
+      val var6: AutoModerationNotification = this.notification;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("AutoModerationContext(headerText=");
+      var8.append(var2);
+      var8.append(", headerBadgeText=");
+      var8.append(var4);
+      var8.append(", ruleDisplayText=");
+      var8.append(var3);
+      var8.append(", keywordDisplayText=");
+      var8.append(var5);
+      var8.append(", actionsIconURL=");
+      var8.append(var1);
+      var8.append(", actionsText=");
+      var8.append(var9);
+      var8.append(", feedbackText=");
+      var8.append(var10);
+      var8.append(", message=");
+      var8.append(var7);
+      var8.append(", notification=");
+      var8.append(var6);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

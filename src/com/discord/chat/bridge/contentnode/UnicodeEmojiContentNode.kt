@@ -1,19 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
+public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode() {
    public final val content: String
    public final val surrogate: String
    public open val jumboable: Boolean
 
    init {
-      r.h(var1, "content");
-      r.h(var2, "surrogate");
-      super(null);
       this.content = var1;
       this.surrogate = var2;
       this.jumboable = var3;
@@ -32,8 +28,6 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public fun copy(content: String = var0.content, surrogate: String = var0.surrogate, jumboable: Boolean = var0.jumboable): UnicodeEmojiContentNode {
-      r.h(var1, "content");
-      r.h(var2, "surrogate");
       return new UnicodeEmojiContentNode(var1, var2, var3);
    }
 
@@ -44,9 +38,9 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.content, var1.content)) {
+         if (!(this.content == var1.content)) {
             return false;
-         } else if (!r.c(this.surrogate, var1.surrogate)) {
+         } else if (!(this.surrogate == var1.surrogate)) {
             return false;
          } else {
             return this.jumboable == var1.jumboable;
@@ -59,18 +53,18 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var4: java.lang.String = this.surrogate;
+      val var4: java.lang.String = this.content;
+      val var3: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UnicodeEmojiContentNode(content=");
-      var3.append(var2);
-      var3.append(", surrogate=");
-      var3.append(var4);
-      var3.append(", jumboable=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UnicodeEmojiContentNode(content=");
+      var2.append(var4);
+      var2.append(", surrogate=");
+      var2.append(var3);
+      var2.append(", jumboable=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

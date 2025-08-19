@@ -6,9 +6,8 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
 import java.io.File
 import java.util.ArrayList
-import kotlin.jvm.internal.r
 
-public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost {
+public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost(var1) {
    protected open val isNewArchEnabled: Boolean
       protected open get() {
          return false;
@@ -20,11 +19,6 @@ public class DCDReactNativeHost(application: Application) : DefaultReactNativeHo
          return java.lang.Boolean.TRUE;
       }
 
-
-   init {
-      r.h(var1, "application");
-      super(var1);
-   }
 
    protected open fun getBundleAssetName(): String {
       return "index.android.bundle";

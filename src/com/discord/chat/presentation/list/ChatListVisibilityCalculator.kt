@@ -23,7 +23,6 @@ internal class ChatListVisibilityCalculator {
 
    private fun getItemPercentVisible(recyclerView: RecyclerView, position: Int): Double {
       val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
-      kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
       val var10: View = (var7 as LinearLayoutManager).findViewByPosition(var2);
       var var3: Double = 0.0;
       if (var10 == null) {
@@ -61,10 +60,8 @@ internal class ChatListVisibilityCalculator {
    }
 
    public fun updateFirstAndLastMessageVisibilityData(recyclerView: RecyclerView) {
-      kotlin.jvm.internal.r.h(var1, "recyclerView");
       this.resetVisibilityData();
       val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
-      kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
       val var5: Int = (var7 as LinearLayoutManager).findFirstVisibleItemPosition();
       val var6: Int = (var7 as LinearLayoutManager).findLastVisibleItemPosition();
       if (var5 != -1 && var6 != -1) {

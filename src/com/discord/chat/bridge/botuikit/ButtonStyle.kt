@@ -3,9 +3,8 @@ package com.discord.chat.bridge.botuikit
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g(with = ButtonStyle.Serializer::class)
 public enum class ButtonStyle(serialNumber: Int) : IntEnum {
@@ -28,7 +27,7 @@ public enum class ButtonStyle(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ButtonStyle> = $values();
       $VALUES = var0;
-      $ENTRIES = I9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    init {
@@ -46,5 +45,5 @@ public enum class ButtonStyle(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(H.b(ButtonStyle.class), ButtonStyle.UNKNOWN)
+   public object Serializer : IntEnumSerializer(ButtonStyle::class, ButtonStyle.UNKNOWN)
 }

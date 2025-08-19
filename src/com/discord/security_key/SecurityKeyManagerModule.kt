@@ -11,41 +11,38 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.r
+import kotlinx.coroutines.CoroutineScope
 
-public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final var currentPromise: Promise?
-   private final val webauthn: WebAuthn
+
+   private final val webauthn: WebAuthn = new WebAuthn(new Function1<java.lang.String, Unit>(this) {
+      {
+         super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
+      }
+
+      public final void invoke(java.lang.String var1) {
+         SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
+      }
+   }, new Function1<java.lang.String, Unit>(this) {
+      {
+         super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
+      }
+
+      public final void invoke(java.lang.String var1) {
+         SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
+      }
+   })
+
    private final val credentialManager: CredentialManager
    private final val activityEventListener: <unrepresentable>
 
    init {
-      r.h(var1, "reactContext");
-      super(var1);
-      this.webauthn = new WebAuthn(new Function1(this) {
-         {
-            super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
-         }
-
-         public final void invoke(java.lang.String var1) {
-            r.h(var1, "p0");
-            SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
-         }
-      }, new Function1(this) {
-         {
-            super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
-         }
-
-         public final void invoke(java.lang.String var1) {
-            r.h(var1, "p0");
-            SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
-         }
-      });
       val var2: CredentialManager.a = CredentialManager.a;
       var1 = this.getReactApplicationContext();
-      r.g(var1, "getReactApplicationContext(...)");
       this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
@@ -82,15 +79,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun authenticate(data: String, promise: Promise) {
-      r.h(var1, "data");
-      r.h(var2, "promise");
       this.authenticateSecurityKey(var1, var2);
    }
 
    @ReactMethod
    public fun authenticatePasskey(requestJson: String, promise: Promise) {
-      r.h(var1, "requestJson");
-      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else if (VERSION.SDK_INT < 28) {
@@ -98,12 +91,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         jb.f.d(
+         db.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
-            new Function2(var1, this, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    ,
             3,
@@ -114,8 +106,6 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun authenticateSecurityKey(data: String, promise: Promise) {
-      r.h(var1, "data");
-      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else {
@@ -140,15 +130,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun register(data: String, promise: Promise) {
-      r.h(var1, "data");
-      r.h(var2, "promise");
       this.registerSecurityKey(var1, var2);
    }
 
    @ReactMethod
    public fun registerPasskey(requestJson: String, promise: Promise) {
-      r.h(var1, "requestJson");
-      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else if (VERSION.SDK_INT < 28) {
@@ -156,12 +142,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         jb.f.d(
+         db.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
-            new Function2(var1, this, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    ,
             3,
@@ -172,8 +157,6 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun registerSecurityKey(data: String, promise: Promise) {
-      r.h(var1, "data");
-      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else {

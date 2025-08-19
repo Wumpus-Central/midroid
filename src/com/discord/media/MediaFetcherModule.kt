@@ -1,6 +1,6 @@
 package com.discord.media
 
-import A9.s
+import B9.s
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -12,14 +12,10 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-   }
-
+@SourceDebugExtension(["SMAP\nMediaFetcherModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,63:1\n1062#2:64\n*S KotlinDebug\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n*L\n32#1:64\n*E\n"])
+public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private fun getQueryType(filter: String?): QueryType {
       if (var1 != null) {
          val var2: Int = var1.hashCode();
@@ -48,8 +44,6 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getPhotos(params: ReadableMap, promise: Promise) {
-      r.h(var1, "params");
-      r.h(var2, "promise");
       val var3: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
@@ -58,14 +52,13 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var4: Int;
       try {
-         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var6: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var6, "getReactApplicationContext(...)");
-         var16 = i.N0(i.L0(var7.getMedia(var6, var12, var3, var5), new Comparator() {
+         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var7: ReactApplicationContext = this.getReactApplicationContext();
+         var16 = CollectionsKt.M0(CollectionsKt.K0(var12.getMedia(var7, var6, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return E9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
@@ -81,8 +74,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               s.a("start_cursor", java.lang.String.valueOf((i.h0(var16) as ContentResolverMedia).getUri())),
-               s.a("end_cursor", java.lang.String.valueOf((i.s0(var16) as ContentResolverMedia).getUri())),
+               s.a("start_cursor", java.lang.String.valueOf((CollectionsKt.h0(var16) as ContentResolverMedia).getUri())),
+               s.a("end_cursor", java.lang.String.valueOf((CollectionsKt.r0(var16) as ContentResolverMedia).getUri())),
                s.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {

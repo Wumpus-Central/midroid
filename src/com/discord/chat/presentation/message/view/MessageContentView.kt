@@ -29,60 +29,51 @@ import com.discord.fonts.DiscordFont
 import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.react_strings.I18nMessage
-import com.discord.react_strings.I18nUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.span.utilities.spannable.BoldSpan
 import com.discord.span.utilities.spannable.ClickableSpan
-import com.discord.span.utilities.spannable.EmojiAccessibilitySpan
 import com.discord.span.utilities.spannable.QuoteSpan
-import com.discord.span.utilities.spannable.SpoilerSpan
 import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import kotlin.jvm.functions.Function1
 
-public open class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : SimpleDraweeSpanTextView,
+public open class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : SimpleDraweeSpanTextView(
+         var1, var2, var3
+      ),
    VerticalSpacingItemDecoration.SpacingProviderView {
    private final var bottomSpacingPx: Int?
 
-   private final val shadowView: SimpleDraweeSpanTextView
+   private final val shadowView: SimpleDraweeSpanTextView by B9.j.b(new E0(this))
       private final get() {
          return this.shadowView$delegate.getValue() as SimpleDraweeSpanTextView;
       }
 
 
    open fun MessageContentView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    open fun MessageContentView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
-      this.shadowView$delegate = A9.j.b(new G0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
-      kotlin.jvm.internal.r.g(var6, "getSpans(...)");
-      val var8: QuoteSpan = kotlin.collections.c.L(var6) as QuoteSpan;
+      val var7: QuoteSpan = kotlin.collections.h.L(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(" (");
-      var7.append(var2);
-      var7.append(")");
-      var1.append(var7.toString());
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(" (");
+      var8.append(var2);
+      var8.append(")");
+      var1.append(var8.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -92,20 +83,18 @@ public open class MessageContentView  public constructor(context: Context, attrs
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var8 != null) {
-         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
+      if (var7 != null) {
+         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
       }
    }
 
    @JvmStatic
    fun `setMessageContent$lambda$1`(var0: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.r.h(var0, "it");
       return new LinkStyle(DiscordFont.PrimaryNormal, ThemeManagerKt.getTheme().getTextLink(), null, null, 12, null);
    }
 
    @JvmStatic
    fun `setMessageContent_AeCz66Y$lambda$2`(var0: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return new LinkStyle(null, 0, null, null, 15, null);
    }
 
@@ -125,9 +114,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = kotlin.jvm.internal.r.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var8: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -137,15 +126,15 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
@@ -159,7 +148,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
                var3 = ThemeManagerKt.getTheme().getTextLink();
             }
 
-            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new F0(var5, var1), 124, null), var7, var4.length(), 33);
+            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new D0(var5, var1), 124, null), var7, var4.length(), 33);
             var4.setSpan(new BoldSpan(), var7, var4.length(), 33);
          } else {
             var4.delete(var7, var4.length());
@@ -169,7 +158,6 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `truncate_LdU2QRA$lambda$3`(var0: Function1, var1: java.lang.String, var2: View): Unit {
-      kotlin.jvm.internal.r.h(var2, "it");
       var0.invoke(MessageId.box-impl(var1));
       return Unit.a;
    }
@@ -180,9 +168,6 @@ public open class MessageContentView  public constructor(context: Context, attrs
       eventHandlers: MarkdownTextRenderEventHandlers,
       emojiBaselineHeightOverridePx: Float? = null
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContent");
-      kotlin.jvm.internal.r.h(var2, "options");
-      kotlin.jvm.internal.r.h(var3, "eventHandlers");
       setMessageContent-AeCz66Y$default(
          this,
          var1,
@@ -206,7 +191,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          var3.getOnTapEmoji(),
          <unrepresentable>.INSTANCE,
          var3.getOnTapSoundmoji(),
-         new H0(),
+         new F0(),
          0,
          0,
          false,
@@ -252,32 +237,10 @@ public open class MessageContentView  public constructor(context: Context, attrs
       theme: DiscordThemeObject = ...,
       emojiBaselineHeightOverridePx: Float? = ...
    ) {
-      kotlin.jvm.internal.r.h(var1, "messageContent");
-      kotlin.jvm.internal.r.h(var2, "messageId");
-      kotlin.jvm.internal.r.h(var7, "onTapLink");
-      kotlin.jvm.internal.r.h(var8, "onLongTapLink");
-      kotlin.jvm.internal.r.h(var9, "onTapChannel");
-      kotlin.jvm.internal.r.h(var10, "onLongPressChannel");
-      kotlin.jvm.internal.r.h(var11, "onTapAttachmentLink");
-      kotlin.jvm.internal.r.h(var12, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.r.h(var13, "onTapMention");
-      kotlin.jvm.internal.r.h(var14, "onTapCommand");
-      kotlin.jvm.internal.r.h(var15, "onLongPressCommand");
-      kotlin.jvm.internal.r.h(var16, "onTapSpoiler");
-      kotlin.jvm.internal.r.h(var17, "onTapTimestamp");
-      kotlin.jvm.internal.r.h(var18, "onTapInlineCode");
-      kotlin.jvm.internal.r.h(var19, "onTapEmoji");
-      kotlin.jvm.internal.r.h(var20, "onTapSeeMore");
-      kotlin.jvm.internal.r.h(var21, "onTapSoundmoji");
-      kotlin.jvm.internal.r.h(var22, "linkStyleProvider");
-      kotlin.jvm.internal.r.h(var29, "theme");
       val var32: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var32, "getContext(...)");
       val var33: FontMetrics = this.getPaint().getFontMetrics();
-      kotlin.jvm.internal.r.g(var33, "getFontMetrics(...)");
       val var31: Float = TextUtilsKt.getBaselineHeightPx(var33);
       val var35: TextPaint = this.getPaint();
-      kotlin.jvm.internal.r.g(var35, "getPaint(...)");
       val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
          var1,
          var32,
@@ -309,7 +272,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          4194304,
          null
       );
-      if (var26 != null && !kotlin.text.h.c0(var26)) {
+      if (var26 != null && !StringsKt.c0(var26)) {
          this.appendEditedLabel(var34, var26, var27);
       }
 
@@ -341,37 +304,120 @@ public open class MessageContentView  public constructor(context: Context, attrs
       private final val view: MessageContentView
 
       init {
-         kotlin.jvm.internal.r.h(var1, "view");
-         super();
          this.view = var1;
       }
 
       public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-         kotlin.jvm.internal.r.h(var1, "host");
-         kotlin.jvm.internal.r.h(var2, "info");
-         super.onInitializeAccessibilityNodeInfo(var1, var2);
-         val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
-         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
-
-         while (var6.hasNext()) {
-            val var7: SpoilerSpan = var6.next() as SpoilerSpan;
-            if (!var7.isRevealed()) {
-               val var3: Int = var5.getSpanStart(var7);
-               val var4: Int = var5.getSpanEnd(var7);
-               val var10: Context = var1.getContext();
-               kotlin.jvm.internal.r.g(var10, "getContext(...)");
-               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
-            }
-         }
-
-         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
-
-         while (var8.hasNext()) {
-            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
-            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
-         }
-
-         var2.V0(var5);
+         // $VF: Couldn't be decompiled
+         // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+         // java.lang.NullPointerException: Cannot read field "bytecode" because the return value of "org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.getInstance()" is null
+         //   at org.vineflower.kotlin.pass.KMergePass.matchForEach(KMergePass.java:165)
+         //   at org.vineflower.kotlin.pass.KMergePass.enhanceLoop(KMergePass.java:52)
+         //   at org.vineflower.kotlin.pass.KMergePass.enhanceLoopsRec(KMergePass.java:39)
+         //   at org.vineflower.kotlin.pass.KMergePass.enhanceLoopsRec(KMergePass.java:34)
+         //   at org.vineflower.kotlin.pass.KMergePass.enhanceLoopsRec(KMergePass.java:34)
+         //   at org.vineflower.kotlin.pass.KMergePass.run(KMergePass.java:23)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.NamedPass.run(NamedPass.java:18)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.LoopingPassBuilder$CompiledPass.run(LoopingPassBuilder.java:43)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.NamedPass.run(NamedPass.java:18)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.LoopingPassBuilder$CompiledPass.run(LoopingPassBuilder.java:43)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.NamedPass.run(NamedPass.java:18)
+         //   at org.jetbrains.java.decompiler.api.plugin.pass.MainPassBuilder$CompiledPass.run(MainPassBuilder.java:34)
+         //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:160)
+         //
+         // Bytecode:
+         // 00: aload 1
+         // 01: ldc "host"
+         // 03: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+         // 06: aload 2
+         // 07: ldc "info"
+         // 09: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+         // 0c: aload 0
+         // 0d: aload 1
+         // 0e: aload 2
+         // 0f: invokespecial androidx/core/view/a.onInitializeAccessibilityNodeInfo (Landroid/view/View;Landroidx/core/view/accessibility/AccessibilityNodeInfoCompat;)V
+         // 12: new android/text/SpannableStringBuilder
+         // 15: dup
+         // 16: aload 0
+         // 17: getfield com/discord/chat/presentation/message/view/MessageContentView$MessageContentViewAccessibilityDelegate.view Lcom/discord/chat/presentation/message/view/MessageContentView;
+         // 1a: invokevirtual android/widget/TextView.getText ()Ljava/lang/CharSequence;
+         // 1d: invokespecial android/text/SpannableStringBuilder.<init> (Ljava/lang/CharSequence;)V
+         // 20: astore 5
+         // 22: aload 5
+         // 24: bipush 0
+         // 25: aload 5
+         // 27: invokevirtual android/text/SpannableStringBuilder.length ()I
+         // 2a: ldc com/discord/span/utilities/spannable/SpoilerSpan
+         // 2c: invokevirtual android/text/SpannableStringBuilder.getSpans (IILjava/lang/Class;)[Ljava/lang/Object;
+         // 2f: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
+         // 32: astore 6
+         // 34: aload 6
+         // 36: invokeinterface java/util/Iterator.hasNext ()Z 1
+         // 3b: ifeq 87
+         // 3e: aload 6
+         // 40: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+         // 45: checkcast com/discord/span/utilities/spannable/SpoilerSpan
+         // 48: astore 7
+         // 4a: aload 7
+         // 4c: invokevirtual com/discord/span/utilities/spannable/SpoilerSpan.isRevealed ()Z
+         // 4f: ifne 34
+         // 52: aload 5
+         // 54: aload 7
+         // 56: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
+         // 59: istore 4
+         // 5b: aload 5
+         // 5d: aload 7
+         // 5f: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // 62: istore 3
+         // 63: aload 1
+         // 64: invokevirtual android/view/View.getContext ()Landroid/content/Context;
+         // 67: astore 7
+         // 69: aload 7
+         // 6b: ldc "getContext(...)"
+         // 6d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+         // 70: aload 5
+         // 72: iload 4
+         // 74: iload 3
+         // 75: aload 7
+         // 77: getstatic com/discord/react_strings/I18nMessage.SPOILER_HIDDEN_A11Y_LABEL Lcom/discord/react_strings/I18nMessage;
+         // 7a: aconst_null
+         // 7b: bipush 2
+         // 7c: aconst_null
+         // 7d: invokestatic com/discord/react_strings/I18nUtilsKt.i18nFormat$default (Landroid/content/Context;Lcom/discord/react_strings/I18nMessage;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/CharSequence;
+         // 80: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+         // 83: pop
+         // 84: goto 34
+         // 87: aload 5
+         // 89: bipush 0
+         // 8a: aload 5
+         // 8c: invokevirtual android/text/SpannableStringBuilder.length ()I
+         // 8f: ldc com/discord/span/utilities/spannable/EmojiAccessibilitySpan
+         // 91: invokevirtual android/text/SpannableStringBuilder.getSpans (IILjava/lang/Class;)[Ljava/lang/Object;
+         // 94: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
+         // 97: astore 6
+         // 99: aload 6
+         // 9b: invokeinterface java/util/Iterator.hasNext ()Z 1
+         // a0: ifeq c7
+         // a3: aload 6
+         // a5: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+         // aa: checkcast com/discord/span/utilities/spannable/EmojiAccessibilitySpan
+         // ad: astore 1
+         // ae: aload 5
+         // b0: aload 5
+         // b2: aload 1
+         // b3: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
+         // b6: aload 5
+         // b8: aload 1
+         // b9: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // bc: aload 1
+         // bd: invokevirtual com/discord/span/utilities/spannable/EmojiAccessibilitySpan.getName ()Ljava/lang/String;
+         // c0: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+         // c3: pop
+         // c4: goto 99
+         // c7: aload 2
+         // c8: aload 5
+         // ca: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.V0 (Ljava/lang/CharSequence;)V
+         // cd: return
       }
    }
 }

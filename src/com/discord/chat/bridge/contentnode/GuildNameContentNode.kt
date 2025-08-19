@@ -1,18 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class GuildNameContentNode(guildId: String? = null, content: String, icon: String? = null) : ContentNode {
+public data class GuildNameContentNode(guildId: String? = null, content: String, icon: String? = null) : ContentNode() {
    public final val guildId: String?
    public final val content: String
    public final val icon: String?
 
    init {
-      r.h(var2, "content");
-      super(null);
       this.guildId = var1;
       this.content = var2;
       this.icon = var3;
@@ -31,7 +28,6 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public fun copy(guildId: String? = var0.guildId, content: String = var0.content, icon: String? = var0.icon): GuildNameContentNode {
-      r.h(var2, "content");
       return new GuildNameContentNode(var1, var2, var3);
    }
 
@@ -42,12 +38,12 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.guildId, var1.guildId)) {
+         if (!(this.guildId == var1.guildId)) {
             return false;
-         } else if (!r.c(this.content, var1.content)) {
+         } else if (!(this.content == var1.content)) {
             return false;
          } else {
-            return r.c(this.icon, var1.icon);
+            return this.icon == var1.icon;
          }
       }
    }
@@ -70,18 +66,18 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.content;
-      val var2: java.lang.String = this.icon;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GuildNameContentNode(guildId=");
-      var1.append(var4);
-      var1.append(", content=");
-      var1.append(var3);
-      var1.append(", icon=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.content;
+      val var3: java.lang.String = this.icon;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GuildNameContentNode(guildId=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var1);
+      var4.append(", icon=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

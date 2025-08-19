@@ -6,9 +6,9 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class U implements OnClickListener {
-   public final ChatEventHandler j;
+   public final ChatEventHandler d;
 
    public final void onClick(View var1) {
-      MessageTagView.a(this.j, var1);
+      MessageTagView.a(this.d, var1);
    }
 }

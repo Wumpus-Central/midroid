@@ -35,44 +35,37 @@ import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null)
-   : ConstraintLayout,
+@SourceDebugExtension(["SMAP\nFlaggedMessageEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FlaggedMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,203:1\n176#2,2:204\n257#2,2:206\n257#2,2:208\n257#2,2:210\n257#2,2:212\n257#2,2:214\n*S KotlinDebug\n*F\n+ 1 FlaggedMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedView\n*L\n51#1:204,2\n94#1:206,2\n134#1:208,2\n171#1:210,2\n178#1:212,2\n194#1:214,2\n*E\n"])
+public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2),
    VerticalSpacingItemDecoration.SpacingProviderView {
    private final val binding: FlaggedMessageEmbedViewBinding
    private final var allowChildGestures: Boolean
 
    fun FlaggedMessageEmbedView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2);
       val var6: FlaggedMessageEmbedViewBinding = FlaggedMessageEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
       this.allowChildGestures = true;
       RippleUtilsKt.addRipple$default(this, false, SizeUtilsKt.getDpToPx(8), 1, null);
       val var5: View = var6.getRoot();
       var5.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      kotlin.jvm.internal.r.e(var5);
       ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
       val var4: Int = SizeUtilsKt.getDpToPx(12);
       var5.setPadding(var4, var4, var4, var4);
       val var8: TextView = var6.authorName;
-      kotlin.jvm.internal.r.e(var6.authorName);
       DiscordFontUtilsKt.setDiscordFont(var8, DiscordFont.PrimarySemibold);
       var var3: Float = 16.0F;
       SetTextSizeSpKt.setTextSizeSp(var8, 16.0F, 20.0F);
       var8.setLineSpacing(0.0F, 1.05F);
       val var9: SimpleDraweeView = var6.authorAvatar;
-      kotlin.jvm.internal.r.g(var6.authorAvatar, "authorAvatar");
       ViewClippingUtilsKt.clipToCircle(var9);
       val var7: MessageContentView = var6.contentView;
       var6.contentView.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.r.e(var7);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var1)) {
          var3 = 14.0F;
@@ -84,18 +77,14 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
    private fun configureAuthor(message: Message, eventHandler: ChatEventHandler) {
       val var6: SimpleDraweeView = this.binding.authorAvatar;
       val var7: Context = this.binding.authorAvatar.getContext();
-      kotlin.jvm.internal.r.g(var7, "getContext(...)");
       var6.setImageURI(MessageKt.avatarUrl(var1, var7));
-      kotlin.jvm.internal.r.e(var6);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new L(var1, var2), 1, null);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new V(var1, var2), 1, null);
       val var11: TextView = this.binding.authorName;
       this.binding.authorName.setTextColor(MessageKt.usernameColor$default(var1, 0, 1, null));
       var11.setText(var1.getUsername());
-      kotlin.jvm.internal.r.e(var11);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new W(var1, var2), 1, null);
       val var12: RoleIconView = this.binding.roleIcon;
-      kotlin.jvm.internal.r.e(this.binding.roleIcon);
       var var3: Boolean;
       if (var1.getRoleIcon() != null) {
          var3 = 1;
@@ -115,7 +104,6 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       }
 
       val var13: ConnectionsRoleTagView = this.binding.connectionsRoleTag;
-      kotlin.jvm.internal.r.e(this.binding.connectionsRoleTag);
       var var9: Boolean;
       if (var1.getConnectionsRoleTag() != null) {
          var9 = 1;
@@ -162,7 +150,6 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
 
    private fun configureCommunicationDisabled(isCommunicationDisabled: Boolean) {
       var var5: SimpleDraweeView = this.binding.guildCommunicationDisabledIcon;
-      kotlin.jvm.internal.r.g(this.binding.guildCommunicationDisabledIcon, "guildCommunicationDisabledIcon");
       val var4: Byte;
       if (var1) {
          var4 = 0;
@@ -172,7 +159,6 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
 
       var5.setVisibility(var4);
       var5 = this.binding.guildCommunicationDisabledIcon;
-      kotlin.jvm.internal.r.g(this.binding.guildCommunicationDisabledIcon, "guildCommunicationDisabledIcon");
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.ClockTimeout);
       var var2: Float;
       if (var1) {
@@ -207,7 +193,6 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
          var2 = var8.getResources().getDisplayMetrics().widthPixels;
       }
 
-      kotlin.jvm.internal.r.e(var8);
       val var16: StructurableText = var1.getContent();
       var var3: Boolean;
       if (var16 != null && var16.getHasContent()) {
@@ -263,7 +248,6 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       }
 
       val var15: FlaggedMessageEmbedFooterView = this.binding.contentFooterView;
-      kotlin.jvm.internal.r.e(this.binding.contentFooterView);
       var var11: Boolean;
       if (var1.getAutoModerationContext() != null) {
          var11 = 1;
@@ -285,13 +269,11 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$10`(var0: CommandMentionContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$11`(var0: CommandMentionContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -302,88 +284,72 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$13`(var0: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$14`(var0: InlineCodeContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$15`(var0: EmojiContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$16`(var0: SoundmojiContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$17`(var0: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.r.h(var0, "it");
       return new LinkStyle(DiscordFont.PrimaryNormal, ThemeManagerKt.getTheme().getTextNormal(), null, null, 12, null);
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$3`(var0: LinkContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$4`(var0: LinkContentNode): Unit {
-      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$5`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$6`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$7`(var0: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$8`(var0: java.lang.String, var1: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var0, "<unused var>");
-      kotlin.jvm.internal.r.h(var1, "<unused var>");
       return Unit.a;
    }
 
    @JvmStatic
    fun `configureMessageContent$lambda$18$lambda$9`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.r.h(var1, "<unused var>");
       return Unit.a;
    }
 
    public open fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-      kotlin.jvm.internal.r.h(var1, "ev");
       return this.allowChildGestures xor true;
    }
 
    public fun setMessage(message: Message, eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE, allowChildGestures: Boolean = true) {
-      kotlin.jvm.internal.r.h(var1, "message");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
       this.allowChildGestures = var3;
       this.configureAuthor(var1, var2);
-      this.configureCommunicationDisabled(kotlin.jvm.internal.r.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE));
+      this.configureCommunicationDisabled(var1.getCommunicationDisabled() == java.lang.Boolean.TRUE);
       this.configureMessageContent(var1);
    }
 

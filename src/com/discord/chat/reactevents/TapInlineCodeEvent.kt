@@ -1,24 +1,19 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapInlineCodeEvent(content: String) : ReactEvent {
    public final val content: String
 
-   public constructor(node: InlineCodeContentNode) : r.h(var1, "node") {
-      this(var1.getContent());
-   }
-
+   public constructor(node: InlineCodeContentNode) : this(var1.getContent())
    init {
-      r.h(var1, "content");
       super();
       this.content = var1;
    }
@@ -28,7 +23,6 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
    }
 
    public fun copy(content: String = var0.content): TapInlineCodeEvent {
-      r.h(var1, "content");
       return new TapInlineCodeEvent(var1);
    }
 
@@ -38,7 +32,7 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
       } else if (var1 !is TapInlineCodeEvent) {
          return false;
       } else {
-         return r.c(this.content, (var1 as TapInlineCodeEvent).content);
+         return this.content == (var1 as TapInlineCodeEvent).content;
       }
    }
 

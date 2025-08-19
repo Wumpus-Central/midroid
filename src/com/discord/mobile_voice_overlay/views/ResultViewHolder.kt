@@ -11,12 +11,13 @@ import com.discord.mobile_voice_overlay.MobileVoiceOverlaySelectorResult
 import com.discord.mobile_voice_overlay.databinding.OverlayVoiceChannelSearchResultBinding
 import com.discord.primitives.ChannelId
 import com.discord.theme.ThemeManagerKt
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nOverlayVoiceSelectorBubbleDialog.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayVoiceSelectorBubbleDialog.kt\ncom/discord/mobile_voice_overlay/views/ResultViewHolder\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,203:1\n1#2:204\n*E\n"])
 private class ResultViewHolder(parent: ViewGroup,
-      onChannelSelected: (ChannelId) -> Unit,
-      binding: OverlayVoiceChannelSearchResultBinding = OverlayVoiceChannelSearchResultBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false)
-   )
-   : RecyclerView.ViewHolder {
+   onChannelSelected: (ChannelId) -> Unit,
+   binding: OverlayVoiceChannelSearchResultBinding = OverlayVoiceChannelSearchResultBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false)
+) : RecyclerView.ViewHolder(var3.getRoot()) {
    private final val onChannelSelected: (ChannelId) -> Unit
    private final val binding: OverlayVoiceChannelSearchResultBinding
 
@@ -24,24 +25,17 @@ private class ResultViewHolder(parent: ViewGroup,
       internal set
 
    init {
-      kotlin.jvm.internal.r.h(var1, "parent");
-      kotlin.jvm.internal.r.h(var2, "onChannelSelected");
-      kotlin.jvm.internal.r.h(var3, "binding");
-      super(var3.getRoot());
       this.onChannelSelected = var2;
       this.binding = var3;
       var3.container.setOnClickListener(new x(this));
       val var4: TextView = var3.channelName;
-      kotlin.jvm.internal.r.e(var3.channelName);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       val var6: TextView = var3.categoryName;
-      kotlin.jvm.internal.r.e(var3.categoryName);
       val var5: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryMedium);
       var6.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       val var7: TextView = var3.guildName;
-      kotlin.jvm.internal.r.e(var3.guildName);
       DiscordFontUtilsKt.setDiscordFont(var7, var5);
       var7.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
    }
@@ -54,7 +48,6 @@ private class ResultViewHolder(parent: ViewGroup,
    }
 
    public fun bind(result: MobileVoiceOverlaySelectorResult) {
-      kotlin.jvm.internal.r.h(var1, "result");
       this.result = var1;
       this.binding.channelName.setText(var1.getChannelName());
       this.binding.categoryName.setText(var1.getCategoryName());

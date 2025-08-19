@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class b implements Function0 {
-   public final Promise j;
+   public final Promise d;
 
    public final Object invoke() {
-      return NativePermissionManagerModule.c(this.j);
+      return NativePermissionManagerModule.c(this.d);
    }
 }

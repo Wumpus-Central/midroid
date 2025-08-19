@@ -27,25 +27,24 @@ import com.discord.chat.presentation.message.view.botuikit.components.ThumbnailD
 import com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView
 import java.util.ArrayList
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nComponentInflater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,93:1\n381#2,7:94\n381#2,7:101\n381#2,7:108\n*S KotlinDebug\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n*L\n45#1:94,7\n54#1:101,7\n70#1:108,7\n*E\n"])
 public class ComponentInflater(context: Context, preInflateRecycledViews: Boolean) {
    public final val context: Context
    private final val viewCache: MutableMap<String, MutableList<ComponentView<out Component>>>
 
    init {
-      r.h(var1, "context");
-      super();
       this.context = var1;
       this.viewCache = new LinkedHashMap<>();
       if (var2) {
          val var5: Byte = 0;
-         var var3: Int = 0;
+         var var4: Int = 0;
 
          while (true) {
-            var var4: Int = var5;
-            if (var3 >= 20) {
-               while (var4 < 10) {
+            var var3: Int = var5;
+            if (var4 >= 20) {
+               while (var3 < 10) {
                   val var13: java.util.Map = this.viewCache;
                   val var12: java.lang.String = ActionRowComponent.class.getSimpleName();
                   val var11: Any = var13.get(var12);
@@ -56,7 +55,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
-                  var4++;
+                  var3++;
                }
                break;
             }
@@ -71,7 +70,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
-            var3++;
+            var4++;
          }
       }
    }
@@ -113,13 +112,11 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun <T : Component> getComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      r.h(var1, "component");
-      r.h(var2, "root");
       val var4: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
       var var5: ComponentView = null;
       val var6: ComponentView;
       if (var4 != null) {
-         var6 = i.H(var4) as ComponentView;
+         var6 = CollectionsKt.H(var4) as ComponentView;
       } else {
          var6 = null;
       }
@@ -137,15 +134,14 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun <T : Component> recycleComponent(componentView: ComponentView<T>) {
-      r.h(var1, "componentView");
-      val var4: java.lang.String = var1.getComponentType().b();
-      if (var4 != null) {
-         val var5: java.util.Map = this.viewCache;
-         val var3: Any = this.viewCache.get(var4);
+      val var5: java.lang.String = var1.getComponentType().getSimpleName();
+      if (var5 != null) {
+         val var4: java.util.Map = this.viewCache;
+         val var3: Any = this.viewCache.get(var5);
          var var2: Any = var3;
          if (var3 == null) {
             var2 = new ArrayList();
-            var5.put(var4, var2);
+            var4.put(var5, var2);
          }
 
          (var2 as java.util.List).add(var1);

@@ -1,8 +1,8 @@
 package com.discord.intents.packages
 
-import I9.a
+import H9.a
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal enum class InstalledPackage(appName: String, appPackage: String?) {
    GMAIL("googlegmail", null),
@@ -38,9 +38,9 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
       return $ENTRIES;
    }
 
+   @SourceDebugExtension(["SMAP\nInstalledPackage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 InstalledPackage.kt\ncom/discord/intents/packages/InstalledPackage$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,23:1\n295#2,2:24\n*S KotlinDebug\n*F\n+ 1 InstalledPackage.kt\ncom/discord/intents/packages/InstalledPackage$Companion\n*L\n19#1:24,2\n*E\n"])
    public companion object {
       public fun parse(appName: String): InstalledPackage {
-         r.h(var1, "appName");
          val var3: java.util.Iterator = InstalledPackage.getEntries().iterator();
 
          var var2: Any;
@@ -51,7 +51,7 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
             }
 
             var2 = (InstalledPackage)var3.next();
-         } while (!r.c(InstalledPackage.access$getAppName$p(var2), var1));
+         } while (!(InstalledPackage.access$getAppName$p(var2) == var1));
 
          var2 = var2;
          if (var2 != null) {

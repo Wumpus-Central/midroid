@@ -4,24 +4,17 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import com.discord.chat.bridge.botuikit.Component
-import kotlin.jvm.internal.H
-import kotlin.jvm.internal.r
 
 public class ComponentProvider(context: Context, preInflateRecycledViews: Boolean) {
    public final val context: Context
    public final val inflater: ComponentInflater
 
    init {
-      r.h(var1, "context");
-      super();
       this.context = var1;
       this.inflater = new ComponentInflater(var1, var2);
    }
 
    public fun <T : Component> getConfiguredComponentView(component: T, componentContext: ComponentContext, root: ViewGroup, childIndex: Int): ComponentView<T>? {
-      r.h(var1, "component");
-      r.h(var2, "componentContext");
-      r.h(var3, "root");
       val var7: View = var3.getChildAt(var4);
       val var5: Boolean = var7 is ComponentView;
       var var6: ComponentView = null;
@@ -34,7 +27,7 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
 
       label23: {
          if (var8 != null) {
-            if (r.c(var8.getComponentType(), H.b(var1.getClass()))) {
+            if (var8.getComponentType() == var1.getClass()::class) {
                var6 = var8;
             }
 
@@ -55,7 +48,6 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun recycleComponentView(componentView: ComponentView<out Component>) {
-      r.h(var1, "componentView");
       var1.onRecycle(this);
       this.inflater.recycleComponent(var1);
    }

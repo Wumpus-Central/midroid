@@ -1,19 +1,17 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
-import wb.f
+import nb.g
+import qb.f
 
 @g
 public data class ChannelMentionContentNode(channelId: String,
-      guildId: String? = null,
-      messageId: String? = null,
-      originalLink: String? = null,
-      inContent: List<ContentNode>? = null,
-      content: List<ContentNode>?
-   )
-   : MentionContentNode {
+   guildId: String? = null,
+   messageId: String? = null,
+   originalLink: String? = null,
+   inContent: List<ContentNode>? = null,
+   content: List<ContentNode>?
+) : MentionContentNode() {
    public final val channelId: String
    public final val guildId: String?
    public final val messageId: String?
@@ -28,8 +26,6 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    init {
-      r.h(var1, "channelId");
-      super(null);
       this.channelId = var1;
       this.guildId = var2;
       this.messageId = var3;
@@ -70,7 +66,6 @@ public data class ChannelMentionContentNode(channelId: String,
       inContent: List<ContentNode>? = var0.inContent,
       content: List<ContentNode>? = var0.content
    ): ChannelMentionContentNode {
-      r.h(var1, "channelId");
       return new ChannelMentionContentNode(var1, var2, var3, var4, var5, var6);
    }
 
@@ -81,18 +76,18 @@ public data class ChannelMentionContentNode(channelId: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.guildId, var1.guildId)) {
+         } else if (!(this.guildId == var1.guildId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!(this.messageId == var1.messageId)) {
             return false;
-         } else if (!r.c(this.originalLink, var1.originalLink)) {
+         } else if (!(this.originalLink == var1.originalLink)) {
             return false;
-         } else if (!r.c(this.inContent, var1.inContent)) {
+         } else if (!(this.inContent == var1.inContent)) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -136,25 +131,25 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.messageId;
-      val var7: java.lang.String = this.originalLink;
-      val var1: java.util.List = this.inContent;
-      val var5: java.util.List = this.content;
+      val var4: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.originalLink;
+      val var5: java.util.List = this.inContent;
+      val var6: java.util.List = this.content;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ChannelMentionContentNode(channelId=");
-      var3.append(var6);
-      var3.append(", guildId=");
-      var3.append(var2);
-      var3.append(", messageId=");
       var3.append(var4);
-      var3.append(", originalLink=");
+      var3.append(", guildId=");
       var3.append(var7);
-      var3.append(", inContent=");
+      var3.append(", messageId=");
       var3.append(var1);
-      var3.append(", content=");
+      var3.append(", originalLink=");
+      var3.append(var2);
+      var3.append(", inContent=");
       var3.append(var5);
+      var3.append(", content=");
+      var3.append(var6);
       var3.append(")");
       return var3.toString();
    }

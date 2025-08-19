@@ -5,8 +5,10 @@ import android.app.ActivityManager.MemoryInfo
 import android.content.Context
 import com.discord.misc.utilities.collections.CircularByteBuffer
 import java.io.File
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.Intrinsics
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nSystemLogCapture.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,124:1\n13409#2,2:125\n*S KotlinDebug\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n*L\n106#1:125,2\n*E\n"])
 internal class SystemLogCapture {
    private final val buffer: CircularByteBuffer = new CircularByteBuffer(262144)
    private final val tombstoneBuffer: CircularByteBuffer = new CircularByteBuffer(51200)
@@ -14,17 +16,16 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var5: Array<StackTraceElement> = var1.getStackTrace();
-      r.g(var5, "getStackTrace(...)");
-      val var3: Int = var5.length;
+      val var6: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var6.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var4: StackTraceElement = var5[var2];
-         val var6: CircularByteBuffer = this.buffer;
+         val var4: StackTraceElement = var6[var2];
+         val var5: CircularByteBuffer = this.buffer;
          val var7: StringBuilder = new StringBuilder();
          var7.append("    ");
          var7.append(var4);
-         var6.addLine(var7.toString());
+         var5.addLine(var7.toString());
       }
    }
 
@@ -32,7 +33,7 @@ internal class SystemLogCapture {
       val var3: MemoryInfo = this.memoryInfo;
       var var1: ActivityManager = this.activityManager;
       if (this.activityManager == null) {
-         r.y("activityManager");
+         Intrinsics.throwUninitializedPropertyAccessException("activityManager");
          var1 = null;
       }
 
@@ -58,7 +59,7 @@ internal class SystemLogCapture {
       // 03: astore 1
       // 04: aload 1
       // 05: bipush 1
-      // 06: anewarray 142
+      // 06: anewarray 146
       // 09: dup
       // 0a: bipush 0
       // 0b: ldc "/system/bin/logcat"
@@ -87,12 +88,12 @@ internal class SystemLogCapture {
       // 35: invokespecial com/discord/crash_reporting/system_logs/d.<init> (Lcom/discord/crash_reporting/system_logs/SystemLogCapture;)V
       // 38: aload 2
       // 39: aload 3
-      // 3a: invokestatic M9/q.c (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
+      // 3a: invokestatic L9/p.c (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
       // 3d: getstatic kotlin/Unit.a Lkotlin/Unit;
       // 40: astore 3
       // 41: aload 2
       // 42: aconst_null
-      // 43: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 43: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 46: aload 1
       // 47: invokevirtual java/lang/Process.destroy ()V
       // 4a: return
@@ -104,46 +105,45 @@ internal class SystemLogCapture {
       // 54: astore 3
       // 55: aload 2
       // 56: aload 4
-      // 58: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 5b: aload 3
       // 5c: athrow
       // 5d: aload 1
       // 5e: invokevirtual java/lang/Process.destroy ()V
       // 61: aload 2
       // 62: athrow
-      // 63: astore 1
+      // 63: astore 3
       // 64: aload 0
       // 65: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
       // 68: astore 2
       // 69: new java/lang/StringBuilder
       // 6c: dup
       // 6d: invokespecial java/lang/StringBuilder.<init> ()V
-      // 70: astore 3
-      // 71: aload 3
+      // 70: astore 1
+      // 71: aload 1
       // 72: ldc "Exception starting logcat process '"
       // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 77: pop
-      // 78: aload 3
-      // 79: aload 1
+      // 78: aload 1
+      // 79: aload 3
       // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 7d: pop
-      // 7e: aload 3
+      // 7e: aload 1
       // 7f: ldc "'"
       // 81: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 84: pop
       // 85: aload 2
-      // 86: aload 3
+      // 86: aload 1
       // 87: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 8a: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
       // 8d: aload 0
-      // 8e: aload 1
+      // 8e: aload 3
       // 8f: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
       // 92: return
    }
 
    @JvmStatic
    fun `readFromLogcat$lambda$2$lambda$1`(var0: SystemLogCapture, var1: java.lang.String): Unit {
-      r.h(var1, "line");
       if (Companion.shouldIncludeLogLine$crash_reporting_release(var1)) {
          var0.buffer.addLine(var1);
       }
@@ -193,13 +193,11 @@ internal class SystemLogCapture {
    }
 
    public fun appendOutput(sb: StringBuilder) {
-      r.h(var1, "sb");
       this.tombstoneBuffer.appendString(var1);
       this.buffer.appendString(var1);
    }
 
    public fun startThread(context: Context) {
-      r.h(var1, "context");
       this.activityManager = var1.getSystemService(ActivityManager.class) as ActivityManager;
       F9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new e(this), 20, null);
    }
@@ -208,8 +206,7 @@ internal class SystemLogCapture {
       private const val THREAD_SLEEP_MS: Long
 
       internal fun shouldIncludeLogLine(line: String): Boolean {
-         r.h(var1, "line");
-         return kotlin.text.h.N(var1, "chatty  : uid=", false, 2, null) xor true;
+         return StringsKt.N(var1, "chatty  : uid=", false, 2, null) xor true;
       }
    }
 }

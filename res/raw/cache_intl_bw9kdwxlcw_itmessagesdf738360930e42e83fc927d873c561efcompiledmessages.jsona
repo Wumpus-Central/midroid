@@ -1,0 +1,31 @@
+{
+  "o/An3t": [
+    [
+      1,
+      "username"
+    ],
+    " ti ha chiesto di fare lo streaming di ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " ti sta chiedendo di fare lo streaming di ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Hai chiesto a qualcuno di fare lo streaming di ",
+    [
+      1,
+      "applicationName"
+    ]
+  ]
+}

@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.view.voicemessages
 
 public object Sampler {
    public fun downSample(data: ByteArray, targetSize: Int): ByteArray {
-      kotlin.jvm.internal.r.h(var1, "data");
       if (var2 == 0) {
          return new byte[0];
       } else if (var1.length == var2) {
@@ -10,7 +9,7 @@ public object Sampler {
       } else if (var1.length == 0) {
          return new byte[var2];
       } else if (var1.length < var2) {
-         return kotlin.collections.c.t(var1, new byte[var2 - var1.length]);
+         return kotlin.collections.h.t(var1, new byte[var2 - var1.length]);
       } else {
          val var3: Float = (float)var1.length / var2;
          val var11: ByteArray = new byte[var2];

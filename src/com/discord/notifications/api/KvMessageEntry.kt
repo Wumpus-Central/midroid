@@ -2,12 +2,11 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import tb.g
-import wb.f
-import xb.q
+import nb.g
+import qb.f
+import rb.q
 
 @g
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -26,10 +25,6 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    fun KvMessageEntry(var1: MutableList<JsonObject>, var2: MutableList<JsonObject>, var3: JsonObject, var4: java.lang.String, var5: Long) {
-      r.h(var1, "members");
-      r.h(var2, "users");
-      r.h(var3, "message");
-      r.h(var4, "id");
       super();
       this.members = var1;
       this.users = var2;
@@ -59,10 +54,6 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public fun copy(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject = ..., id: MessageId = ..., channelId: ChannelId = ...): KvMessageEntry {
-      r.h(var1, "members");
-      r.h(var2, "users");
-      r.h(var3, "message");
-      r.h(var4, "id");
       return new KvMessageEntry(var1, var2, var3, var4, var5, null);
    }
 
@@ -73,11 +64,11 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.members, var1.members)) {
+         if (!(this.members == var1.members)) {
             return false;
-         } else if (!r.c(this.users, var1.users)) {
+         } else if (!(this.users == var1.users)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
          } else if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
@@ -93,22 +84,22 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var4: java.util.List = this.members;
-      val var6: java.util.List = this.users;
-      val var3: JsonObject = this.message;
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.util.List = this.members;
+      val var3: java.util.List = this.users;
+      val var6: JsonObject = this.message;
+      val var5: java.lang.String = MessageId.toString-impl(this.id);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: StringBuilder = new StringBuilder();
       var1.append("KvMessageEntry(members=");
-      var1.append(var4);
-      var1.append(", users=");
-      var1.append(var6);
-      var1.append(", message=");
-      var1.append(var3);
-      var1.append(", id=");
       var1.append(var2);
-      var1.append(", channelId=");
+      var1.append(", users=");
+      var1.append(var3);
+      var1.append(", message=");
+      var1.append(var6);
+      var1.append(", id=");
       var1.append(var5);
+      var1.append(", channelId=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

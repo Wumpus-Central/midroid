@@ -4,8 +4,9 @@ import android.text.Selection
 import android.text.SpanWatcher
 import android.text.Spannable
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nSelectionGuardSpanWatcher.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectionGuardSpanWatcher.kt\ncom/discord/chat/input/plugins/SelectionGuardSpanWatcher\n+ 2 SpannedString.kt\nandroidx/core/text/SpannedStringKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,80:1\n34#2:81\n13409#3,2:82\n*S KotlinDebug\n*F\n+ 1 SelectionGuardSpanWatcher.kt\ncom/discord/chat/input/plugins/SelectionGuardSpanWatcher\n*L\n49#1:81\n58#1:82,2\n*E\n"])
 public class SelectionGuardSpanWatcher : SpanWatcher {
    private fun checkSelections(text: Spannable, selectionStart: Int?, selectionEnd: Int?) {
       if (var2 != null || var3 != null) {
@@ -98,9 +99,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
    public open fun onSpanChanged(text: Spannable?, what: Any?, ostart: Int, oend: Int, nstart: Int, nend: Int) {
       if (var1 != null) {
-         if (r.c(var2, Selection.SELECTION_START)) {
+         if (var2 == Selection.SELECTION_START) {
             this.checkSelections(var1, var5, null);
-         } else if (r.c(var2, Selection.SELECTION_END)) {
+         } else if (var2 == Selection.SELECTION_END) {
             this.checkSelections(var1, null, var5);
          }
       }

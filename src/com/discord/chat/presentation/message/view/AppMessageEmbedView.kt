@@ -30,8 +30,10 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.Locale
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class AppMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
+@SourceDebugExtension(["SMAP\nAppMessageEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/AppMessageEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,290:1\n257#2,2:291\n257#2,2:293\n257#2,2:295\n257#2,2:297\n257#2,2:299\n257#2,2:301\n257#2,2:303\n257#2,2:305\n257#2,2:307\n257#2,2:309\n257#2,2:311\n257#2,2:313\n257#2,2:315\n257#2,2:317\n257#2,2:322\n257#2,2:324\n1872#3,3:319\n*S KotlinDebug\n*F\n+ 1 AppMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/AppMessageEmbedView\n*L\n90#1:291,2\n91#1:293,2\n101#1:295,2\n104#1:297,2\n107#1:299,2\n108#1:301,2\n112#1:303,2\n128#1:305,2\n135#1:307,2\n142#1:309,2\n149#1:311,2\n150#1:313,2\n154#1:315,2\n159#1:317,2\n221#1:322,2\n223#1:324,2\n175#1:319,3\n*E\n"])
+public class AppMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3) {
    public final var view: AppMessageEmbedViewBinding
       internal set
 
@@ -39,20 +41,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    private final val textColor: Int
 
    fun AppMessageEmbedView(var1: Context) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun AppMessageEmbedView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
-      super(var1, var2, var3);
       val var4: AppMessageEmbedViewBinding = AppMessageEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.view = var4;
       this.textColor = ColorUtilsKt.getColorCompat(var1, R.color.primary_230);
       this.setDefaultBackground(this);
@@ -97,65 +94,50 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    public fun initView(data: AppMessageEmbedImpl, eventHandler: ChatEventHandler, constrainedWidth: Int) {
-      kotlin.jvm.internal.r.h(var1, "data");
-      kotlin.jvm.internal.r.h(var2, "eventHandler");
       val var13: AppMessageEmbedViewBinding = this.view;
       var var14: TextView = this.view.title;
       this.view.title.setTextColor(this.textColor);
-      kotlin.jvm.internal.r.e(var14);
       SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimaryExtraBold);
       var14 = var13.header;
       var13.header.setTextColor(this.textColor);
-      kotlin.jvm.internal.r.e(var14);
       SetTextSizeSpKt.setTextSizeSp(var14, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimarySemibold);
       var14 = var13.info;
       var13.info.setTextColor(this.textColor);
-      kotlin.jvm.internal.r.e(var14);
       SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimaryMedium);
       var var15: TextView = var13.tagline;
       var13.tagline.setTextColor(this.textColor);
-      kotlin.jvm.internal.r.e(var15);
       SetTextSizeSpKt.setTextSizeSp(var15, 12.0F);
       val var51: DiscordFont = DiscordFont.PrimaryNormal;
       DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimaryNormal);
       var var16: DCDButton = var13.linkIcon;
       val var56: Context = var13.linkIcon.getContext();
-      kotlin.jvm.internal.r.g(var56, "getContext(...)");
       var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var56, R.color.transparent));
       val var57: ReactAsset = ReactAsset.Link;
       var var17: Context = var16.getContext();
-      kotlin.jvm.internal.r.g(var17, "getContext(...)");
       var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
       var16.setTextColor(this.textColor);
       var16 = var13.linkIconTitle;
       var17 = var13.linkIconTitle.getContext();
-      kotlin.jvm.internal.r.g(var17, "getContext(...)");
       var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var17, R.color.transparent));
       var17 = var16.getContext();
-      kotlin.jvm.internal.r.g(var17, "getContext(...)");
       var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
       var16.setTextColor(this.textColor);
       val var58: SimpleDraweeView = var13.playerIcon;
-      kotlin.jvm.internal.r.e(var13.playerIcon);
       ReactAssetUtilsKt.setReactAsset(var58, ReactAsset.Members);
       ColorUtilsKt.setTintColor(var58, this.textColor);
       val var59: OverlappingCirclesView = var13.participants;
-      kotlin.jvm.internal.r.g(var13.participants, "participants");
       var59.setVisibility(8);
       var15 = var13.participantsText;
-      kotlin.jvm.internal.r.g(var13.participantsText, "participantsText");
       var15.setVisibility(8);
       val var32: TextView = var13.participantsText;
       var13.participantsText.setTextColor(this.textColor);
-      kotlin.jvm.internal.r.e(var32);
       SetTextSizeSpKt.setTextSizeSp(var32, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var32, var51);
       this.view.header.setText(var1.getHeader());
       val var33: TextView = this.view.header;
-      kotlin.jvm.internal.r.g(this.view.header, "header");
       var var8: Boolean;
       if (var1.getHeader() != null) {
          var8 = 1;
@@ -172,7 +154,6 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       var33.setVisibility(var8);
       this.view.info.setText(var1.getInfo());
       val var34: TextView = this.view.info;
-      kotlin.jvm.internal.r.g(this.view.info, "info");
       var var24: Boolean;
       if (var1.getInfo() != null) {
          var24 = 1;
@@ -189,7 +170,6 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       var34.setVisibility(var24);
       this.view.tagline.setText(var1.getTagline());
       val var35: TextView = this.view.tagline;
-      kotlin.jvm.internal.r.g(this.view.tagline, "tagline");
       var var26: Boolean;
       if (var1.getTagline() != null) {
          var26 = 1;
@@ -205,7 +185,6 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
 
       var35.setVisibility(var26);
       val var36: SimpleDraweeView = this.view.playerIcon;
-      kotlin.jvm.internal.r.g(this.view.playerIcon, "playerIcon");
       var var28: Boolean;
       if (var1.getTagline() != null) {
          var28 = 1;
@@ -214,44 +193,39 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = 0;
+         var28 = (byte)0;
       } else {
-         var28 = 8;
+         var28 = (byte)8;
       }
 
       var36.setVisibility(var28);
       if (var1.getStaticBannerSrc() != null) {
          val var37: SimpleDraweeView = this.view.banner;
-         kotlin.jvm.internal.r.g(this.view.banner, "banner");
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
-         if (kotlin.jvm.internal.r.c(var1.getBannerRatio(), "activity")) {
+         if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
          } else {
             var4 = 2.8333333333333335;
          }
 
-         var4 = var3 / var4;
+         var4 = var28 / var4;
          val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
          val var52: SimpleDraweeView = this.view.banner;
-         kotlin.jvm.internal.r.g(this.view.banner, "banner");
-         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
-         kotlin.jvm.internal.r.g(this.view.banner, "banner");
          var39.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         val var40: TextView = this.view.title;
-         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         kotlin.jvm.internal.r.g(var53, "toUpperCase(...)");
-         var40.setText(var53);
+         var14 = this.view.title;
+         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var14.setText(var40);
       } else {
          val var41: TextView = this.view.title;
-         kotlin.jvm.internal.r.g(this.view.title, "title");
          var41.setVisibility(8);
       }
 
@@ -259,26 +233,21 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          this.view.appIcon.setImageURI(var1.getIconSrc());
       } else {
          val var42: SimpleDraweeView = this.view.appIcon;
-         kotlin.jvm.internal.r.g(this.view.appIcon, "appIcon");
          var42.setVisibility(8);
       }
 
       this.setBackgroundGradient(this, var1);
       val var43: DCDButton = this.view.linkIcon;
-      kotlin.jvm.internal.r.g(this.view.linkIcon, "linkIcon");
       var43.setVisibility(8);
       val var44: DCDButton = this.view.linkIconTitle;
-      kotlin.jvm.internal.r.g(this.view.linkIconTitle, "linkIconTitle");
       var44.setVisibility(8);
       if (var1.getEmbedUrl() != null) {
          if (var1.getTitle() != null) {
             val var45: DCDButton = this.view.linkIconTitle;
-            kotlin.jvm.internal.r.g(this.view.linkIconTitle, "linkIconTitle");
             var45.setVisibility(0);
             this.view.linkIconTitle.setOnClickButtonListener(new b(this, var2, var1));
          } else {
             val var46: DCDButton = this.view.linkIcon;
-            kotlin.jvm.internal.r.g(this.view.linkIcon, "linkIcon");
             var46.setVisibility(0);
             this.view.linkIcon.setOnClickButtonListener(new c(this, var2, var1));
          }
@@ -288,12 +257,12 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       if (var47 != null && !var47.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var48: java.util.Iterator = kotlin.collections.i.E0(var1.getActions()).iterator();
+         val var48: java.util.Iterator = CollectionsKt.D0(var1.getActions()).iterator();
 
          for (int var21 = 0; var48.hasNext(); var21++) {
             var14 = (TextView)var48.next();
             if (var21 < 0) {
-               kotlin.collections.i.u();
+               CollectionsKt.u();
             }
 
             val var63: AppMessageActionImpl = var14 as AppMessageActionImpl;
@@ -315,10 +284,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             val var65: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var65, "getContext(...)");
             var var9: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
             val var66: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var66, "getContext(...)");
             val var11: Int = ColorUtilsKt.getColorCompat(var66, R.color.black_500);
             val var10: Int;
             if (var31) {
@@ -338,7 +305,6 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var17 = this.getContext();
-            kotlin.jvm.internal.r.g(var17, "getContext(...)");
             val var71: DCDButton = new DCDButton(var17, null, 2, null);
             val var7: Float;
             if (var12) {
@@ -360,18 +326,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          val var19: LinearLayout = this.view.actionsContainer;
-         kotlin.jvm.internal.r.g(this.view.actionsContainer, "actionsContainer");
          var19.setVisibility(0);
       } else {
          val var18: LinearLayout = this.view.actionsContainer;
-         kotlin.jvm.internal.r.g(this.view.actionsContainer, "actionsContainer");
          var18.setVisibility(8);
       }
    }
 
    public fun setBackgroundGradient(view: View, data: AppMessageEmbedImpl) {
-      kotlin.jvm.internal.r.h(var1, "view");
-      kotlin.jvm.internal.r.h(var2, "data");
       if (var2.getGradientColors() != null) {
          if (var2.getGradientColors().size() == 2) {
             val var3: Int = this.rgbToColorInt(var2.getGradientColors().get(0));
@@ -395,9 +357,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    public fun setDefaultBackground(view: View) {
-      kotlin.jvm.internal.r.h(var1, "view");
       val var2: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var2, "getContext(...)");
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          var1,
          ColorUtilsKt.getColorCompat(var2, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),

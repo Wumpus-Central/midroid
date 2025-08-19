@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
 public final class d implements Function2 {
-   public final EmojiPickerViewManager j;
+   public final EmojiPickerViewManager d;
 
    public final Object invoke(Object var1, Object var2) {
-      return EmojiPickerViewManager.d(this.j, (EmojiPickerView)var1, (EmojiPickerScroller.ScrollEvent)var2);
+      return EmojiPickerViewManager.d(this.d, (EmojiPickerView)var1, (EmojiPickerScroller.ScrollEvent)var2);
    }
 }

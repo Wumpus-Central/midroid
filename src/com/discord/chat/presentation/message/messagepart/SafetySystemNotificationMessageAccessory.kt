@@ -2,7 +2,6 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.safetysystemnotification.SafetySystemNotificationEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class SafetySystemNotificationMessageAccessory(messageId: MessageId, safetySystemNotificationEmbed: SafetySystemNotificationEmbed) : SafetySystemNotificationMessageAccessory(
       var1, var2
@@ -11,8 +10,6 @@ public data class SafetySystemNotificationMessageAccessory(messageId: MessageId,
    public final val safetySystemNotificationEmbed: SafetySystemNotificationEmbed
 
    fun SafetySystemNotificationMessageAccessory(var1: java.lang.String, var2: SafetySystemNotificationEmbed) {
-      r.h(var1, "messageId");
-      r.h(var2, "safetySystemNotificationEmbed");
       super(var1, "safety policy notice embed", false, 4, null);
       this.messageId = var1;
       this.safetySystemNotificationEmbed = var2;
@@ -27,8 +24,6 @@ public data class SafetySystemNotificationMessageAccessory(messageId: MessageId,
    }
 
    public fun copy(messageId: MessageId = ..., safetySystemNotificationEmbed: SafetySystemNotificationEmbed = ...): SafetySystemNotificationMessageAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "safetySystemNotificationEmbed");
       return new SafetySystemNotificationMessageAccessory(var1, var2, null);
    }
 
@@ -42,7 +37,7 @@ public data class SafetySystemNotificationMessageAccessory(messageId: MessageId,
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return r.c(this.safetySystemNotificationEmbed, var1.safetySystemNotificationEmbed);
+            return this.safetySystemNotificationEmbed == var1.safetySystemNotificationEmbed;
          }
       }
    }
@@ -52,14 +47,14 @@ public data class SafetySystemNotificationMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SafetySystemNotificationMessageAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", safetySystemNotificationEmbed=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SafetySystemNotificationMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", safetySystemNotificationEmbed=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -1,12 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>)
-   : BaseLayoutComponent {
+public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>) : BaseLayoutComponent() {
    public open val type: Int
    public open val id: String
    public open val errorText: String?
@@ -14,10 +12,6 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    public final val accessory: SectionAccessory<*>
 
    init {
-      r.h(var2, "id");
-      r.h(var4, "components");
-      r.h(var5, "accessory");
-      super(null);
       this.type = var1;
       this.id = var2;
       this.errorText = var3;
@@ -52,9 +46,6 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
       components: List<SectionChildComponent<*>> = var0.components,
       accessory: SectionAccessory<*> = var0.accessory
    ): SectionComponent {
-      r.h(var2, "id");
-      r.h(var4, "components");
-      r.h(var5, "accessory");
       return new SectionComponent(var1, var2, var3, var4, var5);
    }
 
@@ -67,21 +58,21 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
-         } else if (!r.c(this.errorText, var1.errorText)) {
+         } else if (!(this.errorText == var1.errorText)) {
             return false;
-         } else if (!r.c(this.components, var1.components)) {
+         } else if (!(this.components == var1.components)) {
             return false;
          } else {
-            return r.c(this.accessory, var1.accessory);
+            return this.accessory == var1.accessory;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -89,28 +80,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
+      val var4: java.lang.String = this.id;
+      val var2: java.lang.String = this.errorText;
       val var5: java.util.List = this.components;
       val var3: SectionAccessory = this.accessory;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SectionComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var6);
-      var2.append(", errorText=");
-      var2.append(var4);
-      var2.append(", components=");
-      var2.append(var5);
-      var2.append(", accessory=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("SectionComponent(type=");
+      var6.append(var1);
+      var6.append(", id=");
+      var6.append(var4);
+      var6.append(", errorText=");
+      var6.append(var2);
+      var6.append(", components=");
+      var6.append(var5);
+      var6.append(", accessory=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

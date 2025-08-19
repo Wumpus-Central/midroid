@@ -11,21 +11,14 @@ import com.facebook.react.bridge.ReactContext
 import java.util.WeakHashMap
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class ReactRootView(context: Context) : com.facebook.react.ReactRootView {
-   internal final var exclusionRects: List<Rect>
-   internal final val onInterceptTouchEventListeners: WeakHashMap<View, ((MotionEvent) -> Unit)?>
-
-   init {
-      r.h(var1, "context");
-      super(var1);
-      this.exclusionRects = EMPTY_EXCLUSION_RECTS;
-      this.onInterceptTouchEventListeners = new WeakHashMap<>();
-   }
+@SourceDebugExtension(["SMAP\nReactRootView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactRootView.kt\ncom/discord/react_activities/ReactRootView\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,67:1\n216#2,2:68\n*S KotlinDebug\n*F\n+ 1 ReactRootView.kt\ncom/discord/react_activities/ReactRootView\n*L\n20#1:68,2\n*E\n"])
+public class ReactRootView(context: Context) : com.facebook.react.ReactRootView(var1) {
+   internal final var exclusionRects: List<Rect> = EMPTY_EXCLUSION_RECTS
+   internal final val onInterceptTouchEventListeners: WeakHashMap<View, ((MotionEvent) -> Unit)?> = new WeakHashMap()
 
    protected open fun dispatchDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
       super.dispatchDraw(var1);
       if (VERSION.SDK_INT >= 29) {
          a.a(this, this.exclusionRects);
@@ -33,7 +26,6 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
    }
 
    public open fun onInterceptTouchEvent(e: MotionEvent): Boolean {
-      r.h(var1, "e");
       val var2: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
 
       while (var2.hasNext()) {
@@ -46,6 +38,7 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
       return super.onInterceptTouchEvent(var1);
    }
 
+   @SourceDebugExtension(["SMAP\nReactRootView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactRootView.kt\ncom/discord/react_activities/ReactRootView$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,67:1\n1#2:68\n*E\n"])
    public companion object {
       private final val EMPTY_EXCLUSION_RECTS: List<Rect>
 
@@ -71,12 +64,10 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
 
       private fun View.getReactRootView(): ReactRootView? {
          val var2: Context = var1.getContext();
-         r.g(var2, "getContext(...)");
          return this.getReactRootView(var2);
       }
 
       public fun setOnInterceptTouchEvent(view: View, callback: ((MotionEvent) -> Unit)?) {
-         r.h(var1, "view");
          val var3: ReactRootView = this.getReactRootView(var1);
          if (var3 != null) {
             var3.getOnInterceptTouchEventListeners$react_activity_release().put(var1, var2);
@@ -84,8 +75,6 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
       }
 
       public fun setSystemGestureExclusionRects(context: Context, exclusionRects: List<Rect>) {
-         r.h(var1, "context");
-         r.h(var2, "exclusionRects");
          val var3: ReactRootView = this.getReactRootView(var1);
          if (var3 != null) {
             if (var2.isEmpty()) {

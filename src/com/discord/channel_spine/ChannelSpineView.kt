@@ -1,6 +1,6 @@
 package com.discord.channel_spine
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -16,9 +16,8 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.r
 
-public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
+public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View(var1, var2) {
    private final val spinePaint: Paint
 
    public final var verticalPadding: Int
@@ -68,13 +67,10 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
 
    fun ChannelSpineView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2);
       val var4: Paint = new Paint();
       val var3: Int;
       if (!this.isInEditMode()) {
@@ -92,7 +88,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       this.verticalPadding = SizeUtilsKt.getDpToPx(8);
       this.horizontalPadding = SizeUtilsKt.getDpToPx(0);
       this.arcRect = new RectF();
-      this.paths = i.k();
+      this.paths = CollectionsKt.k();
       this.setWillNotDraw(false);
    }
 
@@ -137,24 +133,24 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var7: Float = this.getMeasuredWidth();
+      var5 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      var1 = this.getMeasuredWidth();
       val var8: Float = this.horizontalPadding;
-      var5 = this.arcPercent() * this.getMeasuredWidth();
+      val var7: Float = this.arcPercent() * this.getMeasuredWidth();
       var2 = var11[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
             throw new n();
          }
 
-         this.arcRect.set(var6, var1, var6 + var5, var5 + var1);
+         this.arcRect.set(var6, var5, var6 + var7, var7 + var5);
       } else {
-         this.arcRect.set(var6, var1 - var5, var5 + var6, var1);
+         this.arcRect.set(var6, var5 - var7, var7 + var6, var5);
       }
 
       var10.moveTo(var6, var4);
       var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var10.lineTo(var7 - var8, var1);
+      var10.lineTo(var1 - var8, var5);
       return var10;
    }
 
@@ -193,7 +189,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
          this.paths = var7;
       } else {
-         this.paths = i.k();
+         this.paths = CollectionsKt.k();
       }
    }
 
@@ -210,7 +206,6 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      r.h(var1, "canvas");
       super.onDraw(var1);
       val var2: Int = var1.save();
       val var3: java.util.Iterator = this.paths.iterator();
@@ -272,7 +267,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       init {

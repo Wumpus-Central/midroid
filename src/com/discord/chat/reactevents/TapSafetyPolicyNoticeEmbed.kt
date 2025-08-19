@@ -2,16 +2,14 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEvent {
    public final val classificationId: String
 
    init {
-      r.h(var1, "classificationId");
       super();
       this.classificationId = var1;
    }
@@ -21,7 +19,6 @@ public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEv
    }
 
    public fun copy(classificationId: String = var0.classificationId): TapSafetyPolicyNoticeEmbed {
-      r.h(var1, "classificationId");
       return new TapSafetyPolicyNoticeEmbed(var1);
    }
 
@@ -31,7 +28,7 @@ public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEv
       } else if (var1 !is TapSafetyPolicyNoticeEmbed) {
          return false;
       } else {
-         return r.c(this.classificationId, (var1 as TapSafetyPolicyNoticeEmbed).classificationId);
+         return this.classificationId == (var1 as TapSafetyPolicyNoticeEmbed).classificationId;
       }
    }
 
@@ -44,12 +41,12 @@ public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEv
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.classificationId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapSafetyPolicyNoticeEmbed(classificationId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.classificationId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSafetyPolicyNoticeEmbed(classificationId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

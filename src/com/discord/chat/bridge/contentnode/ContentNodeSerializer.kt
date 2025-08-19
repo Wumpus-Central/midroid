@@ -1,15 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import vb.g
-import vb.e.i
-import xb.e
+import pb.g
+import pb.e.i
+import rb.e
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -19,8 +18,6 @@ public object ContentNodeSerializer : KSerializer {
 
 
    public open fun deserialize(decoder: Decoder): ContentNode {
-      r.h(var1, "decoder");
-
       try {
          if (var1 !is e) {
             throw new IllegalArgumentException("Failed requirement.");
@@ -40,8 +37,6 @@ public object ContentNodeSerializer : KSerializer {
    }
 
    public open fun serialize(encoder: Encoder, value: ContentNode) {
-      r.h(var1, "encoder");
-      r.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

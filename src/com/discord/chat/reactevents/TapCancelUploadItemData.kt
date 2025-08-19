@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : ReactEvent {
@@ -12,8 +11,6 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    public final val itemId: String
 
    init {
-      r.h(var1, "uploaderId");
-      r.h(var2, "itemId");
       super();
       this.uploaderId = var1;
       this.itemId = var2;
@@ -28,8 +25,6 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public fun copy(uploaderId: String = var0.uploaderId, itemId: String = var0.itemId): TapCancelUploadItemData {
-      r.h(var1, "uploaderId");
-      r.h(var2, "itemId");
       return new TapCancelUploadItemData(var1, var2);
    }
 
@@ -40,10 +35,10 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.uploaderId, var1.uploaderId)) {
+         if (!(this.uploaderId == var1.uploaderId)) {
             return false;
          } else {
-            return r.c(this.itemId, var1.itemId);
+            return this.itemId == var1.itemId;
          }
       }
    }

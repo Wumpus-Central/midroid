@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class h implements Function1 {
-   public final ReactContext j;
+   public final ReactContext d;
 
    public final Object invoke(Object var1) {
-      return ExternalPipModule.Companion.a(this.j, (Result)var1);
+      return ExternalPipModule.Companion.a(this.d, (Result)var1);
    }
 }

@@ -6,10 +6,10 @@ import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class a implements Function1 {
-   public final Function3 j;
-   public final PollMessageAccessory k;
+   public final Function3 d;
+   public final PollMessageAccessory e;
 
    public final Object invoke(Object var1) {
-      return BasePollWithRecyclerView.g(this.j, this.k, (String)var1);
+      return BasePollWithRecyclerView.g(this.d, this.e, (String)var1);
    }
 }

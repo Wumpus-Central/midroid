@@ -1,17 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode {
+public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode() {
    public final val level: Int
    public final val content: List<ContentNode>
 
    init {
-      r.h(var2, "content");
-      super(null);
       this.level = var1;
       this.content = var2;
    }
@@ -25,7 +22,6 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
    }
 
    public fun copy(level: Int = var0.level, content: List<ContentNode> = var0.content): HeadingContentNode {
-      r.h(var2, "content");
       return new HeadingContentNode(var1, var2);
    }
 
@@ -39,7 +35,7 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
          if (this.level != var1.level) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }

@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.automod.AutoModerationContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message: Message, autoModerationContext: AutoModerationContext) : FlaggedMessageActionBarAccessory(
       var1, var2, var3
@@ -13,9 +12,6 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    public final val autoModerationContext: AutoModerationContext
 
    fun FlaggedMessageActionBarAccessory(var1: java.lang.String, var2: Message, var3: AutoModerationContext) {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "autoModerationContext");
       super(var1, "flagged message actions", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -35,9 +31,6 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., autoModerationContext: AutoModerationContext = ...): FlaggedMessageActionBarAccessory {
-      r.h(var1, "messageId");
-      r.h(var2, "message");
-      r.h(var3, "autoModerationContext");
       return new FlaggedMessageActionBarAccessory(var1, var2, var3, null);
    }
 
@@ -50,10 +43,10 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!r.c(this.message, var1.message)) {
+         } else if (!(this.message == var1.message)) {
             return false;
          } else {
-            return r.c(this.autoModerationContext, var1.autoModerationContext);
+            return this.autoModerationContext == var1.autoModerationContext;
          }
       }
    }
@@ -63,17 +56,17 @@ public data class FlaggedMessageActionBarAccessory(messageId: MessageId, message
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Message = this.message;
-      val var3: AutoModerationContext = this.autoModerationContext;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("FlaggedMessageActionBarAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", message=");
-      var1.append(var4);
-      var1.append(", autoModerationContext=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Message = this.message;
+      val var2: AutoModerationContext = this.autoModerationContext;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FlaggedMessageActionBarAccessory(messageId=");
+      var4.append(var3);
+      var4.append(", message=");
+      var4.append(var1);
+      var4.append(", autoModerationContext=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

@@ -1,12 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import vb.g
-import vb.e.i
+import pb.g
+import pb.e.i
 
 public abstract class ComponentUnionSerializer<T> : KSerializer {
    public abstract val unionName: String
@@ -18,7 +17,6 @@ public abstract class ComponentUnionSerializer<T> : KSerializer {
 
 
    public open fun deserialize(decoder: Decoder): Any {
-      r.h(var1, "decoder");
       return this.toValue(Component.Companion.serializer().deserialize(var1) as Component);
    }
 
@@ -26,7 +24,6 @@ public abstract class ComponentUnionSerializer<T> : KSerializer {
    }
 
    public open fun serialize(encoder: Encoder, value: Any) {
-      r.h(var1, "encoder");
       var2 = this.fromValue((T)var2);
       if (var2 != null) {
          Component.Companion.serializer().serialize(var1, var2);

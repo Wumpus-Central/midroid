@@ -1,19 +1,17 @@
 package com.discord.crash_reporting.system_logs
 
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nDebugPrintable.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DebugPrintable.kt\ncom/discord/crash_reporting/system_logs/DebugPrintBuilder\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,170:1\n1#2:171\n*E\n"])
 private class DebugPrintBuilder(sb: StringBuilder) {
    public final val sb: StringBuilder
    private final var indentation: Int
 
    init {
-      r.h(var1, "sb");
-      super();
       this.sb = var1;
    }
 
    public fun appendKeyValue(key: String, value: Any?) {
-      r.h(var1, "key");
       val var4: Int = this.indentation;
 
       for (int var3 = 0; var3 < var4; var3++) {
@@ -38,14 +36,11 @@ private class DebugPrintBuilder(sb: StringBuilder) {
       this.sb.append(var1);
       val var7: StringBuilder = this.sb;
       this.sb.append('\n');
-      r.g(var7, "append(...)");
    }
 
    public fun appendLine(s: String? = null) {
       val var2: StringBuilder = this.sb;
       this.sb.append(var1);
-      r.g(var2, "append(...)");
       var2.append('\n');
-      r.g(var2, "append(...)");
    }
 }

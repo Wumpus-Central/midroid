@@ -1,31 +1,25 @@
 package com.discord.fastest_list.android.placeholder
 
-import A9.n
+import B9.n
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
-import kotlin.jvm.internal.r
 
-internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder {
+internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder() {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
 
    init {
-      r.h(var1, "config");
-      super(null);
       this.placeholder = new FastestListPlaceholderTypeShape.ShapeDrawable(var1);
    }
 
    public override fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
-      r.h(var1, "view");
-      r.h(var2, "item");
       var1.setBackground(this.placeholder);
    }
 
    public override fun onPlaceholderShouldUnbind(view: ViewGroup) {
-      r.h(var1, "view");
       var1.setBackground(null);
    }
 
@@ -34,8 +28,6 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
       private final val paint: Paint
 
       init {
-         r.h(var1, "config");
-         super();
          this.config = var1;
          val var2: Paint = new Paint();
          var2.setAntiAlias(true);
@@ -44,7 +36,6 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
       }
 
       public override fun draw(canvas: Canvas) {
-         r.h(var1, "canvas");
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();
@@ -65,14 +56,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
          var var5: Float;
          if (this.config.getCount() > 1) {
-            var2 = var2 - this.config.getCount() * var3;
-            var5 = this.config.getCount() - 1;
+            var5 = var2 - this.config.getCount() * var3;
+            var2 = this.config.getCount() - 1;
          } else {
-            var2 = var2 - var3;
-            var5 = 2;
+            var5 = var2 - var3;
+            var2 = 2;
          }
 
-         val var6: Float = var2 / var5;
+         val var6: Float = var5 / var2;
          val var8: Int = this.config.getCount();
 
          for (int var9 = 0; var9 < var8; var9++) {

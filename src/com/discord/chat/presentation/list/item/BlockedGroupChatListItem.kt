@@ -1,16 +1,13 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.r
-
 public data class BlockedGroupChatListItem(text: String,
-      id: String,
-      textColor: Int,
-      backgroundColor: Int,
-      borderColor: Int,
-      isRevealed: Boolean,
-      content: List<ChatListItem>
-   )
-   : ChatListItem {
+   id: String,
+   textColor: Int,
+   backgroundColor: Int,
+   borderColor: Int,
+   isRevealed: Boolean,
+   content: List<ChatListItem>
+) : ChatListItem(var2) {
    public final val text: String
    public open val id: String
    public final val textColor: Int
@@ -20,10 +17,6 @@ public data class BlockedGroupChatListItem(text: String,
    public final val content: List<ChatListItem>
 
    init {
-      r.h(var1, "text");
-      r.h(var2, "id");
-      r.h(var7, "content");
-      super(var2, null);
       this.text = var1;
       this.id = var2;
       this.textColor = var3;
@@ -70,9 +63,6 @@ public data class BlockedGroupChatListItem(text: String,
       isRevealed: Boolean = var0.isRevealed,
       content: List<ChatListItem> = var0.content
    ): BlockedGroupChatListItem {
-      r.h(var1, "text");
-      r.h(var2, "id");
-      r.h(var7, "content");
       return new BlockedGroupChatListItem(var1, var2, var3, var4, var5, var6, var7);
    }
 
@@ -83,9 +73,9 @@ public data class BlockedGroupChatListItem(text: String,
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.text, var1.text)) {
+         if (!(this.text == var1.text)) {
             return false;
-         } else if (!r.c(this.id, var1.id)) {
+         } else if (!(this.id == var1.id)) {
             return false;
          } else if (this.textColor != var1.textColor) {
             return false;
@@ -96,7 +86,7 @@ public data class BlockedGroupChatListItem(text: String,
          } else if (this.isRevealed != var1.isRevealed) {
             return false;
          } else {
-            return r.c(this.content, var1.content);
+            return this.content == var1.content;
          }
       }
    }
@@ -119,29 +109,29 @@ public data class BlockedGroupChatListItem(text: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.text;
+      val var7: java.lang.String = this.text;
       val var6: java.lang.String = this.id;
       val var1: Int = this.textColor;
-      val var2: Int = this.backgroundColor;
-      val var3: Int = this.borderColor;
+      val var3: Int = this.backgroundColor;
+      val var2: Int = this.borderColor;
       val var4: Boolean = this.isRevealed;
-      val var7: java.util.List = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("BlockedGroupChatListItem(text=");
-      var5.append(var8);
-      var5.append(", id=");
-      var5.append(var6);
-      var5.append(", textColor=");
-      var5.append(var1);
-      var5.append(", backgroundColor=");
-      var5.append(var2);
-      var5.append(", borderColor=");
-      var5.append(var3);
-      var5.append(", isRevealed=");
-      var5.append(var4);
-      var5.append(", content=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.util.List = this.content;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("BlockedGroupChatListItem(text=");
+      var8.append(var7);
+      var8.append(", id=");
+      var8.append(var6);
+      var8.append(", textColor=");
+      var8.append(var1);
+      var8.append(", backgroundColor=");
+      var8.append(var3);
+      var8.append(", borderColor=");
+      var8.append(var2);
+      var8.append(", isRevealed=");
+      var8.append(var4);
+      var8.append(", content=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 }

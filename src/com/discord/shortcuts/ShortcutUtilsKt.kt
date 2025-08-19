@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nShortcutUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShortcutUtils.kt\ncom/discord/shortcuts/ShortcutUtilsKt\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,67:1\n37#2,2:68\n*S KotlinDebug\n*F\n+ 1 ShortcutUtils.kt\ncom/discord/shortcuts/ShortcutUtilsKt\n*L\n53#1:68,2\n*E\n"])
+
 package com.discord.shortcuts
 
 import android.content.Context
@@ -10,12 +12,9 @@ import androidx.core.content.d
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.b
 import androidx.core.graphics.drawable.IconCompat
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompat): Builder {
-   r.h(var0, "<this>");
-   r.h(var1, "context");
-   r.h(var2, "shortcutInfo");
    var0.Q(var2.g());
    var0.I(new d(var2.g()));
    b.g(var1, var2);
@@ -23,12 +22,6 @@ public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompa
 }
 
 public fun Context.createShortcut(id: String, label: CharSequence, longLabel: CharSequence, icon: Bitmap?, persons: List<Person>, intent: Intent, rank: Int = 0): ShortcutInfoCompat {
-   r.h(var0, "<this>");
-   r.h(var1, "id");
-   r.h(var2, "label");
-   r.h(var3, "longLabel");
-   r.h(var5, "persons");
-   r.h(var6, "intent");
    val var10: ShortcutInfoCompat.b = new ShortcutInfoCompat.b(var0, var1).h(new d(var1)).m(var2).i(var3);
    val var8: IconCompat;
    if (var4 != null) {
@@ -38,7 +31,6 @@ public fun Context.createShortcut(id: String, label: CharSequence, longLabel: Ch
    }
 
    val var9: ShortcutInfoCompat = var10.e(var8).f(var6).l(var7).j(true).c(getShareCategories()).k(var5.toArray(new Person[0])).a();
-   r.g(var9, "build(...)");
    return var9;
 }
 
@@ -65,9 +57,9 @@ fun `createShortcut$default`(
 private fun getShareCategories(): Set<String> {
    val var0: java.util.Set;
    if (VERSION.SDK_INT < 25) {
-      var0 = w.c("com.discord.intent.category.DIRECT_SHARE_TARGET");
+      var0 = V.c("com.discord.intent.category.DIRECT_SHARE_TARGET");
    } else {
-      var0 = w.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
+      var0 = V.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
    }
 
    return var0;

@@ -17,18 +17,14 @@ import com.facebook.react.uimanager.MeasureSpecAssertions
 import com.otaliastudios.zoom.ZoomEngine
 import com.otaliastudios.zoom.ZoomLayout
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
 @SuppressLint(["ViewConstructor"])
-internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> Unit) : ZoomLayout {
+internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> Unit) : ZoomLayout(var1, null, 0, 6) {
    private final val pinchDetector: ScaleGestureDetector
    private final var gestureEnabled: Boolean
    private final val layoutChangeListener: OnLayoutChangeListener
 
    init {
-      r.h(var1, "context");
-      r.h(var2, "onUpdate");
-      super(var1, null, 0, 6, null);
       this.pinchDetector = new ScaleGestureDetector(var1, new SimpleOnScaleGestureListener());
       this.gestureEnabled = true;
       this.layoutChangeListener = new a(this);
@@ -36,7 +32,7 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
       this.setOverScrollVertical(false);
       this.setOverPinchable(false);
       this.getEngine().l(new com.otaliastudios.zoom.ZoomEngine.c(var2, this) {
-         final Function1 $onUpdate;
+         final Function1<ZoomLayoutFixed, Unit> $onUpdate;
          final ZoomLayoutFixed this$0;
 
          {
@@ -45,12 +41,9 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
          }
 
          public void onIdle(ZoomEngine var1) {
-            r.h(var1, "engine");
          }
 
          public void onUpdate(ZoomEngine var1, Matrix var2) {
-            r.h(var1, "engine");
-            r.h(var2, "matrix");
             this.$onUpdate.invoke(this.this$0);
          }
       });
@@ -69,8 +62,6 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams) {
-      r.h(var1, "child");
-      r.h(var3, "params");
       ReactNativeScreensUtilsKt.maybeApplyReactNativeScreensFix(this);
       super.addView(var1, var2, var3);
    }
@@ -99,7 +90,6 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(ev: MotionEvent): Boolean {
-      r.h(var1, "ev");
       if (!this.gestureEnabled) {
          return true;
       } else {

@@ -5,9 +5,9 @@ import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class h implements Function0 {
-   public final Promise j;
+   public final Promise d;
 
    public final Object invoke() {
-      return BillingManagerModule.f(this.j);
+      return BillingManagerModule.f(this.d);
    }
 }

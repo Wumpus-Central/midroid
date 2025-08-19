@@ -7,15 +7,14 @@ import android.content.Intent
 import android.os.Bundle
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nSmsAuthCodeBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n+ 2 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,77:1\n434#2:78\n507#2,5:79\n1#3:84\n*S KotlinDebug\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n*L\n31#1:78\n31#1:79,5\n*E\n"])
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
    private final val onReceiveCallback: (String) -> Unit
    private final var handled: Boolean
 
    init {
-      r.h(var1, "onReceiveCallback");
-      super();
       this.onReceiveCallback = var1;
    }
 
@@ -38,7 +37,6 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             }
 
             var1 = var8.toString();
-            r.g(var1, "toString(...)");
          }
       }
 
@@ -64,11 +62,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var7: Log = Log.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Successfully extracted code from SMS: ");
-         var6.append(var5);
-         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
+         val var6: Log = Log.INSTANCE;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Successfully extracted code from SMS: ");
+         var7.append(var5);
+         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {
@@ -77,8 +75,6 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
    }
 
    public open fun onReceive(context: Context, intent: Intent) {
-      r.h(var1, "context");
-      r.h(var2, "intent");
       if (!this.handled) {
          val var4: Bundle = var2.getExtras();
          val var5: Status;

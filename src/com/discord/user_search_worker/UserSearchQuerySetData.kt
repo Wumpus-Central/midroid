@@ -1,18 +1,14 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
-internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData {
+internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData() {
    public final val uuid: String
    public final val payload: UserSearchQuerySetPayload
 
    init {
-      r.h(var1, "uuid");
-      r.h(var2, "payload");
-      super(null);
       this.uuid = var1;
       this.payload = var2;
    }
@@ -26,8 +22,6 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    }
 
    public fun copy(uuid: String = var0.uuid, payload: UserSearchQuerySetPayload = var0.payload): UserSearchQuerySetData {
-      r.h(var1, "uuid");
-      r.h(var2, "payload");
       return new UserSearchQuerySetData(var1, var2);
    }
 
@@ -38,10 +32,10 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.uuid, var1.uuid)) {
+         if (!(this.uuid == var1.uuid)) {
             return false;
          } else {
-            return r.c(this.payload, var1.payload);
+            return this.payload == var1.payload;
          }
       }
    }

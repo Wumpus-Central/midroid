@@ -6,9 +6,9 @@ import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class t0 implements Function1 {
-   public final ExecutedCommand j;
+   public final ExecutedCommand d;
 
    public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.k(this.j, (LinkContentNode)var1);
+      return MessageViewReplyPreview.k(this.d, (LinkContentNode)var1);
    }
 }

@@ -1,12 +1,10 @@
 package com.discord.crash_reporting.system_logs
 
-import A9.s
-import B9.q
+import B9.s
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import kotlin.jvm.internal.r
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -15,9 +13,9 @@ internal object HistoricalProcessExitReason {
    fun {
       val var0: java.util.Map;
       if (VERSION.SDK_INT < 30) {
-         var0 = q.h();
+         var0 = L.h();
       } else {
-         var0 = q.l(
+         var0 = L.l(
             new Pair[]{
                s.a(6, "ANR"),
                s.a(4, "CRASH"),
@@ -41,7 +39,6 @@ internal object HistoricalProcessExitReason {
    }
 
    public fun lastReason(context: Context): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason? {
-      r.h(var1, "context");
       if (VERSION.SDK_INT < 30) {
          return null;
       } else {
@@ -56,8 +53,7 @@ internal object HistoricalProcessExitReason {
             return null;
          } else {
             var5 = K0.e.a((ActivityManager)var5, null, 0, 1);
-            r.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = K0.f.a(kotlin.collections.i.j0((java.util.List)var5));
+            val var4: ApplicationExitInfo = K0.f.a(CollectionsKt.firstOrNull((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
@@ -82,8 +78,6 @@ internal object HistoricalProcessExitReason {
       public final val description: String?
 
       init {
-         r.h(var1, "reason");
-         super();
          this.reason = var1;
          this.description = var2;
       }
@@ -97,7 +91,6 @@ internal object HistoricalProcessExitReason {
       }
 
       public fun copy(reason: String = var0.reason, description: String? = var0.description): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason {
-         r.h(var1, "reason");
          return new HistoricalProcessExitReason.Reason(var1, var2);
       }
 
@@ -108,10 +101,10 @@ internal object HistoricalProcessExitReason {
             return false;
          } else {
             var1 = var1;
-            if (!r.c(this.reason, var1.reason)) {
+            if (!(this.reason == var1.reason)) {
                return false;
             } else {
-               return r.c(this.description, var1.description);
+               return this.description == var1.description;
             }
          }
       }

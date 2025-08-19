@@ -4,34 +4,8 @@ import com.facebook.react.bridge.JavaScriptContextHolder
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import java.io.File
-import kotlin.jvm.internal.r
 
-public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   init {
-      r.h(var1, "reactContext");
-      super(var1);
-
-      try {
-         System.loadLibrary("libdiscore-rn-jsi-module");
-         var4 = new File(this.getReactApplicationContext().getCacheDir(), "libdiscore");
-         if (!var4.exists()) {
-            var4.mkdirs();
-         }
-      } catch (var3: Exception) {
-         var3.printStackTrace();
-         return;
-      }
-
-      try {
-         val var5: java.lang.String = var4.getAbsolutePath();
-         r.g(var5, "getAbsolutePath(...)");
-         this.jniInitLibDiscore(var5);
-      } catch (var2: Exception) {
-         var2.printStackTrace();
-      }
-   }
-
+public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private external fun jniBridgeJSIFunctions(context: ReactApplicationContext, jsiPtr: Long) {
    }
 
@@ -41,11 +15,9 @@ public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactCont
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun bridgeJSIFunctions(): Boolean {
       try {
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         r.e(var3);
-         val var2: JavaScriptContextHolder = var3.getJavaScriptContextHolder();
-         r.e(var2);
-         this.jniBridgeJSIFunctions(var3, var2.get());
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         val var3: JavaScriptContextHolder = var2.getJavaScriptContextHolder();
+         this.jniBridgeJSIFunctions(var2, var3.get());
       } catch (var4: Exception) {
          return false;
       }

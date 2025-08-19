@@ -22,27 +22,24 @@ import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 
-public class PollTextAndImageView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
-   : BasePollWithRecyclerView,
+public class PollTextAndImageView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : BasePollWithRecyclerView(
+         var1, var2, var3
+      ),
    PollPresenter {
-   protected open val myAdapter: com.discord.chat.presentation.message.view.polls.PollTextAndImageView.ImageAndTextAnswerAdapter
+   protected open val myAdapter: com.discord.chat.presentation.message.view.polls.PollTextAndImageView.ImageAndTextAnswerAdapter =
+      new PollTextAndImageView.ImageAndTextAnswerAdapter()
 
    fun PollTextAndImageView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun PollTextAndImageView(var1: Context, var2: AttributeSet) {
-      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      r.h(var1, "context");
-      super(var1, var2, var3);
-      this.myAdapter = new PollTextAndImageView.ImageAndTextAnswerAdapter();
       val var4: RecyclerView = this.getBinding().answers;
       var4.addItemDecoration(new VerticalGapItemDecoration(SizeUtilsKt.getDpToPx(8)));
       var4.setLayoutManager(new LinearLayoutManager(var1, 1, false));
@@ -51,45 +48,33 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
 
    public class ImageAndTextAnswerAdapter : PollAnswerAdapter<PollTextAndImageView.ImageAndTextAnswerHolder> {
       public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): com.discord.chat.presentation.message.view.polls.PollTextAndImageView.ImageAndTextAnswerHolder {
-         r.h(var1, "parent");
          val var3: PollTextAndImageAnswerViewBinding = PollTextAndImageAnswerViewBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false);
-         r.g(var3, "inflate(...)");
          return new PollTextAndImageView.ImageAndTextAnswerHolder(var3);
       }
    }
 
-   public class ImageAndTextAnswerHolder(binding: PollTextAndImageAnswerViewBinding) : PollAnswerViewHolder<PollTextAndImageAnswerViewBinding> {
+   @SourceDebugExtension(["SMAP\nPollTextAndImageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollTextAndImageView.kt\ncom/discord/chat/presentation/message/view/polls/PollTextAndImageView$ImageAndTextAnswerHolder\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,161:1\n257#2,2:162\n257#2,2:164\n257#2,2:166\n257#2,2:168\n257#2,2:170\n*S KotlinDebug\n*F\n+ 1 PollTextAndImageView.kt\ncom/discord/chat/presentation/message/view/polls/PollTextAndImageView$ImageAndTextAnswerHolder\n*L\n102#1:162,2\n143#1:164,2\n150#1:166,2\n155#1:168,2\n156#1:170,2\n*E\n"])
+   public class ImageAndTextAnswerHolder(binding: PollTextAndImageAnswerViewBinding) : PollAnswerViewHolder(var1) {
       init {
-         r.h(var1, "binding");
-         super(var1);
          val var2: SimpleDraweeSpanTextView = var1.label;
          var1.label.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-         r.e(var2);
          DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
          val var4: FrameLayout = var1.percentageBarContainer;
-         r.g(var1.percentageBarContainer, "percentageBarContainer");
          ViewClippingUtilsKt.clipToRoundedRectangle(var4, BORDER_RADIUS);
          val var5: TextView = var1.votePercentage;
          var1.votePercentage.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-         r.e(var5);
          DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryBold);
          val var3: TextView = var1.voteCounts;
          var1.voteCounts.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-         r.e(var3);
          DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       }
 
       public override fun bind(accessory: PollAnswerAccessory, onTapAnswer: () -> Unit, onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit) {
-         r.h(var1, "accessory");
-         r.h(var2, "onTapAnswer");
-         r.h(var3, "onLongPressImage");
          val var6: PollAnswer = var1.getAnswer();
          val var5: Int = var1.getBorderWidthPx();
          val var7: ConstraintLayout = (this.getBinding() as PollTextAndImageAnswerViewBinding).getRoot();
-         r.e(var7);
          ViewBackgroundUtilsKt.setBackgroundRectangle(var7, var1.getAnswerBackgroundColor(), BORDER_RADIUS, var1.getBorderColor(), var5);
          val var16: View = (this.getBinding() as PollTextAndImageAnswerViewBinding).percentageBarBackground;
-         r.e(var16);
          var var14: Byte;
          if (var1.getCanShowVoteCounts()) {
             var14 = 0;
@@ -119,7 +104,6 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
          (this.getBinding() as PollTextAndImageAnswerViewBinding).checkbox.configure(var1);
          if (var1.getCanShowVoteCounts()) {
             val var11: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).votePercentage;
-            r.e(var11);
             var11.setVisibility(0);
             var11.setTextColor(var1.getLabelColor());
             var14 = var6.getVotesPercentage();
@@ -128,17 +112,13 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
             var13.append("%");
             var11.setText(var13.toString());
             val var12: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).voteCounts;
-            r.e(var12);
             var12.setVisibility(0);
             var12.setTextColor(var1.getLabelColor());
             var12.setText(var6.getVotes());
-            r.e(var12);
          } else {
             val var8: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).votePercentage;
-            r.g(var8, "votePercentage");
             var8.setVisibility(8);
             val var9: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).voteCounts;
-            r.g(var9, "voteCounts");
             var9.setVisibility(8);
          }
       }

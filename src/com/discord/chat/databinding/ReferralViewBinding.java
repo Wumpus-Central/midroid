@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
@@ -15,30 +16,41 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import y0.a;
 
 public final class ReferralViewBinding implements ViewBinding {
+   @NonNull
    public final DCDButton acceptButton;
+   @NonNull
    public final ConstraintLayout content;
+   @NonNull
    public final TextView footer;
+   @NonNull
    public final TextView imageCopy;
+   @NonNull
    public final SimpleDraweeView nitroLogoBanner;
+   @NonNull
    public final SimpleDraweeView nitroTicket;
+   @NonNull
    private final LinearLayout rootView;
+   @NonNull
    public final SimpleDraweeSpanTextView subtitle;
+   @NonNull
    public final TextView title;
+   @NonNull
    public final TextView trialInfo;
+   @NonNull
    public final Barrier trialInfoTop;
 
    private ReferralViewBinding(
-      LinearLayout var1,
-      DCDButton var2,
-      ConstraintLayout var3,
-      TextView var4,
-      TextView var5,
-      SimpleDraweeView var6,
-      SimpleDraweeView var7,
-      SimpleDraweeSpanTextView var8,
-      TextView var9,
-      TextView var10,
-      Barrier var11
+      @NonNull LinearLayout var1,
+      @NonNull DCDButton var2,
+      @NonNull ConstraintLayout var3,
+      @NonNull TextView var4,
+      @NonNull TextView var5,
+      @NonNull SimpleDraweeView var6,
+      @NonNull SimpleDraweeView var7,
+      @NonNull SimpleDraweeSpanTextView var8,
+      @NonNull TextView var9,
+      @NonNull TextView var10,
+      @NonNull Barrier var11
    ) {
       this.rootView = var1;
       this.acceptButton = var2;
@@ -53,38 +65,39 @@ public final class ReferralViewBinding implements ViewBinding {
       this.trialInfoTop = var11;
    }
 
-   public static ReferralViewBinding bind(View var0) {
+   @NonNull
+   public static ReferralViewBinding bind(@NonNull View var0) {
       int var1 = R.id.acceptButton;
-      DCDButton var10 = (DCDButton)a.a(var0, var1);
-      if (var10 != null) {
+      DCDButton var8 = (DCDButton)a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.content;
-         ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-         if (var6 != null) {
+         ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.footer;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.imageCopy;
-               TextView var11 = (TextView)a.a(var0, var1);
-               if (var11 != null) {
+               TextView var10 = (TextView)a.a(var0, var1);
+               if (var10 != null) {
                   var1 = R.id.nitroLogoBanner;
-                  SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var4 != null) {
+                  SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.nitroTicket;
-                     SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var8 != null) {
+                     SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var3 != null) {
                         var1 = R.id.subtitle;
-                        SimpleDraweeSpanTextView var9 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                        if (var9 != null) {
+                        SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                        if (var5 != null) {
                            var1 = R.id.title;
-                           TextView var7 = (TextView)a.a(var0, var1);
-                           if (var7 != null) {
+                           TextView var11 = (TextView)a.a(var0, var1);
+                           if (var11 != null) {
                               var1 = R.id.trialInfo;
-                              TextView var3 = (TextView)a.a(var0, var1);
-                              if (var3 != null) {
+                              TextView var7 = (TextView)a.a(var0, var1);
+                              if (var7 != null) {
                                  var1 = R.id.trial_info_top;
-                                 Barrier var2 = (Barrier)a.a(var0, var1);
-                                 if (var2 != null) {
-                                    return new ReferralViewBinding((LinearLayout)var0, var10, var6, var5, var11, var4, var8, var9, var7, var3, var2);
+                                 Barrier var6 = (Barrier)a.a(var0, var1);
+                                 if (var6 != null) {
+                                    return new ReferralViewBinding((LinearLayout)var0, var8, var4, var2, var10, var9, var3, var5, var11, var7, var6);
                                  }
                               }
                            }
@@ -99,11 +112,13 @@ public final class ReferralViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static ReferralViewBinding inflate(LayoutInflater var0) {
+   @NonNull
+   public static ReferralViewBinding inflate(@NonNull LayoutInflater var0) {
       return inflate(var0, null, false);
    }
 
-   public static ReferralViewBinding inflate(LayoutInflater var0, ViewGroup var1, boolean var2) {
+   @NonNull
+   public static ReferralViewBinding inflate(@NonNull LayoutInflater var0, ViewGroup var1, boolean var2) {
       View var3 = var0.inflate(R.layout.referral_view, var1, false);
       if (var2) {
          var1.addView(var3);
@@ -112,6 +127,7 @@ public final class ReferralViewBinding implements ViewBinding {
       return bind(var3);
    }
 
+   @NonNull
    public LinearLayout getRoot() {
       return this.rootView;
    }

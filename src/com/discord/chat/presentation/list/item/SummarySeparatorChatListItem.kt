@@ -2,7 +2,6 @@ package com.discord.chat.presentation.list.item
 
 import com.discord.chat.bridge.summaries.Summary
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.r
 
 public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isBeforeContent: Boolean) : ChatListItem {
    public final val color: Int
@@ -42,7 +41,6 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
 
 
    init {
-      r.h(var2, "summary");
       val var5: java.lang.String = var2.getId();
       val var4: java.lang.String;
       if (var3) {
@@ -75,7 +73,6 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
    }
 
    public fun copy(color: Int = var0.color, summary: Summary = var0.summary, isBeforeContent: Boolean = var0.isBeforeContent): SummarySeparatorChatListItem {
-      r.h(var2, "summary");
       return new SummarySeparatorChatListItem(var1, var2, var3);
    }
 
@@ -88,7 +85,7 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
          var1 = var1;
          if (this.color != var1.color) {
             return false;
-         } else if (!r.c(this.summary, var1.summary)) {
+         } else if (!(this.summary == var1.summary)) {
             return false;
          } else {
             return this.isBeforeContent == var1.isBeforeContent;

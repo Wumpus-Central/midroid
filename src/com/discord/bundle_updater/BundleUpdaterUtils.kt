@@ -1,27 +1,26 @@
 package com.discord.bundle_updater
 
-import A9.s
+import B9.s
 import java.io.File
 import java.util.ArrayList
-import kotlin.jvm.internal.r
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import okio.BufferedSource
 
+@SourceDebugExtension(["SMAP\nBundleUpdaterUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterUtils.kt\ncom/discord/bundle_updater/BundleUpdaterUtils\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,81:1\n123#2:82\n1611#3,9:83\n1863#3:92\n1864#3:94\n1620#3:95\n1#4:93\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterUtils.kt\ncom/discord/bundle_updater/BundleUpdaterUtils\n*L\n52#1:82\n58#1:83,9\n58#1:92\n58#1:94\n58#1:95\n58#1:93\n*E\n"])
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
-      r.h(var1, "apkManifest");
-      r.h(var3, "newManifest");
       val var4: java.util.Set = var3.getHashes().keySet();
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var7 : var4) {
          val var8: java.lang.String = var3.getHashes().get(var7);
          val var9: Pair;
-         if (r.c(var8, var1.getHashes().get(var7))) {
+         if (var8 == var1.getHashes().get(var7)) {
             var9 = null;
          } else {
             val var10: AssetStatus;
-            if (var2 != null && r.c(var8, var2.getHashes().get(var7))) {
+            if (var2 != null && var8 == var2.getHashes().get(var7)) {
                var10 = AssetStatus.CopyFromPrevious;
             } else {
                var10 = AssetStatus.Download;
@@ -35,39 +34,37 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return kotlin.collections.i.U0(var5);
+      return CollectionsKt.T0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {
-      r.h(var1, "file");
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = M9.j.f(var1, null, 1, null);
+      val var3: java.lang.String = L9.i.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
 
    public fun md5(file: File): String {
       label18: {
-         r.h(var1, "file");
-         val var10: BufferedSource = dc.m.d(dc.m.k(var1));
+         val var10: BufferedSource = Xb.m.d(Xb.m.k(var1));
 
-         var var12: java.lang.String;
+         var var11: java.lang.String;
          try {
-            val var11: dc.j = dc.j.m.a(dc.m.b());
-            var10.G1(var11);
-            var12 = var11.a().s();
+            val var2: Xb.j = Xb.j.m.a(Xb.m.b());
+            var10.F1(var2);
+            var11 = var2.a().r();
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
-               M9.c.a(var10, var5);
+               L9.c.a(var10, var5);
             }
          }
 
-         M9.c.a(var10, null);
-         return var12;
+         L9.c.a(var10, null);
+         return var11;
       }
    }
 }

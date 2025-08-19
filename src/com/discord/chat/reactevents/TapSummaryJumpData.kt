@@ -2,9 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -13,9 +12,6 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    public final val summaryId: String
 
    init {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "summaryId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -35,9 +31,6 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, summaryId: String = var0.summaryId): TapSummaryJumpData {
-      r.h(var1, "channelId");
-      r.h(var2, "messageId");
-      r.h(var3, "summaryId");
       return new TapSummaryJumpData(var1, var2, var3);
    }
 
@@ -48,12 +41,12 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.channelId, var1.channelId)) {
+         if (!(this.channelId == var1.channelId)) {
             return false;
-         } else if (!r.c(this.messageId, var1.messageId)) {
+         } else if (!(this.messageId == var1.messageId)) {
             return false;
          } else {
-            return r.c(this.summaryId, var1.summaryId);
+            return this.summaryId == var1.summaryId;
          }
       }
    }
@@ -67,18 +60,18 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.summaryId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapSummaryJumpData(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(", summaryId=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.summaryId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapSummaryJumpData(channelId=");
+      var2.append(var3);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(", summaryId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

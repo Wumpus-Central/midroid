@@ -12,21 +12,13 @@ import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.r
 
-public class PollCheckboxView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
+public class PollCheckboxView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView(var1, var2) {
    fun PollCheckboxView(var1: Context) {
-      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
-   init {
-      r.h(var1, "context");
-      super(var1, var2);
-   }
-
    public fun configure(accessory: PollAnswerAccessory) {
-      r.h(var1, "accessory");
       if (var1.getStyleSet().getRadioStyle() === PollRadioStyle.NONE) {
          this.setVisibility(4);
       } else {
@@ -34,7 +26,6 @@ public class PollCheckboxView  public constructor(context: Context, attrs: Attri
          var var5: Any;
          if (var1.getAnswer().getDidSelfVote()) {
             var5 = this.getContext();
-            r.g(var5, "getContext(...)");
             var5 = I18nUtilsKt.i18nFormat$default((Context)var5, I18nMessage.POLL_ANSWER_VOTED_ARIA, null, 2, null);
          } else {
             var5 = "";
@@ -68,7 +59,7 @@ public class PollCheckboxView  public constructor(context: Context, attrs: Attri
          } else {
             ReactAssetUtilsKt.setReactImageUrl(this, var1.getResources().getCheckmarkIcon());
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var1.getRadioBackgroundColor(), var3, null, 0, 12, null);
-            ColorUtilsKt.setTintColor((SimpleDraweeView)this, var1.getRadioForegroundColor());
+            ColorUtilsKt.setTintColor(this, var1.getRadioForegroundColor());
          }
       }
    }

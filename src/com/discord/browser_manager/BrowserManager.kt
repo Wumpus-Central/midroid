@@ -8,15 +8,12 @@ import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import gb.k
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.r
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {
       try {
          var10 = new Intent("android.intent.action.VIEW", var2).addFlags(268435456);
-         r.g(var10, "addFlags(...)");
       } catch (var9: ActivityNotFoundException) {
          var3.invoke(var9);
          return;
@@ -25,8 +22,7 @@ internal object BrowserManager {
       if (var4) {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
-            r.g(var11, "queryIntentActivities(...)");
-            var10.setPackage(k.t(k.q(k.A(i.V(var11), new a()), new b(var1))) as java.lang.String);
+            var10.setPackage(k.t(k.q(k.A(CollectionsKt.V(var11), new a()), new b(var1))) as java.lang.String);
          } catch (var8: ActivityNotFoundException) {
             var3.invoke(var8);
             return;
@@ -47,8 +43,7 @@ internal object BrowserManager {
 
    @JvmStatic
    fun `openUrlExternally$lambda$2`(var0: Context, var1: java.lang.String): Boolean {
-      r.h(var1, "it");
-      return r.c(var1, var0.getPackageName()) xor true;
+      return var1 == var0.getPackageName() xor true;
    }
 
    private fun openUrlWithCustomTabs(context: Context, uri: Uri, onFailure: (Exception) -> Unit) {
@@ -59,19 +54,13 @@ internal object BrowserManager {
 
    @JvmStatic
    fun `tryOpenUrlWithCustomTabs$lambda$0`(var0: Context, var1: java.lang.String, var2: Function1, var3: Exception): Unit {
-      r.h(var3, "it");
       INSTANCE.tryOpenUrlExternally(var0, var1, var2);
       return Unit.a;
    }
 
    public fun tryOpenUrlExternally(context: Context, url: String, onFailure: (Exception) -> Unit) {
-      r.h(var1, "context");
-      r.h(var2, "url");
-      r.h(var3, "onFailure");
-
       try {
          val var5: Uri = Uri.parse(var2);
-         r.e(var5);
          openUrlExternally$default(this, var1, var5, var3, false, 8, null);
       } catch (var4: Exception) {
          var3.invoke(var4);
@@ -79,13 +68,8 @@ internal object BrowserManager {
    }
 
    public fun tryOpenUrlWithCustomTabs(context: Context, url: String, onFailure: (Exception) -> Unit) {
-      r.h(var1, "context");
-      r.h(var2, "url");
-      r.h(var3, "onFailure");
-
       try {
          val var4: Uri = Uri.parse(var2);
-         r.e(var4);
          this.openUrlWithCustomTabs(var1, var4, new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);

@@ -1,9 +1,8 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) :
@@ -53,11 +52,11 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.backgroundColor, var1.backgroundColor)) {
+         if (!(this.backgroundColor == var1.backgroundColor)) {
             return false;
-         } else if (!r.c(this.accentColor, var1.accentColor)) {
+         } else if (!(this.accentColor == var1.accentColor)) {
             return false;
-         } else if (!r.c(this.highlightColor, var1.highlightColor)) {
+         } else if (!(this.highlightColor == var1.highlightColor)) {
             return false;
          } else {
             return java.lang.Float.compare(this.opacity, var1.opacity) == 0;

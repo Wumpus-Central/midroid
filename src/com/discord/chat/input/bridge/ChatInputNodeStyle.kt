@@ -1,9 +1,8 @@
 package com.discord.chat.input.bridge
 
 import com.discord.span.utilities.common.BackgroundStyle
-import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.g
+import nb.g
 
 @g
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {
@@ -52,11 +51,11 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
          return false;
       } else {
          var1 = var1;
-         if (!r.c(this.fontSize, var1.fontSize)) {
+         if (!(this.fontSize == var1.fontSize)) {
             return false;
          } else if (this.color != var1.color) {
             return false;
-         } else if (!r.c(this.backgroundStyle, var1.backgroundStyle)) {
+         } else if (!(this.backgroundStyle == var1.backgroundStyle)) {
             return false;
          } else {
             return this.fontWeight === var1.fontWeight;
