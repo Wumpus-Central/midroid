@@ -11066,9 +11066,6 @@
   "Lbpk6u": "Tudasd velünk, ha ez az üzenet indokolatlanul akadt fenn, és igyekszünk továbbfejleszteni az AutoModot a jövőre nézve. Ezzel a megjelölt üzenetet is elküldöd a Discordnak.",
   "7bdzNj": "Tévedtünk?",
   "94JbMz": "Problémák jelentése",
-  "o3ZlOD": "Rendben.",
-  "oxowND": "Az információk segítségével releváns figyelmeztetéseket jelenítünk meg neked.",
-  "pAzfrq": "Köszönjük!",
   "PAM+JS": "Tudasd velünk, mi történt",
   "K3UWeX": "Egyéb",
   "ZQr92N": "Szerverszabályok érvényesítése (MI)",
@@ -38561,6 +38558,30 @@
   "DisZzM": "Szerverspecifikus profil megtekintése",
   "hl1V+f": "Nézők megtekintése",
   "39d0Wl": "Gondolatmenet megtekintése",
+  "7gHWra": [
+    "Hiba történt a következő beváltásakor: ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Sikeresen beváltva: ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " – ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Hang",
   "wtk08f": "Hangtevékenység-értesítések",
   "EZgS+/": "Hanghívás",

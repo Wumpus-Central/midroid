@@ -11089,9 +11089,6 @@
   "Lbpk6u": "Dis-nous si un message a été intercepté par erreur afin que nous puissions continuer d’améliorer l’AutoMod. Cette action entraînera l'envoi du message signalé à Discord.",
   "7bdzNj": "On s’est trompés ?",
   "94JbMz": "Signaler des erreurs",
-  "o3ZlOD": "OK !",
-  "oxowND": "Nous utilisons ces informations pour te donner des alertes pertinentes.",
-  "pAzfrq": "Merci !",
   "PAM+JS": "Raconte-nous ce qui s'est passé",
   "K3UWeX": "Autre",
   "ZQr92N": "Faire respecter les règles du serveur (IA)",
@@ -38733,6 +38730,30 @@
   "DisZzM": "Afficher le profil par serveur",
   "hl1V+f": "Afficher les spectateurs",
   "39d0Wl": "Voir le fil",
+  "7gHWra": [
+    "Erreur lors de la récupération de ",
+    [
+      1,
+      "amount"
+    ],
+    " : ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Récupération réussie de ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " pour ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voix",
   "wtk08f": "Notifications de détection de la voix",
   "EZgS+/": "Appel vocal",

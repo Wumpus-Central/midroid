@@ -11035,9 +11035,6 @@
   "Lbpk6u": "Let us know if this message shouldn’t have been caught so we can improve AutoMod for the future. By doing this, you are also sending the flagged message to Discord.",
   "7bdzNj": "Did we get it wrong?",
   "94JbMz": "Report Issues",
-  "o3ZlOD": "Okay!",
-  "oxowND": "We use this information to deliver relevant alerts to you.",
-  "pAzfrq": "Thanks!",
   "PAM+JS": "Tell us what happened",
   "K3UWeX": "Other",
   "ZQr92N": "Enforce Server Rules (AI)",
@@ -38510,6 +38507,30 @@
   "DisZzM": "View Per-server Profile",
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
+  "7gHWra": [
+    "Error redeeming ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Successfully redeemed ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " for ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voice",
   "wtk08f": "Voice Activity Notifications",
   "EZgS+/": "Voice Call",

@@ -11077,9 +11077,6 @@
   "Lbpk6u": "Laat ons weten of dit bericht niet onderschept had moeten worden, zodat we AutoMod kunnen verbeteren. Hiermee stuur je het gemelde bericht door naar Discord.",
   "7bdzNj": "Hebben we een fout gemaakt?",
   "94JbMz": "Problemen rapporteren",
-  "o3ZlOD": "Oké!",
-  "oxowND": "We gebruiken deze informatie om je relevante waarschuwingen te sturen.",
-  "pAzfrq": "Bedankt!",
   "PAM+JS": "Vertel ons wat er is gebeurd",
   "K3UWeX": "Overig",
   "ZQr92N": "Serverregels (AI) handhaven",
@@ -38645,6 +38642,29 @@
   "DisZzM": "Per-serverprofiel bekijken",
   "hl1V+f": "Meekijkers bekijken",
   "39d0Wl": "Thread bekijken",
+  "7gHWra": [
+    "Fout bij het verzilveren van ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "amountDescription"
+    ],
+    " verzilverd voor ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Spraak",
   "wtk08f": "Spraakactiviteitmeldingen",
   "EZgS+/": "Spraakoproep",

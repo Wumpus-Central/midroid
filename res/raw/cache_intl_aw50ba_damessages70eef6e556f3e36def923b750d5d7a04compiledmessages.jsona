@@ -11072,9 +11072,6 @@
   "Lbpk6u": "Fortæl os det, hvis denne meddelelse ikke skulle være blokeret, så vi kan forbedre AutoMod fremover. Når du gør dette, sender du også den markerede meddelelse til Discord.",
   "7bdzNj": "Har vi misforstået det?",
   "94JbMz": "Rapporter problemer",
-  "o3ZlOD": "Ok!",
-  "oxowND": "Vi bruger denne information til at sende dig relevante advarsler.",
-  "pAzfrq": "Tak!",
   "PAM+JS": "Fortæl os, hvad der skete",
   "K3UWeX": "Andet",
   "ZQr92N": "Håndhæv serverregler (AI)",
@@ -38696,6 +38693,30 @@
   "DisZzM": "Se pr. serverprofil",
   "hl1V+f": "Se tilskuere",
   "39d0Wl": "Vis tråd",
+  "7gHWra": [
+    "Fejl ved indløsning af ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Indløste ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " for ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Stemme",
   "wtk08f": "Meddelelser om aktivitet i stemmekanal",
   "EZgS+/": "Taleopkald",

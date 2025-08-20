@@ -167,38 +167,38 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 }
 
 public fun ReadableMap.toJson(): JSONObject {
-   val var1: JSONObject = new JSONObject();
-   val var2: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var2: JSONObject = new JSONObject();
+   val var1: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var2.hasNextKey()) {
-      val var3: java.lang.String = var2.nextKey();
+   while (var1.hasNextKey()) {
+      val var3: java.lang.String = var1.nextKey();
       switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
          case 1:
-            var1.put(var3, JSONObject.NULL);
+            var2.put(var3, JSONObject.NULL);
             break;
          case 2:
-            var1.put(var3, var0.getBoolean(var3));
+            var2.put(var3, var0.getBoolean(var3));
             break;
          case 3:
-            var1.put(var3, var0.getDouble(var3));
+            var2.put(var3, var0.getDouble(var3));
             break;
          case 4:
-            var1.put(var3, var0.getString(var3));
+            var2.put(var3, var0.getString(var3));
             break;
          case 5:
             val var6: ReadableMap = var0.getMap(var3);
-            var1.put(var3, toJson(var6));
+            var2.put(var3, toJson(var6));
             break;
          case 6:
             val var5: ReadableArray = var0.getArray(var3);
-            var1.put(var3, NativeArrayExtensionsKt.toJson(var5));
+            var2.put(var3, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new n();
       }
    }
 
-   return var1;
+   return var2;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -219,8 +219,8 @@ public inline fun <reified T> ReadableMap.toKotlinObject(): T {
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var2 : var0.entrySet()) {
-      put(var1, var2.getKey() as java.lang.String, var2.getValue());
+   for (Entry var3 : var0.entrySet()) {
+      put(var1, var3.getKey() as java.lang.String, var3.getValue());
    }
 
    return var1;

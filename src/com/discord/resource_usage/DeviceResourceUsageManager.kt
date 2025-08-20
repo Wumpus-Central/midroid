@@ -5,6 +5,7 @@ import android.app.ActivityManager.MemoryInfo
 import android.content.Context
 import android.system.Os
 import android.system.OsConstants
+import kotlin.Result.a
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nDeviceResourceUsageManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceResourceUsageManager.kt\ncom/discord/resource_usage/DeviceResourceUsageManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,135:1\n1#2:136\n*E\n"])
@@ -29,55 +30,55 @@ internal class DeviceResourceUsageManager(context: Context) {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    @JvmStatic
    fun {
-      var var14: Any;
+      var var0: Any;
       label42:
       try {
-         var14 = Result.e;
-         var14 = Result.b(Os.sysconf(OsConstants._SC_CLK_TCK));
+         var0 = Result.e;
+         var0 = Result.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         var14 = Result.e;
-         var14 = Result.b(c.a(var4));
+         val var1: a = Result.e;
+         var0 = Result.b(c.a(var4));
          break label42;
       }
 
-      var var1: Any = var14;
-      if (Result.g(var14)) {
-         var1 = 100L;
+      var var17: Any = var0;
+      if (Result.g(var0)) {
+         var17 = 100L;
       }
 
-      SC_CLK_TCK = (var1 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var17 as java.lang.Number).longValue();
 
       label36:
       try {
-         var14 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
+         var0 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var1 = Result.e;
-         var14 = Result.b(c.a(var3));
+         var17 = Result.e;
+         var0 = Result.b(c.a(var3));
          break label36;
       }
 
-      var1 = var14;
-      if (Result.g(var14)) {
-         var1 = 4096L;
+      var17 = var0;
+      if (Result.g(var0)) {
+         var17 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var1 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var17 as java.lang.Number).longValue();
 
       label30:
       try {
-         var14 = Result.b(Runtime.getRuntime().availableProcessors());
+         var0 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var1 = Result.e;
-         var14 = Result.b(c.a(var2));
+         var17 = Result.e;
+         var0 = Result.b(c.a(var2));
          break label30;
       }
 
-      var1 = var14;
-      if (Result.g(var14)) {
-         var1 = 1;
+      var17 = var0;
+      if (Result.g(var0)) {
+         var17 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var1 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var17 as java.lang.Number).intValue();
    }
 
    init {

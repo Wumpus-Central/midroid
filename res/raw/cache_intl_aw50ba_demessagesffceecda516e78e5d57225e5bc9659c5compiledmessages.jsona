@@ -11067,9 +11067,6 @@
   "Lbpk6u": "Gib uns Bescheid, falls die Nachricht nicht hätte abgefangen werden sollen, damit wir den AutoMod weiter verbessern können. Dabei wird die gemeldete Nachricht an Discord übermittelt.",
   "7bdzNj": "Haben wir einen Fehler gemacht?",
   "94JbMz": "Probleme melden",
-  "o3ZlOD": "Okay!",
-  "oxowND": "Wir verwenden diese Informationen, um dir relevante Benachrichtigungen zuzusenden.",
-  "pAzfrq": "Vielen Dank!",
   "PAM+JS": "Erzähl uns, was passiert ist",
   "K3UWeX": "Sonstiges",
   "ZQr92N": "Serverregeln durchsetzen (KI)",
@@ -38678,6 +38675,30 @@
   "DisZzM": "Serverspezifisches Profil anzeigen",
   "hl1V+f": "Zuschauer anzeigen",
   "39d0Wl": "Thread anzeigen",
+  "7gHWra": [
+    "Fehler beim Einlösen von ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "amountDescription"
+    ],
+    " erfolgreich für ",
+    [
+      1,
+      "redeemedItemDescription"
+    ],
+    " eingelöst"
+  ],
   "K3lovL": "Sprachchat",
   "wtk08f": "Sprachkanalbeitritt-Benachrichtigungen",
   "EZgS+/": "Sprachanruf",

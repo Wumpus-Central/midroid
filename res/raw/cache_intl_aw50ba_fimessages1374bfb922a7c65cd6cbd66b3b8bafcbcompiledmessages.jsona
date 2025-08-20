@@ -11095,9 +11095,6 @@
   "Lbpk6u": "Kerro meille, jos tätä viestiä ei olisi pitänyt estää, jotta voimme tehostaa AutoModin toimintaa. Jos toimit näin, merkitty viesti lähetetään samalla Discordille.",
   "7bdzNj": "Oliko tämä vikaosuma?",
   "94JbMz": "Ilmoita ongelmista",
-  "o3ZlOD": "OK",
-  "oxowND": "Käytämme näitä tietoja itseesi liittyvistä asioista ilmoittamiseen",
-  "pAzfrq": "Kiitos!",
   "PAM+JS": "Kerro meille, mitä tapahtui",
   "K3UWeX": "Muu",
   "ZQr92N": "Valvo palvelimen sääntöjä (AI)",
@@ -38656,6 +38653,29 @@
   "DisZzM": "Näytä palvelinkohtainen profiili",
   "hl1V+f": "Näytä katselijat",
   "39d0Wl": "Näytä ketju",
+  "7gHWra": [
+    "Virhe lunastettaessa ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "redeemedItemDescription"
+    ],
+    " lunastettu onnistuneesti käyttämällä ",
+    [
+      1,
+      "amountDescription"
+    ]
+  ],
   "K3lovL": "Ääni",
   "wtk08f": "Puheaktiivisuusilmoitukset",
   "EZgS+/": "Äänipuhelu",

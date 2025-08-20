@@ -86,7 +86,7 @@ public object ForegroundServiceManager {
                   throw new n();
                }
 
-               var7.requestForegroundServicePermissionVoiceCall(var5);
+               var7.requestForegroundServicePermissionScreenShareWithMic(var5);
             } else {
                var7.requestForegroundServicePermissionVoiceCall(var5);
             }

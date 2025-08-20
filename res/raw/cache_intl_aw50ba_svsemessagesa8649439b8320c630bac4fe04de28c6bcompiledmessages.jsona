@@ -11064,9 +11064,6 @@
   "Lbpk6u": "Hör av dig om det här meddelandet inte borde ha fastnat så att vi kan förbättra AutoMod för framtiden. När du gör detta skickar du även det flaggade meddelandet till Discord.",
   "7bdzNj": "Blev det fel?",
   "94JbMz": "Anmäl ärenden",
-  "o3ZlOD": "Okej!",
-  "oxowND": "Vi använder informationen till att förse dig med relevanta varningar.",
-  "pAzfrq": "Tack!",
   "PAM+JS": "Berätta vad som hände",
   "K3UWeX": "Annat",
   "ZQr92N": "Upprätthåll serverregler (AI)",
@@ -38579,6 +38576,30 @@
   "DisZzM": "Visa serverspecifik profil",
   "hl1V+f": "Visa åskådare",
   "39d0Wl": "Visa tråd",
+  "7gHWra": [
+    "Fel vid inlösen av ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Löste in ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " för ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Röst",
   "wtk08f": "Aviseringar om röstaktivitet",
   "EZgS+/": "Röstsamtal",

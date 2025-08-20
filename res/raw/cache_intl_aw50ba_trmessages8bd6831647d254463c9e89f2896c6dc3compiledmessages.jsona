@@ -11066,9 +11066,6 @@
   "Lbpk6u": "AutoMod'u gelecekte daha iyi hale getirebilmemiz için bir mesajın engellenmesine gerek olup olmadığını bize bildir. Bu işlemi gerçekleştirerek işaretlenen mesajları da Discord'a gönderirsin.",
   "7bdzNj": "Yanlış mı anladık?",
   "94JbMz": "Sorunları Bildir",
-  "o3ZlOD": "Tamam!",
-  "oxowND": "Bu bilgileri sana alakalı reklamlar göstermek için kullanacağız.",
-  "pAzfrq": "Teşekkürler!",
   "PAM+JS": "Bize ne olduğunu anlat",
   "K3UWeX": "Diğer",
   "ZQr92N": "Sunucu Kurallarını Uygula (Yapay Zekâ)",
@@ -38656,6 +38653,29 @@
   "DisZzM": "Sunucu Başına Profilini Görüntüle",
   "hl1V+f": "İzleyicileri görüntüle",
   "39d0Wl": "Alt Başlığı Görüntüle",
+  "7gHWra": [
+    [
+      1,
+      "amount"
+    ],
+    " alınırken hata oluştu: ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "amountDescription"
+    ],
+    " için ",
+    [
+      1,
+      "redeemedItemDescription"
+    ],
+    " başarıyla alındı"
+  ],
   "K3lovL": "Ses",
   "wtk08f": "Ses Etkinliği Bildirimleri",
   "EZgS+/": "Sesli Arama",

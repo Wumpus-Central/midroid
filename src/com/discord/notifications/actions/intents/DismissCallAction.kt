@@ -82,9 +82,9 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.tag.hashCode();
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
-      val var3: Int = java.lang.Boolean.hashCode(this.isFullscreenCallUI);
+      val var2: Int = this.tag.hashCode();
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
+      val var4: Int = java.lang.Boolean.hashCode(this.isFullscreenCallUI);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -92,14 +92,14 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var1 = GuildId.hashCode-impl(this.guildId.unbox-impl());
       }
 
-      return (((var4 * 31 + var2) * 31 + var3) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
+      return (((var2 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var3.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
+      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var4.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
       val var6: java.lang.Long;
       if (this.guildId != null) {
          var6 = this.guildId.unbox-impl();
@@ -107,9 +107,9 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var6 = null;
       }
 
-      var3.putString("guildId", java.lang.String.valueOf(var6));
-      var3.putString("userId", java.lang.String.valueOf(this.userId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "DismissCallAction", 0L, false, var3, true, 12, null);
+      var4.putString("guildId", java.lang.String.valueOf(var6));
+      var4.putString("userId", java.lang.String.valueOf(this.userId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DismissCallAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {

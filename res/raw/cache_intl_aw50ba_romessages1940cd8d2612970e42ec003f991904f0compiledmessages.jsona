@@ -11044,9 +11044,6 @@
   "Lbpk6u": "Spune-ne dacă acest mesaj n-ar fi trebuit semnalat, ca să putem îmbunătăți funcția AutoMod. Prin această acțiune, trimiți către Discord și mesajul semnalat.",
   "7bdzNj": "Am făcut o greșeală?",
   "94JbMz": "Raportează probleme",
-  "o3ZlOD": "În regulă!",
-  "oxowND": "Folosim aceste informații pentru a-ți transmite alerte relevante.",
-  "pAzfrq": "Mulțumim!",
   "PAM+JS": "Spune-ne ce s-a întâmplat",
   "K3UWeX": "Alt motiv",
   "ZQr92N": "Pune în aplicare Regulamentul serverului (IA)",
@@ -38597,6 +38594,30 @@
   "DisZzM": "Vezi profilul per-server",
   "hl1V+f": "Vezi spectatorii",
   "39d0Wl": "Vezi firul",
+  "7gHWra": [
+    "Eroare la valorificarea ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "S-au revendicat cu succes ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " pentru ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voce",
   "wtk08f": "Notificări pentru activitatea vocală",
   "EZgS+/": "Apel vocal",

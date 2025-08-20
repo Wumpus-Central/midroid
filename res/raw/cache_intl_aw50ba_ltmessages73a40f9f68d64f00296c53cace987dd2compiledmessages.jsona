@@ -11435,9 +11435,6 @@
   "Lbpk6u": "Pranešk, jei ši žinutė neturėjo būti sugauta, kad AutoMod galėtume patobulinti ateičiai. Tai darydamas (-a) taip pat nusiųsi Discord pažymėtą žinutę.",
   "7bdzNj": "Kažką ne taip supratome?",
   "94JbMz": "Pranešti apie problemas",
-  "o3ZlOD": "Gerai!",
-  "oxowND": "Šią informaciją naudojame tam, kad tau siųstume aktualius įspėjimus.",
-  "pAzfrq": "Ačiū!",
   "PAM+JS": "Papasakok, kas nutiko",
   "K3UWeX": "Kita",
   "ZQr92N": "Priversti laikytis serverio taisyklių (DI)",
@@ -39897,6 +39894,30 @@
   "DisZzM": "Peržiūrėti serverio profilį",
   "hl1V+f": "Peržiūrėti stebėtojus",
   "39d0Wl": "Peržiūrėti giją",
+  "7gHWra": [
+    "Įvyko klaida bandant atsiimti ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Sėkmingai panaudojai ",
+    [
+      1,
+      "amountDescription"
+    ],
+    ", kurie skirti ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Balsas",
   "wtk08f": "Voice Activity pranešimai",
   "EZgS+/": "Balso skambutis",

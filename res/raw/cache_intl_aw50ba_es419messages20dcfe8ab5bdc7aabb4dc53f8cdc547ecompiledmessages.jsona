@@ -11059,9 +11059,6 @@
   "Lbpk6u": "Avísanos si este mensaje no debería haber sido marcado para que podamos mejorar AutoMod en el futuro. Al hacerlo, también envías el mensaje marcado a Discord.",
   "7bdzNj": "¿Nos equivocamos?",
   "94JbMz": "Informar problemas",
-  "o3ZlOD": "¡Perfecto!",
-  "oxowND": "Usamos esta información para enviarte alertas importantes.",
-  "pAzfrq": "¡Gracias!",
   "PAM+JS": "Cuéntanos qué pasó",
   "K3UWeX": "Otro",
   "ZQr92N": "Aplicar las normas del servidor (IA)",
@@ -38377,6 +38374,29 @@
   "DisZzM": "Ver perfil de servidor",
   "hl1V+f": "Ver espectadores",
   "39d0Wl": "Ver hilo",
+  "7gHWra": [
+    "Error al canjear ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "amountDescription"
+    ],
+    " se canjeó con éxito por ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voz",
   "wtk08f": "Notificaciones de actividad de voz",
   "EZgS+/": "Llamada de voz",

@@ -33,7 +33,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
       val var4: Bundle = new Bundle();
       if (this.guildId != null) {
          var4.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
@@ -44,7 +44,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
          var4.putInt("muteTime", this.muteTime);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MuteAction", 0L, false, var4, true, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {

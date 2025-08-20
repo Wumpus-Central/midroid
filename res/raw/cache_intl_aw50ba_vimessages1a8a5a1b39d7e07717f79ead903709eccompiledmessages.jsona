@@ -11101,9 +11101,6 @@
   "Lbpk6u": "Hãy phản hồi cho chúng tôi biết nếu tin nhắn này đúng ra không nên ở trong trạng thái như vậy, để chúng tôi có thể cải thiện AutoMod trong tương lai. Bằng cách này, bạn cũng đang gửi tin nhắn được gắn cờ tới Discord.",
   "7bdzNj": "Chúng tôi hiểu sai ý bạn sao?",
   "94JbMz": "Báo cáo sự cố",
-  "o3ZlOD": "Đồng ý!",
-  "oxowND": "Chúng tôi sử dụng thông tin này để gửi những cảnh báo có liên quan đến bạn.",
-  "pAzfrq": "Cảm ơn!",
   "PAM+JS": "Hãy cho chúng tôi biết về tình huống đã xảy ra",
   "K3UWeX": "Khác",
   "ZQr92N": "Thực Thi Quy Định Máy Chủ (AI)",
@@ -38683,6 +38680,31 @@
   "DisZzM": "Xem Hồ Sơ Theo Máy Chủ",
   "hl1V+f": "Xem khán giả",
   "39d0Wl": "Xem Chủ Đề",
+  "7gHWra": [
+    "Lỗi quy đổi ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Đã quy đổi ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " lấy ",
+    [
+      1,
+      "redeemedItemDescription"
+    ],
+    " thành công"
+  ],
   "K3lovL": "Giọng nói",
   "wtk08f": "Thông Báo Hoạt Động Âm Thanh Voice",
   "EZgS+/": "Cuộc gọi thoại",

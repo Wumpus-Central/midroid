@@ -213,9 +213,9 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
                val var9: StringBuilder = new StringBuilder();
                var9.append("CALL_RING");
                var9.append(var8);
-               var8 = var9.toString();
-               val var20: java.lang.String = var18.getTag();
-               var5 = StringsKt.I(var20, var8, false, 2, null);
+               val var20: java.lang.String = var9.toString();
+               var8 = var18.getTag();
+               var5 = StringsKt.I(var8, var20, false, 2, null);
             }
 
             if (var5) {

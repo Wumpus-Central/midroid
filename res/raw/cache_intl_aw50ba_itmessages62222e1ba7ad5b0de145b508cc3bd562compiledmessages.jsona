@@ -11105,9 +11105,6 @@
   "Lbpk6u": "Facci sapere se questo messaggio non avrebbe dovuto essere moderato, così potremo migliorare AutoMod per il futuro. Completando l'azione, invierai a Discord anche il messaggio segnalato.",
   "7bdzNj": "Abbiamo sbagliato qualcosa?",
   "94JbMz": "Segnala un problema",
-  "o3ZlOD": "OK!",
-  "oxowND": "Stiamo aggiornando i nostri criteri per inviarti notifiche più precise e rilevanti.",
-  "pAzfrq": "Grazie!",
   "PAM+JS": "Raccontaci cosa è successo",
   "K3UWeX": "Altro",
   "ZQr92N": "Fai rispettare le regole del server (IA)",
@@ -38667,6 +38664,30 @@
   "DisZzM": "Visualizza il profilo specifico del server",
   "hl1V+f": "Visualizza spettatori",
   "39d0Wl": "Mostra thread",
+  "7gHWra": [
+    "Errore nel riscattare ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Hai riscattato con successo ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " per ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voce",
   "wtk08f": "Notifiche attività vocale",
   "EZgS+/": "Chiamata vocale",

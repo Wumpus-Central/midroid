@@ -11116,9 +11116,6 @@
   "Lbpk6u": "Avise a gente se esta mensagem não deveria ter sido marcada para podermos melhorar a função de AutoMod no futuro. Ao fazer isso, você também enviará a mensagem sinalizada para o Discord.",
   "7bdzNj": "Erramos?",
   "94JbMz": "Denunciar erros",
-  "o3ZlOD": "Ok!",
-  "oxowND": "Usamos esta informação para enviar alertas relevantes a você.",
-  "pAzfrq": "Valeu!",
   "PAM+JS": "Diga-nos o que aconteceu",
   "K3UWeX": "Outro",
   "ZQr92N": "Aplicar regras do servidor (IA)",
@@ -38710,6 +38707,30 @@
   "DisZzM": "Ver perfil por servidor",
   "hl1V+f": "Ver espectadores",
   "39d0Wl": "Ver tópico",
+  "7gHWra": [
+    "Erro ao resgatar ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Resgatou com sucesso ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " de ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voz",
   "wtk08f": "Notificações de atividade de voz",
   "EZgS+/": "Chamada de voz",

@@ -11437,9 +11437,6 @@
   "Lbpk6u": "Javi nam ako ova poruka nije trebala biti uhićena kako bismo mogli poboljšati AutoMod u budućnosti. Radeći to, također ćeš Discordu poslati i označenu poruku.",
   "7bdzNj": "Jesmo li nešto krivo shvatili?",
   "94JbMz": "Prijavi probleme",
-  "o3ZlOD": "U redu!",
-  "oxowND": "Ove informacije koristimo kako bismo ti pružili odgovarajuća upozorenja.",
-  "pAzfrq": "Hvala!",
   "PAM+JS": "Reci nam što se dogodilo",
   "K3UWeX": "Ostalo",
   "ZQr92N": "Provedba pravila servera (AI)",
@@ -39887,6 +39884,30 @@
   "DisZzM": "Prikaži profil za određeni server",
   "hl1V+f": "Pogledaj tko su gledatelji",
   "39d0Wl": "Pregledavaj nit",
+  "7gHWra": [
+    "Greška pri otkupu ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Uspješno je iskorišteno ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " za ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Glas",
   "wtk08f": "Obavijesti o glasovnim aktivnostima",
   "EZgS+/": "Glasovni poziv",

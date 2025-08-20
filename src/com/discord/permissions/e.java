@@ -1,14 +1,14 @@
 package com.discord.permissions;
 
-import com.facebook.react.bridge.Callback;
-import kotlin.jvm.functions.Function0;
+import com.facebook.react.bridge.Promise;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class e implements Callback {
-   public final Function0 a;
-   public final Function0 b;
+public final class e implements Function1 {
+   public final NativePermissionManagerModule d;
+   public final Promise e;
 
-   public final void invoke(Object[] var1) {
-      NativePermissionPromise.a(this.a, this.b, var1);
+   public final Object invoke(Object var1) {
+      return NativePermissionManagerModule.c(this.d, this.e, (Promise)var1);
    }
 }

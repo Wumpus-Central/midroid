@@ -11051,9 +11051,6 @@
   "Lbpk6u": "Gi oss beskjed hvis meldingen ikke skulle ha blitt fanget opp, sånn at vi kan forbedre AutoMod. Ved å gjøre dette sender du også den flaggede meldingen til Discord.",
   "7bdzNj": "Tok vi feil?",
   "94JbMz": "Rapporter problemer",
-  "o3ZlOD": "Greit!",
-  "oxowND": "Vi bruker disse opplysningene til å sende deg relevante varsler.",
-  "pAzfrq": "Takk!",
   "PAM+JS": "Fortell oss hva som skjedde",
   "K3UWeX": "Annet",
   "ZQr92N": "Håndhev serverregler (AI)",
@@ -38556,6 +38553,30 @@
   "DisZzM": "Vis profil på server",
   "hl1V+f": "Vis tilskuere",
   "39d0Wl": "Vis tråd",
+  "7gHWra": [
+    "Feil ved innløsing av ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    [
+      1,
+      "amountDescription"
+    ],
+    " til ",
+    [
+      1,
+      "redeemedItemDescription"
+    ],
+    " er løst inn"
+  ],
   "K3lovL": "Tale",
   "wtk08f": "Varsler for taleaktivitet",
   "EZgS+/": "Taleanrop",

@@ -11113,9 +11113,6 @@
   "Lbpk6u": "Avísanos si este mensaje no debería haber sido interceptado para así poder mejorar AutoMod. Al hacerlo, también se enviará a Discord el mensaje marcado.",
   "7bdzNj": "¿Nos hemos equivocado?",
   "94JbMz": "Informar de problemas",
-  "o3ZlOD": "¡Vale!",
-  "oxowND": "Utilizamos esta información para ofrecerte alertas relevantes.",
-  "pAzfrq": "¡Gracias!",
   "PAM+JS": "Cuéntanos qué ha pasado",
   "K3UWeX": "Otro",
   "ZQr92N": "Aplicar las normas del servidor (IA)",
@@ -38702,6 +38699,30 @@
   "DisZzM": "Ver perfil por servidor",
   "hl1V+f": "Ver espectadores",
   "39d0Wl": "Ver hilo",
+  "7gHWra": [
+    "Error al canjear ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Se ha(n) canjeado con éxito ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " por ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voz",
   "wtk08f": "Notificaciones de actividad de voz",
   "EZgS+/": "Llamada de voz",

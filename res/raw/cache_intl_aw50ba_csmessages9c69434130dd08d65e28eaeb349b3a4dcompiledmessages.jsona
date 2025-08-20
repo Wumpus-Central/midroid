@@ -11496,9 +11496,6 @@
   "Lbpk6u": "Dej nám vědět, pokud jsme tuto zprávu neměli odchytit, abychom mohli AutoMod do budoucna vylepšit. S tímto hlášením odešleš Discordu i označenou zprávu.",
   "7bdzNj": "Pochopili jsme to špatně?",
   "94JbMz": "Nahlásit problémy",
-  "o3ZlOD": "OK!",
-  "oxowND": "Tyto informace používáme k tomu, abychom ti doručili relevantní výstrahy.",
-  "pAzfrq": "Díky!",
   "PAM+JS": "Pověz nám, co se stalo",
   "K3UWeX": "Jiný důvod",
   "ZQr92N": "Vynucovat pravidla serveru (AI)",
@@ -39904,6 +39901,30 @@
   "DisZzM": "Zobrazit profil na serveru",
   "hl1V+f": "Zobrazit diváky",
   "39d0Wl": "Zobrazit vlákno",
+  "7gHWra": [
+    "Chyba při uplatnění částky ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Úspěšně uplatněna částka ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " na ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Hlas",
   "wtk08f": "Oznámení o hlasové aktivitě",
   "EZgS+/": "Hlasový hovor",

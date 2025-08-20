@@ -11494,9 +11494,6 @@
   "Lbpk6u": "Daj nam znać, jeśli ta wiadomość nie powinna zostać wychwycona, abyśmy mogli doskonalić system AutoMod. Robiąc to, wysyłasz również oflagowaną wiadomość do Discorda.",
   "7bdzNj": "Coś poszło nie tak?",
   "94JbMz": "Zgłoś problemy",
-  "o3ZlOD": "OK!",
-  "oxowND": "Wykorzystujemy tę informację do dostarczania Ci stosownych alertów.",
-  "pAzfrq": "Dziękujemy!",
   "PAM+JS": "Powiedz nam, co się stało",
   "K3UWeX": "Inne",
   "ZQr92N": "Egzekwowanie zasad serwera (SI)",
@@ -39750,6 +39747,30 @@
   "DisZzM": "Zobacz profil serwerowy",
   "hl1V+f": "Wyświetl obserwatorów",
   "39d0Wl": "Wyświetl wątek",
+  "7gHWra": [
+    "Błąd przy wykorzystywaniu ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Wydano ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " na przedmiot: ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Głos",
   "wtk08f": "Powiadomienia o aktywności głosowej",
   "EZgS+/": "Połączenie głosowe",

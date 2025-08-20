@@ -102,9 +102,9 @@ public class NotificationClient {
       // 067: pop
       // 068: goto 074
       // 06b: astore 1
-      // 06c: goto 262
+      // 06c: goto 263
       // 06f: astore 6
-      // 071: goto 244
+      // 071: goto 245
       // 074: aload 2
       // 075: invokevirtual com/discord/notifications/api/NotificationData.getNotifTypeId ()Ljava/lang/String;
       // 078: astore 7
@@ -307,36 +307,36 @@ public class NotificationClient {
       // 22f: aload 1
       // 230: aconst_null
       // 231: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 234: goto 25f
-      // 237: astore 2
-      // 238: aload 2
-      // 239: athrow
-      // 23a: astore 6
-      // 23c: aload 1
-      // 23d: aload 2
-      // 23e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 241: aload 6
-      // 243: athrow
-      // 244: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 247: astore 1
-      // 248: ldc com/discord/notifications/client/NotificationClient
-      // 24a: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
-      // 24d: astore 2
-      // 24e: aload 2
-      // 24f: ldc_w "getSimpleName(...)"
-      // 252: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 255: aload 1
+      // 234: goto 260
+      // 237: astore 6
+      // 239: aload 6
+      // 23b: athrow
+      // 23c: astore 2
+      // 23d: aload 1
+      // 23e: aload 6
+      // 240: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 243: aload 2
+      // 244: athrow
+      // 245: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
+      // 248: astore 2
+      // 249: ldc com/discord/notifications/client/NotificationClient
+      // 24b: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
+      // 24e: astore 1
+      // 24f: aload 1
+      // 250: ldc_w "getSimpleName(...)"
+      // 253: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 256: aload 2
-      // 257: ldc_w "Error appending notification to cache file"
-      // 25a: aload 6
-      // 25c: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-      // 25f: aload 0
-      // 260: monitorexit
-      // 261: return
-      // 262: aload 0
-      // 263: monitorexit
-      // 264: aload 1
-      // 265: athrow
+      // 257: aload 1
+      // 258: ldc_w "Error appending notification to cache file"
+      // 25b: aload 6
+      // 25d: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+      // 260: aload 0
+      // 261: monitorexit
+      // 262: return
+      // 263: aload 0
+      // 264: monitorexit
+      // 265: aload 1
+      // 266: athrow
    }
 
    private fun getBehaviors(context: Context): NotificationBehaviors? {
@@ -450,9 +450,9 @@ public class NotificationClient {
                   var var15: java.lang.String;
                   try {
                      var14 = PushNotificationMonitor.INSTANCE;
-                     var13 = var2.getType();
+                     var15 = var2.getType();
                      var6 = System.currentTimeMillis();
-                     var15 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
+                     var13 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
                      var74 = NotificationDataUtilsKt.getContent(var2, var1, true);
                   } catch (var30: Exception) {
                      val var37: Log = Log.INSTANCE;
@@ -499,7 +499,7 @@ public class NotificationClient {
                   }
 
                   try {
-                     var14.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var13, var15, var75, var16, var10));
+                     var14.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var15, var13, var75, var16, var10));
                   } catch (var26: Exception) {
                      val var41: Log = Log.INSTANCE;
                      val var58: java.lang.String = NotificationClient.class.getSimpleName();
@@ -585,10 +585,10 @@ public class NotificationClient {
 
                      try {
                         var10 = ChannelId.toString-impl(var78.unbox-impl());
-                        val var81: java.lang.String = MessageId.toString-impl(var76);
-                        val var77: kotlinx.serialization.json.Json.a = Json.d;
+                        val var77: java.lang.String = MessageId.toString-impl(var76);
+                        val var81: kotlinx.serialization.json.Json.a = Json.d;
                         Json.d.a();
-                        DiscordMobileApi.putMessage(var65, var47, var10, var81, var77.c(KvMessageEntry.Companion.serializer(), var72));
+                        DiscordMobileApi.putMessage(var65, var47, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
                      } catch (var19: Exception) {
                         val var49: Log = Log.INSTANCE;
                         val var67: java.lang.String = NotificationClient.class.getSimpleName();
@@ -710,17 +710,17 @@ public class NotificationClient {
    }
 
    public fun onDirectReplySuccess(context: Context, data: String) {
-      val var4: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
-      val var3: Pair = s.a("type", var4.getType());
-      val var5: Pair = s.a("channel_id", java.lang.String.valueOf(var4.getChannelId-qMVnFVQ()));
-      var2 = var4.getMessageId-N_6c4I0();
+      val var3: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
+      val var5: Pair = s.a("type", var3.getType());
+      val var4: Pair = s.a("channel_id", java.lang.String.valueOf(var3.getChannelId-qMVnFVQ()));
+      var2 = var3.getMessageId-N_6c4I0();
       if (var2 == null) {
          var2 = "null";
       } else {
          var2 = MessageId.toString-impl(var2);
       }
 
-      this.showNotification(var1, var4, L.l(new Pair[]{var3, var5, s.a("message_id", var2)}), false);
+      this.showNotification(var1, var3, L.l(new Pair[]{var5, var4, s.a("message_id", var2)}), false);
    }
 
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
