@@ -1,7 +1,69 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.RuntimeException: Constructor com/discord/chat/presentation/message/messagepart/MessageAccessory.<init>(Ljava/lang/String;Ljava/lang/String;ZI)V not found
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
-*/
+package com.discord.chat.presentation.message.messagepart
+
+import com.discord.chat.bridge.attachment.Attachment
+import com.discord.chat.presentation.message.view.UploadContext
+import com.discord.chat.presentation.message.view.UploadItemProps
+import com.discord.primitives.MessageId
+import kotlin.jvm.functions.Function2
+import z1.a
+
+public sealed class MessageAttachmentAccessory protected constructor(messageId: MessageId,
+   attachment: Attachment,
+   attachmentIndex: Int,
+   attachmentsOpacity: Float?
+) : MessageAccessory(var1, MessageAttachmentAccessory.Companion.access$createAccessoryDescription(Companion, var2, var3), false, 4) {
+   public open val messageId: MessageId
+   public open val attachment: Attachment
+   public open val attachmentIndex: Int
+   public open val attachmentsOpacity: Float?
+
+   init {
+      this.messageId = var1;
+      this.attachment = var2;
+      this.attachmentIndex = var3;
+      this.attachmentsOpacity = var4;
+   }
+
+   @JvmStatic
+   fun `getUploadItemProps$lambda$0`(var0: Function2, var1: UploadContext): Unit {
+      var0.invoke(var1.getUploaderId(), var1.getUploadItemId());
+      return Unit.a;
+   }
+
+   public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
+      val var4: java.lang.String = this.getAttachment().getUploaderId();
+      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
+      val var3: Int = this.getAttachment().getProgress();
+      val var2: java.lang.Float = this.getAttachmentsOpacity();
+      if (var4 != null && var5 != null && var3 != null && var2 != null) {
+         val var6: UploadContext = new UploadContext(var4, var5);
+         return new UploadItemProps(var3, var6, var2, new a(var1, var6));
+      } else {
+         return null;
+      }
+   }
+
+   public companion object {
+      private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
+         var var3: java.lang.String;
+         if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
+            var3 = var1.getUploaderId();
+            val var4: java.lang.String = var1.getUploaderItemId();
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var3);
+            var5.append(" ");
+            var5.append(var4);
+            var3 = var5.toString();
+         } else {
+            var3 = java.lang.String.valueOf(var2);
+         }
+
+         val var6: java.lang.String = var1.type().getIndexLabel();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append(var6);
+         var8.append(" ");
+         var8.append(var3);
+         return var8.toString();
+      }
+   }
+}

@@ -109,12 +109,12 @@ internal object CustomFontFamilyOverride {
       val var22: Int = FILE_EXTENSIONS.length;
 
       for (int var21 = 0; var21 < var22; var21++) {
-         val var13: java.lang.String = var19[var21];
-         val var26: StringBuilder = new StringBuilder();
-         var26.append("fonts/");
-         var26.append(var11);
-         var26.append(var13);
-         val var27: java.lang.String = var26.toString();
+         val var26: java.lang.String = var19[var21];
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("fonts/");
+         var13.append(var11);
+         var13.append(var26);
+         val var27: java.lang.String = var13.toString();
 
          try {
             return Typeface.createFromAsset(var3, var27);
@@ -154,16 +154,16 @@ internal object CustomFontFamilyOverride {
             var10 = StringsKt.A(StringsKt.A(StringsKt.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var25[var5];
+            val var13: java.lang.String = var28[var5];
             val var12: StringBuilder = new StringBuilder();
             var12.append("fonts/");
-            var12.append(var10);
+            var12.append(var9);
             var12.append(var13);
             val var31: java.lang.String = var12.toString();
 

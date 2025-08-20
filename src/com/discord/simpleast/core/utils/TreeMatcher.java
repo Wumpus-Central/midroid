@@ -95,9 +95,9 @@ public class TreeMatcher {
                return false;
             } else {
                for (int var3 = 0; var3 < var7.size(); var3++) {
-                  CharacterStyle var5 = (CharacterStyle)var7.get(var3);
-                  CharacterStyle var9 = (CharacterStyle)var4.get(var3);
-                  if (var5.getClass() != var9.getClass()) {
+                  CharacterStyle var9 = (CharacterStyle)var7.get(var3);
+                  CharacterStyle var5 = (CharacterStyle)var4.get(var3);
+                  if (var9.getClass() != var5.getClass()) {
                      return false;
                   }
                }

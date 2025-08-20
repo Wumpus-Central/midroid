@@ -14,6 +14,7 @@ import db.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -176,8 +177,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         c.b(var5);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              val var6: d0 = K.c();
-                              var5 = new Function2<CoroutineScope, Continuation, Object>(
+                              var5 = K.c();
+                              val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(
                                  this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null
                               ) {
                                  final DownloadState $downloadState;
@@ -225,7 +226,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
+                              var12 = f.g((CoroutineContext)var5, var6, (Continuation)var13);
                            } catch (var8: Exception) {
                               val var11: d0 = K.c();
                               var5 = new Function2<CoroutineScope, Continuation, Object>(var8, null) {
