@@ -4935,7 +4935,6 @@
   "qyjZub": "Opret events",
   "CTLgZG": "Slutdato",
   "j2RuXF": "Sluttid",
-  "BgAW29": "Synlighed/Privatliv",
   "z+aIub": [
     "Hver anden ",
     [
@@ -19527,19 +19526,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Gå til serveren",
-  "6hktHB": "Tilføj din server til hubben, opret et event på din server, og vælg \"Del til elevhubber\" i event-indstillingerne.",
-  "RhXVpa": "Vil du promovere events i Hubber?",
-  "4BiO8f": [
-    "Join i ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Du kan kun vise dette event i Elevhubber, hvis den er i en kanal, der kan ses af @everyone.",
-  "V8Oq8P": "Dette event vil kunne findes af personer i Elevhubber, som denne server er i.",
-  "8GW68/": "Del event til Elevhubber",
   "48kg+P": "Hvad er en elevhub?",
   "+/Pv0t": "Få adgang til funktioner kun for elever/studerende",
   "GLG9n5": "Nej, jeg er ikke interesseret",
@@ -31598,6 +31584,15 @@
       []
     ],
     " procent positive bedømmelser"
+  ],
+  "5I4mVV": [
+    "Skal have mindst ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " opslag"
   ],
   "MCHnKy": [
     "Skal have mindst ",

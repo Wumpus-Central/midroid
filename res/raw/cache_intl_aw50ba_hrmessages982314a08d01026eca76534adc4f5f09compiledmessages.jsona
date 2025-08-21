@@ -4995,7 +4995,6 @@
   "qyjZub": "Stvori događaje",
   "CTLgZG": "Datum završetka",
   "j2RuXF": "Vrijeme završetka",
-  "BgAW29": "Vidljivost/Privatnost",
   "z+aIub": [
     "Svakog drugog tjedna – ",
     [
@@ -19951,19 +19950,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Idi na server",
-  "6hktHB": "Dodajte svoj server u Hub, stvori događaj na svom serveru i odaberi \"Dijeli u Učeničkim Hubovima\" Postavkama događaja.",
-  "RhXVpa": "Želiš li promovirati događaje u Hubovima?",
-  "4BiO8f": [
-    "Pridruži se serveru ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Ovaj događaj možeš prikazati u Učeničkim Hubovima samo ako se nalazi na kanalu kojeg može vidjeti @everyone.",
-  "V8Oq8P": "Ovaj događaj će moći otkriti ljudi u Učeničkim Hubovima u kojima se ovaj server nalazi.",
-  "8GW68/": "Podijeli događaj sa Učeničkim Hubovima",
   "48kg+P": "Što je Učenički Hub?",
   "+/Pv0t": "Stekni pristup sadržajima rezerviranima za učenike",
   "GLG9n5": "Ne, ne zanima me",
@@ -32542,6 +32528,14 @@
   ],
   "oTFOe3": [
     "Najmanji obavezan postotak pozitivnih ocjena: ",
+    [
+      8,
+      "metadataHook",
+      []
+    ]
+  ],
+  "5I4mVV": [
+    "Najmanji obavezan broj postova je ",
     [
       8,
       "metadataHook",

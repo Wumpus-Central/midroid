@@ -5028,7 +5028,6 @@
   "qyjZub": "Kurti renginius",
   "CTLgZG": "Pabaigos data",
   "j2RuXF": "Pabaigos laikas",
-  "BgAW29": "Matomumas / privatumas",
   "z+aIub": [
     "Kas antrą ",
     [
@@ -20044,19 +20043,6 @@
     ],
     " nustatymus"
   ],
-  "N+TB5u": "Eiti į serverį",
-  "6hktHB": "Pridėk savo serverį prie Hub serverio, sukurk savo serveryje renginį ir renginio nustatymuose pasirink „Bendrinti Student Hub serveriuose“.",
-  "RhXVpa": "Nori reklamuoti renginius Hub serveriuose?",
-  "4BiO8f": [
-    "Jungtis prie ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Šis renginys bus rodomas Student Hub serveriuose, jei jis yra kanale, kuris matomas visiems (@everyone).",
-  "V8Oq8P": "Šį renginį matys žmonės, esantys Student Hub serveriuose, kuriuose yra šis serveris.",
-  "8GW68/": "Bendrinti renginį Student Hub serveriuose",
   "48kg+P": "Kas yra Student Hub?",
   "+/Pv0t": "Gauk prieigą tik prie moksleiviams / studentams skirtų funkcijų",
   "GLG9n5": "Ne, nedomina",
@@ -32576,6 +32562,15 @@
       []
     ],
     " proc. teigiamų įvertinimų"
+  ],
+  "5I4mVV": [
+    "Privalo būti pasidalijęs (-usi) bent ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " įrašais (-ų)"
   ],
   "MCHnKy": [
     "Privalo turėti bent ",

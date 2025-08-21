@@ -11,13 +11,14 @@ import com.facebook.react.views.view.ReactViewGroup
 import java.util.ArrayList
 
 internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
-   internal final lateinit var portalId: String
+   private final var portalId: String?
    private final var portalIdPrev: String?
    private final var childView: View?
 
    private fun addChildView(child: View) {
       this.childView = var1;
-      this.childViewAdded(this.getPortalId$portals_release(), var1);
+      val var2: java.lang.String = this.portalId;
+      this.childViewAdded(var2, var1);
    }
 
    private fun childViewAdded(portalId: String, child: View) {
@@ -47,7 +48,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    private fun removeChildView(): Unit? {
       var var1: Unit = null;
       if (this.childView != null) {
-         this.childViewRemoved(this.getPortalId$portals_release());
+         val var3: java.lang.String = this.portalId;
+         this.childViewRemoved(var3);
          this.childView = null;
          var1 = Unit.a;
       }
@@ -66,7 +68,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       }
 
       if (this.portalId != null) {
-         var4 = this.getPortalId$portals_release();
+         var4 = this.portalId;
       }
 
       if (this.childView == var1) {
@@ -77,6 +79,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
                "portal"
             );
       } else if (!this.childViewValid()) {
+         this.removeChildView();
          CrashReporting.INSTANCE
             .addBreadcrumb(
                "childView not valid before addView",
@@ -105,7 +108,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         var4 = this.getPortalId$portals_release();
+         var4 = this.portalId;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Adding more than one child unsupported: ");
          var6.append(var4);
@@ -128,32 +131,25 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    }
 
    public open fun getChildAt(index: Int): View {
-      val var2: View = this.childView;
+      val var3: View = this.childView;
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var4: java.lang.String = this.getPortalId$portals_release();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Requesting non-existent child or invalid index: ");
-         var3.append(var1);
-         var3.append(", ");
-         var3.append(var4);
-         var3.append(", ");
-         var3.append(var2);
-         var3.append(".");
-         throw new IllegalArgumentException(var3.toString().toString());
+         val var4: java.lang.String = this.portalId;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Requesting non-existent child or invalid index: ");
+         var2.append(var1);
+         var2.append(", ");
+         var2.append(var4);
+         var2.append(", ");
+         var2.append(var3);
+         var2.append(".");
+         throw new IllegalArgumentException(var2.toString().toString());
       }
    }
 
    public open fun getChildCount(): Int {
-      val var1: Byte;
-      if (this.childView != null) {
-         var1 = 1;
-      } else {
-         var1 = 0;
-      }
-
-      return var1;
+      return this.childViewValid();
    }
 
    public fun onAfterUpdateTransaction() {
@@ -161,11 +157,28 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          this.childViewRemoved(this.portalIdPrev);
          val var2: View = this.childView;
          if (this.childView != null) {
-            this.childViewAdded(this.getPortalId$portals_release(), var2);
+            val var3: java.lang.String = this.portalId;
+            this.childViewAdded(var3, var2);
          }
 
          this.portalIdPrev = null;
       }
+   }
+
+   public fun onDropViewInstance() {
+      var var1: java.lang.String = this.portalIdPrev;
+      if (this.portalIdPrev != null) {
+         this.childViewRemoved(var1);
+      } else {
+         var1 = this.portalId;
+         if (this.portalId != null) {
+            this.childViewRemoved(var1);
+         }
+      }
+
+      this.childView = null;
+      this.portalIdPrev = null;
+      this.portalId = null;
    }
 
    public open fun removeAllViews() {
@@ -182,10 +195,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
 
    public fun setPortalId(portalId: String) {
       if (this.portalId == null) {
-         this.setPortalId$portals_release(var1);
-      } else if (!(this.getPortalId$portals_release() == var1)) {
-         this.portalIdPrev = this.getPortalId$portals_release();
-         this.setPortalId$portals_release(var1);
+         this.portalId = var1;
+      } else if (!(this.portalId == var1)) {
+         this.portalIdPrev = this.portalId;
+         this.portalId = var1;
       }
    }
 }

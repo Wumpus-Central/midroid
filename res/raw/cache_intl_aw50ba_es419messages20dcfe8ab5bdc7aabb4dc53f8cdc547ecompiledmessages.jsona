@@ -4966,7 +4966,6 @@
   "qyjZub": "Crear eventos",
   "CTLgZG": "Fecha de finalización",
   "j2RuXF": "Hora de finalización",
-  "BgAW29": "Visibilidad/Privacidad",
   "z+aIub": [
     "Cada dos ",
     [
@@ -19390,19 +19389,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Ir al servidor",
-  "6hktHB": "Añade tu servidor al centro, crea un evento en tu servidor y selecciona \"Compartir con los centros de estudiantes\" en los ajustes del evento.",
-  "RhXVpa": "¿Quieres promocionar eventos en los centros?",
-  "4BiO8f": [
-    "Unirse a ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Solo puedes mostrar este evento en los centros de estudiantes si está en un canal que puede ser visto por @everyone.",
-  "V8Oq8P": "Este evento podrá ser descubierto por personas en los centros de estudiantes en los que se encuentra este servidor.",
-  "8GW68/": "Compartir el evento con los centros de estudiantes",
   "48kg+P": "¿Qué es un centro de estudiantes?",
   "+/Pv0t": "Consigue acceso a funciones exclusivas para estudiantes",
   "GLG9n5": "No, no me interesa",
@@ -31193,6 +31179,15 @@
       []
     ],
     " % de calificaciones positivas"
+  ],
+  "5I4mVV": [
+    "Debe tener, como mínimo: ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " publicaciones"
   ],
   "MCHnKy": [
     "Debe tener, como mínimo: ",

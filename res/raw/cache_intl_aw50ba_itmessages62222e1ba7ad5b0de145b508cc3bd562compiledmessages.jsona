@@ -4924,7 +4924,6 @@
   "qyjZub": "Crea eventi",
   "CTLgZG": "Data di fine",
   "j2RuXF": "Ora di fine",
-  "BgAW29": "Visibilità/Privacy",
   "z+aIub": [
     "Ogni due settimane: ",
     [
@@ -19446,19 +19445,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Vai al server",
-  "6hktHB": "Aggiungi il tuo server all'hub, crea un evento nel tuo server e seleziona \"Condividi su hub studenti\" nelle Impostazioni evento.",
-  "RhXVpa": "Vuoi promuovere eventi negli hub?",
-  "4BiO8f": [
-    "Unisciti a ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Puoi mostrare questo evento negli hub studenti se è in un canale che è visibile da @everyone.",
-  "V8Oq8P": "Questo evento potrà essere trovato dalle persone negli hub studenti di cui questo server fa parte.",
-  "8GW68/": "Condividi evento sugli hub studenti",
   "48kg+P": "Cos'è un hub studenti?",
   "+/Pv0t": "Ottieni accesso a funzionalità esclusive per studenti",
   "GLG9n5": "No, non m'interessa",
@@ -31505,6 +31491,15 @@
       []
     ],
     "% di valutazioni positive"
+  ],
+  "5I4mVV": [
+    "Deve avere almeno ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " post"
   ],
   "MCHnKy": [
     "Deve avere almeno ",

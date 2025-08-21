@@ -5044,7 +5044,6 @@
   "qyjZub": "Twórz wydarzenia",
   "CTLgZG": "Data zakończenia",
   "j2RuXF": "Godzina zakończenia",
-  "BgAW29": "Widoczność/Prywatność",
   "z+aIub": [
     "Co drugi tydzień (",
     [
@@ -19939,19 +19938,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Przejdź do serwera",
-  "6hktHB": "Dodaj swój serwer do centrum, utwórz wydarzenie na swoim serwerze i w ustawieniach wydarzenia wybierz opcję „Udostępnij w centrach szkolnych”.",
-  "RhXVpa": "Chcesz promować wydarzenia w centrach?",
-  "4BiO8f": [
-    "Dołącz do ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Możesz wyświetlić to wydarzenie w centrach szkolnych tylko wtedy, gdy odbywa się w kanale widocznym dla wszystkich (@everyone).",
-  "V8Oq8P": "To wydarzenie będą mogły znaleźć osoby należące do centrów szkolnych, w których jest ten serwer.",
-  "8GW68/": "Udostępnij wydarzenie w centrach szkolnych",
   "48kg+P": "Czym jest centrum szkolne?",
   "+/Pv0t": "Uzyskaj dostęp do funkcji dostępnych tylko dla uczniów i studentów",
   "GLG9n5": "Nie, nie jestem zainteresowany(-a)",
@@ -32437,6 +32423,14 @@
       []
     ],
     " procent pozytywnych ocen"
+  ],
+  "5I4mVV": [
+    "Musi mieć co najmniej tyle postów: ",
+    [
+      8,
+      "metadataHook",
+      []
+    ]
   ],
   "MCHnKy": [
     "Musi mieć co najmniej tyle przedmiotów TF2: ",

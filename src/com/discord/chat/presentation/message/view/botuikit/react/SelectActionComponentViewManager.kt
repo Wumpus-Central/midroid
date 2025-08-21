@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.botuikit.react
 
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.chat.bridge.botuikit.ComponentSerializer
-import com.discord.chat.bridge.botuikit.StringSelectComponent
+import com.discord.chat.bridge.botuikit.SelectComponent
 import com.discord.chat.presentation.message.view.botuikit.ComponentActionEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.WidthInfo
@@ -74,9 +74,9 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
          val var19: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
          var15 = var5.b(var19, var14) as Component;
-         var3 = var15 is StringSelectComponent;
+         var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
-         val var9: java.lang.String = (StringSelectComponent::class).getSimpleName();
+         val var9: java.lang.String = (SelectComponent::class).getSimpleName();
          val var4: java.lang.String = var8.getMessage();
          val var13: StringBuilder = new StringBuilder();
          var13.append("Error while deserializing ");
@@ -87,11 +87,11 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       }
 
       if (var3) {
-         var1.configure(var15 as StringSelectComponent, this.createSelectComponentContext(new A(this, var1)));
+         var1.configure(var15 as SelectComponent, this.createSelectComponentContext(new A(this, var1)));
          ViewMeasureExtensionsKt.measureAndLayout(var1);
       } else {
          try {
-            val var11: java.lang.String = (StringSelectComponent::class).getSimpleName();
+            val var11: java.lang.String = (SelectComponent::class).getSimpleName();
             val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
             val var21: StringBuilder = new StringBuilder();
             var21.append("Expected ");
@@ -100,7 +100,7 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
             var21.append(var17);
             throw new IllegalStateException(var21.toString().toString());
          } catch (var7: Exception) {
-            val var10: java.lang.String = (StringSelectComponent::class).getSimpleName();
+            val var10: java.lang.String = (SelectComponent::class).getSimpleName();
             val var20: java.lang.String = var7.getMessage();
             val var16: StringBuilder = new StringBuilder();
             var16.append("Error while deserializing ");

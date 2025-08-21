@@ -4922,7 +4922,6 @@
   "qyjZub": "Criar eventos",
   "CTLgZG": "Data de encerramento",
   "j2RuXF": "Hora de encerramento",
-  "BgAW29": "Visibilidade/Privacidade",
   "z+aIub": [
     "Quinzenalmente a cada ",
     [
@@ -19439,19 +19438,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Ir para o Servidor",
-  "6hktHB": "Adicione seu servidor à Central, crie um evento no seu servidor e selecione “Compartilhar com Centrais de Estudantes” nas configurações do evento.",
-  "RhXVpa": "Quer fazer eventos nas Centrais?",
-  "4BiO8f": [
-    "Entrar em ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Você só poderá mostrar este evento em Centrais de Estudantes se ele estiver em um canal visível para @everyone.",
-  "V8Oq8P": "Este evento poderá ser descoberto pelas pessoas na Central de Estudantes em que este servidor está.",
-  "8GW68/": "Compartilhar evento com Centrais de Estudantes",
   "48kg+P": "O que é uma Central de Estudantes?",
   "+/Pv0t": "Obtenha acesso a funcionalidades exclusivas dos estudantes",
   "GLG9n5": "Não, não estou interessado(a)",
@@ -31519,6 +31505,15 @@
       []
     ],
     "% de avaliações positivas"
+  ],
+  "5I4mVV": [
+    "Deve ter pelo menos ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " postagens"
   ],
   "MCHnKy": [
     "Deve ter pelo menos ",

@@ -4880,7 +4880,6 @@
   "qyjZub": "Create Events",
   "CTLgZG": "End Date",
   "j2RuXF": "End Time",
-  "BgAW29": "Visibility/privacy",
   "z+aIub": [
     "Every other ",
     [
@@ -19364,19 +19363,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Go to server",
-  "6hktHB": "Add your server to the hub, create an event in your server and select \"Share to Student Hubs\" in the Event settings.",
-  "RhXVpa": "Want to promote events in Hubs?",
-  "4BiO8f": [
-    "Join ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "You can only show this event in Student Hubs if it is in a channel that is viewable by @everyone.",
-  "V8Oq8P": "This event will be discoverable by people in Student Hubs this server is in.",
-  "8GW68/": "Share event to Student Hubs",
   "48kg+P": "What's a Student Hub?",
   "+/Pv0t": "Get access to features just for students",
   "GLG9n5": "No, I'm not interested",
@@ -31387,6 +31373,15 @@
       []
     ],
     " percent positive ratings"
+  ],
+  "5I4mVV": [
+    "Must have at least ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " posts"
   ],
   "MCHnKy": [
     "Must have at least ",

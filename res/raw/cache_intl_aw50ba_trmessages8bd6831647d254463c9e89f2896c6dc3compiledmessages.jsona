@@ -4920,7 +4920,6 @@
   "qyjZub": "Etkinlik Oluştur",
   "CTLgZG": "Bitiş Tarihi",
   "j2RuXF": "Bitiş Saati",
-  "BgAW29": "Görünürlük/Gizlilik",
   "z+aIub": [
     "Her 2 haftada bir ",
     [
@@ -19501,19 +19500,6 @@
     ],
     " için Ayarları düzenle"
   ],
-  "N+TB5u": "Sunucuya git",
-  "6hktHB": "Sunucunu merkeze ekle, sunucunda bir etkinlik oluştur ve Etkinlik Ayarları'nda \"Öğrenci Merkezlerinde Paylaş\"ı seç.",
-  "RhXVpa": "Merkezlerde bu etkinliği tanıtmak mı istiyorsun?",
-  "4BiO8f": [
-    [
-      1,
-      "guildName"
-    ],
-    " guild'ine katıl"
-  ],
-  "gTgUmZ": "Bu etkinliği sadece @everyone (herkes) tarafından görülebilen bir kanaldaysa Öğrenci Merkezlerinde gösterebilirsin.",
-  "V8Oq8P": "Bu etkinlik bu sunucunun bulunduğu Öğrenci Merkezlerindeki kişiler tarafından keşfedilebilecek.",
-  "8GW68/": "Etkinliği, Öğrenci Merkezlerinde paylaş",
   "48kg+P": "Öğrenci Merkezi nedir?",
   "+/Pv0t": "Öğrenci özelliklerine erişim elde et",
   "GLG9n5": "Hayır, ilgilenmiyorum",
@@ -31496,6 +31482,15 @@
       []
     ],
     " olmalı"
+  ],
+  "5I4mVV": [
+    "En az ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " gönderi olmalı"
   ],
   "MCHnKy": [
     "En az ",

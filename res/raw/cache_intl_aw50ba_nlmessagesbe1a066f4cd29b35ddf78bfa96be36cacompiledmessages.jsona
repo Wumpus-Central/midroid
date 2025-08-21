@@ -4895,7 +4895,6 @@
   "qyjZub": "Evenementen creëren",
   "CTLgZG": "Einddatum",
   "j2RuXF": "Eindtijd",
-  "BgAW29": "Zichtbaarheid/privacy",
   "z+aIub": [
     "Tweewekelijks op ",
     [
@@ -19427,19 +19426,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Naar server gaan",
-  "6hktHB": "Voeg je server toe aan de hub, maak een evenement aan op je server en selecteer 'Delen met studentenhubs' in de instellingen van het evenement.",
-  "RhXVpa": "Wil je evenementen promoten in hubs?",
-  "4BiO8f": [
-    "Doe mee met ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Je kunt dit evenement alleen tonen in studentenhubs op een kanaal dat zichtbaar is door @everyone.",
-  "V8Oq8P": "Leden van de studentenhubs van deze server kunnen dit evenement ontdekken.",
-  "8GW68/": "Evenement delen met studentenhubs",
   "48kg+P": "Wat is een studentenhub?",
   "+/Pv0t": "Krijg toegang tot functies die alleen voor studenten zijn",
   "GLG9n5": "Nee, ik ben niet geïnteresseerd",
@@ -31472,6 +31458,15 @@
       []
     ],
     " procent positieve beoordelingen hebben"
+  ],
+  "5I4mVV": [
+    "Moet minstens ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " posts hebben"
   ],
   "MCHnKy": [
     "Moet minstens ",

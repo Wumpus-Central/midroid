@@ -21,6 +21,11 @@ internal class PortalFromJsViewManager : ReactViewManager {
       (var1 as PortalFromJsViewHost).onAfterUpdateTransaction();
    }
 
+   public open fun onDropViewInstance(view: ReactViewGroup) {
+      super.onDropViewInstance(var1);
+      (var1 as PortalFromJsViewHost).onDropViewInstance();
+   }
+
    @ReactProp(name = "portalId")
    public fun setPortalId(view: ReactViewGroup, value: String) {
       (var1 as PortalFromJsViewHost).setPortalId(var2);

@@ -4877,7 +4877,6 @@
   "qyjZub": "Opprett eventer",
   "CTLgZG": "Avslutningsdato",
   "j2RuXF": "Avslutningsklokkeslett",
-  "BgAW29": "Synlighet/personvern",
   "z+aIub": [
     "Annenhver ",
     [
@@ -19338,19 +19337,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Gå til server",
-  "6hktHB": "Legg til serveren din i huben, opprett en event i serveren, og velg «Del til skolehuber» i eventinnstillingene.",
-  "RhXVpa": "Vil du promotere eventer i huber?",
-  "4BiO8f": [
-    "Bli med på ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Du kan kun se denne eventen i skolehuber hvis den er i en kanal som er synlig for @everyone.",
-  "V8Oq8P": "Eventen er synlig for folk i skolehuber der serveren befinner seg.",
-  "8GW68/": "Del eventen i skolehuber",
   "48kg+P": "Hva er en skolehub?",
   "+/Pv0t": "Få tilgang til innhold for deg som går på skole",
   "GLG9n5": "Nei, jeg er ikke interessert",
@@ -31395,6 +31381,15 @@
       []
     ],
     " positive vurderinger"
+  ],
+  "5I4mVV": [
+    "Må ha minst ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " innlegg"
   ],
   "MCHnKy": [
     "Må ha minst ",

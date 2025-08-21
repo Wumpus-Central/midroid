@@ -4869,7 +4869,6 @@
   "qyjZub": "Creare evenimente",
   "CTLgZG": "Data închiderii",
   "j2RuXF": "Ora închiderii",
-  "BgAW29": "Vizibilitate / Confidențialitate",
   "z+aIub": [
     "O dată la două zile de ",
     [
@@ -19384,19 +19383,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Mergi la server",
-  "6hktHB": "Adaugă-ți serverul pe hub, creează un eveniment pe server și selectează „Partajează pe huburile studențești” în Setările evenimentului.",
-  "RhXVpa": "Vrei să promovezi evenimente în huburi?",
-  "4BiO8f": [
-    "Alătură-te ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Poți afișa evenimentul în huburile studențești doar dacă se află pe un canal care poate fi văzut de către @everyone.",
-  "V8Oq8P": "Evenimentul va putea fi descoperit de utilizatorii din huburile studențești din care face parte serverul.",
-  "8GW68/": "Partajează evenimentul pe huburile studențești",
   "48kg+P": "Ce e un hub studențesc?",
   "+/Pv0t": "Primește funcții exclusive pentru elevi sau studenți",
   "GLG9n5": "Nu, nu mă interesează",
@@ -31434,6 +31420,15 @@
       []
     ],
     "% evaluări pozitive"
+  ],
+  "5I4mVV": [
+    "Trebuie să aibă cel puțin ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " postări"
   ],
   "MCHnKy": [
     "Trebuie să aibă cel puțin ",

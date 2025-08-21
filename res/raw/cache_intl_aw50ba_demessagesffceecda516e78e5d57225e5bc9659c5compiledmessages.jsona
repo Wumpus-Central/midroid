@@ -4947,7 +4947,6 @@
   "qyjZub": "Events erstellen",
   "CTLgZG": "Enddatum",
   "j2RuXF": "Endzeit",
-  "BgAW29": "Sichtbarkeit/Privatsphäre",
   "z+aIub": [
     "Jeden zweiten ",
     [
@@ -19511,19 +19510,6 @@
     ],
     " bearbeiten"
   ],
-  "N+TB5u": "Zum Server",
-  "6hktHB": "Füge einen Server zum Hub hinzu, erstelle ein Event auf deinem Server und wähle in den Event-Einstellungen die Option „Mit Bildungshubs teilen“.",
-  "RhXVpa": "Möchtest du in Hubs für Events werben?",
-  "4BiO8f": [
-    [
-      1,
-      "guildName"
-    ],
-    " beitreten"
-  ],
-  "gTgUmZ": "Du kannst dieses Event nur dann in Bildungshubs anzeigen, wenn es sich in einem Kanal befindet, das für @everyone sichtbar ist.",
-  "V8Oq8P": "Dieses Event kann von Personen in Bildungshubs gefunden werden, denen dieser Server angehört.",
-  "8GW68/": "Event mit Bildungshubs teilen",
   "48kg+P": "Was ist ein Bildungshub?",
   "+/Pv0t": "Erhalte Zugriff auf Features exklusiv für Studierende",
   "GLG9n5": "Nein, das interessiert mich nicht",
@@ -31561,6 +31547,15 @@
       []
     ],
     " Prozent positive Bewertungen haben"
+  ],
+  "5I4mVV": [
+    "Muss mindestens ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " Posts haben"
   ],
   "MCHnKy": [
     "Muss mindestens ",

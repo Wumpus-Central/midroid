@@ -4929,7 +4929,6 @@
   "qyjZub": "Créer des événements",
   "CTLgZG": "Date de fin",
   "j2RuXF": "Heure de fin",
-  "BgAW29": "Visibilité/Confidentialité",
   "z+aIub": [
     "Un ",
     [
@@ -19446,19 +19445,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Aller sur le serveur",
-  "6hktHB": "Il te suffit de créer un événement sur ton serveur, d’ajouter celui-ci au pôle, puis de sélectionner « Partager avec les pôles étudiants » dans les paramètres d’événement.",
-  "RhXVpa": "Tu veux faire la promotion d’événements dans les pôles ?",
-  "4BiO8f": [
-    "Rejoindre ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Pour afficher cet événement dans les pôles étudiants, il faut qu’il se trouve dans un salon visible par @everyone.",
-  "V8Oq8P": "Cet événement pourra être découvert par les membres du pôle étudiant dans lequel ce serveur se trouve.",
-  "8GW68/": "Partager l’événement avec les pôles étudiants",
   "48kg+P": "Qu'est-ce qu'un Pôle étudiant ?",
   "+/Pv0t": "Obtenir l’accès aux fonctionnalités réservées aux étudiants",
   "GLG9n5": "Non, ça ne m'intéresse pas",
@@ -31542,6 +31528,15 @@
       []
     ],
     " pour cent d'évaluations positives"
+  ],
+  "5I4mVV": [
+    "Doit avoir au moins au moins ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " posts"
   ],
   "MCHnKy": [
     "Doit posséder au moins ",

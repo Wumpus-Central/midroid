@@ -4918,7 +4918,6 @@
   "qyjZub": "Skapa event",
   "CTLgZG": "Slutdatum",
   "j2RuXF": "Sluttid",
-  "BgAW29": "Synlighet/Integritet",
   "z+aIub": [
     "Varannan ",
     [
@@ -19387,19 +19386,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Gå till server",
-  "6hktHB": "Lägg till din server i hubben, skapa ett event på din server och välj \"Dela på studenthubbar\" under Eventinställningar.",
-  "RhXVpa": "Vill du marknadsföra event i hubbar?",
-  "4BiO8f": [
-    "Gå med i ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Du kan bara visa det här eventet i studenthubbar om det är i en kanal som kan ses av alla (@everyone).",
-  "V8Oq8P": "Det här eventet kan upptäckas av folk i studenthubbar som denna server tillhör.",
-  "8GW68/": "Dela event till studenthubbar",
   "48kg+P": "Vad är en studenthubb?",
   "+/Pv0t": "Få tillgång till funktioner som endast är för studerande",
   "GLG9n5": "Nej, jag är inte intresserad",
@@ -31426,6 +31412,15 @@
       []
     ],
     " procent positiva omdömen"
+  ],
+  "5I4mVV": [
+    "Måste ha minst ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " poster"
   ],
   "MCHnKy": [
     "Måste ha minst ",

@@ -1,31 +1,10 @@
 {
-  "o/An3t": [
+  "d/qbCw": [
     [
       1,
       "username"
     ],
-    " asked you to stream ",
-    [
-      1,
-      "applicationName"
-    ]
+    " asked you to stream"
   ],
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " is asking you to stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "You asked someone to stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ]
+  "8B3U5O": "You asked someone to stream"
 }

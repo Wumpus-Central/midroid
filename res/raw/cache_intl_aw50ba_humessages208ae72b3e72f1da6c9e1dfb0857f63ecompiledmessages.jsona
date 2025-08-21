@@ -4893,7 +4893,6 @@
   "qyjZub": "Események létrehozása",
   "CTLgZG": "Befejező dátum",
   "j2RuXF": "Befejezés ideje",
-  "BgAW29": "Láthatóság/adatvédelem",
   "z+aIub": [
     "Minden második ",
     [
@@ -19380,19 +19379,6 @@
     ],
     " beállításainak szerkesztése"
   ],
-  "N+TB5u": "Ugrás a szerverre",
-  "6hktHB": "Add hozzá a szerveredet a Csomóponthoz, hozz létre egy eseményt a szerveren, és válaszd a „Megosztás a Diákcsomópontokkal” lehetőséget az Eseménybeállításokban.",
-  "RhXVpa": "Szeretnéd népszerűsíteni az eseményeket a Csomópontban?",
-  "4BiO8f": [
-    "Csatlakozás: ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Ez az esemény csak akkor jeleníthető meg a Diákcsomópontokban, ha olyan csatornán van, amelyet @everyone megtekinthet.",
-  "V8Oq8P": "Ez az esemény azok számára válik felfedezhetővé, aki a szerverrel azonos Diákcsomóponton vannak.",
-  "8GW68/": "Esemény megosztása Diákcsomópontokkal",
   "48kg+P": "Mi az a Diákcsomópont?",
   "+/Pv0t": "Hozzáférés szerzése csak diákok számára elérhető funkciókhoz",
   "GLG9n5": "Nem, nem érdekel",
@@ -31405,6 +31391,15 @@
       []
     ],
     " százalékban pozitív értékelésre van szükség"
+  ],
+  "5I4mVV": [
+    "Legalább ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " bejegyzéssel kell rendelkezned"
   ],
   "MCHnKy": [
     "Rendelkezned kell legalább ",

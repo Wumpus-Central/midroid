@@ -1,5 +1,7 @@
 package com.discord.react_activities
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
@@ -14,6 +16,7 @@ import com.discord.scale.FontScaleUtilsKt
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
+import com.facebook.react.bridge.ReactContext
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import java.util.concurrent.Future
 
@@ -94,6 +97,21 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
       protected open fun isFabricEnabled(): Boolean {
          return DefaultNewArchitectureEntryPoint.getFabricEnabled();
+      }
+
+      @SuppressLint(["VisibleForTests"])
+      public open fun onPause() {
+         val var1: ReactContext = this.getReactNativeHost().getReactInstanceManager().getCurrentReactContext();
+         val var2: Activity;
+         if (var1 != null) {
+            var2 = var1.getCurrentActivity();
+         } else {
+            var2 = null;
+         }
+
+         if (this.this$0 === var2) {
+            super.onPause();
+         }
       }
    }
 

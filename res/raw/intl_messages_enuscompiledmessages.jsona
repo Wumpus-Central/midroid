@@ -3788,6 +3788,32 @@
   "ZH4QFR": "Display the game you're playing on Discord",
   "+eJP7u": "Join voice calls directly from PlayStation",
   "+0VIUl": "Only available on PS5",
+  "RQath4": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "value"
+        ]
+      ]
+    ],
+    " Followers"
+  ],
+  "thA2io": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "value"
+        ]
+      ]
+    ],
+    " Posts"
+  ],
   "YmL22d": [
     [
       8,
@@ -4034,6 +4060,50 @@
       "cardinal"
     ],
     " old account"
+  ],
+  "xIdKU1": [
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " follower"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " followers"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "dy3+NT": [
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " post"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " posts"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
   ],
   "rl9Vg4": [
     [
@@ -5005,7 +5075,6 @@
   "qyjZub": "Create Events",
   "CTLgZG": "End Date",
   "j2RuXF": "End Time",
-  "BgAW29": "Visibility/Privacy",
   "z+aIub": [
     "Every other ",
     [
@@ -19957,19 +20026,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Go to Server",
-  "6hktHB": "Add your server to the hub, create an event in your server, and select \"Share to Student Hubs\" in the Event Settings.",
-  "RhXVpa": "Want to promote events in Hubs?",
-  "4BiO8f": [
-    "Join ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "You can only show this event in Student Hubs if it is in a channel that is viewable by @everyone.",
-  "V8Oq8P": "This event will be discoverable by people in Student Hubs this server is in.",
-  "8GW68/": "Share event to Student Hubs",
   "48kg+P": "What’s a Student Hub?",
   "+/Pv0t": "Get access to features just for students",
   "GLG9n5": "No, I'm not interested",
@@ -32327,6 +32383,15 @@
       []
     ],
     " percent positive ratings"
+  ],
+  "5I4mVV": [
+    "Must have at least ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " posts"
   ],
   "MCHnKy": [
     "Must have at least ",

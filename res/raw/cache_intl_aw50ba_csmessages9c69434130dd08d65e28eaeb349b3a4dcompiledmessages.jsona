@@ -5042,7 +5042,6 @@
   "qyjZub": "Vytvářet události",
   "CTLgZG": "Datum ukončení",
   "j2RuXF": "Čas ukončení",
-  "BgAW29": "Viditelnost/soukromí",
   "z+aIub": [
     "Každý druhý týden v den – ",
     [
@@ -20078,19 +20077,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Přejít na server",
-  "6hktHB": "Přidej do centra svůj server, vytvoř na serveru událost a v nastavení události vyber možnost Sdílet ve studentských centrech.",
-  "RhXVpa": "Chceš v centrech propagovat události?",
-  "4BiO8f": [
-    "Přidat se k ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Událost půjde zobrazit ve studentských centrech, jen pokud je v kanálu, který je viditelný všem (@everyone).",
-  "V8Oq8P": "Událost najdou lidé ze studentských center, ve kterých se tento server nachází.",
-  "8GW68/": "Sdílet událost ve studentských centrech",
   "48kg+P": "Co je to studentské centrum?",
   "+/Pv0t": "Získej přístup k funkcím vyladěným pro studenty",
   "GLG9n5": "Díky, nemám zájem",
@@ -32606,6 +32592,14 @@
       []
     ],
     " % pozitivních hodnocení"
+  ],
+  "5I4mVV": [
+    "Minimální počet příspěvků je ",
+    [
+      8,
+      "metadataHook",
+      []
+    ]
   ],
   "MCHnKy": [
     "Musí mít alespoň ",

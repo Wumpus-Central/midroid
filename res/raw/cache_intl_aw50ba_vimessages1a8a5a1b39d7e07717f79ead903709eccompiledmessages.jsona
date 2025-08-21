@@ -4911,7 +4911,6 @@
   "qyjZub": "Tạo Sự kiện",
   "CTLgZG": "Ngày Kết Thúc",
   "j2RuXF": "Thời Gian Kết Thúc",
-  "BgAW29": "Mức độ hiển thị / Quyền riêng tư",
   "z+aIub": [
     "Vào ",
     [
@@ -19436,19 +19435,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Tới máy chủ",
-  "6hktHB": "Thêm máy chủ của bạn vào trung tâm, tạo một sự kiện trong máy chủ của bạn, và chọn \"Chia sẻ đến Student Hub\" trong Cài Đặt Sự Kiện.",
-  "RhXVpa": "Bạn muốn quảng bá sự kiện trong Trung Tâm?",
-  "4BiO8f": [
-    "Tham gia ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Bạn chỉ có thể hiển thị sự kiện này trong Student Hub nếu sự kiện này ở trong một kênh mà @everyone đều có thể xem.",
-  "V8Oq8P": "Sự kiện này được hiển thị cho tất cả mọi người ở các Student Hub mà máy chủ này tham gia.",
-  "8GW68/": "Chia sẻ sự kiện tới các Student Hub",
   "48kg+P": "Student Hub là gì?",
   "+/Pv0t": "Nhận quyền truy cập các tính năng chỉ dành cho sinh viên",
   "GLG9n5": "Không, tôi không có hứng thú",
@@ -31506,6 +31492,15 @@
       []
     ],
     " phần trăm điểm đánh giá tích cực"
+  ],
+  "5I4mVV": [
+    "Phải có ít nhất ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " bài đăng"
   ],
   "MCHnKy": [
     "Phải có ít nhất ",

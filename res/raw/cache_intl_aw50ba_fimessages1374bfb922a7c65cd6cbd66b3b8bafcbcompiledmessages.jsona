@@ -4889,7 +4889,6 @@
   "qyjZub": "Luo tapahtumia",
   "CTLgZG": "Päättymispäivä",
   "j2RuXF": "Päättymisaika",
-  "BgAW29": "Näkyvyys/yksityisyys",
   "z+aIub": [
     "Joka toinen ",
     [
@@ -19425,19 +19424,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Siirry palvelimelle",
-  "6hktHB": "Lisää palvelimesi keskukseen, luo tapahtuma palvelimellesi ja valitse tapahtuman asetuksista tapahtuma jaettavaksi oppilaskeskuksiin.",
-  "RhXVpa": "Haluatko mainostaa tapahtumia oppilaskeskuksissa?",
-  "4BiO8f": [
-    "Liity: ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "Tapahtuma voidaan näyttää oppilaskeskuksissa vain, jos tapahtuma järjestetään kaikkien (@everyone) tarkasteltavissa olevalla kanavalla.",
-  "V8Oq8P": "Tämän tapahtuman voivat löytää ihmiset, jotka ovat samoissa oppilaskeskuksissa kuin tämä palvelin.",
-  "8GW68/": "Jaa tapahtuma oppilaskeskuksiin",
   "48kg+P": "Mikä oppilaskeskus oikein on?",
   "+/Pv0t": "Hanki käyttöoikeus vain opiskelijoille tarkoitettuihin ominaisuuksiin",
   "GLG9n5": "En ole kiinnostunut",
@@ -31489,6 +31475,14 @@
       []
     ],
     " prosenttia"
+  ],
+  "5I4mVV": [
+    "Viestejä on oltava vähintään ",
+    [
+      8,
+      "metadataHook",
+      []
+    ]
   ],
   "MCHnKy": [
     "TF2-tuotteita on oltava vähintään ",
