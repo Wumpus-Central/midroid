@@ -86,16 +86,16 @@ public object PublicFileDownloader {
       // 4d: new com/discord/file_downloader/DownloadState$Failure
       // 50: astore 5
       // 52: new java/lang/IllegalStateException
-      // 55: astore 7
+      // 55: astore 8
       // 57: new java/io/FileNotFoundException
-      // 5a: astore 8
-      // 5c: aload 8
+      // 5a: astore 7
+      // 5c: aload 7
       // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 7
-      // 63: aload 8
+      // 61: aload 8
+      // 63: aload 7
       // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
       // 68: aload 5
-      // 6a: aload 7
+      // 6a: aload 8
       // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6f: aload 1
       // 70: aload 5
@@ -216,13 +216,13 @@ public object PublicFileDownloader {
                            }
 
                            val var22: Any = this.$context.getSystemService("download");
-                           val var10: DownloadManager = var22 as DownloadManager;
+                           val var11: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.element = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var10.enqueue(
+                              var3x = var11.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.element = var3x;
@@ -236,7 +236,7 @@ public object PublicFileDownloader {
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.element), new b(var23, var1, var10, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.element), new b(var23, var1, var11, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
                                  var7 = var23;
@@ -265,8 +265,8 @@ public object PublicFileDownloader {
                               return var9;
                            }
 
-                           var20 = var1;
                            var1 = var23;
+                           var20 = var1;
                         }
 
                         var7 = var1;
@@ -286,8 +286,8 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var1 = var20;
                   var23 = var1;
+                  var1 = var20;
                }
 
                val var24: c = new c(var23);

@@ -73,10 +73,10 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
       val var5: java.util.List = this.results;
       val var4: ArrayList = new ArrayList(CollectionsKt.v(this.results, 10));
 
-      for (UserSearchWorkerResult var6 : var5) {
+      for (UserSearchWorkerResult var7 : var5) {
          var4.add(
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("id", var6.getId()), s.a("username", var6.getUsername()), s.a("comparator", var6.getComparator()), s.a("score", var6.getScore())
+               s.a("id", var7.getId()), s.a("username", var7.getUsername()), s.a("comparator", var7.getComparator()), s.a("score", var7.getScore())
             )
          );
       }
@@ -90,19 +90,19 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
 
    public override fun toString(): String {
       val var2: java.util.List = this.results;
-      val var3: java.lang.String = this.query;
-      val var4: java.lang.String = this.uuid;
-      val var1: java.lang.String = this.type;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ReturnResultsEvent(results=");
-      var5.append(var2);
-      var5.append(", query=");
-      var5.append(var3);
-      var5.append(", uuid=");
-      var5.append(var4);
-      var5.append(", type=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.query;
+      val var1: java.lang.String = this.uuid;
+      val var3: java.lang.String = this.type;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ReturnResultsEvent(results=");
+      var4.append(var2);
+      var4.append(", query=");
+      var4.append(var5);
+      var4.append(", uuid=");
+      var4.append(var1);
+      var4.append(", type=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

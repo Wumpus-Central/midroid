@@ -103,17 +103,17 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 008: invokevirtual java/io/File.exists ()Z
          // 00b: ifeq 111
          // 00e: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-         // 011: astore 13
+         // 011: astore 10
          // 013: new java/io/InputStreamReader
          // 016: astore 12
          // 018: new java/io/FileInputStream
-         // 01b: astore 10
-         // 01d: aload 10
+         // 01b: astore 13
+         // 01d: aload 13
          // 01f: aload 1
          // 020: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
          // 023: aload 12
-         // 025: aload 10
-         // 027: aload 13
+         // 025: aload 13
+         // 027: aload 10
          // 029: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
          // 02c: new java/io/BufferedReader
          // 02f: astore 10

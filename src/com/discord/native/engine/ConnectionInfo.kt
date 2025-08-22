@@ -1,8 +1,8 @@
 package com.discord.native.engine
 
-public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAddress: String, localPort: Int, createConnectionTime: Int, connectTime: Int) {
-   public final val connectTime: Int
-   public final val createConnectionTime: Int
+public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAddress: String, localPort: Int, createConnectionTime: Int?, connectTime: Int?) {
+   public final val connectTime: Int?
+   public final val createConnectionTime: Int?
    public final val isConnected: Boolean
    public final val localAddress: String
    public final val localPort: Int
@@ -33,11 +33,11 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       return this.localPort;
    }
 
-   public operator fun component5(): Int {
+   public operator fun component5(): Int? {
       return this.createConnectionTime;
    }
 
-   public operator fun component6(): Int {
+   public operator fun component6(): Int? {
       return this.connectTime;
    }
 
@@ -46,8 +46,8 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       protocol: String = var0.protocol,
       localAddress: String = var0.localAddress,
       localPort: Int = var0.localPort,
-      createConnectionTime: Int = var0.createConnectionTime,
-      connectTime: Int = var0.connectTime
+      createConnectionTime: Int? = var0.createConnectionTime,
+      connectTime: Int? = var0.connectTime
    ): ConnectionInfo {
       return new ConnectionInfo(var1, var2, var3, var4, var5, var6);
    }
@@ -67,7 +67,7 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
             return false;
          } else if (this.localPort != var1.localPort) {
             return false;
-         } else if (this.createConnectionTime != var1.createConnectionTime) {
+         } else if (!(this.createConnectionTime == var1.createConnectionTime)) {
             return false;
          } else {
             return this.connectTime == var1.connectTime;
@@ -76,39 +76,46 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
    }
 
    public override fun hashCode(): Int {
-      return (
-               (
-                        ((java.lang.Boolean.hashCode(this.isConnected) * 31 + this.protocol.hashCode()) * 31 + this.localAddress.hashCode()) * 31
-                           + Integer.hashCode(this.localPort)
-                     )
-                     * 31
-                  + Integer.hashCode(this.createConnectionTime)
-            )
-            * 31
-         + Integer.hashCode(this.connectTime);
+      val var3: Int = java.lang.Boolean.hashCode(this.isConnected);
+      val var6: Int = this.protocol.hashCode();
+      val var5: Int = this.localAddress.hashCode();
+      val var4: Int = Integer.hashCode(this.localPort);
+      var var2: Int = 0;
+      val var1: Int;
+      if (this.createConnectionTime == null) {
+         var1 = 0;
+      } else {
+         var1 = this.createConnectionTime.hashCode();
+      }
+
+      if (this.connectTime != null) {
+         var2 = this.connectTime.hashCode();
+      }
+
+      return ((((var3 * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var4: Boolean = this.isConnected;
+      val var2: Boolean = this.isConnected;
       val var5: java.lang.String = this.protocol;
       val var7: java.lang.String = this.localAddress;
       val var1: Int = this.localPort;
-      val var3: Int = this.createConnectionTime;
-      val var2: Int = this.connectTime;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ConnectionInfo(isConnected=");
-      var6.append(var4);
-      var6.append(", protocol=");
-      var6.append(var5);
-      var6.append(", localAddress=");
-      var6.append(var7);
-      var6.append(", localPort=");
-      var6.append(var1);
-      var6.append(", createConnectionTime=");
-      var6.append(var3);
-      var6.append(", connectTime=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var6: Int = this.createConnectionTime;
+      val var3: Int = this.connectTime;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ConnectionInfo(isConnected=");
+      var4.append(var2);
+      var4.append(", protocol=");
+      var4.append(var5);
+      var4.append(", localAddress=");
+      var4.append(var7);
+      var4.append(", localPort=");
+      var4.append(var1);
+      var4.append(", createConnectionTime=");
+      var4.append(var6);
+      var4.append(", connectTime=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

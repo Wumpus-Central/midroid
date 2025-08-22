@@ -108,13 +108,13 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         var4 = this.portalId;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Adding more than one child unsupported: ");
-         var6.append(var4);
-         var6.append(", previous: ");
-         var6.append(var7);
-         throw new IllegalArgumentException(var6.toString().toString());
+         val var6: java.lang.String = this.portalId;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Adding more than one child unsupported: ");
+         var8.append(var6);
+         var8.append(", previous: ");
+         var8.append(var7);
+         throw new IllegalArgumentException(var8.toString().toString());
       }
    }
 

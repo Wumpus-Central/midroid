@@ -51,20 +51,20 @@ public object ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -98,13 +98,13 @@ public object ForegroundServiceManager {
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2`(var0: ServiceNotificationConfiguration.Type, var1: ReactApplicationContext): Unit {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = tag;
-      val var4: java.lang.String = var0.name();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Create or update service with configuration type ");
-      var5.append(var4);
-      Log.i$foreground_service_release$default(var2, var3, var5.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
+      val var5: java.lang.String = var0.name();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Create or update service with configuration type ");
+      var4.append(var5);
+      Log.i$foreground_service_release$default(var3, var2, var4.toString(), null, 4, null);
       ForegroundService.Companion.start(var1, new d());
       return Unit.a;
    }
@@ -130,9 +130,9 @@ public object ForegroundServiceManager {
    private fun handleDestroyService(op: com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.Destroy) {
       val var2: ReactApplicationContext = var1.getContextRef().get();
       if (var2 == null) {
-         val var8: Log = Log.INSTANCE;
-         val var6: java.lang.String = tag;
-         Log.i$foreground_service_release$default(var8, var6, "handleDestroyService context is null.", null, 4, null);
+         val var6: Log = Log.INSTANCE;
+         val var8: java.lang.String = tag;
+         Log.i$foreground_service_release$default(var6, var8, "handleDestroyService context is null.", null, 4, null);
       } else {
          val var4: Service;
          if (serviceRef != null) {
@@ -569,14 +569,14 @@ public object ForegroundServiceManager {
 
          public override fun toString(): String {
             val var3: WeakReference = this.contextRef;
-            val var1: java.util.List = this.serviceConfigurations;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("CreateOrUpdate(contextRef=");
-            var2.append(var3);
-            var2.append(", serviceConfigurations=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.util.List = this.serviceConfigurations;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("CreateOrUpdate(contextRef=");
+            var1.append(var3);
+            var1.append(", serviceConfigurations=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
 
