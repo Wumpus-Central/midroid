@@ -87,8 +87,8 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       val var1: Int = this.connectionId;
       val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var6: java.lang.String = this.streamId;
-      val var7: java.lang.String = this.videoStreamParametersJSON;
+      val var7: java.lang.String = this.streamId;
+      val var6: java.lang.String = this.videoStreamParametersJSON;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnVideoCallbackEvent(connectionId=");
       var4.append(var1);
@@ -97,9 +97,9 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       var4.append(", ssrc=");
       var4.append(var2);
       var4.append(", streamId=");
-      var4.append(var6);
-      var4.append(", videoStreamParametersJSON=");
       var4.append(var7);
+      var4.append(", videoStreamParametersJSON=");
+      var4.append(var6);
       var4.append(")");
       return var4.toString();
    }

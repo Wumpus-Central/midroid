@@ -141,35 +141,35 @@ internal data class EncodingConfig(targetWidth: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.targetWidth;
-      val var3: Int = this.targetHeight;
-      val var7: java.lang.Number = this.frameRate;
+      val var2: Int = this.targetWidth;
+      val var1: Int = this.targetHeight;
+      val var9: java.lang.Number = this.frameRate;
       val var6: java.lang.Number = this.keyFrameIntervalSeconds;
-      val var8: java.lang.Number = this.targetBitrate;
-      val var4: Boolean = this.useHEVC;
-      val var5: Boolean = this.createHDR;
-      val var9: java.lang.Number = this.rotationDegrees;
-      val var2: Int = this.progressUpdateGranularity;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("EncodingConfig(targetWidth=");
-      var10.append(var1);
-      var10.append(", targetHeight=");
-      var10.append(var3);
-      var10.append(", frameRate=");
-      var10.append(var7);
-      var10.append(", keyFrameIntervalSeconds=");
-      var10.append(var6);
-      var10.append(", targetBitrate=");
-      var10.append(var8);
-      var10.append(", useHEVC=");
-      var10.append(var4);
-      var10.append(", createHDR=");
-      var10.append(var5);
-      var10.append(", rotationDegrees=");
-      var10.append(var9);
-      var10.append(", progressUpdateGranularity=");
-      var10.append(var2);
-      var10.append(")");
-      return var10.toString();
+      val var10: java.lang.Number = this.targetBitrate;
+      val var5: Boolean = this.useHEVC;
+      val var4: Boolean = this.createHDR;
+      val var7: java.lang.Number = this.rotationDegrees;
+      val var3: Int = this.progressUpdateGranularity;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("EncodingConfig(targetWidth=");
+      var8.append(var2);
+      var8.append(", targetHeight=");
+      var8.append(var1);
+      var8.append(", frameRate=");
+      var8.append(var9);
+      var8.append(", keyFrameIntervalSeconds=");
+      var8.append(var6);
+      var8.append(", targetBitrate=");
+      var8.append(var10);
+      var8.append(", useHEVC=");
+      var8.append(var5);
+      var8.append(", createHDR=");
+      var8.append(var4);
+      var8.append(", rotationDegrees=");
+      var8.append(var7);
+      var8.append(", progressUpdateGranularity=");
+      var8.append(var3);
+      var8.append(")");
+      return var8.toString();
    }
 }

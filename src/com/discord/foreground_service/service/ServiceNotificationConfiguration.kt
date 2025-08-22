@@ -104,26 +104,26 @@ internal data class ServiceNotificationConfiguration(title: String,
 
    public override fun toString(): String {
       val var2: java.lang.String = this.title;
-      val var4: java.lang.String = this.content;
-      val var3: ServiceNotificationConfiguration.Priority = this.priority;
+      val var3: java.lang.String = this.content;
+      val var7: ServiceNotificationConfiguration.Priority = this.priority;
       val var6: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var7: java.util.List = this.auxiliaryActions;
-      val var1: ServiceNotificationConfiguration.Type = this.type;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ServiceNotificationConfiguration(title=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var4);
-      var5.append(", priority=");
-      var5.append(var3);
-      var5.append(", contentAction=");
-      var5.append(var6);
-      var5.append(", auxiliaryActions=");
-      var5.append(var7);
-      var5.append(", type=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.util.List = this.auxiliaryActions;
+      val var5: ServiceNotificationConfiguration.Type = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ServiceNotificationConfiguration(title=");
+      var1.append(var2);
+      var1.append(", content=");
+      var1.append(var3);
+      var1.append(", priority=");
+      var1.append(var7);
+      var1.append(", contentAction=");
+      var1.append(var6);
+      var1.append(", auxiliaryActions=");
+      var1.append(var4);
+      var1.append(", type=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public data class Action(tag: String, taskName: String, title: String?, data: Map<String, String>) {
@@ -179,8 +179,8 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun hashCode(): Int {
-         val var2: Int = this.tag.hashCode();
-         val var3: Int = this.taskName.hashCode();
+         val var3: Int = this.tag.hashCode();
+         val var2: Int = this.taskName.hashCode();
          val var1: Int;
          if (this.title == null) {
             var1 = 0;
@@ -188,23 +188,23 @@ internal data class ServiceNotificationConfiguration(title: String,
             var1 = this.title.hashCode();
          }
 
-         return ((var2 * 31 + var3) * 31 + var1) * 31 + this.data.hashCode();
+         return ((var3 * 31 + var2) * 31 + var1) * 31 + this.data.hashCode();
       }
 
       public override fun toString(): String {
          val var4: java.lang.String = this.tag;
-         val var5: java.lang.String = this.taskName;
+         val var3: java.lang.String = this.taskName;
          val var1: java.lang.String = this.title;
-         val var3: java.util.Map = this.data;
+         val var5: java.util.Map = this.data;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Action(tag=");
          var2.append(var4);
          var2.append(", taskName=");
-         var2.append(var5);
+         var2.append(var3);
          var2.append(", title=");
          var2.append(var1);
          var2.append(", data=");
-         var2.append(var3);
+         var2.append(var5);
          var2.append(")");
          return var2.toString();
       }

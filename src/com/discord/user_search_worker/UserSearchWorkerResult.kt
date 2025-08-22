@@ -57,15 +57,15 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var6: java.lang.String = this.username;
+      val var6: java.lang.String = this.id;
+      val var5: java.lang.String = this.username;
       val var3: java.lang.String = this.comparator;
       val var1: Double = this.score;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSearchWorkerResult(id=");
-      var4.append(var5);
-      var4.append(", username=");
       var4.append(var6);
+      var4.append(", username=");
+      var4.append(var5);
       var4.append(", comparator=");
       var4.append(var3);
       var4.append(", score=");

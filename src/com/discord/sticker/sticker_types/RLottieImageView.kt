@@ -105,15 +105,15 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                }
 
-               val var11: FileDownloader = FileDownloader.INSTANCE;
-               val var9: Context = this.this$0.getContext();
-               val var6: java.lang.String = this.$config.getUrl();
-               val var7: java.lang.String = this.$config.getAsset();
-               val var5: StringBuilder = new StringBuilder();
-               var5.append(var7);
-               var5.append(".json");
+               val var9: FileDownloader = FileDownloader.INSTANCE;
+               val var7: Context = this.this$0.getContext();
+               val var11: java.lang.String = this.$config.getUrl();
+               val var5: java.lang.String = this.$config.getAsset();
+               val var6: StringBuilder = new StringBuilder();
+               var6.append(var5);
+               var6.append(".json");
                val var12: Flow = FileDownloader.downloadFile$default(
-                  var11, var9, var6, var5.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+                  var9, var7, var11, var6.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
                val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
@@ -152,14 +152,14 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
-                                 val var7: RLottieImageView = this.this$0;
-                                 val var6: Context = this.this$0.getContext();
-                                 val var5: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
-                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
-                                 val var3: Int = this.$config.getRenderMode();
-                                 if (var3 != 0) {
-                                    if (var3 != 1) {
+                                 val var6: RLottieImageView = this.this$0;
+                                 val var5: Context = this.this$0.getContext();
+                                 val var7: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
+                                 val var2x: Int = this.$config.getRenderMode();
+                                 if (var2x != 0) {
+                                    if (var2x != 1) {
                                        var1 = RLottieDrawable.PlaybackMode.ONCE;
                                     } else {
                                        var1 = RLottieDrawable.PlaybackMode.FREEZE;
@@ -168,7 +168,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var7.setAnimation(var6, var5, var2x, var4x, var1);
+                                 var6.setAnimation(var5, var7, var4x, var3, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -378,8 +378,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       public override fun toString(): String {
          val var5: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var3: Int = this.heightDp;
+         val var3: Int = this.widthDp;
+         val var2: Int = this.heightDp;
          val var7: java.lang.String = this.asset;
          val var1: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
@@ -388,9 +388,9 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          var6.append(", animate=");
          var6.append(var4);
          var6.append(", widthDp=");
-         var6.append(var2);
-         var6.append(", heightDp=");
          var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var2);
          var6.append(", asset=");
          var6.append(var7);
          var6.append(", renderMode=");

@@ -3,7 +3,7 @@ package com.discord.fastest_list.android
 import B9.n
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,228:1\n1#2:229\n360#3,7:230\n*S KotlinDebug\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections\n*L\n65#1:230,7\n*E\n"])
+@SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,236:1\n1#2:237\n360#3,7:238\n*S KotlinDebug\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections\n*L\n65#1:238,7\n*E\n"])
 internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.android.FastestListSections.Versioned) {
    private final var sectionsId: String
    private final var sectionEntries: List<com.discord.fastest_list.android.FastestListSections.Entry>
@@ -113,7 +113,18 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
    }
 
    public fun getItemOffset(position: Int): Int {
-      return this.sectionOffsetAtPosition.get(var1).intValue();
+      if (var1 < 0) {
+         var1 = 0;
+      } else if (var1 < this.sectionOffsetAtPosition.size()) {
+         var1 = this.sectionOffsetAtPosition.get(var1).intValue();
+      } else {
+         var1 = 0;
+         if (!this.sectionOffsetAtPosition.isEmpty()) {
+            var1 = (CollectionsKt.r0(this.sectionOffsetAtPosition) as java.lang.Number).intValue();
+         }
+      }
+
+      return var1;
    }
 
    public fun getItemPosition(offset: Int): Int {
@@ -282,7 +293,7 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
             return var2.toString();
          }
 
-         @SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections$Entry$ListFooter$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,228:1\n1#2:229\n*E\n"])
+         @SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections$Entry$ListFooter$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,236:1\n1#2:237\n*E\n"])
          public companion object {
             public fun createKey(listId: String, customKey: String): String {
                var var3: java.lang.String = var2;
@@ -365,7 +376,7 @@ internal class FastestListSections(sectionsVersioned: com.discord.fastest_list.a
             return var4.toString();
          }
 
-         @SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections$Entry$ListHeader$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,228:1\n1#2:229\n*E\n"])
+         @SourceDebugExtension(["SMAP\nFastestListSections.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListSections.kt\ncom/discord/fastest_list/android/FastestListSections$Entry$ListHeader$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,236:1\n1#2:237\n*E\n"])
          public companion object {
             public fun createKey(listId: String, customKey: String): String {
                var var3: java.lang.String = var2;
