@@ -2983,6 +2983,13 @@
   "e1UiOT": "Naujovink ir gauk prieigą prie šio pseudoportreto papuošimo!",
   "zOA4a2": "Tavo pseudoportreto papuošimas atnaujintas!",
   "V1AWw8": "Pirkti Paketą",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " papuošimas"
+  ],
   "IQQYeX": [
     "Pseudoportreto papuošimas: ",
     [
@@ -2996,6 +3003,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " vardo lentelė"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " profilio efektas"
   ],
   "x/MGW1": [
     "Profilio efektas: ",
@@ -3128,18 +3149,6 @@
       "num"
     ],
     " elementai (-ų)"
-  ],
-  "WQbNhI": [
-    "Į paketą įeina: papuošimas ",
-    [
-      1,
-      "decoName"
-    ],
-    " ir profilio efektas ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     "LIKO ",

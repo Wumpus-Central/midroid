@@ -178,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean, showingFullLabel: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var6: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var3) {
          this.binding.reactionCountSwitcher.setVisibility(8);
       } else {
@@ -190,16 +190,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             if (var1 > var4) {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_up);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_up);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_up);
             } else {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_down);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_down);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_down);
             }
 
-            var5.setText(java.lang.String.valueOf(var1));
+            var6.setText(java.lang.String.valueOf(var1));
          } else {
-            var5.setCurrentText(java.lang.String.valueOf(var1));
+            var6.setCurrentText(java.lang.String.valueOf(var1));
          }
 
          this.currentCount = var1;

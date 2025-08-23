@@ -2899,6 +2899,13 @@
   "e1UiOT": "Bu avatar dekorasyonuna erişim sağlamak için yükselt!",
   "zOA4a2": "Avatar dekorasyonun güncellendi!",
   "V1AWw8": "Paket satın al",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " Dekorasyonu"
+  ],
   "IQQYeX": [
     "Avatar Dekorasyonu: ",
     [
@@ -2912,6 +2919,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " İsim Plakası"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " Profil Efekti"
   ],
   "x/MGW1": [
     "Profil Efekti: ",
@@ -3048,19 +3069,6 @@
       "num"
     ],
     " eşya içerir"
-  ],
-  "WQbNhI": [
-    "Paket İçeriği: ",
-    [
-      1,
-      "decoName"
-    ],
-    " Dekorasyonu ve ",
-    [
-      1,
-      "pfxName"
-    ],
-    " Profil Efekti"
   ],
   "DkxLY2": [
     [

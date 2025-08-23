@@ -2903,6 +2903,13 @@
   "e1UiOT": "Uppgradera för att låsa upp åtkomst till denna avatardekoration!",
   "zOA4a2": "Din avatardekoration har uppdaterats!",
   "V1AWw8": "Köp paket",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    "-dekoration"
+  ],
   "IQQYeX": [
     "Avatardekoration: ",
     [
@@ -2916,6 +2923,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    "-namnskylt"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    "-profileffekt"
   ],
   "x/MGW1": [
     "Profileffekt: ",
@@ -3047,18 +3068,6 @@
       "num"
     ],
     " föremål"
-  ],
-  "WQbNhI": [
-    "I paketet ingår: dekorationen ",
-    [
-      1,
-      "decoName"
-    ],
-    " och profileffekten ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

@@ -102,14 +102,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var14: StructurableText = var1.getContent();
-      if (var14 != null) {
-         val var13: ArrayList = this.accessories;
-         val var20: java.lang.String = var1.getId-3Eiw7ao();
+      val var20: StructurableText = var1.getContent();
+      if (var20 != null) {
+         val var14: ArrayList = this.accessories;
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
          val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var11: Boolean = var1.getShouldShowRoleDot();
-         val var9: Boolean = var1.getShouldShowRoleOnName();
+         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var10: Boolean = var1.getShouldShowRoleDot();
+         val var11: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
@@ -133,14 +133,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var13.add(
+         var14.add(
             new MessageContentAccessory(
+               var13,
                var20,
-               var14,
                var8,
+               var9,
                var10,
                var11,
-               var9,
                var5,
                var6,
                var7,

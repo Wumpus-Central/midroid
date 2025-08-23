@@ -59,12 +59,12 @@ public fun Embed.getMediaType(): EmbedType {
 
 public fun Embed.getTag(): String {
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var3: java.lang.String = var0.getType().name();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(": ");
-   var2.append(var3);
-   return var2.toString();
+   val var2: java.lang.String = var0.getType().name();
+   val var3: StringBuilder = new StringBuilder();
+   var3.append(var1);
+   var3.append(": ");
+   var3.append(var2);
+   return var3.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
@@ -215,14 +215,14 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var22: java.lang.String = getTag(var0);
+         val var10: java.lang.String = getTag(var0);
          val var38: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
             var25,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var22,
+            var10,
             var38,
             var4,
             ChannelId.box-impl(var1),

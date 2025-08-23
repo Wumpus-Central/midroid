@@ -2914,6 +2914,13 @@
   "e1UiOT": "Opgrader for at låse op for adgang til denne avatardekoration!",
   "zOA4a2": "Din avatardekoration er opdateret!",
   "V1AWw8": "Køb bundt",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    "-dekoration"
+  ],
   "IQQYeX": [
     "Avatar-dekoration: ",
     [
@@ -2927,6 +2934,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    "-navneskilt"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    "-profileffekt"
   ],
   "x/MGW1": [
     "Profileffekt: ",
@@ -3061,18 +3082,6 @@
       "num"
     ],
     " genstande"
-  ],
-  "WQbNhI": [
-    "Pakken indeholder: dekorationen ",
-    [
-      1,
-      "decoName"
-    ],
-    " og profileffekten ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

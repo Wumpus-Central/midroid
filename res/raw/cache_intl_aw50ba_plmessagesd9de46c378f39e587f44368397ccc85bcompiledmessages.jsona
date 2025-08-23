@@ -2999,6 +2999,13 @@
   "e1UiOT": "Ulepsz, aby odblokować dostęp do tej dekoracji awatara!",
   "zOA4a2": "Twoja dekoracja awatara została zaktualizowana!",
   "V1AWw8": "Kup pakiet",
+  "Ntv9Ji": [
+    "Dekoracja ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Dekoracja awatara: ",
     [
@@ -3008,6 +3015,20 @@
   ],
   "eVNt6O": [
     "Tabliczka z nazwą: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Tabliczka z nazwą ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Efekt profilu ",
     [
       1,
       "itemName"
@@ -3145,18 +3166,6 @@
       "num"
     ],
     " szt. przedmiotów"
-  ],
-  "WQbNhI": [
-    "Pakiet zawiera: dekorację ",
-    [
-      1,
-      "decoName"
-    ],
-    " i efekt profilu ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     "POZOSTAŁO ",

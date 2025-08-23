@@ -62,20 +62,20 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var2: Boolean = this.divider;
-      val var3: SeparatorSpacingSize = this.spacing;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SeparatorDisplayComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var4);
-      var5.append(", divider=");
-      var5.append(var2);
-      var5.append(", spacing=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: SeparatorSpacingSize = this.spacing;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SeparatorDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var5);
+      var3.append(", divider=");
+      var3.append(var2);
+      var3.append(", spacing=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

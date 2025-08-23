@@ -105,17 +105,17 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                }
 
-               val var5: FileDownloader = FileDownloader.INSTANCE;
-               val var6: Context = this.this$0.getContext();
-               val var7: java.lang.String = this.$config.getUrl();
-               val var11: java.lang.String = this.$config.getAsset();
+               val var11: FileDownloader = FileDownloader.INSTANCE;
+               val var7: Context = this.this$0.getContext();
+               val var5: java.lang.String = this.$config.getUrl();
+               val var6: java.lang.String = this.$config.getAsset();
                val var9: StringBuilder = new StringBuilder();
-               var9.append(var11);
+               var9.append(var6);
                var9.append(".json");
-               val var12: Flow = FileDownloader.downloadFile$default(
-                  var5, var6, var7, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var10: Flow = FileDownloader.downloadFile$default(
+                  var11, var7, var5, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -152,14 +152,14 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
-                                 val var5: RLottieImageView = this.this$0;
+                                 val var6: RLottieImageView = this.this$0;
                                  val var7: Context = this.this$0.getContext();
-                                 val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
-                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
-                                 val var2x: Int = this.$config.getRenderMode();
-                                 if (var2x != 0) {
-                                    if (var2x != 1) {
+                                 val var5: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
+                                 val var4x: Int = this.$config.getRenderMode();
+                                 if (var4x != 0) {
+                                    if (var4x != 1) {
                                        var1 = RLottieDrawable.PlaybackMode.ONCE;
                                     } else {
                                        var1 = RLottieDrawable.PlaybackMode.FREEZE;
@@ -168,7 +168,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var5.setAnimation(var7, var6, var4x, var3, var1);
+                                 var6.setAnimation(var7, var5, var3, var2x, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -220,7 +220,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                };
                this.label = 2;
-               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
+               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
             }
          },
          2,

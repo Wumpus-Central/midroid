@@ -49,11 +49,11 @@ public object DeviceFocusLockManager {
    }
 
    public fun disableFocusLock() {
-      val var2: java.util.Iterator = focusExcludedViews.entrySet().iterator();
+      val var4: java.util.Iterator = focusExcludedViews.entrySet().iterator();
 
-      while (var2.hasNext()) {
-         val var4: View = (var2.next() as Entry).getValue() as View;
-         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var4.getId());
+      while (var4.hasNext()) {
+         val var2: View = (var4.next() as Entry).getValue() as View;
+         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
          val var1: Int;
          if (var3 != null) {
             var1 = var3;
@@ -61,7 +61,7 @@ public object DeviceFocusLockManager {
             var1 = 0;
          }
 
-         var4.setImportantForAccessibility(var1);
+         var2.setImportantForAccessibility(var1);
       }
 
       focusExcludedViews.clear();

@@ -2909,6 +2909,13 @@
   "e1UiOT": "Válts magasabb szintű csomagra, ha hozzá szeretnél férni ehhez a profilkép-dekorációhoz!",
   "zOA4a2": "Frissült a profilkép-dekorációd!",
   "V1AWw8": "Csomag vásárlása",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " dekoráció"
+  ],
   "IQQYeX": [
     "Profilkép-dekoráció: ",
     [
@@ -2922,6 +2929,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " névjelzés"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " profileffektus"
   ],
   "x/MGW1": [
     "Profileffektus: ",
@@ -3053,19 +3074,6 @@
       "num"
     ],
     " elemet tartalmaz"
-  ],
-  "WQbNhI": [
-    "A csomag tartalma: ",
-    [
-      1,
-      "decoName"
-    ],
-    " dekoráció és ",
-    [
-      1,
-      "pfxName"
-    ],
-    " profileffektus"
   ],
   "DkxLY2": [
     [

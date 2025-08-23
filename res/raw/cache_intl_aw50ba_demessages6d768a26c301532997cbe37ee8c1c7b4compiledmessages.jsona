@@ -2917,6 +2917,14 @@
   "e1UiOT": "Upgraden, um Zugriff auf diese Avatardekoration freizuschalten!",
   "zOA4a2": "Deine Avatardekoration wurde aktualisiert!",
   "V1AWw8": "Paket kaufen",
+  "Ntv9Ji": [
+    "„",
+    [
+      1,
+      "itemName"
+    ],
+    "“-Dekoration"
+  ],
   "IQQYeX": [
     "Avatardekoration: ",
     [
@@ -2930,6 +2938,22 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    "„",
+    [
+      1,
+      "itemName"
+    ],
+    "“-Namensschild"
+  ],
+  "3Y8q7e": [
+    "„",
+    [
+      1,
+      "itemName"
+    ],
+    "“-Profil-Effekt"
   ],
   "x/MGW1": [
     "Profil-Effekt: ",
@@ -3063,21 +3087,6 @@
       "num"
     ],
     " Gegenstände"
-  ],
-  "WQbNhI": [
-    "Im Paket enthalten: Dekoration „",
-    [
-      1,
-      "decoName"
-    ],
-    "“ ",
-    "& ",
-    "Profil-Effekt „",
-    [
-      1,
-      "pfxName"
-    ],
-    "“"
   ],
   "DkxLY2": [
     [

@@ -2888,6 +2888,13 @@
   "e1UiOT": "Fă upgrade pentru a debloca această decorațiune pentru avatar!",
   "zOA4a2": "Decorațiunea ta pentru avatar s-a actualizat!",
   "V1AWw8": "Cumpără pachet",
+  "Ntv9Ji": [
+    "Decorațiune ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Decorațiune pentru avatar: ",
     [
@@ -2897,6 +2904,20 @@
   ],
   "eVNt6O": [
     "Etichetă pentru nume: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Etichetă pentru nume ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Efect pentru profil ",
     [
       1,
       "itemName"
@@ -3032,18 +3053,6 @@
       "num"
     ],
     " articole"
-  ],
-  "WQbNhI": [
-    "Pachetul include: decorațiunea ",
-    [
-      1,
-      "decoName"
-    ],
-    " și efectul pentru profil ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     "TIMP RĂMAS: ",

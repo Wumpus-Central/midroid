@@ -136,20 +136,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Boolean = this.crashedLastRun;
-      val var5: SystemLogReport.SentryCrashData = this.sentryData;
+      val var5: java.lang.Boolean = this.crashedLastRun;
+      val var3: SystemLogReport.SentryCrashData = this.sentryData;
       val var1: HistoricalProcessExitReason.Reason = this.reason;
-      val var3: SystemLogUtils.Tombstone = this.tombstone;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CrashReportEvent(crashedLastRun=");
-      var4.append(var2);
-      var4.append(", sentryData=");
-      var4.append(var5);
-      var4.append(", reason=");
-      var4.append(var1);
-      var4.append(", tombstone=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: SystemLogUtils.Tombstone = this.tombstone;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CrashReportEvent(crashedLastRun=");
+      var2.append(var5);
+      var2.append(", sentryData=");
+      var2.append(var3);
+      var2.append(", reason=");
+      var2.append(var1);
+      var2.append(", tombstone=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

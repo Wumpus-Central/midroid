@@ -2897,6 +2897,13 @@
   "e1UiOT": "Fai l'upgrade per sbloccare l'accesso a questa decorazione avatar!",
   "zOA4a2": "La tua decorazione avatar è aggiornata!",
   "V1AWw8": "Acquista bundle",
+  "Ntv9Ji": [
+    "Decorazione ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Decorazione avatar: ",
     [
@@ -2906,6 +2913,20 @@
   ],
   "eVNt6O": [
     "Targhetta nome: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Targhetta nome ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Effetto del profilo ",
     [
       1,
       "itemName"
@@ -3048,18 +3069,6 @@
       "num"
     ],
     " oggetti"
-  ],
-  "WQbNhI": [
-    "Il bundle include: decorazione ",
-    [
-      1,
-      "decoName"
-    ],
-    " ed effetto del profilo ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     "RESTANO ",

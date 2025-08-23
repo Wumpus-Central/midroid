@@ -153,8 +153,10 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       null,
       null,
       null,
+      null,
+      null,
       -516,
-      16580223,
+      66911871,
       null
    );
 }

@@ -3,7 +3,6 @@ package com.discord.sticker_picker
 import B9.n
 import android.content.Context
 import android.view.View
-import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.core.view.f0
@@ -41,14 +40,14 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
 
          var6 = var6 as StickerPickerRow.Sticker;
          val var7: View = this.getChildAt(var3);
-         val var8: StickerView = var7 as StickerView;
+         val var10: StickerView = var7 as StickerView;
          if (var6 == null) {
-            var8.setVisibility(4);
-            var8.recycle();
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, null, 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, null, 1, null);
+            var10.setVisibility(4);
+            var10.recycle();
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, null, 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var10, false, null, 1, null);
          } else {
-            var8.setVisibility(0);
+            var10.setVisibility(0);
             val var2: Float;
             if (((StickerPickerRow.Sticker)var6).getOpaque()) {
                var2 = 1.0F;
@@ -56,10 +55,10 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
                var2 = 0.3F;
             }
 
-            var8.setAlpha(var2);
-            var8.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new a((StickerPickerRow.Sticker)var6, this), 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, new b((StickerPickerRow.Sticker)var6, this), 1, null);
+            var10.setAlpha(var2);
+            var10.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new a((StickerPickerRow.Sticker)var6, this), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var10, false, new b((StickerPickerRow.Sticker)var6, this), 1, null);
             val var4: Int = StickerPickerRowView.WhenMappings.$EnumSwitchMapping$0[((StickerPickerRow.Sticker)var6).getType().ordinal()];
             if (var4 != 1) {
                if (var4 != 2) {
@@ -68,7 +67,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
                         throw new n();
                      }
 
-                     var8.asGif(
+                     var10.asGif(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -76,7 +75,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
                         ((StickerPickerRow.Sticker)var6).getName()
                      );
                   } else {
-                     var8.asLottie(
+                     var10.asLottie(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -87,7 +86,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
                      );
                   }
                } else {
-                  var8.asApng(
+                  var10.asApng(
                      ((StickerPickerRow.Sticker)var6).getUrl(),
                      var1.getItemSize(),
                      var1.getItemSize(),
@@ -96,7 +95,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
                   );
                }
             } else {
-               var8.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
+               var10.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
             }
          }
       }
@@ -132,7 +131,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
       val var9: java.util.Iterator = var1.getItems().iterator();
 
       for (int var10 = 0; var9.hasNext(); var10++) {
-         var var7: MarginLayoutParams = (MarginLayoutParams)var9.next();
+         var var7: View = (View)var9.next();
          if (var10 < 0) {
             CollectionsKt.u();
          }
@@ -146,12 +145,12 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
          }
 
          var7 = this.getContext();
-         val var8: StickerView = new StickerView((Context)var7, null, 0, 6, null);
-         RippleUtilsKt.addRipple$default(var8, true, 0, 2, null);
-         var7 = new LayoutParams(var5, var5);
-         var7.setMargins(var3, var6, 0, var6);
-         var8.setLayoutParams(var7);
-         this.addView(var8);
+         var7 = new StickerView((Context)var7, null, 0, 6, null);
+         RippleUtilsKt.addRipple$default(var7, true, 0, 2, null);
+         val var8: LayoutParams = new LayoutParams(var5, var5);
+         var8.setMargins(var3, var6, 0, var6);
+         var7.setLayoutParams(var8);
+         this.addView(var7);
       }
    }
 
@@ -166,8 +165,8 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
    }
 
    public fun clean() {
-      for (View var1 : f0.a(this)) {
-         (var1 as StickerView).recycle();
+      for (View var2 : f0.a(this)) {
+         (var2 as StickerView).recycle();
       }
    }
 

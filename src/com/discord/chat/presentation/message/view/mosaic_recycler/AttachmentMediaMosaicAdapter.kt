@@ -147,11 +147,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
             );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
+               val var10: Class = var1.getClass();
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Invalid view holder type ");
+               var12.append(var10);
+               throw new IllegalStateException(var12.toString().toString());
             }
 
             var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);

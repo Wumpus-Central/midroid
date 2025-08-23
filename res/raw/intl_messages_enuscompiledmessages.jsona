@@ -2934,6 +2934,13 @@
   "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " Decoration"
+  ],
   "IQQYeX": [
     "Avatar Decoration: ",
     [
@@ -2948,12 +2955,47 @@
       "itemName"
     ]
   ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " Nameplate"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " Profile Effect"
+  ],
   "x/MGW1": [
     "Profile Effect: ",
     [
       1,
       "itemName"
     ]
+  ],
+  "Ofrqj4": [
+    "Bundle includes: ",
+    [
+      1,
+      "joinedItems"
+    ]
+  ],
+  "BS1Cu7": [
+    "Bundle includes: ",
+    [
+      1,
+      "decoName"
+    ],
+    " Decoration ",
+    "& ",
+    [
+      1,
+      "pfxName"
+    ],
+    " Profile Effect"
   ],
   "aVCcr6": "Decoration",
   "s+YSgo": "Profile",
@@ -3090,20 +3132,6 @@
       "num"
     ],
     " items"
-  ],
-  "WQbNhI": [
-    "Bundle includes: ",
-    [
-      1,
-      "decoName"
-    ],
-    " Decoration ",
-    "& ",
-    [
-      1,
-      "pfxName"
-    ],
-    " Profile Effect"
   ],
   "DkxLY2": [
     [
@@ -11964,6 +11992,13 @@
     ],
     "."
   ],
+  "fbHsoq": [
+    "Server invite ✉ from ",
+    [
+      1,
+      "userName"
+    ]
+  ],
   "c5T+X1": "Other servers",
   "2bfiLi": "No Results",
   "uohsSk": "Search your servers",
@@ -20661,6 +20696,13 @@
   "Q87rIy": "This emoji doesn't work here because it's from a different server. Upgrade to Discord Nitro to use emoji from other servers",
   "FzugNj": "This emoji doesn't work here because it's from a different server. Discord Nitro can solve all of that, check User Settings > Nitro for details",
   "IRq5am": "Please enter a valid invite link or invite code.",
+  "JhhLEB": [
+    [
+      1,
+      "userName"
+    ],
+    " invited you to a Server"
+  ],
   "4FlZq6": "Learn More",
   "yD/zkp": "Got it",
   "IFBHam": [
@@ -21293,6 +21335,13 @@
   "jlfuFR": "Join an existing server",
   "ihLPiI": "Follow Post",
   "XpeFYm": "Join",
+  "Oqoc4u": [
+    "Join ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "Bd/Li4": "Join Muted",
   "E8euSk": "Join on Xbox",
   "yRjK4u": "Join a server",

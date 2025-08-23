@@ -22,27 +22,31 @@ public class TextDisplayComponentView(context: Context) : MessageContentView(var
       this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
-   public open fun configure(component: TextDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
+   public fun configure(component: TextDisplayComponent, componentContext: ComponentContext) {
       this.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       DiscordFontUtilsKt.setDiscordFont(this, DiscordFont.PrimaryMedium);
-      val var4: Float;
-      if (var3.isInContainerComponent()) {
-         var4 = 14.0F;
+      val var3: Float;
+      if (var2.isInContainerComponent()) {
+         var3 = 14.0F;
       } else {
-         val var7: Context = this.getContext();
-         var4 = MessageUtilsKt.getChatTextSizeSp(var7);
+         val var4: Context = this.getContext();
+         var3 = MessageUtilsKt.getChatTextSizeSp(var4);
       }
 
-      SetTextSizeSpKt.setTextSizeSp(this, var4);
-      val var8: TextPaint = this.getPaint();
+      SetTextSizeSpKt.setTextSizeSp(this, var3);
+      val var6: TextPaint = this.getPaint();
       val var5: FontManager = FontManager.INSTANCE;
-      val var6: Context = this.getContext();
+      val var8: Context = this.getContext();
       this.setMessageContent(
          var1.getContent(),
-         var3.getMarkdownTextRenderOptions(),
-         var3.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var8, var5.getScaledSpToPx(16, var6))
+         var2.getMarkdownTextRenderOptions(),
+         var2.getMarkdownTextRenderEventHandlers(),
+         TextUtilsKt.getBaselineHeightForFontSizePx(var6, var5.getScaledSpToPx(16, var8))
       );
+   }
+
+   public open fun configure(component: TextDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
+      this.configure(var1, var3);
    }
 
    public override fun getComponentType(): KClass<TextDisplayComponent> {

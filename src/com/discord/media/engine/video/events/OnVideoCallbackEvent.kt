@@ -85,23 +85,23 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var7: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var5: java.lang.String = this.streamId;
-      val var4: java.lang.String = this.videoStreamParametersJSON;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("OnVideoCallbackEvent(connectionId=");
-      var6.append(var1);
-      var6.append(", userId=");
-      var6.append(var7);
-      var6.append(", ssrc=");
-      var6.append(var2);
-      var6.append(", streamId=");
-      var6.append(var5);
-      var6.append(", videoStreamParametersJSON=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.String = this.streamId;
+      val var7: java.lang.String = this.videoStreamParametersJSON;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("OnVideoCallbackEvent(connectionId=");
+      var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var5);
+      var4.append(", ssrc=");
+      var4.append(var2);
+      var4.append(", streamId=");
+      var4.append(var6);
+      var4.append(", videoStreamParametersJSON=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

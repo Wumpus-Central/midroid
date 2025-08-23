@@ -2990,6 +2990,13 @@
   "e1UiOT": "Upgraduj a odemkni přístup k tomuto vzhledu avataru!",
   "zOA4a2": "Tvé vzhledy avataru jsou aktualizované!",
   "V1AWw8": "Koupit balíček",
+  "Ntv9Ji": [
+    "Vzhled ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Vzhled avataru: ",
     [
@@ -2999,6 +3006,20 @@
   ],
   "eVNt6O": [
     "Jmenovka: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Jmenovka ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Efekt profilu ",
     [
       1,
       "itemName"
@@ -3131,18 +3152,6 @@
     [
       1,
       "num"
-    ]
-  ],
-  "WQbNhI": [
-    "Obsah balíčku: vzhled ",
-    [
-      1,
-      "decoName"
-    ],
-    " a efekt profilu ",
-    [
-      1,
-      "pfxName"
     ]
   ],
   "DkxLY2": [

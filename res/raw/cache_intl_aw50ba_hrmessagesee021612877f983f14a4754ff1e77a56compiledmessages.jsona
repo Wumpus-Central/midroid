@@ -2981,6 +2981,13 @@
   "e1UiOT": "Nadogradi da otključaš pristup ovom ukrasu avatara!",
   "zOA4a2": "Tvoj je ukras avatara ažuriran!",
   "V1AWw8": "Kupi paket",
+  "Ntv9Ji": [
+    "Ukras ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Ukras avatara: ",
     [
@@ -2990,6 +2997,20 @@
   ],
   "eVNt6O": [
     "Pločica s imenom: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Pločica s imenom ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Efekt profila ",
     [
       1,
       "itemName"
@@ -3125,19 +3146,6 @@
       "num"
     ],
     " predmeta"
-  ],
-  "WQbNhI": [
-    "Komplet sadrži: ",
-    [
-      1,
-      "decoName"
-    ],
-    " ukras i ",
-    [
-      1,
-      "pfxName"
-    ],
-    " efekt profila"
   ],
   "DkxLY2": [
     [

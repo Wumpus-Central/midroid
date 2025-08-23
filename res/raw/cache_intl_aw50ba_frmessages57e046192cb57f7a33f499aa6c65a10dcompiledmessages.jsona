@@ -2913,6 +2913,13 @@
   "e1UiOT": "Passer au niveau supérieur pour déverrouiller l'accès à cette décoration d'avatar !",
   "zOA4a2": "Ta décoration d'avatar a été mise à jour !",
   "V1AWw8": "Acheter le lot",
+  "Ntv9Ji": [
+    "Décoration ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Décoration d'avatar : ",
     [
@@ -2922,6 +2929,20 @@
   ],
   "eVNt6O": [
     "Plaque nominative : ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Plaque nominative ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Effet de profil ",
     [
       1,
       "itemName"
@@ -3058,18 +3079,6 @@
       "num"
     ],
     " objets"
-  ],
-  "WQbNhI": [
-    "Le pack comprend : la décoration ",
-    [
-      1,
-      "decoName"
-    ],
-    " et l'effet de profil ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

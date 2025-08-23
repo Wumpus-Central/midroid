@@ -2910,6 +2910,13 @@
   "e1UiOT": "Päivittämällä voit avata tämän avatar-koristeen käyttöösi!",
   "zOA4a2": "Avatar-koristeesi on päivitetty!",
   "V1AWw8": "Osta paketti",
+  "Ntv9Ji": [
+    "Koriste ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Avatar-koriste: ",
     [
@@ -2919,6 +2926,20 @@
   ],
   "eVNt6O": [
     "Nimikyltti: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Nimikyltti ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Profiilitehoste ",
     [
       1,
       "itemName"
@@ -3053,18 +3074,6 @@
       "num"
     ],
     " tuotetta"
-  ],
-  "WQbNhI": [
-    "Paketin sisältö: koriste ",
-    [
-      1,
-      "decoName"
-    ],
-    " ja profiilitehoste ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

@@ -43,18 +43,18 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
 
    public fun setAutomodContext(autoModerationContext: AutoModerationContext) {
       val var4: java.lang.String = var1.getKeywordDisplayText();
-      val var6: java.lang.String = var1.getRuleDisplayText();
+      val var5: java.lang.String = var1.getRuleDisplayText();
       if (var4 != null && !(var4 == "")) {
          this.binding.flaggedMessageKeyword.setText(var4);
       }
 
-      if (var6 != null && !(var6 == "")) {
-         this.binding.flaggedMessageRuleName.setText(var6);
+      if (var5 != null && !(var5 == "")) {
+         this.binding.flaggedMessageRuleName.setText(var5);
       }
 
-      val var5: ImageView = this.binding.separatorDot;
+      val var6: ImageView = this.binding.separatorDot;
       var var2: Boolean;
-      if (var4 != null && !(var4 == "") && var6 != null && !(var6 == "")) {
+      if (var4 != null && !(var4 == "") && var5 != null && !(var5 == "")) {
          var2 = 1;
       } else {
          var2 = 0;
@@ -66,6 +66,6 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
          var2 = 8;
       }
 
-      var5.setVisibility(var2);
+      var6.setVisibility(var2);
    }
 }

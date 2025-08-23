@@ -2918,6 +2918,13 @@
   "e1UiOT": "Nâng cấp để mở khóa quyền truy cập vào trang trí ảnh đại diện này!",
   "zOA4a2": "Trang trí ảnh đại diện của bạn đã được cập nhật!",
   "V1AWw8": "Mua gói",
+  "Ntv9Ji": [
+    "Vật phẩm trang trí ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Trang trí ảnh đại diện: ",
     [
@@ -2927,6 +2934,20 @@
   ],
   "eVNt6O": [
     "Bảng tên: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Bảng tên ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Hiệu ứng hồ sơ ",
     [
       1,
       "itemName"
@@ -3067,19 +3088,6 @@
       "num"
     ],
     " vật phẩm"
-  ],
-  "WQbNhI": [
-    "Gói bao gồm: Trang Trí ",
-    [
-      1,
-      "decoName"
-    ],
-    " & ",
-    "Hiệu Ứng Hồ Sơ ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

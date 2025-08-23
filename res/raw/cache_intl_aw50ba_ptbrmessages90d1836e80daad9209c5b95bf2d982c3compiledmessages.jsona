@@ -2909,6 +2909,13 @@
   "e1UiOT": "Faça a melhoria para desbloquear o acesso a esta decoração de avatar!",
   "zOA4a2": "Sua decoração de avatar foi atualizada!",
   "V1AWw8": "Comprar pacote",
+  "Ntv9Ji": [
+    "Decoração de ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "IQQYeX": [
     "Decoração de avatar: ",
     [
@@ -2918,6 +2925,20 @@
   ],
   "eVNt6O": [
     "Placa de identificação: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "2keXk5": [
+    "Placa de identificação ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "3Y8q7e": [
+    "Efeito de perfil ",
     [
       1,
       "itemName"
@@ -3054,18 +3075,6 @@
       "num"
     ],
     " itens"
-  ],
-  "WQbNhI": [
-    "O pacote inclui a decoração ",
-    [
-      1,
-      "decoName"
-    ],
-    " e o efeito de perfil ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

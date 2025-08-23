@@ -16,19 +16,22 @@ internal fun AudioAttachmentMessageAccessory.toAudioSource(): AudioSource {
 }
 
 internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource {
-   val var2: ChannelId = var0.getChannelId-qMVnFVQ();
-   val var3: java.lang.String = var0.getMessageId-3Eiw7ao();
-   val var5: Int = var0.getIndex();
-   val var4: java.lang.String = var0.getUrl();
+   val var3: ChannelId = var0.getChannelId-qMVnFVQ();
+   val var4: java.lang.String = var0.getMessageId-3Eiw7ao();
+   val var2: Int = var0.getIndex();
+   val var5: java.lang.String = var0.getUrl();
+   val var7: java.lang.String;
    if (var1 == null) {
       var1 = var0.getUrl();
       val var6: StringBuilder = new StringBuilder();
       var6.append("audio attachment: ");
       var6.append(var1);
-      var1 = var6.toString();
+      var7 = var6.toString();
+   } else {
+      var7 = var1;
    }
 
-   return new MediaSource(var4, null, null, null, var1, MediaType.AUDIO, false, var2, var3, var5, null, null, 3150, null);
+   return new MediaSource(var5, null, null, null, var7, MediaType.AUDIO, false, var3, var4, var2, null, null, 3150, null);
 }
 
 @JvmSynthetic

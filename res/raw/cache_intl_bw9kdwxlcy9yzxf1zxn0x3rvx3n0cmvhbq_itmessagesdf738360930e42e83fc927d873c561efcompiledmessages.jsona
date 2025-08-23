@@ -1,1 +1,27 @@
-{}
+{
+  "DKHheX": "Richiesta di fare streaming",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " ti sta chiedendo di fare lo streaming di ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Hai chiesto a qualcuno di fare lo streaming di ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Già in streaming",
+  "u4QmWl": "Richiesta scaduta",
+  "qRXatr": "Non nel canale vocale",
+  "43zohI": "Non c'è un gioco in corso",
+  "8HU1Mz": "Richiesta in sospeso",
+  "5+172d": "Fai streaming"
+}

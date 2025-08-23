@@ -116,24 +116,24 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
             }
 
             var8 = CollectionsKt.e0(var20);
-            val var26: Component = var1.getAccessory().getComponent();
-            val var23: FlexboxLayout = this.binding.sectionLayoutBox;
-            val var24: ComponentView = var2.getConfiguredComponentView(var26, var3, var23, 1);
+            val var23: Component = var1.getAccessory().getComponent();
+            val var26: FlexboxLayout = this.binding.sectionLayoutBox;
+            val var24: ComponentView = var2.getConfiguredComponentView(var23, var3, var26, 1);
             if (!var8.isEmpty() && var24 != null) {
                MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
                this.setAccessoryView(var24 as View);
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
-                  val var12: FlexboxLayout = this.binding.sectionLayoutBox;
-                  val var16: SectionAccessory = var1.getAccessory();
-                  val var7: Boolean = var16 is SectionAccessory.Button;
+                  val var16: FlexboxLayout = this.binding.sectionLayoutBox;
+                  val var12: SectionAccessory = var1.getAccessory();
+                  val var7: Boolean = var12 is SectionAccessory.Button;
                   var var17: Byte = 2;
-                  if (!var7 && var16 is SectionAccessory.Thumbnail) {
+                  if (!var7 && var12 is SectionAccessory.Thumbnail) {
                      var17 = 0;
                   }
 
-                  var12.setFlexDirection(var17);
+                  var16.setFlexDirection(var17);
                }
 
                val var13: ConstraintLayout = this.binding.sectionComponentViewGroupErrorRow.getRoot();

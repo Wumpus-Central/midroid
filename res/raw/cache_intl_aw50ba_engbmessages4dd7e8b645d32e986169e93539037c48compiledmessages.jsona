@@ -2900,6 +2900,13 @@
   "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " Decoration"
+  ],
   "IQQYeX": [
     "Avatar Decoration: ",
     [
@@ -2913,6 +2920,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " Nameplate"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " Profile Effect"
   ],
   "x/MGW1": [
     "Profile Effect: ",
@@ -3043,20 +3064,6 @@
       "num"
     ],
     " items"
-  ],
-  "WQbNhI": [
-    "Bundle includes: ",
-    [
-      1,
-      "decoName"
-    ],
-    " Decoration ",
-    "& ",
-    [
-      1,
-      "pfxName"
-    ],
-    " Profile Effect"
   ],
   "DkxLY2": [
     [

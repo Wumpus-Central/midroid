@@ -152,33 +152,33 @@ public data class SoundmojiContentNode(soundId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.soundId;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var9: java.lang.String = this.content;
-      val var8: java.lang.String = this.guildId;
+      val var7: java.lang.String = this.soundId;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = this.content;
+      val var6: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var6: java.lang.String = this.emojiId;
-      val var4: java.lang.String = this.emojiName;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SoundmojiContentNode(soundId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", messageId=");
-      var5.append(var7);
-      var5.append(", content=");
-      var5.append(var9);
-      var5.append(", guildId=");
-      var5.append(var8);
-      var5.append(", jumboable=");
-      var5.append(var1);
-      var5.append(", emojiId=");
-      var5.append(var6);
-      var5.append(", emojiName=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var8: java.lang.String = this.emojiId;
+      val var9: java.lang.String = this.emojiName;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SoundmojiContentNode(soundId=");
+      var2.append(var7);
+      var2.append(", channelId=");
+      var2.append(var5);
+      var2.append(", messageId=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(", guildId=");
+      var2.append(var6);
+      var2.append(", jumboable=");
+      var2.append(var1);
+      var2.append(", emojiId=");
+      var2.append(var8);
+      var2.append(", emojiName=");
+      var2.append(var9);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

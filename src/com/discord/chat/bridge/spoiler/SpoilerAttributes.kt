@@ -148,10 +148,10 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
-      val var2: Int = this.label.hashCode();
-      val var3: Int = this.description.hashCode();
-      val var4: Int = this.type.hashCode();
+      val var4: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
+      val var5: Int = this.label.hashCode();
+      val var2: Int = this.description.hashCode();
+      val var3: Int = this.type.hashCode();
       val var1: Int;
       if (this.verifyAge == null) {
          var1 = 0;
@@ -159,28 +159,28 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var1 = this.verifyAge.hashCode();
       }
 
-      return (((var5 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var1;
+      return (((var4 * 31 + var5) * 31 + var2) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
+      val var1: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
       val var2: Function1 = this.label;
-      val var6: Function1 = this.description;
-      val var1: SpoilerType = this.type;
-      val var5: java.lang.Boolean = this.verifyAge;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SpoilerAttributes(identifier=");
-      var4.append(var3);
-      var4.append(", label=");
-      var4.append(var2);
-      var4.append(", description=");
-      var4.append(var6);
-      var4.append(", type=");
-      var4.append(var1);
-      var4.append(", verifyAge=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: Function1 = this.description;
+      val var6: SpoilerType = this.type;
+      val var4: java.lang.Boolean = this.verifyAge;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SpoilerAttributes(identifier=");
+      var3.append(var1);
+      var3.append(", label=");
+      var3.append(var2);
+      var3.append(", description=");
+      var3.append(var5);
+      var3.append(", type=");
+      var3.append(var6);
+      var3.append(", verifyAge=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
@@ -238,14 +238,14 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var5.append("messageId(");
          var5.append(var7);
          var5.append(")");
-         val var6: java.lang.String = var5.toString();
-         val var8: java.lang.String = var1.type().getIndexLabel();
+         val var8: java.lang.String = var5.toString();
+         val var6: java.lang.String = var1.type().getIndexLabel();
          var5 = new StringBuilder();
-         var5.append(var8);
+         var5.append(var6);
          var5.append("(");
          var5.append(var3);
          var5.append(")");
-         return this.forItem(var1, var6, var5.toString(), var4);
+         return this.forItem(var1, var8, var5.toString(), var4);
       }
 
       public fun forEmbed(embed: Embed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {

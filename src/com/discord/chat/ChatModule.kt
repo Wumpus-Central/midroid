@@ -45,9 +45,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = k0.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      moduleScope = g.a(var1.V0(T.b(var0)));
+      val var0: CompletableJob = k0.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      moduleScope = g.a(var0.V0(T.b(var1)));
    }
 
    init {
@@ -118,13 +118,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       changesetUpdateIdValue: Double,
       HACK_iOSForceAnimations: Boolean
    ) {
-      val var10: Int = (int)var1;
-      val var9: Int = (int)var6;
+      val var9: Int = (int)var1;
+      val var10: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var10,
-         new Function2<ChatListManager, Continuation, Object>(this, var10, var3, var5, var9, null) {
+         var9,
+         new Function2<ChatListManager, Continuation, Object>(this, var9, var3, var5, var10, null) {
             final int $changesetUpdateId;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;
@@ -165,15 +165,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           val var5: Json = ChatModule.access$getJson$cp();
-                           val var43: java.lang.String = this.$rowsJSON;
-                           var5.a();
-                           var64 = var5.b(new f(Row.Companion.serializer()), var43) as java.util.List;
+                           var var43: Json = ChatModule.access$getJson$cp();
+                           val var5: java.lang.String = this.$rowsJSON;
+                           var43.a();
+                           var64 = var43.b(new f(Row.Companion.serializer()), var5) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              val var44: Json = ChatModule.access$getJson$cp();
+                              var43 = ChatModule.access$getJson$cp();
                               var1 = this.$scrollDataJSON;
-                              var44.a();
-                              var1 = var44.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
+                              var43.a();
+                              var1 = var43.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -394,9 +394,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var32 = null;
                            }
 
-                           var var7: LinkedHashMap;
-                           var var8: java.util.Iterator;
-                           var var67: java.util.List;
+                           var var7: java.util.List;
+                           var var9: java.util.Iterator;
+                           var var67: LinkedHashMap;
                            try {
                               if (var32 !is ErrorMessage) {
                                  break label127;
@@ -406,13 +406,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var35: SerializerUtils = SerializerUtils.INSTANCE;
                               val var66: java.lang.String = var6.toString();
                               var1 = var35.findErroringFields(var66, Message::class);
-                              var67 = PIIKt.getPIIFieldNames(Message::class);
-                              var7 = new LinkedHashMap();
+                              var7 = PIIKt.getPIIFieldNames(Message::class);
+                              var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
                               }
 
-                              var8 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var9 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var56: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -443,15 +443,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            while (true) {
-                              var var9: Entry;
+                              var var8: Entry;
                               try {
-                                 if (!var8.hasNext()) {
+                                 if (!var9.hasNext()) {
                                     break;
                                  }
 
-                                 var9 = var8.next() as Entry;
-                                 if (var67.contains(var9.getKey())) {
-                                    var7.put(var9.getKey(), "<REDACTED>");
+                                 var8 = var9.next() as Entry;
+                                 if (var7.contains(var8.getKey())) {
+                                    var67.put(var8.getKey(), "<REDACTED>");
                                     continue;
                                  }
                               } catch (var17: Exception) {
@@ -484,7 +484,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               }
 
                               try {
-                                 var7.put(var9.getKey(), var9.getValue());
+                                 var67.put(var8.getKey(), var8.getValue());
                               } catch (var13: Exception) {
                                  val var60: CrashReporting = CrashReporting.INSTANCE;
                                  CrashReporting.addBreadcrumb$default(
@@ -516,15 +516,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            try {
-                              val var68: CrashReporting = CrashReporting.INSTANCE;
-                              CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var7, null, 4, null);
-                              val var40: java.lang.String = CollectionsKt.p0(
+                              val var69: CrashReporting = CrashReporting.INSTANCE;
+                              CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var67, null, 4, null);
+                              val var70: java.lang.String = CollectionsKt.p0(
                                  (var1 as SerializerUtils.SerializerError.Data).getData().keySet(), ",", null, null, 0, null, null, 62, null
                               );
-                              val var70: StringBuilder = new StringBuilder();
-                              var70.append("Could not deserialize message. Bad Fields: ");
-                              var70.append(var40);
-                              CrashReporting.captureException$default(var68, new Exception(var70.toString()), false, 2, null);
+                              val var40: StringBuilder = new StringBuilder();
+                              var40.append("Could not deserialize message. Bad Fields: ");
+                              var40.append(var70);
+                              CrashReporting.captureException$default(var69, new Exception(var40.toString()), false, 2, null);
                            } catch (var12: Exception) {
                               val var62: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(

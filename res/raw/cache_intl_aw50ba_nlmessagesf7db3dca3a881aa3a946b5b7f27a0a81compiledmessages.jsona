@@ -2905,6 +2905,13 @@
   "e1UiOT": "Upgraden om toegang te ontgrendelen tot deze avatarversiering!",
   "zOA4a2": "Je avatarversiering is bijgewerkt!",
   "V1AWw8": "Bundel kopen",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    "-versiering"
+  ],
   "IQQYeX": [
     "Avatarversiering: ",
     [
@@ -2918,6 +2925,20 @@
       1,
       "itemName"
     ]
+  ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    "-naambordje"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    "-profieleffect"
   ],
   "x/MGW1": [
     "Profieleffect: ",
@@ -3050,18 +3071,6 @@
       "num"
     ],
     " items"
-  ],
-  "WQbNhI": [
-    "Bundel bevat: versiering ",
-    [
-      1,
-      "decoName"
-    ],
-    " en profieleffect ",
-    [
-      1,
-      "pfxName"
-    ]
   ],
   "DkxLY2": [
     [

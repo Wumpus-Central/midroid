@@ -166,13 +166,13 @@ internal class EmojiPickerView(context: Context,
          ViewMeasureExtensionsKt.measureAndLayout(this);
       } catch (var6: Exception) {
          val var5: CrashReporting = CrashReporting.INSTANCE;
-         val var3: Boolean = this.isInViewTransition;
-         val var4: Boolean = this.isAttachedToWindow();
+         val var4: Boolean = this.isInViewTransition;
+         val var3: Boolean = this.isAttachedToWindow();
          val var7: StringBuilder = new StringBuilder();
          var7.append("About to crash from EmojiPickerView. isInViewTransition: ");
-         var7.append(var3);
-         var7.append(". isAttached: ");
          var7.append(var4);
+         var7.append(". isAttached: ");
+         var7.append(var3);
          CrashReporting.addBreadcrumb$default(var5, var7.toString(), null, null, 6, null);
          throw var6;
       }
@@ -300,9 +300,9 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public open fun startViewTransition(view: View?) {
@@ -378,19 +378,19 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var4: Boolean = this.animateEmoji;
+         val var3: Boolean = this.animateEmoji;
          val var2: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var3: Boolean = this.disableAnimationsOnScroll;
+         val var4: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var2);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var3);
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

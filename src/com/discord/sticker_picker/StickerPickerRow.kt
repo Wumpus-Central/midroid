@@ -194,28 +194,28 @@ internal data class StickerPickerRow(rowContentWidth: Double,
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.id;
-         val var8: java.lang.String = this.name;
-         val var5: StickerPickerRow.Sticker.Type = this.type;
-         val var3: Boolean = this.animated;
-         val var4: java.lang.String = this.url;
-         val var1: Boolean = this.disabled;
-         val var2: Boolean = this.opaque;
+         val var4: java.lang.String = this.id;
+         val var5: java.lang.String = this.name;
+         val var8: StickerPickerRow.Sticker.Type = this.type;
+         val var2: Boolean = this.animated;
+         val var6: java.lang.String = this.url;
+         val var3: Boolean = this.disabled;
+         val var1: Boolean = this.opaque;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Sticker(id=");
-         var7.append(var6);
-         var7.append(", name=");
-         var7.append(var8);
-         var7.append(", type=");
-         var7.append(var5);
-         var7.append(", animated=");
-         var7.append(var3);
-         var7.append(", url=");
          var7.append(var4);
-         var7.append(", disabled=");
-         var7.append(var1);
-         var7.append(", opaque=");
+         var7.append(", name=");
+         var7.append(var5);
+         var7.append(", type=");
+         var7.append(var8);
+         var7.append(", animated=");
          var7.append(var2);
+         var7.append(", url=");
+         var7.append(var6);
+         var7.append(", disabled=");
+         var7.append(var3);
+         var7.append(", opaque=");
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

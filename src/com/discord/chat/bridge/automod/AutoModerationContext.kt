@@ -117,8 +117,8 @@ public data class AutoModerationContext(headerText: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.headerText.hashCode();
-      val var6: Int = this.headerBadgeText.hashCode();
+      val var6: Int = this.headerText.hashCode();
+      val var5: Int = this.headerBadgeText.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.ruleDisplayText == null) {
@@ -141,47 +141,47 @@ public data class AutoModerationContext(headerText: String,
          var3 = this.actionsIconURL.hashCode();
       }
 
-      val var8: Int = this.actionsText.hashCode();
-      val var9: Int = this.feedbackText.hashCode();
-      val var7: Int = this.message.hashCode();
+      val var9: Int = this.actionsText.hashCode();
+      val var7: Int = this.feedbackText.hashCode();
+      val var8: Int = this.message.hashCode();
       if (this.notification != null) {
          var4 = this.notification.hashCode();
       }
 
-      return (((((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var9) * 31 + var7) * 31 + var4;
+      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var9) * 31 + var7) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.headerText;
-      val var5: java.lang.String = this.headerBadgeText;
-      val var3: java.lang.String = this.ruleDisplayText;
-      val var1: java.lang.String = this.keywordDisplayText;
-      val var7: java.lang.String = this.actionsIconURL;
-      val var2: java.lang.String = this.actionsText;
-      val var6: java.lang.String = this.feedbackText;
-      val var4: FlaggedMessageEmbed = this.message;
-      val var8: AutoModerationNotification = this.notification;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("AutoModerationContext(headerText=");
-      var10.append(var9);
-      var10.append(", headerBadgeText=");
-      var10.append(var5);
-      var10.append(", ruleDisplayText=");
-      var10.append(var3);
-      var10.append(", keywordDisplayText=");
-      var10.append(var1);
-      var10.append(", actionsIconURL=");
-      var10.append(var7);
-      var10.append(", actionsText=");
-      var10.append(var2);
-      var10.append(", feedbackText=");
-      var10.append(var6);
-      var10.append(", message=");
-      var10.append(var4);
-      var10.append(", notification=");
-      var10.append(var8);
-      var10.append(")");
-      return var10.toString();
+      val var6: java.lang.String = this.headerText;
+      val var1: java.lang.String = this.headerBadgeText;
+      val var9: java.lang.String = this.ruleDisplayText;
+      val var4: java.lang.String = this.keywordDisplayText;
+      val var10: java.lang.String = this.actionsIconURL;
+      val var5: java.lang.String = this.actionsText;
+      val var2: java.lang.String = this.feedbackText;
+      val var8: FlaggedMessageEmbed = this.message;
+      val var3: AutoModerationNotification = this.notification;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("AutoModerationContext(headerText=");
+      var7.append(var6);
+      var7.append(", headerBadgeText=");
+      var7.append(var1);
+      var7.append(", ruleDisplayText=");
+      var7.append(var9);
+      var7.append(", keywordDisplayText=");
+      var7.append(var4);
+      var7.append(", actionsIconURL=");
+      var7.append(var10);
+      var7.append(", actionsText=");
+      var7.append(var5);
+      var7.append(", feedbackText=");
+      var7.append(var2);
+      var7.append(", message=");
+      var7.append(var8);
+      var7.append(", notification=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

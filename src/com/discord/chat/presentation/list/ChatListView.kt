@@ -126,11 +126,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       var var4: Pair = B9.s.a(RegularMessageDelegate.class, 50);
       val var3: Int = 25;
 
-      for (Entry var5 : L.l(new Pair[]{var4, B9.s.a(SystemMessageDelegate.class, var3), B9.s.a(SeparatorDelegate.class, var3)}).entrySet()) {
-         val var7: Class = var5.getKey() as Class;
-         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
-         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var2);
+      for (Entry var7 : L.l(new Pair[]{var4, B9.s.a(SystemMessageDelegate.class, var3), B9.s.a(SeparatorDelegate.class, var3)}).entrySet()) {
+         val var5: Class = var7.getKey() as Class;
+         val var1: Int = (var7.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
+         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var1);
       }
    }
 
@@ -140,15 +140,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var7: Any = var2.get(this);
-         val var5: CrashReporting = CrashReporting.INSTANCE;
-         val var3: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("About to crash because of ChatList, dumping update log:\n");
-         var4.append(var3);
-         var4.append("\n Recycler State: ");
-         var4.append(var7);
-         CrashReporting.addBreadcrumb$default(var5, var4.toString(), null, null, 6, null);
+         val var5: Any = var2.get(this);
+         val var4: CrashReporting = CrashReporting.INSTANCE;
+         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("About to crash because of ChatList, dumping update log:\n");
+         var3.append(var7);
+         var3.append("\n Recycler State: ");
+         var3.append(var5);
+         CrashReporting.addBreadcrumb$default(var4, var3.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -216,13 +216,13 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                      val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePosition();
-                     val var7: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePercentVisible();
                      val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePosition();
-                     val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var7: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePercentVisible();
                      if (ChatListView.access$isFirstLayout$p(this.this$0) && var1 >= 0 && var2 >= 0) {
@@ -236,7 +236,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = null;
                            }
 
-                           var4.onFirstLayout(var2, var6, var1, var7);
+                           var4.onFirstLayout(var2, var7, var1, var6);
                         } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
@@ -245,7 +245,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = var12;
                            }
 
-                           var4.onFirstLayout(var1, var7, var2, var6);
+                           var4.onFirstLayout(var1, var6, var2, var7);
                         }
                      }
                   }

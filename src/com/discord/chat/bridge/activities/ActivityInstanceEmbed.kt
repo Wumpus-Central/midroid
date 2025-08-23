@@ -98,24 +98,24 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var1: java.lang.String = this.instanceId;
-      val var4: java.util.List = this.participantAvatarUris;
-      val var5: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var6: java.lang.String = this.participantsDescription;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActivityInstanceEmbed(applicationId=");
-      var2.append(var3);
-      var2.append(", instanceId=");
-      var2.append(var1);
-      var2.append(", participantAvatarUris=");
-      var2.append(var4);
-      var2.append(", appMessageEmbedModel=");
-      var2.append(var5);
-      var2.append(", participantsDescription=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var6: java.lang.String = this.instanceId;
+      val var1: java.util.List = this.participantAvatarUris;
+      val var3: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var2: java.lang.String = this.participantsDescription;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActivityInstanceEmbed(applicationId=");
+      var4.append(var5);
+      var4.append(", instanceId=");
+      var4.append(var6);
+      var4.append(", participantAvatarUris=");
+      var4.append(var1);
+      var4.append(", appMessageEmbedModel=");
+      var4.append(var3);
+      var4.append(", participantsDescription=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {
