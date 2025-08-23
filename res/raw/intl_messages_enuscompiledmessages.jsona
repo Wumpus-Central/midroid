@@ -480,6 +480,21 @@
   ],
   "BGYkaG": "Add Friend Nickname",
   "dukg0d": "or use these options",
+  "zDGAfn": [
+    "Scan the QR Code to add ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ],
+    " as a friend"
+  ],
+  "VUNqoa": "Add Friend by QR Code",
   "P3mDzc": "Connect with friends in your student hub.",
   "Rtl1Eh": [
     "Success! Your friend request to ",
@@ -20746,6 +20761,21 @@
   "9GPbsb": "Invites to this server are currently permanently disabled.",
   "QaAypK": "Email",
   "AQKfCg": "Messages",
+  "rriLm5": "QR Code",
+  "VK3zyM": [
+    "Scan the QR Code to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ]
+  ],
+  "DqE26u": "Invite by QR Code",
   "f1+QIC": "Invite a friend",
   "ib7Ng4": "Add Friend",
   "xhxnPj": "Send a Message",

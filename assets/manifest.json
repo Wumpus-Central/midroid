@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4537",
-    "commit": "ff6f173f0bbc210f03a55f164d381e2659ef3a03",
+    "build": "4538",
+    "commit": "11cd2093321a05d0d188cbca1da3ebb30c09e9e0",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "b9b0498ad287fad103654b94f664a535",
+    "app/src/main/assets/index.android.bundle": "3c1849e60ce5bedfabf6bac0ec6df2be",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_7hoebl5sk2p5db67l35raalhdm_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1331_7hoebl5sk2p5db67l35raalhdm_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
@@ -3316,7 +3316,7 @@
     "app/src/main/res/raw/images_platforms_img_roblox_dark.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/images_platforms_img_roblox_light.svg": "8004c631509b26672d76ec4ff50dd8cb",
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
-    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "97652b33f627ecfc7f3e22be633da8bb",
+    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "2e0583f565fcc7979bc81f69f49daade",
     "app/src/main/res/raw/intl_messages_internationalcompiledmessages.jsona": "7826c5731011d653ad231a2c3b0d1f32",
     "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "8a95a92cb29cc1a1803a209cbf268aa0",
     "app/src/main/res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
