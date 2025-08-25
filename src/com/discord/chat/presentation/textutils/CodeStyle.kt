@@ -31,9 +31,9 @@ public object CodeStyle {
 
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
       private final get() {
-         val var4: java.util.Map = parsers;
-         val var3: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
-         var var2: Any = var4.get(var3);
+         val var3: java.util.Map = parsers;
+         val var4: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
+         var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
             var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
@@ -43,7 +43,7 @@ public object CodeStyle {
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
-            var4.put(var3, var1);
+            var3.put(var4, var1);
          }
 
          return var1 as Parser<RenderContext, Node<RenderContext>, Object>;
@@ -142,10 +142,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var5 = SizeUtilsKt.getDpToPx(4);
-      val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var11: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var9: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var10: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var9: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var11: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var7: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
@@ -155,7 +155,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var8, var7, var11, var9, var10}[var14];
+         val var12: Any = new Object[]{var8, var10, var9, var11, var7}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

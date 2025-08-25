@@ -18,7 +18,6 @@ import db.K
 import db.f
 import db.k0
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CompletableJob
@@ -78,35 +77,38 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
             public final Object invokeSuspend(Object var1) {
                var var7: Any;
-               var var8: DataSource;
-               label1424: {
-                  var8 = (DataSource)b.e();
-                  var var9: Bitmap = null;
+               var var258: DataSource;
+               label1440: {
+                  var7 = b.e();
                   val var3x: Long;
+                  var var9: Any;
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                      }
 
                      var3x = this.J$0;
-                     var8 = this.L$0 as DataSource;
-                     var7 = this.L$0 as DataSource;
+                     var258 = this.L$0 as DataSource;
 
                      try {
                         c.b(var1);
                      } catch (var25: java.lang.Throwable) {
-                        var8 = var25;
-                        break label1424;
+                        var258 = this.L$0 as DataSource;
+                        var7 = var25;
+                        break label1440;
                      }
+
+                     var9 = var1;
                   } else {
                      c.b(var1);
-                     var7 = this.L$0 as CoroutineScope;
+                     var1 = this.L$0 as CoroutineScope;
                      var3x = System.currentTimeMillis();
-                     var1 = d.a().k(ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0)), var7);
+                     var258 = ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0));
+                     val var252: DataSource = d.a().k(var258, var1);
 
                      try {
-                        var7 = K.b();
-                        val var10: Function2 = new Function2<CoroutineScope, Continuation, Object>(var1, null) {
+                        var258 = K.b();
+                        var9 = new Function2<CoroutineScope, Continuation, Object>(var252, null) {
                            final DataSource $dataSource;
                            int label;
 
@@ -133,136 +135,128 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               }
                            }
                         };
-                        this.L$0 = var1;
+                        this.L$0 = var252;
                         this.J$0 = var3x;
                         this.label = 1;
-                        var7 = f.g((CoroutineContext)var7, var10, this);
+                        var9 = (GenericDraweeHierarchy)f.g(var258, (Function2)var9, this);
                      } catch (var24: java.lang.Throwable) {
-                        break label1424;
+                        break label1440;
                      }
 
-                     if (var7 === var8) {
-                        return var8;
+                     if (var9 === var7) {
+                        return var7;
                      }
 
-                     var8 = var1;
-                     var1 = (BitmapDrawable)var7;
+                     var258 = var252;
                   }
-
-                  var7 = var8;
 
                   try {
-                     var1 = var1 as CloseableReference;
+                     var1 = var9 as CloseableReference;
                   } catch (var23: java.lang.Throwable) {
-                     var8 = var23;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var23;
+                     break label1440;
                   }
-
-                  var7 = var8;
 
                   try {
                      TiledDraweeController.access$setMyImageReference$p(this.this$0, var1);
                   } catch (var22: java.lang.Throwable) {
-                     var8 = var22;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var22;
+                     break label1440;
                   }
 
                   val var254: e;
                   if (var1 != null) {
-                     var7 = var8;
-
                      try {
                         var254 = var1.v0() as e;
                      } catch (var21: java.lang.Throwable) {
-                        var8 = var21;
-                        break label1424;
+                        var258 = var258;
+                        var7 = var21;
+                        break label1440;
                      }
                   } else {
                      var254 = null;
                   }
 
-                  var7 = var8;
-
                   label131: {
-                     label163: {
+                     label164: {
                         try {
                            if (var254 !is v3.d) {
-                              break label163;
+                              break label164;
                            }
                         } catch (var20: java.lang.Throwable) {
-                           var8 = var20;
-                           break label1424;
+                           var258 = var258;
+                           var7 = var20;
+                           break label1440;
                         }
-
-                        var7 = var8;
 
                         try {
                            var1 = var254 as v3.d;
                            break label131;
                         } catch (var19: java.lang.Throwable) {
-                           var8 = var19;
-                           break label1424;
+                           var258 = var258;
+                           var7 = var19;
+                           break label1440;
                         }
                      }
 
                      var1 = null;
                   }
 
+                  var9 = null;
                   if (var1 != null) {
-                     var7 = var8;
-
                      try {
                         var9 = var1.B1();
                      } catch (var18: java.lang.Throwable) {
-                        var8 = var18;
-                        break label1424;
+                        var258 = var258;
+                        var7 = var18;
+                        break label1440;
                      }
                   }
-
-                  var7 = var8;
 
                   try {
                      var1 = new BitmapDrawable;
                   } catch (var17: java.lang.Throwable) {
-                     var8 = var17;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var17;
+                     break label1440;
                   }
 
-                  var7 = var8;
-
                   try {
-                     var1./* $VF: Unable to resugar constructor */<init>(TiledDraweeController.access$getResources$p(this.this$0), var9);
+                     var1./* $VF: Unable to resugar constructor */<init>(TiledDraweeController.access$getResources$p(this.this$0), (Bitmap)var9);
                   } catch (var16: java.lang.Throwable) {
-                     var8 = var16;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var16;
+                     break label1440;
                   }
 
-                  var7 = var8;
-
                   try {
-                     var259 = this.this$0;
+                     var9 = this.this$0;
                   } catch (var15: java.lang.Throwable) {
-                     var8 = var15;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var15;
+                     break label1440;
                   }
-
-                  var7 = var8;
 
                   try {
-                     var1.setTileModeXY(TiledDraweeController.access$getTileMode$p(var259), TiledDraweeController.access$getTileMode$p(var259));
+                     var1.setTileModeXY(
+                        TiledDraweeController.access$getTileMode$p((TiledDraweeController)var9),
+                        TiledDraweeController.access$getTileMode$p((TiledDraweeController)var9)
+                     );
                   } catch (var14: java.lang.Throwable) {
-                     var8 = var14;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var14;
+                     break label1440;
                   }
-
-                  var7 = var8;
 
                   var var5: Long;
                   try {
                      var5 = System.currentTimeMillis();
                   } catch (var13: java.lang.Throwable) {
-                     var8 = var13;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var13;
+                     break label1440;
                   }
 
                   var var257: Boolean = false;
@@ -270,32 +264,30 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                      var257 = true;
                   }
 
-                  var7 = var8;
-
                   try {
-                     var260 = TiledDraweeController.access$getHierarchy$p(this.this$0);
+                     var9 = TiledDraweeController.access$getHierarchy$p(this.this$0);
                   } catch (var12: java.lang.Throwable) {
-                     var8 = var12;
-                     break label1424;
+                     var258 = var258;
+                     var7 = var12;
+                     break label1440;
                   }
 
-                  if (var260 != null) {
-                     var7 = var8;
-
+                  if (var9 != null) {
                      try {
-                        var260.f(var1, 1.0F, var257 xor true);
+                        var9.f(var1, 1.0F, var257 xor true);
                      } catch (var11: java.lang.Throwable) {
-                        var8 = var11;
-                        break label1424;
+                        var258 = var258;
+                        var7 = var11;
+                        break label1440;
                      }
                   }
 
-                  var8.close();
+                  var258.close();
                   return Unit.a;
                }
 
-               ((DataSource)var7).close();
-               throw var8;
+               var258.close();
+               throw var7;
             }
          },
          3,

@@ -1,0 +1,27 @@
+{
+  "DKHheX": "Közvetítés kérése",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " arra kér, hogy közvetítsd a következőt: ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Felkértél valakit a következő közvetítésére: ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Már zajlik a közvetítés",
+  "u4QmWl": "A kérés lejárt",
+  "qRXatr": "Nincs a hangcsatornában",
+  "43zohI": "Nem futó játék",
+  "8HU1Mz": "Függőben lévő kérés",
+  "5+172d": "Élő közvetítés"
+}

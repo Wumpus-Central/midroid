@@ -19,6 +19,7 @@ import com.discord.reactions.ReactionView.Reaction
 public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
    public val onMessageTapped: ((MessageId, ChannelId) -> Unit)?
+   public val onMessageDoubleTapped: ((MessageId, ChannelId) -> Unit)?
 
    public abstract fun mediaAttachmentPlaybackEnded(
       messageId: MessageId,
@@ -330,6 +331,7 @@ public interface ChatEventHandler {
    public object Empty : ChatEventHandler {
       public open val onMessageLongPressed: Nothing?
       public open val onMessageTapped: Nothing?
+      public open val onMessageDoubleTapped: Nothing?
 
       public override fun mediaAttachmentPlaybackEnded(
          messageId: MessageId,

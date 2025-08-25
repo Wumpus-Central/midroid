@@ -41,13 +41,13 @@ public data class BorderStyle(color: Int, width: Int) {
    }
 
    public override fun toString(): String {
-      val var1: Int = this.color;
-      val var2: Int = this.width;
+      val var2: Int = this.color;
+      val var1: Int = this.width;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BorderStyle(color=");
-      var3.append(var1);
-      var3.append(", width=");
       var3.append(var2);
+      var3.append(", width=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

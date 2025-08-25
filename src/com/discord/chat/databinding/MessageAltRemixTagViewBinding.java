@@ -31,15 +31,15 @@ public final class MessageAltRemixTagViewBinding implements ViewBinding {
    @NonNull
    public static MessageAltRemixTagViewBinding bind(@NonNull View var0) {
       int var1 = R.id.alt_remix_tag;
-      TextView var4 = (TextView)a.a(var0, var1);
-      if (var4 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.layout;
-         ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-         if (var3 != null) {
+         ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.remix_icon;
             SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
             if (var2 != null) {
-               return new MessageAltRemixTagViewBinding(var0, var4, var3, var2);
+               return new MessageAltRemixTagViewBinding(var0, var3, var4, var2);
             }
          }
       }

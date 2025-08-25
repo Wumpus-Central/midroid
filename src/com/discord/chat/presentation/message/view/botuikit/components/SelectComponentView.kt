@@ -174,7 +174,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    public fun configure(component: SelectComponent, componentContext: ComponentContext) {
-      var var10: java.lang.String = var1.getPlaceholder();
+      val var10: java.lang.String = var1.getPlaceholder();
       this.configureWidth(var2);
       var var11: View = this.binding.getRoot();
       var var5: Byte = 4;
@@ -219,27 +219,27 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var12: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var21: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
                            val var13: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           var10 = var12.getIconSrc();
-                           val var35: Int = var12.getIconColor();
+                           val var35: java.lang.String = var21.getIconSrc();
+                           val var12: Int = var21.getIconColor();
                            val var16: Boolean;
-                           if (var12.getType() === SelectOptionType.USER) {
+                           if (var21.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var13, var10, var35, var16);
+                           this.setImage(var13, var35, var12, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;
                         }
                      }
 
-                     val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                     var21.setVisibility(8);
+                     val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     var22.setVisibility(8);
                   }
                }
             }
@@ -270,30 +270,30 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var4 = true;
       }
 
-      val var8: Boolean;
+      val var17: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var8 = true;
+         var17 = true;
       } else {
-         var8 = false;
+         var17 = false;
       }
 
       val var25: SimpleDraweeView = this.binding.selectComponentChevron;
-      if (!var8) {
+      if (!var17) {
          var5 = 0;
       }
 
       var25.setVisibility(var5);
-      if (var8 != this.currentIsLoading) {
+      if (var17 != this.currentIsLoading) {
          val var26: ProgressDots = this.getProgressDots();
          var5 = 8;
-         if (var8) {
+         if (var17) {
             var5 = 0;
          }
 
          var26.setVisibility(var5);
       }
 
-      this.currentIsLoading = var8;
+      this.currentIsLoading = var17;
       val var27: View = this.binding.getRoot();
       val var3: Float;
       if (var4) {
@@ -306,15 +306,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var28: View = this.binding.getRoot();
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var28, false, new g(var2, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var17: Boolean = false;
-      if (!var8) {
-         var17 = false;
+      var var8: Boolean = false;
+      if (!var17) {
+         var8 = false;
          if (!var4) {
-            var17 = true;
+            var8 = true;
          }
       }
 
-      var14.setClickable(var17);
+      var14.setClickable(var8);
       this.binding.getRoot().setEnabled(var4 xor true);
    }
 

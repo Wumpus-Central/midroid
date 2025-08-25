@@ -31,15 +31,15 @@ public final class ClanTagChipletViewBinding implements ViewBinding {
    @NonNull
    public static ClanTagChipletViewBinding bind(@NonNull View var0) {
       int var1 = R.id.badge;
-      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-      if (var4 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.container;
-         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-         if (var3 != null) {
+         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.tag;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
-               return new ClanTagChipletViewBinding(var0, var4, var3, var2);
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
+               return new ClanTagChipletViewBinding(var0, var3, var2, var4);
             }
          }
       }

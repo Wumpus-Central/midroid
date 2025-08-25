@@ -9,16 +9,16 @@ import com.discord.native.engine.VideoInputDeviceFacing
 import java.util.ArrayList
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   val var5: ArrayList = new ArrayList(var0.length);
+   val var4: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var5.add(L.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
+      var4.add(L.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
       var2++;
    }
 
-   return var5;
+   return var4;
 }
 
 internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
@@ -89,15 +89,24 @@ internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
-   return L.l(
-      new Pair[]{
-         s.a("protocol", var0.getProtocol()),
-         s.a("address", var0.getLocalAddress()),
-         s.a("port", var0.getLocalPort()),
-         s.a("createConnectionTime", var0.getCreateConnectionTime()),
-         s.a("connectTime", var0.getConnectTime())
-      }
-   );
+   val var3: Pair = s.a("protocol", var0.getProtocol());
+   val var4: Pair = s.a("address", var0.getLocalAddress());
+   val var5: Pair = s.a("port", var0.getLocalPort());
+   val var1: Int = var0.getCreateConnectionTime();
+   val var8: Pair;
+   if (var1 != null) {
+      var8 = s.a("createConnectionTime", var1.intValue());
+   } else {
+      var8 = null;
+   }
+
+   val var6: Int = var0.getConnectTime();
+   var var7: Pair = null;
+   if (var6 != null) {
+      var7 = s.a("connectTime", var6.intValue());
+   }
+
+   return L.t(CollectionsKt.p(new Pair[]{var3, var4, var5, var8, var7}));
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

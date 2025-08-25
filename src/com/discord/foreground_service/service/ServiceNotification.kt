@@ -46,12 +46,12 @@ internal object ServiceNotification {
 
       var4 = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
          var4.a(
             0,
-            var5.getTitle(),
+            var7.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null
+               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
             )
          );
       }

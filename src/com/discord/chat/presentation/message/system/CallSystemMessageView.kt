@@ -99,12 +99,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var9: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var19: StringBuilder = new StringBuilder();
-      var19.append("Binding ");
-      var19.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var9, var19.toString(), null, 2, null);
+      val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var19, var13.toString(), null, 2, null);
       if (var1.isCallActive() == var7) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          db.f.d(
@@ -142,9 +142,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     var1 = this.this$0;
-                     val var5: Lifecycle.State = Lifecycle.State.m;
-                     val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
+                     val var4: CallSystemMessageView = this.this$0;
+                     var1 = Lifecycle.State.m;
+                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -274,8 +274,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                     val var8: CallSystemMessageView = this.this$0;
                                     val var9: Message = this.$message;
                                     val var6x: Long = Duration.v(var1);
-                                    val var5: Int = Duration.z(var1);
-                                    val var4x: Int = Duration.B(var1);
+                                    val var4x: Int = Duration.z(var1);
+                                    val var5: Int = Duration.B(var1);
                                     Duration.A(var1);
                                     val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
                                     val var10: java.lang.String = java.lang.String.format(
@@ -283,8 +283,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.e(var6x),
-                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              kotlin.coroutines.jvm.internal.b.d(var4x),
+                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              var9.getDescription()
                                           },
                                           4
@@ -304,7 +304,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var5, var4, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var4, var1, var5, this) === var3) {
                         return var3;
                      }
                   }
