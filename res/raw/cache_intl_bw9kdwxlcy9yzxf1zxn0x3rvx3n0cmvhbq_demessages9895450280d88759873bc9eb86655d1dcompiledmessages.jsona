@@ -1,0 +1,30 @@
+{
+  "DKHheX": "Anfrage zum Streamen",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " bittet dich, ",
+    [
+      1,
+      "applicationName"
+    ],
+    " zu streamen"
+  ],
+  "7pndSk": [
+    "Du hast jemanden gebeten, ",
+    [
+      1,
+      "applicationName"
+    ],
+    " zu streamen"
+  ],
+  "P0wwmJ": "Bereits am Streamen",
+  "u4QmWl": "Anfrage abgelaufen",
+  "qRXatr": "Nicht im Sprachkanal",
+  "43zohI": "Spiel wird nicht ausgeführt",
+  "fac+eH": "Keine Berechtigung",
+  "8HU1Mz": "Anfrage gesendet",
+  "5+172d": "Streamen"
+}

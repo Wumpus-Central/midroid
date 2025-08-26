@@ -12,8 +12,8 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var3: Int = var0.getInt("rowContentPaddingVertical");
-   val var4: Int = var0.getInt("itemSize");
+   val var4: Int = var0.getInt("rowContentPaddingVertical");
+   val var3: Int = var0.getInt("itemSize");
    val var9: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var9);
    val var10: ArrayList = new ArrayList(CollectionsKt.v(var14, 10));
@@ -22,20 +22,20 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
    while (var11.hasNext()) {
       var var5: Int = (var11 as I).nextInt();
       val var6: Boolean = var9.isNull(var5);
-      var var7: StickerPickerRow.Sticker = null;
+      var var15: StickerPickerRow.Sticker = null;
       if (!var6) {
          var0 = var9.getMap(var5);
-         val var16: java.lang.String;
+         var var7: java.lang.String;
          if (var0 != null) {
-            var16 = var0.getString("stickerId");
+            var7 = var0.getString("stickerId");
          } else {
-            var16 = null;
+            var7 = null;
          }
 
-         var7 = null;
-         if (var16 != null) {
+         var15 = null;
+         if (var7 != null) {
             val var21: ReadableMap = var9.getMap(var5);
-            val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
+            var7 = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
             val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
             var5 = var21.getInt("stickerType");
             val var17: StickerPickerRow.Sticker.Type;
@@ -60,8 +60,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
                var17 = StickerPickerRow.Sticker.Type.PNG;
             }
 
-            var7 = new StickerPickerRow.Sticker(
-               var20,
+            var15 = new StickerPickerRow.Sticker(
+               var7,
                var12,
                var17,
                var21.getBoolean("stickerAnimated"),
@@ -72,8 +72,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          }
       }
 
-      var10.add(var7);
+      var10.add(var15);
    }
 
-   return new StickerPickerRow(var1, var3, var4, var10);
+   return new StickerPickerRow(var1, var4, var3, var10);
 }

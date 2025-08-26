@@ -3013,6 +3013,7 @@
     " Profile Effect"
   ],
   "aVCcr6": "Decoration",
+  "HNnSVV": "Nameplate",
   "s+YSgo": "Profile",
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
@@ -5392,6 +5393,7 @@
     ],
     " accepted terms for monetization"
   ],
+  "m7OrlZ": "Search in DMs",
   "oS4NEB": "We’ll use this to display what show you’re watching on Crunchyroll",
   "siPkNj": "First let's sign in with Crunchyroll",
   "/GCyIC": [
@@ -6074,6 +6076,23 @@
       "date"
     ],
     "."
+  ],
+  "CyLYKS": "Use third-party data to personalize Sponsored Content",
+  "2QFDU1": [
+    "Allows us to personalize Sponsored Content, like Quests, using data we receive from advertisers and third-party data providers. If you opt out, you may still see Quests, but they won’t be personalized using data from third parties. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
   ],
   "R5N31N": [
     "We need to store and process some data in order to provide you the basic Discord service, such as your messages, what servers you’re in and your Direct Messages. By using Discord, you allow us to provide this basic service. You can stop this by ",
@@ -33856,6 +33875,7 @@
       "guildName"
     ]
   ],
+  "7Qr0fH": "Search in Server",
   "jes7FB": "Media Image",
   "LBYpDA": "Photos & Media",
   "pYHobG": "Search Members",
@@ -34609,10 +34629,6 @@
     ],
     " Present"
   ],
-  "N3/Oyc": "Join Audience",
-  "Q8o/tb": "Join as Speaker",
-  "LQY4JS": "Join as Speaker to talk, or chill out in the audience.",
-  "njetU1": "Talking or just listening in?",
   "GMZqSk": "Stage Moderator",
   "zqxfra": "Mute Music",
   "ScHlfn": "Unmute Music",
@@ -38967,6 +38983,23 @@
       ]
     ]
   ],
+  "cf9mvb": [
+    "Allows us to personalize Sponsored Content, like Quests, using your Discord activity, such as the games you play.  If you opt out you may still see Quests, but they won’t be personalized. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "sJYh5u": "Use my Discord activity to personalize Sponsored Content",
   "MoZlaG": "Direct messages will not be filtered for explicit images.",
   "FLfuhI": "Do not filter direct messages",
   "Fw+Lvr": "All direct messages will be filtered for explicit images.",

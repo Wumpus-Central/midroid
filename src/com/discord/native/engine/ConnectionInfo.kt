@@ -76,10 +76,10 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = java.lang.Boolean.hashCode(this.isConnected);
-      val var5: Int = this.protocol.hashCode();
-      val var6: Int = this.localAddress.hashCode();
-      val var4: Int = Integer.hashCode(this.localPort);
+      val var5: Int = java.lang.Boolean.hashCode(this.isConnected);
+      val var4: Int = this.protocol.hashCode();
+      val var3: Int = this.localAddress.hashCode();
+      val var6: Int = Integer.hashCode(this.localPort);
       var var2: Int = 0;
       val var1: Int;
       if (this.createConnectionTime == null) {
@@ -92,7 +92,7 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
          var2 = this.connectTime.hashCode();
       }
 
-      return ((((var3 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((((var5 * 31 + var4) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {

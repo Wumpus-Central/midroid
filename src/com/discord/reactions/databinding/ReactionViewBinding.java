@@ -54,18 +54,18 @@ public final class ReactionViewBinding implements ViewBinding {
          TextView var7 = (TextView)a.a(var0, var1);
          if (var7 != null) {
             var1 = R.id.reaction_count_switcher;
-            TextSwitcher var3 = (TextSwitcher)a.a(var0, var1);
-            if (var3 != null) {
+            TextSwitcher var5 = (TextSwitcher)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.reaction_emoji;
-               SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.reaction_label_left;
-                  TextView var6 = (TextView)a.a(var0, var1);
-                  if (var6 != null) {
+                  TextView var4 = (TextView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.reaction_label_right;
-                     TextView var4 = (TextView)a.a(var0, var1);
-                     if (var4 != null) {
-                        return new ReactionViewBinding(var0, var2, var7, var3, var5, var6, var4);
+                     TextView var3 = (TextView)a.a(var0, var1);
+                     if (var3 != null) {
+                        return new ReactionViewBinding(var0, var2, var7, var5, var6, var4, var3);
                      }
                   }
                }

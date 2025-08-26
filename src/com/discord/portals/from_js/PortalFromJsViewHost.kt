@@ -108,19 +108,38 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         var4 = this.portalId;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Adding more than one child unsupported: ");
-         var6.append(var4);
-         var6.append(", previous: ");
-         var6.append(var7);
-         throw new IllegalArgumentException(var6.toString().toString());
+         val var6: java.lang.String = this.portalId;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Adding more than one child unsupported: ");
+         var8.append(var6);
+         var8.append(", previous: ");
+         var8.append(var7);
+         throw new IllegalArgumentException(var8.toString().toString());
       }
    }
 
    protected open fun dispatchDraw(canvas: Canvas) {
       if (!this.childViewValid()) {
-         CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "childView not valid before dispatchDraw", null, "portal", 2, null);
+         val var5: CrashReporting = CrashReporting.INSTANCE;
+         var var2: java.lang.String = this.portalId;
+         if (this.portalId == null) {
+            var2 = "";
+         }
+
+         val var9: Pair = s.a("portalId", var2);
+         var2 = this.portalIdPrev;
+         if (this.portalIdPrev == null) {
+            var2 = "";
+         }
+
+         val var8: Pair = s.a("prevPortalId", var2);
+         if (this.childView == null) {
+            var2 = "true";
+         } else {
+            var2 = "false";
+         }
+
+         var5.addBreadcrumb("childView not valid before dispatchDraw", L.l(new Pair[]{var9, var8, s.a("childViewIsNull", var2)}), "portal");
       }
 
       super.dispatchDraw(var1);
@@ -155,10 +174,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var3: View = this.childView;
+         val var2: View = this.childView;
          if (this.childView != null) {
-            val var2: java.lang.String = this.portalId;
-            this.childViewAdded(var2, var3);
+            val var3: java.lang.String = this.portalId;
+            this.childViewAdded(var3, var2);
          }
 
          this.portalIdPrev = null;

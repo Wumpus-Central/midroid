@@ -81,11 +81,11 @@ public object CodeRules {
          var1, var3, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
       );
       val var15: Pattern = this.createSingleLineCommentPattern("//");
-      val var20: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
-      val var16: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
+      val var16: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
+      val var20: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       var3 = this.createGenericCodeRules(
          var1,
-         CollectionsKt.n(new Rule[]{var20, toMatchGroupRule$default(this, var16, 0, var1.getLiteralStyleProvider(), 1, null)}),
+         CollectionsKt.n(new Rule[]{var16, toMatchGroupRule$default(this, var20, 0, var1.getLiteralStyleProvider(), 1, null)}),
          new java.lang.String[]{"message|enum|extend|service"},
          new java.lang.String[]{"true|false", "string|bool|double|float|bytes", "int32|uint32|sint32|int64|unit64|sint64", "map"},
          "required|repeated|optional|option|oneof|default|reserved",

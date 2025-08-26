@@ -1,0 +1,28 @@
+{
+  "DKHheX": "Solicitar transmitir",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " te está pidiendo que transmitas ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Has pedido a alguien que transmita ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Ya está transmitiendo",
+  "u4QmWl": "Solicitud expirada",
+  "qRXatr": "No está en el canal de voz",
+  "43zohI": "No tiene abierto el juego",
+  "fac+eH": "Sin permiso",
+  "8HU1Mz": "Solicitud enviada",
+  "5+172d": "Transmitir"
+}
