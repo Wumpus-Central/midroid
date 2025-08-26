@@ -94,34 +94,34 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public fun toBundle(): Bundle {
-      val var2: Pair = s.a("text", this.text);
+      val var1: Pair = s.a("text", this.text);
       val var3: java.util.List = this.attachments;
-      val var1: ArrayList = new ArrayList(CollectionsKt.v(this.attachments, 10));
+      val var2: ArrayList = new ArrayList(CollectionsKt.v(this.attachments, 10));
       val var4: java.util.Iterator = var3.iterator();
 
       while (var4.hasNext()) {
-         var1.add((var4.next() as ShareProps.Attachment).toBundle());
+         var2.add((var4.next() as ShareProps.Attachment).toBundle());
       }
 
-      return d.a(var2, s.a("attachments", var1.toArray(new Bundle[0])), s.a("targetChannelId", this.targetChannelId), s.a("targetUserId", this.targetUserId));
+      return d.a(var1, s.a("attachments", var2.toArray(new Bundle[0])), s.a("targetChannelId", this.targetChannelId), s.a("targetUserId", this.targetUserId));
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var3: java.util.List = this.attachments;
-      val var1: java.lang.String = this.targetChannelId;
-      val var4: java.lang.String = this.targetUserId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ShareProps(text=");
-      var5.append(var2);
-      var5.append(", attachments=");
-      var5.append(var3);
-      var5.append(", targetChannelId=");
-      var5.append(var1);
-      var5.append(", targetUserId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.text;
+      val var1: java.util.List = this.attachments;
+      val var4: java.lang.String = this.targetChannelId;
+      val var3: java.lang.String = this.targetUserId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ShareProps(text=");
+      var2.append(var5);
+      var2.append(", attachments=");
+      var2.append(var1);
+      var2.append(", targetChannelId=");
+      var2.append(var4);
+      var2.append(", targetUserId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -186,16 +186,16 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.name;
-         val var1: java.lang.String = this.uri;
-         val var4: java.lang.String = this.mimeType;
+         val var4: java.lang.String = this.name;
+         val var3: java.lang.String = this.uri;
+         val var1: java.lang.String = this.mimeType;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Attachment(name=");
-         var2.append(var3);
-         var2.append(", uri=");
-         var2.append(var1);
-         var2.append(", mimeType=");
          var2.append(var4);
+         var2.append(", uri=");
+         var2.append(var3);
+         var2.append(", mimeType=");
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }
@@ -265,11 +265,11 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          val var20: java.util.List = this.getUriExtras(var1);
          val var11: ArrayList = new ArrayList(CollectionsKt.v(var20, 10));
 
-         for (Uri var8 : var20) {
+         for (Uri var21 : var20) {
             val var9: ContentResolver = var2.getContentResolver();
-            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var8);
-            val var10: java.lang.String = var8.toString();
-            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var8)));
+            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var21);
+            val var10: java.lang.String = var21.toString();
+            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var21)));
          }
 
          return new ShareProps(var14, var11, var4, var5);

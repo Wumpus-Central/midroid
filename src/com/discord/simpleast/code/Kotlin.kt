@@ -20,14 +20,14 @@ public object Kotlin {
       val var2: CodeRules = CodeRules.INSTANCE;
       val var3: Pattern = PATTERN_KOTLIN_COMMENTS;
       val var6: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
-      val var4: Pattern = PATTERN_KOTLIN_STRINGS;
-      val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
-      val var5: Pattern = PATTERN_KOTLIN_ANNOTATION;
+      var var4: Pattern = PATTERN_KOTLIN_STRINGS;
+      val var5: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
+      var4 = PATTERN_KOTLIN_ANNOTATION;
       return CollectionsKt.n(
          new Rule[]{
             var6,
-            var7,
-            CodeRules.toMatchGroupRule$default(var2, var5, 0, var1.getGenericsStyleProvider(), 1, null),
+            var5,
+            CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getGenericsStyleProvider(), 1, null),
             Kotlin.FieldNode.Companion.createFieldRule(var1),
             Kotlin.FunctionNode.Companion.createFunctionRule(var1)
          }
@@ -101,12 +101,12 @@ public object Kotlin {
                @NotNull
                @Override
                public ParseSpec<RC, S> parse(@NotNull Matcher var1, @NotNull Parser<RC, ? super Node<RC>, S> var2, S var3) {
-                  val var4: java.lang.String = var1.group(1);
-                  val var8: java.lang.String = var1.group(2);
+                  val var8: java.lang.String = var1.group(1);
+                  val var4: java.lang.String = var1.group(2);
                   val var5: java.lang.String = var1.group(3);
                   val var7: java.lang.String = var1.group(4);
                   val var6: ParseSpec.Companion = ParseSpec.Companion;
-                  return (ParseSpec<RC, S>)var6.createTerminal(new Kotlin.FunctionNode<>(var4, var8, var5, var7, this.$codeStyleProviders), var3);
+                  return (ParseSpec<RC, S>)var6.createTerminal(new Kotlin.FunctionNode<>(var8, var4, var5, var7, this.$codeStyleProviders), var3);
                }
             };
          }

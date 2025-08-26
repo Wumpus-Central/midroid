@@ -46,15 +46,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var2: java.util.Map = this.data;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ShortcutData(tag=");
-      var3.append(var1);
-      var3.append(", data=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.tag;
+      val var3: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ShortcutData(tag=");
+      var1.append(var2);
+      var1.append(", data=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    @SourceDebugExtension(["SMAP\nShortcutData.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShortcutData.kt\ncom/discord/shortcuts/ShortcutData$Companion\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,60:1\n216#2,2:61\n37#3,2:63\n1317#4,2:65\n*S KotlinDebug\n*F\n+ 1 ShortcutData.kt\ncom/discord/shortcuts/ShortcutData$Companion\n*L\n31#1:61,2\n37#1:63,2\n48#1:65,2\n*E\n"])

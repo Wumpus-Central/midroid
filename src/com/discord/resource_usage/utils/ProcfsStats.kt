@@ -205,21 +205,21 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 0d7: checkcast java/lang/String
          // 0da: lconst_0
          // 0db: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0de: lstore 8
+         // 0de: lstore 4
          // 0e0: aload 1
          // 0e1: bipush 23
          // 0e3: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0e8: checkcast java/lang/String
          // 0eb: lconst_0
          // 0ec: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0ef: lstore 4
+         // 0ef: lstore 8
          // 0f1: new com/discord/resource_usage/utils/ProcfsStats
          // 0f4: astore 10
          // 0f6: aload 10
          // 0f8: lload 6
-         // 0fa: lload 8
+         // 0fa: lload 4
          // 0fc: ladd
-         // 0fd: lload 4
+         // 0fd: lload 8
          // 0ff: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V
          // 102: goto 112
          // 105: aload 12

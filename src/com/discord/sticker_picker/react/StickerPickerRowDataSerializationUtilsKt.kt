@@ -12,8 +12,8 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var3: Int = var0.getInt("rowContentPaddingVertical");
-   val var4: Int = var0.getInt("itemSize");
+   val var4: Int = var0.getInt("rowContentPaddingVertical");
+   val var3: Int = var0.getInt("itemSize");
    val var9: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var9);
    val var10: ArrayList = new ArrayList(CollectionsKt.v(var14, 10));
@@ -35,8 +35,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          var7 = null;
          if (var16 != null) {
             val var21: ReadableMap = var9.getMap(var5);
-            val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
-            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
+            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
+            val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
             var5 = var21.getInt("stickerType");
             val var17: StickerPickerRow.Sticker.Type;
             if (var5 != 1) {
@@ -61,8 +61,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
             }
 
             var7 = new StickerPickerRow.Sticker(
-               var20,
                var12,
+               var20,
                var17,
                var21.getBoolean("stickerAnimated"),
                NativeMapExtensionsKt.getNonNullString(var21, "stickerUrl"),
@@ -75,5 +75,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var10.add(var7);
    }
 
-   return new StickerPickerRow(var1, var3, var4, var10);
+   return new StickerPickerRow(var1, var4, var3, var10);
 }
