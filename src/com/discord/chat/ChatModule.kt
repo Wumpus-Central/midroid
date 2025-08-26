@@ -45,9 +45,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
    @JvmStatic
    fun {
-      val var0: CompletableJob = k0.b(null, 1, null);
-      val var1: ExecutorService = Executors.newSingleThreadExecutor();
-      moduleScope = g.a(var0.R(T.b(var1)));
+      val var1: CompletableJob = k0.b(null, 1, null);
+      val var0: ExecutorService = Executors.newSingleThreadExecutor();
+      moduleScope = g.a(var1.V0(T.b(var0)));
    }
 
    init {
@@ -394,7 +394,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var32 = null;
                            }
 
-                           var var7: java.util.List;
+                           var var8: java.util.List;
                            var var9: java.util.Iterator;
                            var var67: LinkedHashMap;
                            try {
@@ -406,7 +406,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var35: SerializerUtils = SerializerUtils.INSTANCE;
                               val var66: java.lang.String = var6.toString();
                               var1 = var35.findErroringFields(var66, Message::class);
-                              var7 = PIIKt.getPIIFieldNames(Message::class);
+                              var8 = PIIKt.getPIIFieldNames(Message::class);
                               var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
@@ -443,15 +443,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            while (true) {
-                              var var8: Entry;
+                              var var7: Entry;
                               try {
                                  if (!var9.hasNext()) {
                                     break;
                                  }
 
-                                 var8 = var9.next() as Entry;
-                                 if (var7.contains(var8.getKey())) {
-                                    var67.put(var8.getKey(), "<REDACTED>");
+                                 var7 = var9.next() as Entry;
+                                 if (var8.contains(var7.getKey())) {
+                                    var67.put(var7.getKey(), "<REDACTED>");
                                     continue;
                                  }
                               } catch (var17: Exception) {
@@ -484,7 +484,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               }
 
                               try {
-                                 var67.put(var8.getKey(), var8.getValue());
+                                 var67.put(var7.getKey(), var7.getValue());
                               } catch (var13: Exception) {
                                  val var60: CrashReporting = CrashReporting.INSTANCE;
                                  CrashReporting.addBreadcrumb$default(
@@ -518,13 +518,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            try {
                               val var69: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var67, null, 4, null);
-                              val var40: java.lang.String = CollectionsKt.p0(
+                              val var70: java.lang.String = CollectionsKt.p0(
                                  (var1 as SerializerUtils.SerializerError.Data).getData().keySet(), ",", null, null, 0, null, null, 62, null
                               );
-                              val var70: StringBuilder = new StringBuilder();
-                              var70.append("Could not deserialize message. Bad Fields: ");
-                              var70.append(var40);
-                              CrashReporting.captureException$default(var69, new Exception(var70.toString()), false, 2, null);
+                              val var40: StringBuilder = new StringBuilder();
+                              var40.append("Could not deserialize message. Bad Fields: ");
+                              var40.append(var70);
+                              CrashReporting.captureException$default(var69, new Exception(var40.toString()), false, 2, null);
                            } catch (var12: Exception) {
                               val var62: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -580,12 +580,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var3: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
-         val var1: java.lang.String = (ChatModule::class).getSimpleName();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var1);
-         var2.append(" invalidate()");
-         v.g(var3, new CancellationException(var2.toString()));
+         val var1: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var2: java.lang.String = (ChatModule::class).getSimpleName();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" invalidate()");
+         v.g(var1, new CancellationException(var3.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {

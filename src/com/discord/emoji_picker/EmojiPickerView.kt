@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.View
 import androidx.core.view.f0
 import androidx.recyclerview.widget.RecyclerView
+import com.discord.crash_reporting.CrashReporting
 import com.discord.emoji_picker.EmojiPickerItem.ItemType
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
@@ -44,6 +45,7 @@ internal class EmojiPickerView(context: Context,
 
 
    private final val premiumUpsellGradientDecoration: EmojiPickerPremiumUpsellGradientBackground
+   private final var isInViewTransition: Boolean
 
    private final val typedAdapter: EmojiPickerViewAdapter
       private final get() {
@@ -121,11 +123,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -160,7 +162,20 @@ internal class EmojiPickerView(context: Context,
          this.getTypedAdapter().notifyDataSetChanged();
       }
 
-      ViewMeasureExtensionsKt.measureAndLayout(this);
+      try {
+         ViewMeasureExtensionsKt.measureAndLayout(this);
+      } catch (var6: Exception) {
+         val var8: CrashReporting = CrashReporting.INSTANCE;
+         val var3: Boolean = this.isInViewTransition;
+         val var4: Boolean = this.isAttachedToWindow();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("About to crash from EmojiPickerView. isInViewTransition: ");
+         var7.append(var3);
+         var7.append(". isAttached: ");
+         var7.append(var4);
+         CrashReporting.addBreadcrumb$default(var8, var7.toString(), null, null, 6, null);
+         throw var6;
+      }
    }
 
    @JvmStatic
@@ -214,6 +229,7 @@ internal class EmojiPickerView(context: Context,
    public open fun endViewTransition(view: View?) {
       super.endViewTransition(var1);
       this.getTypedLayoutManager().disableRecycling(false);
+      this.isInViewTransition = false;
    }
 
    public override fun fling(velocityX: Int, velocityY: Int): Boolean {
@@ -290,6 +306,7 @@ internal class EmojiPickerView(context: Context,
    }
 
    public open fun startViewTransition(view: View?) {
+      this.isInViewTransition = true;
       this.getTypedLayoutManager().disableRecycling(true);
       super.startViewTransition(var1);
    }
@@ -361,19 +378,19 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var2: Boolean = this.animateEmoji;
+         val var3: Boolean = this.animateEmoji;
          val var4: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var3: Boolean = this.disableAnimationsOnScroll;
+         val var2: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var2);
+         var5.append(var3);
          var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var4);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(")");
          return var5.toString();
       }

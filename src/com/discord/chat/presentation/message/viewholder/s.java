@@ -10,6 +10,6 @@ public final class s implements OnClickListener {
    public final GuildInviteMessageAccessory e;
 
    public final void onClick(View var1) {
-      GuildInviteViewHolder.c(this.d, this.e, var1);
+      GuildInviteViewHolder.b(this.d, this.e, var1);
    }
 }

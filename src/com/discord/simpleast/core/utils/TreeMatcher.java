@@ -47,14 +47,14 @@ public class TreeMatcher {
          return false;
       } else {
          for (int var3 = 0; var3 < var5.size(); var3++) {
-            Node var6 = (Node)var5.get(var3);
-            Node var8 = (Node)var4.get(var3);
-            if (var6.getClass() != var8.getClass()) {
+            Node var8 = (Node)var5.get(var3);
+            Node var6 = (Node)var4.get(var3);
+            if (var8.getClass() != var6.getClass()) {
                return false;
             }
 
-            Class var7 = var6.getClass();
-            if (this.matchers.containsKey(var7) && !this.matchers.get(var7).matches(var6, var8)) {
+            Class var7 = var8.getClass();
+            if (this.matchers.containsKey(var7) && !this.matchers.get(var7).matches(var8, var6)) {
                return false;
             }
          }

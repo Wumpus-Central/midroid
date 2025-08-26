@@ -29,11 +29,11 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: MessageAltRemixTagViewBinding
 
    init {
-      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
-      val var5: TextView = var3.altRemixTag;
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var3.remixIcon;
+      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var5;
+      val var3: TextView = var5.altRemixTag;
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var5.remixIcon;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
@@ -53,16 +53,16 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    ) {
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var11: TextView = this.binding.altRemixTag;
+         val var10: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var10: Context = this.getContext();
-            var9 = ColorUtilsKt.getColorCompat(var10, R.color.white);
+            val var11: Context = this.getContext();
+            var9 = ColorUtilsKt.getColorCompat(var11, R.color.white);
          }
 
-         var11.setTextColor(var9);
+         var10.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          if (var2 != null) {
             var9 = var2;

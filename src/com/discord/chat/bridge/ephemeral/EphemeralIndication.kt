@@ -59,18 +59,18 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var1: StructurableText = this.content;
+      val var2: StructurableText = this.content;
       val var3: java.lang.String = this.helpArticleLink;
       val var4: java.lang.String = this.helpButtonAccessibilityLabel;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EphemeralIndication(content=");
-      var2.append(var1);
-      var2.append(", helpArticleLink=");
-      var2.append(var3);
-      var2.append(", helpButtonAccessibilityLabel=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("EphemeralIndication(content=");
+      var1.append(var2);
+      var1.append(", helpArticleLink=");
+      var1.append(var3);
+      var1.append(", helpButtonAccessibilityLabel=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

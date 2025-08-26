@@ -222,6 +222,9 @@ public interface ChatEventHandler {
    public abstract fun onTapJoinActivity(messageId: MessageId) {
    }
 
+   public abstract fun onTapJoinRichPresence(messageId: MessageId) {
+   }
+
    public abstract fun onTapLoadMessagesAfter() {
    }
 
@@ -528,6 +531,9 @@ public interface ChatEventHandler {
       }
 
       public override fun onTapJoinActivity(messageId: MessageId) {
+      }
+
+      public override fun onTapJoinRichPresence(messageId: MessageId) {
       }
 
       public override fun onTapLoadMessagesAfter() {

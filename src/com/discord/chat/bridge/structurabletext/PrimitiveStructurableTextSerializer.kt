@@ -11,7 +11,7 @@ internal object PrimitiveStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("PrimitiveStructurableText", i.a)
 
    public open fun deserialize(decoder: Decoder): PrimitiveStructurableText {
-      return new PrimitiveStructurableText(var1.n());
+      return new PrimitiveStructurableText(var1.z());
    }
 
    public open fun serialize(encoder: Encoder, value: PrimitiveStructurableText) {

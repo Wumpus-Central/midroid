@@ -47,16 +47,16 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
    if (var4 != null) {
       label35:
       try {
-         val var10: a = Result.e;
-         var9 = Result.b(var4.getActiveNotifications());
+         val var11: a = Result.e;
+         var10 = Result.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var13: a = Result.e;
-         var9 = Result.b(c.a(var6));
+         val var9: a = Result.e;
+         var10 = Result.b(c.a(var6));
          break label35;
       }
 
-      var4 = (NotificationManager)var9;
-      if (Result.g(var9)) {
+      var4 = (NotificationManager)var10;
+      if (Result.g(var10)) {
          var4 = null;
       }
 
@@ -68,13 +68,13 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 
          while (true) {
             if (var2 >= var3) {
-               var12 = null;
+               var13 = null;
                break;
             }
 
-            val var11: StatusBarNotification = var15[var2];
+            val var12: StatusBarNotification = var15[var2];
             if (var15[var2].getTag() == var1) {
-               var12 = var11;
+               var13 = var12;
                break;
             }
 
@@ -82,8 +82,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          }
 
          var8 = null;
-         if (var12 != null) {
-            var8 = var12.getNotification();
+         if (var13 != null) {
+            var8 = var13.getNotification();
          }
       }
    }
@@ -112,16 +112,16 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
    if (var5 != null) {
       label58:
       try {
-         val var13: a = Result.e;
-         var12 = Result.b(var5.getActiveNotifications());
+         val var14: a = Result.e;
+         var13 = Result.b(var5.getActiveNotifications());
       } catch (var9: java.lang.Throwable) {
-         val var18: a = Result.e;
-         var12 = Result.b(c.a(var9));
+         val var12: a = Result.e;
+         var13 = Result.b(c.a(var9));
          break label58;
       }
 
-      var5 = (NotificationManager)var12;
-      if (Result.g(var12)) {
+      var5 = (NotificationManager)var13;
+      if (Result.g(var13)) {
          var5 = null;
       }
 
@@ -136,11 +136,11 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var14: Regex = messageRegex;
+                  val var15: Regex = messageRegex;
                   val var8: java.lang.String = var21.getTag();
-                  var15 = Regex.c(var14, var8, 0, 2, null);
-                  if (var15 != null) {
-                     val var22: java.util.List = var15.b();
+                  var16 = Regex.c(var15, var8, 0, 2, null);
+                  if (var16 != null) {
+                     val var22: java.util.List = var16.b();
                      if (var22 != null) {
                         var3 = var22.size();
                         break label45;
@@ -153,18 +153,18 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
                val var23: java.lang.String = var21.getTag();
                if (StringsKt.I(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
                   label38: {
-                     if (var15 != null) {
-                        val var16: java.util.List = var15.b();
-                        if (var16 != null) {
-                           var17 = var16.get(2) as java.lang.String;
+                     if (var16 != null) {
+                        val var17: java.util.List = var16.b();
+                        if (var17 != null) {
+                           var18 = var17.get(2) as java.lang.String;
                            break label38;
                         }
                      }
 
-                     var17 = null;
+                     var18 = null;
                   }
 
-                  if (var17 == var1) {
+                  if (var18 == var1) {
                      var20.add(var21);
                   }
                }
@@ -184,16 +184,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var15: a = Result.e;
-         var14 = Result.b(var6.getActiveNotifications());
+         val var14: a = Result.e;
+         var13 = Result.b(var6.getActiveNotifications());
       } catch (var10: java.lang.Throwable) {
-         val var13: a = Result.e;
-         var14 = Result.b(c.a(var10));
+         val var15: a = Result.e;
+         var13 = Result.b(c.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var14;
-      if (Result.g(var14)) {
+      var6 = (NotificationManager)var13;
+      if (Result.g(var13)) {
          var6 = null;
       }
 

@@ -182,39 +182,39 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
+      val var10: java.lang.String = this.url;
       val var5: java.lang.String = this.proxyURL;
-      val var6: java.lang.String = this.videoUrl;
+      val var7: java.lang.String = this.videoUrl;
       val var2: Int = this.height;
       val var1: Int = this.width;
-      val var11: java.lang.Boolean = this.gifv;
-      val var7: java.lang.Boolean = this.showPlayButton;
-      val var9: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
+      val var4: java.lang.Boolean = this.gifv;
+      val var8: java.lang.Boolean = this.showPlayButton;
+      val var11: java.lang.String = this.placeholder;
+      val var6: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("EmbedThumbnail(url=");
-      var10.append(var4);
-      var10.append(", proxyURL=");
-      var10.append(var5);
-      var10.append(", videoUrl=");
-      var10.append(var6);
-      var10.append(", height=");
-      var10.append(var2);
-      var10.append(", width=");
-      var10.append(var1);
-      var10.append(", gifv=");
-      var10.append(var11);
-      var10.append(", showPlayButton=");
-      var10.append(var7);
-      var10.append(", placeholder=");
-      var10.append(var9);
-      var10.append(", placeholderVersion=");
-      var10.append(var8);
-      var10.append(", srcIsAnimated=");
-      var10.append(var3);
-      var10.append(")");
-      return var10.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("EmbedThumbnail(url=");
+      var9.append(var10);
+      var9.append(", proxyURL=");
+      var9.append(var5);
+      var9.append(", videoUrl=");
+      var9.append(var7);
+      var9.append(", height=");
+      var9.append(var2);
+      var9.append(", width=");
+      var9.append(var1);
+      var9.append(", gifv=");
+      var9.append(var4);
+      var9.append(", showPlayButton=");
+      var9.append(var8);
+      var9.append(", placeholder=");
+      var9.append(var11);
+      var9.append(", placeholderVersion=");
+      var9.append(var6);
+      var9.append(", srcIsAnimated=");
+      var9.append(var3);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

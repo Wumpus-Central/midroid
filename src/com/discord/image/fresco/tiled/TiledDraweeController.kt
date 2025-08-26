@@ -37,7 +37,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.R(K.c().Z1()));
+      this.scope = g.a(var4.V0(K.c().Z1()));
    }
 
    private fun load() {
@@ -80,7 +80,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return var4 == this.url && this.myImageReference != null && this.myImageReference.e1();
+         return var4 == this.url && this.myImageReference != null && this.myImageReference.z0();
       }
    }
 

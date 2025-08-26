@@ -56,7 +56,7 @@ public enum class StickerFormatType(intType: Int) {
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
-         val var3: Int = var1.j();
+         val var3: Int = var1.h();
          val var6: Array<StickerFormatType> = StickerFormatType.values();
          val var4: Int = var6.length;
 
@@ -71,7 +71,7 @@ public enum class StickerFormatType(intType: Int) {
       }
 
       public open fun serialize(encoder: Encoder, value: StickerFormatType) {
-         var1.x(var2.getIntType());
+         var1.B(var2.getIntType());
       }
    }
 }

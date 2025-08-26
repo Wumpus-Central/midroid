@@ -118,8 +118,8 @@ public data class ChatInputNode(type: Int,
 
    public override fun toString(): String {
       val var2: Int = this.type;
-      val var1: Int = this.location;
-      val var3: Int = this.length;
+      val var3: Int = this.location;
+      val var1: Int = this.length;
       val var6: ChatInputNodeStyle = this.style;
       val var5: Boolean = this.deleteNodeOnBackspace;
       val var8: TapAction = this.tapAction;
@@ -128,9 +128,9 @@ public data class ChatInputNode(type: Int,
       var7.append("ChatInputNode(type=");
       var7.append(var2);
       var7.append(", location=");
-      var7.append(var1);
-      var7.append(", length=");
       var7.append(var3);
+      var7.append(", length=");
+      var7.append(var1);
       var7.append(", style=");
       var7.append(var6);
       var7.append(", deleteNodeOnBackspace=");

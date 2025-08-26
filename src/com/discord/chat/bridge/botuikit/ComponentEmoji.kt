@@ -97,16 +97,16 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
+      val var5: java.lang.String = this.id;
+      val var6: java.lang.String = this.name;
       val var4: java.lang.String = this.src;
       val var1: Boolean = this.animated;
       val var2: java.lang.String = this.surrogates;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ComponentEmoji(id=");
-      var3.append(var6);
-      var3.append(", name=");
       var3.append(var5);
+      var3.append(", name=");
+      var3.append(var6);
       var3.append(", src=");
       var3.append(var4);
       var3.append(", animated=");

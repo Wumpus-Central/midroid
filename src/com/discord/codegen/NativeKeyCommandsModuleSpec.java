@@ -25,12 +25,12 @@ public abstract class NativeKeyCommandsModuleSpec extends ReactContextBaseJavaMo
                "keyModifierAlphaShift", "keyModifierAlternate", "keyModifierCommand", "keyModifierControl", "keyModifierNumericPad", "keyModifierShift"
             )
          );
-         HashSet var2 = new HashSet();
-         HashSet var1 = new HashSet(var3.keySet());
-         var1.removeAll(var4);
-         var1.removeAll(var2);
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
+         HashSet var1 = new HashSet();
+         HashSet var2 = new HashSet(var3.keySet());
+         var2.removeAll(var4);
+         var2.removeAll(var1);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
          var4.removeAll(var3.keySet());

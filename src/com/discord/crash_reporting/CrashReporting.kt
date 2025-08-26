@@ -49,7 +49,7 @@ public object CrashReporting {
 
    @JvmStatic
    fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
-      var3.s(CollectionsKt.e(var0));
+      var3.l(CollectionsKt.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: e2;
       if (var4 != 1) {
@@ -80,16 +80,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var8);
-      var6.append("/sentry");
-      var5.setCacheDirPath(var6.toString());
+      val var6: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var6);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("b255d42d-5ad2-4032-9bf0-9d4f95beb7ec");
+      var5.setProguardUuid("0b3a8fb9-d566-455c-b0eb-4ec816e5d32b");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -103,8 +103,8 @@ public object CrashReporting {
    public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = L.h(), breadcrumbCategory: String? = null) {
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.n(var3);

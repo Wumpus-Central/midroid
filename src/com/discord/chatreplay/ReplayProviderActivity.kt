@@ -26,7 +26,7 @@ public class ReplayProviderActivity : Activity {
    }
 
    private fun getReplaysList(): List<Replay> {
-      var var2: java.lang.String = this.getFilesDir().getPath();
+      val var2: java.lang.String = this.getFilesDir().getPath();
       val var1: StringBuilder = new StringBuilder();
       var1.append(var2);
       var1.append("/rows");
@@ -47,9 +47,9 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
 
-      for (File var4 : var9) {
-         var2 = var4.getName();
-         var7.add(new Replay(var2, var4.lastModified()));
+      for (File var10 : var9) {
+         val var4: java.lang.String = var10.getName();
+         var7.add(new Replay(var4, var10.lastModified()));
       }
 
       return var7;

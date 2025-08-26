@@ -226,11 +226,11 @@ internal class BillingManager(isProdBuild: Boolean,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var3 : var2) {
-            val var7: Function3 = this.onPurchaseUpdated;
-            val var4: java.lang.String = var1.i();
-            val var6: java.lang.String = var1.e();
-            var7.invoke(var4, var6, var3);
+         for (java.lang.String var4 : var2) {
+            val var6: Function3 = this.onPurchaseUpdated;
+            val var7: java.lang.String = var1.i();
+            val var3: java.lang.String = var1.e();
+            var6.invoke(var7, var3, var4);
          }
       }
    }

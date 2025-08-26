@@ -103,10 +103,10 @@ public object MessageViewManagers {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            val var5: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var6: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var5: Context = var1.getContext();
+            var1.setMessage(var6, var8, MessageViewManagers.access$getEventHandler(var3, var7, var5));
          }
       }
 
@@ -168,12 +168,12 @@ public object MessageViewManagers {
             }
 
             val var10: MessageBase = var4.getMessage();
-            val var6: Message = var10 as Message;
+            val var5: Message = var10 as Message;
             val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var11: MessageFrame = var4.getMessageFrame();
-            val var5: Context = var1.getContext();
+            val var6: MessageFrame = var4.getMessageFrame();
+            val var11: Context = var1.getContext();
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var5), this.componentProvider, null, false, false, 224, null
+               var1, var5, var7, var6, MessageViewManagers.access$getEventHandler(var3, var4, var11), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -212,10 +212,10 @@ public object MessageViewManagers {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            val var6: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var5: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 

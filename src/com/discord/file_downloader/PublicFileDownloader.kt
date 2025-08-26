@@ -78,7 +78,7 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface fb/t.g (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
       // 46: goto 79
       // 49: astore 5
@@ -86,20 +86,20 @@ public object PublicFileDownloader {
       // 4e: new com/discord/file_downloader/DownloadState$Failure
       // 51: astore 7
       // 53: new java/lang/IllegalStateException
-      // 56: astore 8
+      // 56: astore 5
       // 58: new java/io/FileNotFoundException
-      // 5b: astore 5
-      // 5d: aload 5
+      // 5b: astore 8
+      // 5d: aload 8
       // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 8
-      // 64: aload 5
+      // 62: aload 5
+      // 64: aload 8
       // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
       // 69: aload 7
-      // 6b: aload 8
+      // 6b: aload 5
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
       // 71: aload 7
-      // 73: invokeinterface fb/t.g (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 73: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 78: pop
       // 79: aload 1
       // 7a: aconst_null
@@ -210,7 +210,7 @@ public object PublicFileDownloader {
                               this.L$0 = var21;
                               this.label = 1;
                               var1 = var21;
-                              if (var21.i(var25, this) === var9) {
+                              if (var21.r(var25, this) === var9) {
                                  return var9;
                               }
                            }
@@ -253,7 +253,7 @@ public object PublicFileDownloader {
                               this.L$0 = var1;
                               this.L$1 = var23;
                               this.label = 2;
-                              var27 = var1.i(var26, this);
+                              var27 = var1.r(var26, this);
                            } catch (var14: Exception) {
                               var7 = var23;
                               var6 = var1;
@@ -280,7 +280,7 @@ public object PublicFileDownloader {
                         }
                      }
 
-                     var6.g(new DownloadState.Failure(var1));
+                     var6.i(new DownloadState.Failure(var1));
                      kotlin.coroutines.jvm.internal.b.a(fb.t.a.a(var6, null, 1, null));
                      var1 = var7;
                      var20 = var6;

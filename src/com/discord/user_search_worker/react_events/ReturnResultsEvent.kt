@@ -67,24 +67,24 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
    }
 
    public override fun serialize(): WritableMap {
-      val var1: Pair = s.a("uuid", this.uuid);
-      val var4: Pair = s.a("type", this.type);
-      val var3: Pair = s.a("query", this.query);
+      val var2: Pair = s.a("uuid", this.uuid);
+      val var1: Pair = s.a("type", this.type);
+      val var4: Pair = s.a("query", this.query);
       val var5: java.util.List = this.results;
-      val var2: ArrayList = new ArrayList(CollectionsKt.v(this.results, 10));
+      val var3: ArrayList = new ArrayList(CollectionsKt.v(this.results, 10));
 
-      for (UserSearchWorkerResult var6 : var5) {
-         var2.add(
+      for (UserSearchWorkerResult var7 : var5) {
+         var3.add(
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("id", var6.getId()), s.a("username", var6.getUsername()), s.a("comparator", var6.getComparator()), s.a("score", var6.getScore())
+               s.a("id", var7.getId()), s.a("username", var7.getUsername()), s.a("comparator", var7.getComparator()), s.a("score", var7.getScore())
             )
          );
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
+         var2,
          var1,
-         var4,
-         s.a("payload", NativeMapExtensionsKt.nativeMapOf(var3, s.a("results", NativeArrayExtensionsKt.toNativeArray$default(var2, null, 1, null))))
+         s.a("payload", NativeMapExtensionsKt.nativeMapOf(var4, s.a("results", NativeArrayExtensionsKt.toNativeArray$default(var3, null, 1, null))))
       );
    }
 

@@ -6,5 +6,5 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
 public fun MainImmediateScope(): CoroutineScope {
-   return g.a(k0.b(null, 1, null).R(K.c().Z1()));
+   return g.a(k0.b(null, 1, null).V0(K.c().Z1()));
 }

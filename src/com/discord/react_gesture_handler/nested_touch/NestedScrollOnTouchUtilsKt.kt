@@ -1,4 +1,4 @@
-@file:SourceDebugExtension(["SMAP\nNestedScrollOnTouchUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n+ 2 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,80:1\n33#2,2:81\n21#2,19:83\n1863#3,2:102\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n*L\n75#1:81,2\n75#1:83,19\n75#1:102,2\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nNestedScrollOnTouchUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n+ 2 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,72:1\n33#2,2:73\n21#2,19:75\n1863#3,2:94\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n*L\n61#1:73,2\n61#1:75,19\n61#1:94,2\n*E\n"])
 
 package com.discord.react_gesture_handler.nested_touch
 
@@ -11,11 +11,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import java.util.ArrayList
-import java.util.WeakHashMap
 import kotlin.jvm.internal.SourceDebugExtension
 
-internal final var viewClickListeners: WeakHashMap<View, OnClickListener> = new WeakHashMap()
-internal final var viewLongClickListeners: WeakHashMap<View, OnLongClickListener> = new WeakHashMap()
+private const val TAG_NESTED_CLICK_LISTENER: Int = -111001
+private const val TAG_NESTED_LONG_CLICK_LISTENER: Int = -111002
 
 @JvmSynthetic
 fun a(var0: OnLongClickListener, var1: View): Boolean {
@@ -35,15 +34,32 @@ fun `enableNestedSpanClickListener$default`(var0: TextView, var1: Boolean, var2:
    enableNestedSpanClickListener(var0, var1);
 }
 
-public fun View.setOnClickListenerNested(viewManagesAccessibility: Boolean = false, onClickListener: OnClickListener?) {
-   if (var2 == null) {
-      viewClickListeners.remove(var0);
+internal fun View.getNestedClickListener(): OnClickListener? {
+   var var1: OnClickListener = (OnClickListener)var0.getTag(-111001);
+   if (var1 is OnClickListener) {
+      var1 = var1;
    } else {
-      viewClickListeners.put(var0, var2);
+      var1 = null;
    }
 
+   return var1;
+}
+
+internal fun View.getNestedLongClickListener(): OnLongClickListener? {
+   var var1: OnLongClickListener = (OnLongClickListener)var0.getTag(-111002);
+   if (var1 is OnLongClickListener) {
+      var1 = var1;
+   } else {
+      var1 = null;
+   }
+
+   return var1;
+}
+
+public fun View.setOnClickListenerNested(viewManagesAccessibility: Boolean = false, onClickListener: OnClickListener?) {
+   var0.setTag(-111001, var2);
    var0.setOnTouchListener(new NestedScrollOnTouchListener(var0, var1));
-   updateClickablity(var0);
+   updateClickability(var0);
 }
 
 @JvmSynthetic
@@ -56,14 +72,15 @@ fun `setOnClickListenerNested$default`(var0: View, var1: Boolean, var2: OnClickL
 }
 
 public fun View.setOnLongClickListenerNested(viewManagesAccessibility: Boolean = false, onLongPress: OnLongClickListener?) {
-   if (var2 == null) {
-      viewLongClickListeners.remove(var0);
+   if (var2 != null) {
+      var2 = updateWithOngoingGestureCancelling(var2);
    } else {
-      viewLongClickListeners.put(var0, updateWithOngoingGestureCancelling(var2));
+      var2 = null;
    }
 
+   var0.setTag(-111002, var2);
    var0.setOnTouchListener(new NestedScrollOnTouchListener(var0, var1));
-   updateClickablity(var0);
+   updateClickability(var0);
 }
 
 @JvmSynthetic
@@ -75,9 +92,9 @@ fun `setOnLongClickListenerNested$default`(var0: View, var1: Boolean, var2: OnLo
    setOnLongClickListenerNested(var0, var1, var2);
 }
 
-private fun View.updateClickablity() {
+private fun View.updateClickability() {
    val var1: Boolean;
-   if (!viewClickListeners.containsKey(var0) && !viewLongClickListeners.containsKey(var0)) {
+   if (var0.getTag(-111001) == null && var0.getTag(-111002) == null) {
       var1 = false;
    } else {
       var1 = true;

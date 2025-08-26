@@ -48,8 +48,8 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var4 = null;
       }
 
-      var3.d(var4);
-      var3.e(this);
+      var3.g(var4);
+      var3.c(this);
    }
 
    public fun enableNearby(context: Context) {
@@ -60,22 +60,22 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       }
 
       val var4: d = k6.a.a(var1);
-      var4.h(this.statusCallback);
-      var4.i(var2);
-      var4.g(this, this.subscribeOptions);
+      var4.i(this.statusCallback);
+      var4.e(var2);
+      var4.h(this, this.subscribeOptions);
    }
 
    public open fun onFound(message: Message) {
       super.onFound(var1);
       val var2: Function1 = this.onFoundUser;
-      val var3: ByteArray = var1.p();
+      val var3: ByteArray = var1.o();
       var2.invoke(new java.lang.String(var3, Charsets.UTF_8));
    }
 
    public open fun onLost(message: Message) {
       super.onLost(var1);
       val var2: Function1 = this.onLostUser;
-      val var3: ByteArray = var1.p();
+      val var3: ByteArray = var1.o();
       var2.invoke(new java.lang.String(var3, Charsets.UTF_8));
    }
 

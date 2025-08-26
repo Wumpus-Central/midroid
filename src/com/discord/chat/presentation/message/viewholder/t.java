@@ -2,15 +2,14 @@ package com.discord.chat.presentation.message.viewholder;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.discord.chat.presentation.events.ChatEventHandler;
+import com.discord.chat.presentation.message.messagepart.GuildInviteMessageAccessory;
 
 // $VF: synthetic class
 public final class t implements OnClickListener {
-   public final ChatEventHandler d;
-   public final String e;
-   public final int i;
+   public final GuildInviteViewHolder d;
+   public final GuildInviteMessageAccessory e;
 
    public final void onClick(View var1) {
-      GuildProfileInviteViewHolder.b(this.d, this.e, this.i, var1);
+      GuildInviteViewHolder.c(this.d, this.e, var1);
    }
 }

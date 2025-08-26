@@ -9,7 +9,7 @@ import kotlin.jvm.functions.Function1
 public class MessagingService : FirebaseMessagingService {
    public open fun onMessageReceived(remoteMessage: RemoteMessage) {
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: java.util.Map = var1.p();
+      val var3: java.util.Map = var1.o();
       var2.onNotificationReceived(this, var3);
    }
 

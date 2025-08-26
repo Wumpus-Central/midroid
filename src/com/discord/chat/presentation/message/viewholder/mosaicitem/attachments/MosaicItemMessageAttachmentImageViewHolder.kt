@@ -39,10 +39,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          }
       });
       val var23: java.lang.String = var25.getUrl();
-      val var11: Int = var25.getWidth();
-      val var9: Int = var25.getHeight();
-      val var24: java.lang.String = var25.getPlaceholder();
-      val var22: Int = var25.getPlaceholderVersion();
+      val var9: Int = var25.getWidth();
+      val var11: Int = var25.getHeight();
+      val var22: java.lang.String = var25.getPlaceholder();
+      val var24: Int = var25.getPlaceholderVersion();
       val var10: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
@@ -117,10 +117,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
 
       super.bind(
          var23,
-         var11,
          var9,
-         var24,
+         var11,
          var22,
+         var24,
          var17,
          var30,
          var12,
@@ -158,12 +158,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       shouldAutoPlayGif: Boolean
    ) {
       val var17: UnfurledMediaItem = var3.getMedia();
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("MediaGalleryDisplayComponent(");
-      var15.append(var2);
-      var15.append(").item[image]");
-      val var21: SpoilerAttributes = var16.forGenericMedia(var3, var1, var15.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
+      val var15: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("MediaGalleryDisplayComponent(");
+      var16.append(var2);
+      var16.append(").item[image]");
+      val var21: SpoilerAttributes = var15.forGenericMedia(var3, var1, var16.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
       val var23: java.lang.String = var17.getProxyUrl();
       val var18: Int = var17.getWidth();
       var var12: Int = 0;

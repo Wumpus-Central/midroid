@@ -29,21 +29,21 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
    }
 
    init {
-      val var8: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var8;
+      val var6: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
       this.setOrientation(0);
       this.setGravity(16);
-      val var5: ReactionView.Companion = ReactionView.Companion;
+      val var8: ReactionView.Companion = ReactionView.Companion;
       val var4: Int = ReactionView.Companion.getHORIZ_PADDING();
       val var3: Int = VERTICAL_PADDING;
-      this.setPadding(var4, VERTICAL_PADDING, var5.getHORIZ_PADDING(), var3);
-      ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var5.getCORNER_RADIUS(), null, 0, 12, null);
-      val var6: TextView = var8.addReactionText;
-      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
-      SetTextSizeSpKt.setTextSizeSp(var6, 14.0F, 14.0F);
-      var6.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      var6.setPadding(var5.getHORIZ_PADDING(), 0, var5.getHORIZ_PADDING(), 0);
-      val var7: SimpleDraweeView = var8.addReactionImage;
+      this.setPadding(var4, VERTICAL_PADDING, var8.getHORIZ_PADDING(), var3);
+      ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var8.getCORNER_RADIUS(), null, 0, 12, null);
+      val var5: TextView = var6.addReactionText;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
+      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var5.setPadding(var8.getHORIZ_PADDING(), 0, var8.getHORIZ_PADDING(), 0);
+      val var7: SimpleDraweeView = var6.addReactionImage;
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.AddReaction);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getInteractiveNormal());
       var7.setScaleType(ScaleType.FIT_CENTER);

@@ -30,9 +30,9 @@ public fun renderNotificationMessageContent(content: String): String {
          return var14;
       }
 
-      val var7: MatchGroup = var6.c().get(1);
+      val var7: MatchGroup = var6.d().get(1);
       val var15: java.lang.String = var7.a();
-      val var8: MatchGroup = var6.c().get(2);
+      val var8: MatchGroup = var6.d().get(2);
       if (var8 != null) {
          var0 = var8.a();
       }
@@ -82,19 +82,19 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.d().a();
-      val var12: Int = var6.d().m();
+      val var2: Int = var6.c().a();
+      val var12: Int = var6.c().g();
       var14 = StringsKt.v0(var14, var2, var12 + 1, var10).toString();
-      var13 = StringsKt.v0(var13, var6.d().a(), var6.d().m() + 1, var10).toString();
+      var13 = StringsKt.v0(var13, var6.c().a(), var6.c().g() + 1, var10).toString();
    }
 }
 
 fun `renderNotificationMessageContent$lambda$0`(var0: MatchResult): java.lang.CharSequence {
-   val var1: MatchGroup = var0.c().get(1);
+   val var1: MatchGroup = var0.d().get(1);
    return StringsKt.y("X", var1.a().length());
 }
 
 fun `renderNotificationMessageContent$lambda$1`(var0: MatchResult): java.lang.CharSequence {
-   val var1: MatchGroup = var0.c().get(1);
+   val var1: MatchGroup = var0.d().get(1);
    return StringsKt.y("X", var1.a().length());
 }

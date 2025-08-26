@@ -30,7 +30,7 @@ public object ChannelListSerializer : KSerializer {
    }
 
    public open fun deserialize(decoder: Decoder): List<ChannelId> {
-      val var6: java.util.List = StringsKt.split$default(this.deserializeForCalls(var1.n()), new java.lang.String[]{","}, false, 0, 6, null);
+      val var6: java.util.List = StringsKt.split$default(this.deserializeForCalls(var1.z()), new java.lang.String[]{","}, false, 0, 6, null);
       val var4: ArrayList = new ArrayList();
 
       for (java.lang.String var3 : var6) {

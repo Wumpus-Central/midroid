@@ -39,7 +39,7 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
       val var9: java.lang.Boolean = var12.getArchived();
       val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
       var15.setArchived(var9 == java.lang.Boolean.TRUE, var12.getArchivedIconUrl());
-      val var16: O = new O(var2, var1);
+      val var16: P = new P(var2, var1);
       var var4: Boolean = false;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, var16, 1, null);
       val var17: ThreadEmbedMessage = var12.getReferencedMessage();
@@ -63,8 +63,8 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          var18 = var15.getContext();
          val var10: java.lang.String = var22.getId-3Eiw7ao();
          val var6: Boolean = MessageKt.shouldAnimateEmoji(var22);
-         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var22);
-         val var5: Boolean = var22.getShouldShowRoleDot();
+         val var5: Boolean = MessageKt.shouldShowLinkDecorations(var22);
+         val var7: Boolean = var22.getShouldShowRoleDot();
          val var8: Boolean = var22.getShouldShowRoleOnName();
          val var11: FontMetrics = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
@@ -74,8 +74,8 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
             (Context)var18,
             var10,
             var6,
-            var7,
             var5,
+            var7,
             var8,
             var30,
             null,
