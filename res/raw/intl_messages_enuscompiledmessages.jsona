@@ -888,7 +888,9 @@
   "xsdcxs": "OUR POLICY",
   "URt7VF": "Did we make a mistake? Let us know.",
   "iHH+k5": "Appearance",
+  "vgvbiI": "Oh no!",
   "DOarTE": "Or, continue with in-app payment",
+  "ycleJS": "There was an error opening our billing page. Please wait and try again.",
   "HU3RFx": "Applications",
   "Nu5Yi4": "Here's all the apps that are doing super cool things to make your Discord experience super cooler. If it gets too chilly, you can remove them at any time.",
   "NgXl3N": "Add App",
@@ -6648,6 +6650,25 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
+  "bp8vRE": "Set your personalized signature reaction emoji. You can change this any time.",
+  "tdsiOz": "Change Default",
+  "5Uf/y8": [
+    "Double tap to :",
+    [
+      1,
+      "emojiName"
+    ],
+    ":"
+  ],
+  "QPJJKy": [
+    "Double tap any message to react with :",
+    [
+      1,
+      "emojiName"
+    ],
+    ": instantly. Or, tap here to set another default emoji."
+  ],
+  "rY+31d": "Double tap to react quicker",
   "1WjMbG": "Download",
   "GmSvdH": "No answers selected.",
   "E2ICbG": "Answers",
@@ -10249,6 +10270,14 @@
   "kYaBOj": "Nevermind",
   "I5gL2N": "GIF",
   "WaYuBQ": "Confirm",
+  "xGzXNT": [
+    "You get one with each gift purchase. Collect all ",
+    [
+      1,
+      "rewardCount"
+    ],
+    " of them."
+  ],
   "Rp0+ZG": "Choose Your Free Reward",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
@@ -21927,6 +21956,23 @@
   "9qLtWl": "Manage Channels",
   "HIgA5e": "Manage Events",
   "bbuXIi": "Manage Expressions",
+  "IERwUV": [
+    "Click ",
+    [
+      8,
+      "$link",
+      [
+        "here"
+      ],
+      [
+        [
+          1,
+          "manageExternalNitroSubscription"
+        ]
+      ]
+    ],
+    " to manage your Nitro subscription."
+  ],
   "ossiZG": "Manage Posts",
   "6lU9xM": "Manage Messages",
   "t+Ct5+": "Manage Nicknames",
@@ -30715,6 +30761,25 @@
     ],
     "."
   ],
+  "2GJLKy": [
+    "Play eligible games for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "a/ia7O": [
     "Stream ",
     [
@@ -30960,6 +31025,7 @@
     ],
     " Connected!"
   ],
+  "04ateH": "Waiting for you to launch eligible games...",
   "JiosAg": "View Requirements",
   "vTgCW1": "View Reward",
   "SdlRnJ": "No Quests Available",
@@ -31170,6 +31236,7 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "bUyEZW": "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched any eligible games on your connected console.",
   "umdNio": "Start Video Quest",
   "smG9qq": [
     "Stream ",
