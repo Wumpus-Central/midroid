@@ -30,15 +30,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
-   var var2: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
    val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var2 = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   val var3: Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Z(var1.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var3: a = C.n();
+   val var6: a = C.n();
    val var5: F = o.a();
-   val var4: Builder = var2.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var4: Builder = var3.X(new E(var6.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
@@ -46,12 +46,12 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             val var5: android.net.Uri.Builder = var1.buildUpon();
             var5.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var3: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var4: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var3.hasNext()) {
-                     var5.appendQueryParameter(var2, var3.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var5.appendQueryParameter(var3, var4.next() as java.lang.String);
                   }
                }
             }

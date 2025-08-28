@@ -5887,25 +5887,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "No puedo esperar por...",
-  "np9mf3": "Obsesión actual",
-  "f+PyDw": "Pregunta del día",
-  "Zx7N1t": "Se necesita una recomendación",
-  "+KXSFh": [
-    "Eliminar etiqueta de estado personalizado: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Establecer estado personalizado como ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Pensamiento de ducha",
   "TS3eJS": [
     [
       6,
@@ -5946,15 +5927,12 @@
   "l3pZcn": "¿Cuál es tu opinión polémica?",
   "SluNa2": "¿Cuál es mi pasatiempo más reciente?",
   "ylzor6": "¿Qué has estado escuchando?",
-  "UZ5AQk": "¿Qué es lo que más esperas?",
   "1TlHw8": "¿Cuál es el emoji que más utilizo últimamente?",
   "45r7ub": "Elige una criatura mitológica como mascota",
   "/Zm5VV": "¿Mi compañero PNJ favorito?",
   "r5TNm5": "¿Qué he jugado últimamente?",
-  "nLMBxM": "¿Qué quieres preguntar hoy?",
   "nXJgjo": "Acabo de subir de rango en...",
   "pYQRnJ": "¿Qué he leído últimamente?",
-  "lneQf3": "¿Para qué te gustaría recibir recomendaciones?",
   "Wf8fxM": "¿Pensamiento de ducha?",
   "S7UJ0t": "¿Cuál fue la última canción que no pude sacarme de la cabeza?",
   "Vok4QU": "Si mi vida tuviera una canción principal...",
@@ -5966,8 +5944,6 @@
   "/UonHB": "Establece un estado personalizado",
   "Iuzg8f": "Establecer tu estado",
   "zOdg0N": "Estado",
-  "hA60Ul": "Haz que tu estado llame la atención con una etiqueta preestablecida",
-  "jrzHRk": "Etiquetas para estados personalizados",
   "GQmLra": "Hoy",
   "bI7n9v": [
     "Mañana a las ",
@@ -22506,14 +22482,6 @@
   "zz1Tfn": "Desactivamos la detección de actividad de voz para mejorar el rendimiento del teléfono.",
   "zlvNOj": "Automática (sigue los ajustes del sistema)",
   "wFpwSk": "Automática",
-  "qGQDio": [
-    "Regalar a ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Duración del regalo",
   "hYoGUF": [
     "Al tocar “Comprar regalo”, aceptas las ",
@@ -31075,7 +31043,6 @@
   "+LXBxc": "Toca para habilitar el envío de notificaciones al autor original.",
   "p9jC2t": "ACTIVAR",
   "PBgTSE": "Toca para desactivar el envío de notificaciones al autor original.",
-  "E+6SSU": "Haz clic para ver el comando",
   "Xxm5i4": "Toca para ver el mensaje",
   "XAkOo6": "Mensaje bloqueado",
   "mE3KJC": "Se eliminó el mensaje original",
@@ -31083,7 +31050,6 @@
   "1i+hMj": "No se pudo cargar el mensaje",
   "JAKsMz": "Toca para ver el archivo adjunto",
   "7K5LmZ": "Toca para ver el sticker",
-  "XC3A5+": "Haz clic para ver el mensaje de voz",
   "6bhHra": "Toca para escuchar el mensaje de voz",
   "+78Pfn": "Denunciar",
   "FOptFR": [

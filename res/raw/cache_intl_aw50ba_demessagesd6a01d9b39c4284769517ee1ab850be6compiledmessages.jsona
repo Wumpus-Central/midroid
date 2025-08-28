@@ -5876,25 +5876,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Ich warte schon gespannt auf",
-  "np9mf3": "Aktuelle Leidenschaft",
-  "f+PyDw": "Frage des Tages",
-  "Zx7N1t": "Empfehlung benötigt",
-  "+KXSFh": [
-    "Personalisiertes Status-Label entfernen: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Personalisiertes Status-Label festlegen auf ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Geistesblitz",
   "TS3eJS": [
     [
       6,
@@ -5935,15 +5916,12 @@
   "l3pZcn": "Was ist deine gewagte Meinung?",
   "SluNa2": "Neuestes Hobby?",
   "ylzor6": "Was hast du angehört?",
-  "UZ5AQk": "Worauf freust du dich?",
   "1TlHw8": "Am häufigsten verwendetes Emoji in letzter Zeit?",
   "45r7ub": "Wähle eine mythische Kreatur als Haustier",
   "/Zm5VV": "Liebster NPC-Begleiter?",
   "r5TNm5": "Was spielst du derzeit?",
-  "nLMBxM": "Was möchtest du heute fragen?",
   "nXJgjo": "Ich bin gerade im Rang aufgestiegen in …",
   "pYQRnJ": "Was liest du derzeit?",
-  "lneQf3": "Wofür möchtest du Empfehlungen?",
   "Wf8fxM": "Geistesblitz?",
   "S7UJ0t": "Letzter Ohrwurm?",
   "Vok4QU": "Wenn dein Leben ein Titellied hätte …",
@@ -5955,8 +5933,6 @@
   "/UonHB": "Einen personalisierten Status festlegen",
   "Iuzg8f": "Status festlegen",
   "zOdg0N": "Status",
-  "hA60Ul": "Hebe deinen Status mit einer Tag-Vorlage hervor",
-  "jrzHRk": "Personalisierte Status-Tags",
   "GQmLra": "Heute",
   "bI7n9v": [
     "Morgen um ",
@@ -22634,14 +22610,6 @@
   "zz1Tfn": "Wir haben die Sprachaktivierungserkennung deaktiviert, um die Handyleistung zu verbessern.",
   "zlvNOj": "Automatisch (richtet sich nach Systemeinstellungen)",
   "wFpwSk": "Automatisch",
-  "qGQDio": [
-    "Beschenke ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Geschenkdauer",
   "hYoGUF": [
     "Wenn du auf „Geschenk kaufen“ tippst, stimmst du den ",
@@ -31448,7 +31416,6 @@
   "+LXBxc": "Tippen, um das Anpingen des ursprünglichen Verfassers zu aktivieren.",
   "p9jC2t": "AN",
   "PBgTSE": "Tippen, um das Anpingen des ursprünglichen Verfassers zu deaktivieren.",
-  "E+6SSU": "Klicken, um Befehl anzuzeigen",
   "Xxm5i4": "Tippe, um die Nachricht anzuzeigen",
   "XAkOo6": "Nachricht wurde blockiert",
   "mE3KJC": "Ursprüngliche Nachricht wurde gelöscht",
@@ -31456,7 +31423,6 @@
   "1i+hMj": "Nachricht konnte nicht geladen werden",
   "JAKsMz": "Tippen, um Anhang anzuzeigen",
   "7K5LmZ": "Tippen, um Sticker anzuzeigen",
-  "XC3A5+": "Klicken, um Sprachnachricht anzuzeigen",
   "6bhHra": "Tippen, um Sprachnachricht anzuzeigen",
   "+78Pfn": "Melden",
   "FOptFR": [

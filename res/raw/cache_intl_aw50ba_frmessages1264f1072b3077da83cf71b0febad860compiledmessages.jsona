@@ -5883,25 +5883,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "J'attends avec impatience",
-  "np9mf3": "Obsession du moment",
-  "f+PyDw": "Question du jour",
-  "Zx7N1t": "Recommandation demandée",
-  "+KXSFh": [
-    "Supprimer l'étiquette de statut personnalisé : ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Modifier l'étiquette de statut personnalisé en : ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Pensée à partager",
   "TS3eJS": [
     [
       6,
@@ -5942,15 +5923,12 @@
   "l3pZcn": "Une opinion personnelle à partager ?",
   "SluNa2": "Ton hobby du moment ?",
   "ylzor6": "Qu'est-ce que tu écoutes en ce moment ?",
-  "UZ5AQk": "Qu'est-ce que tu attends avec impatience ?",
   "1TlHw8": "L'émoji que tu utilises le plus dernièrement ?",
   "45r7ub": "Quelle créature mythique voudrais-tu comme animal de compagnie ?",
   "/Zm5VV": "Ton compagnon PNJ préféré ?",
   "r5TNm5": "À quoi tu joues en ce moment ?",
-  "nLMBxM": "Quelle est ta question du jour ?",
   "nXJgjo": "Je viens juste de monter de niveau dans…",
   "pYQRnJ": "Qu'est-ce que tu lis en ce moment ?",
-  "lneQf3": "Qu'est-ce que tu voudrais comme recommandations ?",
   "Wf8fxM": "Une pensée à partager ?",
   "S7UJ0t": "La chanson que tu n'arrêtes pas de chanter ?",
   "Vok4QU": "Si ta vie avait un générique…",
@@ -5962,8 +5940,6 @@
   "/UonHB": "Définir un statut personnalisé",
   "Iuzg8f": "Définir ton statut",
   "zOdg0N": "Statut",
-  "hA60Ul": "Fais ressortir ton statut avec un tag prédéfini",
-  "jrzHRk": "Tags de statut personnalisé",
   "GQmLra": "Aujourd'hui",
   "bI7n9v": [
     "Demain à ",
@@ -22566,14 +22542,6 @@
   "zz1Tfn": "Nous avons désactivé la détection de la voix pour améliorer les performances du téléphone.",
   "zlvNOj": "Automatique (suit les paramètres du système)",
   "wFpwSk": "Automatique",
-  "qGQDio": [
-    "Offrir à ",
-    [
-      1,
-      "username"
-    ],
-    " :"
-  ],
   "8XT6NT": "Durée du cadeau",
   "hYoGUF": [
     "En touchant « Acheter un cadeau », tu acceptes les ",
@@ -31425,7 +31393,6 @@
   "+LXBxc": "Touche pour activer la mention de l'auteur original.",
   "p9jC2t": "ACTIVÉ",
   "PBgTSE": "Touche pour désactiver la mention de l'auteur original.",
-  "E+6SSU": "Clique pour voir la commande",
   "Xxm5i4": "Touche pour voir le message",
   "XAkOo6": "Message bloqué",
   "mE3KJC": "Le message original a été supprimé",
@@ -31433,7 +31400,6 @@
   "1i+hMj": "Le message n'a pas pu être chargé",
   "JAKsMz": "Touche pour voir la pièce jointe",
   "7K5LmZ": "Touche pour voir les autocollants",
-  "XC3A5+": "Clique pour afficher le message vocal",
   "6bhHra": "Touche pour afficher le message vocal",
   "+78Pfn": "Signaler",
   "FOptFR": [

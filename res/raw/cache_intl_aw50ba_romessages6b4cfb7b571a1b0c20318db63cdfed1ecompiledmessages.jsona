@@ -5874,25 +5874,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "De-abia aștept...",
-  "np9mf3": "Obsesia de azi",
-  "f+PyDw": "Întrebarea zilei",
-  "Zx7N1t": "E nevoie de o recomandare",
-  "+KXSFh": [
-    "Elimină eticheta cu statusul personalizat: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Setează eticheta cu statusul personalizat la ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Idee creață de la duș",
   "TS3eJS": [
     [
       6,
@@ -5933,15 +5914,12 @@
   "l3pZcn": "Ce idei controversate ai?",
   "SluNa2": "Care e cel mai nou hobby al tău?",
   "ylzor6": "Ce mai asculți în ultima vreme?",
-  "UZ5AQk": "Ce aștepți cu nerăbdare?",
   "1TlHw8": "Ce emoji ai folosit cel mai mult în ultima vreme?",
   "45r7ub": "Alege o creatură mitică drept animal de companie",
   "/Zm5VV": "Însoțitor NPC favorit?",
   "r5TNm5": "Ce-ai mai jucat în ultima vreme?",
-  "nLMBxM": "Ce vrei să întrebi azi?",
   "nXJgjo": "Am crescut în nivel în...",
   "pYQRnJ": "Ce-ai mai citit în ultima vreme?",
-  "lneQf3": "Ce ai vrea să ți se recomande?",
   "Wf8fxM": "Ți-a venit o idee creață la duș?",
   "S7UJ0t": "Ce cântec nu ți-ai putut scoate din minte recent?",
   "Vok4QU": "Dacă viața ta ar avea o melodie ca soundtrack...",
@@ -5953,8 +5931,6 @@
   "/UonHB": "Setează un status personalizat",
   "Iuzg8f": "Setează-ți statusul",
   "zOdg0N": "Status",
-  "hA60Ul": "Evidențiază-ți statusul cu un tag presetat",
-  "jrzHRk": "Taguri pentru statusuri personalizate",
   "GQmLra": "Astăzi",
   "bI7n9v": [
     "Mâine la ",
@@ -22552,14 +22528,6 @@
   "zz1Tfn": "Am dezactivat detectarea activității vocale pentru a îmbunătăți funcționarea telefonului.",
   "zlvNOj": "Automată (folosește setările sistemului)",
   "wFpwSk": "Automată",
-  "qGQDio": [
-    "Dăruiește-i lui ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Durata cadoului",
   "hYoGUF": [
     "Atingând „Cumpără cadou”, ești de acord cu ",
@@ -31374,7 +31342,6 @@
   "+LXBxc": "Atinge pentru a activa pingul către autorul original.",
   "p9jC2t": "PORNIT",
   "PBgTSE": "Atinge pentru a dezactiva pingul către autorul original.",
-  "E+6SSU": "Dă clic pentru a vedea comanda",
   "Xxm5i4": "Atinge pentru a vedea mesajul",
   "XAkOo6": "Mesaj blocat",
   "mE3KJC": "Mesajul original a fost șters",
@@ -31382,7 +31349,6 @@
   "1i+hMj": "Nu s-a putut încărca mesajul",
   "JAKsMz": "Atinge pentru a vedea atașamentul",
   "7K5LmZ": "Atinge pentru a vedea sticker-ul",
-  "XC3A5+": "Dă clic pentru a vedea mesajul vocal",
   "6bhHra": "Atinge pentru a vedea mesajul vocal",
   "+78Pfn": "Raportează",
   "FOptFR": [

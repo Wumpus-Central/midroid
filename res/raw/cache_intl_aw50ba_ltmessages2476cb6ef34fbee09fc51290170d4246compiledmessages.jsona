@@ -6107,25 +6107,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Laukiu nesulaukiu",
-  "np9mf3": "Dabartinė aistra",
-  "f+PyDw": "Dienos klausimas",
-  "Zx7N1t": "Reikia rekomendacijos",
-  "+KXSFh": [
-    "Pašalinti tinkintos būsenos etiketę: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Tinkintos būsenos etiketę nustatyk į ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Geniali idėja",
   "TS3eJS": [
     [
       6,
@@ -6166,15 +6147,12 @@
   "l3pZcn": "Rėžk savo nuomonę",
   "SluNa2": "Naujausias hobis?",
   "ylzor6": "Ką klausai?",
-  "UZ5AQk": "Kokių gerų dalykų lauki?",
   "1TlHw8": "Kokį jaustuką pastaruoju metu naudoji dažniausiai?",
   "45r7ub": "Pasirink mitinį padarą augintiniu",
   "/Zm5VV": "Mėgstamiausias NPC palydovas?",
   "r5TNm5": "Ką žaidi?",
-  "nLMBxM": "Ko norėtum paklausti šiandien?",
   "nXJgjo": "Ką tik pakilau į viršų žaidime...",
   "pYQRnJ": "Ką skaitai?",
-  "lneQf3": "Apie ką norėtum gauti rekomendacijų?",
   "Wf8fxM": "Geniali idėja?",
   "S7UJ0t": "Paskutinė daina, kurią vis niūniuodavai?",
   "Vok4QU": "Jeigu tavo gyvenimas turėtų garso takelį...",
@@ -6186,8 +6164,6 @@
   "/UonHB": "Nustatyti pritaikytą būseną",
   "Iuzg8f": "Nustatyk savo būseną",
   "zOdg0N": "Būsena",
-  "hA60Ul": "Išskirk savo būseną iš kitų su iš anksto nustatyta žyme",
-  "jrzHRk": "Tinkintos būsenos žymės",
   "GQmLra": "Šiandien",
   "bI7n9v": [
     "Rytoj ",
@@ -23294,14 +23270,6 @@
   "zz1Tfn": "Išjungėme balso veiklos aptikimą, kad pagerintume telefono veikimą.",
   "zlvNOj": "Automatinė (laikomasi sistemos nustatymų)",
   "wFpwSk": "Automatinė",
-  "qGQDio": [
-    "Dovanoti ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Dovanos trukmė",
   "hYoGUF": [
     "Paliesdamas (-a) „Pirkti dovaną“ sutinki su ",
@@ -32524,7 +32492,6 @@
   "+LXBxc": "Paliesk, kad įjungtum pradinio autoriaus pakibinimą.",
   "p9jC2t": "ĮJUNGTA",
   "PBgTSE": "Paliesk, kad išjungtum pradinio autoriaus pakibinimą.",
-  "E+6SSU": "Spustelėk, kad pamatytum komandą",
   "Xxm5i4": "Paliesk, kad matytum žinutę",
   "XAkOo6": "Užblokuota žinutė",
   "mE3KJC": "Pradinė žinutė pašalinta",
@@ -32532,7 +32499,6 @@
   "1i+hMj": "Nepavyko įkelti žinutės",
   "JAKsMz": "Bakstelėk, kad peržiūrėtum priedą",
   "7K5LmZ": "Bakstelėk, kad pamatytum lipduką",
-  "XC3A5+": "Spustelėk, kad peržiūrėtum balso žinutę",
   "6bhHra": "Paliesk, kad peržiūrėtum balso žinutę",
   "+78Pfn": "Pranešti",
   "FOptFR": [

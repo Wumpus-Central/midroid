@@ -60,17 +60,17 @@ public object TTIMetrics {
       // 03: ldc "label"
       // 05: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/tti_manager/TTIMetrics.timings Ljava/util/List;
-      // 0b: astore 6
+      // 0b: astore 7
       // 0d: new com/discord/tti_manager/TTIMetrics$Timing
-      // 10: astore 7
-      // 12: aload 7
+      // 10: astore 6
+      // 12: aload 6
       // 14: aload 1
       // 15: lload 2
       // 16: aload 4
       // 18: iload 5
       // 1a: invokespecial com/discord/tti_manager/TTIMetrics$Timing.<init> (Ljava/lang/String;JLjava/lang/String;Z)V
-      // 1d: aload 6
-      // 1f: aload 7
+      // 1d: aload 7
+      // 1f: aload 6
       // 21: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
       // 26: pop
       // 27: aload 0

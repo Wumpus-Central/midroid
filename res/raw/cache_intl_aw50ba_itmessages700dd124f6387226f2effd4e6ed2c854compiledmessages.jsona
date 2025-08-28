@@ -5882,25 +5882,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Non vedo l'ora di",
-  "np9mf3": "Ossessione attuale",
-  "f+PyDw": "Domanda del giorno",
-  "Zx7N1t": "Consiglio necessario",
-  "+KXSFh": [
-    "Rimuovi l'etichetta di stato personalizzata: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Imposta l'etichetta di stato personalizzata come ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Idea da doccia",
   "TS3eJS": [
     [
       6,
@@ -5941,15 +5922,12 @@
   "l3pZcn": "Hai un commento a caldo?",
   "SluNa2": "Hai dei nuovi hobby?",
   "ylzor6": "Cosa stai ascoltando?",
-  "UZ5AQk": "Cosa non vedi l'ora di fare?",
   "1TlHw8": "L'emoji che hai usato di più di recente?",
   "45r7ub": "Quale creatura mitologica vorresti come tuo animale?",
   "/Zm5VV": "Chi è il tuo PNG preferito?",
   "r5TNm5": "A cosa stai giocando?",
-  "nLMBxM": "Cosa vuoi chiedere oggi?",
   "nXJgjo": "Ho sbloccato la promozione su...",
   "pYQRnJ": "Che cosa stai leggendo?",
-  "lneQf3": "Per cosa vorresti consigli?",
   "Wf8fxM": "Un'idea sotto la doccia?",
   "S7UJ0t": "L'ultima canzone che ti è rimasta in testa?",
   "Vok4QU": "Se la tua vita avesse una colonna sonora...",
@@ -5961,8 +5939,6 @@
   "/UonHB": "Imposta uno stato personalizzato",
   "Iuzg8f": "Imposta il tuo stato",
   "zOdg0N": "Stato",
-  "hA60Ul": "Fai risaltare il tuo stato con un tag preimpostato",
-  "jrzHRk": "Tag dello stato personalizzato",
   "GQmLra": "Oggi",
   "bI7n9v": [
     "Domani alle ore ",
@@ -22525,14 +22501,6 @@
   "zz1Tfn": "Abbiamo disattivato il rilevamento dell'attività vocale per migliorare la prestazione del telefono.",
   "zlvNOj": "Automatico (segue impostazioni di sistema)",
   "wFpwSk": "Automatico",
-  "qGQDio": [
-    "Regala a ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Durata del regalo",
   "hYoGUF": [
     "Toccando ",
@@ -31392,7 +31360,6 @@
   "+LXBxc": "Tocca per attivare l'invio del ping all'autore originale.",
   "p9jC2t": "ATTIVATO",
   "PBgTSE": "Tocca per disattivare l'invio del ping all'autore originale.",
-  "E+6SSU": "Clicca per vedere il comando",
   "Xxm5i4": "Tocca per vedere il messaggio",
   "XAkOo6": "Messaggio bloccato",
   "mE3KJC": "Il messaggio originale è stato eliminato",
@@ -31400,7 +31367,6 @@
   "1i+hMj": "Non è possibile caricare il messaggio",
   "JAKsMz": "Tocca per vedere l'allegato",
   "7K5LmZ": "Tocca per vedere l'adesivo",
-  "XC3A5+": "Clicca per vedere il messaggio vocale",
   "6bhHra": "Tocca per vedere il messaggio vocale",
   "+78Pfn": "Segnala",
   "FOptFR": [

@@ -5905,25 +5905,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Alig várom a következőt…",
-  "np9mf3": "Aktuális dili",
-  "f+PyDw": "Napi kérdés",
-  "Zx7N1t": "Ajánlásra van szükség",
-  "+KXSFh": [
-    "Egyedi állapotcímke eltávolítása: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Egyedi állapotcímke beállítása a következőre: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Magvas gondolat",
   "TS3eJS": [
     [
       6,
@@ -5964,15 +5945,12 @@
   "l3pZcn": "Mi az okos meglátásod?",
   "SluNa2": "Mi a legújabb hobbid?",
   "ylzor6": "Mit hallgattál mostanában?",
-  "UZ5AQk": "Mit vársz nagyon?",
   "1TlHw8": "Melyik emotikont használtad mostanában a legtöbbet?",
   "45r7ub": "Válassz egy mitikus lényt házi kedvencként",
   "/Zm5VV": "Ki a kedvenc NPC-társad?",
   "r5TNm5": "Mivel játszottál mostanában?",
-  "nLMBxM": "Mit szeretnél kérdezni ma?",
   "nXJgjo": "Az imént jobb helyezést ért el itt…",
   "pYQRnJ": "Mit olvastál mostanában?",
-  "lneQf3": "Mivel kapcsolatban szeretnél ajánlásokat kapni?",
   "Wf8fxM": "Magvas gondolatod támadt?",
   "S7UJ0t": "Melyik dal ment utoljára folyamatosan a fejedben?",
   "Vok4QU": "Az életed aláfestő zenéje…",
@@ -5984,8 +5962,6 @@
   "/UonHB": "Egyéni állapot beállítása",
   "Iuzg8f": "Saját állapot beállítása",
   "zOdg0N": "Állapot",
-  "hA60Ul": "Előre beállított címkével érheted el, hogy az állapotod kitűnjön a tömegből",
-  "jrzHRk": "Egyéni állapotcímkék",
   "GQmLra": "Ma",
   "bI7n9v": [
     "Holnap ekkor: ",
@@ -22530,13 +22506,6 @@
   "zz1Tfn": "A telefon teljesítményének javítása érdekében kikapcsoltuk a hangaktivitás észlelését.",
   "zlvNOj": "Automatikus (a rendszer beállításai alapján)",
   "wFpwSk": "Automatikus",
-  "qGQDio": [
-    [
-      1,
-      "username"
-    ],
-    " megajándékozása:"
-  ],
   "8XT6NT": "Ajándék időtartama",
   "hYoGUF": [
     "Az „Ajándék megvásárlása” lehetőségre kattintva elfogadod a ",
@@ -31351,7 +31320,6 @@
   "+LXBxc": "Koppints az eredeti szerző pingelésének engedélyezéséhez.",
   "p9jC2t": "BE",
   "PBgTSE": "Koppints az eredeti szerző pingelésének letiltásához.",
-  "E+6SSU": "Kattints a parancs megtekintéséhez",
   "Xxm5i4": "Koppints az üzenet megtekintéséhez",
   "XAkOo6": "Letiltott üzenet",
   "mE3KJC": "Az eredeti üzenetet törölték",
@@ -31359,7 +31327,6 @@
   "1i+hMj": "Az üzenet betöltése sikertelen",
   "JAKsMz": "Koppints a melléklet megtekintéséhez",
   "7K5LmZ": "Koppints ide a matrica megtekintéséhez",
-  "XC3A5+": "Kattints a hangüzenet megtekintéséhez",
   "6bhHra": "Koppints a hangüzenet megtekintéséhez",
   "+78Pfn": "Jelentés",
   "FOptFR": [

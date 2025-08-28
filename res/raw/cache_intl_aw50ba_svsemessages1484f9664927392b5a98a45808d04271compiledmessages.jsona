@@ -5864,25 +5864,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Längtar efter",
-  "np9mf3": "Nuvarande besatthet",
-  "f+PyDw": "Dagens fråga",
-  "Zx7N1t": "Rekommendation behövs",
-  "+KXSFh": [
-    "Ta bort anpassad statusetikett: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Ange anpassad statusetikett till ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Duschfundering",
   "TS3eJS": [
     [
       6,
@@ -5923,15 +5904,12 @@
   "l3pZcn": "Vad är din heta åsikt?",
   "SluNa2": "Senaste hobbyn?",
   "ylzor6": "Vad har du lyssnat på?",
-  "UZ5AQk": "Vad ser du fram emot?",
   "1TlHw8": "Mest använda emoji på sistone?",
   "45r7ub": "Välj en mytisk varelse som husdjur",
   "/Zm5VV": "Favorit NPC-följeslagare?",
   "r5TNm5": "Vad har du spelat?",
-  "nLMBxM": "Vad vill du fråga i dag?",
   "nXJgjo": "Klättrade just i rankningen ...",
   "pYQRnJ": "Vad har du läst?",
-  "lneQf3": "Vad vill du ha rekommendationer om?",
   "Wf8fxM": "Duschfundering?",
   "S7UJ0t": "Senaste låten som fastnade i ditt huvud?",
   "Vok4QU": "Om ditt liv hade en signaturlåt ...",
@@ -5943,8 +5921,6 @@
   "/UonHB": "Ställ in en anpassad status",
   "Iuzg8f": "Ange din status",
   "zOdg0N": "Status",
-  "hA60Ul": "Få din status att sticka ut med en förinställd tagg",
-  "jrzHRk": "Taggar för anpassad status",
   "GQmLra": "I dag",
   "bI7n9v": [
     "I morgon kl. ",
@@ -22496,14 +22472,6 @@
   "zz1Tfn": "Vi inaktiverade röstaktiveringen för att förbättra telefonprestandan.",
   "zlvNOj": "Automatisk (följer systeminställningarna)",
   "wFpwSk": "Automatisk",
-  "qGQDio": [
-    "Ge gåva till ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Gåvans varaktighet",
   "hYoGUF": [
     "Genom att trycka på ",
@@ -31314,7 +31282,6 @@
   "+LXBxc": "Tryck om du vill pinga den ursprungliga meddelandeskrivaren.",
   "p9jC2t": "PÅ",
   "PBgTSE": "Tryck om du inte vill pinga den ursprungliga meddelandeskrivaren.",
-  "E+6SSU": "Klicka för att visa kommandot",
   "Xxm5i4": "Tryck för att se meddelandet",
   "XAkOo6": "Blockerat meddelande",
   "mE3KJC": "Originalmeddelandet har raderats",
@@ -31322,7 +31289,6 @@
   "1i+hMj": "Meddelandet kunde inte läsas in",
   "JAKsMz": "Tryck för att se bilagan",
   "7K5LmZ": "Tryck för att visa dekalen",
-  "XC3A5+": "Klicka för att se röstmeddelande",
   "6bhHra": "Tryck för att se röstmeddelande",
   "+78Pfn": "Anmäl",
   "FOptFR": [

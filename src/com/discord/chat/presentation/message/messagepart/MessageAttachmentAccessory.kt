@@ -47,12 +47,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
          val var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            val var4: java.lang.String = var1.getUploaderId();
-            val var5: java.lang.String = var1.getUploaderItemId();
+            val var5: java.lang.String = var1.getUploaderId();
+            val var4: java.lang.String = var1.getUploaderItemId();
             val var7: StringBuilder = new StringBuilder();
-            var7.append(var4);
-            var7.append(" ");
             var7.append(var5);
+            var7.append(" ");
+            var7.append(var4);
             var3 = var7.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);

@@ -148,33 +148,33 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.url;
-      val var9: java.lang.String = this.proxyURL;
+      val var9: java.lang.String = this.url;
+      val var7: java.lang.String = this.proxyURL;
       val var2: Int = this.width;
       val var1: Int = this.height;
-      val var5: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.placeholder;
+      val var6: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var4: java.lang.String = this.contentType;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("EmbedMedia(url=");
-      var6.append(var7);
-      var6.append(", proxyURL=");
-      var6.append(var9);
-      var6.append(", width=");
-      var6.append(var2);
-      var6.append(", height=");
-      var6.append(var1);
-      var6.append(", placeholder=");
-      var6.append(var5);
-      var6.append(", placeholderVersion=");
-      var6.append(var8);
-      var6.append(", srcIsAnimated=");
-      var6.append(var3);
-      var6.append(", contentType=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.contentType;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("EmbedMedia(url=");
+      var8.append(var9);
+      var8.append(", proxyURL=");
+      var8.append(var7);
+      var8.append(", width=");
+      var8.append(var2);
+      var8.append(", height=");
+      var8.append(var1);
+      var8.append(", placeholder=");
+      var8.append(var4);
+      var8.append(", placeholderVersion=");
+      var8.append(var6);
+      var8.append(", srcIsAnimated=");
+      var8.append(var3);
+      var8.append(", contentType=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

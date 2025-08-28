@@ -6116,25 +6116,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Nemůžu se dočkat",
-  "np9mf3": "Aktuální posedlost",
-  "f+PyDw": "Otázka dne",
-  "Zx7N1t": "Potřebuješ doporučení",
-  "+KXSFh": [
-    "Odebrat štítek vlastního stavu: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Nastavit štítek vlastního stavu na ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Momentální nápad",
   "TS3eJS": [
     [
       6,
@@ -6175,15 +6156,12 @@
   "l3pZcn": "Jaký je tvůj názor?",
   "SluNa2": "Nejnovější záliba?",
   "ylzor6": "Co za hudbu ti hrálo do uší?",
-  "UZ5AQk": "Na co se těšíš?",
   "1TlHw8": "Nejpoužívanější smajlík za poslední dobu?",
   "45r7ub": "Vyber si mytickou bytost jako mazlíčka",
   "/Zm5VV": "Přidat do oblíbených NPC parťáka?",
   "r5TNm5": "Co za pařbu bylo na programu?",
-  "nLMBxM": "Na co se chceš dnes zeptat?",
   "nXJgjo": "Podařilo se mi postoupit na vyšší úroveň v…",
   "pYQRnJ": "Co za čtení bylo na programu?",
-  "lneQf3": "Jaká doporučení chceš dostávat?",
   "Wf8fxM": "Máš nějaký nápad?",
   "S7UJ0t": "Poslední písnička, která ti uvízla v hlavě?",
   "Vok4QU": "Kdyby měl tvůj život ústřední píseň…",
@@ -6195,8 +6173,6 @@
   "/UonHB": "Nastavit vlastní status",
   "Iuzg8f": "Nastav svůj stav",
   "zOdg0N": "Stav",
-  "hA60Ul": "Nech svůj stav vyniknout díky přednastavenému štítku",
-  "jrzHRk": "Vlastní štítky stavu",
   "GQmLra": "Dnes",
   "bI7n9v": [
     "Zítra v ",
@@ -23329,14 +23305,6 @@
   "zz1Tfn": "Vypnuli jsme detekci hlasové aktivity, abychom zvýšili výkon telefonu.",
   "zlvNOj": "Automaticky (řídí se nastavením systému)",
   "wFpwSk": "Automaticky",
-  "qGQDio": [
-    "Darovat uživateli ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Darovaná doba",
   "hYoGUF": [
     "Klepnutím na tlačítko „Koupit dárek“ vyjadřuješ souhlas s ",
@@ -32569,7 +32537,6 @@
   "+LXBxc": "Klepnutím zapneš označení původního autora.",
   "p9jC2t": "ZAP",
   "PBgTSE": "Klepnutím vypneš označení původního autora.",
-  "E+6SSU": "Kliknutím zobrazíš příkaz",
   "Xxm5i4": "Klepnutím zobraz zprávu",
   "XAkOo6": "Zpráva byla zablokována",
   "mE3KJC": "Původní zpráva byla odstraněna",
@@ -32577,7 +32544,6 @@
   "1i+hMj": "Zprávu se nepodařilo načíst",
   "JAKsMz": "Klepnutím zobrazíš přílohu",
   "7K5LmZ": "Klepnutím zobrazíš samolepku",
-  "XC3A5+": "Kliknutím zobraz hlasové zprávy",
   "6bhHra": "Klepnutím zobraz hlasové zprávy",
   "+78Pfn": "Nahlásit",
   "FOptFR": [

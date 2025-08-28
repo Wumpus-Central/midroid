@@ -5878,25 +5878,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Qué ganas de...",
-  "np9mf3": "Obsesión actual",
-  "f+PyDw": "Pregunta del día",
-  "Zx7N1t": "Recomendación necesaria",
-  "+KXSFh": [
-    "Elimina la etiqueta de estado personalizado: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Establece la etiqueta de estado personalizado a ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Reflexión en la ducha",
   "TS3eJS": [
     [
       6,
@@ -5937,15 +5918,12 @@
   "l3pZcn": "¿Cuál es tu opinión polémica?",
   "SluNa2": "¿Última afición?",
   "ylzor6": "¿Qué has estado escuchando?",
-  "UZ5AQk": "¿Qué esperas con ganas?",
   "1TlHw8": "¿Emojis más usados últimamente?",
   "45r7ub": "Elige una criatura mítica como mascota",
   "/Zm5VV": "¿Compañero PNJ favorito?",
   "r5TNm5": "¿A qué has estado jugando?",
-  "nLMBxM": "¿Qué quieres preguntar hoy?",
   "nXJgjo": "Acabo de subir de rango en...",
   "pYQRnJ": "¿Qué has estado leyendo?",
-  "lneQf3": "¿Sobre qué te gustaría recibir recomendaciones?",
   "Wf8fxM": "¿Alguna reflexión en la ducha?",
   "S7UJ0t": "¿La última canción que se te ha pegado?",
   "Vok4QU": "Si tu vida tuviera una canción temática...",
@@ -5957,8 +5935,6 @@
   "/UonHB": "Establecer un estado personalizado",
   "Iuzg8f": "Establecer estado",
   "zOdg0N": "Estado",
-  "hA60Ul": "Haz que tu estado destaque con una etiqueta predefinida",
-  "jrzHRk": "Etiquetas de estado personalizado",
   "GQmLra": "Hoy",
   "bI7n9v": [
     "Mañana a la(s) ",
@@ -22553,14 +22529,6 @@
   "zz1Tfn": "Hemos deshabilitado la detección de actividad de voz para mejorar el rendimiento del móvil.",
   "zlvNOj": "Automático (sigue los ajustes del sistema)",
   "wFpwSk": "Automático",
-  "qGQDio": [
-    "Regala a ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Duración del regalo",
   "hYoGUF": [
     "Al tocar «Comprar regalo», aceptas las ",
@@ -31420,7 +31388,6 @@
   "+LXBxc": "Toca para habilitar la mención del autor original.",
   "p9jC2t": "Activado",
   "PBgTSE": "Toca para deshabilitar la mención del autor original.",
-  "E+6SSU": "Haz clic para ver el comando",
   "Xxm5i4": "Toca para ver el mensaje",
   "XAkOo6": "Mensaje bloqueado",
   "mE3KJC": "Se ha eliminado el mensaje original",
@@ -31428,7 +31395,6 @@
   "1i+hMj": "No se ha podido cargar el mensaje",
   "JAKsMz": "Toca para ver el archivo adjunto",
   "7K5LmZ": "Toca para ver el sticker",
-  "XC3A5+": "Haz clic para ver el mensaje de voz",
   "6bhHra": "Toca para ver el mensaje de voz",
   "+78Pfn": "Denunciar",
   "FOptFR": [

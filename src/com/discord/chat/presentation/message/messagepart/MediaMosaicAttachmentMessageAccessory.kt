@@ -117,29 +117,29 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.util.List = this.attachments;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: java.util.List = this.attachments;
       val var1: Int = this.constrainedWidth;
-      val var3: Boolean = this.isForwardedContent;
-      val var7: MessageState = this.messageState;
-      val var2: Boolean = this.shouldAutoPlayGif;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("MediaMosaicAttachmentMessageAccessory(messageId=");
-      var8.append(var6);
-      var8.append(", channelId=");
-      var8.append(var4);
-      var8.append(", attachments=");
-      var8.append(var5);
-      var8.append(", constrainedWidth=");
-      var8.append(var1);
-      var8.append(", isForwardedContent=");
-      var8.append(var3);
-      var8.append(", messageState=");
-      var8.append(var7);
-      var8.append(", shouldAutoPlayGif=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var2: Boolean = this.isForwardedContent;
+      val var8: MessageState = this.messageState;
+      val var3: Boolean = this.shouldAutoPlayGif;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaMosaicAttachmentMessageAccessory(messageId=");
+      var4.append(var5);
+      var4.append(", channelId=");
+      var4.append(var6);
+      var4.append(", attachments=");
+      var4.append(var7);
+      var4.append(", constrainedWidth=");
+      var4.append(var1);
+      var4.append(", isForwardedContent=");
+      var4.append(var2);
+      var4.append(", messageState=");
+      var4.append(var8);
+      var4.append(", shouldAutoPlayGif=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

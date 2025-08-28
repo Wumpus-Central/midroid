@@ -51,20 +51,20 @@ public object ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var2: Int = var3;
-               if (var3 < var4) {
+               var var3: Int = var2;
+               if (var2 < var4) {
                   var8 = var6;
-                  var2 = var4;
+                  var3 = var4;
                }
 
                var5 = var8;
-               var3 = var2;
+               var2 = var3;
             } while (var7.hasNext());
          }
 
@@ -111,18 +111,18 @@ public object ForegroundServiceManager {
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2$lambda$1`(var0: Exception): Unit {
-      val var1: Log = Log.INSTANCE;
-      val var2: java.lang.String = tag;
-      var1.w$foreground_service_release(var2, "Unable to start service", var0);
+      val var2: Log = Log.INSTANCE;
+      val var1: java.lang.String = tag;
+      var2.w$foreground_service_release(var1, "Unable to start service", var0);
       INSTANCE.onCreateOrUpdateServiceFailed();
       return Unit.a;
    }
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$3`(): Unit {
-      val var0: Log = Log.INSTANCE;
-      val var1: java.lang.String = tag;
-      Log.w$foreground_service_release$default(var0, var1, "Couldn't start ForegroundService", null, 4, null);
+      val var1: Log = Log.INSTANCE;
+      val var0: java.lang.String = tag;
+      Log.w$foreground_service_release$default(var1, var0, "Couldn't start ForegroundService", null, 4, null);
       INSTANCE.onCreateOrUpdateServiceFailed();
       return Unit.a;
    }
@@ -130,9 +130,9 @@ public object ForegroundServiceManager {
    private fun handleDestroyService(op: com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.Destroy) {
       val var2: ReactApplicationContext = var1.getContextRef().get();
       if (var2 == null) {
-         val var6: Log = Log.INSTANCE;
-         val var8: java.lang.String = tag;
-         Log.i$foreground_service_release$default(var6, var8, "handleDestroyService context is null.", null, 4, null);
+         val var8: Log = Log.INSTANCE;
+         val var6: java.lang.String = tag;
+         Log.i$foreground_service_release$default(var8, var6, "handleDestroyService context is null.", null, 4, null);
       } else {
          val var4: Service;
          if (serviceRef != null) {
@@ -142,9 +142,9 @@ public object ForegroundServiceManager {
          }
 
          if (var4 == null) {
-            val var7: Log = Log.INSTANCE;
-            val var5: java.lang.String = tag;
-            Log.i$foreground_service_release$default(var7, var5, "handleDestroyService service is null.", null, 4, null);
+            val var5: Log = Log.INSTANCE;
+            val var7: java.lang.String = tag;
+            Log.i$foreground_service_release$default(var5, var7, "handleDestroyService service is null.", null, 4, null);
             this.handleNextOperation();
          } else {
             ForegroundService.Companion.stop(var2, var4);
@@ -397,10 +397,10 @@ public object ForegroundServiceManager {
       // 003: ldc_w "foregroundService"
       // 006: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 009: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 00c: astore 6
+      // 00c: astore 7
       // 00e: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 011: astore 7
-      // 013: aload 7
+      // 011: astore 6
+      // 013: aload 6
       // 015: ldc "tag"
       // 017: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 01a: bipush 0
@@ -424,8 +424,8 @@ public object ForegroundServiceManager {
       // 03d: iload 3
       // 03e: invokevirtual java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;
       // 041: pop
-      // 042: aload 6
-      // 044: aload 7
+      // 042: aload 7
+      // 044: aload 6
       // 046: aload 5
       // 048: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 04b: aconst_null
@@ -447,11 +447,11 @@ public object ForegroundServiceManager {
       // 06d: astore 5
       // 06f: aload 5
       // 071: ifnonnull 09a
-      // 074: aload 7
+      // 074: aload 6
       // 076: ldc "tag"
       // 078: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 07b: aload 6
-      // 07d: aload 7
+      // 07b: aload 7
+      // 07d: aload 6
       // 07f: ldc_w "No CreateOrUpdate op in memory. Stopping the service."
       // 082: aconst_null
       // 083: bipush 4
@@ -468,11 +468,11 @@ public object ForegroundServiceManager {
       // 097: goto 0f5
       // 09a: aload 2
       // 09b: ifnonnull 0bd
-      // 09e: aload 7
+      // 09e: aload 6
       // 0a0: ldc "tag"
       // 0a2: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0a5: aload 6
-      // 0a7: aload 7
+      // 0a5: aload 7
+      // 0a7: aload 6
       // 0a9: ldc_w "Attempting to recover service."
       // 0ac: aconst_null
       // 0ad: bipush 4
@@ -484,11 +484,11 @@ public object ForegroundServiceManager {
       // 0b8: bipush 1
       // 0b9: istore 3
       // 0ba: goto 0f5
-      // 0bd: aload 7
+      // 0bd: aload 6
       // 0bf: ldc "tag"
       // 0c1: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0c4: aload 6
-      // 0c6: aload 7
+      // 0c4: aload 7
+      // 0c6: aload 6
       // 0c8: ldc_w "Promoting service to foreground."
       // 0cb: aconst_null
       // 0cc: bipush 4

@@ -5903,25 +5903,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Kan niet wachten op...",
-  "np9mf3": "Huidige obsessie",
-  "f+PyDw": "Vraag van de dag",
-  "Zx7N1t": "Aanbeveling nodig",
-  "+KXSFh": [
-    "Gepersonaliseerd statuslabel verwijderen: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Gepersonaliseerd statuslabel instellen als ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Eurekamomentje onder de douche",
   "TS3eJS": [
     [
       6,
@@ -5962,15 +5943,12 @@
   "l3pZcn": "Wat is je hot take?",
   "SluNa2": "Wat is je nieuwste hobby?",
   "ylzor6": "Waar luister je naar?",
-  "UZ5AQk": "Waar kijk je naar uit?",
   "1TlHw8": "Welke emoji gebruik je het vaakst de laatste tijd?",
   "45r7ub": "Kies een mythisch wezen als huisdier",
   "/Zm5VV": "Wat is je favoriete NPC-metgezel?",
   "r5TNm5": "Wat heb je gespeeld?",
-  "nLMBxM": "Wat wil je vandaag vragen?",
   "nXJgjo": "Zojuist een rang gestegen in...",
   "pYQRnJ": "Wat heb je de laatste tijd gelezen?",
-  "lneQf3": "Waar wil je aanbevelingen voor?",
   "Wf8fxM": "Eurekamomentje onder de douche?",
   "S7UJ0t": "Welke liedje bleef het laatst in je hoofd hangen?",
   "Vok4QU": "Als je leven een themaliedje zou hebben...",
@@ -5982,8 +5960,6 @@
   "/UonHB": "Gepersonaliseerde status instellen",
   "Iuzg8f": "Je status instellen",
   "zOdg0N": "Status",
-  "hA60Ul": "Laat je status opvallen met een vooraf ingestelde tag",
-  "jrzHRk": "Gepersonaliseerde-statustags",
   "GQmLra": "Vandaag",
   "bI7n9v": [
     "Morgen om ",
@@ -22589,13 +22565,6 @@
   "zz1Tfn": "We hebben de detectie van spraakactiviteit uitgeschakeld om de telefoonprestaties te verbeteren.",
   "zlvNOj": "Automatisch (volgt systeeminstellingen)",
   "wFpwSk": "Automatisch",
-  "qGQDio": [
-    [
-      1,
-      "username"
-    ],
-    " een cadeau geven:"
-  ],
   "8XT6NT": "Cadeauduur",
   "hYoGUF": [
     "Door op 'Cadeau kopen' te klikken ga je akkoord met de ",
@@ -31417,7 +31386,6 @@
   "+LXBxc": "Tik om pingen van oorspronkelijke auteur in te schakelen.",
   "p9jC2t": "AAN",
   "PBgTSE": "Tik om pingen van oorspronkelijke auteur uit te schakelen.",
-  "E+6SSU": "Klik om de opdracht te zien",
   "Xxm5i4": "Tik om het bericht te zien",
   "XAkOo6": "Geblokkeerd bericht",
   "mE3KJC": "Oorspronkelijk bericht verwijderd",
@@ -31425,7 +31393,6 @@
   "1i+hMj": "Bericht kan niet worden geladen",
   "JAKsMz": "Tik om bijlage te zien",
   "7K5LmZ": "Tik om sticker te zien",
-  "XC3A5+": "Klik om het spraakbericht te zien",
   "6bhHra": "Tik om het spraakbericht te zien",
   "+78Pfn": "Rapporteren",
   "FOptFR": [

@@ -128,11 +128,11 @@ public data class PollAnswer(answerId: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.answerId.hashCode();
-      val var7: Int = this.pollMedia.hashCode();
-      val var8: Int = java.lang.Boolean.hashCode(this.didSelfVote);
-      val var5: Int = this.votes.hashCode();
-      val var4: Int = Integer.hashCode(this.votesPercentage);
+      val var7: Int = this.answerId.hashCode();
+      val var6: Int = this.pollMedia.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.didSelfVote);
+      val var4: Int = this.votes.hashCode();
+      val var8: Int = Integer.hashCode(this.votesPercentage);
       var var3: Int = 0;
       val var1: Int;
       if (this.isSelected == null) {
@@ -152,38 +152,38 @@ public data class PollAnswer(answerId: String,
          var3 = this.shouldAnimateTransition.hashCode();
       }
 
-      return (((((((var6 * 31 + var7) * 31 + var8) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
+      return (((((((var7 * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.answerId;
-      val var10: PollMedia = this.pollMedia;
+      val var3: java.lang.String = this.answerId;
+      val var4: PollMedia = this.pollMedia;
       val var2: Boolean = this.didSelfVote;
-      val var8: java.lang.String = this.votes;
+      val var9: java.lang.String = this.votes;
       val var1: Int = this.votesPercentage;
-      val var5: java.lang.Boolean = this.isSelected;
-      val var9: java.lang.Boolean = this.isVictor;
-      val var3: java.lang.Boolean = this.shouldAnimateTransition;
-      val var4: java.lang.String = this.style;
+      val var8: java.lang.Boolean = this.isSelected;
+      val var7: java.lang.Boolean = this.isVictor;
+      val var10: java.lang.Boolean = this.shouldAnimateTransition;
+      val var5: java.lang.String = this.style;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PollAnswer(answerId=");
-      var6.append(var7);
+      var6.append(var3);
       var6.append(", pollMedia=");
-      var6.append(var10);
+      var6.append(var4);
       var6.append(", didSelfVote=");
       var6.append(var2);
       var6.append(", votes=");
-      var6.append(var8);
+      var6.append(var9);
       var6.append(", votesPercentage=");
       var6.append(var1);
       var6.append(", isSelected=");
-      var6.append(var5);
+      var6.append(var8);
       var6.append(", isVictor=");
-      var6.append(var9);
+      var6.append(var7);
       var6.append(", shouldAnimateTransition=");
-      var6.append(var3);
+      var6.append(var10);
       var6.append(", style=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }

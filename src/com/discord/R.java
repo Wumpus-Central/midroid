@@ -87,6 +87,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_calendarplusicon;
       public static int design_components_icon_native_redesign_generated_images_cameraicon;
       public static int design_components_icon_native_redesign_generated_images_cameraswapicon;
+      public static int design_components_icon_native_redesign_generated_images_candyicon;
       public static int design_components_icon_native_redesign_generated_images_channellisticon;
       public static int design_components_icon_native_redesign_generated_images_channellistmagnifyingglassicon;
       public static int design_components_icon_native_redesign_generated_images_channelnotificationicon;
@@ -281,6 +282,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_shopicon;
       public static int design_components_icon_native_redesign_generated_images_shopsparkleicon;
       public static int design_components_icon_native_redesign_generated_images_signposticon;
+      public static int design_components_icon_native_redesign_generated_images_skullicon;
       public static int design_components_icon_native_redesign_generated_images_slashboxicon;
       public static int design_components_icon_native_redesign_generated_images_slashicon;
       public static int design_components_icon_native_redesign_generated_images_soundboardicon;
@@ -293,7 +295,6 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_stampicon;
       public static int design_components_icon_native_redesign_generated_images_staricon;
       public static int design_components_icon_native_redesign_generated_images_staroutlineicon;
-      public static int design_components_icon_native_redesign_generated_images_starshootingicon;
       public static int design_components_icon_native_redesign_generated_images_stickericon;
       public static int design_components_icon_native_redesign_generated_images_stickerplusicon;
       public static int design_components_icon_native_redesign_generated_images_superreactionicon;
@@ -1351,7 +1352,6 @@ public final class R {
       public static int modules_self_mod_inappropriate_conversation_images_vibing_wumpus_rings;
       public static int modules_self_mod_inappropriate_conversation_images_wumpus_exclamation;
       public static int modules_self_mod_inappropriate_conversation_images_wumpus_lightbulb;
-      public static int modules_self_mod_shared_images_safety_banner;
       public static int modules_self_mod_stranger_danger_images_ic_thumbsdown;
       public static int modules_self_mod_stranger_danger_images_ic_thumbsup;
       public static int modules_stage_channels_native_images_audience_welcome;

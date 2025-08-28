@@ -5887,25 +5887,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Kan ikke vente til",
-  "np9mf3": "Nuværende betagelse",
-  "f+PyDw": "Dagens spørgsmål",
-  "Zx7N1t": "Anbefaling behøves",
-  "+KXSFh": [
-    "Fjern brugerdefineret statusmærke: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Indstil brugerdefineret statusetiket til ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Pludselig tanke",
   "TS3eJS": [
     [
       6,
@@ -5946,15 +5927,12 @@
   "l3pZcn": "Hvad er din brandvarme anbefaling?",
   "SluNa2": "Seneste hobby?",
   "ylzor6": "Hvad har du lyttet til?",
-  "UZ5AQk": "Hvad ser du frem til?",
   "1TlHw8": "Mest benyttet emoji på det seneste?",
   "45r7ub": "Vælg et mytisk væsen som kæledyr",
   "/Zm5VV": "Gør til NPC-følgesvend til favorit?",
   "r5TNm5": "Hvad har du spillet?",
-  "nLMBxM": "Hvad vil du spørge om i dag?",
   "nXJgjo": "Lige rykket op i ...",
   "pYQRnJ": "Hvad har du læst på det seneste?",
-  "lneQf3": "Hvad vil du gerne have anbefalinger til?",
   "Wf8fxM": "Pludselig tanke?",
   "S7UJ0t": "Seneste sang, du ikke kunne få ud af det hoved?",
   "Vok4QU": "Hvis dit liv havde en kendingsmelodi ...",
@@ -5966,8 +5944,6 @@
   "/UonHB": "Indstil en brugerdefineret status",
   "Iuzg8f": "Sæt din status",
   "zOdg0N": "Status",
-  "hA60Ul": "Få din status til at skille sig ud med et forudindstillet tag",
-  "jrzHRk": "Tags i brugerdefineret status",
   "GQmLra": "I dag",
   "bI7n9v": [
     "I morgen kl. ",
@@ -22651,14 +22627,6 @@
   "zz1Tfn": "Vi deaktiverede detektering af stemmeaktivitet for at forbedre telefonens ydeevne.",
   "zlvNOj": "Automatisk (følger systemindstillinger)",
   "wFpwSk": "Automatisk",
-  "qGQDio": [
-    "Giv ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Gaves varighed",
   "hYoGUF": [
     "Ved at klikke på ”Køb gave” accepterer du ",
@@ -31485,7 +31453,6 @@
   "+LXBxc": "Tryk for at aktivere ping af den oprindelige forfatter.",
   "p9jC2t": "TIL",
   "PBgTSE": "Tryk for at deaktivere ping af den oprindelige forfatter.",
-  "E+6SSU": "Klik for at se kommando",
   "Xxm5i4": "Tryk for at se meddelelse",
   "XAkOo6": "Blokeret besked",
   "mE3KJC": "Den originale besked blev slettet",
@@ -31493,7 +31460,6 @@
   "1i+hMj": "Besked kunne ikke indlæses",
   "JAKsMz": "Klik for at se vedhæftelse",
   "7K5LmZ": "Klik for at se sticker",
-  "XC3A5+": "Klik for at se talebesked",
   "6bhHra": "Tryk for at se talebesked",
   "+78Pfn": "Anmeld",
   "FOptFR": [

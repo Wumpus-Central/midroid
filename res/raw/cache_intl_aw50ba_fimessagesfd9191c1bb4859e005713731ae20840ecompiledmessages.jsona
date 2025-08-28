@@ -5890,25 +5890,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "En malta odottaa tätä",
-  "np9mf3": "Nykyinen pakkomielle",
-  "f+PyDw": "Päivän kysymys",
-  "Zx7N1t": "Suositus tarvitaan",
-  "+KXSFh": [
-    "Poista mukautettu tila: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Aseta mukautetuksi tilaksi ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Suihkuajatus",
   "TS3eJS": [
     [
       6,
@@ -5949,15 +5930,12 @@
   "l3pZcn": "Onko sinulla jotain ärhäkkää mielipidettä?",
   "SluNa2": "Mikä on uusin harrastuksesi?",
   "ylzor6": "Mitä olet kuunnellut?",
-  "UZ5AQk": "Mitä odotat?",
   "1TlHw8": "Viime aikoina eniten käyttämäsi emoji?",
   "45r7ub": "Valitse myyttinen olento lemmikiksi",
   "/Zm5VV": "Mieleisin NPC-kumppani?",
   "r5TNm5": "Mitä olet pelannut viime aikoina?",
-  "nLMBxM": "Mitä haluat kysyä tänään?",
   "nXJgjo": "Nostin juuri tasoani tässä...",
   "pYQRnJ": "Mitä olet lukenut viime aikoina?",
-  "lneQf3": "Mistä haluat suosituksia?",
   "Wf8fxM": "Onko sinulla suihkuajatuksia?",
   "S7UJ0t": "Viimeisin päähän soimaan jäänyt korvamato?",
   "Vok4QU": "Jos elämälläsi olisi tunnuslaulu...",
@@ -5969,8 +5947,6 @@
   "/UonHB": "Aseta mukautettu tila",
   "Iuzg8f": "Aseta oma tilasi",
   "zOdg0N": "Tila",
-  "hA60Ul": "Tee tilatiedostasi erottuva esiasetetulla tunnisteella",
-  "jrzHRk": "Mukautetut tilatunnisteet",
   "GQmLra": "Tänään",
   "bI7n9v": [
     "Huomenna klo ",
@@ -22585,14 +22561,6 @@
   "zz1Tfn": "Puhelimen suorituskykyä on parannettu poistamalla äänten tunnistus käytöstä.",
   "zlvNOj": "Automaattinen (järjestelmän asetusten mukainen)",
   "wFpwSk": "Automaattinen",
-  "qGQDio": [
-    "Lahjoita käyttäjälle ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Lahjan kesto",
   "hYoGUF": [
     "Valitsemalla ”Osta lahja” hyväksyt ",
@@ -31431,7 +31399,6 @@
   "+LXBxc": "Ota ping-ilmoitukset alkuperäiselle kirjoittajalle käyttöön napauttamalla.",
   "p9jC2t": "Päällä",
   "PBgTSE": "Poista ping-ilmoitukset alkuperäiselle kirjoittajalle käytöstä napauttamalla.",
-  "E+6SSU": "Katso komento napsauttamalla",
   "Xxm5i4": "Katso viesti napauttamalla",
   "XAkOo6": "Estetty viesti",
   "mE3KJC": "Alkuperäinen viesti on poistettu",
@@ -31439,7 +31406,6 @@
   "1i+hMj": "Viestiä ei voitu ladata",
   "JAKsMz": "Katso liite napauttamalla",
   "7K5LmZ": "Katso tarra napauttamalla",
-  "XC3A5+": "Katso ääniviesti klikkaamalla",
   "6bhHra": "Katso ääniviesti napauttamalla",
   "+78Pfn": "Ilmianna",
   "FOptFR": [

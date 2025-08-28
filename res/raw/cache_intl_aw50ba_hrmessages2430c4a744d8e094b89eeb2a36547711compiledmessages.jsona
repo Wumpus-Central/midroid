@@ -6036,25 +6036,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Ne mogu dočekati",
-  "np9mf3": "Trenutačna opsesija",
-  "f+PyDw": "Pitanje dana",
-  "Zx7N1t": "Potrebna je preporuka",
-  "+KXSFh": [
-    "Ukloni prilagođenu oznaku statusa: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Postavi prilagođenu oznaku statusa na ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Iznenadna ideja",
   "TS3eJS": [
     [
       6,
@@ -6101,15 +6082,12 @@
   "l3pZcn": "Koja je tvoja prva reakcija?",
   "SluNa2": "Najsvježiji hobi?",
   "ylzor6": "Što slušaš?",
-  "UZ5AQk": "Čemu se veseliš?",
   "1TlHw8": "Koji si emoji najviše koristio/la u posljednje vrijeme?",
   "45r7ub": "Odaberi mistično stvorenje kao ljubimca",
   "/Zm5VV": "Koji ti je omiljeni NPC suputnik?",
   "r5TNm5": "Što si u zadnje vrijeme igrao/la?",
-  "nLMBxM": "Što želiš pitati danas?",
   "nXJgjo": "Upravo samo ostvario/la napredak u...",
   "pYQRnJ": "Što si u zadnje vrijeme čitao/la?",
-  "lneQf3": "U vezi čega želiš preporuke?",
   "Wf8fxM": "Sinula ti je ideja?",
   "S7UJ0t": "Koja ti je pjesma posljednja ušla u uho?",
   "Vok4QU": "Ako bi tvoj život pratila neka tematska pjesma...",
@@ -6121,8 +6099,6 @@
   "/UonHB": "Postavi prilagođeni status",
   "Iuzg8f": "Postavi svoj status",
   "zOdg0N": "Status",
-  "hA60Ul": "Istakni svoj status unaprijed postavljenim tagom",
-  "jrzHRk": "Prilagođeni tagovi statusa",
   "GQmLra": "Danas",
   "bI7n9v": [
     "Sutra u ",
@@ -23214,14 +23190,6 @@
   "zz1Tfn": "Onemogućili smo prepoznavanje glasovne aktivnosti kako bi telefon radio bolje.",
   "zlvNOj": "Automatski (bit će isto kao postavka sustava)",
   "wFpwSk": "Automatski",
-  "qGQDio": [
-    "Dar korisniku ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Trajanje dara",
   "hYoGUF": [
     "Klikneš li „Kupi dar”, prihvaćaš ",
@@ -32494,7 +32462,6 @@
   "+LXBxc": "Dodirni da omogućiš pinganje izvornog autora.",
   "p9jC2t": "UKLJ.",
   "PBgTSE": "Dodirni da onemogućiš pinganje izvornog autora.",
-  "E+6SSU": "Klikni za prikazivanje naredbe",
   "Xxm5i4": "Dodirni da vidiš poruku",
   "XAkOo6": "Blokirana poruka",
   "mE3KJC": "Izvorna je poruka izbrisana",
@@ -32502,7 +32469,6 @@
   "1i+hMj": "Poruka se nije mogla učitati",
   "JAKsMz": "Dodirni kako bi se prilog prikazao",
   "7K5LmZ": "Dodirni da bi vidio naljepnicu",
-  "XC3A5+": "Klikni za prikaz glasovne poruke",
   "6bhHra": "Dodirni za prikaz glasovne poruke",
   "+78Pfn": "Prijavi",
   "FOptFR": [

@@ -5861,26 +5861,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Sabırsızlıkla beklediğim şey...",
-  "np9mf3": "Mevcut takıntı",
-  "f+PyDw": "Günün Sorusu",
-  "Zx7N1t": "Öneri gerekiyor",
-  "+KXSFh": [
-    "Özel durum etiketini kaldır: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Özel durum etiketini ",
-    [
-      1,
-      "label"
-    ],
-    " olarak ayarla"
-  ],
-  "45vlm5": "Bir anda esen düşünceler",
   "TS3eJS": [
     [
       6,
@@ -5921,15 +5901,12 @@
   "l3pZcn": "Senin tartışmalı fikrin nedir?",
   "SluNa2": "En yeni hobin ne?",
   "ylzor6": "Ne dinliyorsun?",
-  "UZ5AQk": "Neyi sabırsızlıkla bekliyorsun?",
   "1TlHw8": "Son zamanlarda en çok kullandığın emoji hangisi?",
   "45r7ub": "Evcil hayvanı olması için efsanevi bir yaratık seç",
   "/Zm5VV": "Favori NPC yoldaşın hangisi?",
   "r5TNm5": "Neler oynuyorsun?",
-  "nLMBxM": "Bugün ne sormak istiyorsun?",
   "nXJgjo": "Şunda rütbe atladım...",
   "pYQRnJ": "Neler okuyorsun?",
-  "lneQf3": "Ne için öneri almak istersin?",
   "Wf8fxM": "Bir anda esen düşünceler mi?",
   "S7UJ0t": "Aklına takılan son şarkı hangisi?",
   "Vok4QU": "Hayatının bir tema şarkısı olsaydı...",
@@ -5941,8 +5918,6 @@
   "/UonHB": "Bir özel durum belirle",
   "Iuzg8f": "Durumunu ayarla",
   "zOdg0N": "Durum",
-  "hA60Ul": "Önceden ayarlanmış bir etiketle durumunu öne çıkar",
-  "jrzHRk": "Özel durum etiketleri",
   "GQmLra": "Bugün",
   "bI7n9v": [
     "Yarın saat ",
@@ -22613,13 +22588,6 @@
   "zz1Tfn": "Telefon performansını arttırmak için ses etkinliği algılamayı devre dışı bıraktık.",
   "zlvNOj": "Otomatik (sistem ayarlarını uygular)",
   "wFpwSk": "Otomatik",
-  "qGQDio": [
-    [
-      1,
-      "username"
-    ],
-    " kişisine hediye et:"
-  ],
   "8XT6NT": "Hediye süresi",
   "hYoGUF": [
     "\"",
@@ -31386,7 +31354,6 @@
   "+LXBxc": "İlk yazardan bahsetmeyi açmak için dokun.",
   "p9jC2t": "AÇIK",
   "PBgTSE": "İlk yazardan bahsetmeyi kapatmak için dokun.",
-  "E+6SSU": "Komutu görmek için tıkla",
   "Xxm5i4": "Mesajı görmek için dokun",
   "XAkOo6": "Engellenen mesaj",
   "mE3KJC": "Orijinal mesaj silinmiş",
@@ -31394,7 +31361,6 @@
   "1i+hMj": "Mesaj yüklenemedi",
   "JAKsMz": "Eki görmek için dokun",
   "7K5LmZ": "Çıkartmayı görmek için dokun",
-  "XC3A5+": "Sesli mesajı görmek için tıkla",
   "6bhHra": "Sesli mesajı görmek için dokun",
   "+78Pfn": "Bildir",
   "FOptFR": [

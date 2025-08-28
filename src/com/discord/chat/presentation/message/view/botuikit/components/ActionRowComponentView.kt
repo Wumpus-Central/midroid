@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -55,9 +54,9 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
             CollectionsKt.u();
          }
 
-         val var9: Component = var8 as Component;
-         var8 = this.binding.actionRowComponentViewGroup;
-         var6.add(var2.getConfiguredComponentView(var9, var3, (ViewGroup)var8, var4));
+         var8 = var8 as Component;
+         val var9: FlexboxLayout = this.binding.actionRowComponentViewGroup;
+         var6.add(var2.getConfiguredComponentView((Component)var8, var3, var9, var4));
       }
 
       val var15: java.util.List = CollectionsKt.e0(var6);

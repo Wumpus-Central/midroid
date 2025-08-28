@@ -78,29 +78,29 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var7 = null;
       }
 
-      val var4: Pair = s.a("messageId", this.messageId);
-      val var3: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
+      val var3: Pair = s.a("messageId", this.messageId);
+      val var4: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
       val var5: Pair = s.a("reaction", var7);
       var var8: java.lang.Boolean = null;
       if (this.reaction != null) {
          var8 = this.reaction.isBurstReaction();
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, s.a("isBurst", var8));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, s.a("isBurst", var8));
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: ReactionView.Reaction = this.reaction;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressReactionData(messageId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", reaction=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressReactionData(messageId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var4);
+      var3.append(", reaction=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

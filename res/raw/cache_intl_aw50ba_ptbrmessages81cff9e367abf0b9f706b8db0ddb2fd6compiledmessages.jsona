@@ -5875,25 +5875,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Mal posso esperar por",
-  "np9mf3": "Obsessão atual",
-  "f+PyDw": "Pergunta do dia",
-  "Zx7N1t": "Recomendação necessária",
-  "+KXSFh": [
-    "Remover rótulo de status personalizado: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Definir rótulo de status personalizado para ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Pensamento de chuveiro",
   "TS3eJS": [
     [
       6,
@@ -5934,15 +5915,12 @@
   "l3pZcn": "Qual é a sua opinião mais polêmica?",
   "SluNa2": "Passatempo recente?",
   "ylzor6": "O que você tem ouvido?",
-  "UZ5AQk": "O que você está esperando ansiosamente?",
   "1TlHw8": "Emoji mais usado ultimamente?",
   "45r7ub": "Escolha uma criatura mítica como um animal de estimação",
   "/Zm5VV": "NPC favorito?",
   "r5TNm5": "O que você tem jogado?",
-  "nLMBxM": "O que você quer perguntar hoje?",
   "nXJgjo": "Acabei de subir de nível em...",
   "pYQRnJ": "O que você tem lido?",
-  "lneQf3": "Quais recomendações você gostaria?",
   "Wf8fxM": "Pensamento de chuveiro?",
   "S7UJ0t": "Última música que não sai da sua cabeça?",
   "Vok4QU": "Se a sua vida tivesse uma canção tema...",
@@ -5954,8 +5932,6 @@
   "/UonHB": "Definir status personalizado",
   "Iuzg8f": "Definir seu status",
   "zOdg0N": "Status",
-  "hA60Ul": "Faça seu status se destacar com uma tag predefinida",
-  "jrzHRk": "Tags de status personalizado",
   "GQmLra": "Hoje",
   "bI7n9v": [
     "Amanhã às ",
@@ -22560,14 +22536,6 @@
   "zz1Tfn": "Nós desativamos a Detecção de voz para melhorar a performance do telefone.",
   "zlvNOj": "Automático (segue as configurações do sistema)",
   "wFpwSk": "Automático",
-  "qGQDio": [
-    "Presentear ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Duração do presente",
   "hYoGUF": [
     "Ao tocar em “Comprar presente”, você concorda com os ",
@@ -31404,7 +31372,6 @@
   "+LXBxc": "Toque para habilitar a menção ao autor original.",
   "p9jC2t": "LIGADO",
   "PBgTSE": "Toque para desabilitar a menção ao autor original.",
-  "E+6SSU": "Clique para ver o comando",
   "Xxm5i4": "Toque para ver a mensagem",
   "XAkOo6": "Mensagem bloqueada",
   "mE3KJC": "A mensagem original foi excluída",
@@ -31412,7 +31379,6 @@
   "1i+hMj": "A mensagem não pôde ser carregada",
   "JAKsMz": "Toque para ver o anexo",
   "7K5LmZ": "Toque para ver a figurinha",
-  "XC3A5+": "Clique para ver mensagem de voz",
   "6bhHra": "Toque para ver mensagem de voz",
   "+78Pfn": "Denunciar",
   "FOptFR": [

@@ -5917,25 +5917,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Không thể đợi",
-  "np9mf3": "Sở hữu hiện tại",
-  "f+PyDw": "Câu hỏi mấu chốt",
-  "Zx7N1t": "Cần được đề xuất",
-  "+KXSFh": [
-    "Xóa nhãn trạng thái tùy chỉnh: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Cài đặt trạng thái tùy chỉnh thành ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Những suy nghĩ khi đi tắm",
   "TS3eJS": [
     [
       6,
@@ -5976,15 +5957,12 @@
   "l3pZcn": "Ý kiến gây tranh cãi của bạn là gì?",
   "SluNa2": "Sở thích mới nhất?",
   "ylzor6": "Gần đây bạn đang nghe gì?",
-  "UZ5AQk": "Bạn đang mong chờ điều gì vậy?",
   "1TlHw8": "Emoji được sử dụng nhiều nhất dạo gần đây?",
   "45r7ub": "Chọn một sinh vật thần thoại làm thú cưng",
   "/Zm5VV": "Bạn đồng hành NPC ưa thích?",
   "r5TNm5": "Gần đây bạn đang chơi gì?",
-  "nLMBxM": "Bạn muốn hỏi gì hôm nay?",
   "nXJgjo": "Vừa thăng hạng trong...",
   "pYQRnJ": "Gần đây bạn đang đọc gì?",
-  "lneQf3": "Bạn muốn chúng tôi đề xuất gì cho bạn?",
   "Wf8fxM": "Những suy nghĩ khi đi tắm?",
   "S7UJ0t": "Bài hát ấn tượng gần nhất đối với bạn?",
   "Vok4QU": "Nếu cuộc sống của bạn có một bài nhạc nền...",
@@ -5996,8 +5974,6 @@
   "/UonHB": "Đặt trạng thái tùy chỉnh",
   "Iuzg8f": "Thiết lập trạng thái của bạn",
   "zOdg0N": "Trạng Thái",
-  "hA60Ul": "Khiến trạng thái của bạn trở nên nổi bật với một số nhận diện thiết lập sẵn",
-  "jrzHRk": "Tùy chỉnh số nhận diện trạng thái",
   "GQmLra": "Hôm nay",
   "bI7n9v": [
     "Ngày mai lúc ",
@@ -22605,14 +22581,6 @@
   "zz1Tfn": "Chúng tôi đã tắt tính năng phát hiện giọng nói để cải thiện chất lượng cuộc gọi.",
   "zlvNOj": "Tự động (sử dụng cài đặt hệ thống)",
   "wFpwSk": "Tự động",
-  "qGQDio": [
-    "Tặng ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Thời lượng quà tặng",
   "hYoGUF": [
     "Khi nhấn vào “Mua Quà”, bạn đồng ý với ",
@@ -31452,7 +31420,6 @@
   "+LXBxc": "Nhấn để bật tính năng ping tác giả gốc.",
   "p9jC2t": "BẬT",
   "PBgTSE": "Nhấn để tắt tính năng ping tác giả gốc.",
-  "E+6SSU": "Nhấn để xem câu lệnh",
   "Xxm5i4": "Nhấn để xem tin nhắn",
   "XAkOo6": "Tin nhắn bị chặn",
   "mE3KJC": "Tin nhắn gốc đã bị xóa",
@@ -31460,7 +31427,6 @@
   "1i+hMj": "Không tải được tin nhắn",
   "JAKsMz": "Nhấn để xem tệp đính kèm",
   "7K5LmZ": "Nhấn để xem nhãn dán",
-  "XC3A5+": "Ấn để xem tin nhắn thoại",
   "6bhHra": "Nhấn để xem tin nhắn thoại",
   "+78Pfn": "Báo cáo",
   "FOptFR": [

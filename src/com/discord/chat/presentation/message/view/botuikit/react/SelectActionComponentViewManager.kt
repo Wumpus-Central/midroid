@@ -70,10 +70,10 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
    public fun setModel(view: SelectComponentView, model: ReadableMap) {
       var var3: Boolean;
       try {
-         val var5: Json = ComponentDeserializerKt.getJson();
-         val var19: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var19: Json = ComponentDeserializerKt.getJson();
+         val var5: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var15 = var5.b(var19, var14) as Component;
+         var15 = var19.b(var5, var14) as Component;
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();
@@ -92,13 +92,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       } else {
          try {
             val var11: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Expected ");
-            var21.append(var11);
-            var21.append(" but got ");
-            var21.append(var17);
-            throw new IllegalStateException(var21.toString().toString());
+            val var21: java.lang.String = (var15.getClass()::class).getSimpleName();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Expected ");
+            var17.append(var11);
+            var17.append(" but got ");
+            var17.append(var21);
+            throw new IllegalStateException(var17.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (SelectComponent::class).getSimpleName();
             val var16: java.lang.String = var7.getMessage();

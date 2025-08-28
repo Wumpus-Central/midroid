@@ -5882,25 +5882,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Gleder meg til",
-  "np9mf3": "Opphengt i",
-  "f+PyDw": "Dagens spørsmål",
-  "Zx7N1t": "Anbefaling søkes",
-  "+KXSFh": [
-    "Fjern egendefinert statusetikett: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Angi egendefinert statusetikett til ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Dusjtanke",
   "TS3eJS": [
     [
       6,
@@ -5941,15 +5922,12 @@
   "l3pZcn": "Hva mener du?",
   "SluNa2": "Ny hobby?",
   "ylzor6": "Hva har du hørt på i det siste?",
-  "UZ5AQk": "Hva gleder du deg til?",
   "1TlHw8": "Mest brukte emoji i det siste?",
   "45r7ub": "Velg et mytisk vesen til kjæledyr",
   "/Zm5VV": "Beste NPC-ledsager?",
   "r5TNm5": "Hva spiller du for tiden?",
-  "nLMBxM": "Hva vil du spørre om i dag?",
   "nXJgjo": "Steg i gradene i …",
   "pYQRnJ": "Hva leser du for tiden?",
-  "lneQf3": "Hva ønsker du anbefalinger om?",
   "Wf8fxM": "Dusjtanke?",
   "S7UJ0t": "Forrige sang du fikk på hjernen?",
   "Vok4QU": "Hvis livet ditt hadde en kjenningsmelodi …",
@@ -5961,8 +5939,6 @@
   "/UonHB": "Angi egendefinert status",
   "Iuzg8f": "Angi status",
   "zOdg0N": "Status",
-  "hA60Ul": "Få statusen din til å skille seg ut med en forhåndsinnstilt tagg",
-  "jrzHRk": "Tagger med egendefinert status",
   "GQmLra": "I dag",
   "bI7n9v": [
     "I morgen ",
@@ -22520,14 +22496,6 @@
   "zz1Tfn": "Vi har deaktivert gjenkjenning av stemmeaktivitet for å forbedre telefonytelsen.",
   "zlvNOj": "Automatisk (følger systeminnstillingene)",
   "wFpwSk": "Automatisk",
-  "qGQDio": [
-    "Gi ",
-    [
-      1,
-      "username"
-    ],
-    " i gave:"
-  ],
   "8XT6NT": "Gavens varighet",
   "hYoGUF": [
     "Ved å trykke på «Kjøp gave» godtar du ",
@@ -31341,7 +31309,6 @@
   "+LXBxc": "Trykk for å aktivere pinging av opphavspersonen.",
   "p9jC2t": "PÅ",
   "PBgTSE": "Trykk for å deaktivere pinging av opphavspersonen.",
-  "E+6SSU": "Klikk for å se kommandoen",
   "Xxm5i4": "Trykk for å se meldingen",
   "XAkOo6": "Blokkert melding",
   "mE3KJC": "Den opprinnelige meldingen ble slettet",
@@ -31349,7 +31316,6 @@
   "1i+hMj": "Meldingen kunne ikke lastes inn",
   "JAKsMz": "Trykk for å se vedlegget",
   "7K5LmZ": "Trykk for å se klistremerke",
-  "XC3A5+": "Klikk for å se talemeldingen",
   "6bhHra": "Trykk for å se talemeldingen",
   "+78Pfn": "Rapporter",
   "FOptFR": [

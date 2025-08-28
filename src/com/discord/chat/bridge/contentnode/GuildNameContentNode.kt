@@ -66,18 +66,18 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.content;
-      val var4: java.lang.String = this.icon;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GuildNameContentNode(guildId=");
-      var1.append(var3);
-      var1.append(", content=");
-      var1.append(var2);
-      var1.append(", icon=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.content;
+      val var3: java.lang.String = this.icon;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GuildNameContentNode(guildId=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var1);
+      var4.append(", icon=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

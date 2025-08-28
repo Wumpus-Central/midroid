@@ -6109,25 +6109,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Nie mogę się doczekać...",
-  "np9mf3": "Bieżąca obsesja",
-  "f+PyDw": "Pytanie dnia",
-  "Zx7N1t": "Potrzebne rekomendacje",
-  "+KXSFh": [
-    "Usuń etykietę statusu własnego: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Ustaw etykietę statusu własnego na ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Przemyślenia pod prysznicem",
   "TS3eJS": [
     [
       6,
@@ -6168,15 +6149,12 @@
   "l3pZcn": "O czym myślisz?",
   "SluNa2": "Najnowsze hobby?",
   "ylzor6": "Czego ostatnio słuchasz?",
-  "UZ5AQk": "Na co się cieszysz?",
   "1TlHw8": "Najczęściej używane ostatnio emoji?",
   "45r7ub": "Wybierz mityczne stworzenie, które chcesz mieć jako zwierzaka",
   "/Zm5VV": "Ulubiony towarzysz NPC?",
   "r5TNm5": "W co ostatnio grasz?",
-  "nLMBxM": "O co chcesz dzisiaj zapytać?",
   "nXJgjo": "Awansowałem(-am) właśnie w...",
   "pYQRnJ": "Co ostatnio czytasz?",
-  "lneQf3": "Jakie rekomendacje chcesz otrzymać?",
   "Wf8fxM": "Masz przemyślenia pod prysznicem?",
   "S7UJ0t": "Ostatnia piosenka, która utkwiła Ci w głowie?",
   "Vok4QU": "Gdyby Twoje życie miało piosenkę przewodnią...",
@@ -6188,8 +6166,6 @@
   "/UonHB": "Ustaw status własny",
   "Iuzg8f": "Ustaw status",
   "zOdg0N": "Status",
-  "hA60Ul": "Wyróżnij swój status wstępnie skonfigurowanym tagiem",
-  "jrzHRk": "Tagi statusu własnego",
   "GQmLra": "Dzisiaj",
   "bI7n9v": [
     "Jutro o ",
@@ -23151,14 +23127,6 @@
   "zz1Tfn": "Wyłączyliśmy aktywność głosową, by poprawić wydajność telefonu.",
   "zlvNOj": "Automatyczny (według ustawień systemowych)",
   "wFpwSk": "Automatyczny",
-  "qGQDio": [
-    "Podaruj użytkownikowi ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
   "8XT6NT": "Czas trwania prezentu",
   "hYoGUF": [
     "Klikając „Kup prezent”, wyrażasz zgodę na ",
@@ -32389,7 +32357,6 @@
   "+LXBxc": "Stuknij, by włączyć pingowanie oryginalnego autora.",
   "p9jC2t": "WŁ.",
   "PBgTSE": "Stuknij, by wyłączyć pingowanie oryginalnego autora.",
-  "E+6SSU": "Kliknij, aby zobaczyć polecenie",
   "Xxm5i4": "Stuknij, aby wyświetlić wiadomość",
   "XAkOo6": "Zablokowana wiadomość",
   "mE3KJC": "Oryginalna wiadomość została usunięta",
@@ -32397,7 +32364,6 @@
   "1i+hMj": "Nie mogliśmy załadować wiadomości",
   "JAKsMz": "Dotknij, aby zobaczyć załącznik",
   "7K5LmZ": "Dotknij, aby zobaczyć naklejkę",
-  "XC3A5+": "Kliknij, aby odtworzyć wiadomość głosową",
   "6bhHra": "Stuknij, aby odtworzyć wiadomość głosową",
   "+78Pfn": "Zgłoś",
   "FOptFR": [

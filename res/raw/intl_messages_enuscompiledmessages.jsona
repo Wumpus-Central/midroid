@@ -5973,25 +5973,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Can’t wait for",
-  "np9mf3": "Current obsession",
-  "f+PyDw": "Question of the day",
-  "Zx7N1t": "Recommendation needed",
-  "+KXSFh": [
-    "Remove custom status label: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Set custom status label to ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Shower thought",
   "TS3eJS": [
     [
       6,
@@ -6032,15 +6013,12 @@
   "l3pZcn": "What’s your hot take?",
   "SluNa2": "Latest hobby?",
   "ylzor6": "What have you been listening to?",
-  "UZ5AQk": "What are you looking forward to?",
   "1TlHw8": "Most used emoji lately?",
   "45r7ub": "Pick a mythical creature as a pet",
   "/Zm5VV": "Favorite NPC companion?",
   "r5TNm5": "What have you been playing?",
-  "nLMBxM": "What do you want to ask today?",
   "nXJgjo": "Just ranked up in...",
   "pYQRnJ": "What have you been reading?",
-  "lneQf3": "What would you like recommendations for?",
   "Wf8fxM": "Shower thought?",
   "S7UJ0t": "Last song stuck in your head?",
   "Vok4QU": "If your life had a theme song...",
@@ -6052,8 +6030,6 @@
   "/UonHB": "Set a custom status",
   "Iuzg8f": "Set your status",
   "zOdg0N": "Status",
-  "hA60Ul": "Make your status stand out with a preset tag",
-  "jrzHRk": "Custom status tags",
   "GQmLra": "Today",
   "bI7n9v": [
     "Tomorrow at ",
@@ -6650,25 +6626,41 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
-  "bp8vRE": "Set your personalized signature reaction emoji. You can change this any time.",
+  "bp8vRE": "Double tap any message to react instantly. You can personalize your default reaction emoji anytime.",
   "tdsiOz": "Change Default",
-  "5Uf/y8": [
-    "Double tap to :",
-    [
-      1,
-      "emojiName"
-    ],
-    ":"
-  ],
+  "F6lRAA": "Double tap to React",
   "QPJJKy": [
-    "Double tap any message to react with :",
+    "React with ",
     [
-      1,
-      "emojiName"
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
     ],
-    ": instantly. Or, tap here to set another default emoji."
+    " instantly. Or, tap here to set another default emoji."
   ],
-  "rY+31d": "Double tap to react quicker",
+  "rY+31d": "Double tap to react",
+  "nKY0Fh": [
+    "All done! Double tap to ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ]
+  ],
   "1WjMbG": "Download",
   "GmSvdH": "No answers selected.",
   "E2ICbG": "Answers",
@@ -10279,6 +10271,8 @@
     " of them."
   ],
   "Rp0+ZG": "Choose Your Free Reward",
+  "baye/P": "Treat",
+  "XtIgwc": "Trick",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -23220,14 +23214,7 @@
   "zz1Tfn": "We disabled voice activity detection to improve phone performance.",
   "zlvNOj": "Automatic (follows system settings)",
   "wFpwSk": "Automatic",
-  "qGQDio": [
-    "Gift ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
+  "NlkxGR": "Gift to:",
   "8XT6NT": "Gift duration",
   "hYoGUF": [
     "By tapping “Buy gift”, you agree to the ",
@@ -32198,7 +32185,7 @@
   "+LXBxc": "Tap to enable pinging the original author.",
   "p9jC2t": "ON",
   "PBgTSE": "Tap to disable pinging the original author.",
-  "E+6SSU": "Click to see command",
+  "2v7kfn": "Tap to see command",
   "Xxm5i4": "Tap to see message",
   "XAkOo6": "Blocked message",
   "mE3KJC": "Original message was deleted",
@@ -32206,7 +32193,6 @@
   "1i+hMj": "Message could not be loaded",
   "JAKsMz": "Tap to see attachment",
   "7K5LmZ": "Tap to see sticker",
-  "XC3A5+": "Click to see voice message",
   "6bhHra": "Tap to see voice message",
   "+78Pfn": "Report",
   "FOptFR": [
@@ -34296,8 +34282,7 @@
   "N4YDam": "App Icon",
   "k4W40N": "Inbox",
   "H9XOl5": "Messages",
-  "96WKND": "Default Emoji",
-  "h1ejNj": "Double Tap to React",
+  "96WKND": "Double tap to react emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
   "xERCnZ": [

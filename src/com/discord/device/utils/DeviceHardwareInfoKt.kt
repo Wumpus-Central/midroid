@@ -316,11 +316,11 @@ internal fun maxCpuFreq(): String {
 }
 
 internal fun ramSize(context: Context): String {
-   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
-   val var3: ActivityManager = var4 as ActivityManager;
-   var4 = new MemoryInfo();
-   var3.getMemoryInfo(var4);
-   val var1: Double = var4.totalMem / 1.0737418E9F;
+   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
+   var4 = var4;
+   val var3: MemoryInfo = new MemoryInfo();
+   var4.getMemoryInfo(var3);
+   val var1: Double = var3.totalMem / 1.0737418E9F;
    val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    return var7;
@@ -337,12 +337,12 @@ internal fun socName(): String {
       }
 
       val var1: java.lang.String = a.a();
-      var0 = b.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var1);
-      var2.append("_");
-      var2.append(var0);
-      return var2.toString();
+      val var2: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var1);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }
