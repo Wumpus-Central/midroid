@@ -100,29 +100,29 @@ public object ForegroundServiceManager {
    fun `handleCreateOrUpdateService$lambda$2`(var0: ServiceNotificationConfiguration.Type, var1: ReactApplicationContext): Unit {
       val var2: Log = Log.INSTANCE;
       val var3: java.lang.String = tag;
-      val var5: java.lang.String = var0.name();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Create or update service with configuration type ");
-      var4.append(var5);
-      Log.i$foreground_service_release$default(var2, var3, var4.toString(), null, 4, null);
+      val var4: java.lang.String = var0.name();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Create or update service with configuration type ");
+      var5.append(var4);
+      Log.i$foreground_service_release$default(var2, var3, var5.toString(), null, 4, null);
       ForegroundService.Companion.start(var1, new d());
       return Unit.a;
    }
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2$lambda$1`(var0: Exception): Unit {
-      val var2: Log = Log.INSTANCE;
-      val var1: java.lang.String = tag;
-      var2.w$foreground_service_release(var1, "Unable to start service", var0);
+      val var1: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
+      var1.w$foreground_service_release(var2, "Unable to start service", var0);
       INSTANCE.onCreateOrUpdateServiceFailed();
       return Unit.a;
    }
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$3`(): Unit {
-      val var1: Log = Log.INSTANCE;
-      val var0: java.lang.String = tag;
-      Log.w$foreground_service_release$default(var1, var0, "Couldn't start ForegroundService", null, 4, null);
+      val var0: Log = Log.INSTANCE;
+      val var1: java.lang.String = tag;
+      Log.w$foreground_service_release$default(var0, var1, "Couldn't start ForegroundService", null, 4, null);
       INSTANCE.onCreateOrUpdateServiceFailed();
       return Unit.a;
    }
@@ -350,14 +350,14 @@ public object ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 2
+      // 05: astore 1
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 1
-      // 0a: aload 1
+      // 09: astore 2
+      // 0a: aload 2
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 2
-      // 11: aload 1
+      // 10: aload 1
+      // 11: aload 2
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4
@@ -569,14 +569,14 @@ public object ForegroundServiceManager {
 
          public override fun toString(): String {
             val var1: WeakReference = this.contextRef;
-            val var2: java.util.List = this.serviceConfigurations;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("CreateOrUpdate(contextRef=");
-            var3.append(var1);
-            var3.append(", serviceConfigurations=");
-            var3.append(var2);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.util.List = this.serviceConfigurations;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("CreateOrUpdate(contextRef=");
+            var2.append(var1);
+            var2.append(", serviceConfigurations=");
+            var2.append(var3);
+            var2.append(")");
+            return var2.toString();
          }
       }
 

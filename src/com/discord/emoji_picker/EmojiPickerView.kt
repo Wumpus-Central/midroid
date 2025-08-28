@@ -152,29 +152,63 @@ internal class EmojiPickerView(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemsChanged(position: Int?, count: Int?) {
+      val var3: Boolean = this.isComputingLayout();
+      val var5: java.lang.String;
       if (var1 != null) {
          if (var2 != null) {
             this.getTypedAdapter().notifyItemRangeChanged(var1, var2);
+            var5 = "rangeChanged";
          } else {
             this.getTypedAdapter().notifyItemChanged(var1);
+            var5 = "itemChanged";
          }
       } else {
          this.getTypedAdapter().notifyDataSetChanged();
+         var5 = "setChanged";
       }
 
       try {
          ViewMeasureExtensionsKt.measureAndLayout(this);
-      } catch (var6: Exception) {
-         val var5: CrashReporting = CrashReporting.INSTANCE;
-         val var4: Boolean = this.isInViewTransition;
-         val var3: Boolean = this.isAttachedToWindow();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("About to crash from EmojiPickerView. isInViewTransition: ");
-         var7.append(var4);
-         var7.append(". isAttached: ");
-         var7.append(var3);
-         CrashReporting.addBreadcrumb$default(var5, var7.toString(), null, null, 6, null);
-         throw var6;
+      } catch (var15: Exception) {
+         var var7: Pair;
+         var var8: Pair;
+         var var9: Pair;
+         var var11: CrashReporting;
+         var var12: Pair;
+         var var13: Pair;
+         var var14: Pair;
+         label31: {
+            var11 = CrashReporting.INSTANCE;
+            var7 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
+            var8 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
+            var12 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var3));
+            var13 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
+            var9 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
+            var14 = B9.s.a("adapterTypeChange", var5);
+            if (var1 != null) {
+               val var6: java.lang.String = var1.toString();
+               var16 = var6;
+               if (var6 != null) {
+                  break label31;
+               }
+            }
+
+            var16 = "null";
+         }
+
+         val var19: Pair = B9.s.a("position", var16);
+         var var17: java.lang.String = "null";
+         if (var2 != null) {
+            var17 = var2.toString();
+            if (var17 == null) {
+               var17 = "null";
+            }
+         }
+
+         CrashReporting.addBreadcrumb$default(
+            var11, "About to crash from EmojiPickerView.", L.l(new Pair[]{var7, var8, var12, var13, var9, var14, var19, B9.s.a("count", var17)}), null, 4, null
+         );
+         throw var15;
       }
    }
 
@@ -300,9 +334,9 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var3: Context = this.getContext();
-      var2.setUseTier0UpsellContent(var3, var1);
+      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var2: Context = this.getContext();
+      var3.setUseTier0UpsellContent(var2, var1);
    }
 
    public open fun startViewTransition(view: View?) {
