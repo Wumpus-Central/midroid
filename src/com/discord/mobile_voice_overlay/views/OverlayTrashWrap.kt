@@ -48,7 +48,7 @@ public class OverlayTrashWrap : OverlayView {
       this.setVisibility(4);
       var6.trashWrapTargetContainer.setActivated(false);
       val var7: AnimatorSet = new AnimatorSet();
-      var var3: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
+      val var3: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
       var3.setTarget(this);
       var var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
       var10.setTarget(var6.trashWrapTargetZone);
@@ -74,13 +74,13 @@ public class OverlayTrashWrap : OverlayView {
          }
       });
       this.showAnimator = var7;
-      val var8: AnimatorSet = new AnimatorSet();
-      var3 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var3.setTarget(this);
-      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var10.setTarget(var6.trashWrapTargetZone);
-      var8.playTogether(new Animator[]{var3, var10});
-      var8.addListener(new AnimatorListener(this) {
+      val var9: AnimatorSet = new AnimatorSet();
+      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      val var8: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var8.setTarget(var6.trashWrapTargetZone);
+      var9.playTogether(new Animator[]{var10, var8});
+      var9.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -100,7 +100,7 @@ public class OverlayTrashWrap : OverlayView {
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.hideAnimator = var8;
+      this.hideAnimator = var9;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }
@@ -117,13 +117,13 @@ public class OverlayTrashWrap : OverlayView {
       this.setBackgroundResource(R.drawable.trash_bg);
       this.setVisibility(4);
       var6.trashWrapTargetContainer.setActivated(false);
-      val var3: AnimatorSet = new AnimatorSet();
-      val var8: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
-      var8.setTarget(this);
-      val var11: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
+      val var8: AnimatorSet = new AnimatorSet();
+      val var3: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
+      var3.setTarget(this);
+      var var11: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
       var11.setTarget(var6.trashWrapTargetZone);
-      var3.playTogether(new Animator[]{var8, var11});
-      var3.addListener(new AnimatorListener(this) {
+      var8.playTogether(new Animator[]{var3, var11});
+      var8.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -143,83 +143,13 @@ public class OverlayTrashWrap : OverlayView {
             this.this$0.setVisibility(0);
          }
       });
-      this.showAnimator = var3;
-      val var12: AnimatorSet = new AnimatorSet();
+      this.showAnimator = var8;
+      val var10: AnimatorSet = new AnimatorSet();
       val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
       var9.setTarget(this);
-      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var10.setTarget(var6.trashWrapTargetZone);
-      var12.playTogether(new Animator[]{var9, var10});
-      var12.addListener(new AnimatorListener(this) {
-         final OverlayTrashWrap this$0;
-
-         {
-            this.this$0 = var1;
-         }
-
-         public void onAnimationCancel(Animator var1) {
-         }
-
-         public void onAnimationEnd(Animator var1) {
-            this.this$0.setVisibility(4);
-         }
-
-         public void onAnimationRepeat(Animator var1) {
-         }
-
-         public void onAnimationStart(Animator var1) {
-         }
-      });
-      this.hideAnimator = var12;
-      this.trashZoneRect = new Rect();
-      this.locationOnScreen = new int[]{0, 0};
-   }
-
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
-      val var6: WindowUtils = WindowUtils.INSTANCE;
-      val var8: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
-      var8.width = -1;
-      var8.gravity = 81;
-      var6.addFlag(var8, 16);
-      this.windowLayoutParams = var8;
-      val var7: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      this.binding = var7;
-      this.setBackgroundResource(R.drawable.trash_bg);
-      this.setVisibility(4);
-      var7.trashWrapTargetContainer.setActivated(false);
-      val var4: AnimatorSet = new AnimatorSet();
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
-      var9.setTarget(this);
-      var var12: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
-      var12.setTarget(var7.trashWrapTargetZone);
-      var4.playTogether(new Animator[]{var9, var12});
-      var4.addListener(new AnimatorListener(this) {
-         final OverlayTrashWrap this$0;
-
-         {
-            this.this$0 = var1;
-         }
-
-         public void onAnimationCancel(Animator var1) {
-         }
-
-         public void onAnimationEnd(Animator var1) {
-         }
-
-         public void onAnimationRepeat(Animator var1) {
-         }
-
-         public void onAnimationStart(Animator var1) {
-            this.this$0.setVisibility(0);
-         }
-      });
-      this.showAnimator = var4;
-      val var10: AnimatorSet = new AnimatorSet();
-      var12 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var12.setTarget(this);
-      val var11: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var11.setTarget(var7.trashWrapTargetZone);
-      var10.playTogether(new Animator[]{var12, var11});
+      var11 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var11.setTarget(var6.trashWrapTargetZone);
+      var10.playTogether(new Animator[]{var9, var11});
       var10.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
@@ -241,6 +171,76 @@ public class OverlayTrashWrap : OverlayView {
          }
       });
       this.hideAnimator = var10;
+      this.trashZoneRect = new Rect();
+      this.locationOnScreen = new int[]{0, 0};
+   }
+
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
+      val var6: WindowUtils = WindowUtils.INSTANCE;
+      val var8: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
+      var8.width = -1;
+      var8.gravity = 81;
+      var6.addFlag(var8, 16);
+      this.windowLayoutParams = var8;
+      val var7: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
+      this.binding = var7;
+      this.setBackgroundResource(R.drawable.trash_bg);
+      this.setVisibility(4);
+      var7.trashWrapTargetContainer.setActivated(false);
+      val var9: AnimatorSet = new AnimatorSet();
+      var var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
+      var4.setTarget(this);
+      val var12: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
+      var12.setTarget(var7.trashWrapTargetZone);
+      var9.playTogether(new Animator[]{var4, var12});
+      var9.addListener(new AnimatorListener(this) {
+         final OverlayTrashWrap this$0;
+
+         {
+            this.this$0 = var1;
+         }
+
+         public void onAnimationCancel(Animator var1) {
+         }
+
+         public void onAnimationEnd(Animator var1) {
+         }
+
+         public void onAnimationRepeat(Animator var1) {
+         }
+
+         public void onAnimationStart(Animator var1) {
+            this.this$0.setVisibility(0);
+         }
+      });
+      this.showAnimator = var9;
+      val var13: AnimatorSet = new AnimatorSet();
+      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      var4 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var4.setTarget(var7.trashWrapTargetZone);
+      var13.playTogether(new Animator[]{var10, var4});
+      var13.addListener(new AnimatorListener(this) {
+         final OverlayTrashWrap this$0;
+
+         {
+            this.this$0 = var1;
+         }
+
+         public void onAnimationCancel(Animator var1) {
+         }
+
+         public void onAnimationEnd(Animator var1) {
+            this.this$0.setVisibility(4);
+         }
+
+         public void onAnimationRepeat(Animator var1) {
+         }
+
+         public void onAnimationStart(Animator var1) {
+         }
+      });
+      this.hideAnimator = var13;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }

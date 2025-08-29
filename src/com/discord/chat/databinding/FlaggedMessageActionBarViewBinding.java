@@ -30,15 +30,15 @@ public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
    @NonNull
    public static FlaggedMessageActionBarViewBinding bind(@NonNull View var0) {
       int var1 = R.id.actions_button;
-      DCDButton var4 = (DCDButton)a.a(var0, var1);
-      if (var4 != null) {
+      DCDButton var3 = (DCDButton)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.feedback_button;
-         DCDButton var3 = (DCDButton)a.a(var0, var1);
-         if (var3 != null) {
+         DCDButton var4 = (DCDButton)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.separator_dot;
             ImageView var2 = (ImageView)a.a(var0, var1);
             if (var2 != null) {
-               return new FlaggedMessageActionBarViewBinding(var0, var4, var3, var2);
+               return new FlaggedMessageActionBarViewBinding(var0, var3, var4, var2);
             }
          }
       }

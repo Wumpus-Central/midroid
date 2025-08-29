@@ -185,34 +185,34 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
       }
 
       val var8: MessageView.ChainPart = this.onChainPart.invoke() as MessageView.ChainPart;
-      var var3: Boolean = true;
+      var var4: Boolean = true;
       if (var8 != MessageView.ChainPart.MIDDLE) {
          if (var8 === MessageView.ChainPart.START) {
-            var3 = true;
+            var4 = true;
          } else {
-            var3 = false;
+            var4 = false;
          }
       }
 
-      val var14: Int;
+      val var13: Int;
       if (var7) {
-         var14 = 0;
+         var13 = 0;
       } else {
-         var14 = SizeUtilsKt.getDpToPx(8);
+         var13 = SizeUtilsKt.getDpToPx(8);
       }
 
       var var5: Int = 0;
       if (var11) {
          var5 = 0;
-         if (var3) {
+         if (var4) {
             var5 = SizeUtilsKt.getDpToPx(4);
          }
       }
 
       val var9: LayoutParams = this.binding.accessoriesView.getLayoutParams();
       val var10: MarginLayoutParams = var9 as MarginLayoutParams;
-      if ((var9 as MarginLayoutParams).topMargin != var14 || (var9 as MarginLayoutParams).bottomMargin != var5) {
-         var10.setMargins(var10.leftMargin, var14, var10.rightMargin, var5);
+      if ((var9 as MarginLayoutParams).topMargin != var13 || (var9 as MarginLayoutParams).bottomMargin != var5) {
+         var10.setMargins(var10.leftMargin, var13, var10.rightMargin, var5);
          this.binding.accessoriesView.setLayoutParams(var10);
       }
    }
@@ -534,13 +534,13 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
 
       val var65: StructurableText = var1.getContent();
       if (var65 != null && var65.getHasContent() && var1.getType() != MessageType.CUSTOM_GIFT) {
-         val var19: ArrayList = this.accessories;
+         val var20: ArrayList = this.accessories;
          val var66: java.lang.String = var1.getId-3Eiw7ao();
-         val var20: StructurableText = var1.getContent();
-         val var14: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var19: StructurableText = var1.getContent();
+         val var16: Boolean = MessageKt.shouldAnimateEmoji(var1);
          val var17: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var15: Boolean = var1.getShouldShowRoleDot();
-         val var16: Boolean = var1.getShouldShowRoleOnName();
+         val var14: Boolean = var1.getShouldShowRoleOnName();
          val var9: Int = this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
          val var21: Int = var1.getLinkColor();
          val var8: Int;
@@ -572,14 +572,14 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
             var6 = ThemeManagerKt.getTheme().getTextMuted();
          }
 
-         var19.add(
+         var20.add(
             new MessageContentAccessory(
                var66,
-               var20,
-               var14,
+               var19,
+               var16,
                var17,
                var15,
-               var16,
+               var14,
                var9,
                var8,
                var6,
@@ -625,19 +625,19 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
          }
 
          val var103: java.lang.Iterable = CollectionsKt.Z0(var1.getAttachments());
-         val var89: ArrayList = new ArrayList();
          val var70: ArrayList = new ArrayList();
+         val var89: ArrayList = new ArrayList();
 
          for (Object var114 : var103) {
             if (((var114 as IndexedValue).d() as Attachment).type() != AttachmentType.Image
                && ((var114 as IndexedValue).d() as Attachment).type() != AttachmentType.Video) {
-               var70.add(var114);
-            } else {
                var89.add(var114);
+            } else {
+               var70.add(var114);
             }
          }
 
-         val var71: Pair = new Pair(var89, var70);
+         val var71: Pair = new Pair(var70, var89);
          val var105: java.util.List = var71.a() as java.util.List;
          val var115: java.util.List = var71.b() as java.util.List;
          if (!var105.isEmpty() && var2.getUseAttachmentGridLayout()) {
@@ -657,15 +657,15 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
             val var11: Long = var1.getChannelId-o4g7jtM();
             val var23: ArrayList = new ArrayList(CollectionsKt.v(var105, 10));
 
-            for (IndexedValue var91 : var105) {
+            for (IndexedValue var106 : var105) {
                var23.add(
                   CreateAttachmentAccessoryKt.createAttachmentAccessory(
-                     var91.d() as Attachment,
+                     var106.d() as Attachment,
                      var1,
-                     var91.c(),
+                     var106.c(),
                      var5,
                      this.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius),
-                     (var91.d() as Attachment).getVerifyAge()
+                     (var106.d() as Attachment).getVerifyAge()
                   )
                );
             }
@@ -689,10 +689,10 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
 
          val var73: ArrayList = this.accessories;
 
-         for (IndexedValue var109 : var115) {
+         for (IndexedValue var93 : var115) {
             var73.add(
                CreateAttachmentAccessoryKt.createAttachmentAccessory(
-                  var109.d() as Attachment, var1, var109.c(), var5, var7, (var109.d() as Attachment).getVerifyAge()
+                  var93.d() as Attachment, var1, var93.c(), var5, var7, (var93.d() as Attachment).getVerifyAge()
                )
             );
          }
@@ -747,7 +747,7 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
                CollectionsKt.u();
             }
 
-            val var97: Embed = var79 as Embed;
+            val var80: Embed = var79 as Embed;
             this.accessories
                .add(
                   new EmbedMessageAccessory(
@@ -768,13 +768,13 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
                      null
                   )
                );
-            if (var97.getObscureOrNull() != null) {
+            if (var80.getObscureOrNull() != null) {
                val var122: ArrayList = this.accessories;
                val var116: java.lang.String = var1.getId-3Eiw7ao();
                val var62: Long = var1.getChannelId-o4g7jtM();
-               var79 = var97.getId();
-               if (var79 != null && !StringsKt.c0((java.lang.CharSequence)var79)) {
-                  var79 = var97.getId();
+               var var97: java.lang.String = var80.getId();
+               if (var97 != null && !StringsKt.c0(var97)) {
+                  var79 = var80.getId();
                } else {
                   var79 = new StringBuilder();
                   var79.append("index_");
@@ -782,12 +782,12 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
                   var79 = var79.toString();
                }
 
-               var var98: java.lang.String = var1.getObscureLearnMoreLabel();
-               if (var98 == null) {
-                  var98 = "";
+               var97 = var1.getObscureLearnMoreLabel();
+               if (var97 == null) {
+                  var97 = "";
                }
 
-               var122.add(new InfoLinkMessageAccessory(var116, var62, null, (java.lang.String)var79, var98, ReactAsset.Info, null));
+               var122.add(new InfoLinkMessageAccessory(var116, var62, null, (java.lang.String)var79, var97, ReactAsset.Info, null));
             }
          }
       }
@@ -896,9 +896,9 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
          }
 
          var13 = var2.getCanAddNewReactions();
-         val var123: java.lang.String = var2.getAddReactionLabel();
-         val var124: java.lang.String = var2.getAddNewReactionAccessibilityLabel();
-         val var24: ReactionsTheme = var2.getReactionsTheme();
+         val var24: java.lang.String = var2.getAddReactionLabel();
+         val var123: java.lang.String = var2.getAddNewReactionAccessibilityLabel();
+         val var124: ReactionsTheme = var2.getReactionsTheme();
          val var101: Int;
          if (var46 == "embed") {
             var101 = 0;
@@ -906,7 +906,7 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
             var101 = null;
          }
 
-         var112.add(new ReactionsMessageAccessory(var117, var87, var13, var123, var124, var24, null, var46, var101, 64, null));
+         var112.add(new ReactionsMessageAccessory(var117, var87, var13, var24, var123, var124, null, var46, var101, 64, null));
       }
 
       val var47: ActivityInviteEmbed = var1.getActivityInviteEmbed();
@@ -1264,19 +1264,19 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
       NestedScrollOnTouchUtilsKt.setOnDoubleClickListenerNested(this, true, var31);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(this, true, var25);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var30);
-      val var33: java.util.List = this.generateMessageAccessories(var1, var2, var3, var4.getOnMessageLongPressed());
-      val var18: MessageAccessoriesView = this.binding.accessoriesView;
+      val var18: java.util.List = this.generateMessageAccessories(var1, var2, var3, var4.getOnMessageLongPressed());
+      val var32: MessageAccessoriesView = this.binding.accessoriesView;
       val var19: java.lang.String = var1.getId-3Eiw7ao();
       val var12: Long = var1.getChannelId-o4g7jtM();
-      val var32: GuildId = var1.getGuildId-qOKuAAo();
+      val var33: GuildId = var1.getGuildId-qOKuAAo();
       if (var1.getForwardInfo() != null) {
          var7 = true;
       } else {
          var7 = false;
       }
 
-      var18.setAccessories-mFdI1tY(var19, var12, var32, var33, var4, var5, var2, var8, var7);
-      this.configureAccessoriesMargin(var33);
+      var32.setAccessories-mFdI1tY(var19, var12, var33, var18, var4, var5, var2, var8, var7);
+      this.configureAccessoriesMargin(var18);
       this.configureCommunicationDisabled(var1.getCommunicationDisabled() == java.lang.Boolean.TRUE, var16);
       this.configureSuppressNotifications(MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.SUPPRESS_NOTIFICATIONS), var4, var16);
       if (var2.getContextType() === MessageContextType.SEARCH) {

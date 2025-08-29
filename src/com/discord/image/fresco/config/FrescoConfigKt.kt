@@ -30,33 +30,33 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
-   val var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   var var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var6: Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
    val var3: a = C.n();
-   val var5: F = o.a();
-   val var4: Builder = var6.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var6: F = o.a();
+   val var4: Builder = var1.X(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var5: android.net.Uri.Builder = var1.buildUpon();
-            var5.clearQuery();
+            val var2: android.net.Uri.Builder = var1.buildUpon();
+            var2.clearQuery();
 
             for (java.lang.String var3 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
-                  val var4: java.util.Iterator = var1.getQueryParameters(var3).iterator();
+                  val var5: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var4.hasNext()) {
-                     var5.appendQueryParameter(var3, var4.next() as java.lang.String);
+                  while (var5.hasNext()) {
+                     var2.appendQueryParameter(var3, var5.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var5.build();
+            var1 = var2.build();
             return var1;
          }
       }

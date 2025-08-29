@@ -174,7 +174,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    public fun configure(component: SelectComponent, componentContext: ComponentContext) {
-      val var10: java.lang.String = var1.getPlaceholder();
+      var var10: java.lang.String = var1.getPlaceholder();
       this.configureWidth(var2);
       var var11: View = this.binding.getRoot();
       var var5: Byte = 4;
@@ -219,27 +219,27 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var21: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var12: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
                            val var13: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           val var35: java.lang.String = var21.getIconSrc();
-                           val var12: Int = var21.getIconColor();
+                           var10 = var12.getIconSrc();
+                           val var35: Int = var12.getIconColor();
                            val var16: Boolean;
-                           if (var21.getType() === SelectOptionType.USER) {
+                           if (var12.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var13, var35, var12, var16);
+                           this.setImage(var13, var10, var35, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;
                         }
                      }
 
-                     val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                     var22.setVisibility(8);
+                     val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     var21.setVisibility(8);
                   }
                }
             }

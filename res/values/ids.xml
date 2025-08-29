@@ -72,6 +72,7 @@
     <item type="id" name="action_row_component_view_group" />
     <item type="id" name="action_row_component_view_group_error_row" />
     <item type="id" name="action_text" />
+    <item type="id" name="action_wrapper" />
     <item type="id" name="actions" />
     <item type="id" name="actions_button" />
     <item type="id" name="actions_container" />

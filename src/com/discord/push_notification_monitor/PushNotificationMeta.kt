@@ -97,10 +97,10 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = java.lang.Long.hashCode(this.receivedTimestamp);
+      val var6: Int = java.lang.Long.hashCode(this.receivedTimestamp);
       val var4: Int = java.lang.Boolean.hashCode(this.silent);
-      val var6: Int = this.type.hashCode();
-      val var5: Int = this.title.hashCode();
+      val var5: Int = this.type.hashCode();
+      val var7: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -120,7 +120,7 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var7 * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var6 * 31 + var4) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {

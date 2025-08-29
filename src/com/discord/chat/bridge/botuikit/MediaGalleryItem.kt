@@ -263,8 +263,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var3 = this.obscureDescription.hashCode();
       }
 
-      val var13: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
-      val var12: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
+      val var12: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var13: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var4: Int;
       if (this.verifyAge == null) {
          var4 = 0;
@@ -280,8 +280,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var5 = this.description.hashCode();
       }
 
-      val var15: Int = this.descriptionHint.hashCode();
-      val var16: Int = this.accessibilityRole.hashCode();
+      val var16: Int = this.descriptionHint.hashCode();
+      val var15: Int = this.accessibilityRole.hashCode();
       if (this.portalIdString != null) {
          var6 = this.portalIdString.hashCode();
       }
@@ -307,10 +307,10 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                                                                  + var3
                                                                            )
                                                                            * 31
-                                                                        + var13
+                                                                        + var12
                                                                   )
                                                                   * 31
-                                                               + var12
+                                                               + var13
                                                          )
                                                          * 31
                                                       + var4
@@ -322,67 +322,67 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                     + var5
                               )
                               * 31
-                           + var15
+                           + var16
                      )
                      * 31
-                  + var16
+                  + var15
             )
             * 31
          + var6;
    }
 
    public override fun toString(): String {
-      val var16: UnfurledMediaItem = this.media;
+      val var9: UnfurledMediaItem = this.media;
       val var13: MediaGalleryItemType = this.mediaType;
-      val var9: java.lang.String = this.videoPreviewUrl;
-      val var1: Boolean = this.isSpoiler;
-      val var15: java.lang.String = this.spoilerDescription;
-      val var4: Boolean = this.isObscure;
-      val var5: Boolean = this.isObscureAwaitingScan;
-      val var12: java.lang.String = this.obscureDescription;
-      val var3: Boolean = this.obscureHideControls;
+      val var16: java.lang.String = this.videoPreviewUrl;
+      val var5: Boolean = this.isSpoiler;
+      val var7: java.lang.String = this.spoilerDescription;
+      val var1: Boolean = this.isObscure;
+      val var4: Boolean = this.isObscureAwaitingScan;
+      val var11: java.lang.String = this.obscureDescription;
+      val var6: Boolean = this.obscureHideControls;
       val var2: Boolean = this.obscureIsOpaque;
-      val var8: java.lang.Boolean = this.verifyAge;
-      val var6: Boolean = this.showDescription;
-      val var11: java.lang.String = this.description;
-      val var7: java.lang.String = this.descriptionHint;
-      val var14: java.lang.String = this.accessibilityRole;
-      val var17: java.lang.String = this.portalIdString;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("MediaGalleryItem(media=");
-      var10.append(var16);
-      var10.append(", mediaType=");
-      var10.append(var13);
-      var10.append(", videoPreviewUrl=");
-      var10.append(var9);
-      var10.append(", isSpoiler=");
-      var10.append(var1);
-      var10.append(", spoilerDescription=");
-      var10.append(var15);
-      var10.append(", isObscure=");
-      var10.append(var4);
-      var10.append(", isObscureAwaitingScan=");
-      var10.append(var5);
-      var10.append(", obscureDescription=");
-      var10.append(var12);
-      var10.append(", obscureHideControls=");
-      var10.append(var3);
-      var10.append(", obscureIsOpaque=");
-      var10.append(var2);
-      var10.append(", verifyAge=");
-      var10.append(var8);
-      var10.append(", showDescription=");
-      var10.append(var6);
-      var10.append(", description=");
-      var10.append(var11);
-      var10.append(", descriptionHint=");
-      var10.append(var7);
-      var10.append(", accessibilityRole=");
-      var10.append(var14);
-      var10.append(", portalIdString=");
-      var10.append(var17);
-      var10.append(")");
-      return var10.toString();
+      val var17: java.lang.Boolean = this.verifyAge;
+      val var3: Boolean = this.showDescription;
+      val var8: java.lang.String = this.description;
+      val var10: java.lang.String = this.descriptionHint;
+      val var12: java.lang.String = this.accessibilityRole;
+      val var14: java.lang.String = this.portalIdString;
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("MediaGalleryItem(media=");
+      var15.append(var9);
+      var15.append(", mediaType=");
+      var15.append(var13);
+      var15.append(", videoPreviewUrl=");
+      var15.append(var16);
+      var15.append(", isSpoiler=");
+      var15.append(var5);
+      var15.append(", spoilerDescription=");
+      var15.append(var7);
+      var15.append(", isObscure=");
+      var15.append(var1);
+      var15.append(", isObscureAwaitingScan=");
+      var15.append(var4);
+      var15.append(", obscureDescription=");
+      var15.append(var11);
+      var15.append(", obscureHideControls=");
+      var15.append(var6);
+      var15.append(", obscureIsOpaque=");
+      var15.append(var2);
+      var15.append(", verifyAge=");
+      var15.append(var17);
+      var15.append(", showDescription=");
+      var15.append(var3);
+      var15.append(", description=");
+      var15.append(var8);
+      var15.append(", descriptionHint=");
+      var15.append(var10);
+      var15.append(", accessibilityRole=");
+      var15.append(var12);
+      var15.append(", portalIdString=");
+      var15.append(var14);
+      var15.append(")");
+      return var15.toString();
    }
 
    public companion object {

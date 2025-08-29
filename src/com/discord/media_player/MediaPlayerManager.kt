@@ -255,12 +255,12 @@ public object MediaPlayerManager {
                            return Unit.a;
                         }
 
-                        var5 = var6.getPlaybackRateFlow$media_player_release();
+                        val var19: MutableStateFlow = var6.getPlaybackRateFlow$media_player_release();
 
                         do {
-                           var26 = var5.getValue();
-                           val var19: Pair = var26 as Pair;
-                        } while (!var5.d(var26, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
+                           var26 = var19.getValue();
+                           var5 = var26 as Pair;
+                        } while (!var19.d(var26, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
 
                         return Unit.a;
                      }
@@ -362,13 +362,13 @@ public object MediaPlayerManager {
                   var15 = var1;
                }
 
-               val var25: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
+               val var9: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
 
-               val var20: Any;
+               val var25: Any;
                do {
-                  var20 = var25.getValue();
-                  val var9: Pair = var20 as Pair;
-               } while (!var25.d(var20, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
+                  var25 = var9.getValue();
+                  val var20: Pair = var25 as Pair;
+               } while (!var9.d(var25, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
 
                val var10: WeakReference = new WeakReference<>(this.$mediaPlayer);
                MediaPlayerManager.access$setActivePlayerRef$p(var10);

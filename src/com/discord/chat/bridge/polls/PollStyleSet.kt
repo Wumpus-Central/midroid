@@ -298,37 +298,37 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var9: Int = this.border;
+      val var7: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var6: Int = this.fill;
-      val var8: Int = this.label;
+      val var8: Int = this.fill;
+      val var3: Int = this.label;
       val var1: Float = this.opacity;
       val var4: Int = this.answerBackground;
-      val var11: Int = this.answerFill;
-      val var5: PollRadioStyle = this.radioStyle;
-      val var3: Int = this.radioBackground;
-      val var7: Int = this.radioForeground;
+      val var5: Int = this.answerFill;
+      val var9: PollRadioStyle = this.radioStyle;
+      val var11: Int = this.radioBackground;
+      val var6: Int = this.radioForeground;
       val var10: StringBuilder = new StringBuilder();
       var10.append("PollStyleSet(border=");
-      var10.append(var9);
+      var10.append(var7);
       var10.append(", borderWidth=");
       var10.append(var2);
       var10.append(", fill=");
-      var10.append(var6);
-      var10.append(", label=");
       var10.append(var8);
+      var10.append(", label=");
+      var10.append(var3);
       var10.append(", opacity=");
       var10.append(var1);
       var10.append(", answerBackground=");
       var10.append(var4);
       var10.append(", answerFill=");
-      var10.append(var11);
-      var10.append(", radioStyle=");
       var10.append(var5);
+      var10.append(", radioStyle=");
+      var10.append(var9);
       var10.append(", radioBackground=");
-      var10.append(var3);
+      var10.append(var11);
       var10.append(", radioForeground=");
-      var10.append(var7);
+      var10.append(var6);
       var10.append(")");
       return var10.toString();
    }

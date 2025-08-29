@@ -165,15 +165,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           var var43: Json = ChatModule.access$getJson$cp();
-                           val var5: java.lang.String = this.$rowsJSON;
+                           val var43: Json = ChatModule.access$getJson$cp();
+                           var1 = this.$rowsJSON;
                            var43.a();
-                           var64 = var43.b(new f(Row.Companion.serializer()), var5) as java.util.List;
+                           var64 = var43.b(new f(Row.Companion.serializer()), var1) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              var43 = ChatModule.access$getJson$cp();
-                              var1 = this.$scrollDataJSON;
-                              var43.a();
-                              var1 = var43.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
+                              val var23: Json = ChatModule.access$getJson$cp();
+                              val var44: java.lang.String = this.$scrollDataJSON;
+                              var23.a();
+                              var1 = var23.b(ChatScrollData.Companion.serializer(), var44) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -394,7 +394,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var32 = null;
                            }
 
-                           var var7: java.util.Iterator;
+                           var var8: java.util.Iterator;
                            var var9: java.util.List;
                            var var67: LinkedHashMap;
                            try {
@@ -412,7 +412,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  break label127;
                               }
 
-                              var7 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var8 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var56: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -443,15 +443,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            while (true) {
-                              var var8: Entry;
+                              var var7: Entry;
                               try {
-                                 if (!var7.hasNext()) {
+                                 if (!var8.hasNext()) {
                                     break;
                                  }
 
-                                 var8 = var7.next() as Entry;
-                                 if (var9.contains(var8.getKey())) {
-                                    var67.put(var8.getKey(), "<REDACTED>");
+                                 var7 = var8.next() as Entry;
+                                 if (var9.contains(var7.getKey())) {
+                                    var67.put(var7.getKey(), "<REDACTED>");
                                     continue;
                                  }
                               } catch (var17: Exception) {
@@ -484,7 +484,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               }
 
                               try {
-                                 var67.put(var8.getKey(), var8.getValue());
+                                 var67.put(var7.getKey(), var7.getValue());
                               } catch (var13: Exception) {
                                  val var60: CrashReporting = CrashReporting.INSTANCE;
                                  CrashReporting.addBreadcrumb$default(
@@ -581,11 +581,11 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
       private fun cancelCoroutineChildren() {
          val var3: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
-         val var1: java.lang.String = (ChatModule::class).getSimpleName();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var1);
-         var2.append(" invalidate()");
-         v.g(var3, new CancellationException(var2.toString()));
+         val var2: java.lang.String = (ChatModule::class).getSimpleName();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var2);
+         var1.append(" invalidate()");
+         v.g(var3, new CancellationException(var1.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
@@ -632,10 +632,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      c.b(var1);
                   } else {
                      c.b(var1);
-                     var1 = this.$block;
-                     val var4: ChatListManager = this.$manager;
+                     val var4: Function2 = this.$block;
+                     var1 = this.$manager;
                      this.label = 1;
-                     if (var1.invoke(var4, this) === var3) {
+                     if (var4.invoke(var1, this) === var3) {
                         return var3;
                      }
                   }

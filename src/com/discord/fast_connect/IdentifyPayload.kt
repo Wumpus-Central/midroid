@@ -80,27 +80,27 @@ internal object IdentifyPayload {
          return var1;
       } else {
          var7 = var17 as JsonObject;
-         var17 = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         val var12: Array<GuildVersion> = var2.getGuildVersions();
-         val var8: LinkedHashMap = new LinkedHashMap(d.d(L.d(var12.length), 16));
-         var var5: Int = var12.length;
+         val var8: java.util.List = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         var17 = var2.getGuildVersions();
+         val var12: LinkedHashMap = new LinkedHashMap(d.d(L.d(((Object[])var17).length), 16));
+         var var5: Int = ((Object[])var17).length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(var12[var3].getId(), g.c(var12[var3].getVersion()));
-            var8.put(var24.c(), var24.d());
+            val var24: Pair = s.a(((GuildVersion)((Object[])var17)[var3]).getId(), g.c(((GuildVersion)((Object[])var17)[var3]).getVersion()));
+            var12.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var7, (java.util.List<java.lang.String>)var17, new JsonObject(var8));
+         var var13: JsonObject = this.put((JsonObject)var7, var8, new JsonObject(var12));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var17 = var14[var15];
-            var7 = INSTANCE;
+            var7 = var14[var15];
+            var17 = INSTANCE;
             var13 = INSTANCE.put(
                var13,
-               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var17).getId()}),
-               ((IdentifyPayload)var7).toJson((NonGuildVersion)var17)
+               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var7).getId()}),
+               ((IdentifyPayload)var17).toJson((NonGuildVersion)var7)
             );
          }
 

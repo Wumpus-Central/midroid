@@ -78,22 +78,22 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.title;
-      val var1: StructurableText = this.subtitle;
-      val var3: java.lang.String = this.cta;
-      val var2: java.lang.String = this.icon;
-      val var4: java.lang.String = this.closeIcon;
+      val var1: java.lang.String = this.title;
+      val var3: StructurableText = this.subtitle;
+      val var5: java.lang.String = this.cta;
+      val var4: java.lang.String = this.icon;
+      val var2: java.lang.String = this.closeIcon;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PostSharePrompt(title=");
-      var6.append(var5);
-      var6.append(", subtitle=");
       var6.append(var1);
-      var6.append(", cta=");
+      var6.append(", subtitle=");
       var6.append(var3);
+      var6.append(", cta=");
+      var6.append(var5);
       var6.append(", icon=");
-      var6.append(var2);
-      var6.append(", closeIcon=");
       var6.append(var4);
+      var6.append(", closeIcon=");
+      var6.append(var2);
       var6.append(")");
       return var6.toString();
    }

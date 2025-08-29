@@ -101,20 +101,20 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       val var3: java.lang.String = this.name;
       val var5: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var6: java.lang.String = this.surrogates;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ComponentEmoji(id=");
-      var2.append(var4);
-      var2.append(", name=");
-      var2.append(var3);
-      var2.append(", src=");
-      var2.append(var5);
-      var2.append(", animated=");
-      var2.append(var1);
-      var2.append(", surrogates=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.surrogates;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ComponentEmoji(id=");
+      var6.append(var4);
+      var6.append(", name=");
+      var6.append(var3);
+      var6.append(", src=");
+      var6.append(var5);
+      var6.append(", animated=");
+      var6.append(var1);
+      var6.append(", surrogates=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -35,7 +35,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       onTapObscureToggle: (Boolean) -> Unit
    ) {
       val var30: Attachment = var2.getAttachment();
-      val var28: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var26: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -45,13 +45,13 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          }
       });
       val var22: Long = var2.getChannelId-o4g7jtM();
-      val var26: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var27: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var10: Int = var2.getAttachmentIndex();
-      val var27: java.lang.String = var30.getVideoUrl();
-      val var24: java.lang.String = var30.getUrl();
-      val var12: Int = var30.getWidth();
-      val var11: Int = var30.getHeight();
-      val var29: java.lang.String = var30.getPlaceholder();
+      val var28: java.lang.String = var30.getVideoUrl();
+      val var29: java.lang.String = var30.getUrl();
+      val var11: Int = var30.getWidth();
+      val var12: Int = var30.getHeight();
+      val var24: java.lang.String = var30.getPlaceholder();
       val var25: Int = var30.getPlaceholderVersion();
       val var13: Int = var2.getRadiusPx();
       val var18: Boolean = var30.isSpoiler();
@@ -97,13 +97,13 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
 
       super.bind-l_cVQvE(
          ChannelId.box-impl(var22),
-         var26,
-         var10,
          var27,
-         var24,
-         var11,
-         var12,
+         var10,
+         var28,
          var29,
+         var12,
+         var11,
+         var24,
          var25,
          var18,
          var40,
@@ -126,7 +126,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          },
          var13,
          var3 xor true,
-         var28,
+         var26,
          var3,
          var2.getHideMediaPlayButton(),
          var30.getAttachmentTagText(),
@@ -175,8 +175,8 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       var22.append(var2);
       var22.append(").item[image]");
       val var26: SpoilerAttributes = var23.forGenericMedia(var3, var1, var22.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
-      val var33: java.lang.String = var24.getProxyUrl();
-      var2 = var3.getVideoPreviewUrl();
+      var2 = var24.getProxyUrl();
+      val var33: java.lang.String = var3.getVideoPreviewUrl();
       val var34: Int = var24.getWidth();
       val var12: Int;
       if (var34 != null) {
@@ -196,7 +196,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       val var36: java.lang.String = var24.getPlaceholder();
       val var37: Int = var24.getPlaceholderVersion();
       val var14: Int = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
-      val var16: Boolean = var3.isSpoiler();
+      val var17: Boolean = var3.isSpoiler();
       val var27: SpoilerConfig;
       if (var26 != null) {
          var27 = var26.configure(var7, var8);
@@ -204,36 +204,36 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var27 = null;
       }
 
-      val var18: Boolean = var3.isObscure();
-      val var17: Boolean = var3.isObscureAwaitingScan();
-      val var21: Boolean = var3.getObscureHideControls();
+      val var19: Boolean = var3.isObscure();
+      val var16: Boolean = var3.isObscureAwaitingScan();
+      val var15: Boolean = var3.getObscureHideControls();
       val var20: Boolean = var3.getObscureIsOpaque();
-      val var19: Boolean = var3.getShowDescription();
+      val var18: Boolean = var3.getShowDescription();
       val var32: java.lang.String = var3.getDescription();
       val var25: java.lang.String = var3.getDescriptionHint();
-      val var15: Boolean = var3.getShowDescription();
+      val var21: Boolean = var3.getShowDescription();
       val var31: java.lang.String = var3.getAccessibilityRole();
       val var29: java.lang.Double = var3.getPortalId();
       super.bind-l_cVQvE(
          null,
          null,
          null,
-         var33,
          var2,
+         var33,
          var13,
          var12,
          var36,
          var37,
-         var16,
-         var27,
-         var18,
          var17,
-         var21,
-         var20,
+         var27,
          var19,
+         var16,
+         var15,
+         var20,
+         var18,
          var32,
          var25,
-         var15,
+         var21,
          var9,
          var14,
          var4 xor true,

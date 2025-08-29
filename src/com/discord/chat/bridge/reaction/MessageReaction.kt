@@ -95,11 +95,11 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.count);
-      val var3: Int = java.lang.Boolean.hashCode(this.me);
-      val var4: Int = java.lang.Boolean.hashCode(this.isMeBurst);
-      val var5: Int = this.emoji.hashCode();
-      val var6: Int = Integer.hashCode(this.burstCount);
+      val var4: Int = Integer.hashCode(this.count);
+      val var6: Int = java.lang.Boolean.hashCode(this.me);
+      val var5: Int = java.lang.Boolean.hashCode(this.isMeBurst);
+      val var3: Int = this.emoji.hashCode();
+      val var2: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
          var1 = 0;
@@ -107,7 +107,7 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var2 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1;
+      return ((((var4 * 31 + var6) * 31 + var5) * 31 + var3) * 31 + var2) * 31 + var1;
    }
 
    override fun isBurstReaction(): Boolean {
@@ -118,24 +118,24 @@ public data class MessageReaction(count: Int,
       val var2: Int = this.count;
       val var4: Boolean = this.me;
       val var3: Boolean = this.isMeBurst;
-      val var6: MessageReactionEmoji = this.emoji;
+      val var7: MessageReactionEmoji = this.emoji;
       val var1: Int = this.burstCount;
-      val var5: ThemedBurstReactionColorPalette = this.themedBurstColors;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MessageReaction(count=");
-      var7.append(var2);
-      var7.append(", me=");
-      var7.append(var4);
-      var7.append(", isMeBurst=");
-      var7.append(var3);
-      var7.append(", emoji=");
-      var7.append(var6);
-      var7.append(", burstCount=");
-      var7.append(var1);
-      var7.append(", themedBurstColors=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var6: ThemedBurstReactionColorPalette = this.themedBurstColors;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageReaction(count=");
+      var5.append(var2);
+      var5.append(", me=");
+      var5.append(var4);
+      var5.append(", isMeBurst=");
+      var5.append(var3);
+      var5.append(", emoji=");
+      var5.append(var7);
+      var5.append(", burstCount=");
+      var5.append(var1);
+      var5.append(", themedBurstColors=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

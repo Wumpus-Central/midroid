@@ -85,18 +85,18 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
       val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
       val var4: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapInviteEvent(messageId=");
-      var5.append(var3);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", primary=");
-      var5.append(var4);
-      var5.append(", secondary=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.secondary;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInviteEvent(messageId=");
+      var2.append(var3);
+      var2.append(", index=");
+      var2.append(var1);
+      var2.append(", primary=");
+      var2.append(var4);
+      var2.append(", secondary=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

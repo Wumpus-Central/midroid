@@ -47,13 +47,13 @@ public data class ActivityRichPresenceInviteEmbedMessageAccessory(messageId: Mes
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ActivityRichPresenceInviteEmbedMessageAccessory(messageId=");
-      var2.append(var1);
-      var2.append(", activityRichPresenceInviteEmbed=");
       var2.append(var3);
+      var2.append(", activityRichPresenceInviteEmbed=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

@@ -33,7 +33,7 @@ public object CookieValidator {
                      return null;
                   }
 
-                  val var3: JsonElement = rb.g.o(var14).get("$meta") as JsonElement;
+                  var var3: JsonElement = rb.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
@@ -52,11 +52,11 @@ public object CookieValidator {
                   val var17: LinkedHashMap = new LinkedHashMap(L.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     val var20: Any = var5.getKey();
-                     val var21: JsonElement = var5.getValue() as JsonElement;
-                     val var6: kotlinx.serialization.json.Json.a = Json.d;
+                     var3 = (JsonElement)var5.getKey();
+                     val var6: JsonElement = var5.getValue() as JsonElement;
+                     val var21: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
+                     var17.put(var3, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

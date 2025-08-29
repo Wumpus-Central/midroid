@@ -48,13 +48,13 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
 
    private fun configureSpoiler(component: ContainerComponent, componentContext: ComponentContext) {
       val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var3: java.lang.String = var2.getContainerId();
-      val var4: java.lang.String = var1.getId();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ContainerComponent(");
-      var6.append(var4);
-      var6.append(")");
-      val var9: SpoilerAttributes = var5.forGenericMedia(var1, var3, var6.toString(), "content", null);
+      val var4: java.lang.String = var2.getContainerId();
+      val var6: java.lang.String = var1.getId();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContainerComponent(");
+      var3.append(var6);
+      var3.append(")");
+      val var9: SpoilerAttributes = var5.forGenericMedia(var1, var4, var3.toString(), "content", null);
       val var7: SpoilerConfig;
       if (var9 != null) {
          var7 = SpoilerAttributes.configure$default(var9, new d(var2, this), null, 2, null);
@@ -118,9 +118,9 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          var6.add(var2.getConfiguredComponentView(var8 as Component, var12, this, var9));
       }
 
-      val var13: java.util.List = CollectionsKt.e0(var6);
-      val var14: LinearLayout = this.binding.childrenViews;
-      MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      val var14: java.util.List = CollectionsKt.e0(var6);
+      val var13: LinearLayout = this.binding.childrenViews;
+      MessageComponentsViewKt.replaceViews$default(var13, var14, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
       this.configureSpoiler(var1, var3);
    }
 

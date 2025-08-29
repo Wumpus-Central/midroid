@@ -44,10 +44,10 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
    @JvmStatic
    fun `scrollEvents$lambda$0`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
       val var4: RecyclerView = var1.component1();
-      val var2: Int = var1.component2();
-      val var3: Int = var1.component3();
+      val var3: Int = var1.component2();
+      val var2: Int = var1.component3();
       if (var0.onScrolled != null) {
-         var0.onScrolled.invoke(var4, var2, var3);
+         var0.onScrolled.invoke(var4, var3, var2);
       }
 
       return Unit.a;
@@ -180,15 +180,15 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
 
       public override fun toString(): String {
          val var4: RecyclerView = this.recyclerView;
-         val var2: Int = this.dx;
-         val var1: Int = this.dy;
+         val var1: Int = this.dx;
+         val var2: Int = this.dy;
          val var3: StringBuilder = new StringBuilder();
          var3.append("ScrollEvent(recyclerView=");
          var3.append(var4);
          var3.append(", dx=");
-         var3.append(var2);
-         var3.append(", dy=");
          var3.append(var1);
+         var3.append(", dy=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
