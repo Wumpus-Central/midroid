@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4564",
-    "commit": "94d451bc6949cabb469b3d440df13a21eedfbd67",
+    "build": "4566",
+    "commit": "140f2d69b6eae2aae5a8b6c506961e14eab0157a",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "2f1b91104c85bd3ff729adb0e2a5a55d",
+    "app/src/main/assets/index.android.bundle": "66c37490d0366c407caf5ac0797c854c",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_7hoebl5sk2p5db67l35raalhdm_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1331_7hoebl5sk2p5db67l35raalhdm_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
@@ -632,6 +632,7 @@
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_staroutlineicon.png": "1c5f6d080e9a28b876c7dda0280577c1",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_stickericon.png": "d928f9b3e9b64ee33e649ef1ea2c8332",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_stickerplusicon.png": "30726efc4dbde1d4f872615629519226",
+    "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_stopicon.png": "452bce70aae7f2d5467d2ebd6b026590",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_superreactionicon.png": "e119dde2cb41257554a1febbc1a6a312",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_tagicon.png": "4d951156ce181849f649b3b200501b55",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_tagsicon.png": "fd4b2811a60079e9ebc3220697f1084c",
@@ -1795,6 +1796,7 @@
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_staroutlineicon.png": "3f6fad0053e0951dd353c12f9e8316bb",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_stickericon.png": "067b0efd926687718fbfabc0f3d779c8",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_stickerplusicon.png": "24738a061ded8f6fa8156594f586aab4",
+    "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_stopicon.png": "8c4bc22a007d63ebfbd5f154c0bb8fea",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_superreactionicon.png": "257ae8dfb5554314115ea31577fd9fed",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_tagicon.png": "9ba41444f74c1647c632f262a955cb93",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_tagsicon.png": "a49b53bca9b94701778426f08c93cb51",

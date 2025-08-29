@@ -297,6 +297,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_staroutlineicon;
       public static int design_components_icon_native_redesign_generated_images_stickericon;
       public static int design_components_icon_native_redesign_generated_images_stickerplusicon;
+      public static int design_components_icon_native_redesign_generated_images_stopicon;
       public static int design_components_icon_native_redesign_generated_images_superreactionicon;
       public static int design_components_icon_native_redesign_generated_images_tagicon;
       public static int design_components_icon_native_redesign_generated_images_tagsicon;
