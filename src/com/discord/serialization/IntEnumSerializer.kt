@@ -55,15 +55,15 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             val var9: IntEnum = this.choices[var2];
             return (T)var9;
          } else {
-            val var11: java.lang.String = this.serialName;
+            val var8: java.lang.String = this.serialName;
             var3 = this.choices.length;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append(var2);
-            var8.append(" is not among valid ");
-            var8.append(var11);
-            var8.append(" choices, choices size is ");
-            var8.append(var3);
-            throw new IllegalStateException(var8.toString().toString());
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var2);
+            var11.append(" is not among valid ");
+            var11.append(var8);
+            var11.append(" choices, choices size is ");
+            var11.append(var3);
+            throw new IllegalStateException(var11.toString().toString());
          }
       } else {
          val var6: java.lang.String = this.serialName;

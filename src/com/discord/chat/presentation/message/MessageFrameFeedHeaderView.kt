@@ -54,8 +54,8 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
    }
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
-      var var7: TextView = this.binding.feedChannelText;
-      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
+      val var6: TextView = this.binding.feedChannelText;
+      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -69,7 +69,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var7.setVisibility(var3);
+      var6.setVisibility(var3);
       val var19: SimpleDraweeView = this.binding.feedChannelIcon;
       ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var1.getChannelIconURL());
       val var22: SimpleDraweeView = this.binding.feedReplyIcon;
@@ -82,7 +82,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      var7 = this.binding.feedReplyCount;
+      val var23: TextView = this.binding.feedReplyCount;
       val var11: java.lang.String;
       if (var3 > 3) {
          var11 = "3+";
@@ -92,7 +92,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var7, var11);
+      ViewUtilsKt.setOptionalText(var23, var11);
       val var24: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
@@ -233,19 +233,19 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.channelIconURL;
-         val var1: java.lang.String = this.chatIconURL;
+         val var3: java.lang.String = this.channelIconURL;
+         val var4: java.lang.String = this.chatIconURL;
          val var5: ArrayList = this.avatarURLs;
-         val var3: java.lang.String = this.channelName;
+         val var1: java.lang.String = this.channelName;
          val var2: StringBuilder = new StringBuilder();
          var2.append("MessageBundleHeader(channelIconURL=");
-         var2.append(var4);
+         var2.append(var3);
          var2.append(", chatIconURL=");
-         var2.append(var1);
+         var2.append(var4);
          var2.append(", avatarURLs=");
          var2.append(var5);
          var2.append(", channelName=");
-         var2.append(var3);
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }

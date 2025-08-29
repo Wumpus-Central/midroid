@@ -109,8 +109,8 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = MessageId.hashCode-impl(this.messageId);
-      val var5: Int = this.attachment.hashCode();
+      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var4: Int = this.attachment.hashCode();
       val var3: Int = Integer.hashCode(this.attachmentIndex);
       var var2: Int = 0;
       val var1: Int;
@@ -126,34 +126,34 @@ public data class ImageAttachmentMessageAccessory(messageId: MessageId,
          var2 = this.spoilerAttributes.hashCode();
       }
 
-      return ((((((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var2) * 31
+      return ((((((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var2) * 31
          + java.lang.Boolean.hashCode(this.useNewAltTextButton);
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: Attachment = this.attachment;
-      val var1: Int = this.attachmentIndex;
-      val var8: java.lang.Float = this.attachmentsOpacity;
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: Attachment = this.attachment;
+      val var2: Int = this.attachmentIndex;
+      val var5: java.lang.Float = this.attachmentsOpacity;
       val var3: Int = this.constrainedWidth;
-      val var2: Int = this.radiusPx;
-      val var5: SpoilerAttributes = this.spoilerAttributes;
+      val var1: Int = this.radiusPx;
+      val var9: SpoilerAttributes = this.spoilerAttributes;
       val var4: Boolean = this.useNewAltTextButton;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ImageAttachmentMessageAccessory(messageId=");
-      var6.append(var9);
-      var6.append(", attachment=");
       var6.append(var7);
-      var6.append(", attachmentIndex=");
-      var6.append(var1);
-      var6.append(", attachmentsOpacity=");
+      var6.append(", attachment=");
       var6.append(var8);
+      var6.append(", attachmentIndex=");
+      var6.append(var2);
+      var6.append(", attachmentsOpacity=");
+      var6.append(var5);
       var6.append(", constrainedWidth=");
       var6.append(var3);
       var6.append(", radiusPx=");
-      var6.append(var2);
+      var6.append(var1);
       var6.append(", spoilerAttributes=");
-      var6.append(var5);
+      var6.append(var9);
       var6.append(", useNewAltTextButton=");
       var6.append(var4);
       var6.append(")");

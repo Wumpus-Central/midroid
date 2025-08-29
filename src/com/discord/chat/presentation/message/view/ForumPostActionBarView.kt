@@ -157,16 +157,16 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          val var12: SimpleDraweeView = this.binding.sharePromptIcon;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
-         val var10: StructurableText = var2.getSubtitle();
-         val var14: Context = var13.getContext();
+         val var14: StructurableText = var2.getSubtitle();
+         val var10: Context = var13.getContext();
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var16: TextPaint = var13.getPaint();
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var10,
                var14,
+               var10,
                var1,
                false,
                false,

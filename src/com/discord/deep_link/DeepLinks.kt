@@ -35,22 +35,22 @@ public object DeepLinks {
             var9 = "true";
          }
 
-         val var5: Builder = Uri.parse(var4).buildUpon();
-         val var10: Uri = var5.build();
-         var5.clearQuery();
+         val var7: Builder = Uri.parse(var4).buildUpon();
+         val var10: Uri = var7.build();
+         var7.clearQuery();
 
-         for (java.lang.String var7 : var10.getQueryParameterNames()) {
-            if (!(var7 == "fromAppsFlyer")) {
-               val var6: java.util.Iterator = var10.getQueryParameters(var7).iterator();
+         for (java.lang.String var11 : var10.getQueryParameterNames()) {
+            if (!(var11 == "fromAppsFlyer")) {
+               val var5: java.util.Iterator = var10.getQueryParameters(var11).iterator();
 
-               while (var6.hasNext()) {
-                  var5.appendQueryParameter(var7, var6.next() as java.lang.String);
+               while (var5.hasNext()) {
+                  var7.appendQueryParameter(var11, var5.next() as java.lang.String);
                }
             }
          }
 
-         var5.appendQueryParameter("fromAppsFlyer", var9);
-         return var5.toString();
+         var7.appendQueryParameter("fromAppsFlyer", var9);
+         return var7.toString();
       }
    }
 
@@ -75,20 +75,20 @@ public object DeepLinks {
             @Override
             public void onDeepLinking(DeepLinkResult var1) {
                if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
-                  val var4: DeepLink = var1.getDeepLink();
-                  if (var4 != null) {
-                     val var2: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var4);
-                     if (var2 != null) {
+                  val var2: DeepLink = var1.getDeepLink();
+                  if (var2 != null) {
+                     val var4: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var2);
+                     if (var4 != null) {
                         if (DeepLinks.access$getInitialUrl$p() == null) {
-                           DeepLinks.access$setInitialUrl$p(new Pair(var2, var4.isDeferred() == java.lang.Boolean.TRUE));
+                           DeepLinks.access$setInitialUrl$p(new Pair(var4, var2.isDeferred() == java.lang.Boolean.TRUE));
                         }
 
                         try {
-                           val var5: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var2));
-                           val var6: Context = this.$context;
-                           var5.addFlags(268435456);
-                           var5.setPackage(var6.getPackageName());
-                           this.$context.startActivity(var5);
+                           val var6: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var4));
+                           val var5: Context = this.$context;
+                           var6.addFlags(268435456);
+                           var6.setPackage(var5.getPackageName());
+                           this.$context.startActivity(var6);
                         } catch (var3: Exception) {
                            CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
                         }

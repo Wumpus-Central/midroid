@@ -1214,6 +1214,7 @@
   ],
   "T15lqq": "Too fast! Wait a bit and try again.",
   "/s1xR0": "Gift ready for delivery",
+  "1Qm829": "Apply",
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
@@ -3301,6 +3302,7 @@
   "nSFuCw": "Shop Menu",
   "P0DpSU": "Discord Shop Menu",
   "NG43//": "Online",
+  "rSfoCw": "Discord Shop Orbs Exclusives Page",
   "RSyoZm": "Shop All",
   "bG3n/v": "Discord Shop All",
   "MAS7uL": "Use Now",
@@ -6626,9 +6628,39 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
-  "bp8vRE": "Double tap any message to react instantly. You can personalize your default reaction emoji anytime.",
+  "bp8vRE": [
+    "Double tap any message to react with ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " instantly. You can personalize your default reaction emoji anytime."
+  ],
   "tdsiOz": "Change Default",
-  "F6lRAA": "Double tap to React",
+  "F6lRAA": "Double tap to react",
+  "WZGLFh": [
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " is not available. Head to Settings to set another default."
+  ],
   "QPJJKy": [
     "React with ",
     [
@@ -10261,7 +10293,8 @@
   "msZW3t": "Download the Xbox app to connect to Discord on your Xbox.",
   "kYaBOj": "Nevermind",
   "I5gL2N": "GIF",
-  "WaYuBQ": "Confirm",
+  "3d0NmZ": "Confirm Reward",
+  "gNZY/P": "Choose your Reward",
   "xGzXNT": [
     "You get one with each gift purchase. Collect all ",
     [
@@ -20901,6 +20934,11 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
+  "fMs6ub": "You'll be joined on Android.",
+  "aqN8U1": "You'll be joined on Desktop.",
+  "CyQ5iY": "You'll be joined on iOS.",
+  "R/1GpK": "You'll be joined on PlayStation.",
+  "o0hjdn": "You'll be joined on Xbox.",
   "OAB5TE": "Join From a Supported Device",
   "pwEQoq": "Play From a Supported Device",
   "sTo7s7": "Listen From a Supported Device",
@@ -25486,6 +25524,7 @@
   "bkqux8": "Heads up!",
   "HEuagI": "or",
   "UmsfHB": "Orange",
+  "EBYkzs": "Orbs Exclusives",
   "bhrgkJ": [
     "Originally known as ",
     [

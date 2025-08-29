@@ -46,14 +46,14 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
       val var2: ReactRootView.Companion = ReactRootView.Companion;
-      val var6: ReactApplicationContext = var0.getReactApplicationContext();
+      val var3: ReactApplicationContext = var0.getReactApplicationContext();
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
+      val var6: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
       val var5: java.util.Iterator = var4.iterator();
 
       while (var5.hasNext()) {
          val var7: ReadableMap = var1.getMap((var5 as I).nextInt());
-         var3.add(
+         var6.add(
             new Rect(
                SizeUtilsKt.getDpToPx(var7.getInt("left")),
                SizeUtilsKt.getDpToPx(var7.getInt("top")),
@@ -63,7 +63,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
          );
       }
 
-      var2.setSystemGestureExclusionRects(var6, var3);
+      var2.setSystemGestureExclusionRects(var3, var6);
    }
 
    public override fun openAccessibilitySettings() {

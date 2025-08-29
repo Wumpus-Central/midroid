@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 296203
-  versionName: 296.3 - Alpha
+  versionCode: 296204
+  versionName: 296.4 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -463,8 +463,6 @@ doNotCompress:
 - res/raw/com_android_billingclient_heterodyne_info
 - res/raw/com_android_billingclient_registration_info.binarypb
 - res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
-- res/raw/design_components_lottieicon_native_generated_lotties_halloweenaction.lottie
-- res/raw/design_components_lottieicon_native_generated_lotties_halloweenidle.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagerequest.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_messagestab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_microphone.lottie

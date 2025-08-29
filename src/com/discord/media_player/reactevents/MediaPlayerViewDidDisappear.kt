@@ -57,13 +57,13 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.util.List = this.mediaItemIds;
+      val var2: java.lang.String = this.channelId;
+      val var1: java.util.List = this.mediaItemIds;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MediaPlayerViewDidDisappear(channelId=");
-      var3.append(var1);
-      var3.append(", mediaItemIds=");
       var3.append(var2);
+      var3.append(", mediaItemIds=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

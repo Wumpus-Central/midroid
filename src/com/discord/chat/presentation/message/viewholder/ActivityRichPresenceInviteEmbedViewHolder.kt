@@ -31,11 +31,11 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var4 = false;
       }
 
-      val var10: java.lang.String = var8.getCtaButtonText();
+      val var11: java.lang.String = var8.getCtaButtonText();
       val var15: java.lang.String = var8.getFooterLabel();
-      val var12: java.util.List = var8.getGradientColors();
-      val var11: java.lang.String = var8.getHeaderText();
-      val var13: java.lang.String = var8.getIconSrc();
+      val var13: java.util.List = var8.getGradientColors();
+      val var10: java.lang.String = var8.getHeaderText();
+      val var12: java.lang.String = var8.getIconSrc();
       var var14: java.lang.Boolean = var8.isActive();
       val var5: Boolean;
       if (var14 != null) {
@@ -59,11 +59,11 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
 
       var7.setActivityRichPresenceInviteEmbed(
          var4,
-         var10,
-         var15,
-         var12,
          var11,
+         var15,
          var13,
+         var10,
+         var12,
          var5,
          var6,
          var3,

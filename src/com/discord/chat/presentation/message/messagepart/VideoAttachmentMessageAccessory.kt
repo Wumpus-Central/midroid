@@ -146,9 +146,9 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
 
    public override fun hashCode(): Int {
       val var3: Int = ChannelId.hashCode-impl(this.channelId);
-      val var4: Int = MessageId.hashCode-impl(this.messageId);
-      val var5: Int = Integer.hashCode(this.index);
-      val var6: Int = this.attachment.hashCode();
+      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var6: Int = Integer.hashCode(this.index);
+      val var4: Int = this.attachment.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -157,14 +157,14 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
          var1 = this.attachmentsOpacity.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.constrainedWidth);
-      val var7: Int = Integer.hashCode(this.radiusPx);
+      val var7: Int = Integer.hashCode(this.constrainedWidth);
+      val var8: Int = Integer.hashCode(this.radiusPx);
       if (this.spoilerAttributes != null) {
          var2 = this.spoilerAttributes.hashCode();
       }
 
       return (
-               (((((((var3 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var8) * 31 + var7) * 31 + var2) * 31
+               (((((((var3 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31
                   + java.lang.Boolean.hashCode(this.useNewAltTextButton)
             )
             * 31
@@ -172,38 +172,38 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var10: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: Int = this.index;
-      val var8: Attachment = this.attachment;
-      val var6: java.lang.Float = this.attachmentsOpacity;
-      val var2: Int = this.constrainedWidth;
-      val var3: Int = this.radiusPx;
-      val var7: SpoilerAttributes = this.spoilerAttributes;
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Int = this.index;
+      val var10: Attachment = this.attachment;
+      val var11: java.lang.Float = this.attachmentsOpacity;
+      val var1: Int = this.constrainedWidth;
+      val var2: Int = this.radiusPx;
+      val var9: SpoilerAttributes = this.spoilerAttributes;
       val var5: Boolean = this.useNewAltTextButton;
       val var4: Boolean = this.hideMediaPlayButton;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("VideoAttachmentMessageAccessory(channelId=");
-      var11.append(var9);
-      var11.append(", messageId=");
-      var11.append(var10);
-      var11.append(", index=");
-      var11.append(var1);
-      var11.append(", attachment=");
-      var11.append(var8);
-      var11.append(", attachmentsOpacity=");
-      var11.append(var6);
-      var11.append(", constrainedWidth=");
-      var11.append(var2);
-      var11.append(", radiusPx=");
-      var11.append(var3);
-      var11.append(", spoilerAttributes=");
-      var11.append(var7);
-      var11.append(", useNewAltTextButton=");
-      var11.append(var5);
-      var11.append(", hideMediaPlayButton=");
-      var11.append(var4);
-      var11.append(")");
-      return var11.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("VideoAttachmentMessageAccessory(channelId=");
+      var6.append(var7);
+      var6.append(", messageId=");
+      var6.append(var8);
+      var6.append(", index=");
+      var6.append(var3);
+      var6.append(", attachment=");
+      var6.append(var10);
+      var6.append(", attachmentsOpacity=");
+      var6.append(var11);
+      var6.append(", constrainedWidth=");
+      var6.append(var1);
+      var6.append(", radiusPx=");
+      var6.append(var2);
+      var6.append(", spoilerAttributes=");
+      var6.append(var9);
+      var6.append(", useNewAltTextButton=");
+      var6.append(var5);
+      var6.append(", hideMediaPlayButton=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 }

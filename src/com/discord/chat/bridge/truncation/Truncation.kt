@@ -72,8 +72,8 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = Integer.hashCode(this.numberOfLines);
-      val var5: Int = java.lang.Boolean.hashCode(this.expandable);
+      val var5: Int = Integer.hashCode(this.numberOfLines);
+      val var4: Int = java.lang.Boolean.hashCode(this.expandable);
       var var3: Int = 0;
       val var1: Int;
       if (this.seeMoreLabel == null) {
@@ -93,28 +93,28 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
          var3 = this.forceShow.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var4: java.lang.String = this.seeMoreLabel;
-      val var3: Int = this.seeMoreLabelColor;
+      val var3: java.lang.String = this.seeMoreLabel;
+      val var6: Int = this.seeMoreLabelColor;
       val var5: java.lang.Boolean = this.forceShow;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Truncation(numberOfLines=");
-      var6.append(var1);
-      var6.append(", expandable=");
-      var6.append(var2);
-      var6.append(", seeMoreLabel=");
-      var6.append(var4);
-      var6.append(", seeMoreLabelColor=");
-      var6.append(var3);
-      var6.append(", forceShow=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Truncation(numberOfLines=");
+      var4.append(var1);
+      var4.append(", expandable=");
+      var4.append(var2);
+      var4.append(", seeMoreLabel=");
+      var4.append(var3);
+      var4.append(", seeMoreLabelColor=");
+      var4.append(var6);
+      var4.append(", forceShow=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

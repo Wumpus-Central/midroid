@@ -26,13 +26,13 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    init {
-      val var5: SafetySystemNotificationBinding = SafetySystemNotificationBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
-      val var3: View = var5.getRoot();
-      var3.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      val var4: TextView = var5.separator;
-      var5.separator.setText("•");
+      val var3: SafetySystemNotificationBinding = SafetySystemNotificationBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var5: View = var3.getRoot();
+      var5.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
+      val var4: TextView = var3.separator;
+      var3.separator.setText("•");
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
       var4.setVisibility(8);

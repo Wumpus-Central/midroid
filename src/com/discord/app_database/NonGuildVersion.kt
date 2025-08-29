@@ -50,8 +50,8 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.id.hashCode();
-      val var3: Int = java.lang.Long.hashCode(this.version);
+      val var3: Int = this.id.hashCode();
+      val var2: Int = java.lang.Long.hashCode(this.version);
       val var1: Int;
       if (this.versionString == null) {
          var1 = 0;
@@ -59,20 +59,20 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          var1 = this.versionString.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var3: java.lang.String = this.versionString;
+      val var4: java.lang.String = this.versionString;
       val var5: StringBuilder = new StringBuilder();
       var5.append("NonGuildVersion(id=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", version=");
       var5.append(var1);
       var5.append(", versionString=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

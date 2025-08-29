@@ -970,7 +970,6 @@
     <color name="ucrop_color_inactive_aspect_ratio">@color/ucrop_color_ebony_clay</color>
     <color name="ucrop_color_inactive_controls_color">@color/ucrop_color_heather</color>
     <color name="ucrop_color_progress_wheel_line">@color/ucrop_color_ebony_clay</color>
-    <color name="ucrop_color_statusbar">#fff5f5f5</color>
     <color name="ucrop_color_toolbar">@color/ucrop_color_white</color>
     <color name="ucrop_color_toolbar_widget">@color/ucrop_color_black</color>
     <color name="ucrop_color_white">#ffffffff</color>

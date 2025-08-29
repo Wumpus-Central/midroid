@@ -1406,6 +1406,7 @@ public final class R {
       public static int modules_video_calls_native_images_spectator;
       public static int modules_video_calls_native_images_watch;
       public static int modules_video_calls_native_images_xbox_voice_upsell;
+      public static int modules_virtual_currency_images_native_coachmarkorb;
       public static int modules_virtual_currency_images_native_heroorb;
       public static int modules_voice_panel_native_images_activity;
       public static int modules_voice_panel_native_images_airplay;
@@ -1963,8 +1964,6 @@ public final class R {
       public static int cache_intl_zgvzawdu_zhcnmessages18ca504c47e1ec20468288e033459edfcompiledmessages;
       public static int cache_intl_zgvzawdu_zhtwmessages390652b007f25dfae8ad4e00c290f9f9compiledmessages;
       public static int design_components_lottieicon_native_generated_lotties_camera;
-      public static int design_components_lottieicon_native_generated_lotties_halloweenaction;
-      public static int design_components_lottieicon_native_generated_lotties_halloweenidle;
       public static int design_components_lottieicon_native_generated_lotties_messagerequest;
       public static int design_components_lottieicon_native_generated_lotties_messagestab;
       public static int design_components_lottieicon_native_generated_lotties_microphone;

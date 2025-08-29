@@ -90,10 +90,10 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.messageId.hashCode();
-      val var6: Int = this.channelId.hashCode();
-      val var3: Int = Integer.hashCode(this.mediaIndex);
-      val var4: Int = this.mediaType.hashCode();
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = this.channelId.hashCode();
+      val var5: Int = Integer.hashCode(this.mediaIndex);
+      val var6: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -106,7 +106,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var5 * 31 + var6) * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((((var3 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -117,9 +117,9 @@ internal data class LongPressMessageEvent(messageId: String,
       val var6: java.lang.String = this.messageId;
       val var3: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var5: java.lang.String = this.mediaType;
-      val var7: java.lang.String = this.componentId;
-      val var2: Int = this.componentMediaIndex;
+      val var7: java.lang.String = this.mediaType;
+      val var2: java.lang.String = this.componentId;
+      val var5: Int = this.componentMediaIndex;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LongPressMessageEvent(messageId=");
       var4.append(var6);
@@ -128,11 +128,11 @@ internal data class LongPressMessageEvent(messageId: String,
       var4.append(", mediaIndex=");
       var4.append(var1);
       var4.append(", mediaType=");
-      var4.append(var5);
-      var4.append(", componentId=");
       var4.append(var7);
-      var4.append(", componentMediaIndex=");
+      var4.append(", componentId=");
       var4.append(var2);
+      var4.append(", componentMediaIndex=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

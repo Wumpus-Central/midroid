@@ -60,13 +60,13 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                break;
             }
 
-            val var8: java.util.Map = this.viewCache;
-            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
-            val var6: Any = var8.get(var7);
+            val var7: java.util.Map = this.viewCache;
+            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
+            val var6: Any = var7.get(var8);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var8.put(var7, var9);
+               var7.put(var8, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));

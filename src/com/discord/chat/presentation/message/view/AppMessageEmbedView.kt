@@ -56,15 +56,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var5: java.lang.String = var2.getMessageId();
-      val var6: java.lang.String = var2.getAppId();
+      val var6: java.lang.String = var2.getMessageId();
+      val var5: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
+      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
    }
 
    @JvmStatic
@@ -193,9 +193,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = (byte)0;
+         var28 = 0;
       } else {
-         var28 = (byte)8;
+         var28 = 8;
       }
 
       var36.setVisibility(var28);
@@ -203,7 +203,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var37: SimpleDraweeView = this.view.banner;
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,10 +211,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var28 / var4;
-         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var4 = var3 / var4;
+         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var38: SimpleDraweeView = this.view.banner;
+         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);

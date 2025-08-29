@@ -71,8 +71,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -80,28 +80,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var5: java.util.List = this.components;
-      val var6: SectionAccessory = this.accessory;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SectionComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(", errorText=");
-      var2.append(var4);
-      var2.append(", components=");
-      var2.append(var5);
-      var2.append(", accessory=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.errorText;
+      val var6: java.util.List = this.components;
+      val var2: SectionAccessory = this.accessory;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SectionComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", errorText=");
+      var3.append(var5);
+      var3.append(", components=");
+      var3.append(var6);
+      var3.append(", accessory=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

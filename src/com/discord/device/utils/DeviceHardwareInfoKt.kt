@@ -74,7 +74,7 @@ internal fun getSocFromProcCpuInfo(): String {
    // 56: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
    // 59: ifeq 3d
    // 5c: goto 65
-   // 5f: astore 0
+   // 5f: astore 3
    // 60: goto 9e
    // 63: aconst_null
    // 64: astore 0
@@ -108,13 +108,13 @@ internal fun getSocFromProcCpuInfo(): String {
    // 97: aconst_null
    // 98: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 9b: goto a8
-   // 9e: aload 0
+   // 9e: aload 3
    // 9f: athrow
-   // a0: astore 3
+   // a0: astore 0
    // a1: aload 2
-   // a2: aload 0
+   // a2: aload 3
    // a3: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-   // a6: aload 3
+   // a6: aload 0
    // a7: athrow
    // a8: aload 0
    // a9: areturn
@@ -239,7 +239,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 13
+   // 0d8: astore 14
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -263,17 +263,17 @@ internal fun maxCpuFreq(): String {
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 13
+   // 10a: aload 14
    // 10c: athrow
-   // 10d: astore 14
+   // 10d: astore 13
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 13
+   // 115: aload 14
    // 117: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 14
+   // 11e: aload 13
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -336,13 +336,13 @@ internal fun socName(): String {
          }
       }
 
-      val var1: java.lang.String = a.a();
-      val var2: java.lang.String = b.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var1);
-      var4.append("_");
-      var4.append(var2);
-      return var4.toString();
+      val var2: java.lang.String = a.a();
+      var0 = b.a();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var2);
+      var1.append("_");
+      var1.append(var0);
+      return var1.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

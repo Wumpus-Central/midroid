@@ -88,14 +88,14 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.source;
+      val var3: java.lang.String = this.source;
       val var2: java.lang.String = this.unicodeEmoji;
       val var5: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var3: java.lang.String = this.alt;
+      val var4: java.lang.String = this.alt;
       val var6: StringBuilder = new StringBuilder();
       var6.append("RoleIcon(source=");
-      var6.append(var4);
+      var6.append(var3);
       var6.append(", unicodeEmoji=");
       var6.append(var2);
       var6.append(", name=");
@@ -103,7 +103,7 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
       var6.append(", size=");
       var6.append(var1);
       var6.append(", alt=");
-      var6.append(var3);
+      var6.append(var4);
       var6.append(")");
       return var6.toString();
    }
