@@ -204,38 +204,40 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val averageColor: Swatch
          public final get() {
-            var var6: Int = this.lowerIndex;
+            var var7: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
-            var var5: Int = 0;
-            var var7: Int = 0;
+            var var6: Int = 0;
             var var3: Int;
             var var4: Int;
+            var var12: Int;
             if (this.lowerIndex <= this.upperIndex) {
-               var5 = 0;
+               var12 = 0;
                var3 = 0;
                var4 = 0;
 
                while (true) {
-                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var6];
+                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
                   val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
-                  var7 += var9;
-                  var5 += Color.red(var10) * var9;
+                  var6 += var9;
+                  var12 += Color.red(var10) * var9;
                   var3 += Color.green(var10) * var9;
                   var4 += var9 * Color.blue(var10);
-                  if (var6 == var8) {
-                     var6 = var7;
+                  if (var7 == var8) {
+                     var12 = var6;
+                     var6 = var12;
                      break;
                   }
 
-                  var6++;
+                  var7++;
                }
             } else {
-               var6 = 0;
                var3 = 0;
                var4 = 0;
+               var6 = 0;
+               var12 = 0;
             }
 
-            return new Swatch(Math.round((float)var5 / (float)var6), Math.round((float)var3 / (float)var6), Math.round((float)var4 / (float)var6), var6);
+            return new Swatch(Math.round((float)var6 / (float)var12), Math.round((float)var3 / (float)var12), Math.round((float)var4 / (float)var12), var12);
          }
 
 

@@ -55,8 +55,8 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.reaction == null) {
          var1 = 0;
@@ -64,7 +64,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var1 = this.reaction.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun serialize(): WritableMap {
@@ -90,16 +90,16 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: ReactionView.Reaction = this.reaction;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: ReactionView.Reaction = this.reaction;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressReactionData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", reaction=");
       var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var1);
+      var2.append(", reaction=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

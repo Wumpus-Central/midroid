@@ -55,14 +55,14 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
       onTapAutoModerationActions: OnClickListener,
       onTapAutoModerationFeedback: OnClickListener
    ) {
-      val var6: java.lang.String = var1.getActionsIconURL();
-      val var4: java.lang.String = var1.getActionsText();
+      val var4: java.lang.String = var1.getActionsIconURL();
+      val var6: java.lang.String = var1.getActionsText();
       val var5: DCDButton = this.binding.actionsButton;
-      if (var6 != null) {
-         this.binding.actionsButton.setIcon(var6, SizeUtilsKt.getDpToPx(16));
+      if (var4 != null) {
+         this.binding.actionsButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var4);
+      this.binding.actionsButton.setText(var6);
       var5.setOnClickButtonListener(var2);
       val var8: java.lang.String = var1.getFeedbackText();
       val var7: DCDButton = this.binding.feedbackButton;

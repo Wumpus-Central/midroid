@@ -131,12 +131,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
       if (var2) {
          val var18: Context = this.getContext();
-         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var11: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var11: LayoutParams = new LayoutParams(-2, -1);
-         var11.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var11);
+         val var20: LayoutParams = new LayoutParams(-2, -1);
+         var20.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var11, var20);
       }
    }
 

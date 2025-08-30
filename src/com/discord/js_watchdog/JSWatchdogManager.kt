@@ -191,28 +191,28 @@ public object JSWatchdogManager {
                   }
 
                   if (var6 != null) {
-                     var var4: Boolean;
+                     var var2x: Boolean;
                      var var5: java.lang.String;
-                     var var15: Long;
+                     var var16: Long;
                      try {
                         var5 = this.$sessionId;
-                        var4 = this.$enableTrace;
-                        var15 = this.$sentTimestamp - var6.longValue() - 500;
+                        var2x = this.$enableTrace;
+                        var16 = this.$sentTimestamp - var6.longValue() - 500;
                      } catch (var11: Exception) {
                         CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var11);
                         this.$promise.reject(var11);
                         return Unit.a;
                      }
 
-                     if (var15 > 1000L) {
+                     if (var16 > 1000L) {
                         try {
                            val var19: Log = Log.INSTANCE;
                            val var7: StringBuilder = new StringBuilder();
                            var7.append("Exceeded JS stall threshold [based on previous ping]: ");
-                           var7.append(var15);
+                           var7.append(var16);
                            Log.i$default(var19, "JSWatchdogManager", var7.toString(), null, 4, null);
                            var1.element = true;
-                           JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var15, var5, var4);
+                           JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var16, var5, var2x);
                         } catch (var10: Exception) {
                            CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var10);
                            this.$promise.reject(var10);
@@ -232,7 +232,7 @@ public object JSWatchdogManager {
                            {
                               this.$sentTimestamp$inlined = var1;
                               this.$sessionId$inlined = var3;
-                              this.$enableTrace$inlined = var4x;
+                              this.$enableTrace$inlined = var4;
                            }
 
                            @Override

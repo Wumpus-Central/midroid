@@ -20,12 +20,12 @@ internal class SystemLogCapture {
       val var3: Int = var7.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: StackTraceElement = var7[var2];
-         val var5: CircularByteBuffer = this.buffer;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("    ");
-         var4.append(var6);
-         var5.addLine(var4.toString());
+         val var4: StackTraceElement = var7[var2];
+         val var6: CircularByteBuffer = this.buffer;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("    ");
+         var5.append(var4);
+         var6.addLine(var5.toString());
       }
    }
 
@@ -112,32 +112,32 @@ internal class SystemLogCapture {
       // 5d: invokevirtual java/lang/Process.destroy ()V
       // 60: aload 2
       // 61: athrow
-      // 62: astore 3
+      // 62: astore 2
       // 63: aload 0
       // 64: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
       // 67: astore 1
       // 68: new java/lang/StringBuilder
       // 6b: dup
       // 6c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 6f: astore 2
-      // 70: aload 2
+      // 6f: astore 3
+      // 70: aload 3
       // 71: ldc "Exception starting logcat process '"
       // 73: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 76: pop
-      // 77: aload 2
-      // 78: aload 3
+      // 77: aload 3
+      // 78: aload 2
       // 79: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 7c: pop
-      // 7d: aload 2
+      // 7d: aload 3
       // 7e: ldc "'"
       // 80: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 83: pop
       // 84: aload 1
-      // 85: aload 2
+      // 85: aload 3
       // 86: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 89: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
       // 8c: aload 0
-      // 8d: aload 3
+      // 8d: aload 2
       // 8e: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
       // 91: return
    }

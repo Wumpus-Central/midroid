@@ -140,28 +140,28 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.username;
-      val var6: java.lang.Boolean = this.isBot;
-      val var7: java.lang.Boolean = this.isFriend;
-      val var3: java.lang.String = this.friendNickname;
-      val var1: java.lang.String = this.globalName;
-      val var8: java.util.Map = this.nicknames;
+      val var8: java.lang.String = this.id;
+      val var4: java.lang.String = this.username;
+      val var7: java.lang.Boolean = this.isBot;
+      val var5: java.lang.Boolean = this.isFriend;
+      val var1: java.lang.String = this.friendNickname;
+      val var3: java.lang.String = this.globalName;
+      val var6: java.util.Map = this.nicknames;
       val var2: StringBuilder = new StringBuilder();
       var2.append("UserSearchTransformedUser(id=");
-      var2.append(var4);
-      var2.append(", username=");
-      var2.append(var5);
-      var2.append(", isBot=");
-      var2.append(var6);
-      var2.append(", isFriend=");
-      var2.append(var7);
-      var2.append(", friendNickname=");
-      var2.append(var3);
-      var2.append(", globalName=");
-      var2.append(var1);
-      var2.append(", nicknames=");
       var2.append(var8);
+      var2.append(", username=");
+      var2.append(var4);
+      var2.append(", isBot=");
+      var2.append(var7);
+      var2.append(", isFriend=");
+      var2.append(var5);
+      var2.append(", friendNickname=");
+      var2.append(var1);
+      var2.append(", globalName=");
+      var2.append(var3);
+      var2.append(", nicknames=");
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }
@@ -196,7 +196,7 @@ internal data class UserSearchTransformedUser(id: String,
                   val var2: ArrayList = new ArrayList((var11 as java.util.Map).size());
 
                   for (Entry var13 : var12.entrySet()) {
-                     val var4: java.lang.String = var13.getKey() as java.lang.String;
+                     val var3: java.lang.String = var13.getKey() as java.lang.String;
                      val var14: JsonElement = var13.getValue() as JsonElement;
                      val var15: java.lang.String;
                      if (rb.g.p(var14).g()) {
@@ -205,7 +205,7 @@ internal data class UserSearchTransformedUser(id: String,
                         var15 = null;
                      }
 
-                     var2.add(s.a(var4, var15));
+                     var2.add(s.a(var3, var15));
                   }
 
                   var16 = L.t(var2);

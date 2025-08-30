@@ -170,11 +170,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var38: SimpleDraweeView = this.binding.image;
-         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var24: SimpleDraweeView = this.binding.image;
+         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var38: SimpleDraweeView = this.binding.image;
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var38, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
+            var24, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
          );
       }
 
@@ -208,9 +208,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var33: SpoilerViewManager = this.spoilerViewManager;
+      val var28: SpoilerViewManager = this.spoilerViewManager;
       val var34: ConstraintLayout = this.binding.container;
-      val var31: SimpleDraweeView = this.binding.image;
+      val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,10 +223,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var33.configureSpoiler(var8, this, var34, var31, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var28.configureSpoiler(var8, this, var34, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -247,12 +247,12 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var3: ConstraintLayout = this.binding.container;
-      val var4: LayoutParams = var3.getLayoutParams();
-      if (var4 != null) {
-         var4.width = var1;
-         var4.height = var2;
-         var3.setLayoutParams(var4);
+      val var4: ConstraintLayout = this.binding.container;
+      val var3: LayoutParams = var4.getLayoutParams();
+      if (var3 != null) {
+         var3.width = var1;
+         var3.height = var2;
+         var4.setLayoutParams(var3);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -360,16 +360,16 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       public override fun toString(): String {
          val var2: Int = this.width;
          val var1: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
-         var4.append(var1);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

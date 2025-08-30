@@ -33,7 +33,7 @@ import kotlinx.serialization.json.b
 import qb.f
 
 @ReactModule(name = "DCDChatInput")
-@SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,323:1\n123#2:324\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n321#1:324\n*E\n"])
+@SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,328:1\n123#2:329\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n326#1:329\n*E\n"])
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
    private final val json: Json = b.b(null, new a(), 1, null)
    private final val delegate: DCDChatInputManagerDelegate<ChatInputRootView, ChatInputViewManager>
@@ -269,6 +269,10 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
    @ReactProp(name = "markAsSpoilerTitle")
    public open fun setMarkAsSpoilerTitle(view: ChatInputRootView, spoilerTitle: String?) {
+   }
+
+   @ReactProp(name = "maxHeight")
+   public open fun setMaxHeight(view: ChatInputRootView?, value: Float) {
    }
 
    @ReactProp(name = "placeholder")

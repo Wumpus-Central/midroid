@@ -45,8 +45,8 @@ public object FileDownloader {
    public fun downloadBlob(fileUrl: String, headers: Map<String, String> = L.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
       val var4: okhttp3.Request.Builder = new okhttp3.Request.Builder();
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.a(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.a(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       return var3.b(var4.l(var1).b()).execute();

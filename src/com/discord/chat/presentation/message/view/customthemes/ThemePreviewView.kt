@@ -38,13 +38,13 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
          }
 
          val var1: Double = Math.toRadians((double)this.angleDegrees - (double)90);
-         var var7: Float = (float)Math.cos(var1);
-         val var6: Float = (float)Math.sin(var1);
+         var var5: Float = (float)Math.cos(var1);
+         var var6: Float = (float)Math.sin(var1);
          val var3: Float = this.getWidth() / 2.0F;
          val var4: Float = this.getHeight() / 2.0F;
-         var var5: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
-         var7 = var7 * var5;
-         var5 = var6 * var5;
+         val var7: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
+         var5 = var5 * var7;
+         var6 = var6 * var7;
          var9 = this.colors.length;
 
          val var14: FloatArray;
@@ -52,7 +52,7 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
             var14[var8] = (float)var8 / (this.colors.length - 1);
          }
 
-         val var15: LinearGradient = new LinearGradient(var3 - var7, var4 - var5, var3 + var7, var4 + var5, this.colors, var14, TileMode.CLAMP);
+         val var15: LinearGradient = new LinearGradient(var3 - var5, var4 - var6, var3 + var5, var4 + var6, this.colors, var14, TileMode.CLAMP);
          this.shader = var15;
          this.paint.setShader(var15);
       }

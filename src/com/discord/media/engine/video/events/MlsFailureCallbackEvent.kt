@@ -61,15 +61,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var4: java.lang.String = this.source;
-      val var3: java.lang.String = this.reason;
+      val var3: java.lang.String = this.source;
+      val var4: java.lang.String = this.reason;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MlsFailureCallbackEvent(connectionId=");
       var2.append(var1);
       var2.append(", source=");
-      var2.append(var4);
-      var2.append(", reason=");
       var2.append(var3);
+      var2.append(", reason=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

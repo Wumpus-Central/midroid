@@ -35,22 +35,22 @@ public object DeepLinks {
             var9 = "true";
          }
 
-         val var10: Builder = Uri.parse(var4).buildUpon();
-         val var6: Uri = var10.build();
-         var10.clearQuery();
+         val var7: Builder = Uri.parse(var4).buildUpon();
+         val var5: Uri = var7.build();
+         var7.clearQuery();
 
-         for (java.lang.String var11 : var6.getQueryParameterNames()) {
+         for (java.lang.String var11 : var5.getQueryParameterNames()) {
             if (!(var11 == "fromAppsFlyer")) {
-               val var7: java.util.Iterator = var6.getQueryParameters(var11).iterator();
+               val var10: java.util.Iterator = var5.getQueryParameters(var11).iterator();
 
-               while (var7.hasNext()) {
-                  var10.appendQueryParameter(var11, var7.next() as java.lang.String);
+               while (var10.hasNext()) {
+                  var7.appendQueryParameter(var11, var10.next() as java.lang.String);
                }
             }
          }
 
-         var10.appendQueryParameter("fromAppsFlyer", var9);
-         return var10.toString();
+         var7.appendQueryParameter("fromAppsFlyer", var9);
+         return var7.toString();
       }
    }
 

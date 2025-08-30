@@ -39,15 +39,15 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var5: SharedCustomThemeViewBinding = SharedCustomThemeViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
       this.nitroWheelIcon = new SimpleDraweeView(var1);
-      val var4: View = var5.getRoot();
-      val var6: GradientDrawable = new GradientDrawable();
-      var6.setShape(0);
-      var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
-      var6.setColor(ThemeManagerKt.getTheme().getBgModStrong());
-      var6.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
-      var4.setBackground(var6);
+      val var6: View = var5.getRoot();
+      val var4: GradientDrawable = new GradientDrawable();
+      var4.setShape(0);
+      var4.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
+      var4.setColor(ThemeManagerKt.getTheme().getBgModStrong());
+      var4.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
+      var6.setBackground(var4);
       val var3: Int = SizeUtilsKt.getDpToPx(12);
-      var4.setPadding(var3, var3, var3, var3);
+      var6.setPadding(var3, var3, var3, var3);
    }
 
    @JvmStatic
@@ -63,10 +63,10 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var15: java.util.List = var2.getColors();
       val var12: ArrayList = new ArrayList(CollectionsKt.v(var15, 10));
 
-      for (java.lang.String var6 : var15) {
+      for (java.lang.String var7 : var15) {
          val var16: StringBuilder = new StringBuilder();
          var16.append("#");
-         var16.append(var6);
+         var16.append(var7);
          var12.add(var16.toString());
       }
 
@@ -100,12 +100,12 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
-      for (java.lang.String var8 : var4) {
-         val var6: TextView = new TextView(this.getContext());
-         var6.setText(var8);
-         var6.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var6.setTextSize(14.0F);
-         var3.add(var6);
+      for (java.lang.String var6 : var4) {
+         val var8: TextView = new TextView(this.getContext());
+         var8.setText(var6);
+         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var8.setTextSize(14.0F);
+         var3.add(var8);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

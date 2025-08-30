@@ -343,26 +343,26 @@ public class CircularByteBuffer(maxByteCount: Int) {
       }
 
       public override fun toString(): String {
-         val var3: Int = this.linesCount;
-         val var1: Int = this.bytesUsed;
-         val var2: Int = this.bytesCapacity;
+         val var5: Int = this.linesCount;
+         val var2: Int = this.bytesUsed;
+         val var4: Int = this.bytesCapacity;
          val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
          val var7: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
-         val var5: Int = this.headPosition;
-         val var4: Int = this.tailPosition;
+         val var1: Int = this.headPosition;
+         val var3: Int = this.tailPosition;
          val var8: StringBuilder = new StringBuilder();
          var8.append("BufferStats(lines=");
-         var8.append(var3);
+         var8.append(var5);
          var8.append(", used=");
-         var8.append(var1);
-         var8.append("B/");
          var8.append(var2);
+         var8.append("B/");
+         var8.append(var4);
          var8.append("B (");
          var8.append(var7);
          var8.append("%), head=");
-         var8.append(var5);
+         var8.append(var1);
          var8.append(", tail=");
-         var8.append(var4);
+         var8.append(var3);
          var8.append(")");
          return var8.toString();
       }

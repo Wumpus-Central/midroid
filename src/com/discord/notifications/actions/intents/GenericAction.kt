@@ -73,14 +73,14 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
       val var6: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: java.lang.String = this.taskName;
-      val var4: Bundle = new Bundle();
+      val var4: java.lang.String = this.taskName;
+      val var7: Bundle = new Bundle();
 
       for (Entry var5 : this.data.entrySet()) {
-         var4.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+         var7.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var3, 0L, false, var4, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var4, 0L, false, var7, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -93,15 +93,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
 
    public override fun toString(): String {
       val var3: java.lang.String = this.tag;
-      val var4: java.lang.String = this.taskName;
-      val var1: java.util.Map = this.data;
+      val var1: java.lang.String = this.taskName;
+      val var4: java.util.Map = this.data;
       val var2: StringBuilder = new StringBuilder();
       var2.append("GenericAction(tag=");
       var2.append(var3);
       var2.append(", taskName=");
-      var2.append(var4);
-      var2.append(", data=");
       var2.append(var1);
+      var2.append(", data=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

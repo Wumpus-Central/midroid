@@ -32,22 +32,22 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 2
-   // 07: aload 2
+   // 06: astore 3
+   // 07: aload 3
    // 08: ldc "/proc/cpuinfo"
    // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
    // 0d: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-   // 10: astore 3
+   // 10: astore 2
    // 11: new java/io/InputStreamReader
    // 14: astore 0
    // 15: new java/io/FileInputStream
    // 18: astore 4
    // 1a: aload 4
-   // 1c: aload 2
+   // 1c: aload 3
    // 1d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 20: aload 0
    // 21: aload 4
-   // 23: aload 3
+   // 23: aload 2
    // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 27: new java/io/BufferedReader
    // 2a: astore 2
@@ -316,11 +316,11 @@ internal fun maxCpuFreq(): String {
 }
 
 internal fun ramSize(context: Context): String {
-   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
-   var4 = var4;
-   val var3: MemoryInfo = new MemoryInfo();
-   var4.getMemoryInfo(var3);
-   val var1: Double = var3.totalMem / 1.0737418E9F;
+   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
+   val var3: ActivityManager = var4 as ActivityManager;
+   var4 = new MemoryInfo();
+   var3.getMemoryInfo(var4);
+   val var1: Double = var4.totalMem / 1.0737418E9F;
    val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    return var7;
@@ -336,13 +336,13 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var2: java.lang.String = b.a();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var0);
-      var1.append("_");
-      var1.append(var2);
-      return var1.toString();
+      val var1: java.lang.String = a.a();
+      var0 = b.a();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var1);
+      var2.append("_");
+      var2.append(var0);
+      return var2.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

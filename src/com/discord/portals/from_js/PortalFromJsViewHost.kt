@@ -169,20 +169,20 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    }
 
    public open fun getChildAt(index: Int): View {
-      val var3: View = this.childView;
+      val var2: View = this.childView;
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var4: java.lang.String = this.portalId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Requesting non-existent child or invalid index: ");
-         var2.append(var1);
-         var2.append(", ");
-         var2.append(var4);
-         var2.append(", ");
-         var2.append(var3);
-         var2.append(".");
-         throw new IllegalArgumentException(var2.toString().toString());
+         val var3: java.lang.String = this.portalId;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Requesting non-existent child or invalid index: ");
+         var4.append(var1);
+         var4.append(", ");
+         var4.append(var3);
+         var4.append(", ");
+         var4.append(var2);
+         var4.append(".");
+         throw new IllegalArgumentException(var4.toString().toString());
       }
    }
 
