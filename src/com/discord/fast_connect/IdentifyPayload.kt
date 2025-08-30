@@ -79,28 +79,28 @@ internal object IdentifyPayload {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         var7 = var17 as JsonObject;
-         val var8: java.util.List = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         var17 = var2.getGuildVersions();
-         val var12: LinkedHashMap = new LinkedHashMap(d.d(L.d(((Object[])var17).length), 16));
-         var var5: Int = ((Object[])var17).length;
+         var17 = var17 as JsonObject;
+         var7 = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var8: Array<GuildVersion> = var2.getGuildVersions();
+         val var12: LinkedHashMap = new LinkedHashMap(d.d(L.d(var8.length), 16));
+         var var5: Int = var8.length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(((GuildVersion)((Object[])var17)[var3]).getId(), g.c(((GuildVersion)((Object[])var17)[var3]).getVersion()));
+            val var24: Pair = s.a(var8[var3].getId(), g.c(var8[var3].getVersion()));
             var12.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var7, var8, new JsonObject(var12));
+         var var13: JsonObject = this.put((JsonObject)var17, (java.util.List<java.lang.String>)var7, new JsonObject(var12));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var7 = var14[var15];
-            var17 = INSTANCE;
+            var17 = var14[var15];
+            var7 = INSTANCE;
             var13 = INSTANCE.put(
                var13,
-               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var7).getId()}),
-               ((IdentifyPayload)var17).toJson((NonGuildVersion)var7)
+               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var17).getId()}),
+               ((IdentifyPayload)var7).toJson((NonGuildVersion)var17)
             );
          }
 

@@ -152,36 +152,36 @@ public data class AutoModerationContext(headerText: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.headerText;
-      val var5: java.lang.String = this.headerBadgeText;
-      val var9: java.lang.String = this.ruleDisplayText;
-      val var6: java.lang.String = this.keywordDisplayText;
+      val var4: java.lang.String = this.headerText;
+      val var9: java.lang.String = this.headerBadgeText;
+      val var2: java.lang.String = this.ruleDisplayText;
+      val var8: java.lang.String = this.keywordDisplayText;
       val var1: java.lang.String = this.actionsIconURL;
-      val var7: java.lang.String = this.actionsText;
-      val var2: java.lang.String = this.feedbackText;
-      val var8: FlaggedMessageEmbed = this.message;
-      val var10: AutoModerationNotification = this.notification;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AutoModerationContext(headerText=");
-      var4.append(var3);
-      var4.append(", headerBadgeText=");
-      var4.append(var5);
-      var4.append(", ruleDisplayText=");
-      var4.append(var9);
-      var4.append(", keywordDisplayText=");
-      var4.append(var6);
-      var4.append(", actionsIconURL=");
-      var4.append(var1);
-      var4.append(", actionsText=");
-      var4.append(var7);
-      var4.append(", feedbackText=");
-      var4.append(var2);
-      var4.append(", message=");
-      var4.append(var8);
-      var4.append(", notification=");
-      var4.append(var10);
-      var4.append(")");
-      return var4.toString();
+      val var10: java.lang.String = this.actionsText;
+      val var5: java.lang.String = this.feedbackText;
+      val var7: FlaggedMessageEmbed = this.message;
+      val var6: AutoModerationNotification = this.notification;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AutoModerationContext(headerText=");
+      var3.append(var4);
+      var3.append(", headerBadgeText=");
+      var3.append(var9);
+      var3.append(", ruleDisplayText=");
+      var3.append(var2);
+      var3.append(", keywordDisplayText=");
+      var3.append(var8);
+      var3.append(", actionsIconURL=");
+      var3.append(var1);
+      var3.append(", actionsText=");
+      var3.append(var10);
+      var3.append(", feedbackText=");
+      var3.append(var5);
+      var3.append(", message=");
+      var3.append(var7);
+      var3.append(", notification=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

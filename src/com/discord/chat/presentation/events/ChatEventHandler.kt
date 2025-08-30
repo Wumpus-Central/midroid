@@ -259,6 +259,9 @@ public interface ChatEventHandler {
    public abstract fun onTapPostPreviewEmbed(guildId: GuildId, parentChannelId: ChannelId, threadId: ChannelId, messageId: MessageId) {
    }
 
+   public abstract fun onTapPreviewSharedClientTheme(messageId: MessageId) {
+   }
+
    public abstract fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ..., location: String? = ...) {
    }
 
@@ -569,6 +572,9 @@ public interface ChatEventHandler {
       }
 
       public override fun onTapPostPreviewEmbed(guildId: GuildId, parentChannelId: ChannelId, threadId: ChannelId, messageId: MessageId) {
+      }
+
+      public override fun onTapPreviewSharedClientTheme(messageId: MessageId) {
       }
 
       public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?, location: String?) {

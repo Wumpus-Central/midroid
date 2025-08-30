@@ -188,6 +188,8 @@
     <item type="id" name="copy_button" />
     <item type="id" name="cover_image" />
     <item type="id" name="cover_image_overlay_button" />
+    <item type="id" name="createdBy" />
+    <item type="id" name="createdByContainer" />
     <item type="id" name="creator_avatar" />
     <item type="id" name="cta" />
     <item type="id" name="ctaButton" />
@@ -340,6 +342,7 @@
     <item type="id" name="header_section" />
     <item type="id" name="header_text" />
     <item type="id" name="header_title" />
+    <item type="id" name="heading" />
     <item type="id" name="hero_text" />
     <item type="id" name="hide_button" />
     <item type="id" name="hide_ime_id" />
@@ -582,6 +585,8 @@
     <item type="id" name="pointer_events" />
     <item type="id" name="pooling_container_listener_holder_tag" />
     <item type="id" name="pressed" />
+    <item type="id" name="previewBtn" />
+    <item type="id" name="previewHeading" />
     <item type="id" name="primary_action" />
     <item type="id" name="primary_cta" />
     <item type="id" name="progress" />
@@ -762,6 +767,7 @@
     <item type="id" name="textinput_placeholder" />
     <item type="id" name="textinput_prefix_text" />
     <item type="id" name="textinput_suffix_text" />
+    <item type="id" name="themePreview" />
     <item type="id" name="thread_embed_container" />
     <item type="id" name="thread_embed_icon" />
     <item type="id" name="thread_embed_messages_count" />

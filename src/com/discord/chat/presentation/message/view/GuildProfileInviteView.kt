@@ -148,7 +148,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       }
 
       val var6: SimpleDraweeView = this.binding.itemInviteSplash;
-      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a(var5, var5, 0.0F, 0.0F));
+      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b(var5, var5, 0.0F, 0.0F));
       var6.setImageURI(var1);
       if (var1 == null) {
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(var6, new int[]{var2, var3}, Orientation.TL_BR, var5, var5, 0.0F, 0.0F, null, 0, 240, null);

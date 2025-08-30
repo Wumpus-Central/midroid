@@ -74,12 +74,12 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
                Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
                AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
             } else {
-               val var3: Log = Log.INSTANCE;
-               val var2: java.lang.String = var1.getMessage();
-               val var4: StringBuilder = new StringBuilder();
-               var4.append("Error getting google advertising ID: ");
-               var4.append(var2);
-               var3.e("AdsModule", var4.toString(), var1);
+               val var4: Log = Log.INSTANCE;
+               val var3: java.lang.String = var1.getMessage();
+               val var2: StringBuilder = new StringBuilder();
+               var2.append("Error getting google advertising ID: ");
+               var2.append(var3);
+               var4.e("AdsModule", var2.toString(), var1);
                this.$promise.reject("err", "Failed to get google advertising ID", var1);
             }
          }

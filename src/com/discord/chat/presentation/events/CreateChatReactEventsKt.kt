@@ -62,6 +62,7 @@ import com.discord.chat.reactevents.TapPollAction
 import com.discord.chat.reactevents.TapPollAnswer
 import com.discord.chat.reactevents.TapPollSubmitVote
 import com.discord.chat.reactevents.TapPostPreviewEmbedData
+import com.discord.chat.reactevents.TapPreviewSharedClientThemeData
 import com.discord.chat.reactevents.TapReactionData
 import com.discord.chat.reactevents.TapReferralRedeemData
 import com.discord.chat.reactevents.TapRemixData
@@ -173,6 +174,7 @@ internal fun createChatReactEvents(): ReactEvents {
       s.a("onTapInlineForward", TapInlineForwardData::class),
       s.a("onTapClanTagChiplet", TapClanTagChipletData::class),
       s.a("onTapContentInventoryEntryEmbed", TapContentInventoryEntryEmbedData::class),
-      s.a("onTapSoundmoji", TapSoundmojiData::class)
+      s.a("onTapSoundmoji", TapSoundmojiData::class),
+      s.a("onTapPreviewSharedClientTheme", TapPreviewSharedClientThemeData::class)
    );
 }

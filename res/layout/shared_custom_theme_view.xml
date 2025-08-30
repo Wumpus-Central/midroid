@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:dividerPadding="3.0dip">
+        <com.google.android.flexbox.FlexboxLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="10.0dip" app:alignItems="center" app:flexDirection="row">
+            <com.discord.chat.presentation.message.view.customthemes.ThemePreviewView android:id="@id/themePreview" android:layout_width="54.0dip" android:layout_height="54.0dip" android:layout_marginEnd="10.0dip" app:layout_alignSelf="center" app:layout_flexGrow="0.0" app:layout_flexShrink="0.0" />
+            <com.google.android.flexbox.FlexboxLayout android:layout_width="fill_parent" android:layout_height="wrap_content" app:flexDirection="column">
+                <com.google.android.flexbox.FlexboxLayout android:id="@id/heading" android:layout_width="fill_parent" android:layout_height="wrap_content" app:alignItems="center" app:flexDirection="row" app:justifyContent="flex_start">
+                    <TextView android:id="@id/previewHeading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+                </com.google.android.flexbox.FlexboxLayout>
+                <com.google.android.flexbox.FlexboxLayout android:id="@id/createdByContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" app:dividerDrawable="@drawable/drawable_bot_component_divider" app:flexWrap="wrap" app:showDivider="middle">
+                    <TextView android:id="@id/createdBy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" />
+                </com.google.android.flexbox.FlexboxLayout>
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.flexbox.FlexboxLayout>
+        <com.discord.core.DCDButton android:id="@id/previewBtn" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+</merge>

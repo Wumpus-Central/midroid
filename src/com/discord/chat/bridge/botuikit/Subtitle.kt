@@ -87,19 +87,19 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.badgeUrl;
-      val var4: java.lang.String = this.text;
-      val var1: java.lang.String = this.ariaDescription;
-      val var2: ContentInventoryEntryClickable = this.clickable;
+      val var2: java.lang.String = this.badgeUrl;
+      val var5: java.lang.String = this.text;
+      val var4: java.lang.String = this.ariaDescription;
+      val var1: ContentInventoryEntryClickable = this.clickable;
       val var3: StringBuilder = new StringBuilder();
       var3.append("Subtitle(badgeUrl=");
-      var3.append(var5);
-      var3.append(", text=");
-      var3.append(var4);
-      var3.append(", ariaDescription=");
-      var3.append(var1);
-      var3.append(", clickable=");
       var3.append(var2);
+      var3.append(", text=");
+      var3.append(var5);
+      var3.append(", ariaDescription=");
+      var3.append(var4);
+      var3.append(", clickable=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -87,8 +87,8 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.title.hashCode();
-      val var5: Int = this.messageCountLabel.hashCode();
+      val var5: Int = this.title.hashCode();
+      val var6: Int = this.messageCountLabel.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.messagePreviewString == null) {
@@ -115,31 +115,31 @@ public data class ThreadEmbed(title: String,
          var4 = this.referencedMessage.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.title;
-      val var5: java.lang.String = this.messageCountLabel;
-      val var6: java.lang.String = this.messagePreviewString;
-      val var7: java.lang.Boolean = this.archived;
-      val var3: java.lang.String = this.archivedIconUrl;
-      val var1: ThreadEmbedMessage = this.referencedMessage;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThreadEmbed(title=");
-      var2.append(var4);
-      var2.append(", messageCountLabel=");
-      var2.append(var5);
-      var2.append(", messagePreviewString=");
-      var2.append(var6);
-      var2.append(", archived=");
-      var2.append(var7);
-      var2.append(", archivedIconUrl=");
-      var2.append(var3);
-      var2.append(", referencedMessage=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var6: java.lang.String = this.messageCountLabel;
+      val var2: java.lang.String = this.messagePreviewString;
+      val var3: java.lang.Boolean = this.archived;
+      val var5: java.lang.String = this.archivedIconUrl;
+      val var7: ThreadEmbedMessage = this.referencedMessage;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThreadEmbed(title=");
+      var1.append(var4);
+      var1.append(", messageCountLabel=");
+      var1.append(var6);
+      var1.append(", messagePreviewString=");
+      var1.append(var2);
+      var1.append(", archived=");
+      var1.append(var3);
+      var1.append(", archivedIconUrl=");
+      var1.append(var5);
+      var1.append(", referencedMessage=");
+      var1.append(var7);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

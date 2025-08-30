@@ -16,10 +16,10 @@ public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactCont
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun bridgeJSIFunctions(): Boolean {
       try {
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         val var4: CallInvokerHolder = var2.getCatalystInstance().getJSCallInvokerHolder();
-         val var3: JavaScriptContextHolder = var2.getJavaScriptContextHolder();
-         this.jniBridgeJSIFunctions(var2, var3.get(), var4);
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         val var2: CallInvokerHolder = var3.getCatalystInstance().getJSCallInvokerHolder();
+         val var4: JavaScriptContextHolder = var3.getJavaScriptContextHolder();
+         this.jniBridgeJSIFunctions(var3, var4.get(), var2);
       } catch (var5: Exception) {
          return false;
       }

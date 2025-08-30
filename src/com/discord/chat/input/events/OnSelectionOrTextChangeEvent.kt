@@ -71,18 +71,18 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       val var2: Int = this.start;
       val var1: Int = this.end;
       val var3: java.lang.String = this.text;
-      val var4: java.lang.String = this.editId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("OnSelectionOrTextChangeEvent(start=");
-      var5.append(var2);
-      var5.append(", end=");
-      var5.append(var1);
-      var5.append(", text=");
-      var5.append(var3);
-      var5.append(", editId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.editId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("OnSelectionOrTextChangeEvent(start=");
+      var4.append(var2);
+      var4.append(", end=");
+      var4.append(var1);
+      var4.append(", text=");
+      var4.append(var3);
+      var4.append(", editId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

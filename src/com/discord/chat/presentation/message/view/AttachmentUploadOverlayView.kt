@@ -45,14 +45,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    init {
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
-      val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
+      val var3: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
       this.onAnimationComplete = new e();
-      val var3: SimpleDraweeView = var5.uploadCancel;
-      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
-      ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
-      I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
-      val var4: SimpleDraweeView = var5.uploadComplete;
+      val var5: SimpleDraweeView = var3.uploadCancel;
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.Cancel);
+      ColorUtilsKt.setTintColor(var5, Color.argb(255, 255, 255, 255));
+      I18nUtilsKt.i18nContentDescription$default(var5, I18nMessage.CANCEL, null, 2, null);
+      val var4: SimpleDraweeView = var3.uploadComplete;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -404,14 +404,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
       public override fun toString(): String {
          val var3: Int = this.backgroundSize;
-         val var1: Int = this.checkmarkButtonSize;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("CompleteViewConfig(backgroundSize=");
-         var2.append(var3);
-         var2.append(", checkmarkButtonSize=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: Int = this.checkmarkButtonSize;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("CompleteViewConfig(backgroundSize=");
+         var1.append(var3);
+         var1.append(", checkmarkButtonSize=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 
@@ -541,27 +541,27 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var6: Int = this.backgroundSize;
+         val var4: Int = this.backgroundSize;
          val var2: Drawable = this.backgroundDrawable;
-         val var5: Int = this.cancelButtonSize;
+         val var1: Int = this.cancelButtonSize;
          val var3: Int = this.primaryColor;
          val var7: Int = this.progressIndicatorSize;
-         val var4: Int = this.trackColor;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ProgressViewConfig(backgroundSize=");
-         var1.append(var6);
-         var1.append(", backgroundDrawable=");
-         var1.append(var2);
-         var1.append(", cancelButtonSize=");
-         var1.append(var5);
-         var1.append(", primaryColor=");
-         var1.append(var3);
-         var1.append(", progressIndicatorSize=");
-         var1.append(var7);
-         var1.append(", trackColor=");
-         var1.append(var4);
-         var1.append(")");
-         return var1.toString();
+         val var5: Int = this.trackColor;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("ProgressViewConfig(backgroundSize=");
+         var6.append(var4);
+         var6.append(", backgroundDrawable=");
+         var6.append(var2);
+         var6.append(", cancelButtonSize=");
+         var6.append(var1);
+         var6.append(", primaryColor=");
+         var6.append(var3);
+         var6.append(", progressIndicatorSize=");
+         var6.append(var7);
+         var6.append(", trackColor=");
+         var6.append(var5);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

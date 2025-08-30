@@ -29,11 +29,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       if (var7.e() == "inapp") {
          val var11: ProductDetails.b = var7.c();
          if (var11 == null) {
-            var3 = var7.d();
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("Could not find oneTimePurchaseOfferDetails for product: ");
-            var13.append(var3);
-            throw new AssertionError(var13.toString());
+            val var13: java.lang.String = var7.d();
+            val var19: StringBuilder = new StringBuilder();
+            var19.append("Could not find oneTimePurchaseOfferDetails for product: ");
+            var19.append(var13);
+            throw new AssertionError(var19.toString());
          }
 
          var1 = var11.b();
@@ -75,12 +75,12 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          var3 = var16.c();
          var4 = var16.b();
          var12 = var16.e();
-         val var10: java.util.Iterator = var9.iterator();
+         val var23: java.util.Iterator = var9.iterator();
 
-         while (var10.hasNext()) {
-            val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
-            if (var23 != null) {
-               var6.add(var23);
+         while (var23.hasNext()) {
+            val var10: java.lang.String = (var23.next() as ProductDetails.d).b();
+            if (var10 != null) {
+               var6.add(var10);
             }
          }
       } else {

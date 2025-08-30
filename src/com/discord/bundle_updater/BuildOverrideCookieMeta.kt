@@ -147,8 +147,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = s.a("expiresAt", this.expiresAt);
-      val var3: Pair = s.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = s.a("expiresAt", this.expiresAt);
+      val var4: Pair = s.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -163,36 +163,36 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var7: Pair = s.a("allowedVersions", var9);
-      val var6: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
+      val var6: Pair = s.a("allowedVersions", var9);
+      val var7: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var7, var6, s.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var6, var7, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.expiresAt;
-      val var6: java.lang.String = this.releaseChannel;
-      val var4: java.util.List = this.validForUserIds;
+      val var6: java.lang.String = this.expiresAt;
+      val var5: java.lang.String = this.releaseChannel;
+      val var2: java.util.List = this.validForUserIds;
       val var3: java.util.List = this.allowedVersions;
       val var1: java.lang.Boolean = this.allowLoggedOut;
-      val var2: java.util.Map = this.experiments;
+      val var4: java.util.Map = this.experiments;
       val var7: StringBuilder = new StringBuilder();
       var7.append("BuildOverrideCookieMeta(expiresAt=");
-      var7.append(var5);
-      var7.append(", releaseChannel=");
       var7.append(var6);
+      var7.append(", releaseChannel=");
+      var7.append(var5);
       var7.append(", validForUserIds=");
-      var7.append(var4);
+      var7.append(var2);
       var7.append(", allowedVersions=");
       var7.append(var3);
       var7.append(", allowLoggedOut=");
       var7.append(var1);
       var7.append(", experiments=");
-      var7.append(var2);
+      var7.append(var4);
       var7.append(")");
       return var7.toString();
    }

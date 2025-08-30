@@ -137,10 +137,10 @@ public data class SafetySystemNotificationEmbed(titleText: String,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.titleText.hashCode();
+      val var8: Int = this.titleText.hashCode();
       val var7: Int = this.titleIcon.hashCode();
       val var9: Int = this.subtitleText.hashCode();
-      val var8: Int = this.descriptionText.hashCode();
+      val var10: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.primaryCtaText == null) {
@@ -181,47 +181,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var10 * 31 + var7) * 31 + var9) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var8 * 31 + var7) * 31 + var9) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.titleText;
-      val var12: java.lang.String = this.titleIcon;
+      val var2: java.lang.String = this.titleText;
+      val var3: java.lang.String = this.titleIcon;
       val var11: java.lang.String = this.subtitleText;
-      val var10: java.lang.String = this.descriptionText;
+      val var7: java.lang.String = this.descriptionText;
       val var6: java.lang.String = this.primaryCtaText;
       val var4: java.lang.String = this.primaryCtaType;
-      val var8: java.lang.String = this.primaryCtaKey;
-      val var9: java.lang.String = this.secondaryCtaText;
-      val var2: java.lang.String = this.secondaryCtaType;
-      val var3: java.lang.String = this.secondaryCtaKey;
-      val var7: FooterTheme = this.footerTheme;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SafetySystemNotificationEmbed(titleText=");
-      var5.append(var1);
-      var5.append(", titleIcon=");
-      var5.append(var12);
-      var5.append(", subtitleText=");
-      var5.append(var11);
-      var5.append(", descriptionText=");
-      var5.append(var10);
-      var5.append(", primaryCtaText=");
-      var5.append(var6);
-      var5.append(", primaryCtaType=");
-      var5.append(var4);
-      var5.append(", primaryCtaKey=");
-      var5.append(var8);
-      var5.append(", secondaryCtaText=");
-      var5.append(var9);
-      var5.append(", secondaryCtaType=");
-      var5.append(var2);
-      var5.append(", secondaryCtaKey=");
-      var5.append(var3);
-      var5.append(", footerTheme=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.primaryCtaKey;
+      val var8: java.lang.String = this.secondaryCtaText;
+      val var12: java.lang.String = this.secondaryCtaType;
+      val var9: java.lang.String = this.secondaryCtaKey;
+      val var5: FooterTheme = this.footerTheme;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("SafetySystemNotificationEmbed(titleText=");
+      var10.append(var2);
+      var10.append(", titleIcon=");
+      var10.append(var3);
+      var10.append(", subtitleText=");
+      var10.append(var11);
+      var10.append(", descriptionText=");
+      var10.append(var7);
+      var10.append(", primaryCtaText=");
+      var10.append(var6);
+      var10.append(", primaryCtaType=");
+      var10.append(var4);
+      var10.append(", primaryCtaKey=");
+      var10.append(var1);
+      var10.append(", secondaryCtaText=");
+      var10.append(var8);
+      var10.append(", secondaryCtaType=");
+      var10.append(var12);
+      var10.append(", secondaryCtaKey=");
+      var10.append(var9);
+      var10.append(", footerTheme=");
+      var10.append(var5);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

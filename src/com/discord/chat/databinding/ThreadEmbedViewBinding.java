@@ -61,8 +61,8 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
       ClanTagChipletView var9 = (ClanTagChipletView)a.a(var0, var1);
       if (var9 != null) {
          var1 = R.id.thread_embed_icon;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.thread_embed_messages_count;
             TextView var2 = (TextView)a.a(var0, var1);
             if (var2 != null) {
@@ -70,18 +70,18 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
                SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
                if (var6 != null) {
                   var1 = R.id.thread_embed_most_recent_message_content;
-                  SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var7 != null) {
+                  SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.thread_embed_most_recent_message_header;
-                     LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-                     if (var3 != null) {
+                     LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.thread_embed_most_recent_message_name;
-                        TextView var8 = (TextView)a.a(var0, var1);
-                        if (var8 != null) {
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.thread_embed_name;
                            TextView var4 = (TextView)a.a(var0, var1);
                            if (var4 != null) {
-                              return new ThreadEmbedViewBinding(var0, var9, var5, var2, var6, var7, var3, var8, var4);
+                              return new ThreadEmbedViewBinding(var0, var9, var8, var2, var6, var3, var5, var7, var4);
                            }
                         }
                      }

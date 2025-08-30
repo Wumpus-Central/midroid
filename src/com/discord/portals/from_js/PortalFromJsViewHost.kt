@@ -80,12 +80,12 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             );
       } else if (this.childView != null && !this.childViewValid()) {
          this.removeChildView();
-         val var6: CrashReporting = CrashReporting.INSTANCE;
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("childView not valid before addView ");
-         var11.append(var4);
-         var6.addBreadcrumb(
-            var11.toString(),
+         val var11: CrashReporting = CrashReporting.INSTANCE;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("childView not valid before addView ");
+         var6.append(var4);
+         var11.addBreadcrumb(
+            var6.toString(),
             L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
             "portal"
          );
@@ -111,13 +111,13 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       if (this.childView == null) {
          this.addChildView(var1);
       } else {
-         val var7: java.lang.String = this.portalId;
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("Adding more than one child unsupported: ");
-         var9.append(var7);
-         var9.append(", previous: ");
-         var9.append(var8);
-         throw new IllegalArgumentException(var9.toString().toString());
+         var4 = this.portalId;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Adding more than one child unsupported: ");
+         var7.append(var4);
+         var7.append(", previous: ");
+         var7.append(var8);
+         throw new IllegalArgumentException(var7.toString().toString());
       }
    }
 
@@ -169,18 +169,18 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    }
 
    public open fun getChildAt(index: Int): View {
-      val var4: View = this.childView;
+      val var3: View = this.childView;
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var3: java.lang.String = this.portalId;
+         val var4: java.lang.String = this.portalId;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Requesting non-existent child or invalid index: ");
          var2.append(var1);
          var2.append(", ");
-         var2.append(var3);
-         var2.append(", ");
          var2.append(var4);
+         var2.append(", ");
+         var2.append(var3);
          var2.append(".");
          throw new IllegalArgumentException(var2.toString().toString());
       }

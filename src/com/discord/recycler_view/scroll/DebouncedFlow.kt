@@ -67,9 +67,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                } else {
                   kotlin.c.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
+                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     var1 = new FlowCollector(this.$onEvent) {
+                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -112,12 +112,12 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
                         return var5;
                      }
                   } else {
-                     val var8: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
+                     val var9: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var8: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -160,7 +160,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var8.collect(var9, this) === var5) {
+                     if (var9.collect(var8, this) === var5) {
                         return var5;
                      }
                   }

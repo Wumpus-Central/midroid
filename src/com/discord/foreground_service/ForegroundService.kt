@@ -19,15 +19,15 @@ internal class ForegroundService : Service {
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
       val var6: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("onStartCommand: intent ");
-      var4.append(var1);
-      var4.append(", flags ");
-      var4.append(var2);
-      var4.append(", startId ");
-      var4.append(var3);
-      Log.i$foreground_service_release$default(var6, var5, var4.toString(), null, 4, null);
+      val var4: java.lang.String = tag;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("onStartCommand: intent ");
+      var5.append(var1);
+      var5.append(", flags ");
+      var5.append(var2);
+      var5.append(", startId ");
+      var5.append(var3);
+      Log.i$foreground_service_release$default(var6, var4, var5.toString(), null, 4, null);
       val var7: Byte;
       if (ForegroundServiceManager.INSTANCE.onServiceStartCommandReceived$foreground_service_release(this, var1)) {
          var7 = 1;

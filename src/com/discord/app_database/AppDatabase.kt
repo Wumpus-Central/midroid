@@ -63,14 +63,14 @@ public object AppDatabase {
             var1 = this.databaseName(var1);
             val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
             val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-            val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-            val var15: kotlinx.serialization.json.Json.a = Json.d;
-            var15.a();
-            var24 = var15.b(new z0(GuildVersion::class, GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
-            var15.a();
-            var27 = var15.b(new z0(NonGuildVersion::class, NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
-            var15.a();
-            var16 = var15.b(new z0(CacheVersion::class, CacheVersion.Companion.serializer()), var6) as Array<CacheVersion>;
+            var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+            val var6: kotlinx.serialization.json.Json.a = Json.d;
+            var6.a();
+            var24 = var6.b(new z0(GuildVersion::class, GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
+            var6.a();
+            var27 = var6.b(new z0(NonGuildVersion::class, NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+            var6.a();
+            var16 = var6.b(new z0(CacheVersion::class, CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;

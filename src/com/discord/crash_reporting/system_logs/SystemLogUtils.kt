@@ -26,12 +26,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var0: java.lang.String = Regex.e.c("libdiscord_version");
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var1.append(var0);
-      var1.append("\\].+))");
-      regexExtractTombstone = new Regex(var1.toString());
+      val var1: java.lang.String = Regex.e.c("libdiscord_version");
+      val var0: StringBuilder = new StringBuilder();
+      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var0.append(var1);
+      var0.append("\\].+))");
+      regexExtractTombstone = new Regex(var0.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -96,30 +96,30 @@ internal object SystemLogUtils {
          } else {
             val var11: kotlin.text.f = kotlin.text.f.m;
             val var17: Regex = new Regex("^Cause: (.+)$", kotlin.text.f.m);
-            val var21: Sequence = kotlin.sequences.k.z(
+            val var21: Sequence = kotlin.sequences.k.B(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
             );
-            val var23: HashSet = V.e(
+            val var8: HashSet = V.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
                do {
-                  if (!var8.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var14 = var8.next();
-               } while (var23.contains((java.lang.String)var14));
+                  var23 = var14.next();
+               } while (var8.contains((java.lang.String)var23));
 
-               var13 = var14 as java.lang.String;
+               var13 = var23 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var13 = "Unknown";
             }
 
-            val var22: java.lang.String = kotlin.sequences.k.x(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = kotlin.sequences.k.z(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -455,13 +455,13 @@ internal object SystemLogUtils {
 
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
-      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("[");
-      var3.append("libdiscord_version");
-      var3.append("]: ");
-      var3.append(var2);
-      Log.v("Discord", var3.toString());
+      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("[");
+      var2.append("libdiscord_version");
+      var2.append("]: ");
+      var2.append(var3);
+      Log.v("Discord", var2.toString());
       systemLogCapture.startThread(var1);
    }
 
@@ -554,27 +554,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
+         val var3: java.lang.String = this.text;
+         val var1: java.lang.String = this.cause;
          val var6: java.lang.String = this.groupBy;
-         val var3: java.lang.String = this.origin;
-         val var1: java.lang.String = this.groupHash;
+         val var7: java.lang.String = this.origin;
+         val var5: java.lang.String = this.groupHash;
          val var4: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var5);
-         var7.append(", cause=");
-         var7.append(var2);
-         var7.append(", groupBy=");
-         var7.append(var6);
-         var7.append(", origin=");
-         var7.append(var3);
-         var7.append(", groupHash=");
-         var7.append(var1);
-         var7.append(", textHash=");
-         var7.append(var4);
-         var7.append(")");
-         return var7.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Tombstone(text=");
+         var2.append(var3);
+         var2.append(", cause=");
+         var2.append(var1);
+         var2.append(", groupBy=");
+         var2.append(var6);
+         var2.append(", origin=");
+         var2.append(var7);
+         var2.append(", groupHash=");
+         var2.append(var5);
+         var2.append(", textHash=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

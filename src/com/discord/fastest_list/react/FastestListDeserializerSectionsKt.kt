@@ -108,8 +108,8 @@ private fun createSectionItem(
    }
 
    var0 = FastestListSections.Entry.SectionItem.Companion.createKey(var0, var2, var4, var15);
-   val var9: Int = FastestListSections.Section.constructor-impl(var2);
-   var2 = FastestListSections.Item.constructor-impl(var4);
+   var2 = FastestListSections.Section.constructor-impl(var2);
+   val var9: Int = FastestListSections.Item.constructor-impl(var4);
    if (var4 == 0) {
       var1 = true;
    } else {
@@ -123,7 +123,7 @@ private fun createSectionItem(
       var10 = false;
    }
 
-   return new FastestListSections.Entry.SectionItem(var0, var9, var2, var8, var1, var10, null);
+   return new FastestListSections.Entry.SectionItem(var0, var2, var9, var8, var1, var10, null);
 }
 
 internal operator fun Companion.invoke(value: ReadableMap): Versioned {

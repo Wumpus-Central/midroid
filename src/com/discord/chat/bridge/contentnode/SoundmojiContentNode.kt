@@ -119,8 +119,8 @@ public data class SoundmojiContentNode(soundId: String,
 
    public override fun hashCode(): Int {
       val var7: Int = this.soundId.hashCode();
-      val var6: Int = ChannelId.hashCode-impl(this.channelId);
-      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       var var4: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -148,37 +148,37 @@ public data class SoundmojiContentNode(soundId: String,
          var4 = this.emojiName.hashCode();
       }
 
-      return ((((((var7 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var7 * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.soundId;
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: java.lang.String = this.content;
-      val var2: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.soundId;
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = this.content;
+      val var8: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var3: java.lang.String = this.emojiId;
+      val var7: java.lang.String = this.emojiId;
       val var9: java.lang.String = this.emojiName;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("SoundmojiContentNode(soundId=");
-      var7.append(var6);
-      var7.append(", channelId=");
-      var7.append(var4);
-      var7.append(", messageId=");
-      var7.append(var8);
-      var7.append(", content=");
-      var7.append(var5);
-      var7.append(", guildId=");
-      var7.append(var2);
-      var7.append(", jumboable=");
-      var7.append(var1);
-      var7.append(", emojiId=");
-      var7.append(var3);
-      var7.append(", emojiName=");
-      var7.append(var9);
-      var7.append(")");
-      return var7.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SoundmojiContentNode(soundId=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var6);
+      var5.append(", messageId=");
+      var5.append(var4);
+      var5.append(", content=");
+      var5.append(var3);
+      var5.append(", guildId=");
+      var5.append(var8);
+      var5.append(", jumboable=");
+      var5.append(var1);
+      var5.append(", emojiId=");
+      var5.append(var7);
+      var5.append(", emojiName=");
+      var5.append(var9);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

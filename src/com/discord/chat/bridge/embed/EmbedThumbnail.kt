@@ -150,8 +150,8 @@ public data class EmbedThumbnail(url: String,
          var2 = this.videoUrl.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.height);
-      val var9: Int = Integer.hashCode(this.width);
+      val var9: Int = Integer.hashCode(this.height);
+      val var8: Int = Integer.hashCode(this.width);
       val var3: Int;
       if (this.gifv == null) {
          var3 = 0;
@@ -177,44 +177,44 @@ public data class EmbedThumbnail(url: String,
          var6 = this.placeholderVersion.hashCode();
       }
 
-      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var8) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.url;
-      val var7: java.lang.String = this.proxyURL;
-      val var10: java.lang.String = this.videoUrl;
-      val var2: Int = this.height;
-      val var1: Int = this.width;
-      val var9: java.lang.Boolean = this.gifv;
-      val var4: java.lang.Boolean = this.showPlayButton;
+      val var10: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
+      val var8: java.lang.String = this.videoUrl;
+      val var1: Int = this.height;
+      val var2: Int = this.width;
+      val var6: java.lang.Boolean = this.gifv;
+      val var7: java.lang.Boolean = this.showPlayButton;
       val var11: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
+      val var5: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("EmbedThumbnail(url=");
-      var6.append(var5);
-      var6.append(", proxyURL=");
-      var6.append(var7);
-      var6.append(", videoUrl=");
-      var6.append(var10);
-      var6.append(", height=");
-      var6.append(var2);
-      var6.append(", width=");
-      var6.append(var1);
-      var6.append(", gifv=");
-      var6.append(var9);
-      var6.append(", showPlayButton=");
-      var6.append(var4);
-      var6.append(", placeholder=");
-      var6.append(var11);
-      var6.append(", placeholderVersion=");
-      var6.append(var8);
-      var6.append(", srcIsAnimated=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("EmbedThumbnail(url=");
+      var9.append(var10);
+      var9.append(", proxyURL=");
+      var9.append(var4);
+      var9.append(", videoUrl=");
+      var9.append(var8);
+      var9.append(", height=");
+      var9.append(var1);
+      var9.append(", width=");
+      var9.append(var2);
+      var9.append(", gifv=");
+      var9.append(var6);
+      var9.append(", showPlayButton=");
+      var9.append(var7);
+      var9.append(", placeholder=");
+      var9.append(var11);
+      var9.append(", placeholderVersion=");
+      var9.append(var5);
+      var9.append(", srcIsAnimated=");
+      var9.append(var3);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

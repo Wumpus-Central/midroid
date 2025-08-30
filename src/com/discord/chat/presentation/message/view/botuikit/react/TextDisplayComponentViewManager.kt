@@ -233,13 +233,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       } else {
          try {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            val var22: java.lang.String = (var15.getClass()::class).getSimpleName();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Expected ");
-            var17.append(var11);
-            var17.append(" but got ");
-            var17.append(var22);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
+            val var22: StringBuilder = new StringBuilder();
+            var22.append("Expected ");
+            var22.append(var11);
+            var22.append(" but got ");
+            var22.append(var17);
+            throw new IllegalStateException(var22.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();
             val var16: java.lang.String = var7.getMessage();

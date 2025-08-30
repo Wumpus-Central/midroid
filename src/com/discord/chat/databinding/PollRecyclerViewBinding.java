@@ -48,11 +48,11 @@ public final class PollRecyclerViewBinding implements ViewBinding {
    @NonNull
    public static PollRecyclerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.answers;
-      RecyclerView var2 = (RecyclerView)a.a(var0, var1);
-      if (var2 != null) {
+      RecyclerView var3 = (RecyclerView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.primary_action;
-         PollActionButton var3 = (PollActionButton)a.a(var0, var1);
-         if (var3 != null) {
+         PollActionButton var2 = (PollActionButton)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.prompt_text;
             TextView var4 = (TextView)a.a(var0, var1);
             if (var4 != null) {
@@ -65,7 +65,7 @@ public final class PollRecyclerViewBinding implements ViewBinding {
                      var1 = R.id.tertiary_action_button;
                      PollActionButton var5 = (PollActionButton)a.a(var0, var1);
                      if (var5 != null) {
-                        return new PollRecyclerViewBinding(var0, var2, var3, var4, var7, var6, var5);
+                        return new PollRecyclerViewBinding(var0, var3, var2, var4, var7, var6, var5);
                      }
                   }
                }

@@ -112,24 +112,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
-      val var5: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.name;
+      val var1: java.lang.String = this.src;
+      val var3: java.lang.String = this.displayName;
       val var6: java.lang.String = this.id;
-      val var4: java.lang.Boolean = this.animated;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageReactionEmoji(name=");
-      var3.append(var1);
-      var3.append(", src=");
-      var3.append(var2);
-      var3.append(", displayName=");
-      var3.append(var5);
-      var3.append(", id=");
-      var3.append(var6);
-      var3.append(", animated=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.Boolean = this.animated;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageReactionEmoji(name=");
+      var2.append(var4);
+      var2.append(", src=");
+      var2.append(var1);
+      var2.append(", displayName=");
+      var2.append(var3);
+      var2.append(", id=");
+      var2.append(var6);
+      var2.append(", animated=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
