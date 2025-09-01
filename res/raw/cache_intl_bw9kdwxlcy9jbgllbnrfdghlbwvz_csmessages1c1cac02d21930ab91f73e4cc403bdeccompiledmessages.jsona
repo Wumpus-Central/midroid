@@ -1,0 +1,29 @@
+{
+  "fQPSER": [
+    "Vytvořil/a ",
+    [
+      1,
+      "username"
+    ]
+  ],
+  "3ej1LS": "Náhled vlastního motivu",
+  "qZMUoK": "Takto se tvůj motiv zobrazí na všech zařízeních s Discordem.",
+  "v15Ipq": [
+    "Když je zapnutá synchronizace, mohou vlastní motivy [Beta verze] vytvořené na počítači ovlivnit tvůj motiv na mobilním zařízení. ",
+    [
+      8,
+      "$link",
+      [
+        "Další informace najdeš zde."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "yl1iMj": "Vlastní motiv",
+  "KSBBpK": "Vlastní motiv"
+}

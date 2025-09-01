@@ -37,9 +37,9 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
             CollectionsKt.u();
          }
 
-         val var8: java.lang.String = (var7 as ReactAsset).name();
-         var7 = var1.getString(var2);
-         var3.put(var8, var7);
+         var7 = (var7 as ReactAsset).name();
+         val var8: java.lang.String = var1.getString(var2);
+         var3.put(var7, var8);
       }
 
       var4.set(var5, var3);

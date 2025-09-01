@@ -1,0 +1,29 @@
+{
+  "fQPSER": [
+    "Criada por ",
+    [
+      1,
+      "username"
+    ]
+  ],
+  "3ej1LS": "Prévia do tema personalizado",
+  "qZMUoK": "É assim que o seu tema aparecerá em todos os dispositivos do Discord.",
+  "v15Ipq": [
+    "Quando a sincronização estiver ativada, os temas personalizados [Beta] criados no desktop podem afetar o seu tema de dispositivo móvel. ",
+    [
+      8,
+      "$link",
+      [
+        "Saiba mais aqui."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "yl1iMj": "Tema Personalizado",
+  "KSBBpK": "Tema Personalizado"
+}

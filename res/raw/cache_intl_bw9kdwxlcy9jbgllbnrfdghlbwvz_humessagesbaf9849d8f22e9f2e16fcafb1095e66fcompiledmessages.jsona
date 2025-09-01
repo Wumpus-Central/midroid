@@ -1,0 +1,29 @@
+{
+  "fQPSER": [
+    "Létrehozta: ",
+    [
+      1,
+      "username"
+    ]
+  ],
+  "3ej1LS": "Egyedi téma előnézete",
+  "qZMUoK": "Így fog kinézni a témád az összes Discord-eszközön.",
+  "v15Ipq": [
+    "Amikor be van kapcsolva a szinkronizálás, a számítógépen létrehozott egyedi témák [béta-verziója] hatással lehet a mobilos témádra. ",
+    [
+      8,
+      "$link",
+      [
+        "Erről itt tájékozódhatsz részletesebben."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "yl1iMj": "Egyéni téma",
+  "KSBBpK": "Egyéni téma"
+}

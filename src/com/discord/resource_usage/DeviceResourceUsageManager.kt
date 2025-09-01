@@ -41,12 +41,12 @@ internal class DeviceResourceUsageManager(context: Context) {
          break label42;
       }
 
-      var var19: Any = var0;
+      var var18: Any = var0;
       if (Result.g(var0)) {
-         var19 = 100L;
+         var18 = 100L;
       }
 
-      SC_CLK_TCK = (var19 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
 
       label36:
       try {
@@ -57,28 +57,28 @@ internal class DeviceResourceUsageManager(context: Context) {
          break label36;
       }
 
-      var19 = var0;
+      var18 = var0;
       if (Result.g(var0)) {
-         var19 = 4096L;
+         var18 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var19 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
 
       label30:
       try {
          var0 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var0 = Result.e;
+         var18 = Result.e;
          var0 = Result.b(c.a(var2));
          break label30;
       }
 
-      var19 = var0;
+      var18 = var0;
       if (Result.g(var0)) {
-         var19 = 1;
+         var18 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var19 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
    }
 
    init {

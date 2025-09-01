@@ -362,8 +362,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       for (ChatInputNode var7 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var7);
+         val var17: Editable = this.editText.getEditableText();
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();

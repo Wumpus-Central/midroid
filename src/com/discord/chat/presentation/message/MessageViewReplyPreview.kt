@@ -61,7 +61,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nMessageViewReplyPreview.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,423:1\n327#2,4:424\n255#2:429\n257#2,2:430\n257#2,2:432\n257#2,2:434\n257#2,2:436\n311#2:438\n327#2,4:439\n312#2:443\n257#2,2:444\n257#2,2:446\n257#2,2:448\n257#2,2:450\n257#2,2:452\n257#2,2:454\n257#2,2:456\n257#2,2:458\n257#2,2:460\n257#2,2:462\n257#2,2:464\n257#2,2:466\n257#2,2:468\n257#2,2:470\n257#2,2:472\n257#2,2:474\n257#2,2:476\n257#2,2:478\n37#2,2:480\n55#2:482\n257#2,2:483\n257#2,2:485\n257#2,2:487\n257#2,2:489\n257#2,2:491\n257#2,2:493\n257#2,2:495\n257#2,2:497\n257#2,2:499\n257#2,2:501\n257#2,2:503\n1#3:428\n*S KotlinDebug\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n*L\n102#1:424,4\n70#1:429\n120#1:430,2\n134#1:432,2\n140#1:434,2\n142#1:436,2\n159#1:438\n159#1:439,4\n159#1:443\n179#1:444,2\n180#1:446,2\n181#1:448,2\n184#1:450,2\n190#1:452,2\n196#1:454,2\n198#1:456,2\n200#1:458,2\n210#1:460,2\n211#1:462,2\n212#1:464,2\n258#1:466,2\n259#1:468,2\n260#1:470,2\n262#1:472,2\n263#1:474,2\n265#1:476,2\n272#1:478,2\n280#1:480,2\n280#1:482\n340#1:483,2\n341#1:485,2\n343#1:487,2\n344#1:489,2\n345#1:491,2\n351#1:493,2\n352#1:495,2\n417#1:497,2\n418#1:499,2\n419#1:501,2\n420#1:503,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nMessageViewReplyPreview.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,421:1\n327#2,4:422\n255#2:427\n257#2,2:428\n257#2,2:430\n257#2,2:432\n257#2,2:434\n311#2:436\n327#2,4:437\n312#2:441\n257#2,2:442\n257#2,2:444\n257#2,2:446\n257#2,2:448\n257#2,2:450\n257#2,2:452\n257#2,2:454\n257#2,2:456\n257#2,2:458\n257#2,2:460\n257#2,2:462\n257#2,2:464\n257#2,2:466\n257#2,2:468\n257#2,2:470\n257#2,2:472\n257#2,2:474\n257#2,2:476\n37#2,2:478\n55#2:480\n257#2,2:481\n257#2,2:483\n257#2,2:485\n257#2,2:487\n257#2,2:489\n257#2,2:491\n257#2,2:493\n257#2,2:495\n257#2,2:497\n257#2,2:499\n257#2,2:501\n1#3:426\n*S KotlinDebug\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n*L\n102#1:422,4\n70#1:427\n118#1:428,2\n132#1:430,2\n138#1:432,2\n140#1:434,2\n157#1:436\n157#1:437,4\n157#1:441\n177#1:442,2\n178#1:444,2\n179#1:446,2\n182#1:448,2\n188#1:450,2\n194#1:452,2\n196#1:454,2\n198#1:456,2\n208#1:458,2\n209#1:460,2\n210#1:462,2\n256#1:464,2\n257#1:466,2\n258#1:468,2\n260#1:470,2\n261#1:472,2\n263#1:474,2\n270#1:476,2\n278#1:478,2\n278#1:480\n338#1:481,2\n339#1:483,2\n341#1:485,2\n342#1:487,2\n343#1:489,2\n349#1:491,2\n350#1:493,2\n415#1:495,2\n416#1:497,2\n417#1:499,2\n418#1:501,2\n*E\n"])
 public class MessageViewReplyPreview  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2), SpineParentMessage {
    private final val binding: MessageViewReplyPreviewBinding
    private final val replyTextLineBounds: Rect
@@ -111,15 +111,15 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
       var14.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
-      val var17: Float = var3 / 2 - this.getResources().getDimension(com.discord.channel_spine.R.dimen.spine_width) / 2;
-      val var5: Float = this.getResources().getDimension(R.dimen.message_reply_leading_views_margin_start);
+      val var5: Float = var3 / 2 - this.getResources().getDimension(com.discord.channel_spine.R.dimen.spine_width) / 2;
+      val var17: Float = this.getResources().getDimension(R.dimen.message_reply_leading_views_margin_start);
       var6.replySpline.configureAsReplySpline();
       val var7: ChannelSpineView = var6.replySpline;
       val var15: android.view.ViewGroup.LayoutParams = var7.getLayoutParams();
       if (var15 != null) {
          val var16: MarginLayoutParams = var15 as MarginLayoutParams;
-         (var15 as MarginLayoutParams).width = (int)(var3 - var5 - var17);
-         var16.setMarginStart((int)var17);
+         (var15 as MarginLayoutParams).width = (int)(var3 - var17 - var5);
+         var16.setMarginStart((int)var5);
          var7.setLayoutParams(var16);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
@@ -230,35 +230,34 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          var2 = 0;
       }
 
-      var var3: Boolean = true;
-      if (!var1.isPollResult()) {
-         if (var2) {
-            var3 = true;
-         } else {
-            var3 = false;
-         }
+      val var6: ReactAsset;
+      if (var1.isPollResult()) {
+         var6 = ReactAsset.PollsIcon;
+      } else if (var2) {
+         var6 = ReactAsset.ArrowAngleRightUpIcon;
+      } else {
+         var6 = null;
       }
 
-      if (var3) {
-         val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
-         val var7: ReactAsset;
-         if (var1.isPollResult()) {
-            var7 = ReactAsset.PollsIcon;
-         } else {
-            var7 = ReactAsset.ArrowAngleRightUpIcon;
-         }
-
-         ReactAssetUtilsKt.setReactAsset(var10, var7);
+      if (var6 != null) {
+         val var9: SimpleDraweeView = this.binding.replyLeadingIcon;
+         ReactAssetUtilsKt.setReactAsset(var9, var6);
       }
 
-      val var8: SimpleDraweeView = this.binding.replyLeadingIcon;
-      if (var3) {
+      val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
+      if (var6 != null) {
+         var2 = (boolean)1;
+      } else {
+         var2 = (boolean)0;
+      }
+
+      if (var2) {
          var2 = 0;
       } else {
          var2 = 8;
       }
 
-      var8.setVisibility(var2);
+      var10.setVisibility(var2);
    }
 
    @JvmStatic
@@ -267,26 +266,32 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    private fun configureTrailingIcon(message: Message) {
-      var var2: Boolean;
-      if (!var1.isVoiceMessage() && !var1.hasAttachments()) {
-         var2 = 0;
+      val var5: ReactAsset;
+      if (var1.hasStickers()) {
+         var5 = ReactAsset.Sticker;
+      } else if (var1.hasCommand()) {
+         var5 = ReactAsset.SlashBox;
+      } else if (var1.isVoiceMessage()) {
+         var5 = ReactAsset.Mic;
+      } else if (var1.hasAttachmentsOrEmbeds()) {
+         var5 = ReactAsset.ImageIcon;
       } else {
-         var2 = 1;
+         var5 = null;
       }
 
-      if (var2) {
-         val var5: SimpleDraweeView = this.binding.replyTrailingIcon;
-         val var6: ReactAsset;
-         if (var1.isVoiceMessage()) {
-            var6 = ReactAsset.Mic;
-         } else {
-            var6 = ReactAsset.ImageIcon;
-         }
-
-         ReactAssetUtilsKt.setReactAsset(var5, var6);
+      if (var5 != null) {
+         val var4: SimpleDraweeView = this.binding.replyTrailingIcon;
+         ReactAssetUtilsKt.setReactAsset(var4, var5);
       }
 
       val var7: SimpleDraweeView = this.binding.replyTrailingIcon;
+      var var2: Boolean;
+      if (var5 != null) {
+         var2 = 1;
+      } else {
+         var2 = 0;
+      }
+
       if (var2) {
          var2 = 0;
       } else {
@@ -300,13 +305,13 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       if (this.binding.replyText.getWidth() > 0) {
          this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
-         val var1: Int = this.replyTextLineBounds.bottom;
-         val var2: Int = this.replyTextLineBounds.top;
-         val var6: LinearLayout = this.binding.replyLeadingViews;
-         val var4: android.view.ViewGroup.LayoutParams = var6.getLayoutParams();
-         if (var4 != null) {
-            var4.height = var1 - var2;
-            var6.setLayoutParams(var4);
+         val var2: Int = this.replyTextLineBounds.bottom;
+         val var1: Int = this.replyTextLineBounds.top;
+         val var4: LinearLayout = this.binding.replyLeadingViews;
+         val var6: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var6 != null) {
+            var6.height = var2 - var1;
+            var4.setLayoutParams(var6);
          } else {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
@@ -351,14 +356,14 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       var24.setVisibility(8);
       val var25: MessageContentView = this.binding.replyText;
       val var26: LinearLayout = this.binding.replyLeadingViews;
-      val var12: AnnotatedStructurableText = var2.getContent();
-      val var11: Context = this.getContext();
+      val var11: AnnotatedStructurableText = var2.getContent();
+      val var12: Context = this.getContext();
       val var13: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
       val var8: Float = TextUtilsKt.getBaselineHeightPx(var13);
       val var27: TextPaint = this.binding.replyText.getPaint();
       val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var12,
          var11,
+         var12,
          var1,
          var3,
          var4,
@@ -464,23 +469,23 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          if (var12.getSystemContent() != null) {
             val var28: MessageContentView = this.binding.replyText;
             val var44: LinearLayout = this.binding.replyLeadingViews;
-            val var63: StructurableText = var12.getSystemContent();
-            val var14: Context = this.getContext();
-            val var69: java.lang.String = var11.getId-3Eiw7ao();
-            val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var14: StructurableText = var12.getSystemContent();
+            val var69: Context = this.getContext();
+            val var63: java.lang.String = var11.getId-3Eiw7ao();
+            var2 = MessageKt.shouldAnimateEmoji(var11);
             val var9: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
+            val var7: Boolean = var11.getShouldShowRoleDot();
             val var8: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
             val var56: TextPaint = this.binding.replyText.getPaint();
             val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var63,
                var14,
                var69,
-               var7,
-               var9,
+               var63,
                var2,
+               var9,
+               var7,
                var8,
                var56,
                null,
@@ -511,24 +516,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          } else if (var11.getContent() != null) {
             val var29: MessageContentView = this.binding.replyText;
             val var46: LinearLayout = this.binding.replyLeadingViews;
-            val var71: StructurableText = var11.getContent();
-            val var70: Context = this.getContext();
+            val var70: StructurableText = var11.getContent();
+            val var71: Context = this.getContext();
             val var66: java.lang.String = var11.getId-3Eiw7ao();
-            val var39: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var38: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
-            val var37: Boolean = var11.getShouldShowRoleOnName();
+            val var38: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var37: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var39: Boolean = var11.getShouldShowRoleDot();
+            var2 = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
             val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var71,
                var70,
+               var71,
                var66,
-               var39,
                var38,
-               var2,
                var37,
+               var39,
+               var2,
                var59,
                null,
                null,

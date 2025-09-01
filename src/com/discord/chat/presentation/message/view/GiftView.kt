@@ -82,7 +82,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var12: PipelineDraweeControllerBuilder = H2.d.g()
+         val var14: PipelineDraweeControllerBuilder = H2.d.g()
             .F(
                ImageRequestBuilder.b(var6)
                   .J(
@@ -94,14 +94,14 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   )
                   .a()
             ) as PipelineDraweeControllerBuilder;
-         val var14: java.lang.String = var1.getGiftCode();
+         val var12: java.lang.String = var1.getGiftCode();
          val var15: java.lang.String = var1.getSplashUrl();
          val var8: StringBuilder = new StringBuilder();
          var8.append("splash-");
-         var8.append(var14);
+         var8.append(var12);
          var8.append("-");
          var8.append(var15);
-         var9 = ((var12.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         var9 = ((var14.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -163,15 +163,15 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var19: GradientDrawable = new GradientDrawable(
+         val var13: GradientDrawable = new GradientDrawable(
             var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
          );
-         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var13: IntArray = this.binding.gradients.getReferencedIds();
-         val var23: Int = var13.length;
+         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var19: IntArray = this.binding.gradients.getReferencedIds();
+         val var23: Int = var19.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
+            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
          }
 
          val var14: Group = this.binding.gradients;
@@ -198,7 +198,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var31: SimpleDraweeView = this.binding.thumbnail;
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
-         (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
+         (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.c((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
          var var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
          var11.setTextColor(var27.getTitleColor());

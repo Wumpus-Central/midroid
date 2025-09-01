@@ -39,12 +39,12 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
       this.viewCache = new LinkedHashMap<>();
       if (var2) {
          val var5: Byte = 0;
-         var var4: Int = 0;
+         var var3: Int = 0;
 
          while (true) {
-            var var3: Int = var5;
-            if (var4 >= 20) {
-               while (var3 < 10) {
+            var var4: Int = var5;
+            if (var3 >= 20) {
+               while (var4 < 10) {
                   val var13: java.util.Map = this.viewCache;
                   val var12: java.lang.String = ActionRowComponent.class.getSimpleName();
                   val var11: Any = var13.get(var12);
@@ -55,22 +55,22 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
-                  var3++;
+                  var4++;
                }
                break;
             }
 
-            val var8: java.util.Map = this.viewCache;
-            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
-            val var6: Any = var8.get(var7);
+            val var7: java.util.Map = this.viewCache;
+            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
+            val var6: Any = var7.get(var8);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var8.put(var7, var9);
+               var7.put(var8, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
-            var4++;
+            var3++;
          }
       }
    }

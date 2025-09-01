@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("de415616-5d28-474b-ae0e-a7b3bc797c56");
+      var5.setProguardUuid("5ec2f2f0-f200-456e-a36a-039bd8c6ae6c");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -103,8 +103,8 @@ public object CrashReporting {
    public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = L.h(), breadcrumbCategory: String? = null) {
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.n(var3);

@@ -44,18 +44,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
       this.spoilerViewManager = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var4: TextView = var3.imageAltText;
-      var3.imageAltText.setImportantForAccessibility(4);
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?, srcIsAnimated: Boolean) {
@@ -82,10 +82,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var6: Int = GIF_INDICATOR_PADDING;
+         val var5: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -208,9 +208,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var33: SpoilerViewManager = this.spoilerViewManager;
-      val var28: ConstraintLayout = this.binding.container;
-      val var34: SimpleDraweeView = this.binding.image;
+      val var28: SpoilerViewManager = this.spoilerViewManager;
+      val var34: ConstraintLayout = this.binding.container;
+      val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,10 +223,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var33.configureSpoiler(var8, this, var28, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var28.configureSpoiler(var8, this, var34, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -247,12 +247,12 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var3: ConstraintLayout = this.binding.container;
-      val var4: LayoutParams = var3.getLayoutParams();
-      if (var4 != null) {
-         var4.width = var1;
-         var4.height = var2;
-         var3.setLayoutParams(var4);
+      val var4: ConstraintLayout = this.binding.container;
+      val var3: LayoutParams = var4.getLayoutParams();
+      if (var3 != null) {
+         var3.width = var1;
+         var3.height = var2;
+         var4.setLayoutParams(var3);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }

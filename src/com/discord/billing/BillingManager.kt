@@ -226,11 +226,11 @@ internal class BillingManager(isProdBuild: Boolean,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var4 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var7: java.lang.String = var1.i();
-            val var3: java.lang.String = var1.e();
-            var5.invoke(var7, var3, var4);
+         for (java.lang.String var5 : var2) {
+            val var3: Function3 = this.onPurchaseUpdated;
+            val var6: java.lang.String = var1.i();
+            val var7: java.lang.String = var1.e();
+            var3.invoke(var6, var7, var5);
          }
       }
    }
@@ -275,12 +275,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         val var6: CoroutineScope = this.getCoroutineScope(var5);
          db.f.d(
-            var7,
+            var6,
             K.a(),
             null,
-            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -473,13 +473,13 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var2: BillingResult = this.billingResult;
-         val var3: java.util.List = this.productDetails;
+         val var3: BillingResult = this.billingResult;
+         val var2: java.util.List = this.productDetails;
          val var1: StringBuilder = new StringBuilder();
          var1.append("ProductDetailsResponse(billingResult=");
-         var1.append(var2);
-         var1.append(", productDetails=");
          var1.append(var3);
+         var1.append(", productDetails=");
+         var1.append(var2);
          var1.append(")");
          return var1.toString();
       }

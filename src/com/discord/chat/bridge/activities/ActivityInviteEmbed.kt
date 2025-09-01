@@ -166,39 +166,39 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.coverImage;
+      val var4: java.lang.String = this.coverImage;
       val var2: Boolean = this.isListening;
-      val var7: java.lang.String = this.headerText;
+      val var9: java.lang.String = this.headerText;
       val var11: java.lang.String = this.partyStatus;
-      val var4: java.util.List = this.avatarsToRender;
+      val var6: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
-      val var8: java.lang.String = this.name;
+      val var7: java.lang.String = this.name;
       val var5: java.lang.String = this.subtext;
       val var3: Boolean = this.joinable;
-      val var9: java.lang.String = this.ctaText;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("ActivityInviteEmbed(coverImage=");
-      var10.append(var6);
-      var10.append(", isListening=");
-      var10.append(var2);
-      var10.append(", headerText=");
-      var10.append(var7);
-      var10.append(", partyStatus=");
-      var10.append(var11);
-      var10.append(", avatarsToRender=");
-      var10.append(var4);
-      var10.append(", maxPartySize=");
-      var10.append(var1);
-      var10.append(", name=");
-      var10.append(var8);
-      var10.append(", subtext=");
-      var10.append(var5);
-      var10.append(", joinable=");
-      var10.append(var3);
-      var10.append(", ctaText=");
-      var10.append(var9);
-      var10.append(")");
-      return var10.toString();
+      val var10: java.lang.String = this.ctaText;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ActivityInviteEmbed(coverImage=");
+      var8.append(var4);
+      var8.append(", isListening=");
+      var8.append(var2);
+      var8.append(", headerText=");
+      var8.append(var9);
+      var8.append(", partyStatus=");
+      var8.append(var11);
+      var8.append(", avatarsToRender=");
+      var8.append(var6);
+      var8.append(", maxPartySize=");
+      var8.append(var1);
+      var8.append(", name=");
+      var8.append(var7);
+      var8.append(", subtext=");
+      var8.append(var5);
+      var8.append(", joinable=");
+      var8.append(var3);
+      var8.append(", ctaText=");
+      var8.append(var10);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

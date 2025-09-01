@@ -47,14 +47,14 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
    }
 
    private fun configureSpoiler(component: ContainerComponent, componentContext: ComponentContext) {
-      val var4: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var5: java.lang.String = var2.getContainerId();
-      val var3: java.lang.String = var1.getId();
+      val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var3: java.lang.String = var2.getContainerId();
+      val var4: java.lang.String = var1.getId();
       val var6: StringBuilder = new StringBuilder();
       var6.append("ContainerComponent(");
-      var6.append(var3);
+      var6.append(var4);
       var6.append(")");
-      val var9: SpoilerAttributes = var4.forGenericMedia(var1, var5, var6.toString(), "content", null);
+      val var9: SpoilerAttributes = var5.forGenericMedia(var1, var3, var6.toString(), "content", null);
       val var7: SpoilerConfig;
       if (var9 != null) {
          var7 = SpoilerAttributes.configure$default(var9, new d(var2, this), null, 2, null);
@@ -103,10 +103,10 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          var11.setVisibility(8);
       }
 
-      val var12: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, false, 1535, null)
+      val var6: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, false, 1535, null)
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
-      val var6: ArrayList = new ArrayList(CollectionsKt.v(var7, 10));
+      val var12: ArrayList = new ArrayList(CollectionsKt.v(var7, 10));
       val var8: java.util.Iterator = var7.iterator();
 
       for (int var9 = 0; var8.hasNext(); var9++) {
@@ -115,12 +115,12 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
             CollectionsKt.u();
          }
 
-         var6.add(var2.getConfiguredComponentView(var15 as Component, var12, this, var9));
+         var12.add(var2.getConfiguredComponentView(var15 as Component, var6, this, var9));
       }
 
-      val var13: java.util.List = CollectionsKt.e0(var6);
-      val var14: LinearLayout = this.binding.childrenViews;
-      MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      val var14: java.util.List = CollectionsKt.e0(var12);
+      val var13: LinearLayout = this.binding.childrenViews;
+      MessageComponentsViewKt.replaceViews$default(var13, var14, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
       this.configureSpoiler(var1, var3);
    }
 

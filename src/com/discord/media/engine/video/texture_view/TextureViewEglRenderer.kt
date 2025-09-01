@@ -183,7 +183,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
 
    public open fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var3: Long = System.currentTimeMillis();
+         val var5: Long = System.currentTimeMillis();
          val var10: CountDownLatch = new CountDownLatch(1);
          this.releaseEglSurface(new Function0<Unit>(var10) {
             final CountDownLatch $completionLatch;
@@ -197,17 +197,17 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
             }
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
-         val var5: Long = System.currentTimeMillis();
-         val var8: Log = Log.INSTANCE;
-         val var12: java.lang.String = access$getName(this);
+         val var3: Long = System.currentTimeMillis();
+         val var12: Log = Log.INSTANCE;
+         val var8: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
          val var11: StringBuilder = new StringBuilder();
          var11.append("releaseEglSurface (");
-         var11.append(var5 - var3);
+         var11.append(var3 - var5);
          var11.append(" ms) (");
          var11.append(var2);
          var11.append(" total)");
-         Log.i$default(var8, var12, var11.toString(), null, 4, null);
+         Log.i$default(var12, var8, var11.toString(), null, 4, null);
          return true;
       } else {
          val var7: Thread = Thread.currentThread();

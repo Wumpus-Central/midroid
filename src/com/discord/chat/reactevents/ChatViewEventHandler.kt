@@ -46,8 +46,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             java.lang.String var1, long var2, Integer var4, MediaType var5, java.lang.String var6, Integer var7
          ) {
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var10: java.lang.String = MessageId.toString-impl(var1);
-            val var11: java.lang.String = ChannelId.toString-impl(var2);
+            val var11: java.lang.String = MessageId.toString-impl(var1);
+            val var10: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -67,7 +67,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2<MessageId, ChannelId, Unit>(this) {
@@ -465,6 +465,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
    public override fun onTapPostPreviewEmbed(guildId: GuildId, parentChannelId: ChannelId, threadId: ChannelId, messageId: MessageId) {
       this.emitReactEvent
          .invoke(new TapPostPreviewEmbedData(GuildId.toString-impl(var1), ChannelId.toString-impl(var3), ChannelId.toString-impl(var5), var7, null));
+   }
+
+   public override fun onTapPreviewSharedClientTheme(messageId: MessageId) {
+      this.emitReactEvent.invoke(new TapPreviewSharedClientThemeData(var1, null));
    }
 
    public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?, location: String?) {

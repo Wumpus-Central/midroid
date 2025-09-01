@@ -1,0 +1,29 @@
+{
+  "fQPSER": [
+    "Erstellt von ",
+    [
+      1,
+      "username"
+    ]
+  ],
+  "3ej1LS": "Vorschau des benutzerdefinierten Farbschemas",
+  "qZMUoK": "So wird dein Farbschema auf allen Discord-Geräten angezeigt.",
+  "v15Ipq": [
+    "Bei aktivierter Synchronisierung können benutzerdefinierte Schemata [Beta], die auf dem Desktop erstellt wurden, dein Mobilgerät-Schema beeinflussen. ",
+    [
+      8,
+      "$link",
+      [
+        "Mehr erfährst du hier."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "yl1iMj": "Benutzerdefiniertes Schema",
+  "KSBBpK": "Benutzerdefiniertes Schema"
+}

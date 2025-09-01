@@ -1,0 +1,29 @@
+{
+  "fQPSER": [
+    "Création : ",
+    [
+      1,
+      "username"
+    ]
+  ],
+  "3ej1LS": "Aperçu du thème personnalisé",
+  "qZMUoK": "Voilà comment ton thème apparaîtra sur tous les appareils Discord.",
+  "v15Ipq": [
+    "Lorsque la synchronisation est activée, les thèmes personnalisés [bêta] créés sur l'appli de bureau peuvent affecter ton thème sur l'appli mobile. ",
+    [
+      8,
+      "$link",
+      [
+        "En savoir plus ici."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "yl1iMj": "Thème personnalisé",
+  "KSBBpK": "Thème personnalisé"
+}

@@ -1,0 +1,28 @@
+{
+  "DKHheX": "Pošalji zahtjev za streamanje",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " te traži da streama ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Zatražio si nekoga da streamaš ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Već streama",
+  "u4QmWl": "Zahtjev je istekao",
+  "qRXatr": "Nije u glasovnom kanalu",
+  "43zohI": "Nije pokrenuo igru",
+  "fac+eH": "Nema dozvole",
+  "8HU1Mz": "Zahtjev poslan",
+  "5+172d": "Stream"
+}

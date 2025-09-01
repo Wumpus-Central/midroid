@@ -22,21 +22,21 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
    while (var11.hasNext()) {
       var var5: Int = (var11 as I).nextInt();
       val var6: Boolean = var9.isNull(var5);
-      var var15: StickerPickerRow.Sticker = null;
+      var var7: StickerPickerRow.Sticker = null;
       if (!var6) {
          var0 = var9.getMap(var5);
-         var var7: java.lang.String;
+         val var16: java.lang.String;
          if (var0 != null) {
-            var7 = var0.getString("stickerId");
+            var16 = var0.getString("stickerId");
          } else {
-            var7 = null;
+            var16 = null;
          }
 
-         var15 = null;
-         if (var7 != null) {
+         var7 = null;
+         if (var16 != null) {
             val var21: ReadableMap = var9.getMap(var5);
-            var7 = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
-            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
+            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
+            val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
             var5 = var21.getInt("stickerType");
             val var17: StickerPickerRow.Sticker.Type;
             if (var5 != 1) {
@@ -60,9 +60,9 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
                var17 = StickerPickerRow.Sticker.Type.PNG;
             }
 
-            var15 = new StickerPickerRow.Sticker(
-               var7,
+            var7 = new StickerPickerRow.Sticker(
                var12,
+               var20,
                var17,
                var21.getBoolean("stickerAnimated"),
                NativeMapExtensionsKt.getNonNullString(var21, "stickerUrl"),
@@ -72,7 +72,7 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          }
       }
 
-      var10.add(var15);
+      var10.add(var7);
    }
 
    return new StickerPickerRow(var1, var4, var3, var10);
