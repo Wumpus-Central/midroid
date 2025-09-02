@@ -18,13 +18,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var2: LinkedHashMap = new LinkedHashMap();
+      val var3: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var3 : this.events.values()) {
-         var2.put(this.prefixWithTop(var3), L.m(new Pair[]{s.a("registrationName", var3)}));
+      for (java.lang.String var2 : this.events.values()) {
+         var3.put(this.prefixWithTop(var2), L.m(new Pair[]{s.a("registrationName", var2)}));
       }
 
-      return var2;
+      return var3;
    }
 
    public fun getEventName(event: ReactEvent): String {

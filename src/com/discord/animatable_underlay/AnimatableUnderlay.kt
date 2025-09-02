@@ -91,9 +91,9 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
             val var19: RectF = this.pathRect;
             val var9: Float = this.width;
-            val var12: Float = this.shapeWidth;
+            val var13: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var9 - (var9 - var12) / 2;
+            var19.right = var9 - (var9 - var13) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;

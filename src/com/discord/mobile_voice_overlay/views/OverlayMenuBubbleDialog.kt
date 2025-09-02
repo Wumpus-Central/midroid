@@ -194,11 +194,11 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    @JvmStatic
    fun `setData$lambda$24`(var0: OverlayMenuBubbleDialog, var1: MobileVoiceOverlayData): Unit {
-      val var2: Context = var0.getContext();
-      val var3: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
-      var3.addCategory("android.intent.category.HOME");
-      var3.addFlags(268435456);
-      var2.startActivity(var3);
+      val var3: Context = var0.getContext();
+      val var2: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
+      var2.addCategory("android.intent.category.HOME");
+      var2.addFlags(268435456);
+      var3.startActivity(var2);
       val var5: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var4: Context = var0.getContext();
       var5.startHeadlessTask(var4, "SelectChannel", D.d.a(B9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));

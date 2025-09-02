@@ -212,12 +212,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var12: java.lang.String = this.getClass().getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var12);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var13.toString(), null, 2, null);
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var14: java.lang.String = this.getClass().getSimpleName();
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("Binding ");
+      var12.append(var14);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var12.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       var var11: Byte;
       if (!var10) {
@@ -268,14 +268,14 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       var16.setAlpha(var9);
-      val var24: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var17: ShapeDrawable = new ShapeDrawable();
-      val var21: Paint = var17.getPaint();
-      val var22: Context = this.getContext();
-      var21.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
+      val var24: ShapeDrawable = new ShapeDrawable();
+      val var21: Paint = var24.getPaint();
+      val var17: Context = this.getContext();
+      var21.setColor(ColorUtilsKt.getColorCompat(var17, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var24, null, var17, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var22, null, var24, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!(this.uploadContext == this.uploadContext)) {
          this.uploadContext = this.uploadContext;

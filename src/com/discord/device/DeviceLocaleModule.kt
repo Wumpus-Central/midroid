@@ -9,20 +9,20 @@ import java.util.ArrayList
 internal class DeviceLocaleModule(reactContext: ReactApplicationContext) : NativeDeviceLocaleModuleSpec(var1) {
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
       val var5: ArrayList = new ArrayList();
-      val var6: LocaleList = LocaleList.getAdjustedDefault();
-      val var3: Int = var6.size();
+      val var4: LocaleList = LocaleList.getAdjustedDefault();
+      val var3: Int = var4.size();
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var7: java.lang.String = var6.get(var1).toLanguageTag();
+         val var7: java.lang.String = var4.get(var1).toLanguageTag();
          if (var1 == 0) {
             var5.add(var7);
          } else {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append(var7);
-            var4.append(";q=0.");
-            var4.append(var2);
-            var5.add(var4.toString());
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var7);
+            var6.append(";q=0.");
+            var6.append(var2);
+            var5.add(var6.toString());
          }
 
          var2 = kotlin.ranges.d.d(1, var2 - 1);

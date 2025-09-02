@@ -21,11 +21,11 @@ internal class SystemLogCapture {
 
       for (int var2 = 0; var2 < var3; var2++) {
          val var4: StackTraceElement = var7[var2];
-         val var6: CircularByteBuffer = this.buffer;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("    ");
-         var5.append(var4);
-         var6.addLine(var5.toString());
+         val var5: CircularByteBuffer = this.buffer;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("    ");
+         var6.append(var4);
+         var5.addLine(var6.toString());
       }
    }
 
@@ -168,13 +168,13 @@ internal class SystemLogCapture {
                      this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
                   }
                } catch (var4: Exception) {
-                  val var3: CircularByteBuffer = this.buffer;
-                  val var2: StringBuilder = new StringBuilder();
-                  var2.append("Exception getting system logs, will restart logcat. '");
+                  val var2: CircularByteBuffer = this.buffer;
+                  val var3: StringBuilder = new StringBuilder();
+                  var3.append("Exception getting system logs, will restart logcat. '");
                   val var1: Any;
-                  var2.append(var1);
-                  var2.append("'");
-                  var3.addLine(var2.toString());
+                  var3.append(var1);
+                  var3.append("'");
+                  var2.addLine(var3.toString());
                   this.addExceptionToBuffer((Exception)var1);
                }
             } catch (var5: java.lang.Throwable) {

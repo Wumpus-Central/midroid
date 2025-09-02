@@ -193,17 +193,17 @@ public data class EmbedMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var12: Int = MessageId.hashCode-impl(this.messageId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       val var4: Int = Integer.hashCode(this.index);
-      val var9: Int = ChannelId.hashCode-impl(this.channelId);
-      val var10: Int = Integer.hashCode(this.constrainedWidth);
-      val var3: Int = Integer.hashCode(this.radiusPx);
-      val var5: Int = this.embed.hashCode();
-      val var11: Int = java.lang.Boolean.hashCode(this.shouldAutoPlayGifs);
-      val var13: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
-      val var8: Int = java.lang.Boolean.hashCode(this.shouldShowLinkDecorations);
-      val var7: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
-      val var6: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
+      val var13: Int = ChannelId.hashCode-impl(this.channelId);
+      val var11: Int = Integer.hashCode(this.constrainedWidth);
+      val var5: Int = Integer.hashCode(this.radiusPx);
+      val var7: Int = this.embed.hashCode();
+      val var12: Int = java.lang.Boolean.hashCode(this.shouldAutoPlayGifs);
+      val var8: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
+      val var9: Int = java.lang.Boolean.hashCode(this.shouldShowLinkDecorations);
+      val var3: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
+      val var10: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
       var var2: Int = 0;
       val var1: Int;
       if (this.spoilerAttributes == null) {
@@ -221,15 +221,15 @@ public data class EmbedMessageAccessory(messageId: MessageId,
                         (
                                  (
                                           (
-                                                   (((((((var12 * 31 + var4) * 31 + var9) * 31 + var10) * 31 + var3) * 31 + var5) * 31 + var11) * 31 + var13)
+                                                   (((((((var6 * 31 + var4) * 31 + var13) * 31 + var11) * 31 + var5) * 31 + var7) * 31 + var12) * 31 + var8)
                                                          * 31
-                                                      + var8
+                                                      + var9
                                                 )
                                                 * 31
-                                             + var7
+                                             + var3
                                        )
                                        * 31
-                                    + var6
+                                    + var10
                               )
                               * 31
                            + var1
@@ -242,49 +242,49 @@ public data class EmbedMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var14: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var11: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
-      val var12: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: Int = this.constrainedWidth;
-      val var3: Int = this.radiusPx;
-      val var15: Embed = this.embed;
-      val var9: Boolean = this.shouldAutoPlayGifs;
-      val var4: Boolean = this.shouldAnimateEmoji;
-      val var7: Boolean = this.shouldShowLinkDecorations;
-      val var5: Boolean = this.shouldShowRoleDot;
-      val var6: Boolean = this.shouldShowRoleOnName;
-      val var13: SpoilerAttributes = this.spoilerAttributes;
-      val var11: OnLongClickListener = this.onLongClick;
-      val var8: Boolean = this.isForwardedContent;
+      val var14: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: Int = this.constrainedWidth;
+      val var2: Int = this.radiusPx;
+      val var13: Embed = this.embed;
+      val var8: Boolean = this.shouldAutoPlayGifs;
+      val var5: Boolean = this.shouldAnimateEmoji;
+      val var6: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowRoleDot;
+      val var7: Boolean = this.shouldShowRoleOnName;
+      val var15: SpoilerAttributes = this.spoilerAttributes;
+      val var12: OnLongClickListener = this.onLongClick;
+      val var9: Boolean = this.isForwardedContent;
       val var10: StringBuilder = new StringBuilder();
       var10.append("EmbedMessageAccessory(messageId=");
-      var10.append(var14);
+      var10.append(var11);
       var10.append(", index=");
       var10.append(var1);
       var10.append(", channelId=");
-      var10.append(var12);
+      var10.append(var14);
       var10.append(", constrainedWidth=");
-      var10.append(var2);
-      var10.append(", radiusPx=");
       var10.append(var3);
+      var10.append(", radiusPx=");
+      var10.append(var2);
       var10.append(", embed=");
-      var10.append(var15);
-      var10.append(", shouldAutoPlayGifs=");
-      var10.append(var9);
-      var10.append(", shouldAnimateEmoji=");
-      var10.append(var4);
-      var10.append(", shouldShowLinkDecorations=");
-      var10.append(var7);
-      var10.append(", shouldShowRoleDot=");
-      var10.append(var5);
-      var10.append(", shouldShowRoleOnName=");
-      var10.append(var6);
-      var10.append(", spoilerAttributes=");
       var10.append(var13);
-      var10.append(", onLongClick=");
-      var10.append(var11);
-      var10.append(", isForwardedContent=");
+      var10.append(", shouldAutoPlayGifs=");
       var10.append(var8);
+      var10.append(", shouldAnimateEmoji=");
+      var10.append(var5);
+      var10.append(", shouldShowLinkDecorations=");
+      var10.append(var6);
+      var10.append(", shouldShowRoleDot=");
+      var10.append(var4);
+      var10.append(", shouldShowRoleOnName=");
+      var10.append(var7);
+      var10.append(", spoilerAttributes=");
+      var10.append(var15);
+      var10.append(", onLongClick=");
+      var10.append(var12);
+      var10.append(", isForwardedContent=");
+      var10.append(var9);
       var10.append(")");
       return var10.toString();
    }

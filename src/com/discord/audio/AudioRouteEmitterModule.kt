@@ -1,7 +1,6 @@
 package com.discord.audio
 
 import B9.s
-import android.content.Context
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -27,9 +26,9 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
             val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var4: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var4.emitModuleEvent(var3, var2);
+            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var3.emitModuleEvent(var4, var2);
          }
 
          @Override
@@ -63,16 +62,16 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       super.initialize();
       var var3: Any;
       if (VERSION.SDK_INT >= 33) {
-         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
-         var3 = this.getReactApplicationContext();
-         var3 = var2.getInstance((Context)var3);
+         var3 = DiscordAudioManager2.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var3 = var3.getInstance(var2);
       } else {
          val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         var3 = this.getReactApplicationContext();
-         var3 = var5.getInstance((Context)var3);
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         var3 = var5.getInstance(var4);
       }
 
-      this.audioManager = (DiscordAudioManagerInterface)var3;
+      this.audioManager = var3;
       var var6: Any = var3;
       if (var3 == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");

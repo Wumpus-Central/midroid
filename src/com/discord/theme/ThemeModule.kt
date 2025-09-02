@@ -4,7 +4,7 @@ import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
-import j2.X2
+import j2.f3
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec(var1) {
    @JvmStatic
@@ -62,7 +62,7 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMod
 
          val var3: Activity = this.getCurrentActivity();
          if (var3 != null) {
-            var3.runOnUiThread(new X2(this));
+            var3.runOnUiThread(new f3(this));
          }
 
          return;

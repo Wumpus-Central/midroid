@@ -38965,6 +38965,29 @@
   "DisZzM": "Visualizza il profilo specifico del server",
   "hl1V+f": "Visualizza spettatori",
   "39d0Wl": "Mostra thread",
+  "FIilKy": [
+    "Hai ottenuto ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Guadagna Orbs",
+  "GPdvqa": "Riscatta Orbs nel Negozio",
+  "97ztVl": "Continua a guadagnare Orbs per riscattare dei premi fantastici!",
+  "Heldho": [
+    "Hai abbastanza Orbs per riscattare una decorazione ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    " dal Negozio!"
+  ],
+  "pGDUHx": "Decorazione del profilo",
   "7gHWra": [
     "Errore nel riscattare ",
     [

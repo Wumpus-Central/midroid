@@ -266,13 +266,13 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  val var18: java.lang.String = var20.d();
-                  val var21: StringBuilder = new StringBuilder();
-                  var21.append("Could not find offer token for productId: ");
-                  var21.append(var18);
-                  var21.append(" offerId: ");
-                  var21.append(var6);
-                  throw new AssertionError(var21.toString());
+                  var2 = var20.d();
+                  val var18: StringBuilder = new StringBuilder();
+                  var18.append("Could not find offer token for productId: ");
+                  var18.append(var2);
+                  var18.append(" offerId: ");
+                  var18.append(var6);
+                  throw new AssertionError(var18.toString());
                }
 
                var25.b(var13);

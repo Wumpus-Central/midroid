@@ -38954,6 +38954,28 @@
   "DisZzM": "Sunucu Başına Profilini Görüntüle",
   "hl1V+f": "İzleyicileri görüntüle",
   "39d0Wl": "Alt Başlığı Görüntüle",
+  "FIilKy": [
+    [
+      1,
+      "count"
+    ],
+    " tane Orbs topladın!"
+  ],
+  "uJAMFR": "Orbs kazan",
+  "GPdvqa": "Mağaza'dan Orbs Al",
+  "97ztVl": "Harika ödüller almak için Orbs kazanmaya devam et!",
+  "Heldho": [
+    "Artık Mağaza'dan bir ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    " almak için yeterli Orbs'un var!"
+  ],
+  "pGDUHx": "Profil Dekoru",
   "7gHWra": [
     [
       1,

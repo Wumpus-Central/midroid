@@ -76,16 +76,16 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guild;
+      val var2: java.lang.String = this.guild;
       val var3: java.lang.Boolean = this.friends;
-      val var2: java.lang.Boolean = this.strict;
+      val var4: java.lang.Boolean = this.strict;
       val var1: StringBuilder = new StringBuilder();
       var1.append("UserSearchQuerySetFilters(guild=");
-      var1.append(var4);
+      var1.append(var2);
       var1.append(", friends=");
       var1.append(var3);
       var1.append(", strict=");
-      var1.append(var2);
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

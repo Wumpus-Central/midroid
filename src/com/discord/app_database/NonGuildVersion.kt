@@ -63,16 +63,16 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var5: java.lang.String = this.versionString;
+      val var4: java.lang.String = this.versionString;
       val var3: StringBuilder = new StringBuilder();
       var3.append("NonGuildVersion(id=");
-      var3.append(var4);
+      var3.append(var5);
       var3.append(", version=");
       var3.append(var1);
       var3.append(", versionString=");
-      var3.append(var5);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

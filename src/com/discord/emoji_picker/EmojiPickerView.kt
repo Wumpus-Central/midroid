@@ -152,7 +152,7 @@ internal class EmojiPickerView(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemsChanged(position: Int?, count: Int?) {
-      val var3: Boolean = this.isComputingLayout();
+      val var4: Boolean = this.isComputingLayout();
       val var5: java.lang.String;
       if (var1 != null) {
          if (var2 != null) {
@@ -170,20 +170,20 @@ internal class EmojiPickerView(context: Context,
       try {
          ViewMeasureExtensionsKt.measureAndLayout(this);
       } catch (var15: Exception) {
+         var var7: Pair;
          var var8: Pair;
          var var9: CrashReporting;
          var var10: Pair;
          var var11: Pair;
-         var var12: Pair;
          var var13: Pair;
          var var14: Pair;
          label31: {
             var9 = CrashReporting.INSTANCE;
-            var13 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
-            var12 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
-            var10 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var3));
-            var11 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
-            var8 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
+            var7 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
+            var13 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
+            var10 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var4));
+            var8 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
+            var11 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
             var14 = B9.s.a("adapterTypeChange", var5);
             if (var1 != null) {
                val var6: java.lang.String = var1.toString();
@@ -206,12 +206,7 @@ internal class EmojiPickerView(context: Context,
          }
 
          CrashReporting.addBreadcrumb$default(
-            var9,
-            "About to crash from EmojiPickerView.",
-            L.l(new Pair[]{var13, var12, var10, var11, var8, var14, var19, B9.s.a("count", var17)}),
-            null,
-            4,
-            null
+            var9, "About to crash from EmojiPickerView.", L.l(new Pair[]{var7, var13, var10, var8, var11, var14, var19, B9.s.a("count", var17)}), null, 4, null
          );
          throw var15;
       }

@@ -1,11 +1,10 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import android.content.Context
 import android.widget.Button
 import com.discord.chat.bridge.botuikit.ButtonComponent
 import com.discord.chat.bridge.botuikit.ButtonStyle
 import com.discord.misc.utilities.view.ButtonBackgroundUtilsKt
-import com.discord.theme.R
+import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 
 @JvmSynthetic
@@ -61,28 +60,21 @@ private fun ButtonComponent.hasIcon(): Boolean {
 }
 
 private fun Button.setBrandColor() {
-   ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, R.color.brand_500), ColorUtilsKt.getColorCompat(var0, R.color.brand_new_500_alpha_20)
-   );
+   setThemedBackgroundColor(var0, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground());
 }
 
 private fun Button.setDangerColor() {
-   ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, R.color.red_400), ColorUtilsKt.getColorCompat(var0, R.color.status_red_500_alpha_20)
-   );
+   setThemedBackgroundColor(var0, ThemeManagerKt.getTheme().getRedesignButtonDangerBackground());
 }
 
 private fun Button.setSecondaryColor() {
-   var var2: Context = var0.getContext();
-   val var1: Int = ColorUtilsKt.getThemeColor(var2, R.color.primary_400, R.color.primary_500);
-   var2 = var0.getContext();
-   ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, var1, ColorUtilsKt.getThemeColor(var2, R.color.primary_light_500_alpha_20, R.color.primary_dark_500_alpha_20)
-   );
+   setThemedBackgroundColor(var0, ThemeManagerKt.getTheme().getBackgroundAccent());
 }
 
 private fun Button.setSuccessColor() {
-   ButtonBackgroundUtilsKt.setBackgroundColors(
-      var0, ColorUtilsKt.getColorCompat(var0, R.color.green_360), ColorUtilsKt.getColorCompat(var0, R.color.status_green_500_alpha_20)
-   );
+   setThemedBackgroundColor(var0, ThemeManagerKt.getTheme().getRedesignButtonActiveBackground());
+}
+
+private fun Button.setThemedBackgroundColor(color: Int) {
+   ButtonBackgroundUtilsKt.setBackgroundColors(var0, var1, ColorUtilsKt.argbWithAdjustedAlpha(var1, 0.5F));
 }

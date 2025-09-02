@@ -27,12 +27,12 @@ public final class ThreadStarterMessageHeaderViewBinding implements ViewBinding 
    @NonNull
    public static ThreadStarterMessageHeaderViewBinding bind(@NonNull View var0) {
       int var1 = R.id.thread_starter_header_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.thread_starter_header_text;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new ThreadStarterMessageHeaderViewBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new ThreadStarterMessageHeaderViewBinding(var0, var2, var3);
          }
       }
 

@@ -43,11 +43,11 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var2: java.lang.String = var4.getMessage();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Error getting google advertising ID info: ");
-         var3.append(var2);
-         var0.y(new Exception(var3.toString(), var4));
+         val var3: java.lang.String = var4.getMessage();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Error getting google advertising ID info: ");
+         var2.append(var3);
+         var0.y(new Exception(var2.toString(), var4));
       }
    }
 
@@ -75,11 +75,11 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
                AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
             } else {
                val var4: Log = Log.INSTANCE;
-               val var3: java.lang.String = var1.getMessage();
-               val var2: StringBuilder = new StringBuilder();
-               var2.append("Error getting google advertising ID: ");
-               var2.append(var3);
-               var4.e("AdsModule", var2.toString(), var1);
+               val var2: java.lang.String = var1.getMessage();
+               val var3: StringBuilder = new StringBuilder();
+               var3.append("Error getting google advertising ID: ");
+               var3.append(var2);
+               var4.e("AdsModule", var3.toString(), var1);
                this.$promise.reject("err", "Failed to get google advertising ID", var1);
             }
          }

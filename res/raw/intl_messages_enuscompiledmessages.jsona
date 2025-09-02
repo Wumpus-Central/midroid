@@ -6661,6 +6661,39 @@
     ],
     " is not available. Head to Settings to set another default."
   ],
+  "LIIHR0": "Choose another emoji",
+  "3u/Je3": [
+    "You can't use ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " without an active Nitro subscription. Choose a different emoji for your double tap or ",
+    [
+      8,
+      "$link",
+      [
+        "renew Nitro"
+      ],
+      [
+        [
+          1,
+          "onRenewNitro"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "Nr6v29": "Got it",
+  "HRAWfH": "Custom emoji need Nitro",
   "QPJJKy": [
     "React with ",
     [
@@ -10304,8 +10337,6 @@
     " of them."
   ],
   "Rp0+ZG": "Choose Your Free Reward",
-  "baye/P": "Treat",
-  "XtIgwc": "Trick",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -19975,6 +20006,8 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
+  "2UeOlZ": "Treat",
+  "6Zuiv7": "Trick",
   "1+boPj": "Happening Now",
   "zSG3Q0": [
     "Your message could not be delivered because this message contains a link blocked by Discord. You can learn more here: ",
@@ -31158,6 +31191,7 @@
     ],
     " minutes"
   ],
+  "BDUDam": "Quest Home",
   "MFGxFB": "This Quest can't be completed on macOS",
   "BV6xDg": "Use the desktop app to make progress!",
   "o6FLcH": "Promoted",
@@ -39910,6 +39944,29 @@
   "DisZzM": "View Per-server Profile",
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
+  "FIilKy": [
+    "You've collected ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Earn Orbs",
+  "GPdvqa": "Redeem Orbs in Shop",
+  "97ztVl": "Keep on earning Orbs to claim some awesome prizes!",
+  "Heldho": [
+    "You now have enough Orbs to claim a ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    " from the Shop!"
+  ],
+  "pGDUHx": "Profile Deco",
   "7gHWra": [
     "Error redeeming ",
     [

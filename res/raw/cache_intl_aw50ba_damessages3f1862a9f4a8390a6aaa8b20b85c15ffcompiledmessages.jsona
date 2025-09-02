@@ -38993,6 +38993,29 @@
   "DisZzM": "Se pr. serverprofil",
   "hl1V+f": "Se tilskuere",
   "39d0Wl": "Vis tråd",
+  "FIilKy": [
+    "Du har samlet ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Optjen Orbs",
+  "GPdvqa": "Indløs Orbs i Shop",
+  "97ztVl": "Fortsæt med at tjene Orbs for at hente nogle fantastiske præmier!",
+  "Heldho": [
+    "Du har nu nok Orbs til at hente en ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profil-deko"
+      ]
+    ],
+    " fra Shop!"
+  ],
+  "pGDUHx": "Profil-deko",
   "7gHWra": [
     "Fejl ved indløsning af ",
     [

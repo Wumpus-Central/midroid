@@ -210,10 +210,10 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    public fun setModel(view: TextDisplayComponentView, model: ReadableMap) {
       var var3: Boolean;
       try {
-         val var20: Json = ComponentDeserializerKt.getJson();
-         val var5: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var5: Json = ComponentDeserializerKt.getJson();
+         val var20: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var15 = var20.b(var5, var14) as Component;
+         var15 = var5.b(var20, var14) as Component;
          var3 = var15 is TextDisplayComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (TextDisplayComponent::class).getSimpleName();
@@ -233,13 +233,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       } else {
          try {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            val var22: java.lang.String = (var15.getClass()::class).getSimpleName();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Expected ");
-            var17.append(var11);
-            var17.append(" but got ");
-            var17.append(var22);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
+            val var22: StringBuilder = new StringBuilder();
+            var22.append("Expected ");
+            var22.append(var11);
+            var22.append(" but got ");
+            var22.append(var17);
+            throw new IllegalStateException(var22.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();
             val var16: java.lang.String = var7.getMessage();

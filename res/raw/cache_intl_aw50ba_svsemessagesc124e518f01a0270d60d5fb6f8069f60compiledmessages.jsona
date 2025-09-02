@@ -38877,6 +38877,29 @@
   "DisZzM": "Visa serverspecifik profil",
   "hl1V+f": "Visa åskådare",
   "39d0Wl": "Visa tråd",
+  "FIilKy": [
+    "Du har samlat in ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Tjäna Orbs",
+  "GPdvqa": "Lös in Orbs i butiken",
+  "97ztVl": "Fortsätt att tjäna Orbs för att hämta grymma priser!",
+  "Heldho": [
+    "Nu har du tillräckligt med Orbs för att hämta en ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profilDeco"
+      ]
+    ],
+    " från butiken!"
+  ],
+  "pGDUHx": "Profildekoration",
   "7gHWra": [
     "Fel vid inlösen av ",
     [

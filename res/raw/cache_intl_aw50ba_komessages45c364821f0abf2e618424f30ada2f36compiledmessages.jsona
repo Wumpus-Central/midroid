@@ -39059,6 +39059,28 @@
   "DisZzM": "서버별 프로필 보기",
   "hl1V+f": "관전자 보기",
   "39d0Wl": "스레드 보기",
+  "FIilKy": [
+    [
+      1,
+      "count"
+    ],
+    "개의 오브를 수집했어요!"
+  ],
+  "uJAMFR": "Orbs 받기",
+  "GPdvqa": "상점에서 Orbs 받기",
+  "97ztVl": "Orbs를 계속 획득해 멋진 보상을 받으세요!",
+  "Heldho": [
+    "Orbs를 충분히 수집했어요. 이제 상점에서 ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    "를 받을 수 있어요!"
+  ],
+  "pGDUHx": "프로필 데코",
   "7gHWra": [
     [
       1,

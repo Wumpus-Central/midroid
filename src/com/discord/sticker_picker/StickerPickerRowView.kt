@@ -166,8 +166,8 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
    }
 
    public fun clean() {
-      for (View var1 : f0.a(this)) {
-         (var1 as StickerView).recycle();
+      for (View var2 : f0.a(this)) {
+         (var2 as StickerView).recycle();
       }
    }
 

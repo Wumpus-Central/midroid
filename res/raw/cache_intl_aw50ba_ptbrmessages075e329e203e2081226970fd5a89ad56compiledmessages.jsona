@@ -39003,6 +39003,29 @@
   "DisZzM": "Ver perfil por servidor",
   "hl1V+f": "Ver espectadores",
   "39d0Wl": "Ver tópico",
+  "FIilKy": [
+    "Você coletou ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Ganhe Orbs",
+  "GPdvqa": "Resgatar Orbs na loja",
+  "97ztVl": "Continue acumulando Orbs para resgatar prêmios incríveis!",
+  "Heldho": [
+    "Agora você tem Orbs suficientes para resgatar uma ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "decoração de perfil"
+      ]
+    ],
+    " da loja!"
+  ],
+  "pGDUHx": "Decoração de Perfil",
   "7gHWra": [
     "Erro ao resgatar ",
     [

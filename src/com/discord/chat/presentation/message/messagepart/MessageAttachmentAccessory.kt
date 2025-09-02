@@ -58,12 +58,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
             var3 = java.lang.String.valueOf(var2);
          }
 
-         val var8: java.lang.String = var1.type().getIndexLabel();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var8);
-         var6.append(" ");
-         var6.append(var3);
-         return var6.toString();
+         val var6: java.lang.String = var1.type().getIndexLabel();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append(var6);
+         var8.append(" ");
+         var8.append(var3);
+         return var8.toString();
       }
    }
 }

@@ -38976,6 +38976,29 @@
   "DisZzM": "Serverspezifisches Profil anzeigen",
   "hl1V+f": "Zuschauer anzeigen",
   "39d0Wl": "Thread anzeigen",
+  "FIilKy": [
+    "Du hast ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs gesammelt!"
+  ],
+  "uJAMFR": "Orbs verdienen",
+  "GPdvqa": "Orbs im Shop einlösen",
+  "97ztVl": "Sammle weiter Orbs, um tolle Preise zu beanspruchen!",
+  "Heldho": [
+    "Du hast jetzt genug Orbs, um eine ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "Profildekoration"
+      ]
+    ],
+    " aus dem Shop zu beanspruchen!"
+  ],
+  "pGDUHx": "Profildekoration",
   "7gHWra": [
     "Fehler beim Einlösen von ",
     [

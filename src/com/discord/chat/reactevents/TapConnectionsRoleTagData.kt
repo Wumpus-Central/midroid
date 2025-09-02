@@ -69,20 +69,20 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
 
    public override fun toString(): String {
       val var3: java.lang.String = this.userId;
-      val var4: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapConnectionsRoleTagData(userId=");
-      var2.append(var3);
-      var2.append(", guildId=");
-      var2.append(var4);
-      var2.append(", channelId=");
-      var2.append(var5);
-      var2.append(", roleId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.roleId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapConnectionsRoleTagData(userId=");
+      var5.append(var3);
+      var5.append(", guildId=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var2);
+      var5.append(", roleId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

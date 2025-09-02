@@ -39025,6 +39025,29 @@
   "DisZzM": "Afficher le profil par serveur",
   "hl1V+f": "Afficher les spectateurs",
   "39d0Wl": "Voir le fil",
+  "FIilKy": [
+    "Tu as collecté ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs !"
+  ],
+  "uJAMFR": "Obtiens des Orbs",
+  "GPdvqa": "Échange des Orbs dans la Boutique",
+  "97ztVl": "Continue à gagner des Orbs pour récupérer des prix fantastiques !",
+  "Heldho": [
+    "Tu as maintenant assez d'Orbs pour récupérer un ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "Profil Déco"
+      ]
+    ],
+    " dans la Boutique !"
+  ],
+  "pGDUHx": "Profil Déco",
   "7gHWra": [
     "Erreur lors de la récupération de ",
     [

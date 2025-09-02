@@ -18,24 +18,18 @@ internal class ForegroundService : Service {
    }
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-      val var5: Log = Log.INSTANCE;
-      val var4: java.lang.String = tag;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("onStartCommand: intent ");
-      var6.append(var1);
-      var6.append(", flags ");
-      var6.append(var2);
-      var6.append(", startId ");
-      var6.append(var3);
-      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
-      val var7: Byte;
-      if (ForegroundServiceManager.INSTANCE.onServiceStartCommandReceived$foreground_service_release(this, var1)) {
-         var7 = 1;
-      } else {
-         var7 = 2;
-      }
-
-      return var7;
+      val var6: Log = Log.INSTANCE;
+      val var5: java.lang.String = tag;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("onStartCommand: intent ");
+      var4.append(var1);
+      var4.append(", flags ");
+      var4.append(var2);
+      var4.append(", startId ");
+      var4.append(var3);
+      Log.i$foreground_service_release$default(var6, var5, var4.toString(), null, 4, null);
+      ForegroundServiceManager.INSTANCE.onServiceCreatedOrUpdated$foreground_service_release(this);
+      return super.onStartCommand(var1, var2, var3);
    }
 
    public companion object {
@@ -53,12 +47,10 @@ internal class ForegroundService : Service {
          ForegroundService.Companion.stopInternal(var0, var1);
       }
 
-      private fun stopInternal(context: Context?, service: Service) {
+      private fun stopInternal(context: Context, service: Service) {
          var2.stopForeground(1);
          var2.stopSelf();
-         if (var1 != null) {
-            ServiceNotification.INSTANCE.clearNotifications(var1);
-         }
+         ServiceNotification.INSTANCE.clearNotifications(var1);
       }
 
       public fun start(context: Context, onError: (Exception) -> Unit) {
@@ -70,7 +62,7 @@ internal class ForegroundService : Service {
          }
       }
 
-      public fun stop(context: Context?, service: Service) {
+      public fun stop(context: Context, service: Service) {
          val var3: Long = System.currentTimeMillis() - ForegroundService.access$getLastServiceStartTime$cp();
          if (var3 > 3000L) {
             this.stopInternal(var1, var2);

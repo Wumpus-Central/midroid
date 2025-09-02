@@ -38994,6 +38994,29 @@
   "DisZzM": "Ver perfil por servidor",
   "hl1V+f": "Ver espectadores",
   "39d0Wl": "Ver hilo",
+  "FIilKy": [
+    "¡Has conseguido ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Gana Orbs",
+  "GPdvqa": "Canjear Orbs en la Tienda",
+  "97ztVl": "¡Sigue ganando Orbs para obtener algunos premios increíbles!",
+  "Heldho": [
+    "¡Ahora tienes suficientes Orbs para obtener una ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    " en la Tienda!"
+  ],
+  "pGDUHx": "Decoración de perfil",
   "7gHWra": [
     "Error al canjear ",
     [

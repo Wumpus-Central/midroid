@@ -58,17 +58,17 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
       val var3: Int = (int)var1;
       val var7: java.util.Map = this.zlibInflaters;
       val var6: Int = var3;
-      var var5: Any = var7.get(var6);
-      var var4: WebSocketModule = (WebSocketModule)var5;
+      var var5: WebSocketModule = (WebSocketModule)var7.get(var6);
+      var var4: Any = var5;
       if (var5 == null) {
          var4 = new Inflater();
          var7.put(var6, var4);
       }
 
-      var5 = var4 as Inflater;
-      var4 = this.getWebSocketModule();
-      if (var4 != null) {
-         var4.setContentHandler(var3, new CompressionModule.ZlibContentHandler((Inflater)var5));
+      var4 = var4 as Inflater;
+      var5 = this.getWebSocketModule();
+      if (var5 != null) {
+         var5.setContentHandler(var3, new CompressionModule.ZlibContentHandler((Inflater)var4));
       }
    }
 
@@ -116,11 +116,11 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
          if (var6.getDurationMillis() > 100L) {
             val var5: Log = Log.INSTANCE;
             val var3: java.lang.String = CompressionModule.access$getLogTag$cp();
-            val var9: java.lang.String = var6.getDuration();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Decompressed ZLib message in ");
-            var7.append(var9);
-            Log.i$default(var5, var3, var7.toString(), null, 4, null);
+            val var7: java.lang.String = var6.getDuration();
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Decompressed ZLib message in ");
+            var9.append(var7);
+            Log.i$default(var5, var3, var9.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
@@ -191,18 +191,18 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
          if (this.read(var8) != 0) {
             throw new UnsupportedOperationException("Error in zstd: still had data when trying to refill buffer");
          } else {
-            var var4: Int = 1;
+            var var3: Int = 1;
 
-            for (int var3 = 0; var4 < 51; var4++) {
+            for (int var4 = 0; var3 < 51; var3++) {
                val var5: Int = this.read(var8);
-               var3 += var5;
+               var4 += var5;
                if (var5 == 0) {
                   if (var6.size() == 1) {
                      val var11: ByteArray = (var6.get(0) as ByteBuffer).array();
-                     return new java.lang.String(var11, 0, var3, Charsets.UTF_8);
+                     return new java.lang.String(var11, 0, var4, Charsets.UTF_8);
                   }
 
-                  val var9: ByteBuffer = ByteBuffer.allocate(var3);
+                  val var9: ByteBuffer = ByteBuffer.allocate(var4);
 
                   for (ByteBuffer var12 : var6) {
                      ((Buffer)var12).flip();

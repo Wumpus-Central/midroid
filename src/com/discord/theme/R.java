@@ -484,9 +484,7 @@ public final class R {
       public static int primary_830;
       public static int primary_860;
       public static int primary_900;
-      public static int primary_dark_500_alpha_20;
       public static int primary_dark_700_alpha_60;
-      public static int primary_light_500_alpha_20;
       public static int red;
       public static int red_100;
       public static int red_130;
@@ -546,8 +544,6 @@ public final class R {
       public static int spoiler_revealed_background_darker;
       public static int spoiler_revealed_background_midnight;
       public static int spotify;
-      public static int status_green_500_alpha_20;
-      public static int status_red_500_alpha_20;
       public static int steam;
       public static int teal;
       public static int teal_100;

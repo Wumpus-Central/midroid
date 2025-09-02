@@ -156,11 +156,11 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
                   throw new n();
                }
 
-               val var6: MediaGalleryItemType = this.items.get(var1).getMediaType();
-               val var4: StringBuilder = new StringBuilder();
-               var4.append("Unknown bot component media type: ");
-               var4.append(var6);
-               throw new IllegalArgumentException(var4.toString());
+               val var4: MediaGalleryItemType = this.items.get(var1).getMediaType();
+               val var6: StringBuilder = new StringBuilder();
+               var6.append("Unknown bot component media type: ");
+               var6.append(var4);
+               throw new IllegalArgumentException(var6.toString());
             }
 
             var5 = 51;
@@ -178,56 +178,56 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
       val var4: Boolean = var1 is MosaicItemMessageAttachmentImageViewHolder;
       var var3: Boolean = false;
       if (var4) {
-         val var8: MediaGalleryItem = this.items.get(var2);
+         val var6: MediaGalleryItem = this.items.get(var2);
          val var10: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var9: ComponentContext = this.componentContext;
+         val var7: ComponentContext = this.componentContext;
          if (this.componentContext == null) {
             return;
          }
 
-         val var6: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-         val var7: java.lang.String = this.containerId;
-         val var5: java.lang.String = this.component.getId();
+         val var5: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+         val var9: java.lang.String = this.containerId;
+         val var8: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
          } else {
             var3 = false;
          }
 
-         var6.bindGalleryItem(
-            var7,
-            var5,
+         var5.bindGalleryItem(
+            var9,
             var8,
+            var6,
             var3,
-            new a(this, var10, var8, var1),
-            new b(this, var10, var8),
-            new c(this, var8),
+            new a(this, var10, var6, var1),
+            new b(this, var10, var6),
+            new c(this, var6),
             new d(this),
-            new e(this, var8),
-            var9.getShouldAutoPlayGif()
+            new e(this, var6),
+            var7.getShouldAutoPlayGif()
          );
       } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-         val var19: MediaGalleryItem = this.items.get(var2);
-         val var22: MediaGalleryDisplayComponent = this.component;
+         val var20: MediaGalleryItem = this.items.get(var2);
+         val var19: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
-         val var20: java.lang.String = this.containerId;
-         val var21: java.lang.String = this.component.getId();
+         val var21: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+         val var16: java.lang.String = this.containerId;
+         val var22: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
          } else {
             var3 = false;
          }
 
-         var16.bindGalleryItem(
-            var20, var21, var19, var3, new f(this, var22, var19, var1), new g(this, var22, var19), new h(this, var19), new i(this), new j(this, var19)
+         var21.bindGalleryItem(
+            var16, var22, var20, var3, new f(this, var19, var20, var1), new g(this, var19, var20), new h(this, var20), new i(this), new j(this, var20)
          );
       } else {
          if (var1 !is MosaicItemVisualPlaceholderViewHolder) {
