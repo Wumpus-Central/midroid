@@ -125,20 +125,20 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
       val var3: GuildId = this.guildId;
-      val var6: java.lang.String = UserId.toString-impl(this.userId);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("DismissCallAction(tag=");
-      var4.append(var5);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", isFullscreenCallUI=");
-      var4.append(var1);
-      var4.append(", guildId=");
-      var4.append(var3);
-      var4.append(", userId=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("DismissCallAction(tag=");
+      var6.append(var5);
+      var6.append(", channelId=");
+      var6.append(var2);
+      var6.append(", isFullscreenCallUI=");
+      var6.append(var1);
+      var6.append(", guildId=");
+      var6.append(var3);
+      var6.append(", userId=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {

@@ -72,15 +72,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
-      val var6: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: java.lang.String = this.taskName;
-      val var7: Bundle = new Bundle();
+      val var7: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: java.lang.String = this.taskName;
+      val var6: Bundle = new Bundle();
 
       for (Entry var5 : this.data.entrySet()) {
-         var7.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+         var6.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var4, 0L, false, var7, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var3, 0L, false, var6, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -92,18 +92,18 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var1: java.lang.String = this.taskName;
-      val var4: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GenericAction(tag=");
-      var2.append(var3);
-      var2.append(", taskName=");
-      var2.append(var1);
-      var2.append(", data=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.tag;
+      val var4: java.lang.String = this.taskName;
+      val var1: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GenericAction(tag=");
+      var3.append(var2);
+      var3.append(", taskName=");
+      var3.append(var4);
+      var3.append(", data=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
@@ -112,17 +112,17 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var5 : var3.entrySet()) {
-         var1.writeString(var5.getKey() as java.lang.String);
-         var1.writeString(var5.getValue() as java.lang.String);
+      for (Entry var4 : var3.entrySet()) {
+         var1.writeString(var4.getKey() as java.lang.String);
+         var1.writeString(var4.getValue() as java.lang.String);
       }
    }
 
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<GenericAction> {
       fun createFromParcel(var1: Parcel): GenericAction {
-         val var6: java.lang.String = var1.readString();
          val var4: java.lang.String = var1.readString();
+         val var6: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
          val var5: LinkedHashMap = new LinkedHashMap(var3);
 
@@ -130,7 +130,7 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
             var5.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var6, var4, var5);
+         return new GenericAction(var4, var6, var5);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

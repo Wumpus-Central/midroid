@@ -110,26 +110,26 @@ public object PlayAssetDelivery {
       // 031: aconst_null
       // 032: astore 3
       // 033: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 036: astore 5
+      // 036: astore 7
       // 038: new java/lang/StringBuilder
       // 03b: dup
       // 03c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 03f: astore 7
-      // 041: aload 7
+      // 03f: astore 5
+      // 041: aload 5
       // 043: ldc "Fetching "
       // 045: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 048: pop
-      // 049: aload 7
+      // 049: aload 5
       // 04b: aload 1
       // 04c: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 04f: pop
-      // 050: aload 7
+      // 050: aload 5
       // 052: ldc " Asset"
       // 054: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 057: pop
-      // 058: aload 5
+      // 058: aload 7
       // 05a: ldc "PlayAssetDelivery"
-      // 05c: aload 7
+      // 05c: aload 5
       // 05e: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 061: aconst_null
       // 062: bipush 4

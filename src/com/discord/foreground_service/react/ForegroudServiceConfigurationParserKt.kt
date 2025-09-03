@@ -15,8 +15,8 @@ import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
-   val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
-   val var4: java.lang.String = var1.getString("content");
+   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
+   val var6: java.lang.String = var1.getString("content");
    var0 = ServiceNotificationConfiguration.Companion;
    val var5: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
    var var2: ReadableMap = var1.getMap("contentAction");
@@ -46,34 +46,34 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
       var2 = CollectionsKt.k();
    }
 
-   return new ServiceNotificationConfiguration(var6, var4, var5, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
+   return new ServiceNotificationConfiguration(var4, var6, var5, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
    val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
-   val var2: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
-   val var3: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
+   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
+   val var2: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
    val var5: ReadableMap = var1.getMap("data");
    if (var5 != null) {
       val var7: java.util.Map = NativeMapExtensionsKt.toStringMap(var5);
       if (var7 != null) {
-         return new ServiceNotificationConfiguration.Action(var4, var2, var3, var7);
+         return new ServiceNotificationConfiguration.Action(var4, var3, var2, var7);
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var4, var2, var3, L.h());
+   return new ServiceNotificationConfiguration.Action(var4, var3, var2, L.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
    val var6: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
-   val var7: java.util.Iterator = var3.iterator();
+   val var5: java.util.Iterator = var3.iterator();
 
-   while (var7.hasNext()) {
-      val var2: Int = (var7 as I).nextInt();
-      val var4: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var5: ReadableMap = var1.getMap(var2);
-      var6.add(parse(var4, var5));
+   while (var5.hasNext()) {
+      val var2: Int = (var5 as I).nextInt();
+      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var4: ReadableMap = var1.getMap(var2);
+      var6.add(parse(var7, var4));
    }
 
    return var6;

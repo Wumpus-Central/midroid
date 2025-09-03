@@ -85,21 +85,21 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.id);
-      val var2: java.lang.String = this.username;
-      val var3: java.lang.String = this.discriminator;
-      val var1: java.lang.String = this.avatar;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("DirectReplyUser(id=");
-      var4.append(var5);
-      var4.append(", username=");
-      var4.append(var2);
-      var4.append(", discriminator=");
-      var4.append(var3);
-      var4.append(", avatar=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = UserId.toString-impl(this.id);
+      val var4: java.lang.String = this.username;
+      val var1: java.lang.String = this.discriminator;
+      val var5: java.lang.String = this.avatar;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DirectReplyUser(id=");
+      var2.append(var3);
+      var2.append(", username=");
+      var2.append(var4);
+      var2.append(", discriminator=");
+      var2.append(var1);
+      var2.append(", avatar=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

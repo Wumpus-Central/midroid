@@ -15,16 +15,16 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
 
    @ReactMethod
    public fun registerNotificationCategories(localizedCategoryNames: ReadableMap) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), L.h());
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.initNotificationCategories(var2, NativeMapExtensionsKt.toStringMap(var1), L.h());
    }
 
    @ReactMethod
    public fun registerNotificationCategoriesAndGroups(localizedCategoryNames: ReadableMap, localizedGroupNames: ReadableMap) {
-      val var4: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var4.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      var3.initNotificationCategories(var4, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
    }
 
    @ReactMethod
@@ -33,8 +33,8 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
 
    @ReactMethod
    public fun setIncomingRingtone(name: String) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.setIncomingRingtone(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.setIncomingRingtone(var2, var1);
    }
 }

@@ -186,13 +186,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var1: Int = this.maxRed - this.minRed;
-            val var2: Int = this.maxGreen - this.minGreen;
-            val var3: Int = this.maxBlue - this.minBlue;
+            val var3: Int = this.maxRed - this.minRed;
+            val var1: Int = this.maxGreen - this.minGreen;
+            val var2: Int = this.maxBlue - this.minBlue;
             val var4: Byte;
-            if (var1 >= var2 && var1 >= this.maxBlue - this.minBlue) {
+            if (var3 >= var1 && var3 >= this.maxBlue - this.minBlue) {
                var4 = -3;
-            } else if (var2 >= var1 && var2 >= var3) {
+            } else if (var1 >= var3 && var1 >= var2) {
                var4 = -2;
             } else {
                var4 = -1;
@@ -206,12 +206,12 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
          public final get() {
             var var7: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
+            var var5: Int = 0;
             var var6: Int = 0;
             var var3: Int;
             var var4: Int;
-            var var12: Int;
             if (this.lowerIndex <= this.upperIndex) {
-               var12 = 0;
+               var5 = 0;
                var3 = 0;
                var4 = 0;
 
@@ -219,25 +219,22 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                   val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
                   val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
                   var6 += var9;
-                  var12 += Color.red(var10) * var9;
+                  var5 += Color.red(var10) * var9;
                   var3 += Color.green(var10) * var9;
                   var4 += var9 * Color.blue(var10);
                   if (var7 == var8) {
-                     var12 = var6;
-                     var6 = var12;
                      break;
                   }
 
                   var7++;
                }
             } else {
+               var6 = 0;
                var3 = 0;
                var4 = 0;
-               var6 = 0;
-               var12 = 0;
             }
 
-            return new Swatch(Math.round((float)var6 / (float)var12), Math.round((float)var3 / (float)var12), Math.round((float)var4 / (float)var12), var12);
+            return new Swatch(Math.round((float)var5 / (float)var6), Math.round((float)var3 / (float)var6), Math.round((float)var4 / (float)var6), var6);
          }
 
 
@@ -296,23 +293,23 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
          if (this.lowerIndex <= this.upperIndex) {
             while (true) {
                var var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
-               val var3: Int = Color.red(var5);
-               val var4: Int = Color.green(var5);
+               val var4: Int = Color.red(var5);
+               val var3: Int = Color.green(var5);
                var5 = Color.blue(var5);
-               if (var3 > this.maxRed) {
-                  this.maxRed = var3;
+               if (var4 > this.maxRed) {
+                  this.maxRed = var4;
                }
 
-               if (var3 < this.minRed) {
-                  this.minRed = var3;
+               if (var4 < this.minRed) {
+                  this.minRed = var4;
                }
 
-               if (var4 > this.maxGreen) {
-                  this.maxGreen = var4;
+               if (var3 > this.maxGreen) {
+                  this.maxGreen = var3;
                }
 
-               if (var4 < this.minGreen) {
-                  this.minGreen = var4;
+               if (var3 < this.minGreen) {
+                  this.minGreen = var3;
                }
 
                if (var5 > this.maxBlue) {
