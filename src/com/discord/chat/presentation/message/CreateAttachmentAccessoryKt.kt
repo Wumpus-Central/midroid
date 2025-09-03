@@ -53,41 +53,41 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
             );
          }
       } else {
-         val var18: Long = var1.getChannelId-o4g7jtM();
+         val var16: Long = var1.getChannelId-o4g7jtM();
          var var22: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-         val var7: Boolean;
+         val var9: Boolean;
          if (var22 != null) {
-            var7 = var22;
+            var9 = var22;
          } else {
-            var7 = false;
+            var9 = false;
          }
 
          var22 = var1.getUseAttachmentUploadPreview();
-         var var8: Boolean;
+         var var10: Boolean;
          if (var22 != null) {
-            var8 = var22;
+            var10 = var22;
          } else {
-            var8 = false;
+            var10 = false;
          }
 
-         if (var8 && var0.getProgress() != null) {
-            var8 = true;
+         if (var10 && var0.getProgress() != null) {
+            var10 = true;
          } else {
-            var8 = false;
+            var10 = false;
          }
 
-         var14 = new VideoAttachmentMessageAccessory(var18, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var7, var8, null);
+         var14 = new VideoAttachmentMessageAccessory(var16, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var9, var10, null);
       }
    } else {
       val var24: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-      val var16: Boolean;
+      val var17: Boolean;
       if (var24 != null) {
-         var16 = var24;
+         var17 = var24;
       } else {
-         var16 = false;
+         var17 = false;
       }
 
-      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var16, null);
+      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var17, null);
    }
 
    return (MessageAttachmentAccessory)var14;

@@ -45,8 +45,8 @@ public sealed interface PostProcessor {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
 
-            for (PostProcessor var6 : var2) {
-               var4.add($$INSTANCE.create(var6));
+            for (PostProcessor var3 : var2) {
+               var4.add($$INSTANCE.create(var3));
             }
 
             var5 = new CompositePostprocessor(var4);
@@ -101,12 +101,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.postprocessors;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Composite(postprocessors=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.util.List = this.postprocessors;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Composite(postprocessors=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -207,8 +207,8 @@ public sealed interface PostProcessor {
          val var5: PostProcessor.Gradient.Direction = this.direction;
          val var4: Int = this.startColor;
          val var3: Int = this.endColor;
-         val var1: Float = this.startPosition;
-         val var2: Float = this.endPosition;
+         val var2: Float = this.startPosition;
+         val var1: Float = this.endPosition;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Gradient(direction=");
          var6.append(var5);
@@ -217,9 +217,9 @@ public sealed interface PostProcessor {
          var6.append(", endColor=");
          var6.append(var3);
          var6.append(", startPosition=");
-         var6.append(var1);
-         var6.append(", endPosition=");
          var6.append(var2);
+         var6.append(", endPosition=");
+         var6.append(var1);
          var6.append(")");
          return var6.toString();
       }

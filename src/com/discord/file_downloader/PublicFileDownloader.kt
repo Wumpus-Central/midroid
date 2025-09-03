@@ -84,21 +84,21 @@ public object PublicFileDownloader {
       // 49: astore 5
       // 4b: goto 8a
       // 4e: new com/discord/file_downloader/DownloadState$Failure
-      // 51: astore 7
+      // 51: astore 5
       // 53: new java/lang/IllegalStateException
-      // 56: astore 5
+      // 56: astore 7
       // 58: new java/io/FileNotFoundException
       // 5b: astore 8
       // 5d: aload 8
       // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 5
+      // 62: aload 7
       // 64: aload 8
       // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 69: aload 7
-      // 6b: aload 5
+      // 69: aload 5
+      // 6b: aload 7
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
-      // 71: aload 7
+      // 71: aload 5
       // 73: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 78: pop
       // 79: aload 1

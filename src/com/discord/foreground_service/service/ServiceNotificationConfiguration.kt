@@ -103,25 +103,25 @@ internal data class ServiceNotificationConfiguration(title: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.title;
-      val var7: java.lang.String = this.content;
-      val var5: ServiceNotificationConfiguration.Priority = this.priority;
-      val var4: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var6: java.util.List = this.auxiliaryActions;
-      val var3: ServiceNotificationConfiguration.Type = this.type;
+      val var6: java.lang.String = this.title;
+      val var2: java.lang.String = this.content;
+      val var3: ServiceNotificationConfiguration.Priority = this.priority;
+      val var7: ServiceNotificationConfiguration.Action = this.contentAction;
+      val var4: java.util.List = this.auxiliaryActions;
+      val var5: ServiceNotificationConfiguration.Type = this.type;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ServiceNotificationConfiguration(title=");
-      var1.append(var2);
-      var1.append(", content=");
-      var1.append(var7);
-      var1.append(", priority=");
-      var1.append(var5);
-      var1.append(", contentAction=");
-      var1.append(var4);
-      var1.append(", auxiliaryActions=");
       var1.append(var6);
-      var1.append(", type=");
+      var1.append(", content=");
+      var1.append(var2);
+      var1.append(", priority=");
       var1.append(var3);
+      var1.append(", contentAction=");
+      var1.append(var7);
+      var1.append(", auxiliaryActions=");
+      var1.append(var4);
+      var1.append(", type=");
+      var1.append(var5);
       var1.append(")");
       return var1.toString();
    }
@@ -192,19 +192,19 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.tag;
+         val var4: java.lang.String = this.tag;
          val var5: java.lang.String = this.taskName;
-         val var2: java.lang.String = this.title;
-         val var4: java.util.Map = this.data;
+         val var1: java.lang.String = this.title;
+         val var2: java.util.Map = this.data;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Action(tag=");
-         var3.append(var1);
+         var3.append(var4);
          var3.append(", taskName=");
          var3.append(var5);
          var3.append(", title=");
-         var3.append(var2);
+         var3.append(var1);
          var3.append(", data=");
-         var3.append(var4);
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

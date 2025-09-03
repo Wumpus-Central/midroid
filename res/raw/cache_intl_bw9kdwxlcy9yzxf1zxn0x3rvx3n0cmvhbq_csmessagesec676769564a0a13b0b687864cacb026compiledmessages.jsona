@@ -1,0 +1,27 @@
+{
+  "DKHheX": "Žádost o stream",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " tě žádá o streamování aplikace ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Požádal/a jsi někoho o streamování aplikace ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Už streamuješ",
+  "u4QmWl": "Žádost vypršela",
+  "qRXatr": "Není v hlasovém kanálu",
+  "43zohI": "Hra není spuštěna",
+  "8HU1Mz": "Nevyřízená žádost",
+  "5+172d": "Stream"
+}

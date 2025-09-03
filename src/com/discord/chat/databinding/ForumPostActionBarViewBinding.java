@@ -98,75 +98,75 @@ public final class ForumPostActionBarViewBinding implements ViewBinding {
    @NonNull
    public static ForumPostActionBarViewBinding bind(@NonNull View var0) {
       int var1 = R.id.add_reaction;
-      AddReactionView var2 = (AddReactionView)a.a(var0, var1);
-      if (var2 != null) {
+      AddReactionView var12 = (AddReactionView)a.a(var0, var1);
+      if (var12 != null) {
          var1 = R.id.follow_button;
-         DCDButton var8 = (DCDButton)a.a(var0, var1);
-         if (var8 != null) {
+         DCDButton var17 = (DCDButton)a.a(var0, var1);
+         if (var17 != null) {
             var1 = R.id.footer_barrier;
-            Barrier var17 = (Barrier)a.a(var0, var1);
-            if (var17 != null) {
+            Barrier var14 = (Barrier)a.a(var0, var1);
+            if (var14 != null) {
                var1 = R.id.footer_divider;
-               View var6 = a.a(var0, var1);
-               if (var6 != null) {
+               View var18 = a.a(var0, var1);
+               if (var18 != null) {
                   var1 = R.id.header_barrier;
-                  Barrier var16 = (Barrier)a.a(var0, var1);
-                  if (var16 != null) {
+                  Barrier var3 = (Barrier)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.header_divider;
-                     View var5 = a.a(var0, var1);
-                     if (var5 != null) {
+                     View var4 = a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.other_reactions_count;
-                        DCDButton var18 = (DCDButton)a.a(var0, var1);
-                        if (var18 != null) {
+                        DCDButton var16 = (DCDButton)a.a(var0, var1);
+                        if (var16 != null) {
                            var1 = R.id.reactions_view;
-                           ShortcutsFlexbox var15 = (ShortcutsFlexbox)a.a(var0, var1);
-                           if (var15 != null) {
+                           ShortcutsFlexbox var8 = (ShortcutsFlexbox)a.a(var0, var1);
+                           if (var8 != null) {
                               var1 = R.id.share_button;
-                              DCDButton var3 = (DCDButton)a.a(var0, var1);
-                              if (var3 != null) {
+                              DCDButton var13 = (DCDButton)a.a(var0, var1);
+                              if (var13 != null) {
                                  var1 = R.id.share_prompt_close_button;
-                                 DCDButton var12 = (DCDButton)a.a(var0, var1);
-                                 if (var12 != null) {
+                                 DCDButton var15 = (DCDButton)a.a(var0, var1);
+                                 if (var15 != null) {
                                     var1 = R.id.share_prompt_container;
-                                    ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
-                                    if (var7 != null) {
+                                    ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
+                                    if (var10 != null) {
                                        var1 = R.id.share_prompt_copy_link_button;
-                                       DCDButton var11 = (DCDButton)a.a(var0, var1);
-                                       if (var11 != null) {
+                                       DCDButton var6 = (DCDButton)a.a(var0, var1);
+                                       if (var6 != null) {
                                           var1 = R.id.share_prompt_icon;
-                                          SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-                                          if (var9 != null) {
+                                          SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                                          if (var11 != null) {
                                              var1 = R.id.share_prompt_subtitle;
-                                             SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                                             if (var4 != null) {
+                                             SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                                             if (var7 != null) {
                                                 var1 = R.id.share_prompt_title;
-                                                TextView var10 = (TextView)a.a(var0, var1);
-                                                if (var10 != null) {
+                                                TextView var5 = (TextView)a.a(var0, var1);
+                                                if (var5 != null) {
                                                    var1 = R.id.spacer;
-                                                   Space var14 = (Space)a.a(var0, var1);
-                                                   if (var14 != null) {
+                                                   Space var9 = (Space)a.a(var0, var1);
+                                                   if (var9 != null) {
                                                       var1 = R.id.start_spacer;
-                                                      Space var13 = (Space)a.a(var0, var1);
-                                                      if (var13 != null) {
+                                                      Space var2 = (Space)a.a(var0, var1);
+                                                      if (var2 != null) {
                                                          return new ForumPostActionBarViewBinding(
                                                             var0,
-                                                            var2,
-                                                            var8,
-                                                            var17,
-                                                            var6,
-                                                            var16,
-                                                            var5,
-                                                            var18,
-                                                            var15,
-                                                            var3,
                                                             var12,
-                                                            var7,
-                                                            var11,
-                                                            var9,
-                                                            var4,
-                                                            var10,
+                                                            var17,
                                                             var14,
-                                                            var13
+                                                            var18,
+                                                            var3,
+                                                            var4,
+                                                            var16,
+                                                            var8,
+                                                            var13,
+                                                            var15,
+                                                            var10,
+                                                            var6,
+                                                            var11,
+                                                            var7,
+                                                            var5,
+                                                            var9,
+                                                            var2
                                                          );
                                                       }
                                                    }

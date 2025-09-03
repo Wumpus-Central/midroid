@@ -83,8 +83,8 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.tag.hashCode();
-      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var5: Int = this.tag.hashCode();
+      val var4: Int = ChannelId.hashCode-impl(this.channelId);
       var var3: Int = 0;
       val var1: Int;
       if (this.channelName == null) {
@@ -104,22 +104,22 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          var3 = this.guildName.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
       val var4: java.lang.String = DirectReplyAction.Companion.access$getReplyText(Companion, var2);
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var5: Bundle = new Bundle();
-      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var5.putString("channelName", this.channelName);
-      var5.putString("channelReplyText", var4);
+      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var3.putString("channelName", this.channelName);
+      var3.putString("channelReplyText", var4);
       if (this.channelType != null) {
-         var5.putInt("channelType", this.channelType.intValue());
+         var3.putInt("channelType", this.channelType.intValue());
       }
 
-      var5.putString("guildName", this.guildName);
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DirectReply", 0L, false, var5, true, 12, null);
+      var3.putString("guildName", this.guildName);
+      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "DirectReply", 0L, false, var3, true, 12, null);
    }
 
    public override fun onNotificationActionComplete(context: Context) {
@@ -130,22 +130,22 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = this.channelName;
-      val var6: Int = this.channelType;
-      val var4: java.lang.String = this.guildName;
+      val var6: java.lang.String = this.tag;
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.channelName;
+      val var5: Int = this.channelType;
+      val var1: java.lang.String = this.guildName;
       val var2: StringBuilder = new StringBuilder();
       var2.append("DirectReplyAction(tag=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var5);
-      var2.append(", channelName=");
-      var2.append(var1);
-      var2.append(", channelType=");
       var2.append(var6);
-      var2.append(", guildName=");
+      var2.append(", channelId=");
       var2.append(var4);
+      var2.append(", channelName=");
+      var2.append(var3);
+      var2.append(", channelType=");
+      var2.append(var5);
+      var2.append(", guildName=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

@@ -44,18 +44,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
+      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
       this.spoilerViewManager = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var3: TextView = var4.imageAltText;
-      var4.imageAltText.setImportantForAccessibility(4);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
-      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
-      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var4: TextView = var3.imageAltText;
+      var3.imageAltText.setImportantForAccessibility(4);
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
+      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
+      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?, srcIsAnimated: Boolean) {
@@ -208,9 +208,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var31: SpoilerViewManager = this.spoilerViewManager;
-      val var33: ConstraintLayout = this.binding.container;
-      val var28: SimpleDraweeView = this.binding.image;
+      val var33: SpoilerViewManager = this.spoilerViewManager;
+      val var28: ConstraintLayout = this.binding.container;
+      val var34: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,7 +223,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var31.configureSpoiler(var8, this, var33, var28, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      var33.configureSpoiler(var8, this, var28, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
       val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var32: ConstraintLayout = this.binding.container;
       var29.configureAttachmentOverlay(this, var32, var9, var10);

@@ -161,33 +161,33 @@ public data class DirectReplyMessage(id: MessageId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: DirectReplyUser = this.author;
-      val var9: java.lang.String = this.content;
-      val var4: Int = this.type;
-      val var6: Int = this.channelType;
-      val var1: java.lang.String = this.channelName;
-      val var2: java.lang.String = this.guildName;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("DirectReplyMessage(id=");
-      var5.append(var7);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", author=");
-      var5.append(var8);
-      var5.append(", content=");
-      var5.append(var9);
-      var5.append(", type=");
-      var5.append(var4);
-      var5.append(", channelType=");
-      var5.append(var6);
-      var5.append(", channelName=");
-      var5.append(var1);
-      var5.append(", guildName=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var9: java.lang.String = MessageId.toString-impl(this.id);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: DirectReplyUser = this.author;
+      val var2: java.lang.String = this.content;
+      val var6: Int = this.type;
+      val var7: Int = this.channelType;
+      val var3: java.lang.String = this.channelName;
+      val var8: java.lang.String = this.guildName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("DirectReplyMessage(id=");
+      var4.append(var9);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", author=");
+      var4.append(var5);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(", type=");
+      var4.append(var6);
+      var4.append(", channelType=");
+      var4.append(var7);
+      var4.append(", channelName=");
+      var4.append(var3);
+      var4.append(", guildName=");
+      var4.append(var8);
+      var4.append(")");
+      return var4.toString();
    }
 
    @SourceDebugExtension(["SMAP\nDirectReplyMessage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,57:1\n123#2:58\n*S KotlinDebug\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n*L\n26#1:58\n*E\n"])
@@ -204,11 +204,11 @@ public data class DirectReplyMessage(id: MessageId,
          val var12: DirectReplyMessage = var6.b(DirectReplyMessage.Companion.serializer(), var1) as DirectReplyMessage;
          val var9: java.lang.String = var12.getId-3Eiw7ao();
          val var8: Int = var12.getType();
-         val var7: java.lang.String = var12.getContent();
-         val var2: Long = var12.getChannelId-o4g7jtM();
-         val var10: Int = var12.getChannelType();
+         val var10: java.lang.String = var12.getContent();
+         val var4: Long = var12.getChannelId-o4g7jtM();
+         val var7: Int = var12.getChannelType();
          val var11: java.util.List = CollectionsKt.k();
-         val var4: Long = var12.getAuthor().getId-re6GcUE();
+         val var2: Long = var12.getAuthor().getId-re6GcUE();
          val var16: java.lang.String = var12.getAuthor().getUsername();
          var1 = var16;
          if (var16 == null) {
@@ -229,18 +229,18 @@ public data class DirectReplyMessage(id: MessageId,
             null,
             null,
             var8,
-            var7,
-            null,
             var10,
+            null,
+            var7,
             var12.getChannelName(),
-            ChannelId.box-impl(var2),
+            ChannelId.box-impl(var4),
             null,
             null,
             null,
             null,
             null,
             var11,
-            UserId.box-impl(var4),
+            UserId.box-impl(var2),
             var1,
             null,
             var18,
@@ -280,8 +280,10 @@ public data class DirectReplyMessage(id: MessageId,
             null,
             null,
             null,
+            null,
+            null,
             -35357620,
-            16777167,
+            67108815,
             null
          );
       }

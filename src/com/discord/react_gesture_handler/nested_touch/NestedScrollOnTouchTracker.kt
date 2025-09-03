@@ -4,6 +4,7 @@ import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewConfiguration
 import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
@@ -16,34 +17,52 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
-@SourceDebugExtension(["SMAP\nNestedScrollOnTouchTracker.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n+ 3 TextViewTouchUtils.kt\ncom/discord/misc/utilities/touch/TextViewTouchUtilsKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,156:1\n8#2:157\n12#3,27:158\n13996#4,14:185\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n*L\n47#1:157\n49#1:158,27\n55#1:185,14\n*E\n"])
+@SourceDebugExtension(["SMAP\nNestedScrollOnTouchTracker.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n+ 3 TextViewTouchUtils.kt\ncom/discord/misc/utilities/touch/TextViewTouchUtilsKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,211:1\n8#2:212\n12#3,27:213\n13996#4,14:240\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n*L\n51#1:212\n53#1:213,27\n59#1:240,14\n*E\n"])
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
    onLongClickListener: OnLongClickListener?,
+   onDoubleClickListener: OnClickListener?,
    onTrackingStart: ((View) -> Unit)? = null,
    onTrackingFinish: ((View) -> Unit)? = null
 ) {
    private final val onClickListener: OnClickListener?
    private final val onLongClickListener: OnLongClickListener?
+   private final val onDoubleClickListener: OnClickListener?
    private final val onTrackingStart: ((View) -> Unit)?
    private final val onTrackingFinish: ((View) -> Unit)?
-   private final var job: Job?
-   private final var doClickOnUp: Boolean
+   private final var longPressJob: Job?
+   private final var doubleClickJob: Job?
+   private final var runningDoubleClickJob: Boolean
+   private final var activeClick: Boolean
+   private final var consideringDoubleClick: Boolean
    private final val originTracker: OriginTracker
    private final var spanBeingTouched: NestedClickableSpan?
+
+   @JvmStatic
+   fun {
+      val var2: Long = ViewConfiguration.getDoubleTapTimeout();
+      DOUBLE_CLICK_TIME = var2;
+      var var0: Long = 40L;
+      if (var2 <= 40L) {
+         var0 = 1L;
+      }
+
+      DOUBLE_CLICK_MIN_TIME = var0;
+   }
 
    init {
       this.onClickListener = var2;
       this.onLongClickListener = var3;
-      this.onTrackingStart = var4;
-      this.onTrackingFinish = var5;
+      this.onDoubleClickListener = var4;
+      this.onTrackingStart = var5;
+      this.onTrackingFinish = var6;
       this.originTracker = new OriginTracker(var1);
    }
 
    private fun cleanUp(view: View) {
       this.originTracker.cleanUp();
-      if (this.job != null) {
-         kotlinx.coroutines.Job.a.a(this.job, null, 1, null);
+      if (this.longPressJob != null) {
+         kotlinx.coroutines.Job.a.a(this.longPressJob, null, 1, null);
       }
 
       var1.setPressed(false);
@@ -51,6 +70,17 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
       if (this.onTrackingFinish != null) {
          this.onTrackingFinish.invoke(var1);
       }
+
+      this.cleanupDoubleClickJob();
+   }
+
+   private fun cleanupDoubleClickJob() {
+      if (this.doubleClickJob != null) {
+         kotlinx.coroutines.Job.a.a(this.doubleClickJob, null, 1, null);
+      }
+
+      this.runningDoubleClickJob = false;
+      this.consideringDoubleClick = false;
    }
 
    internal fun handleTouch(view: View, event: MotionEvent, isSupplementalEvent: Boolean): Boolean {
@@ -68,27 +98,27 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
          if (var14 as TextView != null) {
             val var16: Array<NestedClickableSpan>;
             if (var2.getAction() == 0) {
-               val var32: java.lang.CharSequence = var20.getText();
-               val var33: Spannable;
-               if (var32 is Spannable) {
-                  var33 = var32 as Spannable;
+               val var33: java.lang.CharSequence = var20.getText();
+               val var34: Spannable;
+               if (var33 is Spannable) {
+                  var34 = var33 as Spannable;
                } else {
-                  var33 = null;
+                  var34 = null;
                }
 
-               if (var33 == null) {
+               if (var34 == null) {
                   var14 = new NestedClickableSpan[0];
                } else {
                   var var7: Int = (int)var2.getX() - var20.getTotalPaddingLeft() + var20.getScrollX();
-                  val var30: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
-                  val var4: Float = var20.getLayout().getLineRight(var30);
-                  val var6: Float = var20.getLayout().getLineLeft(var30);
-                  val var5: Float = var7;
-                  if (var7 > var4 || var7 >= 0 && var7 < var6) {
+                  val var31: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
+                  val var5: Float = var20.getLayout().getLineRight(var31);
+                  val var4: Float = var20.getLayout().getLineLeft(var31);
+                  val var6: Float = var7;
+                  if (var7 > var5 || var7 >= 0 && var7 < var4) {
                      var14 = new NestedClickableSpan[0];
                   } else {
-                     var7 = var20.getLayout().getOffsetForHorizontal(var30, var5);
-                     var14 = var33.getSpans(var7, var7, NestedClickableSpan.class);
+                     var7 = var20.getLayout().getOffsetForHorizontal(var31, var6);
+                     var14 = var34.getSpans(var7, var7, NestedClickableSpan.class);
                   }
                }
 
@@ -102,33 +132,33 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                if (var16.length == 0) {
                   var15 = null;
                } else {
-                  var var35: Any = var16[0];
-                  val var31: Int = h.Q(var16);
-                  if (var31 == 0) {
-                     var15 = var35;
+                  var var36: Any = var16[0];
+                  val var32: Int = h.Q(var16);
+                  if (var32 == 0) {
+                     var15 = var36;
                   } else {
-                     var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var35).getTouchPriority();
-                     var15 = var35;
-                     if (1 <= var31) {
-                        var var28: Int = 1;
-                        var var36: NestedClickableSpan.TouchPriority = var17;
+                     var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var36).getTouchPriority();
+                     var15 = var36;
+                     if (1 <= var32) {
+                        var var29: Int = 1;
+                        var var37: NestedClickableSpan.TouchPriority = var17;
 
                         while (true) {
-                           val var19: NestedClickableSpan = var16[var28];
-                           val var18: NestedClickableSpan.TouchPriority = var16[var28].getTouchPriority();
-                           var17 = var36;
-                           if (var36.compareTo(var18) < 0) {
-                              var35 = var19;
+                           val var19: NestedClickableSpan = var16[var29];
+                           val var18: NestedClickableSpan.TouchPriority = var16[var29].getTouchPriority();
+                           var17 = var37;
+                           if (var37.compareTo(var18) < 0) {
+                              var36 = var19;
                               var17 = var18;
                            }
 
-                           var15 = var35;
-                           if (var28 == var31) {
+                           var15 = var36;
+                           if (var29 == var32) {
                               break;
                            }
 
-                           var28++;
-                           var36 = var17;
+                           var29++;
+                           var37 = var17;
                         }
                      }
                   }
@@ -141,11 +171,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
             }
          }
 
-         val var29: Int = var2.getAction();
-         if (var29 != 0) {
-            if (var29 != 1) {
-               if (var29 != 2) {
-                  if (var29 != 3) {
+         val var30: Int = var2.getAction();
+         if (var30 != 0) {
+            if (var30 != 1) {
+               if (var30 != 2) {
+                  if (var30 != 3) {
                      return false;
                   } else {
                      this.cleanUp(var1);
@@ -155,16 +185,23 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   return false;
                } else {
                   this.cleanUp(var1);
-                  this.doClickOnUp = false;
+                  this.activeClick = false;
                   return false;
                }
+            } else if (this.onDoubleClickListener != null) {
+               this.activeClick = false;
+               if (!this.runningDoubleClickJob) {
+                  this.cleanUp(var1);
+               }
+
+               return true;
             } else {
-               if (this.spanBeingTouched == null && this.doClickOnUp && this.onClickListener != null) {
+               if (this.spanBeingTouched == null && this.activeClick && this.onClickListener != null) {
                   var1.setPressed(true);
                }
 
-               if (this.doClickOnUp) {
-                  this.doClickOnUp = false;
+               if (this.activeClick) {
+                  this.activeClick = false;
                   if (this.spanBeingTouched != null) {
                      if (this.spanBeingTouched != null) {
                         this.spanBeingTouched.onClick(var1);
@@ -186,12 +223,12 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   this.onTrackingStart.invoke(var1);
                }
 
-               this.doClickOnUp = true;
-               if (this.job != null) {
-                  kotlinx.coroutines.Job.a.a(this.job, null, 1, null);
+               this.activeClick = true;
+               if (this.longPressJob != null) {
+                  kotlinx.coroutines.Job.a.a(this.longPressJob, null, 1, null);
                }
 
-               this.job = f.d(
+               this.longPressJob = f.d(
                   CoroutineViewUtilsKt.attachedScope(var1, true),
                   null,
                   null,
@@ -259,11 +296,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                         }
 
                         if (var9 == kotlin.coroutines.jvm.internal.b.a(true)) {
-                           NestedScrollOnTouchTracker.access$setDoClickOnUp$p(this.this$0, false);
+                           NestedScrollOnTouchTracker.access$setActiveClick$p(this.this$0, false);
                         } else {
                            val var10: OnLongClickListener = NestedScrollOnTouchTracker.access$getOnLongClickListener$p(this.this$0);
                            if (var10 != null && var10.onLongClick(this.$view)) {
-                              NestedScrollOnTouchTracker.access$setDoClickOnUp$p(this.this$0, false);
+                              NestedScrollOnTouchTracker.access$setActiveClick$p(this.this$0, false);
                            }
                         }
 
@@ -274,7 +311,91 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   3,
                   null
                );
-               return this.spanBeingTouched != null || this.onLongClickListener != null;
+               val var23: OnClickListener = this.onDoubleClickListener;
+               if (this.onDoubleClickListener != null) {
+                  if (this.consideringDoubleClick) {
+                     this.activeClick = false;
+                     var23.onClick(var1);
+                     this.cleanUp(var1);
+                  } else if (!this.runningDoubleClickJob) {
+                     this.runningDoubleClickJob = true;
+                     this.doubleClickJob = f.d(
+                        CoroutineViewUtilsKt.attachedScope(var1, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, var1, null) {
+                           final View $view;
+                           int label;
+                           final NestedScrollOnTouchTracker this$0;
+
+                           {
+                              super(2, var3);
+                              this.this$0 = var1;
+                              this.$view = var2x;
+                           }
+
+                           public final Continuation create(Object var1, Continuation var2) {
+                              return new <anonymous constructor>(this.this$0, this.$view, var2);
+                           }
+
+                           public final Object invoke(CoroutineScope var1, Continuation var2x) {
+                              return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                           }
+
+                           public final Object invokeSuspend(Object var1) {
+                              label37: {
+                                 val var7: Any = G9.b.e();
+                                 if (this.label != 0) {
+                                    if (this.label != 1) {
+                                       if (this.label != 2) {
+                                          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                                       }
+
+                                       kotlin.c.b(var1);
+                                       break label37;
+                                    }
+
+                                    kotlin.c.b(var1);
+                                 } else {
+                                    kotlin.c.b(var1);
+                                    val var3: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_MIN_TIME();
+                                    this.label = 1;
+                                    if (I.a(var3, this) === var7) {
+                                       return var7;
+                                    }
+                                 }
+
+                                 NestedScrollOnTouchTracker.access$setConsideringDoubleClick$p(this.this$0, true);
+                                 val var9: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_TIME();
+                                 val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_MIN_TIME();
+                                 this.label = 2;
+                                 if (I.a(var9 - var5, this) === var7) {
+                                    return var7;
+                                 }
+                              }
+
+                              NestedScrollOnTouchTracker.access$setConsideringDoubleClick$p(this.this$0, false);
+                              if (!NestedScrollOnTouchTracker.access$getActiveClick$p(this.this$0)) {
+                                 if (NestedScrollOnTouchTracker.access$getSpanBeingTouched$p(this.this$0) != null) {
+                                    var1 = NestedScrollOnTouchTracker.access$getSpanBeingTouched$p(this.this$0);
+                                    if (var1 != null) {
+                                       var1.onClick(this.$view);
+                                    }
+                                 } else if (NestedScrollOnTouchTracker.access$getOnClickListener$p(this.this$0) != null) {
+                                    this.$view.setPressed(true);
+                                    NestedScrollOnTouchTracker.access$getOnClickListener$p(this.this$0).onClick(this.$view);
+                                 }
+
+                                 NestedScrollOnTouchTracker.access$cleanUp(this.this$0, this.$view);
+                              } else {
+                                 NestedScrollOnTouchTracker.access$cleanupDoubleClickJob(this.this$0);
+                              }
+
+                              return Unit.a;
+                           }
+                        }, 3, null
+                     );
+                  }
+               }
+
+               return this.spanBeingTouched != null || this.onLongClickListener != null || this.onDoubleClickListener != null;
             }
          }
       }
@@ -283,5 +404,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    private companion object {
       public final val CLICK_MAX_DOWN_TIME: Long
       public final val LONG_PRESS_DOWN_TIME: Long
+      public final val DOUBLE_CLICK_TIME: Long
+      public final val DOUBLE_CLICK_MIN_TIME: Long
    }
 }

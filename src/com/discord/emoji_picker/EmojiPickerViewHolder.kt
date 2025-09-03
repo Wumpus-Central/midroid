@@ -271,7 +271,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
             this.animating = var1;
          }
 
-         public override fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
+         public open fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
             this.setAnimating(this.animating, var3);
          }
 

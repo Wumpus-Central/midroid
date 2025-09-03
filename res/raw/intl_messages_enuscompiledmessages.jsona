@@ -480,6 +480,21 @@
   ],
   "BGYkaG": "Add Friend Nickname",
   "dukg0d": "or use these options",
+  "zDGAfn": [
+    "Scan the QR Code to add ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ],
+    " as a friend"
+  ],
+  "VUNqoa": "Add Friend by QR Code",
   "P3mDzc": "Connect with friends in your student hub.",
   "Rtl1Eh": [
     "Success! Your friend request to ",
@@ -873,6 +888,7 @@
   "xsdcxs": "OUR POLICY",
   "URt7VF": "Did we make a mistake? Let us know.",
   "iHH+k5": "Appearance",
+  "DOarTE": "Or, continue with in-app payment",
   "HU3RFx": "Applications",
   "Nu5Yi4": "Here's all the apps that are doing super cool things to make your Discord experience super cooler. If it gets too chilly, you can remove them at any time.",
   "NgXl3N": "Add App",
@@ -2933,6 +2949,13 @@
   "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "Ntv9Ji": [
+    [
+      1,
+      "itemName"
+    ],
+    " Decoration"
+  ],
   "IQQYeX": [
     "Avatar Decoration: ",
     [
@@ -2947,12 +2970,47 @@
       "itemName"
     ]
   ],
+  "2keXk5": [
+    [
+      1,
+      "itemName"
+    ],
+    " Nameplate"
+  ],
+  "3Y8q7e": [
+    [
+      1,
+      "itemName"
+    ],
+    " Profile Effect"
+  ],
   "x/MGW1": [
     "Profile Effect: ",
     [
       1,
       "itemName"
     ]
+  ],
+  "Ofrqj4": [
+    "Bundle includes: ",
+    [
+      1,
+      "joinedItems"
+    ]
+  ],
+  "BS1Cu7": [
+    "Bundle includes: ",
+    [
+      1,
+      "decoName"
+    ],
+    " Decoration ",
+    "& ",
+    [
+      1,
+      "pfxName"
+    ],
+    " Profile Effect"
   ],
   "aVCcr6": "Decoration",
   "s+YSgo": "Profile",
@@ -3089,20 +3147,6 @@
       "num"
     ],
     " items"
-  ],
-  "WQbNhI": [
-    "Bundle includes: ",
-    [
-      1,
-      "decoName"
-    ],
-    " Decoration ",
-    "& ",
-    [
-      1,
-      "pfxName"
-    ],
-    " Profile Effect"
   ],
   "DkxLY2": [
     [
@@ -3788,6 +3832,32 @@
   "ZH4QFR": "Display the game you're playing on Discord",
   "+eJP7u": "Join voice calls directly from PlayStation",
   "+0VIUl": "Only available on PS5",
+  "RQath4": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "value"
+        ]
+      ]
+    ],
+    " Followers"
+  ],
+  "thA2io": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "value"
+        ]
+      ]
+    ],
+    " Posts"
+  ],
   "YmL22d": [
     [
       8,
@@ -4034,6 +4104,50 @@
       "cardinal"
     ],
     " old account"
+  ],
+  "xIdKU1": [
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " follower"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " followers"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "dy3+NT": [
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " post"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " posts"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
   ],
   "rl9Vg4": [
     [
@@ -5005,7 +5119,6 @@
   "qyjZub": "Create Events",
   "CTLgZG": "End Date",
   "j2RuXF": "End Time",
-  "BgAW29": "Visibility/Privacy",
   "z+aIub": [
     "Every other ",
     [
@@ -5279,6 +5392,7 @@
     ],
     " accepted terms for monetization"
   ],
+  "m7OrlZ": "Search in DMs",
   "oS4NEB": "We’ll use this to display what show you’re watching on Crunchyroll",
   "siPkNj": "First let's sign in with Crunchyroll",
   "/GCyIC": [
@@ -9235,6 +9349,7 @@
   ],
   "mi5+Vl": "There’s a post that’s pinned already. Pinning this post will remove the existing pinned post.",
   "IMbjxs": "Pin this post?",
+  "Y4REmJ": "Forum Post",
   "ipgKDg": "This post cannot be sent because it contains content blocked by this community. Please revise your post and try again.",
   "Lkp2fH": "Post contains a blocked message",
   "YBgep6": "Do you want to save your changes as a draft?",
@@ -10116,7 +10231,7 @@
   "kYaBOj": "Nevermind",
   "I5gL2N": "GIF",
   "WaYuBQ": "Confirm",
-  "Rp0+ZG": "Choose Your Reward",
+  "Rp0+ZG": "Choose Your Free Reward",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -11433,9 +11548,6 @@
   "Lbpk6u": "Let us know if this message shouldn’t have been caught so we can improve AutoMod for the future. By doing this, you are also sending the flagged message to Discord.",
   "7bdzNj": "Did we get it wrong?",
   "94JbMz": "Report Issues",
-  "o3ZlOD": "Okay!",
-  "oxowND": "We use this information to deliver relevant alerts to you.",
-  "pAzfrq": "Thanks!",
   "PAM+JS": "Tell us what happened",
   "K3UWeX": "Other",
   "ZQr92N": "Enforce Server Rules (AI)",
@@ -11895,6 +12007,13 @@
       "xDays"
     ],
     "."
+  ],
+  "fbHsoq": [
+    "Server invite ✉ from ",
+    [
+      1,
+      "userName"
+    ]
   ],
   "c5T+X1": "Other servers",
   "2bfiLi": "No Results",
@@ -19867,7 +19986,6 @@
   ],
   "5PoYtr": "From clubs, to study groups, to game nights, there’s a place for you.",
   "IT7qoK": "Find your people",
-  "jjUTLy": "Student Hub",
   "+MWrWl": "Edit Hub Profile",
   "8vmKOz": "Join Hub",
   "H1jCHB": "Find study groups, clubs, and friends in the Student Hub for your school!",
@@ -19959,19 +20077,6 @@
       "guildName"
     ]
   ],
-  "N+TB5u": "Go to Server",
-  "6hktHB": "Add your server to the hub, create an event in your server, and select \"Share to Student Hubs\" in the Event Settings.",
-  "RhXVpa": "Want to promote events in Hubs?",
-  "4BiO8f": [
-    "Join ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "gTgUmZ": "You can only show this event in Student Hubs if it is in a channel that is viewable by @everyone.",
-  "V8Oq8P": "This event will be discoverable by people in Student Hubs this server is in.",
-  "8GW68/": "Share event to Student Hubs",
   "48kg+P": "What’s a Student Hub?",
   "+/Pv0t": "Get access to features just for students",
   "GLG9n5": "No, I'm not interested",
@@ -20607,6 +20712,13 @@
   "Q87rIy": "This emoji doesn't work here because it's from a different server. Upgrade to Discord Nitro to use emoji from other servers",
   "FzugNj": "This emoji doesn't work here because it's from a different server. Discord Nitro can solve all of that, check User Settings > Nitro for details",
   "IRq5am": "Please enter a valid invite link or invite code.",
+  "JhhLEB": [
+    [
+      1,
+      "userName"
+    ],
+    " invited you to a Server"
+  ],
   "4FlZq6": "Learn More",
   "yD/zkp": "Got it",
   "IFBHam": [
@@ -20650,6 +20762,21 @@
   "9GPbsb": "Invites to this server are currently permanently disabled.",
   "QaAypK": "Email",
   "AQKfCg": "Messages",
+  "rriLm5": "QR Code",
+  "VK3zyM": [
+    "Scan the QR Code to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ]
+  ],
+  "DqE26u": "Invite by QR Code",
   "f1+QIC": "Invite a friend",
   "ib7Ng4": "Add Friend",
   "xhxnPj": "Send a Message",
@@ -21239,6 +21366,13 @@
   "jlfuFR": "Join an existing server",
   "ihLPiI": "Follow Post",
   "XpeFYm": "Join",
+  "Oqoc4u": [
+    "Join ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "Bd/Li4": "Join Muted",
   "E8euSk": "Join on Xbox",
   "yRjK4u": "Join a server",
@@ -22311,10 +22445,26 @@
   ],
   "KkvKho": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "d"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "d"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "d ago"
+    " ago"
   ],
   "Lru1ra": [
     [
@@ -22348,10 +22498,26 @@
   ],
   "raJpz8": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "h"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "h"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "h ago"
+    " ago"
   ],
   "AfXezs": [
     [
@@ -22385,10 +22551,26 @@
   ],
   "LRNgHh": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "m"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "m"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "m ago"
+    " ago"
   ],
   "DmvRVF": [
     [
@@ -22415,10 +22597,26 @@
   ],
   "ITymoq": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "mo"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "mo"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "mo ago"
+    " ago"
   ],
   "nmSbSU": [
     [
@@ -22445,10 +22643,26 @@
   ],
   "EOrEJi": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "s"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "s"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "s ago"
+    " ago"
   ],
   "jfUoRU": [
     [
@@ -22475,10 +22689,26 @@
   ],
   "sDtO6O": [
     [
-      1,
-      "count"
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "w"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "w"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    "w ago"
+    " ago"
   ],
   "jovF+/": [
     [
@@ -30624,6 +30854,7 @@
   "yHzB4e": "From your desktop Discord app or browser you can go to\nDiscovery > Quests and accept the Quest there.",
   "ii4mJi": "Sorry! You're not eligible for this quest right now. Tap here to view other quests available to you.",
   "Dd6Da2": "This quest isn't available here",
+  "NXrP3N": "This quest cannot be shared. Tap here to view other quests available to you.",
   "3Z/Ejo": "Quests aren’t available on mobile",
   "Ow5AQE": "Check to confirm you’re using a valid Quest URL",
   "E2R8VV": [
@@ -31374,7 +31605,6 @@
   "S5cB9f": "Real-time",
   "uZyspK": "Recently Active",
   "8i/+SE": "Recently Heard",
-  "pd7oXF": "Recently Visited",
   "+9QSnp": "Recents",
   "gKcrqK": "Suggested",
   "yM9Krq": "Recent Activity",
@@ -32233,6 +32463,15 @@
     ],
     " percent positive ratings"
   ],
+  "5I4mVV": [
+    "Must have at least ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " posts"
+  ],
   "MCHnKy": [
     "Must have at least ",
     [
@@ -33027,6 +33266,7 @@
   "qFsx5u": "Show alerts in direct messages",
   "39O+8P": "Block and report",
   "5NhTvr": "They won’t be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
+  "TcFR5u": "Thanks for letting us know!",
   "pEdBDw": [
     "Thanks for upholding Discord's ",
     [
@@ -33617,6 +33857,7 @@
       "guildName"
     ]
   ],
+  "7Qr0fH": "Search in Server",
   "jes7FB": "Media Image",
   "LBYpDA": "Photos & Media",
   "pYHobG": "Search Members",
@@ -33970,6 +34211,8 @@
   "N4YDam": "App Icon",
   "k4W40N": "Inbox",
   "H9XOl5": "Messages",
+  "96WKND": "Default Emoji",
+  "h1ejNj": "Double Tap to React",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
   "xERCnZ": [
@@ -34319,25 +34562,6 @@
   "6C6PJy": "Leave the Stage",
   "r23NoK": "Remove from Stage",
   "jMLfp6": "Continue without starting",
-  "jBS1r6": [
-    [
-      6,
-      "count",
-      {
-        "=0": [],
-        "other": [
-          "+",
-          [
-            1,
-            "count"
-          ],
-          " speaking"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "ah3RLi": "We are having problems connecting you to this Stage. Please try later.",
   "8/uDSE": "This server will need to be Boosted to the next level to support more people.",
   "tJmOu7": "This server will need to be Boosted to the next level to support more people. Each additional Boost grants 30 more seats in Video Stage events.",
@@ -34386,26 +34610,6 @@
       "cardinal"
     ],
     " Present"
-  ],
-  "L1pCBQ": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          "1 Speaker"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Speakers"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "N3/Oyc": "Join Audience",
   "Q8o/tb": "Join as Speaker",
@@ -39584,6 +39788,30 @@
   "DisZzM": "View Per-server Profile",
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
+  "7gHWra": [
+    "Error redeeming ",
+    [
+      1,
+      "amount"
+    ],
+    ": ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
+  "JxNFam": [
+    "Successfully redeemed ",
+    [
+      1,
+      "amountDescription"
+    ],
+    " for ",
+    [
+      1,
+      "redeemedItemDescription"
+    ]
+  ],
   "K3lovL": "Voice",
   "wtk08f": "Voice Activity Notifications",
   "EZgS+/": "Voice Call",

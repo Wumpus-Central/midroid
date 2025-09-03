@@ -9,6 +9,7 @@ import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateM
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.linecorp.apng.ApngDrawable
 import db.K
+import db.d0
 import java.io.File
 import java.security.MessageDigest
 import java.util.Arrays
@@ -226,11 +227,9 @@ public class APNGView(context: Context) : m(var1) {
                               }
 
                               try {
-                                 val var11: ApngDrawable = com.linecorp.apng.ApngDrawable.b.c(
-                                    ApngDrawable.B, (var1 as DownloadState.Completed).getFile(), null, null, 6, null
-                                 );
-                                 var5 = K.c();
-                                 val var6x: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, var11, this.$config, null) {
+                                 var5 = com.linecorp.apng.ApngDrawable.b.c(ApngDrawable.B, (var1 as DownloadState.Completed).getFile(), null, null, 6, null);
+                                 val var11: d0 = K.c();
+                                 val var6x: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, (ApngDrawable)var5, this.$config, null) {
                                     final APNGView.Config $config;
                                     final ApngDrawable $drawable;
                                     int label;
@@ -274,7 +273,7 @@ public class APNGView(context: Context) : m(var1) {
                                  };
                                  ((<unrepresentable>)var14).L$0 = this;
                                  ((<unrepresentable>)var14).label = 1;
-                                 var12 = db.f.g((CoroutineContext)var5, var6x, (Continuation)var14);
+                                 var12 = db.f.g(var11, var6x, (Continuation)var14);
                               } catch (var8: Exception) {
                                  var9 = this;
                                  break label82;
@@ -535,9 +534,9 @@ public class APNGView(context: Context) : m(var1) {
       }
 
       public override fun hashCode(): Int {
-         val var4: Int = this.url.hashCode();
-         val var5: Int = java.lang.Boolean.hashCode(this.animate);
-         val var3: Int = java.lang.Boolean.hashCode(this.showLoading);
+         val var3: Int = this.url.hashCode();
+         val var4: Int = java.lang.Boolean.hashCode(this.animate);
+         val var5: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
          if (this.widthDp == null) {
@@ -550,7 +549,7 @@ public class APNGView(context: Context) : m(var1) {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
@@ -558,8 +557,8 @@ public class APNGView(context: Context) : m(var1) {
          val var2: Boolean = this.animate;
          val var1: Boolean = this.showLoading;
          val var7: Int = this.widthDp;
-         val var4: Int = this.heightDp;
-         val var6: java.lang.String = this.cacheDirectory;
+         val var6: Int = this.heightDp;
+         val var4: java.lang.String = this.cacheDirectory;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Config(url=");
          var3.append(var5);
@@ -570,9 +569,9 @@ public class APNGView(context: Context) : m(var1) {
          var3.append(", widthDp=");
          var3.append(var7);
          var3.append(", heightDp=");
-         var3.append(var4);
-         var3.append(", cacheDirectory=");
          var3.append(var6);
+         var3.append(", cacheDirectory=");
+         var3.append(var4);
          var3.append(")");
          return var3.toString();
       }

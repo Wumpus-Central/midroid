@@ -14,22 +14,22 @@ private const val PLACEHOLDER_TYPE_SHAPE: Int = 1
 private const val PLACEHOLDER_TYPE_FEED_ITEM: Int = 2
 
 private operator fun Companion.invoke(key: String, value: ReadableMap): Type {
-   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
-   val var4: FastestListPlaceholderType.Shape.Type;
-   if (var3 == "circle") {
-      var4 = FastestListPlaceholderType.Shape.Type.CIRCLE;
+   var1 = NativeMapExtensionsKt.getNonNullString(var2, var1, "circle");
+   val var3: FastestListPlaceholderType.Shape.Type;
+   if (var1 == "circle") {
+      var3 = FastestListPlaceholderType.Shape.Type.CIRCLE;
    } else {
-      if (!(var3 == "rect")) {
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Unknown placeholder shape type ");
-         var5.append(var3);
-         throw new IllegalArgumentException(var5.toString());
+      if (!(var1 == "rect")) {
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Unknown placeholder shape type ");
+         var4.append(var1);
+         throw new IllegalArgumentException(var4.toString());
       }
 
-      var4 = FastestListPlaceholderType.Shape.Type.RECT;
+      var3 = FastestListPlaceholderType.Shape.Type.RECT;
    }
 
-   return var4;
+   return var3;
 }
 
 internal operator fun com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Companion.invoke(value: ReadableMap): FastestListPlaceholderType {

@@ -212,12 +212,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var12: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var13: java.lang.String = this.getClass().getSimpleName();
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("Binding ");
-      var12.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var12.toString(), null, 2, null);
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("Binding ");
+      var14.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var12, var14.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       var var11: Byte;
       if (!var10) {
@@ -270,12 +270,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       var16.setAlpha(var9);
       val var24: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var22: ShapeDrawable = new ShapeDrawable();
-      val var17: Paint = var22.getPaint();
-      val var21: Context = this.getContext();
-      var17.setColor(ColorUtilsKt.getColorCompat(var21, 17170445));
+      val var21: ShapeDrawable = new ShapeDrawable();
+      val var22: Paint = var21.getPaint();
+      val var17: Context = this.getContext();
+      var22.setColor(ColorUtilsKt.getColorCompat(var17, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var24, null, var22, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var24, null, var21, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!(this.uploadContext == this.uploadContext)) {
          this.uploadContext = this.uploadContext;

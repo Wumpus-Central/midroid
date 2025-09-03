@@ -59,7 +59,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         val var7: java.util.Iterator = var1.iterator();
+         var var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -104,17 +104,18 @@ internal object SystemLogUtils {
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               var7 = var21.iterator();
 
+               val var8: Any;
                do {
-                  if (!var8.hasNext()) {
+                  if (!var7.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var23 = var8.next();
-               } while (var13.contains((java.lang.String)var23));
+                  var8 = var7.next();
+               } while (var13.contains((java.lang.String)var8));
 
-               var14 = var23 as java.lang.String;
+               var14 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var14 = "Unknown";
             }
@@ -425,8 +426,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var4: Long = System.nanoTime();
-      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var2: Long = System.nanoTime();
+      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -434,7 +435,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var4 + var2) {
+            if (System.nanoTime() >= var2 + var4) {
                return;
             }
          }
@@ -555,26 +556,26 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var1: java.lang.String = this.text;
-         val var3: java.lang.String = this.cause;
-         val var4: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
-         val var2: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Tombstone(text=");
-         var6.append(var1);
-         var6.append(", cause=");
-         var6.append(var3);
-         var6.append(", groupBy=");
-         var6.append(var4);
-         var6.append(", origin=");
-         var6.append(var5);
-         var6.append(", groupHash=");
-         var6.append(var2);
-         var6.append(", textHash=");
-         var6.append(var7);
-         var6.append(")");
-         return var6.toString();
+         val var4: java.lang.String = this.cause;
+         val var2: java.lang.String = this.groupBy;
+         val var7: java.lang.String = this.origin;
+         val var6: java.lang.String = this.groupHash;
+         val var3: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var1);
+         var5.append(", cause=");
+         var5.append(var4);
+         var5.append(", groupBy=");
+         var5.append(var2);
+         var5.append(", origin=");
+         var5.append(var7);
+         var5.append(", groupHash=");
+         var5.append(var6);
+         var5.append(", textHash=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

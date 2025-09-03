@@ -28,10 +28,10 @@ internal class ChatListVisibilityCalculator {
       if (var10 == null) {
          return 0.0;
       } else {
-         var var5: Int = Math.min(var10.getTop(), var10.getBottom());
-         val var6: Int = Math.max(var10.getTop(), var10.getBottom());
-         var2 = var6 - var5;
-         var5 = this.intersectIntervals(0, var1.getHeight(), var5, var6);
+         val var6: Int = Math.min(var10.getTop(), var10.getBottom());
+         var var5: Int = Math.max(var10.getTop(), var10.getBottom());
+         var2 = var5 - var6;
+         var5 = this.intersectIntervals(0, var1.getHeight(), var6, var5);
          if (var2 > 0) {
             var3 = (double)var5 / var2;
          }
