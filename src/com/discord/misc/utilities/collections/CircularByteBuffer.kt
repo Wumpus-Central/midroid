@@ -126,21 +126,21 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 0d: aload 0
       // 0e: getfield com/discord/misc/utilities/collections/CircularByteBuffer.lines Lkotlin/collections/ArrayDeque;
       // 11: invokevirtual java/util/AbstractCollection.iterator ()Ljava/util/Iterator;
-      // 14: astore 3
-      // 15: aload 3
-      // 16: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 1b: ifeq 62
-      // 1e: aload 3
-      // 1f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 24: checkcast kotlin/Pair
-      // 27: astore 4
-      // 29: aload 1
-      // 2a: aload 0
-      // 2b: aload 4
-      // 2d: invokevirtual kotlin/Pair.a ()Ljava/lang/Object;
-      // 30: checkcast java/lang/Number
-      // 33: invokevirtual java/lang/Number.intValue ()I
-      // 36: aload 4
+      // 14: astore 4
+      // 16: aload 4
+      // 18: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 1d: ifeq 62
+      // 20: aload 4
+      // 22: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 27: checkcast kotlin/Pair
+      // 2a: astore 3
+      // 2b: aload 1
+      // 2c: aload 0
+      // 2d: aload 3
+      // 2e: invokevirtual kotlin/Pair.a ()Ljava/lang/Object;
+      // 31: checkcast java/lang/Number
+      // 34: invokevirtual java/lang/Number.intValue ()I
+      // 37: aload 3
       // 38: invokevirtual kotlin/Pair.b ()Ljava/lang/Object;
       // 3b: checkcast java/lang/Number
       // 3e: invokevirtual java/lang/Number.intValue ()I
@@ -157,7 +157,7 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 55: aload 1
       // 56: ldc "append(...)"
       // 58: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 5b: goto 15
+      // 5b: goto 16
       // 5e: astore 1
       // 5f: goto 69
       // 62: getstatic kotlin/Unit.a Lkotlin/Unit;
@@ -212,46 +212,46 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 09: aload 0
       // 0a: getfield com/discord/misc/utilities/collections/CircularByteBuffer.lines Lkotlin/collections/ArrayDeque;
       // 0d: invokevirtual kotlin/collections/e.size ()I
-      // 10: istore 2
-      // 11: aload 0
-      // 12: getfield com/discord/misc/utilities/collections/CircularByteBuffer.size I
-      // 15: istore 3
-      // 16: aload 0
-      // 17: getfield com/discord/misc/utilities/collections/CircularByteBuffer.maxByteCount I
-      // 1a: istore 4
-      // 1c: iload 4
-      // 1e: ifle 2b
-      // 21: iload 3
-      // 22: i2f
-      // 23: iload 4
-      // 25: i2f
-      // 26: fdiv
-      // 27: fstore 1
-      // 28: goto 30
-      // 2b: fconst_0
-      // 2c: fstore 1
-      // 2d: goto 28
-      // 30: new com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats
-      // 33: dup
-      // 34: iload 2
-      // 35: iload 3
-      // 36: iload 4
-      // 38: fload 1
-      // 39: aload 0
-      // 3a: getfield com/discord/misc/utilities/collections/CircularByteBuffer.head I
-      // 3d: aload 0
-      // 3e: getfield com/discord/misc/utilities/collections/CircularByteBuffer.tail I
-      // 41: invokespecial com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats.<init> (IIIFII)V
-      // 44: astore 6
-      // 46: aload 5
-      // 48: monitorexit
-      // 49: aload 6
-      // 4b: areturn
-      // 4c: astore 6
-      // 4e: aload 5
-      // 50: monitorexit
-      // 51: aload 6
-      // 53: athrow
+      // 10: istore 4
+      // 12: aload 0
+      // 13: getfield com/discord/misc/utilities/collections/CircularByteBuffer.size I
+      // 16: istore 3
+      // 17: aload 0
+      // 18: getfield com/discord/misc/utilities/collections/CircularByteBuffer.maxByteCount I
+      // 1b: istore 2
+      // 1c: iload 2
+      // 1d: ifle 29
+      // 20: iload 3
+      // 21: i2f
+      // 22: iload 2
+      // 23: i2f
+      // 24: fdiv
+      // 25: fstore 1
+      // 26: goto 2e
+      // 29: fconst_0
+      // 2a: fstore 1
+      // 2b: goto 26
+      // 2e: new com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats
+      // 31: dup
+      // 32: iload 4
+      // 34: iload 3
+      // 35: iload 2
+      // 36: fload 1
+      // 37: aload 0
+      // 38: getfield com/discord/misc/utilities/collections/CircularByteBuffer.head I
+      // 3b: aload 0
+      // 3c: getfield com/discord/misc/utilities/collections/CircularByteBuffer.tail I
+      // 3f: invokespecial com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats.<init> (IIIFII)V
+      // 42: astore 6
+      // 44: aload 5
+      // 46: monitorexit
+      // 47: aload 6
+      // 49: areturn
+      // 4a: astore 6
+      // 4c: aload 5
+      // 4e: monitorexit
+      // 4f: aload 6
+      // 51: athrow
    }
 
    public data class BufferStats(linesCount: Int, bytesUsed: Int, bytesCapacity: Int, memoryEfficiency: Float, headPosition: Int, tailPosition: Int) {
@@ -343,24 +343,24 @@ public class CircularByteBuffer(maxByteCount: Int) {
       }
 
       public override fun toString(): String {
-         val var2: Int = this.linesCount;
-         val var3: Int = this.bytesUsed;
-         val var4: Int = this.bytesCapacity;
+         val var1: Int = this.linesCount;
+         val var2: Int = this.bytesUsed;
+         val var3: Int = this.bytesCapacity;
          val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
          val var7: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
-         val var1: Int = this.headPosition;
+         val var4: Int = this.headPosition;
          val var5: Int = this.tailPosition;
          val var8: StringBuilder = new StringBuilder();
          var8.append("BufferStats(lines=");
-         var8.append(var2);
+         var8.append(var1);
          var8.append(", used=");
-         var8.append(var3);
+         var8.append(var2);
          var8.append("B/");
-         var8.append(var4);
+         var8.append(var3);
          var8.append("B (");
          var8.append(var7);
          var8.append("%), head=");
-         var8.append(var1);
+         var8.append(var4);
          var8.append(", tail=");
          var8.append(var5);
          var8.append(")");

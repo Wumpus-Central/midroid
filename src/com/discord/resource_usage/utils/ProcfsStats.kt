@@ -60,13 +60,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var1: Long = this.totalTime;
-      val var3: Long = this.rssPages;
+      val var3: Long = this.totalTime;
+      val var1: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var1);
-      var5.append(", rssPages=");
       var5.append(var3);
+      var5.append(", rssPages=");
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -198,14 +198,14 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 0c5: checkcast java/lang/String
          // 0c8: lconst_0
          // 0c9: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0cc: lstore 4
+         // 0cc: lstore 8
          // 0ce: aload 1
          // 0cf: bipush 14
          // 0d1: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0d6: checkcast java/lang/String
          // 0d9: lconst_0
          // 0da: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0dd: lstore 8
+         // 0dd: lstore 4
          // 0df: aload 1
          // 0e0: bipush 23
          // 0e2: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
@@ -216,8 +216,8 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 0f0: new com/discord/resource_usage/utils/ProcfsStats
          // 0f3: astore 10
          // 0f5: aload 10
-         // 0f7: lload 4
-         // 0f9: lload 8
+         // 0f7: lload 8
+         // 0f9: lload 4
          // 0fb: ladd
          // 0fc: lload 6
          // 0fe: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V

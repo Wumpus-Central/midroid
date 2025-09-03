@@ -72,15 +72,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
-      val var6: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var5: java.lang.String = this.taskName;
+      val var7: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var6: java.lang.String = this.taskName;
       val var3: Bundle = new Bundle();
 
-      for (Entry var7 : this.data.entrySet()) {
-         var3.putString(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
+      for (Entry var5 : this.data.entrySet()) {
+         var3.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var5, 0L, false, var3, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var6, 0L, false, var3, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -92,18 +92,18 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var1: java.lang.String = this.taskName;
-      val var2: java.util.Map = this.data;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("GenericAction(tag=");
-      var4.append(var3);
-      var4.append(", taskName=");
-      var4.append(var1);
-      var4.append(", data=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.tag;
+      val var4: java.lang.String = this.taskName;
+      val var3: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("GenericAction(tag=");
+      var1.append(var2);
+      var1.append(", taskName=");
+      var1.append(var4);
+      var1.append(", data=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {

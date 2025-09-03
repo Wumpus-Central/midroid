@@ -10328,15 +10328,6 @@
   "I5gL2N": "GIF",
   "3d0NmZ": "Confirm Reward",
   "gNZY/P": "Choose your Reward",
-  "xGzXNT": [
-    "You get one with each gift purchase. Collect all ",
-    [
-      1,
-      "rewardCount"
-    ],
-    " of them."
-  ],
-  "Rp0+ZG": "Choose Your Free Reward",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -20006,6 +19997,44 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
+  "mMgymZ": "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase.",
+  "h2nMp6": "Get one with each gift purchase.",
+  "6OUb3t": "Collect all 8 if you dare...",
+  "3JCuX1": "Choose your free reward",
+  "dAqTcH": "Snag a free decoration with a gift purchase",
+  "F/5kFB": "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?",
+  "UPFiIi": "Gift Nitro if you dare...",
+  "9rInzc": "It's time to pick: trick or treat? Gift Nitro during October, and get your choice of a chillingly, cool avatar decoration to keep.",
+  "CGgAyM": "Gift Nitro if you dare...",
+  "ruVnPj": "Choose a FREE reward",
+  "q4BJSE": "Yours to keep if you dare...",
+  "eDBuFx": [
+    [
+      1,
+      "rewardCount"
+    ],
+    " available ",
+    [
+      6,
+      "rewardCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " option"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " options"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "2UeOlZ": "Treat",
   "6Zuiv7": "Trick",
   "1+boPj": "Happening Now",

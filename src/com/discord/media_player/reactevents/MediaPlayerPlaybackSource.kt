@@ -124,8 +124,8 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.assetUrl;
+      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.assetUrl;
       val var2: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
@@ -137,9 +137,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       val var6: Int = this.attachmentIndex;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaPlayerPlaybackSource(id=");
-      var5.append(var3);
-      var5.append(", assetUrl=");
       var5.append(var4);
+      var5.append(", assetUrl=");
+      var5.append(var3);
       var5.append(", channelId=");
       var5.append(var2);
       var5.append(", messageId=");

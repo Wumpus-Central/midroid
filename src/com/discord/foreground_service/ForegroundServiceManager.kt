@@ -347,54 +347,63 @@ public object ForegroundServiceManager {
       // 02: aload 1
       // 03: ldc_w "foregroundService"
       // 06: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
-      // 09: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 09: getstatic com/discord/foreground_service/ForegroundServiceManager.currentOperation Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;
       // 0c: astore 2
-      // 0d: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 10: astore 3
-      // 11: aload 3
-      // 12: ldc "tag"
-      // 14: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 17: aload 2
-      // 18: aload 3
-      // 19: ldc_w "On service created or updated."
-      // 1c: aconst_null
-      // 1d: bipush 4
-      // 1e: aconst_null
-      // 1f: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
-      // 22: new java/lang/ref/WeakReference
-      // 25: astore 2
-      // 26: aload 2
-      // 27: aload 1
-      // 28: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 2b: aload 2
-      // 2c: putstatic com/discord/foreground_service/ForegroundServiceManager.serviceRef Ljava/lang/ref/WeakReference;
-      // 2f: getstatic com/discord/foreground_service/ForegroundServiceManager.serviceWakelocks Lcom/discord/foreground_service/utils/Wakelocks;
-      // 32: aload 1
-      // 33: invokevirtual com/discord/foreground_service/utils/Wakelocks.acquire (Landroid/content/Context;)V
-      // 36: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
-      // 39: astore 3
-      // 3a: getstatic com/discord/foreground_service/ForegroundServiceManager.currentOperation Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;
-      // 3d: astore 2
-      // 3e: aload 2
-      // 3f: ldc_w "null cannot be cast to non-null type com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.CreateOrUpdate"
-      // 42: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V
-      // 45: aload 3
-      // 46: aload 1
-      // 47: aload 1
-      // 48: aload 2
-      // 49: checkcast com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
-      // 4c: invokevirtual com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.getServiceConfigurations ()Ljava/util/List;
-      // 4f: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
-      // 52: aload 0
-      // 53: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleNextOperation ()V
-      // 56: aload 0
-      // 57: monitorexit
-      // 58: return
-      // 59: astore 1
-      // 5a: aload 0
-      // 5b: monitorexit
+      // 0d: aload 2
+      // 0e: instanceof com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
+      // 11: ifeq 20
+      // 14: aload 2
+      // 15: checkcast com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
+      // 18: astore 2
+      // 19: goto 22
+      // 1c: astore 1
+      // 1d: goto 6b
+      // 20: aconst_null
+      // 21: astore 2
+      // 22: aload 2
+      // 23: ifnonnull 29
+      // 26: aload 0
+      // 27: monitorexit
+      // 28: return
+      // 29: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 2c: astore 4
+      // 2e: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 31: astore 3
+      // 32: aload 3
+      // 33: ldc "tag"
+      // 35: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 38: aload 4
+      // 3a: aload 3
+      // 3b: ldc_w "On service created or updated."
+      // 3e: aconst_null
+      // 3f: bipush 4
+      // 40: aconst_null
+      // 41: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 44: new java/lang/ref/WeakReference
+      // 47: astore 3
+      // 48: aload 3
+      // 49: aload 1
+      // 4a: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
+      // 4d: aload 3
+      // 4e: putstatic com/discord/foreground_service/ForegroundServiceManager.serviceRef Ljava/lang/ref/WeakReference;
+      // 51: getstatic com/discord/foreground_service/ForegroundServiceManager.serviceWakelocks Lcom/discord/foreground_service/utils/Wakelocks;
+      // 54: aload 1
+      // 55: invokevirtual com/discord/foreground_service/utils/Wakelocks.acquire (Landroid/content/Context;)V
+      // 58: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
+      // 5b: aload 1
       // 5c: aload 1
-      // 5d: athrow
+      // 5d: aload 2
+      // 5e: invokevirtual com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.getServiceConfigurations ()Ljava/util/List;
+      // 61: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
+      // 64: aload 0
+      // 65: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleNextOperation ()V
+      // 68: aload 0
+      // 69: monitorexit
+      // 6a: return
+      // 6b: aload 0
+      // 6c: monitorexit
+      // 6d: aload 1
+      // 6e: athrow
    }
 
    internal fun onServiceDestroyed() {
@@ -414,14 +423,14 @@ public object ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 2
+      // 05: astore 1
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 1
-      // 0a: aload 1
+      // 09: astore 2
+      // 0a: aload 2
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 2
-      // 11: aload 1
+      // 10: aload 1
+      // 11: aload 2
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4
