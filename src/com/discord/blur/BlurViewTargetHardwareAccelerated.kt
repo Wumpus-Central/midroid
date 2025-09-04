@@ -79,10 +79,10 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
    protected open fun dispatchDraw(canvas: Canvas) {
       val var8: java.util.Map = this.blurRects;
       val var7: LinkedHashMap = new LinkedHashMap();
-      val var9: java.util.Iterator = var8.entrySet().iterator();
+      val var13: java.util.Iterator = var8.entrySet().iterator();
 
       while (true) {
-         val var6: Boolean = var9.hasNext();
+         val var6: Boolean = var13.hasNext();
          var var4: Boolean = false;
          if (!var6) {
             if (var7.isEmpty()) {
@@ -120,9 +120,9 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
             return;
          }
 
-         val var13: Entry = var9.next() as Entry;
-         val var5: Int = (var13.getKey() as java.lang.Number).intValue();
-         val var10: BlurViewTargetHardwareAccelerated.BlurRect = var13.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
+         val var9: Entry = var13.next() as Entry;
+         val var5: Int = (var9.getKey() as java.lang.Number).intValue();
+         val var10: BlurViewTargetHardwareAccelerated.BlurRect = var9.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
          val var3: Boolean;
          if (var10.getWidth() != 0 && var10.getHeight() != 0) {
             var3 = true;
@@ -135,7 +135,7 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
          }
 
          if (var3 && var4) {
-            var7.put(var13.getKey(), var13.getValue());
+            var7.put(var9.getKey(), var9.getValue());
          }
       }
    }

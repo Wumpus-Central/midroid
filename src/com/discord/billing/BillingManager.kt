@@ -226,11 +226,11 @@ internal class BillingManager(isProdBuild: Boolean,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var3 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var4: java.lang.String = var1.i();
-            val var6: java.lang.String = var1.e();
-            var5.invoke(var4, var6, var3);
+         for (java.lang.String var6 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
+            val var7: java.lang.String = var1.i();
+            val var5: java.lang.String = var1.e();
+            var4.invoke(var7, var5, var6);
          }
       }
    }
@@ -275,12 +275,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         val var6: CoroutineScope = this.getCoroutineScope(var5);
          db.f.d(
-            var7,
+            var6,
             K.a(),
             null,
-            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)

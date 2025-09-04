@@ -89,13 +89,13 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun initTextStyling() {
-      val var1: TextView = this.binding.imageCopy;
-      SetTextSizeSpKt.setTextSizeSp(var1, 14.0F);
-      val var2: DiscordFont = DiscordFont.PrimarySemibold;
-      DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimarySemibold);
+      val var2: TextView = this.binding.imageCopy;
+      SetTextSizeSpKt.setTextSizeSp(var2, 14.0F);
+      val var1: DiscordFont = DiscordFont.PrimarySemibold;
+      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
       var var3: TextView = this.binding.title;
       SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
-      val var4: DiscordFont = DiscordFont.PrimaryMedium;
+      val var5: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       val var6: SimpleDraweeSpanTextView = this.binding.subtitle;
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
@@ -103,10 +103,10 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
       val var8: DCDButton = this.binding.acceptButton;
       this.binding.acceptButton.setTextSizeSp(14.0F);
-      var8.setDiscordFont(var2);
-      val var5: TextView = this.binding.footer;
-      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, var4);
+      var8.setDiscordFont(var1);
+      val var4: TextView = this.binding.footer;
+      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
+      DiscordFontUtilsKt.setDiscordFont(var4, var5);
    }
 
    public fun bind(accessory: ReferralMessageAccessory, onTapAccept: (String?) -> Unit, onTapLink: (MessageId, LinkContentNode) -> Unit) {
@@ -166,16 +166,16 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
             val var11: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var47: Context = var38.getContext();
-            val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
+            val var12: Context = var38.getContext();
+            val var47: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
                   var11,
-                  var47,
                   var12,
+                  var47,
                   false,
                   true,
                   false,

@@ -75,12 +75,12 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          var3 = var16.c();
          var4 = var16.b();
          var12 = var16.e();
-         val var10: java.util.Iterator = var9.iterator();
+         val var23: java.util.Iterator = var9.iterator();
 
-         while (var10.hasNext()) {
-            val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
-            if (var23 != null) {
-               var7.add(var23);
+         while (var23.hasNext()) {
+            val var10: java.lang.String = (var23.next() as ProductDetails.d).b();
+            if (var10 != null) {
+               var7.add(var10);
             }
          }
       } else {

@@ -178,15 +178,16 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
+         var var3: TapLinkData;
          label37: {
-            var1 = var1;
+            var3 = var1 as TapLinkData;
             if (this.messageId == null) {
-               if (var1.messageId == null) {
+               if (var3.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var1.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+            } else if (var3.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
                break label37;
             }
 
@@ -195,12 +196,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!(this.title == var1.title)) {
+         } else if (!(this.title == var3.title)) {
             return false;
-         } else if (!(this.target == var1.target)) {
+         } else if (!(this.target == var3.target)) {
             return false;
          } else {
-            return this.content == var1.content;
+            return this.content == var3.content;
          }
       }
    }

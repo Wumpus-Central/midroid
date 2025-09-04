@@ -367,7 +367,6 @@ public final class R {
       public static int design_components_illustration_native_redesign_generated_images_img_no_results_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_nsfw_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_pins_empty_darker;
-      public static int design_components_illustration_native_redesign_generated_images_img_premium_embed_background_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_search_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_spotify_error_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_stream_ended_darker;

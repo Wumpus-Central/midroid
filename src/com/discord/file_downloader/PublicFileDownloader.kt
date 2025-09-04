@@ -84,21 +84,21 @@ public object PublicFileDownloader {
       // 49: astore 5
       // 4b: goto 8a
       // 4e: new com/discord/file_downloader/DownloadState$Failure
-      // 51: astore 8
+      // 51: astore 5
       // 53: new java/lang/IllegalStateException
-      // 56: astore 7
+      // 56: astore 8
       // 58: new java/io/FileNotFoundException
-      // 5b: astore 5
-      // 5d: aload 5
+      // 5b: astore 7
+      // 5d: aload 7
       // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 7
-      // 64: aload 5
+      // 62: aload 8
+      // 64: aload 7
       // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 69: aload 8
-      // 6b: aload 7
+      // 69: aload 5
+      // 6b: aload 8
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
-      // 71: aload 8
+      // 71: aload 5
       // 73: invokeinterface fb/t.i (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 78: pop
       // 79: aload 1
@@ -216,48 +216,48 @@ public object PublicFileDownloader {
                            }
 
                            val var22: Any = this.$context.getSystemService("download");
-                           val var33: DownloadManager = var22 as DownloadManager;
+                           val var31: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.element = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var33.enqueue(
+                              var3x = var31.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.element = var3x;
                            } catch (var15: Exception) {
-                              var7 = var23;
                               var6 = var1;
                               var1 = var15;
+                              var7 = var23;
                               break label86;
                            }
 
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.element), new b(var23, var1, var33, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.element), new b(var23, var1, var31, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
-                                 var7 = var23;
                                  var6 = var1;
                                  var1 = var12;
+                                 var7 = var23;
                                  break label86;
                               }
                            }
 
                            try {
-                              val var31: DownloadState.Failure = new DownloadState.Failure(
+                              val var26: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var23;
                               this.label = 2;
-                              var27 = var1.r(var31, this);
+                              var27 = var1.r(var26, this);
                            } catch (var14: Exception) {
-                              var7 = var23;
                               var6 = var1;
                               var1 = var14;
+                              var7 = var23;
                               break label86;
                            }
 
@@ -286,8 +286,8 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var23 = var1;
                   var1 = var20;
+                  var23 = var1;
                }
 
                val var24: c = new c(var23);

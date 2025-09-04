@@ -219,19 +219,19 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var35: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var12: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
                            val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           val var12: java.lang.String = var35.getIconSrc();
-                           val var13: Int = var35.getIconColor();
+                           val var13: java.lang.String = var12.getIconSrc();
+                           val var35: Int = var12.getIconColor();
                            val var16: Boolean;
-                           if (var35.getType() === SelectOptionType.USER) {
+                           if (var12.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var22, var12, var13, var16);
+                           this.setImage(var22, var13, var35, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;
@@ -270,30 +270,30 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var4 = true;
       }
 
-      val var17: Boolean;
+      val var8: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var17 = true;
+         var8 = true;
       } else {
-         var17 = false;
+         var8 = false;
       }
 
       val var25: SimpleDraweeView = this.binding.selectComponentChevron;
-      if (!var17) {
+      if (!var8) {
          var5 = 0;
       }
 
       var25.setVisibility(var5);
-      if (var17 != this.currentIsLoading) {
+      if (var8 != this.currentIsLoading) {
          val var26: ProgressDots = this.getProgressDots();
          var5 = 8;
-         if (var17) {
+         if (var8) {
             var5 = 0;
          }
 
          var26.setVisibility(var5);
       }
 
-      this.currentIsLoading = var17;
+      this.currentIsLoading = var8;
       val var27: View = this.binding.getRoot();
       val var3: Float;
       if (var4) {
@@ -306,15 +306,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var28: View = this.binding.getRoot();
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var28, false, new g(var2, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var8: Boolean = false;
-      if (!var17) {
-         var8 = false;
+      var var17: Boolean = false;
+      if (!var8) {
+         var17 = false;
          if (!var4) {
-            var8 = true;
+            var17 = true;
          }
       }
 
-      var14.setClickable(var8);
+      var14.setClickable(var17);
       this.binding.getRoot().setEnabled(var4 xor true);
    }
 

@@ -60,17 +60,17 @@ public final class SafetySystemNotificationBinding implements ViewBinding {
    @NonNull
    public static SafetySystemNotificationBinding bind(@NonNull View var0) {
       int var1 = R.id.description;
-      TextView var10 = (TextView)a.a(var0, var1);
-      if (var10 != null) {
+      TextView var2 = (TextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.footer;
-         LinearLayout var6 = (LinearLayout)a.a(var0, var1);
-         if (var6 != null) {
+         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-            if (var7 != null) {
+            SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.primary_cta;
-               TextView var3 = (TextView)a.a(var0, var1);
-               if (var3 != null) {
+               TextView var4 = (TextView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.secondary_cta;
                   TextView var5 = (TextView)a.a(var0, var1);
                   if (var5 != null) {
@@ -78,15 +78,15 @@ public final class SafetySystemNotificationBinding implements ViewBinding {
                      TextView var8 = (TextView)a.a(var0, var1);
                      if (var8 != null) {
                         var1 = R.id.subtitle_text;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.title;
-                           TextView var9 = (TextView)a.a(var0, var1);
-                           if (var9 != null) {
+                           TextView var10 = (TextView)a.a(var0, var1);
+                           if (var10 != null) {
                               var1 = R.id.title_container;
-                              LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-                              if (var2 != null) {
-                                 return new SafetySystemNotificationBinding(var0, var10, var6, var7, var3, var5, var8, var4, var9, var2);
+                              LinearLayout var6 = (LinearLayout)a.a(var0, var1);
+                              if (var6 != null) {
+                                 return new SafetySystemNotificationBinding(var0, var2, var3, var9, var4, var5, var8, var7, var10, var6);
                               }
                            }
                         }

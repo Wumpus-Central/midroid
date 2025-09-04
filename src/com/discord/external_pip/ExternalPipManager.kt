@@ -37,10 +37,10 @@ internal class ExternalPipManager {
          val var11: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var4: ExternalPipManager.Companion = Companion;
+               val var5: ExternalPipManager.Companion = Companion;
                e.a();
-               val var5: Builder = a.a(d.a(), this.aspectRatio);
-               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var4, var5, false)));
+               val var4: Builder = a.a(d.a(), this.aspectRatio);
+               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var4, false)));
             } catch (var8: Exception) {
                val var10: kotlin.Result.a = Result.e;
                var3.invoke(Result.a(Result.b(kotlin.c.a(var8))));

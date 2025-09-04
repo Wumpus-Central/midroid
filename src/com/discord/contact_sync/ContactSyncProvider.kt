@@ -31,12 +31,12 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 5c
+      // 0e: ifnull 5b
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 46
+      // 17: ifnull 45
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
       // 1e: astore 1
@@ -55,25 +55,25 @@ public object ContactSyncProvider {
       // 39: bipush 0
       // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
       // 3d: astore 1
-      // 3e: goto 48
-      // 41: astore 4
-      // 43: goto 50
-      // 46: aconst_null
-      // 47: astore 1
-      // 48: aload 2
-      // 49: aconst_null
-      // 4a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4d: goto 5c
-      // 50: aload 4
-      // 52: athrow
-      // 53: astore 1
-      // 54: aload 2
-      // 55: aload 4
-      // 57: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 5a: aload 1
-      // 5b: athrow
-      // 5c: aload 1
-      // 5d: areturn
+      // 3e: goto 47
+      // 41: astore 1
+      // 42: goto 4f
+      // 45: aconst_null
+      // 46: astore 1
+      // 47: aload 2
+      // 48: aconst_null
+      // 49: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4c: goto 5b
+      // 4f: aload 1
+      // 50: athrow
+      // 51: astore 4
+      // 53: aload 2
+      // 54: aload 1
+      // 55: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 4
+      // 5a: athrow
+      // 5b: aload 1
+      // 5c: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -141,17 +141,17 @@ public object ContactSyncProvider {
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      val var7: LinkedHashMap = new LinkedHashMap();
-      val var8: Cursor = var1.getContentResolver()
+      val var8: LinkedHashMap = new LinkedHashMap();
+      val var7: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
-      if (var8 == null) {
-         return var7;
+      if (var7 == null) {
+         return var8;
       } else {
-         while (var8.moveToNext()) {
-            val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var10: java.lang.String = this.getColumnString(var8, "data4");
-            val var9: java.lang.String = this.getColumnString(var8, "_id");
-            var var3: java.lang.String = this.getColumnString(var8, "contact_id");
+         while (var7.moveToNext()) {
+            val var6: java.lang.String = this.getColumnString(var7, "display_name");
+            val var10: java.lang.String = this.getColumnString(var7, "data4");
+            val var9: java.lang.String = this.getColumnString(var7, "_id");
+            var var3: java.lang.String = this.getColumnString(var7, "contact_id");
             if (var9 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
@@ -178,7 +178,7 @@ public object ContactSyncProvider {
                }
 
                val var2: Boolean;
-               if (this.getColumnString(var8, "photo_file_id") != null) {
+               if (this.getColumnString(var7, "photo_file_id") != null) {
                   var2 = true;
                } else {
                   var2 = false;
@@ -190,13 +190,13 @@ public object ContactSyncProvider {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
                }
             }
          }
 
-         var8.close();
-         return var7;
+         var7.close();
+         return var8;
       }
    }
 

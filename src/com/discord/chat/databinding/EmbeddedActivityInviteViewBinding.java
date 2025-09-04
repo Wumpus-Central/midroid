@@ -77,43 +77,43 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
    @NonNull
    public static EmbeddedActivityInviteViewBinding bind(@NonNull View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var13 = (Barrier)a.a(var0, var1);
-      if (var13 != null) {
+      Barrier var7 = (Barrier)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.item_bottom_container;
-         ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-         if (var3 != null) {
+         ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.item_header;
-            TextView var8 = (TextView)a.a(var0, var1);
-            if (var8 != null) {
+            TextView var12 = (TextView)a.a(var0, var1);
+            if (var12 != null) {
                var1 = R.id.item_hero;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+               if (var10 != null) {
                   var1 = R.id.item_subtitle;
-                  MessageContentView var11 = (MessageContentView)a.a(var0, var1);
-                  if (var11 != null) {
+                  MessageContentView var13 = (MessageContentView)a.a(var0, var1);
+                  if (var13 != null) {
                      var1 = R.id.item_title;
-                     TextView var6 = (TextView)a.a(var0, var1);
-                     if (var6 != null) {
+                     TextView var2 = (TextView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var2 = (DCDButton)a.a(var0, var1);
-                        if (var2 != null) {
+                        DCDButton var6 = (DCDButton)a.a(var0, var1);
+                        if (var6 != null) {
                            var1 = R.id.no_participants_text;
                            TextView var9 = (TextView)a.a(var0, var1);
                            if (var9 != null) {
                               var1 = R.id.participants;
-                              OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
-                              if (var4 != null) {
+                              OverlappingCirclesView var11 = (OverlappingCirclesView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.participants_container;
-                                 FrameLayout var12 = (FrameLayout)a.a(var0, var1);
-                                 if (var12 != null) {
+                                 FrameLayout var8 = (FrameLayout)a.a(var0, var1);
+                                 if (var8 != null) {
                                     var1 = R.id.subtitle_icon;
-                                    SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var7 != null) {
+                                    SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var3 != null) {
                                        var1 = R.id.subtitle_top_barrier;
-                                       Barrier var10 = (Barrier)a.a(var0, var1);
-                                       if (var10 != null) {
+                                       Barrier var5 = (Barrier)a.a(var0, var1);
+                                       if (var5 != null) {
                                           return new EmbeddedActivityInviteViewBinding(
-                                             var0, var13, var3, var8, var5, var11, var6, var2, var9, var4, var12, var7, var10
+                                             var0, var7, var4, var12, var10, var13, var2, var6, var9, var11, var8, var3, var5
                                           );
                                        }
                                     }

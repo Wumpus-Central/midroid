@@ -91,9 +91,9 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var13: java.lang.String = MessageId.toString-impl(var15);
-      val var14: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
-      val var12: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var12: java.lang.String = MessageId.toString-impl(var15);
+      val var13: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
+      val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var11.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var11),
          MessageKt.shouldShowLinkDecorations(var11),
@@ -244,11 +244,11 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var30: ComponentActionEventHandlers = new ComponentActionEventHandlers(new y(var7, var15), new z(var7, var15), new A(var7, var15), new B(var7, var15));
+      val var31: ComponentActionEventHandlers = new ComponentActionEventHandlers(new y(var7, var15), new z(var7, var15), new A(var7, var15), new B(var7, var15));
       val var32: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
-      val var31: java.lang.Boolean = var11.getGifAutoPlay();
-      if (var31 != null) {
-         var9 = var31;
+      val var30: java.lang.Boolean = var11.getGifAutoPlay();
+      if (var30 != null) {
+         var9 = var30;
       } else {
          var9 = false;
       }
@@ -261,6 +261,6 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var14, var12, var35, var28, var30, var32, var9, var10, false, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var12, var13, var14, var35, var28, var31, var32, var9, var10, false, false));
    }
 }

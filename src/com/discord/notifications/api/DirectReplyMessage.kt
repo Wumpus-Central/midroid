@@ -162,32 +162,32 @@ public data class DirectReplyMessage(id: MessageId,
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: DirectReplyUser = this.author;
-      val var2: java.lang.String = this.content;
-      val var9: Int = this.type;
-      val var5: Int = this.channelType;
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: DirectReplyUser = this.author;
+      val var8: java.lang.String = this.content;
+      val var7: Int = this.type;
+      val var9: Int = this.channelType;
       val var3: java.lang.String = this.channelName;
-      val var4: java.lang.String = this.guildName;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("DirectReplyMessage(id=");
-      var8.append(var1);
-      var8.append(", channelId=");
-      var8.append(var6);
-      var8.append(", author=");
-      var8.append(var7);
-      var8.append(", content=");
-      var8.append(var2);
-      var8.append(", type=");
-      var8.append(var9);
-      var8.append(", channelType=");
-      var8.append(var5);
-      var8.append(", channelName=");
-      var8.append(var3);
-      var8.append(", guildName=");
-      var8.append(var4);
-      var8.append(")");
-      return var8.toString();
+      val var5: java.lang.String = this.guildName;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("DirectReplyMessage(id=");
+      var6.append(var1);
+      var6.append(", channelId=");
+      var6.append(var2);
+      var6.append(", author=");
+      var6.append(var4);
+      var6.append(", content=");
+      var6.append(var8);
+      var6.append(", type=");
+      var6.append(var7);
+      var6.append(", channelType=");
+      var6.append(var9);
+      var6.append(", channelName=");
+      var6.append(var3);
+      var6.append(", guildName=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    @SourceDebugExtension(["SMAP\nDirectReplyMessage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,57:1\n123#2:58\n*S KotlinDebug\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n*L\n26#1:58\n*E\n"])
@@ -202,13 +202,13 @@ public data class DirectReplyMessage(id: MessageId,
          val var6: Json = DirectReplyMessage.access$getJson$cp();
          var6.a();
          val var12: DirectReplyMessage = var6.b(DirectReplyMessage.Companion.serializer(), var1) as DirectReplyMessage;
-         val var11: java.lang.String = var12.getId-3Eiw7ao();
+         val var10: java.lang.String = var12.getId-3Eiw7ao();
          val var7: Int = var12.getType();
-         val var10: java.lang.String = var12.getContent();
-         val var4: Long = var12.getChannelId-o4g7jtM();
-         val var9: Int = var12.getChannelType();
-         val var8: java.util.List = CollectionsKt.k();
-         val var2: Long = var12.getAuthor().getId-re6GcUE();
+         val var8: java.lang.String = var12.getContent();
+         val var2: Long = var12.getChannelId-o4g7jtM();
+         val var11: Int = var12.getChannelType();
+         val var9: java.util.List = CollectionsKt.k();
+         val var4: Long = var12.getAuthor().getId-re6GcUE();
          val var16: java.lang.String = var12.getAuthor().getUsername();
          var1 = var16;
          if (var16 == null) {
@@ -225,22 +225,22 @@ public data class DirectReplyMessage(id: MessageId,
 
          return new NotificationData(
             "MESSAGE_CREATE",
-            var11,
+            var10,
             null,
             null,
             var7,
-            var10,
+            var8,
+            null,
+            var11,
+            var12.getChannelName(),
+            ChannelId.box-impl(var2),
+            null,
+            null,
+            null,
+            null,
             null,
             var9,
-            var12.getChannelName(),
-            ChannelId.box-impl(var4),
-            null,
-            null,
-            null,
-            null,
-            null,
-            var8,
-            UserId.box-impl(var2),
+            UserId.box-impl(var4),
             var1,
             null,
             var18,

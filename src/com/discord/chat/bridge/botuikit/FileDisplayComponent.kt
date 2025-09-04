@@ -133,29 +133,29 @@ public data class FileDisplayComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var3: UnfurledMediaItem = this.file;
-      val var4: java.lang.String = this.name;
-      val var8: java.lang.String = this.size;
+      val var7: java.lang.String = this.id;
+      val var8: UnfurledMediaItem = this.file;
+      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.size;
       val var2: Boolean = this.isSpoiler;
-      val var7: java.lang.String = this.spoilerDescription;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("FileDisplayComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", file=");
-      var6.append(var3);
-      var6.append(", name=");
-      var6.append(var4);
-      var6.append(", size=");
-      var6.append(var8);
-      var6.append(", isSpoiler=");
-      var6.append(var2);
-      var6.append(", spoilerDescription=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var3: java.lang.String = this.spoilerDescription;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FileDisplayComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var7);
+      var5.append(", file=");
+      var5.append(var8);
+      var5.append(", name=");
+      var5.append(var6);
+      var5.append(", size=");
+      var5.append(var4);
+      var5.append(", isSpoiler=");
+      var5.append(var2);
+      var5.append(", spoilerDescription=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

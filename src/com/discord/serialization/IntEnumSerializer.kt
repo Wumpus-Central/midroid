@@ -83,14 +83,14 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       } else if (var3 != -1) {
          var1.B(this.choicesNumbers[var3]);
       } else {
-         val var7: java.lang.String = this.serialName;
-         val var6: Array<IntEnum> = this.choices;
+         val var6: java.lang.String = this.serialName;
+         val var7: Array<IntEnum> = this.choices;
          val var5: StringBuilder = new StringBuilder();
          var5.append(var2);
          var5.append(" is not a valid enum ");
-         var5.append(var7);
-         var5.append(", choices are ");
          var5.append(var6);
+         var5.append(", choices are ");
+         var5.append(var7);
          throw new IllegalStateException(var5.toString().toString());
       }
    }

@@ -168,12 +168,12 @@ public object MessageViewManagers {
             }
 
             val var10: MessageBase = var4.getMessage();
-            val var6: Message = var10 as Message;
-            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var7: MessageFrame = var4.getMessageFrame();
-            val var5: Context = var1.getContext();
+            val var7: Message = var10 as Message;
+            val var6: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var5: MessageFrame = var4.getMessageFrame();
+            val var11: Context = var1.getContext();
             DecoratedMessageView.setMessage$default(
-               var1, var6, var11, var7, MessageViewManagers.access$getEventHandler(var3, var4, var5), this.componentProvider, null, false, false, 224, null
+               var1, var7, var6, var5, MessageViewManagers.access$getEventHandler(var3, var4, var11), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }

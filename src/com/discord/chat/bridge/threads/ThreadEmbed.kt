@@ -119,27 +119,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.title;
-      val var2: java.lang.String = this.messageCountLabel;
-      val var3: java.lang.String = this.messagePreviewString;
-      val var1: java.lang.Boolean = this.archived;
-      val var5: java.lang.String = this.archivedIconUrl;
-      val var4: ThreadEmbedMessage = this.referencedMessage;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ThreadEmbed(title=");
-      var7.append(var6);
-      var7.append(", messageCountLabel=");
-      var7.append(var2);
-      var7.append(", messagePreviewString=");
-      var7.append(var3);
-      var7.append(", archived=");
-      var7.append(var1);
-      var7.append(", archivedIconUrl=");
-      var7.append(var5);
-      var7.append(", referencedMessage=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = this.title;
+      val var6: java.lang.String = this.messageCountLabel;
+      val var2: java.lang.String = this.messagePreviewString;
+      val var3: java.lang.Boolean = this.archived;
+      val var4: java.lang.String = this.archivedIconUrl;
+      val var5: ThreadEmbedMessage = this.referencedMessage;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThreadEmbed(title=");
+      var1.append(var7);
+      var1.append(", messageCountLabel=");
+      var1.append(var6);
+      var1.append(", messagePreviewString=");
+      var1.append(var2);
+      var1.append(", archived=");
+      var1.append(var3);
+      var1.append(", archivedIconUrl=");
+      var1.append(var4);
+      var1.append(", referencedMessage=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {
