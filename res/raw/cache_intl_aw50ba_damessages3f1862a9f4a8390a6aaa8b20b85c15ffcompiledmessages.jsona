@@ -525,6 +525,7 @@
   "BbESsr": "Avanceret stemmeaktivitet",
   "qyGmGh": "Indstillinger for inaktivitet",
   "gUiIGR": "Alder bekræftet",
+  "susqq6": "Tak fordi du bekræftede din alder. Det hjælper os til at holde Discord sikkert.",
   "EcJBEB": [
     "For at holde vores brugere sikre, er vi nødt til at få bekræftet din alder. Vi vil kun spørge dig om dette en gang. ",
     [
@@ -587,22 +588,6 @@
     ]
   ],
   "E4Cd5O": "Denne kanal indeholder voksenindhold, der er mærket som aldersbegrænset. Ønsker du at fortsætte?",
-  "6ejLER": [
-    "Før du kan se denne aldersbegrænsede server, er vi nødt til at få bekræftet din alder. Vi vil kun spørge dig om dette en gang. ",
-    [
-      8,
-      "$link",
-      [
-        "Hvorfor skal jeg oplyse min fødselsdag?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Denne server indeholder sensitivt indhold, der er mærket som aldersbegrænset. Ønsker du at fortsætte?",
   "6++3cX": [
     "Du skal være myndig for at kunne se aldersbegrænsede servere. Få mere at vide om vores ",
@@ -6484,26 +6469,6 @@
     ]
   ],
   "9T6N5+": "Du kan ikke sende beskeder til en bruger, du har blokeret.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " ændrede DM-baggrunden. Denne funktion er i øjeblikket i Beta og kun synlig på computere. ",
-    [
-      8,
-      "$link",
-      [
-        "Få mere at vide."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Over ",
     [
@@ -33775,26 +33740,6 @@
   "MDOXJS": "Kræver højere serverboost niveau",
   "Rtvk9f": "Discord-lyde",
   "Tj5Nws": "Soundmoji understøttes for nuværende kun på desktop-computer.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hejsa"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Boble",
-  "s5Qo8P": "Blop",
-  "4iA55u": "Wumpus' favorit",
-  "p3Hg5e": "Discord Standard",
-  "1kbe6e": "Som en and",
-  "4TOv0t": "Rap-rap",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Glimte",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Kraft på!",
   "Z5OQNj": "❄️ Vinter",
   "sWmtIy": "Gør stum",
   "NHJxcn": "Ophæv stumhed",

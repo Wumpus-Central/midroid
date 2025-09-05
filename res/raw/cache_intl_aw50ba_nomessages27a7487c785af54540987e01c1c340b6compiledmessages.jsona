@@ -511,6 +511,7 @@
   "BbESsr": "Avansert taleaktivitet",
   "qyGmGh": "Innstillinger for inaktive",
   "gUiIGR": "Alder bekreftet",
+  "susqq6": "Takk for at du bekreftet alderen din. Dette hjelper oss å holde Discord trygt.",
   "EcJBEB": [
     "For å beskytte brukerne våre ber vi deg bekrefte alderen din. Vi kommer bare til å be om dette én gang. ",
     [
@@ -573,22 +574,6 @@
     ]
   ],
   "E4Cd5O": "På denne kanalen finnes det voksent innhold merket med aldersgrense. Vil du fortsette?",
-  "6ejLER": [
-    "Før du kan se denne serveren med aldersgrense, må du bekrefte alderen din. Vi kommer bare til å be om dette én gang. ",
-    [
-      8,
-      "$link",
-      [
-        "Hvorfor må jeg oppgi fødselsdatoen min?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "På denne serveren finnes det voksent innhold merket med aldersgrense. Vil du fortsette?",
   "6++3cX": [
     "Du må være juridisk voksen for å se aldersbegrensede servere. Les mer om ",
@@ -6445,26 +6430,6 @@
     ]
   ],
   "9T6N5+": "Du kan ikke sende meldinger til en bruker du har blokkert.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " byttet DM-bakgrunnsbilde. Dette er foreløpig en betafunksjon og bare synlig på datamaskin. ",
-    [
-      8,
-      "$link",
-      [
-        "Mer info."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Over ",
     [
@@ -33556,26 +33521,6 @@
   "MDOXJS": "Krever høyere Server Boost-nivå",
   "Rtvk9f": "Discord-lyder",
   "Tj5Nws": "Soundmojier er foreløpig bare tilgjengelig på datamaskin.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hei"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Boble",
-  "s5Qo8P": "Plopp",
-  "4iA55u": "Wumpus’ favoritt",
-  "p3Hg5e": "Discord standard",
-  "1kbe6e": "Andy",
-  "4TOv0t": "Kvakk",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Funkle",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Større kraft!",
   "Z5OQNj": "❄️ Vinter",
   "sWmtIy": "Demp",
   "NHJxcn": "Opphev demping",

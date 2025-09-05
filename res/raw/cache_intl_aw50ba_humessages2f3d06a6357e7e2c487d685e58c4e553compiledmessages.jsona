@@ -510,6 +510,7 @@
   "BbESsr": "Haladó Voice Activity",
   "qyGmGh": "Inaktív beállítások",
   "gUiIGR": "Igazolt életkor",
+  "susqq6": "Köszönjük, hogy igazoltad életkorodat. Ezzel elősegíted, hogy a Discord biztonságos hely legyen.",
   "EcJBEB": [
     "A felhasználók biztonságának garantálásához igazolnod kell az életkorodat. Csak egyszer kérjük ezt az információt. ",
     [
@@ -572,22 +573,6 @@
     ]
   ],
   "E4Cd5O": "Ezen a csatornán korhatáros címkével ellátott felnőtt tartalmak találhatók. Biztosan folytatod?",
-  "6ejLER": [
-    "A korhatáros szerverek megtekintéséhez hitelesítened kell az életkorodat. Csak egyszer kérjük ezt az információt. ",
-    [
-      8,
-      "$link",
-      [
-        "Miért kell megadnom a születési időmet?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Ez a szerver korhatárosként megjelölt kényes tartalmakat foglal magában. Biztosan folytatod?",
   "6++3cX": [
     "A korhatáros csatornák megtekintéséhez nagykorúnak kell lenned. ",
@@ -6468,26 +6453,6 @@
     ]
   ],
   "9T6N5+": "Nem tudsz üzenetet küldeni azoknak, akiket letiltottál.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " megváltoztatta a közvetlen üzeneteknél beállított hátteret. Ez a funkció jelenleg béta-verziójú, és csak asztali gépen látható. ",
-    [
-      8,
-      "$link",
-      [
-        "További tájékoztatás."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     [
       1,
@@ -33574,26 +33539,6 @@
   "MDOXJS": "Magasabb szervergyorsítás szintet igényel",
   "Rtvk9f": "Discord-hangok",
   "Tj5Nws": "A Hangemotikonok funkciót jelenleg csak az asztali verzió támogatja.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hahó"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Buborék",
-  "s5Qo8P": "Pukk",
-  "4iA55u": "Wumpus kedvence",
-  "p3Hg5e": "Discord – alapértelmezett",
-  "1kbe6e": "Kiskacsa",
-  "4TOv0t": "Háp",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Csillám",
-  "zKG+ur": "Retró",
-  "Rrwrnp": "Teljes erőbedobás!",
   "Z5OQNj": "❄️ Tél",
   "sWmtIy": "Némítás",
   "NHJxcn": "Némítás kikapcsolása",

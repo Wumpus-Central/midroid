@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 297205
-  versionName: 297.5 - Alpha
+  versionCode: 297206
+  versionName: 297.6 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -457,3 +457,4 @@ doNotCompress:
 - res/raw/modules_guild_settings_web_tags_guildsettingstagscompiledmessages.jsona
 - res/raw/modules_intl_messages_secondtestcompiledmessages.jsona
 - res/raw/modules_notifications_inbox_notificationsinboxcompiledmessages.jsona
+- res/raw/modules_premium_portkey_portkeycompiledmessages.jsona

@@ -527,6 +527,7 @@
   "BbESsr": "Actividad de voz avanzada",
   "qyGmGh": "Ajustes de inactividad",
   "gUiIGR": "Edad verificada",
+  "susqq6": "Gracias por verificar tu edad. Esto nos ayuda a que Discord sea un lugar seguro.",
   "EcJBEB": [
     "Para proteger a nuestros usuarios, debemos verificar tu edad. Solo te lo pediremos una vez. ",
     [
@@ -589,22 +590,6 @@
     ]
   ],
   "E4Cd5O": "Este canal incluye contenido para adultos con restricción por edad. ¿Deseas continuar?",
-  "6ejLER": [
-    "Antes de que puedas ver este servidor con restricción por edad, debemos verificar tu edad. Solo te lo pediremos una vez. ",
-    [
-      8,
-      "$link",
-      [
-        "¿Por qué tengo que proporcionar mi fecha de nacimiento?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Este servidor incluye contenido sensible con restricción por edad. ¿Deseas continuar?",
   "6++3cX": [
     "Debes ser mayor de edad para poder ver servidores con restricción por edad. Obtén más información sobre nuestro ",
@@ -6474,26 +6459,6 @@
     ]
   ],
   "9T6N5+": "No puedes enviar mensajes a un usuario al que tienes bloqueado.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " ha cambiado el fondo de pantalla de MD. Actualmente, esta función está en fase beta y solo es visible en la aplicación de escritorio. ",
-    [
-      8,
-      "$link",
-      [
-        "Más información."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Encima de ",
     [
@@ -33662,26 +33627,6 @@
   "MDOXJS": "Hace falta un nivel superior de mejoras de servidor",
   "Rtvk9f": "Sonidos de Discord",
   "Tj5Nws": "Actualmente, los emojis de sonido solo son compatibles con la aplicación de escritorio.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "¡Hola!"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Burbuja",
-  "s5Qo8P": "Blup",
-  "4iA55u": "Favorito de Wumpus",
-  "p3Hg5e": "Predeterminado de Discord",
-  "1kbe6e": "Pato",
-  "4TOv0t": "Cuac",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Destello",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "¡Subida de nivel!",
   "Z5OQNj": "❄️ Invierno",
   "sWmtIy": "Silenciar",
   "NHJxcn": "Desactivar silencio",

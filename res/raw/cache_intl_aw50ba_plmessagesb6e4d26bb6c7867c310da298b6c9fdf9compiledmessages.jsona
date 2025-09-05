@@ -516,6 +516,7 @@
   "BbESsr": "Zaawansowana Aktywność Głosowa",
   "qyGmGh": "Ustawienia nieaktywności",
   "gUiIGR": "Zweryfikowano wiek",
+  "susqq6": "Dziękujemy za weryfikację wieku. W ten sposób dbamy o bezpieczeństwo Discorda.",
   "EcJBEB": [
     "W trosce o bezpieczeństwo użytkowników musimy zweryfikować Twój wiek. Poprosimy o to tylko raz. ",
     [
@@ -585,22 +586,6 @@
     ]
   ],
   "E4Cd5O": "Ten kanał zawiera treści dla dorosłych objęte ograniczeniami wiekowymi. Czy chcesz przejść dalej?",
-  "6ejLER": [
-    "Zanim wyświetlisz ten serwer z ograniczeniami wiekowymi, musimy zweryfikować Twój wiek. Poprosimy o to tylko raz. ",
-    [
-      8,
-      "$link",
-      [
-        "Dlaczego muszę podawać datę urodzenia?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Ten serwer zawiera wrażliwe treści objęte ograniczeniami wiekowymi. Czy chcesz przejść dalej?",
   "6++3cX": [
     "Musisz być pełnoletni(-a), aby wyświetlić serwery z ograniczeniami wiekowymi. Więcej informacji o naszym ",
@@ -6672,27 +6657,6 @@
     ]
   ],
   "9T6N5+": "Nie możesz wysyłać wiadomości do zablokowanych użytkowników.",
-  "+fBFYG": [
-    "Użytkownik ",
-    [
-      1,
-      "username"
-    ],
-    " zmienił tapetę PW. Ta funkcja działa aktualnie w wersji beta i jest widoczna tylko na komputerze. ",
-    [
-      8,
-      "$link",
-      [
-        "Dowiedz się więcej."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Nad: ",
     [
@@ -34610,26 +34574,6 @@
   "MDOXJS": "Wymaga wyższego poziomu wzmocnienia serwera",
   "Rtvk9f": "Dźwięki na Discordzie",
   "Tj5Nws": "Funkcja audioemoji jest obecnie dostępna tylko na komputerze.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "Cześć"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bańka",
-  "s5Qo8P": "Plup",
-  "4iA55u": "Ulubione Wumpusa",
-  "p3Hg5e": "Domyślne dźwięki Discorda",
-  "1kbe6e": "Kaczka",
-  "4TOv0t": "Kwak",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Migotanie",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Wzmocnienie!",
   "Z5OQNj": "❄️ Zima",
   "sWmtIy": "Wycisz",
   "NHJxcn": "Wyłącz wyciszenie",

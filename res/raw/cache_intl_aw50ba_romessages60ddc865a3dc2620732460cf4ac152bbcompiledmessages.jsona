@@ -511,6 +511,7 @@
   "BbESsr": "Activitate vocală avansată",
   "qyGmGh": "Setări inactivitate",
   "gUiIGR": "Vârstă verificată",
+  "susqq6": "Îți mulțumim că ți-ai confirmat vârsta. Acest lucru ajută Discord să rămână un mediu sigur.",
   "EcJBEB": [
     "Pentru a ne menține utilizatorii în siguranță, trebuie să îți verificăm vârsta. Nu-ți vom cere această informație decât o singură dată. ",
     [
@@ -573,22 +574,6 @@
     ]
   ],
   "E4Cd5O": "Acest canal include conținut pentru adulți marcat ca restricționat în funcție de vârstă. Vrei să continui?",
-  "6ejLER": [
-    "Înainte să poți accesa acest server cu restricționare în funcție de vârstă, trebuie să îți verificăm vârsta. Nu-ți vom cere această informație decât o singură dată. ",
-    [
-      8,
-      "$link",
-      [
-        "De ce trebuie să-mi specific ziua de naștere?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Acest server include conținut sensibil marcat ca fiind restricționat în funcție de vârstă. Vrei să continui?",
   "6++3cX": [
     "Trebuie să ai peste vârsta legală pentru a vizualiza serverele cu restricționare în funcție de vârstă. Află mai multe despre ",
@@ -6437,26 +6422,6 @@
     ]
   ],
   "9T6N5+": "Nu poți trimite mesaje unui utilizator pe care l-ai blocat.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " a schimbat fundalul pentru mesajele directe. Această funcție este momentan în versiunea Beta și este vizibilă doar pe desktop. ",
-    [
-      8,
-      "$link",
-      [
-        "Află mai multe."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Deasupra ",
     [
@@ -33588,26 +33553,6 @@
   "MDOXJS": "Este necesar un nivel boost server mai ridicat",
   "Rtvk9f": "Sunete Discord",
   "Tj5Nws": "Momentan, Soundmojiurile sunt disponibile doar pe desktop.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "salut"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Balon",
-  "s5Qo8P": "Blup",
-  "4iA55u": "Favoritele lui Wumpus",
-  "p3Hg5e": "Sunetele implicite Discord",
-  "1kbe6e": "Rățușcă",
-  "4TOv0t": "Mac, mac!",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Sclipiri",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Putere bonus!",
   "Z5OQNj": "❄️ Iarnă",
   "sWmtIy": "Oprește microfonul",
   "NHJxcn": "Pornește microfonul",

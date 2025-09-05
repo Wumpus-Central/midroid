@@ -528,6 +528,7 @@
   "BbESsr": "Pokročilá hlasová aktivita",
   "qyGmGh": "Nastavení nečinnosti",
   "gUiIGR": "Věk jsme ověřili",
+  "susqq6": "Děkujeme za ověření věku. Pomůže nám to udržovat Discord bezpečný.",
   "EcJBEB": [
     "Abychom našim uživatelům mohli poskytnout bezpečí, potřebujeme ověřit tvůj věk. Požádáme tě o to pouze tentokrát. ",
     [
@@ -599,22 +600,6 @@
     ]
   ],
   "E4Cd5O": "V tomto kanálu je obsah pro dospělé s věkovým omezením. Chceš pokračovat?",
-  "6ejLER": [
-    "Než si budeš moct zobrazit tento server s věkovým omezením, potřebujeme ověřit tvůj věk. Požádáme tě o to pouze tentokrát. ",
-    [
-      8,
-      "$link",
-      [
-        "Proč musím poskytnout své datum narození?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Tento server obsahuje citlivý obsah s věkovým omezením. Chceš pokračovat?",
   "6++3cX": [
     "Pokud chceš zobrazit servery s věkovým omezením, musí ti být více, než je stanovený zákonný věk. Více o našem ",
@@ -6679,26 +6664,6 @@
     ]
   ],
   "9T6N5+": "Nemůžeš posílat zprávy uživateli, kterého sis zablokoval.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " změnil/a tapetu pro PZ. Tato funkce je aktuálně v beta verzi a viditelná je pouze na počítači. ",
-    [
-      8,
-      "$link",
-      [
-        "Zjistit více."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Nad ",
     [
@@ -34800,26 +34765,6 @@
   "MDOXJS": "Vyžaduje vyšší úroveň vylepšení serveru",
   "Rtvk9f": "Zvuky na Discordu",
   "Tj5Nws": "Zvukoví smajlíci jsou momentálně podporováni jen na počítači.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "nazdárek"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bublání",
-  "s5Qo8P": "Prasknutí",
-  "4iA55u": "Wumpusovo oblíbené",
-  "p3Hg5e": "Výchozí nastavení Discordu",
-  "1kbe6e": "Kachnička",
-  "4TOv0t": "Kvák",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Jiskření",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Posílení!",
   "Z5OQNj": "❄️ Zima",
   "sWmtIy": "Ztlumit",
   "NHJxcn": "Zrušit ztlumení zvuku",

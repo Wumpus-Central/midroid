@@ -522,6 +522,7 @@
   "BbESsr": "Gelişmiş Ses Etkinliği",
   "qyGmGh": "Aktif Olmayanlar Ayarları",
   "gUiIGR": "Yaş Doğrulandı",
+  "susqq6": "Yaşını doğruladığın için teşekkürler. Bu sayede Discord güvenli bir yer olmaya devam ediyor.",
   "EcJBEB": [
     "Kullanıcılarımızın güvenliği için yaşını doğrulamamız gerekiyor. Bunu yalnızca bu seferlik soracağız. ",
     [
@@ -583,22 +584,6 @@
     ]
   ],
   "E4Cd5O": "Bu kanalda yetişkinlere uygun yaş sınırlı olarak işaretlenmiş içerikler var. Devam etmek istiyor musun?",
-  "6ejLER": [
-    "Bu yaş sınırlı sunucuyu görüntüleyebilmen için yaşını doğrulamamız gerekiyor. Bunu yalnızca bu seferlik soracağız. ",
-    [
-      8,
-      "$link",
-      [
-        "Neden doğum günümü bildirmem gerekiyor?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Bu sunucuda yaş sınırlı olarak işaretlenmiş, hassas içerikler var. Devam etmek istiyor musun?",
   "6++3cX": [
     "Yaş sınırlı sunucuları görüntüleyebilmek için yasal yaşın üzerinde olman gerekiyor. ",
@@ -6455,26 +6440,6 @@
     " kullanıcısına mesaj gönder"
   ],
   "9T6N5+": "Engellediğin bir kullanıcıya mesaj gönderemezsin.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    ", DM duvar kâğıdını değiştirdi. Bu özellik şu anda Beta aşamasında ve yalnızca masaüstünde görülebilir. ",
-    [
-      8,
-      "$link",
-      [
-        "Daha fazla bilgi edin."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     [
       1,
@@ -33653,26 +33618,6 @@
   "MDOXJS": "Daha yüksek Sunucu Takviyesi Seviyesi gerekir",
   "Rtvk9f": "Discord Sesleri",
   "Tj5Nws": "Soundmoji şu anda yalnızca masaüstünde destekleniyor.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "Merhaba"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Baloncuk",
-  "s5Qo8P": "Bup",
-  "4iA55u": "Wumpus'un Favorisi",
-  "p3Hg5e": "Discord Varsayılan",
-  "1kbe6e": "Ördek",
-  "4TOv0t": "Vak Vak",
-  "fMUEj4": "LoFi",
-  "aEsrnp": "Parıltı",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Güçlen!",
   "Z5OQNj": "❄️ Kış",
   "sWmtIy": "Sustur",
   "NHJxcn": "Susturmayı Kaldır",

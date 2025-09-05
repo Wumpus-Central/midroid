@@ -528,6 +528,7 @@
   "BbESsr": "Detecção de voz avançada",
   "qyGmGh": "Configurações de ausência",
   "gUiIGR": "Idade verificada",
+  "susqq6": "Obrigado por verificar sua idade. Isso nos ajuda a manter o Discord seguro.",
   "EcJBEB": [
     "Para manter nossos usuários seguros, precisamos verificar sua idade. Só vamos pedir isso uma vez. ",
     [
@@ -590,22 +591,6 @@
     ]
   ],
   "E4Cd5O": "Este canal contém conteúdo adulto marcado com restrição de idade. Deseja continuar?",
-  "6ejLER": [
-    "Antes de você poder ver este servidor com restrição de idade, precisamos verificar sua idade. Só vamos pedir isso uma vez. ",
-    [
-      8,
-      "$link",
-      [
-        "Por que preciso informar minha data de nascimento?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Este servidor apresenta conteúdo sensível marcado com restrição de idade. Você deseja continuar?",
   "6++3cX": [
     "Você deve ter a idade legal para visualizar servidores com restrição de idade. Saiba mais sobre nosso processo de verificação de idade ",
@@ -6474,26 +6459,6 @@
     ]
   ],
   "9T6N5+": "Você não pode enviar mensagens a um usuário que bloqueou.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " mudou o papel de parede das mensagens diretas. Este recurso se encontra em fase beta e está visível apenas na área de trabalho. ",
-    [
-      8,
-      "$link",
-      [
-        "Saiba mais."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Acima de ",
     [
@@ -33692,26 +33657,6 @@
   "MDOXJS": "Requer um nível mais alto de impulso de servidor",
   "Rtvk9f": "Sons do Discord",
   "Tj5Nws": "Atualmente, Áudioemojis são compatíveis apenas com o aplicativo para desktop.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "Olá"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bolha",
-  "s5Qo8P": "Bloop",
-  "4iA55u": "O Favorito do Wumpus",
-  "p3Hg5e": "Discord Padrão",
-  "1kbe6e": "Ducky",
-  "4TOv0t": "Quack",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Cintilação",
-  "zKG+ur": "Retrô",
-  "Rrwrnp": "Energizar!",
   "Z5OQNj": "❄️ Inverno",
   "sWmtIy": "Silenciar",
   "NHJxcn": "Reativar microfone",

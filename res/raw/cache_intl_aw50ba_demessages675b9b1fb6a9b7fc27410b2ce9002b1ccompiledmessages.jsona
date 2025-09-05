@@ -528,6 +528,7 @@
   "BbESsr": "Erweiterte Sprachaktivierung",
   "qyGmGh": "Inaktivitätseinstellungen",
   "gUiIGR": "Alter bestätigt",
+  "susqq6": "Danke, dass du dein Alter bestätigt hast. Das hilft uns dabei, Discord sicher zu gestalten.",
   "EcJBEB": [
     "Um unseren Benutzern Sicherheit zu gewährleisten, muss dein Alter verifiziert werden. Wir bitten dich nur ein einziges Mal darum. ",
     [
@@ -590,22 +591,6 @@
     ]
   ],
   "E4Cd5O": "Dieser Kanal enthält nicht jugendfreie Inhalte und verwendet eine Altersbegrenzung. Möchtest du wirklich fortfahren?",
-  "6ejLER": [
-    "Bevor du dir diesen altersbegrenzten Server ansehen kannst, muss dein Alter verifiziert werden. Wir bitten dich nur ein einziges Mal darum. ",
-    [
-      8,
-      "$link",
-      [
-        "Warum muss ich mein Geburtsdatum angeben?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Dieser Server enthält sensible Inhalte und verwendet eine Altersbegrenzung. Möchtest du wirklich fortfahren?",
   "6++3cX": [
     "Du musst das gesetzliche Mindestalter erreicht haben, um altersbegrenzte Server ansehen zu können. ",
@@ -6472,26 +6457,6 @@
     ]
   ],
   "9T6N5+": "Du kannst einem von dir geblockten Nutzer keine Nachrichten senden.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " hat das DM-Hintergrundbild geändert. Dieses Feature befindet sich derzeit in der Beta und ist nur auf dem Desktop sichtbar. ",
-    [
-      8,
-      "$link",
-      [
-        "Mehr erfahren."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Über ",
     [
@@ -33690,26 +33655,6 @@
   "MDOXJS": "Höheres Server-Boost-Level erforderlich",
   "Rtvk9f": "Discord-Sounds",
   "Tj5Nws": "Soundmoji wird momentan nur auf dem Desktop unterstützt.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "Hallo du"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Blase",
-  "s5Qo8P": "Blub",
-  "4iA55u": "Wumpus’ Liebling",
-  "p3Hg5e": "Discord-Standard",
-  "1kbe6e": "Entchen",
-  "4TOv0t": "Quak",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Funkeln",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Power-Up!",
   "Z5OQNj": "❄️ Winter",
   "sWmtIy": "Stummschalten",
   "NHJxcn": "Stummschaltung aufheben",

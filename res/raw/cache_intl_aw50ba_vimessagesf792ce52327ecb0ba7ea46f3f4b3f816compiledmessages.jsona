@@ -510,6 +510,7 @@
   "BbESsr": "Nhận Diện Giọng Nói Nâng Cao",
   "qyGmGh": "Cài đặt \"Không Hoạt Động\"",
   "gUiIGR": "Xác Minh Tuổi Thành Công",
+  "susqq6": "Cảm ơn vì đã xác nhận tuổi. Điều này sẽ giúp chúng tôi đảm bảo an toàn trên Discord.",
   "EcJBEB": [
     "Để đảm bảo sự an toàn của người dùng, chúng tôi cần bạn xác minh tuổi của mình. Chúng tôi chỉ hỏi duy nhất lần này thôi. ",
     [
@@ -572,22 +573,6 @@
     ]
   ],
   "E4Cd5O": "Kênh này có chứa nội dung người lớn được dán nhãn giới hạn độ tuổi. Bạn có muốn tiếp tục không?",
-  "6ejLER": [
-    "Để có thể xem máy chủ giới hạn độ tuổi này, bạn phải xác minh tuổi của mình. Chúng tôi sẽ chỉ hỏi bạn duy nhất một lần này. ",
-    [
-      8,
-      "$link",
-      [
-        "Tại sao tôi phải cung cấp ngày sinh của mình?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Máy chủ này có chứa nội dung nhạy cảm dán nhãn giới hạn độ tuổi. Bạn có muốn tiếp tục không?",
   "6++3cX": [
     "Bạn phải trên độ tuổi hợp pháp để xem máy chủ giới hạn độ tuổi. Tìm hiểu thêm về ",
@@ -6482,26 +6467,6 @@
     ]
   ],
   "9T6N5+": "Bạn không thể gửi tin nhắn cho người dùng đã chặn.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " đã thay đổi hình nền DM. Tính năng này hiện đang trong thời gian thử nghiệm Beta và chỉ có trên máy tính. ",
-    [
-      8,
-      "$link",
-      [
-        "Tìm hiểu thêm."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Phía trên ",
     [
@@ -33680,26 +33645,6 @@
   "MDOXJS": "Yêu cầu Nâng Cấp Máy Chủ cấp cao hơn",
   "Rtvk9f": "Âm thanh Discord",
   "Tj5Nws": "Emoji Âm Thanh hiện chỉ được hỗ trợ trên Máy tính bàn.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "xin chào"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bong bóng",
-  "s5Qo8P": "Bụp",
-  "4iA55u": "Wumpus ưa thích",
-  "p3Hg5e": "Discord mặc định",
-  "1kbe6e": "Tiếng vịt kêu",
-  "4TOv0t": "Quạc",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Twinkle",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Lên sức mạnh!",
   "Z5OQNj": "❄️ Mùa Đông",
   "sWmtIy": "Tắt âm",
   "NHJxcn": "Bỏ tắt âm",

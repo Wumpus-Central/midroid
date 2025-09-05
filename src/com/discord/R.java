@@ -238,6 +238,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_nintendoswitchneutralicon;
       public static int design_components_icon_native_redesign_generated_images_nitrowheelicon;
       public static int design_components_icon_native_redesign_generated_images_objecticon;
+      public static int design_components_icon_native_redesign_generated_images_orbsicon;
       public static int design_components_icon_native_redesign_generated_images_paintbrushthinicon;
       public static int design_components_icon_native_redesign_generated_images_paintpaletteicon;
       public static int design_components_icon_native_redesign_generated_images_papericon;
@@ -1104,12 +1105,10 @@ public final class R {
       public static int images_user_settings_crunchyroll_link_intro;
       public static int images_user_settings_crunchyroll_link_success;
       public static int modules_activities_images_announcement_birb;
-      public static int modules_age_gate_native_images_age_gate;
       public static int modules_age_gate_native_images_check;
       public static int modules_age_gate_native_images_nsfw_gate;
       public static int modules_age_gate_native_images_nsfw_gate_lock;
       public static int modules_age_gate_native_images_nsfw_gate_unavailable;
-      public static int modules_age_gate_native_images_underage_blocker;
       public static int modules_app_icons_images_app_icon_marketing;
       public static int modules_app_launcher_native_images_applauncherlearnmore;
       public static int modules_auth_native_images_registerbackgrounddark;
@@ -2025,6 +2024,7 @@ public final class R {
       public static int modules_notifications_inbox_notificationsinboxcompiledmessages;
       public static int modules_parent_tools_familycentercompiledmessages;
       public static int modules_premium_gifting_premiumgiftingcompiledmessages;
+      public static int modules_premium_portkey_portkeycompiledmessages;
       public static int modules_premium_powerups_guildpowerupscompiledmessages;
       public static int modules_report_to_mod_reporttomodcompiledmessages;
       public static int modules_request_to_stream_requesttostreamcompiledmessages;

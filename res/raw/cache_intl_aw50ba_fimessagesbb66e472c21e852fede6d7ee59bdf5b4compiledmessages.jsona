@@ -510,6 +510,7 @@
   "BbESsr": "Kehittynyt puheentunnistus",
   "qyGmGh": "Poissaoloasetukset",
   "gUiIGR": "Ikä vahvistettu",
+  "susqq6": "Kiitos, että vahvistit ikäsi. Se auttaa pitämään Discordin turvallisena.",
   "EcJBEB": [
     "Haluamme pitää käyttäjämme turvassa, joten meidän on vahvistettava ikäsi. Kysymme tätä vain kerran. ",
     [
@@ -572,22 +573,6 @@
     ]
   ],
   "E4Cd5O": "Tällä kanavalla on aikuisille tarkoitettua ja ikärajoitetuksi merkittyä sisältöä. Haluatko jatkaa?",
-  "6ejLER": [
-    "Jotta voisit käyttää tätä ikärajoitettua palvelinta, meidän on vahvistettava ikäsi. Kysymme sitä vain kerran. ",
-    [
-      8,
-      "$link",
-      [
-        "Miksi minun on ilmoitettava syntymäaikani?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Tällä palvelimella on arkaluonteista, ikärajoitetuksi merkittyä sisältöä. Haluatko jatkaa?",
   "6++3cX": [
     "Sinun on oltava täysi-ikäinen, jotta voit käyttää ikärajoitettuja palvelimia. Lue lisää ",
@@ -6454,26 +6439,6 @@
     ]
   ],
   "9T6N5+": "Et voi lähettää viestejä käyttäjälle, jonka olet estänyt.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " vaihtoi yksityisviestien taustan. Tämä ominaisuus on parhaillaan beetatestausvaiheessa ja näkyy vain työpöytäsovelluksessa. ",
-    [
-      8,
-      "$link",
-      [
-        "Lisätietoja."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Kohteen ",
     [
@@ -33639,26 +33604,6 @@
   "MDOXJS": "Edellyttää palvelimen korkeinta nostatustasoa",
   "Rtvk9f": "Discord-äänet",
   "Tj5Nws": "Ääniemojit ovat tällä hetkellä tuettuja vain työpöytäsovelluksessa.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hei siellä"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Kupla",
-  "s5Qo8P": "Pulina",
-  "4iA55u": "Wumpuksen suosikki",
-  "p3Hg5e": "Discordin oletus",
-  "1kbe6e": "Ankkanen",
-  "4TOv0t": "Kvaak",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Tuike",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Poweria!",
   "Z5OQNj": "❄️ Talvi",
   "sWmtIy": "Mykistä",
   "NHJxcn": "Poista mykistys",

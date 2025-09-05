@@ -506,6 +506,7 @@
   "BbESsr": "Attività vocale avanzata",
   "qyGmGh": "Impostazioni inattivi",
   "gUiIGR": "Età verificata",
+  "susqq6": "Grazie per aver verificato la tua età. Questo ci aiuta a rendere Discord più sicuro.",
   "EcJBEB": [
     "Per rendere Discord più sicuro abbiamo bisogno di verificare la tua età. Ti verrà richiesto una sola volta. ",
     [
@@ -568,22 +569,6 @@
     ]
   ],
   "E4Cd5O": "In questo canale sono presenti contenuti contrassegnati come soggetti a limiti di età. Vuoi procedere?",
-  "6ejLER": [
-    "Prima che tu possa vedere questo server soggetto a limiti di età abbiamo bisogno di verificare la tua età. Ti verrà richiesto una sola volta. ",
-    [
-      8,
-      "$link",
-      [
-        "Perché devo fornire la mia data di nascita?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "In questo server sono presenti contenuti sensibili contrassegnati come soggetti a limiti di età. Vuoi procedere?",
   "6++3cX": [
     "Devi essere maggiorenne per poter visualizzare i server soggetti a limiti di età. Scopri di più sulla nostra ",
@@ -6480,26 +6465,6 @@
     ]
   ],
   "9T6N5+": "Non puoi inviare messaggi a qualcuno che hai bloccato.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " ha cambiato lo sfondo MD. Questa funzione è attualmente in Beta e visibile solo su desktop. ",
-    [
-      8,
-      "$link",
-      [
-        "Scopri di più."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Sopra a ",
     [
@@ -33649,26 +33614,6 @@
   "MDOXJS": "Richiede un livello di potenziamento del server più alto",
   "Rtvk9f": "Suoni di Discord",
   "Tj5Nws": "Al momento, la funzione Soundmoji è supportata solo su desktop.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "ciao"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bolla",
-  "s5Qo8P": "Blup",
-  "4iA55u": "Il preferito di Wumpus",
-  "p3Hg5e": "Predefinito Discord",
-  "1kbe6e": "Paperella",
-  "4TOv0t": "Qua qua!!",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Luccichio",
-  "zKG+ur": "Rétro",
-  "Rrwrnp": "Potenzia!",
   "Z5OQNj": "❄️ Inverno",
   "sWmtIy": "Silenzia",
   "NHJxcn": "Disattiva silenziamento",

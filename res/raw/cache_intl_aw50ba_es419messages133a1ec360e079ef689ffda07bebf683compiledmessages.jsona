@@ -526,6 +526,7 @@
   "BbESsr": "Actividad avanzada de voz",
   "qyGmGh": "Ajustes de inactividad",
   "gUiIGR": "Edad verificada",
+  "susqq6": "Gracias por verificar tu edad. Esto nos ayuda a mantener Discord seguro.",
   "EcJBEB": [
     "Por la seguridad de nuestros usuarios, necesitamos verificar tu edad. Solo te la preguntaremos una vez. ",
     [
@@ -588,22 +589,6 @@
     ]
   ],
   "E4Cd5O": "Este es un canal con restricción de edad que incluye contenido para adultos. ¿Deseas continuar?",
-  "6ejLER": [
-    "Antes de que puedas ver este canal con restricción de edad, necesitamos verificar tu edad. Solo te lo preguntaremos una vez. ",
-    [
-      8,
-      "$link",
-      [
-        "¿Por qué tengo que proporcionar mi fecha de nacimiento?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Este es un servidor con restricción de edad que incluye contenido sensible. ¿Deseas continuar?",
   "6++3cX": [
     "Debes ser mayor de edad para ver los servidores con restricción por edad. ",
@@ -6484,26 +6469,6 @@
     ]
   ],
   "9T6N5+": "No puedes enviarle mensajes a un usuario al que has bloqueado.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " cambió el fondo de pantalla del MD. Actualmente, esta función está en fase beta y solo se puede ver en dispositivos de escritorio. ",
-    [
-      8,
-      "$link",
-      [
-        "Más información."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Sobre ",
     [
@@ -33346,26 +33311,6 @@
   "MDOXJS": "Requiere un nivel de mejora del servidor más alto",
   "Rtvk9f": "Sonidos de Discord",
   "Tj5Nws": "Los emojis con sonido solo está disponible en la versión de escritorio.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hola"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Burbuja",
-  "s5Qo8P": "Plop",
-  "4iA55u": "El favorito de Wumpus",
-  "p3Hg5e": "Predeterminado de Discord",
-  "1kbe6e": "Patito",
-  "4TOv0t": "Cuac",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Destello",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "¡Sube de nivel!",
   "Z5OQNj": "❄️ Invierno",
   "sWmtIy": "Silenciar",
   "NHJxcn": "Desactivar silencio",

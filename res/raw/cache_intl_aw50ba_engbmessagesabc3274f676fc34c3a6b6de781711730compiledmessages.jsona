@@ -510,6 +510,7 @@
   "BbESsr": "Advanced Voice Activity",
   "qyGmGh": "Inactive Settings",
   "gUiIGR": "Age Verified",
+  "susqq6": "Thank you for verifying your age. This helps us to keep Discord safe.",
   "EcJBEB": [
     "To keep our users safe, we need to verify your age. We will only ask you for this once. ",
     [
@@ -572,22 +573,6 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
-  "6ejLER": [
-    "Before you can view this age-restricted server, we need to verify your age. We will only ask you for this once. ",
-    [
-      8,
-      "$link",
-      [
-        "Why do I need to provide my birthday?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "This server contains sensitive content marked as age-restricted. Do you wish to proceed?",
   "6++3cX": [
     "You must be over legal age in order to view age-restricted servers. Learn more about our ",
@@ -6422,26 +6407,6 @@
     ]
   ],
   "9T6N5+": "You cannot send messages to a user you have blocked.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " changed the DM wallpaper. This feature is currently in Beta and visible on desktop only. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Above ",
     [
@@ -33523,26 +33488,6 @@
   "MDOXJS": "Requires higher Server Boost Level",
   "Rtvk9f": "Discord Sounds",
   "Tj5Nws": "Soundmoji is currently only supported on Desktop.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hey there"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bubble",
-  "s5Qo8P": "Bloop",
-  "4iA55u": "Wumpus’s Favourite",
-  "p3Hg5e": "Discord Default",
-  "1kbe6e": "Ducky",
-  "4TOv0t": "Quack",
-  "fMUEj4": "Lo-Fi",
-  "aEsrnp": "Twinkle",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Power up!",
   "Z5OQNj": "❄️ Winter",
   "sWmtIy": "Mute",
   "NHJxcn": "Unmute",

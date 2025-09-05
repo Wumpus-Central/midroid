@@ -511,6 +511,7 @@
   "BbESsr": "Geavanceerde stemactiviteit",
   "qyGmGh": "Inactiviteit-instellingen",
   "gUiIGR": "Leeftijd geverifieerd",
+  "susqq6": "Bedankt voor het verifiëren van je leeftijd. Hiermee kunnen we Discord veilig houden.",
   "EcJBEB": [
     "Om onze gebruikers veilig te houden, moeten we je leeftijd verifiëren. We vragen je dit slechts één keer. ",
     [
@@ -573,22 +574,6 @@
     ]
   ],
   "E4Cd5O": "Dit kanaal bevat volwassen, leeftijdsgebonden content. Wil je verdergaan?",
-  "6ejLER": [
-    "Voor je deze leeftijdsgebonden server kunt bekijken, moeten we je leeftijd verifiëren. We vragen je dit slechts één keer. ",
-    [
-      8,
-      "$link",
-      [
-        "Waarom moet ik mijn geboortedatum opgeven?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Deze server bevat gevoelige, leeftijdsgebonden inhoud. Wil je verdergaan?",
   "6++3cX": [
     "Je moet de wettelijk vereiste leeftijd hebben bereikt om leeftijdsgebonden servers te bekijken. Meer informatie over ons ",
@@ -6467,26 +6452,6 @@
     ]
   ],
   "9T6N5+": "Je kunt geen berichten verzenden naar een gebruiker die je hebt geblokkeerd.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " heeft de pb-achtergrond veranderd. Deze functie bevindt zich nog in de bètafase en werkt alleen in de desktopversie. ",
-    [
-      8,
-      "$link",
-      [
-        "Meer informatie."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Boven ",
     [
@@ -33636,26 +33601,6 @@
   "MDOXJS": "Hoger serverboostniveau vereist",
   "Rtvk9f": "Discord-geluiden",
   "Tj5Nws": "Soundmoji worden momenteel alleen ondersteund door de desktopversie.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hallootjes"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bubbel",
-  "s5Qo8P": "Blub",
-  "4iA55u": "Favoriet van Wumpus",
-  "p3Hg5e": "Discord (standaard)",
-  "1kbe6e": "Eendje",
-  "4TOv0t": "Kwaak",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Twinkel",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Power up!",
   "Z5OQNj": "❄️ Winter",
   "sWmtIy": "Dempen",
   "NHJxcn": "Dempen opheffen",

@@ -525,6 +525,7 @@
   "BbESsr": "Avancerad röstaktivering",
   "qyGmGh": "Inaktivitetsinställningar",
   "gUiIGR": "Ålder verifierad",
+  "susqq6": "Tack för att du verifierar din ålder. Detta hjälper oss hålla Discord säkert.",
   "EcJBEB": [
     "För att våra användare ska vara trygga måste vi verifiera din ålder. Vi kommer bara fråga dig det här en gång. ",
     [
@@ -587,22 +588,6 @@
     ]
   ],
   "E4Cd5O": "Den här kanalen har innehåll som är märkt åldersbegränsat. Vill du fortsätta?",
-  "6ejLER": [
-    "Innan du kan se denna åldersbegränsade server måste vi verifiera din ålder. Vi kommer bara att fråga dig det här en gång. ",
-    [
-      8,
-      "$link",
-      [
-        "Varför måste jag ange min födelsedag?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Den här servern innehåller känsligt innehåll som är markerat som åldersbegränsat. Vill du fortsätta?",
   "6++3cX": [
     "Du måste vara myndig för att visa åldersbegränsade servrar. Läs mer om vår ",
@@ -6460,26 +6445,6 @@
     ]
   ],
   "9T6N5+": "Du kan inte skicka meddelanden till en användare du har blockerat.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " ändrade DM-bakgrunden. Den här funktionen är för närvarande i beta och endast synlig på datorer. ",
-    [
-      8,
-      "$link",
-      [
-        "Läs mer."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Ovanför ",
     [
@@ -33594,26 +33559,6 @@
   "MDOXJS": "Kräver högre boostnivå för servern",
   "Rtvk9f": "Discordljud",
   "Tj5Nws": "Ljudemojier stöds för närvarande endast på dator.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hallå där"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bubbla",
-  "s5Qo8P": "Plopp",
-  "4iA55u": "Wumpus favorit",
-  "p3Hg5e": "Discord-standard",
-  "1kbe6e": "Ducky",
-  "4TOv0t": "Kvack",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Twinkle",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Power up!",
   "Z5OQNj": "❄️ Vinter",
   "sWmtIy": "Tysta",
   "NHJxcn": "Sluta tysta",

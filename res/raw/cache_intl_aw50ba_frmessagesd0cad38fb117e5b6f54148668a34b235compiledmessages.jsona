@@ -528,6 +528,7 @@
   "BbESsr": "Détection de la voix avancée",
   "qyGmGh": "Paramètres d'inactivité",
   "gUiIGR": "Âge vérifié",
+  "susqq6": "Merci de vérifier ton âge. Cela nous aide à faire de Discord un endroit sûr.",
   "EcJBEB": [
     "Pour que nos utilisateurs soient en sécurité, nous devons vérifier ton âge. Nous ne le demanderons que cette fois-ci. ",
     [
@@ -590,22 +591,6 @@
     ]
   ],
   "E4Cd5O": "Ce salon contient du contenu mature marqué comme étant soumis à une limite d'âge. Veux-tu continuer ?",
-  "6ejLER": [
-    "Avant de pouvoir accéder à ce serveur soumis à une limite d'âge, nous devons vérifier ton âge. Nous ne le demanderons que cette fois-ci. ",
-    [
-      8,
-      "$link",
-      [
-        "Pourquoi dois-je renseigner ma date de naissance ?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Ce serveur inclut du contenu sensible marqué comme étant soumis à une limite d'âge. Veux-tu continuer ?",
   "6++3cX": [
     "Tu dois avoir dépassé l'âge légal pour accéder aux serveurs soumis à une limite d'âge sur Discord. ",
@@ -6479,26 +6464,6 @@
     ]
   ],
   "9T6N5+": "Tu ne peux pas envoyer de message à un utilisateur que tu as bloqué.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " a changé le fond d'écran de MP. Cette fonctionnalité est actuellement en bêta et uniquement visible sur l'application de bureau. ",
-    [
-      8,
-      "$link",
-      [
-        "En savoir plus."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Au-dessus de ",
     [
@@ -33713,26 +33678,6 @@
   "MDOXJS": "Nécessite un niveau de boost de serveur supérieur",
   "Rtvk9f": "Les sons Discord",
   "Tj5Nws": "Soundmoji n'est actuellement pris en charge que sur l'application de bureau.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "salut"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bulle",
-  "s5Qo8P": "Blop",
-  "4iA55u": "Le préféré de Wumpus",
-  "p3Hg5e": "Discord par défaut",
-  "1kbe6e": "Petit canard",
-  "4TOv0t": "Coin coin",
-  "fMUEj4": "Lo-fi",
-  "aEsrnp": "Serein",
-  "zKG+ur": "Rétro",
-  "Rrwrnp": "Power-up !",
   "Z5OQNj": "❄️ Hiver",
   "sWmtIy": "Rendre muet",
   "NHJxcn": "Rétablir la voix",

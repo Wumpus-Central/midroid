@@ -523,6 +523,7 @@
   "BbESsr": "Išplėstinė Balso Veikla",
   "qyGmGh": "Neaktyvūs nustatymai",
   "gUiIGR": "Amžius patvirtintas",
+  "susqq6": "Dėkojame, kad patvirtinai amžių. Tai padeda išlaikyti Discord saugų.",
   "EcJBEB": [
     "Kad apsaugotume savo naudotojus, turime patvirtinti tavo amžių. To prašysime tik šį kartą. ",
     [
@@ -585,22 +586,6 @@
     ]
   ],
   "E4Cd5O": "Šiame kanale pateikiamas suaugusiesiems skirtas turinys, pažymėtas kaip ribojamas pagal amžių. Nori tęsti?",
-  "6ejLER": [
-    "Jei nori peržiūrėti šį pagal amžių ribojamą serverį, reikia patvirtinti tavo amžių. To prašysime tik šį vienintelį kartą. ",
-    [
-      8,
-      "$link",
-      [
-        "Kodėl turiu pateikti savo gimimo datą?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Šiame serveryje pateikiamas jautrus turinys, pažymėtas kaip ribojamas pagal amžių. Nori tęsti?",
   "6++3cX": [
     "Jei nori peržiūrėti pagal amžių ribojamus serverius, turi būti pilnametis (-ė). Sužinok daugiau apie mūsų ",
@@ -6669,26 +6654,6 @@
     ]
   ],
   "9T6N5+": "Tu negali siųsti pranešimų užblokuotam naudotojui.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " pakeitė AŽ foną. Ši funkcija šiuo metu prieinama Beta versijoje ir matoma tik kompiuterio programėlėje. ",
-    [
-      8,
-      "$link",
-      [
-        "Sužinoti daugiau."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Virš ",
     [
@@ -34755,26 +34720,6 @@
   "MDOXJS": "Reikia aukštesnio serverio stiprinimo lygio",
   "Rtvk9f": "Discord garsai",
   "Tj5Nws": "Kol kas garsiniai jaustukai prieinami tik kompiuterio programėlėje.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "labukas"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Burbulas",
-  "s5Qo8P": "Pliūkšt",
-  "4iA55u": "Wumpus mėgstamiausias",
-  "p3Hg5e": "Discord numatytasis",
-  "1kbe6e": "Antytė",
-  "4TOv0t": "Kre",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Žybsi",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Daugiau galios!",
   "Z5OQNj": "❄️ žiema",
   "sWmtIy": "Nutildyti",
   "NHJxcn": "Atšaukti nutildymą",

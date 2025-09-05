@@ -518,6 +518,7 @@
   "BbESsr": "Napredna glasovna aktivnost",
   "qyGmGh": "Postavke za neaktivnost",
   "gUiIGR": "Starost potvrđena",
+  "susqq6": "Hvala na potvrdi tvoje dobi. Time na pomažeš da očuvamo Discordovu sigurnost.",
   "EcJBEB": [
     "Kako bismo osigurali sigurnost svojih korisnika, treba nam potvrda tvoje dobi. ",
     [
@@ -584,22 +585,6 @@
     ]
   ],
   "E4Cd5O": "Ovaj kanal ima sadržaje koji su označeni kao dobno ograničeni. Želiš li nastaviti?",
-  "6ejLER": [
-    "Prije nego ti omogućimo pristup serveru koji ima dobno ograničenje, treba nam potvrda tvoje dobi. Tražit ćemo je samo jednom. ",
-    [
-      8,
-      "$link",
-      [
-        "Zašto trebam dati svoj datum rođenja?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "Na ovom je serveru osjetljivi sadržaj koji je označen kao dobno ograničen. Želiš li nastaviti?",
   "6++3cX": [
     "Moraš biti u zakonom propisanoj dobi da možeš vidjeti servere s dobnim ograničenjem. Više o našem ",
@@ -6598,27 +6583,6 @@
     ]
   ],
   "9T6N5+": "Ne možeš slati poruke korisniku kojeg si blokirao/la.",
-  "+fBFYG": [
-    "Korisnik ",
-    [
-      1,
-      "username"
-    ],
-    " promijenio je pozadinu direktnih poruka. Ta je značajka trenutačno u beta fazi i vidljiva je samo na desktopu. ",
-    [
-      8,
-      "$link",
-      [
-        "Doznaj više."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Iznad predmeta ",
     [
@@ -34721,26 +34685,6 @@
   "MDOXJS": "Za ovo je potrebna viša razina server boosta",
   "Rtvk9f": "Zvukovi Discorda",
   "Tj5Nws": "Zvučni emojiji trenutačno su podržani samo na desktopu.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hej, ti"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Mjehurić",
-  "s5Qo8P": "Blup",
-  "4iA55u": "Wumpusovi omiljeni",
-  "p3Hg5e": "Zadano za Discord",
-  "1kbe6e": "Patkica",
-  "4TOv0t": "Kvak",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Svjetluc",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Viša razina!",
   "Z5OQNj": "❄️ Zima",
   "sWmtIy": "Isključi mikrofon",
   "NHJxcn": "Ukini utišavanje",
