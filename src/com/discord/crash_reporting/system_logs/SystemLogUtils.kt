@@ -59,7 +59,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         val var7: java.util.Iterator = var1.iterator();
+         var var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -104,17 +104,18 @@ internal object SystemLogUtils {
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               var7 = var21.iterator();
 
+               val var8: Any;
                do {
-                  if (!var8.hasNext()) {
+                  if (!var7.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var23 = var8.next();
-               } while (var13.contains((java.lang.String)var23));
+                  var8 = var7.next();
+               } while (var13.contains((java.lang.String)var8));
 
-               var14 = var23 as java.lang.String;
+               var14 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var14 = "Unknown";
             }
@@ -221,7 +222,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var32 = var30.listIterator(var30.size());
+                           var31 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -235,7 +236,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var32.hasPrevious()) {
+                              if (!var31.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -250,7 +251,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var31 = var32.previous();
+                              var8 = (java.lang.String)var31.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -263,7 +264,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if ((var31 as java.lang.String).length() <= 0) {
+                              if (var8.length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -278,7 +279,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var31 as java.lang.String;
+                              var7 = var8;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -425,8 +426,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var4: Long = System.nanoTime();
-      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var2: Long = System.nanoTime();
+      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -434,7 +435,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var4 + var2) {
+            if (System.nanoTime() >= var2 + var4) {
                return;
             }
          }
@@ -554,27 +555,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
-         val var5: java.lang.String = this.groupBy;
-         val var7: java.lang.String = this.origin;
-         val var2: java.lang.String = this.groupHash;
+         val var2: java.lang.String = this.text;
+         val var6: java.lang.String = this.cause;
+         val var3: java.lang.String = this.groupBy;
+         val var4: java.lang.String = this.origin;
+         val var5: java.lang.String = this.groupHash;
          val var1: java.lang.String = this.textHash;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Tombstone(text=");
-         var3.append(var6);
-         var3.append(", cause=");
-         var3.append(var4);
-         var3.append(", groupBy=");
-         var3.append(var5);
-         var3.append(", origin=");
-         var3.append(var7);
-         var3.append(", groupHash=");
-         var3.append(var2);
-         var3.append(", textHash=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Tombstone(text=");
+         var7.append(var2);
+         var7.append(", cause=");
+         var7.append(var6);
+         var7.append(", groupBy=");
+         var7.append(var3);
+         var7.append(", origin=");
+         var7.append(var4);
+         var7.append(", groupHash=");
+         var7.append(var5);
+         var7.append(", textHash=");
+         var7.append(var1);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

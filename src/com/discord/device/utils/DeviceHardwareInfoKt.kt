@@ -32,96 +32,96 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 4
-   // 08: aload 4
-   // 0a: ldc "/proc/cpuinfo"
-   // 0c: invokespecial java/io/File.<init> (Ljava/lang/String;)V
-   // 0f: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-   // 12: astore 2
-   // 13: new java/io/InputStreamReader
-   // 16: astore 0
-   // 17: new java/io/FileInputStream
-   // 1a: astore 3
-   // 1b: aload 3
-   // 1c: aload 4
-   // 1e: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
-   // 21: aload 0
-   // 22: aload 3
-   // 23: aload 2
-   // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
-   // 27: new java/io/BufferedReader
-   // 2a: astore 2
-   // 2b: aload 2
-   // 2c: aload 0
-   // 2d: sipush 8192
-   // 30: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
-   // 33: aload 2
-   // 34: invokestatic L9/p.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
-   // 37: invokeinterface kotlin/sequences/Sequence.iterator ()Ljava/util/Iterator; 1
-   // 3c: astore 3
-   // 3d: aload 3
-   // 3e: invokeinterface java/util/Iterator.hasNext ()Z 1
-   // 43: ifeq 63
-   // 46: aload 3
-   // 47: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-   // 4c: astore 0
-   // 4d: aload 0
-   // 4e: checkcast java/lang/String
-   // 51: ldc "Hardware"
-   // 53: bipush 0
-   // 54: bipush 2
-   // 55: aconst_null
-   // 56: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
-   // 59: ifeq 3d
-   // 5c: goto 65
-   // 5f: astore 0
-   // 60: goto 9e
-   // 63: aconst_null
-   // 64: astore 0
-   // 65: aload 0
-   // 66: checkcast java/lang/String
-   // 69: astore 0
-   // 6a: aload 0
-   // 6b: ifnull 93
-   // 6e: aload 0
-   // 6f: bipush 1
-   // 70: anewarray 95
-   // 73: dup
-   // 74: bipush 0
-   // 75: ldc ":"
-   // 77: aastore
+   // 06: astore 2
+   // 07: aload 2
+   // 08: ldc "/proc/cpuinfo"
+   // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 0d: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
+   // 10: astore 4
+   // 12: new java/io/InputStreamReader
+   // 15: astore 0
+   // 16: new java/io/FileInputStream
+   // 19: astore 3
+   // 1a: aload 3
+   // 1b: aload 2
+   // 1c: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 1f: aload 0
+   // 20: aload 3
+   // 21: aload 4
+   // 23: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
+   // 26: new java/io/BufferedReader
+   // 29: astore 2
+   // 2a: aload 2
+   // 2b: aload 0
+   // 2c: sipush 8192
+   // 2f: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
+   // 32: aload 2
+   // 33: invokestatic L9/p.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
+   // 36: invokeinterface kotlin/sequences/Sequence.iterator ()Ljava/util/Iterator; 1
+   // 3b: astore 3
+   // 3c: aload 3
+   // 3d: invokeinterface java/util/Iterator.hasNext ()Z 1
+   // 42: ifeq 62
+   // 45: aload 3
+   // 46: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+   // 4b: astore 0
+   // 4c: aload 0
+   // 4d: checkcast java/lang/String
+   // 50: ldc "Hardware"
+   // 52: bipush 0
+   // 53: bipush 2
+   // 54: aconst_null
+   // 55: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+   // 58: ifeq 3c
+   // 5b: goto 64
+   // 5e: astore 0
+   // 5f: goto 9d
+   // 62: aconst_null
+   // 63: astore 0
+   // 64: aload 0
+   // 65: checkcast java/lang/String
+   // 68: astore 0
+   // 69: aload 0
+   // 6a: ifnull 92
+   // 6d: aload 0
+   // 6e: bipush 1
+   // 6f: anewarray 95
+   // 72: dup
+   // 73: bipush 0
+   // 74: ldc ":"
+   // 76: aastore
+   // 77: bipush 0
    // 78: bipush 0
-   // 79: bipush 0
-   // 7a: bipush 6
-   // 7c: aconst_null
-   // 7d: invokestatic kotlin/text/StringsKt.split$default (Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;
-   // 80: bipush 1
-   // 81: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
-   // 86: checkcast java/lang/String
-   // 89: invokestatic kotlin/text/StringsKt.Y0 (Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
-   // 8c: invokevirtual java/lang/Object.toString ()Ljava/lang/String;
-   // 8f: astore 0
-   // 90: goto 96
-   // 93: ldc ""
-   // 95: astore 0
-   // 96: aload 2
-   // 97: aconst_null
-   // 98: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-   // 9b: goto a8
-   // 9e: aload 0
-   // 9f: athrow
-   // a0: astore 3
-   // a1: aload 2
-   // a2: aload 0
-   // a3: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-   // a6: aload 3
-   // a7: athrow
-   // a8: aload 0
-   // a9: areturn
-   // aa: astore 0
-   // ab: aload 1
-   // ac: astore 0
-   // ad: goto a8
+   // 79: bipush 6
+   // 7b: aconst_null
+   // 7c: invokestatic kotlin/text/StringsKt.split$default (Ljava/lang/CharSequence;[Ljava/lang/String;ZIILjava/lang/Object;)Ljava/util/List;
+   // 7f: bipush 1
+   // 80: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
+   // 85: checkcast java/lang/String
+   // 88: invokestatic kotlin/text/StringsKt.Y0 (Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
+   // 8b: invokevirtual java/lang/Object.toString ()Ljava/lang/String;
+   // 8e: astore 0
+   // 8f: goto 95
+   // 92: ldc ""
+   // 94: astore 0
+   // 95: aload 2
+   // 96: aconst_null
+   // 97: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 9a: goto a7
+   // 9d: aload 0
+   // 9e: athrow
+   // 9f: astore 3
+   // a0: aload 2
+   // a1: aload 0
+   // a2: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // a5: aload 3
+   // a6: athrow
+   // a7: aload 0
+   // a8: areturn
+   // a9: astore 0
+   // aa: aload 1
+   // ab: astore 0
+   // ac: goto a7
 }
 
 internal fun maxCpuFreq(): String {
@@ -186,7 +186,7 @@ internal fun maxCpuFreq(): String {
    // 05a: lload 4
    // 05c: lstore 8
    // 05e: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-   // 061: astore 14
+   // 061: astore 15
    // 063: lload 4
    // 065: lstore 8
    // 067: new java/io/InputStreamReader
@@ -194,17 +194,17 @@ internal fun maxCpuFreq(): String {
    // 06c: lload 4
    // 06e: lstore 8
    // 070: new java/io/FileInputStream
-   // 073: astore 15
+   // 073: astore 14
    // 075: lload 4
    // 077: lstore 8
-   // 079: aload 15
+   // 079: aload 14
    // 07b: aload 12
    // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 080: lload 4
    // 082: lstore 8
    // 084: aload 13
-   // 086: aload 15
-   // 088: aload 14
+   // 086: aload 14
+   // 088: aload 15
    // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 08d: lload 4
    // 08f: lstore 8
@@ -316,11 +316,11 @@ internal fun maxCpuFreq(): String {
 }
 
 internal fun ramSize(context: Context): String {
-   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
-   val var3: ActivityManager = var4 as ActivityManager;
-   var4 = new MemoryInfo();
-   var3.getMemoryInfo(var4);
-   val var1: Double = var4.totalMem / 1.0737418E9F;
+   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
+   var4 = var4;
+   val var3: MemoryInfo = new MemoryInfo();
+   var4.getMemoryInfo(var3);
+   val var1: Double = var3.totalMem / 1.0737418E9F;
    val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    return var7;
@@ -336,13 +336,13 @@ internal fun socName(): String {
          }
       }
 
-      val var2: java.lang.String = a.a();
-      val var1: java.lang.String = b.a();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var2);
-      var4.append("_");
-      var4.append(var1);
-      return var4.toString();
+      val var1: java.lang.String = a.a();
+      var0 = b.a();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var1);
+      var2.append("_");
+      var2.append(var0);
+      return var2.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

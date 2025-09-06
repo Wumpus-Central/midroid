@@ -276,13 +276,13 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
 
    public override fun hashCode(): Int {
       val var17: Int = ChannelId.hashCode-impl(this.parentChannelId);
-      val var12: Int = ChannelId.hashCode-impl(this.threadId);
-      val var14: Int = MessageId.hashCode-impl(this.messageId);
-      val var16: Int = GuildId.hashCode-impl(this.guildId);
-      val var15: Int = this.title.hashCode();
-      val var18: Int = this.ctaText.hashCode();
-      val var13: Int = Integer.hashCode(this.ctaButtonColor);
-      val var19: Int = this.footer.hashCode();
+      val var15: Int = ChannelId.hashCode-impl(this.threadId);
+      val var19: Int = MessageId.hashCode-impl(this.messageId);
+      val var13: Int = GuildId.hashCode-impl(this.guildId);
+      val var12: Int = this.title.hashCode();
+      val var16: Int = this.ctaText.hashCode();
+      val var14: Int = Integer.hashCode(this.ctaButtonColor);
+      val var18: Int = this.footer.hashCode();
       var var11: Int = 0;
       val var1: Int;
       if (this.subtitle == null) {
@@ -379,25 +379,25 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                                                                                                                                                                (
                                                                                                                                                                         var17
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var12
+                                                                                                                                                                           + var15
                                                                                                                                                                      )
                                                                                                                                                                      * 31
-                                                                                                                                                                  + var14
+                                                                                                                                                                  + var19
                                                                                                                                                             )
                                                                                                                                                             * 31
-                                                                                                                                                         + var16
+                                                                                                                                                         + var13
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var15
+                                                                                                                                                + var12
                                                                                                                                           )
                                                                                                                                           * 31
-                                                                                                                                       + var18
+                                                                                                                                       + var16
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var13
+                                                                                                                              + var14
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var19
+                                                                                                                     + var18
                                                                                                                )
                                                                                                                * 31
                                                                                                             + var1
@@ -437,69 +437,69 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var11: java.lang.String = ChannelId.toString-impl(this.parentChannelId);
-      val var21: java.lang.String = ChannelId.toString-impl(this.threadId);
-      val var12: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var16: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var15: java.lang.String = this.title;
-      val var7: java.lang.String = this.ctaText;
+      val var14: java.lang.String = ChannelId.toString-impl(this.parentChannelId);
+      val var18: java.lang.String = ChannelId.toString-impl(this.threadId);
+      val var19: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var5: java.lang.String = this.title;
+      val var4: java.lang.String = this.ctaText;
       val var1: Int = this.ctaButtonColor;
-      val var8: StructurableText = this.footer;
-      val var18: java.lang.String = this.subtitle;
-      val var19: java.lang.String = this.coverImage;
-      val var4: java.lang.String = this.blurredCoverImage;
-      val var5: java.lang.String = this.coverImageOverlayText;
-      val var6: java.lang.String = this.backgroundImage;
-      val var14: java.lang.String = this.spoiler;
-      val var20: java.lang.String = this.obscure;
-      val var9: java.lang.Boolean = this.obscureAwaitingScan;
+      val var16: StructurableText = this.footer;
+      val var6: java.lang.String = this.subtitle;
+      val var11: java.lang.String = this.coverImage;
+      val var15: java.lang.String = this.blurredCoverImage;
+      val var13: java.lang.String = this.coverImageOverlayText;
+      val var3: java.lang.String = this.backgroundImage;
+      val var20: java.lang.String = this.spoiler;
+      val var7: java.lang.String = this.obscure;
+      val var10: java.lang.Boolean = this.obscureAwaitingScan;
       val var2: Boolean = this.shouldSpoiler;
-      val var13: java.lang.Boolean = this.obscureHideControls;
-      val var17: java.lang.Boolean = this.obscureIsOpaque;
-      val var10: java.lang.Boolean = this.verifyAge;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PostPreviewEmbed(parentChannelId=");
-      var3.append(var11);
-      var3.append(", threadId=");
-      var3.append(var21);
-      var3.append(", messageId=");
-      var3.append(var12);
-      var3.append(", guildId=");
-      var3.append(var16);
-      var3.append(", title=");
-      var3.append(var15);
-      var3.append(", ctaText=");
-      var3.append(var7);
-      var3.append(", ctaButtonColor=");
-      var3.append(var1);
-      var3.append(", footer=");
-      var3.append(var8);
-      var3.append(", subtitle=");
-      var3.append(var18);
-      var3.append(", coverImage=");
-      var3.append(var19);
-      var3.append(", blurredCoverImage=");
-      var3.append(var4);
-      var3.append(", coverImageOverlayText=");
-      var3.append(var5);
-      var3.append(", backgroundImage=");
-      var3.append(var6);
-      var3.append(", spoiler=");
-      var3.append(var14);
-      var3.append(", obscure=");
-      var3.append(var20);
-      var3.append(", obscureAwaitingScan=");
-      var3.append(var9);
-      var3.append(", shouldSpoiler=");
-      var3.append(var2);
-      var3.append(", obscureHideControls=");
-      var3.append(var13);
-      var3.append(", obscureIsOpaque=");
-      var3.append(var17);
-      var3.append(", verifyAge=");
-      var3.append(var10);
-      var3.append(")");
-      return var3.toString();
+      val var12: java.lang.Boolean = this.obscureHideControls;
+      val var21: java.lang.Boolean = this.obscureIsOpaque;
+      val var17: java.lang.Boolean = this.verifyAge;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("PostPreviewEmbed(parentChannelId=");
+      var9.append(var14);
+      var9.append(", threadId=");
+      var9.append(var18);
+      var9.append(", messageId=");
+      var9.append(var19);
+      var9.append(", guildId=");
+      var9.append(var8);
+      var9.append(", title=");
+      var9.append(var5);
+      var9.append(", ctaText=");
+      var9.append(var4);
+      var9.append(", ctaButtonColor=");
+      var9.append(var1);
+      var9.append(", footer=");
+      var9.append(var16);
+      var9.append(", subtitle=");
+      var9.append(var6);
+      var9.append(", coverImage=");
+      var9.append(var11);
+      var9.append(", blurredCoverImage=");
+      var9.append(var15);
+      var9.append(", coverImageOverlayText=");
+      var9.append(var13);
+      var9.append(", backgroundImage=");
+      var9.append(var3);
+      var9.append(", spoiler=");
+      var9.append(var20);
+      var9.append(", obscure=");
+      var9.append(var7);
+      var9.append(", obscureAwaitingScan=");
+      var9.append(var10);
+      var9.append(", shouldSpoiler=");
+      var9.append(var2);
+      var9.append(", obscureHideControls=");
+      var9.append(var12);
+      var9.append(", obscureIsOpaque=");
+      var9.append(var21);
+      var9.append(", verifyAge=");
+      var9.append(var17);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

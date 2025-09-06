@@ -175,16 +175,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       I18nUtilsKt.i18nContentDescription$default(var10, I18nMessage.PLAY_FULL_VIDEO, null, 2, null);
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
-      val var12: GradientDrawable = new GradientDrawable();
-      var12.setShape(0);
-      var12.setStroke(
-         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var5: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
+      val var13: GradientDrawable = new GradientDrawable();
+      var13.setShape(0);
+      var13.setStroke(
+         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var12);
+      var5.z(var13);
    }
 
    @JvmStatic
@@ -246,10 +246,10 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var7: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var11: Context = this.getContext();
-            val var12: java.lang.Double = var1.getPortal();
-            var10 = var7.acquire(var11, var12, this.playerSettings);
+            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: Context = this.getContext();
+            val var7: java.lang.Double = var1.getPortal();
+            var10 = var11.acquire(var12, var7, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));

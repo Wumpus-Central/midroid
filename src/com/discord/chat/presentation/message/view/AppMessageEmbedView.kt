@@ -83,13 +83,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var3: Int = var1.get("r") as Int;
-      val var2: Int = var1.get("g") as Int;
+      val var2: Int = var1.get("r") as Int;
+      val var3: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var3 == null || var2 == null || var4 == null) {
+      if (var2 == null || var3 == null || var4 == null) {
          return null;
       } else {
-         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
+         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
       }
    }
 
@@ -221,9 +221,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var14.setText(var40);
+         val var40: TextView = this.view.title;
+         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var40.setText(var53);
       } else {
          val var41: TextView = this.view.title;
          var41.setVisibility(8);
@@ -284,18 +284,18 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             val var65: Context = this.getContext();
-            var var9: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
+            var var10: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
             val var66: Context = this.getContext();
             val var11: Int = ColorUtilsKt.getColorCompat(var66, R.color.black_500);
-            val var10: Int;
+            val var9: Int;
             if (var31) {
-               var10 = var9;
+               var9 = var10;
             } else {
-               var10 = y.c.k(var9, 30);
+               var9 = y.c.k(var10, 30);
             }
 
             if (var31) {
-               var9 = var11;
+               var10 = var11;
             }
 
             val var67: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(0, -2);
@@ -315,8 +315,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
 
             var71.setAlpha(var7);
             var71.setText(var61);
-            var71.setBackgroundColor(var10);
-            var71.setTextColor(var9);
+            var71.setBackgroundColor(var9);
+            var71.setTextColor(var10);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));

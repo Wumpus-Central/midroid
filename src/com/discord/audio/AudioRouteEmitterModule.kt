@@ -26,9 +26,9 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
             val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var3.emitModuleEvent(var4, var2);
+            val var4: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var4.emitModuleEvent(var3, var2);
          }
 
          @Override

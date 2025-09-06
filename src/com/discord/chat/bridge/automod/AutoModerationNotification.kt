@@ -157,10 +157,10 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.header.hashCode();
-      val var9: Int = Integer.hashCode(this.headerColor);
-      val var11: Int = this.headerIconURL.hashCode();
-      val var12: Int = Integer.hashCode(this.headerIconColor);
+      val var9: Int = this.header.hashCode();
+      val var11: Int = Integer.hashCode(this.headerColor);
+      val var12: Int = this.headerIconURL.hashCode();
+      val var10: Int = Integer.hashCode(this.headerIconColor);
       var var8: Int = 0;
       val var1: Int;
       if (this.subtitleLeft == null) {
@@ -218,7 +218,7 @@ public data class AutoModerationNotification(header: String,
 
       return (
                (
-                        (((((((((var10 * 31 + var9) * 31 + var11) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
+                        (((((((((var9 * 31 + var11) * 31 + var12) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
                            + var6
                      )
@@ -230,48 +230,48 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun toString(): String {
-      val var14: java.lang.String = this.header;
-      val var1: Int = this.headerColor;
-      val var10: java.lang.String = this.headerIconURL;
-      val var2: Int = this.headerIconColor;
-      val var12: java.lang.String = this.subtitleLeft;
-      val var5: java.lang.String = this.subtitleRight;
+      val var7: java.lang.String = this.header;
+      val var2: Int = this.headerColor;
+      val var6: java.lang.String = this.headerIconURL;
+      val var1: Int = this.headerIconColor;
+      val var9: java.lang.String = this.subtitleLeft;
+      val var10: java.lang.String = this.subtitleRight;
       val var4: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var9: java.lang.String = this.enabledByUsername;
-      val var7: java.lang.String = this.enabledByAvatarURL;
+      val var5: java.lang.String = this.enabledByUsername;
+      val var14: java.lang.String = this.enabledByAvatarURL;
       val var11: Int = this.enabledByColor;
-      val var13: java.lang.String = this.severity;
-      val var8: java.lang.String = this.startTime;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("AutoModerationNotification(header=");
-      var6.append(var14);
-      var6.append(", headerColor=");
-      var6.append(var1);
-      var6.append(", headerIconURL=");
-      var6.append(var10);
-      var6.append(", headerIconColor=");
-      var6.append(var2);
-      var6.append(", subtitleLeft=");
-      var6.append(var12);
-      var6.append(", subtitleRight=");
-      var6.append(var5);
-      var6.append(", body=");
-      var6.append(var4);
-      var6.append(", shouldShowActions=");
-      var6.append(var3);
-      var6.append(", enabledByUsername=");
-      var6.append(var9);
-      var6.append(", enabledByAvatarURL=");
-      var6.append(var7);
-      var6.append(", enabledByColor=");
-      var6.append(var11);
-      var6.append(", severity=");
-      var6.append(var13);
-      var6.append(", startTime=");
-      var6.append(var8);
-      var6.append(")");
-      return var6.toString();
+      val var8: java.lang.String = this.severity;
+      val var12: java.lang.String = this.startTime;
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("AutoModerationNotification(header=");
+      var13.append(var7);
+      var13.append(", headerColor=");
+      var13.append(var2);
+      var13.append(", headerIconURL=");
+      var13.append(var6);
+      var13.append(", headerIconColor=");
+      var13.append(var1);
+      var13.append(", subtitleLeft=");
+      var13.append(var9);
+      var13.append(", subtitleRight=");
+      var13.append(var10);
+      var13.append(", body=");
+      var13.append(var4);
+      var13.append(", shouldShowActions=");
+      var13.append(var3);
+      var13.append(", enabledByUsername=");
+      var13.append(var5);
+      var13.append(", enabledByAvatarURL=");
+      var13.append(var14);
+      var13.append(", enabledByColor=");
+      var13.append(var11);
+      var13.append(", severity=");
+      var13.append(var8);
+      var13.append(", startTime=");
+      var13.append(var12);
+      var13.append(")");
+      return var13.toString();
    }
 
    public companion object {

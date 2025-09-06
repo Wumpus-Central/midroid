@@ -47,9 +47,9 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
 
-      for (File var10 : var9) {
-         val var12: java.lang.String = var10.getName();
-         var7.add(new Replay(var12, var10.lastModified()));
+      for (File var4 : var9) {
+         val var12: java.lang.String = var4.getName();
+         var7.add(new Replay(var12, var4.lastModified()));
       }
 
       return var7;

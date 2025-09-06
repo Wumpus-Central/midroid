@@ -6,6 +6,6 @@ import kotlin.jvm.functions.Function1;
 // $VF: synthetic class
 public final class J implements Function1 {
    public final Object invoke(Object var1) {
-      return TextDisplayComponentViewManager.b((SoundmojiContentNode)var1);
+      return TextDisplayComponentViewManager.l((SoundmojiContentNode)var1);
    }
 }

@@ -92,25 +92,25 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          }
       }
 
-      val var12: java.util.Iterator = var9.iterator();
+      val var16: java.util.Iterator = var9.iterator();
 
       label75:
       while (true) {
          var var4: Boolean;
-         for (var4 = false; var12.hasNext(); var4 = true) {
-            val var16: Row = var12.next() as Row;
-            this.insert(var6, var16);
-            var5.add(new ListOperation.Insert(var16.getIndex()));
-            if (!var4 && var16.getIndex() != 0) {
+         for (var4 = false; var16.hasNext(); var4 = true) {
+            val var12: Row = var16.next() as Row;
+            this.insert(var6, var12);
+            var5.add(new ListOperation.Insert(var12.getIndex()));
+            if (!var4 && var12.getIndex() != 0) {
                continue label75;
             }
          }
 
          val var13: ArrayList = new ArrayList();
 
-         for (Object var17 : var1) {
-            if ((var17 as Row).getChangeType() === ChangeType.DELETE || (var17 as Row).getChangeType() === ChangeType.UPDATE) {
-               var13.add(var17);
+         for (Object var10 : var1) {
+            if ((var10 as Row).getChangeType() === ChangeType.DELETE || (var10 as Row).getChangeType() === ChangeType.UPDATE) {
+               var13.add(var10);
             }
          }
 
@@ -185,10 +185,10 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                c.b(var1);
             } else {
                c.b(var1);
-               var1 = ChatListManager.access$getUpdatesFlow$p(this.this$0);
-               val var4: ChatListUpdate = this.$update;
+               val var4: MutableSharedFlow = ChatListManager.access$getUpdatesFlow$p(this.this$0);
+               var1 = this.$update;
                this.label = 1;
-               if (var1.emit(var4, this) === var3) {
+               if (var4.emit(var1, this) === var3) {
                   return var3;
                }
             }
@@ -212,8 +212,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          }
 
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
-         val var7: java.lang.String = (var1 as BlockedGroupRow).getText();
-         val var8: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
+         val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
+         val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
          val var3: Int = var11.getColor();
          val var4: Int = var11.getBackgroundColor();
          val var2: Int = var11.getBorderColor();
@@ -243,7 +243,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var7, var8, var3, var4, var2, var5, CollectionsKt.O(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var3, var4, var2, var5, CollectionsKt.O(var14));
       }
 
       return (ChatListItem)var9;
@@ -385,18 +385,18 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       public override fun toString(): String {
-         val var4: java.util.List = this.rows;
+         val var3: java.util.List = this.rows;
          val var1: Boolean = this.didInsertAtBottom;
-         val var3: java.util.List = this.listOperations;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("RowsModificationResult(rows=");
-         var2.append(var4);
-         var2.append(", didInsertAtBottom=");
-         var2.append(var1);
-         var2.append(", listOperations=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.util.List = this.listOperations;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("RowsModificationResult(rows=");
+         var4.append(var3);
+         var4.append(", didInsertAtBottom=");
+         var4.append(var1);
+         var4.append(", listOperations=");
+         var4.append(var2);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

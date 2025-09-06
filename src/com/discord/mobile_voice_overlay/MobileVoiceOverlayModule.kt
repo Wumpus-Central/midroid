@@ -42,9 +42,9 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    }
 
    public override fun enableOverlay(promise: Promise) {
-      val var2: WindowUtils = WindowUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      if (var2.canDrawOverlay(var3)) {
+      val var3: WindowUtils = WindowUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      if (var3.canDrawOverlay(var2)) {
          var1.resolve(java.lang.Boolean.TRUE);
       } else {
          val var4: ActivityEventListener = new ActivityEventListener(this, var1) {

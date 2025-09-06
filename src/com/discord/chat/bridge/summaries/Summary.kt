@@ -136,33 +136,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.id;
-      val var6: java.lang.String = this.topic;
-      val var2: java.lang.String = this.summShort;
-      val var5: java.util.List = this.people;
-      val var3: java.lang.String = MessageId.toString-impl(this.startId);
-      val var9: java.lang.String = MessageId.toString-impl(this.endId);
+      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.topic;
+      val var8: java.lang.String = this.summShort;
+      val var6: java.util.List = this.people;
+      val var9: java.lang.String = MessageId.toString-impl(this.startId);
+      val var7: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Summary(id=");
-      var4.append(var8);
-      var4.append(", topic=");
-      var4.append(var6);
-      var4.append(", summShort=");
-      var4.append(var2);
-      var4.append(", people=");
-      var4.append(var5);
-      var4.append(", startId=");
-      var4.append(var3);
-      var4.append(", endId=");
-      var4.append(var9);
-      var4.append(", count=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Summary(id=");
+      var5.append(var3);
+      var5.append(", topic=");
+      var5.append(var2);
+      var5.append(", summShort=");
+      var5.append(var8);
+      var5.append(", people=");
+      var5.append(var6);
+      var5.append(", startId=");
+      var5.append(var9);
+      var5.append(", endId=");
+      var5.append(var7);
+      var5.append(", count=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -86,17 +86,17 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
 
    public override fun toString(): String {
       val var1: Double = this.rowContentWidth;
-      val var4: Int = this.rowContentPaddingVertical;
-      val var3: Int = this.itemSize;
+      val var3: Int = this.rowContentPaddingVertical;
+      val var4: Int = this.itemSize;
       val var6: java.util.List = this.items;
       val var5: Boolean = this.isSectionNitroLocked;
       val var7: StringBuilder = new StringBuilder();
       var7.append("EmojiPickerRow(rowContentWidth=");
       var7.append(var1);
       var7.append(", rowContentPaddingVertical=");
-      var7.append(var4);
-      var7.append(", itemSize=");
       var7.append(var3);
+      var7.append(", itemSize=");
+      var7.append(var4);
       var7.append(", items=");
       var7.append(var6);
       var7.append(", isSectionNitroLocked=");
@@ -185,17 +185,17 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
 
       public override fun toString(): String {
          val var4: java.lang.String = this.id;
-         val var6: java.lang.String = this.name;
-         val var5: java.lang.String = this.url;
+         val var5: java.lang.String = this.name;
+         val var6: java.lang.String = this.url;
          val var2: Boolean = this.animated;
          val var1: Boolean = this.disabled;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Emoji(id=");
          var3.append(var4);
          var3.append(", name=");
-         var3.append(var6);
-         var3.append(", url=");
          var3.append(var5);
+         var3.append(", url=");
+         var3.append(var6);
          var3.append(", animated=");
          var3.append(var2);
          var3.append(", disabled=");

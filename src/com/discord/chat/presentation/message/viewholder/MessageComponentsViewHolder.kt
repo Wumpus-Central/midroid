@@ -91,9 +91,9 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var12: java.lang.String = MessageId.toString-impl(var15);
-      val var13: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
-      val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var13: java.lang.String = MessageId.toString-impl(var15);
+      val var14: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
+      val var12: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var11.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var11),
          MessageKt.shouldShowLinkDecorations(var11),
@@ -261,6 +261,6 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var12, var13, var14, var35, var28, var31, var32, var9, var10, false, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var14, var12, var35, var28, var31, var32, var9, var10, false, false));
    }
 }

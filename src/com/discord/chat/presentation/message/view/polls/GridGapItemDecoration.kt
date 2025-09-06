@@ -16,13 +16,13 @@ public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.It
 
    public override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
       val var7: Int = var3.getChildAdapterPosition(var2);
-      val var5: Int = this.spanCount;
-      val var6: Int = var7 % this.spanCount;
-      val var8: Int = this.gapPx;
-      var1.left = var6 * this.gapPx / this.spanCount;
-      var1.right = var8 - (var6 + 1) * var8 / var5;
-      if (var7 >= var5) {
-         var1.top = var8;
+      val var8: Int = this.spanCount;
+      val var5: Int = var7 % this.spanCount;
+      val var6: Int = this.gapPx;
+      var1.left = var5 * this.gapPx / this.spanCount;
+      var1.right = var6 - (var5 + 1) * var6 / var8;
+      if (var7 >= var8) {
+         var1.top = var6;
       }
    }
 }

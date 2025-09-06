@@ -117,14 +117,14 @@ public data class BlockedGroupRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.index);
-      val var4: Int = this.changeType.hashCode();
-      val var2: Int = Integer.hashCode(this.color);
-      val var7: Int = Integer.hashCode(this.borderColor);
-      val var6: Int = Integer.hashCode(this.backgroundColor);
-      val var8: Int = this.text.hashCode();
-      val var5: Int = java.lang.Boolean.hashCode(this.revealed);
-      val var9: Int = this.button.hashCode();
+      val var9: Int = Integer.hashCode(this.index);
+      val var3: Int = this.changeType.hashCode();
+      val var8: Int = Integer.hashCode(this.color);
+      val var2: Int = Integer.hashCode(this.borderColor);
+      val var5: Int = Integer.hashCode(this.backgroundColor);
+      val var6: Int = this.text.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.revealed);
+      val var7: Int = this.button.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -132,40 +132,40 @@ public data class BlockedGroupRow(index: Int,
          var1 = this.content.hashCode();
       }
 
-      return (((((((var3 * 31 + var4) * 31 + var2) * 31 + var7) * 31 + var6) * 31 + var8) * 31 + var5) * 31 + var9) * 31 + var1;
+      return (((((((var9 * 31 + var3) * 31 + var8) * 31 + var2) * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var7) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: Int = this.index;
+      val var4: Int = this.index;
       val var9: ChangeType = this.changeType;
-      val var2: Int = this.color;
-      val var3: Int = this.borderColor;
-      val var4: Int = this.backgroundColor;
-      val var6: java.lang.String = this.text;
+      val var3: Int = this.color;
+      val var1: Int = this.borderColor;
+      val var2: Int = this.backgroundColor;
+      val var7: java.lang.String = this.text;
       val var5: Boolean = this.revealed;
       val var10: BlockedGroupButton = this.button;
-      val var7: java.util.List = this.content;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("BlockedGroupRow(index=");
-      var8.append(var1);
-      var8.append(", changeType=");
-      var8.append(var9);
-      var8.append(", color=");
-      var8.append(var2);
-      var8.append(", borderColor=");
-      var8.append(var3);
-      var8.append(", backgroundColor=");
-      var8.append(var4);
-      var8.append(", text=");
-      var8.append(var6);
-      var8.append(", revealed=");
-      var8.append(var5);
-      var8.append(", button=");
-      var8.append(var10);
-      var8.append(", content=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var8: java.util.List = this.content;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("BlockedGroupRow(index=");
+      var6.append(var4);
+      var6.append(", changeType=");
+      var6.append(var9);
+      var6.append(", color=");
+      var6.append(var3);
+      var6.append(", borderColor=");
+      var6.append(var1);
+      var6.append(", backgroundColor=");
+      var6.append(var2);
+      var6.append(", text=");
+      var6.append(var7);
+      var6.append(", revealed=");
+      var6.append(var5);
+      var6.append(", button=");
+      var6.append(var10);
+      var6.append(", content=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

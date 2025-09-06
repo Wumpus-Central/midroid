@@ -33,18 +33,18 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var5: Bundle = new Bundle();
+      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
       if (this.guildId != null) {
-         var5.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var4.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
       }
 
-      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
       if (this.muteTime != null) {
-         var5.putInt("muteTime", this.muteTime);
+         var4.putInt("muteTime", this.muteTime);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MuteAction", 0L, false, var5, true, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -73,8 +73,8 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MuteAction> {
       fun createFromParcel(var1: Parcel): MuteAction {
-         val var4: java.lang.String = var1.readString();
-         val var5: GuildId = var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId;
+         val var5: java.lang.String = var1.readString();
+         val var4: GuildId = var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId;
          val var2: Long = (var1.readParcelable(MuteAction.class.getClassLoader()) as ChannelId).unbox-impl();
          val var6: Int;
          if (var1.readInt() == 0) {
@@ -83,7 +83,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
             var6 = var1.readInt();
          }
 
-         return new MuteAction(var4, var5, var2, var6, null);
+         return new MuteAction(var5, var4, var2, var6, null);
       }
 
       fun newArray(var1: Int): Array<MuteAction> {

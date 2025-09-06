@@ -51,8 +51,8 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.tagValue.hashCode();
-      val var3: Int = java.lang.Float.hashCode(this.elevation);
+      val var3: Int = this.tagValue.hashCode();
+      val var2: Int = java.lang.Float.hashCode(this.elevation);
       val var1: Int;
       if (this.animator == null) {
          var1 = 0;
@@ -60,21 +60,21 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
          var1 = this.animator.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var3: Any = this.tagValue;
       val var1: Float = this.elevation;
-      val var4: ObjectAnimator = this.animator;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AnimateElevationContext(tagValue=");
-      var2.append(var3);
-      var2.append(", elevation=");
-      var2.append(var1);
-      var2.append(", animator=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: ObjectAnimator = this.animator;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AnimateElevationContext(tagValue=");
+      var4.append(var3);
+      var4.append(", elevation=");
+      var4.append(var1);
+      var4.append(", animator=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

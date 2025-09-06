@@ -140,15 +140,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var3: Any = var2.get(this);
-         val var4: CrashReporting = CrashReporting.INSTANCE;
-         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("About to crash because of ChatList, dumping update log:\n");
-         var5.append(var7);
-         var5.append("\n Recycler State: ");
-         var5.append(var3);
-         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
+         val var7: Any = var2.get(this);
+         val var3: CrashReporting = CrashReporting.INSTANCE;
+         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("About to crash because of ChatList, dumping update log:\n");
+         var4.append(var5);
+         var4.append("\n Recycler State: ");
+         var4.append(var7);
+         CrashReporting.addBreadcrumb$default(var3, var4.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -230,19 +230,19 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
                         if (var3) {
-                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
-                           if (var4 == null) {
-                              Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-                              var4 = null;
-                           }
-
-                           var4.onFirstLayout(var1, var7, var2, var6);
-                        } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
                               Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                            } else {
                               var4 = var12;
+                           }
+
+                           var4.onFirstLayout(var1, var7, var2, var6);
+                        } else {
+                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
+                           if (var4 == null) {
+                              Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
+                              var4 = null;
                            }
 
                            var4.onFirstLayout(var2, var6, var1, var7);
@@ -290,11 +290,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

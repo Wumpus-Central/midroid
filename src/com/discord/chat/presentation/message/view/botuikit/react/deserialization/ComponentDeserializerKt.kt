@@ -44,13 +44,13 @@ internal inline fun <reified T : Component> deserializeComponentModel(model: Rea
       try {
          Intrinsics.reifiedOperationMarker(4, "T");
          val var9: java.lang.String = (Component::class).getSimpleName();
-         val var14: java.lang.String = (var12.getClass()::class).getSimpleName();
-         val var18: StringBuilder = new StringBuilder();
-         var18.append("Expected ");
-         var18.append(var9);
-         var18.append(" but got ");
-         var18.append(var14);
-         throw new IllegalStateException(var18.toString().toString());
+         val var18: java.lang.String = (var12.getClass()::class).getSimpleName();
+         val var14: StringBuilder = new StringBuilder();
+         var14.append("Expected ");
+         var14.append(var9);
+         var14.append(" but got ");
+         var14.append(var18);
+         throw new IllegalStateException(var14.toString().toString());
       } catch (var4: Exception) {
          Intrinsics.reifiedOperationMarker(4, "T");
          val var8: java.lang.String = (Component::class).getSimpleName();

@@ -118,8 +118,8 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                kotlin.c.b(var1);
                var1 = PublicFileDownloader.INSTANCE;
                val var4: Context = this.this$0.getContext();
-               val var7: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
-               val var6: FlowCollector = new FlowCollector(this.this$0) {
+               val var6: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
+               val var7: FlowCollector = new FlowCollector(this.this$0) {
                   final FileAttachmentView this$0;
 
                   {
@@ -177,7 +177,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                   }
                };
                this.label = 1;
-               if (var7.collect(var6, this) === var3) {
+               if (var6.collect(var7, this) === var3) {
                   return var3;
                }
             }
@@ -270,12 +270,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       var16.setAlpha(var9);
       val var21: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var17: ShapeDrawable = new ShapeDrawable();
-      val var24: Paint = var17.getPaint();
+      val var24: ShapeDrawable = new ShapeDrawable();
+      val var17: Paint = var24.getPaint();
       val var22: Context = this.getContext();
-      var24.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
+      var17.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var21, null, var17, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var21, null, var24, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!(this.uploadContext == this.uploadContext)) {
          this.uploadContext = this.uploadContext;

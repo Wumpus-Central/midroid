@@ -1,0 +1,37 @@
+{
+  "DKHheX": "Požádat o streamování",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " tě žádá o streamování aplikace ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Požádal/a jsi někoho o streamování aplikace ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Už streamuješ",
+  "u4QmWl": "Žádost vypršela",
+  "qRXatr": "Není v hlasovém kanálu",
+  "43zohI": "Hra není spuštěna",
+  "fac+eH": "Žádné oprávnění",
+  "8HU1Mz": "Žádost odeslána",
+  "5+172d": "Stream",
+  "nAyuPj": "Žádost o streamování",
+  "d/qbCw": [
+    [
+      1,
+      "username"
+    ],
+    " tě žádá o streamování"
+  ],
+  "8B3U5O": "Žádáš někoho o streamování"
+}
