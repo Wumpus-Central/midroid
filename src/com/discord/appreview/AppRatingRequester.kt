@@ -1,8 +1,8 @@
 package com.discord.appreview
 
-import W6.b
-import W6.c
-import Z6.a
+import V6.b
+import V6.c
+import Y6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
@@ -62,9 +62,9 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    public fun executeRequest() {
-      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.b();
-      var2.addOnCompleteListener(new l1.c(var1, this));
-      var2.b(new d(this));
+      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var1: Task = var2.b();
+      var1.addOnCompleteListener(new l1.c(var2, this));
+      var1.b(new d(this));
    }
 }

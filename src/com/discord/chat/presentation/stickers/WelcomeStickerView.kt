@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.stickers
 
-import B9.n
+import A9.n
 import G1.a
 import android.content.Context
 import android.util.AttributeSet

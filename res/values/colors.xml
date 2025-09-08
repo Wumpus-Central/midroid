@@ -839,11 +839,9 @@
     <color name="primary_830">#ff0c0c0d</color>
     <color name="primary_860">#ff060607</color>
     <color name="primary_900">#ff020202</color>
-    <color name="primary_dark_500_alpha_20">#334f545c</color>
     <color name="primary_dark_700_alpha_60">#99202225</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
-    <color name="primary_light_500_alpha_20">#33747f8d</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
     <color name="primary_material_light">@color/material_grey_100</color>
     <color name="primary_text_default_material_dark">#ffffffff</color>
@@ -915,8 +913,6 @@
     <color name="spoiler_revealed_background_darker">#296c6f7c</color>
     <color name="spoiler_revealed_background_midnight">#296c6f7c</color>
     <color name="spotify">#ff1db954</color>
-    <color name="status_green_500_alpha_20">#3343b581</color>
-    <color name="status_red_500_alpha_20">#33ed4245</color>
     <color name="steam">#ff182332</color>
     <color name="sunset_background">#fff576b0</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>

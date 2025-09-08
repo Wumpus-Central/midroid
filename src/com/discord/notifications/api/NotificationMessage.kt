@@ -2,7 +2,7 @@ package com.discord.notifications.api
 
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import nb.g
+import mb.g
 
 @g
 public data class NotificationMessage(stickerItems: List<Sticker> = CollectionsKt.k(),
@@ -112,19 +112,19 @@ public data class NotificationMessage(stickerItems: List<Sticker> = CollectionsK
 
    public override fun toString(): String {
       val var3: java.util.List = this.stickerItems;
-      val var1: JsonObject = this.author;
-      val var5: java.util.List = this.mentions;
-      val var6: Poll = this.poll;
+      val var6: JsonObject = this.author;
+      val var1: java.util.List = this.mentions;
+      val var5: Poll = this.poll;
       val var4: java.util.List = this.embeds;
       val var2: StringBuilder = new StringBuilder();
       var2.append("NotificationMessage(stickerItems=");
       var2.append(var3);
       var2.append(", author=");
-      var2.append(var1);
-      var2.append(", mentions=");
-      var2.append(var5);
-      var2.append(", poll=");
       var2.append(var6);
+      var2.append(", mentions=");
+      var2.append(var1);
+      var2.append(", poll=");
+      var2.append(var5);
       var2.append(", embeds=");
       var2.append(var4);
       var2.append(")");

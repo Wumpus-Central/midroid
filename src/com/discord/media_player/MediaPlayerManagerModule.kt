@@ -1,8 +1,13 @@
 package com.discord.media_player
 
-import B9.s
+import A9.s
 import android.app.Activity
 import android.view.View
+import cb.I
+import cb.K
+import cb.T
+import cb.d0
+import cb.k0
 import com.discord.logging.Log
 import com.discord.media_player.reactevents.MediaPlayerDownloadProgress
 import com.discord.media_player.reactevents.MediaPlayerMuteStateChanged
@@ -24,12 +29,7 @@ import com.facebook.react.module.annotations.ReactModule
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.SimpleExoPlayer
 import com.google.android.exoplayer2.ui.PlayerView
-import db.I
-import db.K
-import db.T
-import db.d0
-import db.k0
-import gb.x
+import fb.x
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.UUID
@@ -62,7 +62,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       this.mediaPlayerProgressMap = new LinkedHashMap<>();
       val var2: CompletableJob = k0.b(null, 1, null);
       val var3: ExecutorService = Executors.newSingleThreadExecutor();
-      this.scope = kotlinx.coroutines.g.a(var2.V0(T.b(var3)));
+      this.scope = kotlinx.coroutines.g.a(var2.Z0(T.b(var3)));
       val var4: MutableStateFlow = x.a(null);
       this._pausePlayerFlow = var4;
       this.pausePlayerFlow = var4;
@@ -82,28 +82,28 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    @JvmStatic
    fun `changeProgress$lambda$1`(var0: Double, var2: SimpleExoPlayer): Unit {
       val var7: kotlin.time.Duration.a = Duration.e;
-      val var3: Long = Duration.w(kotlin.time.b.r(var0, cb.b.n));
-      val var5: Long = var2.getDuration();
-      if (var5 > 0L && var3 >= 0L && var3 <= var5) {
+      val var5: Long = Duration.w(kotlin.time.b.r(var0, bb.b.n));
+      val var3: Long = var2.getDuration();
+      if (var3 > 0L && var5 >= 0L && var5 <= var3) {
          try {
-            var2.l0(var3);
+            var2.l0(var5);
          } catch (var9: IllegalArgumentException) {
-            val var12: Log = Log.INSTANCE;
+            val var11: Log = Log.INSTANCE;
             val var8: StringBuilder = new StringBuilder();
             var8.append("Invalid seek position: ");
-            var8.append(var3);
-            var8.append(", duration: ");
             var8.append(var5);
-            var12.e("MediaPlayerManager", var8.toString(), var9);
+            var8.append(", duration: ");
+            var8.append(var3);
+            var11.e("MediaPlayerManager", var8.toString(), var9);
          }
       } else {
          val var10: Log = Log.INSTANCE;
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("Invalid seek attempt: position=");
-         var11.append(var3);
-         var11.append(", duration=");
-         var11.append(var5);
-         Log.w$default(var10, "MediaPlayerManager", var11.toString(), null, 4, null);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("Invalid seek attempt: position=");
+         var12.append(var5);
+         var12.append(", duration=");
+         var12.append(var3);
+         Log.w$default(var10, "MediaPlayerManager", var12.toString(), null, 4, null);
       }
 
       return Unit.a;
@@ -138,10 +138,10 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
             val var14: ReactEvents = this.reactEvents;
             val var12: ReactApplicationContext = this.reactContext;
             val var15: kotlin.time.Duration.a = Duration.e;
-            val var16: cb.b = cb.b.m;
-            var2 = kotlin.time.b.t(var2, cb.b.m);
-            val var17: cb.b = cb.b.n;
-            var14.emitModuleEvent(var12, new MediaPlayerProgress(var6, Duration.L(var2, cb.b.n), Duration.L(kotlin.time.b.t(var4, var16), var17)));
+            val var17: bb.b = bb.b.m;
+            var2 = kotlin.time.b.t(var2, bb.b.m);
+            val var16: bb.b = bb.b.n;
+            var14.emitModuleEvent(var12, new MediaPlayerProgress(var6, Duration.M(var2, bb.b.n), Duration.M(kotlin.time.b.t(var4, var17), var16)));
          }
       }
    }
@@ -240,7 +240,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    public fun onMediaPlayerViewDetached(channelId: ChannelId, vararg mediaSources: MediaSource): Job {
-      return db.f.d(this.scope, K.c(), null, new Function2<CoroutineScope, Continuation, Object>(this, var1, var3, null) {
+      return cb.f.d(this.scope, K.c(), null, new Function2<CoroutineScope, Continuation, Object>(this, var1, var3, null) {
          final long $channelId;
          final MediaSource[] $mediaSources;
          int label;
@@ -262,23 +262,23 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final Object invokeSuspend(Object var1) {
-            G9.b.e();
+            F9.b.e();
             if (this.label != 0) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             } else {
                kotlin.c.b(var1);
-               val var4: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
-               val var5: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
+               val var5: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
+               val var7: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
                var1 = ChannelId.toString-impl(this.$channelId);
-               val var8: Array<MediaSource> = this.$mediaSources;
-               val var6: ArrayList = new ArrayList(this.$mediaSources.length);
-               val var3: Int = var8.length;
+               val var4: Array<MediaSource> = this.$mediaSources;
+               val var8: ArrayList = new ArrayList(this.$mediaSources.length);
+               val var3: Int = var4.length;
 
                for (int var2x = 0; var2x < var3; var2x++) {
-                  var6.add(MediaPlayerPlaybackSource.Companion.createId(var8[var2x]));
+                  var8.add(MediaPlayerPlaybackSource.Companion.createId(var4[var2x]));
                }
 
-               var4.emitModuleEvent(var5, new MediaPlayerViewDidDisappear(var1, var6));
+               var5.emitModuleEvent(var7, new MediaPlayerViewDidDisappear(var1, var8));
                return Unit.a;
             }
          }
@@ -286,7 +286,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
    }
 
    public fun onMediaPlayerViewWillAppear(channelId: ChannelId, vararg mediaSources: MediaSource): Job {
-      return db.f.d(this.scope, K.c(), null, new Function2<CoroutineScope, Continuation, Object>(this, var1, var3, null) {
+      return cb.f.d(this.scope, K.c(), null, new Function2<CoroutineScope, Continuation, Object>(this, var1, var3, null) {
          final long $channelId;
          final MediaSource[] $mediaSources;
          int label;
@@ -308,23 +308,23 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final Object invokeSuspend(Object var1) {
-            G9.b.e();
+            F9.b.e();
             if (this.label != 0) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             } else {
                kotlin.c.b(var1);
-               val var5: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
-               val var6: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
-               val var8: java.lang.String = ChannelId.toString-impl(this.$channelId);
-               val var7: Array<MediaSource> = this.$mediaSources;
-               var1 = new ArrayList(this.$mediaSources.length);
-               val var3: Int = var7.length;
+               val var6: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
+               var1 = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
+               val var7: java.lang.String = ChannelId.toString-impl(this.$channelId);
+               val var4: Array<MediaSource> = this.$mediaSources;
+               val var5: ArrayList = new ArrayList(this.$mediaSources.length);
+               val var3: Int = var4.length;
 
                for (int var2x = 0; var2x < var3; var2x++) {
-                  var1.add(MediaPlayerPlaybackSource.Companion.createId(var7[var2x]));
+                  var5.add(MediaPlayerPlaybackSource.Companion.createId(var4[var2x]));
                }
 
-               var5.emitModuleEvent(var6, new MediaPlayerViewWillAppear(var8, var1));
+               var6.emitModuleEvent(var1, new MediaPlayerViewWillAppear(var7, var5));
                return Unit.a;
             }
          }
@@ -371,7 +371,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
       val var4: java.lang.Double = var1.getPortal();
       var3.put(
          var4,
-         db.f.d(
+         cb.f.d(
             this.scope,
             null,
             null,
@@ -401,7 +401,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
                // $VF: Irreducible bytecode was duplicated to produce valid code
                public final Object invokeSuspend(Object var1) {
-                  val var4: Any = G9.b.e();
+                  val var4: Any = F9.b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         if (this.label != 2) {
@@ -427,8 +427,8 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                   }
 
                   while (kotlinx.coroutines.g.i(var1)) {
-                     val var5: d0 = K.c();
-                     val var8: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$mediaPlayer, this.this$0, this.$mediaSource, null) {
+                     val var8: d0 = K.c();
+                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$mediaPlayer, this.this$0, this.$mediaSource, null) {
                         final MediaPlayer $mediaPlayer;
                         final MediaSource $mediaSource;
                         int label;
@@ -450,7 +450,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           G9.b.e();
+                           F9.b.e();
                            if (this.label == 0) {
                               kotlin.c.b(var1);
                               if (this.$mediaPlayer.isPlaying()) {
@@ -473,7 +473,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                      };
                      this.L$0 = var1;
                      this.label = 1;
-                     if (db.f.g(var5, var8, this) === var4) {
+                     if (cb.f.g(var8, var5, this) === var4) {
                         return var4;
                      }
 
@@ -504,7 +504,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun subscribeToPlaybackEvents() {
-      db.f.d(
+      cb.f.d(
          this.scope,
          null,
          null,
@@ -526,7 +526,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = G9.b.e();
+               val var3: Any = F9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -535,8 +535,8 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: Flow = gb.e.g(
-                     gb.e.p(
+                  var1 = fb.e.g(
+                     fb.e.p(
                         MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release(),
                         new Function2<Pair<? extends MediaSource, ? extends java.lang.Double>, Continuation, Object>(null) {
                            Object L$0;
@@ -557,7 +557,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              G9.b.e();
+                              F9.b.e();
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  return (this.L$0 as Pair).a() as MediaSource;
@@ -568,7 +568,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                         }
                      )
                   );
-                  var1 = new Function2<MediaSource, Continuation, Object>(this.this$0, null) {
+                  val var4: Function2 = new Function2<MediaSource, Continuation, Object>(this.this$0, null) {
                      Object L$0;
                      int label;
                      final MediaPlayerManagerModule this$0;
@@ -589,12 +589,12 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        G9.b.e();
+                        F9.b.e();
                         if (this.label == 0) {
                            kotlin.c.b(var1);
                            var1 = this.L$0 as MediaSource;
-                           val var3x: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
-                           val var2x: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
+                           val var2x: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
+                           val var3x: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
                            val var5: MediaPlayerPlaybackSource;
                            if (var1 != null) {
                               var5 = MediaPlayerPlaybackSource.Companion.fromMediaSource(var1);
@@ -602,7 +602,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                               var5 = null;
                            }
 
-                           var3x.emitModuleEvent(var2x, new MediaPlayerPlaybackSourceChanged(var5));
+                           var2x.emitModuleEvent(var3x, new MediaPlayerPlaybackSourceChanged(var5));
                            return Unit.a;
                         } else {
                            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -610,7 +610,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                      }
                   };
                   this.label = 1;
-                  if (gb.e.e(var4, var1, this) === var3) {
+                  if (fb.e.e(var1, var4, this) === var3) {
                      return var3;
                   }
                }
@@ -621,7 +621,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          3,
          null
       );
-      db.f.d(this.scope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      cb.f.d(this.scope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final MediaPlayerManagerModule this$0;
 
@@ -639,7 +639,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = G9.b.e();
+            val var3: Any = F9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -648,8 +648,8 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
-               val var4: Function2 = new Function2<Pair<? extends MediaSource, ? extends java.lang.Double>, Continuation, Object>(this.this$0, null) {
+               val var4: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
+               var1 = new Function2<Pair<? extends MediaSource, ? extends java.lang.Double>, Continuation, Object>(this.this$0, null) {
                   Object L$0;
                   int label;
                   final MediaPlayerManagerModule this$0;
@@ -670,14 +670,14 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                   }
 
                   public final Object invokeSuspend(Object var1) {
-                     G9.b.e();
+                     F9.b.e();
                      if (this.label == 0) {
                         kotlin.c.b(var1);
                         val var4: Pair = this.L$0 as Pair;
                         var1 = (this.L$0 as Pair).a() as MediaSource;
                         val var2x: Double = (var4.b() as java.lang.Number).doubleValue();
-                        val var5: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
-                        val var8: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
+                        val var8: ReactEvents = MediaPlayerManagerModule.access$getReactEvents$p(this.this$0);
+                        val var5: ReactApplicationContext = MediaPlayerManagerModule.access$getReactContext$p(this.this$0);
                         val var7: MediaPlayerPlaybackSource;
                         if (var1 != null) {
                            var7 = MediaPlayerPlaybackSource.Companion.fromMediaSource(var1);
@@ -685,7 +685,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                            var7 = null;
                         }
 
-                        var5.emitModuleEvent(var8, new MediaPlayerPlaybackRateChanged(var7, var2x));
+                        var8.emitModuleEvent(var5, new MediaPlayerPlaybackRateChanged(var7, var2x));
                         return Unit.a;
                      } else {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -693,7 +693,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                   }
                };
                this.label = 1;
-               if (gb.e.e(var1, var4, this) === var3) {
+               if (fb.e.e(var4, var1, this) === var3) {
                   return var3;
                }
             }
@@ -701,7 +701,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
             return Unit.a;
          }
       }, 3, null);
-      db.f.d(
+      cb.f.d(
          this.scope,
          null,
          null,
@@ -723,7 +723,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = G9.b.e();
+               val var3: Any = F9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -754,7 +754,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        G9.b.e();
+                        F9.b.e();
                         if (this.label == 0) {
                            kotlin.c.b(var1);
                            var1 = this.L$0 as MediaPlayerManager.PlaybackProgress;
@@ -768,7 +768,7 @@ public class MediaPlayerManagerModule(reactContext: ReactApplicationContext) : R
                      }
                   };
                   this.label = 1;
-                  if (gb.e.e(var4, var1, this) === var3) {
+                  if (fb.e.e(var4, var1, this) === var3) {
                      return var3;
                   }
                }

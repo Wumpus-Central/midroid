@@ -2,7 +2,7 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row() {

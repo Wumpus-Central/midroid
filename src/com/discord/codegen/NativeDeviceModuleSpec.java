@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import I3.a;
+import H3.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -22,7 +22,7 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
    public final Map<String, Object> getConstants() {
       Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var2 = new HashSet<>(
+         HashSet var3 = new HashSet<>(
             Arrays.asList(
                "device",
                "deviceBrand",
@@ -39,16 +39,16 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
             )
          );
          HashSet var4 = new HashSet();
-         HashSet var3 = new HashSet(var1.keySet());
-         var3.removeAll(var2);
-         var3.removeAll(var4);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var2 = new HashSet(var1.keySet());
+         var2.removeAll(var3);
+         var2.removeAll(var4);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var2.removeAll(var1.keySet());
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
+         var3.removeAll(var1.keySet());
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
          }
       }
 

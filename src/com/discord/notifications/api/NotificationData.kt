@@ -6,7 +6,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class NotificationData(type: String,
@@ -56,6 +56,9 @@ public data class NotificationData(type: String,
    deeplink: String? = ...,
    expandSubtitle: Boolean? = ...,
    imageAttachmentUrl: String? = ...,
+   ergoImageAttachmentUrl: String? = ...,
+   attachmentTextVariant: Int? = ...,
+   imageAttachmentCount: Int? = ...,
    timeReceived: String? = ...,
    silent: Boolean = ...,
    userInfo: Map<String, String> = ...,
@@ -125,7 +128,10 @@ public data class NotificationData(type: String,
       var55,
       var56,
       var57,
-      var58
+      var58,
+      var59,
+      var60,
+      var61
    ) {
    public final val type: String
    public final val messageId: MessageId?
@@ -189,6 +195,9 @@ public data class NotificationData(type: String,
    public final val deeplink: String?
    public final val expandSubtitle: Boolean?
    public final val imageAttachmentUrl: String?
+   public final val ergoImageAttachmentUrl: String?
+   public final val attachmentTextVariant: Int?
+   public final val imageAttachmentCount: Int?
    public final val timeReceived: String?
    public final val silent: Boolean
    public final val userInfo: Map<String, String>
@@ -250,16 +259,19 @@ public data class NotificationData(type: String,
       var46: java.lang.Boolean,
       var47: java.lang.String,
       var48: java.lang.String,
-      var49: Boolean,
-      var50: MutableMap<java.lang.String, java.lang.String>,
-      var51: Boolean,
-      var52: java.lang.String,
-      var53: java.lang.String,
-      var54: java.lang.String,
+      var49: Int,
+      var50: Int,
+      var51: java.lang.String,
+      var52: Boolean,
+      var53: MutableMap<java.lang.String, java.lang.String>,
+      var54: Boolean,
       var55: java.lang.String,
       var56: java.lang.String,
       var57: java.lang.String,
-      var58: Int
+      var58: java.lang.String,
+      var59: java.lang.String,
+      var60: java.lang.String,
+      var61: Int
    ) {
       this.type = var1;
       this.messageId = var2;
@@ -308,17 +320,20 @@ public data class NotificationData(type: String,
       this.deeplink = var45;
       this.expandSubtitle = var46;
       this.imageAttachmentUrl = var47;
-      this.timeReceived = var48;
-      this.silent = var49;
-      this.userInfo = var50;
-      this.appDm = var51;
-      this.notifTypeId = var52;
-      this.notifInstanceId = var53;
-      this.joinId = var54;
-      this.mentionType = var55;
-      this.appState = var56;
-      this.inviteGuildName = var57;
-      this.inviteTitleVariant = var58;
+      this.ergoImageAttachmentUrl = var48;
+      this.attachmentTextVariant = var49;
+      this.imageAttachmentCount = var50;
+      this.timeReceived = var51;
+      this.silent = var52;
+      this.userInfo = var53;
+      this.appDm = var54;
+      this.notifTypeId = var55;
+      this.notifInstanceId = var56;
+      this.joinId = var57;
+      this.mentionType = var58;
+      this.appState = var59;
+      this.inviteGuildName = var60;
+      this.inviteTitleVariant = var61;
    }
 
    public operator fun component1(): String {
@@ -490,55 +505,67 @@ public data class NotificationData(type: String,
    }
 
    public operator fun component48(): String? {
-      return this.timeReceived;
+      return this.ergoImageAttachmentUrl;
    }
 
-   public operator fun component49(): Boolean {
-      return this.silent;
+   public operator fun component49(): Int? {
+      return this.attachmentTextVariant;
    }
 
    public operator fun component5(): Int? {
       return this.messageType;
    }
 
-   public operator fun component50(): Map<String, String> {
+   public operator fun component50(): Int? {
+      return this.imageAttachmentCount;
+   }
+
+   public operator fun component51(): String? {
+      return this.timeReceived;
+   }
+
+   public operator fun component52(): Boolean {
+      return this.silent;
+   }
+
+   public operator fun component53(): Map<String, String> {
       return this.userInfo;
    }
 
-   public operator fun component51(): Boolean {
+   public operator fun component54(): Boolean {
       return this.appDm;
    }
 
-   public operator fun component52(): String? {
+   public operator fun component55(): String? {
       return this.notifTypeId;
    }
 
-   public operator fun component53(): String? {
+   public operator fun component56(): String? {
       return this.notifInstanceId;
    }
 
-   public operator fun component54(): String? {
+   public operator fun component57(): String? {
       return this.joinId;
    }
 
-   public operator fun component55(): String? {
+   public operator fun component58(): String? {
       return this.mentionType;
    }
 
-   public operator fun component56(): String? {
+   public operator fun component59(): String? {
       return this.appState;
-   }
-
-   public operator fun component57(): String? {
-      return this.inviteGuildName;
-   }
-
-   public operator fun component58(): Int? {
-      return this.inviteTitleVariant;
    }
 
    public operator fun component6(): String? {
       return this.messageContent;
+   }
+
+   public operator fun component60(): String? {
+      return this.inviteGuildName;
+   }
+
+   public operator fun component61(): Int? {
+      return this.inviteTitleVariant;
    }
 
    public operator fun component7(): Long? {
@@ -601,6 +628,9 @@ public data class NotificationData(type: String,
       deeplink: String? = ...,
       expandSubtitle: Boolean? = ...,
       imageAttachmentUrl: String? = ...,
+      ergoImageAttachmentUrl: String? = ...,
+      attachmentTextVariant: Int? = ...,
+      imageAttachmentCount: Int? = ...,
       timeReceived: String? = ...,
       silent: Boolean = ...,
       userInfo: Map<String, String> = ...,
@@ -672,6 +702,9 @@ public data class NotificationData(type: String,
          var56,
          var57,
          var58,
+         var59,
+         var60,
+         var61,
          null
       );
    }
@@ -687,15 +720,15 @@ public data class NotificationData(type: String,
             return false;
          } else {
             var var2: Boolean;
-            label252: {
+            label264: {
                if (this.messageId == null) {
                   if (var4.messageId == null) {
                      var2 = true;
-                     break label252;
+                     break label264;
                   }
                } else if (var4.messageId != null) {
                   var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
-                  break label252;
+                  break label264;
                }
 
                var2 = false;
@@ -793,6 +826,12 @@ public data class NotificationData(type: String,
                return false;
             } else if (!(this.imageAttachmentUrl == var4.imageAttachmentUrl)) {
                return false;
+            } else if (!(this.ergoImageAttachmentUrl == var4.ergoImageAttachmentUrl)) {
+               return false;
+            } else if (!(this.attachmentTextVariant == var4.attachmentTextVariant)) {
+               return false;
+            } else if (!(this.imageAttachmentCount == var4.imageAttachmentCount)) {
+               return false;
             } else if (!(this.timeReceived == var4.timeReceived)) {
                return false;
             } else if (this.silent != var4.silent) {
@@ -821,8 +860,8 @@ public data class NotificationData(type: String,
    }
 
    public override fun hashCode(): Int {
-      val var52: Int = this.type.hashCode();
-      var var51: Int = 0;
+      val var55: Int = this.type.hashCode();
+      var var54: Int = 0;
       val var1: Int;
       if (this.messageId == null) {
          var1 = 0;
@@ -921,7 +960,7 @@ public data class NotificationData(type: String,
          var14 = this.channelRtcRegion.hashCode();
       }
 
-      val var53: Int = this.ackChannelIds.hashCode();
+      val var56: Int = this.ackChannelIds.hashCode();
       val var15: Int;
       if (this.userId == null) {
          var15 = 0;
@@ -1062,8 +1101,8 @@ public data class NotificationData(type: String,
          var34 = this.guildScheduledEventEntityType.hashCode();
       }
 
-      val var54: Int = java.lang.Boolean.hashCode(this.canReply);
-      val var55: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
+      val var58: Int = java.lang.Boolean.hashCode(this.canReply);
+      val var57: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
       val var35: Int;
       if (this.receivingUserId == null) {
          var35 = 0;
@@ -1128,59 +1167,80 @@ public data class NotificationData(type: String,
       }
 
       val var44: Int;
-      if (this.timeReceived == null) {
+      if (this.ergoImageAttachmentUrl == null) {
          var44 = 0;
       } else {
-         var44 = this.timeReceived.hashCode();
+         var44 = this.ergoImageAttachmentUrl.hashCode();
       }
 
-      val var56: Int = java.lang.Boolean.hashCode(this.silent);
-      val var57: Int = this.userInfo.hashCode();
-      val var58: Int = java.lang.Boolean.hashCode(this.appDm);
       val var45: Int;
-      if (this.notifTypeId == null) {
+      if (this.attachmentTextVariant == null) {
          var45 = 0;
       } else {
-         var45 = this.notifTypeId.hashCode();
+         var45 = this.attachmentTextVariant.hashCode();
       }
 
       val var46: Int;
-      if (this.notifInstanceId == null) {
+      if (this.imageAttachmentCount == null) {
          var46 = 0;
       } else {
-         var46 = this.notifInstanceId.hashCode();
+         var46 = this.imageAttachmentCount.hashCode();
       }
 
       val var47: Int;
-      if (this.joinId == null) {
+      if (this.timeReceived == null) {
          var47 = 0;
       } else {
-         var47 = this.joinId.hashCode();
+         var47 = this.timeReceived.hashCode();
       }
 
+      val var61: Int = java.lang.Boolean.hashCode(this.silent);
+      val var60: Int = this.userInfo.hashCode();
+      val var59: Int = java.lang.Boolean.hashCode(this.appDm);
       val var48: Int;
-      if (this.mentionType == null) {
+      if (this.notifTypeId == null) {
          var48 = 0;
       } else {
-         var48 = this.mentionType.hashCode();
+         var48 = this.notifTypeId.hashCode();
       }
 
       val var49: Int;
-      if (this.appState == null) {
+      if (this.notifInstanceId == null) {
          var49 = 0;
       } else {
-         var49 = this.appState.hashCode();
+         var49 = this.notifInstanceId.hashCode();
       }
 
       val var50: Int;
-      if (this.inviteGuildName == null) {
+      if (this.joinId == null) {
          var50 = 0;
       } else {
-         var50 = this.inviteGuildName.hashCode();
+         var50 = this.joinId.hashCode();
+      }
+
+      val var51: Int;
+      if (this.mentionType == null) {
+         var51 = 0;
+      } else {
+         var51 = this.mentionType.hashCode();
+      }
+
+      val var52: Int;
+      if (this.appState == null) {
+         var52 = 0;
+      } else {
+         var52 = this.appState.hashCode();
+      }
+
+      val var53: Int;
+      if (this.inviteGuildName == null) {
+         var53 = 0;
+      } else {
+         var53 = this.inviteGuildName.hashCode();
       }
 
       if (this.inviteTitleVariant != null) {
-         var51 = this.inviteTitleVariant.hashCode();
+         var54 = this.inviteTitleVariant.hashCode();
       }
 
       return (
@@ -1239,363 +1299,384 @@ public data class NotificationData(type: String,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      (
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              var52
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         var55
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 31
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            + var1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * 31
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   + var2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * 31
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          + var3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 + var1
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 + var4
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        + var2
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        + var5
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               + var3
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               + var6
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      + var4
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      + var7
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             + var5
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             + var8
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    + var6
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    + var9
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           + var7
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                           + var10
                                                                                                                                                                                                                                                                                                                                                                                                                                                                      )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                      * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                  + var8
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  + var11
                                                                                                                                                                                                                                                                                                                                                                                                                                                             )
                                                                                                                                                                                                                                                                                                                                                                                                                                                             * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         + var9
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         + var12
                                                                                                                                                                                                                                                                                                                                                                                                                                                    )
                                                                                                                                                                                                                                                                                                                                                                                                                                                    * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                + var10
+                                                                                                                                                                                                                                                                                                                                                                                                                                                + var13
                                                                                                                                                                                                                                                                                                                                                                                                                                           )
                                                                                                                                                                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                       + var11
+                                                                                                                                                                                                                                                                                                                                                                                                                                       + var14
                                                                                                                                                                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                              + var12
+                                                                                                                                                                                                                                                                                                                                                                                                                              + var56
                                                                                                                                                                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                                                                                                                                                                         * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                     + var13
+                                                                                                                                                                                                                                                                                                                                                                                                                     + var15
                                                                                                                                                                                                                                                                                                                                                                                                                )
                                                                                                                                                                                                                                                                                                                                                                                                                * 31
-                                                                                                                                                                                                                                                                                                                                                                                                            + var14
+                                                                                                                                                                                                                                                                                                                                                                                                            + var16
                                                                                                                                                                                                                                                                                                                                                                                                       )
                                                                                                                                                                                                                                                                                                                                                                                                       * 31
-                                                                                                                                                                                                                                                                                                                                                                                                   + var53
+                                                                                                                                                                                                                                                                                                                                                                                                   + var17
                                                                                                                                                                                                                                                                                                                                                                                              )
                                                                                                                                                                                                                                                                                                                                                                                              * 31
-                                                                                                                                                                                                                                                                                                                                                                                          + var15
+                                                                                                                                                                                                                                                                                                                                                                                          + var18
                                                                                                                                                                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                                                                                                                                                                     * 31
-                                                                                                                                                                                                                                                                                                                                                                                 + var16
+                                                                                                                                                                                                                                                                                                                                                                                 + var19
                                                                                                                                                                                                                                                                                                                                                                            )
                                                                                                                                                                                                                                                                                                                                                                            * 31
-                                                                                                                                                                                                                                                                                                                                                                        + var17
+                                                                                                                                                                                                                                                                                                                                                                        + var20
                                                                                                                                                                                                                                                                                                                                                                   )
                                                                                                                                                                                                                                                                                                                                                                   * 31
-                                                                                                                                                                                                                                                                                                                                                               + var18
+                                                                                                                                                                                                                                                                                                                                                               + var21
                                                                                                                                                                                                                                                                                                                                                          )
                                                                                                                                                                                                                                                                                                                                                          * 31
-                                                                                                                                                                                                                                                                                                                                                      + var19
+                                                                                                                                                                                                                                                                                                                                                      + var22
                                                                                                                                                                                                                                                                                                                                                 )
                                                                                                                                                                                                                                                                                                                                                 * 31
-                                                                                                                                                                                                                                                                                                                                             + var20
+                                                                                                                                                                                                                                                                                                                                             + var23
                                                                                                                                                                                                                                                                                                                                        )
                                                                                                                                                                                                                                                                                                                                        * 31
-                                                                                                                                                                                                                                                                                                                                    + var21
+                                                                                                                                                                                                                                                                                                                                    + var24
                                                                                                                                                                                                                                                                                                                               )
                                                                                                                                                                                                                                                                                                                               * 31
-                                                                                                                                                                                                                                                                                                                           + var22
+                                                                                                                                                                                                                                                                                                                           + var25
                                                                                                                                                                                                                                                                                                                      )
                                                                                                                                                                                                                                                                                                                      * 31
-                                                                                                                                                                                                                                                                                                                  + var23
+                                                                                                                                                                                                                                                                                                                  + var26
                                                                                                                                                                                                                                                                                                             )
                                                                                                                                                                                                                                                                                                             * 31
-                                                                                                                                                                                                                                                                                                         + var24
+                                                                                                                                                                                                                                                                                                         + var27
                                                                                                                                                                                                                                                                                                    )
                                                                                                                                                                                                                                                                                                    * 31
-                                                                                                                                                                                                                                                                                                + var25
+                                                                                                                                                                                                                                                                                                + var28
                                                                                                                                                                                                                                                                                           )
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var26
+                                                                                                                                                                                                                                                                                       + var29
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var27
+                                                                                                                                                                                                                                                                              + var30
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
-                                                                                                                                                                                                                                                                     + var28
+                                                                                                                                                                                                                                                                     + var31
                                                                                                                                                                                                                                                                )
                                                                                                                                                                                                                                                                * 31
-                                                                                                                                                                                                                                                            + var29
+                                                                                                                                                                                                                                                            + var32
                                                                                                                                                                                                                                                       )
                                                                                                                                                                                                                                                       * 31
-                                                                                                                                                                                                                                                   + var30
+                                                                                                                                                                                                                                                   + var33
                                                                                                                                                                                                                                              )
                                                                                                                                                                                                                                              * 31
-                                                                                                                                                                                                                                          + var31
+                                                                                                                                                                                                                                          + var34
                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                     * 31
-                                                                                                                                                                                                                                 + var32
+                                                                                                                                                                                                                                 + var58
                                                                                                                                                                                                                            )
                                                                                                                                                                                                                            * 31
-                                                                                                                                                                                                                        + var33
+                                                                                                                                                                                                                        + var57
                                                                                                                                                                                                                   )
                                                                                                                                                                                                                   * 31
-                                                                                                                                                                                                               + var34
+                                                                                                                                                                                                               + var35
                                                                                                                                                                                                          )
                                                                                                                                                                                                          * 31
-                                                                                                                                                                                                      + var54
+                                                                                                                                                                                                      + var36
                                                                                                                                                                                                 )
                                                                                                                                                                                                 * 31
-                                                                                                                                                                                             + var55
+                                                                                                                                                                                             + var37
                                                                                                                                                                                        )
                                                                                                                                                                                        * 31
-                                                                                                                                                                                    + var35
+                                                                                                                                                                                    + var38
                                                                                                                                                                               )
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var36
+                                                                                                                                                                           + var39
                                                                                                                                                                      )
                                                                                                                                                                      * 31
-                                                                                                                                                                  + var37
+                                                                                                                                                                  + var40
                                                                                                                                                             )
                                                                                                                                                             * 31
-                                                                                                                                                         + var38
+                                                                                                                                                         + var41
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var39
+                                                                                                                                                + var42
                                                                                                                                           )
                                                                                                                                           * 31
-                                                                                                                                       + var40
+                                                                                                                                       + var43
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var41
+                                                                                                                              + var44
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var42
+                                                                                                                     + var45
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var43
+                                                                                                            + var46
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var44
+                                                                                                   + var47
                                                                                              )
                                                                                              * 31
-                                                                                          + var56
+                                                                                          + var61
                                                                                     )
                                                                                     * 31
-                                                                                 + var57
+                                                                                 + var60
                                                                            )
                                                                            * 31
-                                                                        + var58
+                                                                        + var59
                                                                   )
                                                                   * 31
-                                                               + var45
+                                                               + var48
                                                          )
                                                          * 31
-                                                      + var46
+                                                      + var49
                                                 )
                                                 * 31
-                                             + var47
+                                             + var50
                                        )
                                        * 31
-                                    + var48
+                                    + var51
                               )
                               * 31
-                           + var49
+                           + var52
                      )
                      * 31
-                  + var50
+                  + var53
             )
             * 31
-         + var51;
+         + var54;
    }
 
    public override fun toString(): String {
       val var6: java.lang.String = this.type;
-      val var60: java.lang.String;
+      val var63: java.lang.String;
       if (this.messageId == null) {
-         var60 = "null";
+         var63 = "null";
       } else {
-         var60 = MessageId.toString-impl(this.messageId);
+         var63 = MessageId.toString-impl(this.messageId);
       }
 
-      val var10: Int = this.messageActivityType;
-      val var41: java.lang.String = this.messageApplicationName;
-      val var42: Int = this.messageType;
-      val var46: java.lang.String = this.messageContent;
-      val var48: java.lang.Long = this.messageFlags;
-      val var56: Int = this.channelType;
-      val var43: java.lang.String = this.channelName;
-      val var23: ChannelId = this.channelId;
-      val var54: java.lang.String = this.channelIcon;
-      val var16: java.lang.String = this.parentName;
-      val var15: ChannelId = this.parentId;
-      val var45: Int = this.messageReferenceType;
-      val var17: java.lang.String = this.channelRtcRegion;
-      val var28: java.util.List = this.ackChannelIds;
-      val var13: UserId = this.userId;
-      val var14: java.lang.String = this.userUsername;
-      val var49: java.lang.String = this.userGlobalName;
-      val var44: Int = this.userDiscriminator;
-      val var38: java.lang.String = this.userAvatar;
-      val var52: java.lang.String = this.userGuildAvatar;
-      val var47: java.lang.String = this.platformUserUsername;
-      val var19: Int = this.relationshipType;
-      val var40: GuildId = this.guildId;
-      val var8: java.lang.String = this.guildName;
-      val var12: java.lang.String = this.guildIcon;
-      val var22: java.lang.String = this.activityInstanceId;
-      val var33: Int = this.activityType;
-      val var30: java.lang.String = this.activityName;
-      val var18: ApplicationId = this.applicationId;
-      val var31: java.lang.String = this.applicationName;
-      val var32: java.lang.String = this.applicationIcon;
-      val var7: NotificationMessage = this.message;
-      val var55: java.lang.String = this.stageInstanceTopic;
-      val var29: Int = this.guildScheduledEventEntityType;
+      val var19: Int = this.messageActivityType;
+      val var32: java.lang.String = this.messageApplicationName;
+      val var26: Int = this.messageType;
+      val var54: java.lang.String = this.messageContent;
+      val var31: java.lang.Long = this.messageFlags;
+      val var38: Int = this.channelType;
+      val var37: java.lang.String = this.channelName;
+      val var33: ChannelId = this.channelId;
+      val var24: java.lang.String = this.channelIcon;
+      val var21: java.lang.String = this.parentName;
+      val var61: ChannelId = this.parentId;
+      val var59: Int = this.messageReferenceType;
+      val var36: java.lang.String = this.channelRtcRegion;
+      val var9: java.util.List = this.ackChannelIds;
+      val var52: UserId = this.userId;
+      val var41: java.lang.String = this.userUsername;
+      val var50: java.lang.String = this.userGlobalName;
+      val var30: Int = this.userDiscriminator;
+      val var22: java.lang.String = this.userAvatar;
+      val var43: java.lang.String = this.userGuildAvatar;
+      val var8: java.lang.String = this.platformUserUsername;
+      val var62: Int = this.relationshipType;
+      val var20: GuildId = this.guildId;
+      val var53: java.lang.String = this.guildName;
+      val var7: java.lang.String = this.guildIcon;
+      val var25: java.lang.String = this.activityInstanceId;
+      val var60: Int = this.activityType;
+      val var28: java.lang.String = this.activityName;
+      val var23: ApplicationId = this.applicationId;
+      val var40: java.lang.String = this.applicationName;
+      val var16: java.lang.String = this.applicationIcon;
+      val var12: NotificationMessage = this.message;
+      val var57: java.lang.String = this.stageInstanceTopic;
+      val var46: Int = this.guildScheduledEventEntityType;
       val var2: Boolean = this.canReply;
-      val var3: Boolean = this.isFromCurrentUser;
-      val var20: UserId = this.receivingUserId;
-      val var58: java.lang.String = this.title;
-      val var9: java.lang.String = this.subtitle;
-      val var57: java.lang.String = this.iconUrl;
-      val var36: java.lang.String = this.notificationChannel;
-      val var50: java.lang.String = this.trackingType;
-      val var35: java.lang.String = this.deeplink;
-      val var59: java.lang.Boolean = this.expandSubtitle;
-      val var51: java.lang.String = this.imageAttachmentUrl;
-      val var26: java.lang.String = this.timeReceived;
+      val var1: Boolean = this.isFromCurrentUser;
+      val var29: UserId = this.receivingUserId;
+      val var39: java.lang.String = this.title;
+      val var58: java.lang.String = this.subtitle;
+      val var13: java.lang.String = this.iconUrl;
+      val var14: java.lang.String = this.notificationChannel;
+      val var35: java.lang.String = this.trackingType;
+      val var56: java.lang.String = this.deeplink;
+      val var45: java.lang.Boolean = this.expandSubtitle;
+      val var10: java.lang.String = this.imageAttachmentUrl;
+      val var15: java.lang.String = this.ergoImageAttachmentUrl;
+      val var18: Int = this.attachmentTextVariant;
+      val var11: Int = this.imageAttachmentCount;
+      val var55: java.lang.String = this.timeReceived;
       val var4: Boolean = this.silent;
-      val var11: java.util.Map = this.userInfo;
-      val var1: Boolean = this.appDm;
-      val var37: java.lang.String = this.notifTypeId;
-      val var53: java.lang.String = this.notifInstanceId;
-      val var27: java.lang.String = this.joinId;
-      val var34: java.lang.String = this.mentionType;
-      val var24: java.lang.String = this.appState;
-      val var21: java.lang.String = this.inviteGuildName;
-      val var25: Int = this.inviteTitleVariant;
-      val var39: StringBuilder = new StringBuilder();
-      var39.append("NotificationData(type=");
-      var39.append(var6);
-      var39.append(", messageId=");
-      var39.append(var60);
-      var39.append(", messageActivityType=");
-      var39.append(var10);
-      var39.append(", messageApplicationName=");
-      var39.append(var41);
-      var39.append(", messageType=");
-      var39.append(var42);
-      var39.append(", messageContent=");
-      var39.append(var46);
-      var39.append(", messageFlags=");
-      var39.append(var48);
-      var39.append(", channelType=");
-      var39.append(var56);
-      var39.append(", channelName=");
-      var39.append(var43);
-      var39.append(", channelId=");
-      var39.append(var23);
-      var39.append(", channelIcon=");
-      var39.append(var54);
-      var39.append(", parentName=");
-      var39.append(var16);
-      var39.append(", parentId=");
-      var39.append(var15);
-      var39.append(", messageReferenceType=");
-      var39.append(var45);
-      var39.append(", channelRtcRegion=");
-      var39.append(var17);
-      var39.append(", ackChannelIds=");
-      var39.append(var28);
-      var39.append(", userId=");
-      var39.append(var13);
-      var39.append(", userUsername=");
-      var39.append(var14);
-      var39.append(", userGlobalName=");
-      var39.append(var49);
-      var39.append(", userDiscriminator=");
-      var39.append(var44);
-      var39.append(", userAvatar=");
-      var39.append(var38);
-      var39.append(", userGuildAvatar=");
-      var39.append(var52);
-      var39.append(", platformUserUsername=");
-      var39.append(var47);
-      var39.append(", relationshipType=");
-      var39.append(var19);
-      var39.append(", guildId=");
-      var39.append(var40);
-      var39.append(", guildName=");
-      var39.append(var8);
-      var39.append(", guildIcon=");
-      var39.append(var12);
-      var39.append(", activityInstanceId=");
-      var39.append(var22);
-      var39.append(", activityType=");
-      var39.append(var33);
-      var39.append(", activityName=");
-      var39.append(var30);
-      var39.append(", applicationId=");
-      var39.append(var18);
-      var39.append(", applicationName=");
-      var39.append(var31);
-      var39.append(", applicationIcon=");
-      var39.append(var32);
-      var39.append(", message=");
-      var39.append(var7);
-      var39.append(", stageInstanceTopic=");
-      var39.append(var55);
-      var39.append(", guildScheduledEventEntityType=");
-      var39.append(var29);
-      var39.append(", canReply=");
-      var39.append(var2);
-      var39.append(", isFromCurrentUser=");
-      var39.append(var3);
-      var39.append(", receivingUserId=");
-      var39.append(var20);
-      var39.append(", title=");
-      var39.append(var58);
-      var39.append(", subtitle=");
-      var39.append(var9);
-      var39.append(", iconUrl=");
-      var39.append(var57);
-      var39.append(", notificationChannel=");
-      var39.append(var36);
-      var39.append(", trackingType=");
-      var39.append(var50);
-      var39.append(", deeplink=");
-      var39.append(var35);
-      var39.append(", expandSubtitle=");
-      var39.append(var59);
-      var39.append(", imageAttachmentUrl=");
-      var39.append(var51);
-      var39.append(", timeReceived=");
-      var39.append(var26);
-      var39.append(", silent=");
-      var39.append(var4);
-      var39.append(", userInfo=");
-      var39.append(var11);
-      var39.append(", appDm=");
-      var39.append(var1);
-      var39.append(", notifTypeId=");
-      var39.append(var37);
-      var39.append(", notifInstanceId=");
-      var39.append(var53);
-      var39.append(", joinId=");
-      var39.append(var27);
-      var39.append(", mentionType=");
-      var39.append(var34);
-      var39.append(", appState=");
-      var39.append(var24);
-      var39.append(", inviteGuildName=");
-      var39.append(var21);
-      var39.append(", inviteTitleVariant=");
-      var39.append(var25);
-      var39.append(")");
-      return var39.toString();
+      val var49: java.util.Map = this.userInfo;
+      val var3: Boolean = this.appDm;
+      val var27: java.lang.String = this.notifTypeId;
+      val var44: java.lang.String = this.notifInstanceId;
+      val var42: java.lang.String = this.joinId;
+      val var48: java.lang.String = this.mentionType;
+      val var34: java.lang.String = this.appState;
+      val var51: java.lang.String = this.inviteGuildName;
+      val var17: Int = this.inviteTitleVariant;
+      val var47: StringBuilder = new StringBuilder();
+      var47.append("NotificationData(type=");
+      var47.append(var6);
+      var47.append(", messageId=");
+      var47.append(var63);
+      var47.append(", messageActivityType=");
+      var47.append(var19);
+      var47.append(", messageApplicationName=");
+      var47.append(var32);
+      var47.append(", messageType=");
+      var47.append(var26);
+      var47.append(", messageContent=");
+      var47.append(var54);
+      var47.append(", messageFlags=");
+      var47.append(var31);
+      var47.append(", channelType=");
+      var47.append(var38);
+      var47.append(", channelName=");
+      var47.append(var37);
+      var47.append(", channelId=");
+      var47.append(var33);
+      var47.append(", channelIcon=");
+      var47.append(var24);
+      var47.append(", parentName=");
+      var47.append(var21);
+      var47.append(", parentId=");
+      var47.append(var61);
+      var47.append(", messageReferenceType=");
+      var47.append(var59);
+      var47.append(", channelRtcRegion=");
+      var47.append(var36);
+      var47.append(", ackChannelIds=");
+      var47.append(var9);
+      var47.append(", userId=");
+      var47.append(var52);
+      var47.append(", userUsername=");
+      var47.append(var41);
+      var47.append(", userGlobalName=");
+      var47.append(var50);
+      var47.append(", userDiscriminator=");
+      var47.append(var30);
+      var47.append(", userAvatar=");
+      var47.append(var22);
+      var47.append(", userGuildAvatar=");
+      var47.append(var43);
+      var47.append(", platformUserUsername=");
+      var47.append(var8);
+      var47.append(", relationshipType=");
+      var47.append(var62);
+      var47.append(", guildId=");
+      var47.append(var20);
+      var47.append(", guildName=");
+      var47.append(var53);
+      var47.append(", guildIcon=");
+      var47.append(var7);
+      var47.append(", activityInstanceId=");
+      var47.append(var25);
+      var47.append(", activityType=");
+      var47.append(var60);
+      var47.append(", activityName=");
+      var47.append(var28);
+      var47.append(", applicationId=");
+      var47.append(var23);
+      var47.append(", applicationName=");
+      var47.append(var40);
+      var47.append(", applicationIcon=");
+      var47.append(var16);
+      var47.append(", message=");
+      var47.append(var12);
+      var47.append(", stageInstanceTopic=");
+      var47.append(var57);
+      var47.append(", guildScheduledEventEntityType=");
+      var47.append(var46);
+      var47.append(", canReply=");
+      var47.append(var2);
+      var47.append(", isFromCurrentUser=");
+      var47.append(var1);
+      var47.append(", receivingUserId=");
+      var47.append(var29);
+      var47.append(", title=");
+      var47.append(var39);
+      var47.append(", subtitle=");
+      var47.append(var58);
+      var47.append(", iconUrl=");
+      var47.append(var13);
+      var47.append(", notificationChannel=");
+      var47.append(var14);
+      var47.append(", trackingType=");
+      var47.append(var35);
+      var47.append(", deeplink=");
+      var47.append(var56);
+      var47.append(", expandSubtitle=");
+      var47.append(var45);
+      var47.append(", imageAttachmentUrl=");
+      var47.append(var10);
+      var47.append(", ergoImageAttachmentUrl=");
+      var47.append(var15);
+      var47.append(", attachmentTextVariant=");
+      var47.append(var18);
+      var47.append(", imageAttachmentCount=");
+      var47.append(var11);
+      var47.append(", timeReceived=");
+      var47.append(var55);
+      var47.append(", silent=");
+      var47.append(var4);
+      var47.append(", userInfo=");
+      var47.append(var49);
+      var47.append(", appDm=");
+      var47.append(var3);
+      var47.append(", notifTypeId=");
+      var47.append(var27);
+      var47.append(", notifInstanceId=");
+      var47.append(var44);
+      var47.append(", joinId=");
+      var47.append(var42);
+      var47.append(", mentionType=");
+      var47.append(var48);
+      var47.append(", appState=");
+      var47.append(var34);
+      var47.append(", inviteGuildName=");
+      var47.append(var51);
+      var47.append(", inviteTitleVariant=");
+      var47.append(var17);
+      var47.append(")");
+      return var47.toString();
    }
 
    public companion object {

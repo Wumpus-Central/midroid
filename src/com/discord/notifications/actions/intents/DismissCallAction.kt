@@ -122,19 +122,19 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
 
    public override fun toString(): String {
       val var5: java.lang.String = this.tag;
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
-      val var3: GuildId = this.guildId;
+      val var2: GuildId = this.guildId;
       val var4: java.lang.String = UserId.toString-impl(this.userId);
       val var6: StringBuilder = new StringBuilder();
       var6.append("DismissCallAction(tag=");
       var6.append(var5);
       var6.append(", channelId=");
-      var6.append(var2);
+      var6.append(var3);
       var6.append(", isFullscreenCallUI=");
       var6.append(var1);
       var6.append(", guildId=");
-      var6.append(var3);
+      var6.append(var2);
       var6.append(", userId=");
       var6.append(var4);
       var6.append(")");

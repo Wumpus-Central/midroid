@@ -1,6 +1,6 @@
 package com.discord.animatable_underlay
 
-import B9.n
+import A9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -66,10 +66,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
             }
 
             val var15: RectF = this.pathRect;
-            val var2: Float = this.height;
-            val var4: Float = this.shapeHeight;
+            val var4: Float = this.height;
+            val var3: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var2 - (var2 - var4) / 2;
+            var15.bottom = var4 - (var4 - var3) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -91,9 +91,9 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
             val var19: RectF = this.pathRect;
             val var9: Float = this.width;
-            val var12: Float = this.shapeWidth;
+            val var13: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var9 - (var9 - var12) / 2;
+            var19.right = var9 - (var9 - var13) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -180,7 +180,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = G9.a.a(var0);
       }
 
       @JvmStatic
@@ -227,7 +227,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = G9.a.a(var0);
       }
 
       @JvmStatic

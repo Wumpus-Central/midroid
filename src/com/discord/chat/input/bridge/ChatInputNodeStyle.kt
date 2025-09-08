@@ -2,7 +2,7 @@ package com.discord.chat.input.bridge
 
 import com.discord.span.utilities.common.BackgroundStyle
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {
@@ -88,19 +88,19 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var2: Int = this.fontSize;
+      val var3: Int = this.fontSize;
       val var1: Int = this.color;
-      val var4: BackgroundStyle = this.backgroundStyle;
-      val var3: ChatInputNodeFontWeight = this.fontWeight;
+      val var2: BackgroundStyle = this.backgroundStyle;
+      val var4: ChatInputNodeFontWeight = this.fontWeight;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ChatInputNodeStyle(fontSize=");
-      var5.append(var2);
+      var5.append(var3);
       var5.append(", color=");
       var5.append(var1);
       var5.append(", backgroundStyle=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", fontWeight=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

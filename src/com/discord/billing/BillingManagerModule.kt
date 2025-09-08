@@ -24,9 +24,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         B9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
-         B9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
-         B9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         A9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
+         A9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
+         A9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
@@ -69,9 +69,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 
@@ -157,9 +157,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      var2.open(var1);
    }
 
    @ReactMethod

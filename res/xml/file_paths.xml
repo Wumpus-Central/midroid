@@ -5,4 +5,5 @@
     <external-files-path name="Discord-Files" path="." />
     <external-path name="external_files" path="." />
     <files-path name="files" path="." />
+    <cache-path name="discord_notification_images" path="notifications/" />
 </paths>

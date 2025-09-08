@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.scroll
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Boolean = false, highlight: Boolean = false, position: Int? = null) {
@@ -72,8 +72,8 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.type.hashCode();
-      val var2: Int = Integer.hashCode(this.index);
+      val var2: Int = this.type.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       val var3: Int = java.lang.Boolean.hashCode(this.animate);
       val var5: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
@@ -83,14 +83,14 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var4 * 31 + var2) * 31 + var3) * 31 + var5) * 31 + var1;
+      return (((var2 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var5: ChatScrollType = this.type;
       val var1: Int = this.index;
-      val var2: Boolean = this.animate;
-      val var3: Boolean = this.highlight;
+      val var3: Boolean = this.animate;
+      val var2: Boolean = this.highlight;
       val var6: Int = this.position;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ChatScrollData(type=");
@@ -98,9 +98,9 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
       var4.append(", index=");
       var4.append(var1);
       var4.append(", animate=");
-      var4.append(var2);
-      var4.append(", highlight=");
       var4.append(var3);
+      var4.append(", highlight=");
+      var4.append(var2);
       var4.append(", position=");
       var4.append(var6);
       var4.append(")");

@@ -259,6 +259,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       );
    }
 
+   public override fun onSharedClientThemeViewed(messageId: MessageId) {
+      this.emitReactEvent.invoke(new SharedClientThemeViewedData(var1, null));
+   }
+
    public override fun onStickerClicked(sticker: Sticker, messageId: MessageId) {
       this.emitReactEvent.invoke(new TapStickerData(var1, var2, null));
    }

@@ -1,7 +1,7 @@
 package com.discord.image.fresco.postprocessors
 
-import B9.n
-import H9.a
+import A9.n
+import G9.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
@@ -207,8 +207,8 @@ public sealed interface PostProcessor {
          val var5: PostProcessor.Gradient.Direction = this.direction;
          val var3: Int = this.startColor;
          val var4: Int = this.endColor;
-         val var2: Float = this.startPosition;
-         val var1: Float = this.endPosition;
+         val var1: Float = this.startPosition;
+         val var2: Float = this.endPosition;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Gradient(direction=");
          var6.append(var5);
@@ -217,9 +217,9 @@ public sealed interface PostProcessor {
          var6.append(", endColor=");
          var6.append(var4);
          var6.append(", startPosition=");
-         var6.append(var2);
-         var6.append(", endPosition=");
          var6.append(var1);
+         var6.append(", endPosition=");
+         var6.append(var2);
          var6.append(")");
          return var6.toString();
       }

@@ -1,7 +1,7 @@
 package com.discord.chat.input.bridge
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ChatInputNode(type: Int,
@@ -117,28 +117,28 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.type;
-      val var2: Int = this.location;
+      val var2: Int = this.type;
+      val var1: Int = this.location;
       val var3: Int = this.length;
-      val var7: ChatInputNodeStyle = this.style;
-      val var4: Boolean = this.deleteNodeOnBackspace;
-      val var6: TapAction = this.tapAction;
-      val var5: Boolean = this.editDisabled;
+      val var6: ChatInputNodeStyle = this.style;
+      val var5: Boolean = this.deleteNodeOnBackspace;
+      val var7: TapAction = this.tapAction;
+      val var4: Boolean = this.editDisabled;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ChatInputNode(type=");
-      var8.append(var1);
-      var8.append(", location=");
       var8.append(var2);
+      var8.append(", location=");
+      var8.append(var1);
       var8.append(", length=");
       var8.append(var3);
       var8.append(", style=");
-      var8.append(var7);
-      var8.append(", deleteNodeOnBackspace=");
-      var8.append(var4);
-      var8.append(", tapAction=");
       var8.append(var6);
-      var8.append(", editDisabled=");
+      var8.append(", deleteNodeOnBackspace=");
       var8.append(var5);
+      var8.append(", tapAction=");
+      var8.append(var7);
+      var8.append(", editDisabled=");
+      var8.append(var4);
       var8.append(")");
       return var8.toString();
    }

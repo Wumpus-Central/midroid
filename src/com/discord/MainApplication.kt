@@ -57,7 +57,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
-         F9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
+         E9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
          var3 = TTIMetrics.INSTANCE;
          TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
          ReactMarkerListener.INSTANCE.start();
@@ -70,7 +70,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "296.16", 296116, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "297.8", 297108, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -83,7 +83,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@296.16.0-1+296116";
+         var5 = "discord_android@297.8.0-1+297108";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

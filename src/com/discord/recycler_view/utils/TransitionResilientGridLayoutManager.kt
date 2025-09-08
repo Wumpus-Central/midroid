@@ -1,16 +1,16 @@
 package com.discord.recycler_view.utils
 
+import a2.d
+import a2.e
+import a2.f
+import a2.g
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
-import b2.d
-import b2.e
-import b2.f
-import b2.g
 
-public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new b2.a()) : GridLayoutManager(
+public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new a2.a()) : GridLayoutManager(
       var1, var2
    ) {
    private final val recyclingDelegate: TransitionResilientRecyclingDelegate
@@ -69,7 +69,7 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
    }
 
    public override fun removeAndRecycleView(child: View, recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new b2.b(this), new b2.c(this));
+      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new a2.b(this), new a2.c(this));
    }
 
    public override fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {

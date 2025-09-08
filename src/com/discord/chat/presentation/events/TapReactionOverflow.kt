@@ -3,7 +3,7 @@ package com.discord.chat.presentation.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapReactionOverflow(messageId: String, channelId: String) : ReactEvent {

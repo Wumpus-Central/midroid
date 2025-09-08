@@ -50,7 +50,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         F9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         E9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -456,13 +456,13 @@ internal object SystemLogUtils {
 
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread(var1);
    }
 
@@ -555,27 +555,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.text;
-         val var6: java.lang.String = this.cause;
-         val var1: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
-         val var4: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Tombstone(text=");
-         var2.append(var3);
-         var2.append(", cause=");
-         var2.append(var6);
-         var2.append(", groupBy=");
-         var2.append(var1);
-         var2.append(", origin=");
-         var2.append(var5);
-         var2.append(", groupHash=");
-         var2.append(var4);
-         var2.append(", textHash=");
-         var2.append(var7);
-         var2.append(")");
-         return var2.toString();
+         val var5: java.lang.String = this.text;
+         val var1: java.lang.String = this.cause;
+         val var3: java.lang.String = this.groupBy;
+         val var4: java.lang.String = this.origin;
+         val var2: java.lang.String = this.groupHash;
+         val var6: java.lang.String = this.textHash;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Tombstone(text=");
+         var7.append(var5);
+         var7.append(", cause=");
+         var7.append(var1);
+         var7.append(", groupBy=");
+         var7.append(var3);
+         var7.append(", origin=");
+         var7.append(var4);
+         var7.append(", groupHash=");
+         var7.append(var2);
+         var7.append(", textHash=");
+         var7.append(var6);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

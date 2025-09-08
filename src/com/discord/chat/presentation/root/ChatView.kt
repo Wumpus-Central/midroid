@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.root
 
-import B9.s
+import A9.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -124,11 +124,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

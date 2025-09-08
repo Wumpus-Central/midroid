@@ -121,18 +121,18 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
    if (var0 is CustomEmojiContentNode) {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var2: Long = (var0 as CustomEmojiContentNode).getId();
-      val var1: Boolean;
+      val var1: Long = (var0 as CustomEmojiContentNode).getId();
+      val var3: Boolean;
       if (!StringsKt.c0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
-         var1 = true;
+         var3 = true;
       } else {
-         var1 = false;
+         var3 = false;
       }
 
-      var6 = var4.customWithEmojiId(var2, var1, var5.getAlt());
+      var6 = var4.customWithEmojiId(var1, var3, var5.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
-         throw new B9.n();
+         throw new A9.n();
       }
 
       var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());

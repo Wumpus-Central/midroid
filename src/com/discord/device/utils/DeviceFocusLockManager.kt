@@ -15,7 +15,7 @@ public object DeviceFocusLockManager {
    private final val focusExcludedViewPreviousImportantForAccessibilityValue: MutableMap<Int, Int> = new LinkedHashMap()
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
-      val var7: LinkedHashSet = new LinkedHashSet();
+      val var8: LinkedHashSet = new LinkedHashSet();
       val var9: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
@@ -42,18 +42,18 @@ public object DeviceFocusLockManager {
             var4 = var11;
          }
 
-         var7.addAll(var6);
+         var8.addAll(var6);
       }
 
-      return CollectionsKt.T0(var7);
+      return CollectionsKt.T0(var8);
    }
 
    public fun disableFocusLock() {
-      val var4: java.util.Iterator = focusExcludedViews.entrySet().iterator();
+      val var2: java.util.Iterator = focusExcludedViews.entrySet().iterator();
 
-      while (var4.hasNext()) {
-         val var2: View = (var4.next() as Entry).getValue() as View;
-         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
+      while (var2.hasNext()) {
+         val var4: View = (var2.next() as Entry).getValue() as View;
+         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var4.getId());
          val var1: Int;
          if (var3 != null) {
             var1 = var3;
@@ -61,7 +61,7 @@ public object DeviceFocusLockManager {
             var1 = 0;
          }
 
-         var2.setImportantForAccessibility(var1);
+         var4.setImportantForAccessibility(var1);
       }
 
       focusExcludedViews.clear();

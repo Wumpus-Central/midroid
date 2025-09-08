@@ -10,6 +10,6 @@ public final class K implements Function1 {
    public final TextDisplayComponentView e;
 
    public final Object invoke(Object var1) {
-      return TextDisplayComponentViewManager.h(this.d, this.e, (LinkContentNode)var1);
+      return TextDisplayComponentViewManager.j(this.d, this.e, (LinkContentNode)var1);
    }
 }

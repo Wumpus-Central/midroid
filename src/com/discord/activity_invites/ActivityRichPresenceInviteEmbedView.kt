@@ -27,7 +27,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import z2.f
+import y2.f
 
 @SourceDebugExtension(["SMAP\nActivityRichPresenceInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,252:1\n257#2,2:253\n257#2,2:255\n257#2,2:257\n257#2,2:259\n257#2,2:261\n257#2,2:263\n257#2,2:265\n257#2,2:267\n257#2,2:269\n257#2,2:271\n257#2,2:273\n257#2,2:275\n257#2,2:277\n257#2,2:279\n257#2,2:281\n257#2,2:283\n257#2,2:285\n257#2,2:287\n257#2,2:289\n257#2,2:291\n257#2,2:293\n257#2,2:295\n257#2,2:301\n257#2,2:303\n257#2,2:305\n257#2,2:307\n1557#3:297\n1628#3,3:298\n1557#3:309\n1628#3,3:310\n*S KotlinDebug\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n*L\n107#1:253,2\n112#1:255,2\n114#1:257,2\n131#1:259,2\n134#1:261,2\n142#1:263,2\n144#1:265,2\n147#1:267,2\n151#1:269,2\n165#1:271,2\n169#1:273,2\n175#1:275,2\n177#1:277,2\n183#1:279,2\n185#1:281,2\n191#1:283,2\n193#1:285,2\n196#1:287,2\n197#1:289,2\n198#1:291,2\n199#1:293,2\n200#1:295,2\n218#1:301,2\n220#1:303,2\n226#1:305,2\n230#1:307,2\n215#1:297\n215#1:298,3\n233#1:309\n233#1:310,3\n*E\n"])
 public class ActivityRichPresenceInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
@@ -64,16 +64,16 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          var2.setVisibility(0);
          val var7: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
 
-         for (RGBAColorModel var5 : var1) {
-            var7.add(Color.argb((int)(var5.getA() * (float)255), (int)var5.getR(), (int)var5.getG(), (int)var5.getB()));
+         for (RGBAColorModel var3 : var1) {
+            var7.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
          }
 
-         val var6: IntArray = CollectionsKt.S0(var7);
-         val var8: GradientDrawable = new GradientDrawable();
-         var8.setColors(var6);
-         var8.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
-         var8.setOrientation(Orientation.BL_TR);
-         this.binding.gradientBackground.setBackground(var8);
+         val var8: IntArray = CollectionsKt.S0(var7);
+         val var6: GradientDrawable = new GradientDrawable();
+         var6.setColors(var8);
+         var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
+         var6.setOrientation(Orientation.BL_TR);
+         this.binding.gradientBackground.setBackground(var6);
       } else {
          val var4: View = this.binding.gradientBackground;
          var4.setVisibility(8);

@@ -4,7 +4,7 @@ import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g(with = SelectOptionType.Serializer::class)
 public enum class SelectOptionType(serialNumber: Int) : IntEnum {
@@ -25,7 +25,7 @@ public enum class SelectOptionType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<SelectOptionType> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = G9.a.a(var0);
    }
 
    init {

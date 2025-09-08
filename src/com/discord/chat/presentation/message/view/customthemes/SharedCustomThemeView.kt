@@ -26,10 +26,13 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nSharedCustomThemeView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SharedCustomThemeView.kt\ncom/discord/chat/presentation/message/view/customthemes/SharedCustomThemeView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,136:1\n176#2,2:137\n1557#3:139\n1628#3,3:140\n1557#3:143\n1628#3,3:144\n*S KotlinDebug\n*F\n+ 1 SharedCustomThemeView.kt\ncom/discord/chat/presentation/message/view/customthemes/SharedCustomThemeView\n*L\n45#1:137,2\n64#1:139\n64#1:140,3\n106#1:143\n106#1:144,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nSharedCustomThemeView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SharedCustomThemeView.kt\ncom/discord/chat/presentation/message/view/customthemes/SharedCustomThemeView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,157:1\n176#2,2:158\n1557#3:160\n1628#3,3:161\n1557#3:164\n1628#3,3:165\n*S KotlinDebug\n*F\n+ 1 SharedCustomThemeView.kt\ncom/discord/chat/presentation/message/view/customthemes/SharedCustomThemeView\n*L\n49#1:158,2\n73#1:160\n73#1:161,3\n115#1:164\n115#1:165,3\n*E\n"])
 public class SharedCustomThemeView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    public final val binding: SharedCustomThemeViewBinding
    public final val nitroWheelIcon: SimpleDraweeView
+   private final var onViewed: ((MessageId) -> Unit)?
+   private final var messageId: MessageId?
+   private final var hasViewed: Boolean
 
    fun SharedCustomThemeView(var1: Context) {
       this(var1, null, 2, null);
@@ -51,23 +54,32 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
    }
 
    @JvmStatic
-   fun `bind_AFFcxXc$lambda$2`(var0: Function1, var1: java.lang.String, var2: View) {
+   fun `bind_pPZZVto$lambda$2`(var0: Function1, var1: java.lang.String, var2: View) {
       var0.invoke(MessageId.box-impl(var1));
    }
 
-   public fun bind(messageId: MessageId, sharedCustomThemeData: SharedCustomThemeData, author: String?, onTapPreview: (MessageId) -> Unit) {
+   public fun bind(
+      messageId: MessageId,
+      sharedCustomThemeData: SharedCustomThemeData,
+      author: String?,
+      onTapPreview: (MessageId) -> Unit,
+      onViewed: (MessageId) -> Unit
+   ) {
+      this.hasViewed = false;
+      this.messageId = var1;
+      this.onViewed = var5;
       this.binding.previewBtn.setText(var2.getPreviewLabel());
       this.binding.previewBtn.setCornerRadius(this.binding.previewBtn.getHeight() / 2);
       this.binding.previewBtn.setOnClickButtonListener(new a(var4, var1));
       val var8: ThemePreviewView = this.binding.themePreview;
-      val var15: java.util.List = var2.getColors();
-      val var12: ArrayList = new ArrayList(CollectionsKt.v(var15, 10));
+      val var16: java.util.List = var2.getColors();
+      val var12: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var7 : var15) {
-         val var16: StringBuilder = new StringBuilder();
-         var16.append("#");
-         var16.append(var7);
-         var12.add(var16.toString());
+      for (java.lang.String var17 : var16) {
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("#");
+         var7.append(var17);
+         var12.add(var7.toString());
       }
 
       var8.setHexColors(var12);
@@ -101,11 +113,11 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
       for (java.lang.String var6 : var4) {
-         val var8: TextView = new TextView(this.getContext());
-         var8.setText(var6);
-         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var8.setTextSize(14.0F);
-         var3.add(var8);
+         val var5: TextView = new TextView(this.getContext());
+         var5.setText(var6);
+         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var5.setTextSize(14.0F);
+         var3.add(var5);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);
@@ -122,5 +134,18 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       this.binding.createdByContainer.addView(var9);
       this.binding.createdByContainer.addView(var7);
       this.binding.createdByContainer.addView(var3.get(1) as View);
+   }
+
+   protected open fun onAttachedToWindow() {
+      super.onAttachedToWindow();
+      if (!this.hasViewed) {
+         if (this.messageId != null) {
+            if (this.onViewed != null) {
+               this.onViewed.invoke(MessageId.box-impl(this.messageId));
+            }
+
+            this.hasViewed = true;
+         }
+      }
    }
 }

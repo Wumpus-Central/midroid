@@ -107,6 +107,9 @@ public interface ChatEventHandler {
    public abstract fun onScrollStateChanged(scrollState: ScrollState, changesetUpdateId: Int) {
    }
 
+   public abstract fun onSharedClientThemeViewed(messageId: MessageId) {
+   }
+
    public abstract fun onStickerClicked(sticker: Sticker, messageId: MessageId) {
    }
 
@@ -420,6 +423,9 @@ public interface ChatEventHandler {
       }
 
       public override fun onScrollStateChanged(scrollState: ScrollState, changesetUpdateId: Int) {
+      }
+
+      public override fun onSharedClientThemeViewed(messageId: MessageId) {
       }
 
       public override fun onStickerClicked(sticker: Sticker, messageId: MessageId) {

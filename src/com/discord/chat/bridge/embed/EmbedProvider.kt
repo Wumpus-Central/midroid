@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.embed
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class EmbedProvider(name: String) {

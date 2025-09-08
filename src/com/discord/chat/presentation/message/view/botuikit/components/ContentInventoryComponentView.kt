@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import B9.m
+import A9.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -38,7 +38,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          var1, var2, var3
       ),
    ComponentView<ContentInventoryEntryComponent> {
-   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = H2.d.g()
+   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = G2.d.g()
 
    private final val binding: MessageComponentContentInventoryViewBinding
       private final get() {
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = B9.j.a(m.i, new e(this));
+      this.binding$delegate = A9.j.a(m.i, new e(this));
    }
 
    @JvmStatic

@@ -5,7 +5,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 @SourceDebugExtension(["SMAP\nPollStyleSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollStyleSet.kt\ncom/discord/chat/bridge/polls/PollStyleSet\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,58:1\n1#2:59\n*E\n"])
@@ -298,39 +298,39 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var10: Int = this.border;
+      val var9: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var11: Int = this.fill;
-      val var3: Int = this.label;
+      val var8: Int = this.fill;
+      val var6: Int = this.label;
       val var1: Float = this.opacity;
-      val var7: Int = this.answerBackground;
-      val var8: Int = this.answerFill;
-      val var4: PollRadioStyle = this.radioStyle;
-      val var5: Int = this.radioBackground;
-      val var9: Int = this.radioForeground;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PollStyleSet(border=");
-      var6.append(var10);
-      var6.append(", borderWidth=");
-      var6.append(var2);
-      var6.append(", fill=");
-      var6.append(var11);
-      var6.append(", label=");
-      var6.append(var3);
-      var6.append(", opacity=");
-      var6.append(var1);
-      var6.append(", answerBackground=");
-      var6.append(var7);
-      var6.append(", answerFill=");
-      var6.append(var8);
-      var6.append(", radioStyle=");
-      var6.append(var4);
-      var6.append(", radioBackground=");
-      var6.append(var5);
-      var6.append(", radioForeground=");
-      var6.append(var9);
-      var6.append(")");
-      return var6.toString();
+      val var3: Int = this.answerBackground;
+      val var4: Int = this.answerFill;
+      val var5: PollRadioStyle = this.radioStyle;
+      val var10: Int = this.radioBackground;
+      val var7: Int = this.radioForeground;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("PollStyleSet(border=");
+      var11.append(var9);
+      var11.append(", borderWidth=");
+      var11.append(var2);
+      var11.append(", fill=");
+      var11.append(var8);
+      var11.append(", label=");
+      var11.append(var6);
+      var11.append(", opacity=");
+      var11.append(var1);
+      var11.append(", answerBackground=");
+      var11.append(var3);
+      var11.append(", answerFill=");
+      var11.append(var4);
+      var11.append(", radioStyle=");
+      var11.append(var5);
+      var11.append(", radioBackground=");
+      var11.append(var10);
+      var11.append(", radioForeground=");
+      var11.append(var7);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

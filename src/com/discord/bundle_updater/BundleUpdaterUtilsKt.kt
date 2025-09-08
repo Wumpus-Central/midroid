@@ -2,7 +2,7 @@
 
 package com.discord.bundle_updater
 
-import L9.p
+import K9.p
 import android.content.res.AssetManager
 import java.io.BufferedReader
 import java.io.InputStream
@@ -24,21 +24,21 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       val var10: BufferedReader = new BufferedReader(new InputStreamReader(var9, Charsets.UTF_8), 8192);
 
       try {
-         val var2: Json = json;
-         var1 = p.f(var10);
-         var2.a();
-         var13 = var2.b(AppManifest.Companion.serializer(), var1) as AppManifest;
+         val var12: Json = json;
+         val var2: java.lang.String = p.f(var10);
+         var12.a();
+         var13 = var12.b(AppManifest.Companion.serializer(), var2) as AppManifest;
       } catch (var4: java.lang.Throwable) {
          val var11: java.lang.Throwable = var4;
 
          try {
             throw var11;
          } catch (var3: java.lang.Throwable) {
-            L9.c.a(var10, var4);
+            K9.c.a(var10, var4);
          }
       }
 
-      L9.c.a(var10, null);
+      K9.c.a(var10, null);
       return var13;
    }
 }

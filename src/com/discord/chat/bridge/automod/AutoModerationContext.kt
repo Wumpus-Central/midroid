@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.automod
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class AutoModerationContext(headerText: String,
@@ -152,22 +152,22 @@ public data class AutoModerationContext(headerText: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.headerText;
-      val var9: java.lang.String = this.headerBadgeText;
-      val var2: java.lang.String = this.ruleDisplayText;
+      val var5: java.lang.String = this.headerText;
+      val var6: java.lang.String = this.headerBadgeText;
+      val var4: java.lang.String = this.ruleDisplayText;
       val var8: java.lang.String = this.keywordDisplayText;
       val var1: java.lang.String = this.actionsIconURL;
       val var10: java.lang.String = this.actionsText;
-      val var5: java.lang.String = this.feedbackText;
+      val var9: java.lang.String = this.feedbackText;
       val var7: FlaggedMessageEmbed = this.message;
-      val var6: AutoModerationNotification = this.notification;
+      val var2: AutoModerationNotification = this.notification;
       val var3: StringBuilder = new StringBuilder();
       var3.append("AutoModerationContext(headerText=");
-      var3.append(var4);
+      var3.append(var5);
       var3.append(", headerBadgeText=");
-      var3.append(var9);
+      var3.append(var6);
       var3.append(", ruleDisplayText=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(", keywordDisplayText=");
       var3.append(var8);
       var3.append(", actionsIconURL=");
@@ -175,11 +175,11 @@ public data class AutoModerationContext(headerText: String,
       var3.append(", actionsText=");
       var3.append(var10);
       var3.append(", feedbackText=");
-      var3.append(var5);
+      var3.append(var9);
       var3.append(", message=");
       var3.append(var7);
       var3.append(", notification=");
-      var3.append(var6);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

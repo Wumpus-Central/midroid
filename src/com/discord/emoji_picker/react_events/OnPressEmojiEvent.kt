@@ -3,7 +3,7 @@ package com.discord.emoji_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {

@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import B9.s
+import A9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -141,11 +141,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             NativeMapExtensionsKt.put(var5, "addSpace", var8);
          }
       } else {
-         val var4: Log = Log.INSTANCE;
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("Missing target type data: ");
-         var11.append(var2);
-         Log.e$default(var4, "TapLink", var11.toString(), null, 4, null);
+         val var11: Log = Log.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Missing target type data: ");
+         var4.append(var2);
+         Log.e$default(var11, "TapLink", var4.toString(), null, 4, null);
       }
 
       return var5;
@@ -178,16 +178,15 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
-         var var3: TapLinkData;
          label37: {
-            var3 = var1 as TapLinkData;
+            var1 = var1;
             if (this.messageId == null) {
-               if (var3.messageId == null) {
+               if (var1.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var3.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+            } else if (var1.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
                break label37;
             }
 
@@ -196,12 +195,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!(this.title == var3.title)) {
+         } else if (!(this.title == var1.title)) {
             return false;
-         } else if (!(this.target == var3.target)) {
+         } else if (!(this.target == var1.target)) {
             return false;
          } else {
-            return this.content == var3.content;
+            return this.content == var1.content;
          }
       }
    }
@@ -264,19 +263,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var2: LinkContextData = this.target;
-      val var5: java.lang.String = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapLinkData(messageId=");
-      var3.append(var6);
-      var3.append(", title=");
-      var3.append(var4);
-      var3.append(", target=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.title;
+      val var5: LinkContextData = this.target;
+      val var4: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapLinkData(messageId=");
+      var2.append(var6);
+      var2.append(", title=");
+      var2.append(var3);
+      var2.append(", target=");
+      var2.append(var5);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

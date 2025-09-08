@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class LHeadingContentNode(level: Int, className: String, content: List<ContentNode>) : ContentNode() {

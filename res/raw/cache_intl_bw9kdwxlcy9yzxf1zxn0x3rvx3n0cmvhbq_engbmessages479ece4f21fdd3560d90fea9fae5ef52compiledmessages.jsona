@@ -1,0 +1,37 @@
+{
+  "DKHheX": "Ask to Stream",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " is asking you to stream ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "You asked someone to stream ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Already streaming",
+  "u4QmWl": "Request expired",
+  "qRXatr": "Not in voice channel",
+  "43zohI": "Not running game",
+  "fac+eH": "No permission",
+  "8HU1Mz": "Request sent",
+  "5+172d": "Stream",
+  "nAyuPj": "Stream Request",
+  "d/qbCw": [
+    [
+      1,
+      "username"
+    ],
+    " asked you to stream"
+  ],
+  "8B3U5O": "You asked someone to stream"
+}

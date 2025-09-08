@@ -1,0 +1,37 @@
+{
+  "DKHheX": "Pyydä striimaamaan",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " pyytää sinua striimaamaan tätä: ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Pyysit jotakuta striimaamaan tätä: ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Striimi on jo käynnissä",
+  "u4QmWl": "Pyyntö vanhentunut",
+  "qRXatr": "Ei puhekanavalla",
+  "43zohI": "Ei suorita peliä",
+  "fac+eH": "Ei käyttöoikeutta",
+  "8HU1Mz": "Pyyntö lähetetty",
+  "5+172d": "Striimaa",
+  "nAyuPj": "Striimauspyyntö",
+  "d/qbCw": [
+    [
+      1,
+      "username"
+    ],
+    " pyysi sinua striimaamaan"
+  ],
+  "8B3U5O": "Pyysit jotakuta striimaamaan"
+}

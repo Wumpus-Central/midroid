@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.events
 
-import B9.s
+import A9.s
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.DoubleTapMessageEvent
@@ -20,6 +20,7 @@ import com.discord.chat.reactevents.LongPressStickerData
 import com.discord.chat.reactevents.LongPressUsernameData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackStartedData
+import com.discord.chat.reactevents.SharedClientThemeViewedData
 import com.discord.chat.reactevents.TapAppMessageEmbedData
 import com.discord.chat.reactevents.TapAttachmentLinkData
 import com.discord.chat.reactevents.TapAutoModerationActionsData
@@ -175,6 +176,7 @@ internal fun createChatReactEvents(): ReactEvents {
       s.a("onTapClanTagChiplet", TapClanTagChipletData::class),
       s.a("onTapContentInventoryEntryEmbed", TapContentInventoryEntryEmbedData::class),
       s.a("onTapSoundmoji", TapSoundmojiData::class),
-      s.a("onTapPreviewSharedClientTheme", TapPreviewSharedClientThemeData::class)
+      s.a("onTapPreviewSharedClientTheme", TapPreviewSharedClientThemeData::class),
+      s.a("onSharedClientThemeViewed", SharedClientThemeViewedData::class)
    );
 }
