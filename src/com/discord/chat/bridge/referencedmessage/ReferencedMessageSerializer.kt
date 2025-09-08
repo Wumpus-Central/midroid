@@ -4,8 +4,8 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rb.d
-import rb.g
+import qb.d
+import qb.g
 
 public object ReferencedMessageSerializer : d(ReferencedMessage::class) {
    private const val STATE_LOADED: String = "0"

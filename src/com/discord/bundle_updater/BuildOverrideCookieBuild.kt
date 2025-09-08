@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import B9.s
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
 
-@nb.g
+@mb.g
 public data class BuildOverrideCookieBuild(type: String, id: String) {
    public final val type: String
    public final val id: String

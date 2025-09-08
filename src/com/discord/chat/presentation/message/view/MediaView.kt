@@ -247,9 +247,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
             val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var12: Context = this.getContext();
-            val var7: java.lang.Double = var1.getPortal();
-            var10 = var11.acquire(var12, var7, this.playerSettings);
+            val var7: Context = this.getContext();
+            val var12: java.lang.Double = var1.getPortal();
+            var10 = var11.acquire(var7, var12, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -516,7 +516,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      db.f.d(
+      cb.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -538,7 +538,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = G9.b.e();
+               val var3: Any = F9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -594,7 +594,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      db.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      cb.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final MediaView this$0;
 
@@ -612,7 +612,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = G9.b.e();
+            val var3: Any = F9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

@@ -1,6 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import G9.b
+import F9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -8,19 +8,19 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RectShape
 import android.webkit.URLUtil
+import cb.K
+import cb.f
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
-import db.K
-import db.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
@@ -92,8 +92,8 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            var4 = K.b();
-            val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
+            val var5: CoroutineDispatcher = K.b();
+            var4 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -140,7 +140,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = f.g((CoroutineContext)var4, var5, this);
+            var4 = f.g(var5, (Function2)var4, this);
             if (var4 === var3) {
                return var3;
             }

@@ -41,9 +41,9 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
    private final val activityEventListener: <unrepresentable>
 
    init {
-      val var3: CredentialManager.a = CredentialManager.a;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      this.credentialManager = var3.a(var2);
+      val var2: CredentialManager.a = CredentialManager.a;
+      var1 = this.getReactApplicationContext();
+      this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -91,7 +91,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         db.f.d(
+         cb.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -142,7 +142,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         db.f.d(
+         cb.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,

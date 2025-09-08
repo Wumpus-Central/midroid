@@ -7,7 +7,7 @@ import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
-import l2.h
+import k2.h
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public open fun getName(): String {

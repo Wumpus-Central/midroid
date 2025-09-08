@@ -1,19 +1,20 @@
 package com.discord.sounds.utils
 
-import E9.a
-import G9.b
+import D9.a
+import F9.b
 import android.content.Context
 import android.net.Uri
+import cb.K
+import cb.d0
+import cb.f
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import db.K
-import db.d0
-import db.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -271,8 +272,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            return Unit.a;
                         }
 
-                        val var10: d0 = K.c();
-                        var5 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                        var5 = K.c();
+                        val var10: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                            int label;
 
                            {
@@ -298,7 +299,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            }
                         };
                         ((<unrepresentable>)var13).label = 3;
-                        if (f.g(var10, (Function2)var5, (Continuation)var13) === var15) {
+                        if (f.g((CoroutineContext)var5, var10, (Continuation)var13) === var15) {
                            return var15;
                         }
                      }

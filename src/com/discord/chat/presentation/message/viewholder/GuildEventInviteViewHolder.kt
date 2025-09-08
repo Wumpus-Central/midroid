@@ -47,14 +47,14 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    }
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
-      val var13: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var19: GuildEventInviteEmbedImpl = var1.getInvite();
       val var20: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var13.getHeaderIcon(), var13.getHeaderText(), var13.getHeaderColor());
-      var20.setCreatorAvatar(var13.getCreatorAvatar());
-      var20.setBadge(var13.getBadgeIcon(), var13.getBadgeCount());
-      var20.setTitle(var13.getTitleText(), var13.getTitleColor());
+      this.guildEventInviteView.setHeader(var19.getHeaderIcon(), var19.getHeaderText(), var19.getHeaderColor());
+      var20.setCreatorAvatar(var19.getCreatorAvatar());
+      var20.setBadge(var19.getBadgeIcon(), var19.getBadgeCount());
+      var20.setTitle(var19.getTitleText(), var19.getTitleColor());
       var20.setDescription-iRUqyQU(
-         var13.getContent(),
+         var19.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
@@ -218,16 +218,16 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var20.setGuild(var13.getGuildName(), var13.getGuildIcon());
-      var20.setChannel(var13.getChannelIcon(), var13.getChannelName());
+      var20.setGuild(var19.getGuildName(), var19.getGuildIcon());
+      var20.setChannel(var19.getChannelIcon(), var19.getChannelName());
       var20.setAcceptButton(
-         var13.getAcceptLabelIcon(),
-         var13.getAcceptLabelText(),
-         var13.getAcceptLabelColor(),
-         var13.getAcceptLabelBorderColor(),
-         var13.getAcceptLabelBackgroundColor(),
+         var19.getAcceptLabelIcon(),
+         var19.getAcceptLabelText(),
+         var19.getAcceptLabelColor(),
+         var19.getAcceptLabelBorderColor(),
+         var19.getAcceptLabelBackgroundColor(),
          new p(this, var1)
       );
-      var20.setSecondaryButton(var13.getSecondaryActionIcon(), new q(this, var1));
+      var20.setSecondaryButton(var19.getSecondaryActionIcon(), new q(this, var1));
    }
 }

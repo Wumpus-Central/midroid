@@ -2,8 +2,8 @@
 
 package com.discord.image.fresco
 
-import G9.b
-import H2.d
+import F9.b
+import G2.d
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -40,7 +40,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.f(new r3.b(var6, var3) {
+      var8.f(new q3.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -116,7 +116,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).f(new r3.b(var3) {
+      d.a().k(var5.J(var6).a(), var0).f(new q3.b(var3) {
          final Function1<Bitmap, Unit> $onDecodedImage;
 
          {

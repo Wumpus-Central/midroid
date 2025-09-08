@@ -2,7 +2,7 @@ package com.discord.chat.bridge.feedback
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {

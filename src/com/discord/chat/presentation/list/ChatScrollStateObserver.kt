@@ -28,12 +28,12 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          val var28: LinearLayoutManager = var18 as LinearLayoutManager;
          val var17: Boolean = (var18 as LinearLayoutManager).getReverseLayout();
          this.chatListVisibilityCalculator.updateFirstAndLastMessageVisibilityData(var1);
-         val var7: Int = this.chatListVisibilityCalculator.getFirstMessagePosition();
+         val var6: Int = this.chatListVisibilityCalculator.getFirstMessagePosition();
          val var20: java.lang.Double = this.chatListVisibilityCalculator.getFirstMessagePercentVisible();
-         val var6: Int = this.chatListVisibilityCalculator.getLastMessagePosition();
+         val var7: Int = this.chatListVisibilityCalculator.getLastMessagePosition();
          val var19: java.lang.Double = this.chatListVisibilityCalculator.getLastMessagePercentVisible();
          var var10: Boolean;
-         if (var7 == 0) {
+         if (var6 == 0) {
             var10 = true;
          } else {
             var10 = false;
@@ -47,7 +47,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          val var11: Boolean;
-         if (var7 <= var23) {
+         if (var6 <= var23) {
             var11 = true;
          } else {
             var11 = false;
@@ -101,7 +101,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          val var21: RecyclerView.Adapter = var1.getAdapter();
          var23 = (var21 as ChannelChatListAdapter).getFirstMessageItemPosition();
          val var16: Boolean;
-         if (var7 <= var23 && var23 <= var8) {
+         if (var6 <= var23 && var23 <= var8) {
             var16 = true;
          } else {
             var16 = false;
@@ -109,9 +109,9 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
 
          val var22: ScrollState;
          if (var17) {
-            var22 = new ScrollState(var14, var15, var11, var10, var13, var12, var29, var16, var6, var19, var7, var20);
+            var22 = new ScrollState(var14, var15, var11, var10, var13, var12, var29, var16, var7, var19, var6, var20);
          } else {
-            var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var7, var20, var6, var19);
+            var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var6, var20, var7, var19);
          }
 
          var10 = this.scrollState == var22;
@@ -155,7 +155,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = G9.a.a(var0);
       }
 
       @JvmStatic

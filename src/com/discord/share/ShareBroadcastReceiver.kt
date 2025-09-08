@@ -1,6 +1,6 @@
 package com.discord.share
 
-import B9.s
+import A9.s
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName

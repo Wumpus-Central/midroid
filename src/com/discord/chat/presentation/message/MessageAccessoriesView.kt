@@ -72,7 +72,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var3;
       val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var4;
-      this.forwardBarPaint$delegate = B9.j.b(new Q());
+      this.forwardBarPaint$delegate = A9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);

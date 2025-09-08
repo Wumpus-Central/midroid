@@ -1,7 +1,7 @@
 package com.discord.user_search_worker
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData() {

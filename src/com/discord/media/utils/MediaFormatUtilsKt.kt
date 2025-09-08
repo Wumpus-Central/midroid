@@ -9,16 +9,16 @@ public final val mimeType: String?
    public final get() {
       label16:
       try {
-         val var5: kotlin.Result.a = Result.e;
-         var4 = Result.b(var0.getString("mime"));
-      } catch (var2: java.lang.Throwable) {
          val var1: kotlin.Result.a = Result.e;
-         var4 = Result.b(kotlin.c.a(var2));
+         var5 = Result.b(var0.getString("mime"));
+      } catch (var2: java.lang.Throwable) {
+         val var4: kotlin.Result.a = Result.e;
+         var5 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (Result.g(var4)) {
+      var var6: Any = var5;
+      if (Result.g(var5)) {
          var6 = null;
       }
 
@@ -87,16 +87,16 @@ public final val profile: Int?
    public final get() {
       label16:
       try {
-         val var5: kotlin.Result.a = Result.e;
-         var4 = Result.b(var0.getInteger("profile"));
-      } catch (var2: java.lang.Throwable) {
          val var1: kotlin.Result.a = Result.e;
-         var4 = Result.b(kotlin.c.a(var2));
+         var5 = Result.b(var0.getInteger("profile"));
+      } catch (var2: java.lang.Throwable) {
+         val var4: kotlin.Result.a = Result.e;
+         var5 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (Result.g(var4)) {
+      var var6: Any = var5;
+      if (Result.g(var5)) {
          var6 = null;
       }
 

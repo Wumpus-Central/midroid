@@ -1,6 +1,6 @@
 package com.discord.simpleast.core.parser
 
-import B9.s
+import A9.s
 import android.util.Log
 import com.discord.simpleast.core.node.Node
 import java.util.ArrayList
@@ -76,19 +76,19 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
             break;
          }
 
-         val var12: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
+         val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
          val var5: Int = var10.getStartIndex();
-         val var11: java.util.Iterator = var3.iterator();
+         val var12: java.util.Iterator = var3.iterator();
 
          while (true) {
-            if (var11.hasNext()) {
-               val var18: Rule = var11.next() as Rule;
-               val var13: Matcher = var18.match(var12, var6, var10.getState());
+            if (var12.hasNext()) {
+               val var18: Rule = var12.next() as Rule;
+               val var13: Matcher = var18.match(var11, var6, var10.getState());
                if (var13 == null) {
-                  this.logMiss(var18, var12);
+                  this.logMiss(var18, var11);
                   var2 = null;
                } else {
-                  this.logMatch(var18, var12);
+                  this.logMatch(var18, var11);
                   var2 = s.a(var18, var13);
                }
 

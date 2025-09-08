@@ -516,24 +516,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          } else if (var11.getContent() != null) {
             val var29: MessageContentView = this.binding.replyText;
             val var46: LinearLayout = this.binding.replyLeadingViews;
-            val var66: StructurableText = var11.getContent();
-            val var71: Context = this.getContext();
-            val var70: java.lang.String = var11.getId-3Eiw7ao();
-            val var38: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var71: StructurableText = var11.getContent();
+            val var70: Context = this.getContext();
+            val var66: java.lang.String = var11.getId-3Eiw7ao();
+            var2 = MessageKt.shouldAnimateEmoji(var11);
+            val var37: Boolean = MessageKt.shouldShowLinkDecorations(var11);
             val var39: Boolean = var11.getShouldShowRoleDot();
-            val var37: Boolean = var11.getShouldShowRoleOnName();
+            val var38: Boolean = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
             val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var66,
                var71,
                var70,
-               var38,
+               var66,
                var2,
-               var39,
                var37,
+               var39,
+               var38,
                var59,
                null,
                null,
@@ -565,7 +565,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          }
       } else {
          if (var1 !is SystemReferencedMessage) {
-            throw new B9.n();
+            throw new A9.n();
          }
 
          val var47: ChannelSpineView = this.binding.replySpline;

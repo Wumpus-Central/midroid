@@ -1,61 +1,61 @@
 package com.discord.theme
 
-import B9.j
+import A9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import j2.A
-import j2.B
-import j2.C
-import j2.D
-import j2.E
-import j2.F
-import j2.G
-import j2.H
-import j2.I
-import j2.J
-import j2.K
-import j2.L
-import j2.M
-import j2.N
-import j2.O
-import j2.P
-import j2.Q
-import j2.S
-import j2.T
-import j2.U
-import j2.V
-import j2.W
-import j2.X
-import j2.Y
-import j2.Z
-import j2.a
-import j2.a0
-import j2.b
-import j2.b0
-import j2.c
-import j2.d
-import j2.e
-import j2.f
-import j2.g
-import j2.h
-import j2.i
-import j2.k
-import j2.l
-import j2.m
-import j2.n
-import j2.o
-import j2.p
-import j2.q
-import j2.r
-import j2.s
-import j2.t
-import j2.u
-import j2.v
-import j2.w
-import j2.x
-import j2.y
-import j2.z
+import i2.A
+import i2.B
+import i2.C
+import i2.D
+import i2.E
+import i2.F
+import i2.G
+import i2.H
+import i2.I
+import i2.J
+import i2.K
+import i2.L
+import i2.M
+import i2.N
+import i2.O
+import i2.P
+import i2.Q
+import i2.S
+import i2.T
+import i2.U
+import i2.V
+import i2.W
+import i2.X
+import i2.Y
+import i2.Z
+import i2.a
+import i2.a0
+import i2.b
+import i2.b0
+import i2.c
+import i2.d
+import i2.e
+import i2.f
+import i2.g
+import i2.h
+import i2.i
+import i2.k
+import i2.l
+import i2.m
+import i2.n
+import i2.o
+import i2.p
+import i2.q
+import i2.r
+import i2.s
+import i2.t
+import i2.u
+import i2.v
+import i2.w
+import i2.x
+import i2.y
+import i2.z
 
 internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject() {
    public open val androidRipple: Int
@@ -403,7 +403,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.infoDangerForeground$delegate = j.b(new g(var1, var2));
       this.interactiveActive$delegate = j.b(new h(var1, var2));
       this.interactiveMuted$delegate = j.b(new i(var1, var2));
-      this.interactiveNormal$delegate = j.b(new j2.j(var1, var2));
+      this.interactiveNormal$delegate = j.b(new i2.j(var1, var2));
       this.redesignButtonActiveBackground$delegate = j.b(new k(var1, var2));
       this.redesignButtonDangerBackground$delegate = j.b(new m(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = j.b(new n(var1, var2));

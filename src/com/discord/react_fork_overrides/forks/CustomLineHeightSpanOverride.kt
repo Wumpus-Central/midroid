@@ -27,7 +27,7 @@ internal object CustomLineHeightSpanOverride {
             return;
          }
 
-         val var10: Int = O9.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
+         val var10: Int = N9.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
          var1.descent = var10;
          var1.ascent = var10 - var2;
       }

@@ -2,7 +2,7 @@
 
 package com.discord.analytics
 
-import G9.b
+import F9.b
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import kotlin.coroutines.Continuation

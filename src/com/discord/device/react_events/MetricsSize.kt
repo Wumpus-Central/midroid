@@ -1,6 +1,6 @@
 package com.discord.device.react_events
 
-import B9.s
+import A9.s
 import android.util.DisplayMetrics
 import androidx.window.layout.WindowMetrics
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -56,13 +56,13 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public override fun toString(): String {
-      val var2: Int = this.widthPixels;
-      val var1: Int = this.heightPixels;
+      val var1: Int = this.widthPixels;
+      val var2: Int = this.heightPixels;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MetricsSize(widthPixels=");
-      var3.append(var2);
-      var3.append(", heightPixels=");
       var3.append(var1);
+      var3.append(", heightPixels=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

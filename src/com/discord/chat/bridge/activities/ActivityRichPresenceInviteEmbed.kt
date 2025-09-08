@@ -2,10 +2,10 @@ package com.discord.chat.bridge.activities
 
 import com.discord.activity_invites.RGBAColorModel
 import kotlinx.serialization.KSerializer
-import nb.a
-import nb.g
-import qb.E0
-import qb.f
+import mb.a
+import mb.g
+import pb.E0
+import pb.f
 
 @g
 public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = java.lang.Boolean.FALSE,
@@ -357,55 +357,55 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    }
 
    public override fun toString(): String {
-      val var7: java.lang.Boolean = this.ctaButtonEnabled;
-      val var1: java.lang.String = this.ctaButtonText;
-      val var8: java.lang.Boolean = this.ctaButtonIsLoading;
-      val var11: java.lang.String = this.footerLabel;
-      val var12: java.util.List = this.gradientColors;
-      val var3: java.lang.String = this.headerText;
-      val var9: java.lang.String = this.iconSrc;
-      val var13: java.lang.Boolean = this.isActive;
+      val var1: java.lang.Boolean = this.ctaButtonEnabled;
+      val var3: java.lang.String = this.ctaButtonText;
+      val var9: java.lang.Boolean = this.ctaButtonIsLoading;
+      val var16: java.lang.String = this.footerLabel;
+      val var4: java.util.List = this.gradientColors;
+      val var12: java.lang.String = this.headerText;
+      val var10: java.lang.String = this.iconSrc;
+      val var8: java.lang.Boolean = this.isActive;
       val var17: java.lang.Boolean = this.isPlatformSupported;
-      val var16: java.lang.Boolean = this.isSpotifyParty;
-      val var2: Int = this.maxPartySize;
-      val var5: java.util.List = this.partyMemberAvatarURIs;
-      val var15: java.lang.String = this.partySizeText;
-      val var4: java.util.List = this.platformIconKeys;
-      val var6: java.lang.String = this.subtitle;
-      val var10: java.lang.String = this.title;
+      val var5: java.lang.Boolean = this.isSpotifyParty;
+      val var6: Int = this.maxPartySize;
+      val var13: java.util.List = this.partyMemberAvatarURIs;
+      val var11: java.lang.String = this.partySizeText;
+      val var2: java.util.List = this.platformIconKeys;
+      val var7: java.lang.String = this.subtitle;
+      val var15: java.lang.String = this.title;
       val var14: StringBuilder = new StringBuilder();
       var14.append("ActivityRichPresenceInviteEmbed(ctaButtonEnabled=");
-      var14.append(var7);
-      var14.append(", ctaButtonText=");
       var14.append(var1);
-      var14.append(", ctaButtonIsLoading=");
-      var14.append(var8);
-      var14.append(", footerLabel=");
-      var14.append(var11);
-      var14.append(", gradientColors=");
-      var14.append(var12);
-      var14.append(", headerText=");
+      var14.append(", ctaButtonText=");
       var14.append(var3);
-      var14.append(", iconSrc=");
+      var14.append(", ctaButtonIsLoading=");
       var14.append(var9);
+      var14.append(", footerLabel=");
+      var14.append(var16);
+      var14.append(", gradientColors=");
+      var14.append(var4);
+      var14.append(", headerText=");
+      var14.append(var12);
+      var14.append(", iconSrc=");
+      var14.append(var10);
       var14.append(", isActive=");
-      var14.append(var13);
+      var14.append(var8);
       var14.append(", isPlatformSupported=");
       var14.append(var17);
       var14.append(", isSpotifyParty=");
-      var14.append(var16);
-      var14.append(", maxPartySize=");
-      var14.append(var2);
-      var14.append(", partyMemberAvatarURIs=");
       var14.append(var5);
-      var14.append(", partySizeText=");
-      var14.append(var15);
-      var14.append(", platformIconKeys=");
-      var14.append(var4);
-      var14.append(", subtitle=");
+      var14.append(", maxPartySize=");
       var14.append(var6);
+      var14.append(", partyMemberAvatarURIs=");
+      var14.append(var13);
+      var14.append(", partySizeText=");
+      var14.append(var11);
+      var14.append(", platformIconKeys=");
+      var14.append(var2);
+      var14.append(", subtitle=");
+      var14.append(var7);
       var14.append(", title=");
-      var14.append(var10);
+      var14.append(var15);
       var14.append(")");
       return var14.toString();
    }

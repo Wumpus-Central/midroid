@@ -4,7 +4,7 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapButtonActionComponent(messageId: MessageId, componentId: String) : TapButtonActionComponent(var1, var2), ReactEvent {
@@ -53,15 +53,15 @@ public data class TapButtonActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: java.lang.String = this.componentId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapButtonActionComponent(messageId=");
-      var2.append(var3);
-      var2.append(", componentId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapButtonActionComponent(messageId=");
+      var3.append(var2);
+      var3.append(", componentId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

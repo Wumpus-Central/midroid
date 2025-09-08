@@ -208,9 +208,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var28: SpoilerViewManager = this.spoilerViewManager;
-      val var33: ConstraintLayout = this.binding.container;
-      val var34: SimpleDraweeView = this.binding.image;
+      val var34: SpoilerViewManager = this.spoilerViewManager;
+      val var28: ConstraintLayout = this.binding.container;
+      val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,10 +223,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var33, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var29: ConstraintLayout = this.binding.container;
-      var32.configureAttachmentOverlay(this, var29, var9, var10);
+      var34.configureSpoiler(var8, this, var28, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var32: ConstraintLayout = this.binding.container;
+      var29.configureAttachmentOverlay(this, var32, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 

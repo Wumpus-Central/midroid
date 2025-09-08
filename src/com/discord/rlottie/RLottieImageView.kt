@@ -1,6 +1,6 @@
 package com.discord.rlottie
 
-import B9.t
+import A9.t
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION

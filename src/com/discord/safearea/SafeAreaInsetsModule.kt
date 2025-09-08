@@ -1,6 +1,6 @@
 package com.discord.safearea
 
-import B9.s
+import A9.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -15,10 +15,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e2.a
-import e2.b
-import e2.c
-import e2.d
+import d2.a
+import d2.b
+import d2.c
+import d2.d
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,105:1\n1#2:106\n*E\n"])
@@ -142,18 +142,18 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun getStableSafeAreaInsets(): WritableMap {
       val var1: c = new c();
-      val var2: Activity = this.getCurrentActivity();
-      val var4: Int = 0;
-      if (var2 == null) {
-         return var1.invoke(var4, var4, var4, var4) as WritableMap;
+      val var3: Activity = this.getCurrentActivity();
+      val var2: Int = 0;
+      if (var3 == null) {
+         return var1.invoke(var2, var2, var2, var2) as WritableMap;
       } else {
-         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var2);
-         if (var3 == null) {
-            return var1.invoke(var4, var4, var4, var4) as WritableMap;
+         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var4 == null) {
+            return var1.invoke(var2, var2, var2, var2) as WritableMap;
          } else {
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var2, true);
-            return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            return var1.invoke(Math.max(var5.a, var6.a), Math.max(var5.b, var6.b), Math.max(var5.c, var6.c), Math.max(var5.d, var6.d)) as WritableMap;
          }
       }
    }

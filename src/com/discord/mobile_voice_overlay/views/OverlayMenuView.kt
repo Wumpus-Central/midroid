@@ -47,26 +47,26 @@ public class OverlayMenuView : LinearLayout {
    }
 
    public constructor(context: Context, attrs: AttributeSet?) : super(var1, var2) {
-      val var4: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
-      this.binding = var4;
-      var var3: TextView = var4.overlayGuildName;
-      val var5: DiscordFont = DiscordFont.PrimarySemibold;
+      val var5: ViewOverlayMenuBinding = ViewOverlayMenuBinding.inflate(LayoutInflater.from(this.getContext()), this);
+      this.binding = var5;
+      var var3: TextView = var5.overlayGuildName;
+      val var4: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      var3 = var4.overlayInviteLink;
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var3 = var4.overlaySwitchChannels;
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var3 = var4.overlayOpenApp;
-      DiscordFontUtilsKt.setDiscordFont(var3, var5);
-      var4.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      var4.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
-      var4.menuTopStatusContainer.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundTertiary()));
-      var4.menuBottom.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
-      var4.overlayInviteLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlaySwitchChannels.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlayOpenApp.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      var4.overlayGuildName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      var4.overlayChannelName.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var3 = var5.overlayInviteLink;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var3 = var5.overlaySwitchChannels;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var3 = var5.overlayOpenApp;
+      DiscordFontUtilsKt.setDiscordFont(var3, var4);
+      var5.menuTop.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      var5.menuTopStatusContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
+      var5.menuTopStatusContainer.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundTertiary()));
+      var5.menuBottom.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundTertiary());
+      var5.overlayInviteLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlaySwitchChannels.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlayOpenApp.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var5.overlayGuildName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      var5.overlayChannelName.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : super(var1, var2, var3) {
@@ -133,7 +133,7 @@ public class OverlayMenuView : LinearLayout {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new B9.n();
+                  throw new A9.n();
                }
 
                var8 = ReactAsset.CallStatusUnknown;

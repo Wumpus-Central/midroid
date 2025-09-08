@@ -1,12 +1,12 @@
 package com.discord.react_activities
 
+import a4.b
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
-import b4.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator

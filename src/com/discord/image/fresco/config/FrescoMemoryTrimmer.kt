@@ -1,6 +1,6 @@
 package com.discord.image.fresco.config
 
-import H2.d
+import G2.d
 import android.app.ActivityManager
 import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2

@@ -3,7 +3,7 @@ package com.discord.segmented.control.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
@@ -52,15 +52,15 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.value;
+      val var2: java.lang.String = this.value;
       val var1: Int = this.selectedSegmentIndex;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ValueChangeEvent(value=");
-      var2.append(var3);
-      var2.append(", selectedSegmentIndex=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ValueChangeEvent(value=");
+      var3.append(var2);
+      var3.append(", selectedSegmentIndex=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

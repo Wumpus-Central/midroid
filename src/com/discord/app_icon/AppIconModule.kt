@@ -1,6 +1,6 @@
 package com.discord.app_icon
 
-import B9.s
+import A9.s
 import com.discord.codegen.NativeAppIconModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -24,9 +24,9 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
    }
 
    public override fun getCurrentIcon(promise: Promise) {
-      val var2: AppIconUtil = AppIconUtil.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var2.getCurrentAppIcon(var3).getId())));
+      val var3: AppIconUtil = AppIconUtil.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var3.getCurrentAppIcon(var2).getId())));
    }
 
    public override fun setIcon(id: String, promise: Promise) {

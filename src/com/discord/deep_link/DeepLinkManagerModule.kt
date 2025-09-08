@@ -1,6 +1,6 @@
 package com.discord.deep_link
 
-import B9.s
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext

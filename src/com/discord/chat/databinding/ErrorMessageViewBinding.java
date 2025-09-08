@@ -29,15 +29,15 @@ public final class ErrorMessageViewBinding implements ViewBinding {
    @NonNull
    public static ErrorMessageViewBinding bind(@NonNull View var0) {
       int var1 = R.id.error_label;
-      TextView var3 = (TextView)a.a(var0, var1);
-      if (var3 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.header;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.see_more_button;
             TextView var2 = (TextView)a.a(var0, var1);
             if (var2 != null) {
-               return new ErrorMessageViewBinding(var0, var3, var4, var2);
+               return new ErrorMessageViewBinding(var0, var4, var3, var2);
             }
          }
       }

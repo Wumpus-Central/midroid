@@ -1,6 +1,6 @@
 package com.discord.external_pip
 
-import B9.s
+import A9.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -40,9 +40,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -96,21 +96,21 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
+      val var4: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
       val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMediaEmoji(id=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", displayName=");
-      var4.append(var5);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMediaEmoji(id=");
+      var3.append(var4);
+      var3.append(", name=");
+      var3.append(var2);
+      var3.append(", displayName=");
+      var3.append(var5);
+      var3.append(", animated=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

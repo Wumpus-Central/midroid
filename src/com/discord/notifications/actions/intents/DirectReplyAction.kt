@@ -83,8 +83,8 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.tag.hashCode();
-      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var5: Int = this.tag.hashCode();
+      val var4: Int = ChannelId.hashCode-impl(this.channelId);
       var var3: Int = 0;
       val var1: Int;
       if (this.channelName == null) {
@@ -104,7 +104,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          var3 = this.guildName.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
@@ -130,24 +130,24 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.tag;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = this.channelName;
-      val var4: Int = this.channelType;
-      val var1: java.lang.String = this.guildName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DirectReplyAction(tag=");
-      var2.append(var5);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(", channelName=");
-      var2.append(var6);
-      var2.append(", channelType=");
-      var2.append(var4);
-      var2.append(", guildName=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.tag;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.channelName;
+      val var2: Int = this.channelType;
+      val var6: java.lang.String = this.guildName;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("DirectReplyAction(tag=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var1);
+      var5.append(", channelName=");
+      var5.append(var3);
+      var5.append(", channelType=");
+      var5.append(var2);
+      var5.append(", guildName=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {

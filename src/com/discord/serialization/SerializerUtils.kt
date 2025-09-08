@@ -1,7 +1,7 @@
 package com.discord.serialization
 
-import R9.c
-import f2.a
+import Q9.c
+import e2.a
 import java.util.LinkedHashMap
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
@@ -24,14 +24,14 @@ public object SerializerUtils {
       } else {
          val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var7 : c.a(var2)) {
-            val var5: JsonElement = (var3 as JsonObject).get(var7.getName()) as JsonElement;
-            if (var5 == null) {
-               if (!var7.getReturnType().isMarkedNullable()) {
-                  var6.put(var7.getName(), "null");
+         for (KProperty1 var5 : c.a(var2)) {
+            val var7: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
+            if (var7 == null) {
+               if (!var5.getReturnType().isMarkedNullable()) {
+                  var6.put(var5.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var7, var5)) {
-               var6.put(var7.getName(), var5.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var5, var7)) {
+               var6.put(var5.getName(), var7.toString());
             }
          }
 
@@ -70,12 +70,12 @@ public object SerializerUtils {
          }
 
          public override fun toString(): String {
-            val var2: java.util.Map = this.data;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Data(data=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.util.Map = this.data;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Data(data=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
 

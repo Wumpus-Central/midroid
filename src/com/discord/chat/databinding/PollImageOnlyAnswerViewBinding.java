@@ -55,27 +55,27 @@ public final class PollImageOnlyAnswerViewBinding implements ViewBinding {
    @NonNull
    public static PollImageOnlyAnswerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.avatar;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.avatar_placeholder;
-         Space var7 = (Space)a.a(var0, var1);
-         if (var7 != null) {
+         Space var4 = (Space)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.image;
-            PollMediaView var2 = (PollMediaView)a.a(var0, var1);
-            if (var2 != null) {
+            PollMediaView var8 = (PollMediaView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.info_bar;
-               Flow var6 = (Flow)a.a(var0, var1);
-               if (var6 != null) {
+               Flow var7 = (Flow)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.selected_icon;
-                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var5 = (TextView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var5, var7, var2, var6, var3, var8, var4);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var3, var4, var8, var7, var2, var5, var6);
                         }
                      }
                   }

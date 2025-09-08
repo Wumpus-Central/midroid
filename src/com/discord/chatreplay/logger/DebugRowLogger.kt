@@ -1,8 +1,8 @@
 package com.discord.chatreplay.logger
 
 import H1.a
-import L9.c
-import L9.p
+import K9.c
+import K9.p
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -33,11 +33,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var7.append(var2);
       var7.append(".replay");
       this.replayFile = new File(var10, var7.toString());
-      val var5: java.lang.String = var1.toString();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var2);
-      var8.append(".json");
-      this.jsonFile = new File(var5, var8.toString());
+      var3 = var1.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append(var2);
+      var5.append(".json");
+      this.jsonFile = new File(var3, var5.toString());
    }
 
    private fun appendLine(line: String) {

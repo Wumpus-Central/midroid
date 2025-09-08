@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.embed
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class EmbedThumbnail(url: String,
@@ -150,8 +150,8 @@ public data class EmbedThumbnail(url: String,
          var2 = this.videoUrl.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.height);
-      val var9: Int = Integer.hashCode(this.width);
+      val var9: Int = Integer.hashCode(this.height);
+      val var8: Int = Integer.hashCode(this.width);
       val var3: Int;
       if (this.gifv == null) {
          var3 = 0;
@@ -177,44 +177,44 @@ public data class EmbedThumbnail(url: String,
          var6 = this.placeholderVersion.hashCode();
       }
 
-      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var8) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
-      val var5: java.lang.String = this.videoUrl;
-      val var1: Int = this.height;
-      val var2: Int = this.width;
+      val var5: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyURL;
+      val var7: java.lang.String = this.videoUrl;
+      val var2: Int = this.height;
+      val var1: Int = this.width;
       val var9: java.lang.Boolean = this.gifv;
-      val var6: java.lang.Boolean = this.showPlayButton;
-      val var8: java.lang.String = this.placeholder;
-      val var11: Int = this.placeholderVersion;
+      val var10: java.lang.Boolean = this.showPlayButton;
+      val var6: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedThumbnail(url=");
-      var7.append(var10);
-      var7.append(", proxyURL=");
-      var7.append(var4);
-      var7.append(", videoUrl=");
-      var7.append(var5);
-      var7.append(", height=");
-      var7.append(var1);
-      var7.append(", width=");
-      var7.append(var2);
-      var7.append(", gifv=");
-      var7.append(var9);
-      var7.append(", showPlayButton=");
-      var7.append(var6);
-      var7.append(", placeholder=");
-      var7.append(var8);
-      var7.append(", placeholderVersion=");
-      var7.append(var11);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("EmbedThumbnail(url=");
+      var11.append(var5);
+      var11.append(", proxyURL=");
+      var11.append(var8);
+      var11.append(", videoUrl=");
+      var11.append(var7);
+      var11.append(", height=");
+      var11.append(var2);
+      var11.append(", width=");
+      var11.append(var1);
+      var11.append(", gifv=");
+      var11.append(var9);
+      var11.append(", showPlayButton=");
+      var11.append(var10);
+      var11.append(", placeholder=");
+      var11.append(var6);
+      var11.append(", placeholderVersion=");
+      var11.append(var4);
+      var11.append(", srcIsAnimated=");
+      var11.append(var3);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

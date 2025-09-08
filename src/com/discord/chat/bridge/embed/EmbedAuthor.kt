@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import B9.j
+import A9.j
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 import p1.b
 
 @g
@@ -101,21 +101,21 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.name;
-      val var1: java.lang.String = this.url;
-      val var2: java.lang.String = this.iconURL;
-      val var3: java.lang.String = this.iconProxyURL;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("EmbedAuthor(name=");
-      var4.append(var5);
-      var4.append(", url=");
-      var4.append(var1);
-      var4.append(", iconURL=");
-      var4.append(var2);
-      var4.append(", iconProxyURL=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.name;
+      val var4: java.lang.String = this.url;
+      val var5: java.lang.String = this.iconURL;
+      val var2: java.lang.String = this.iconProxyURL;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EmbedAuthor(name=");
+      var3.append(var1);
+      var3.append(", url=");
+      var3.append(var4);
+      var3.append(", iconURL=");
+      var3.append(var5);
+      var3.append(", iconProxyURL=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

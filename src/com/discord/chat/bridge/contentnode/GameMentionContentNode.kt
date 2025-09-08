@@ -2,7 +2,7 @@ package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class GameMentionContentNode(channelId: ChannelId, icon: String? = ..., applicationId: String, content: List<ContentNode>) : GameMentionContentNode(
@@ -74,18 +74,18 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
 
    public override fun toString(): String {
       val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = this.icon;
-      val var1: java.lang.String = this.applicationId;
-      val var2: java.util.List = this.content;
+      val var1: java.lang.String = this.icon;
+      val var2: java.lang.String = this.applicationId;
+      val var3: java.util.List = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("GameMentionContentNode(channelId=");
       var4.append(var5);
       var4.append(", icon=");
-      var4.append(var3);
-      var4.append(", applicationId=");
       var4.append(var1);
-      var4.append(", content=");
+      var4.append(", applicationId=");
       var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

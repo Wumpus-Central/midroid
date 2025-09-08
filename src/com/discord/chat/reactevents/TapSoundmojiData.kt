@@ -4,7 +4,7 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapSoundmojiData(soundId: String, channelId: String, guildId: String? = ..., messageId: MessageId? = ...) : TapSoundmojiData(
@@ -72,8 +72,8 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.soundId.hashCode();
-      val var4: Int = this.channelId.hashCode();
+      val var4: Int = this.soundId.hashCode();
+      val var3: Int = this.channelId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -86,7 +86,7 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
          var2 = MessageId.hashCode-impl(this.messageId);
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -95,8 +95,8 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
 
    public override fun toString(): String {
       val var2: java.lang.String = this.soundId;
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.guildId;
       val var6: java.lang.String;
       if (this.messageId == null) {
          var6 = "null";
@@ -108,9 +108,9 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
       var5.append("TapSoundmojiData(soundId=");
       var5.append(var2);
       var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", guildId=");
       var5.append(var4);
+      var5.append(", guildId=");
+      var5.append(var3);
       var5.append(", messageId=");
       var5.append(var6);
       var5.append(")");
