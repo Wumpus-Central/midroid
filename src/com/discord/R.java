@@ -2040,6 +2040,7 @@ public final class R {
       public static int intl_messages_internationalcompiledmessages;
       public static int intl_messages_untranslatedcompiledmessages;
       public static int modules_activity_privacy_activityprivacycompiledmessages;
+      public static int modules_age_assurance_ageassurancecompiledmessages;
       public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_display_name_styles_intl_displaynamestylescompiledmessages;

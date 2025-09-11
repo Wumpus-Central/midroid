@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4605",
-    "commit": "cd851e9eb0aeca7ada2e2b712aafc1610268bc20",
+    "build": "4621",
+    "commit": "4526ecca7372ffdbc4a7c4c5caa47128818773ea",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "7923e570c1980a5312f9aa32f7f1f0c6",
+    "app/src/main/assets/index.android.bundle": "b664618879bf0c7786ce686a029e01c8",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1331_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
@@ -3311,10 +3311,11 @@
     "app/src/main/res/raw/images_platforms_img_roblox_dark.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/images_platforms_img_roblox_light.svg": "8004c631509b26672d76ec4ff50dd8cb",
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
-    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "31383cb14bbde57d120443b3b84fd4bd",
+    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "4f128fa6c21f29e4757d9144977bf3fd",
     "app/src/main/res/raw/intl_messages_internationalcompiledmessages.jsona": "7826c5731011d653ad231a2c3b0d1f32",
     "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "80a60d19efa4b89e5583461dc879630e",
     "app/src/main/res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
+    "app/src/main/res/raw/modules_age_assurance_ageassurancecompiledmessages.jsona": "d068a9ea11699ead30b7219130ada7de",
     "app/src/main/res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona": "5d607775d6330ec3b8886ce3a6657c25",
     "app/src/main/res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_display_name_styles_intl_displaynamestylescompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
@@ -3332,7 +3333,7 @@
     "app/src/main/res/raw/modules_premium_powerups_guildpowerupscompiledmessages.jsona": "8a42e449c32f47ad999b38ba6a6fd7cf",
     "app/src/main/res/raw/modules_report_to_mod_reporttomodcompiledmessages.jsona": "539c67225b60e5a5ae531a7606f714bd",
     "app/src/main/res/raw/modules_request_to_stream_requesttostreamcompiledmessages.jsona": "6fc8e2e275ea900a23f1fcbd08830fee",
-    "app/src/main/res/raw/modules_safety_flows_safetyflowscompiledmessages.jsona": "acd055f065d1e12c2bd5af8d5f46d334",
+    "app/src/main/res/raw/modules_safety_flows_safetyflowscompiledmessages.jsona": "86b8d061180502a46af93540f02e3dcc",
     "app/src/main/res/raw/modules_self_remediation_feedback_selfremediationfeedbackcompiledmessages.jsona": "5d29d656d46318bcd724935d83ccc303",
     "app/src/main/res/raw/modules_voice_filters_voicefilternamescompiledmessages.jsona": "e6ae81a4b6d01da6e2f30b2da1a27cd0"
   }
