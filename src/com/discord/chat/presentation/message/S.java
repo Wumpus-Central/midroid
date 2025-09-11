@@ -12,6 +12,6 @@ public final class S implements OnClickListener {
    public final String m;
 
    public final void onClick(View var1) {
-      MessageAltRemixTagView.a(this.d, this.e, this.i, this.m, var1);
+      MessageTagView.b(this.d, this.e, this.i, this.m, var1);
    }
 }

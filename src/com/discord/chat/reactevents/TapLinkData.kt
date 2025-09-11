@@ -263,18 +263,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var3: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var4: java.lang.String = this.content;
+      val var5: java.lang.String = this.title;
+      val var4: LinkContextData = this.target;
+      val var3: java.lang.String = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapLinkData(messageId=");
       var2.append(var6);
       var2.append(", title=");
-      var2.append(var3);
-      var2.append(", target=");
       var2.append(var5);
-      var2.append(", content=");
+      var2.append(", target=");
       var2.append(var4);
+      var2.append(", content=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

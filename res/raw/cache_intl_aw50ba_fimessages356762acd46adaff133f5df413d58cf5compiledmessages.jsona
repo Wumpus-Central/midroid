@@ -2921,20 +2921,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Avatar-koriste: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Nimikyltti: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Nimikyltti ",
     [
@@ -2944,13 +2930,6 @@
   ],
   "3Y8q7e": [
     "Profiilitehoste ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Profiilitehoste: ",
     [
       1,
       "itemName"
@@ -3017,49 +2996,6 @@
   "3lv7q6": "Uudista avatarisi ulkoasu.",
   "ik37ER": "Tee nimestäsi joukosta erottuva palvelimilla ja keskusteluissa.",
   "VhJL7+": "Näytä tämä tehoste, kun profiiliasi katsellaan.",
-  "VdGtwc": [
-    "Valitsemalla ”",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” vahvistat hyväksyväsi ",
-    [
-      8,
-      "$link",
-      [
-        "maksullisten palvelujen ehdot"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Tuotteen ostaminen kaupasta tarkoittaa, että ostat rajoitetun käyttöoikeuden kyseisen tuotteen käyttämiseen Discordissa. Lisätietoja on ",
-        [
-          8,
-          "$link",
-          [
-            "Virtuaalituotteet-osiossa"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Tästä ostoksesta ei myönnetä hyvityksiä. Huomaa, että Nitro-tilauksista ei voida myöntää enää hyvityksiä, kun ne on ostettu."
-  ],
   "YS2J4e": [
     "Emme malta odottaa, että kaverisi pääsee avaamaan lahjan. Voit seurata kaikkien lahjaostostesi tilaa ",
     [
@@ -3159,49 +3095,6 @@
     ]
   ],
   "tf1ZZ2": "Profiilisi on päivitetty!",
-  "zFXJX1": [
-    "Valitsemalla ”",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” vahvistat hyväksyväsi ",
-    [
-      8,
-      "$link",
-      [
-        "maksullisten palvelujen ehdot"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Tuotteen ostaminen kaupasta tarkoittaa, että ostat rajoitetun käyttöoikeuden kyseisen tuotteen käyttämiseen Discordissa. Lisätietoja on ",
-        [
-          8,
-          "$link",
-          [
-            "Virtuaalituotteet-osiossa"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Tästä ostoksesta ei myönnetä hyvityksiä. Kun olet vahvistanut ostoksen, tuote on heti käytettävissä ja sen voi ottaa käyttöön käyttäjäprofiilin asetuksista. Huomaa, että Nitro-tilauksista ei voida myöntää enää hyvityksiä, kun ne on ostettu."
-  ],
   "SKduys": [
     [
       1,
@@ -19395,7 +19288,6 @@
   "wb7QJy": "Mainokset",
   "j+d6RE": "Oma toimintasi",
   "JN9c39": "Palvelimet",
-  "M4ddeX": "Ohjelmat",
   "0dO1t7": "Viestit",
   "rfe/x8": "Tili",
   "yaLeEB": "Tukipyynnöt",
@@ -21376,6 +21268,7 @@
   "NbhSIy": "Peruuta jäsenen vahvistus",
   "6QlTeH": "Vahvista jäsen",
   "+vt7w8": "Tee Discordista näköisesi",
+  "kpMomJ": "Mukautettu profiili",
   "e6RscX": "Merkitse luetuksi",
   "RpE9k5": "Merkitse lukemattomaksi",
   "COq6kp": "Avaa linkki",
@@ -23123,6 +23016,7 @@
   "DOb6x8": "Nitron suosituimmat",
   "M9AIt7": "Saat tiettyjä uusia ominaisuuksia kokeiltavaksi ennen kuin ne julkaistaan yleisesti.",
   "LgHbnJ": "Nauti päivitetystä Discordista",
+  "xT1Vfn": "Palvelimelle latauksen enimmäiskoko 500 Mt",
   "37MFFh": "Hanki tämä siisti merkki ryhtymällä Nitro-tilaajaksi.",
   "LTaxu7": "Näy haluamallasi tavalla",
   "H4/NBA": "Erikoishinta jäsenille",
@@ -28070,6 +27964,7 @@
   "vlHicH": "Mukautetut profiilit ja enemmän!",
   "ky8rxc": "Uudelleenmiksaa mediasisältöä ennakkokäyttöoikeudella",
   "myyAEh": "HD-videostriimaus",
+  "zTk8Ul": "Sovelluksen väriteemat ja paljon muuta!",
   "+qqh6u": [
     [
       8,
@@ -30022,39 +29917,6 @@
       ]
     ],
     " on sinun."
-  ],
-  "BfgxRk": [
-    "Avaa ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
-        ]
-      ]
-    ],
-    " pelaamalla jotakin ",
-    [
-      8,
-      "$link",
-      [
-        "näistä peleistä"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minuutin ajan."
   ],
   "a/ia7O": [
     "Striimaa peliä ",
@@ -39467,6 +39329,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Lisää enintään ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " peli"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " peliä"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Valitse yksi peli",
+  "sUQar6": "Suosikkipeli",
+  "SqNnur": "Kierrossa olevat pelit",
+  "scOKER": "Minulle mieluiset pelit",
+  "bWSQwc": "Haluan pelata",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

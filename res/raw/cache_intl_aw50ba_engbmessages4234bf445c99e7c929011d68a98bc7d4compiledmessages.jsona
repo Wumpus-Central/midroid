@@ -2911,20 +2911,6 @@
     ],
     " Decoration"
   ],
-  "IQQYeX": [
-    "Avatar Decoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Nameplate: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2938,13 +2924,6 @@
       "itemName"
     ],
     " Profile Effect"
-  ],
-  "x/MGW1": [
-    "Profile Effect: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Bundle includes: ",
@@ -3009,49 +2988,6 @@
   "3lv7q6": "Give your avatar a new look.",
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
-  "VdGtwc": [
-    "By clicking ‘",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "’, you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Paid Service Terms"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Buying an item from the Shop means you’re buying a limited licence to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "‘Virtual Goods’ section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". This purchase is non-refundable. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
-  ],
   "YS2J4e": [
     "We can’t wait for your friend to open it. You’ll be able to keep track of all your gift purchases in your ",
     [
@@ -3160,49 +3096,6 @@
     ]
   ],
   "tf1ZZ2": "Your profile is updated!",
-  "zFXJX1": [
-    "By clicking ‘",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "’, you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Paid Service Terms"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "‘Virtual Goods’ section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
-  ],
   "SKduys": [
     [
       1,
@@ -19346,7 +19239,6 @@
   "wb7QJy": "Ads",
   "j+d6RE": "Your Activity",
   "JN9c39": "Servers",
-  "M4ddeX": "Programs",
   "0dO1t7": "Messages",
   "rfe/x8": "Account",
   "yaLeEB": "Support Tickets",
@@ -21329,6 +21221,7 @@
   "NbhSIy": "Unverify Member",
   "6QlTeH": "Verify Member",
   "+vt7w8": "Make Discord Yours",
+  "kpMomJ": "Custom profile",
   "e6RscX": "Mark as Read",
   "RpE9k5": "Mark Unread",
   "COq6kp": "Open Link",
@@ -23066,6 +22959,7 @@
   "DOb6x8": "Nitro Favourites",
   "M9AIt7": "Get exclusive access to certain new features before they’re released to everyone.",
   "LgHbnJ": "Enjoy an Upgraded Discord",
+  "xT1Vfn": "500 MB Uploads",
   "37MFFh": "Get this cool badge for being a Nitro subscriber.",
   "LTaxu7": "Show up the Way You Want",
   "H4/NBA": "Special Member Pricing",
@@ -27994,6 +27888,7 @@
   "vlHicH": "Custom profiles and more!",
   "ky8rxc": "Remix any media with Early Access",
   "myyAEh": "HD video streaming",
+  "zTk8Ul": "Colour app themes and more!",
   "+qqh6u": [
     "Your ",
     [
@@ -29938,39 +29833,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Play any of ",
-    [
-      8,
-      "$link",
-      [
-        "these select games"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " for ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minutes and unlock ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39334,6 +39196,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Add up to ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " game"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " games"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Choose 1 game",
+  "sUQar6": "Favourite game",
+  "SqNnur": "Games in rotation",
+  "scOKER": "Games I like",
+  "bWSQwc": "Want to play",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

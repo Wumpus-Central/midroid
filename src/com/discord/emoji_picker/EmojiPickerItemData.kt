@@ -45,14 +45,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun getItemCount(): Int {
       val var4: Array<java.util.List> = this.dataSets;
       val var3: Int = this.dataSets.length;
-      var var1: Int = 0;
+      var var2: Int = 0;
 
-      var var2: Int;
-      for (var2 = 0; var1 < var3; var1++) {
-         var2 += var4[var1].size();
+      var var1: Int;
+      for (var1 = 0; var2 < var3; var2++) {
+         var1 += var4[var2].size();
       }
 
-      return var2;
+      return var1;
    }
 
    public fun getItemIndex(position: Int): Int? {
@@ -73,14 +73,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
-      val var3: Array<java.util.List> = this.dataSets;
-      val var4: java.util.List = var1.getLeading();
-      var4.set(0, this.coreData.getLeading().get(0));
-      var3[0] = var4;
-      val var8: Array<java.util.List> = this.dataSets;
-      val var6: java.util.List = var1.getTrailing();
-      var6.set(CollectionsKt.m(var6), CollectionsKt.r0(this.coreData.getTrailing()));
-      var8[3] = var6;
+      var var3: Array<java.util.List> = this.dataSets;
+      val var5: java.util.List = var1.getLeading();
+      var5.set(0, this.coreData.getLeading().get(0));
+      var3[0] = var5;
+      var3 = this.dataSets;
+      val var8: java.util.List = var1.getTrailing();
+      var8.set(CollectionsKt.m(var8), CollectionsKt.r0(this.coreData.getTrailing()));
+      var3[3] = var8;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = CollectionsKt.k();
          this.dataSets[2] = CollectionsKt.k();
@@ -308,31 +308,31 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
       public override fun toString(): String {
          val var1: Int = this.rowSize;
          val var4: Boolean = this.hasGuildData;
-         val var2: Boolean = this.hasSearchData;
-         val var3: Boolean = this.hasPremiumInlineRoadblock;
-         val var5: java.util.List = this.leading;
-         val var8: java.util.List = this.trailing;
+         val var3: Boolean = this.hasSearchData;
+         val var2: Boolean = this.hasPremiumInlineRoadblock;
+         val var9: java.util.List = this.leading;
+         val var6: java.util.List = this.trailing;
          val var7: java.util.List = this.nativeSectionsEmojis;
-         val var6: java.util.List = this.nativeSectionsEmojisUnicode;
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("CoreData(rowSize=");
-         var9.append(var1);
-         var9.append(", hasGuildData=");
-         var9.append(var4);
-         var9.append(", hasSearchData=");
-         var9.append(var2);
-         var9.append(", hasPremiumInlineRoadblock=");
-         var9.append(var3);
-         var9.append(", leading=");
-         var9.append(var5);
-         var9.append(", trailing=");
-         var9.append(var8);
-         var9.append(", nativeSectionsEmojis=");
-         var9.append(var7);
-         var9.append(", nativeSectionsEmojisUnicode=");
-         var9.append(var6);
-         var9.append(")");
-         return var9.toString();
+         val var5: java.util.List = this.nativeSectionsEmojisUnicode;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("CoreData(rowSize=");
+         var8.append(var1);
+         var8.append(", hasGuildData=");
+         var8.append(var4);
+         var8.append(", hasSearchData=");
+         var8.append(var3);
+         var8.append(", hasPremiumInlineRoadblock=");
+         var8.append(var2);
+         var8.append(", leading=");
+         var8.append(var9);
+         var8.append(", trailing=");
+         var8.append(var6);
+         var8.append(", nativeSectionsEmojis=");
+         var8.append(var7);
+         var8.append(", nativeSectionsEmojisUnicode=");
+         var8.append(var5);
+         var8.append(")");
+         return var8.toString();
       }
 
       public companion object

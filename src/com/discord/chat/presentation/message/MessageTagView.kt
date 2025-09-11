@@ -78,7 +78,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
 
          var14.setTextColor(var12);
          val var15: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new T(var6, var7, var8, var10), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new S(var6, var7, var8, var10), 1, null);
          val var16: SimpleDraweeView = this.binding.verifiedBotIcon;
          var var29: Byte = 8;
          if (var2 == java.lang.Boolean.TRUE) {
@@ -117,7 +117,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             var27, ColorUtilsKt.getThemeColor(var23, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
          );
          val var24: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new U(var6), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new T(var6), 1, null);
          val var25: SimpleDraweeView = this.binding.verifiedBotIcon;
          var25.setVisibility(8);
       }

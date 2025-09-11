@@ -64,18 +64,18 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
       val var1: Int = this.type;
       val var3: java.lang.String = this.id;
       val var2: Boolean = this.divider;
-      val var4: SeparatorSpacingSize = this.spacing;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SeparatorDisplayComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var3);
-      var5.append(", divider=");
-      var5.append(var2);
-      var5.append(", spacing=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: SeparatorSpacingSize = this.spacing;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SeparatorDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", divider=");
+      var4.append(var2);
+      var4.append(", spacing=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

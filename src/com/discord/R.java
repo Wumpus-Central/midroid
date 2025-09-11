@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_mfid4xegivrx5sbvvvov5sji64_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_yrtu4uimdekxet3n3ycr7hepeu_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_yrtu4uimdekxet3n3ycr7hepeu_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_yrtu4uimdekxet3n3ycr7hepeu_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_yrtu4uimdekxet3n3ycr7hepeu_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -218,6 +218,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_locationicon;
       public static int design_components_icon_native_redesign_generated_images_lockicon;
       public static int design_components_icon_native_redesign_generated_images_lockunlockedicon;
+      public static int design_components_icon_native_redesign_generated_images_magicdooricon;
       public static int design_components_icon_native_redesign_generated_images_magicwandicon;
       public static int design_components_icon_native_redesign_generated_images_magnifyingglassicon;
       public static int design_components_icon_native_redesign_generated_images_medalicon;
@@ -1211,13 +1212,12 @@ public final class R {
       public static int modules_guild_settings_roles_native_images_illustrationlightlarge;
       public static int modules_guild_templates_native_images_ic_guild_template;
       public static int modules_guilds_bar_native_images_wumpus_wave;
-      public static int modules_hang_status_images_native_brb;
-      public static int modules_hang_status_images_native_chillin;
-      public static int modules_hang_status_images_native_gaming;
-      public static int modules_hang_status_images_native_grubbin;
-      public static int modules_hang_status_images_native_inthezone;
-      public static int modules_hang_status_images_native_wandering;
-      public static int modules_hang_status_images_native_watching;
+      public static int modules_hang_status_images_native_original_brb;
+      public static int modules_hang_status_images_native_original_chillin;
+      public static int modules_hang_status_images_native_original_gaming;
+      public static int modules_hang_status_images_native_original_grubbin;
+      public static int modules_hang_status_images_native_original_inthezone;
+      public static int modules_hang_status_images_native_original_watching;
       public static int modules_hub_native_images_conversation;
       public static int modules_hub_native_images_hubheader;
       public static int modules_hub_native_images_progresssetup;
@@ -1405,7 +1405,6 @@ public final class R {
       public static int modules_video_calls_native_images_watch;
       public static int modules_video_calls_native_images_xbox_voice_upsell;
       public static int modules_virtual_currency_images_native_coachmarkorb;
-      public static int modules_virtual_currency_images_native_heroorb;
       public static int modules_voice_panel_native_images_activity;
       public static int modules_voice_panel_native_images_airplay;
       public static int modules_voice_panel_native_images_badconnection;
@@ -2040,6 +2039,7 @@ public final class R {
       public static int intl_messages_internationalcompiledmessages;
       public static int intl_messages_untranslatedcompiledmessages;
       public static int modules_activity_privacy_activityprivacycompiledmessages;
+      public static int modules_age_assurance_ageassurancecompiledmessages;
       public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_display_name_styles_intl_displaynamestylescompiledmessages;

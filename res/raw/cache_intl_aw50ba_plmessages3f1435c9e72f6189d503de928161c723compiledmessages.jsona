@@ -3010,20 +3010,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Dekoracja awatara: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Tabliczka z nazwą: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Tabliczka z nazwą ",
     [
@@ -3033,13 +3019,6 @@
   ],
   "3Y8q7e": [
     "Efekt profilu ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Efekt profilu: ",
     [
       1,
       "itemName"
@@ -3108,49 +3087,6 @@
   "3lv7q6": "Nadaj swojemu awatarowi nowy wygląd.",
   "ik37ER": "Spraw, by Twoja nazwa wyróżniała się na serwerach i czatach.",
   "VhJL7+": "Pokazuj ten efekt, gdy inni przeglądają Twój profil.",
-  "VdGtwc": [
-    "Klikając „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, akceptujesz ",
-    [
-      8,
-      "$link",
-      [
-        "Warunki Korzystania z Płatnych Usług"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Kupując przedmiot ze Sklepu, nabywasz ograniczoną licencję na jego używanie na Discordzie. Dowiedz się więcej w sekcji ",
-        [
-          8,
-          "$link",
-          [
-            "„Wirtualne Produkty”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Zakup nie podlega zwrotowi. Pamiętaj, że subskrypcje Nitro przestają podlegać zwrotowi po zakupie przedmiotu."
-  ],
   "YS2J4e": [
     "Już nie możemy się doczekać reakcji Twojego znajomego. Wszystkie zakupione prezenty znajdziesz w swoim ",
     [
@@ -3262,49 +3198,6 @@
     ]
   ],
   "tf1ZZ2": "Twój profil został zaktualizowany!",
-  "zFXJX1": [
-    "Klikając „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, akceptujesz ",
-    [
-      8,
-      "$link",
-      [
-        "Warunki Korzystania z Płatnych Usług"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Kupując przedmiot ze Sklepu, nabywasz ograniczoną licencję na jego używanie na Discordzie. Dowiedz się więcej w sekcji ",
-        [
-          8,
-          "$link",
-          [
-            "„Wirtualne Produkty”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Zakup nie podlega zwrotowi. Po dokonaniu zakupu przedmiot będzie natychmiast dostępny w ustawieniach Twojego profilu użytkownika. Pamiętaj, że subskrypcje Nitro przestają podlegać zwrotowi po zakupie przedmiotu."
-  ],
   "SKduys": [
     "Użytkownik ",
     [
@@ -19954,7 +19847,6 @@
   "wb7QJy": "Reklamy",
   "j+d6RE": "Twoja aktywność",
   "JN9c39": "Serwery",
-  "M4ddeX": "Programy",
   "0dO1t7": "Wiadomości",
   "rfe/x8": "Konto",
   "yaLeEB": "Zgłoszenia wsparcia",
@@ -21948,6 +21840,7 @@
   "NbhSIy": "Cofnij weryfikację członka",
   "6QlTeH": "Zweryfikuj członka",
   "+vt7w8": "Spersonalizuj Discorda",
+  "kpMomJ": "Własny profil",
   "e6RscX": "Oznacz jako przeczytane",
   "RpE9k5": "Oznacz jako nieprzeczytane",
   "COq6kp": "Otwórz link",
@@ -23720,6 +23613,7 @@
   "DOb6x8": "Ulubione Nitro",
   "M9AIt7": "Uzyskaj ekskluzywny dostęp do nowych funkcji, zanim zostaną udostępnione wszystkim.",
   "LgHbnJ": "Ciesz się ulepszonym Discordem",
+  "xT1Vfn": "Przesyłanie plików o rozmiarze 500 MB",
   "37MFFh": "Jako subskrybent Nitro otrzymasz tę fajną odznakę.",
   "LTaxu7": "Dostosuj swój wygląd na Discordzie",
   "H4/NBA": "Specjalne ceny dla członków",
@@ -28890,6 +28784,7 @@
   "vlHicH": "Własne profile i nie tylko!",
   "ky8rxc": "Zremiksuj dowolne multimedia dzięki wczesnemu dostępowi",
   "myyAEh": "Możliwość streamowania wideo w rozdzielczości HD",
+  "zTk8Ul": "Motywy kolorystyczne aplikacji i dużo więcej!",
   "+qqh6u": [
     "Twoja zniżka w wysokości ",
     [
@@ -30963,39 +30858,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Graj w dowolną z ",
-    [
-      8,
-      "$link",
-      [
-        "tych wybranych gier"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " przez ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " min i odblokuj nagrodę: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -40658,6 +40520,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Dodaj do ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " gry"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " gier"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Wybierz 1 grę",
+  "sUQar6": "Ulubiona gra",
+  "SqNnur": "Gry w rotacji",
+  "scOKER": "Gry, które lubię",
+  "bWSQwc": "Chcę zagrać",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

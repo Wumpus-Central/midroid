@@ -3001,20 +3001,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Vzhled avataru: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Jmenovka: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Jmenovka ",
     [
@@ -3024,13 +3010,6 @@
   ],
   "3Y8q7e": [
     "Efekt profilu ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Efekt profilu: ",
     [
       1,
       "itemName"
@@ -3097,49 +3076,6 @@
   "3lv7q6": "Dopřej svému avataru nový vzhled.",
   "ik37ER": "Nechej své jméno vyniknout na serverech i v chatech.",
   "VhJL7+": "Pochlub se tímto efektem všem, kdo zavítají na tvůj profil.",
-  "VdGtwc": [
-    "Kliknutím na tlačítko „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“ souhlasíš s ",
-    [
-      8,
-      "$link",
-      [
-        "podmínkami placených služeb"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Nákup položky z obchodu znamená, že si kupuješ omezenou licenci k používání této položky na Discordu. Další informace zjistíš v sekci ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtuální zboží“"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Tento nákup nelze refundovat. Nezapomeň, že jakmile zakoupíš jakoukoli položku, také předplatné Nitro se stává nerefundovatelným."
-  ],
   "YS2J4e": [
     "Už se nemůžeme dočkat, až si tvůj kámoš nebo kámoška dárek rozbalí! Všechny své nákupy dárků můžeš sledovat v ",
     [
@@ -3249,49 +3185,6 @@
     ]
   ],
   "tf1ZZ2": "Tvůj profil je aktualizován!",
-  "zFXJX1": [
-    "Kliknutím na „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“ souhlasíš s ",
-    [
-      8,
-      "$link",
-      [
-        "podmínkami placených služeb"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Nákup položky z obchodu znamená, že si kupuješ omezenou licenci k používání této položky na Discordu. Další informace zjistíš v sekci ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtuální zboží“"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Tento nákup nelze refundovat. Jakmile nákup dokončíš, položka bude okamžitě dostupná v nastavení tvého uživatelského profilu. Nezapomeň, že jakmile zakoupíš jakoukoli položku, také předplatné Nitro se stává nerefundovatelným."
-  ],
   "SKduys": [
     [
       1,
@@ -20072,7 +19965,6 @@
   "wb7QJy": "Reklamy",
   "j+d6RE": "Tvoje aktivita",
   "JN9c39": "Servery",
-  "M4ddeX": "Programy",
   "0dO1t7": "Zprávy",
   "rfe/x8": "Účet",
   "yaLeEB": "Lístky podpory",
@@ -22097,6 +21989,7 @@
   "NbhSIy": "Zrušit ověření člena",
   "6QlTeH": "Ověřit člena",
   "+vt7w8": "Uprav si Discord po svém",
+  "kpMomJ": "Vlastní profil",
   "e6RscX": "Označit jako přečtené",
   "RpE9k5": "Označit nepřečtené",
   "COq6kp": "Otevřít odkaz",
@@ -23872,6 +23765,7 @@
   "DOb6x8": "Oblíbené s Nitrem",
   "M9AIt7": "Získej exkluzivní přístup k některým novým funkcím dříve než ostatní.",
   "LgHbnJ": "Užívej si vylepšený Discord",
+  "xT1Vfn": "Nahrávání souborů o velikosti až 500 MB",
   "37MFFh": "Získej tento skvělý odznak za předplatné Nitra.",
   "LTaxu7": "Ukaž se po svém",
   "H4/NBA": "Speciální ceny pro členy",
@@ -28979,6 +28873,7 @@
   "vlHicH": "Vlastní profily a další výhody!",
   "ky8rxc": "Využij předběžný přístup a remixuj libovolná média",
   "myyAEh": "Streamování HD videa",
+  "zTk8Ul": "Barevné motivy aplikací a další!",
   "+qqh6u": [
     "Tvoje ",
     [
@@ -31105,39 +31000,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Hraj libovolnou z ",
-    [
-      8,
-      "$link",
-      [
-        "těchto vybraných her"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " po dobu ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " min a odemkni odměnu ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -40768,6 +40630,40 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Přidej až ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " hru"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " hry"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " her"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Vyber 1 hru",
+  "sUQar6": "Přidat hru do oblíbených",
+  "SqNnur": "Hry v rotaci",
+  "scOKER": "Hry, které se mi líbí",
+  "bWSQwc": "Chci hrát",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

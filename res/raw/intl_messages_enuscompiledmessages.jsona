@@ -2950,20 +2950,6 @@
     ],
     " Decoration"
   ],
-  "IQQYeX": [
-    "Avatar Decoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Nameplate: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2977,13 +2963,6 @@
       "itemName"
     ],
     " Profile Effect"
-  ],
-  "x/MGW1": [
-    "Profile Effect: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Bundle includes: ",
@@ -3056,7 +3035,7 @@
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
   "PpoJzs": "Your gift",
-  "VdGtwc": [
+  "rsEdd3": [
     "By clicking ",
     "\"",
     [
@@ -3099,7 +3078,7 @@
         ]
       ]
     ],
-    ". This purchase is non-refundable. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
+    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
   ],
   "R0vK0N": "Select a friend",
   "3YfczM": "Hey! Your friend already has this. Try sending something else.",
@@ -3212,51 +3191,6 @@
     ]
   ],
   "tf1ZZ2": "Your profile is updated!",
-  "zFXJX1": [
-    "By clicking ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\"",
-    ", you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Paid Service Terms"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "“Virtual Goods” section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
-  ],
   "iIglwM": [
     "By clicking ",
     "\"",
@@ -6662,6 +6596,31 @@
   ],
   "tdsiOz": "Change Default",
   "F6lRAA": "Double tap to react",
+  "5/l2ra": [
+    "React with ",
+    [
+      8,
+      "emojiNameHook",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " instantly. Or ",
+    [
+      8,
+      "tapHereHook",
+      [
+        "tap here"
+      ]
+    ],
+    " to set another default emoji."
+  ],
+  "6RUX7e": "Double tap to react",
   "WZGLFh": [
     [
       8,
@@ -6733,6 +6692,30 @@
       8,
       "emojiHook",
       []
+    ]
+  ],
+  "wHTk2N": "Edit default",
+  "VrWSNj": "Choose double tap emoji",
+  "C2tQIS": [
+    [
+      8,
+      "protipHook",
+      [
+        "PROTIP:"
+      ]
+    ],
+    " Double tap to react with ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
     ]
   ],
   "nKY0Fh": [
@@ -20089,7 +20072,6 @@
   "wb7QJy": "Ads",
   "j+d6RE": "Your Activity",
   "JN9c39": "Servers",
-  "M4ddeX": "Programs",
   "0dO1t7": "Messages",
   "rfe/x8": "Account",
   "yaLeEB": "Support Tickets",
@@ -22119,6 +22101,7 @@
   "NbhSIy": "Unverify Member",
   "6QlTeH": "Verify Member",
   "+vt7w8": "Make Discord Yours",
+  "kpMomJ": "Custom profiles",
   "e6RscX": "Mark As Read",
   "RpE9k5": "Mark Unread",
   "COq6kp": "Open Link",
@@ -23871,6 +23854,7 @@
   "DOb6x8": "Nitro Favorites",
   "M9AIt7": "Get exclusive access to certain new features before they’re released to everyone.",
   "LgHbnJ": "Enjoy An Upgraded Discord",
+  "xT1Vfn": "500MB Uploads",
   "37MFFh": "Get this cool badge for being a Nitro subscriber.",
   "LTaxu7": "Show Up The Way You Want",
   "H4/NBA": "Special Member Pricing",
@@ -28905,6 +28889,7 @@
   "vlHicH": "Custom profiles and more!",
   "ky8rxc": "Remix any media with Early Access",
   "myyAEh": "HD video streaming",
+  "zTk8Ul": "Color app themes and more!",
   "+qqh6u": [
     "Your ",
     [
@@ -30855,22 +30840,8 @@
     ],
     "."
   ],
-  "BfgxRk": [
-    "Play any of ",
-    [
-      8,
-      "$link",
-      [
-        "these select games"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " for ",
+  "2GJLKy": [
+    "Play eligible games for ",
     [
       2,
       "targetMinutes"
@@ -30888,8 +30859,35 @@
     ],
     "."
   ],
-  "2GJLKy": [
-    "Play eligible games for ",
+  "1votFx": [
+    "Play any of these select games for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "CDeHur": [
+    "Play any of ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "these select games"
+      ]
+    ],
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31364,6 +31362,36 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "Hu8SKS": [
+    "Play any eligible game for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes"
+  ],
+  "gbtCpa": [
+    "Play any eligible game on desktop or a ",
+    [
+      8,
+      "$link",
+      [
+        "connected console"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
+    ],
+    " for ",
+    [
+      2,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "bUyEZW": "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched any eligible games on your connected console.",
   "umdNio": "Start Video Quest",
   "smG9qq": [
@@ -38319,6 +38347,7 @@
     " age group. If we made a mistake, you can reverify."
   ],
   "PBG51t": "Reverify",
+  "El4aXl": "The information you provide is only used to confirm your age group, then it’s deleted",
   "/nicWl": "Retry",
   "LZO+HR": "Contact Us",
   "ty+iWF": "Request a manual review",
@@ -40500,6 +40529,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Add up to ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " game"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " games"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Choose 1 game",
+  "sUQar6": "Favorite game",
+  "SqNnur": "Games in rotation",
+  "scOKER": "Games I like",
+  "bWSQwc": "Want to play",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

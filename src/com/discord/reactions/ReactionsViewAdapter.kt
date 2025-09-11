@@ -54,7 +54,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       val var2: Int = this.getAddReactionIndex();
       var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var3: Long;
+      val var4: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -72,7 +72,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var13.append(var6);
          var13.append("_add_reactions_");
          var13.append(var7);
-         var3 = IdUtilsKt.convertToId(var13.toString());
+         var4 = IdUtilsKt.convertToId(var13.toString());
       } else {
          val var14: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -82,16 +82,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          }
 
          var7 = var14.getEmoji().getEmojiId();
-         val var5: Boolean = var14.isBurstReaction();
+         val var3: Boolean = var14.isBurstReaction();
          val var15: StringBuilder = new StringBuilder();
          var15.append(var6);
          var15.append("_");
          var15.append(var7);
-         var15.append(var5);
-         var3 = IdUtilsKt.convertToId(var15.toString());
+         var15.append(var3);
+         var4 = IdUtilsKt.convertToId(var15.toString());
       }
 
-      return var3;
+      return var4;
    }
 
    public override fun getItemViewType(position: Int): Int {
@@ -166,9 +166,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var4: ThemeManager = ThemeManager.INSTANCE;
-      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var4.setThemeOverride(this.theme);
+      val var3: ThemeManager = ThemeManager.INSTANCE;
+      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var3.setThemeOverride(this.theme);
       val var8: Any;
       if (var2 != 46) {
          if (var2 != 47) {
@@ -189,7 +189,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var8 = new ReactionViewHolder(var11);
       }
 
-      var4.setThemeOverride(var3);
+      var3.setThemeOverride(var4);
       return (RecyclerView.ViewHolder)var8;
    }
 

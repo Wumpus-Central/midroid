@@ -2992,20 +2992,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Ukras avatara: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Pločica s imenom: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Pločica s imenom ",
     [
@@ -3015,13 +3001,6 @@
   ],
   "3Y8q7e": [
     "Efekt profila ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Efekt profila: ",
     [
       1,
       "itemName"
@@ -3090,49 +3069,6 @@
   "3lv7q6": "Promijeni izgled svojeg avatara.",
   "ik37ER": "Neka se tvoje ime ističe na serverima i u chatovima.",
   "VhJL7+": "Ovaj će se efekt prikazivati kada druge osobe pregledavaju tvoj profil.",
-  "VdGtwc": [
-    "Klikneš li na „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, to znači da prihvaćaš ",
-    [
-      8,
-      "$link",
-      [
-        "Uvjete komercijalno pruženih usluga"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Kupnja artikla iz Trgovine znači da kupuješ ograničenu licencu za korištenje ovog artikla na Discordu. Doznaj više u odjeljku ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtualna roba”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Ova je kupnja nepovratna. Imaj na umu da pretplate na Nitro postaju nepovratne nakon što kupiš neki artikl."
-  ],
   "YS2J4e": [
     "Ne možemo dočekati da ga tvoj prijatelj otvori. Možeš pratiti sve svoje kupnje darova u ",
     [
@@ -3241,49 +3177,6 @@
     ]
   ],
   "tf1ZZ2": "Tvoj je profil ažuriran!",
-  "zFXJX1": [
-    "Klikneš li na „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, to znači da prihvaćaš ",
-    [
-      8,
-      "$link",
-      [
-        "Uvjete komercijalno pruženih usluga"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Kupnja artikla iz Trgovine znači da kupuješ ograničenu licencu za korištenje ovog artikla na Discordu. Doznaj više u odjeljku ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtualna roba”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Ova je kupnja nepovratna. Nakon što dovršiš kupnju, predmet će odmah biti dostupan za korištenje i moći ćeš mu pristupiti u postavkama svog korisničkog profila. Imaj na umu da pretplate na Nitro postaju nepovratne nakon što kupiš neki predmet."
-  ],
   "SKduys": [
     [
       1,
@@ -19929,7 +19822,6 @@
   "wb7QJy": "Oglasi",
   "j+d6RE": "Tvoja aktivnost",
   "JN9c39": "Serveri",
-  "M4ddeX": "Programi",
   "0dO1t7": "Poruke",
   "rfe/x8": "Račun",
   "yaLeEB": "Upiti za podršku",
@@ -21932,6 +21824,7 @@
   "NbhSIy": "Poništi verifikaciju člana",
   "6QlTeH": "Verificiraj člana",
   "+vt7w8": "Učini Discord svojim",
+  "kpMomJ": "Prilagođeni profil",
   "e6RscX": "Označi kao pročitano",
   "RpE9k5": "Označi kao nepročitano",
   "COq6kp": "Otvori link",
@@ -23762,6 +23655,7 @@
   "DOb6x8": "Nitro omiljeni",
   "M9AIt7": "Ostvari ekskluzivni pristup nekim novim značajkama prije nego budu svima dostupne.",
   "LgHbnJ": "Uživaj u nadograđenom Discordu",
+  "xT1Vfn": "500 MB prijenosa",
   "37MFFh": "Uzmi za sebe ovaj cool badge jer si Nitro pretplatnik.",
   "LTaxu7": "Predstavi se kako želiš",
   "H4/NBA": "Posebni cjenik za članove",
@@ -28925,6 +28819,7 @@
   "vlHicH": "Prilagođeni profili i još toga!",
   "ky8rxc": "Remiksiraj bilo kojih medij koristeći Rani Pristup",
   "myyAEh": "HD video streaming",
+  "zTk8Ul": "Teme aplikacije u boji i još toga!",
   "+qqh6u": [
     "Tvoj popust od ",
     [
@@ -31025,39 +30920,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Zaigraj bilo koju od ",
-    [
-      8,
-      "$link",
-      [
-        "ovih odabranih igara"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " min i otključaj nagradu ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -40750,6 +40612,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Dodaj do ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " igru"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " igara"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Odaberi 1 igru",
+  "sUQar6": "Omiljena igra",
+  "SqNnur": "Igre u rotaciji",
+  "scOKER": "Igre koje mi se sviđaju",
+  "bWSQwc": "Želim igrati",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

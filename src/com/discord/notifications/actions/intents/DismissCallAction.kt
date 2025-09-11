@@ -82,8 +82,8 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.tag.hashCode();
-      val var3: Int = ChannelId.hashCode-impl(this.channelId);
+      val var3: Int = this.tag.hashCode();
+      val var2: Int = ChannelId.hashCode-impl(this.channelId);
       val var4: Int = java.lang.Boolean.hashCode(this.isFullscreenCallUI);
       val var1: Int;
       if (this.guildId == null) {
@@ -92,7 +92,7 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var1 = GuildId.hashCode-impl(this.guildId.unbox-impl());
       }
 
-      return (((var2 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
+      return (((var3 * 31 + var2) * 31 + var4) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
@@ -121,24 +121,24 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.tag;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.tag;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
-      val var2: GuildId = this.guildId;
-      val var4: java.lang.String = UserId.toString-impl(this.userId);
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("DismissCallAction(tag=");
-      var6.append(var5);
-      var6.append(", channelId=");
-      var6.append(var3);
-      var6.append(", isFullscreenCallUI=");
-      var6.append(var1);
-      var6.append(", guildId=");
-      var6.append(var2);
-      var6.append(", userId=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var3: GuildId = this.guildId;
+      val var6: java.lang.String = UserId.toString-impl(this.userId);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("DismissCallAction(tag=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", isFullscreenCallUI=");
+      var4.append(var1);
+      var4.append(", guildId=");
+      var4.append(var3);
+      var4.append(", userId=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {

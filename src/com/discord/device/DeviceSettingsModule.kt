@@ -9,7 +9,7 @@ import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceSettingsModuleSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
-import com.discord.react_activities.ReactRootView
+import com.discord.react_activities.RootViewUtils
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
@@ -45,7 +45,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
-      val var2: ReactRootView.Companion = ReactRootView.Companion;
+      val var2: RootViewUtils = RootViewUtils.INSTANCE;
       val var3: ReactApplicationContext = var0.getReactApplicationContext();
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
       val var6: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));

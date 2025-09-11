@@ -2916,20 +2916,6 @@
     ],
     "-versiering"
   ],
-  "IQQYeX": [
-    "Avatarversiering: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Naambordje: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2943,13 +2929,6 @@
       "itemName"
     ],
     "-profieleffect"
-  ],
-  "x/MGW1": [
-    "Profieleffect: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Bundel bevat: ",
@@ -3013,49 +2992,6 @@
   "3lv7q6": "Geef je avatar een nieuwe look.",
   "ik37ER": "Zorg dat je naam opvalt in servers en chats.",
   "VhJL7+": "Toon dit effect als anderen je profiel bekijken.",
-  "VdGtwc": [
-    "Door op '",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "' te klikken, ga je akkoord met de ",
-    [
-      8,
-      "$link",
-      [
-        "Voorwaarden betaaldiensten"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Als je iets uit de winkel koopt, koop je in feite een tijdelijke licentie om dit item te gebruiken op Discord. Ga voor meer informatie naar het ",
-        [
-          8,
-          "$link",
-          [
-            "artikel Virtuele goederen"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Deze aankoop komt niet in aanmerking voor restitutie. Denk er ook aan dat je geen restitutie kunt krijgen voor je Nitro-abonnement als je een item hebt gekocht."
-  ],
   "YS2J4e": [
     "We kunnen niet wachten tot je vriend(in) het cadeau opent! Je kunt al je cadeau-aankopen bijhouden in je ",
     [
@@ -3165,49 +3101,6 @@
     ]
   ],
   "tf1ZZ2": "Je profiel is geüpdatet!",
-  "zFXJX1": [
-    "Door op '",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "' te klikken, ga je akkoord met de ",
-    [
-      8,
-      "$link",
-      [
-        "Voorwaarden betaaldiensten"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Als je iets uit de winkel koopt, koop je in feite een tijdelijke licentie om dit item te gebruiken op Discord. Ga voor meer informatie naar het ",
-        [
-          8,
-          "$link",
-          [
-            "artikel Virtuele goederen"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Deze aankoop komt niet in aanmerking voor restitutie. Als je je aankoop hebt voltooid, is het item direct beschikbaar via de instellingen van je gebruikersprofiel. Denk eraan dat je geen restitutie kunt krijgen voor je Nitro-abonnement als je een item hebt gekocht."
-  ],
   "SKduys": [
     [
       1,
@@ -19406,7 +19299,6 @@
   "wb7QJy": "Advertenties",
   "j+d6RE": "Je activiteit",
   "JN9c39": "Servers",
-  "M4ddeX": "Programma's",
   "0dO1t7": "Berichten",
   "rfe/x8": "Account",
   "yaLeEB": "Ondersteuningstickets",
@@ -21395,6 +21287,7 @@
   "NbhSIy": "Lid deverifiëren",
   "6QlTeH": "Lid verifiëren",
   "+vt7w8": "Geef Discord een persoonlijk tintje",
+  "kpMomJ": "Persoonlijk profiel",
   "e6RscX": "Markeren als gelezen",
   "RpE9k5": "Markeren als ongelezen",
   "COq6kp": "Link openen",
@@ -23118,6 +23011,7 @@
   "DOb6x8": "Nitro-favorieten",
   "M9AIt7": "Krijg exclusief toegang tot bepaalde nieuwe functies voordat iedereen erbij kan.",
   "LgHbnJ": "Geniet van een verbeterd Discord",
+  "xT1Vfn": "Uploads van 500 MB",
   "37MFFh": "Als Nitro-abonnee krijg je deze coole badge.",
   "LTaxu7": "Verschijn in gesprekken op je eigen manier",
   "H4/NBA": "Speciale prijzen voor leden",
@@ -28068,6 +27962,7 @@
   "vlHicH": "Persoonlijke profielen en meer!",
   "ky8rxc": "Remix media met Vroegtijdige toegang",
   "myyAEh": "HD-videostreamen",
+  "zTk8Ul": "Kleurrijke appthema's en meer!",
   "+qqh6u": [
     "Je korting van ",
     [
@@ -30003,39 +29898,6 @@
       ]
     ],
     "."
-  ],
-  "BfgxRk": [
-    "Speel een van ",
-    [
-      8,
-      "$link",
-      [
-        "deze games"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minuten lang om ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
-        ]
-      ]
-    ],
-    " te ontgrendelen."
   ],
   "a/ia7O": [
     "Stream ",
@@ -39467,6 +39329,35 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Voeg maximaal ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " game"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " games"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " toe"
+  ],
+  "wiXdER": "Kies 1 game",
+  "sUQar6": "Favoriete game",
+  "SqNnur": "Games in roulatie",
+  "scOKER": "Games die ik leuk vind",
+  "bWSQwc": "Wil spelen",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

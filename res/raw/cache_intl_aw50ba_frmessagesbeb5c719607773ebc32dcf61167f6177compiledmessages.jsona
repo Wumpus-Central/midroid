@@ -2925,20 +2925,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Décoration d'avatar : ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Plaque nominative : ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Plaque nominative ",
     [
@@ -2948,13 +2934,6 @@
   ],
   "3Y8q7e": [
     "Effet de profil ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Effet de profil : ",
     [
       1,
       "itemName"
@@ -3022,49 +3001,6 @@
   "3lv7q6": "Donne un nouveau look à ton avatar.",
   "ik37ER": "Mets ton nom en valeur dans les serveurs et les conversations.",
   "VhJL7+": "Applique cet effet quand d'autres personnes consultent ton profil.",
-  "VdGtwc": [
-    "En cliquant sur « ",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    " », tu acceptes les ",
-    [
-      8,
-      "$link",
-      [
-        "Conditions des Services Payants"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Acheter un objet dans la Boutique signifie que tu achètes une licence limitée pour utiliser cet objet sur Discord. Tu peux en savoir plus à ce sujet dans la ",
-        [
-          8,
-          "$link",
-          [
-            "section « Produits virtuels »"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Cet achat est non remboursable. Note que les abonnements Nitro deviennent non remboursables une fois que tu as acheté un objet."
-  ],
   "YS2J4e": [
     "Il n'y a plus qu'à attendre que ton ami(e) l'ouvre ! Tous tes achats de cadeaux peuvent être consultés dans ton ",
     [
@@ -3155,49 +3091,6 @@
     ]
   ],
   "tf1ZZ2": "Ton profil a été mis à jour !",
-  "zFXJX1": [
-    "En cliquant sur « ",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    " », tu acceptes les ",
-    [
-      8,
-      "$link",
-      [
-        "Conditions des Services Payants"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Acheter un objet dans la Boutique signifie que tu achètes une licence limitée pour utiliser cet objet sur Discord. Tu peux en savoir plus à ce sujet dans la ",
-        [
-          8,
-          "$link",
-          [
-            "section « Produits virtuels »"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Cet achat est non remboursable. Une fois ton achat terminé, l'objet sera disponible immédiatement et pourra être consulté dans les paramètres de ton profil d'utilisateur. Note que les abonnements Nitro deviennent non remboursables une fois que tu as acheté un objet."
-  ],
   "SKduys": [
     [
       1,
@@ -19512,7 +19405,6 @@
   "wb7QJy": "Publicités",
   "j+d6RE": "Ton Activité",
   "JN9c39": "Serveurs",
-  "M4ddeX": "Programmes",
   "0dO1t7": "Messages",
   "rfe/x8": "Compte",
   "yaLeEB": "Demandes de support",
@@ -21511,6 +21403,7 @@
   "NbhSIy": "Annuler la vérification du membre",
   "6QlTeH": "Vérifier le membre",
   "+vt7w8": "Prends le contrôle de Discord",
+  "kpMomJ": "Profil personnalisé",
   "e6RscX": "Marquer comme lu",
   "RpE9k5": "Marquer comme non lu",
   "COq6kp": "Ouvrir le lien",
@@ -23251,6 +23144,7 @@
   "DOb6x8": "Favoris Nitro",
   "M9AIt7": "Obtiens un accès exclusif à certaines nouvelles fonctionnalités avant qu'elles ne soient disponibles pour tout le monde.",
   "LgHbnJ": "Profite d'un Discord amélioré",
+  "xT1Vfn": "Des uploads de 500 Mo",
   "37MFFh": "Obtiens ce super badge en remerciement de ton abonnement Nitro.",
   "LTaxu7": "Présente-toi avec ton propre style",
   "H4/NBA": "Tarification spéciale pour les membres",
@@ -28199,6 +28093,7 @@
   "vlHicH": "Profils personnalisés et bien plus !",
   "ky8rxc": "Remixe n'importe quel média avec l'accès anticipé",
   "myyAEh": "Streaming vidéo haute définition",
+  "zTk8Ul": "Des thèmes colorés pour l'appli et bien plus encore !",
   "+qqh6u": [
     "Ta réduction de ",
     [
@@ -30142,39 +30037,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Joue à l'un de ",
-    [
-      8,
-      "$link",
-      [
-        "ces jeux sélectionnés"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " pendant ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minutes et déverrouille ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39651,6 +39513,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Ajoute jusqu'à ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " jeu"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " jeux"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Choisis 1 jeu",
+  "sUQar6": "Jeu favori",
+  "SqNnur": "Jeux du moment",
+  "scOKER": "Jeux que j'aime",
+  "bWSQwc": "Envie de jouer",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

@@ -29,11 +29,11 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: MessageAltRemixTagViewBinding
 
    init {
-      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
-      val var3: TextView = var5.altRemixTag;
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var5.remixIcon;
+      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var5: TextView = var3.altRemixTag;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var3.remixIcon;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
@@ -73,7 +73,7 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
 
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new S(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new Q(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          var14.setVisibility(0);
          if (var3 != null) {

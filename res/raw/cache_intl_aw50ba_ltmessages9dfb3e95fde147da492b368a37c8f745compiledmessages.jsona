@@ -2994,20 +2994,6 @@
     ],
     " papuošimas"
   ],
-  "IQQYeX": [
-    "Pseudoportreto papuošimas: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Vardo lentelė: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -3021,13 +3007,6 @@
       "itemName"
     ],
     " profilio efektas"
-  ],
-  "x/MGW1": [
-    "Profilio efektas: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Į paketą įeina: ",
@@ -3091,49 +3070,6 @@
   "3lv7q6": "Atnaujink savo pseudoportreto išvaizdą.",
   "ik37ER": "Pasirūpink, kad tavo vardas išsiskirtų iš kitų serveriuose ir pokalbiuose.",
   "VhJL7+": "Rodyti šį efektą, kai kiti peržiūri tavo profilį.",
-  "VdGtwc": [
-    "Jei spaudi „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“, vadinasi, sutinki su ",
-    [
-      8,
-      "$link",
-      [
-        "Mokamų paslaugų teikimo sąlygomis"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Jei perki prekę Parduotuvėje, tai reiškia, kad perki ribotą licenciją naudoti šią prekę Discord platformoje. Sužinok daugiau ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtualiųjų prekių“ skyriuje"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Už šį įsigijimą lėšos negali būti grąžinamos. Atkreipk dėmesį, kad įsigijus prekę, lėšos už Nitro prenumeratą nebegali būti grąžinamos."
-  ],
   "YS2J4e": [
     "Nekantriai laukiame, kol tavo draugas atidarys dovaną. Visus savo dovanų pirkimus gali peržiūrėti skyriuje ",
     [
@@ -3245,49 +3181,6 @@
     ]
   ],
   "tf1ZZ2": "Tavo profilis atnaujintas!",
-  "zFXJX1": [
-    "Jei spaudi „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“, vadinasi, sutinki su ",
-    [
-      8,
-      "$link",
-      [
-        "Mokamų paslaugų teikimo sąlygomis"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Jei perki prekę Parduotuvėje, tai reiškia, kad perki ribotą licenciją naudoti šią prekę Discord platformoje. Sužinok daugiau ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtualiųjų prekių“ skyriuje"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Už šį įsigijimą lėšos negali būti grąžinamos. Kai baigsi pirkimą, šią prekę galėsi naudoti iš karto, ją pasieksi savo naudotojo profilio nustatymuose. Atkreipk dėmesį, kad įsigijus prekę, lėšos už Nitro prenumeratą nebegali būti grąžinamos."
-  ],
   "SKduys": [
     [
       1,
@@ -20034,7 +19927,6 @@
   "wb7QJy": "Reklamos",
   "j+d6RE": "Tavo veikla",
   "JN9c39": "Serveriai",
-  "M4ddeX": "Programos",
   "0dO1t7": "Žinutės",
   "rfe/x8": "Paskyra",
   "yaLeEB": "Pagalbos talonai",
@@ -22080,6 +21972,7 @@
   "NbhSIy": "Atšaukti nario patvirtinimą",
   "6QlTeH": "Patvirtinti narį",
   "+vt7w8": "Pritaikyk Discord savo poreikiams",
+  "kpMomJ": "Tinkintas profilis",
   "e6RscX": "Žymėti Kaip Skaitytą",
   "RpE9k5": "Pažymėti kaip neskaitytą",
   "COq6kp": "Atidaryti nuorodą",
@@ -23837,6 +23730,7 @@
   "DOb6x8": "Nitro mėgstamiausi",
   "M9AIt7": "Gauk išskirtinę prieigą prie tam tikrų naujų funkcijų iki joms tampant viešai prieinamoms.",
   "LgHbnJ": "Mėgaukis naujovintu Discord",
+  "xT1Vfn": "500 MB dydžio failų įkėlimas",
   "37MFFh": "Tapk Nitro prenumeratoriumi (-e) ir gauk šį šaunų ženklelį.",
   "LTaxu7": "Pasirodyk kitiems, kaip tik nori",
   "H4/NBA": "Specialios kainos nariams",
@@ -29044,6 +28938,7 @@
   "vlHicH": "Tinkinti profiliai ir ne tik!",
   "ky8rxc": "Redaguok bet kokias medijas su Išankstine prieiga",
   "myyAEh": "HD raiškos vaizdo transliacijos",
+  "zTk8Ul": "Programėlės spalvų temos ir ne tik!",
   "+qqh6u": [
     "Tavo ",
     [
@@ -31060,39 +30955,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Žaisk bet kurį iš ",
-    [
-      8,
-      "$link",
-      [
-        "šių atrinktų žaidimų"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " min. ir gauk ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -40795,6 +40657,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Pridėti iki ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " žaidimo"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " žaidimų"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Pasirink 1 žaidimą",
+  "sUQar6": "Mėgstamiausias žaidimas",
+  "SqNnur": "Žaidimai rotacine tvarka",
+  "scOKER": "Mano mėgstami žaidimai",
+  "bWSQwc": "Noriu žaisti",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

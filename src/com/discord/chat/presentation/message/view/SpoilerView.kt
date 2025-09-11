@@ -49,12 +49,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var9: ObscureOverlayView = this.binding.obscure;
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var6: Function1 = var3.getLabel();
-      val var5: Context = this.getContext();
-      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
-      val var8: Function1 = var3.getDescription();
-      val var12: Context = this.getContext();
-      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      val var5: Function1 = var3.getLabel();
+      val var6: Context = this.getContext();
+      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
+      val var12: Function1 = var3.getDescription();
+      val var8: Context = this.getContext();
+      var10.configure(var11, var12.invoke(var8) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
    }
 
    @JvmStatic
@@ -74,12 +74,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var var3: SpoilerOverlayView = this.binding.spoiler;
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
-      val var4: Function1 = var1.getAttributes().getLabel();
-      var var5: Context = this.getContext();
-      val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
-      val var6: Function1 = var1.getAttributes().getDescription();
-      var5 = this.getContext();
-      var3.configure(var8, var6.invoke(var5) as java.lang.String, new P0(this, var2));
+      var var5: Function1 = var1.getAttributes().getLabel();
+      val var4: Context = this.getContext();
+      val var8: java.lang.String = var5.invoke(var4) as java.lang.String;
+      var5 = var1.getAttributes().getDescription();
+      val var6: Context = this.getContext();
+      var3.configure(var8, var5.invoke(var6) as java.lang.String, new P0(this, var2));
    }
 
    @JvmStatic
@@ -136,7 +136,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var4 = this;
       }
 
-      var4 = var4 as ViewGroup;
+      val var5: ViewGroup = var4 as ViewGroup;
       var var3: Byte;
       if (var1) {
          var3 = 2;
@@ -144,9 +144,9 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var3 = 1;
       }
 
-      val var5: androidx.transition.c = new androidx.transition.c(var3);
-      var5.e0(150L);
-      var5.b(new androidx.transition.p(var1, this) {
+      var4 = new androidx.transition.c(var3);
+      var4.e0(150L);
+      var4.b(new androidx.transition.p(var1, this) {
          final boolean $showImage;
          final SpoilerView this$0;
 
@@ -166,7 +166,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
          }
       });
-      androidx.transition.q.a((ViewGroup)var4, var5);
+      androidx.transition.q.a(var5, var4);
       if (!var1) {
          var3 = 0;
       } else {

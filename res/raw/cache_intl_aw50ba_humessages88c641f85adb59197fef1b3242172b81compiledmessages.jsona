@@ -2920,20 +2920,6 @@
     ],
     " dekoráció"
   ],
-  "IQQYeX": [
-    "Profilkép-dekoráció: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Névjelzés: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2947,13 +2933,6 @@
       "itemName"
     ],
     " profileffektus"
-  ],
-  "x/MGW1": [
-    "Profileffektus: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "A csomag tartalma: ",
@@ -3018,49 +2997,6 @@
   "3lv7q6": "Új megjelenést kölcsönözhetsz a profilképednek.",
   "ik37ER": "Kitűnhet a neved a tömegből a szervereken és a csevegésekben.",
   "VhJL7+": "Megjelenítheted ezt az effektust, amikor mások megtekintik a profilodat.",
-  "VdGtwc": [
-    "A(z) „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” gombra kattintva elfogadod a ",
-    [
-      8,
-      "$link",
-      [
-        "Fizetős szolgáltatások szerződési feltételeit"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Ha terméket vásárolsz az Áruházból, azzal limitált licencet vásárolsz a termék Discordon történő felhasználásához. A ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtuális áruk”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    " területen tájékozódhatsz részletesebben. Fontos tudni, hogy miután vásárolsz egy terméket, a Nitro-előfizetések nem téríthetők vissza."
-  ],
   "YS2J4e": [
     "Alig várjuk, hogy a barátod kicsomagolja. Az összes megvásárolt ajándékodat nyomon követheted az ",
     [
@@ -3169,49 +3105,6 @@
     ]
   ],
   "tf1ZZ2": "Frissült a profilod!",
-  "zFXJX1": [
-    "A(z) „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” gombra kattintva elfogadod a ",
-    [
-      8,
-      "$link",
-      [
-        "Fizetős szolgáltatások szerződési feltételeit"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Ha terméket vásárolsz az Áruházból, azzal limitált licencet vásárolsz a termék Discordon történő felhasználásához. A ",
-        [
-          8,
-          "$link",
-          [
-            "„Virtuális áruk”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    " területen tájékozódhatsz részletesebben. A vásárlás nem téríthető vissza. A vásárlás végrehajtása után a termék azonnal felhasználható, és a Felhasználói profilbeállításoknál fogod megtalálni. Fontos tudni, hogy miután vásárolsz egy terméket, a Nitro-előfizetések nem téríthetők vissza."
-  ],
   "SKduys": [
     [
       1,
@@ -19359,7 +19252,6 @@
   "wb7QJy": "Hirdetések",
   "j+d6RE": "A tevékenységed",
   "JN9c39": "Szerverek",
-  "M4ddeX": "Programok",
   "0dO1t7": "Üzenetek",
   "rfe/x8": "Fiók",
   "yaLeEB": "Támogatási jegyek",
@@ -21336,6 +21228,7 @@
   "NbhSIy": "Tag hitelesítésének visszavonása",
   "6QlTeH": "Tag hitelesítése",
   "+vt7w8": "Formáld a Discordot kedved szerint!",
+  "kpMomJ": "Egyéni profil",
   "e6RscX": "Megjelölés olvasottként",
   "RpE9k5": "Megjelölés olvasatlannak",
   "COq6kp": "Hivatkozás megnyitása",
@@ -23060,6 +22953,7 @@
   "DOb6x8": "Nitro-kedvencek",
   "M9AIt7": "Exkluzív hozzáférést kaphatsz bizonyos új funkciókhoz, mielőtt mindenki számára elérhetővé válnának.",
   "LgHbnJ": "Frissített Discord-élmény vár rád",
+  "xT1Vfn": "500 MB méretű feltöltések",
   "37MFFh": "Szerezd meg ezt a Nitro-előfizetőknek járó menő jelvényt!",
   "LTaxu7": "Úgy jelenhetsz meg, ahogyan csak szeretnél",
   "H4/NBA": "Különleges, tagokra vonatkozó árak",
@@ -27996,6 +27890,7 @@
   "vlHicH": "Egyedi profilok és sok minden más!",
   "ky8rxc": "Korai hozzáféréssel remixelhetsz bármilyen médiatartalmat",
   "myyAEh": "HD-videós közvetítés",
+  "zTk8Ul": "Színes alkalmazástémák és még sok más!",
   "+qqh6u": [
     "A(z) ",
     [
@@ -29938,39 +29833,6 @@
       ]
     ],
     " jutalomra tehetsz szert."
-  ],
-  "BfgxRk": [
-    "Ha ",
-    [
-      8,
-      "$link",
-      [
-        "bármelyik megadott játékkal"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " percig játszol, feloldhatod a következőt: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
-        ]
-      ]
-    ],
-    "."
   ],
   "a/ia7O": [
     "Ha közvetíted a(z) ",
@@ -39385,6 +39247,35 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Akár ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " játékot"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " játékot"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " adhatsz hozzá"
+  ],
+  "wiXdER": "Válassz 1 játékot",
+  "sUQar6": "Kedvenc játék",
+  "SqNnur": "Váltakozó játékok",
+  "scOKER": "Nekem tetsző játékok",
+  "bWSQwc": "Játszani szeretnék",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

@@ -2925,20 +2925,6 @@
     ],
     "-dekoration"
   ],
-  "IQQYeX": [
-    "Avatar-dekoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Navneskilt: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2952,13 +2938,6 @@
       "itemName"
     ],
     "-profileffekt"
-  ],
-  "x/MGW1": [
-    "Profileffekt: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Pakken indeholder: ",
@@ -3022,51 +3001,6 @@
   "ik37ER": "Få dit navn til at skille sig ud på servere og i chats.",
   "VhJL7+": "Vis denne effekt, når andre ser din profil.",
   "PpoJzs": "Din gave",
-  "VdGtwc": [
-    "Ved at klikke på ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\" ",
-    "accepterer du ",
-    [
-      8,
-      "$link",
-      [
-        "vilkårene for betalte tjenester"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Når du køber en vare fra shoppen, betyder det, at du køber en begrænset licens til at bruge varen på Discord. Få mere at vide herom i ",
-        [
-          8,
-          "$link",
-          [
-            "afsnittet “Virtuelle varer”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Købet kan ikke refunderes. Bemærk, at Nitro-abonnementer ikke kan refunderes, når du har købt en vare."
-  ],
   "YS2J4e": [
     "Vi glæder os til, at din ven åbner den. Du kan holde styr på alle dine gavekøb i dit ",
     [
@@ -3157,51 +3091,6 @@
     ]
   ],
   "tf1ZZ2": "Din profil er opdateret!",
-  "zFXJX1": [
-    "Ved at klikke på ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\" ",
-    "accepterer du ",
-    [
-      8,
-      "$link",
-      [
-        "vilkårene for betalte tjenester"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Når du køber en vare fra shoppen, betyder det, at du køber en begrænset licens til at bruge denne vare på Discord. Få mere at vide herom ",
-        [
-          8,
-          "$link",
-          [
-            "i afsnittet “Virtuelle varer”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Dette køb kan ikke refunderes. Når du har gennemført dit køb, vil varen straks være klar til brug og kan tilgås i indstillingerne for din brugerprofil. Bemærk, at Nitro-abonnementer ikke kan refunderes, når du har købt en vare."
-  ],
   "SKduys": [
     [
       1,
@@ -19592,7 +19481,6 @@
   "wb7QJy": "Annoncer",
   "j+d6RE": "Din aktivitet",
   "JN9c39": "Servere",
-  "M4ddeX": "Programmer",
   "0dO1t7": "Beskeder",
   "rfe/x8": "Konto",
   "yaLeEB": "Supportanmodninger",
@@ -21602,6 +21490,7 @@
   "NbhSIy": "Fjern bekræftelse af medlem",
   "6QlTeH": "Bekræft medlem",
   "+vt7w8": "Gør Discord til dit",
+  "kpMomJ": "Brugerdefineret profil",
   "e6RscX": "Marker som læst",
   "RpE9k5": "Marker som ulæst",
   "COq6kp": "Åbn link",
@@ -23344,6 +23233,7 @@
   "DOb6x8": "Nitro-favoritter",
   "M9AIt7": "Få eksklusiv adgang til visse nye funktioner, før de udgives til alle.",
   "LgHbnJ": "Nyd godt af en opgraderet Discord",
+  "xT1Vfn": "500 MB uploads",
   "37MFFh": "Få dette seje emblem for at være Nitro-abonnement.",
   "LTaxu7": "Vis dig, som du vil",
   "H4/NBA": "Særlige medlemspriser",
@@ -28287,6 +28177,7 @@
   "vlHicH": "Brugerdefinerede profiler med mere!",
   "ky8rxc": "Remix ethvert medie med Tidlig Adgang",
   "myyAEh": "HD-videostreaming",
+  "zTk8Ul": "Farver til app-temaer og mere!",
   "+qqh6u": [
     "Din rabat på ",
     [
@@ -30223,39 +30114,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Spil et af ",
-    [
-      8,
-      "$link",
-      [
-        "disse udvalgte spil"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " i ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minutter, og lås op for ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39620,6 +39478,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Tilføj op til ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " spil"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " spil"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Vælg et spil",
+  "sUQar6": "Yndlingsspil",
+  "SqNnur": "Spil i rotation",
+  "scOKER": "Spil, jeg godt kan lide",
+  "bWSQwc": "Vil gerne spille",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

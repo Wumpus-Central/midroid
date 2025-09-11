@@ -2,7 +2,6 @@ package com.discord.foreground_service.utils
 
 import A9.n
 import K1.a
-import K1.c
 import android.app.Notification
 import android.app.Service
 import android.content.ComponentName
@@ -50,26 +49,23 @@ public fun hasMicrophonePermission(context: Context): Boolean {
    return var1;
 }
 
-internal fun Service.startForegroundCompat(context: Context, notificationId: Int, notification: Notification): Boolean {
-   var var4: Int = VERSION.SDK_INT;
+internal fun Service.startForegroundCompat(context: Context, notificationId: Int, notification: Notification) {
+   val var7: Int = VERSION.SDK_INT;
    if (VERSION.SDK_INT < 29) {
       var0.startForeground(var2, var3);
-      return true;
-   } else if (VERSION.SDK_INT >= 31 && !AppLifecycle.INSTANCE.isForegrounded() && a.a(var0) == 0) {
-      var0.stopSelf();
-      return false;
    } else {
-      var var5: Int = var3.extras.getInt("permissionType", -1);
-      val var6: ServiceNotificationConfiguration.Type = CollectionsKt.j0(ServiceNotificationConfiguration.Type.getEntries(), var5) as ServiceNotificationConfiguration.Type;
-      if (var6 == null) {
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Unknown service type: ");
-         var7.append(var5);
-         throw new IllegalStateException(var7.toString().toString());
+      var var4: Int = var3.extras.getInt("permissionType", -1);
+      val var9: ServiceNotificationConfiguration.Type = CollectionsKt.j0(ServiceNotificationConfiguration.Type.getEntries(), var4) as ServiceNotificationConfiguration.Type;
+      if (var9 == null) {
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("Unknown service type: ");
+         var11.append(var4);
+         throw new IllegalStateException(var11.toString().toString());
       } else {
-         label52:
-         if (var4 < 34) {
-            var5 = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
+         var var5: Int = 1;
+         if (var7 < 34) {
+            var5 = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var9.ordinal()];
+            var4 = 1;
             if (var5 != 1) {
                if (var5 != 2) {
                   if (var5 != 3) {
@@ -77,34 +73,44 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
                   }
 
                   var4 = 32;
-                  break label52;
-               }
-
-               if (var4 >= 30) {
-                  var4 = 128;
-                  break label52;
+               } else {
+                  var4 = 1;
+                  if (var7 >= 30) {
+                     var4 = 128;
+                  }
                }
             }
-
-            var4 = 1;
          } else {
-            if (var6.ordinal() >= ServiceNotificationConfiguration.Type.VOICE_CALL.ordinal()
-               && hasMicrophonePermission(var1)
-               && hasForegroundServiceMicPermission(var1)) {
+            val var8: Boolean = AppLifecycle.INSTANCE.isForegrounded();
+            val var14: Boolean;
+            if (hasMicrophonePermission(var1) && hasForegroundServiceMicPermission(var1)) {
+               var14 = true;
+            } else {
+               var14 = false;
+            }
+
+            if (var9.ordinal() >= ServiceNotificationConfiguration.Type.VOICE_CALL.ordinal() && var14 && var8) {
                var4 = 129;
             } else {
                var4 = 1;
             }
 
-            if (var6.ordinal() >= ServiceNotificationConfiguration.Type.SCREEN_SHARE.ordinal()
-               && MediaProjectionConsent.INSTANCE.isGranted(var1)
-               && hasForegroundServiceMediaProjectionPermission(var1)) {
+            if (!MediaProjectionConsent.INSTANCE.isGranted(var1) || !hasForegroundServiceMediaProjectionPermission(var1)) {
+               var5 = 0;
+            }
+
+            if (var9.ordinal() >= ServiceNotificationConfiguration.Type.SCREEN_SHARE.ordinal() && var5) {
                var4 |= 32;
             }
          }
 
-         K1.b.a(var0, var2, var3, var4);
-         return true;
+         val var16: Log = Log.INSTANCE;
+         val var10: java.lang.String = toForegroundServiceTypeString(var4);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("Foregrounding ForegroundService with type ");
+         var12.append(var10);
+         Log.i$foreground_service_release$default(var16, var12.toString(), null, 2, null);
+         a.a(var0, var2, var3, var4);
       }
    }
 }
@@ -112,11 +118,33 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
 internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): ComponentName? {
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = c.a(var0, var1);
+      var2 = K1.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }
 
+   return var2;
+}
+
+internal fun Int.toForegroundServiceTypeString(): String {
+   val var1: StringBuilder = new StringBuilder();
+   if ((var0 and 1) != 0) {
+      var1.append("DataSync ");
+   }
+
+   if ((var0 and 128) != 0) {
+      var1.append("Microphone ");
+   }
+
+   if ((var0 and 32) != 0) {
+      var1.append("MediaProjection ");
+   }
+
+   if (StringsKt.c0(var1)) {
+      var1.append("Unknown ");
+   }
+
+   val var2: java.lang.String = var1.toString();
    return var2;
 }
 // $VF: Class flags could not be determined

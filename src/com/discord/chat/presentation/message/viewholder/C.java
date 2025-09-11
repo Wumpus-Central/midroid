@@ -11,6 +11,6 @@ public final class C implements Function1 {
    public final MessageContentAccessory e;
 
    public final Object invoke(Object var1) {
-      return MessageContentViewHolder.c(this.d, this.e, (LinkContentNode)var1);
+      return MessageContentViewHolder.d(this.d, this.e, (LinkContentNode)var1);
    }
 }

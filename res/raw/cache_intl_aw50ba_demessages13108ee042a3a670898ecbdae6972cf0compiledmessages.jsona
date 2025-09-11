@@ -2930,20 +2930,6 @@
     ],
     "“-Dekoration"
   ],
-  "IQQYeX": [
-    "Avatardekoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Namensschild: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "„",
     [
@@ -2959,13 +2945,6 @@
       "itemName"
     ],
     "“-Profil-Effekt"
-  ],
-  "x/MGW1": [
-    "Profil-Effekt: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Das Paket enthält: ",
@@ -3032,49 +3011,6 @@
   "3lv7q6": "Verpass deinem Avatar einen neuen Look.",
   "ik37ER": "Lass deinen Namen in Servern und Chats hervorstechen.",
   "VhJL7+": "Dieser Effekt wird gezeigt, wenn andere dein Profil ansehen.",
-  "VdGtwc": [
-    "Wenn du auf „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“ klickst, stimmst du den ",
-    [
-      8,
-      "$link",
-      [
-        "Nutzungsbedingungen für Bezahldienste"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    " zu. ",
-    [
-      8,
-      "$b",
-      [
-        "Einen Artikel im Shop zu kaufen bedeutet, dass du eine begrenzte Lizenz erwirbst, um diesen Artikel auf Discord zu verwenden. Mehr erfährst du im ",
-        [
-          8,
-          "$link",
-          [
-            "Abschnitt „Virtuelle Güter“"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Dieser Kauf ist nicht erstattungsfähig. Bitte beachte, dass Nitro-Abonnements nach dem Kauf eines Artikels nicht mehr erstattungsfähig sind."
-  ],
   "YS2J4e": [
     "Wir können es kaum erwarten, dass dein Freund es öffnet. Über das ",
     [
@@ -3166,49 +3102,6 @@
     ]
   ],
   "tf1ZZ2": "Dein Profil wurde aktualisiert!",
-  "zFXJX1": [
-    "Wenn du auf „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "“ klickst, stimmst du den ",
-    [
-      8,
-      "$link",
-      [
-        "Nutzungsbedingungen für Bezahldienste"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    " zu. ",
-    [
-      8,
-      "$b",
-      [
-        "Einen Artikel im Shop zu kaufen bedeutet, dass du eine begrenzte Lizenz erwirbst, um diesen Artikel auf Discord zu verwenden. Mehr erfährst du im ",
-        [
-          8,
-          "$link",
-          [
-            "Abschnitt „Virtuelle Güter“"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Dieser Kauf ist nicht erstattungsfähig. Sobald du deinen Kauf abgeschlossen hast, ist der Artikel sofort verfügbar und kann in deinen Nutzerprofileinstellungen eingesehen werden. Bitte beachte, dass Nitro-Abonnements nach dem Kauf eines Artikels nicht mehr erstattungsfähig sind."
-  ],
   "SKduys": [
     [
       1,
@@ -19581,7 +19474,6 @@
   "wb7QJy": "Werbung",
   "j+d6RE": "Deine Aktivität",
   "JN9c39": "Server",
-  "M4ddeX": "Programme",
   "0dO1t7": "Nachrichten",
   "rfe/x8": "Account",
   "yaLeEB": "Support-Tickets",
@@ -21597,6 +21489,7 @@
   "NbhSIy": "Verifizierung vom Mitglied aufheben",
   "6QlTeH": "Mitglied verifizieren",
   "+vt7w8": "Drück Discord deinen Stempel auf",
+  "kpMomJ": "Personalisiertes Profil",
   "e6RscX": "Als gelesen markieren",
   "RpE9k5": "Als ungelesen markieren",
   "COq6kp": "Link öffnen",
@@ -23331,6 +23224,7 @@
   "DOb6x8": "Nitro-Favoriten",
   "M9AIt7": "Erhalte exklusiven Zugang zu bestimmten neuen Features, bevor sie für alle veröffentlicht werden.",
   "LgHbnJ": "Genieße ein verbessertes Discord",
+  "xT1Vfn": "500 MB Uploads",
   "37MFFh": "Erhalte dieses coole Abzeichen für dein Nitro-Abonnement.",
   "LTaxu7": "Zeige dich so, wie du möchtest",
   "H4/NBA": "Spezielle Mitgliederpreise",
@@ -28259,6 +28153,7 @@
   "vlHicH": "Personalisierte Profile und vieles mehr!",
   "ky8rxc": "Remixe Medien mit dem Early Access",
   "myyAEh": "HD-Videostreams",
+  "zTk8Ul": "App-Farbschemata und mehr!",
   "+qqh6u": [
     "Dein Rabatt von **",
     [
@@ -30206,39 +30101,6 @@
       ]
     ],
     "."
-  ],
-  "BfgxRk": [
-    "Spiele eines ",
-    [
-      8,
-      "$link",
-      [
-        "dieser ausgewählten Spiele"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " für ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " Minuten, um ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
-        ]
-      ]
-    ],
-    " freizuschalten."
   ],
   "2GJLKy": [
     "Spiele ",
@@ -39605,6 +39467,35 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Füge bis zu ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " Spiel"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Spiele"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " hinzu"
+  ],
+  "wiXdER": "Wähle 1 Spiel",
+  "sUQar6": "Spiel zu Favoriten hinzufügen",
+  "SqNnur": "Spiele in Rotation",
+  "scOKER": "Spiele, die ich mag",
+  "bWSQwc": "Möchte spielen",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

@@ -2911,20 +2911,6 @@
     ],
     " Dekorasyonu"
   ],
-  "IQQYeX": [
-    "Avatar Dekorasyonu: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "İsim Plakası: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2938,13 +2924,6 @@
       "itemName"
     ],
     " Profil Efekti"
-  ],
-  "x/MGW1": [
-    "Profil Efekti: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Paket İçeriği: ",
@@ -3009,53 +2988,6 @@
   "3lv7q6": "Avatarını yeni bir görünüme kavuştur.",
   "ik37ER": "Adını sunucularda ve sohbetlerde ön plana çıkar.",
   "VhJL7+": "Diğer kullanıcılar profilini görüntülediğinde bu efekti göster.",
-  "VdGtwc": [
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\" ",
-    "butonuna tıklayarak ",
-    [
-      8,
-      "$link",
-      [
-        "Ücretli Hizmet Koşullarını"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    " kabul etmiş olursun. ",
-    [
-      8,
-      "$b",
-      [
-        "Mağazadan bir öğe satın almak, Discord'da bu öğeyi kullanmak için sınırlı bir lisans satın aldığın anlamına gelir. Daha fazla bilgi için ",
-        [
-          8,
-          "$link",
-          [
-            "\"",
-            "Sanal Varlıklar",
-            "\" ",
-            "bölümüne"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    " göz atabilirsin. Bu satın alma işlemi iade edilemez. Nitro aboneliklerinin bir öğe satın alındıktan sonra iade edilemeyeceğini hatırlatırız."
-  ],
   "YS2J4e": [
     "Arkadaşının hediyesini açması için sabırsızlanıyoruz. Satın aldığın tüm hediyeleri ",
     [
@@ -3147,53 +3079,6 @@
     ]
   ],
   "tf1ZZ2": "Profilin güncellendi!",
-  "zFXJX1": [
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\" ",
-    "Butonuna tıklayarak ",
-    [
-      8,
-      "$link",
-      [
-        "Ücretli Hizmet Koşullarını"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    " kabul etmiş olursun. ",
-    [
-      8,
-      "$b",
-      [
-        "Mağazadan bir öğe satın almak, Discord'da bu öğeyi kullanmak için sınırlı bir lisans satın aldığın anlamına gelir. Daha fazla bilgi için ",
-        [
-          8,
-          "$link",
-          [
-            "\"",
-            "Sanal Varlıklar",
-            "\" ",
-            "bölümüne"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    " göz atabilirsin. Bu satın alma işlemi iade edilemez. Satın alma işlemini tamamladığında öğe derhal kullanıma hazır olacak ve Kullanıcı Profili ayarlarından erişilebilecektir. Nitro aboneliklerinin bir öğe satın alındıktan sonra iade edilemeyeceğini hatırlatırız."
-  ],
   "SKduys": [
     [
       1,
@@ -19562,7 +19447,6 @@
   "wb7QJy": "Reklamlar",
   "j+d6RE": "Etkinliğin",
   "JN9c39": "Sunucular",
-  "M4ddeX": "Programlar",
   "0dO1t7": "Mesajlar",
   "rfe/x8": "Hesap",
   "yaLeEB": "Destek Biletleri",
@@ -21559,6 +21443,7 @@
   "NbhSIy": "Üyenin Doğrulamasını Kaldır",
   "6QlTeH": "Üyeyi Doğrula",
   "+vt7w8": "Discord'unu Özelleştir",
+  "kpMomJ": "Özel profil",
   "e6RscX": "Okunmuş Olarak İşaretle",
   "RpE9k5": "Okunmadı Olarak İşaretle",
   "COq6kp": "Bağlantıyı Aç",
@@ -23297,6 +23182,7 @@
   "DOb6x8": "Nitro Favorileri",
   "M9AIt7": "Herkes için erişime açılmadan önce belirli yeni özelliklere özel erişim sağla.",
   "LgHbnJ": "Yükseltilmiş Bir Discord'un Tadını Çıkar",
+  "xT1Vfn": "500 MB Yükleme",
   "37MFFh": "Nitro abonesi olarak bu havalı rozeti kazan.",
   "LTaxu7": "Dilediğin Gibi Görün",
   "H4/NBA": "Özel Üye Fiyatlandırması",
@@ -28223,6 +28109,7 @@
   "vlHicH": "Özel profiller ve fazlası!",
   "ky8rxc": "Erken Erişim ile herhangi bir medyayı remiksle",
   "myyAEh": "HD görüntülü yayın",
+  "zTk8Ul": "Renkli uygulama temaları ve daha fazlası!",
   "+qqh6u": [
     [
       8,
@@ -30147,38 +30034,6 @@
       ]
     ],
     " kazan."
-  ],
-  "BfgxRk": [
-    [
-      8,
-      "$link",
-      [
-        "Bu seçili oyunlardan"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " herhangi birini ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " dakika oyna ve ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
-        ]
-      ]
-    ],
-    " ödülünün kilidini aç."
   ],
   "2GJLKy": [
     [
@@ -39574,6 +39429,35 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "En fazla ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          "oyun"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "oyun"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ekle"
+  ],
+  "wiXdER": "Bir oyun seç",
+  "sUQar6": "Favori oyun",
+  "SqNnur": "Dönüşümlü oyunlar",
+  "scOKER": "Sevdiğim oyunlar",
+  "bWSQwc": "Oynamak istiyorum",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

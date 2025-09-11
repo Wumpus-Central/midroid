@@ -80,25 +80,25 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       onTapObscureToggle: (Boolean) -> Unit,
       eventHandler: ChatEventHandler
    ) {
-      val var11: Message = var1.getMessage();
+      val var13: Message = var1.getMessage();
       val var15: java.lang.String = var1.getMessageId-3Eiw7ao();
       var var8: Int = var1.getConstrainedWidth();
       var var9: Boolean;
-      if (var11.getForwardInfo() != null) {
+      if (var13.getForwardInfo() != null) {
          var9 = true;
       } else {
          var9 = false;
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var13: java.lang.String = MessageId.toString-impl(var15);
-      val var12: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
+      val var12: java.lang.String = MessageId.toString-impl(var15);
+      val var11: GeneralEventHandlers = new GeneralEventHandlers(new w(var7, var15), var5);
       val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var11.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var11),
-         MessageKt.shouldShowLinkDecorations(var11),
-         var11.getShouldShowRoleDot(),
-         var11.getShouldShowRoleOnName()
+         MessageId.toString-impl(var13.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var13),
+         MessageKt.shouldShowLinkDecorations(var13),
+         var13.getShouldShowRoleDot(),
+         var13.getShouldShowRoleOnName()
       );
       val var35: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
          new x(var7, var15),
@@ -246,7 +246,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }, var6);
       val var31: ComponentActionEventHandlers = new ComponentActionEventHandlers(new y(var7, var15), new z(var7, var15), new A(var7, var15), new B(var7, var15));
       val var30: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
-      val var32: java.lang.Boolean = var11.getGifAutoPlay();
+      val var32: java.lang.Boolean = var13.getGifAutoPlay();
       if (var32 != null) {
          var9 = var32;
       } else {
@@ -254,13 +254,13 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       val var10: Boolean;
-      if (var11.getForwardInfo() != null) {
+      if (var13.getForwardInfo() != null) {
          var10 = true;
       } else {
          var10 = false;
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var12, var14, var35, var28, var31, var30, var9, var10, false, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var12, var11, var14, var35, var28, var31, var30, var9, var10, false, false));
    }
 }

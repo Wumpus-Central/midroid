@@ -2933,20 +2933,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Decoración de avatar: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Placa de nombre: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Placa de nombre ",
     [
@@ -2956,13 +2942,6 @@
   ],
   "3Y8q7e": [
     "Efecto de perfil ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Efecto de perfil: ",
     [
       1,
       "itemName"
@@ -3030,49 +3009,6 @@
   "3lv7q6": "Dale un nuevo look a tu avatar.",
   "ik37ER": "Haz que tu nombre destaque en los chats y servidores.",
   "VhJL7+": "Muestra este efecto cuando alguien vea tu perfil.",
-  "VdGtwc": [
-    "Al hacer clic en «",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "», aceptas las ",
-    [
-      8,
-      "$link",
-      [
-        "Condiciones de los Servicios de Pago"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Cuando compras un artículo de la Tienda, adquieres una licencia limitada para usar el artículo en cuestión en Discord. Obtén más información en la sección ",
-        [
-          8,
-          "$link",
-          [
-            "«Artículos Virtuales»"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Esta compra no es reembolsable. Ten en cuenta que las suscripciones Nitro no son reembolsables una vez que has comprado un artículo."
-  ],
   "YS2J4e": [
     "Qué ganas de que lo abran. Podrás ver todas tus compras de regalos registradas en tu ",
     [
@@ -3164,49 +3100,6 @@
     ]
   ],
   "tf1ZZ2": "¡Tu perfil está actualizado!",
-  "zFXJX1": [
-    "Al hacer clic en «",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "», aceptas las ",
-    [
-      8,
-      "$link",
-      [
-        "Condiciones de los Servicios de Pago"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Cuando compras un artículo de la Tienda, adquieres una licencia limitada para usar el artículo en cuestión en Discord. Obtén más información en la sección ",
-        [
-          8,
-          "$link",
-          [
-            "«Artículos Virtuales»"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Esta compra no es reembolsable. Una vez que completes la compra, el artículo estará disponible para usarlo de inmediato y podrás acceder a él en los ajustes de tu perfil de usuario. Ten en cuenta que las suscripciones Nitro no son reembolsables una vez que has comprado un artículo."
-  ],
   "SKduys": [
     "¡",
     [
@@ -19505,7 +19398,6 @@
   "wb7QJy": "Anuncios",
   "j+d6RE": "Tu actividad",
   "JN9c39": "Servidores",
-  "M4ddeX": "Programas",
   "0dO1t7": "Mensajes",
   "rfe/x8": "Cuenta",
   "yaLeEB": "Tickets de soporte técnico",
@@ -21503,6 +21395,7 @@
   "NbhSIy": "Cancelar verificación de miembro",
   "6QlTeH": "Verificar miembro",
   "+vt7w8": "Personaliza Discord",
+  "kpMomJ": "Perfil personalizado",
   "e6RscX": "Marcar como leído",
   "RpE9k5": "Marcar no leídos",
   "COq6kp": "Abrir enlace",
@@ -23249,6 +23142,7 @@
   "DOb6x8": "Favoritos de Nitro",
   "M9AIt7": "Obtén acceso exclusivo a ciertas funciones nuevas antes de que estén disponibles para todo el mundo.",
   "LgHbnJ": "Disfruta de una versión mejorada de Discord",
+  "xT1Vfn": "Subidas de 500 MB",
   "37MFFh": "Consigue esta insignia tan molona con tu suscripción a Nitro.",
   "LTaxu7": "Muéstrate como tú quieras",
   "H4/NBA": "Precio especial para miembros",
@@ -28200,6 +28094,7 @@
   "vlHicH": "¡Perfiles personalizados y mucho más!",
   "ky8rxc": "Mezclar contenido multimedia con acceso anticipado",
   "myyAEh": "Transmitir vídeo en HD",
+  "zTk8Ul": "¡Colores de temas para aplicaciones y mucho más!",
   "+qqh6u": [
     "Tu ",
     [
@@ -30137,39 +30032,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Juega a cualquiera de ",
-    [
-      8,
-      "$link",
-      [
-        "estos juegos seleccionados"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " durante ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minutos y desbloquea: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39632,6 +39494,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Añade hasta ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " juego"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " juegos"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Elige 1 juego",
+  "sUQar6": "Juego favorito",
+  "SqNnur": "Juegos en rotación",
+  "scOKER": "Juegos que me gustan",
+  "bWSQwc": "Quiero jugar",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

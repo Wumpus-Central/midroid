@@ -116,10 +116,10 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = PublicFileDownloader.INSTANCE;
-               val var4: Context = this.this$0.getContext();
-               val var6: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
-               val var7: FlowCollector = new FlowCollector(this.this$0) {
+               val var4: PublicFileDownloader = PublicFileDownloader.INSTANCE;
+               var1 = this.this$0.getContext();
+               val var7: Flow = var4.downloadFile(var1, this.$url, this.$attachmentName, this.$attachmentDescription);
+               val var6: FlowCollector = new FlowCollector(this.this$0) {
                   final FileAttachmentView this$0;
 
                   {
@@ -177,7 +177,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                   }
                };
                this.label = 1;
-               if (var6.collect(var7, this) === var3) {
+               if (var7.collect(var6, this) === var3) {
                   return var3;
                }
             }
@@ -213,11 +213,11 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var12: java.lang.String = this.getClass().getSimpleName();
-      val var14: StringBuilder = new StringBuilder();
-      var14.append("Binding ");
-      var14.append(var12);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var14.toString(), null, 2, null);
+      val var14: java.lang.String = this.getClass().getSimpleName();
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("Binding ");
+      var12.append(var14);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var12.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       var var11: Byte;
       if (!var10) {
@@ -271,9 +271,9 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
       val var24: ShapeDrawable = new ShapeDrawable();
-      val var21: Paint = var24.getPaint();
-      val var17: Context = this.getContext();
-      var21.setColor(ColorUtilsKt.getColorCompat(var17, 17170445));
+      val var17: Paint = var24.getPaint();
+      val var21: Context = this.getContext();
+      var17.setColor(ColorUtilsKt.getColorCompat(var21, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
          var22, null, var24, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );

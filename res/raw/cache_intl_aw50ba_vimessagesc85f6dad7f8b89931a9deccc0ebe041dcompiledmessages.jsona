@@ -2929,20 +2929,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Trang trí ảnh đại diện: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Bảng tên: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Bảng tên ",
     [
@@ -2952,13 +2938,6 @@
   ],
   "3Y8q7e": [
     "Hiệu ứng hồ sơ ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Hiệu ứng hồ sơ: ",
     [
       1,
       "itemName"
@@ -3026,54 +3005,6 @@
   "3lv7q6": "Tạo diện mạo mới cho ảnh đại diện của bạn.",
   "ik37ER": "Để tên của bạn trở nên nổi bật trên máy chủ và cuộc trò chuyện.",
   "VhJL7+": "Hiển thị hiệu ứng này khi người khác xem hồ sơ của bạn.",
-  "VdGtwc": [
-    "Khi nhấn vào ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\"",
-    ", bạn đồng ý với ",
-    [
-      8,
-      "$link",
-      [
-        "Điều Khoản Dịch Vụ Trả Phí"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Mua một vật phẩm từ Cửa Hàng nghĩa là bạn đang mua một giấy phép giới hạn để sử dụng vật phẩm này trên Discord. Tìm hiểu thêm trong ",
-        [
-          8,
-          "$link",
-          [
-            "mục ",
-            "\"",
-            "Hàng Hóa Ảo",
-            "\""
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Đây là giao dịch mua không thể hoàn tiền. Xin lưu ý rằng gói đăng ký Nitro sẽ không được hoàn tiền sau khi bạn đã mua một vật phẩm."
-  ],
   "YS2J4e": [
     "Chúng tôi vô cùng háo hức chờ bạn của bạn mở quà. Bạn sẽ có thể theo dõi tất cả các món quà mình đã mua trong ",
     [
@@ -3183,54 +3114,6 @@
     ]
   ],
   "tf1ZZ2": "Hồ sơ của bạn đã được cập nhật!",
-  "zFXJX1": [
-    "Khi nhấn vào ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\"",
-    ", bạn đồng ý với ",
-    [
-      8,
-      "$link",
-      [
-        "Điều Khoản Dịch Vụ Trả Phí"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Mua một vật phẩm từ Cửa Hàng nghĩa là bạn đang mua một giấy phép giới hạn để sử dụng vật phẩm này trên Discord. Tìm hiểu thêm trong ",
-        [
-          8,
-          "$link",
-          [
-            "mục ",
-            "\"",
-            "Hàng Hóa Ảo",
-            "\""
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Đây là giao dịch mua không thể hoàn tiền. Sau khi bạn hoàn tất giao dịch mua, vật phẩm sẽ có thể sử dụng ngay lập tức và bạn có thể truy cập vật phẩm trong cài đặt Hồ Sơ Người Dùng của mình. Lưu ý rằng gói đăng ký Nitro sẽ không được hoàn tiền sau khi bạn đã mua một vật phẩm."
-  ],
   "SKduys": [
     [
       1,
@@ -19417,7 +19300,6 @@
   "wb7QJy": "Quảng cáo",
   "j+d6RE": "Hoạt Động Của Bạn",
   "JN9c39": "Máy chủ",
-  "M4ddeX": "Chương trình",
   "0dO1t7": "Các tin nhắn",
   "rfe/x8": "Tài Khoản",
   "yaLeEB": "Yêu Cầu Hỗ Trợ",
@@ -21395,6 +21277,7 @@
   "NbhSIy": "Hủy xác minh thành viên",
   "6QlTeH": "Xác minh thành viên",
   "+vt7w8": "Cá nhân hóa Discord",
+  "kpMomJ": "Hồ sơ tùy chỉnh",
   "e6RscX": "Đánh Dấu Đã Đọc",
   "RpE9k5": "Đánh Dấu Chưa Đọc",
   "COq6kp": "Mở liên kết",
@@ -23133,6 +23016,7 @@
   "DOb6x8": "Nitro Ưa Thích",
   "M9AIt7": "Nhận quyền truy cập độc nhất vào những tính năng nhất định trước khi chúng được giới thiệu với tất cả mọi người.",
   "LgHbnJ": "Tận Hưởng Trải Nghiệm Discord Cao Cấp",
+  "xT1Vfn": "Tải lên 500MB",
   "37MFFh": "Nhận huy hiệu cực ngầu này khi trở thành người đăng ký Nitro.",
   "LTaxu7": "Xuất Hiện Theo Cách Mà Bạn Muốn",
   "H4/NBA": "Giá Gói Thành Viên Đặc Biệt",
@@ -28085,6 +27969,7 @@
   "vlHicH": "Hồ sơ tùy chỉnh và hơn thế nữa!",
   "ky8rxc": "Remix tệp tin bất kỳ bằng Truy Cập Sớm",
   "myyAEh": "Đang stream video HD",
+  "zTk8Ul": "Chủ đề màu ứng dụng và hơn thế nữa!",
   "+qqh6u": [
     "Ưu đãi ",
     [
@@ -30032,39 +29917,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Chơi ",
-    [
-      8,
-      "$link",
-      [
-        "các trò chơi được chọn này"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " trong ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " phút và mở khóa ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39506,6 +39358,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Thêm tối đa ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " trò chơi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " trò chơi"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Chọn 1 trò chơi",
+  "sUQar6": "Trò chơi ưa thích",
+  "SqNnur": "Trò chơi luân phiên",
+  "scOKER": "Trò chơi tôi thích",
+  "bWSQwc": "Muốn chơi",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

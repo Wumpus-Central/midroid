@@ -136,8 +136,8 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       val var6: Int = java.lang.Boolean.hashCode(this.isListening);
-      val var7: Int = this.headerText.hashCode();
-      val var5: Int = this.partyStatus.hashCode();
+      val var5: Int = this.headerText.hashCode();
+      val var7: Int = this.partyStatus.hashCode();
       val var2: Int;
       if (this.avatarsToRender == null) {
          var2 = 0;
@@ -158,7 +158,7 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
       }
 
       return (
-               (((((((var1 * 31 + var6) * 31 + var7) * 31 + var5) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
+               (((((((var1 * 31 + var6) * 31 + var5) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4) * 31
                   + java.lang.Boolean.hashCode(this.joinable)
             )
             * 31
@@ -166,39 +166,39 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    }
 
    public override fun toString(): String {
-      val var11: java.lang.String = this.coverImage;
+      val var6: java.lang.String = this.coverImage;
       val var3: Boolean = this.isListening;
       val var4: java.lang.String = this.headerText;
-      val var9: java.lang.String = this.partyStatus;
-      val var5: java.util.List = this.avatarsToRender;
+      val var10: java.lang.String = this.partyStatus;
+      val var11: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
-      val var10: java.lang.String = this.name;
-      val var8: java.lang.String = this.subtext;
+      val var8: java.lang.String = this.name;
+      val var9: java.lang.String = this.subtext;
       val var2: Boolean = this.joinable;
-      val var6: java.lang.String = this.ctaText;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ActivityInviteEmbed(coverImage=");
-      var7.append(var11);
-      var7.append(", isListening=");
-      var7.append(var3);
-      var7.append(", headerText=");
-      var7.append(var4);
-      var7.append(", partyStatus=");
-      var7.append(var9);
-      var7.append(", avatarsToRender=");
-      var7.append(var5);
-      var7.append(", maxPartySize=");
-      var7.append(var1);
-      var7.append(", name=");
-      var7.append(var10);
-      var7.append(", subtext=");
-      var7.append(var8);
-      var7.append(", joinable=");
-      var7.append(var2);
-      var7.append(", ctaText=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = this.ctaText;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ActivityInviteEmbed(coverImage=");
+      var5.append(var6);
+      var5.append(", isListening=");
+      var5.append(var3);
+      var5.append(", headerText=");
+      var5.append(var4);
+      var5.append(", partyStatus=");
+      var5.append(var10);
+      var5.append(", avatarsToRender=");
+      var5.append(var11);
+      var5.append(", maxPartySize=");
+      var5.append(var1);
+      var5.append(", name=");
+      var5.append(var8);
+      var5.append(", subtext=");
+      var5.append(var9);
+      var5.append(", joinable=");
+      var5.append(var2);
+      var5.append(", ctaText=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

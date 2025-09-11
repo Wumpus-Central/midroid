@@ -2915,20 +2915,6 @@
     ],
     "-dekoration"
   ],
-  "IQQYeX": [
-    "Avatardekoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Namnskylt: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2942,13 +2928,6 @@
       "itemName"
     ],
     "-profileffekt"
-  ],
-  "x/MGW1": [
-    "Profileffekt: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Paketet innehåller: ",
@@ -3011,49 +2990,6 @@
   "3lv7q6": "Ge din avatar en ny look.",
   "ik37ER": "Få ditt namn att sticka ut på servrar och i chattar.",
   "VhJL7+": "Visa den här effekten när andra tittar på din profil.",
-  "VdGtwc": [
-    "Genom att klicka på ”",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” godkänner du våra ",
-    [
-      8,
-      "$link",
-      [
-        "Villkor för betaltjänster"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "När du köper en artikel från butiken betyder det att du köper en begränsad licens för att använda den här artikeln på Discord. Läs mer i avsnittet ",
-        [
-          8,
-          "$link",
-          [
-            "”Virtuella varor”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Detta köp är ej återbetalningsbart. Observera att Nitro-prenumerationer inte kan återbetalas när du har köpt en artikel."
-  ],
   "YS2J4e": [
     "Vi ser fram emot att din vän öppnar den. Du kommer att kunna hålla koll på alla dina gåvoköp i ditt ",
     [
@@ -3144,49 +3080,6 @@
     ]
   ],
   "tf1ZZ2": "Din profil är uppdaterad!",
-  "zFXJX1": [
-    "Genom att klicka på ”",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "” godkänner du våra ",
-    [
-      8,
-      "$link",
-      [
-        "Villkor för betaltjänster"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "När du köper ett föremål från butiken betyder det att du köper en begränsad licens för att använda det här föremålet på Discord. Läs mer i ",
-        [
-          8,
-          "$link",
-          [
-            "avsnittet ”Virtuella varor”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Detta köp är ej återbetalningsbart. När du har genomfört köpet hamnar föremålet i inställningarna för din användarprofil och kan börja användas direkt. Obs! Nitro-prenumerationer blir ej återbetalningsbara när du köper ett föremål."
-  ],
   "SKduys": [
     [
       1,
@@ -19451,7 +19344,6 @@
   "wb7QJy": "Annonser",
   "j+d6RE": "Din aktivitet",
   "JN9c39": "Servrar",
-  "M4ddeX": "Program",
   "0dO1t7": "Meddelanden",
   "rfe/x8": "Konto",
   "yaLeEB": "Supportärende",
@@ -21449,6 +21341,7 @@
   "NbhSIy": "Ta bort verifiering för medlem",
   "6QlTeH": "Verifiera medlem",
   "+vt7w8": "Gör det till ditt Discord",
+  "kpMomJ": "Anpassad profil",
   "e6RscX": "Markera som läst",
   "RpE9k5": "Markera som oläst",
   "COq6kp": "Öppna länk",
@@ -23180,6 +23073,7 @@
   "DOb6x8": "Nitro-favoriter",
   "M9AIt7": "Få exklusiv åtkomst till särskilda nya funktioner innan de släpps till alla.",
   "LgHbnJ": "Upplev ett uppgraderat Discord",
+  "xT1Vfn": "500 MB uppladdningar",
   "37MFFh": "Få det här coola märket som Nitro-prenumerant.",
   "LTaxu7": "Dyk upp som du vill",
   "H4/NBA": "Specialpris för medlemmar",
@@ -28114,6 +28008,7 @@
   "vlHicH": "Anpassade profiler och mycket mer!",
   "ky8rxc": "Mixa valfritt medium med tidig tillgång",
   "myyAEh": "HD-videostreaming",
+  "zTk8Ul": "App-teman med färg och annat!",
   "+qqh6u": [
     "Din rabatt på ",
     [
@@ -30061,39 +29956,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Spela något av ",
-    [
-      8,
-      "$link",
-      [
-        "dessa utvalda spel"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " i ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minuter och lås upp ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39505,6 +39367,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Lägg till upp till ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " spel"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " spel"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Välj ett spel",
+  "sUQar6": "Favoritspel",
+  "SqNnur": "Spel i rotation",
+  "scOKER": "Spel jag gillar",
+  "bWSQwc": "Vill spela",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",

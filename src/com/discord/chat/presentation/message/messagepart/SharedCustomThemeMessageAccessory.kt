@@ -61,9 +61,9 @@ public data class SharedCustomThemeMessageAccessory(channelId: ChannelId, messag
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = ChannelId.hashCode-impl(this.channelId);
-      val var2: Int = MessageId.hashCode-impl(this.messageId);
-      val var3: Int = this.data.hashCode();
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
+      val var2: Int = this.data.hashCode();
       val var1: Int;
       if (this.author == null) {
          var1 = 0;
@@ -71,23 +71,23 @@ public data class SharedCustomThemeMessageAccessory(channelId: ChannelId, messag
          var1 = this.author.hashCode();
       }
 
-      return ((var4 * 31 + var2) * 31 + var3) * 31 + var1;
+      return ((var3 * 31 + var4) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: SharedCustomThemeData = this.data;
-      val var5: java.lang.String = this.author;
+      val var4: java.lang.String = this.author;
       val var3: StringBuilder = new StringBuilder();
       var3.append("SharedCustomThemeMessageAccessory(channelId=");
-      var3.append(var4);
+      var3.append(var5);
       var3.append(", messageId=");
       var3.append(var1);
       var3.append(", data=");
       var3.append(var2);
       var3.append(", author=");
-      var3.append(var5);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

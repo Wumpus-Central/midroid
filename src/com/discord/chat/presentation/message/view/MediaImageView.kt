@@ -82,10 +82,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var6: Int = GIF_INDICATOR_PADDING;
+         val var5: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -170,11 +170,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var38: SimpleDraweeView = this.binding.image;
-         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var24: SimpleDraweeView = this.binding.image;
+         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var39: SimpleDraweeView = this.binding.image;
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var38, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
+            var24, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var39, var5, var6)
          );
       }
 
@@ -208,8 +208,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var34: SpoilerViewManager = this.spoilerViewManager;
-      val var28: ConstraintLayout = this.binding.container;
+      val var28: SpoilerViewManager = this.spoilerViewManager;
+      val var31: ConstraintLayout = this.binding.container;
       val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
@@ -223,10 +223,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var34.configureSpoiler(var8, this, var28, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var28.configureSpoiler(var8, this, var31, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -247,12 +247,12 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var3: ConstraintLayout = this.binding.container;
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -358,14 +358,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(", resizeMode=");
          var3.append(var4);
          var3.append(")");

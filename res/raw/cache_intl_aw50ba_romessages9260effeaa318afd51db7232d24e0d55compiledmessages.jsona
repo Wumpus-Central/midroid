@@ -2899,20 +2899,6 @@
       "itemName"
     ]
   ],
-  "IQQYeX": [
-    "Decorațiune pentru avatar: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Etichetă pentru nume: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     "Etichetă pentru nume ",
     [
@@ -2922,13 +2908,6 @@
   ],
   "3Y8q7e": [
     "Efect pentru profil ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "x/MGW1": [
-    "Efect pentru profil: ",
     [
       1,
       "itemName"
@@ -2996,49 +2975,6 @@
   "3lv7q6": "Dă-i avatarului tău o nouă înfățișare.",
   "ik37ER": "Fă-ți numele să iasă în evidență în servere și chaturi.",
   "VhJL7+": "Afișează acest efect atunci când alții îți văd profilul.",
-  "VdGtwc": [
-    "Dând clic pe „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, ești de acord cu ",
-    [
-      8,
-      "$link",
-      [
-        "Condițiile de prestare a serviciilor plătite"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Achiziționând un articol din Magazin, obții o licență limitată pentru a folosi acest articol pe Discord. Află mai multe din ",
-        [
-          8,
-          "$link",
-          [
-            "secțiunea „Bunuri virtuale”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Această achiziție este nerambursabilă. Nu uita că abonamentele Nitro devin nerambursabile din momentul în care achiziționezi un articol."
-  ],
   "YS2J4e": [
     "De-abia așteptăm ca prietenul tău să-și deschidă cadoul. Poți vedea toate cadourile cumpărate de tine în ",
     [
@@ -3149,49 +3085,6 @@
     ]
   ],
   "tf1ZZ2": "Profilul tău s-a actualizat!",
-  "zFXJX1": [
-    "Dând clic pe „",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "”, ești de acord cu ",
-    [
-      8,
-      "$link",
-      [
-        "Condițiile de prestare a serviciilor plătite"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Achiziționând un articol din Magazin, obții o licență limitată pentru a folosi acest articol pe Discord. Află mai multe din ",
-        [
-          8,
-          "$link",
-          [
-            "secțiunea „Bunuri virtuale”"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". Această achiziție este nerambursabilă. După finalizarea achiziției, articolul va putea fi folosit imediat și poate fi accesat din setările Profilului de utilizator. Nu uita că abonamentele Nitro devin nerambursabile din momentul în care achiziționezi un articol."
-  ],
   "SKduys": [
     [
       1,
@@ -19362,7 +19255,6 @@
   "wb7QJy": "Reclame",
   "j+d6RE": "Activitatea ta",
   "JN9c39": "Servere",
-  "M4ddeX": "Programe",
   "0dO1t7": "Mesaje",
   "rfe/x8": "Cont",
   "yaLeEB": "Tichete de asistență",
@@ -21338,6 +21230,7 @@
   "NbhSIy": "Anulează verificarea membrului",
   "6QlTeH": "Verifică membrul",
   "+vt7w8": "Exprimă-ți personalitatea pe Discord",
+  "kpMomJ": "Profil personalizat",
   "e6RscX": "Marchează ca citit",
   "RpE9k5": "Marchează necitit",
   "COq6kp": "Deschide link-ul",
@@ -23070,6 +22963,7 @@
   "DOb6x8": "Favorite Nitro",
   "M9AIt7": "Primește acces la anumite caracteristici noi înainte să fie lansate pentru toată lumea.",
   "LgHbnJ": "Bucură-te de un Discord îmbunătățit",
+  "xT1Vfn": "Încărcări de 500 MB",
   "37MFFh": "În calitate de abonat Nitro, primești această insignă grozavă.",
   "LTaxu7": "Prezintă-te așa cum îți dorești",
   "H4/NBA": "Prețuri speciale pentru abonați",
@@ -28007,6 +27901,7 @@
   "vlHicH": "Profiluri personalizate și multe altele!",
   "ky8rxc": "Remixează orice fișiere media, profitând de accesul timpuriu",
   "myyAEh": "Streaming video în HD",
+  "zTk8Ul": "Teme colorate pentru aplicații și nu numai!",
   "+qqh6u": [
     "Reducerea de ",
     [
@@ -29953,39 +29848,6 @@
         [
           1,
           "questReward"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "BfgxRk": [
-    "Joacă oricare dintre ",
-    [
-      8,
-      "$link",
-      [
-        "aceste jocuri"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " timp de ",
-    [
-      2,
-      "targetMinutes"
-    ],
-    " minute și deblochează ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "rewardNameWithArticle"
         ]
       ]
     ],
@@ -39410,6 +39272,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Adaugă până la ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " joc"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " jocuri"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Alege un joc",
+  "sUQar6": "Joc favorit",
+  "SqNnur": "Jocuri în rotație",
+  "scOKER": "Jocuri care-mi plac",
+  "bWSQwc": "Vreau să joc",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",
