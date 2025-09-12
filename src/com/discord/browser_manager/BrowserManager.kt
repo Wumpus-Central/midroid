@@ -22,7 +22,7 @@ internal object BrowserManager {
       if (var4) {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
-            var10.setPackage(k.t(k.q(k.A(CollectionsKt.V(var11), new a()), new b(var1))) as java.lang.String);
+            var10.setPackage(k.u(k.r(k.C(CollectionsKt.V(var11), new a()), new b(var1))) as java.lang.String);
          } catch (var8: ActivityNotFoundException) {
             var3.invoke(var8);
             return;
@@ -69,8 +69,8 @@ internal object BrowserManager {
 
    public fun tryOpenUrlWithCustomTabs(context: Context, url: String, onFailure: (Exception) -> Unit) {
       try {
-         val var4: Uri = Uri.parse(var2);
-         this.openUrlWithCustomTabs(var1, var4, new c(var1, var2, var3));
+         val var5: Uri = Uri.parse(var2);
+         this.openUrlWithCustomTabs(var1, var5, new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

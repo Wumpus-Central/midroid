@@ -1,0 +1,37 @@
+{
+  "DKHheX": "Pedir para a transmitir",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " está pedindo para você transmitir ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Você pediu para alguém transmitir ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Transmissão em andamento",
+  "u4QmWl": "Solicitação expirado",
+  "qRXatr": "Não está no canal de voz",
+  "43zohI": "Não está executando o jogo",
+  "fac+eH": "Nenhuma permissão",
+  "8HU1Mz": "Pedido enviado",
+  "5+172d": "Transmitir",
+  "nAyuPj": "Pedido de transmissão",
+  "d/qbCw": [
+    [
+      1,
+      "username"
+    ],
+    " pediu para você transmitir"
+  ],
+  "8B3U5O": "Você pediu para alguém transmitir"
+}

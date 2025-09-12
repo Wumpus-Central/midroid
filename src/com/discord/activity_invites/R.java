@@ -13,6 +13,7 @@ public final class R {
 
    public static final class id {
       public static int above_bottom_row_barrier;
+      public static int action_wrapper;
       public static int activity_icon;
       public static int avatar;
       public static int avatars;

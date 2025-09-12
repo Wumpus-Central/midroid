@@ -166,33 +166,33 @@ internal data class FastestListPlaceholderConfig(listFooter: FastestListPlacehol
    }
 
    public override fun toString(): String {
-      val var1: FastestListPlaceholderType = this.listFooter;
-      val var2: FastestListPlaceholderType = this.listHeader;
+      val var3: FastestListPlaceholderType = this.listFooter;
+      val var8: FastestListPlaceholderType = this.listHeader;
       val var7: FastestListPlaceholderType = this.sectionFooter;
-      val var6: FastestListPlaceholderType = this.sectionHeader;
-      val var9: FastestListPlaceholderType = this.sectionItem;
-      val var8: FastestListPlaceholderType = this.sectionItemAtFront;
-      val var5: FastestListPlaceholderType = this.sectionItemAtRear;
-      val var4: FastestListPlaceholderType = this.sectionItemSingleton;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FastestListPlaceholderConfig(listFooter=");
-      var3.append(var1);
-      var3.append(", listHeader=");
-      var3.append(var2);
-      var3.append(", sectionFooter=");
-      var3.append(var7);
-      var3.append(", sectionHeader=");
-      var3.append(var6);
-      var3.append(", sectionItem=");
-      var3.append(var9);
-      var3.append(", sectionItemAtFront=");
-      var3.append(var8);
-      var3.append(", sectionItemAtRear=");
-      var3.append(var5);
-      var3.append(", sectionItemSingleton=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var9: FastestListPlaceholderType = this.sectionHeader;
+      val var1: FastestListPlaceholderType = this.sectionItem;
+      val var5: FastestListPlaceholderType = this.sectionItemAtFront;
+      val var2: FastestListPlaceholderType = this.sectionItemAtRear;
+      val var6: FastestListPlaceholderType = this.sectionItemSingleton;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FastestListPlaceholderConfig(listFooter=");
+      var4.append(var3);
+      var4.append(", listHeader=");
+      var4.append(var8);
+      var4.append(", sectionFooter=");
+      var4.append(var7);
+      var4.append(", sectionHeader=");
+      var4.append(var9);
+      var4.append(", sectionItem=");
+      var4.append(var1);
+      var4.append(", sectionItemAtFront=");
+      var4.append(var5);
+      var4.append(", sectionItemAtRear=");
+      var4.append(var2);
+      var4.append(", sectionItemSingleton=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object

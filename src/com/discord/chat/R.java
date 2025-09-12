@@ -163,6 +163,8 @@ public final class R {
       public static int copy_button;
       public static int cover_image;
       public static int cover_image_overlay_button;
+      public static int createdBy;
+      public static int createdByContainer;
       public static int creator_avatar;
       public static int cta;
       public static int ctaButton;
@@ -225,6 +227,7 @@ public final class R {
       public static int header_icon;
       public static int header_section;
       public static int header_text;
+      public static int heading;
       public static int hide_button;
       public static int icon;
       public static int icon_button;
@@ -329,6 +332,8 @@ public final class R {
       public static int percentage_bar_container;
       public static int player_container;
       public static int player_icon;
+      public static int previewBtn;
+      public static int previewHeading;
       public static int primary_action;
       public static int primary_cta;
       public static int progress;
@@ -413,6 +418,7 @@ public final class R {
       public static int tagline;
       public static int tertiary_action_button;
       public static int text;
+      public static int themePreview;
       public static int thread_embed_container;
       public static int thread_embed_icon;
       public static int thread_embed_messages_count;
@@ -543,6 +549,7 @@ public final class R {
       public static int safety_system_notification;
       public static int separator_summary_view;
       public static int separator_view;
+      public static int shared_custom_theme_view;
       public static int spoiler_overlay_view;
       public static int spoiler_view;
       public static int survey_action_view;

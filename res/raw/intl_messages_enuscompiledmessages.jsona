@@ -888,7 +888,9 @@
   "xsdcxs": "OUR POLICY",
   "URt7VF": "Did we make a mistake? Let us know.",
   "iHH+k5": "Appearance",
+  "vgvbiI": "Oh no!",
   "DOarTE": "Or, continue with in-app payment",
+  "ycleJS": "There was an error opening our billing page. Please wait and try again.",
   "HU3RFx": "Applications",
   "Nu5Yi4": "Here's all the apps that are doing super cool things to make your Discord experience super cooler. If it gets too chilly, you can remove them at any time.",
   "NgXl3N": "Add App",
@@ -1212,6 +1214,7 @@
   ],
   "T15lqq": "Too fast! Wait a bit and try again.",
   "/s1xR0": "Gift ready for delivery",
+  "1Qm829": "Apply",
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
@@ -3013,6 +3016,7 @@
     " Profile Effect"
   ],
   "aVCcr6": "Decoration",
+  "HNnSVV": "Nameplate",
   "s+YSgo": "Profile",
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
@@ -3298,6 +3302,7 @@
   "nSFuCw": "Shop Menu",
   "P0DpSU": "Discord Shop Menu",
   "NG43//": "Online",
+  "rSfoCw": "Discord Shop Orbs Exclusives Page",
   "RSyoZm": "Shop All",
   "bG3n/v": "Discord Shop All",
   "MAS7uL": "Use Now",
@@ -5970,25 +5975,6 @@
       "cardinal"
     ]
   ],
-  "G8dhaW": "Can’t wait for",
-  "np9mf3": "Current obsession",
-  "f+PyDw": "Question of the day",
-  "Zx7N1t": "Recommendation needed",
-  "+KXSFh": [
-    "Remove custom status label: ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "mDVlTk": [
-    "Set custom status label to ",
-    [
-      1,
-      "label"
-    ]
-  ],
-  "45vlm5": "Shower thought",
   "TS3eJS": [
     [
       6,
@@ -6029,15 +6015,12 @@
   "l3pZcn": "What’s your hot take?",
   "SluNa2": "Latest hobby?",
   "ylzor6": "What have you been listening to?",
-  "UZ5AQk": "What are you looking forward to?",
   "1TlHw8": "Most used emoji lately?",
   "45r7ub": "Pick a mythical creature as a pet",
   "/Zm5VV": "Favorite NPC companion?",
   "r5TNm5": "What have you been playing?",
-  "nLMBxM": "What do you want to ask today?",
   "nXJgjo": "Just ranked up in...",
   "pYQRnJ": "What have you been reading?",
-  "lneQf3": "What would you like recommendations for?",
   "Wf8fxM": "Shower thought?",
   "S7UJ0t": "Last song stuck in your head?",
   "Vok4QU": "If your life had a theme song...",
@@ -6049,8 +6032,6 @@
   "/UonHB": "Set a custom status",
   "Iuzg8f": "Set your status",
   "zOdg0N": "Status",
-  "hA60Ul": "Make your status stand out with a preset tag",
-  "jrzHRk": "Custom status tags",
   "GQmLra": "Today",
   "bI7n9v": [
     "Tomorrow at ",
@@ -6075,6 +6056,23 @@
       "date"
     ],
     "."
+  ],
+  "CyLYKS": "Use third-party data to personalize Sponsored Content",
+  "2QFDU1": [
+    "Allows us to personalize Sponsored Content, like Quests, using data we receive from advertisers and third-party data providers. If you opt out, you may still see Quests, but they won’t be personalized using data from third parties. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
   ],
   "R5N31N": [
     "We need to store and process some data in order to provide you the basic Discord service, such as your messages, what servers you’re in and your Direct Messages. By using Discord, you allow us to provide this basic service. You can stop this by ",
@@ -6630,6 +6628,71 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
+  "bp8vRE": [
+    "Double tap any message to react with ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " instantly. You can personalize your default reaction emoji anytime."
+  ],
+  "tdsiOz": "Change Default",
+  "F6lRAA": "Double tap to react",
+  "WZGLFh": [
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " is not available. Head to Settings to set another default."
+  ],
+  "QPJJKy": [
+    "React with ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " instantly. Or, tap here to set another default emoji."
+  ],
+  "rY+31d": "Double tap to react",
+  "nKY0Fh": [
+    "All done! Double tap to ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ]
+  ],
   "1WjMbG": "Download",
   "GmSvdH": "No answers selected.",
   "E2ICbG": "Answers",
@@ -10230,8 +10293,19 @@
   "msZW3t": "Download the Xbox app to connect to Discord on your Xbox.",
   "kYaBOj": "Nevermind",
   "I5gL2N": "GIF",
-  "WaYuBQ": "Confirm",
+  "3d0NmZ": "Confirm Reward",
+  "gNZY/P": "Choose your Reward",
+  "xGzXNT": [
+    "You get one with each gift purchase. Collect all ",
+    [
+      1,
+      "rewardCount"
+    ],
+    " of them."
+  ],
   "Rp0+ZG": "Choose Your Free Reward",
+  "baye/P": "Treat",
+  "XtIgwc": "Trick",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -20860,6 +20934,11 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
+  "fMs6ub": "You'll be joined on Android.",
+  "aqN8U1": "You'll be joined on Desktop.",
+  "CyQ5iY": "You'll be joined on iOS.",
+  "R/1GpK": "You'll be joined on PlayStation.",
+  "o0hjdn": "You'll be joined on Xbox.",
   "OAB5TE": "Join From a Supported Device",
   "pwEQoq": "Play From a Supported Device",
   "sTo7s7": "Listen From a Supported Device",
@@ -21909,6 +21988,23 @@
   "9qLtWl": "Manage Channels",
   "HIgA5e": "Manage Events",
   "bbuXIi": "Manage Expressions",
+  "IERwUV": [
+    "Click ",
+    [
+      8,
+      "$link",
+      [
+        "here"
+      ],
+      [
+        [
+          1,
+          "manageExternalNitroSubscription"
+        ]
+      ]
+    ],
+    " to manage your Nitro subscription."
+  ],
   "ossiZG": "Manage Posts",
   "6lU9xM": "Manage Messages",
   "t+Ct5+": "Manage Nicknames",
@@ -23156,14 +23252,7 @@
   "zz1Tfn": "We disabled voice activity detection to improve phone performance.",
   "zlvNOj": "Automatic (follows system settings)",
   "wFpwSk": "Automatic",
-  "qGQDio": [
-    "Gift ",
-    [
-      1,
-      "username"
-    ],
-    ":"
-  ],
+  "NlkxGR": "Gift to:",
   "8XT6NT": "Gift duration",
   "hYoGUF": [
     "By tapping “Buy gift”, you agree to the ",
@@ -25435,6 +25524,7 @@
   "bkqux8": "Heads up!",
   "HEuagI": "or",
   "UmsfHB": "Orange",
+  "EBYkzs": "Orbs Exclusives",
   "bhrgkJ": [
     "Originally known as ",
     [
@@ -30697,6 +30787,25 @@
     ],
     "."
   ],
+  "2GJLKy": [
+    "Play eligible games for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "a/ia7O": [
     "Stream ",
     [
@@ -30942,6 +31051,7 @@
     ],
     " Connected!"
   ],
+  "04ateH": "Waiting for you to launch eligible games...",
   "JiosAg": "View Requirements",
   "vTgCW1": "View Reward",
   "SdlRnJ": "No Quests Available",
@@ -31152,6 +31262,7 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "bUyEZW": "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched any eligible games on your connected console.",
   "umdNio": "Start Video Quest",
   "smG9qq": [
     "Stream ",
@@ -32113,7 +32224,7 @@
   "+LXBxc": "Tap to enable pinging the original author.",
   "p9jC2t": "ON",
   "PBgTSE": "Tap to disable pinging the original author.",
-  "E+6SSU": "Click to see command",
+  "2v7kfn": "Tap to see command",
   "Xxm5i4": "Tap to see message",
   "XAkOo6": "Blocked message",
   "mE3KJC": "Original message was deleted",
@@ -32121,7 +32232,6 @@
   "1i+hMj": "Message could not be loaded",
   "JAKsMz": "Tap to see attachment",
   "7K5LmZ": "Tap to see sticker",
-  "XC3A5+": "Click to see voice message",
   "6bhHra": "Tap to see voice message",
   "+78Pfn": "Report",
   "FOptFR": [
@@ -34211,8 +34321,7 @@
   "N4YDam": "App Icon",
   "k4W40N": "Inbox",
   "H9XOl5": "Messages",
-  "96WKND": "Default Emoji",
-  "h1ejNj": "Double Tap to React",
+  "96WKND": "Double tap to react emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
   "xERCnZ": [
@@ -34611,10 +34720,6 @@
     ],
     " Present"
   ],
-  "N3/Oyc": "Join Audience",
-  "Q8o/tb": "Join as Speaker",
-  "LQY4JS": "Join as Speaker to talk, or chill out in the audience.",
-  "njetU1": "Talking or just listening in?",
   "GMZqSk": "Stage Moderator",
   "zqxfra": "Mute Music",
   "ScHlfn": "Unmute Music",
@@ -38969,6 +39074,23 @@
       ]
     ]
   ],
+  "cf9mvb": [
+    "Allows us to personalize Sponsored Content, like Quests, using your Discord activity, such as the games you play.  If you opt out you may still see Quests, but they won’t be personalized. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
+  "sJYh5u": "Use my Discord activity to personalize Sponsored Content",
   "MoZlaG": "Direct messages will not be filtered for explicit images.",
   "FLfuhI": "Do not filter direct messages",
   "Fw+Lvr": "All direct messages will be filtered for explicit images.",

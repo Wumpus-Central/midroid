@@ -60,7 +60,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    init {
-      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -69,9 +69,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var3;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
-      this.transitionResilientLinearLayoutManager = var4;
+      this.accessoriesAdapter = var4;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
+      this.transitionResilientLinearLayoutManager = var3;
       this.forwardBarPaint$delegate = B9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -85,8 +85,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var3);
+      this.setLayoutManager(var3);
+      this.setAdapter(var4);
    }
 
    @JvmStatic
@@ -97,7 +97,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : kotlin.sequences.k.J(androidx.core.view.f0.a(this))) {
+      for (Pair var3 : kotlin.sequences.k.L(androidx.core.view.f0.a(this))) {
          val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
@@ -136,11 +136,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }

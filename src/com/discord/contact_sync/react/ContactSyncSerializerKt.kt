@@ -25,14 +25,14 @@ fun a(var0: Any): Any {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   val var2: Locale = Locale.ROOT;
+   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
    val var1: Byte;
-   if (var0 == var2) {
+   if (var0 == var3) {
       var1 = 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      var0 == var2;
+      val var4: java.lang.String = "DENIED".toLowerCase(var2);
+      var0 == var4;
       var1 = 0;
    }
 
@@ -77,7 +77,7 @@ fun `serializeHasContactPermissionsResult$lambda$0`(var0: Any): Any {
 }
 
 internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
-   var var6: java.util.Iterator;
+   var var5: java.util.Iterator;
    var var11: java.lang.String;
    var var12: ArrayList;
    try {
@@ -87,7 +87,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       var11 = var10.c(new U(E0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(CollectionsKt.v(var4, 10));
-      var6 = var4.iterator();
+      var5 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
       return;
@@ -95,11 +95,11 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    while (true) {
       try {
-         if (!var6.hasNext()) {
+         if (!var5.hasNext()) {
             break;
          }
 
-         var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
+         var12.add(new ContactSyncPayloadEntry((var5.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
          var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
          return;

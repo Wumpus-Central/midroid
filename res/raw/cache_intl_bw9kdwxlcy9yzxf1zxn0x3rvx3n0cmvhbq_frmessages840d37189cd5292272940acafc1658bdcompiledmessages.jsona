@@ -1,0 +1,37 @@
+{
+  "DKHheX": "Demander à streamer",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " te demande de streamer ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Tu as demandé à quelqu'un de streamer ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Déjà en train de streamer",
+  "u4QmWl": "Demande expirée",
+  "qRXatr": "Pas dans le salon vocal",
+  "43zohI": "Le jeu n'est pas lancé",
+  "fac+eH": "Aucune permission",
+  "8HU1Mz": "Demande envoyée",
+  "5+172d": "Streamer",
+  "nAyuPj": "Demande de streamer",
+  "d/qbCw": [
+    [
+      1,
+      "username"
+    ],
+    " t'a demandé de streamer"
+  ],
+  "8B3U5O": "Tu as demandé à quelqu'un de streamer"
+}

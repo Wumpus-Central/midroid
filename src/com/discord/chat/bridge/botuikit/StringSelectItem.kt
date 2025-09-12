@@ -105,20 +105,20 @@ public data class StringSelectItem(label: String,
       val var5: java.lang.String = this.value;
       val var4: ComponentEmoji = this.emoji;
       val var3: java.lang.String = this.description;
-      val var6: java.lang.Boolean = this.default;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("StringSelectItem(label=");
-      var2.append(var1);
-      var2.append(", value=");
-      var2.append(var5);
-      var2.append(", emoji=");
-      var2.append(var4);
-      var2.append(", description=");
-      var2.append(var3);
-      var2.append(", default=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.Boolean = this.default;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("StringSelectItem(label=");
+      var6.append(var1);
+      var6.append(", value=");
+      var6.append(var5);
+      var6.append(", emoji=");
+      var6.append(var4);
+      var6.append(", description=");
+      var6.append(var3);
+      var6.append(", default=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

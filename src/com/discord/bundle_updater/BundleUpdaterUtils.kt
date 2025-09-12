@@ -48,23 +48,23 @@ public object BundleUpdaterUtils {
       label18: {
          val var10: BufferedSource = Xb.m.d(Xb.m.k(var1));
 
-         var var12: java.lang.String;
+         var var11: java.lang.String;
          try {
-            val var11: Xb.j = Xb.j.m.a(Xb.m.b());
-            var10.N1(var11);
-            var12 = var11.a().r();
+            val var2: Xb.j = Xb.j.m.a(Xb.m.b());
+            var10.N1(var2);
+            var11 = var2.a().r();
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
                L9.c.a(var10, var5);
             }
          }
 
          L9.c.a(var10, null);
-         return var12;
+         return var11;
       }
    }
 }

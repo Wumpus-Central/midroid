@@ -148,9 +148,9 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
+      val var2: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
       val var5: Int = this.label.hashCode();
-      val var2: Int = this.description.hashCode();
+      val var4: Int = this.description.hashCode();
       val var3: Int = this.type.hashCode();
       val var1: Int;
       if (this.verifyAge == null) {
@@ -159,28 +159,28 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var1 = this.verifyAge.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var2) * 31 + var3) * 31 + var1;
+      return (((var2 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
-      val var2: Function1 = this.label;
-      val var5: Function1 = this.description;
-      val var6: SpoilerType = this.type;
-      val var4: java.lang.Boolean = this.verifyAge;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SpoilerAttributes(identifier=");
-      var3.append(var1);
-      var3.append(", label=");
-      var3.append(var2);
-      var3.append(", description=");
-      var3.append(var5);
-      var3.append(", type=");
-      var3.append(var6);
-      var3.append(", verifyAge=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
+      val var1: Function1 = this.label;
+      val var6: Function1 = this.description;
+      val var3: SpoilerType = this.type;
+      val var5: java.lang.Boolean = this.verifyAge;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SpoilerAttributes(identifier=");
+      var2.append(var4);
+      var2.append(", label=");
+      var2.append(var1);
+      var2.append(", description=");
+      var2.append(var6);
+      var2.append(", type=");
+      var2.append(var3);
+      var2.append(", verifyAge=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
@@ -238,28 +238,28 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var5.append("messageId(");
          var5.append(var7);
          var5.append(")");
-         val var8: java.lang.String = var5.toString();
-         val var6: java.lang.String = var1.type().getIndexLabel();
+         val var6: java.lang.String = var5.toString();
+         val var8: java.lang.String = var1.type().getIndexLabel();
          var5 = new StringBuilder();
-         var5.append(var6);
+         var5.append(var8);
          var5.append("(");
          var5.append(var3);
          var5.append(")");
-         return this.forItem(var1, var8, var5.toString(), var4);
+         return this.forItem(var1, var6, var5.toString(), var4);
       }
 
       public fun forEmbed(embed: Embed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
-         val var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("messageId(");
-         var6.append(var5);
-         var6.append(")");
-         val var7: java.lang.String = var6.toString();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("embedIndex(");
-         var8.append(var3);
-         var8.append(")");
-         return this.forItem(var1, var7, var8.toString(), var4);
+         val var6: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("messageId(");
+         var5.append(var6);
+         var5.append(")");
+         val var8: java.lang.String = var5.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("embedIndex(");
+         var7.append(var3);
+         var7.append(")");
+         return this.forItem(var1, var8, var7.toString(), var4);
       }
 
       public fun forGenericMedia(spoilerableData: SpoilerableData, containerId: String, itemType: String, itemKey: String, verifyAge: Boolean?): SpoilerAttributes? {

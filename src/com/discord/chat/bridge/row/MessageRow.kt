@@ -189,8 +189,8 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var11: Int = Integer.hashCode(this.index);
-      val var12: Int = this.changeType.hashCode();
+      val var12: Int = Integer.hashCode(this.index);
+      val var11: Int = this.changeType.hashCode();
       var var10: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
@@ -269,7 +269,7 @@ public data class MessageRow(index: Int,
                                           (
                                                    (
                                                             (
-                                                                     ((((((var11 * 31 + var12) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
+                                                                     ((((((var12 * 31 + var11) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
                                                                            * 31
                                                                         + var5
                                                                   )
@@ -297,51 +297,51 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var12: ChangeType = this.changeType;
-      val var13: java.lang.Boolean = this.jumped;
-      val var11: MessageBase = this.message;
-      val var5: java.lang.Boolean = this.canAddNewReactions;
-      val var6: java.lang.String = this.addReactionLabel;
-      val var9: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var16: ChangeType = this.changeType;
+      val var5: java.lang.Boolean = this.jumped;
+      val var15: MessageBase = this.message;
+      val var3: java.lang.Boolean = this.canAddNewReactions;
+      val var12: java.lang.String = this.addReactionLabel;
+      val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
       val var10: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var16: MessageFrame = this.messageFrame;
+      val var6: MessageFrame = this.messageFrame;
       val var4: Int = this.reactTag;
-      val var15: Truncation = this.truncation;
-      val var14: BackgroundHighlight = this.backgroundHighlight;
-      val var8: SwipeActionsType = this.swipeActions;
-      val var3: MessageContextType = this.contextType;
+      val var13: Truncation = this.truncation;
+      val var8: BackgroundHighlight = this.backgroundHighlight;
+      val var9: SwipeActionsType = this.swipeActions;
+      val var14: MessageContextType = this.contextType;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MessageRow(index=");
       var7.append(var1);
       var7.append(", changeType=");
-      var7.append(var12);
+      var7.append(var16);
       var7.append(", jumped=");
-      var7.append(var13);
-      var7.append(", message=");
-      var7.append(var11);
-      var7.append(", canAddNewReactions=");
       var7.append(var5);
+      var7.append(", message=");
+      var7.append(var15);
+      var7.append(", canAddNewReactions=");
+      var7.append(var3);
       var7.append(", addReactionLabel=");
-      var7.append(var6);
+      var7.append(var12);
       var7.append(", addNewReactionAccessibilityLabel=");
-      var7.append(var9);
+      var7.append(var11);
       var7.append(", reactionsTheme=");
       var7.append(var10);
       var7.append(", renderContentOnly=");
       var7.append(var2);
       var7.append(", messageFrame=");
-      var7.append(var16);
+      var7.append(var6);
       var7.append(", reactTag=");
       var7.append(var4);
       var7.append(", truncation=");
-      var7.append(var15);
+      var7.append(var13);
       var7.append(", backgroundHighlight=");
-      var7.append(var14);
-      var7.append(", swipeActions=");
       var7.append(var8);
+      var7.append(", swipeActions=");
+      var7.append(var9);
       var7.append(", contextType=");
-      var7.append(var3);
+      var7.append(var14);
       var7.append(")");
       return var7.toString();
    }

@@ -73,21 +73,21 @@ public data class GameMentionContentNode(channelId: ChannelId, icon: String? = .
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: java.lang.String = this.icon;
       val var4: java.lang.String = this.applicationId;
-      val var5: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("GameMentionContentNode(channelId=");
-      var2.append(var3);
-      var2.append(", icon=");
-      var2.append(var1);
-      var2.append(", applicationId=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.util.List = this.content;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("GameMentionContentNode(channelId=");
+      var5.append(var2);
+      var5.append(", icon=");
+      var5.append(var1);
+      var5.append(", applicationId=");
+      var5.append(var4);
+      var5.append(", content=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

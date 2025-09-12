@@ -69,15 +69,15 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 
-      val var9: j = new j(var4);
-      val var10: ReactApplicationContext = this.getReactApplicationContext();
-      var1.getProducts(var7, var3, var4, var9, var10);
+      val var10: j = new j(var4);
+      val var9: ReactApplicationContext = this.getReactApplicationContext();
+      var1.getProducts(var7, var3, var4, var10, var9);
    }
 
    @JvmStatic

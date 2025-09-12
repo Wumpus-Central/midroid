@@ -89,9 +89,9 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var9: FrameLayout = var6.avatarContainer;
       var6.avatarContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(var9, SizeUtilsKt.getDpToPx(16));
-      val var16: View = var6.overlayGradient;
+      val var10: View = var6.overlayGradient;
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-         var16,
+         var10,
          new int[]{ColorUtilsKt.argbWithAdjustedAlpha(ThemeManagerKt.getTheme().getBackgroundSecondary(), 0.9F), 0},
          Orientation.BOTTOM_TOP,
          0.0F,
@@ -148,7 +148,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       }
 
       val var6: SimpleDraweeView = this.binding.itemInviteSplash;
-      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a(var5, var5, 0.0F, 0.0F));
+      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b(var5, var5, 0.0F, 0.0F));
       var6.setImageURI(var1);
       if (var1 == null) {
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(var6, new int[]{var2, var3}, Orientation.TL_BR, var5, var5, 0.0F, 0.0F, null, 0, 240, null);

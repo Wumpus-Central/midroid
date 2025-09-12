@@ -188,14 +188,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
       val var3: NativeConnection = this.engineConnections.get(var1);
       if (var3 == null) {
-         val var4: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("[");
-         var5.append(var2);
-         var5.append("] no NativeConnection for connectionId=");
-         var5.append(var1);
-         var5.append(", returning null");
-         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
+         val var5: Log = Log.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("[");
+         var4.append(var2);
+         var4.append("] no NativeConnection for connectionId=");
+         var4.append(var1);
+         var4.append(", returning null");
+         Log.w$default(var5, "MediaEngine", var4.toString(), null, 4, null);
       }
 
       return var3;
@@ -908,15 +908,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 061: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 064: aload 10
       // 066: invokevirtual android/media/MediaCodecInfo.getSupportedTypes ()[Ljava/lang/String;
-      // 069: astore 11
-      // 06b: aload 11
+      // 069: astore 12
+      // 06b: aload 12
       // 06d: ldc_w "getSupportedTypes(...)"
       // 070: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
       // 07a: astore 4
-      // 07c: aload 11
+      // 07c: aload 12
       // 07e: arraylength
       // 07f: istore 3
       // 080: bipush 0
@@ -924,13 +924,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 082: iload 2
       // 083: iload 3
       // 084: if_icmpge 0b0
-      // 087: aload 11
+      // 087: aload 12
       // 089: iload 2
       // 08a: aaload
-      // 08b: astore 12
-      // 08d: aload 12
+      // 08b: astore 11
+      // 08d: aload 11
       // 08f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 092: aload 12
+      // 092: aload 11
       // 094: ldc_w "video"
       // 097: bipush 0
       // 098: bipush 2
@@ -938,7 +938,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
       // 0a0: aload 4
-      // 0a2: aload 12
+      // 0a2: aload 11
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1

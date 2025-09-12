@@ -1,0 +1,28 @@
+{
+  "DKHheX": "Yêu Cầu Stream",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " đang yêu cầu bạn stream ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Bạn đã yêu cầu người khác stream ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Đang stream rồi",
+  "u4QmWl": "Yêu cầu đã hết hạn",
+  "qRXatr": "Không ở trong kênh thoại",
+  "43zohI": "Không đang chạy trò chơi",
+  "fac+eH": "Không có quyền hạn",
+  "8HU1Mz": "Đã gửi yêu cầu",
+  "5+172d": "Stream"
+}
