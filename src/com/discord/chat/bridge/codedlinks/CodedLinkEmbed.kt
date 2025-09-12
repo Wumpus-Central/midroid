@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.codedlinks
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = CodedLinkSerializer::class)
+@m(with = CodedLinkSerializer::class)
 public sealed class CodedLinkEmbed protected constructor() {
    public abstract val acceptLabelBackgroundColor: Int?
    public abstract val acceptLabelBorderColor: Int?

@@ -33,38 +33,38 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public abstract fun getActivityDelegate(): com.discord.react_activities.ReactActivity.ActivityDelegate {
    }
 
-   protected fun getMainComponentName(): String {
+   protected override fun getMainComponentName(): String {
       return this.getNameOfComponent();
    }
 
    public abstract fun getNameOfComponent(): String {
    }
 
-   public open fun onConfigurationChanged(newConfig: Configuration) {
+   public override fun onConfigurationChanged(newConfig: Configuration) {
       super.onConfigurationChanged(var1);
-      a4.b.m.a(this, var1);
+      c5.b.s.a(this, var1);
    }
 
-   protected open fun onCreate(savedInstanceState: Bundle?) {
+   protected override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
       var4.updateWindowBackground(this, true);
    }
 
-   protected open fun onPause() {
+   protected override fun onPause() {
       super.onPause();
       JankStatsAggregator.INSTANCE.disableTracking();
       JSWatchdogManager.INSTANCE.disable();
    }
 
-   protected open fun onResume() {
+   protected override fun onResume() {
       super.onResume();
       JankStatsAggregator.INSTANCE.enableTracking();
       JSWatchdogManager.INSTANCE.enable();
@@ -84,19 +84,19 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected open fun createRootView(): com.facebook.react.ReactRootView? {
+      protected override fun createRootView(): com.facebook.react.ReactRootView? {
          val var1: Context = this.getContext();
          val var2: ReactRootView = new ReactRootView(var1);
          var2.setIsFabric(this.isFabricEnabled());
          return var2;
       }
 
-      protected open fun isFabricEnabled(): Boolean {
+      protected override fun isFabricEnabled(): Boolean {
          return DefaultNewArchitectureEntryPoint.getFabricEnabled();
       }
 
       @SuppressLint(["VisibleForTests"])
-      public open fun onPause() {
+      public override fun onPause() {
          val var1: ReactContext = this.getReactNativeHost().getReactInstanceManager().getCurrentReactContext();
          val var2: Activity;
          if (var1 != null) {

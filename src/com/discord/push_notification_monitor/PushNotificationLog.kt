@@ -1,9 +1,9 @@
 package com.discord.push_notification_monitor
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = CollectionsKt.k()) {
    public final val pushNotifications: List<PushNotificationMeta>
 

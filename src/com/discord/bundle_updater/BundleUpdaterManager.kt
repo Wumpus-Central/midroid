@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import A9.s
+import Ca.v
 import android.app.Activity
 import android.app.Application
 import android.view.View
@@ -43,7 +43,9 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("BundleDownloaded", BundleDownloadedEvent::class), s.a("OtaUpdateChecked", OtaCheckAttemptEvent::class));
+      this.reactEvents = new ReactEvents(
+         new Pair[]{v.a("BundleDownloaded", BundleDownloadedEvent::class), v.a("OtaUpdateChecked", OtaCheckAttemptEvent::class)}
+      );
    }
 
    @JvmStatic

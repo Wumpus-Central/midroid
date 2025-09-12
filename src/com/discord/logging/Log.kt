@@ -17,7 +17,7 @@ public object Log {
    }
 
    public fun d(tag: KClass<*>, message: String, exception: Throwable? = null) {
-      val var4: java.lang.String = L9.a.b(var1).getSimpleName();
+      val var4: java.lang.String = Na.a.b(var1).getSimpleName();
       this.d(var4, var2, var3);
    }
 
@@ -28,7 +28,7 @@ public object Log {
    }
 
    public fun e(tag: KClass<*>, message: String, exception: Throwable? = null) {
-      val var4: java.lang.String = L9.a.b(var1).getSimpleName();
+      val var4: java.lang.String = Na.a.b(var1).getSimpleName();
       this.e(var4, var2, var3);
    }
 
@@ -39,7 +39,7 @@ public object Log {
    }
 
    public fun i(tag: KClass<*>, message: String, exception: Throwable? = null) {
-      val var4: java.lang.String = L9.a.b(var1).getSimpleName();
+      val var4: java.lang.String = Na.a.b(var1).getSimpleName();
       this.i(var4, var2, var3);
    }
 
@@ -50,7 +50,7 @@ public object Log {
    }
 
    public fun w(tag: KClass<*>, message: String, exception: Throwable? = null) {
-      val var4: java.lang.String = L9.a.b(var1).getSimpleName();
+      val var4: java.lang.String = Na.a.b(var1).getSimpleName();
       this.w(var4, var2, var3);
    }
 }

@@ -4,9 +4,9 @@ import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = ButtonStyle.Serializer::class)
+@m(with = ButtonStyle.Serializer::class)
 public enum class ButtonStyle(serialNumber: Int) : IntEnum {
    DANGER(4),
    LINK(5),
@@ -27,7 +27,7 @@ public enum class ButtonStyle(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ButtonStyle> = $values();
       $VALUES = var0;
-      $ENTRIES = G9.a.a(var0);
+      $ENTRIES = Ia.a.a(var0);
    }
 
    init {

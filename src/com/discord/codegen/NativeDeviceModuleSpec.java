@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import H3.a;
+import H4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -20,7 +20,7 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var3 = this.getTypedExportedConstants();
+      Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var1 = new HashSet<>(
             Arrays.asList(
@@ -38,21 +38,21 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
                "timeZone"
             )
          );
-         HashSet var4 = new HashSet();
-         HashSet var2 = new HashSet(var3.keySet());
+         HashSet var3 = new HashSet();
+         HashSet var2 = new HashSet(var4.keySet());
          var2.removeAll(var1);
-         var2.removeAll(var4);
+         var2.removeAll(var3);
          if (!var2.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var1.removeAll(var3.keySet());
+         var1.removeAll(var4.keySet());
          if (!var1.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 
-      return var3;
+      return var4;
    }
 
    @ReactMethod(

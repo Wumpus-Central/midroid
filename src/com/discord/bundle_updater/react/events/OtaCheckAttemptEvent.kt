@@ -1,6 +1,6 @@
 package com.discord.bundle_updater.react.events
 
-import A9.s
+import Ca.v
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
@@ -10,9 +10,9 @@ import com.facebook.react.bridge.WritableNativeMap
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 @SourceDebugExtension(["SMAP\nOtaCheckAttemptEvent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OtaCheckAttemptEvent.kt\ncom/discord/bundle_updater/react/events/OtaCheckAttemptEvent\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,29:1\n1557#2:30\n1628#2,3:31\n*S KotlinDebug\n*F\n+ 1 OtaCheckAttemptEvent.kt\ncom/discord/bundle_updater/react/events/OtaCheckAttemptEvent\n*L\n26#1:30\n26#1:31,3\n*E\n"])
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
    public final val metrics: List<OtaMetric>
@@ -53,16 +53,16 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
          var1.add((var3.next() as BundleUpdater.OtaMetric).toNativeMap());
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(s.a("metrics", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null)));
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("metrics", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null))});
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.metrics;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OtaCheckAttemptEvent(metrics=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.metrics;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OtaCheckAttemptEvent(metrics=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

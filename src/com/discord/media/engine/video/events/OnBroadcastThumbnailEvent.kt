@@ -3,9 +3,9 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
    public final var imgdata: String
       internal set

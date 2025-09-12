@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.chat.reactevents.TapImageData.Layout
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -67,26 +67,28 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
       return ((this.channelId.hashCode() * 31 + this.messageId.hashCode()) * 31 + this.attachmentId.hashCode()) * 31 + this.layout.hashCode();
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("channelId", this.channelId), s.a("messageId", this.messageId), s.a("attachmentId", this.attachmentId), s.a("layout", this.layout.serialize())
+         new Pair[]{
+            v.a("channelId", this.channelId), v.a("messageId", this.messageId), v.a("attachmentId", this.attachmentId), v.a("layout", this.layout.serialize())
+         }
       );
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.attachmentId;
-      val var2: TapImageData.Layout = this.layout;
+      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.attachmentId;
+      val var5: TapImageData.Layout = this.layout;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LongPressPollImageData(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
       var4.append(var3);
-      var4.append(", attachmentId=");
-      var4.append(var5);
-      var4.append(", layout=");
+      var4.append(", messageId=");
       var4.append(var2);
+      var4.append(", attachmentId=");
+      var4.append(var1);
+      var4.append(", layout=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

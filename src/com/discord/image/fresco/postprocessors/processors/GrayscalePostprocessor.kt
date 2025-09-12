@@ -7,7 +7,7 @@ import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
-import k2.h
+import k3.h
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public open fun getName(): String {
@@ -21,10 +21,10 @@ internal object GrayscalePostprocessor : BasePostprocessor {
 
    public open fun process(destBitmap: Bitmap, sourceBitmap: Bitmap) {
       super.process(var1, var2);
-      val var3: ColorMatrix = new ColorMatrix();
-      var3.setSaturation(0.0F);
-      val var4: Paint = new Paint();
-      var4.setColorFilter(new ColorMatrixColorFilter(var3));
-      new Canvas(var1).drawBitmap(var2, 0.0F, 0.0F, var4);
+      val var4: ColorMatrix = new ColorMatrix();
+      var4.setSaturation(0.0F);
+      val var3: Paint = new Paint();
+      var3.setColorFilter(new ColorMatrixColorFilter(var4));
+      new Canvas(var1).drawBitmap(var2, 0.0F, 0.0F, var3);
    }
 }

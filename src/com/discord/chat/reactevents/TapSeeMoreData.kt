@@ -2,11 +2,12 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1), ReactEvent {
    public final val messageId: MessageId
 
@@ -37,8 +38,8 @@ internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1),
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

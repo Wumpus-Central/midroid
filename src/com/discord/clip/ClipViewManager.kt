@@ -53,7 +53,7 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
             val var5: java.util.Iterator = var3.iterator();
 
             while (var5.hasNext()) {
-               val var6: ReadableMap = var2.getMap((var5 as I).nextInt());
+               val var6: ReadableMap = var2.getMap((var5 as L).nextInt());
                val var4: java.lang.String = var6.getString("shape");
                if (var4 == "circle") {
                   var1.addCircleCutout(

@@ -3,9 +3,9 @@ package com.discord.notifications.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class RegisterEvent(token: String) : ReactEvent {
    public final val token: String
 
@@ -41,12 +41,12 @@ internal data class RegisterEvent(token: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.token;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("RegisterEvent(token=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.token;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("RegisterEvent(token=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

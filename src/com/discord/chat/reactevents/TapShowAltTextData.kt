@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class TapShowAltTextData(description: String) : ReactEvent {
    public final val description: String
 
@@ -36,8 +37,8 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       return this.description.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

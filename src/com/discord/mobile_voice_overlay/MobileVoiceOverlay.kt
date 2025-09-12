@@ -1,5 +1,6 @@
 package com.discord.mobile_voice_overlay
 
+import Ca.v
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.Animator.AnimatorListener
@@ -195,7 +196,9 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
       val var2: MobileVoiceOverlay.Companion = Companion;
       val var3: Context = var0.getContext();
       var2.startHeadlessTask(
-         var3, "SelectChannel", D.d.a(A9.s.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), A9.s.a("connectToVoice", java.lang.Boolean.TRUE))
+         var3,
+         "SelectChannel",
+         v0.d.a(new Pair[]{v.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), v.a("connectToVoice", java.lang.Boolean.TRUE)})
       );
       return Unit.a;
    }
@@ -384,11 +387,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
          access$getSelectorDialogProvider$p(this).setData(var1);
          access$getTrashWrapProvider$p(this).setData(var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
@@ -412,11 +415,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
             });
          }
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

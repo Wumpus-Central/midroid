@@ -2378,20 +2378,20 @@
         "No SLA on resolution."
       ]
     ],
-    " No guarantee of resolution. Very minor cosmetic issues that users will likely not notice, or minor functionality issues that will not be encountered by users during expected usage of the app."
+    " These should be very minor cosmetic issues that most users are unlikely to experience, or minor functionality issues that we believe affect very few users."
   ],
-  "Ia0skZ": "Low (P2)",
-  "Kmg64O": [
+  "Ia0skZ": "Low (P3)",
+  "nC7pv7": [
     [
       8,
       "$b",
       [
-        "Will not be fixed."
+        "90 Day SLA on resolution."
       ]
     ],
-    " P3 allows us to acknowledge that something is an issue for tracking purposes, but with no expectation that it will be fixed."
+    " Intended for minor functionality issues or noticeable cosmetic issues that only affect a small subset of users. Generally, this should be used as a bucket for “we should fix this, but does not require the urgency of a 14 day SLA”."
   ],
-  "KGsyFx": "Very Low (P3)",
+  "9LSuy8": "Medium (P2)",
   "6mpW09": "Something is broken on this screen",
   "ZiWcJy": "Submitting",
   "Uuqbcn": "Submitting Bug",
@@ -6636,6 +6636,7 @@
     ],
     " is not available. Head to Settings to set another default."
   ],
+  "CL5mWl": "Emoji is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
   "3u/Je3": [
     "You can't use ",
@@ -20019,6 +20020,21 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
+  "pDrI0t": [
+    [
+      1,
+      "category"
+    ],
+    " variant: ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "sBk8mZ": "You Rang?",
+  "9PzTtL": "Mr. Jack O’ Lantern",
+  "RbkXxc": "Rest in Peace",
+  "FW3Qp6": "Just Hangin’",
   "mMgymZ": "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase.",
   "h2nMp6": "Get one with each gift purchase.",
   "6OUb3t": "Collect all 8 if you dare...",
@@ -23843,6 +23859,23 @@
   "s7vIQU": "New Override",
   "vPHdPz": "New Permission",
   "QBMHvL": "new role",
+  "CN0Hvb": [
+    "We announced updates to our policies last month, which are now in effect. Check out our ",
+    [
+      8,
+      "$link",
+      [
+        "article here"
+      ],
+      [
+        [
+          1,
+          "url"
+        ]
+      ]
+    ],
+    " for a summary of these changes, and read the full policies below."
+  ],
   "7glvXl": "Terms of Service and Policy Updates",
   "4WNcpq": "New Thread",
   "FCRiT0": "New Unreads",
@@ -37839,21 +37872,7 @@
       ]
     ]
   ],
-  "+USXQE": "By clicking Agree, you acknowledge that you agree to Discord’s Terms of Service and have read our Privacy Policy.",
-  "zHolhY": [
-    "We announced our annual updates to our policies last month, which are now in effect. Check out our ",
-    [
-      8,
-      "$link",
-      [
-        "blog post"
-      ],
-      [
-        "https://discord.com/blog/important-policy-updates"
-      ]
-    ],
-    " for a summary of these changes, and read the full policies below."
-  ],
+  "+USXQE": "By clicking Agree, you agree to Discord’s Terms of Service and acknowledge that you have read our Privacy Policy.",
   "KI+BSU": [
     "By clicking “Create Account,” you agree to Discord's ",
     [
@@ -40593,7 +40612,6 @@
   "H9jz+f": "Yellow",
   "p89ACg": "Yes",
   "LuZzxs": "You",
-  "CAqwXl": "Your Friends",
   "wQ6ur6": [
     "You are Game Friends from ",
     [

@@ -15,12 +15,12 @@ import com.facebook.react.viewmanagers.DCDVisualEffectViewManagerInterface
 internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVisualEffectViewManagerInterface<ViewGroup> {
    private final val delegate: DCDVisualEffectViewManagerDelegate<ViewGroup, BlurViewManager> = new DCDVisualEffectViewManagerDelegate(this)
 
-   public override fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ViewGroup {
-      val var6: java.lang.String = var2.getString("blurTargetViewNativeId");
-      val var5: java.lang.String = var2.getString("blurTintRgba");
+   public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ViewGroup {
+      val var5: java.lang.String = var2.getString("blurTargetViewNativeId");
+      val var6: java.lang.String = var2.getString("blurTintRgba");
       val var3: Float = var2.getFloat("blurAmount", -1.0F);
       val var8: java.lang.String = var2.getString("blurTintIOSParityCompensationRgba");
-      if (var6 != null) {
+      if (var5 != null) {
          val var4: Boolean;
          if (var3 == -1.0F) {
             var4 = true;
@@ -31,9 +31,9 @@ internal class BlurViewManager : InitialPropsViewGroupManager<ViewGroup>, DCDVis
          if (!var4) {
             val var7: Any;
             if (Companion.isHardwareBlurEnabled$blur_release()) {
-               var7 = new BlurViewHardwareAccelerated(var1, var6, ColorUtilsKt.rgbaToArgb(var5), ColorUtilsKt.rgbaToArgb(var8), var3);
+               var7 = new BlurViewHardwareAccelerated(var1, var5, ColorUtilsKt.rgbaToArgb(var6), ColorUtilsKt.rgbaToArgb(var8), var3);
             } else {
-               var7 = new BlurView(var1, var6, ColorUtilsKt.rgbaToArgb(var5), ColorUtilsKt.rgbaToArgb(var8), var3);
+               var7 = new BlurView(var1, var5, ColorUtilsKt.rgbaToArgb(var6), ColorUtilsKt.rgbaToArgb(var8), var3);
             }
 
             return (ViewGroup)var7;

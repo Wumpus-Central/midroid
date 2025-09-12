@@ -4,9 +4,9 @@ import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = ComponentType.Serializer::class)
+@m(with = ComponentType.Serializer::class)
 public enum class ComponentType(serialNumber: Int) : IntEnum {
    ACTION_ROW(1),
    BUTTON(2),
@@ -36,7 +36,7 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ComponentType> = $values();
       $VALUES = var0;
-      $ENTRIES = G9.a.a(var0);
+      $ENTRIES = Ia.a.a(var0);
    }
 
    init {

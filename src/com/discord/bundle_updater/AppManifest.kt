@@ -1,19 +1,19 @@
 package com.discord.bundle_updater
 
 import kotlinx.serialization.KSerializer
-import pb.E0
-import pb.U
+import sc.P0
+import sc.W
 
-@mb.g
-public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = L.h(), patches: Map<String, String> = L.h()) {
+@pc.m
+public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = O.i(), patches: Map<String, String> = O.i()) {
    public final val metadata: AppManifestMetadata
    public final val hashes: Map<String, String>
    public final val patches: Map<String, String>
 
    @JvmStatic
    fun {
-      val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, new U(E0.a, E0.a), new U(var0, var0)};
+      val var0: P0 = P0.a;
+      $childSerializers = new KSerializer[]{null, new W(P0.a, P0.a), new W(var0, var0)};
    }
 
    init {
@@ -62,15 +62,15 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
 
    public override fun toString(): String {
       val var3: AppManifestMetadata = this.metadata;
-      val var1: java.util.Map = this.hashes;
-      val var2: java.util.Map = this.patches;
+      val var2: java.util.Map = this.hashes;
+      val var1: java.util.Map = this.patches;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppManifest(metadata=");
       var4.append(var3);
       var4.append(", hashes=");
-      var4.append(var1);
-      var4.append(", patches=");
       var4.append(var2);
+      var4.append(", patches=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

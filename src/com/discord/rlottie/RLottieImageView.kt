@@ -1,6 +1,6 @@
 package com.discord.rlottie
 
-import A9.t
+import Ca.w
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION
@@ -9,6 +9,7 @@ import android.view.Display
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.m
+import app.rive.runtime.kotlin.renderers.c
 import com.discord.rlottie.RLottieDrawable.PlaybackMode
 import java.io.File
 import java.util.HashMap
@@ -42,7 +43,7 @@ public open class RLottieImageView : m {
    private fun Context.getDisplayCompat(): Display {
       val var2: Display;
       if (VERSION.SDK_INT >= 30) {
-         var2 = a.a(var1);
+         var2 = c.a(var1);
          if (var2 == null) {
             Intrinsics.throwNpe();
          }
@@ -51,7 +52,7 @@ public open class RLottieImageView : m {
       } else {
          val var3: Any = var1.getSystemService("window");
          if (var3 == null) {
-            throw new t("null cannot be cast to non-null type android.view.WindowManager");
+            throw new w("null cannot be cast to non-null type android.view.WindowManager");
          }
 
          var2 = (var3 as WindowManager).getDefaultDisplay();
@@ -160,10 +161,10 @@ public open class RLottieImageView : m {
          }
 
          for (Entry var16 : this.layerColors.entrySet()) {
-            val var15: java.lang.String = var16.getKey() as java.lang.String;
+            val var11: java.lang.String = var16.getKey() as java.lang.String;
             var1 = (var16.getValue() as java.lang.Number).intValue();
             if (this.drawable != null) {
-               this.drawable.setLayerColor(var15, var1);
+               this.drawable.setLayerColor(var11, var1);
             }
          }
 

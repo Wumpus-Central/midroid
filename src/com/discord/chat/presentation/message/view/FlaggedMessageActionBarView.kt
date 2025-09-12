@@ -12,13 +12,13 @@ import com.discord.core.DCDButton
 import com.discord.fonts.DiscordFont
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
 import com.discord.theme.ThemeManagerKt
 
 public class FlaggedMessageActionBarView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(
          var1, var2, var3
       ),
-   VerticalSpacingItemDecoration.SpacingProviderView {
+   SpacingProviderView {
    private final val binding: FlaggedMessageActionBarViewBinding
 
    fun FlaggedMessageActionBarView(var1: Context) {
@@ -55,22 +55,22 @@ public class FlaggedMessageActionBarView  public constructor(context: Context, a
       onTapAutoModerationActions: OnClickListener,
       onTapAutoModerationFeedback: OnClickListener
    ) {
-      val var5: java.lang.String = var1.getActionsIconURL();
-      val var4: java.lang.String = var1.getActionsText();
-      val var6: DCDButton = this.binding.actionsButton;
-      if (var5 != null) {
-         this.binding.actionsButton.setIcon(var5, SizeUtilsKt.getDpToPx(16));
+      val var4: java.lang.String = var1.getActionsIconURL();
+      val var6: java.lang.String = var1.getActionsText();
+      val var5: DCDButton = this.binding.actionsButton;
+      if (var4 != null) {
+         this.binding.actionsButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var4);
-      var6.setOnClickButtonListener(var2);
+      this.binding.actionsButton.setText(var6);
+      var5.setOnClickButtonListener(var2);
       val var8: java.lang.String = var1.getFeedbackText();
       val var7: DCDButton = this.binding.feedbackButton;
       this.binding.feedbackButton.setText(var8);
       var7.setOnClickButtonListener(var3);
    }
 
-   public override fun spacingPxOverride(): Int {
+   public open fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

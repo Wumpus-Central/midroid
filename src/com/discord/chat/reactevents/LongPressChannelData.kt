@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
    ReactEvent {
    public final val guildId: String?
@@ -100,33 +100,37 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
       return ((var1 * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a(
-            "data",
-            NativeMapExtensionsKt.nativeMapOf(
-               s.a("guildId", this.guildId), s.a("channelId", this.channelId), s.a("messageId", this.messageId), s.a("originalLink", this.originalLink)
+         new Pair[]{
+            v.a(
+               "data",
+               NativeMapExtensionsKt.nativeMapOf(
+                  new Pair[]{
+                     v.a("guildId", this.guildId), v.a("channelId", this.channelId), v.a("messageId", this.messageId), v.a("originalLink", this.originalLink)
+                  }
+               )
             )
-         )
+         }
       );
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressChannelData(guildId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var5);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(", originalLink=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.originalLink;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LongPressChannelData(guildId=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var5);
+      var1.append(", originalLink=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

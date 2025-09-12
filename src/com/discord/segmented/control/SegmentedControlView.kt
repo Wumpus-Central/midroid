@@ -193,17 +193,16 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
                this.this$0 = var2;
             }
 
-            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var var3: Boolean = true;
-               var2.D0(true);
+               var2.G0(true);
                if (this.$index != this.this$0.getSelectedIndex()) {
                   var3 = false;
                }
 
-               var2.Q0(var3);
-               var2.N0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
+               var2.V0(var3);
+               var2.S0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
             }
          });
          this.binding.segmentContainer.addView(var3, new LayoutParams(0, -1, 1.0F));
@@ -223,14 +222,14 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var3: CardView = this.binding.selectedSegmentBg;
-         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
-         if (var4 == null) {
+         val var4: CardView = this.binding.selectedSegmentBg;
+         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var3 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var4.width = var1;
-         var3.setLayoutParams(var4);
+         var3.width = var1;
+         var4.setLayoutParams(var3);
          ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }

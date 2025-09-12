@@ -89,12 +89,12 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = L.c();
+            val var11: java.util.Map = O.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = h.A(var6);
+               val var7: Sequence = k.J(var6);
                if (var7 != null) {
-                  val var8: Sequence = k.m(var7, 2);
+                  val var8: Sequence = kotlin.sequences.k.n(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
                         val var9: java.lang.String = var5.get(0) as java.lang.String;
@@ -105,7 +105,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                }
             }
 
-            var10 = new ShortcutData(var2, L.b(var11));
+            var10 = new ShortcutData(var2, O.b(var11));
          } else {
             var10 = null;
          }

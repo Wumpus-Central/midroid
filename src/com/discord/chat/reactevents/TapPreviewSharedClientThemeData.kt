@@ -2,11 +2,12 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapPreviewSharedClientThemeData(messageId: MessageId? = ...) : TapPreviewSharedClientThemeData(var1), ReactEvent {
    public final val messageId: MessageId?
 
@@ -52,8 +53,8 @@ public data class TapPreviewSharedClientThemeData(messageId: MessageId? = ...) :
       return var1;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

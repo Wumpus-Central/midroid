@@ -12,7 +12,7 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import com.discord.theme.R
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
@@ -32,11 +32,11 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
    }
 
    init {
-      val var6: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var6;
-      val var4: View = var6.getRoot();
-      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(16));
-      val var5: TextView = var6.guildText;
+      val var4: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
+      val var6: View = var4.getRoot();
+      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(16));
+      val var5: TextView = var4.guildText;
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
    }
@@ -73,7 +73,7 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
                var6 = var3;
             } else {
                val var9: Context = this.getContext();
-               var6 = ColorUtilsKt.getColorCompat(var9, R.color.brand);
+               var6 = ColorUtilsKt.getColorCompat(var9, color.brand);
             }
 
             this.setBackgroundColor(var6);

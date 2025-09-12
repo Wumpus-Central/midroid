@@ -1,7 +1,7 @@
 package com.discord.chat.reactevents
 
-import A9.n
-import A9.s
+import Ca.p
+import Ca.v
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -39,25 +39,29 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       return this.emoji.hashCode();
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            s.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), s.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
+            new Pair[]{
+               v.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), v.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
+            }
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
-            throw new n();
+            throw new p();
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            s.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-            s.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-            s.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
+            new Pair[]{
+               v.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+               v.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+               v.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
+            }
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(s.a("node", var2));
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("node", var2)});
    }
 
    public override fun toString(): String {

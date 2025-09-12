@@ -3,11 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       totalDurationSecs: Float,
       startDurationSecs: Float,
@@ -108,30 +109,30 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
          + this.attachmentId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
-      val var1: Float = this.startDurationSecs;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Float = this.totalDurationSecs;
+      val var2: Float = this.startDurationSecs;
       val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
-      val var4: java.lang.String = this.attachmentId;
+      val var5: java.lang.String = this.attachmentId;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaAttachmentPlaybackStartedData(messageId=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(", totalDurationSecs=");
-      var6.append(var2);
-      var6.append(", startDurationSecs=");
       var6.append(var1);
+      var6.append(", startDurationSecs=");
+      var6.append(var2);
       var6.append(", senderUserId=");
       var6.append(var7);
       var6.append(", isVoiceMessage=");
       var6.append(var3);
       var6.append(", attachmentId=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }

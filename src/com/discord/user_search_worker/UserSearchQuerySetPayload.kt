@@ -1,13 +1,13 @@
 package com.discord.user_search_worker
 
 import kotlinx.serialization.KSerializer
-import mb.g
-import pb.E0
-import pb.U
-import pb.f
-import pb.y
+import pc.m
+import sc.P0
+import sc.W
+import sc.f
+import sc.y
 
-@g
+@m
 internal data class UserSearchQuerySetPayload(query: String,
    filters: UserSearchQuerySetFilters? = null,
    blacklist: List<String>? = null,
@@ -26,8 +26,8 @@ internal data class UserSearchQuerySetPayload(query: String,
 
    @JvmStatic
    fun {
-      val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new f(E0.a), new f(var0), new U(var0, y.a), null, null};
+      val var0: P0 = P0.a;
+      $childSerializers = new KSerializer[]{null, null, new f(P0.a), new f(var0), new W(var0, y.a), null, null};
    }
 
    init {
@@ -132,30 +132,30 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.query;
-      val var7: UserSearchQuerySetFilters = this.filters;
-      val var4: java.util.List = this.blacklist;
-      val var9: java.util.List = this.whitelist;
-      val var6: java.util.Map = this.boosters;
+      val var6: java.lang.String = this.query;
+      val var4: UserSearchQuerySetFilters = this.filters;
+      val var5: java.util.List = this.blacklist;
+      val var8: java.util.List = this.whitelist;
+      val var7: java.util.Map = this.boosters;
       val var1: Double = this.boosterFallback;
       val var3: Int = this.limit;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("UserSearchQuerySetPayload(query=");
-      var8.append(var5);
-      var8.append(", filters=");
-      var8.append(var7);
-      var8.append(", blacklist=");
-      var8.append(var4);
-      var8.append(", whitelist=");
-      var8.append(var9);
-      var8.append(", boosters=");
-      var8.append(var6);
-      var8.append(", boosterFallback=");
-      var8.append(var1);
-      var8.append(", limit=");
-      var8.append(var3);
-      var8.append(")");
-      return var8.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("UserSearchQuerySetPayload(query=");
+      var9.append(var6);
+      var9.append(", filters=");
+      var9.append(var4);
+      var9.append(", blacklist=");
+      var9.append(var5);
+      var9.append(", whitelist=");
+      var9.append(var8);
+      var9.append(", boosters=");
+      var9.append(var7);
+      var9.append(", boosterFallback=");
+      var9.append(var1);
+      var9.append(", limit=");
+      var9.append(var3);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

@@ -2,7 +2,7 @@
 
 package com.discord.analytics
 
-import F9.b
+import Ha.b
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import kotlin.coroutines.Continuation
@@ -40,7 +40,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.e(
+   var2.b(
       new Function1<java.lang.Throwable, Unit>(var0) {
          final InstallReferrerClient $this_await;
 
@@ -51,14 +51,14 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var2: InstallReferrerClient = this.$this_await;
+            val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: kotlin.Result.a = Result.e;
-               var2.endConnection();
+               val var2: kotlin.Result.a = Result.e;
+               var5.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var5: kotlin.Result.a = Result.e;
+               val var6: kotlin.Result.a = Result.e;
                Result.b(c.a(var3));
                return;
             }

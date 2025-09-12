@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
 
-@mb.g
+@pc.m
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -78,26 +78,26 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
    public fun toNativeMap(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("build", this.build), s.a("release_name", this.releaseName), s.a("commit", this.commit), s.a("confirm_update", this.confirmUpdate)
+         new Pair[]{v.a("build", this.build), v.a("release_name", this.releaseName), v.a("commit", this.commit), v.a("confirm_update", this.confirmUpdate)}
       );
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.build;
-      val var3: java.lang.String = this.releaseName;
-      val var5: java.lang.String = this.commit;
+      val var3: java.lang.String = this.build;
+      val var4: java.lang.String = this.releaseName;
+      val var2: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifestMetadata(build=");
-      var4.append(var2);
-      var4.append(", releaseName=");
-      var4.append(var3);
-      var4.append(", commit=");
-      var4.append(var5);
-      var4.append(", confirmUpdate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("AppManifestMetadata(build=");
+      var5.append(var3);
+      var5.append(", releaseName=");
+      var5.append(var4);
+      var5.append(", commit=");
+      var5.append(var2);
+      var5.append(", confirmUpdate=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -1,6 +1,6 @@
 package com.discord.nearby
 
-import A9.s
+import Ca.v
 import android.app.Activity
 import com.discord.nearby.reactevents.OnNearbyErrorEvent
 import com.discord.nearby.reactevents.OnNearbyMessageLostEvent
@@ -20,9 +20,9 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         s.a("nearbyMessageReceived", OnNearbyMessageReceivedEvent::class),
-         s.a("nearbyMessageLost", OnNearbyMessageLostEvent::class),
-         s.a("nearbyError", OnNearbyErrorEvent::class)
+         v.a("nearbyMessageReceived", OnNearbyMessageReceivedEvent::class),
+         v.a("nearbyMessageLost", OnNearbyMessageLostEvent::class),
+         v.a("nearbyError", OnNearbyErrorEvent::class)
       );
       this.manager = new NearbyManager(new a(this), new b(this), new c(this));
    }
@@ -49,7 +49,7 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
    public fun addListener(type: String) {
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "NearbyHelper";
    }
 

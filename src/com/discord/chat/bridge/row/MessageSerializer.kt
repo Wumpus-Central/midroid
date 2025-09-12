@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.row
 
-import A9.c
+import Ca.e
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -11,13 +11,13 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import ob.g
-import ob.e.i
+import rc.j
+import rc.e.i
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return g.a("Message", i.a);
+         return j.b("Message", i.a);
       }
 
 
@@ -26,11 +26,11 @@ public object MessageSerializer : KSerializer {
          var6 = var1.G(Message.Companion.serializer()) as MessageBase;
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
-         val var5: UUID = UUID.randomUUID();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("RENDERING_ERROR_");
-         var3.append(var5);
-         var6 = new ErrorMessage(MessageId.constructor-impl(var3.toString()), c.b(var4), null);
+         val var2: UUID = UUID.randomUUID();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("RENDERING_ERROR_");
+         var5.append(var2);
+         var6 = new ErrorMessage(MessageId.constructor-impl(var5.toString()), e.b(var4), null);
       }
 
       return (MessageBase)var6;

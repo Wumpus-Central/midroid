@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: String, attachmentId: String, embedId: String) : ReactEvent {
    public final val messageId: String
    public final val channelId: String
@@ -68,24 +69,24 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
       return ((this.messageId.hashCode() * 31 + this.channelId.hashCode()) * 31 + this.attachmentId.hashCode()) * 31 + this.embedId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.attachmentId;
-      val var2: java.lang.String = this.embedId;
+      val var5: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.attachmentId;
+      val var3: java.lang.String = this.embedId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapObscuredMediaLearnMoreData(messageId=");
-      var1.append(var4);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", attachmentId=");
       var1.append(var5);
-      var1.append(", embedId=");
+      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", attachmentId=");
+      var1.append(var4);
+      var1.append(", embedId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

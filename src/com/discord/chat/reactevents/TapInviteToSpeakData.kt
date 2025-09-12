@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -35,8 +35,8 @@ public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakD
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   public override fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("messageId", MessageId.toString-impl(this.messageId)));
+   public open fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("messageId", MessageId.toString-impl(this.messageId))});
    }
 
    public override fun toString(): String {

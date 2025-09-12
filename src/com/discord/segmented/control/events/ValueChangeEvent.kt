@@ -3,9 +3,9 @@ package com.discord.segmented.control.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
    public final val value: String
    public final val selectedSegmentIndex: Int

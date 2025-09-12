@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.activities
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class ActivityInviteEmbed(coverImage: String? = null,
    isListening: Boolean,
    headerText: String,
@@ -166,39 +166,39 @@ public data class ActivityInviteEmbed(coverImage: String? = null,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.coverImage;
+      val var10: java.lang.String = this.coverImage;
       val var3: Boolean = this.isListening;
-      val var4: java.lang.String = this.headerText;
-      val var10: java.lang.String = this.partyStatus;
-      val var11: java.util.List = this.avatarsToRender;
+      val var11: java.lang.String = this.headerText;
+      val var7: java.lang.String = this.partyStatus;
+      val var9: java.util.List = this.avatarsToRender;
       val var1: Int = this.maxPartySize;
-      val var8: java.lang.String = this.name;
-      val var9: java.lang.String = this.subtext;
+      val var4: java.lang.String = this.name;
+      val var8: java.lang.String = this.subtext;
       val var2: Boolean = this.joinable;
-      val var7: java.lang.String = this.ctaText;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ActivityInviteEmbed(coverImage=");
-      var5.append(var6);
-      var5.append(", isListening=");
-      var5.append(var3);
-      var5.append(", headerText=");
-      var5.append(var4);
-      var5.append(", partyStatus=");
-      var5.append(var10);
-      var5.append(", avatarsToRender=");
-      var5.append(var11);
-      var5.append(", maxPartySize=");
-      var5.append(var1);
-      var5.append(", name=");
-      var5.append(var8);
-      var5.append(", subtext=");
-      var5.append(var9);
-      var5.append(", joinable=");
-      var5.append(var2);
-      var5.append(", ctaText=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.ctaText;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ActivityInviteEmbed(coverImage=");
+      var6.append(var10);
+      var6.append(", isListening=");
+      var6.append(var3);
+      var6.append(", headerText=");
+      var6.append(var11);
+      var6.append(", partyStatus=");
+      var6.append(var7);
+      var6.append(", avatarsToRender=");
+      var6.append(var9);
+      var6.append(", maxPartySize=");
+      var6.append(var1);
+      var6.append(", name=");
+      var6.append(var4);
+      var6.append(", subtext=");
+      var6.append(var8);
+      var6.append(", joinable=");
+      var6.append(var2);
+      var6.append(", ctaText=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

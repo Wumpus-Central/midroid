@@ -1,11 +1,12 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactEvent {
    public final val text: String
    public final val requestId: String
@@ -47,8 +48,8 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
       return this.text.hashCode() * 31 + this.requestId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

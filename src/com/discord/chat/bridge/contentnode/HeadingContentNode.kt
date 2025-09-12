@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class HeadingContentNode(level: Int, content: List<ContentNode>) : ContentNode() {
    public final val level: Int
    public final val content: List<ContentNode>

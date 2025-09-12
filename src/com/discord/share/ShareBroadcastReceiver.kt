@@ -1,6 +1,6 @@
 package com.discord.share
 
-import A9.s
+import Ca.v
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -24,7 +24,7 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
 
    init {
       this.reactApplicationContext = var1;
-      this.reactEvents = new ReactEvents(s.a("share-broadcast-receiver-app-clicked", ShareBroadcastReceiverAppClicked::class));
+      this.reactEvents = new ReactEvents(v.a("share-broadcast-receiver-app-clicked", ShareBroadcastReceiverAppClicked::class));
    }
 
    public open fun onReceive(context: Context?, intent: Intent?) {
@@ -41,10 +41,10 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var4: ReactEvents = this.reactEvents;
-         val var7: ReactApplicationContext = this.reactApplicationContext;
+         val var7: ReactEvents = this.reactEvents;
+         val var4: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
-         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 

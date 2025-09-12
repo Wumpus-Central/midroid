@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class TapChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null) : ReactEvent {
    public final val guildId: String?
    public final val channelId: String?
@@ -79,25 +79,30 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
       return (var1 * 31 + var2) * 31 + var3;
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("data", NativeMapExtensionsKt.nativeMapOf(s.a("guildId", this.guildId), s.a("channelId", this.channelId), s.a("messageId", this.messageId)))
+         new Pair[]{
+            v.a(
+               "data",
+               NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("guildId", this.guildId), v.a("channelId", this.channelId), v.a("messageId", this.messageId)})
+            )
+         }
       );
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = this.guildId;
       val var4: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapChannelData(guildId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var4);
-      var1.append(", messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.messageId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapChannelData(guildId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

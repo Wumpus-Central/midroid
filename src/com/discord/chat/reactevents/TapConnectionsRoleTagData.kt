@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapConnectionsRoleTagData(userId: String, guildId: String, channelId: String, roleId: String) : ReactEvent {
    public final val userId: String
    public final val guildId: String
@@ -63,22 +64,22 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
       return ((this.userId.hashCode() * 31 + this.guildId.hashCode()) * 31 + this.channelId.hashCode()) * 31 + this.roleId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.userId;
+      val var4: java.lang.String = this.userId;
       val var1: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.channelId;
       val var2: java.lang.String = this.roleId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapConnectionsRoleTagData(userId=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(", guildId=");
       var5.append(var1);
       var5.append(", channelId=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", roleId=");
       var5.append(var2);
       var5.append(")");

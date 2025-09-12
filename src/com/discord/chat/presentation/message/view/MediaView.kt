@@ -28,6 +28,10 @@ import com.discord.media_player.MediaPlayerView
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaPlayer.Event
 import com.discord.media_player.MediaPlayer.PlayerSettings
+import com.discord.media_player.MediaPlayer.Event.BufferStart
+import com.discord.media_player.MediaPlayer.Event.Paused
+import com.discord.media_player.MediaPlayer.Event.PlaybackEnded
+import com.discord.media_player.MediaPlayer.Event.StartedPlaying
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
@@ -40,6 +44,7 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
@@ -246,10 +251,10 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var12: Context = this.getContext();
+            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var11: Context = this.getContext();
             val var7: java.lang.Double = var1.getPortal();
-            var10 = var11.acquire(var12, var7, this.playerSettings);
+            var10 = var12.acquire(var11, var7, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -272,7 +277,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    @JvmStatic
-   fun `prepareMediaPlayer$lambda$19$lambda$16`(var0: MediaView, var1: MediaPlayer.Event): Unit {
+   fun `prepareMediaPlayer$lambda$19$lambda$16`(var0: MediaView, var1: Event): Unit {
       setMediaData$default(var0, null, false, false, false, var1, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262127, null);
       return Unit.a;
    }
@@ -479,7 +484,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          if (var5 != null) {
             var6 = var5;
          } else {
-            var6 = com.discord.theme.R.color.white_500;
+            var6 = color.white_500;
          }
 
          val var10: SimpleDraweeView = this.binding.overlayTagIcon;
@@ -516,7 +521,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      cb.f.d(
+      fc.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -538,7 +543,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = F9.b.e();
+               val var3: Any = Ha.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -555,7 +560,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         this.this$0 = var1;
                      }
 
-                     public final Object emit(PortalFromNativeContextManager.Event var1, Continuation var2x) {
+                     public final Object emit(com.discord.portals.from_native.PortalFromNativeContextManager.Event var1, Continuation var2x) {
                         MediaView.setMediaData$default(
                            this.this$0,
                            null,
@@ -594,7 +599,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      cb.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      fc.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final MediaView this$0;
 
@@ -612,7 +617,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = F9.b.e();
+            val var3: Any = Ha.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -749,7 +754,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          var var19: Boolean;
-         if (!(var5 == MediaPlayer.Event.BufferStart.INSTANCE) || var1 != null && var1.isGifv()) {
+         if (!(var5 == BufferStart.INSTANCE) || var1 != null && var1.isGifv()) {
             var19 = false;
          } else {
             var19 = true;
@@ -809,9 +814,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          val var34: SimpleDraweeView = this.binding.inlineMediaImagePreview;
-         val var49: MediaPlayer.Event.StartedPlaying = MediaPlayer.Event.StartedPlaying.INSTANCE;
+         val var49: StartedPlaying = StartedPlaying.INSTANCE;
          var var50: Boolean;
-         if (!(var5 == MediaPlayer.Event.StartedPlaying.INSTANCE) && !(var5 == MediaPlayer.Event.Paused.INSTANCE)) {
+         if (!(var5 == StartedPlaying.INSTANCE) && !(var5 == Paused.INSTANCE)) {
             var50 = 1;
          } else {
             var50 = 0;
@@ -914,7 +919,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          this.setupTag(var6, var14, var15, var16, var17);
-         var6 = var5 == MediaPlayer.Event.PlaybackEnded.INSTANCE;
+         var6 = var5 == PlaybackEnded.INSTANCE;
          var var59: Boolean;
          if (var6 && var24 == java.lang.Boolean.TRUE) {
             var59 = true;
@@ -988,7 +993,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                }
             } else if (var5 == var49) {
                this.play();
-            } else if (var5 == MediaPlayer.Event.Paused.INSTANCE) {
+            } else if (var5 == Paused.INSTANCE) {
                this.pause();
             }
          }

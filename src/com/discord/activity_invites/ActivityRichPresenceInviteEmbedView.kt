@@ -23,11 +23,12 @@ import com.discord.overlapping_circles.OverlappingItem
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import y2.f
+import y3.f
 
 @SourceDebugExtension(["SMAP\nActivityRichPresenceInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,249:1\n257#2,2:250\n257#2,2:252\n257#2,2:254\n257#2,2:256\n257#2,2:258\n257#2,2:260\n257#2,2:262\n257#2,2:264\n257#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n257#2,2:288\n257#2,2:290\n257#2,2:292\n257#2,2:298\n257#2,2:300\n257#2,2:302\n257#2,2:304\n1557#3:294\n1628#3,3:295\n1557#3:306\n1628#3,3:307\n*S KotlinDebug\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n*L\n104#1:250,2\n109#1:252,2\n111#1:254,2\n128#1:256,2\n131#1:258,2\n139#1:260,2\n141#1:262,2\n144#1:264,2\n148#1:266,2\n162#1:268,2\n166#1:270,2\n172#1:272,2\n174#1:274,2\n180#1:276,2\n182#1:278,2\n188#1:280,2\n190#1:282,2\n193#1:284,2\n194#1:286,2\n195#1:288,2\n196#1:290,2\n197#1:292,2\n215#1:298,2\n217#1:300,2\n223#1:302,2\n227#1:304,2\n212#1:294\n212#1:295,3\n230#1:306\n230#1:307,3\n*E\n"])
 public class ActivityRichPresenceInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
@@ -75,7 +76,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
             var7.add(Color.argb((int)(var5.getA() * (float)255), (int)var5.getR(), (int)var5.getG(), (int)var5.getB()));
          }
 
-         val var8: IntArray = CollectionsKt.S0(var7);
+         val var8: IntArray = CollectionsKt.V0(var7);
          val var6: GradientDrawable = new GradientDrawable();
          var6.setColors(var8);
          var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
@@ -108,7 +109,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
             var11[var9] = new OverlappingItem(null);
          }
 
-         this.binding.partyAvatars.setItems(CollectionsKt.C0(var5, var11));
+         this.binding.partyAvatars.setItems(CollectionsKt.E0(var5, var11));
          val var7: OverlappingCirclesView = this.binding.partyAvatars;
          var7.setVisibility(0);
       } else {
@@ -138,7 +139,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
       val var19: Context = this.getContext();
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this,
-         ColorUtilsKt.getColorCompat(var19, ThemeManagerKt.getTheme().getColorRes(com.discord.theme.R.color.primary_130, com.discord.theme.R.color.primary_630)),
+         ColorUtilsKt.getColorCompat(var19, ThemeManagerKt.getTheme().getColorRes(color.primary_130, color.primary_630)),
          SizeUtilsKt.getDpToPx(12),
          null,
          0,

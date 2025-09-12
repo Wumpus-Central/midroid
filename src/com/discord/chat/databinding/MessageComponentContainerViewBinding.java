@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.SpoilerView;
-import y0.a;
+import x1.a;
 
 public final class MessageComponentContainerViewBinding implements ViewBinding {
    @NonNull

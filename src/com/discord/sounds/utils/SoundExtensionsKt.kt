@@ -1,20 +1,20 @@
 package com.discord.sounds.utils
 
-import D9.a
-import F9.b
+import Fa.a
+import Ha.b
 import android.content.Context
 import android.net.Uri
-import cb.K
-import cb.d0
-import cb.f
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
+import com.discord.file_downloader.DownloadState.Completed
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
+import fc.K
+import fc.d0
+import fc.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -174,10 +174,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         c.b(var5);
                      } else {
                         c.b(var5);
-                        if (var1 is DownloadState.Completed) {
+                        if (var1 is Completed) {
                            try {
-                              var5 = K.c();
-                              val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(
+                              val var6: d0 = K.c();
+                              var5 = new Function2<CoroutineScope, Continuation, Object>(
                                  this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null
                               ) {
                                  final DownloadState $downloadState;
@@ -215,7 +215,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                              this.$key,
                                              this.$usage,
                                              null,
-                                             (this.$downloadState as DownloadState.Completed).getFile().getAbsolutePath(),
+                                             (this.$downloadState as Completed).getFile().getAbsolutePath(),
                                              this.$soundResIdPrepared
                                           );
                                        return Unit.a;
@@ -225,7 +225,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = f.g((CoroutineContext)var5, var6, (Continuation)var13);
+                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
                            } catch (var8: Exception) {
                               val var11: d0 = K.c();
                               var5 = new Function2<CoroutineScope, Continuation, Object>(var8, null) {
@@ -321,11 +321,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 }
 
 internal fun getRemoteSoundFilename(url: String): String {
-   var0 = Uri.parse(var0).getLastPathSegment();
-   val var1: StringBuilder = new StringBuilder();
-   var1.append(var0);
-   var1.append(".mp3");
-   return var1.toString();
+   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(".mp3");
+   return var2.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {
@@ -335,13 +335,13 @@ internal fun Context.getSoundsCacheDirectory(): File {
 internal fun Context.tryPruneSoundsCache() {
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
-      h.y(var1, new Comparator() {
+      k.G(var1, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var2 as File).lastModified(), (var1 as File).lastModified());
          }
       });
-      val var2: File = h.l0(var1) as File;
+      val var2: File = k.u0(var1) as File;
       if (var2 != null) {
          var2.delete();
       }

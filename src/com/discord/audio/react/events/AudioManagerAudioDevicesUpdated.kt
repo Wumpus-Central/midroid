@@ -1,6 +1,6 @@
 package com.discord.audio.react.events
 
-import A9.s
+import Ca.v
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -40,7 +40,9 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("devices", AudioManagerAudioDevicesUpdated.Companion.access$convertDevices(Companion, this.devices)));
+      return NativeMapExtensionsKt.nativeMapOf(
+         new Pair[]{v.a("devices", AudioManagerAudioDevicesUpdated.Companion.access$convertDevices(Companion, this.devices))}
+      );
    }
 
    public override fun toString(): String {

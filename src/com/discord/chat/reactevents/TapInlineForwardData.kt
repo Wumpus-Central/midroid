@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?, triggerHaptic: Boolean?, location: String?) :
    ReactEvent {
    private final val channelId: String
@@ -28,19 +28,21 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       this.location = var6;
    }
 
-   public override fun serialize(): WritableMap {
-      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
-         s.a("channelId", this.channelId),
-         s.a("messageId", this.messageId),
-         s.a("targetKind", this.targetKind),
-         s.a("triggerHaptic", this.triggerHaptic),
-         s.a("location", this.location)
+   public open fun serialize(): WritableMap {
+      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+         new Pair[]{
+            v.a("channelId", this.channelId),
+            v.a("messageId", this.messageId),
+            v.a("targetKind", this.targetKind),
+            v.a("triggerHaptic", this.triggerHaptic),
+            v.a("location", this.location)
+         }
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
       }
 
-      return var1;
+      return var2;
    }
 
    public companion object {

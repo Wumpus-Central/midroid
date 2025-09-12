@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.embed
 
-import A9.j
+import Ca.l
 import kotlinx.serialization.KSerializer
-import mb.g
-import p1.d
+import p2.d
+import pc.m
 
-@g
+@m
 public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = null, content: String? = null) {
    public final val iconURL: String?
    public final val iconProxyURL: String?
@@ -25,7 +25,7 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
       this.iconURL = var1;
       this.iconProxyURL = var2;
       this.content = var3;
-      this.imageUrl$delegate = j.b(new d(this));
+      this.imageUrl$delegate = l.b(new d(this));
    }
 
    @JvmStatic
@@ -95,16 +95,16 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.iconURL;
-      val var4: java.lang.String = this.iconProxyURL;
-      val var2: java.lang.String = this.content;
+      val var2: java.lang.String = this.iconURL;
+      val var3: java.lang.String = this.iconProxyURL;
+      val var4: java.lang.String = this.content;
       val var1: StringBuilder = new StringBuilder();
       var1.append("EmbedFooter(iconURL=");
-      var1.append(var3);
-      var1.append(", iconProxyURL=");
-      var1.append(var4);
-      var1.append(", content=");
       var1.append(var2);
+      var1.append(", iconProxyURL=");
+      var1.append(var3);
+      var1.append(", content=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

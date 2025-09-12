@@ -40,8 +40,8 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var5 = false;
       }
 
-      val var12: java.lang.String = var9.getFooterLabel();
-      val var13: java.util.List = var9.getGradientColors();
+      val var13: java.lang.String = var9.getFooterLabel();
+      val var12: java.util.List = var9.getGradientColors();
       val var14: java.lang.String = var9.getHeaderText();
       val var17: java.lang.String = var9.getIconSrc();
       var var15: java.lang.Boolean = var9.isActive();
@@ -69,8 +69,8 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var4,
          var16,
          var5,
-         var12,
          var13,
+         var12,
          var14,
          var17,
          var6,

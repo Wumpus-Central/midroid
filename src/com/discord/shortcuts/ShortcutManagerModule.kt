@@ -14,7 +14,7 @@ public class ShortcutManagerModule(reactContext: ReactApplicationContext) : Reac
       this.reactContext = var1;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDShortcutManager";
    }
 

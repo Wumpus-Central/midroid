@@ -6,7 +6,7 @@ import android.content.Context
 import android.text.SpannableStringBuilder
 import android.text.style.StrikethroughSpan
 import android.text.style.UnderlineSpan
-import f2.e
+import f3.e
 import kotlin.jvm.internal.SourceDebugExtension
 
 @JvmSynthetic
@@ -28,7 +28,7 @@ public inline fun SpannableStringBuilder.bold(context: Context, action: (Spannab
 
 public fun SpannableStringBuilder.debugSpans(): String {
    val var1: Array<Any> = var0.getSpans(0, var0.length(), Object.class);
-   return h.k0(var1, null, null, null, 0, null, new e(), 31, null);
+   return k.t0(var1, null, null, null, 0, null, new e(), 31, null);
 }
 
 fun `debugSpans$lambda$7`(var0: Any): java.lang.CharSequence {
@@ -38,7 +38,7 @@ fun `debugSpans$lambda$7`(var0: Any): java.lang.CharSequence {
 
 public fun SpannableStringBuilder.ensureNewline(span: Any? = null) {
    if (var0.length() > 0) {
-      val var3: Character = StringsKt.b1(var0);
+      val var3: Character = StringsKt.c1(var0);
       if (var3 == null || var3 != '\n') {
          if (var1 != null) {
             val var2: Int = var0.length();

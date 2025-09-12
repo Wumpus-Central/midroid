@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class ButtonComponent(type: Int,
    id: String,
    state: ActionComponentState,
@@ -169,36 +169,36 @@ public data class ButtonComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
-      val var5: ActionComponentState = this.state;
-      val var3: java.lang.String = this.customId;
-      val var10: java.lang.String = this.label;
-      val var8: ButtonStyle = this.style;
+      val var11: java.lang.String = this.id;
+      val var6: ActionComponentState = this.state;
+      val var5: java.lang.String = this.customId;
+      val var4: java.lang.String = this.label;
+      val var3: ButtonStyle = this.style;
       val var2: Boolean = this.disabled;
-      val var9: ComponentEmoji = this.emoji;
-      val var11: java.lang.String = this.url;
-      val var4: java.lang.String = this.skuId;
+      val var10: ComponentEmoji = this.emoji;
+      val var9: java.lang.String = this.url;
+      val var8: java.lang.String = this.skuId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ButtonComponent(type=");
       var7.append(var1);
       var7.append(", id=");
-      var7.append(var6);
+      var7.append(var11);
       var7.append(", state=");
-      var7.append(var5);
+      var7.append(var6);
       var7.append(", customId=");
-      var7.append(var3);
+      var7.append(var5);
       var7.append(", label=");
-      var7.append(var10);
+      var7.append(var4);
       var7.append(", style=");
-      var7.append(var8);
+      var7.append(var3);
       var7.append(", disabled=");
       var7.append(var2);
       var7.append(", emoji=");
-      var7.append(var9);
+      var7.append(var10);
       var7.append(", url=");
-      var7.append(var11);
+      var7.append(var9);
       var7.append(", skuId=");
-      var7.append(var4);
+      var7.append(var8);
       var7.append(")");
       return var7.toString();
    }

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.structurabletext
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = StructurableTextSerializer::class)
+@m(with = StructurableTextSerializer::class)
 public sealed class StructurableText protected constructor() {
    public abstract val hasContent: Boolean
 

@@ -13,10 +13,10 @@ public final class b implements OnClickListener {
    public final ChatEventHandler d;
    public final UserId e;
    public final GuildId i;
-   public final ChannelId m;
-   public final ConnectionsRoleTag n;
+   public final ChannelId s;
+   public final ConnectionsRoleTag t;
 
    public final void onClick(View var1) {
-      ConnectionsRoleTagView.a(this.d, this.e, this.i, this.m, this.n, var1);
+      ConnectionsRoleTagView.a(this.d, this.e, this.i, this.s, this.t, var1);
    }
 }

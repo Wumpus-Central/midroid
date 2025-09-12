@@ -52,6 +52,7 @@ public class ShareActivity : ReactActivity {
             return var2;
          }
 
+         @Override
          protected Bundle getLaunchOptions() {
             var var1: ShareProps = this.shareProps;
             if (this.shareProps == null) {
@@ -62,11 +63,13 @@ public class ShareActivity : ReactActivity {
             return var1.toBundle();
          }
 
+         @Override
          public void onCreate(Bundle var1) {
             this.updateShareProps(this.this$0.getIntent());
             super.onCreate(var1);
          }
 
+         @Override
          public boolean onNewIntent(Intent var1) {
             if (var1 != null) {
                this.updateShareProps(var1);

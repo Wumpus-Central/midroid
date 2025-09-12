@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEvent {
    public final val messageId: String
    public final val index: Int
@@ -47,8 +48,8 @@ public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEve
       return this.messageId.hashCode() * 31 + Integer.hashCode(this.index);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

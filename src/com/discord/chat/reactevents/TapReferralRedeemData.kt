@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
    public final val referralId: String?
 
@@ -43,17 +44,17 @@ public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
       return var1;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.referralId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapReferralRedeemData(referralId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.referralId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapReferralRedeemData(referralId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

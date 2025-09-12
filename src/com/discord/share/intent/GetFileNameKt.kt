@@ -37,14 +37,14 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                try {
                   throw var18;
                } catch (var3: java.lang.Throwable) {
-                  K9.c.a(var21, var4);
+                  Ma.c.a(var21, var4);
                }
             }
 
             var16 = "";
          }
 
-         K9.c.a(var21, null);
+         Ma.c.a(var21, null);
          if (var16 == null) {
             var16 = "";
          }

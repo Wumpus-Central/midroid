@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.polls
 
+import Ca.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -16,8 +17,8 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.SourceDebugExtension
@@ -87,7 +88,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new A9.n();
+                     throw new p();
                   }
 
                   val var18: TextView = this.binding.actionText;
@@ -107,7 +108,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   DCDButton.setBackgroundRectangle$default(
                      this.binding.actionButton, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
+                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new e(var1, var5, var2, var4));
                   var11 = var21;

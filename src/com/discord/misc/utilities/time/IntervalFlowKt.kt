@@ -1,7 +1,7 @@
 package com.discord.misc.utilities.time
 
-import cb.I
-import fb.e
+import fc.I
+import ic.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
-   return e.m(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
+   return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
       final long $initialDelayMs;
       final long $periodMs;
       private Object L$0;
@@ -33,7 +33,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = F9.b.e();
+         val var6: Any = Ha.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -101,7 +101,7 @@ fun `intervalFlow$default`(var0: Long, var2: Long, var4: Int, var5: Any): Flow {
 }
 
 public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Unit> {
-   return e.m(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
+   return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
       final long $initialDelay;
       final long $period;
       private Object L$0;
@@ -125,7 +125,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = F9.b.e();
+         val var6: Any = Ha.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {

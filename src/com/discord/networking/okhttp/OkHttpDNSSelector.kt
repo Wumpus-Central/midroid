@@ -1,8 +1,8 @@
 package com.discord.networking.okhttp
 
-import A9.n
-import D9.a
-import Hb.l
+import Ca.p
+import Fa.a
+import Kc.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -27,7 +27,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
             if (var2 != 3) {
                if (var2 != 4) {
                   if (var2 != 5) {
-                     throw new n();
+                     throw new p();
                   }
                } else {
                   val var8: ArrayList = new ArrayList();
@@ -62,7 +62,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
                }
             }
          } else {
-            var5 = CollectionsKt.K0((java.lang.Iterable)var5, new Comparator() {
+            var5 = CollectionsKt.M0((java.lang.Iterable)var5, new Comparator() {
                @Override
                public final int compare(T var1, T var2) {
                   return a.d(Inet6Address.class.isInstance(var1 as InetAddress), Inet6Address.class.isInstance(var2 as InetAddress));
@@ -70,7 +70,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
             });
          }
       } else {
-         var5 = CollectionsKt.K0((java.lang.Iterable)var5, new Comparator() {
+         var5 = CollectionsKt.M0((java.lang.Iterable)var5, new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d(Inet4Address.class.isInstance(var1 as InetAddress), Inet4Address.class.isInstance(var2 as InetAddress));
@@ -97,7 +97,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = G9.a.a(var0);
+         $ENTRIES = Ia.a.a(var0);
       }
 
       init {

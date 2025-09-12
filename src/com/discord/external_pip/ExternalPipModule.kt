@@ -1,6 +1,6 @@
 package com.discord.external_pip
 
-import A9.s
+import Ca.v
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -22,7 +22,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val manager: ExternalPipManager = new ExternalPipManager()
    private final val reactEvents: ReactEvents =
-      new ReactEvents(s.a("onPipModeChanged", OnPipModeChangedEvent::class), s.a("onPipModeWillChange", OnPipModeWillChangeEvent::class))
+      new ReactEvents(new Pair[]{v.a("onPipModeChanged", OnPipModeChangedEvent::class), v.a("onPipModeWillChange", OnPipModeWillChangeEvent::class)})
 
    private fun enterPipMode(force: Boolean, onResult: (Result<Unit>) -> Unit) {
       if (this.manager.getEnabled(var1)) {
@@ -55,7 +55,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return L.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return O.n(new Pair[]{v.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

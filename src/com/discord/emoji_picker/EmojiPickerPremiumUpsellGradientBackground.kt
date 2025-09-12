@@ -10,6 +10,7 @@ import androidx.core.view.f0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.discord.theme.R.color
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nEmojiPickerPremiumUpsellGradientBackground.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,128:1\n1328#2,3:129\n8#3:132\n*S KotlinDebug\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n*L\n68#1:129,3\n99#1:132\n*E\n"])
@@ -169,15 +170,12 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
          val var4: IntArray;
          if (var2) {
-            var4 = new int[]{
-               var1.getColor(com.discord.theme.R.color.premium_tier_0_purple_for_gradients),
-               var1.getColor(com.discord.theme.R.color.premium_tier_0_blue_for_gradients)
-            };
+            var4 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
          } else {
             var4 = new int[]{
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients),
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients_2),
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_pink_for_gradients)
+               var1.getColor(color.premium_tier_2_purple_for_gradients),
+               var1.getColor(color.premium_tier_2_purple_for_gradients_2),
+               var1.getColor(color.premium_tier_2_pink_for_gradients)
             };
          }
 

@@ -6,9 +6,9 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class FlaggedMessageEmbed(id: MessageId,
    channelId: ChannelId,
    guildId: GuildId? = ...,
@@ -229,43 +229,43 @@ public data class FlaggedMessageEmbed(id: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.id);
+      val var4: java.lang.String = MessageId.toString-impl(this.id);
       val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var13: GuildId = this.guildId;
+      val var5: GuildId = this.guildId;
       val var12: UserId = this.userId;
-      val var10: StructurableText = this.content;
-      val var8: java.lang.String = this.channelName;
-      val var4: java.lang.String = this.username;
+      val var3: StructurableText = this.content;
+      val var13: java.lang.String = this.channelName;
+      val var6: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var6: Int = this.roleColor;
+      val var10: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
-      val var11: java.lang.String = this.avatarURL;
-      val var5: java.lang.Boolean = this.communicationDisabled;
+      val var8: java.lang.String = this.avatarURL;
+      val var11: java.lang.Boolean = this.communicationDisabled;
       val var7: StringBuilder = new StringBuilder();
       var7.append("FlaggedMessageEmbed(id=");
-      var7.append(var3);
+      var7.append(var4);
       var7.append(", channelId=");
       var7.append(var9);
       var7.append(", guildId=");
-      var7.append(var13);
+      var7.append(var5);
       var7.append(", userId=");
       var7.append(var12);
       var7.append(", content=");
-      var7.append(var10);
+      var7.append(var3);
       var7.append(", channelName=");
-      var7.append(var8);
+      var7.append(var13);
       var7.append(", username=");
-      var7.append(var4);
+      var7.append(var6);
       var7.append(", usernameColor=");
       var7.append(var1);
       var7.append(", roleColor=");
-      var7.append(var6);
+      var7.append(var10);
       var7.append(", shouldShowRoleDot=");
       var7.append(var2);
       var7.append(", avatarURL=");
-      var7.append(var11);
+      var7.append(var8);
       var7.append(", communicationDisabled=");
-      var7.append(var5);
+      var7.append(var11);
       var7.append(")");
       return var7.toString();
    }

@@ -1,6 +1,6 @@
 package com.discord.app_icon
 
-import G9.a
+import Ia.a
 import kotlin.enums.EnumEntries
 
 public enum class AppIcon(id: String, aliasSuffix: String) {

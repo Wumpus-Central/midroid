@@ -23,7 +23,7 @@ internal class StickerViewManagerAPNG : SimpleViewManager<StickerView>, APNGStic
       return this.delegate;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "APNGStickerView";
    }
 

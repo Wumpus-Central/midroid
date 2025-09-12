@@ -49,16 +49,16 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
       val var3: ReactApplicationContext = var0.getReactApplicationContext();
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
       val var6: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
-      val var7: java.util.Iterator = var4.iterator();
+      val var5: java.util.Iterator = var4.iterator();
 
-      while (var7.hasNext()) {
-         val var5: ReadableMap = var1.getMap((var7 as I).nextInt());
+      while (var5.hasNext()) {
+         val var7: ReadableMap = var1.getMap((var5 as L).nextInt());
          var6.add(
             new Rect(
-               SizeUtilsKt.getDpToPx(var5.getInt("left")),
-               SizeUtilsKt.getDpToPx(var5.getInt("top")),
-               SizeUtilsKt.getDpToPx(var5.getInt("right")),
-               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
+               SizeUtilsKt.getDpToPx(var7.getInt("left")),
+               SizeUtilsKt.getDpToPx(var7.getInt("top")),
+               SizeUtilsKt.getDpToPx(var7.getInt("right")),
+               SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
             )
          );
       }

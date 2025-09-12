@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -43,7 +43,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    private fun LinkContextData.toMap(): WritableNativeMap {
-      val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
+      val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
       val var2: LinkContextData = this.target;
       if (this.target is LinkContextData.LinkUrl) {
          NativeMapExtensionsKt.put(var5, "url", (this.target as LinkContextData.LinkUrl).getUrl());
@@ -77,7 +77,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindGuildMenu).getAction());
          val var3: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
          if (var3 != null) {
-            val var7: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
+            val var7: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
             NativeMapExtensionsKt.put(var7, "channel_id", ChannelId.toString-impl(var3.getChannelId-o4g7jtM()));
             val var9: GuildId = var3.getGuildId-qOKuAAo();
             if (var9 != null) {
@@ -93,13 +93,17 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             var5,
             "message",
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("id", (this.target as LinkContextData.BindDismissMessage).getMessage().getId-3Eiw7ao()),
-               s.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindDismissMessage).getMessage().getChannelId-o4g7jtM())),
-               s.a("loggingName", (this.target as LinkContextData.BindDismissMessage).getMessage().getLoggingName()),
-               s.a(
-                  "author",
-                  NativeMapExtensionsKt.nativeMapOf(s.a("username", (this.target as LinkContextData.BindDismissMessage).getMessage().getAuthor().getUsername()))
-               )
+               new Pair[]{
+                  v.a("id", (this.target as LinkContextData.BindDismissMessage).getMessage().getId-3Eiw7ao()),
+                  v.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindDismissMessage).getMessage().getChannelId-o4g7jtM())),
+                  v.a("loggingName", (this.target as LinkContextData.BindDismissMessage).getMessage().getLoggingName()),
+                  v.a(
+                     "author",
+                     NativeMapExtensionsKt.nativeMapOf(
+                        new Pair[]{v.a("username", (this.target as LinkContextData.BindDismissMessage).getMessage().getAuthor().getUsername())}
+                     )
+                  )
+               }
             )
          );
       } else if (this.target is LinkContextData.BindOpenRoleSubscriptionOverview) {
@@ -116,9 +120,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             var5,
             "message",
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("id", (this.target as LinkContextData.BindUserSurvey).getMessage().getId-3Eiw7ao()),
-               s.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindUserSurvey).getMessage().getChannelId-o4g7jtM())),
-               s.a("loggingName", (this.target as LinkContextData.BindUserSurvey).getMessage().getLoggingName())
+               new Pair[]{
+                  v.a("id", (this.target as LinkContextData.BindUserSurvey).getMessage().getId-3Eiw7ao()),
+                  v.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindUserSurvey).getMessage().getChannelId-o4g7jtM())),
+                  v.a("loggingName", (this.target as LinkContextData.BindUserSurvey).getMessage().getLoggingName())
+               }
             )
          );
          NativeMapExtensionsKt.put(var5, "notificationType", (this.target as LinkContextData.BindUserSurvey).getNotificationType());
@@ -141,11 +147,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             NativeMapExtensionsKt.put(var5, "addSpace", var8);
          }
       } else {
-         val var11: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Missing target type data: ");
-         var4.append(var2);
-         Log.e$default(var11, "TapLink", var4.toString(), null, 4, null);
+         val var4: Log = Log.INSTANCE;
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("Missing target type data: ");
+         var11.append(var2);
+         Log.e$default(var4, "TapLink", var11.toString(), null, 4, null);
       }
 
       return var5;
@@ -178,15 +184,16 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
+         var var4: TapLinkData;
          label37: {
-            var1 = var1;
+            var4 = var1 as TapLinkData;
             if (this.messageId == null) {
-               if (var1.messageId == null) {
+               if (var4.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var1.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+            } else if (var4.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                break label37;
             }
 
@@ -195,12 +202,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!(this.title == var1.title)) {
+         } else if (!(this.title == var4.title)) {
             return false;
-         } else if (!(this.target == var1.target)) {
+         } else if (!(this.target == var4.target)) {
             return false;
          } else {
-            return this.content == var1.content;
+            return this.content == var4.content;
          }
       }
    }
@@ -228,11 +235,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       return ((var1 * 31 + var2) * 31 + var3) * 31 + this.content.hashCode();
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       if (this.target != null) {
          val var2: WritableNativeMap = this.toMap(this.target);
          if (var2 != null) {
-            return NativeMapExtensionsKt.nativeMapOf(s.a("data", var2));
+            return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("data", var2)});
          }
       }
 
@@ -244,14 +251,21 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a(
-            "data",
-            NativeMapExtensionsKt.nativeMapOf(
-               s.a("messageId", var5),
-               s.a("url", this.target),
-               s.a("node", NativeMapExtensionsKt.nativeMapOf(s.a("title", this.title), s.a("target", this.target), s.a("content", this.content)))
+         new Pair[]{
+            v.a(
+               "data",
+               NativeMapExtensionsKt.nativeMapOf(
+                  new Pair[]{
+                     v.a("messageId", var5),
+                     v.a("url", this.target),
+                     v.a(
+                        "node",
+                        NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("title", this.title), v.a("target", this.target), v.a("content", this.content)})
+                     )
+                  }
+               )
             )
-         )
+         }
       );
    }
 
@@ -263,18 +277,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var5: java.lang.String = this.title;
-      val var4: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
+      val var4: java.lang.String = this.title;
+      val var3: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapLinkData(messageId=");
       var2.append(var6);
       var2.append(", title=");
-      var2.append(var5);
-      var2.append(", target=");
       var2.append(var4);
-      var2.append(", content=");
+      var2.append(", target=");
       var2.append(var3);
+      var2.append(", content=");
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

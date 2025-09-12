@@ -11,11 +11,11 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class PortalsPackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
+   public override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
       return CollectionsKt.q(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
    }
 
-   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       val var3: PortalFromNativeModule;
       if (var1 == "NativePortalFromNativeModule") {
          var3 = new PortalFromNativeModule(var2);
@@ -26,7 +26,7 @@ public class PortalsPackage : BaseReactPackage {
       return var3;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(CollectionsKt.e("NativePortalFromNativeModule"), false, 2, null);
    }
 }

@@ -3,9 +3,9 @@ package com.discord.chat.bridge.contentnode
 import com.discord.chat.bridge.rolecolors.RoleColors
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 @SourceDebugExtension(["SMAP\nLinkContentNode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,268:1\n8#2:269\n*S KotlinDebug\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n*L\n66#1:269\n*E\n"])
 public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode() {
    public final val content: List<ContentNode>

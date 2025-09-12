@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.scroll
 
-import G9.a
+import Ia.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = ChatScrollType.Serializer::class)
+@m(with = ChatScrollType.Serializer::class)
 public enum class ChatScrollType(serialNumber: Int) : IntEnum {
    FOCUS_ONLY(1),
    SCROLL(0)

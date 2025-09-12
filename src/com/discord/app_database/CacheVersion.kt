@@ -1,9 +1,9 @@
 package com.discord.app_database
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class CacheVersion(version: String) {
    public final val version: String
 

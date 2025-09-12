@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import A9.n
+import Ca.p
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -31,7 +31,7 @@ public object ThemeManager {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new n();
+                  throw new p();
                }
 
                var var7: Resources = resources;

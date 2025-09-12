@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
 
-@mb.g
+@pc.m
 public data class BuildOverrideCookieBuild(type: String, id: String) {
    public final val type: String
    public final val id: String
@@ -48,7 +48,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("type", this.type), s.a("id", this.id));
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("type", this.type), v.a("id", this.id)});
    }
 
    public override fun toString(): String {

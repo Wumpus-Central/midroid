@@ -1,6 +1,6 @@
 package com.discord.lifecycle
 
-import A9.s
+import Ca.v
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
@@ -15,7 +15,7 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("onHostDestroy", OnHostDestroyEvent::class));
+      this.reactEvents = new ReactEvents(v.a("onHostDestroy", OnHostDestroyEvent::class));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final AppLifecycleModule this$0;
 
@@ -23,6 +23,7 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
             this.this$0 = var1;
          }
 
+         @Override
          public void onHostDestroy() {
             if (AppLifecycleModule.access$getReactListenerCount$p(this.this$0) != 0) {
                val var1: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
@@ -31,15 +32,17 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
             }
          }
 
+         @Override
          public void onHostPause() {
          }
 
+         @Override
          public void onHostResume() {
          }
       };
    }
 
-   public override fun addListener(type: String) {
+   public open fun addListener(type: String) {
       this.reactListenerCount++;
    }
 
@@ -53,7 +56,7 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
       this.reactContext.removeLifecycleEventListener(this.reactLifecycleEventListener);
    }
 
-   public override fun removeListeners(count: Double) {
+   public open fun removeListeners(count: Double) {
       this.reactListenerCount -= (int)var1;
    }
 }

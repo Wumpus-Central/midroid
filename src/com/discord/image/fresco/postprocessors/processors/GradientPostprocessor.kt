@@ -1,7 +1,7 @@
 package com.discord.image.fresco.postprocessors.processors
 
-import A9.n
-import A9.s
+import Ca.p
+import Ca.v
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.LinearGradient
@@ -24,27 +24,27 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          if (var10 != 2) {
             if (var10 != 3) {
                if (var10 != 4) {
-                  throw new n();
+                  throw new p();
                }
 
-               var17 = s.a(
+               var17 = v.a(
                   new GradientPostprocessor.Companion.Point((float)var1.getWidth() / 2.0F, (float)var1.getHeight()),
                   new GradientPostprocessor.Companion.Point((float)var1.getWidth() / 2.0F, 0.0F)
                );
             } else {
-               var17 = s.a(
+               var17 = v.a(
                   new GradientPostprocessor.Companion.Point((float)var1.getWidth() / 2.0F, 0.0F),
                   new GradientPostprocessor.Companion.Point((float)var1.getWidth() / 2.0F, (float)var1.getHeight())
                );
             }
          } else {
-            var17 = s.a(
+            var17 = v.a(
                new GradientPostprocessor.Companion.Point((float)var1.getWidth(), (float)var1.getHeight() / 2.0F),
                new GradientPostprocessor.Companion.Point(0.0F, (float)var1.getHeight() / 2.0F)
             );
          }
       } else {
-         var17 = s.a(
+         var17 = v.a(
             new GradientPostprocessor.Companion.Point(0.0F, (float)var1.getHeight() / 2.0F),
             new GradientPostprocessor.Companion.Point((float)var1.getWidth(), (float)var1.getHeight() / 2.0F)
          );
@@ -53,8 +53,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var3: Float = var1.getWidth();
-      val var7: Float = var1.getHeight();
+      val var6: Float = var1.getWidth();
+      val var9: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -67,7 +67,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var3, var7, var15);
+      var18.drawRect(0.0F, 0.0F, var6, var9, var15);
    }
 
    public companion object {

@@ -2,9 +2,9 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row() {
    public open val index: Int
    public open val changeType: ChangeType
@@ -64,19 +64,19 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
    public override fun toString(): String {
       val var1: Int = this.index;
       val var5: ChangeType = this.changeType;
-      val var4: LoadMoreButton = this.button;
+      val var3: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadingRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var5);
-      var3.append(", button=");
-      var3.append(var4);
-      var3.append(", isLoading=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LoadingRow(index=");
+      var4.append(var1);
+      var4.append(", changeType=");
+      var4.append(var5);
+      var4.append(", button=");
+      var4.append(var3);
+      var4.append(", isLoading=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

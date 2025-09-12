@@ -1,7 +1,7 @@
 package com.discord.overlapping_circles
 
-import A9.j
-import A9.m
+import Ca.l
+import Ca.o
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -57,7 +57,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       this.imageLoadingColorDrawable = new ColorDrawable(this.imageLoadingColor);
       val var3: IntArray = R.styleable.OverlappingCirclesView;
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
-      this.maxItems = d.d(var4.getInt(R.styleable.OverlappingCirclesView_oc_maxItems, this.maxItems), 0);
+      this.maxItems = e.e(var4.getInt(R.styleable.OverlappingCirclesView_oc_maxItems, this.maxItems), 0);
       this.overlapPx = var4.getDimensionPixelSize(R.styleable.OverlappingCirclesView_oc_overlap, this.overlapPx);
       this.separatorSizePx = var4.getDimensionPixelSize(R.styleable.OverlappingCirclesView_oc_separation, this.separatorSizePx);
       this.imageLoadingColor = var4.getColor(R.styleable.OverlappingCirclesView_oc_circleBgColor, this.imageLoadingColor);
@@ -85,7 +85,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var8: java.util.Iterator = CollectionsKt.M0(var1, var3).iterator();
+      val var8: java.util.Iterator = CollectionsKt.P0(var1, var3).iterator();
 
       for (int var12 = 0; var8.hasNext(); var12++) {
          var var7: OverlappingItem = (OverlappingItem)var8.next();
@@ -107,9 +107,9 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
                var14 = var7.getImageUri();
             } else {
                val var9: Context = this.getContext();
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
-               val var15: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var10.getUri(var15));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var10: Context = this.getContext();
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
             }
 
             val var21: Context = this.getContext();
@@ -131,12 +131,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
       if (var2) {
          val var18: Context = this.getContext();
-         val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var19: LayoutParams = new LayoutParams(-2, -1);
-         var19.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var20, var19);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var19, var11);
       }
    }
 
@@ -194,7 +194,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
                val var3: android.view.ViewGroup.LayoutParams = this.this$0.getLayoutParams();
                if (var3 != null) {
                   val var4: LayoutParams = var3 as LayoutParams;
-                  (var3 as LayoutParams).width = d.d(var1.getWidth(), var1.getHeight());
+                  (var3 as LayoutParams).width = e.e(var1.getWidth(), var1.getHeight());
                   var2.setLayoutParams(var4);
                } else {
                   throw new NullPointerException("null cannot be cast to non-null type android.widget.LinearLayout.LayoutParams");
@@ -287,7 +287,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.showSeparation = var3;
          this.overlapPx = var4;
          this.radius = var6 / 2.0F;
-         this.separatorClipPath$delegate = j.a(m.i, new a(this, var5));
+         this.separatorClipPath$delegate = l.a(o.i, new a(this, var5));
          val var7: Paint = new Paint();
          var7.setColor(var2);
          var7.setAntiAlias(true);

@@ -115,7 +115,7 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                var20.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
             }
 
-            var8 = CollectionsKt.e0(var20);
+            var8 = CollectionsKt.g0(var20);
             val var26: Component = var1.getAccessory().getComponent();
             val var23: FlexboxLayout = this.binding.sectionLayoutBox;
             val var24: ComponentView = var2.getConfiguredComponentView(var26, var3, var23, 1);

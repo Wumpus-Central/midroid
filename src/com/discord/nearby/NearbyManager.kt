@@ -5,11 +5,11 @@ import com.google.android.gms.nearby.messages.Message
 import com.google.android.gms.nearby.messages.SubscribeOptions
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.Intrinsics
-import m6.d
-import m6.h
-import m6.i
+import o7.d
+import o7.h
+import o7.i
 
-internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : m6.b {
+internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : o7.b {
    private final val onFoundUser: (String) -> Unit
    private final val onLostUser: (String) -> Unit
    private final val onError: (String) -> Unit
@@ -21,7 +21,7 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       this.onFoundUser = var1;
       this.onLostUser = var2;
       this.onError = var3;
-      val var4: SubscribeOptions = new com.google.android.gms.nearby.messages.SubscribeOptions.a().b(i.r).a();
+      val var4: SubscribeOptions = new SubscribeOptions.a().b(i.x).a();
       this.subscribeOptions = var4;
       this.statusCallback = new h(this) {
          final NearbyManager this$0;
@@ -30,6 +30,7 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
             this.this$0 = var1;
          }
 
+         @Override
          public void onPermissionChanged(boolean var1) {
             super.onPermissionChanged(var1);
             if (!var1) {
@@ -40,8 +41,8 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
    }
 
    public fun disableNearby(context: Context) {
-      val var3: d = j6.a.a(var1);
-      var3.i(this.statusCallback);
+      val var3: d = l7.a.a(var1);
+      var3.h(this.statusCallback);
       var var4: Message = this.outboundMessage;
       if (this.outboundMessage == null) {
          Intrinsics.throwUninitializedPropertyAccessException("outboundMessage");
@@ -49,7 +50,7 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       }
 
       var3.j(var4);
-      var3.l(this);
+      var3.c(this);
    }
 
    public fun enableNearby(context: Context) {
@@ -59,23 +60,23 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var2 = null;
       }
 
-      val var4: d = j6.a.a(var1);
+      val var4: d = l7.a.a(var1);
       var4.k(this.statusCallback);
-      var4.d(var2);
-      var4.c(this, this.subscribeOptions);
+      var4.f(var2);
+      var4.e(this, this.subscribeOptions);
    }
 
-   public open fun onFound(message: Message) {
+   public override fun onFound(message: Message) {
       super.onFound(var1);
       val var2: Function1 = this.onFoundUser;
-      val var3: ByteArray = var1.o();
+      val var3: ByteArray = var1.q();
       var2.invoke(new java.lang.String(var3, Charsets.UTF_8));
    }
 
-   public open fun onLost(message: Message) {
+   public override fun onLost(message: Message) {
       super.onLost(var1);
       val var2: Function1 = this.onLostUser;
-      val var3: ByteArray = var1.o();
+      val var3: ByteArray = var1.q();
       var2.invoke(new java.lang.String(var3, Charsets.UTF_8));
    }
 

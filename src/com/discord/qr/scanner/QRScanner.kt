@@ -71,7 +71,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       this.codeScanner.g0();
    }
 
-   public override fun onDecoded(result: Result) {
+   public open fun onDecoded(result: Result) {
       val var2: java.lang.String = var1.f();
       if (var2 != null && URLUtil.isValidUrl(var2)) {
          this.onCodeFound.invoke(var2);
@@ -85,7 +85,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       this.codeScanner.U();
    }
 
-   public override fun onError(thrown: Throwable) {
+   public open fun onError(thrown: Throwable) {
       CrashReporting.captureException$default(CrashReporting.INSTANCE, var1, false, 2, null);
       this.onCodeNotFound.invoke();
    }

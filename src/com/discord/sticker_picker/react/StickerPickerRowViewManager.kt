@@ -1,6 +1,6 @@
 package com.discord.sticker_picker.react
 
-import A9.s
+import Ca.v
 import com.discord.reactevents.ReactEvents
 import com.discord.sticker_picker.StickerPickerRowView
 import com.discord.sticker_picker.react_events.OnLongPressStickerEvent
@@ -18,7 +18,7 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
    private final val delegate: StickerPickerRowViewManagerDelegate<StickerPickerRowView, StickerPickerRowViewManager> =
       new StickerPickerRowViewManagerDelegate(this)
       private final val reactEvents: ReactEvents =
-      new ReactEvents(s.a("onPressSticker", OnPressStickerEvent::class), s.a("onLongPressSticker", OnLongPressStickerEvent::class))
+      new ReactEvents(v.a("onPressSticker", OnPressStickerEvent::class), v.a("onLongPressSticker", OnLongPressStickerEvent::class))
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$0`(var0: StickerPickerRowViewManager, var1: ThemedReactContext, var2: StickerPickerRowView, var3: java.lang.String): Unit {
@@ -43,11 +43,11 @@ internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowV
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "StickerPickerRowView";
    }
 

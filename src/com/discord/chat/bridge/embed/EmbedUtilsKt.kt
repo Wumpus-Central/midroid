@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import A9.s
+import Ca.v
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
@@ -59,12 +59,12 @@ public fun Embed.getMediaType(): EmbedType {
 
 public fun Embed.getTag(): String {
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var2: java.lang.String = var0.getType().name();
-   val var3: StringBuilder = new StringBuilder();
-   var3.append(var1);
-   var3.append(": ");
-   var3.append(var2);
-   return var3.toString();
+   val var3: java.lang.String = var0.getType().name();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(": ");
+   var2.append(var3);
+   return var2.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
@@ -74,13 +74,13 @@ public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
       if (var1 != 2) {
          val var6: EmbedMedia = var0.getImage();
          if (var6 != null) {
-            val var11: Pair = s.a(var6.getWidth(), var6.getHeight());
+            val var11: Pair = v.a(var6.getWidth(), var6.getHeight());
             if (var11 != null) {
                return var11;
             }
          }
 
-         var7 = s.a(null, null);
+         var7 = v.a(null, null);
       } else if (isInlineMedia(var0)) {
          val var12: EmbedMedia = var0.getVideo();
          val var13: Int;
@@ -96,11 +96,11 @@ public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
             var8 = var20.getHeight();
          }
 
-         var7 = s.a(var13, var8);
+         var7 = v.a(var13, var8);
       } else {
          val var14: EmbedThumbnail = var0.getThumbnail();
          if (var14 != null) {
-            val var15: Pair = s.a(var14.getWidth(), var14.getHeight());
+            val var15: Pair = v.a(var14.getWidth(), var14.getHeight());
             if (var15 != null) {
                return var15;
             }
@@ -120,7 +120,7 @@ public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
             var9 = var22.getHeight();
          }
 
-         var7 = s.a(var17, var9);
+         var7 = v.a(var17, var9);
       }
    } else {
       val var18: EmbedThumbnail = var0.getThumbnail();
@@ -137,7 +137,7 @@ public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
          var10 = var21.getHeight();
       }
 
-      var7 = s.a(var19, var10);
+      var7 = v.a(var19, var10);
    }
 
    return var7;
@@ -210,20 +210,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var10: java.lang.String = var21.getEmbedUrl();
-         if (var10 == null) {
+         val var22: java.lang.String = var21.getEmbedUrl();
+         if (var22 == null) {
             return null;
          }
 
-         val var22: java.lang.String = getTag(var0);
-         val var11: MediaType = MediaType.IMAGE;
+         val var25: java.lang.String = getTag(var0);
+         val var10: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
-            var10,
+            var22,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var22,
-            var11,
+            var25,
+            var10,
             var4,
             ChannelId.box-impl(var1),
             var3,

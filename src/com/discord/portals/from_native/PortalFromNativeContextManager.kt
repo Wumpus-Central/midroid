@@ -2,7 +2,7 @@ package com.discord.portals.from_native
 
 import android.view.View
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
-import fb.x
+import ic.F
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlinx.coroutines.flow.Flow
@@ -15,7 +15,7 @@ public object PortalFromNativeContextManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = x.a(null);
+      val var0: MutableStateFlow = F.a(null);
       _portalContextIdsFlow = var0;
       portalContextIdsFlow = var0;
    }
@@ -67,14 +67,14 @@ public object PortalFromNativeContextManager {
    }
 
    public fun registerView(portal: Double, portalView: PortalHolderViewGroup) {
-      val var4: PortalFromNativeContext = portalContextMap.get(var1);
-      if (var4 != null) {
-         val var5: View = var4.getView().get();
-         if (var5 != null) {
-            var4.getRemoveViewFromParent().invoke(var5);
-            var3.addView(var5);
+      val var5: PortalFromNativeContext = portalContextMap.get(var1);
+      if (var5 != null) {
+         val var4: View = var5.getView().get();
+         if (var4 != null) {
+            var5.getRemoveViewFromParent().invoke(var4);
+            var3.addView(var4);
             ViewMeasureExtensionsKt.measureAndLayout(var3);
-            var4.getOnViewAddedToPortal().invoke(var5);
+            var5.getOnViewAddedToPortal().invoke(var4);
             _portalContextIdsFlow.setValue(PortalFromNativeContextManager.Event.PortalRegistered.INSTANCE);
          }
       }

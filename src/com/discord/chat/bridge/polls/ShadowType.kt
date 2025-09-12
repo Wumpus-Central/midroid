@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.polls
 
-import G9.a
+import Ia.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g(with = ShadowType.Serializer::class)
+@m(with = ShadowType.Serializer::class)
 public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
    HIGH(2, 20),
    LOW(1, 4),

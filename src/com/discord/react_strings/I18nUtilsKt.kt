@@ -2,11 +2,11 @@
 
 package com.discord.react_strings
 
-import Y1.b
-import Y1.c
-import Y1.d
-import Y1.e
-import Y1.f
+import Y2.b
+import Y2.c
+import Y2.d
+import Y2.e
+import Y2.f
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView

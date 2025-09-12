@@ -9,7 +9,7 @@ import kotlin.reflect.KCallable
 import kotlin.reflect.KClass
 
 public fun getPIIFieldNames(kClass: KClass<*>): List<String> {
-   val var5: java.util.Collection = var0.getMembers();
+   val var5: java.lang.Iterable = var0.getMembers();
    val var1: ArrayList = new ArrayList();
 
    for (Object var3 : var5) {

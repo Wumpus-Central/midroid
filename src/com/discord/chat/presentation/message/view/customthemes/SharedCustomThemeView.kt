@@ -42,15 +42,15 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var5: SharedCustomThemeViewBinding = SharedCustomThemeViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
       this.nitroWheelIcon = new SimpleDraweeView(var1);
-      val var4: View = var5.getRoot();
-      val var6: GradientDrawable = new GradientDrawable();
-      var6.setShape(0);
-      var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
-      var6.setColor(ThemeManagerKt.getTheme().getBgModStrong());
-      var6.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
-      var4.setBackground(var6);
+      val var6: View = var5.getRoot();
+      val var4: GradientDrawable = new GradientDrawable();
+      var4.setShape(0);
+      var4.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
+      var4.setColor(ThemeManagerKt.getTheme().getBgModStrong());
+      var4.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
+      var6.setBackground(var4);
       val var3: Int = SizeUtilsKt.getDpToPx(12);
-      var4.setPadding(var3, var3, var3, var3);
+      var6.setPadding(var3, var3, var3, var3);
    }
 
    @JvmStatic
@@ -75,11 +75,11 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var16: java.util.List = var2.getColors();
       val var8: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var6 : var16) {
-         val var17: StringBuilder = new StringBuilder();
-         var17.append("#");
-         var17.append(var6);
-         var8.add(var17.toString());
+      for (java.lang.String var7 : var16) {
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("#");
+         var6.append(var7);
+         var8.add(var6.toString());
       }
 
       var12.setHexColors(var8);
@@ -91,7 +91,7 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimarySemibold);
       this.binding.previewHeading.setPadding(0, 0, 0, SizeUtilsKt.getDpToPx(6.0F));
       val var10: FlexboxLayout = this.binding.heading;
-      if (!k.n(g0.a(var10), this.nitroWheelIcon)) {
+      if (!k.o(g0.a(var10), this.nitroWheelIcon)) {
          val var11: SimpleDraweeView = this.nitroWheelIcon;
          val var13: LayoutParams = new LayoutParams(SizeUtilsKt.getDpToPx(18.0F), SizeUtilsKt.getDpToPx(13.0F));
          var13.setMarginStart(SizeUtilsKt.getDpToPx(4.0F));
@@ -112,12 +112,12 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
-      for (java.lang.String var5 : var4) {
-         val var6: TextView = new TextView(this.getContext());
-         var6.setText(var5);
-         var6.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var6.setTextSize(14.0F);
-         var3.add(var6);
+      for (java.lang.String var8 : var4) {
+         val var5: TextView = new TextView(this.getContext());
+         var5.setText(var8);
+         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var5.setTextSize(14.0F);
+         var3.add(var5);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

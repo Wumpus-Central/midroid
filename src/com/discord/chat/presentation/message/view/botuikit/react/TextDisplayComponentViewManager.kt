@@ -40,14 +40,16 @@ import org.json.JSONObject
 public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComponentView> {
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         A9.s.a("onTapLink", TapLinkData::class),
-         A9.s.a("onLongPressLink", LongPressLinkData::class),
-         A9.s.a("onTapAttachmentLink", TapAttachmentLinkData::class),
-         A9.s.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
-         A9.s.a("onTapMention", TapMentionData::class),
-         A9.s.a("onTapTimestamp", TapTimestampEvent::class),
-         A9.s.a("onTapInlineCode", TapInlineCodeEvent::class),
-         A9.s.a("onTapEmoji", TapEmojiData::class)
+         new Pair[]{
+            Ca.v.a("onTapLink", TapLinkData::class),
+            Ca.v.a("onLongPressLink", LongPressLinkData::class),
+            Ca.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
+            Ca.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
+            Ca.v.a("onTapMention", TapMentionData::class),
+            Ca.v.a("onTapTimestamp", TapTimestampEvent::class),
+            Ca.v.a("onTapInlineCode", TapInlineCodeEvent::class),
+            Ca.v.a("onTapEmoji", TapEmojiData::class)
+         }
       )
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
@@ -175,9 +177,9 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    private fun tryConfigure(view: TextDisplayComponentView) {
       val var2: PartialData = this.viewToDataMapping.get(var1);
       if (var2 != null) {
-         val var3: Data = var2.toData();
-         if (var3 != null) {
-            var1.configure(var3.getComponent(), this.createTextDisplayComponentContext(var1, var3));
+         val var4: Data = var2.toData();
+         if (var4 != null) {
+            var1.configure(var4.getComponent(), this.createTextDisplayComponentContext(var1, var4));
             ViewMeasureExtensionsKt.measureAndLayout(var1);
          }
       }
@@ -263,13 +265,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       } else {
          try {
             val var12: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            val var18: java.lang.String = (var16.getClass()::class).getSimpleName();
-            var4 = new StringBuilder();
-            var4.append("Expected ");
-            var4.append(var12);
-            var4.append(" but got ");
-            var4.append(var18);
-            throw new IllegalStateException(var4.toString().toString());
+            val var23: java.lang.String = (var16.getClass()::class).getSimpleName();
+            val var18: StringBuilder = new StringBuilder();
+            var18.append("Expected ");
+            var18.append(var12);
+            var18.append(" but got ");
+            var18.append(var23);
+            throw new IllegalStateException(var18.toString().toString());
          } catch (var8: Exception) {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
             val var17: java.lang.String = var8.getMessage();

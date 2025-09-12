@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -47,10 +47,15 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
       return this.sticker.hashCode() * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("messageId", this.messageId),
-         s.a("sticker", NativeMapExtensionsKt.nativeMapOf(s.a("id", java.lang.String.valueOf(this.sticker.getId())), s.a("name", this.sticker.getName())))
+         new Pair[]{
+            v.a("messageId", this.messageId),
+            v.a(
+               "sticker",
+               NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("id", java.lang.String.valueOf(this.sticker.getId())), v.a("name", this.sticker.getName())})
+            )
+         }
       );
    }
 

@@ -1,5 +1,6 @@
 package com.discord.billing
 
+import Ca.v
 import com.discord.billing.react.events.BillingManagerConnectionStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseUpdated
@@ -24,9 +25,11 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         A9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
-         A9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
-         A9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         new Pair[]{
+            v.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
+            v.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
+            v.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         }
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
@@ -75,9 +78,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var10: j = new j(var4);
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      var1.getProducts(var7, var3, var4, var10, var9);
+      val var9: j = new j(var4);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      var1.getProducts(var7, var3, var4, var9, var10);
    }
 
    @JvmStatic

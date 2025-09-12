@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import x1.a;
 
 public final class MediaVisualPlaceholderViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class MediaVisualPlaceholderViewBinding implements ViewBinding {
    @NonNull
    public static MediaVisualPlaceholderViewBinding bind(@NonNull View var0) {
       int var1 = R.id.container;
-      ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-      if (var3 != null) {
+      ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.image_invalid;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
-            return new MediaVisualPlaceholderViewBinding(var0, var3, var2);
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
+            return new MediaVisualPlaceholderViewBinding(var0, var2, var3);
          }
       }
 

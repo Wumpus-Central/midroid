@@ -3,11 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
    public final val channelId: String
    public final val commandId: String
@@ -73,24 +74,24 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
       return ((this.channelId.hashCode() * 31 + this.commandId.hashCode()) * 31 + this.commandName.hashCode()) * 31 + this.commandKey.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.commandId;
-      val var2: java.lang.String = this.commandName;
-      val var4: java.lang.String = this.commandKey;
+      val var3: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.commandId;
+      val var4: java.lang.String = this.commandName;
+      val var2: java.lang.String = this.commandKey;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapCommandData(channelId=");
-      var5.append(var1);
-      var5.append(", commandId=");
       var5.append(var3);
+      var5.append(", commandId=");
+      var5.append(var1);
       var5.append(", commandName=");
-      var5.append(var2);
-      var5.append(", commandKey=");
       var5.append(var4);
+      var5.append(", commandKey=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }

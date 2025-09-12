@@ -1,6 +1,6 @@
 package com.discord.ads
 
-import A9.s
+import Ca.v
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -44,67 +44,73 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
          val var3: java.lang.String = var4.getMessage();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Error getting google advertising ID info: ");
-         var5.append(var3);
-         var0.y(new Exception(var5.toString(), var4));
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Error getting google advertising ID info: ");
+         var2.append(var3);
+         var0.y(new Exception(var2.toString(), var4));
       }
    }
 
    private fun resolveWithNullId(promise: Promise) {
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("googleAdvertisingId", null), s.a("isLimitAdTrackingEnabled", java.lang.Boolean.TRUE)));
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("googleAdvertisingId", null), v.a("isLimitAdTrackingEnabled", java.lang.Boolean.TRUE)}));
    }
 
    public override fun getGoogleAdvertisingId(promise: Promise) {
       this.cleanupCurrentOperation();
       val var2: ListenableFuture = this.getAdvertisingIdInfoAsync();
       this.currentOperation.set(var2);
-      d.a(var2, new c(this, var1) {
-         final Promise $promise;
-         final AdsModule this$0;
+      d.a(
+         var2,
+         new c(this, var1) {
+            final Promise $promise;
+            final AdsModule this$0;
 
-         {
-            this.this$0 = var1;
-            this.$promise = var2;
-         }
-
-         public void onFailure(java.lang.Throwable var1) {
-            AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
-            if (var1 is CancellationException) {
-               Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
-               AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
-            } else {
-               val var2: Log = Log.INSTANCE;
-               val var3: java.lang.String = var1.getMessage();
-               val var4: StringBuilder = new StringBuilder();
-               var4.append("Error getting google advertising ID: ");
-               var4.append(var3);
-               var2.e("AdsModule", var4.toString(), var1);
-               this.$promise.reject("err", "Failed to get google advertising ID", var1);
-            }
-         }
-
-         public void onSuccess(Info var1) {
-            AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
-            val var7: java.lang.String = var1.a();
-            val var2: Boolean = var1.b();
-            val var5: java.lang.String;
-            if (var2) {
-               var5 = null;
-            } else {
-               var5 = var7;
+            {
+               this.this$0 = var1;
+               this.$promise = var2;
             }
 
-            val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(s.a("googleAdvertisingId", var5), s.a("isLimitAdTrackingEnabled", var2));
-            if (var2) {
-               Log.i$default(Log.INSTANCE, "AdsModule", "User has limited ad tracking, returning null ID", null, 4, null);
-            } else {
-               Log.i$default(Log.INSTANCE, "AdsModule", "Successfully retrieved google advertising ID", null, 4, null);
+            public void onFailure(java.lang.Throwable var1) {
+               AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
+               if (var1 is CancellationException) {
+                  Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
+                  AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
+               } else {
+                  val var2: Log = Log.INSTANCE;
+                  val var3: java.lang.String = var1.getMessage();
+                  val var4: StringBuilder = new StringBuilder();
+                  var4.append("Error getting google advertising ID: ");
+                  var4.append(var3);
+                  var2.e("AdsModule", var4.toString(), var1);
+                  this.$promise.reject("err", "Failed to get google advertising ID", var1);
+               }
             }
 
-            this.$promise.resolve(var6);
-         }
-      }, this.adExecutor);
+            public void onSuccess(Info var1) {
+               AdsModule.access$getCurrentOperation$p(this.this$0).set(null);
+               val var7: java.lang.String = var1.a();
+               val var2: Boolean = var1.b();
+               val var5: java.lang.String;
+               if (var2) {
+                  var5 = null;
+               } else {
+                  var5 = var7;
+               }
+
+               val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+                  new Pair[]{v.a("googleAdvertisingId", var5), v.a("isLimitAdTrackingEnabled", var2)}
+               );
+               if (var2) {
+                  Log.i$default(Log.INSTANCE, "AdsModule", "User has limited ad tracking, returning null ID", null, 4, null);
+               } else {
+                  Log.i$default(Log.INSTANCE, "AdsModule", "Successfully retrieved google advertising ID", null, 4, null);
+               }
+
+               this.$promise.resolve(var6);
+            }
+         },
+         this.adExecutor
+      );
    }
 
    public open fun invalidate() {

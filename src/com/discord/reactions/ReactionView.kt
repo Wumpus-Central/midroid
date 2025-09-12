@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
+import com.discord.emoji.RenderableEmoji.CustomWithEmojiId
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.ids.IdUtilsKt
@@ -66,7 +67,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = N9.a.c(var2.getOpacity() * (float)255);
+         var3 = Pa.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -74,7 +75,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          if (var2 != null) {
             val var5: java.lang.String = var2.getBackgroundColor();
             if (var5 != null) {
-               var12 = y.c.k(Color.parseColor(var5), var3);
+               var12 = q0.c.k(Color.parseColor(var5), var3);
                break label41;
             }
          }
@@ -215,14 +216,14 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          val var5: java.util.List = StringsKt.split$default(
             I18nUtilsKt.i18nFormat(var2, I18nMessage.REACT_PILL_FULL_LABEL, new a()).toString(), new java.lang.String[]{"{emojiPreview}"}, false, 0, 6, null
          );
-         var var4: java.lang.String = CollectionsKt.j0(var5, 0) as java.lang.String;
+         var var4: java.lang.String = CollectionsKt.l0(var5, 0) as java.lang.String;
          var var3: java.lang.String = "";
          var var6: java.lang.String = var4;
          if (var4 == null) {
             var6 = "";
          }
 
-         var4 = CollectionsKt.j0(var5, 1) as java.lang.String;
+         var4 = CollectionsKt.l0(var5, 1) as java.lang.String;
          if (var4 != null) {
             var3 = var4;
          }
@@ -448,15 +449,14 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             if (var3 != null) {
                val var7: java.lang.Long = StringsKt.o(var3);
                if (var7 != null) {
-                  val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion
-                     .customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
+                  val var8: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
                   if (var8 != null) {
                      return var8;
                   }
                }
             }
 
-            val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
+            val var4: com.discord.emoji.RenderableEmoji.Companion = RenderableEmoji.Companion;
             var3 = var0.getName();
             var var5: java.lang.String = var3;
             if (var3 == null) {

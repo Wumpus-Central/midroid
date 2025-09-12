@@ -1,12 +1,13 @@
 package com.discord.safearea
 
-import A9.s
+import Ca.v
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
 import androidx.activity.o
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsCompat.n
 import com.discord.codegen.NativeSafeAreaInsetsModuleSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -15,10 +16,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import d2.a
-import d2.b
-import d2.c
-import d2.d
+import d3.a
+import d3.b
+import d3.c
+import d3.d
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,105:1\n1#2:106\n*E\n"])
@@ -26,10 +27,10 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    @JvmStatic
    fun `getStableSafeAreaInsets$lambda$1`(var0: Int, var1: Int, var2: Int, var3: Int): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("left", SizeUtilsKt.getPxToDp(var0)),
-         s.a("top", SizeUtilsKt.getPxToDp(var1)),
-         s.a("right", SizeUtilsKt.getPxToDp(var2)),
-         s.a("bottom", SizeUtilsKt.getPxToDp(var3))
+         v.a("left", SizeUtilsKt.getPxToDp(var0)),
+         v.a("top", SizeUtilsKt.getPxToDp(var1)),
+         v.a("right", SizeUtilsKt.getPxToDp(var2)),
+         v.a("bottom", SizeUtilsKt.getPxToDp(var3))
       );
    }
 
@@ -70,7 +71,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       if (var2 != null) {
          val var3: Window = var2.getWindow();
          if (var3 != null) {
-            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.n.f(), var1);
+            WindowInsetsCompatExtensionsKt.setInsetsType(var3, n.f(), var1);
          }
       }
    }
@@ -81,12 +82,12 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       if (var2 != null) {
          val var3: Window = var2.getWindow();
          if (var3 != null) {
-            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.n.g(), var1);
+            WindowInsetsCompatExtensionsKt.setInsetsType(var3, n.g(), var1);
          }
       }
    }
 
-   public override fun getImeInsets(exludeSytemBars: Boolean): Double {
+   public open fun getImeInsets(exludeSytemBars: Boolean): Double {
       val var8: Activity = this.getCurrentActivity();
       var var9: Insets = null;
       val var11: WindowInsetsCompat;
@@ -140,7 +141,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public override fun getStableSafeAreaInsets(): WritableMap {
+   public open fun getStableSafeAreaInsets(): WritableMap {
       val var1: c = new c();
       val var2: Activity = this.getCurrentActivity();
       val var4: Int = 0;
@@ -158,15 +159,15 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public override fun setNavigationBarContrastEnforced(enforced: Boolean) {
+   public open fun setNavigationBarContrastEnforced(enforced: Boolean) {
       UiThreadUtil.runOnUiThread(new a(this, var1));
    }
 
-   public override fun setNavigationBarVisible(visible: Boolean) {
+   public open fun setNavigationBarVisible(visible: Boolean) {
       UiThreadUtil.runOnUiThread(new d(this, var1));
    }
 
-   public override fun setStatusBarVisible(visible: Boolean) {
+   public open fun setStatusBarVisible(visible: Boolean) {
       UiThreadUtil.runOnUiThread(new b(this, var1));
    }
 }

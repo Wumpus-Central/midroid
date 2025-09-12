@@ -1,11 +1,12 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEvent {
    public final val width: Int
    public final val height: Int
@@ -46,8 +47,8 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
       return Integer.hashCode(this.width) * 31 + Integer.hashCode(this.height);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

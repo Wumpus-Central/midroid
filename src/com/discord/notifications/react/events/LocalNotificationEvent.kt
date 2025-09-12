@@ -4,9 +4,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class LocalNotificationEvent(locationNotification: Map<String, String?>) : ReactEvent {
    public final val locationNotification: Map<String, String?>
 

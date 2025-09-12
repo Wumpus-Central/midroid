@@ -3,9 +3,9 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class OnVoiceEvent(level: Float, speaking: Int) : ReactEvent {
    public final val level: Float
    public final val speaking: Int

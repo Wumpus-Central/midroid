@@ -1,6 +1,6 @@
 package com.discord.audio
 
-import A9.s
+import Ca.v
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -23,12 +23,12 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-            val var3: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var2: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var2.emitModuleEvent(var4, var3);
+            val var4: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var4.emitModuleEvent(var3, var2);
          }
 
          @Override
@@ -36,7 +36,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          }
       }
 
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("audio-route-changed", AudioRouteEmitterAudioRouteChanged::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{v.a("audio-route-changed", AudioRouteEmitterAudioRouteChanged::class)})
 
    public fun addListener(type: String) {
    }
@@ -51,8 +51,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          var1.resolve(
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
-               s.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
+               new Pair[]{
+                  v.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
+                  v.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
+               }
             )
          );
       }

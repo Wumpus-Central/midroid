@@ -1,7 +1,7 @@
 package com.discord.foreground_service.utils
 
-import A9.n
-import K1.a
+import Ca.p
+import K2.a
 import android.app.Notification
 import android.app.Service
 import android.content.ComponentName
@@ -55,7 +55,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
       var0.startForeground(var2, var3);
    } else {
       var var4: Int = var3.extras.getInt("permissionType", -1);
-      val var9: ServiceNotificationConfiguration.Type = CollectionsKt.j0(ServiceNotificationConfiguration.Type.getEntries(), var4) as ServiceNotificationConfiguration.Type;
+      val var9: ServiceNotificationConfiguration.Type = CollectionsKt.l0(ServiceNotificationConfiguration.Type.getEntries(), var4) as ServiceNotificationConfiguration.Type;
       if (var9 == null) {
          val var11: StringBuilder = new StringBuilder();
          var11.append("Unknown service type: ");
@@ -69,7 +69,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
             if (var5 != 1) {
                if (var5 != 2) {
                   if (var5 != 3) {
-                     throw new n();
+                     throw new p();
                   }
 
                   var4 = 32;
@@ -104,12 +104,12 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
             }
          }
 
-         val var16: Log = Log.INSTANCE;
-         val var10: java.lang.String = toForegroundServiceTypeString(var4);
-         val var12: StringBuilder = new StringBuilder();
-         var12.append("Foregrounding ForegroundService with type ");
-         var12.append(var10);
-         Log.i$foreground_service_release$default(var16, var12.toString(), null, 2, null);
+         val var12: Log = Log.INSTANCE;
+         val var16: java.lang.String = toForegroundServiceTypeString(var4);
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("Foregrounding ForegroundService with type ");
+         var10.append(var16);
+         Log.i$foreground_service_release$default(var12, var10.toString(), null, 2, null);
          a.a(var0, var2, var3, var4);
       }
    }
@@ -118,7 +118,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
 internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): ComponentName? {
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = K1.b.a(var0, var1);
+      var2 = K2.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }

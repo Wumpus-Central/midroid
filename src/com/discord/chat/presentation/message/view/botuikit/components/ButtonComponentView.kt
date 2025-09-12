@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import A9.n
+import Ca.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -24,7 +24,7 @@ import com.discord.progress_dots.ProgressDots
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -59,16 +59,16 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
-      this.progressDots$delegate = A9.j.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      this.progressDots$delegate = Ca.l.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
+      val var5: SimpleDraweeView = var6.linkIcon;
       this.configureLinkIcon(var5);
    }
 
@@ -166,7 +166,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
                ButtonComponentViewKt.access$setBrandColor(var1);
                break;
             default:
-               throw new n();
+               throw new p();
          }
       }
    }
@@ -245,7 +245,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
          var20.setVisibility(var6);
          DiscordFontUtilsKt.setDiscordFont(var20, DiscordFont.PrimaryMedium);
-         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, R.color.white));
+         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, color.white));
          if (!var8) {
             val var21: MaterialButton = this.binding.button;
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new b(var1, var3), 1, null);

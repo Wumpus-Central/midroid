@@ -47,7 +47,6 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
             super(null, null, 3, null);
          }
 
-         @Override
          public void endAnimation(RecyclerView.ViewHolder var1) {
             super.endAnimation(var1);
             val var2: View = var1.itemView;
@@ -106,9 +105,9 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       Z.A0(var12, 4);
       var12.setImportantForAccessibility(1);
       Z.o0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      var8 = this.binding.primaryAction.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
       val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       var var5: Boolean;
@@ -130,7 +129,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
@@ -143,7 +142,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
          var6 = false;
       }
 
-      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

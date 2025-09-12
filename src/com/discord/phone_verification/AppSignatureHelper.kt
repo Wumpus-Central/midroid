@@ -1,10 +1,10 @@
 package com.discord.phone_verification
 
-import A9.j
-import X1.a
-import X1.b
-import X1.c
-import Xb.f
+import Ca.l
+import X2.a
+import X2.b
+import X2.c
+import ad.f
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -24,7 +24,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SuppressLint(["PackageManagerGetSignatures"])
 @SourceDebugExtension(["SMAP\nAppSignatureHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppSignatureHelper.kt\ncom/discord/phone_verification/AppSignatureHelper\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,114:1\n11483#2,9:115\n13409#2:124\n13410#2:126\n11492#2:127\n1#3:125\n*S KotlinDebug\n*F\n+ 1 AppSignatureHelper.kt\ncom/discord/phone_verification/AppSignatureHelper\n*L\n74#1:115,9\n74#1:124\n74#1:126\n74#1:127\n74#1:125\n*E\n"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
-   public final val appSignatures: MutableList<String> by j.b(new c(this))
+   public final val appSignatures: MutableList<String> by l.b(new c(this))
       public final get() {
          return this.appSignatures$delegate.getValue() as MutableList<java.lang.String>;
       }
@@ -107,26 +107,25 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var9: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
-               var9 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var25: Log = Log.INSTANCE;
+               var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var8: Log = Log.INSTANCE;
                val var23: java.lang.String = TAG;
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Hash ");
-               var8.append(var9);
-               Log.i$default(var25, var23, var8.toString(), null, 4, null);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var25);
+               Log.i$default(var8, var23, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
                break;
             }
 
-            if (var9 != null) {
+            if (var25 != null) {
                try {
-                  var22.add(var9);
+                  var22.add(var25);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   CollectionsKt.k();
@@ -151,20 +150,20 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var12: java.lang.String = var3.toString();
-            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
-            var8.update(f.a(var12));
-            val var9: ByteArray = var8.digest();
-            val var10: java.lang.String = Base64.encodeToString(h.n(var9, 0, 9), 3);
+            val var8: java.lang.String = var3.toString();
+            val var12: MessageDigest = MessageDigest.getInstance("SHA-256");
+            var12.update(f.a(var8));
+            val var9: ByteArray = var12.digest();
+            val var10: java.lang.String = Base64.encodeToString(k.p(var9, 0, 9), 3);
             var2 = var10.substring(0, 11);
-            val var5: Log = Log.INSTANCE;
-            val var4: java.lang.String = this.getTAG();
+            val var4: Log = Log.INSTANCE;
+            val var5: java.lang.String = this.getTAG();
             var3 = new StringBuilder();
             var3.append("pkg: ");
             var3.append(var1);
             var3.append(" -- hash: ");
             var3.append(var2);
-            Log.i$default(var5, var4, var3.toString(), null, 4, null);
+            Log.i$default(var4, var5, var3.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

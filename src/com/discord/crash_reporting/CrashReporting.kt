@@ -1,6 +1,6 @@
 package com.discord.crash_reporting
 
-import A9.n
+import Ca.p
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -13,7 +13,7 @@ import io.sentry.e
 import io.sentry.e2
 import io.sentry.p1
 import io.sentry.android.core.SentryAndroidOptions
-import io.sentry.android.core.v0
+import io.sentry.android.core.w0
 import java.io.File
 import java.net.ConnectException
 import java.net.SocketException
@@ -54,7 +54,7 @@ public object CrashReporting {
       val var5: e2;
       if (var4 != 1) {
          if (var4 != 2) {
-            throw new n();
+            throw new p();
          }
 
          var5 = e2.WARNING;
@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("9ba63bc8-fb5d-4b14-a9ef-15d626505b69");
+      var5.setProguardUuid("ff8d465c-6b40-4aec-9c71-430bd7bee148");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -100,7 +100,7 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = L.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = O.i(), breadcrumbCategory: String? = null) {
       val var4: e = new e(var1);
 
       for (Entry var5 : var2.entrySet()) {
@@ -113,7 +113,7 @@ public object CrashReporting {
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", A9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", Ca.e.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(var1.getClass()::class)) {
@@ -135,7 +135,7 @@ public object CrashReporting {
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       if (var4 != 1) {
          if (var4 != 2) {
-            throw new n();
+            throw new p();
          }
 
          Log.w$default(Log.INSTANCE, var1, var2, null, 4, null);
@@ -177,7 +177,7 @@ public object CrashReporting {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
       }
 
-      v0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
+      w0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
       isCrashedLastRun = p1.v();
    }
 
@@ -192,7 +192,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = G9.a.a(var0);
+         $ENTRIES = Ia.a.a(var0);
       }
 
       @JvmStatic

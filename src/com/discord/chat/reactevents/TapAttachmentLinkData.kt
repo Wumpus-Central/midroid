@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import Ca.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
    public final val attachmentUrl: String?
 
@@ -48,8 +48,8 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       return var1;
    }
 
-   public override fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("data", NativeMapExtensionsKt.nativeMapOf(s.a("attachmentUrl", this.attachmentUrl))));
+   public open fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("data", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("attachmentUrl", this.attachmentUrl)}))});
    }
 
    public override fun toString(): String {

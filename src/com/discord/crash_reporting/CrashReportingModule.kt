@@ -1,6 +1,6 @@
 package com.discord.crash_reporting
 
-import A9.s
+import Ca.v
 import com.discord.crash_reporting.react_events.CrashReportEvent
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
@@ -28,7 +28,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("onCrashReportsReceived", CrashReportEvent::class));
+      this.reactEvents = new ReactEvents(new Pair[]{v.a("onCrashReportsReceived", CrashReportEvent::class)});
    }
 
    @JvmStatic
@@ -95,8 +95,8 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun setUser(user: ReadableMap) {
       val var2: Boolean = var1.getBoolean("staff");
-      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var4.getInstance(var3).setStaff(var2);
+      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      var3.getInstance(var4).setStaff(var2);
    }
 }

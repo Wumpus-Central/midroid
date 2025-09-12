@@ -1,11 +1,12 @@
 package com.discord.audio.react.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
    public final val routeType: String
    public final val multipleRoutesAvailable: Boolean
@@ -47,20 +48,20 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
       return this.routeType.hashCode() * 31 + java.lang.Boolean.hashCode(this.multipleRoutesAvailable);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.routeType;
+      val var3: java.lang.String = this.routeType;
       val var1: Boolean = this.multipleRoutesAvailable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioRouteEmitterAudioRouteChanged(routeType=");
-      var3.append(var2);
-      var3.append(", multipleRoutesAvailable=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioRouteEmitterAudioRouteChanged(routeType=");
+      var2.append(var3);
+      var2.append(", multipleRoutesAvailable=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.polls.a11y
 
-import A9.n
+import Ca.p
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
@@ -20,7 +20,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       val var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getInteractionType().ordinal()];
       if (var3 != 1 && var3 != 2) {
          if (var3 != 3) {
-            throw new n();
+            throw new p();
          }
 
          var2.setChecked(var4);
@@ -36,29 +36,29 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var4 = false;
       }
 
-      var2.p0(var4);
+      var2.q0(var4);
       var4 = this.accessory.getAnswer().isSelected() == java.lang.Boolean.TRUE;
-      val var6: PollChatAnswerInteractionType = this.accessory.getInteractionType();
-      val var5: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
-      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
+      val var5: PollChatAnswerInteractionType = this.accessory.getInteractionType();
+      val var6: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
+      var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var5.ordinal()];
       if (var3 != 1) {
          if (var3 != 2) {
             if (var3 != 3) {
-               throw new n();
+               throw new p();
             }
 
-            var2.q0(var4);
+            var2.r0(var4);
          } else {
-            var2.Q0(var4);
+            var2.V0(var4);
          }
       }
 
-      var3 = var5[this.accessory.getInteractionType().ordinal()];
+      var3 = var6[this.accessory.getInteractionType().ordinal()];
       val var7: java.lang.String;
       if (var3 != 1) {
          if (var3 != 2) {
             if (var3 != 3) {
-               throw new n();
+               throw new p();
             }
 
             var7 = "android.widget.CheckBox";
@@ -69,7 +69,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var7 = "android.view.ViewGroup";
       }
 
-      var2.r0(var7);
+      var2.s0(var7);
       if (this.accessory.getTapAccessibilityLabel() != null) {
          var2.b(new AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
       }

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class EmphasisContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 

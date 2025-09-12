@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode() {
    public final val start: Long?
    public final val ordered: Boolean
@@ -60,18 +60,18 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Long = this.start;
+      val var4: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var3: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BulletListContentNode(start=");
-      var4.append(var2);
-      var4.append(", ordered=");
-      var4.append(var1);
-      var4.append(", items=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.util.List = this.items;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BulletListContentNode(start=");
+      var3.append(var4);
+      var3.append(", ordered=");
+      var3.append(var1);
+      var3.append(", items=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

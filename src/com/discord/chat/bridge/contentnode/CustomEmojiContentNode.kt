@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import pc.m
 
-@g
+@m
 public data class CustomEmojiContentNode(id: Long, alt: String, src: String, frozenSrc: String, jumboable: Boolean = false) : EmojiContentNode() {
    public final val id: Long
    public final val alt: String
@@ -72,22 +72,22 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    public override fun toString(): String {
       val var1: Long = this.id;
       val var5: java.lang.String = this.alt;
-      val var4: java.lang.String = this.src;
-      val var7: java.lang.String = this.frozenSrc;
+      val var6: java.lang.String = this.src;
+      val var4: java.lang.String = this.frozenSrc;
       val var3: Boolean = this.jumboable;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("CustomEmojiContentNode(id=");
-      var6.append(var1);
-      var6.append(", alt=");
-      var6.append(var5);
-      var6.append(", src=");
-      var6.append(var4);
-      var6.append(", frozenSrc=");
-      var6.append(var7);
-      var6.append(", jumboable=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("CustomEmojiContentNode(id=");
+      var7.append(var1);
+      var7.append(", alt=");
+      var7.append(var5);
+      var7.append(", src=");
+      var7.append(var6);
+      var7.append(", frozenSrc=");
+      var7.append(var4);
+      var7.append(", jumboable=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 298203
-  versionName: 298.3 - Alpha
+  versionCode: 298204
+  versionName: 298.4 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -33,6 +33,14 @@ doNotCompress:
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.browser_browser.version
 - META-INF/androidx.cardview_cardview.version
+- META-INF/androidx.compose.runtime_runtime-saveable.version
+- META-INF/androidx.compose.runtime_runtime.version
+- META-INF/androidx.compose.ui_ui-geometry.version
+- META-INF/androidx.compose.ui_ui-graphics.version
+- META-INF/androidx.compose.ui_ui-text.version
+- META-INF/androidx.compose.ui_ui-unit.version
+- META-INF/androidx.compose.ui_ui-util.version
+- META-INF/androidx.compose.ui_ui.version
 - META-INF/androidx.coordinatorlayout_coordinatorlayout.version
 - META-INF/androidx.core_core-ktx.version
 - META-INF/androidx.core_core-performance-play-services.version
@@ -59,6 +67,17 @@ doNotCompress:
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
 - META-INF/androidx.lifecycle_lifecycle-extensions.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.lifecycle_lifecycle-livedata.version
+- META-INF/androidx.lifecycle_lifecycle-process.version
+- META-INF/androidx.lifecycle_lifecycle-runtime-compose.version
+- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.lifecycle_lifecycle-service.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
 - META-INF/androidx.loader_loader.version
 - META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
 - META-INF/androidx.media_media.version
@@ -91,9 +110,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/V9.b
-- META-INF/services/cb.z
-- META-INF/services/hb.t
+- META-INF/services/Xa.b
+- META-INF/services/fc.z
+- META-INF/services/kc.t
 - META-INF/version-control-info.textproto
 - assets/com/appsflyer/internal/1ef4f10b9adfdad9a-
 - assets/com/appsflyer/internal/4c337fab34977e37d-
@@ -231,6 +250,36 @@ doNotCompress:
 - assets/net/time4j/olson/zones/tzname_gsw.properties
 - okhttp3/internal/publicsuffix/publicsuffixes.gz
 - res/raw/cache_intl_aw50ba_idmessagesa0aa3774e064cca7bab0fc18be60dfdfcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_bgmessagesdfca7d0bce87346109e2d754b933e5a8compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_csmessages37cfa27aa7246b6aa887955288d8ecafcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_damessagesa5322e0d905e7f25b9fbe964bcfbb8e4compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_demessages3c208445367d2577b5b75bc8167de694compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_elmessagesbc5814251e0033f605300161bdca0841compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_engbmessages580689f5a1a5c2a858f6b4b0ed2fbebecompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_es419messagesda10b6ad0d158dcc234e8d6d8acad4fecompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_esesmessagesbffb21e58ccd1940e522905f54096ce7compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_fimessages5422a8f4d6af3d72e0fa6139e429ab4bcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_frmessagesfd3759e1e712edb4b2bf745535d3a82ccompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_himessages3f8944345d82bc28faf47ea1d0c90cf6compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_hrmessages117d21a9b45fc20c33121358321c1c4acompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_humessages3cac8c3fc4e5d877136341ef6324aebacompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_itmessages90c0eae13064ad06c33f3df40953f4e2compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_jamessages5ca03b128cd54fef04a79b4ec9573660compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_komessages1e49eaf37b9669fe4f7db06991421fffcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_ltmessagesdcb1bd9b09fc2ecb0b57951a60a1f441compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_nlmessages210a0b494844677ed51f16cc55772b63compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_nomessagesb5dc72e578b86053e96ef8d4cbf7b22ccompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_plmessages31b370c355f9fc284fe4db88e053f3b7compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_ptbrmessages96fab8985666709daf747328d947f7b6compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_romessages12b559375fc4b76bf44a99ec763fdaf8compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_rumessages3b388e61bf07a5ef74ba51525fef593dcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_svsemessagesd6afe50be2ac99d4679eb183e2479b48compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_thmessages744bace8c2bd2ad1e313eb0fe94c2dc6compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_trmessages477ea3412d3ef975dd531af5b813de41compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_ukmessages10f52ae8f4c15a7785bf0feea0297989compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_vimessages15e7eb74220c6eb341fd2c8d7f326947compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_zhcnmessagese2f01cb74f4336441f0c7e4ea678969fcompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcw_zhtwmessagesc7384d1b95ed0d70cc2c759ebc3d03b4compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy92b2ljzv9mawx0zxjz_csmessages753153b85230bfab7a080de1e6c3174ecompiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy92b2ljzv9mawx0zxjz_demessages3d65d00adc7d5ee40d3645c59e88636ccompiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy92b2ljzv9mawx0zxjz_elmessages6f0f9856b5c6e0de4c14e7fc132af198compiledmessages.jsona

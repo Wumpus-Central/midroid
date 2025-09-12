@@ -6,28 +6,28 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import ob.g
-import ob.e.i
-import qb.e
+import rc.j
+import rc.e.i
+import tc.f
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return g.a("ContentNode", i.a);
+         return j.b("ContentNode", i.a);
       }
 
 
    public open fun deserialize(decoder: Decoder): ContentNode {
       try {
-         if (var1 !is e) {
+         if (var1 !is f) {
             throw new IllegalArgumentException("Failed requirement.");
          }
 
-         val var2: JsonElement = (var1 as e).g();
+         val var2: JsonElement = (var1 as f).g();
          if (var2 is JsonPrimitive) {
-            var4 = new TextContentNode((var2 as JsonPrimitive).a());
+            var4 = new TextContentNode((var2 as JsonPrimitive).c());
          } else {
-            var4 = (var1 as e).d().d(ContentNodeKt.access$getSealedClassSerializer$p(), var2) as ContentNode;
+            var4 = (var1 as f).d().d(ContentNodeKt.access$getSealedClassSerializer$p(), var2) as ContentNode;
          }
       } catch (var3: Exception) {
          var4 = new ErrorContentNode(var3);

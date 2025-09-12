@@ -87,6 +87,7 @@
     <item type="id" name="alt_text_container" />
     <item type="id" name="alt_text_label" />
     <item type="id" name="ampm" />
+    <item type="id" name="androidx_compose_ui_view_composition_context" />
     <item type="id" name="androidx_window_activity_scope" />
     <item type="id" name="answers" />
     <item type="id" name="app_icon" />
@@ -166,9 +167,11 @@
     <item type="id" name="clan_tag_chiplet" />
     <item type="id" name="close" />
     <item type="id" name="close_icon" />
+    <item type="id" name="compose_view_saveable_id_tag" />
     <item type="id" name="confirm_button" />
     <item type="id" name="connections_role_tag" />
     <item type="id" name="connections_role_tag_container" />
+    <item type="id" name="consume_window_insets_tag" />
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
@@ -346,6 +349,7 @@
     <item type="id" name="hero_text" />
     <item type="id" name="hide_button" />
     <item type="id" name="hide_ime_id" />
+    <item type="id" name="hide_in_inspector_tag" />
     <item type="id" name="home" />
     <item type="id" name="hour" />
     <item type="id" name="icon" />
@@ -380,6 +384,7 @@
     <item type="id" name="inline_media_view3" />
     <item type="id" name="inline_media_view4" />
     <item type="id" name="inline_media_volume_toggle" />
+    <item type="id" name="inspection_slot_table_set" />
     <item type="id" name="invalidate_transform" />
     <item type="id" name="invite_to_speak_button" />
     <item type="id" name="invite_to_speak_text" />
@@ -858,6 +863,7 @@
     <item type="id" name="welcome_reply_text" />
     <item type="id" name="wipe" />
     <item type="id" name="with_icon" />
+    <item type="id" name="wrapped_composition_tag" />
     <item type="id" name="wrapper_controls" />
     <item type="id" name="wrapper_reset_rotate" />
     <item type="id" name="wrapper_rotate_by_angle" />

@@ -26,14 +26,14 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
          val var1: Float;
          val var2: Float;
          if (this.horizontal) {
-            var1 = this.getWidth();
-            var2 = this.renderAhead.getExtraLayoutPercent();
+            var2 = this.getWidth();
+            var1 = this.renderAhead.getExtraLayoutPercent();
          } else {
-            var1 = this.getHeight();
-            var2 = this.renderAhead.getExtraLayoutPercent();
+            var2 = this.getHeight();
+            var1 = this.renderAhead.getExtraLayoutPercent();
          }
 
-         return (int)(var1 * var2);
+         return (int)(var2 * var1);
       }
 
 
@@ -48,7 +48,7 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
       return new FastestListLayoutManager.FastestListLayoutManagerException(var0);
    }
 
-   protected override fun calculateExtraLayoutSpace(state: State, extraLayoutSpace: IntArray) {
+   protected open fun calculateExtraLayoutSpace(state: State, extraLayoutSpace: IntArray) {
       if (this.scrollingForward) {
          var2[1] = this.getExtraLayoutSpace();
       } else {

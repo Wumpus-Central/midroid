@@ -1,8 +1,8 @@
 package com.discord.recycler_view.utils
 
-import androidx.recyclerview.widget.c
+import androidx.recyclerview.widget.c.b
 
-public class ItemDiffer(oldItems: List<ItemDiffableType>, newItems: List<ItemDiffableType>) : c.b {
+public class ItemDiffer(oldItems: List<ItemDiffableType>, newItems: List<ItemDiffableType>) : b {
    private final val oldItems: List<ItemDiffableType>
    private final val newItems: List<ItemDiffableType>
 
@@ -11,19 +11,19 @@ public class ItemDiffer(oldItems: List<ItemDiffableType>, newItems: List<ItemDif
       this.newItems = var2;
    }
 
-   public override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+   public open fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
       return this.oldItems.get(var1) == this.newItems.get(var2);
    }
 
-   public override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
+   public open fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
       return this.oldItems.get(var1).getItemId() == this.newItems.get(var2).getItemId();
    }
 
-   public override fun getNewListSize(): Int {
+   public open fun getNewListSize(): Int {
       return this.newItems.size();
    }
 
-   public override fun getOldListSize(): Int {
+   public open fun getOldListSize(): Int {
       return this.oldItems.size();
    }
 }

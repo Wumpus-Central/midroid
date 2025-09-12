@@ -121,15 +121,15 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 13: astore 10
       // 15: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
       // 18: invokevirtual java/lang/Thread.getId ()J
-      // 1b: lstore 5
-      // 1d: aload 10
-      // 1f: ifnonnull 25
-      // 22: goto 32
-      // 25: aload 10
-      // 27: invokevirtual java/lang/Long.longValue ()J
-      // 2a: lstore 3
-      // 2b: lload 3
-      // 2c: lload 5
+      // 1b: lstore 3
+      // 1c: aload 10
+      // 1e: ifnonnull 24
+      // 21: goto 32
+      // 24: aload 10
+      // 26: invokevirtual java/lang/Long.longValue ()J
+      // 29: lstore 5
+      // 2b: lload 5
+      // 2d: lload 3
       // 2e: lcmp
       // 2f: ifeq 36
       // 32: aload 9
@@ -250,11 +250,11 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 07: aload 0
       // 08: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
       // 0b: astore 2
-      // 0c: new b2/a
+      // 0c: new b3/a
       // 0f: astore 3
       // 10: aload 3
       // 11: aload 0
-      // 12: invokespecial b2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
+      // 12: invokespecial b3/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
       // 15: bipush 1
       // 16: bipush 1
       // 17: aconst_null
@@ -263,7 +263,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 1c: aload 3
       // 1d: bipush 4
       // 1e: aconst_null
-      // 1f: invokestatic E9/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1f: invokestatic Ga/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 22: astore 3
       // 23: aload 0
       // 24: aload 3
