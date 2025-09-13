@@ -21,15 +21,15 @@ public object CookieValidator {
          if (var8 == null) {
             return null;
          } else {
-            var var2: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var9: okio.ByteString.a = ByteString.t;
-            val var10: ByteString = var9.b(var2);
+            val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
+            val var2: okio.ByteString.a = ByteString.t;
+            val var10: ByteString = var2.b(var9);
             if (var10 != null) {
-               var2 = var10.H();
-               if (var2 != null) {
+               val var13: java.lang.String = var10.H();
+               if (var13 != null) {
                   try {
                      var11 = Json.d;
-                     var14 = Json.d.g(var2);
+                     var14 = Json.d.g(var13);
                   } catch (var7: n) {
                      return null;
                   }
@@ -44,9 +44,9 @@ public object CookieValidator {
                   val var15: JsonObject = tc.h.n(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
-                  for (Entry var4 : var15.entrySet()) {
-                     if (!(var4.getKey() as java.lang.String == "$meta")) {
-                        var18.put(var4.getKey(), var4.getValue());
+                  for (Entry var16 : var15.entrySet()) {
+                     if (!(var16.getKey() as java.lang.String == "$meta")) {
+                        var18.put(var16.getKey(), var16.getValue());
                      }
                   }
 

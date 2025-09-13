@@ -29,21 +29,21 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
    }
 
    private fun deserializeTypeEmojiRowSlim(emojisRow: ReadableArray, emojiItems: MutableList<EmojiPickerItem>, isSectionNitroLocked: Boolean) {
-      val var7: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var1).iterator();
+      val var5: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var1).iterator();
 
-      while (var7.hasNext()) {
-         val var8: ReadableMap = var1.getMap((var7 as L).nextInt());
-         val var5: java.lang.String = var8.getString("id");
-         val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "name");
+      while (var5.hasNext()) {
+         val var8: ReadableMap = var1.getMap((var5 as L).nextInt());
+         val var6: java.lang.String = var8.getString("id");
+         val var7: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "name");
          val var4: Boolean = NativeMapExtensionsKt.getBoolean(var8, "animated", false);
-         if (var5 == null) {
+         if (var6 == null) {
             var2.add(
                new EmojiPickerItem.Emoji(
-                  IdUtilsKt.convertToId(var6),
-                  var6,
+                  IdUtilsKt.convertToId(var7),
+                  var7,
                   var4,
                   null,
-                  new UnicodeEmojis.Emoji(CollectionsKt.e(var6), NativeMapExtensionsKt.getNonNullString(var8, "surrogates")),
+                  new UnicodeEmojis.Emoji(CollectionsKt.e(var7), NativeMapExtensionsKt.getNonNullString(var8, "surrogates")),
                   false,
                   40,
                   null
@@ -52,8 +52,8 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
          } else {
             var2.add(
                new EmojiPickerItem.Emoji(
-                  java.lang.Long.parseLong(var5),
-                  var6,
+                  java.lang.Long.parseLong(var6),
+                  var7,
                   var4,
                   EmojiPickerItem.Emoji.DisabledType.Companion.create(NativeMapExtensionsKt.getBoolean(var8, "disabled", false), var3),
                   null,
@@ -94,20 +94,20 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
    ) {
       val var6: java.lang.String = var1.getString("guildId");
       if (var6 != null) {
-         val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
+         val var10: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
          val var5: Int = var1.getInt("emojiCount");
-         val var11: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "emojisDisabled");
-         val var10: HashSet = new HashSet();
-         val var7: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var11).iterator();
+         val var7: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "emojisDisabled");
+         val var9: HashSet = new HashSet();
+         val var8: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var7).iterator();
 
-         while (var7.hasNext()) {
-            val var8: java.lang.String = var11.getString((var7 as L).nextInt());
-            var10.add(java.lang.Long.parseLong(var8));
+         while (var8.hasNext()) {
+            val var11: java.lang.String = var7.getString((var8 as L).nextInt());
+            var9.add(java.lang.Long.parseLong(var11));
          }
 
          var2.add(
             new EmojiPickerItemData.CoreData.NativeSection.Guild(
-               var6, var9, var5, var10, var4, var1.getBoolean("hasPremiumInlineRoadblockHeader"), var1.getBoolean("hasPremiumInlineRoadblockFooter")
+               var6, var10, var5, var9, var4, var1.getBoolean("hasPremiumInlineRoadblockHeader"), var1.getBoolean("hasPremiumInlineRoadblockFooter")
             )
          );
       } else {
@@ -124,14 +124,14 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
       val var8: EmojiPickerItem.Spacer = new EmojiPickerItem.Spacer("bottom", SizeUtilsKt.getDpToPx(var3));
       val var17: java.util.List = CollectionsKt.q(new EmojiPickerItem[]{var16});
       val var9: java.util.List = CollectionsKt.q(new EmojiPickerItem[]{var8});
-      val var19: ArrayList = new ArrayList();
-      val var11: ArrayList = new ArrayList();
-      val var12: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var2, "data");
-      val var10: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var12).iterator();
+      val var10: ArrayList = new ArrayList();
+      val var12: ArrayList = new ArrayList();
+      val var19: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var2, "data");
+      val var11: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var19).iterator();
       var var6: Boolean = false;
 
-      while (var10.hasNext()) {
-         val var13: ReadableMap = var12.getMap((var10 as L).nextInt());
+      while (var11.hasNext()) {
+         val var13: ReadableMap = var19.getMap((var11 as L).nextInt());
          val var14: EmojiPickerItemTypes = EmojiPickerItemTypes.Companion.create(var13.getInt("type"));
          val var5: Int = EmojiPickerItemDataCoreDataDeserializer.WhenMappings.$EnumSwitchMapping$0[var14.ordinal()];
          if (var5 != 1) {
@@ -145,7 +145,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
                      INSTANCE.deserializeTypeFooterUpsell(var13, var9);
                   }
                } else {
-                  val var23: EmojiPickerItemDataCoreDataDeserializer = INSTANCE;
+                  val var22: EmojiPickerItemDataCoreDataDeserializer = INSTANCE;
                   val var18: Boolean = var13.getBoolean("isSectionNitroLocked");
                   if (!var6 && !var18) {
                      var6 = false;
@@ -153,7 +153,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
                      var6 = true;
                   }
 
-                  var23.deserializeTypeNativeSection(var13, var19, var11, var18);
+                  var22.deserializeTypeNativeSection(var13, var10, var12, var18);
                }
             } else {
                val var21: EmojiPickerItemDataCoreDataDeserializer = INSTANCE;
@@ -173,7 +173,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
       }
 
       return new EmojiPickerItemData.CoreData(
-         this.deserializeRowSize(var2), var2.getBoolean("hasGuildData"), var2.getBoolean("hasSearchData"), var6, var17, var9, var19, var11
+         this.deserializeRowSize(var2), var2.getBoolean("hasGuildData"), var2.getBoolean("hasSearchData"), var6, var17, var9, var10, var12
       );
    }
 }

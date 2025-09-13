@@ -69,36 +69,36 @@ public final class FileAttachmentViewBinding implements ViewBinding {
    @NonNull
    public static FileAttachmentViewBinding bind(@NonNull View var0) {
       int var1 = R.id.file_action_group;
-      ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
-      if (var8 != null) {
+      ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.file_attachment_description;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var11 = (TextView)a.a(var0, var1);
+         if (var11 != null) {
             var1 = R.id.file_attachment_download;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.file_attachment_download_icon_barrier;
-               Barrier var9 = (Barrier)a.a(var0, var1);
-               if (var9 != null) {
+               Barrier var6 = (Barrier)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.file_attachment_download_progress_bar;
-                  ProgressBar var10 = (ProgressBar)a.a(var0, var1);
-                  if (var10 != null) {
+                  ProgressBar var5 = (ProgressBar)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.file_attachment_icon;
-                     SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var11 != null) {
+                     SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var10 != null) {
                         var1 = R.id.file_attachment_name;
-                        TextView var5 = (TextView)a.a(var0, var1);
-                        if (var5 != null) {
+                        TextView var2 = (TextView)a.a(var0, var1);
+                        if (var2 != null) {
                            var1 = R.id.spoiler;
-                           SpoilerView var4 = (SpoilerView)a.a(var0, var1);
-                           if (var4 != null) {
+                           SpoilerView var8 = (SpoilerView)a.a(var0, var1);
+                           if (var8 != null) {
                               var1 = R.id.upload_overlay;
-                              AttachmentUploadOverlayView var6 = (AttachmentUploadOverlayView)a.a(var0, var1);
-                              if (var6 != null) {
+                              AttachmentUploadOverlayView var3 = (AttachmentUploadOverlayView)a.a(var0, var1);
+                              if (var3 != null) {
                                  var1 = R.id.upload_overlay_background;
-                                 LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                                 if (var7 != null) {
-                                    return new FileAttachmentViewBinding(var0, var8, var3, var2, var9, var10, var11, var5, var4, var6, var7);
+                                 LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+                                 if (var4 != null) {
+                                    return new FileAttachmentViewBinding(var0, var7, var11, var9, var6, var5, var10, var2, var8, var3, var4);
                                  }
                               }
                            }

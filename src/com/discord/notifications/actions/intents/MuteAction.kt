@@ -73,8 +73,8 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<MuteAction> {
       fun createFromParcel(var1: Parcel): MuteAction {
-         val var5: java.lang.String = var1.readString();
-         val var4: GuildId = var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId;
+         val var4: java.lang.String = var1.readString();
+         val var5: GuildId = var1.readParcelable(MuteAction.class.getClassLoader()) as GuildId;
          val var2: Long = (var1.readParcelable(MuteAction.class.getClassLoader()) as ChannelId).unbox-impl();
          val var6: Int;
          if (var1.readInt() == 0) {
@@ -83,7 +83,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
             var6 = var1.readInt();
          }
 
-         return new MuteAction(var5, var4, var2, var6, null);
+         return new MuteAction(var4, var5, var2, var6, null);
       }
 
       fun newArray(var1: Int): Array<MuteAction> {

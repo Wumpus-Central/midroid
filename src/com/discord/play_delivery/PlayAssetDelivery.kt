@@ -280,36 +280,40 @@ public object PlayAssetDelivery {
       // 52: athrow
    }
 
-   public fun getOrFetchAssetPackLocation(assetPackName: String, successCallback: ((Boolean) -> Unit)? = null): String? {
-      val var4: AssetPackLocation = assetPackLocations.get(var1);
-      var var3: AssetPackLocation = var4;
-      if (var4 == null) {
-         var3 = this.fetchAssetPackLocation(var1, var2);
+   public fun getAssetPackLocation(assetPackName: String, tryToFetch: Boolean, successCallback: ((Boolean) -> Unit)? = null): String? {
+      val var6: AssetPackLocation = assetPackLocations.get(var1);
+      var var4: AssetPackLocation = var6;
+      if (var6 == null) {
+         if (var2) {
+            var4 = this.fetchAssetPackLocation(var1, var3);
+         } else {
+            var4 = null;
+         }
       }
 
-      var var5: java.lang.String;
-      if (var3 == null) {
-         var5 = null;
-      } else if (var3.c() == 1) {
-         var5 = null;
+      var var7: java.lang.String;
+      if (var4 == null) {
+         var7 = null;
+      } else if (var4.c() == 1) {
+         var7 = null;
       } else {
-         var5 = null;
-         if (var3.c() == 0) {
-            if (var3.b() == null) {
-               val var6: Log = Log.INSTANCE;
-               val var7: StringBuilder = new StringBuilder();
-               var7.append("Asset ");
-               var7.append(var1);
-               var7.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var6, "PlayAssetDelivery", var7.toString(), null, 4, null);
-               var5 = null;
+         var7 = null;
+         if (var4.c() == 0) {
+            if (var4.b() == null) {
+               val var9: Log = Log.INSTANCE;
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Asset ");
+               var8.append(var1);
+               var8.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+               Log.w$default(var9, "PlayAssetDelivery", var8.toString(), null, 4, null);
+               var7 = null;
             } else {
-               var5 = var3.b();
+               var7 = var4.b();
             }
          }
       }
 
-      return var5;
+      return var7;
    }
 
    public fun initialize(applicationContext: Context) {

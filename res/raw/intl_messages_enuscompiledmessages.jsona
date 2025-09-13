@@ -3159,6 +3159,8 @@
     " Make your name stand out no matter where you are. Nameplates are now available for purchase on mobile!"
   ],
   "4wA9a2": "Shop Anywhere, Anytime",
+  "V+IE9/": "Join Nitro to unlock access to this nameplate!",
+  "a6SrkZ": "Upgrade to unlock access to this nameplate!",
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -3181,6 +3183,10 @@
       ]
     ]
   ],
+  "uYLGcn": "View My Badge",
+  "6gF4aW": "Sweet!",
+  "B25MUV": "The badge has been added to your profile.",
+  "Bal8Cg": "You've collected the Orbs Apprentice Badge!",
   "SWm2am": "Your Profile Effect is updated!",
   "ivaAAw": "Popular Picks",
   "HSX4HR": [
@@ -7879,7 +7885,6 @@
     " is only for adult players. Please play responsibly."
   ],
   "SSDPOD": "You’re about to use an age-restricted activity",
-  "wJNK8P": "Already in Activity",
   "uGDCc3": "This Activity is not currently available on this OS",
   "AlJyIy": "Error Fetching Developer Activity Shelf",
   "JfA7IC": "Developer Shelf Activity Override Enabled",
@@ -23860,7 +23865,7 @@
   "vPHdPz": "New Permission",
   "QBMHvL": "new role",
   "CN0Hvb": [
-    "We announced updates to our policies last month, which are now in effect. Check out our ",
+    "We announced updates to our policies in August, which are now in effect. Check out our ",
     [
       8,
       "$link",

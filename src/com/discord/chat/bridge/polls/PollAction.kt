@@ -87,23 +87,23 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var2: java.lang.String = this.secondaryLabel;
+      val var1: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var1: java.lang.String = this.label;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var1);
-         var3.append("  •  ");
-         var3.append(var2);
-         return var3.toString();
+         val var3: java.lang.String = this.label;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var3);
+         var2.append("  •  ");
+         var2.append(var1);
+         return var2.toString();
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.label.hashCode();
-      val var4: Int = this.presentation.hashCode();
-      val var5: Int = java.lang.Boolean.hashCode(this.enabled);
+      val var5: Int = this.label.hashCode();
+      val var6: Int = this.presentation.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.enabled);
       var var3: Int = 0;
       val var1: Int;
       if (this.type == null) {
@@ -123,19 +123,19 @@ public data class PollAction(label: String,
          var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var5 * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.label;
+      val var5: java.lang.String = this.label;
       val var4: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
       val var3: java.lang.String = this.type;
-      val var5: java.lang.String = this.secondaryLabel;
-      val var2: java.lang.String = this.accessibilityHint;
+      val var2: java.lang.String = this.secondaryLabel;
+      val var6: java.lang.String = this.accessibilityHint;
       val var7: StringBuilder = new StringBuilder();
       var7.append("PollAction(label=");
-      var7.append(var6);
+      var7.append(var5);
       var7.append(", presentation=");
       var7.append(var4);
       var7.append(", enabled=");
@@ -143,9 +143,9 @@ public data class PollAction(label: String,
       var7.append(", type=");
       var7.append(var3);
       var7.append(", secondaryLabel=");
-      var7.append(var5);
-      var7.append(", accessibilityHint=");
       var7.append(var2);
+      var7.append(", accessibilityHint=");
+      var7.append(var6);
       var7.append(")");
       return var7.toString();
    }

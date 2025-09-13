@@ -130,31 +130,31 @@ public data class SharedCustomThemeData(colors: List<String>,
    public override fun toString(): String {
       val var2: java.util.List = this.colors;
       val var1: Float = this.gradientAngle;
-      val var6: java.lang.String = this.createdBy;
-      val var5: java.lang.String = this.createdByAvatarUrl;
-      val var8: java.lang.String = this.nitroWheelIconUrl;
-      val var7: java.lang.String = this.previewLabel;
-      val var4: java.lang.String = this.previewHeading;
-      val var9: java.lang.String = this.createdByLabel;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SharedCustomThemeData(colors=");
-      var3.append(var2);
-      var3.append(", gradientAngle=");
-      var3.append(var1);
-      var3.append(", createdBy=");
-      var3.append(var6);
-      var3.append(", createdByAvatarUrl=");
-      var3.append(var5);
-      var3.append(", nitroWheelIconUrl=");
-      var3.append(var8);
-      var3.append(", previewLabel=");
-      var3.append(var7);
-      var3.append(", previewHeading=");
-      var3.append(var4);
-      var3.append(", createdByLabel=");
-      var3.append(var9);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.String = this.createdBy;
+      val var4: java.lang.String = this.createdByAvatarUrl;
+      val var9: java.lang.String = this.nitroWheelIconUrl;
+      val var6: java.lang.String = this.previewLabel;
+      val var3: java.lang.String = this.previewHeading;
+      val var7: java.lang.String = this.createdByLabel;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("SharedCustomThemeData(colors=");
+      var8.append(var2);
+      var8.append(", gradientAngle=");
+      var8.append(var1);
+      var8.append(", createdBy=");
+      var8.append(var5);
+      var8.append(", createdByAvatarUrl=");
+      var8.append(var4);
+      var8.append(", nitroWheelIconUrl=");
+      var8.append(var9);
+      var8.append(", previewLabel=");
+      var8.append(var6);
+      var8.append(", previewHeading=");
+      var8.append(var3);
+      var8.append(", createdByLabel=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

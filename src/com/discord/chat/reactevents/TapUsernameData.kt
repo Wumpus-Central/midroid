@@ -53,15 +53,15 @@ public data class TapUsernameData(messageId: String, userId: String) : ReactEven
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.userId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapUsernameData(messageId=");
-      var1.append(var3);
-      var1.append(", userId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.userId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapUsernameData(messageId=");
+      var2.append(var1);
+      var2.append(", userId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

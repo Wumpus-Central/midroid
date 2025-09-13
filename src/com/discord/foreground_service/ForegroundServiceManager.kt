@@ -93,11 +93,11 @@ public object ForegroundServiceManager {
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2`(var0: ServiceNotificationConfiguration.Type, var1: ReactApplicationContext): Unit {
       val var2: Log = Log.INSTANCE;
-      val var4: java.lang.String = var0.name();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Create or update service with configuration type ");
-      var3.append(var4);
-      Log.i$foreground_service_release$default(var2, var3.toString(), null, 2, null);
+      val var3: java.lang.String = var0.name();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Create or update service with configuration type ");
+      var4.append(var3);
+      Log.i$foreground_service_release$default(var2, var4.toString(), null, 2, null);
       ForegroundService.Companion.start(var1, new d());
       return Unit.a;
    }
@@ -253,18 +253,18 @@ public object ForegroundServiceManager {
       // 0a: ldc_w "serviceConfigurations"
       // 0d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 10: new com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
-      // 13: astore 4
-      // 15: new java/lang/ref/WeakReference
-      // 18: astore 3
-      // 19: aload 3
-      // 1a: aload 1
-      // 1b: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 1e: aload 4
-      // 20: aload 3
-      // 21: aload 2
-      // 22: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
-      // 25: aload 0
-      // 26: aload 4
+      // 13: astore 3
+      // 14: new java/lang/ref/WeakReference
+      // 17: astore 4
+      // 19: aload 4
+      // 1b: aload 1
+      // 1c: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
+      // 1f: aload 3
+      // 20: aload 4
+      // 22: aload 2
+      // 23: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
+      // 26: aload 0
+      // 27: aload 3
       // 28: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleQueueOperation (Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;)V
       // 2b: aload 0
       // 2c: monitorexit
@@ -296,17 +296,17 @@ public object ForegroundServiceManager {
       // 03: ldc_w "context"
       // 06: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 09: new com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$Destroy
-      // 0c: astore 2
+      // 0c: astore 3
       // 0d: new java/lang/ref/WeakReference
-      // 10: astore 3
-      // 11: aload 3
+      // 10: astore 2
+      // 11: aload 2
       // 12: aload 1
       // 13: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$Destroy.<init> (Ljava/lang/ref/WeakReference;)V
       // 1b: aload 0
-      // 1c: aload 2
+      // 1c: aload 3
       // 1d: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleQueueOperation (Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;)V
       // 20: aload 0
       // 21: monitorexit

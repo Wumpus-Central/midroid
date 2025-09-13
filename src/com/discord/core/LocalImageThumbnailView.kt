@@ -240,9 +240,9 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      }
 
                      try {
-                        val var26: ContentResolver = this.this$0.getContext().getContentResolver();
-                        val var17: java.lang.String = this.$uri.getLastPathSegment();
-                        var1 = Thumbnails.getThumbnail(var26, java.lang.Long.parseLong(var17), 1, null);
+                        val var17: ContentResolver = this.this$0.getContext().getContentResolver();
+                        val var26: java.lang.String = this.$uri.getLastPathSegment();
+                        var1 = Thumbnails.getThumbnail(var17, java.lang.Long.parseLong(var26), 1, null);
                      } catch (var11: Exception) {
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,

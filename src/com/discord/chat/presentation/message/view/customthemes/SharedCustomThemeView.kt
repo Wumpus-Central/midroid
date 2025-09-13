@@ -75,10 +75,10 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var16: java.util.List = var2.getColors();
       val var8: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var7 : var16) {
+      for (java.lang.String var17 : var16) {
          val var6: StringBuilder = new StringBuilder();
          var6.append("#");
-         var6.append(var7);
+         var6.append(var17);
          var8.add(var6.toString());
       }
 
@@ -112,12 +112,12 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
-      for (java.lang.String var8 : var4) {
-         val var5: TextView = new TextView(this.getContext());
-         var5.setText(var8);
-         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var5.setTextSize(14.0F);
-         var3.add(var5);
+      for (java.lang.String var6 : var4) {
+         val var8: TextView = new TextView(this.getContext());
+         var8.setText(var6);
+         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var8.setTextSize(14.0F);
+         var3.add(var8);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

@@ -155,26 +155,26 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : q9.a(v
 
          label130:
          try {
-            var113 = Result.b(var135.getInteger("frame-rate"));
+            var114 = Result.b(var135.getInteger("frame-rate"));
          } catch (var15: java.lang.Throwable) {
-            var123 = Result.e;
-            var113 = Result.b(kotlin.c.a(var15));
+            val var113: kotlin.Result.a = Result.e;
+            var114 = Result.b(kotlin.c.a(var15));
             break label130;
          }
 
-         if (Result.e(var113) != null) {
+         if (Result.e(var114) != null) {
             label125:
             try {
-               var113 = Result.b((int)var135.getFloat("frame-rate"));
+               var114 = Result.b((int)var135.getFloat("frame-rate"));
             } catch (var14: java.lang.Throwable) {
-               val var114: kotlin.Result.a = Result.e;
-               var113 = Result.b(kotlin.c.a(var14));
+               var123 = Result.e;
+               var114 = Result.b(kotlin.c.a(var14));
                break label125;
             }
          }
 
-         var123 = var113;
-         if (Result.g(var113)) {
+         var123 = var114;
+         if (Result.g(var114)) {
             var123 = 30;
          }
 
@@ -183,26 +183,26 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : q9.a(v
 
          label119:
          try {
-            var116 = Result.b(var135.getFloat("i-frame-interval"));
+            var115 = Result.b(var135.getFloat("i-frame-interval"));
          } catch (var13: java.lang.Throwable) {
-            val var115: kotlin.Result.a = Result.e;
-            var116 = Result.b(kotlin.c.a(var13));
+            var123 = Result.e;
+            var115 = Result.b(kotlin.c.a(var13));
             break label119;
          }
 
-         if (Result.e(var116) != null) {
+         if (Result.e(var115) != null) {
             label114:
             try {
-               var116 = Result.b((float)var135.getInteger("i-frame-interval"));
+               var115 = Result.b((float)var135.getInteger("i-frame-interval"));
             } catch (var12: java.lang.Throwable) {
-               var123 = Result.e;
-               var116 = Result.b(kotlin.c.a(var12));
+               val var116: kotlin.Result.a = Result.e;
+               var115 = Result.b(kotlin.c.a(var12));
                break label114;
             }
          }
 
-         var123 = var116;
-         if (Result.g(var116)) {
+         var123 = var115;
+         if (Result.g(var115)) {
             var123 = 5.0F;
          }
 
@@ -312,10 +312,10 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : q9.a(v
       // 3f: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 42: pop
       // 43: goto 53
-      // 46: astore 1
+      // 46: astore 2
       // 47: getstatic kotlin/Result.e Lkotlin/Result$a;
-      // 4a: astore 2
-      // 4b: aload 1
+      // 4a: astore 1
+      // 4b: aload 2
       // 4c: invokestatic kotlin/c.a (Ljava/lang/Throwable;)Ljava/lang/Object;
       // 4f: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 52: pop
@@ -559,17 +559,17 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : q9.a(v
       public override fun toString(): String {
          val var2: Int = this.colorTransfer;
          val var3: Int = this.colorStandard;
-         val var1: Int = this.colorRange;
-         val var5: ByteBuffer = this.hdrStaticInfo;
+         val var5: Int = this.colorRange;
+         val var1: ByteBuffer = this.hdrStaticInfo;
          val var4: StringBuilder = new StringBuilder();
          var4.append("ColorFormatSettings(colorTransfer=");
          var4.append(var2);
          var4.append(", colorStandard=");
          var4.append(var3);
          var4.append(", colorRange=");
-         var4.append(var1);
-         var4.append(", hdrStaticInfo=");
          var4.append(var5);
+         var4.append(", hdrStaticInfo=");
+         var4.append(var1);
          var4.append(")");
          return var4.toString();
       }

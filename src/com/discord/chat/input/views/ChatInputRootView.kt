@@ -40,7 +40,6 @@ import java.util.UUID
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -254,9 +253,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var22: Uri = var9.c().getItemAt(var4).getUri();
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var22);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -362,9 +361,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var7 : var4) {
+      for (ChatInputNode var18 : var4) {
          val var17: Editable = this.editText.getEditableText();
-         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var18);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -529,8 +528,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                      int label;
 
                      {
@@ -565,7 +564,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (fc.f.g(var4, var1, this) === var3) {
+                  if (fc.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

@@ -22,13 +22,13 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
             var3 = null;
          }
 
-         PlayAssetDelivery.INSTANCE.getOrFetchAssetPackLocation(var1, var3);
+         PlayAssetDelivery.INSTANCE.getAssetPackLocation(var1, true, var3);
       }
    }
 
    public open fun hasOnDemandResource(resourceName: String?): Boolean {
       var var2: Boolean = false;
-      if (var1 != null && PlayAssetDelivery.getOrFetchAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, null, 2, null) != null) {
+      if (var1 != null && PlayAssetDelivery.getAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, false, null, 4, null) != null) {
          var2 = true;
       }
 

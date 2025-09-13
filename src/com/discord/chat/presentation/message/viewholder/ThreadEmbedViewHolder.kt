@@ -59,24 +59,24 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
          var18 = new DraweeSpanStringBuilder((java.lang.CharSequence)var18);
       } else if (var22.getContent() != null) {
-         val var24: StructurableText = var22.getContent();
-         var18 = var15.getContext();
-         val var10: java.lang.String = var22.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var22);
-         val var5: Boolean = MessageKt.shouldShowLinkDecorations(var22);
+         var18 = var22.getContent();
+         val var10: Context = var15.getContext();
+         val var24: java.lang.String = var22.getId-3Eiw7ao();
+         val var7: Boolean = MessageKt.shouldAnimateEmoji(var22);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var22);
          val var6: Boolean = var22.getShouldShowRoleDot();
-         val var7: Boolean = var22.getShouldShowRoleOnName();
+         val var5: Boolean = var22.getShouldShowRoleOnName();
          val var11: FontMetrics = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
          val var30: TextPaint = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint();
          var18 = TextUtilsKt.toSpannable$default(
-            var24,
-            (Context)var18,
+            (StructurableText)var18,
             var10,
-            var8,
-            var5,
-            var6,
+            var24,
             var7,
+            var8,
+            var6,
+            var5,
             var30,
             null,
             null,

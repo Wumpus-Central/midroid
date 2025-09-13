@@ -45,13 +45,13 @@ public data class ThreadEmbedMessageAccessory(messageId: MessageId, threadEmbed:
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ThreadEmbed = this.threadEmbed;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: ThreadEmbed = this.threadEmbed;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ThreadEmbedMessageAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", threadEmbed=");
       var1.append(var3);
+      var1.append(", threadEmbed=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

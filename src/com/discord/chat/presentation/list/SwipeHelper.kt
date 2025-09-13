@@ -92,7 +92,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var19 = null;
          }
 
-         var var6: Float = Math.abs(var19.getTranslationX());
+         var var4: Float = Math.abs(var19.getTranslationX());
          var19 = this.mView;
          if (this.mView == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mView");
@@ -124,8 +124,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
          var1.save();
          var var2: Float = this.getSwipeProgress();
-         var var8: Float = this.getLeftBevelRadius(var2, var5);
-         var var12: Float = MAX_RIGHT_BEVEL_WIDTH * var2;
+         var var7: Float = this.getLeftBevelRadius(var2, var5);
+         val var12: Float = MAX_RIGHT_BEVEL_WIDTH * var2;
          var19 = this.mView;
          if (this.mView == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mView");
@@ -140,55 +140,55 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          }
 
          var3 = var3 + var19.getTranslationX();
-         val var10: Float = var3 - var8;
-         var var4: Float = var3 + var6;
-         val var13: Float = var3 + var6 - var12;
+         val var10: Float = var3 - var7;
+         val var6: Float = var3 + var4;
+         var var11: Float = var3 + var4 - var12;
          var19 = this.mView;
          if (this.mView == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mView");
             var19 = null;
          }
 
-         var var7: Float = var19.getTop();
+         var var8: Float = var19.getTop();
          var var16: Int = RIGHT_BEVEL_HEIGHT;
-         val var14: Float = var7 - RIGHT_BEVEL_HEIGHT;
-         val var9: Float = RIGHT_BEVEL_HEIGHT + (var7 - RIGHT_BEVEL_HEIGHT);
-         val var15: Float = var7 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
-         val var11: Float = var14 + var5 + RIGHT_BEVEL_HEIGHT * 2 - RIGHT_BEVEL_HEIGHT;
+         val var15: Float = var8 - RIGHT_BEVEL_HEIGHT;
+         val var9: Float = RIGHT_BEVEL_HEIGHT + (var8 - RIGHT_BEVEL_HEIGHT);
+         val var14: Float = var8 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
+         val var13: Float = var15 + var5 + RIGHT_BEVEL_HEIGHT * 2 - RIGHT_BEVEL_HEIGHT;
          val var48: Path = new Path();
-         var48.moveTo(var13, var11);
-         var48.lineTo(var3, var11);
-         var48.lineTo(var3, var9 + var8);
-         var7 = 2;
-         var48.addArc(var10 - var8, var9, var3, var9 + (float)2 * var8, 0.0F, -90.0F);
-         var48.lineTo(var13, var9);
-         val var37: Float = var12 * 0.55F + var13;
-         var48.cubicTo(var12 * 0.55F + var13, var9, var4, var14 + (float)var16 * 0.55F, var4, var14);
-         var48.lineTo(var4, var15);
-         var48.cubicTo(var4, var15 - (float)var16 * 0.55F, var37, var11, var13, var11);
+         var48.moveTo(var11, var13);
+         var48.lineTo(var3, var13);
+         var48.lineTo(var3, var9 + var7);
+         var8 = 2;
+         var48.addArc(var10 - var7, var9, var3, var9 + (float)2 * var7, 0.0F, -90.0F);
+         var48.lineTo(var11, var9);
+         val var38: Float = var12 * 0.55F + var11;
+         var48.cubicTo(var12 * 0.55F + var11, var9, var6, var15 + (float)var16 * 0.55F, var6, var15);
+         var48.lineTo(var6, var14);
+         var48.cubicTo(var6, var14 - (float)var16 * 0.55F, var38, var13, var11, var13);
          var1.save();
          var1.clipPath(var48);
-         var1.drawRect(var10, var14, var4, var15, var21);
+         var1.drawRect(var10, var15, var6, var14, var21);
          var1.restore();
          var1.save();
          var48.reset();
-         var12 = var11 - var8;
-         var48.addCircle(var10, var11 - var8, var8, Direction.CW);
+         var11 = var13 - var7;
+         var48.addCircle(var10, var13 - var7, var7, Direction.CW);
          if (VERSION.SDK_INT >= 26) {
             p.a(var1, var48);
          } else {
             var1.clipPath(var48, Op.DIFFERENCE);
          }
 
-         var1.drawRect(var10, var12, var3, var11, var21);
+         var1.drawRect(var10, var11, var3, var13, var21);
          var1.restore();
-         var8 = this.getArrowContainerBaseSize(var5) / var7;
-         var6 = var6 / var7;
-         val var17: Int = (int)(var5 / var7 + var9 - var8);
+         var7 = this.getArrowContainerBaseSize(var5) / var8;
+         var4 = var4 / var8;
+         val var17: Int = (int)(var5 / var8 + var9 - var7);
          var16 = kotlin.ranges.e.m((int)((float)192 * var2) + 64, 0, 255);
          var1.save();
-         var1.clipRect(var3, 0.0F, var4, (float)var1.getHeight());
-         var1.translate(var3 + var6 - var8 + var8, (float)var17 + var8);
+         var1.clipRect(var3, 0.0F, var6, (float)var1.getHeight());
+         var1.translate(var3 + var4 - var7 + var7, (float)var17 + var7);
          var1.scale(this.easterEggArrowScale, this.easterEggArrowScale);
          if (this.isCompleted) {
             var3 = 1.0F;
@@ -211,7 +211,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          }
 
          var21.setShadowLayer(10.0F, 0.0F, 5.0F, Color.parseColor(var49));
-         var1.drawCircle(0.0F, 0.0F, var8, var21);
+         var1.drawCircle(0.0F, 0.0F, var7, var21);
          var21.clearShadowLayer();
          if (this.editCircleScale > 0.0F) {
             var1.save();
@@ -229,7 +229,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             );
             var21.setStyle(var22);
             var21.setAlpha(255);
-            var1.drawCircle(0.0F, 0.0F, var8, var21);
+            var1.drawCircle(0.0F, 0.0F, var7, var21);
             var1.restore();
          }
 
@@ -306,23 +306,23 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var3 = null;
          }
 
-         var var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+         val var5: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
-         val var5: ValueAnimator = new ValueAnimator();
-         var5.setValues(new PropertyValuesHolder[]{var7});
-         var5.setDuration(300L);
-         var5.setInterpolator(new AccelerateDecelerateInterpolator());
-         var5.addUpdateListener(new s(this, var1));
-         this.easterEggArrowAnimator = var5;
-         var5.start();
-         var7 = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
-         val var6: ValueAnimator = new ValueAnimator();
-         var6.setValues(new PropertyValuesHolder[]{var7});
-         var6.setDuration(800L);
-         var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
-         var6.addUpdateListener(new t(this, var1));
-         var6.addListener(new AnimatorListener(this, var2, var1) {
+         var var7: ValueAnimator = new ValueAnimator();
+         var7.setValues(new PropertyValuesHolder[]{var5});
+         var7.setDuration(300L);
+         var7.setInterpolator(new AccelerateDecelerateInterpolator());
+         var7.addUpdateListener(new s(this, var1));
+         this.easterEggArrowAnimator = var7;
+         var7.start();
+         val var6: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         var7 = new ValueAnimator();
+         var7.setValues(new PropertyValuesHolder[]{var6});
+         var7.setDuration(800L);
+         var7.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
+         var7.addUpdateListener(new t(this, var1));
+         var7.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
             final RecyclerView.ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
@@ -350,8 +350,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             public void onAnimationStart(Animator var1) {
             }
          });
-         this.easterEggArrowRotationAnimator = var6;
-         var6.start();
+         this.easterEggArrowRotationAnimator = var7;
+         var7.start();
          this.easterEggIsAnimating = true;
       }
    }
@@ -468,13 +468,13 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    private fun triggerEditExitTransition(recyclerView: RecyclerView) {
-      val var2: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
-      val var3: ValueAnimator = new ValueAnimator();
-      var3.setValues(new PropertyValuesHolder[]{var2});
-      var3.setDuration(200L);
-      var3.setInterpolator(new AccelerateDecelerateInterpolator());
-      var3.addUpdateListener(new u(this, var1));
-      var3.addListener(new AnimatorListener(this) {
+      val var3: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setValues(new PropertyValuesHolder[]{var3});
+      var2.setDuration(200L);
+      var2.setInterpolator(new AccelerateDecelerateInterpolator());
+      var2.addUpdateListener(new u(this, var1));
+      var2.addListener(new AnimatorListener(this) {
          final SwipeHelper this$0;
 
          {
@@ -494,8 +494,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.editCircleScaleAnimator = var3;
-      var3.start();
+      this.editCircleScaleAnimator = var2;
+      var2.start();
    }
 
    @JvmStatic

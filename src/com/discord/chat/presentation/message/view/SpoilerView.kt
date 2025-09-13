@@ -49,12 +49,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var9: ObscureOverlayView = this.binding.obscure;
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var6: Function1 = var3.getLabel();
-      val var5: Context = this.getContext();
-      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
+      val var5: Function1 = var3.getLabel();
+      var var6: Context = this.getContext();
+      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
       val var8: Function1 = var3.getDescription();
-      val var12: Context = this.getContext();
-      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      var6 = this.getContext();
+      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
    }
 
    @JvmStatic
@@ -74,12 +74,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var var3: SpoilerOverlayView = this.binding.spoiler;
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
-      val var5: Function1 = var1.getAttributes().getLabel();
-      val var4: Context = this.getContext();
-      val var8: java.lang.String = var5.invoke(var4) as java.lang.String;
+      val var4: Function1 = var1.getAttributes().getLabel();
+      var var5: Context = this.getContext();
+      val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
       val var6: Function1 = var1.getAttributes().getDescription();
-      val var9: Context = this.getContext();
-      var3.configure(var8, var6.invoke(var9) as java.lang.String, new P0(this, var2));
+      var5 = this.getContext();
+      var3.configure(var8, var6.invoke(var5) as java.lang.String, new P0(this, var2));
    }
 
    @JvmStatic
@@ -238,19 +238,19 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    public companion object {
       public fun ConstraintLayout.createAndAttachSpoilerView(radiusPx: Int): SpoilerView {
          val var3: Context = var1.getContext();
-         val var5: SpoilerView = new SpoilerView(var3, null, 2, null);
-         var5.setId(View.generateViewId());
-         ViewClippingUtilsKt.clipToRoundedRectangle(var5, var2);
-         var5.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
-         var1.addView(var5);
-         val var4: ConstraintSet = new ConstraintSet();
-         var4.f(var1);
-         var4.g(var5.getId(), 6, 0, 6, 0);
-         var4.g(var5.getId(), 7, 0, 7, 0);
-         var4.g(var5.getId(), 3, 0, 3, 0);
-         var4.g(var5.getId(), 4, 0, 4, 0);
-         var4.c(var1);
-         return var5;
+         val var4: SpoilerView = new SpoilerView(var3, null, 2, null);
+         var4.setId(View.generateViewId());
+         ViewClippingUtilsKt.clipToRoundedRectangle(var4, var2);
+         var4.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
+         var1.addView(var4);
+         val var5: ConstraintSet = new ConstraintSet();
+         var5.f(var1);
+         var5.g(var4.getId(), 6, 0, 6, 0);
+         var5.g(var4.getId(), 7, 0, 7, 0);
+         var5.g(var4.getId(), 3, 0, 3, 0);
+         var5.g(var4.getId(), 4, 0, 4, 0);
+         var5.c(var1);
+         return var4;
       }
    }
 }

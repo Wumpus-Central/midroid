@@ -67,19 +67,19 @@ public data class AppMessageEmbedAccessory(messageId: MessageId, codedLinkIndex:
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Int = this.codedLinkIndex;
-      val var3: AppMessageEmbedImpl = this.appMessageEmbed;
-      val var1: Int = this.constrainedWidth;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Int = this.codedLinkIndex;
+      val var5: AppMessageEmbedImpl = this.appMessageEmbed;
+      val var2: Int = this.constrainedWidth;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppMessageEmbedAccessory(messageId=");
-      var4.append(var5);
-      var4.append(", codedLinkIndex=");
-      var4.append(var2);
-      var4.append(", appMessageEmbed=");
       var4.append(var3);
-      var4.append(", constrainedWidth=");
+      var4.append(", codedLinkIndex=");
       var4.append(var1);
+      var4.append(", appMessageEmbed=");
+      var4.append(var5);
+      var4.append(", constrainedWidth=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

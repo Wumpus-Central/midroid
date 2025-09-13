@@ -367,6 +367,18 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/treat" android:name="com.discord.main.MainTreat" android:roundIcon="@mipmap/treat_round" android:targetActivity="com.discord.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/trick" android:name="com.discord.main.MainTrick" android:roundIcon="@mipmap/trick_round" android:targetActivity="com.discord.main.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
         <activity-alias android:enabled="false" android:exported="true" android:icon="@mipmap/blurple_twilight" android:name="com.discord.main.MainBlurpleTwilight" android:roundIcon="@mipmap/blurple_twilight_round" android:targetActivity="com.discord.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

@@ -2102,6 +2102,7 @@ public final class R {
       public static int modules_age_assurance_ageassurancecompiledmessages;
       public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
+      public static int modules_custom_status_statuscompiledmessages;
       public static int modules_display_name_styles_intl_displaynamestylescompiledmessages;
       public static int modules_feedback_intl_feedbackcompiledmessages;
       public static int modules_go_live_web_modal_golivemodalcompiledmessages;

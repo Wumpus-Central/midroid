@@ -145,12 +145,12 @@ public open class RLottieImageView : m {
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
       Intrinsics.checkParameterIsNotNull(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      Intrinsics.checkExpressionValueIsNotNull(var6, "context");
       val var7: Context = this.getContext();
       Intrinsics.checkExpressionValueIsNotNull(var7, "context");
+      val var6: Context = this.getContext();
+      Intrinsics.checkExpressionValueIsNotNull(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;
@@ -161,10 +161,10 @@ public open class RLottieImageView : m {
          }
 
          for (Entry var16 : this.layerColors.entrySet()) {
-            val var11: java.lang.String = var16.getKey() as java.lang.String;
+            val var15: java.lang.String = var16.getKey() as java.lang.String;
             var1 = (var16.getValue() as java.lang.Number).intValue();
             if (this.drawable != null) {
-               this.drawable.setLayerColor(var11, var1);
+               this.drawable.setLayerColor(var15, var1);
             }
          }
 

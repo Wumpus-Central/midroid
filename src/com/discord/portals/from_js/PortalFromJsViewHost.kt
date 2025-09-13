@@ -177,25 +177,24 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
-            val var7: CrashReporting = CrashReporting.INSTANCE;
-            val var8: Pair = v.a("index", java.lang.String.valueOf(var1));
+            val var8: CrashReporting = CrashReporting.INSTANCE;
+            val var7: Pair = v.a("index", java.lang.String.valueOf(var1));
             var3 = this.portalId;
             if (this.portalId == null) {
                var3 = "";
             }
 
             val var15: Pair = v.a("portalId", var3);
-            var3 = this.portalIdPrev;
-            if (this.portalIdPrev == null) {
-               var3 = "";
+            if (this.portalIdPrev != null) {
+               var5 = this.portalIdPrev;
             }
 
-            val var12: Pair = v.a("prevPortalId", var3);
+            val var12: Pair = v.a("prevPortalId", var5);
             if (this.childView == null) {
                var4 = "true";
             }
 
-            var7.addBreadcrumb("getChildAt of non-zero index", O.m(new Pair[]{var8, var15, var12, v.a("childViewIsNull", var4)}), "portal");
+            var8.addBreadcrumb("getChildAt of non-zero index", O.m(new Pair[]{var7, var15, var12, v.a("childViewIsNull", var4)}), "portal");
          }
 
          val var13: View;
@@ -223,10 +222,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var3: View = this.childView;
+         val var2: View = this.childView;
          if (this.childView != null) {
-            val var2: java.lang.String = this.portalId;
-            this.childViewAdded(var2, var3);
+            val var3: java.lang.String = this.portalId;
+            this.childViewAdded(var3, var2);
          }
 
          this.portalIdPrev = null;
@@ -283,8 +282,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
 
    public open fun removeViewAt(index: Int) {
       if (var1 > 0) {
-         val var6: CrashReporting = CrashReporting.INSTANCE;
-         val var5: Pair = v.a("index", java.lang.String.valueOf(var1));
+         val var5: CrashReporting = CrashReporting.INSTANCE;
+         val var6: Pair = v.a("index", java.lang.String.valueOf(var1));
          var var2: java.lang.String = this.portalId;
          if (this.portalId == null) {
             var2 = "";
@@ -303,7 +302,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             var2 = "false";
          }
 
-         var6.addBreadcrumb("removeViewAt of non-zero index", O.m(new Pair[]{var5, var10, var9, v.a("childViewIsNull", var2)}), "portal");
+         var5.addBreadcrumb("removeViewAt of non-zero index", O.m(new Pair[]{var6, var10, var9, v.a("childViewIsNull", var2)}), "portal");
       }
 
       if (var1 == 0) {

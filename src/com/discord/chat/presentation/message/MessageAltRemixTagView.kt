@@ -54,16 +54,16 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    ) {
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var11: TextView = this.binding.altRemixTag;
+         val var10: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var10: Context = this.getContext();
-            var9 = ColorUtilsKt.getColorCompat(var10, color.white);
+            val var11: Context = this.getContext();
+            var9 = ColorUtilsKt.getColorCompat(var11, color.white);
          }
 
-         var11.setTextColor(var9);
+         var10.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          if (var2 != null) {
             var9 = var2;
