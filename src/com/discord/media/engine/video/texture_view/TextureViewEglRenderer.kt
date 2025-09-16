@@ -173,11 +173,11 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
          Log.i$default(var9, var6, var5.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var4: Thread = Thread.currentThread();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Expected to be on android main thread. Current: ");
-         var7.append(var4);
-         throw new IllegalStateException(var7.toString().toString());
+         val var7: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var7);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 

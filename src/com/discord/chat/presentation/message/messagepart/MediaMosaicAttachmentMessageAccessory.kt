@@ -117,29 +117,29 @@ public data class MediaMosaicAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: java.util.List = this.attachments;
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var6: java.util.List = this.attachments;
       val var1: Int = this.constrainedWidth;
       val var3: Boolean = this.isForwardedContent;
-      val var6: MessageState = this.messageState;
+      val var5: MessageState = this.messageState;
       val var2: Boolean = this.shouldAutoPlayGif;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MediaMosaicAttachmentMessageAccessory(messageId=");
-      var5.append(var4);
-      var5.append(", channelId=");
-      var5.append(var7);
-      var5.append(", attachments=");
-      var5.append(var8);
-      var5.append(", constrainedWidth=");
-      var5.append(var1);
-      var5.append(", isForwardedContent=");
-      var5.append(var3);
-      var5.append(", messageState=");
-      var5.append(var6);
-      var5.append(", shouldAutoPlayGif=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaMosaicAttachmentMessageAccessory(messageId=");
+      var4.append(var7);
+      var4.append(", channelId=");
+      var4.append(var8);
+      var4.append(", attachments=");
+      var4.append(var6);
+      var4.append(", constrainedWidth=");
+      var4.append(var1);
+      var4.append(", isForwardedContent=");
+      var4.append(var3);
+      var4.append(", messageState=");
+      var4.append(var5);
+      var4.append(", shouldAutoPlayGif=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

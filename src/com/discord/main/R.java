@@ -25,6 +25,8 @@ public final class R {
       public static int pastel_background;
       public static int pirate_background;
       public static int sunset_background;
+      public static int treat_background;
+      public static int trick_background;
       public static int y2k_background;
 
       private color() {
@@ -110,6 +112,12 @@ public final class R {
       public static int sunset;
       public static int sunset_foreground;
       public static int sunset_round;
+      public static int treat;
+      public static int treat_foreground;
+      public static int treat_round;
+      public static int trick;
+      public static int trick_foreground;
+      public static int trick_round;
       public static int y2k;
       public static int y2k_foreground;
       public static int y2k_round;

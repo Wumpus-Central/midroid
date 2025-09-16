@@ -1,6 +1,5 @@
 package com.discord.react_activities
 
-import a4.b
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
@@ -21,8 +20,6 @@ import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import java.util.concurrent.Future
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
-   internal final lateinit var rootView: ReactRootView
-
    protected open fun attachBaseContext(newBase: Context) {
       super.attachBaseContext(FontScaleUtilsKt.getFontScaledContext(var1));
       var1 = this.getApplicationContext();
@@ -45,16 +42,16 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    public open fun onConfigurationChanged(newConfig: Configuration) {
       super.onConfigurationChanged(var1);
-      b.m.a(this, var1);
+      a4.b.m.a(this, var1);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -87,11 +84,10 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected open fun createRootView(): com.facebook.react.ReactRootView {
+      protected open fun createRootView(): com.facebook.react.ReactRootView? {
          val var1: Context = this.getContext();
          val var2: ReactRootView = new ReactRootView(var1);
-         var2.setIsFabric(DefaultNewArchitectureEntryPoint.getFabricEnabled());
-         this.this$0.setRootView$react_activity_release(var2);
+         var2.setIsFabric(this.isFabricEnabled());
          return var2;
       }
 

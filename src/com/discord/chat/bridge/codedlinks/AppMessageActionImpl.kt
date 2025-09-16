@@ -50,8 +50,8 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.id.hashCode();
-      val var3: Int = this.label.hashCode();
+      val var3: Int = this.id.hashCode();
+      val var2: Int = this.label.hashCode();
       val var1: Int;
       if (this.disabled == null) {
          var1 = 0;
@@ -59,20 +59,20 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          var1 = this.disabled.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.label;
-      val var1: java.lang.Boolean = this.disabled;
+      val var3: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var2: java.lang.Boolean = this.disabled;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppMessageActionImpl(id=");
-      var4.append(var2);
-      var4.append(", label=");
       var4.append(var3);
-      var4.append(", disabled=");
+      var4.append(", label=");
       var4.append(var1);
+      var4.append(", disabled=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

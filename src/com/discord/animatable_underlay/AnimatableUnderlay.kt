@@ -10,7 +10,7 @@ import android.graphics.RectF
 import android.graphics.Path.Direction
 import android.view.MotionEvent
 import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.react_activities.ReactRootView
+import com.discord.react_activities.RootViewUtils
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
@@ -67,9 +67,9 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
             val var15: RectF = this.pathRect;
             val var4: Float = this.height;
-            val var3: Float = this.shapeHeight;
+            val var2: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var4 - (var4 - var3) / 2;
+            var15.bottom = var4 - (var4 - var2) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -152,12 +152,12 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      ReactRootView.Companion.setOnInterceptTouchEvent(this, new a(this));
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new a(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      ReactRootView.Companion.setOnInterceptTouchEvent(this, null);
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, null);
    }
 
    protected open fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {

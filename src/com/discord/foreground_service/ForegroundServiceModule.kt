@@ -1,8 +1,8 @@
 package com.discord.foreground_service
 
-import com.discord.crash_reporting.CrashReporting
 import com.discord.foreground_service.react.ForegroudServiceConfigurationParserKt
 import com.discord.foreground_service.service.ServiceNotificationConfiguration
+import com.discord.foreground_service.utils.Log
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -27,18 +27,24 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
 
    @ReactMethod
    public fun startService(parameters: ReadableArray) {
-      val var2: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
-      if (var2.isEmpty()) {
-         CrashReporting.addBreadcrumb$default(
-            CrashReporting.INSTANCE, "Couldn't start ForegroundService, no service configurations provided.", null, null, 6, null
-         );
+      val var3: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
+      val var4: Log = Log.INSTANCE;
+      val var2: Int = var3.size();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("startService: ForegroundService with ");
+      var5.append(var2);
+      var5.append(" configurations");
+      Log.i$foreground_service_release$default(var4, var5.toString(), null, 2, null);
+      if (var3.isEmpty()) {
+         Log.i$foreground_service_release$default(var4, "Couldn't start ForegroundService, no service configurations provided.", null, 2, null);
       } else {
-         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var2);
+         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var3);
       }
    }
 
    @ReactMethod
    public fun stopService() {
+      Log.i$foreground_service_release$default(Log.INSTANCE, "stopService: Stopping ForegroundService", null, 2, null);
       ForegroundServiceManager.INSTANCE.onRequestServiceDestroy$foreground_service_release(this.reactContext);
    }
 }

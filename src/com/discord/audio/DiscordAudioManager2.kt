@@ -77,25 +77,25 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          // $VF: Duplicated exception handlers to handle obfuscated exceptions
          public void onAudioDevicesAdded(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var6: DiscordAudioManager2 = this.this$0;
-               val var5: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var8: ArrayList = new ArrayList();
+               val var8: DiscordAudioManager2 = this.this$0;
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var7: ArrayList = new ArrayList();
                var var4: Int = var1.length;
 
                for (int var2 = 0; var2 < var4; var2++) {
-                  val var7: AudioDeviceInfo = var1[var2];
+                  val var5: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var8.add(var7);
+                     var7.add(var5);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var6, V.l(var5, var8));
+               DiscordAudioManager2.access$setAudioDevices$p(var8, V.l(var6, var7));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new k(this.this$0));
                if (DiscordAudioManager2.access$getPreferredAudioDevice$p(this.this$0) == null) {
                   var4 = var1.length;
                   var var11: Int = 0;
 
-                  val var18: Any;
+                  var var16: AudioDeviceInfo;
                   while (true) {
                      var18 = null;
                      if (var11 >= var4) {
@@ -151,19 +151,19 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var5: DiscordAudioManager2 = this.this$0;
+               val var7: DiscordAudioManager2 = this.this$0;
                val var4: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var6: ArrayList = new ArrayList();
+               val var5: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var7: AudioDeviceInfo = var1[var2];
+                  val var6: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var6.add(var7);
+                     var5.add(var6);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var5, V.j(var4, CollectionsKt.X0(var6)));
+               DiscordAudioManager2.access$setAudioDevices$p(var7, V.j(var4, CollectionsKt.X0(var5)));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new l(this.this$0));
                DiscordAudioManager2.access$emitEffectiveDevice(this.this$0);
             }

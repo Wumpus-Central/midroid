@@ -189,8 +189,8 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var12: Int = Integer.hashCode(this.index);
-      val var11: Int = this.changeType.hashCode();
+      val var11: Int = Integer.hashCode(this.index);
+      val var12: Int = this.changeType.hashCode();
       var var10: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
@@ -269,7 +269,7 @@ public data class MessageRow(index: Int,
                                           (
                                                    (
                                                             (
-                                                                     ((((((var12 * 31 + var11) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
+                                                                     ((((((var11 * 31 + var12) * 31 + var1) * 31 + var13) * 31 + var2) * 31 + var3) * 31 + var4)
                                                                            * 31
                                                                         + var5
                                                                   )
@@ -297,51 +297,51 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var8: ChangeType = this.changeType;
-      val var7: java.lang.Boolean = this.jumped;
-      val var3: MessageBase = this.message;
-      val var13: java.lang.Boolean = this.canAddNewReactions;
-      val var14: java.lang.String = this.addReactionLabel;
-      val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var5: ReactionsTheme = this.reactionsTheme;
+      val var7: ChangeType = this.changeType;
+      val var4: java.lang.Boolean = this.jumped;
+      val var11: MessageBase = this.message;
+      val var10: java.lang.Boolean = this.canAddNewReactions;
+      val var5: java.lang.String = this.addReactionLabel;
+      val var9: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var13: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var9: MessageFrame = this.messageFrame;
-      val var12: Int = this.reactTag;
-      val var4: Truncation = this.truncation;
-      val var15: BackgroundHighlight = this.backgroundHighlight;
-      val var10: SwipeActionsType = this.swipeActions;
-      val var16: MessageContextType = this.contextType;
+      val var14: MessageFrame = this.messageFrame;
+      val var15: Int = this.reactTag;
+      val var3: Truncation = this.truncation;
+      val var16: BackgroundHighlight = this.backgroundHighlight;
+      val var12: SwipeActionsType = this.swipeActions;
+      val var8: MessageContextType = this.contextType;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MessageRow(index=");
       var6.append(var1);
       var6.append(", changeType=");
-      var6.append(var8);
-      var6.append(", jumped=");
       var6.append(var7);
+      var6.append(", jumped=");
+      var6.append(var4);
       var6.append(", message=");
-      var6.append(var3);
-      var6.append(", canAddNewReactions=");
-      var6.append(var13);
-      var6.append(", addReactionLabel=");
-      var6.append(var14);
-      var6.append(", addNewReactionAccessibilityLabel=");
       var6.append(var11);
-      var6.append(", reactionsTheme=");
+      var6.append(", canAddNewReactions=");
+      var6.append(var10);
+      var6.append(", addReactionLabel=");
       var6.append(var5);
+      var6.append(", addNewReactionAccessibilityLabel=");
+      var6.append(var9);
+      var6.append(", reactionsTheme=");
+      var6.append(var13);
       var6.append(", renderContentOnly=");
       var6.append(var2);
       var6.append(", messageFrame=");
-      var6.append(var9);
+      var6.append(var14);
       var6.append(", reactTag=");
-      var6.append(var12);
-      var6.append(", truncation=");
-      var6.append(var4);
-      var6.append(", backgroundHighlight=");
       var6.append(var15);
-      var6.append(", swipeActions=");
-      var6.append(var10);
-      var6.append(", contextType=");
+      var6.append(", truncation=");
+      var6.append(var3);
+      var6.append(", backgroundHighlight=");
       var6.append(var16);
+      var6.append(", swipeActions=");
+      var6.append(var12);
+      var6.append(", contextType=");
+      var6.append(var8);
       var6.append(")");
       return var6.toString();
    }

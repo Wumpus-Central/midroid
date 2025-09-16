@@ -8,6 +8,6 @@ public final class l implements Function1 {
    public final BundleUpdaterManager d;
 
    public final Object invoke(Object var1) {
-      return BundleUpdaterManager.b(this.d, (ViewGroup)var1);
+      return BundleUpdaterManager.d(this.d, (ViewGroup)var1);
    }
 }

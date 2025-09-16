@@ -107,26 +107,25 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var9: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
-               var9 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var25: Log = Log.INSTANCE;
+               var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var8: Log = Log.INSTANCE;
                val var23: java.lang.String = TAG;
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Hash ");
-               var8.append(var9);
-               Log.i$default(var25, var23, var8.toString(), null, 4, null);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var25);
+               Log.i$default(var8, var23, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
                break;
             }
 
-            if (var9 != null) {
+            if (var25 != null) {
                try {
-                  var22.add(var9);
+                  var22.add(var25);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   CollectionsKt.k();

@@ -133,24 +133,24 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      var5 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      var1 = this.getMeasuredWidth();
-      val var8: Float = this.horizontalPadding;
-      val var7: Float = this.arcPercent() * this.getMeasuredWidth();
+      val var7: Float = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      val var8: Float = this.getMeasuredWidth();
+      var1 = this.horizontalPadding;
+      var5 = this.arcPercent() * this.getMeasuredWidth();
       var2 = var10[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
             throw new n();
          }
 
-         this.arcRect.set(var6, var5, var6 + var7, var7 + var5);
+         this.arcRect.set(var6, var7, var6 + var5, var5 + var7);
       } else {
-         this.arcRect.set(var6, var5 - var7, var7 + var6, var5);
+         this.arcRect.set(var6, var7 - var5, var5 + var6, var7);
       }
 
       var11.moveTo(var6, var4);
       var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var1 - var8, var5);
+      var11.lineTo(var8 - var1, var7);
       return var11;
    }
 

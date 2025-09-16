@@ -91,12 +91,12 @@ public data class PollAction(label: String,
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var2: java.lang.String = this.label;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append(var2);
-         var1.append("  •  ");
-         var1.append(var3);
-         return var1.toString();
+         val var1: java.lang.String = this.label;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var1);
+         var2.append("  •  ");
+         var2.append(var3);
+         return var2.toString();
       }
    }
 
@@ -128,24 +128,24 @@ public data class PollAction(label: String,
 
    public override fun toString(): String {
       val var5: java.lang.String = this.label;
-      val var4: PollActionPresentation = this.presentation;
+      val var6: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var6: java.lang.String = this.type;
+      val var7: java.lang.String = this.type;
       val var2: java.lang.String = this.secondaryLabel;
-      val var7: java.lang.String = this.accessibilityHint;
+      val var4: java.lang.String = this.accessibilityHint;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PollAction(label=");
       var3.append(var5);
       var3.append(", presentation=");
-      var3.append(var4);
+      var3.append(var6);
       var3.append(", enabled=");
       var3.append(var1);
       var3.append(", type=");
-      var3.append(var6);
+      var3.append(var7);
       var3.append(", secondaryLabel=");
       var3.append(var2);
       var3.append(", accessibilityHint=");
-      var3.append(var7);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

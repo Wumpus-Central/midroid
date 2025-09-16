@@ -19,8 +19,8 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
@@ -92,8 +92,8 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            val var5: CoroutineDispatcher = K.b();
-            var4 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
+            var4 = K.b();
+            val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -117,16 +117,16 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                   if (this.label == 0) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
-                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var2x.isResource()) {
-                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var3.isResource()) {
+                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
-                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
-                     } else if (var2x.getUri().getScheme() == "file") {
-                        var1 = Drawable.createFromPath(var2x.getUri().getPath());
+                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
+                     } else if (var3.getUri().getScheme() == "file") {
+                        var1 = Drawable.createFromPath(var3.getUri().getPath());
                      } else {
-                        val var8: URLConnection = new URL(var2x.getSource()).openConnection();
+                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();
                         var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));
@@ -140,7 +140,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = f.g(var5, (Function2)var4, this);
+            var4 = f.g((CoroutineContext)var4, var5, this);
             if (var4 === var3) {
                return var3;
             }

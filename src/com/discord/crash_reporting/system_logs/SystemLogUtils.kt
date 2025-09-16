@@ -59,7 +59,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -99,25 +99,24 @@ internal object SystemLogUtils {
             val var21: Sequence = kotlin.sequences.k.B(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
             );
-            val var13: HashSet = V.e(
+            val var23: HashSet = V.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               var7 = var21.iterator();
+               val var8: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var8.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (var13.contains((java.lang.String)var8));
+                  var14 = var8.next();
+               } while (var23.contains((java.lang.String)var14));
 
-               var14 = var8 as java.lang.String;
+               var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
             val var22: java.lang.String = kotlin.sequences.k.z(var21, "\n", null, null, 0, null, null, 62, null);
@@ -131,7 +130,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -555,27 +554,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.text;
-         val var1: java.lang.String = this.cause;
-         val var3: java.lang.String = this.groupBy;
-         val var4: java.lang.String = this.origin;
-         val var2: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var5);
-         var7.append(", cause=");
-         var7.append(var1);
-         var7.append(", groupBy=");
-         var7.append(var3);
-         var7.append(", origin=");
-         var7.append(var4);
-         var7.append(", groupHash=");
-         var7.append(var2);
-         var7.append(", textHash=");
-         var7.append(var6);
-         var7.append(")");
-         return var7.toString();
+         val var3: java.lang.String = this.text;
+         val var7: java.lang.String = this.cause;
+         val var4: java.lang.String = this.groupBy;
+         val var1: java.lang.String = this.origin;
+         val var6: java.lang.String = this.groupHash;
+         val var2: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var3);
+         var5.append(", cause=");
+         var5.append(var7);
+         var5.append(", groupBy=");
+         var5.append(var4);
+         var5.append(", origin=");
+         var5.append(var1);
+         var5.append(", groupHash=");
+         var5.append(var6);
+         var5.append(", textHash=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

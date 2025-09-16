@@ -28,6 +28,8 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
    PASTEL("PastelIcon", "MainPastel"),
    PIRATE("PirateIcon", "MainPirate"),
    SUNSET("SunsetIcon", "MainSunset"),
+   TREAT("TreatIcon", "MainTreat"),
+   TRICK("TrickIcon", "MainTrick"),
    Y2K("Y2KIcon", "MainY2K")
    public final val id: String
    private final val aliasSuffix: String

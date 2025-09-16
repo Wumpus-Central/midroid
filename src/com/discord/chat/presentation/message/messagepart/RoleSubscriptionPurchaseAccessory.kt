@@ -92,16 +92,16 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var6: java.lang.String = this.authorUsername;
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = this.authorUsername;
       val var5: java.lang.String = this.authorAvatar;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.isForwardedContent;
       val var4: StringBuilder = new StringBuilder();
       var4.append("RoleSubscriptionPurchaseAccessory(messageId=");
-      var4.append(var3);
-      var4.append(", authorUsername=");
       var4.append(var6);
+      var4.append(", authorUsername=");
+      var4.append(var3);
       var4.append(", authorAvatar=");
       var4.append(var5);
       var4.append(", constrainedWidth=");

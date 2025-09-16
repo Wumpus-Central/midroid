@@ -36,11 +36,11 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var1);
-         var6.append(var5);
-         var1 = var6.toString();
+         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var1);
+         var5.append(var6);
+         var1 = var5.toString();
       }
 
       return var1;

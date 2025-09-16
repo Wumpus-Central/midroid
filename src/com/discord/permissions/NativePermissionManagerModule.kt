@@ -57,15 +57,15 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
             // 07: astore 2
             // 08: aload 0
             // 09: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.this$0 Lcom/discord/permissions/NativePermissionManagerModule;
-            // 0c: astore 3
-            // 0d: aload 0
-            // 0e: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.$permissionKey Ljava/lang/String;
-            // 11: astore 4
+            // 0c: astore 4
+            // 0e: aload 0
+            // 0f: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.$permissionKey Ljava/lang/String;
+            // 12: astore 3
             // 13: aload 2
             // 14: monitorenter
-            // 15: aload 3
-            // 16: invokestatic com/discord/permissions/NativePermissionManagerModule.access$getPendingPermissionRequests$p (Lcom/discord/permissions/NativePermissionManagerModule;)Ljava/util/Map;
-            // 19: aload 4
+            // 15: aload 4
+            // 17: invokestatic com/discord/permissions/NativePermissionManagerModule.access$getPendingPermissionRequests$p (Lcom/discord/permissions/NativePermissionManagerModule;)Ljava/util/Map;
+            // 1a: aload 3
             // 1b: invokeinterface java/util/Map.remove (Ljava/lang/Object;)Ljava/lang/Object; 2
             // 20: checkcast java/util/List
             // 23: astore 3
@@ -76,16 +76,16 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
             // 2a: return
             // 2b: aload 3
             // 2c: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
-            // 31: astore 6
-            // 33: aload 6
+            // 31: astore 4
+            // 33: aload 4
             // 35: invokeinterface java/util/Iterator.hasNext ()Z 1
             // 3a: ifeq 8d
-            // 3d: aload 6
+            // 3d: aload 4
             // 3f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
             // 44: checkcast com/facebook/react/bridge/Promise
-            // 47: astore 7
+            // 47: astore 6
             // 49: aload 1
-            // 4a: aload 7
+            // 4a: aload 6
             // 4c: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
             // 51: pop
             // 52: goto 33
@@ -96,20 +96,20 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
             // 5d: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
             // 60: astore 3
             // 61: new java/lang/StringBuilder
-            // 64: astore 4
-            // 66: aload 4
+            // 64: astore 7
+            // 66: aload 7
             // 68: invokespecial java/lang/StringBuilder.<init> ()V
-            // 6b: aload 4
+            // 6b: aload 7
             // 6d: ldc "Failed to resolve promise: "
             // 6f: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
             // 72: pop
-            // 73: aload 4
+            // 73: aload 7
             // 75: aload 3
             // 76: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
             // 79: pop
-            // 7a: aload 7
+            // 7a: aload 6
             // 7c: ldc "PROMISE_RESOLUTION_ERROR"
-            // 7e: aload 4
+            // 7e: aload 7
             // 80: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
             // 83: aload 5
             // 85: invokeinterface com/facebook/react/bridge/Promise.reject (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V 4
@@ -346,26 +346,26 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       // 3e: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 43: pop
       // 44: new com/discord/react/utilities/PromiseWrapper
-      // 47: astore 6
-      // 49: aload 0
-      // 4a: aload 1
-      // 4b: invokespecial com/discord/permissions/NativePermissionManagerModule.createMultiPromiseResolver (Ljava/lang/String;)Lcom/facebook/react/bridge/Promise;
-      // 4e: astore 5
-      // 50: new com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1
-      // 53: astore 2
-      // 54: aload 2
-      // 55: getstatic com/discord/permissions/NativePermissionStatus.Companion Lcom/discord/permissions/NativePermissionStatus$Companion;
-      // 58: invokespecial com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1.<init> (Ljava/lang/Object;)V
-      // 5b: aload 6
-      // 5d: aload 5
-      // 5f: aload 2
-      // 60: aconst_null
-      // 61: bipush 4
-      // 62: aconst_null
-      // 63: invokespecial com/discord/react/utilities/PromiseWrapper.<init> (Lcom/facebook/react/bridge/Promise;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-      // 66: aload 3
-      // 67: aload 1
-      // 68: aload 6
+      // 47: astore 2
+      // 48: aload 0
+      // 49: aload 1
+      // 4a: invokespecial com/discord/permissions/NativePermissionManagerModule.createMultiPromiseResolver (Ljava/lang/String;)Lcom/facebook/react/bridge/Promise;
+      // 4d: astore 6
+      // 4f: new com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1
+      // 52: astore 5
+      // 54: aload 5
+      // 56: getstatic com/discord/permissions/NativePermissionStatus.Companion Lcom/discord/permissions/NativePermissionStatus$Companion;
+      // 59: invokespecial com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1.<init> (Ljava/lang/Object;)V
+      // 5c: aload 2
+      // 5d: aload 6
+      // 5f: aload 5
+      // 61: aconst_null
+      // 62: bipush 4
+      // 63: aconst_null
+      // 64: invokespecial com/discord/react/utilities/PromiseWrapper.<init> (Lcom/facebook/react/bridge/Promise;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+      // 67: aload 3
+      // 68: aload 1
+      // 69: aload 2
       // 6a: invokeinterface kotlin/jvm/functions/Function2.invoke (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 6f: pop
       // 70: getstatic kotlin/Unit.a Lkotlin/Unit;

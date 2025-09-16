@@ -44,14 +44,14 @@ public data class Data(component: TextDisplayComponent, markdownTextRenderOption
    }
 
    public override fun toString(): String {
-      val var2: TextDisplayComponent = this.component;
-      val var3: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("Data(component=");
-      var1.append(var2);
-      var1.append(", markdownTextRenderOptions=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: TextDisplayComponent = this.component;
+      val var1: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Data(component=");
+      var2.append(var3);
+      var2.append(", markdownTextRenderOptions=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }
