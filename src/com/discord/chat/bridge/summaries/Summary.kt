@@ -136,31 +136,31 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.topic;
-      val var4: java.lang.String = this.summShort;
-      val var6: java.util.List = this.people;
-      val var8: java.lang.String = MessageId.toString-impl(this.startId);
-      val var5: java.lang.String = MessageId.toString-impl(this.endId);
+      val var5: java.lang.String = this.id;
+      val var7: java.lang.String = this.topic;
+      val var2: java.lang.String = this.summShort;
+      val var8: java.util.List = this.people;
+      val var4: java.lang.String = MessageId.toString-impl(this.startId);
+      val var6: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var9: StringBuilder = new StringBuilder();
       var9.append("Summary(id=");
-      var9.append(var2);
-      var9.append(", topic=");
-      var9.append(var3);
-      var9.append(", summShort=");
-      var9.append(var4);
-      var9.append(", people=");
-      var9.append(var6);
-      var9.append(", startId=");
-      var9.append(var8);
-      var9.append(", endId=");
       var9.append(var5);
+      var9.append(", topic=");
+      var9.append(var7);
+      var9.append(", summShort=");
+      var9.append(var2);
+      var9.append(", people=");
+      var9.append(var8);
+      var9.append(", startId=");
+      var9.append(var4);
+      var9.append(", endId=");
+      var9.append(var6);
       var9.append(", count=");
       var9.append(var1);
       var9.append(", channelId=");
-      var9.append(var7);
+      var9.append(var3);
       var9.append(")");
       return var9.toString();
    }

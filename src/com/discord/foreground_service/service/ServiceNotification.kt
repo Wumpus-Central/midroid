@@ -66,22 +66,22 @@ internal object ServiceNotification {
    }
 
    public fun Service.startForegroundCompat(context: Context, serviceNotificationConfigurations: List<ServiceNotificationConfiguration>) {
-      var3 = CollectionsKt.K0(var3, new Comparator() {
+      val var5: java.util.List = CollectionsKt.K0(var3, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var1 as ServiceNotificationConfiguration).getPriority(), (var2 as ServiceNotificationConfiguration).getPriority());
          }
       });
-      var var5: Notification = this.buildNotification(var2, CollectionsKt.h0(var3) as ServiceNotificationConfiguration);
-      ForegroundServiceUtilsKt.startForegroundCompat(var1, var2, 8761, var5);
-      var3 = CollectionsKt.Z(var3, 1);
+      val var6: Notification = this.buildNotification(var2, CollectionsKt.h0(var5) as ServiceNotificationConfiguration);
+      ForegroundServiceUtilsKt.startForegroundCompat(var1, var2, 8761, var6);
+      var3 = CollectionsKt.Z(var5, 1);
 
       for (int var4 = 0; var4 < 6; var4++) {
          val var8: ServiceNotificationConfiguration = CollectionsKt.j0(var3, var4) as ServiceNotificationConfiguration;
          if (var8 != null) {
-            var5 = this.buildNotification(var2, var8);
+            val var9: Notification = this.buildNotification(var2, var8);
             if (VERSION.SDK_INT < 33 || b.a(var2, "android.permission.POST_NOTIFICATIONS") == 0) {
-               this.getNotificationManagerCompat(var1).o("FOREGROUND_NOTIFICATION_TAG", var4, var5);
+               this.getNotificationManagerCompat(var1).o("FOREGROUND_NOTIFICATION_TAG", var4, var9);
             }
          } else {
             this.getNotificationManagerCompat(var1).b("FOREGROUND_NOTIFICATION_TAG", var4);

@@ -57,15 +57,15 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
             // 07: astore 2
             // 08: aload 0
             // 09: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.this$0 Lcom/discord/permissions/NativePermissionManagerModule;
-            // 0c: astore 3
-            // 0d: aload 0
-            // 0e: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.$permissionKey Ljava/lang/String;
-            // 11: astore 4
+            // 0c: astore 4
+            // 0e: aload 0
+            // 0f: getfield com/discord/permissions/NativePermissionManagerModule$createMultiPromiseResolver$1.$permissionKey Ljava/lang/String;
+            // 12: astore 3
             // 13: aload 2
             // 14: monitorenter
-            // 15: aload 3
-            // 16: invokestatic com/discord/permissions/NativePermissionManagerModule.access$getPendingPermissionRequests$p (Lcom/discord/permissions/NativePermissionManagerModule;)Ljava/util/Map;
-            // 19: aload 4
+            // 15: aload 4
+            // 17: invokestatic com/discord/permissions/NativePermissionManagerModule.access$getPendingPermissionRequests$p (Lcom/discord/permissions/NativePermissionManagerModule;)Ljava/util/Map;
+            // 1a: aload 3
             // 1b: invokeinterface java/util/Map.remove (Ljava/lang/Object;)Ljava/lang/Object; 2
             // 20: checkcast java/util/List
             // 23: astore 3
@@ -76,53 +76,53 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
             // 2a: return
             // 2b: aload 3
             // 2c: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
-            // 31: astore 3
-            // 32: aload 3
-            // 33: invokeinterface java/util/Iterator.hasNext ()Z 1
-            // 38: ifeq 8c
-            // 3b: aload 3
-            // 3c: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-            // 41: checkcast com/facebook/react/bridge/Promise
-            // 44: astore 6
-            // 46: aload 1
-            // 47: aload 6
-            // 49: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-            // 4e: pop
-            // 4f: goto 32
-            // 52: astore 1
-            // 53: goto 93
-            // 56: astore 4
-            // 58: aload 4
-            // 5a: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-            // 5d: astore 5
-            // 5f: new java/lang/StringBuilder
-            // 62: astore 7
-            // 64: aload 7
-            // 66: invokespecial java/lang/StringBuilder.<init> ()V
-            // 69: aload 7
+            // 31: astore 4
+            // 33: aload 4
+            // 35: invokeinterface java/util/Iterator.hasNext ()Z 1
+            // 3a: ifeq 8a
+            // 3d: aload 4
+            // 3f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+            // 44: checkcast com/facebook/react/bridge/Promise
+            // 47: astore 5
+            // 49: aload 1
+            // 4a: aload 5
+            // 4c: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+            // 51: pop
+            // 52: goto 33
+            // 55: astore 1
+            // 56: goto 91
+            // 59: astore 7
+            // 5b: aload 7
+            // 5d: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
+            // 60: astore 6
+            // 62: new java/lang/StringBuilder
+            // 65: astore 3
+            // 66: aload 3
+            // 67: invokespecial java/lang/StringBuilder.<init> ()V
+            // 6a: aload 3
             // 6b: ldc "Failed to resolve promise: "
             // 6d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
             // 70: pop
-            // 71: aload 7
-            // 73: aload 5
-            // 75: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-            // 78: pop
-            // 79: aload 6
-            // 7b: ldc "PROMISE_RESOLUTION_ERROR"
-            // 7d: aload 7
-            // 7f: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-            // 82: aload 4
-            // 84: invokeinterface com/facebook/react/bridge/Promise.reject (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V 4
-            // 89: goto 32
-            // 8c: getstatic kotlin/Unit.a Lkotlin/Unit;
-            // 8f: astore 1
-            // 90: aload 2
-            // 91: monitorexit
-            // 92: return
-            // 93: aload 2
-            // 94: monitorexit
-            // 95: aload 1
-            // 96: athrow
+            // 71: aload 3
+            // 72: aload 6
+            // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+            // 77: pop
+            // 78: aload 5
+            // 7a: ldc "PROMISE_RESOLUTION_ERROR"
+            // 7c: aload 3
+            // 7d: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+            // 80: aload 7
+            // 82: invokeinterface com/facebook/react/bridge/Promise.reject (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V 4
+            // 87: goto 33
+            // 8a: getstatic kotlin/Unit.a Lkotlin/Unit;
+            // 8d: astore 1
+            // 8e: aload 2
+            // 8f: monitorexit
+            // 90: return
+            // 91: aload 2
+            // 92: monitorexit
+            // 93: aload 1
+            // 94: athrow
          }
 
          private static final Unit reject$lambda$10(java.lang.String var0, java.lang.String var1, WritableMap var2, Promise var3) {
@@ -332,7 +332,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       // 28: monitorexit
       // 29: return
       // 2a: astore 1
-      // 2b: goto d8
+      // 2b: goto db
       // 2e: aload 0
       // 2f: getfield com/discord/permissions/NativePermissionManagerModule.pendingPermissionRequests Ljava/util/Map;
       // 32: aload 1
@@ -346,26 +346,26 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       // 3e: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 43: pop
       // 44: new com/discord/react/utilities/PromiseWrapper
-      // 47: astore 6
+      // 47: astore 5
       // 49: aload 0
       // 4a: aload 1
       // 4b: invokespecial com/discord/permissions/NativePermissionManagerModule.createMultiPromiseResolver (Ljava/lang/String;)Lcom/facebook/react/bridge/Promise;
       // 4e: astore 2
       // 4f: new com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1
-      // 52: astore 5
-      // 54: aload 5
+      // 52: astore 6
+      // 54: aload 6
       // 56: getstatic com/discord/permissions/NativePermissionStatus.Companion Lcom/discord/permissions/NativePermissionStatus$Companion;
       // 59: invokespecial com/discord/permissions/NativePermissionManagerModule$requestWithDeduplication$1$wrapperPromise$1.<init> (Ljava/lang/Object;)V
-      // 5c: aload 6
+      // 5c: aload 5
       // 5e: aload 2
-      // 5f: aload 5
+      // 5f: aload 6
       // 61: aconst_null
       // 62: bipush 4
       // 63: aconst_null
       // 64: invokespecial com/discord/react/utilities/PromiseWrapper.<init> (Lcom/facebook/react/bridge/Promise;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
       // 67: aload 3
       // 68: aload 1
-      // 69: aload 6
+      // 69: aload 5
       // 6b: invokeinterface kotlin/jvm/functions/Function2.invoke (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 70: pop
       // 71: getstatic kotlin/Unit.a Lkotlin/Unit;
@@ -381,45 +381,45 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       // 84: checkcast java/util/List
       // 87: astore 1
       // 88: aload 1
-      // 89: ifnull d6
+      // 89: ifnull d9
       // 8c: aload 1
       // 8d: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
-      // 92: astore 3
-      // 93: aload 3
+      // 92: astore 1
+      // 93: aload 1
       // 94: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 99: ifeq d6
-      // 9c: aload 3
+      // 99: ifeq d9
+      // 9c: aload 1
       // 9d: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // a2: checkcast com/facebook/react/bridge/Promise
-      // a5: astore 6
+      // a5: astore 5
       // a7: aload 2
       // a8: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // ab: astore 5
-      // ad: new java/lang/StringBuilder
-      // b0: astore 1
-      // b1: aload 1
-      // b2: invokespecial java/lang/StringBuilder.<init> ()V
-      // b5: aload 1
-      // b6: ldc_w "Failed to request permission: "
-      // b9: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // bc: pop
-      // bd: aload 1
-      // be: aload 5
-      // c0: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // c3: pop
-      // c4: aload 6
-      // c6: ldc_w "PERMISSION_REQUEST_ERROR"
-      // c9: aload 1
-      // ca: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // cd: aload 2
-      // ce: invokeinterface com/facebook/react/bridge/Promise.reject (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V 4
-      // d3: goto 93
-      // d6: aload 2
-      // d7: athrow
-      // d8: aload 4
-      // da: monitorexit
-      // db: aload 1
-      // dc: athrow
+      // ab: astore 3
+      // ac: new java/lang/StringBuilder
+      // af: astore 6
+      // b1: aload 6
+      // b3: invokespecial java/lang/StringBuilder.<init> ()V
+      // b6: aload 6
+      // b8: ldc_w "Failed to request permission: "
+      // bb: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // be: pop
+      // bf: aload 6
+      // c1: aload 3
+      // c2: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // c5: pop
+      // c6: aload 5
+      // c8: ldc_w "PERMISSION_REQUEST_ERROR"
+      // cb: aload 6
+      // cd: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // d0: aload 2
+      // d1: invokeinterface com/facebook/react/bridge/Promise.reject (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V 4
+      // d6: goto 93
+      // d9: aload 2
+      // da: athrow
+      // db: aload 4
+      // dd: monitorexit
+      // de: aload 1
+      // df: athrow
    }
 
    private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {

@@ -305,13 +305,13 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       if (this.binding.replyText.getWidth() > 0) {
          this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
-         val var2: Int = this.replyTextLineBounds.bottom;
-         val var1: Int = this.replyTextLineBounds.top;
-         val var4: LinearLayout = this.binding.replyLeadingViews;
-         val var6: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-         if (var6 != null) {
-            var6.height = var2 - var1;
-            var4.setLayoutParams(var6);
+         val var1: Int = this.replyTextLineBounds.bottom;
+         val var2: Int = this.replyTextLineBounds.top;
+         val var6: LinearLayout = this.binding.replyLeadingViews;
+         val var4: android.view.ViewGroup.LayoutParams = var6.getLayoutParams();
+         if (var4 != null) {
+            var4.height = var1 - var2;
+            var6.setLayoutParams(var4);
          } else {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
@@ -356,14 +356,14 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       var24.setVisibility(8);
       val var25: MessageContentView = this.binding.replyText;
       val var26: LinearLayout = this.binding.replyLeadingViews;
-      val var11: AnnotatedStructurableText = var2.getContent();
-      val var12: Context = this.getContext();
+      val var12: AnnotatedStructurableText = var2.getContent();
+      val var11: Context = this.getContext();
       val var13: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
       val var8: Float = TextUtilsKt.getBaselineHeightPx(var13);
       val var27: TextPaint = this.binding.replyText.getPaint();
       val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var11,
          var12,
+         var11,
          var1,
          var3,
          var4,
@@ -472,9 +472,9 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var63: StructurableText = var12.getSystemContent();
             val var14: Context = this.getContext();
             val var69: java.lang.String = var11.getId-3Eiw7ao();
-            val var8: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
+            val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var8: Boolean = var11.getShouldShowRoleDot();
             val var9: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
@@ -483,9 +483,9 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                var63,
                var14,
                var69,
-               var8,
                var7,
                var2,
+               var8,
                var9,
                var56,
                null,
@@ -521,8 +521,8 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var71: java.lang.String = var11.getId-3Eiw7ao();
             var2 = MessageKt.shouldAnimateEmoji(var11);
             val var39: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var37: Boolean = var11.getShouldShowRoleDot();
-            val var38: Boolean = var11.getShouldShowRoleOnName();
+            val var38: Boolean = var11.getShouldShowRoleDot();
+            val var37: Boolean = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
@@ -532,8 +532,8 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                var71,
                var2,
                var39,
-               var37,
                var38,
+               var37,
                var59,
                null,
                null,

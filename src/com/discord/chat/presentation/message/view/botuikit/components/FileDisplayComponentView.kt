@@ -23,17 +23,17 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
    }
 
    public open fun configure(component: FileDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var10: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
       val var7: java.lang.String = var3.getContainerId();
-      var var5: java.lang.String = var1.getId();
+      val var10: java.lang.String = var1.getId();
       val var6: StringBuilder = new StringBuilder();
       var6.append("FileDisplayComponent(");
-      var6.append(var5);
+      var6.append(var10);
       var6.append(")");
-      val var8: SpoilerAttributes = var10.forGenericMedia(var1, var7, var6.toString(), var1.getFile().getUrl(), null);
-      var5 = var1.getName();
-      val var11: java.lang.String = var1.getSize();
-      val var13: java.lang.String = var1.getFile().getUrl();
+      val var8: SpoilerAttributes = var5.forGenericMedia(var1, var7, var6.toString(), var1.getFile().getUrl(), null);
+      val var12: java.lang.String = var1.getName();
+      val var13: java.lang.String = var1.getSize();
+      val var11: java.lang.String = var1.getFile().getUrl();
       val var4: Boolean = var1.isSpoiler();
       val var14: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
       var var9: SpoilerConfig = null;
@@ -41,7 +41,7 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
          var9 = SpoilerAttributes.configure$default(var8, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
       }
 
-      this.setContent(var5, var11, var13, var14, var4, var9, null, null);
+      this.setContent(var12, var13, var11, var14, var4, var9, null, null);
    }
 
    public override fun getComponentType(): KClass<FileDisplayComponent> {

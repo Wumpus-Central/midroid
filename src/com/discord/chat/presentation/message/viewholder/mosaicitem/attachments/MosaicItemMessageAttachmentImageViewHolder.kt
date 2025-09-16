@@ -40,10 +40,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       });
       val var23: java.lang.String = var25.getUrl();
       val var11: Int = var25.getWidth();
-      val var9: Int = var25.getHeight();
-      val var24: java.lang.String = var25.getPlaceholder();
-      val var22: Int = var25.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var10: Int = var25.getHeight();
+      val var22: java.lang.String = var25.getPlaceholder();
+      val var24: Int = var25.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -118,9 +118,9 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       super.bind(
          var23,
          var11,
-         var9,
-         var24,
+         var10,
          var22,
+         var24,
          var17,
          var30,
          var12,
@@ -132,7 +132,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var37,
          var19,
          var28,
-         var10,
+         var9,
          var20,
          var3 xor true,
          var4,

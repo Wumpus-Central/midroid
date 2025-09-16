@@ -1,10 +1,12 @@
 package com.discord.chat.presentation.list;
 
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class q implements Function1 {
-   public final Object invoke(Object var1) {
-      return PortalViewUpdate.a((Boolean)var1);
+public final class q implements Function0 {
+   public final ChatListView d;
+
+   public final Object invoke() {
+      return ChatListView.R(this.d);
    }
 }

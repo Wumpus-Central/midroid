@@ -90,19 +90,19 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = V
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var1: java.util.Set = this.attachmentIds;
-      val var5: PollMediaEmoji = this.emoji;
-      val var4: java.lang.Long = this.stickerId;
+      val var4: java.lang.String = this.text;
+      val var5: java.util.Set = this.attachmentIds;
+      val var1: PollMediaEmoji = this.emoji;
+      val var2: java.lang.Long = this.stickerId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PollMedia(text=");
-      var3.append(var2);
-      var3.append(", attachmentIds=");
-      var3.append(var1);
-      var3.append(", emoji=");
-      var3.append(var5);
-      var3.append(", stickerId=");
       var3.append(var4);
+      var3.append(", attachmentIds=");
+      var3.append(var5);
+      var3.append(", emoji=");
+      var3.append(var1);
+      var3.append(", stickerId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

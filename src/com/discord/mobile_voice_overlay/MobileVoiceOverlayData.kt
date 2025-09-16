@@ -150,8 +150,8 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.users.hashCode();
-      val var2: Int = Integer.hashCode(this.extraUsers);
+      val var2: Int = this.users.hashCode();
+      val var3: Int = Integer.hashCode(this.extraUsers);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -165,7 +165,7 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                                  (
                                           (
                                                    (
-                                                            (((var3 * 31 + var2) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
+                                                            (((var2 * 31 + var3) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
                                                                + this.channelName.hashCode()
                                                          )
                                                          * 31
@@ -188,42 +188,42 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun toString(): String {
-      val var5: java.util.List = this.users;
+      val var7: java.util.List = this.users;
       val var1: Int = this.extraUsers;
-      val var6: GuildId = this.guildId;
-      val var12: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: GuildId = this.guildId;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var11: java.lang.String = this.channelName;
-      val var9: java.lang.String = this.guildName;
-      val var2: Boolean = this.deafened;
-      val var3: Boolean = this.muted;
-      val var8: ConnectionQuality = this.connectionQuality;
-      val var4: Boolean = this.canGenerateInvite;
-      val var7: java.util.List = this.channelSelectorResults;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("MobileVoiceOverlayData(users=");
-      var10.append(var5);
-      var10.append(", extraUsers=");
-      var10.append(var1);
-      var10.append(", guildId=");
-      var10.append(var6);
-      var10.append(", channelId=");
-      var10.append(var12);
-      var10.append(", channelName=");
-      var10.append(var11);
-      var10.append(", guildName=");
-      var10.append(var9);
-      var10.append(", deafened=");
-      var10.append(var2);
-      var10.append(", muted=");
-      var10.append(var3);
-      var10.append(", connectionQuality=");
-      var10.append(var8);
-      var10.append(", canGenerateInvite=");
-      var10.append(var4);
-      var10.append(", channelSelectorResults=");
-      var10.append(var7);
-      var10.append(")");
-      return var10.toString();
+      val var12: java.lang.String = this.guildName;
+      val var4: Boolean = this.deafened;
+      val var2: Boolean = this.muted;
+      val var6: ConnectionQuality = this.connectionQuality;
+      val var3: Boolean = this.canGenerateInvite;
+      val var10: java.util.List = this.channelSelectorResults;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("MobileVoiceOverlayData(users=");
+      var9.append(var7);
+      var9.append(", extraUsers=");
+      var9.append(var1);
+      var9.append(", guildId=");
+      var9.append(var8);
+      var9.append(", channelId=");
+      var9.append(var5);
+      var9.append(", channelName=");
+      var9.append(var11);
+      var9.append(", guildName=");
+      var9.append(var12);
+      var9.append(", deafened=");
+      var9.append(var4);
+      var9.append(", muted=");
+      var9.append(var2);
+      var9.append(", connectionQuality=");
+      var9.append(var6);
+      var9.append(", canGenerateInvite=");
+      var9.append(var3);
+      var9.append(", channelSelectorResults=");
+      var9.append(var10);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

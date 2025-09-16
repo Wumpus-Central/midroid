@@ -157,14 +157,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             val var9: ByteArray = var8.digest();
             val var10: java.lang.String = Base64.encodeToString(h.n(var9, 0, 9), 3);
             var2 = var10.substring(0, 11);
-            val var4: Log = Log.INSTANCE;
+            val var5: Log = Log.INSTANCE;
             val var13: java.lang.String = this.getTAG();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("pkg: ");
-            var5.append(var1);
-            var5.append(" -- hash: ");
-            var5.append(var2);
-            Log.i$default(var4, var13, var5.toString(), null, 4, null);
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("pkg: ");
+            var4.append(var1);
+            var4.append(" -- hash: ");
+            var4.append(var2);
+            Log.i$default(var5, var13, var4.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

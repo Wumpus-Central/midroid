@@ -151,30 +151,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.cameraButtonIcon;
+      val var3: java.lang.String = this.cameraButtonIcon;
       val var4: java.lang.String = this.gifButtonIcon;
       val var8: java.lang.String = this.emojiButtonIcon;
-      val var1: java.lang.String = this.gamingStatsButtonText;
-      val var2: java.lang.String = this.cameraButtonText;
-      val var6: java.lang.String = this.gifButtonText;
-      val var5: java.lang.String = this.emojiButtonText;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChannelPromptData(cameraButtonIcon=");
-      var3.append(var7);
-      var3.append(", gifButtonIcon=");
-      var3.append(var4);
-      var3.append(", emojiButtonIcon=");
-      var3.append(var8);
-      var3.append(", gamingStatsButtonText=");
-      var3.append(var1);
-      var3.append(", cameraButtonText=");
-      var3.append(var2);
-      var3.append(", gifButtonText=");
-      var3.append(var6);
-      var3.append(", emojiButtonText=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.gamingStatsButtonText;
+      val var5: java.lang.String = this.cameraButtonText;
+      val var1: java.lang.String = this.gifButtonText;
+      val var7: java.lang.String = this.emojiButtonText;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChannelPromptData(cameraButtonIcon=");
+      var6.append(var3);
+      var6.append(", gifButtonIcon=");
+      var6.append(var4);
+      var6.append(", emojiButtonIcon=");
+      var6.append(var8);
+      var6.append(", gamingStatsButtonText=");
+      var6.append(var2);
+      var6.append(", cameraButtonText=");
+      var6.append(var5);
+      var6.append(", gifButtonText=");
+      var6.append(var1);
+      var6.append(", emojiButtonText=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
                val var10: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var9.getUri(var10));
+               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var15: Context = this.getContext();
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var9.getUri(var15));
             }
 
             val var21: Context = this.getContext();
@@ -131,12 +131,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
       if (var2) {
          val var18: Context = this.getContext();
-         val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var19: LayoutParams = new LayoutParams(-2, -1);
-         var19.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var20, var19);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var19, var11);
       }
    }
 
@@ -328,7 +328,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/p.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokestatic com/discord/chat/presentation/list/s.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

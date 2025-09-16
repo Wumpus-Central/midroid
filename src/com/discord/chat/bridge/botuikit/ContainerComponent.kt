@@ -160,31 +160,31 @@ public data class ContainerComponent(type: Int,
    public override fun toString(): String {
       val var1: Int = this.type;
       val var6: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var8: java.util.List = this.components;
-      val var3: Int = this.accentColor;
+      val var8: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var7: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var7: java.lang.String = this.spoilerDescription;
-      val var5: Int = this.themedBackgroundColor;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ContainerComponent(type=");
-      var9.append(var1);
-      var9.append(", id=");
-      var9.append(var6);
-      var9.append(", errorText=");
-      var9.append(var4);
-      var9.append(", components=");
-      var9.append(var8);
-      var9.append(", accentColor=");
-      var9.append(var3);
-      var9.append(", isSpoiler=");
-      var9.append(var2);
-      var9.append(", spoilerDescription=");
-      var9.append(var7);
-      var9.append(", themedBackgroundColor=");
-      var9.append(var5);
-      var9.append(")");
-      return var9.toString();
+      val var9: java.lang.String = this.spoilerDescription;
+      val var3: Int = this.themedBackgroundColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContainerComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var6);
+      var4.append(", errorText=");
+      var4.append(var8);
+      var4.append(", components=");
+      var4.append(var5);
+      var4.append(", accentColor=");
+      var4.append(var7);
+      var4.append(", isSpoiler=");
+      var4.append(var2);
+      var4.append(", spoilerDescription=");
+      var4.append(var9);
+      var4.append(", themedBackgroundColor=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

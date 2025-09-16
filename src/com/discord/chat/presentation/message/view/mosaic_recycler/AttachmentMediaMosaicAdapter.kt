@@ -147,16 +147,16 @@ public class AttachmentMediaMosaicAdapter(context: Context,
             );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
+               val var10: Class = var1.getClass();
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Invalid view holder type ");
+               var12.append(var10);
+               throw new IllegalStateException(var12.toString().toString());
             }
 
-            var var14: Any = this.items.get(var2);
-            var14 = var14 as VideoAttachmentMessageAccessory;
-            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
+            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
+            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -164,15 +164,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var16.bindAttachment(
-               var5,
-               (VideoAttachmentMessageAccessory)var14,
-               var11,
-               new e(this, (VideoAttachmentMessageAccessory)var14, var1),
-               new f(this, (VideoAttachmentMessageAccessory)var14),
-               new g(this, (VideoAttachmentMessageAccessory)var14),
-               new h(this)
-            );
+            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
          }
       }
    }

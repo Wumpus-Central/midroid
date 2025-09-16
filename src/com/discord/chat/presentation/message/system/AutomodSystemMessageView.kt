@@ -214,16 +214,16 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
-         val var12: MessageType = MessageType.DEFAULT;
+         val var9: MessageType = MessageType.DEFAULT;
          val var16: java.lang.String = var17.getId-3Eiw7ao();
          val var6: Long = var17.getChannelId-o4g7jtM();
          val var14: GuildId = var17.getGuildId-qOKuAAo();
-         val var11: UserId = var17.getUserId-wUX8bhU();
-         val var13: java.lang.String = var17.getUsername();
-         val var15: java.lang.String = var17.getAvatarURL();
-         val var10: StructurableText = var17.getContent();
+         val var15: UserId = var17.getUserId-wUX8bhU();
+         val var11: java.lang.String = var17.getUsername();
+         val var10: java.lang.String = var17.getAvatarURL();
+         val var13: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var9: Int = var17.getRoleColor();
+         val var12: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
          val var4: Boolean;
@@ -234,13 +234,13 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          }
 
          val var20: Message = new Message(
-            var12,
+            var9,
             var16,
             null,
             var6,
             var14,
             null,
-            var11,
+            var15,
             0L,
             null,
             null,
@@ -249,19 +249,19 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var13,
+            var11,
             var3,
-            var9,
+            var12,
             null,
             var5,
             false,
             null,
-            var15,
-            null,
-            null,
-            null,
-            null,
             var10,
+            null,
+            null,
+            null,
+            null,
+            var13,
             null,
             null,
             null,
@@ -399,18 +399,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var10: java.util.List = this.generateMessageAccessories(var1, var2);
-         val var11: MessageAccessoriesView = this.binding.accessoriesView;
-         val var16: java.lang.String = var1.getId-3Eiw7ao();
+         val var11: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var10: MessageAccessoriesView = this.binding.accessoriesView;
+         val var15: java.lang.String = var1.getId-3Eiw7ao();
          val var6: Long = var1.getChannelId-o4g7jtM();
-         val var15: GuildId = var1.getGuildId-qOKuAAo();
+         val var16: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var11.setAccessories-mFdI1tY(var16, var6, var15, var10, var3, var4, var2, false, var5);
+         var10.setAccessories-mFdI1tY(var15, var6, var16, var11, var3, var4, var2, false, var5);
       }
    }
 

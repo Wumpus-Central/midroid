@@ -45,9 +45,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = k0.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      moduleScope = g.a(var1.Z0(T.b(var0)));
+      val var0: CompletableJob = k0.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      moduleScope = g.a(var0.Z0(T.b(var1)));
    }
 
    init {
@@ -116,16 +116,18 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       isLoadingAtTop: Boolean,
       scrollDataJSON: String?,
       changesetUpdateIdValue: Double,
-      HACK_iOSForceAnimations: Boolean
+      HACK_iOSForceAnimations: Boolean,
+      forceReload: Boolean
    ) {
-      val var9: Int = (int)var1;
-      val var10: Int = (int)var6;
+      val var10: Int = (int)var1;
+      val var11: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var9,
-         new Function2<ChatListManager, Continuation, Object>(this, var9, var3, var5, var10, null) {
+         var10,
+         new Function2<ChatListManager, Continuation, Object>(this, var10, var3, var5, var11, var9, null) {
             final int $changesetUpdateId;
+            final boolean $forceReload;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;
             final int $tag;
@@ -134,16 +136,19 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
             final ChatModule this$0;
 
             {
-               super(2, var6);
+               super(2, var7);
                this.this$0 = var1;
                this.$tag = var2x;
                this.$rowsJSON = var3x;
                this.$scrollDataJSON = var4;
                this.$changesetUpdateId = var5;
+               this.$forceReload = var6;
             }
 
             public final Continuation create(Object var1, Continuation var2) {
-               val var3: Function2 = new <anonymous constructor>(this.this$0, this.$tag, this.$rowsJSON, this.$scrollDataJSON, this.$changesetUpdateId, var2);
+               val var3: Function2 = new <anonymous constructor>(
+                  this.this$0, this.$tag, this.$rowsJSON, this.$scrollDataJSON, this.$changesetUpdateId, this.$forceReload, var2
+               );
                var3.L$0 = var1;
                return var3;
             }
@@ -165,15 +170,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           var1 = ChatModule.access$getJson$cp();
-                           val var5: java.lang.String = this.$rowsJSON;
-                           var1.a();
-                           var64 = var1.b(new f(Row.Companion.serializer()), var5) as java.util.List;
+                           val var5: Json = ChatModule.access$getJson$cp();
+                           var var43: java.lang.String = this.$rowsJSON;
+                           var5.a();
+                           var64 = var5.b(new f(Row.Companion.serializer()), var43) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              val var44: Json = ChatModule.access$getJson$cp();
-                              val var23: java.lang.String = this.$scrollDataJSON;
-                              var44.a();
-                              var1 = var44.b(ChatScrollData.Companion.serializer(), var23) as ChatScrollData;
+                              var1 = ChatModule.access$getJson$cp();
+                              var43 = this.$scrollDataJSON;
+                              var1.a();
+                              var1 = var1.b(ChatScrollData.Companion.serializer(), var43) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -210,7 +215,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
 
                      var var47: java.lang.String;
                      try {
-                        var3x.updateRows(var64, var1, this.$changesetUpdateId);
+                        var3x.updateRows(var64, var1, this.$changesetUpdateId, this.$forceReload);
                         if (ClientInfo.INSTANCE.isProdBuild()) {
                            break label131;
                         }

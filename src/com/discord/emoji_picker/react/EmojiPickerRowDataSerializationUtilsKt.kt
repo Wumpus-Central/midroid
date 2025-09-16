@@ -12,8 +12,8 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var4: Int = var0.getInt("rowContentPaddingVertical");
-   val var3: Int = var0.getInt("itemSize");
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var4: Int = var0.getInt("itemSize");
    val var7: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var7);
    val var6: ArrayList = new ArrayList(CollectionsKt.v(var5, 10));
@@ -37,5 +37,5 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
       var6.add(var10);
    }
 
-   return new EmojiPickerRow(var1, var4, var3, var6, var0.getBoolean("isSectionNitroLocked"));
+   return new EmojiPickerRow(var1, var3, var4, var6, var0.getBoolean("isSectionNitroLocked"));
 }

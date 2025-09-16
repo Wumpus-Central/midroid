@@ -54,17 +54,17 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var2: java.lang.String = this.className;
+      val var3: java.lang.String = this.className;
       val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LHeadingContentNode(level=");
-      var3.append(var1);
-      var3.append(", className=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LHeadingContentNode(level=");
+      var2.append(var1);
+      var2.append(", className=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

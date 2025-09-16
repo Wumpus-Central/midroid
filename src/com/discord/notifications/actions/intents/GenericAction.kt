@@ -72,15 +72,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    }
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
-      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var7: java.lang.String = this.taskName;
+      val var6: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: java.lang.String = this.taskName;
       val var3: Bundle = new Bundle();
 
-      for (Entry var4 : this.data.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var7 : this.data.entrySet()) {
+         var3.putString(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, var7, 0L, false, var3, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var6, var1, var4, 0L, false, var3, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -122,15 +122,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    internal class Creator : android.os.Parcelable.Creator<GenericAction> {
       fun createFromParcel(var1: Parcel): GenericAction {
          val var5: java.lang.String = var1.readString();
-         val var6: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var6: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var6.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var5, var6, var4);
+         return new GenericAction(var5, var4, var6);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

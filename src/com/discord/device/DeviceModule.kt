@@ -41,28 +41,28 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
-      val var1: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
-      val var9: Pair = s.a("device", Build.DEVICE);
-      val var5: Pair = s.a("deviceModel", Build.MODEL);
-      val var6: Pair = s.a("deviceBrand", Build.BRAND);
-      val var7: Pair = s.a("deviceProduct", Build.PRODUCT);
-      val var3: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
-      val var2: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
-      val var8: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
-      val var4: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
-      val var10: Context = this.reactContext.getApplicationContext();
+      val var9: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
+      val var1: Pair = s.a("device", Build.DEVICE);
+      val var3: Pair = s.a("deviceModel", Build.MODEL);
+      val var10: Pair = s.a("deviceBrand", Build.BRAND);
+      val var5: Pair = s.a("deviceProduct", Build.PRODUCT);
+      val var4: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
+      val var7: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
+      val var6: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
+      val var8: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
+      val var2: Context = this.reactContext.getApplicationContext();
       return L.m(
          new Pair[]{
-            var1,
             var9,
-            var5,
-            var6,
-            var7,
+            var1,
             var3,
-            var2,
-            var8,
+            var10,
+            var5,
             var4,
-            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var10)),
+            var7,
+            var6,
+            var8,
+            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var2)),
             s.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq()),
             s.a("timeZone", TimeZone.getDefault().getID())
          }
