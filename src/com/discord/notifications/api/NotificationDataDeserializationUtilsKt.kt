@@ -2,7 +2,7 @@
 
 package com.discord.notifications.api
 
-import Ca.v
+import A9.s
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -24,9 +24,9 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var6 : var9.entrySet()) {
-            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
-               var3.put(var6.getKey(), var6.getValue());
+         for (Entry var5 : var9.entrySet()) {
+            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
+               var3.put(var5.getKey(), var5.getValue());
             }
          }
 
@@ -36,16 +36,16 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
             var var20: Any = var24.getKey();
             val var25: Any = var24.getValue();
             var20 = var20 as java.lang.String;
-            var12.add(v.a(var20, var25 as java.lang.String));
+            var12.add(s.a(var20, var25 as java.lang.String));
          }
 
-         var9 = O.u(var12);
+         var9 = L.t(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = O.i();
+      var9 = L.h();
    }
 
    var var19: ChannelId;

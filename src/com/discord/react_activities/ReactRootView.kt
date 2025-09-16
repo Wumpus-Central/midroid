@@ -32,11 +32,11 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView(
       return Unit.a;
    }
 
-   protected override fun dispatchDraw(canvas: Canvas) {
+   protected open fun dispatchDraw(canvas: Canvas) {
       this.helper.handleDispatchDraw(this, new a(this, var1));
    }
 
-   public override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(e: MotionEvent): Boolean {
       this.helper.handleInterceptTouchEvent(var1);
       return super.onInterceptTouchEvent(var1);
    }

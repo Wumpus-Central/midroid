@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import x1.a;
+import y0.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    @NonNull

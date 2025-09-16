@@ -1,6 +1,6 @@
 package com.discord.recycler_view.utils
 
-import a3.o
+import a2.o
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.discord.crash_reporting.CrashReporting

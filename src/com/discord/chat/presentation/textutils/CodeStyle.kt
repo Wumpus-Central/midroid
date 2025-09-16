@@ -36,13 +36,13 @@ public object CodeStyle {
          var var2: Any = var4.get(var3);
          var var1: Any = var2;
          if (var2 == null) {
-            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
-            val var5: CodeRules = CodeRules.INSTANCE;
+            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            var2 = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, var2.getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
+               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
             );
             var1 = new Parser(false, 1, null);
-            var1.addRule((Rule)var2);
+            ((Parser)var1).addRule((Rule)var2);
             var4.put(var3, var1);
          }
 
@@ -61,7 +61,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      var var3: java.lang.String = StringsKt.Z0(var1.getLang()).toString();
+      var var3: java.lang.String = StringsKt.Y0(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -73,17 +73,17 @@ public object CodeStyle {
 
       label16:
       try {
-         val var9: kotlin.Result.a = Result.e;
-         var8 = Result.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
+         val var8: kotlin.Result.a = Result.e;
+         var7 = Result.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var7: kotlin.Result.a = Result.e;
-         var8 = Result.b(kotlin.c.a(var4));
+         val var11: kotlin.Result.a = Result.e;
+         var7 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
       val var12: java.util.List = CollectionsKt.e(new TextNode(var2));
-      var2 = (java.lang.String)var8;
-      if (Result.g(var8)) {
+      var2 = (java.lang.String)var7;
+      if (Result.g(var7)) {
          var2 = var12;
       }
 

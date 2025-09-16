@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import x1.a;
+import y0.a;
 
 public final class CtaButtonBinding implements ViewBinding {
    @NonNull

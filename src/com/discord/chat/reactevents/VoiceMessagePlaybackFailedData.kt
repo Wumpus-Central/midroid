@@ -2,12 +2,11 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMessage: String?) : VoiceMessagePlaybackFailedData(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val errorMessage: String?
@@ -57,20 +56,20 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
       return var2 * 31 + var1;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = this.errorMessage;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("VoiceMessagePlaybackFailedData(messageId=");
-      var1.append(var2);
-      var1.append(", errorMessage=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("VoiceMessagePlaybackFailedData(messageId=");
+      var2.append(var1);
+      var2.append(", errorMessage=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

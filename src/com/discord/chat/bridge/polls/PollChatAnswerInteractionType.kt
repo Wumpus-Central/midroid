@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.polls
 
-import Ia.a
+import G9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m(with = PollChatAnswerInteractionType.Serializer::class)
+@g(with = PollChatAnswerInteractionType.Serializer::class)
 public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
    CHECKBOXES(2),
    LIST(1),

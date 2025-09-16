@@ -10,7 +10,7 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class DiscordGestureHandlerPackage : BaseReactPackage {
-   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       return CollectionsKt.n(new ViewManager[]{new BlockingGestureViewManager(), new PassthroughTouchViewManager(), new DiscordGestureHandlerRootViewManager()});
    }
 
@@ -18,7 +18,7 @@ public class DiscordGestureHandlerPackage : BaseReactPackage {
       return null;
    }
 
-   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

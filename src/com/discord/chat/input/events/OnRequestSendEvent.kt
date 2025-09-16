@@ -4,12 +4,12 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal class OnRequestSendEvent : ReactEvent {
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
+      return NativeMapExtensionsKt.nativeMapOf();
    }
 
    public companion object {

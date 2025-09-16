@@ -1,12 +1,11 @@
 package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
    public final val index: Int
 
@@ -36,8 +35,8 @@ internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {
       return Integer.hashCode(this.index);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

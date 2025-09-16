@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 299200
-  versionName: 299.0 - Alpha
+  versionCode: 299202
+  versionName: 299.2 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -33,14 +33,6 @@ doNotCompress:
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.browser_browser.version
 - META-INF/androidx.cardview_cardview.version
-- META-INF/androidx.compose.runtime_runtime-saveable.version
-- META-INF/androidx.compose.runtime_runtime.version
-- META-INF/androidx.compose.ui_ui-geometry.version
-- META-INF/androidx.compose.ui_ui-graphics.version
-- META-INF/androidx.compose.ui_ui-text.version
-- META-INF/androidx.compose.ui_ui-unit.version
-- META-INF/androidx.compose.ui_ui-util.version
-- META-INF/androidx.compose.ui_ui.version
 - META-INF/androidx.coordinatorlayout_coordinatorlayout.version
 - META-INF/androidx.core_core-ktx.version
 - META-INF/androidx.core_core-performance-play-services.version
@@ -67,17 +59,6 @@ doNotCompress:
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
 - META-INF/androidx.lifecycle_lifecycle-extensions.version
-- META-INF/androidx.lifecycle_lifecycle-livedata-core-ktx.version
-- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
-- META-INF/androidx.lifecycle_lifecycle-livedata.version
-- META-INF/androidx.lifecycle_lifecycle-process.version
-- META-INF/androidx.lifecycle_lifecycle-runtime-compose.version
-- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
-- META-INF/androidx.lifecycle_lifecycle-runtime.version
-- META-INF/androidx.lifecycle_lifecycle-service.version
-- META-INF/androidx.lifecycle_lifecycle-viewmodel-ktx.version
-- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
-- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
 - META-INF/androidx.loader_loader.version
 - META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
 - META-INF/androidx.media_media.version
@@ -110,9 +91,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/Xa.b
-- META-INF/services/fc.z
-- META-INF/services/kc.t
+- META-INF/services/V9.b
+- META-INF/services/cb.z
+- META-INF/services/hb.t
 - META-INF/version-control-info.textproto
 - assets/com/appsflyer/internal/1ef4f10b9adfdad9a-
 - assets/com/appsflyer/internal/4c337fab34977e37d-
@@ -526,6 +507,8 @@ doNotCompress:
 - res/raw/design_components_lottieicon_native_generated_lotties_nitrogem9.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_notificationstab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_servertab.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_spendearnorbs.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_spendearnorbslighttheme.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
 - res/raw/design_intl_manacompiledmessages.jsona
 - res/raw/emojis_json.gz

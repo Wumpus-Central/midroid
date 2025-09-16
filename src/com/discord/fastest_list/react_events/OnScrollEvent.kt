@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react_events
 
-import Ca.v
+import A9.s
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -32,15 +32,13 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
          SizeUtilsKt.getPxToDp(var1.getContentWidth()),
          SizeUtilsKt.getPxToDp(var1.getContentHeight())
       )
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var1: Int = 0;
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            v.a("contentInset", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("left", var1), v.a("top", var1), v.a("bottom", var1), v.a("right", var1)})),
-            v.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("x", this.x), v.a("y", this.y)})),
-            v.a("contentSize", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("width", this.contentWidth), v.a("height", this.contentHeight)})),
-            v.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("width", this.width), v.a("height", this.height)}))
-         }
+         s.a("contentInset", NativeMapExtensionsKt.nativeMapOf(s.a("left", var1), s.a("top", var1), s.a("bottom", var1), s.a("right", var1))),
+         s.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(s.a("x", this.x), s.a("y", this.y))),
+         s.a("contentSize", NativeMapExtensionsKt.nativeMapOf(s.a("width", this.contentWidth), s.a("height", this.contentHeight))),
+         s.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(s.a("width", this.width), s.a("height", this.height)))
       );
    }
 }

@@ -2,6 +2,8 @@ package com.discord.billing
 
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
+import cb.K
+import cb.U
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.ProductDetails
@@ -11,8 +13,6 @@ import com.discord.billing.types.QueryProductDetailsParams
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import fc.K
-import fc.U
 import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -48,8 +48,8 @@ internal class BillingManager(isProdBuild: Boolean,
       this.onPurchaseUpdated = var4;
       this.prodPackageName = "com.discord";
       this.devPackageName = "com.discord.debug.billingtesting";
-      this.allowedPackageNames = Y.i(new java.lang.String[]{"com.discord", "com.discord.debug.billingtesting"});
-      this.billingClientStateListener = new c2.c(this) {
+      this.allowedPackageNames = V.i(new java.lang.String[]{"com.discord", "com.discord.debug.billingtesting"});
+      this.billingClientStateListener = new d1.c(this) {
          final BillingManager this$0;
 
          {
@@ -106,7 +106,7 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       if (var5 != null) {
-         var4 = androidx.lifecycle.p.a(var5);
+         var4 = androidx.lifecycle.m.a(var5);
       }
 
       if (var4 == null) {
@@ -160,7 +160,7 @@ internal class BillingManager(isProdBuild: Boolean,
 
    private fun isRetryableError(billingResult: BillingResult): Boolean {
       val var2: Boolean;
-      if (this.isNotOk(var1) && Y.i(new Integer[]{6, -1, 2, 12}).contains(var1.b())) {
+      if (this.isNotOk(var1) && V.i(new Integer[]{6, -1, 2, 12}).contains(var1.b())) {
          var2 = true;
       } else {
          var2 = false;
@@ -199,7 +199,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               Ha.b.e();
+               F9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -210,7 +210,7 @@ internal class BillingManager(isProdBuild: Boolean,
                   }
 
                   var1.l(BillingManager.access$getBillingClientStateListener$p(this.this$0));
-                  this.this$0.getOnConnectionUpdated().invoke(kotlin.coroutines.jvm.internal.b.e(BillingManager.ConnectionState.CONNECTING.getValue()));
+                  this.this$0.getOnConnectionUpdated().invoke(kotlin.coroutines.jvm.internal.b.d(BillingManager.ConnectionState.CONNECTING.getValue()));
                   return Unit.a;
                } else {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -226,11 +226,11 @@ internal class BillingManager(isProdBuild: Boolean,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var4 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var7: java.lang.String = var1.i();
-            val var6: java.lang.String = var1.e();
-            var5.invoke(var7, var6, var4);
+         for (java.lang.String var7 : var2) {
+            val var3: Function3 = this.onPurchaseUpdated;
+            val var4: java.lang.String = var1.i();
+            val var5: java.lang.String = var1.e();
+            var3.invoke(var4, var5, var7);
          }
       }
    }
@@ -254,7 +254,7 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var3.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var5: c2.e = c2.e.b().b(var1).a();
+         val var5: d1.e = d1.e.b().b(var1).a();
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
             Intrinsics.throwUninitializedPropertyAccessException("billingClient");
@@ -275,12 +275,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var6: CoroutineScope = this.getCoroutineScope(var5);
-         fc.f.d(
-            var6,
+         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         cb.f.d(
+            var7,
             K.a(),
             null,
-            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -317,14 +317,14 @@ internal class BillingManager(isProdBuild: Boolean,
             var5 = null;
          }
 
-         var5.k(c2.m.a().b("subs").a(), new a(this));
+         var5.k(d1.m.a().b("subs").a(), new a(this));
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
             Intrinsics.throwUninitializedPropertyAccessException("billingClient");
             var6 = null;
          }
 
-         var6.k(c2.m.a().b("inapp").a(), new a(this));
+         var6.k(d1.m.a().b("inapp").a(), new a(this));
          var1.invoke();
       }
    }
@@ -411,7 +411,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = Ia.a.a(var0);
+         $ENTRIES = G9.a.a(var0);
       }
 
       init {

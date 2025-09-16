@@ -1,12 +1,11 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class OnPasteCommandEvent(data: String) : ReactEvent {
    public final val data: String
 
@@ -37,8 +36,8 @@ public data class OnPasteCommandEvent(data: String) : ReactEvent {
       return this.data.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

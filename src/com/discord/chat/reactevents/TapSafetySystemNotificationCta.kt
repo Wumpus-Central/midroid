@@ -1,12 +1,11 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String) : ReactEvent {
    public final val ctaType: String
    public final val ctaKey: String
@@ -48,8 +47,8 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
       return this.ctaType.hashCode() * 31 + this.ctaKey.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

@@ -89,7 +89,7 @@ public object MarkdownRules {
 
    @JvmStatic
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
-      return CollectionsKt.D0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
+      return CollectionsKt.B0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
    public open class HeaderLineClassedRule<RC, T, S>(styleSpanProvider: (Int) -> CharacterStyle,
@@ -102,7 +102,7 @@ public object MarkdownRules {
       public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : this(
             var1,
             var2,
-            CollectionsKt.D0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule())
+            CollectionsKt.B0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule())
          )
       init {
          this.classSpanProvider = var2;
@@ -127,7 +127,7 @@ public object MarkdownRules {
          label42: {
             val var6: java.lang.String = var1.group(2);
             if (var6 != null) {
-               val var7: java.lang.String = StringsKt.Z0(var6).toString();
+               val var7: java.lang.String = StringsKt.Y0(var6).toString();
                if (var7 != null) {
                   var8 = StringsKt.A0(var7, new char[]{' '}, false, 0, 6, null);
                   break label42;
@@ -201,9 +201,9 @@ public object MarkdownRules {
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(1);
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(1);
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

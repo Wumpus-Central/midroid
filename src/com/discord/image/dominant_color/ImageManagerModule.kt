@@ -1,7 +1,7 @@
 package com.discord.image.dominant_color
 
-import M2.a
-import M2.b
+import M1.a
+import M1.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
@@ -47,7 +47,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
             while (var5.hasNext()) {
                val var2: Int = (var5.next() as java.lang.Number).intValue();
-               var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+               var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
             }
 
             var0.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));

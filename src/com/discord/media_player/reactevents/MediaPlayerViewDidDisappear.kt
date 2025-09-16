@@ -1,14 +1,14 @@
 package com.discord.media_player.reactevents
 
-import Ca.v
+import A9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
    public final val channelId: String
    public final val mediaItemIds: List<String>
@@ -52,20 +52,20 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
 
    public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         v.a("channelId", this.channelId), v.a("mediaItemIds", NativeArrayExtensionsKt.toNativeArray$default(this.mediaItemIds, null, 1, null))
+         s.a("channelId", this.channelId), s.a("mediaItemIds", NativeArrayExtensionsKt.toNativeArray$default(this.mediaItemIds, null, 1, null))
       );
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var3: java.util.List = this.mediaItemIds;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MediaPlayerViewDidDisappear(channelId=");
-      var2.append(var1);
-      var2.append(", mediaItemIds=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.channelId;
+      val var1: java.util.List = this.mediaItemIds;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerViewDidDisappear(channelId=");
+      var3.append(var2);
+      var3.append(", mediaItemIds=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

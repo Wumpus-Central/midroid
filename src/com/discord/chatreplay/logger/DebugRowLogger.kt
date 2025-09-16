@@ -1,8 +1,8 @@
 package com.discord.chatreplay.logger
 
-import H2.a
-import Ma.c
-import Ma.q
+import H1.a
+import K9.c
+import K9.p
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -18,26 +18,26 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    private final var lastUpdateTimestamp: Long?
 
    init {
-      val var3: java.lang.String = var1.toString();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var2);
-      var4.append(".replay");
-      new File(var3, var4.toString()).delete();
-      val var9: java.lang.String = var1.toString();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var2);
-      var6.append(".json");
-      new File(var9, var6.toString()).delete();
-      val var10: java.lang.String = var1.toString();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var2);
-      var7.append(".replay");
-      this.replayFile = new File(var10, var7.toString());
+      var var4: java.lang.String = var1.toString();
+      var var3: StringBuilder = new StringBuilder();
+      var3.append(var2);
+      var3.append(".replay");
+      new File(var4, var3.toString()).delete();
+      val var6: java.lang.String = var1.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append(var2);
+      var9.append(".json");
+      new File(var6, var9.toString()).delete();
+      var4 = var1.toString();
+      var3 = new StringBuilder();
+      var3.append(var2);
+      var3.append(".replay");
+      this.replayFile = new File(var4, var3.toString());
       val var5: java.lang.String = var1.toString();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var2);
-      var8.append(".json");
-      this.jsonFile = new File(var5, var8.toString());
+      var3 = new StringBuilder();
+      var3.append(var2);
+      var3.append(".json");
+      this.jsonFile = new File(var5, var3.toString());
    }
 
    private fun appendLine(line: String) {
@@ -90,7 +90,7 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
          try {
             var12.write("[\n");
-            q.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new a(var2, var12));
+            p.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {

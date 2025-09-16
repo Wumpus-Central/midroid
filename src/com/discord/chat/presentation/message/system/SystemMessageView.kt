@@ -1,13 +1,12 @@
 package com.discord.chat.presentation.message.system
 
-import Ca.v
+import A9.s
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.Z
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.chat.R
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.MessageType
@@ -43,15 +42,16 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
+import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,344:1\n257#2,2:345\n1872#3,3:347\n*S KotlinDebug\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n*L\n111#1:345,2\n213#1:347,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,354:1\n257#2,2:355\n1872#3,3:357\n*S KotlinDebug\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n*L\n121#1:355,2\n223#1:357,3\n*E\n"])
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2), SpineParentMessage {
    private final val normalIconColor: Int = ThemeManagerKt.getTheme().getInteractiveNormal()
    private final val greenIconColor: Int
@@ -75,10 +75,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    init {
-      this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
-      this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
-      this.warnIconColor = ColorUtilsKt.getColorCompat(this, color.yellow_300);
-      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, color.guild_boosting_pink);
+      this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
+      this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
+      this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
+      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
       this.mutedIconColor = ThemeManagerKt.getTheme().getTextMuted();
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
@@ -103,19 +103,19 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      var var13: StructurableText = var1.getContent();
-      if (var13 != null) {
-         val var20: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var9: Boolean = var1.getShouldShowRoleDot();
-         val var10: Boolean = var1.getShouldShowRoleOnName();
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
+         val var13: ArrayList = this.accessories;
+         val var20: java.lang.String = var1.getId-3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var11: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
          } else {
-            var5 = this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
+            var5 = this.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_accessories_vertical_spacing);
          }
 
          var var15: Int = var1.getLinkColor();
@@ -134,14 +134,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var20.add(
+         var13.add(
             new MessageContentAccessory(
+               var20,
                var14,
-               var13,
+               var10,
                var8,
                var11,
                var9,
-               var10,
                var5,
                var6,
                var7,
@@ -170,11 +170,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var31: ArrayList = this.accessories;
-         val var23: java.lang.String = var1.getId-3Eiw7ao();
+         val var33: ArrayList = this.accessories;
+         val var31: java.lang.String = var1.getId-3Eiw7ao();
          val var28: java.lang.String = var1.getUsername();
-         val var33: Context = this.binding.getRoot().getContext();
-         var31.add(new RoleSubscriptionPurchaseAccessory(var23, var28, MessageKt.avatarUrl(var1, var33), var3, false, null));
+         val var23: Context = this.binding.getRoot().getContext();
+         var33.add(new RoleSubscriptionPurchaseAccessory(var31, var28, MessageKt.avatarUrl(var1, var23), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -192,7 +192,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var26: java.util.Iterator = var25.iterator();
 
             for (int var19 = 0; var26.hasNext(); var19++) {
-               var13 = (StructurableText)var26.next();
+               val var29: Any = var26.next();
                if (var19 < 0) {
                   CollectionsKt.u();
                }
@@ -205,7 +205,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var13 as Embed,
+                        var29 as Embed,
                         false,
                         false,
                         false,
@@ -272,86 +272,86 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          case 6:
          case 7:
          case 8:
-            var3 = v.a(ReactAsset.ArrowForward, this.greenIconColor);
+            var3 = s.a(ReactAsset.ArrowForward, this.greenIconColor);
             break;
          case 9:
          case 10:
-            var3 = v.a(ReactAsset.ArrowBack, this.redIconColor);
+            var3 = s.a(ReactAsset.ArrowBack, this.redIconColor);
             break;
          case 11:
          case 12:
          case 13:
          case 14:
-            var3 = v.a(ReactAsset.Pencil, this.normalIconColor);
+            var3 = s.a(ReactAsset.Pencil, this.normalIconColor);
             break;
          case 15:
-            var3 = v.a(ReactAsset.AddReaction, this.normalIconColor);
+            var3 = s.a(ReactAsset.AddReaction, this.normalIconColor);
             break;
          case 16:
-            var3 = v.a(ReactAsset.Pin, this.normalIconColor);
+            var3 = s.a(ReactAsset.Pin, this.normalIconColor);
             break;
          case 17:
-            var3 = v.a(ReactAsset.Ticket, this.normalIconColor);
+            var3 = s.a(ReactAsset.Ticket, this.normalIconColor);
             break;
          case 18:
          case 19:
          case 20:
          case 21:
-            var3 = v.a(ReactAsset.MemberListBadge, this.pinkIconColor);
+            var3 = s.a(ReactAsset.MemberListBadge, this.pinkIconColor);
             break;
          case 22:
-            var3 = v.a(ReactAsset.AnnouncementThread, this.normalIconColor);
+            var3 = s.a(ReactAsset.AnnouncementThread, this.normalIconColor);
             break;
          case 23:
-            var3 = v.a(ReactAsset.Close, this.redIconColor);
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
             break;
          case 24:
-            var3 = v.a(ReactAsset.Check, this.greenIconColor);
+            var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 25:
          case 26:
-            var3 = v.a(ReactAsset.Alert, this.warnIconColor);
+            var3 = s.a(ReactAsset.Alert, this.warnIconColor);
             break;
          case 27:
          case 28:
-            var3 = v.a(ReactAsset.Thread, this.normalIconColor);
+            var3 = s.a(ReactAsset.Thread, this.normalIconColor);
             break;
          case 29:
-            var3 = v.a(ReactAsset.StageChannel, this.greenIconColor);
+            var3 = s.a(ReactAsset.StageChannel, this.greenIconColor);
             break;
          case 30:
          case 31:
-            var3 = v.a(ReactAsset.StageChannel, this.normalIconColor);
+            var3 = s.a(ReactAsset.StageChannel, this.normalIconColor);
             break;
          case 32:
-            var3 = v.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
+            var3 = s.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
             break;
          case 33:
-            var3 = v.a(ReactAsset.RaisedHand, this.normalIconColor);
+            var3 = s.a(ReactAsset.RaisedHand, this.normalIconColor);
             break;
          case 34:
-            var3 = v.a(ReactAsset.LockClosed, this.normalIconColor);
+            var3 = s.a(ReactAsset.LockClosed, this.normalIconColor);
             break;
          case 35:
-            var3 = v.a(ReactAsset.LockOpen, this.normalIconColor);
+            var3 = s.a(ReactAsset.LockOpen, this.normalIconColor);
             break;
          case 36:
-            var3 = v.a(ReactAsset.PollsIcon, this.normalIconColor);
+            var3 = s.a(ReactAsset.PollsIcon, this.normalIconColor);
             break;
          case 37:
-            var3 = v.a(ReactAsset.Refresh, this.greenIconColor);
+            var3 = s.a(ReactAsset.Refresh, this.greenIconColor);
             break;
          case 38:
-            var3 = v.a(ReactAsset.GameController, this.mutedIconColor);
+            var3 = s.a(ReactAsset.GameController, this.mutedIconColor);
             break;
          case 39:
-            var3 = v.a(ReactAsset.Check, this.greenIconColor);
+            var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 40:
-            var3 = v.a(ReactAsset.Close, this.redIconColor);
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
             break;
          case 41:
-            var3 = v.a(ReactAsset.ArrowBack, this.normalIconColor);
+            var3 = s.a(ReactAsset.ArrowBack, this.normalIconColor);
             break;
          default:
             val var2: StringBuilder = new StringBuilder();
@@ -381,7 +381,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    @JvmStatic
-   fun `setMessage$lambda$1`(var0: View) {
+   fun `setMessage$lambda$2$lambda$1`(var0: Function2, var1: Message, var2: View) {
+      var0.invoke(MessageId.box-impl(var1.getId-3Eiw7ao()), ChannelId.box-impl(var1.getChannelId-o4g7jtM()));
+   }
+
+   @JvmStatic
+   fun `setMessage$lambda$3`(var0: View) {
    }
 
    public fun setAccessoriesRecycledViewPool(recycledViewPool: RecycledViewPool) {
@@ -389,28 +394,39 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    public fun setMessage(message: Message, context: MessageContext, eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE) {
-      val var5: e = new e(var1, var3);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var5);
-      val var7: Pair = this.getIconAndColor(var1.getType());
-      val var6: ReactAsset = var7.a() as ReactAsset;
-      val var4: Int = (var7.b() as java.lang.Number).intValue();
-      val var12: SimpleDraweeView = this.binding.icon;
-      ReactAssetUtilsKt.setReactAsset(var12, var6);
-      val var10: SimpleDraweeView = this.binding.icon;
-      ColorUtilsKt.setTintColor(var10, var4);
-      val var11: java.util.List = this.generateMessageAccessories(var1, var2);
-      this.binding
-         .accessoriesView
-         .setAccessories-mFdI1tY(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var11, var3, null, var2, false, false);
-      val var8: MessageAccessoriesView = this.binding.accessoriesView;
-      val var9: Byte;
-      if (!var11.isEmpty()) {
-         var9 = 0;
-      } else {
-         var9 = 8;
+      val var7: e = new e(var1, var3);
+      val var8: Function2 = var3.getOnMessageDoubleTapped();
+      var var5: f = null;
+      if (var8 != null) {
+         if (MessageKt.isEphemeral(var1)) {
+            var5 = null;
+         } else {
+            var5 = new f(var8, var1);
+         }
       }
 
-      var8.setVisibility(var9);
-      Z.o0(this, new MessageViewAccessibilityDelegate(var1, new f(), var5));
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var7);
+      NestedScrollOnTouchUtilsKt.setOnDoubleClickListenerNested(this, true, var5);
+      val var14: Pair = this.getIconAndColor(var1.getType());
+      val var11: ReactAsset = var14.a() as ReactAsset;
+      val var4: Int = (var14.b() as java.lang.Number).intValue();
+      val var15: SimpleDraweeView = this.binding.icon;
+      ReactAssetUtilsKt.setReactAsset(var15, var11);
+      val var12: SimpleDraweeView = this.binding.icon;
+      ColorUtilsKt.setTintColor(var12, var4);
+      val var13: java.util.List = this.generateMessageAccessories(var1, var2);
+      this.binding
+         .accessoriesView
+         .setAccessories-mFdI1tY(var1.getId-3Eiw7ao(), var1.getChannelId-o4g7jtM(), var1.getGuildId-qOKuAAo(), var13, var3, null, var2, false, false);
+      val var9: MessageAccessoriesView = this.binding.accessoriesView;
+      val var10: Byte;
+      if (!var13.isEmpty()) {
+         var10 = 0;
+      } else {
+         var10 = 8;
+      }
+
+      var9.setVisibility(var10);
+      Z.o0(this, new MessageViewAccessibilityDelegate(var1, new g(), var7));
    }
 }

@@ -1,11 +1,12 @@
 package com.discord.chat.bridge.reaction
 
-import com.discord.reactions.ReactionView.BurstColorPalette
+import com.discord.reactions.ReactionView
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
-public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) : BurstColorPalette {
+@g
+public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) :
+   ReactionView.BurstColorPalette {
    public open val backgroundColor: String?
    public open val accentColor: String?
    public open val highlightColor: String?
@@ -87,17 +88,17 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.backgroundColor;
+      val var5: java.lang.String = this.backgroundColor;
       val var2: java.lang.String = this.accentColor;
-      val var5: java.lang.String = this.highlightColor;
+      val var3: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BurstReactionColorPalette(backgroundColor=");
-      var4.append(var3);
+      var4.append(var5);
       var4.append(", accentColor=");
       var4.append(var2);
       var4.append(", highlightColor=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", opacity=");
       var4.append(var1);
       var4.append(")");

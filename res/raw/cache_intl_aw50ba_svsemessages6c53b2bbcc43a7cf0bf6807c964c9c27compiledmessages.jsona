@@ -6557,14 +6557,6 @@
     " direkt. Eller tryck här för att ställa in en annan standardemoji."
   ],
   "rY+31d": "Dubbeltryck för att reagera",
-  "EQnNv7": [
-    "Dubbeltryck på ett meddelande för att ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Ändra standard",
   "VrWSNj": "Välj emoji för dubbeltryck",
   "nKY0Fh": [
@@ -38977,7 +38969,6 @@
     " från butiken!"
   ],
   "pGDUHx": "Profildekoration",
-  "wmcDys": "Få med Orbs",
   "y0WGqK": "Orbs–saldo",
   "7gHWra": [
     "Fel vid inlösen av ",

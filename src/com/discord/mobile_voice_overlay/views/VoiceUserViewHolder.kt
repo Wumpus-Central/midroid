@@ -1,9 +1,9 @@
 package com.discord.mobile_voice_overlay.views
 
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 
-private class VoiceUserViewHolder(overlayVoiceBubble: OverlayVoiceBubble) : ViewHolder(var1) {
+private class VoiceUserViewHolder(overlayVoiceBubble: OverlayVoiceBubble) : RecyclerView.ViewHolder(var1) {
    public final val overlayVoiceBubble: OverlayVoiceBubble
 
    init {

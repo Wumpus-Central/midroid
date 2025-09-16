@@ -6581,14 +6581,6 @@
     " al instante. O toca aquí para establecer otro emoji predeterminado."
   ],
   "rY+31d": "Toca dos veces para reaccionar",
-  "EQnNv7": [
-    "Toca dos veces un mensaje para ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Editar predeterminado",
   "VrWSNj": "Elige el doble toque de un emoji",
   "nKY0Fh": [
@@ -38769,7 +38761,6 @@
     " de la tienda!"
   ],
   "pGDUHx": "Deco para el perfil",
-  "wmcDys": "Canjear con Orbs",
   "y0WGqK": "Saldo de Orbs",
   "7gHWra": [
     "Error al canjear ",

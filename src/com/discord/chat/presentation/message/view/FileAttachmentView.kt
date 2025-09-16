@@ -28,8 +28,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.coroutines.Continuation
@@ -83,7 +83,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `setContent$lambda$1`(var0: FileAttachmentView, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String, var4: View) {
-      fc.f.d(CoroutineViewUtilsKt.getAttachedScope(var0), fc.K.b(), null, new Function2<CoroutineScope, Continuation, Object>(var0, var1, var2, var3, null) {
+      cb.f.d(CoroutineViewUtilsKt.getAttachedScope(var0), cb.K.b(), null, new Function2<CoroutineScope, Continuation, Object>(var0, var1, var2, var3, null) {
          final java.lang.String $attachmentDescription;
          final java.lang.String $attachmentName;
          final java.lang.String $url;
@@ -107,7 +107,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = Ha.b.e();
+            val var3: Any = F9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -127,7 +127,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                   }
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
-                     val var3x: Any = fc.f.g(fc.K.c(), new Function2<CoroutineScope, Continuation, Object>(var1, this.this$0, null) {
+                     val var3x: Any = cb.f.g(cb.K.c(), new Function2<CoroutineScope, Continuation, Object>(var1, this.this$0, null) {
                         final DownloadState $downloadState;
                         int label;
                         final FileAttachmentView this$0;
@@ -147,7 +147,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           Ha.b.e();
+                           F9.b.e();
                            if (this.label == 0) {
                               kotlin.c.b(var1);
                               val var4: Boolean = this.$downloadState is DownloadState.InProgress;
@@ -173,7 +173,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                            }
                         }
                      }, var2x);
-                     return if (var3x === Ha.b.e()) var3x else Unit.a;
+                     return if (var3x === F9.b.e()) var3x else Unit.a;
                   }
                };
                this.label = 1;
@@ -212,12 +212,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var12: java.lang.String = this.getClass().getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var12);
-      AttachedViewCoroutineScope.cancelAllWork$default(var14, var13.toString(), null, 2, null);
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("Binding ");
+      var14.append(var12);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var14.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       var var11: Byte;
       if (!var10) {
@@ -241,7 +241,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
 
       val var25: View = this.binding.getRoot();
       ViewBackgroundUtilsKt.setBackgroundRectangle(
-         var25, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
+         var25, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, R.color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
       );
       if (!var10) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new I(var4, var3, var1), 1, null);
@@ -270,12 +270,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       var16.setAlpha(var9);
       val var24: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var17: ShapeDrawable = new ShapeDrawable();
-      val var21: Paint = var17.getPaint();
+      val var21: ShapeDrawable = new ShapeDrawable();
+      val var17: Paint = var21.getPaint();
       val var22: Context = this.getContext();
-      var21.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
+      var17.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var24, null, var17, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var24, null, var21, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!(this.uploadContext == this.uploadContext)) {
          this.uploadContext = this.uploadContext;

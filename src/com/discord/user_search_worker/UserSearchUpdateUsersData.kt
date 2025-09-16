@@ -1,9 +1,9 @@
 package com.discord.user_search_worker
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransformedUser>) : UserSearchData() {
    public final val payload: List<UserSearchTransformedUser>
 

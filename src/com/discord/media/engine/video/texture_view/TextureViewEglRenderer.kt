@@ -163,14 +163,14 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
 
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var6: Log = Log.INSTANCE;
-         val var5: java.lang.String = access$getName(this);
+         val var5: Log = Log.INSTANCE;
+         val var9: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("createEglSurface (");
-         var9.append(var2);
-         var9.append(" total)");
-         Log.i$default(var6, var5, var9.toString(), null, 4, null);
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("createEglSurface (");
+         var6.append(var2);
+         var6.append(" total)");
+         Log.i$default(var5, var9, var6.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
          val var4: Thread = Thread.currentThread();
@@ -198,23 +198,23 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
          val var3: Long = System.currentTimeMillis();
-         val var11: Log = Log.INSTANCE;
-         val var12: java.lang.String = access$getName(this);
+         val var8: Log = Log.INSTANCE;
+         val var11: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("releaseEglSurface (");
-         var8.append(var3 - var5);
-         var8.append(" ms) (");
-         var8.append(var2);
-         var8.append(" total)");
-         Log.i$default(var11, var12, var8.toString(), null, 4, null);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("releaseEglSurface (");
+         var12.append(var3 - var5);
+         var12.append(" ms) (");
+         var12.append(var2);
+         var12.append(" total)");
+         Log.i$default(var8, var11, var12.toString(), null, 4, null);
          return true;
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("Expected to be on android main thread. Current: ");
-         var9.append(var7);
-         throw new IllegalStateException(var9.toString().toString());
+         val var9: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var9);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 

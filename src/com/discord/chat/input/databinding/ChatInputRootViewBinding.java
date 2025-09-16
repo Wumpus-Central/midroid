@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
-import x1.a;
+import y0.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
    @NonNull

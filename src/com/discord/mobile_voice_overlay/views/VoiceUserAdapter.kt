@@ -3,13 +3,13 @@ package com.discord.mobile_voice_overlay.views
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 
-private class VoiceUserAdapter : Adapter {
+private class VoiceUserAdapter : RecyclerView.Adapter {
    private final var data: List<MobileVoiceOverlayDataUser> = CollectionsKt.k()
 
-   public open fun getItemCount(): Int {
+   public override fun getItemCount(): Int {
       return this.data.size();
    }
 

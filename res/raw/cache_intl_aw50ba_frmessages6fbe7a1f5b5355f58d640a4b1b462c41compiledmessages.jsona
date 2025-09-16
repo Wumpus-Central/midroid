@@ -6576,14 +6576,6 @@
     ". Ou, appuie ici pour choisir un autre émoji par défaut."
   ],
   "rY+31d": "Appuie deux fois pour réagir",
-  "EQnNv7": [
-    "Appuie deux fois sur un message pour ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Modifier l'émoji par défaut",
   "VrWSNj": "Choisis l'émoji utilisé lorsque tu appuies deux fois",
   "nKY0Fh": [
@@ -39125,7 +39117,6 @@
     " dans la Boutique !"
   ],
   "pGDUHx": "Profil Déco",
-  "wmcDys": "Récupérer avec des Orbs",
   "y0WGqK": "Solde d'Orbs",
   "7gHWra": [
     "Erreur lors de la récupération de ",

@@ -2,12 +2,11 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: String, threadId: String, messageId: MessageId) : TapPostPreviewEmbedData(
          var1, var2, var3, var4
       ),
@@ -68,24 +67,24 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
       return ((this.guildId.hashCode() * 31 + this.parentChannelId.hashCode()) * 31 + this.threadId.hashCode()) * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.parentChannelId;
-      val var3: java.lang.String = this.threadId;
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.parentChannelId;
+      val var2: java.lang.String = this.threadId;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapPostPreviewEmbedData(guildId=");
-      var1.append(var2);
-      var1.append(", parentChannelId=");
-      var1.append(var5);
-      var1.append(", threadId=");
-      var1.append(var3);
-      var1.append(", messageId=");
       var1.append(var4);
+      var1.append(", parentChannelId=");
+      var1.append(var3);
+      var1.append(", threadId=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var5);
       var1.append(")");
       return var1.toString();
    }

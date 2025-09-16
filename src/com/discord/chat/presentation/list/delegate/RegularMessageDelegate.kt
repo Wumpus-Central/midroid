@@ -43,7 +43,7 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
       val var9: ChatListAdapter = var5 as ChatListAdapter;
       val var3: Int = var2.getHolder().getBindingAdapterPosition();
       var var4: Boolean = true;
-      val var7: ChatListItem = CollectionsKt.l0(var9.getChatListItems(), var3 - 1) as ChatListItem;
+      val var7: ChatListItem = CollectionsKt.j0(var9.getChatListItems(), var3 - 1) as ChatListItem;
       val var8: Boolean;
       if (var1.getMessage().getTimestamp() == null) {
          var8 = true;

@@ -3,9 +3,9 @@ package com.discord.primitives
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public inline class GuildId : SnowflakePrimitive {
    public open val snowflake: Long
 

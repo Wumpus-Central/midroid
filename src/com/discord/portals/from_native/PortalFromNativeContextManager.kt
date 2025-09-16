@@ -2,7 +2,7 @@ package com.discord.portals.from_native
 
 import android.view.View
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
-import ic.F
+import fb.x
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlinx.coroutines.flow.Flow
@@ -15,7 +15,7 @@ public object PortalFromNativeContextManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = F.a(null);
+      val var0: MutableStateFlow = x.a(null);
       _portalContextIdsFlow = var0;
       portalContextIdsFlow = var0;
    }

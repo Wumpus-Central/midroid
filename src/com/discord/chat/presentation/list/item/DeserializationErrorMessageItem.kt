@@ -43,14 +43,14 @@ public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpan
    }
 
    public override fun toString(): String {
-      val var3: ErrorMessage = this.message;
+      val var2: ErrorMessage = this.message;
       val var1: Boolean = this.isExpanded;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DeserializationErrorMessageItem(message=");
-      var2.append(var3);
-      var2.append(", isExpanded=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DeserializationErrorMessageItem(message=");
+      var3.append(var2);
+      var3.append(", isExpanded=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

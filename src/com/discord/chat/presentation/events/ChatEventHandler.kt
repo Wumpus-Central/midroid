@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.events
 
-import Ca.c
 import com.discord.chat.bridge.MediaType
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
@@ -257,7 +256,6 @@ public interface ChatEventHandler {
    public abstract fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
    }
 
-   @c
    public abstract fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
    }
 
@@ -576,7 +574,6 @@ public interface ChatEventHandler {
       public override fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
       }
 
-      @c
       public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
       }
 

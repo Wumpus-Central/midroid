@@ -3,9 +3,9 @@ package com.discord.nearby.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class OnNearbyMessageLostEvent(body: String) : ReactEvent {
    public final val body: String
 

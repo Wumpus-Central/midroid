@@ -8,6 +8,6 @@ public final class H implements Function1 {
    public final MessageAccessoriesAdapter d;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.z(this.d, (MessagePartViewHolder)var1);
+      return MessageAccessoriesAdapter.b(this.d, (MessagePartViewHolder)var1);
    }
 }

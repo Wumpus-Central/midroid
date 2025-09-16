@@ -1,12 +1,11 @@
 package com.discord.avatar.react.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class OnImageLoadedEvent(url: String) : ReactEvent {
    public final val url: String
 
@@ -37,8 +36,8 @@ internal data class OnImageLoadedEvent(url: String) : ReactEvent {
       return this.url.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

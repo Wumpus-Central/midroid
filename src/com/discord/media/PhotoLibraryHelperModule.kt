@@ -1,6 +1,6 @@
 package com.discord.media
 
-import Ca.v
+import A9.s
 import android.database.ContentObserver
 import android.database.Cursor
 import android.net.Uri
@@ -23,7 +23,7 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(v.a("photoLibraryChanged", PhotoLibraryChangedEvent::class));
+      this.reactEvents = new ReactEvents(s.a("photoLibraryChanged", PhotoLibraryChangedEvent::class));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 
@@ -81,7 +81,7 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
       }
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "PhotoLibraryHelper";
    }
 

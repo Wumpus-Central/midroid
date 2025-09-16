@@ -1,18 +1,16 @@
 package com.discord.recycler_view.utils
 
-import a3.a
-import a3.b
-import a3.c
-import a3.d
-import a3.e
-import a3.f
-import a3.g
+import a2.d
+import a2.e
+import a2.f
+import a2.g
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 
-public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new a()) : GridLayoutManager(
+public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new a2.a()) : GridLayoutManager(
       var1, var2
    ) {
    private final val recyclingDelegate: TransitionResilientRecyclingDelegate
@@ -33,7 +31,7 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
    }
 
    @JvmStatic
-   fun `removeAndRecycleAllViews$lambda$4`(var0: TransitionResilientGridLayoutManager, var1: Recycler): Unit {
+   fun `removeAndRecycleAllViews$lambda$4`(var0: TransitionResilientGridLayoutManager, var1: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleAllViews(var1);
       return Unit.a;
    }
@@ -45,7 +43,7 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
    }
 
    @JvmStatic
-   fun `removeAndRecycleView$lambda$2`(var0: TransitionResilientGridLayoutManager, var1: View, var2: Recycler): Unit {
+   fun `removeAndRecycleView$lambda$2`(var0: TransitionResilientGridLayoutManager, var1: View, var2: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleView(var1, var2);
       return Unit.a;
    }
@@ -57,7 +55,7 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
    }
 
    @JvmStatic
-   fun `removeAndRecycleViewAt$lambda$6`(var0: TransitionResilientGridLayoutManager, var1: Int, var2: Recycler): Unit {
+   fun `removeAndRecycleViewAt$lambda$6`(var0: TransitionResilientGridLayoutManager, var1: Int, var2: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleViewAt(var1, var2);
       return Unit.a;
    }
@@ -66,15 +64,15 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
       this.recyclingDelegate.disableRecycling(var1);
    }
 
-   public open fun removeAndRecycleAllViews(recycler: Recycler) {
+   public override fun removeAndRecycleAllViews(recycler: Recycler) {
       this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new f(this), new g(this));
    }
 
-   public open fun removeAndRecycleView(child: View, recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new b(this), new c(this));
+   public override fun removeAndRecycleView(child: View, recycler: Recycler) {
+      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new a2.b(this), new a2.c(this));
    }
 
-   public open fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
+   public override fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
       this.recyclingDelegate.safeRemoveAndRecycleViewAt(var1, var2, new d(this), new e(this));
    }
 }

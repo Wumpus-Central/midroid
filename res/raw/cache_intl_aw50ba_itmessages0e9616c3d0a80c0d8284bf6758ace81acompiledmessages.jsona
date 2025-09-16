@@ -6577,14 +6577,6 @@
     ". Oppure, tocca qui per impostare un'altra emoji predefinita."
   ],
   "rY+31d": "Tocca due volte per reagire",
-  "EQnNv7": [
-    "Tocca due volte un messaggio per ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Modifica predefinita",
   "VrWSNj": "Scegli l'emoji per il doppio tocco",
   "nKY0Fh": [
@@ -39065,7 +39057,6 @@
     " dal Negozio!"
   ],
   "pGDUHx": "Decorazione del profilo",
-  "wmcDys": "Riscatta con gli Orbs",
   "y0WGqK": "Saldo degli Orbs",
   "7gHWra": [
     "Errore nel riscattare ",

@@ -141,7 +141,7 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
 
    public companion object {
       internal fun mapBlurTint(blurAmountTint: Int, blurTint: Int, blurAmount: Float): Int {
-         return q0.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
+         return y.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
       }
 
       internal fun mapRadius(radius: Float, maxRadius: Float = ..., minRadius: Float = ...): Float {

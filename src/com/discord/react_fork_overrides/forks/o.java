@@ -5,6 +5,7 @@ import com.facebook.react.views.text.CreateTypefaceObject;
 
 // $VF: synthetic class
 public final class o implements Function {
+   @Override
    public final Object apply(Object var1) {
       return CustomFontFamilyOverride.a((CreateTypefaceObject)var1);
    }

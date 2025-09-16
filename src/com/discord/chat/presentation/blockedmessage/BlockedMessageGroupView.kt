@@ -62,7 +62,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
-      this.setOnClickListener(new t2.a(var2, var1));
+      this.setOnClickListener(new t1.a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();

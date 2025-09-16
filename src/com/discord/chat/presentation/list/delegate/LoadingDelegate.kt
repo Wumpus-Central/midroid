@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list.delegate
 
-import Ca.p
+import A9.n
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
@@ -21,7 +21,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
          val var6: Function0;
          if (var4 != 1) {
             if (var4 != 2) {
-               throw new p();
+               throw new n();
             }
 
             var6 = new Function0<Unit>(this.getEventHandler()) {

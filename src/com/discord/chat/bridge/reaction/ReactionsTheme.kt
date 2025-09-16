@@ -1,9 +1,10 @@
 package com.discord.chat.bridge.reaction
 
+import com.discord.reactions.ReactionView
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       reactionBorderColor: Int? = null,
       reactionTextColor: Int? = null,
@@ -11,7 +12,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       activeReactionBorderColor: Int? = null,
       activeReactionTextColor: Int? = null
    ) :
-   com.discord.reactions.ReactionView.ReactionsTheme {
+   ReactionView.ReactionsTheme {
    public open val reactionBackgroundColor: Int?
    public open val reactionBorderColor: Int?
    public open val reactionTextColor: Int?
@@ -135,27 +136,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.reactionBackgroundColor;
-      val var2: Int = this.reactionBorderColor;
-      val var6: Int = this.reactionTextColor;
-      val var7: Int = this.activeReactionBackgroundColor;
-      val var4: Int = this.activeReactionBorderColor;
-      val var1: Int = this.activeReactionTextColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ReactionsTheme(reactionBackgroundColor=");
-      var5.append(var3);
-      var5.append(", reactionBorderColor=");
-      var5.append(var2);
-      var5.append(", reactionTextColor=");
-      var5.append(var6);
-      var5.append(", activeReactionBackgroundColor=");
-      var5.append(var7);
-      var5.append(", activeReactionBorderColor=");
-      var5.append(var4);
-      var5.append(", activeReactionTextColor=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var6: Int = this.reactionBackgroundColor;
+      val var5: Int = this.reactionBorderColor;
+      val var7: Int = this.reactionTextColor;
+      val var1: Int = this.activeReactionBackgroundColor;
+      val var2: Int = this.activeReactionBorderColor;
+      val var3: Int = this.activeReactionTextColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ReactionsTheme(reactionBackgroundColor=");
+      var4.append(var6);
+      var4.append(", reactionBorderColor=");
+      var4.append(var5);
+      var4.append(", reactionTextColor=");
+      var4.append(var7);
+      var4.append(", activeReactionBackgroundColor=");
+      var4.append(var1);
+      var4.append(", activeReactionBorderColor=");
+      var4.append(var2);
+      var4.append(", activeReactionTextColor=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

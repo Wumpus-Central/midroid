@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
+import y0.a;
 
 public final class ForwardHeaderViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class ForwardHeaderViewBinding implements ViewBinding {
    @NonNull
    public static ForwardHeaderViewBinding bind(@NonNull View var0) {
       int var1 = R.id.icon;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.label;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new ForwardHeaderViewBinding(var0, var2, var3);
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new ForwardHeaderViewBinding(var0, var3, var2);
          }
       }
 

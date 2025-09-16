@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.view.View.OnClickListener
+import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.reactions.ReactionView.Reaction
@@ -45,9 +46,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var2: Context = this.getContext();
       val var4: ReactionView = new ReactionView(var2, null, 2, null);
       this.addView(var4, var1);
-      val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-      val var5: FlexboxLayout.LayoutParams = var3 as FlexboxLayout.LayoutParams;
-      (var3 as FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
+      val var3: LayoutParams = var4.getLayoutParams();
+      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
+      (var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
       var4.setLayoutParams(var5);
       return var4;
    }
@@ -57,8 +58,8 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       if (var1 < this.getChildCount() - 1) {
          val var2: View = this.getChildAt(var1);
          var4 = var2 as ReactionView;
-         val var3: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
-         var4.setLayoutParams(var3 as FlexboxLayout.LayoutParams);
+         val var3: LayoutParams = (var2 as ReactionView).getLayoutParams();
+         var4.setLayoutParams(var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams);
          var4.setVisibility(0);
       } else {
          var4 = this.createAndAddReactionView(this.getChildCount() - 1);
@@ -97,9 +98,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    private fun setShortcutMargins(shortcutView: AddReactionView) {
-      val var2: android.view.ViewGroup.LayoutParams = var1.getLayoutParams();
-      val var3: FlexboxLayout.LayoutParams = var2 as FlexboxLayout.LayoutParams;
-      (var2 as FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(6), SizeUtilsKt.getDpToPx(4));
+      val var2: LayoutParams = var1.getLayoutParams();
+      val var3: com.google.android.flexbox.FlexboxLayout.LayoutParams = var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
+      (var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(6), SizeUtilsKt.getDpToPx(4));
       var1.setLayoutParams(var3);
    }
 
@@ -121,16 +122,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var15: java.util.Iterator = var18.iterator();
 
       for (int var10 = 0; var15.hasNext(); var10++) {
-         var var21: ReactionView = (ReactionView)var15.next();
+         var var21: Any = var15.next();
          if (var10 < 0) {
             CollectionsKt.u();
          }
 
-         val var14: ReactionView.Reaction = var21 as ReactionView.Reaction;
-         var21 = this.getOrCreateReactionView(var10);
-         var21.setReaction(var14, var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new f(var7, var14), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var21, false, new g(var8, var14), 1, null);
+         var21 = var21 as ReactionView.Reaction;
+         val var14: ReactionView = this.getOrCreateReactionView(var10);
+         var14.setReaction((ReactionView.Reaction)var21, var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new f(var7, (ReactionView.Reaction)var21), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var14, false, new g(var8, (ReactionView.Reaction)var21), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var18.size());

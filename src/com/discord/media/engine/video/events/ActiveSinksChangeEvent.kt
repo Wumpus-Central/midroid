@@ -3,9 +3,9 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : ReactEvent {
    public final val streamId: String
    public final val active: Boolean

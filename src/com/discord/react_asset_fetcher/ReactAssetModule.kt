@@ -21,14 +21,14 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
       return var0.name();
    }
 
-   public open fun keysRequest(callback: Callback) {
-      var1.invoke(NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), new a()));
+   public override fun keysRequest(callback: Callback) {
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), new a())});
    }
 
-   public open fun valuesResult(values: ReadableArray) {
-      val var4: ReactAssetCache = ReactAssetCache.INSTANCE;
-      val var3: ReactApplicationContext = this.reactContext;
-      val var5: HashMap = new HashMap();
+   public override fun valuesResult(values: ReadableArray) {
+      val var3: ReactAssetCache = ReactAssetCache.INSTANCE;
+      val var5: ReactApplicationContext = this.reactContext;
+      val var4: HashMap = new HashMap();
       val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
@@ -37,11 +37,11 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
             CollectionsKt.u();
          }
 
-         val var8: java.lang.String = (var7 as ReactAsset).name();
-         var7 = var1.getString(var2);
-         var5.put(var8, var7);
+         var7 = (var7 as ReactAsset).name();
+         val var8: java.lang.String = var1.getString(var2);
+         var4.put(var7, var8);
       }
 
-      var4.set(var3, var5);
+      var3.set(var5, var4);
    }
 }

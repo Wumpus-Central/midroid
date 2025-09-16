@@ -60,6 +60,6 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
          var5.add(var7);
       }
 
-      MessageComponentsViewKt.replaceViews$default(this, CollectionsKt.g0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      MessageComponentsViewKt.replaceViews$default(this, CollectionsKt.e0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
    }
 }

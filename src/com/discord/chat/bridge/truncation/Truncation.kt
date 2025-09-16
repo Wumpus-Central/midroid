@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.truncation
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
    public final val numberOfLines: Int
    public final val expandable: Boolean

@@ -8,7 +8,7 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import x1.a;
+import y0.a;
 
 public final class ChatLoadingViewBinding implements ViewBinding {
    @NonNull

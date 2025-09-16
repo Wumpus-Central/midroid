@@ -1,6 +1,6 @@
 package com.discord.on_demand_resource
 
-import W2.a
+import W1.a
 import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
@@ -13,7 +13,7 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
       return Unit.a;
    }
 
-   public open fun fetchOnDemandResource(resourceName: String?, promise: Promise?) {
+   public override fun fetchOnDemandResource(resourceName: String?, promise: Promise?) {
       if (var1 != null) {
          val var3: a;
          if (var2 != null) {
@@ -26,7 +26,7 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun hasOnDemandResource(resourceName: String?): Boolean {
+   public override fun hasOnDemandResource(resourceName: String?): Boolean {
       var var2: Boolean = false;
       if (var1 != null && PlayAssetDelivery.getAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, false, null, 4, null) != null) {
          var2 = true;
@@ -35,7 +35,7 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
       return var2;
    }
 
-   public open fun isOnDemandResourcingAvailable(): Boolean {
+   public override fun isOnDemandResourcingAvailable(): Boolean {
       return PlayAssetDelivery.INSTANCE.isAssetDeliveryAvailable();
    }
 }

@@ -6581,14 +6581,6 @@
     " øjeblikkeligt. Eller du kan trykke her for at indstille en anden standard-emoji."
   ],
   "rY+31d": "Dobbelttryk for at reagere",
-  "EQnNv7": [
-    "Dobbelttryk på en besked for at ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Rediger standard",
   "VrWSNj": "Vælg dobbelttryk-emoji",
   "nKY0Fh": [
@@ -39093,7 +39085,6 @@
     " fra Shop!"
   ],
   "pGDUHx": "Profil-deko",
-  "wmcDys": "Få med Orbs",
   "y0WGqK": "Orb-saldo",
   "7gHWra": [
     "Fejl ved indløsning af ",

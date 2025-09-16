@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import x1.a;
+import y0.a;
 
 public final class ConnectionsRoleTagViewBinding implements ViewBinding {
    @NonNull

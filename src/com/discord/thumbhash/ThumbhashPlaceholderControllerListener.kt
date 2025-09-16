@@ -1,16 +1,16 @@
 package com.discord.thumbhash
 
-import Ha.b
+import F9.b
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
 import android.util.Base64
+import cb.K
+import cb.f
 import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import fc.K
-import fc.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineDispatcher
@@ -31,11 +31,11 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
       this.placeholderVersion = var4;
    }
 
-   public open fun onFailure(id: String?, throwable: Throwable?) {
+   public override fun onFailure(id: String?, throwable: Throwable?) {
       (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
    }
 
-   public open fun onSubmit(id: String?, callerContext: Any?) {
+   public override fun onSubmit(id: String?, callerContext: Any?) {
       (this.draweeView.getHierarchy() as GenericDraweeHierarchy).A(null);
       if (!Companion.canDisplay(this.placeholder, this.placeholderVersion)) {
          (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);

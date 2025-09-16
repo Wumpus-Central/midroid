@@ -1,6 +1,6 @@
 package com.discord.user_search_worker
 
-import Ca.v
+import A9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 
 public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   private final val reactEvents: ReactEvents = new ReactEvents(v.a("ReturnResults", ReturnResultsEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("ReturnResults", ReturnResultsEvent::class))
    private final var worker: UserSearchWorker
 
    init {
@@ -27,7 +27,7 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
    public fun addListener(type: String) {
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "UserSearchWorkerManager";
    }
 

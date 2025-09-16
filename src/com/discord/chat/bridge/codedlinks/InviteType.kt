@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.codedlinks
 
-import Ia.a
+import G9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m(with = InviteType.Serializer::class)
+@g(with = InviteType.Serializer::class)
 public enum class InviteType(serialNumber: Int) : IntEnum {
    FRIEND(2),
    GROUP_DM(1),

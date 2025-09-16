@@ -144,16 +144,16 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var6.selectedSegmentBg.setElevation(var4);
       var6.segmentContainer.setElevation(var4);
       var6.segmentContainer.setOutlineProvider(null);
-      val var7: Int = 0;
-      this.containerBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      val var5: Int = 0;
+      this.containerBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.cornerRadiusPx$delegate = updateViewOnChange$default(this, (float)SizeUtilsKt.getDpToPx(4), false, 2, null);
-      this.selectedIndex$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.segmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      val var5: java.lang.Float = 0.0F;
-      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedIndex$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.segmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      val var7: java.lang.Float = 0.0F;
+      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.labels$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
       this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(CollectionsKt.k(), true);
    }
@@ -193,16 +193,17 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
                this.this$0 = var2;
             }
 
+            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var var3: Boolean = true;
-               var2.G0(true);
+               var2.D0(true);
                if (this.$index != this.this$0.getSelectedIndex()) {
                   var3 = false;
                }
 
-               var2.V0(var3);
-               var2.S0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
+               var2.Q0(var3);
+               var2.N0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
             }
          });
          this.binding.segmentContainer.addView(var3, new LayoutParams(0, -1, 1.0F));

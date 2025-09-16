@@ -9,7 +9,7 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 
 public class PushNotificationCategoryModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDNotificationCategoryUtils";
    }
 
@@ -17,14 +17,14 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    public fun registerNotificationCategories(localizedCategoryNames: ReadableMap) {
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), O.i());
+      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), L.h());
    }
 
    @ReactMethod
    public fun registerNotificationCategoriesAndGroups(localizedCategoryNames: ReadableMap, localizedGroupNames: ReadableMap) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.initNotificationCategories(var4, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
+      val var4: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
    }
 
    @ReactMethod

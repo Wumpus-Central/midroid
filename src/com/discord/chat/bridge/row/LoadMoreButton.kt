@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class LoadMoreButton(action: LoadingAction, text: String, backgroundColor: Int, cornerRadius: Int? = null, color: Int? = null) {
    public final val action: LoadingAction
    public final val text: String
@@ -72,9 +72,9 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.action.hashCode();
-      val var4: Int = this.text.hashCode();
-      val var5: Int = Integer.hashCode(this.backgroundColor);
+      val var5: Int = this.action.hashCode();
+      val var3: Int = this.text.hashCode();
+      val var4: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -87,28 +87,28 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2;
+      return (((var5 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var5: LoadingAction = this.action;
-      val var4: java.lang.String = this.text;
+      val var2: LoadingAction = this.action;
+      val var6: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var2: Int = this.cornerRadius;
-      val var3: Int = this.color;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("LoadMoreButton(action=");
-      var6.append(var5);
-      var6.append(", text=");
-      var6.append(var4);
-      var6.append(", backgroundColor=");
-      var6.append(var1);
-      var6.append(", cornerRadius=");
-      var6.append(var2);
-      var6.append(", color=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var4: Int = this.cornerRadius;
+      val var5: Int = this.color;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadMoreButton(action=");
+      var3.append(var2);
+      var3.append(", text=");
+      var3.append(var6);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", cornerRadius=");
+      var3.append(var4);
+      var3.append(", color=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

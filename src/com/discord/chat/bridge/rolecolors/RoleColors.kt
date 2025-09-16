@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.rolecolors
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, tertiaryColor: Int? = null) {
    public final val primaryColor: Int
    public final val secondaryColor: Int?

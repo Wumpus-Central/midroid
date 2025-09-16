@@ -1,12 +1,11 @@
 package com.discord.external_pip.react_events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
    public final val isInPipMode: Boolean
 
@@ -37,8 +36,8 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
       return java.lang.Boolean.hashCode(this.isInPipMode);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

@@ -9,7 +9,6 @@ public final class d implements ReactModuleInfoProvider {
    public final List a;
    public final boolean b;
 
-   @Override
    public final Map getReactModuleInfos() {
       return ReactModuleInfoProviderExtensionsKt.a(this.a, this.b);
    }

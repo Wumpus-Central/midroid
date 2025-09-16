@@ -14,7 +14,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SourceDebugExtension(["SMAP\nPlayAssetDelivery.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PlayAssetDelivery.kt\ncom/discord/play_delivery/PlayAssetDelivery\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 3 com.google.android.play:asset-delivery-ktx@@2.3.0\ncom/google/android/play/core/ktx/AssetPackManagerKtxKt\n*L\n1#1,144:1\n381#2,7:145\n44#3:152\n*S KotlinDebug\n*F\n+ 1 PlayAssetDelivery.kt\ncom/discord/play_delivery/PlayAssetDelivery\n*L\n105#1:145,7\n27#1:152\n*E\n"])
 public object PlayAssetDelivery {
    private const val TAG: String = "PlayAssetDelivery"
-   private final lateinit var assetPackManagerWeakRef: WeakReference<Q7.a>
+   private final lateinit var assetPackManagerWeakRef: WeakReference<O6.a>
    private final var assetDeliveryAvailable: Boolean = true
    private final val pendingCallbacks: MutableMap<String, MutableList<(Boolean) -> Unit>> = new LinkedHashMap()
    private final val assetPackLocations: MutableMap<String, AssetPackLocation> = new LinkedHashMap()
@@ -28,7 +28,7 @@ public object PlayAssetDelivery {
          var1 = null;
       }
 
-      val var7: Q7.a = var1.get() as Q7.a;
+      val var7: O6.a = var1.get() as O6.a;
       if (var7 != null) {
          val var11: java.lang.String = var0.h();
          var var9: java.lang.Boolean;
@@ -38,12 +38,12 @@ public object PlayAssetDelivery {
                assetPackLocations.put(var11, var4);
             }
 
-            val var5: Log = Log.INSTANCE;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("Download of ");
-            var8.append(var11);
-            var8.append(" Asset complete");
-            Log.i$default(var5, "PlayAssetDelivery", var8.toString(), null, 4, null);
+            val var8: Log = Log.INSTANCE;
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Download of ");
+            var5.append(var11);
+            var5.append(" Asset complete");
+            Log.i$default(var8, "PlayAssetDelivery", var5.toString(), null, 4, null);
             var9 = java.lang.Boolean.TRUE;
          } else {
             label26: {
@@ -98,38 +98,38 @@ public object PlayAssetDelivery {
       // 016: astore 3
       // 017: aload 3
       // 018: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
-      // 01b: checkcast Q7/a
+      // 01b: checkcast O6/a
       // 01e: astore 6
       // 020: aload 6
       // 022: ifnull 031
       // 025: aload 6
       // 027: aload 1
-      // 028: invokeinterface Q7/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
+      // 028: invokeinterface O6/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
       // 02d: astore 3
       // 02e: goto 033
       // 031: aconst_null
       // 032: astore 3
       // 033: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 036: astore 5
+      // 036: astore 7
       // 038: new java/lang/StringBuilder
       // 03b: dup
       // 03c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 03f: astore 7
-      // 041: aload 7
+      // 03f: astore 5
+      // 041: aload 5
       // 043: ldc "Fetching "
       // 045: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 048: pop
-      // 049: aload 7
+      // 049: aload 5
       // 04b: aload 1
       // 04c: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 04f: pop
-      // 050: aload 7
+      // 050: aload 5
       // 052: ldc " Asset"
       // 054: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 057: pop
-      // 058: aload 5
+      // 058: aload 7
       // 05a: ldc "PlayAssetDelivery"
-      // 05c: aload 7
+      // 05c: aload 5
       // 05e: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 061: aconst_null
       // 062: bipush 4
@@ -191,7 +191,7 @@ public object PlayAssetDelivery {
       // 0d4: aload 6
       // 0d6: aload 1
       // 0d7: invokestatic kotlin/collections/CollectionsKt.e (Ljava/lang/Object;)Ljava/util/List;
-      // 0da: invokeinterface Q7/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
+      // 0da: invokeinterface O6/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
       // 0df: new com/discord/play_delivery/b
       // 0e2: dup
       // 0e3: aload 1
@@ -317,7 +317,7 @@ public object PlayAssetDelivery {
    }
 
    public fun initialize(applicationContext: Context) {
-      val var2: Q7.a = com.google.android.play.core.assetpacks.b.a(var1);
+      val var2: O6.a = com.google.android.play.core.assetpacks.b.a(var1);
       var2.a(assetPackStateUpdateListener);
       assetPackManagerWeakRef = new WeakReference<>(var2);
    }

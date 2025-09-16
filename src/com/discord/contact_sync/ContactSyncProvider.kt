@@ -31,12 +31,12 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 5c
+      // 0e: ifnull 5b
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 46
+      // 17: ifnull 45
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
       // 1e: astore 1
@@ -55,25 +55,25 @@ public object ContactSyncProvider {
       // 39: bipush 0
       // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
       // 3d: astore 1
-      // 3e: goto 48
-      // 41: astore 4
-      // 43: goto 50
-      // 46: aconst_null
-      // 47: astore 1
-      // 48: aload 2
-      // 49: aconst_null
-      // 4a: invokestatic Ma/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4d: goto 5c
-      // 50: aload 4
-      // 52: athrow
-      // 53: astore 1
-      // 54: aload 2
-      // 55: aload 4
-      // 57: invokestatic Ma/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 5a: aload 1
-      // 5b: athrow
-      // 5c: aload 1
-      // 5d: areturn
+      // 3e: goto 47
+      // 41: astore 1
+      // 42: goto 4f
+      // 45: aconst_null
+      // 46: astore 1
+      // 47: aload 2
+      // 48: aconst_null
+      // 49: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4c: goto 5b
+      // 4f: aload 1
+      // 50: athrow
+      // 51: astore 4
+      // 53: aload 2
+      // 54: aload 1
+      // 55: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 4
+      // 5a: athrow
+      // 5b: aload 1
+      // 5c: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -94,8 +94,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var5 = var10;
-            var6 = var2;
+            var6 = var10;
+            var5 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -114,8 +114,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var5 = var4;
-               var6 = var13;
+               var6 = var4;
+               var5 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -124,8 +124,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var5 = var4;
-               var6 = var13;
+               var6 = var4;
+               var5 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -136,22 +136,22 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var6, var5);
+         return new ContactNameEntry(var5, var6);
       }
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      val var8: LinkedHashMap = new LinkedHashMap();
-      val var7: Cursor = var1.getContentResolver()
+      val var7: LinkedHashMap = new LinkedHashMap();
+      val var8: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
-      if (var7 == null) {
-         return var8;
+      if (var8 == null) {
+         return var7;
       } else {
-         while (var7.moveToNext()) {
-            val var6: java.lang.String = this.getColumnString(var7, "display_name");
-            val var9: java.lang.String = this.getColumnString(var7, "data4");
-            val var10: java.lang.String = this.getColumnString(var7, "_id");
-            var var3: java.lang.String = this.getColumnString(var7, "contact_id");
+         while (var8.moveToNext()) {
+            val var6: java.lang.String = this.getColumnString(var8, "display_name");
+            val var9: java.lang.String = this.getColumnString(var8, "data4");
+            val var10: java.lang.String = this.getColumnString(var8, "_id");
+            var var3: java.lang.String = this.getColumnString(var8, "contact_id");
             if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
@@ -178,7 +178,7 @@ public object ContactSyncProvider {
                }
 
                val var2: Boolean;
-               if (this.getColumnString(var7, "photo_file_id") != null) {
+               if (this.getColumnString(var8, "photo_file_id") != null) {
                   var2 = true;
                } else {
                   var2 = false;
@@ -190,13 +190,13 @@ public object ContactSyncProvider {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var8.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
+                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
 
-         var7.close();
-         return var8;
+         var8.close();
+         return var7;
       }
    }
 
@@ -276,23 +276,23 @@ public object ContactSyncProvider {
       // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 6e: astore 1
       // 6f: goto 78
-      // 72: astore 1
+      // 72: astore 2
       // 73: goto 82
       // 76: aconst_null
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic Ma/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
-      // 82: aload 1
+      // 82: aload 2
       // 83: athrow
-      // 84: astore 2
+      // 84: astore 1
       // 85: aload 3
-      // 86: aload 1
-      // 87: invokestatic Ma/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 2
+      // 86: aload 2
+      // 87: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8a: aload 1
       // 8b: athrow
       // 8c: aload 2
       // 8d: areturn

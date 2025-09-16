@@ -1,9 +1,9 @@
 package com.discord.activity_invites
 
-import Ca.l
-import Ca.o
-import Ca.p
-import G3.d
+import A9.j
+import A9.m
+import A9.n
+import G2.d
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -23,7 +23,6 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
@@ -32,7 +31,7 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import y3.f
+import y2.f
 
 @SourceDebugExtension(["SMAP\nActivityInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,212:1\n257#2,2:213\n257#2,2:215\n257#2,2:217\n257#2,2:219\n257#2,2:221\n257#2,2:223\n257#2,2:225\n257#2,2:227\n257#2,2:229\n257#2,2:231\n327#2,4:233\n327#2,4:237\n257#2,2:241\n1557#3:243\n1628#3,3:244\n*S KotlinDebug\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n*L\n73#1:213,2\n92#1:215,2\n93#1:217,2\n94#1:219,2\n97#1:221,2\n98#1:223,2\n99#1:225,2\n105#1:227,2\n106#1:229,2\n107#1:231,2\n134#1:233,4\n142#1:237,4\n173#1:241,2\n174#1:243\n174#1:244,3\n*E\n"])
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
@@ -57,11 +56,11 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    init {
       val var4: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      this.grayscalePostprocessor$delegate = l.a(o.i, new com.discord.activity_invites.a());
+      this.grayscalePostprocessor$delegate = j.a(m.i, new com.discord.activity_invites.a());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var5: SimpleDraweeView = var4.startImage;
       ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
-      var4.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, color.green_360));
+      var4.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, com.discord.theme.R.color.green_360));
    }
 
    private fun buildImageConfig(imageUri: String?, listening: Boolean, joinable: Boolean): com.discord.activity_invites.ActivityInviteEmbedView.ImageConfig {
@@ -103,7 +102,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          this.binding.startImage.setImageURI((var1 as ActivityInviteEmbedView.ImageConfig.Start).getUri());
       } else {
          if (var1 !is ActivityInviteEmbedView.ImageConfig.End) {
-            throw new p();
+            throw new n();
          }
 
          this.binding.bgGradient.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundSecondary()));
@@ -145,15 +144,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       }
 
       var5.setVisibility(var2);
-      val var4: OverlappingCirclesView = this.binding.avatars;
-      val var6: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
+      val var6: OverlappingCirclesView = this.binding.avatars;
+      val var4: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
       val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var4.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var4.setItems(var6);
+      var6.setItems(var4);
    }
 
    private fun setBottomEndLabel(text: CharSequence?, color: Int) {

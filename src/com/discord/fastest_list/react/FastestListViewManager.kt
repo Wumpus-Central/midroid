@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react
 
-import Ca.v
+import A9.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
@@ -30,14 +30,12 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            v.a("onUnexpectedItemSize", OnUnexpectedItemSizeEvent::class),
-            v.a("onLayout", OnLayoutEvent::class),
-            v.a("onScroll", OnScrollEvent::class),
-            v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
-            v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
-            v.a("onVisibleItemsChanged", OnVisibleItemsChangedEvent::class)
-         }
+         s.a("onUnexpectedItemSize", OnUnexpectedItemSizeEvent::class),
+         s.a("onLayout", OnLayoutEvent::class),
+         s.a("onScroll", OnScrollEvent::class),
+         s.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
+         s.a("onScrollEndDrag", OnScrollEndDragEvent::class),
+         s.a("onVisibleItemsChanged", OnVisibleItemsChangedEvent::class)
       )
 
    @JvmStatic

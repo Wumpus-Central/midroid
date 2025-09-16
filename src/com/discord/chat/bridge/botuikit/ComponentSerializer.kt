@@ -8,25 +8,25 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import tc.e
-import tc.h
+import qb.d
+import qb.g
 
 @SourceDebugExtension(["SMAP\nComponentSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentSerializer.kt\ncom/discord/chat/bridge/botuikit/ComponentSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,134:1\n11165#2:135\n11500#2,3:136\n*S KotlinDebug\n*F\n+ 1 ComponentSerializer.kt\ncom/discord/chat/bridge/botuikit/ComponentSerializer\n*L\n21#1:135\n21#1:136,3\n*E\n"])
-public object ComponentSerializer : e(Component::class) {
+public object ComponentSerializer : d(Component::class) {
    private final val knownTypes: List<Int>
    private final val componentClassSerializer: SealedClassSerializer<Component>
 
    @JvmStatic
    fun {
-      val var3: Array<ComponentType> = ComponentType.values();
-      val var2: ArrayList = new ArrayList(var3.length);
-      val var1: Int = var3.length;
+      val var2: Array<ComponentType> = ComponentType.values();
+      val var3: ArrayList = new ArrayList(var2.length);
+      val var1: Int = var2.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var2.add(var3[var0].getSerialNumber());
+         var3.add(var2[var0].getSerialNumber());
       }
 
-      knownTypes = var2;
+      knownTypes = var3;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
          Component::class,
@@ -73,11 +73,11 @@ public object ComponentSerializer : e(Component::class) {
       var var2: java.util.List;
       label17: {
          var2 = knownTypes;
-         var1 = h.n(var1).get("type") as JsonElement;
+         var1 = g.o(var1).get("type") as JsonElement;
          if (var1 != null) {
-            val var4: JsonPrimitive = h.o(var1);
+            val var4: JsonPrimitive = g.p(var1);
             if (var4 != null) {
-               var5 = h.k(var4);
+               var5 = g.l(var4);
                break label17;
             }
          }
@@ -86,7 +86,7 @@ public object ComponentSerializer : e(Component::class) {
       }
 
       val var6: Any;
-      if (CollectionsKt.Z(var2, var5)) {
+      if (CollectionsKt.X(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();

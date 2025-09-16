@@ -13,7 +13,7 @@ public class NotificationManager(reactContext: ReactApplicationContext) : ReactC
       var2.ackReactionNotifications(var3, var1);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDNotificationManager";
    }
 

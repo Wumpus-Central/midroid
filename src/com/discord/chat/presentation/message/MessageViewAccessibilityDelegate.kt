@@ -27,7 +27,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
 
    private fun getReferencedMessageLabel(context: Context, referencedMessage: ReferencedMessage?): CharSequence? {
       return if (var2 is LoadedReferencedMessage)
-         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new o0((var2 as LoadedReferencedMessage).getMessage().getUsername()))
+         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new p0((var2 as LoadedReferencedMessage).getMessage().getUsername()))
          else
          null;
    }
@@ -55,9 +55,9 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
          var3.add(var5);
       }
 
-      var2.a1(CollectionsKt.r0(var3, ", ", null, null, 0, null, null, 62, null));
-      var2.k0(AccessibilityNodeInfoCompat.a.i);
-      var2.L0(15);
+      var2.V0(CollectionsKt.p0(var3, ", ", null, null, 0, null, null, 62, null));
+      var2.j0(AccessibilityNodeInfoCompat.a.i);
+      var2.H0(15);
    }
 
    public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {

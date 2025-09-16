@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
+import y0.a;
 
 public final class AddReactionViewBinding implements ViewBinding {
    @NonNull
@@ -50,6 +50,7 @@ public final class AddReactionViewBinding implements ViewBinding {
    }
 
    @NonNull
+   @Override
    public View getRoot() {
       return this.rootView;
    }

@@ -6571,14 +6571,6 @@
     ". Oder tippe hier, um ein anderes Standard-Emoji festzulegen."
   ],
   "rY+31d": "Zum Reagieren doppelt antippen",
-  "EQnNv7": [
-    "Tippe zweimal auf eine Nachricht, um ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Standard bearbeiten",
   "VrWSNj": "Wähle Emojis zum Doppeltippen",
   "nKY0Fh": [
@@ -39077,7 +39069,6 @@
     " aus dem Shop zu beanspruchen!"
   ],
   "pGDUHx": "Profildekoration",
-  "wmcDys": "Mit Orbs beanspruchen",
   "y0WGqK": "Orbs-Guthaben",
   "7gHWra": [
     "Fehler beim Einlösen von ",

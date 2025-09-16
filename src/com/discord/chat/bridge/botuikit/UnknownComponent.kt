@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component() {
    public open val type: Int
    public open val id: String

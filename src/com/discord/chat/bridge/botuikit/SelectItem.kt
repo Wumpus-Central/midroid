@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public sealed class SelectItem protected constructor() {
    public abstract val label: String
    public abstract val value: String

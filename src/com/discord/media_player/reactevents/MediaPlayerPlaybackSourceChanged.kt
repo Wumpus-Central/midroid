@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import Ca.v
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
-import pc.w
-import wc.a
+import mb.g
+import mb.k
+import tb.a
 
-@m
+@g
 public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSource?) : ReactEvent {
    public final val source: MediaPlayerPlaybackSource?
 
@@ -49,18 +49,18 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
 
    public override fun serialize(): WritableMap {
       return if (this.source == null)
-         NativeMapExtensionsKt.toNativeMap(O.i())
+         NativeMapExtensionsKt.toNativeMap(L.h())
          else
-         NativeMapExtensionsKt.nativeMapOf(v.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(w.b(MediaPlayerPlaybackSource.class), this.source))));
+         NativeMapExtensionsKt.nativeMapOf(s.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(k.b(MediaPlayerPlaybackSource.class), this.source))));
    }
 
    public override fun toString(): String {
-      val var2: MediaPlayerPlaybackSource = this.source;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MediaPlayerPlaybackSourceChanged(source=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MediaPlayerPlaybackSource = this.source;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaPlayerPlaybackSourceChanged(source=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

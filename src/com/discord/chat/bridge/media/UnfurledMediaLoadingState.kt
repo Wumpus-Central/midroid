@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.media
 
-import Ia.a
+import G9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m(with = UnfurledMediaLoadingState.Serializer::class)
+@g(with = UnfurledMediaLoadingState.Serializer::class)
 public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
    LOADED_NOT_FOUND(3),
    LOADED_SUCCESS(2),

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.messageframe
 
-import Ia.a
+import G9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m(with = MessageFrameType.Serializer::class)
+@g(with = MessageFrameType.Serializer::class)
 public enum class MessageFrameType(serialNumber: Int) : IntEnum {
    JUMP_MESSAGE_FRAME(0),
    MEDIA_VIEWER_MESSAGE_FRAME(1),

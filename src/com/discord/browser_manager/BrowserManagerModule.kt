@@ -1,6 +1,6 @@
 package com.discord.browser_manager
 
-import Ca.v
+import A9.s
 import android.content.Context
 import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
@@ -25,11 +25,11 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = StringsKt.toIntOrNull(var2);
          if (var3 != null) {
-            return O.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return L.m(new Pair[]{s.a("selectedBrowser", var3), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return O.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return L.m(new Pair[]{s.a("selectedBrowser", 1), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {
@@ -43,9 +43,9 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
    }
 
    public override fun openInChromeURL(url: String, promise: Promise) {
-      val var3: BrowserManager = BrowserManager.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.tryOpenUrlExternally(var4, var1, new d(var2));
+      val var4: BrowserManager = BrowserManager.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.tryOpenUrlExternally(var3, var1, new d(var2));
    }
 
    public override fun selectBrowser(browser: Double) {

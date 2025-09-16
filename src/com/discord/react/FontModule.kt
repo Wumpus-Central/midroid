@@ -1,6 +1,6 @@
 package com.discord.react
 
-import Ca.v
+import A9.s
 import com.discord.codegen.NativeFontModuleSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
@@ -14,15 +14,15 @@ public class FontModule(reactContext: ReactApplicationContext) : NativeFontModul
       this.reactContext = var1;
    }
 
-   public open fun getCustomFontScale(): WritableMap {
+   public override fun getCustomFontScale(): WritableMap {
       val var1: FontManager = FontManager.INSTANCE;
       return NativeMapExtensionsKt.nativeMapOf(
-         v.a("fontScale", FontManager.INSTANCE.getFontScale(this.reactContext)),
-         v.a("isClassicChatFontScaleEnabled", var1.getIsClassicChatFontScaleEnabled(this.reactContext))
+         s.a("fontScale", FontManager.INSTANCE.getFontScale(this.reactContext)),
+         s.a("isClassicChatFontScaleEnabled", var1.getIsClassicChatFontScaleEnabled(this.reactContext))
       );
    }
 
-   public open fun setCustomFontScale(fontScale: Double, isClassicChatFontScaleEnabled: Boolean) {
+   public override fun setCustomFontScale(fontScale: Double, isClassicChatFontScaleEnabled: Boolean) {
       FontManager.INSTANCE.setFontSize(this.reactContext, (float)var1, var3);
       ProcessPhoenix.b(this.reactContext);
    }

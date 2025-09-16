@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import Ca.v
+import A9.s
 import android.view.View
 import com.discord.emoji_picker.EmojiPickerCache
 import com.discord.emoji_picker.EmojiPickerItem
@@ -37,15 +37,13 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    private final val emojiPickerCaches: MutableMap<EmojiPickerView, EmojiPickerCache> = new LinkedHashMap()
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            v.a("onPressEmoji", OnPressEmojiEvent::class),
-            v.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
-            v.a("onScroll", OnScrollEvent::class),
-            v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
-            v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
-            v.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
-            v.a("onShowNitroUpsell", OnShowNitroUpsell::class)
-         }
+         s.a("onPressEmoji", OnPressEmojiEvent::class),
+         s.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
+         s.a("onScroll", OnScrollEvent::class),
+         s.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
+         s.a("onScrollEndDrag", OnScrollEndDragEvent::class),
+         s.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
+         s.a("onShowNitroUpsell", OnShowNitroUpsell::class)
       )
 
    @JvmStatic

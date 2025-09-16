@@ -41,20 +41,21 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       super(var1, var2, var3);
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
-      val var7: RecyclerView = var5.answers;
-      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var4: RecyclerView = var5.answers;
+      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
 
+         @Override
          public void endAnimation(RecyclerView.ViewHolder var1) {
             super.endAnimation(var1);
             val var2: View = var1.itemView;
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var4.setSupportsChangeAnimations(false);
-      var7.setItemAnimator(var4);
+      var7.setSupportsChangeAnimations(false);
+      var4.setItemAnimator(var7);
       val var8: View = var5.getRoot();
       var3 = SizeUtilsKt.getDpToPx(16);
       var8.setPadding(var3, var3, var3, var3);
@@ -105,8 +106,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       Z.A0(var12, 4);
       var12.setImportantForAccessibility(1);
       Z.o0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.primaryAction.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
       val var9: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
@@ -129,14 +130,14 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var10 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
       }
 
       val var6: Boolean;
-      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;

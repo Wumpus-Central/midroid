@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
+import y0.a;
 
 public final class ViewOverlayMenuBinding implements ViewBinding {
    @NonNull
@@ -69,39 +69,39 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
    @NonNull
    public static ViewOverlayMenuBinding bind(@NonNull View var0) {
       int var1 = R.id.disconnect_btn;
-      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-      if (var4 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.menu_bottom;
-         CardView var9 = (CardView)a.a(var0, var1);
-         if (var9 != null) {
+         CardView var4 = (CardView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.menu_top;
-            CardView var5 = (CardView)a.a(var0, var1);
-            if (var5 != null) {
+            CardView var6 = (CardView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.menu_top_status_container;
-               ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-               if (var3 != null) {
+               ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.mute_toggle;
-                  SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var2 != null) {
+                  SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var12 != null) {
                      var1 = R.id.overlay_channel_name;
                      TextView var8 = (TextView)a.a(var0, var1);
                      if (var8 != null) {
                         var1 = R.id.overlay_guild_name;
-                        TextView var7 = (TextView)a.a(var0, var1);
-                        if (var7 != null) {
+                        TextView var10 = (TextView)a.a(var0, var1);
+                        if (var10 != null) {
                            var1 = R.id.overlay_invite_link;
-                           TextView var12 = (TextView)a.a(var0, var1);
-                           if (var12 != null) {
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.overlay_network_icon;
-                              SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var6 != null) {
+                              SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var5 != null) {
                                  var1 = R.id.overlay_open_app;
-                                 TextView var10 = (TextView)a.a(var0, var1);
-                                 if (var10 != null) {
+                                 TextView var3 = (TextView)a.a(var0, var1);
+                                 if (var3 != null) {
                                     var1 = R.id.overlay_switch_channels;
                                     TextView var11 = (TextView)a.a(var0, var1);
                                     if (var11 != null) {
-                                       return new ViewOverlayMenuBinding(var0, var4, var9, var5, var3, var2, var8, var7, var12, var6, var10, var11);
+                                       return new ViewOverlayMenuBinding(var0, var2, var4, var6, var9, var12, var8, var10, var7, var5, var3, var11);
                                     }
                                  }
                               }
@@ -128,6 +128,7 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
    }
 
    @NonNull
+   @Override
    public View getRoot() {
       return this.rootView;
    }

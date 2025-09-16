@@ -1,12 +1,11 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
       firstVisibleMessagePercentVisible: Double?,
       lastVisibleMessageIndex: Int,
@@ -88,22 +87,22 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
       return ((var3 * 31 + var1) * 31 + var4) * 31 + var2;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: Int = this.firstVisibleMessageIndex;
+      val var1: Int = this.firstVisibleMessageIndex;
       val var4: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var1: Int = this.lastVisibleMessageIndex;
+      val var2: Int = this.lastVisibleMessageIndex;
       val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var3: StringBuilder = new StringBuilder();
       var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", firstVisibleMessagePercentVisible=");
       var3.append(var4);
       var3.append(", lastVisibleMessageIndex=");
-      var3.append(var1);
+      var3.append(var2);
       var3.append(", lastVisibleMessagePercentVisible=");
       var3.append(var5);
       var3.append(")");

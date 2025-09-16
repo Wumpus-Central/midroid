@@ -104,7 +104,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       }
    }
 
-   public open fun getPortalViewIndex(portalView: View): Int {
+   public override fun getPortalViewIndex(portalView: View): Int {
       return this.view.indexOfChild(var1);
    }
 
@@ -117,7 +117,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       PortalFromJsContextManager.INSTANCE.addContext(var1.getKey(), this);
    }
 
-   public open fun onPortalFromJsAdded(portalId: String, portalView: View) {
+   public override fun onPortalFromJsAdded(portalId: String, portalView: View) {
       if (this.viewPortalId == var1) {
          this.viewPortalBound = true;
          updatePlaceholder$default(this, this.view, null, 1, null);
@@ -127,7 +127,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       }
    }
 
-   public open fun onPortalFromJsRemoved(portalId: String, portalView: View) {
+   public override fun onPortalFromJsRemoved(portalId: String, portalView: View) {
       if (this.viewPortalId == var1) {
          this.viewPortalBound = false;
       }

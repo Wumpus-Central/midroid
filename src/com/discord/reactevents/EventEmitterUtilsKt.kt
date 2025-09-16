@@ -3,7 +3,6 @@ package com.discord.reactevents
 import android.content.Context
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.WritableMap
-import com.facebook.react.modules.core.DeviceEventManagerModule
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
 
 internal fun Context.emitReactNativeEvent(eventName: String, serializedEvent: WritableMap) {
@@ -11,5 +10,5 @@ internal fun Context.emitReactNativeEvent(eventName: String, serializedEvent: Wr
 }
 
 private fun Context.getEventEmitter(): RCTDeviceEventEmitter {
-   return (var0 as ReactContext).getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class);
+   return (var0 as ReactContext).getJSModule(RCTDeviceEventEmitter.class) as RCTDeviceEventEmitter;
 }

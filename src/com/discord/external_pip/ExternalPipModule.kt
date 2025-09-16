@@ -1,6 +1,6 @@
 package com.discord.external_pip
 
-import Ca.v
+import A9.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -22,7 +22,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val manager: ExternalPipManager = new ExternalPipManager()
    private final val reactEvents: ReactEvents =
-      new ReactEvents(new Pair[]{v.a("onPipModeChanged", OnPipModeChangedEvent::class), v.a("onPipModeWillChange", OnPipModeWillChangeEvent::class)})
+      new ReactEvents(s.a("onPipModeChanged", OnPipModeChangedEvent::class), s.a("onPipModeWillChange", OnPipModeWillChangeEvent::class))
 
    private fun enterPipMode(force: Boolean, onResult: (Result<Unit>) -> Unit) {
       if (this.manager.getEnabled(var1)) {
@@ -40,22 +40,22 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var2: ReactEvents = this.reactEvents;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
+         val var1: ReactEvents = this.reactEvents;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return O.n(new Pair[]{v.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return L.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

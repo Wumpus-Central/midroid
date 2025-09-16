@@ -25,7 +25,7 @@ internal class EmojiPickerLayoutManager(context: Context, rowSize: Int, onGetSpa
       });
    }
 
-   public open fun canScrollVertically(): Boolean {
+   public override fun canScrollVertically(): Boolean {
       val var1: Boolean;
       if (this.isScrollEnabled && super.canScrollVertically()) {
          var1 = true;

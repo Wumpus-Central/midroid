@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Build.VERSION
 import androidx.credentials.CredentialManager
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.p
+import androidx.lifecycle.m
 import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -41,7 +41,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
    private final val activityEventListener: <unrepresentable>
 
    init {
-      val var2: androidx.credentials.CredentialManager.a = CredentialManager.a;
+      val var2: CredentialManager.a = CredentialManager.a;
       var1 = this.getReactApplicationContext();
       this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
@@ -51,7 +51,6 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             this.this$0 = var1;
          }
 
-         @Override
          public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
             SecurityKeyManagerModule.access$getWebauthn$p(this.this$0).onActivityResult(var2, var3, var4);
          }
@@ -92,8 +91,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         fc.f.d(
-            p.a(var3 as LifecycleOwner),
+         cb.f.d(
+            m.a(var3 as LifecycleOwner),
             null,
             null,
             new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
@@ -115,16 +114,16 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       }
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDSecurityKeyManager";
    }
 
-   public override fun initialize() {
+   public open fun initialize() {
       super.initialize();
       this.getReactApplicationContext().addActivityEventListener(this.activityEventListener);
    }
 
-   public override fun invalidate() {
+   public open fun invalidate() {
       super.invalidate();
       this.getReactApplicationContext().removeActivityEventListener(this.activityEventListener);
    }
@@ -143,8 +142,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         fc.f.d(
-            p.a(var3 as LifecycleOwner),
+         cb.f.d(
+            m.a(var3 as LifecycleOwner),
             null,
             null,
             new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled

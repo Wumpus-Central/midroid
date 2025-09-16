@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
    public final val action: BlockedGroupButtonAction
 

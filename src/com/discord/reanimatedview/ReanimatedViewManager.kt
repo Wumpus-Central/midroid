@@ -31,9 +31,9 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
       }
    }
 
-   public override fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
+   public open fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
       if (this.nodesManager == null) {
-         val var2: ReanimatedModule = var1.getNativeModule(ReanimatedModule.class);
+         val var2: ReanimatedModule = var1.getNativeModule(ReanimatedModule.class) as ReanimatedModule;
          val var3: NodesManager;
          if (var2 != null) {
             var3 = var2.getNodesManager();
@@ -47,7 +47,7 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
       return new ReactViewGroup(var1);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "ReanimatedView";
    }
 
@@ -56,20 +56,20 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
       var1.setTag(R.id.firstRenderPerformed, java.lang.Boolean.TRUE);
    }
 
-   protected override fun prepareToRecycleView(reactContext: ThemedReactContext, view: ReactViewGroup): ReactViewGroup {
+   protected open fun prepareToRecycleView(reactContext: ThemedReactContext, view: ReactViewGroup): ReactViewGroup {
       var2.setTag(R.id.firstRenderPerformed, null);
       return super.prepareToRecycleView(var1, var2);
    }
 
    @ReactPropGroup(names = ["borderRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius", "borderTopStartRadius", "borderTopEndRadius", "borderBottomStartRadius", "borderBottomEndRadius", "borderEndEndRadius", "borderEndStartRadius", "borderStartEndRadius", "borderStartStartRadius"])
-   public override fun setBorderRadius(view: ReactViewGroup, index: Int, rawBorderRadius: Dynamic) {
+   public open fun setBorderRadius(view: ReactViewGroup, index: Int, rawBorderRadius: Dynamic) {
       if (this.allowUpdating(var1)) {
          super.setBorderRadius(var1, var2, var3);
       }
    }
 
    @ReactProp(name = "opacity")
-   public override fun setOpacity(view: ReactViewGroup, value: Float) {
+   public open fun setOpacity(view: ReactViewGroup, value: Float) {
       if (this.allowUpdating(var1)) {
          super.setOpacity(var1, var2);
       }

@@ -1,12 +1,12 @@
 package com.discord.resource_usage
 
-import Ca.v
-import Qc.e
+import A9.s
+import Nb.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
 import android.telephony.TelephonyManager
-import b3.b
+import b2.b
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
@@ -126,30 +126,30 @@ public class DeviceResourceUsageRecorder {
          }
 
          return NativeMapExtensionsKt.nativeMapOf(
-            v.a("signalStrengthLevel", var9.a() as Int),
-            v.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
-            v.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
-            v.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),
-            v.a("totalReceiveBytes", TrafficStats.getTotalRxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalReceiveBytes$cp()),
-            v.a("totalSendBytes", TrafficStats.getTotalTxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalSendBytes$cp()),
-            v.a(
+            s.a("signalStrengthLevel", var9.a() as Int),
+            s.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
+            s.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
+            s.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),
+            s.a("totalReceiveBytes", TrafficStats.getTotalRxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalReceiveBytes$cp()),
+            s.a("totalSendBytes", TrafficStats.getTotalTxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalSendBytes$cp()),
+            s.a(
                "uidReceiveBytes",
                TrafficStats.getUidRxBytes(DeviceResourceUsageRecorder.access$getUid$cp()) - DeviceResourceUsageRecorder.access$getInitialAppReceiveBytes$cp()
             ),
-            v.a(
+            s.a(
                "uidSendBytes",
                TrafficStats.getUidTxBytes(DeviceResourceUsageRecorder.access$getUid$cp()) - DeviceResourceUsageRecorder.access$getInitialAppSendBytes$cp()
             ),
-            v.a("socketBytesReceived", this.getSocketBytesReceived()),
-            v.a("otaBytesReceived", DeviceResourceUsageRecorder.access$getOta$cp().getBytesReceived()),
-            v.a("otaNumRequests", DeviceResourceUsageRecorder.access$getOta$cp().getNumRequests()),
-            v.a("xhrBytesReceived", DeviceResourceUsageRecorder.access$getXhr$cp().getBytesReceived()),
-            v.a("xhrNumRequests", DeviceResourceUsageRecorder.access$getXhr$cp().getNumRequests()),
-            v.a("frescoBytesReceived", DeviceResourceUsageRecorder.access$getFresco$cp().getBytesReceived()),
-            v.a("frescoNumRequests", DeviceResourceUsageRecorder.access$getFresco$cp().getNumRequests()),
-            v.a("downloadBytesReceived", DeviceResourceUsageRecorder.access$getDownloads$cp().getBytesReceived()),
-            v.a("downloadNumRequests", DeviceResourceUsageRecorder.access$getDownloads$cp().getNumRequests()),
-            v.a("mediaPlayerBytesReceived", this.getMediaPlayerBytesReceived())
+            s.a("socketBytesReceived", this.getSocketBytesReceived()),
+            s.a("otaBytesReceived", DeviceResourceUsageRecorder.access$getOta$cp().getBytesReceived()),
+            s.a("otaNumRequests", DeviceResourceUsageRecorder.access$getOta$cp().getNumRequests()),
+            s.a("xhrBytesReceived", DeviceResourceUsageRecorder.access$getXhr$cp().getBytesReceived()),
+            s.a("xhrNumRequests", DeviceResourceUsageRecorder.access$getXhr$cp().getNumRequests()),
+            s.a("frescoBytesReceived", DeviceResourceUsageRecorder.access$getFresco$cp().getBytesReceived()),
+            s.a("frescoNumRequests", DeviceResourceUsageRecorder.access$getFresco$cp().getNumRequests()),
+            s.a("downloadBytesReceived", DeviceResourceUsageRecorder.access$getDownloads$cp().getBytesReceived()),
+            s.a("downloadNumRequests", DeviceResourceUsageRecorder.access$getDownloads$cp().getNumRequests()),
+            s.a("mediaPlayerBytesReceived", this.getMediaPlayerBytesReceived())
          );
       }
    }

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m(with = ComponentSerializer::class)
+@g(with = ComponentSerializer::class)
 public sealed class Component protected constructor() {
    public abstract val type: Int
    public abstract val id: String

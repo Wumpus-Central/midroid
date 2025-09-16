@@ -4,12 +4,12 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import tc.e
-import tc.h
+import qb.d
+import qb.g
 
-public object GiftEmbedSerializer : e(GiftEmbed::class) {
+public object GiftEmbedSerializer : d(GiftEmbed::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<GiftEmbed> {
-      val var2: JsonObject = h.n(var1);
+      val var2: JsonObject = g.o(var1);
       val var3: KSerializer;
       if (GiftEmbedKt.access$hasPrimitives(var2, "resolvingGradientStart", "resolvingGradientEnd")) {
          var3 = GiftEmbed.Resolving.Companion.serializer();

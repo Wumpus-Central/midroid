@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component() {
    public open val type: Int
    public open val id: String

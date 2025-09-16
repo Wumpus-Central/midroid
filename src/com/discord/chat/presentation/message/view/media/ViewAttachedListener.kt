@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view.media
 
-import C2.a
-import C2.b
-import C2.c
-import Ca.l
+import A9.j
+import C1.a
+import C1.b
+import C1.c
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import v7.f
+import t6.f
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = new c()) : OnAttachStateChangeListener {
    private final val view: View
@@ -28,7 +28,7 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
       this.viewScrolling = var3;
       this.isAttachedDelay = var1.getResources().getInteger(f.c);
       this.isAttachedRunnable = new a(this);
-      this.scrollStateListener$delegate = l.b(new b(this));
+      this.scrollStateListener$delegate = j.b(new b(this));
    }
 
    @JvmStatic
@@ -56,11 +56,11 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
    public open fun onViewDetachedFromWindow(view: View) {
       var1.removeCallbacks(this.isAttachedRunnable);
-      val var3: ViewTreeObserver = var1.getViewTreeObserver();
-      if (var3 != null) {
-         val var2: ViewScrollStateListener = this.getScrollStateListener();
-         var2.reset();
-         var3.removeOnScrollChangedListener(var2);
+      val var2: ViewTreeObserver = var1.getViewTreeObserver();
+      if (var2 != null) {
+         val var3: ViewScrollStateListener = this.getScrollStateListener();
+         var3.reset();
+         var2.removeOnScrollChangedListener(var3);
       }
 
       this.viewAttached.invoke(java.lang.Boolean.FALSE);

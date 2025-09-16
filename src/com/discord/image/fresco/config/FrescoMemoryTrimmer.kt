@@ -1,7 +1,6 @@
 package com.discord.image.fresco.config
 
-import Ca.c
-import G3.d
+import G2.d
 import android.app.ActivityManager
 import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2
@@ -31,7 +30,6 @@ internal object FrescoMemoryTrimmer {
          public void onConfigurationChanged(Configuration var1) {
          }
 
-         @c
          public void onLowMemory() {
             this.clearMemoryCaches();
          }

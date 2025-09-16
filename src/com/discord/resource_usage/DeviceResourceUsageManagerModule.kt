@@ -15,41 +15,41 @@ public class DeviceResourceUsageManagerModule(reactContext: ReactApplicationCont
 
    @ReactMethod
    public fun getCpuCoreCount(callback: Callback) {
-      var1.invoke(this.deviceResourceUsageManager.getCpuCoreCount());
+      var1.invoke(new Object[]{this.deviceResourceUsageManager.getCpuCoreCount()});
    }
 
    @ReactMethod
    public fun getCumulativeCpuUsage(callback: Callback) {
-      var1.invoke((double)Process.getElapsedCpuTime() / (double)e.e(this.deviceResourceUsageManager.getCpuCoreCount(), 1) / (double)1000);
+      var1.invoke(new Object[]{(double)Process.getElapsedCpuTime() / (double)d.d(this.deviceResourceUsageManager.getCpuCoreCount(), 1) / (double)1000});
    }
 
    @ReactMethod
    public fun getCurrentCpuUsagePercent(callback: Callback) {
-      var1.invoke(this.deviceResourceUsageManager.getCpuUsagePercent());
+      var1.invoke(new Object[]{this.deviceResourceUsageManager.getCpuUsagePercent()});
    }
 
    @ReactMethod
    public fun getCurrentMemoryUsageKb(callback: Callback) {
-      var1.invoke(this.deviceResourceUsageManager.getMemoryRssKB());
+      var1.invoke(new Object[]{this.deviceResourceUsageManager.getMemoryRssKB()});
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "SystemResourceManager";
    }
 
    @ReactMethod
    public fun getNetworkUsage(callback: Callback) {
-      val var2: DeviceResourceUsageRecorder.Companion = DeviceResourceUsageRecorder.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(var2.getNetworkUsage(var3));
+      val var3: DeviceResourceUsageRecorder.Companion = DeviceResourceUsageRecorder.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var3.getNetworkUsage(var2)});
    }
 
-   public override fun initialize() {
+   public open fun initialize() {
       super.initialize();
       this.deviceResourceUsageManager.start();
    }
 
-   public override fun invalidate() {
+   public open fun invalidate() {
       super.invalidate();
       this.deviceResourceUsageManager.stop();
    }

@@ -1215,7 +1215,6 @@ public final class R {
       public static int modules_hang_status_images_native_original_brb;
       public static int modules_hang_status_images_native_original_chillin;
       public static int modules_hang_status_images_native_original_gaming;
-      public static int modules_hang_status_images_native_original_grubbin;
       public static int modules_hang_status_images_native_original_inthezone;
       public static int modules_hang_status_images_native_original_watching;
       public static int modules_hub_native_images_conversation;
@@ -2035,6 +2034,8 @@ public final class R {
       public static int design_components_lottieicon_native_generated_lotties_nitrogem9;
       public static int design_components_lottieicon_native_generated_lotties_notificationstab;
       public static int design_components_lottieicon_native_generated_lotties_servertab;
+      public static int design_components_lottieicon_native_generated_lotties_spendearnorbs;
+      public static int design_components_lottieicon_native_generated_lotties_spendearnorbslighttheme;
       public static int design_components_lottieicon_native_generated_lotties_youtab;
       public static int design_intl_manacompiledmessages;
       public static int images_platforms_img_account_sync_battlenet_light_and_dark;

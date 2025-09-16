@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.embed
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class EmbedThumbnail(url: String,
       proxyURL: String? = null,
       videoUrl: String? = null,
@@ -182,35 +182,35 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.url;
-      val var8: java.lang.String = this.proxyURL;
-      val var7: java.lang.String = this.videoUrl;
+      val var8: java.lang.String = this.url;
+      val var9: java.lang.String = this.proxyURL;
+      val var11: java.lang.String = this.videoUrl;
       val var1: Int = this.height;
       val var2: Int = this.width;
-      val var11: java.lang.Boolean = this.gifv;
+      val var7: java.lang.Boolean = this.gifv;
       val var5: java.lang.Boolean = this.showPlayButton;
-      val var9: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.placeholder;
+      val var6: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
       val var10: StringBuilder = new StringBuilder();
       var10.append("EmbedThumbnail(url=");
-      var10.append(var6);
-      var10.append(", proxyURL=");
       var10.append(var8);
+      var10.append(", proxyURL=");
+      var10.append(var9);
       var10.append(", videoUrl=");
-      var10.append(var7);
+      var10.append(var11);
       var10.append(", height=");
       var10.append(var1);
       var10.append(", width=");
       var10.append(var2);
       var10.append(", gifv=");
-      var10.append(var11);
+      var10.append(var7);
       var10.append(", showPlayButton=");
       var10.append(var5);
       var10.append(", placeholder=");
-      var10.append(var9);
-      var10.append(", placeholderVersion=");
       var10.append(var4);
+      var10.append(", placeholderVersion=");
+      var10.append(var6);
       var10.append(", srcIsAnimated=");
       var10.append(var3);
       var10.append(")");

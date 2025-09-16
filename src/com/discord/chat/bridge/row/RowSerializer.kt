@@ -7,10 +7,10 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import tc.e
-import tc.h
+import qb.d
+import qb.g
 
-public object RowSerializer : e(Row::class) {
+public object RowSerializer : d(Row::class) {
    private const val CHANGE_TYPE_DELETE: String = "3"
    private final val rowSealedClassSerializer: SealedClassSerializer<Row> =
       new SealedClassSerializer(
@@ -23,7 +23,7 @@ public object RowSerializer : e(Row::class) {
       )
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Row> {
-      val var2: JsonObject = h.n(var1);
+      val var2: JsonObject = g.o(var1);
       val var3: Any;
       if (var2.containsKey("type")) {
          var3 = rowSealedClassSerializer;
@@ -31,9 +31,9 @@ public object RowSerializer : e(Row::class) {
          label19: {
             val var4: JsonElement = var2.get("changeType") as JsonElement;
             if (var4 != null) {
-               val var5: JsonPrimitive = h.o(var4);
+               val var5: JsonPrimitive = g.p(var4);
                if (var5 != null) {
-                  var6 = var5.c();
+                  var6 = var5.a();
                   break label19;
                }
             }

@@ -7,7 +7,7 @@ import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootView
 import com.facebook.react.views.view.ReactViewGroup
 
 internal class BlockingGestureViewGroup(context: Context) : ReactViewGroup(var1) {
-   public override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {
       if (var1.getAction() == 0) {
          val var2: ViewGroup = GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this);
          if (var2 != null) {

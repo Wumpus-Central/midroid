@@ -6536,14 +6536,6 @@
     " ile hemen tepki ver ya da buraya dokunarak başka bir varsayılan emoji ayarla."
   ],
   "rY+31d": "Tepki vermek için çift dokun",
-  "EQnNv7": [
-    "Bir mesaja iki kez dokunarak ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Varsayılan düzenle",
   "VrWSNj": "Emojiye çift dokunmayı seç",
   "nKY0Fh": [
@@ -39032,7 +39024,6 @@
     " almak için yeterli Orbs'un var!"
   ],
   "pGDUHx": "Profil Dekoru",
-  "wmcDys": "Orbs ile Al",
   "y0WGqK": "Orbs Bakiyesi",
   "7gHWra": [
     [

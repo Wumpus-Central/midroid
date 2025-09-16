@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class UnderlineContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 

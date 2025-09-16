@@ -128,8 +128,8 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = MessageId.hashCode-impl(this.messageId);
-      val var6: Int = this.reactions.hashCode();
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
+      val var5: Int = this.reactions.hashCode();
       val var8: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
       val var7: Int = this.addReactionLabel.hashCode();
       val var9: Int = this.addNewReactionAccessibilityLabel.hashCode();
@@ -159,38 +159,38 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
          var4 = this.embedIndex.hashCode();
       }
 
-      return (((((((var5 * 31 + var6) * 31 + var8) * 31 + var7) * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return (((((((var6 * 31 + var5) * 31 + var8) * 31 + var7) * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: java.util.List = this.reactions;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var2: java.lang.String = this.addReactionLabel;
-      val var9: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var8: ReactionsTheme = this.reactionsTheme;
+      val var9: java.lang.String = this.addReactionLabel;
+      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var4: ReactionsTheme = this.reactionsTheme;
       val var10: DiscordTheme = this.theme;
-      val var6: java.lang.String = this.targetKind;
-      val var3: Int = this.embedIndex;
+      val var8: java.lang.String = this.targetKind;
+      val var6: Int = this.embedIndex;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ReactionsMessageAccessory(messageId=");
-      var7.append(var4);
+      var7.append(var3);
       var7.append(", reactions=");
-      var7.append(var5);
+      var7.append(var2);
       var7.append(", canAddNewReactions=");
       var7.append(var1);
       var7.append(", addReactionLabel=");
-      var7.append(var2);
-      var7.append(", addNewReactionAccessibilityLabel=");
       var7.append(var9);
+      var7.append(", addNewReactionAccessibilityLabel=");
+      var7.append(var5);
       var7.append(", reactionsTheme=");
-      var7.append(var8);
+      var7.append(var4);
       var7.append(", theme=");
       var7.append(var10);
       var7.append(", targetKind=");
-      var7.append(var6);
+      var7.append(var8);
       var7.append(", embedIndex=");
-      var7.append(var3);
+      var7.append(var6);
       var7.append(")");
       return var7.toString();
    }

@@ -78,7 +78,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
          this.currentMeasuredSize.set(ScreenCapturer.MediaProjectionObserver.INSTANCE.getCurrentCaptureSize());
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
-         var3.set(C1.c.a(d.a(var4 as WindowManager)));
+         var3.set(D0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }

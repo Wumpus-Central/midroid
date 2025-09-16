@@ -42,10 +42,9 @@ import com.discord.primitives.UserId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
@@ -53,7 +52,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nAutomodSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AutomodSystemMessageView.kt\ncom/discord/chat/presentation/message/system/AutomodSystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,297:1\n257#2,2:298\n257#2,2:300\n257#2,2:302\n*S KotlinDebug\n*F\n+ 1 AutomodSystemMessageView.kt\ncom/discord/chat/presentation/message/system/AutomodSystemMessageView\n*L\n266#1:298,2\n278#1:300,2\n285#1:302,2\n*E\n"])
 public class AutomodSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2),
-   SpacingProviderView,
+   VerticalSpacingItemDecoration.SpacingProviderView,
    SpineParentMessage {
    private final val binding: AutomodSystemMessageViewBinding
 
@@ -95,8 +94,8 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
       var4 = var3.automodMessageChannel;
-      var3.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, color.brand_500, color.brand_600));
-      var4.setTextColor(ColorUtilsKt.getThemeColor(var1, color.white_100, color.white_160));
+      var3.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.brand_500, com.discord.theme.R.color.brand_600));
+      var4.setTextColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.white_100, com.discord.theme.R.color.white_160));
       DiscordFontUtilsKt.setDiscordFont(var4, var6);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F, 15.0F);
       ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
@@ -215,16 +214,16 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
-         val var9: MessageType = MessageType.DEFAULT;
-         val var13: java.lang.String = var17.getId-3Eiw7ao();
+         val var12: MessageType = MessageType.DEFAULT;
+         val var16: java.lang.String = var17.getId-3Eiw7ao();
          val var6: Long = var17.getChannelId-o4g7jtM();
          val var14: GuildId = var17.getGuildId-qOKuAAo();
          val var11: UserId = var17.getUserId-wUX8bhU();
-         val var10: java.lang.String = var17.getUsername();
-         val var16: java.lang.String = var17.getAvatarURL();
-         val var15: StructurableText = var17.getContent();
+         val var13: java.lang.String = var17.getUsername();
+         val var15: java.lang.String = var17.getAvatarURL();
+         val var10: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var12: Int = var17.getRoleColor();
+         val var9: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
          val var4: Boolean;
@@ -235,8 +234,8 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          }
 
          val var20: Message = new Message(
-            var9,
-            var13,
+            var12,
+            var16,
             null,
             var6,
             var14,
@@ -250,19 +249,19 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var10,
+            var13,
             var3,
-            var12,
+            var9,
             null,
             var5,
             false,
             null,
-            var16,
-            null,
-            null,
-            null,
-            null,
             var15,
+            null,
+            null,
+            null,
+            null,
+            var10,
             null,
             null,
             null,
@@ -400,22 +399,22 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var15: java.util.List = this.generateMessageAccessories(var1, var2);
-         val var16: MessageAccessoriesView = this.binding.accessoriesView;
-         val var10: java.lang.String = var1.getId-3Eiw7ao();
+         val var10: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var11: MessageAccessoriesView = this.binding.accessoriesView;
+         val var16: java.lang.String = var1.getId-3Eiw7ao();
          val var6: Long = var1.getChannelId-o4g7jtM();
-         val var11: GuildId = var1.getGuildId-qOKuAAo();
+         val var15: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var16.setAccessories-mFdI1tY(var10, var6, var11, var15, var3, var4, var2, false, var5);
+         var11.setAccessories-mFdI1tY(var16, var6, var15, var10, var3, var4, var2, false, var5);
       }
    }
 
-   public open fun spacingPxOverride(): Int {
+   public override fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(8);
    }
 }

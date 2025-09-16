@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Ca.v
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -141,49 +141,47 @@ public data class TapImageData(id: String,
       return ((((((var8 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            v.a("id", this.id),
-            v.a("index", this.index),
-            v.a("type", this.type),
-            v.a("layout", this.layout.serialize()),
-            v.a("portal", this.portal),
-            v.a("embedIndex", this.embedIndex),
-            v.a("componentId", this.componentId),
-            v.a("componentMediaIndex", this.componentMediaIndex)
-         }
+         s.a("id", this.id),
+         s.a("index", this.index),
+         s.a("type", this.type),
+         s.a("layout", this.layout.serialize()),
+         s.a("portal", this.portal),
+         s.a("embedIndex", this.embedIndex),
+         s.a("componentId", this.componentId),
+         s.a("componentMediaIndex", this.componentMediaIndex)
       );
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var9: java.lang.String = this.id;
       val var1: Int = this.index;
-      val var5: java.lang.String = this.type;
-      val var4: TapImageData.Layout = this.layout;
-      val var6: java.lang.Double = this.portal;
-      val var9: Int = this.embedIndex;
-      val var7: java.lang.String = this.componentId;
-      val var8: Int = this.componentMediaIndex;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapImageData(id=");
-      var2.append(var3);
-      var2.append(", index=");
-      var2.append(var1);
-      var2.append(", type=");
-      var2.append(var5);
-      var2.append(", layout=");
-      var2.append(var4);
-      var2.append(", portal=");
-      var2.append(var6);
-      var2.append(", embedIndex=");
-      var2.append(var9);
-      var2.append(", componentId=");
-      var2.append(var7);
-      var2.append(", componentMediaIndex=");
-      var2.append(var8);
-      var2.append(")");
-      return var2.toString();
+      val var7: java.lang.String = this.type;
+      val var8: TapImageData.Layout = this.layout;
+      val var2: java.lang.Double = this.portal;
+      val var3: Int = this.embedIndex;
+      val var4: java.lang.String = this.componentId;
+      val var5: Int = this.componentMediaIndex;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("TapImageData(id=");
+      var6.append(var9);
+      var6.append(", index=");
+      var6.append(var1);
+      var6.append(", type=");
+      var6.append(var7);
+      var6.append(", layout=");
+      var6.append(var8);
+      var6.append(", portal=");
+      var6.append(var2);
+      var6.append(", embedIndex=");
+      var6.append(var3);
+      var6.append(", componentId=");
+      var6.append(var4);
+      var6.append(", componentMediaIndex=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public data class Layout(width: Int, height: Int, x: Int, y: Int, resizeMode: ViewResizeMode) {
@@ -253,29 +251,29 @@ public data class TapImageData(id: String,
 
       public fun serialize(): WritableMap {
          return NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{v.a("width", this.width), v.a("height", this.height), v.a("x", this.x), v.a("y", this.y), v.a("resizeMode", this.resizeMode.getValue())}
+            s.a("width", this.width), s.a("height", this.height), s.a("x", this.x), s.a("y", this.y), s.a("resizeMode", this.resizeMode.getValue())
          );
       }
 
       public override fun toString(): String {
-         val var3: Int = this.width;
-         val var2: Int = this.height;
-         val var1: Int = this.x;
+         val var1: Int = this.width;
+         val var3: Int = this.height;
+         val var2: Int = this.x;
          val var4: Int = this.y;
-         val var5: ViewResizeMode = this.resizeMode;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Layout(width=");
-         var6.append(var3);
-         var6.append(", height=");
-         var6.append(var2);
-         var6.append(", x=");
-         var6.append(var1);
-         var6.append(", y=");
-         var6.append(var4);
-         var6.append(", resizeMode=");
-         var6.append(var5);
-         var6.append(")");
-         return var6.toString();
+         val var6: ViewResizeMode = this.resizeMode;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Layout(width=");
+         var5.append(var1);
+         var5.append(", height=");
+         var5.append(var3);
+         var5.append(", x=");
+         var5.append(var2);
+         var5.append(", y=");
+         var5.append(var4);
+         var5.append(", resizeMode=");
+         var5.append(var6);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

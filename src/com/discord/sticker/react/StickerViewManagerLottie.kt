@@ -22,7 +22,7 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
       return this.delegate;
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "NativeLottieNode";
    }
 

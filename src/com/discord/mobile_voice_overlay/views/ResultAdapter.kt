@@ -2,11 +2,11 @@ package com.discord.mobile_voice_overlay.views
 
 import android.annotation.SuppressLint
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.mobile_voice_overlay.MobileVoiceOverlaySelectorResult
 import com.discord.primitives.ChannelId
 
-private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : Adapter {
+private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : RecyclerView.Adapter {
    private final val onChannelSelected: (ChannelId) -> Unit
    private final var results: List<MobileVoiceOverlaySelectorResult>
 
@@ -15,7 +15,7 @@ private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : Adapter {
       this.results = CollectionsKt.k();
    }
 
-   public open fun getItemCount(): Int {
+   public override fun getItemCount(): Int {
       return this.results.size();
    }
 

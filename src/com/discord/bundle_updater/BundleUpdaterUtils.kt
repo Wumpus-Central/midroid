@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import Ca.v
+import A9.s
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
@@ -10,7 +10,7 @@ import okio.BufferedSource
 @SourceDebugExtension(["SMAP\nBundleUpdaterUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterUtils.kt\ncom/discord/bundle_updater/BundleUpdaterUtils\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,81:1\n123#2:82\n1611#3,9:83\n1863#3:92\n1864#3:94\n1620#3:95\n1#4:93\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterUtils.kt\ncom/discord/bundle_updater/BundleUpdaterUtils\n*L\n52#1:82\n58#1:83,9\n58#1:92\n58#1:94\n58#1:95\n58#1:93\n*E\n"])
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
-      val var4: java.lang.Iterable = var3.getHashes().keySet();
+      val var4: java.util.Set = var3.getHashes().keySet();
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var7 : var4) {
@@ -26,7 +26,7 @@ public object BundleUpdaterUtils {
                var10 = AssetStatus.Download;
             }
 
-            var9 = v.a(var7, var10);
+            var9 = s.a(var7, var10);
          }
 
          if (var9 != null) {
@@ -34,37 +34,37 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return CollectionsKt.W0(var5);
+      return CollectionsKt.T0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = Ma.j.g(var1, null, 1, null);
+      val var3: java.lang.String = K9.i.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
 
    public fun md5(file: File): String {
       label18: {
-         val var10: BufferedSource = Zc.m.d(Zc.m.k(var1));
+         val var10: BufferedSource = Wb.m.d(Wb.m.k(var1));
 
-         var var11: java.lang.String;
+         var var12: java.lang.String;
          try {
-            val var2: Zc.j = Zc.j.s.a(Zc.m.b());
-            var10.O1(var2);
-            var11 = var2.a().r();
+            val var11: Wb.j = Wb.j.m.a(Wb.m.b());
+            var10.M1(var11);
+            var12 = var11.a().r();
          } catch (var5: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var5;
+            val var2: java.lang.Throwable = var5;
 
             try {
-               throw var3;
+               throw var2;
             } catch (var4: java.lang.Throwable) {
-               Ma.c.a(var10, var5);
+               K9.c.a(var10, var5);
             }
          }
 
-         Ma.c.a(var10, null);
-         return var11;
+         K9.c.a(var10, null);
+         return var12;
       }
    }
 }

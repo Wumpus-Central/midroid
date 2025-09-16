@@ -12,15 +12,15 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var4: Int = var0.getInt("rowContentPaddingVertical");
-   val var3: Int = var0.getInt("itemSize");
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var4: Int = var0.getInt("itemSize");
    val var9: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var9);
    val var10: ArrayList = new ArrayList(CollectionsKt.v(var14, 10));
    val var11: java.util.Iterator = var14.iterator();
 
    while (var11.hasNext()) {
-      var var5: Int = (var11 as L).nextInt();
+      var var5: Int = (var11 as I).nextInt();
       val var6: Boolean = var9.isNull(var5);
       var var15: StickerPickerRow.Sticker = null;
       if (!var6) {
@@ -34,10 +34,10 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
 
          var15 = null;
          if (var7 != null) {
-            val var21: ReadableMap = var9.getMap(var5);
-            var7 = NativeMapExtensionsKt.getNonNullString(var21, "stickerId");
-            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var21, "stickerName");
-            var5 = var21.getInt("stickerType");
+            val var12: ReadableMap = var9.getMap(var5);
+            var7 = NativeMapExtensionsKt.getNonNullString(var12, "stickerId");
+            val var21: java.lang.String = NativeMapExtensionsKt.getNonNullString(var12, "stickerName");
+            var5 = var12.getInt("stickerType");
             val var17: StickerPickerRow.Sticker.Type;
             if (var5 != 1) {
                if (var5 != 2) {
@@ -62,12 +62,12 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
 
             var15 = new StickerPickerRow.Sticker(
                var7,
-               var12,
+               var21,
                var17,
-               var21.getBoolean("stickerAnimated"),
-               NativeMapExtensionsKt.getNonNullString(var21, "stickerUrl"),
-               var21.getBoolean("stickerDisabled"),
-               var21.getBoolean("stickerOpaque")
+               var12.getBoolean("stickerAnimated"),
+               NativeMapExtensionsKt.getNonNullString(var12, "stickerUrl"),
+               var12.getBoolean("stickerDisabled"),
+               var12.getBoolean("stickerOpaque")
             );
          }
       }
@@ -75,5 +75,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var10.add(var15);
    }
 
-   return new StickerPickerRow(var1, var4, var3, var10);
+   return new StickerPickerRow(var1, var3, var4, var10);
 }

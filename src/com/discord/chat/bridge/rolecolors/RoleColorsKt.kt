@@ -4,7 +4,7 @@ package com.discord.chat.bridge.rolecolors
 
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import kotlin.jvm.internal.SourceDebugExtension
-import q0.c
+import y.c
 
 public const val ROLE_COLORS_PATTERN_WIDTH: Float = 150.0F
 

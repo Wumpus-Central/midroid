@@ -2823,6 +2823,8 @@
   "6eXLcH": "Show Channel Details",
   "ohhhDA": "Search, members, media, pins, threads, and more",
   "3tYNDQ": "Reply to Message",
+  "q9EGpq": "Checkout",
+  "hws7bG": "Order Summary",
   "RzWDqa": "Check it out",
   "VkKicX": "Clear",
   "O8k7Oz": "Clear all",
@@ -3181,6 +3183,21 @@
       [
         "subscribe now"
       ]
+    ]
+  ],
+  "lOtBOD": [
+    "Redeem for ",
+    [
+      8,
+      "orbIconHook",
+      [
+        "orbIcon"
+      ]
+    ],
+    " ",
+    [
+      1,
+      "orbPrice"
     ]
   ],
   "uYLGcn": "View My Badge",
@@ -6693,14 +6710,7 @@
     " instantly. Or, tap here to set another default emoji."
   ],
   "rY+31d": "Double tap to react",
-  "EQnNv7": [
-    "Double tap a message to ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
+  "1EUr/f": "Double tap a message to",
   "wHTk2N": "Edit default",
   "VrWSNj": "Choose double tap emoji",
   "C2tQIS": [
@@ -8686,6 +8696,36 @@
     ],
     "MB"
   ],
+  "dy6viI": [
+    "You can upload up to ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "1 file"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " files"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "."
+  ],
+  "pmAt6+": [
+    "You need to upload at least ",
+    [
+      2,
+      "minValues"
+    ],
+    " files."
+  ],
+  "9ovjIC": "At least 1 file is required.",
   "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
@@ -40062,7 +40102,8 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
-  "wmcDys": "Claim with Orbs",
+  "dsmHMz": "Redeem Using",
+  "zLch/f": "Redeem Using Orbs",
   "y0WGqK": "Orbs Balance",
   "7gHWra": [
     "Error redeeming ",

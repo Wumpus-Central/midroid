@@ -6571,14 +6571,6 @@
     ". Ou, toque aqui para definir outro emoji padrão."
   ],
   "rY+31d": "Toque duas vezes para reagir",
-  "EQnNv7": [
-    "Toque duas vezes em uma mensagem para ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
   "wHTk2N": "Editar padrão",
   "VrWSNj": "Escolha o emoji de toque duplo",
   "nKY0Fh": [
@@ -39103,7 +39095,6 @@
     " da loja!"
   ],
   "pGDUHx": "Decoração de Perfil",
-  "wmcDys": "Resgatar com Orbs",
   "y0WGqK": "Saldo de Orbs",
   "7gHWra": [
     "Erro ao resgatar ",

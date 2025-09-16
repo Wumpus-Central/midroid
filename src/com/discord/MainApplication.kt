@@ -53,11 +53,11 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       return Unit.a;
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
-         Ga.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
+         E9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
          var3 = TTIMetrics.INSTANCE;
          TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
          ReactMarkerListener.INSTANCE.start();
@@ -70,7 +70,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "299.0", 299200, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "299.2", 299202, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -83,7 +83,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@299.0.0-2+299200";
+         var5 = "discord_android@299.2.0-2+299202";
       }
 
       CrashReporting.INSTANCE.init(this, var5);
@@ -102,7 +102,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       TTIMetrics.record$default(var3, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
    }
 
-   public open fun onCreate() {
+   public override fun onCreate() {
       super.onCreate();
       UIManagerConstantsCache.getInstance().init(this);
       DeepLinks.INSTANCE.init(this);

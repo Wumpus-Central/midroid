@@ -2,7 +2,7 @@
 
 package com.discord.contact_sync.react
 
-import J2.a
+import J1.a
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -15,9 +15,9 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import sc.P0
-import sc.W
-import sc.f
+import pb.E0
+import pb.U
+import pb.f
 
 @JvmSynthetic
 fun a(var0: Any): Any {
@@ -77,17 +77,17 @@ fun `serializeHasContactPermissionsResult$lambda$0`(var0: Any): Any {
 }
 
 internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
-   var var6: java.util.Iterator;
+   var var5: java.util.Iterator;
    var var11: java.lang.String;
    var var12: ArrayList;
    try {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new W(P0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
-      val var4: java.lang.Iterable = var3.values();
+      var11 = var10.c(new U(E0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
+      val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(CollectionsKt.v(var4, 10));
-      var6 = var4.iterator();
+      var5 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
       return;
@@ -95,11 +95,11 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    while (true) {
       try {
-         if (!var6.hasNext()) {
+         if (!var5.hasNext()) {
             break;
          }
 
-         var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
+         var12.add(new ContactSyncPayloadEntry((var5.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
          var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
          return;

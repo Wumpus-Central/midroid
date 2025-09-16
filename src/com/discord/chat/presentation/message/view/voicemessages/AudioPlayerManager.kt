@@ -10,8 +10,6 @@ import android.os.Build.VERSION
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaPlayer.Event
-import com.discord.media_player.MediaPlayer.Factory
-import com.discord.media_player.MediaPlayer.Event.PlaybackEnded
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import java.util.LinkedHashMap
@@ -44,7 +42,7 @@ public object AudioPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = ic.F.a(null);
+      val var0: MutableStateFlow = fb.x.a(null);
       _currentPlayerSourceFlow = var0;
       currentPlayerSourceFlow = var0;
    }
@@ -146,8 +144,8 @@ public object AudioPlayerManager {
    }
 
    @JvmStatic
-   fun `setupPlayer$lambda$2$lambda$1`(var0: AudioPlayerManager.AudioSource, var1: Function1, var2: Event): Unit {
-      if (var2 == PlaybackEnded.INSTANCE) {
+   fun `setupPlayer$lambda$2$lambda$1`(var0: AudioPlayerManager.AudioSource, var1: Function1, var2: MediaPlayer.Event): Unit {
+      if (var2 == MediaPlayer.Event.PlaybackEnded.INSTANCE) {
          currentProgressMap.remove(var0);
          INSTANCE.abandonAudioFocus();
       } else {
@@ -187,7 +185,7 @@ public object AudioPlayerManager {
    }
 
    public fun getState(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource?): Event? {
-      val var2: Event;
+      val var2: MediaPlayer.Event;
       if (this.hasCurrentPlayer(var1)) {
          var2 = mediaPlayerState;
       } else {
@@ -290,7 +288,7 @@ public object AudioPlayerManager {
       onStateChanged: (Event) -> Unit
    ) {
       if (mediaPlayer == null) {
-         mediaPlayer = Factory.create$default(MediaPlayer.Factory, var1, null, 2, null);
+         mediaPlayer = MediaPlayer.Factory.create$default(MediaPlayer.Factory, var1, null, 2, null);
       }
 
       if (!(var2 == this.getCurrentPlayerSource())) {
@@ -301,16 +299,16 @@ public object AudioPlayerManager {
          this.maybeCreateDuration(var2, var3);
          if (this.requestAudioFocus()) {
             var8.setValue(var2);
-            val var9: MediaPlayer = mediaPlayer;
+            val var6: MediaPlayer = mediaPlayer;
             val var7: MediaSource = AudioPlayerUtilsKt.toMediaSource$default(var2, null, 1, null);
-            val var6: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
-            if (var6 != null) {
-               var3 = var6.getCurrentProgress();
+            val var9: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
+            if (var9 != null) {
+               var3 = var9.getCurrentProgress();
             } else {
                var3 = 0L;
             }
 
-            MediaPlayer.preparePlayer$default(var9, var7, true, false, var3, null, null, 52, null);
+            MediaPlayer.preparePlayer$default(var6, var7, true, false, var3, null, null, 52, null);
          }
       }
 
@@ -408,19 +406,19 @@ public object AudioPlayerManager {
       }
 
       public override fun toString(): String {
-         val var4: ChannelId = this.channelId;
-         val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-         val var5: java.lang.String = this.url;
-         val var2: Int = this.index;
+         val var2: ChannelId = this.channelId;
+         val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var1: java.lang.String = this.url;
+         val var5: Int = this.index;
          val var3: StringBuilder = new StringBuilder();
          var3.append("AudioSource(channelId=");
-         var3.append(var4);
-         var3.append(", messageId=");
-         var3.append(var1);
-         var3.append(", url=");
-         var3.append(var5);
-         var3.append(", index=");
          var3.append(var2);
+         var3.append(", messageId=");
+         var3.append(var4);
+         var3.append(", url=");
+         var3.append(var1);
+         var3.append(", index=");
+         var3.append(var5);
          var3.append(")");
          return var3.toString();
       }

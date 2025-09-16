@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import Ca.p
+import A9.n
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -31,7 +31,7 @@ public object ThemeManager {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new p();
+                  throw new n();
                }
 
                var var7: Resources = resources;
@@ -69,10 +69,10 @@ public object ThemeManager {
                var10 = null;
             }
 
-            var3 = resourceTheme;
             if (resourceTheme == null) {
                Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-               var3 = null;
+            } else {
+               var3 = resourceTheme;
             }
 
             var8 = new LightTheme(var10, var3);
@@ -84,10 +84,10 @@ public object ThemeManager {
             var11 = null;
          }
 
+         var3 = resourceTheme;
          if (resourceTheme == null) {
             Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-         } else {
-            var3 = resourceTheme;
+            var3 = null;
          }
 
          var8 = new DarkTheme(var11, var3);

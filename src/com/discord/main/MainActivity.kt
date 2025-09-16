@@ -1,6 +1,5 @@
 package com.discord.main
 
-import Ca.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -31,24 +30,22 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            var var3: Context = this.getContext();
-            var2.handleIntent(var3, var1);
-            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            var3 = this.getContext();
-            var4.handleIntent(var3, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            var var2: Context = this.getContext();
+            var3.handleIntent(var2, var1);
+            val var5: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            var2 = this.getContext();
+            var5.handleIntent(var2, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             BundleUpdater.Companion.instance().handleIntent(var1);
          }
 
-         @Override
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
             this.parseIntent(var2);
          }
 
-         @Override
          public boolean onNewIntent(Intent var1) {
             this.parseIntent(var1);
             this.this$0.setIntent(var1);
@@ -61,7 +58,6 @@ public class MainActivity : ReactActivity {
       return "Discord";
    }
 
-   @c
    public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
       super.onPictureInPictureModeChanged(var1);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
@@ -72,7 +68,7 @@ public class MainActivity : ReactActivity {
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public override fun onUserLeaveHint() {
+   public open fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

@@ -1,6 +1,6 @@
 package com.discord.sticker_picker
 
-import Ia.a
+import G9.a
 import kotlin.enums.EnumEntries
 
 internal data class StickerPickerRow(rowContentWidth: Double,
@@ -194,30 +194,30 @@ internal data class StickerPickerRow(rowContentWidth: Double,
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.id;
-         val var7: java.lang.String = this.name;
-         val var4: StickerPickerRow.Sticker.Type = this.type;
+         val var7: java.lang.String = this.id;
+         val var4: java.lang.String = this.name;
+         val var5: StickerPickerRow.Sticker.Type = this.type;
          val var3: Boolean = this.animated;
-         val var8: java.lang.String = this.url;
+         val var6: java.lang.String = this.url;
          val var1: Boolean = this.disabled;
          val var2: Boolean = this.opaque;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Sticker(id=");
-         var5.append(var6);
-         var5.append(", name=");
-         var5.append(var7);
-         var5.append(", type=");
-         var5.append(var4);
-         var5.append(", animated=");
-         var5.append(var3);
-         var5.append(", url=");
-         var5.append(var8);
-         var5.append(", disabled=");
-         var5.append(var1);
-         var5.append(", opaque=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Sticker(id=");
+         var8.append(var7);
+         var8.append(", name=");
+         var8.append(var4);
+         var8.append(", type=");
+         var8.append(var5);
+         var8.append(", animated=");
+         var8.append(var3);
+         var8.append(", url=");
+         var8.append(var6);
+         var8.append(", disabled=");
+         var8.append(var1);
+         var8.append(", opaque=");
+         var8.append(var2);
+         var8.append(")");
+         return var8.toString();
       }
 
       public enum class Type {

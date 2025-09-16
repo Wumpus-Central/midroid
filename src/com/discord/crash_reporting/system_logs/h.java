@@ -10,9 +10,9 @@ public final class h implements Function0 {
    public final LinkedList d;
    public final Regex e;
    public final boolean i;
-   public final Function1 s;
+   public final Function1 m;
 
    public final Object invoke() {
-      return SystemLogUtils.d(this.d, this.e, this.i, this.s);
+      return SystemLogUtils.d(this.d, this.e, this.i, this.m);
    }
 }

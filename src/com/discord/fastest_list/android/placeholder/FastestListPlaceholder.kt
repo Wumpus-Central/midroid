@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import Ca.p
+import A9.n
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
@@ -24,7 +24,7 @@ internal sealed class FastestListPlaceholder protected constructor() {
             var2 = new FastestListPlaceholderTypeShape(var1 as FastestListPlaceholderType.Shape);
          } else {
             if (var1 !is FastestListPlaceholderType.None) {
-               throw new p();
+               throw new n();
             }
 
             var2 = FastestListPlaceholderTypeNone.INSTANCE;

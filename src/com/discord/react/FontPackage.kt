@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
 public class FontPackage : BaseReactPackage {
-   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       val var3: FontModule;
       if (var1 == "NativeFontModule") {
          var3 = new FontModule(var2);
@@ -18,7 +18,7 @@ public class FontPackage : BaseReactPackage {
       return var3;
    }
 
-   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(CollectionsKt.e("NativeFontModule"), false, 2, null);
    }
 }

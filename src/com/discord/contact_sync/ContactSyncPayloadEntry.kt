@@ -1,9 +1,9 @@
 package com.discord.contact_sync
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class ContactSyncPayloadEntry(friendId: String) {
    public final val friendId: String
 

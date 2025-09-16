@@ -1,6 +1,6 @@
 package com.discord.zoom_layout
 
-import Ca.v
+import A9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.zoom_layout.reactevents.OnZoomChangedEvent
 import com.facebook.react.bridge.ReadableArray
@@ -15,7 +15,7 @@ import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
 @ReactModule(name = "DCDZoomLayoutAndroid")
 internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
    private final val delegate: DCDZoomLayoutAndroidManagerDelegate<ZoomLayoutFixed, ZoomLayoutViewManager> = new DCDZoomLayoutAndroidManagerDelegate(this)
-   private final val reactEvents: ReactEvents = new ReactEvents(v.a("onZoomChanged", OnZoomChangedEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onZoomChanged", OnZoomChangedEvent::class))
 
    @JvmStatic
    fun `createViewInstance$lambda$0`(var0: ZoomLayoutViewManager, var1: ZoomLayoutFixed): Unit {
@@ -27,15 +27,15 @@ internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoo
       return new ZoomLayoutFixed(var1, new c(this));
    }
 
-   protected override fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed> {
+   protected open fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed> {
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDZoomLayoutAndroid";
    }
 

@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import x1.a;
+import y0.a;
 
 public final class EmbedFieldViewBinding implements ViewBinding {
    @NonNull

@@ -8,11 +8,11 @@ import com.facebook.react.views.view.ReactViewManager
 
 @ReactModule(name = "PortalToNativeView")
 internal class PortalFromJsViewManager : ReactViewManager {
-   public override fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
+   public open fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
       return new PortalFromJsViewHost(var1);
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "PortalToNativeView";
    }
 

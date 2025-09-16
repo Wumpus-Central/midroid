@@ -1,6 +1,6 @@
 package com.discord.recycler_view.scroller
 
-import Ca.p
+import A9.n
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.i
@@ -19,14 +19,14 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       this.setTargetPosition(var2);
    }
 
-   public open fun calculateDtToFit(viewStart: Int, viewEnd: Int, boxStart: Int, boxEnd: Int, snapPreference: Int): Int {
+   public override fun calculateDtToFit(viewStart: Int, viewEnd: Int, boxStart: Int, boxEnd: Int, snapPreference: Int): Int {
       if (this.targetAlignment is Scroller.TargetAlignment.Center) {
          var1 = var3 + (var4 - var3) / 2 - (var1 + (var2 - var1) / 2);
       } else if (this.targetAlignment is Scroller.TargetAlignment.Top) {
          var1 = var3 - var1 + (this.targetAlignment as Scroller.TargetAlignment.Top).getOffsetPx();
       } else {
          if (this.targetAlignment !is Scroller.TargetAlignment.Anywhere) {
-            throw new p();
+            throw new n();
          }
 
          var1 = super.calculateDtToFit(var1, var2, var3, var4, var5);
@@ -35,14 +35,14 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       return var1;
    }
 
-   protected open fun onChildAttachedToWindow(child: View) {
+   protected override fun onChildAttachedToWindow(child: View) {
       super.onChildAttachedToWindow(var1);
       if (this.targetView == null && this.getChildPosition(var1) == this.getTargetPosition()) {
          this.targetView = var1;
       }
    }
 
-   protected open fun onSeekTargetStep(dx: Int, dy: Int, state: State, action: Action) {
+   protected override fun onSeekTargetStep(dx: Int, dy: Int, state: State, action: Action) {
       if (this.targetView != null) {
          this.onTargetFound(this.targetView, var3, var4);
       } else {
@@ -50,7 +50,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
       }
    }
 
-   protected open fun onStop() {
+   protected override fun onStop() {
       super.onStop();
       if (this.onStopScroll != null) {
          this.onStopScroll.invoke();

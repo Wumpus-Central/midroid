@@ -1,6 +1,6 @@
 package com.discord.fonts
 
-import Ia.a
+import G9.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -77,15 +77,15 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          val var3: ReactFontManager = ReactFontManager.Companion.getInstance();
          val var6: java.lang.String = var2.getRawName();
          val var4: AssetManager = var1.getAssets();
-         val var7: Typeface = var3.getTypeface(var6, 0, var4);
-         if (!(var7 == Typeface.DEFAULT)) {
-            return var7;
+         val var5: Typeface = var3.getTypeface(var6, 0, var4);
+         if (!(var5 == Typeface.DEFAULT)) {
+            return var5;
          } else {
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Cannot find typeface ");
-            var5.append(var7);
-            var5.append(".rawName");
-            throw new IllegalStateException(var5.toString().toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Cannot find typeface ");
+            var7.append(var5);
+            var7.append(".rawName");
+            throw new IllegalStateException(var7.toString().toString());
          }
       }
 
@@ -109,17 +109,17 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          if (var1 == null) {
             return null;
          } else {
-            var var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
+            val var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
             val var4: java.util.Iterator = var3.iterator();
 
             while (true) {
                if (var4.hasNext()) {
-                  var3 = (java.util.Set)var4.next();
-                  if (!((var3 as Entry).getValue() == var1)) {
+                  val var7: Any = var4.next();
+                  if (!((var7 as Entry).getValue() == var1)) {
                      continue;
                   }
 
-                  var5 = var3;
+                  var5 = var7;
                   break;
                }
 

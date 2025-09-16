@@ -7,7 +7,6 @@ import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.Z
-import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 
 public object ImmersiveMode {
@@ -32,8 +31,8 @@ public object ImmersiveMode {
    @JvmStatic
    fun `fitSystemWindowsAndAdjustResize$lambda$1`(var0: ViewGroup, var1: View, var2: View, var3: WindowInsetsCompat): WindowInsetsCompat {
       var0.setFitsSystemWindows(true);
-      val var5: androidx.core.view.WindowInsetsCompat.a = new androidx.core.view.WindowInsetsCompat.a(var3);
-      val var4: Int = n.h();
+      val var5: WindowInsetsCompat.a = new WindowInsetsCompat.a(var3);
+      val var4: Int = WindowInsetsCompat.n.h();
       val var6: WindowInsetsCompat = var5.b(var4, Insets.c(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
       Z.a0(var1, var6);

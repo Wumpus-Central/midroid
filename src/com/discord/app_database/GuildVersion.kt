@@ -1,9 +1,9 @@
 package com.discord.app_database
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class GuildVersion(id: String, version: Long) {
    public final val id: String
    public final val version: Long

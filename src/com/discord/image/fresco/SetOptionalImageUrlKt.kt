@@ -4,7 +4,7 @@ import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
-import y3.f
+import y2.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(
    imageUrl: String?,

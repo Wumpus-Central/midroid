@@ -80,14 +80,14 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
          public void onViewAttachedToWindow(View var1) {
             val var2: MediaPlayerManagerModule = AudioPlayerViewHolder.access$getMediaPlayerManagerModule$p(this.this$0);
             if (var2 != null) {
-               var2.onMediaPlayerViewWillAppear-LJLSWy8(this.$accessory.getChannelId-o4g7jtM(), new MediaSource[]{this.$mediaSource});
+               var2.onMediaPlayerViewWillAppear-LJLSWy8(this.$accessory.getChannelId-o4g7jtM(), this.$mediaSource);
             }
          }
 
          public void onViewDetachedFromWindow(View var1) {
             val var2: MediaPlayerManagerModule = AudioPlayerViewHolder.access$getMediaPlayerManagerModule$p(this.this$0);
             if (var2 != null) {
-               var2.onMediaPlayerViewDetached-LJLSWy8(this.$accessory.getChannelId-o4g7jtM(), new MediaSource[]{this.$mediaSource});
+               var2.onMediaPlayerViewDetached-LJLSWy8(this.$accessory.getChannelId-o4g7jtM(), this.$mediaSource);
             }
          }
       };
@@ -99,8 +99,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       val var6: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
       this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var6, null, 1, null));
-      val var5: Attachment = var1.getAttachment();
-      val var7: UploadItemProps = var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var2) {
+      val var4: Attachment = var1.getAttachment();
+      val var5: UploadItemProps = var1.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -109,27 +109,27 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var4: AudioPlayerView = this.view;
+      val var7: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var8: ByteArray = var5.getWaveformByteArray();
+      val var8: ByteArray = var4.getWaveformByteArray();
       if (var8 != null) {
-         var4.setSampleData(var8);
+         var7.setSampleData(var8);
       } else {
-         var4.setAudioFileDetails(var1.getAttachment());
+         var7.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var9: java.lang.Float = var5.getDurationSecs();
+      val var9: java.lang.Float = var4.getDurationSecs();
       if (var9 != null) {
-         var4.setDurationMs((long)(var9.floatValue() * (float)1000));
+         var7.setDurationMs((long)(var9.floatValue() * (float)1000));
       } else {
-         var4.setUnknownDuration();
+         var7.setUnknownDuration();
       }
 
-      var4.setUploadProgress(var7);
-      var4.setOnLongPress(new c(var3, var1));
-      var4.shouldAnimate(var5.isAnimated());
-      var4.setContainerBackgroundColor(var1.getColor());
-      var4.setListener(new AudioPlayerView.Listener(var5, var2, var1, var6) {
+      var7.setUploadProgress(var5);
+      var7.setOnLongPress(new c(var3, var1));
+      var7.shouldAnimate(var4.isAnimated());
+      var7.setContainerBackgroundColor(var1.getColor());
+      var7.setListener(new AudioPlayerView.Listener(var4, var2, var1, var6) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;

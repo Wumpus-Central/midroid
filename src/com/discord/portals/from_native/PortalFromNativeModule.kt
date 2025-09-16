@@ -1,6 +1,9 @@
 package com.discord.portals.from_native
 
 import android.app.Activity
+import cb.I
+import cb.K
+import cb.f
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
@@ -10,12 +13,8 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import fc.I
-import fc.K
-import fc.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec(var1) {
@@ -24,7 +23,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
       PortalFromNativeContextManager.INSTANCE.unregisterView(var0);
    }
 
-   public open fun unregisterView(portal: Double) {
+   public override fun unregisterView(portal: Double) {
       val var3: Activity = this.getReactApplicationContext().getCurrentActivity();
       if (var3 != null) {
          var3.runOnUiThread(new c(var1));
@@ -44,7 +43,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
          return this.delegate;
       }
 
-      public override fun getName(): String {
+      public open fun getName(): String {
          return "DCDPortalView";
       }
 
@@ -70,7 +69,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = Ha.b.e();
+               val var3: Any = F9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -79,8 +78,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                      int label;
 
                      {
@@ -96,7 +95,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = Ha.b.e();
+                        val var3: Any = F9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -115,7 +114,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var4, var1, this) === var3) {
+                  if (f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

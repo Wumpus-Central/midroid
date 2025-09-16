@@ -10,9 +10,9 @@ public final class O implements Function2 {
    public final DraweeSpanStringBuilder d;
    public final ForegroundColorSpan e;
    public final ContentNode i;
-   public final boolean s;
+   public final boolean m;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextUtilsKt.c(this.d, this.e, this.i, this.s, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
+      return TextUtilsKt.c(this.d, this.e, this.i, this.m, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

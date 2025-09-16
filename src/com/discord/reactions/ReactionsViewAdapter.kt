@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.ViewGroup
 import android.view.View.OnClickListener
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.misc.utilities.ids.IdUtilsKt
 import com.discord.reactions.ReactionView.Reaction
@@ -12,13 +12,12 @@ import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.recycler_view.utils.ItemDiffer
 import com.discord.theme.DiscordTheme
 import com.discord.theme.ThemeManager
-import com.google.android.flexbox.FlexboxLayoutManager
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nReactionsViewAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReactionsViewAdapter.kt\ncom/discord/reactions/ReactionsViewAdapter\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,147:1\n1#2:148\n*E\n"])
-internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
+internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter {
    private final val reactionHeight: Int
    private final var reactions: List<Reaction>
    private final var reactionsTheme: ReactionsTheme?
@@ -41,7 +40,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
       return this.reactions.size();
    }
 
-   public open fun getItemCount(): Int {
+   public override fun getItemCount(): Int {
       val var2: Int = this.reactions.size();
       var var1: Int = var2;
       if (this.canAddNewReactions) {
@@ -51,11 +50,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
       return var1;
    }
 
-   public open fun getItemId(position: Int): Long {
+   public override fun getItemId(position: Int): Long {
       val var2: Int = this.getAddReactionIndex();
       var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var3: Long;
+      val var4: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -73,7 +72,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
          var13.append(var6);
          var13.append("_add_reactions_");
          var13.append(var7);
-         var3 = IdUtilsKt.convertToId(var13.toString());
+         var4 = IdUtilsKt.convertToId(var13.toString());
       } else {
          val var14: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -83,19 +82,19 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
          }
 
          var7 = var14.getEmoji().getEmojiId();
-         val var5: Boolean = var14.isBurstReaction();
+         val var3: Boolean = var14.isBurstReaction();
          val var15: StringBuilder = new StringBuilder();
          var15.append(var6);
          var15.append("_");
          var15.append(var7);
-         var15.append(var5);
-         var3 = IdUtilsKt.convertToId(var15.toString());
+         var15.append(var3);
+         var4 = IdUtilsKt.convertToId(var15.toString());
       }
 
-      return var3;
+      return var4;
    }
 
-   public open fun getItemViewType(position: Int): Int {
+   public override fun getItemViewType(position: Int): Int {
       val var2: Byte;
       if (var1 == this.getAddReactionIndex()) {
          var2 = 47;
@@ -108,10 +107,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
       return var2;
    }
 
-   public open fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      val var7: ThemeManager = ThemeManager.INSTANCE;
-      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var7.setThemeOverride(this.theme);
+   public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+      val var8: ThemeManager = ThemeManager.INSTANCE;
+      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var8.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -133,11 +132,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
          var9.bind(var6, var10, var4, this.reactionsTheme);
       } else {
          if (var1 !is AddReactionViewHolder) {
-            val var15: Class = var1.getClass();
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("Invalid view holder type ");
-            var12.append(var15);
-            throw new IllegalStateException(var12.toString().toString());
+            val var12: Class = var1.getClass();
+            val var15: StringBuilder = new StringBuilder();
+            var15.append("Invalid view holder type ");
+            var15.append(var12);
+            throw new IllegalStateException(var15.toString().toString());
          }
 
          val var20: AddReactionViewHolder = var1 as AddReactionViewHolder;
@@ -162,11 +161,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
          var20.bind(var11, var14, var5, this.reactionsTheme);
       }
 
-      var7.setThemeOverride(var8);
+      var8.setThemeOverride(var7);
    }
 
-   public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      val var5: FlexboxLayoutManager.c = new FlexboxLayoutManager.c(-2, this.reactionHeight);
+   public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+      val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var4.setThemeOverride(this.theme);
@@ -191,7 +190,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
       }
 
       var4.setThemeOverride(var3);
-      return (ViewHolder)var8;
+      return (RecyclerView.ViewHolder)var8;
    }
 
    @SuppressLint(["NotifyDataSetChanged"])

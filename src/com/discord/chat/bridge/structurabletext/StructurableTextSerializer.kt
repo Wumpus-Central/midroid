@@ -4,9 +4,9 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import tc.e
+import qb.d
 
-internal object StructurableTextSerializer : e(StructurableText::class) {
+internal object StructurableTextSerializer : d(StructurableText::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<StructurableText> {
       val var3: Any;
       if (var1 is JsonPrimitive) {

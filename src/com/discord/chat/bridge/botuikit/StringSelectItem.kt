@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import pc.m
+import mb.g
 
-@m
+@g
 public data class StringSelectItem(label: String,
    value: String,
    emoji: ComponentEmoji? = null,
@@ -76,8 +76,8 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.value.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.value.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.emoji == null) {
@@ -97,28 +97,28 @@ public data class StringSelectItem(label: String,
          var3 = this.default.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.label;
+      val var5: java.lang.String = this.label;
       val var3: java.lang.String = this.value;
-      val var5: ComponentEmoji = this.emoji;
-      val var6: java.lang.String = this.description;
-      val var2: java.lang.Boolean = this.default;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("StringSelectItem(label=");
-      var4.append(var1);
-      var4.append(", value=");
-      var4.append(var3);
-      var4.append(", emoji=");
-      var4.append(var5);
-      var4.append(", description=");
-      var4.append(var6);
-      var4.append(", default=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var1: ComponentEmoji = this.emoji;
+      val var2: java.lang.String = this.description;
+      val var4: java.lang.Boolean = this.default;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("StringSelectItem(label=");
+      var6.append(var5);
+      var6.append(", value=");
+      var6.append(var3);
+      var6.append(", emoji=");
+      var6.append(var1);
+      var6.append(", description=");
+      var6.append(var2);
+      var6.append(", default=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -1,6 +1,6 @@
 package com.discord.foreground_service.service
 
-import Ia.a
+import G9.a
 import kotlin.enums.EnumEntries
 
 internal data class ServiceNotificationConfiguration(title: String,
@@ -104,24 +104,24 @@ internal data class ServiceNotificationConfiguration(title: String,
 
    public override fun toString(): String {
       val var1: java.lang.String = this.title;
-      val var6: java.lang.String = this.content;
-      val var4: ServiceNotificationConfiguration.Priority = this.priority;
-      val var7: ServiceNotificationConfiguration.Action = this.contentAction;
+      val var4: java.lang.String = this.content;
+      val var7: ServiceNotificationConfiguration.Priority = this.priority;
+      val var2: ServiceNotificationConfiguration.Action = this.contentAction;
       val var3: java.util.List = this.auxiliaryActions;
-      val var2: ServiceNotificationConfiguration.Type = this.type;
+      val var6: ServiceNotificationConfiguration.Type = this.type;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ServiceNotificationConfiguration(title=");
       var5.append(var1);
       var5.append(", content=");
-      var5.append(var6);
-      var5.append(", priority=");
       var5.append(var4);
-      var5.append(", contentAction=");
+      var5.append(", priority=");
       var5.append(var7);
+      var5.append(", contentAction=");
+      var5.append(var2);
       var5.append(", auxiliaryActions=");
       var5.append(var3);
       var5.append(", type=");
-      var5.append(var2);
+      var5.append(var6);
       var5.append(")");
       return var5.toString();
    }
@@ -192,21 +192,21 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.tag;
-         val var2: java.lang.String = this.taskName;
+         val var4: java.lang.String = this.tag;
+         val var1: java.lang.String = this.taskName;
          val var3: java.lang.String = this.title;
-         val var4: java.util.Map = this.data;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Action(tag=");
-         var1.append(var5);
-         var1.append(", taskName=");
-         var1.append(var2);
-         var1.append(", title=");
-         var1.append(var3);
-         var1.append(", data=");
-         var1.append(var4);
-         var1.append(")");
-         return var1.toString();
+         val var5: java.util.Map = this.data;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Action(tag=");
+         var2.append(var4);
+         var2.append(", taskName=");
+         var2.append(var1);
+         var2.append(", title=");
+         var2.append(var3);
+         var2.append(", data=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

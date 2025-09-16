@@ -1,16 +1,13 @@
 package com.discord.chat.presentation.message.viewholder;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.postpreviewembed.PostPreviewEmbed;
-import kotlin.jvm.functions.Function4;
+import com.discord.reactions.ReactionView;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class F implements OnClickListener {
-   public final Function4 d;
-   public final PostPreviewEmbed e;
+public final class F implements Function1 {
+   public final Function1 d;
 
-   public final void onClick(View var1) {
-      PostPreviewEmbedViewHolder.b(this.d, this.e, var1);
+   public final Object invoke(Object var1) {
+      return ReactionsViewHolder.b(this.d, (ReactionView.Reaction)var1);
    }
 }

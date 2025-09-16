@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import Ca.p
+import A9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
@@ -22,7 +22,7 @@ public inline fun ReadableArray.forEach(action: (Int, ReadableArray) -> Unit) {
    val var2: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var2.hasNext()) {
-      var1.invoke((var2 as L).nextInt(), var0);
+      var1.invoke((var2 as I).nextInt(), var0);
    }
 }
 
@@ -44,7 +44,7 @@ public inline fun <T> ReadableArray.map(transform: (Int, ReadableArray) -> Any):
    val var4: java.util.Iterator = var3.iterator();
 
    while (var4.hasNext()) {
-      var2.add(var1.invoke((var4 as L).nextInt(), var0));
+      var2.add(var1.invoke((var4 as I).nextInt(), var0));
    }
 
    return var2;
@@ -64,7 +64,7 @@ public inline fun <T, C : MutableCollection<in Any>> ReadableArray.mapTo(destina
    val var3: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var3.hasNext()) {
-      var1.add(var2.invoke((var3 as L).nextInt(), var0));
+      var1.add(var2.invoke((var3 as I).nextInt(), var0));
    }
 
    return (C)var1;
@@ -106,7 +106,7 @@ public fun <V> WritableNativeArray.push(value: Any) {
 }
 
 public fun ReadableArray.sizeRange(): IntRange {
-   return kotlin.ranges.e.v(0, var0.size());
+   return kotlin.ranges.d.s(0, var0.size());
 }
 
 public fun ReadableArray.toBooleanList(): List<Boolean> {
@@ -115,7 +115,7 @@ public fun ReadableArray.toBooleanList(): List<Boolean> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getBoolean((var3 as L).nextInt()));
+      var1.add(var0.getBoolean((var3 as I).nextInt()));
    }
 
    return var1;
@@ -127,7 +127,7 @@ public fun ReadableArray.toDoubleList(): List<Double> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getDouble((var3 as L).nextInt()));
+      var1.add(var0.getDouble((var3 as I).nextInt()));
    }
 
    return var1;
@@ -139,7 +139,7 @@ public fun ReadableArray.toIntList(): List<Int> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getInt((var3 as L).nextInt()));
+      var1.add(var0.getInt((var3 as I).nextInt()));
    }
 
    return var1;
@@ -171,7 +171,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new p();
+            throw new n();
       }
    }
 
@@ -233,14 +233,14 @@ fun `toNativeArray$default`(var0: java.util.Collection, var1: Function1, var2: I
 }
 
 public fun <V> Collection<Map<String, Any>>.toNativeArrayOfMaps(): ReadableNativeArray {
-   val var2: ArrayList = new ArrayList(CollectionsKt.v(var0, 10));
-   val var3: java.util.Iterator = var0.iterator();
+   val var1: ArrayList = new ArrayList(CollectionsKt.v(var0, 10));
+   val var2: java.util.Iterator = var0.iterator();
 
-   while (var3.hasNext()) {
-      var2.add(NativeMapExtensionsKt.toNativeMap(var3.next() as java.util.Map));
+   while (var2.hasNext()) {
+      var1.add(NativeMapExtensionsKt.toNativeMap(var2.next() as java.util.Map));
    }
 
-   return toNativeArray$default(var2, null, 1, null);
+   return toNativeArray$default(var1, null, 1, null);
 }
 
 public fun ReadableArray.toStringList(): List<String> {
@@ -249,7 +249,7 @@ public fun ReadableArray.toStringList(): List<String> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      val var4: java.lang.String = var0.getString((var3 as L).nextInt());
+      val var4: java.lang.String = var0.getString((var3 as I).nextInt());
       var1.add(var4);
    }
 

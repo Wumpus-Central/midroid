@@ -23,12 +23,12 @@ internal class PassthroughTouchViewGroup(context: Context) : ReactViewGroup(var1
       return Unit.a;
    }
 
-   public override fun onInterceptTouchEvent(event: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {
       return false;
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
-   public override fun onTouchEvent(ev: MotionEvent): Boolean {
+   public open fun onTouchEvent(ev: MotionEvent): Boolean {
       if (var1.getAction() == 0) {
          this.onTouchDown.invoke();
       }

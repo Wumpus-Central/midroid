@@ -2,7 +2,7 @@
 
 package com.discord.react.utilities
 
-import Ca.l
+import A9.j
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode
@@ -15,7 +15,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.b(new e())
+private final val viewOperationQueueMethod: Method by j.b(new e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }

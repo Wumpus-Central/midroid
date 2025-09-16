@@ -1,15 +1,16 @@
 package com.discord.recycler_view.utils
 
-import a3.h
-import a3.i
-import a3.j
-import a3.k
-import a3.l
-import a3.m
-import a3.n
+import a2.h
+import a2.i
+import a2.j
+import a2.k
+import a2.l
+import a2.m
+import a2.n
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 
 public open class TransitionResilientLinearLayoutManager(context: Context,
@@ -35,7 +36,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context,
    }
 
    @JvmStatic
-   fun `removeAndRecycleAllViews$lambda$4`(var0: TransitionResilientLinearLayoutManager, var1: Recycler): Unit {
+   fun `removeAndRecycleAllViews$lambda$4`(var0: TransitionResilientLinearLayoutManager, var1: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleAllViews(var1);
       return Unit.a;
    }
@@ -47,7 +48,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context,
    }
 
    @JvmStatic
-   fun `removeAndRecycleView$lambda$2`(var0: TransitionResilientLinearLayoutManager, var1: View, var2: Recycler): Unit {
+   fun `removeAndRecycleView$lambda$2`(var0: TransitionResilientLinearLayoutManager, var1: View, var2: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleView(var1, var2);
       return Unit.a;
    }
@@ -59,7 +60,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context,
    }
 
    @JvmStatic
-   fun `removeAndRecycleViewAt$lambda$6`(var0: TransitionResilientLinearLayoutManager, var1: Int, var2: Recycler): Unit {
+   fun `removeAndRecycleViewAt$lambda$6`(var0: TransitionResilientLinearLayoutManager, var1: Int, var2: RecyclerView.Recycler): Unit {
       var0.removeAndRecycleViewAt(var1, var2);
       return Unit.a;
    }
@@ -68,15 +69,15 @@ public open class TransitionResilientLinearLayoutManager(context: Context,
       this.recyclingDelegate.disableRecycling(var1);
    }
 
-   public open fun removeAndRecycleAllViews(recycler: Recycler) {
+   public override fun removeAndRecycleAllViews(recycler: Recycler) {
       this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new j(this), new k(this));
    }
 
-   public open fun removeAndRecycleView(child: View, recycler: Recycler) {
+   public override fun removeAndRecycleView(child: View, recycler: Recycler) {
       this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new h(this), new i(this));
    }
 
-   public open fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
+   public override fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
       this.recyclingDelegate.safeRemoveAndRecycleViewAt(var1, var2, new m(this), new n(this));
    }
 }

@@ -1,11 +1,11 @@
 package com.discord.reactions
 
 import android.view.View.OnClickListener
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import androidx.recyclerview.widget.RecyclerView
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.reactions.ReactionView.ReactionsTheme
 
-internal class AddReactionViewHolder(addReactionView: AddReactionView) : ViewHolder(var1) {
+internal class AddReactionViewHolder(addReactionView: AddReactionView) : RecyclerView.ViewHolder(var1) {
    private final val addReactionView: AddReactionView
 
    init {

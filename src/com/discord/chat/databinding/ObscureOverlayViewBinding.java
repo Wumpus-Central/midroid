@@ -13,7 +13,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.IconButtonView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import eightbitlab.com.blurview.BlurView;
-import x1.a;
+import y0.a;
 
 public final class ObscureOverlayViewBinding implements ViewBinding {
    @NonNull
@@ -63,17 +63,17 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       BlurView var3 = (BlurView)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.description_label;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var2 = (IconButtonView)a.a(var0, var1);
-            if (var2 != null) {
+            IconButtonView var5 = (IconButtonView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.media_warning_icon;
                SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
                if (var7 != null) {
                   var1 = R.id.opaque_background;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-                  if (var4 != null) {
+                  FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.overlay_centered_container;
                      LinearLayout var6 = (LinearLayout)a.a(var0, var1);
                      if (var6 != null) {
@@ -83,7 +83,7 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
                            var1 = R.id.reveal_button;
                            IconButtonView var8 = (IconButtonView)a.a(var0, var1);
                            if (var8 != null) {
-                              return new ObscureOverlayViewBinding(var0, var3, var5, var2, var7, var4, var6, var9, var8);
+                              return new ObscureOverlayViewBinding(var0, var3, var4, var5, var7, var2, var6, var9, var8);
                            }
                         }
                      }

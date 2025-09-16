@@ -5,7 +5,7 @@ import com.discord.chat.presentation.message.view.UploadContext
 import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function2
-import z2.a
+import z1.a
 
 public sealed class MessageAttachmentAccessory protected constructor(messageId: MessageId,
    attachment: Attachment,
@@ -31,12 +31,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
    }
 
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
-      val var5: java.lang.String = this.getAttachment().getUploaderId();
-      val var4: java.lang.String = this.getAttachment().getUploaderItemId();
+      val var4: java.lang.String = this.getAttachment().getUploaderId();
+      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
       val var3: Int = this.getAttachment().getProgress();
       val var2: java.lang.Float = this.getAttachmentsOpacity();
-      if (var5 != null && var4 != null && var3 != null && var2 != null) {
-         val var6: UploadContext = new UploadContext(var5, var4);
+      if (var4 != null && var5 != null && var3 != null && var2 != null) {
+         val var6: UploadContext = new UploadContext(var4, var5);
          return new UploadItemProps(var3, var6, var2, new a(var1, var6));
       } else {
          return null;
@@ -45,15 +45,15 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public companion object {
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
-         var var3: java.lang.String;
+         val var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            var3 = var1.getUploaderId();
+            val var5: java.lang.String = var1.getUploaderId();
             val var4: java.lang.String = var1.getUploaderItemId();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var3);
-            var5.append(" ");
-            var5.append(var4);
-            var3 = var5.toString();
+            val var7: StringBuilder = new StringBuilder();
+            var7.append(var5);
+            var7.append(" ");
+            var7.append(var4);
+            var3 = var7.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }

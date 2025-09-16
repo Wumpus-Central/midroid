@@ -2,7 +2,7 @@ package com.discord.media.utils
 
 import java.io.File
 
-public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : ka.a {
+public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : i9.a {
    private final val quality: Int
    private final val shouldResize: Boolean
    private final var isResolved: Boolean
@@ -18,9 +18,9 @@ public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean)
 
    public open fun satisfy(imageFile: File): File {
       if (this.shouldResize) {
-         var1 = ja.c.k(var1, ja.c.f(var1, ja.c.e(var1, 612, 816)), null, this.quality, 4, null);
+         var1 = h9.c.k(var1, h9.c.f(var1, h9.c.e(var1, 612, 816)), null, this.quality, 4, null);
       } else {
-         var1 = ja.c.k(var1, ja.c.i(var1), null, this.quality, 4, null);
+         var1 = h9.c.k(var1, h9.c.i(var1), null, this.quality, 4, null);
       }
 
       this.isResolved = true;
