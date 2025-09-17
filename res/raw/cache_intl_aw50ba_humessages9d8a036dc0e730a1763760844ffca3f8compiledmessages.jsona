@@ -19427,6 +19427,52 @@
   "dAqTcH": "Ajándékvásárlással lecsaphatsz egy ingyenes dekorációra",
   "F/5kFB": "Ebben a hónapban ingyenes dekorációt kaphatsz, ha Nitrót adsz ajándékba. Csokit vagy csalunk: melyiket választod?",
   "UPFiIi": "Ajándékozz Nitrót, ha mersz…",
+  "gI6Yvr": [
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " havi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " havi"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitrót adtál ajándékba. Csodálatos módja a hátborzongató szezon megünneplésének!"
+  ],
+  "rSS+oq": [
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " évnyi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " évnyi"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitrót adtál ajándékba. Csodálatos módja a hátborzongató szezon megünneplésének!"
+  ],
   "9rInzc": "Ideje választani: csokit vagy csalunk? Ha októberben Nitrót adsz ajándékba, megtarthatsz egy hátborzongatóan menő profilkép-dekorációt.",
   "CGgAyM": "Ajándékozz Nitrót, ha mersz…",
   "ruVnPj": "Válassz INGYENES jutalmat",
@@ -33548,6 +33594,7 @@
   "96WKND": "Dupla koppintásos reakcióemotikon",
   "bNqkDw": "Átfedés",
   "+U02+v": "Általános",
+  "GP7JLC": "Óvatosan – Nem mentett változások vannak!",
   "xERCnZ": [
     "Biztos, hogy törölni szeretnéd ",
     [

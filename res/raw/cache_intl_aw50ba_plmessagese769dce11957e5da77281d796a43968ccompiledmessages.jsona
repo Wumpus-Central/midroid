@@ -20020,6 +20020,66 @@
   "dAqTcH": "Zdobądź dekorację za darmo przy zakupie prezentu",
   "F/5kFB": "Zdobądź darmową dekorację za podarowanie Nitro w tym miesiącu. Cukierek albo psikus! Co wybierasz?",
   "UPFiIi": "Podaruj Nitro, jeśli się odważysz...",
+  "gI6Yvr": [
+    "Podarowano ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " miesiąc"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " miesiące"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " miesięcy"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro. Wspaniały sposób, aby uczcić sezon strachów!"
+  ],
+  "rSS+oq": [
+    "Podarowano ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " rok"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " lata"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " lat"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro. Wspaniały sposób, aby uczcić sezon strachów!"
+  ],
   "9rInzc": "Czas na wybór: cukierek albo psikus? Podaruj Nitro w październiku, a otrzymasz na zawsze mrożącą krew w żyłach dekorację awatara.",
   "CGgAyM": "Podaruj Nitro, jeśli się odważysz...",
   "ruVnPj": "Wybierz DARMOWĄ nagrodę",
@@ -34584,6 +34644,7 @@
   "96WKND": "Stuknij dwukrotnie, aby zareagować przy pomocy emoji",
   "bNqkDw": "Nakładka",
   "+U02+v": "Ogólne",
+  "GP7JLC": "Uważaj – masz niezapisane zmiany!",
   "xERCnZ": [
     "Czy na pewno chcesz usunąć uprawnienia ",
     [

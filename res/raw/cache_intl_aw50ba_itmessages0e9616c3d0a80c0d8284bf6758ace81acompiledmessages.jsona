@@ -19460,6 +19460,54 @@
   "dAqTcH": "Ottieni una decorazione gratis con l'acquisto di un regalo",
   "F/5kFB": "Questo mese, ottieni una decorazione gratis quando regali Nitro! Dolcetto o scherzetto: cosa sceglierai?",
   "UPFiIi": "Non avere paura di regalare Nitro!",
+  "gI6Yvr": [
+    "Hai regalato ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " mese"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " mesi"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " di Nitro. Questo sì che è un bel modo di festeggiare Halloween!"
+  ],
+  "rSS+oq": [
+    "Hai regalato ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " anno"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " anni"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " di Nitro. Questo sì che è un bel modo di festeggiare Halloween!"
+  ],
   "9rInzc": "È ora di scegliere: dolcetto o scherzetto? Regala Nitro nel mese di ottobre e scegli una bella e spaventosa decorazione avatar da fare tua per sempre.",
   "CGgAyM": "Non avere paura di regalare Nitro!",
   "ruVnPj": "Scegli una ricompensa GRATIS",
@@ -33572,6 +33620,7 @@
   "96WKND": "Emoji di reazione con doppio tocco",
   "bNqkDw": "Overlay",
   "+U02+v": "Generale",
+  "GP7JLC": "Attenzione! Ci sono delle modifiche non salvate!",
   "xERCnZ": [
     "Sei sicuro di voler eliminare i permessi di ",
     [

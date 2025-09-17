@@ -19502,6 +19502,40 @@
   "dAqTcH": "Hediye satın alımında ücretsiz bir dekorasyon kap",
   "F/5kFB": "Bu ay Nitro hediye ederek ücretsiz bir dekorasyon kazan. Şeker mi şaka mı? Hangisini seçeceksin?",
   "UPFiIi": "Cesaretin varsa Nitro hediye et...",
+  "gI6Yvr": [
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          "ay"
+        ],
+        "other": [
+          "ay"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro hediye ettin. Ürkütücü sezonu kutlamanın ne güzel bir yolu bu!"
+  ],
+  "rSS+oq": [
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          "yıl"
+        ],
+        "other": [
+          "yıl"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro hediye ettin. Ürkütücü sezonu kutlamanın ne güzel bir yolu bu!"
+  ],
   "9rInzc": "Şimdi seçim zamanı: Şeker mi şaka mı? Ekim boyunca Nitro hediye et ve havalı bir avatar dekorasyonu kazan.",
   "CGgAyM": "Cesaretin varsa Nitro hediye et...",
   "ruVnPj": "ÜCRETSİZ bir ödül seç",
@@ -33557,6 +33591,7 @@
   "96WKND": "Tepki emojisi göndermek için çift dokun",
   "bNqkDw": "Arayüz",
   "+U02+v": "Genel",
+  "GP7JLC": "Dikkat — kaydetmediğin değişiklikler var!",
   "xERCnZ": [
     [
       8,

@@ -19462,6 +19462,54 @@
   "dAqTcH": "Nappaa ilmainen koriste ostamalla lahja",
   "F/5kFB": "Saat ilmaisen koristeen, kun annat Nitron lahjaksi tässä kuussa. Karkki vai kepponen, kumman valitset?",
   "UPFiIi": "Lahjoita Nitro, jos uskallat...",
+  "gI6Yvr": [
+    "Olet antanut lahjaksi ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " kuukauden"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " kuukautta"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitroa. Kerrassaan upea tapa juhlistaa tätä karmivaa sesonkia!"
+  ],
+  "rSS+oq": [
+    "Olet antanut lahjaksi ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " vuoden"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " vuotta"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitroa. Kerrassaan upea tapa juhlistaa tätä karmivaa sesonkia!"
+  ],
   "9rInzc": "On aika valita: karkki vai kepponen? Lahjoita Nitro lokakuussa, niin saat haluamasi karmivan tyylikkään avatar-koristeen.",
   "CGgAyM": "Lahjoita Nitro, jos uskallat...",
   "ruVnPj": "Valitse ILMAINEN palkinto",
@@ -33614,6 +33662,7 @@
   "96WKND": "Reagoi emojilla kaksoisnapauttamalla",
   "bNqkDw": "Peitetaso",
   "+U02+v": "Yleinen",
+  "GP7JLC": "Nyt varoen – sinulla on tallentamattomia muutoksia!",
   "xERCnZ": [
     "Haluatko varmasti poistaa nämä oikeudet: ",
     [

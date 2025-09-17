@@ -19483,6 +19483,54 @@
   "dAqTcH": "Lấy trang trí miễn phí khi mua quà tặng",
   "F/5kFB": "Nhận trang trí miễn phí khi bạn tặng Nitro trong tháng này. Cho kẹo hay bị ghẹo: bạn sẽ chọn món quà nào?",
   "UPFiIi": "Tặng Nitro nếu bạn dám...",
+  "gI6Yvr": [
+    "Bạn đã tặng ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " tháng"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " tháng"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro. Một cách tuyệt vời để ăn mừng mùa hội ma quái!"
+  ],
+  "rSS+oq": [
+    "Bạn đã tặng ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " năm"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " năm"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro. Một cách tuyệt vời để ăn mừng mùa hội ma quái!"
+  ],
   "9rInzc": "Đã đến lúc chọn: cho kẹo hay bị ghẹo? Tặng Nitro trong suốt tháng Mười và nhận một trang trí ảnh đại diện cực ngầu vĩnh viễn.",
   "CGgAyM": "Tặng Nitro nếu bạn dám...",
   "ruVnPj": "Chọn một phần thưởng MIỄN PHÍ",
@@ -33653,6 +33701,7 @@
   "96WKND": "Nhấp đúp để tương tác emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "Chung",
+  "GP7JLC": "Hãy cẩn thận – bạn chưa lưu các thay đổi!",
   "xERCnZ": [
     "Bạn có chắc muốn xóa các quyền ",
     [

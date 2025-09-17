@@ -19428,6 +19428,54 @@
   "dAqTcH": "Primește o decorațiune gratuită când cumperi un cadou",
   "F/5kFB": "Obține o decorațiune gratuită când dăruiești Nitro luna asta. Ce alegi, ceva dulce sau o mică răutate?",
   "UPFiIi": "Dăruiește Nitro dacă ai curaj...",
+  "gI6Yvr": [
+    "Ai dăruit ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " lună"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " luni"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Nitro. Ce mod potrivit de a sărbători sezonul înfricoșător!"
+  ],
+  "rSS+oq": [
+    "Ai dăruit ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " an"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " ani"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Nitro. Ce mod potrivit de a sărbători sezonul înfricoșător!"
+  ],
   "9rInzc": "Este timpul să alegi: ceva dulce sau o mică răutate? Dăruiește Nitro în octombrie și alege o decorațiune înfricoșător de tare pentru avatar, pe care poți s-o păstrezi.",
   "CGgAyM": "Dăruiește Nitro dacă ai curaj...",
   "ruVnPj": "Alege o recompensă GRATUITĂ",
@@ -33560,6 +33608,7 @@
   "96WKND": "Atinge de două ori pentru a reacționa cu un emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
+  "GP7JLC": "Ai grijă — schimbările nu au fost salvate!",
   "xERCnZ": [
     "Ești sigur că vrei să ștergi permisiunile pentru ",
     [

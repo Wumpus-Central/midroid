@@ -19529,6 +19529,54 @@
   "dAqTcH": "Schnapp dir eine kostenlose Dekoration, wenn du ein Geschenk kaufst",
   "F/5kFB": "Verdien dir eine kostenlose Dekoration, wenn du diesen Monat Nitro verschenkst. Süßes oder Saures: Was wählst du?",
   "UPFiIi": "Verschenke Nitro, wenn du dich traust …",
+  "gI6Yvr": [
+    "Du hast ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Monat"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Monate"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro verschenkt. Eine tolle Art, die Gruselsaison zu feiern!"
+  ],
+  "rSS+oq": [
+    "Du hast ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Jahr"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Jahre"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro verschenkt. Eine tolle Art, die Gruselsaison zu feiern!"
+  ],
   "9rInzc": "Es ist Zeit, sich zu entscheiden: Süßes oder Saures? Verschenke Nitro im Oktober und schnapp dir eine der schaurig coolen Avatardekorationen als Bonus.",
   "CGgAyM": "Verschenke Nitro, wenn du dich traust …",
   "ruVnPj": "Wähle eine kostenlose Belohnung",
@@ -33614,6 +33662,7 @@
   "96WKND": "Zweimal antippen, um mit Emoji zu reagieren",
   "bNqkDw": "Overlay",
   "+U02+v": "Allgemein",
+  "GP7JLC": "Achtung, du hast nicht gespeicherte Änderungen!",
   "xERCnZ": [
     "Bist du sicher, dass du ",
     [

@@ -19472,6 +19472,54 @@
   "dAqTcH": "Sleep een gratis versiering binnen met een cadeau-aankoop",
   "F/5kFB": "Deze maand kun je een gratis versiering verdienen als je Nitro cadeau doet. Treiteren of trakteren: wat zal het worden?",
   "UPFiIi": "Geef Nitro als je durft...",
+  "gI6Yvr": [
+    "Je hebt ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " maand"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " maanden"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro gegeven. Wat een supermanier om het griezelseizoen te vieren!"
+  ],
+  "rSS+oq": [
+    "Je hebt ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " jaar"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " jaar"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro gegeven. Wat een supermanier om het griezelseizoen te vieren!"
+  ],
   "9rInzc": "Tijd om te kiezen: treiteren of trakteren? Geef Nitro tijdens oktober en kies een griezelig coole avatarversiering die je voor altijd mag houden.",
   "CGgAyM": "Geef Nitro als je durft...",
   "ruVnPj": "Kies een GRATIS beloning",
@@ -33608,6 +33656,7 @@
   "96WKND": "Dubbeltik om met een emoji te reageren",
   "bNqkDw": "Overlay",
   "+U02+v": "Algemeen",
+  "GP7JLC": "Pas op - je hebt niet-opgeslagen wijzigingen!",
   "xERCnZ": [
     "Weet je zeker dat je de machtigingen van ",
     [

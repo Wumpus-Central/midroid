@@ -20076,7 +20076,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "You Rang?",
+  "sBk8mZ": "Boo!",
   "9PzTtL": "Mr. Jack O’ Lantern",
   "RbkXxc": "Rest in Peace",
   "FW3Qp6": "Just Hangin’",
@@ -20087,6 +20087,54 @@
   "dAqTcH": "Snag a free decoration with a gift purchase",
   "F/5kFB": "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?",
   "UPFiIi": "Gift Nitro if you dare...",
+  "gI6Yvr": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " month"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " months"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the spooky season!"
+  ],
+  "rSS+oq": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " year"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " years"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the spooky season!"
+  ],
   "9rInzc": "It's time to pick: trick or treat? Gift Nitro during October, and get your choice of a chillingly, cool avatar decoration to keep.",
   "CGgAyM": "Gift Nitro if you dare...",
   "ruVnPj": "Choose a FREE reward",
@@ -34533,6 +34581,7 @@
   "96WKND": "Double tap to react emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
+  "GP7JLC": "Careful — you have unsaved changes!",
   "xERCnZ": [
     "Are you sure you want to delete ",
     [
@@ -40620,6 +40669,7 @@
   "wiXdER": "Choose 1 game",
   "sUQar6": "Favorite game",
   "SqNnur": "Games in rotation",
+  "gKoO1N": "You must save or reset your changes before closing your profile.",
   "scOKER": "Games I like",
   "bWSQwc": "Want to play",
   "0/xHFB": "Windows",

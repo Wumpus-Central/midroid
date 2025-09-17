@@ -20139,6 +20139,66 @@
   "dAqTcH": "Shrábni vzhled zdarma při nákupu dárku",
   "F/5kFB": "Získej vzhled zdarma, když tento měsíc daruješ Nitro. Koledu, nebo něco vyvedu: co si vybereš?",
   "UPFiIi": "Daruj Nitro, jestli máš dost odvahy…",
+  "gI6Yvr": [
+    "Daroval/a jsi Nitro na ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " měsíc"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " měsíce"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " měsíců"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    ". Skvělý způsob, jak oslavit strašidelnou sezónu!"
+  ],
+  "rSS+oq": [
+    "Daroval/a jsi Nitro na ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " rok"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " roky"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " let"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    ". Skvělý způsob, jak oslavit strašidelnou sezónu!"
+  ],
   "9rInzc": "Je načase si vybrat: Koledu, nebo něco vyvedu! Daruj Nitro během října a získej parádní vzhled avataru, který možná nažene i husí kůži. A navíc ti zůstane napořád.",
   "CGgAyM": "Daruj Nitro, jestli máš dost odvahy…",
   "ruVnPj": "Vyber si odměnu ZDARMA",
@@ -34775,6 +34835,7 @@
   "96WKND": "Poklepáním reagovat smajlíkem",
   "bNqkDw": "Překrytí",
   "+U02+v": "Obecné",
+  "GP7JLC": "Opatrně – máš tu neuložené změny!",
   "xERCnZ": [
     "Určitě chceš odstranit oprávnění ",
     [

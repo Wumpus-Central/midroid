@@ -20100,6 +20100,54 @@
   "dAqTcH": "Įsigijęs (-usi) dovaną griebk nemokamą papuošimą",
   "F/5kFB": "Šį mėnesį gauk nemokamą papuošimą, kam nors padovanodamas (-a) Nitro. Pokštas ar saldainis: ką pasirinksi?",
   "UPFiIi": "Padovanok Nitro, jei išdrįsi...",
+  "gI6Yvr": [
+    "Padovanojai ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " mėnesio"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " mėnesių"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro prenumeratą. Puikus būdas švęsti šiurpųjį laikotarpį!"
+  ],
+  "rSS+oq": [
+    "Padovanojai ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " metų"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " metų"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitro prenumeratą. Puikus būdas švęsti šiurpųjį laikotarpį!"
+  ],
   "9rInzc": "Laikas pasirinkti: pokštas ar saldainis? Padovanok Nitro spalio mėnesį ir gauk pasirinktą kietą pseudoportreto papuošimą, kurį galėsi pasilikti.",
   "CGgAyM": "Padovanok Nitro, jei išdrįsi...",
   "ruVnPj": "Pasirink NEMOKAMĄ apdovanojimą",
@@ -34727,6 +34775,7 @@
   "96WKND": "Dukart paliesk, kad sureaguotum jaustuku",
   "bNqkDw": "Perdanga",
   "+U02+v": "Bendrieji",
+  "GP7JLC": "Atsargiai — turi neišsaugotų pakeitimų!",
   "xERCnZ": [
     "Ar tikrai nori ištrinti ",
     [

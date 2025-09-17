@@ -19541,6 +19541,54 @@
   "dAqTcH": "Snup en gratis dekoration med et gavekøb",
   "F/5kFB": "Få en gratis dekoration, når du giver Nitro som gave denne måned. Slik eller ballade: hvilken vælger du?",
   "UPFiIi": "Giv Nitro som gave, hvis du tør ...",
+  "gI6Yvr": [
+    "Du har givet Nitro som gave i ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " måned"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " måneder"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    ". Sikke en måde at fejre den uhyggelige tid!"
+  ],
+  "rSS+oq": [
+    "Du har givet Nitro som gave i ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " år"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " år"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    ". Sikke en måde at fejre den uhyggelige tid!"
+  ],
   "9rInzc": "Det er tid til at vælge: slik eller ballade? Giv Nitro som gave i oktober, og vælg en uhyggelig, cool avatardekoration, som du må beholde.",
   "CGgAyM": "Giv Nitro som gave, hvis du tør ...",
   "ruVnPj": "Vælg en gratis belønning",
@@ -33698,6 +33746,7 @@
   "96WKND": "Dobbelttryk for at reagere med emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "Generelt",
+  "GP7JLC": "Vær forsigtig – du har ikke-gemte ændringer.",
   "xERCnZ": [
     "Er du sikker på, at du vil slette ",
     [

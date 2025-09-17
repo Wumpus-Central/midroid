@@ -19404,6 +19404,54 @@
   "dAqTcH": "Compra un regalo y llévate una decoración gratis",
   "F/5kFB": "Regala Nitro durante este mes y obtén decoración gratis de regalo. Truco o trato: ¿cuál vas a elegir?",
   "UPFiIi": "Si te atreves, regala Nitro...",
+  "gI6Yvr": [
+    "Has regalado ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " mes"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " meses"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Nitro. ¡Una forma fantástica de celebrar la temporada más espeluznante del año!"
+  ],
+  "rSS+oq": [
+    "Has regalado ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " año"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " años"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Nitro. ¡Una forma fantástica de celebrar la temporada más espeluznante del año!"
+  ],
   "9rInzc": "Llegó el momento de elegir: ¿truco o trato? Regala Nitro durante octubre y obtén una decoración de avatar espeluznante y divertida, que podrás conservar en tu colección.",
   "CGgAyM": "Si te atreves, regala Nitro...",
   "ruVnPj": "Elige una recompensa GRATIS",
@@ -33269,6 +33317,7 @@
   "96WKND": "Toca dos veces para reaccionar con un emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
+  "GP7JLC": "¡Cuidado! ¡Tienes cambios sin guardar!",
   "xERCnZ": [
     "¿Realmente quieres eliminar los permisos de ",
     [

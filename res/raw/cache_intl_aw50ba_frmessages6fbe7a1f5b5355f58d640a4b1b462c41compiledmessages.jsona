@@ -19460,6 +19460,54 @@
   "dAqTcH": "Obtiens une décoration gratuite avec l'achat d'un cadeau",
   "F/5kFB": "Obtiens une décoration gratuite en offrant Discord Nitro ce mois-ci. Des bonbons ou un sort : que choisiras-tu ?",
   "UPFiIi": "Offre Nitro si tu l'oses…",
+  "gI6Yvr": [
+    "Tu as offert ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " mois"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " mois"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Discord Nitro. Quel moyen génial de célébrer la saison de l'effroi !"
+  ],
+  "rSS+oq": [
+    "Tu as offert ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " année"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " années"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " de Discord Nitro. Quel moyen génial de célébrer la saison de l'effroi !"
+  ],
   "9rInzc": "Il est temps de choisir : des bonbons ou un sort ? Offre Nitro en octobre, et obtiens une décoration d'avatar effrayante de ton choix que tu pourras garder.",
   "CGgAyM": "Offre Nitro si tu l'oses…",
   "ruVnPj": "Choisis une récompense GRATUITE",
@@ -33636,6 +33684,7 @@
   "96WKND": "Appuie deux fois pour réagir avec un émoji",
   "bNqkDw": "Overlay",
   "+U02+v": "Général",
+  "GP7JLC": "Attention, il reste des modifications non enregistrées !",
   "xERCnZ": [
     "Tu es sûr(e) de vouloir supprimer les permissions de ",
     [

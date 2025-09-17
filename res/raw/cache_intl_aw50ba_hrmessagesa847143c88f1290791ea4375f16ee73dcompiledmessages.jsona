@@ -19996,6 +19996,66 @@
   "dAqTcH": "Zgrabi besplatni ukras uz kupnju dara",
   "F/5kFB": "Dobit ćeš besplatni ukras kada ovoga mjeseca pokloniš Nitro. „Dajte nam nešto i stjerajte nas van” - što ćeš im darovati?",
   "UPFiIi": "Daruj Nitro ako se usuđuješ...",
+  "gI6Yvr": [
+    "Darovao/la si ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " mjesec"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " mjeseca"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " mjeseci"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitra. Sjajan način da se proslave jezivi blagdani!"
+  ],
+  "rSS+oq": [
+    "Darovao/la si ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " godinu"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " godine"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " godina"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Nitra. Sjajan način da se proslave jezivi blagdani!"
+  ],
   "9rInzc": "Vrijeme je za odluku: što ćeš im darovati prije nego ih „stjeraš van”? Daruj Nitro tijekom listopada i dobit ćeš jezivo zabavan avatar ukrasa za stalno.",
   "CGgAyM": "Daruj Nitro ako se usuđuješ...",
   "ruVnPj": "Odaberi BESPLATNU nagradu",
@@ -34699,6 +34759,7 @@
   "96WKND": "Dvostruko dodirni da reagiraš emojijem",
   "bNqkDw": "Prekrivanje",
   "+U02+v": "Općenito",
+  "GP7JLC": "Oprez — imaš nespremljenih promjena!",
   "xERCnZ": [
     "Jesi li siguran/na da želiš izbrisati dozvole korisnika ",
     [

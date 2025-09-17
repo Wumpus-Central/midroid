@@ -19384,6 +19384,54 @@
   "dAqTcH": "Kjøp en gave, så får du en gratis dekorasjon",
   "F/5kFB": "Denne måneden får du en gratis dekorasjon når du gir Nitro i gave. Knask eller knep: Hva går du for?",
   "UPFiIi": "Gi Nitro i gave hvis du våger …",
+  "gI6Yvr": [
+    "Du har gitt ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " måned"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " måneder"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " med Nitro i gave. For en suveren måte å feire den nifse årstiden på!"
+  ],
+  "rSS+oq": [
+    "Du har gitt ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " år"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " år"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " med Nitro i gave. For en suveren måte å feire den nifse årstiden på!"
+  ],
   "9rInzc": "Nå må du velge: knask eller knep? Gi Nitro i gave i oktober, så kan du velge en skummelt kul avatardekorasjon.",
   "CGgAyM": "Gi Nitro i gave hvis du våger …",
   "ruVnPj": "Velg en GRATIS premie",
@@ -33528,6 +33576,7 @@
   "96WKND": "Dobbelttrykk for å reagere med emoji",
   "bNqkDw": "Overlegg",
   "+U02+v": "Generelt",
+  "GP7JLC": "Forsiktig – du har ulagrede endringer!",
   "xERCnZ": [
     "Er du sikker på at du vil slette ",
     [

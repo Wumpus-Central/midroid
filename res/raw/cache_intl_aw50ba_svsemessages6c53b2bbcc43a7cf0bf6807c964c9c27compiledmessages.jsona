@@ -19399,6 +19399,54 @@
   "dAqTcH": "Få en gratis dekoration när du köper en gåva",
   "F/5kFB": "Få en gratis dekoration när du ger någon Nitro den här månaden. Bus eller godis: vad kommer du att välja?",
   "UPFiIi": "Ge någon Nitro om du vågar ...",
+  "gI6Yvr": [
+    "Du har gett bort ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " månad"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " månader"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " med Nitro. Vilket perfekt sätt att fira spöksäsongen på!"
+  ],
+  "rSS+oq": [
+    "Du har gett bort ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " år"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " år"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " med Nitro. Vilket perfekt sätt att fira spöksäsongen på!"
+  ],
   "9rInzc": "Det är dags att välja: bus eller godis? Ge någon Nitro under oktober och välj en läskigt cool avatardekoration att behålla.",
   "CGgAyM": "Ge någon Nitro om du vågar ...",
   "ruVnPj": "Välj en GRATIS belöning",
@@ -33517,6 +33565,7 @@
   "96WKND": "Dubbeltryck för att reagera med emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "Allmänt",
+  "GP7JLC": "Försiktigt – du har osparade ändringar!",
   "xERCnZ": [
     "Är du säker på att du vill ta bort behörigheter för ",
     [
