@@ -89,7 +89,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
    public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
          new SimpleDraweeView(var1)
       ) {
-      private final val placeholder: Drawable by B9.j.b(new B())
+      private final val placeholder: Drawable by A9.j.b(new B())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }
@@ -264,7 +264,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : L2.a {
+      private class EmojiLoadListener(animating: Boolean) : K2.a {
          private final var animating: Boolean
 
          init {
@@ -293,10 +293,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var4: View = this.itemView;
-         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
-         var3.setMargins(var2, var2, var2, var2);
-         var4.setLayoutParams(var3);
+         val var3: View = this.itemView;
+         val var4: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         var4.setMargins(var2, var2, var2, var2);
+         var3.setLayoutParams(var4);
       }
    }
 

@@ -1,7 +1,5 @@
 package com.discord.notifications.renderer.utils
 
-import W1.y
-import W1.z
 import android.text.format.DateUtils
 import java.text.DateFormat
 import java.util.Date
@@ -17,10 +15,10 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var4.h(var3.h(var0, new y()), new z());
+   var var13: java.lang.String = var3.h(var4.h(var0, new z()), new A());
    var var14: java.lang.String = var0;
 
    while (true) {

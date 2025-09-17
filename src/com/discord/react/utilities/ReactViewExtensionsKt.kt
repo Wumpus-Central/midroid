@@ -2,7 +2,7 @@
 
 package com.discord.react.utilities
 
-import B9.j
+import A9.j
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode

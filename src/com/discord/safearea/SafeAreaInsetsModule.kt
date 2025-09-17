@@ -1,6 +1,6 @@
 package com.discord.safearea
 
-import B9.s
+import A9.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -15,10 +15,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e2.a
-import e2.b
-import e2.c
-import e2.d
+import d2.a
+import d2.b
+import d2.c
+import d2.d
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,105:1\n1#2:106\n*E\n"])

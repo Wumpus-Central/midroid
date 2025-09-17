@@ -8,6 +8,6 @@ public final class h0 implements Function2 {
    public final MediaEngineModule d;
 
    public final Object invoke(Object var1, Object var2) {
-      return <unrepresentable>.a(this.d, (Double)var1, (Map)var2);
+      return <unrepresentable>.d(this.d, (Double)var1, (Map)var2);
    }
 }

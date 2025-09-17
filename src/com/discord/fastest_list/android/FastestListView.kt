@@ -93,12 +93,12 @@ internal class FastestListView(context: Context,
    private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.k()) {
       if (!var1.isEmpty()) {
          for (FastestListViewAdapter.DataChanged var5 : var1) {
-            val var3: Int = var5.component1();
-            val var2: Int = var5.component2();
-            if (var2 == 1) {
-               this.typedAdapter.notifyItemChanged(var3);
+            val var2: Int = var5.component1();
+            val var3: Int = var5.component2();
+            if (var3 == 1) {
+               this.typedAdapter.notifyItemChanged(var2);
             } else {
-               this.typedAdapter.notifyItemRangeChanged(var3, var2);
+               this.typedAdapter.notifyItemRangeChanged(var2, var3);
             }
          }
       } else {

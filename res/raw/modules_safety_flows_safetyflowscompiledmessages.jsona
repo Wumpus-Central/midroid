@@ -1,22 +1,44 @@
 {
-  "/fHz9f": "/fHz9f",
-  "d9Ykjo": "d9Ykjo",
-  "bFbsV1": "bFbsV1",
-  "RRBNpq": "RRBNpq",
-  "0DHxys": "0DHxys",
-  "0TnUrK": "0TnUrK",
-  "Ks6opq": "Ks6opq",
-  "I2Ctk5": "I2Ctk5",
-  "RRamMD": "RRamMD",
-  "ah0EUl": "ah0EUl",
-  "2+Lyn5": "2+Lyn5",
-  "3AXMYm": "3AXMYm",
-  "dSkE/P": "dSkE/P",
-  "o4D6fn": "o4D6fn",
-  "VBZJJi": "VBZJJi",
-  "yxqMCA": "yxqMCA",
-  "wq2RDg": "wq2RDg",
-  "PfbG6O": "PfbG6O",
-  "aveKoK": "aveKoK",
-  "Qm6K/v": "Qm6K/v"
+  "/fHz9f": "Your account has been unlocked",
+  "d9Ykjo": "Confirmation code",
+  "bFbsV1": "Enter your email",
+  "RRBNpq": "Next",
+  "0DHxys": [
+    "Not you? ",
+    [
+      8,
+      "$link",
+      [
+        "Log out"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "We may ask for more follow-ups along the way, like if you're a robot",
+  "Ks6opq": "Start",
+  "I2Ctk5": "Complete the steps below to unlock your account",
+  "RRamMD": "Account Locked",
+  "ah0EUl": "Resend code",
+  "2+Lyn5": [
+    "Resend code in ",
+    [
+      1,
+      "countdown"
+    ],
+    " seconds"
+  ],
+  "3AXMYm": "Failed to resend verification code",
+  "dSkE/P": "Verify age group",
+  "o4D6fn": "Update",
+  "VBZJJi": "Please update the app to continue.",
+  "yxqMCA": "Update Required",
+  "wq2RDg": "Verify",
+  "PfbG6O": "Invalid verification code",
+  "aveKoK": "We just sent a verification code to your email address. It may take a few minutes to arrive",
+  "Qm6K/v": "Verify your email"
 }

@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapReferralRedeemData(referralId: String?) : ReactEvent {

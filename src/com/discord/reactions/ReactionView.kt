@@ -66,7 +66,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = O9.a.c(var2.getOpacity() * (float)255);
+         var3 = N9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -371,10 +371,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var11: Context = this.getContext();
-         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var11: RenderableEmoji = var1.getEmoji().renderable();
+         val var16: Context = this.getContext();
+         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

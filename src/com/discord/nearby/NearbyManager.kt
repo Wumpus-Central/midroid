@@ -5,11 +5,11 @@ import com.google.android.gms.nearby.messages.Message
 import com.google.android.gms.nearby.messages.SubscribeOptions
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.Intrinsics
-import n6.d
-import n6.h
-import n6.i
+import m6.d
+import m6.h
+import m6.i
 
-internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : n6.b {
+internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : m6.b {
    private final val onFoundUser: (String) -> Unit
    private final val onLostUser: (String) -> Unit
    private final val onError: (String) -> Unit
@@ -40,16 +40,16 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
    }
 
    public fun disableNearby(context: Context) {
-      val var3: d = k6.a.a(var1);
-      var3.j(this.statusCallback);
+      val var3: d = j6.a.a(var1);
+      var3.i(this.statusCallback);
       var var4: Message = this.outboundMessage;
       if (this.outboundMessage == null) {
          Intrinsics.throwUninitializedPropertyAccessException("outboundMessage");
          var4 = null;
       }
 
-      var3.g(var4);
-      var3.c(this);
+      var3.j(var4);
+      var3.l(this);
    }
 
    public fun enableNearby(context: Context) {
@@ -59,10 +59,10 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var2 = null;
       }
 
-      val var4: d = k6.a.a(var1);
-      var4.i(this.statusCallback);
-      var4.e(var2);
-      var4.h(this, this.subscribeOptions);
+      val var4: d = j6.a.a(var1);
+      var4.k(this.statusCallback);
+      var4.d(var2);
+      var4.c(this, this.subscribeOptions);
    }
 
    public open fun onFound(message: Message) {

@@ -1,8 +1,10 @@
 package com.discord.chat
 
-import B9.s
-import G9.b
+import A9.s
+import F9.b
 import android.content.Context
+import cb.T
+import cb.k0
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -19,8 +21,6 @@ import com.discord.logging.PIIKt
 import com.discord.serialization.SerializerUtils
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
-import db.T
-import db.k0
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import java.util.concurrent.CancellationException
@@ -38,7 +38,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONArray
 import org.json.JSONObject
-import qb.f
+import pb.f
 
 public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
@@ -47,7 +47,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
    fun {
       val var1: CompletableJob = k0.b(null, 1, null);
       val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      moduleScope = g.a(var1.V0(T.b(var0)));
+      moduleScope = g.a(var1.Z0(T.b(var0)));
    }
 
    init {
@@ -118,13 +118,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       changesetUpdateIdValue: Double,
       HACK_iOSForceAnimations: Boolean
    ) {
-      val var9: Int = (int)var1;
-      val var10: Int = (int)var6;
+      val var10: Int = (int)var1;
+      val var9: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var9,
-         new Function2<ChatListManager, Continuation, Object>(this, var9, var3, var5, var10, null) {
+         var10,
+         new Function2<ChatListManager, Continuation, Object>(this, var10, var3, var5, var9, null) {
             final int $changesetUpdateId;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;
@@ -165,15 +165,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           var var52: Json = ChatModule.access$getJson$cp();
+                           val var5: Json = ChatModule.access$getJson$cp();
                            var1 = this.$rowsJSON;
-                           var52.a();
-                           var64 = var52.b(new f(Row.Companion.serializer()), var1) as java.util.List;
+                           var5.a();
+                           var64 = var5.b(new f(Row.Companion.serializer()), var1) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              var52 = ChatModule.access$getJson$cp();
+                              val var53: Json = ChatModule.access$getJson$cp();
                               var1 = this.$scrollDataJSON;
-                              var52.a();
-                              var1 = var52.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
+                              var53.a();
+                              var1 = var53.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -394,8 +394,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var38 = null;
                            }
 
-                           var var7: java.util.Iterator;
-                           var var8: java.util.List;
+                           var var8: java.util.Iterator;
+                           var var9: java.util.List;
                            var var67: LinkedHashMap;
                            try {
                               if (var38 !is ErrorMessage) {
@@ -406,13 +406,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var42: SerializerUtils = SerializerUtils.INSTANCE;
                               val var66: java.lang.String = var6.toString();
                               var1 = var42.findErroringFields(var66, Message::class);
-                              var8 = PIIKt.getPIIFieldNames(Message::class);
+                              var9 = PIIKt.getPIIFieldNames(Message::class);
                               var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
                               }
 
-                              var7 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var8 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var39: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -443,15 +443,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            while (true) {
-                              var var9: Entry;
+                              var var7: Entry;
                               try {
-                                 if (!var7.hasNext()) {
+                                 if (!var8.hasNext()) {
                                     break;
                                  }
 
-                                 var9 = var7.next() as Entry;
-                                 if (var8.contains(var9.getKey())) {
-                                    var67.put(var9.getKey(), "<REDACTED>");
+                                 var7 = var8.next() as Entry;
+                                 if (var9.contains(var7.getKey())) {
+                                    var67.put(var7.getKey(), "<REDACTED>");
                                     continue;
                                  }
                               } catch (var17: Exception) {
@@ -484,7 +484,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               }
 
                               try {
-                                 var67.put(var9.getKey(), var9.getValue());
+                                 var67.put(var7.getKey(), var7.getValue());
                               } catch (var13: Exception) {
                                  val var46: CrashReporting = CrashReporting.INSTANCE;
                                  CrashReporting.addBreadcrumb$default(
@@ -580,29 +580,29 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var3: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var1: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
          val var2: java.lang.String = (ChatModule::class).getSimpleName();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append(var2);
-         var1.append(" invalidate()");
-         v.g(var3, new CancellationException(var1.toString()));
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" invalidate()");
+         v.g(var1, new CancellationException(var3.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
-         val var5: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
-         val var4: Int = var2;
-         val var3: Any = var5.get(var4);
+         val var4: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
+         val var5: Int = var2;
+         val var3: Any = var4.get(var5);
          var var6: Any = var3;
          if (var3 == null) {
             var6 = new ReleaseRowLogger();
-            var5.put(var4, var6);
+            var4.put(var5, var6);
          }
 
          return var6 as RowLogger;
       }
 
       private fun withChatManager(tag: Int, block: (ChatListManager, Continuation<Unit>) -> Any?) {
-         db.f.d(
+         cb.f.d(
             ChatModule.access$getModuleScope$cp(), null, null, new Function2<CoroutineScope, Continuation, Object>(var2, this.getChatListManager(var1), null) {
                final Function2<ChatListManager, Continuation, Object> $block;
                final ChatListManager $manager;

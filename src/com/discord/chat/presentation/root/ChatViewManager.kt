@@ -107,10 +107,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    public open fun setKeyboardBackgroundRgba(view: ChatView, value: String?) {
    }
 
-   @ReactProp(name = "keyboardResponderProxyTag")
-   public open fun setKeyboardResponderProxyTag(view: ChatView, value: Int) {
-   }
-
    @ReactProp(name = "roleStyle")
    public open fun setRoleStyle(view: ChatView, value: String?) {
    }

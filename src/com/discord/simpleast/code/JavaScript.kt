@@ -22,18 +22,18 @@ public object JavaScript {
       val var3: Pattern = PATTERN_JAVASCRIPT_COMMENTS;
       val var8: Rule = CodeRules.toMatchGroupRule$default(var2, var3, 0, var1.getCommentStyleProvider(), 1, null);
       val var4: Pattern = PATTERN_JAVASCRIPT_STRINGS;
-      val var9: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
-      val var5: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
-      val var6: Pattern = PATTERN_JAVASCRIPT_GENERIC;
-      val var10: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
-      val var7: Pattern = PATTERN_JAVASCRIPT_REGEX;
+      val var5: Rule = CodeRules.toMatchGroupRule$default(var2, var4, 0, var1.getLiteralStyleProvider(), 1, null);
+      val var9: Rule = JavaScript.ObjectPropertyNode.Companion.createObjectPropertyRule(var1);
+      var var6: Pattern = PATTERN_JAVASCRIPT_GENERIC;
+      val var7: Rule = CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getGenericsStyleProvider(), 1, null);
+      var6 = PATTERN_JAVASCRIPT_REGEX;
       return CollectionsKt.n(
          new Rule[]{
             var8,
-            var9,
             var5,
-            var10,
-            CodeRules.toMatchGroupRule$default(var2, var7, 0, var1.getLiteralStyleProvider(), 1, null),
+            var9,
+            var7,
+            CodeRules.toMatchGroupRule$default(var2, var6, 0, var1.getLiteralStyleProvider(), 1, null),
             JavaScript.FieldNode.Companion.createFieldRule(var1),
             JavaScript.FunctionNode.Companion.createFunctionRule(var1)
          }

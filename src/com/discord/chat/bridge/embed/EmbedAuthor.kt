@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import B9.j
+import A9.j
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 import p1.b
 
 @g
@@ -103,17 +103,17 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    public override fun toString(): String {
       val var2: java.lang.String = this.name;
       val var3: java.lang.String = this.url;
-      val var4: java.lang.String = this.iconURL;
-      val var5: java.lang.String = this.iconProxyURL;
+      val var5: java.lang.String = this.iconURL;
+      val var4: java.lang.String = this.iconProxyURL;
       val var1: StringBuilder = new StringBuilder();
       var1.append("EmbedAuthor(name=");
       var1.append(var2);
       var1.append(", url=");
       var1.append(var3);
       var1.append(", iconURL=");
-      var1.append(var4);
-      var1.append(", iconProxyURL=");
       var1.append(var5);
+      var1.append(", iconProxyURL=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

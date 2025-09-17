@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import B9.s
+import A9.s
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapInlineCodeEvent(content: String) : ReactEvent {

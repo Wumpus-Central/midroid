@@ -10,6 +10,6 @@ public final class I implements Function1 {
    public final TextDisplayComponentView e;
 
    public final Object invoke(Object var1) {
-      return TextDisplayComponentViewManager.c(this.d, this.e, (EmojiContentNode)var1);
+      return TextDisplayComponentViewManager.g(this.d, this.e, (EmojiContentNode)var1);
    }
 }

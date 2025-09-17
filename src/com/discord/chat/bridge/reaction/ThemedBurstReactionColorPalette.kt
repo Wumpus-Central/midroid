@@ -2,7 +2,7 @@ package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ReactionView.ThemedBurstColorPalette {

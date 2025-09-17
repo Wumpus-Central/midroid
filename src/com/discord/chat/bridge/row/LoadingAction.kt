@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.row
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class LoadingAction(type: LoadingActionType) {

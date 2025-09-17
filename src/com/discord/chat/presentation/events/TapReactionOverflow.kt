@@ -3,7 +3,7 @@ package com.discord.chat.presentation.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapReactionOverflow(messageId: String, channelId: String) : ReactEvent {
@@ -52,13 +52,13 @@ public data class TapReactionOverflow(messageId: String, channelId: String) : Re
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapReactionOverflow(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

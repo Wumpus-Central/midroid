@@ -32,21 +32,21 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 3
-   // 07: aload 3
-   // 08: ldc "/proc/cpuinfo"
-   // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
-   // 0d: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-   // 10: astore 2
-   // 11: new java/io/InputStreamReader
-   // 14: astore 0
-   // 15: new java/io/FileInputStream
-   // 18: astore 4
-   // 1a: aload 4
-   // 1c: aload 3
-   // 1d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
-   // 20: aload 0
-   // 21: aload 4
+   // 06: astore 4
+   // 08: aload 4
+   // 0a: ldc "/proc/cpuinfo"
+   // 0c: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 0f: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
+   // 12: astore 2
+   // 13: new java/io/InputStreamReader
+   // 16: astore 0
+   // 17: new java/io/FileInputStream
+   // 1a: astore 3
+   // 1b: aload 3
+   // 1c: aload 4
+   // 1e: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 21: aload 0
+   // 22: aload 3
    // 23: aload 2
    // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 27: new java/io/BufferedReader
@@ -56,7 +56,7 @@ internal fun getSocFromProcCpuInfo(): String {
    // 2d: sipush 8192
    // 30: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
    // 33: aload 2
-   // 34: invokestatic L9/p.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
+   // 34: invokestatic K9/p.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
    // 37: invokeinterface kotlin/sequences/Sequence.iterator ()Ljava/util/Iterator; 1
    // 3c: astore 3
    // 3d: aload 3
@@ -74,7 +74,7 @@ internal fun getSocFromProcCpuInfo(): String {
    // 56: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
    // 59: ifeq 3d
    // 5c: goto 65
-   // 5f: astore 0
+   // 5f: astore 3
    // 60: goto 9e
    // 63: aconst_null
    // 64: astore 0
@@ -106,15 +106,15 @@ internal fun getSocFromProcCpuInfo(): String {
    // 95: astore 0
    // 96: aload 2
    // 97: aconst_null
-   // 98: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 98: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 9b: goto a8
-   // 9e: aload 0
+   // 9e: aload 3
    // 9f: athrow
-   // a0: astore 3
+   // a0: astore 0
    // a1: aload 2
-   // a2: aload 0
-   // a3: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-   // a6: aload 3
+   // a2: aload 3
+   // a3: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // a6: aload 0
    // a7: athrow
    // a8: aload 0
    // a9: areturn
@@ -239,7 +239,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 13
+   // 0d8: astore 14
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -259,21 +259,21 @@ internal fun maxCpuFreq(): String {
    // 0fb: lstore 8
    // 0fd: aload 12
    // 0ff: aconst_null
-   // 100: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 100: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 13
+   // 10a: aload 14
    // 10c: athrow
-   // 10d: astore 14
+   // 10d: astore 13
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 13
-   // 117: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 115: aload 14
+   // 117: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 14
+   // 11e: aload 13
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -336,13 +336,13 @@ internal fun socName(): String {
          }
       }
 
-      val var2: java.lang.String = a.a();
-      var0 = b.a();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var2);
-      var1.append("_");
-      var1.append(var0);
-      return var1.toString();
+      val var1: java.lang.String = a.a();
+      val var2: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var1);
+      var4.append("_");
+      var4.append(var2);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

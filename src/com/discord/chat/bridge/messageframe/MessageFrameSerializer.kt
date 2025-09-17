@@ -8,8 +8,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rb.d
-import rb.g
+import qb.d
+import qb.g
 
 @SourceDebugExtension(["SMAP\nMessageFrameSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,41:1\n11165#2:42\n11500#2,3:43\n*S KotlinDebug\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n*L\n13#1:42\n13#1:43,3\n*E\n"])
 public object MessageFrameSerializer : d(MessageFrame::class) {

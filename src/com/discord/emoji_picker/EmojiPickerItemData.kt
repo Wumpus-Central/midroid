@@ -73,10 +73,10 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
-      val var3: Array<java.util.List> = this.dataSets;
-      val var5: java.util.List = var1.getLeading();
-      var5.set(0, this.coreData.getLeading().get(0));
-      var3[0] = var5;
+      val var5: Array<java.util.List> = this.dataSets;
+      val var4: java.util.List = var1.getLeading();
+      var4.set(0, this.coreData.getLeading().get(0));
+      var5[0] = var4;
       val var8: Array<java.util.List> = this.dataSets;
       val var6: java.util.List = var1.getTrailing();
       var6.set(CollectionsKt.m(var6), CollectionsKt.r0(this.coreData.getTrailing()));
@@ -173,19 +173,19 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
          this.trailing = var6;
          this.nativeSectionsEmojis = var7;
          this.nativeSectionsEmojisUnicode = var8;
-         this.categoryIndices$delegate = B9.j.b(new b(this));
+         this.categoryIndices$delegate = A9.j.b(new b(this));
       }
 
       @JvmStatic
       fun `categoryIndices_delegate$lambda$1`(var0: EmojiPickerItemData.CoreData): java.util.Map {
          val var2: LinkedHashMap = new LinkedHashMap();
-         val var3: java.util.Iterator = var0.leading.iterator();
+         val var4: java.util.Iterator = var0.leading.iterator();
          var var1: Int = 0;
 
-         while (var3.hasNext()) {
-            val var4: EmojiPickerItem = var3.next() as EmojiPickerItem;
-            if (var4 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var4 as EmojiPickerItem.Category).getTitle()), var1);
+         while (var4.hasNext()) {
+            val var3: EmojiPickerItem = var4.next() as EmojiPickerItem;
+            if (var3 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var3 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }
@@ -307,32 +307,32 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
       public override fun toString(): String {
          val var1: Int = this.rowSize;
-         val var4: Boolean = this.hasGuildData;
-         val var2: Boolean = this.hasSearchData;
-         val var3: Boolean = this.hasPremiumInlineRoadblock;
-         val var8: java.util.List = this.leading;
-         val var5: java.util.List = this.trailing;
-         val var6: java.util.List = this.nativeSectionsEmojis;
-         val var9: java.util.List = this.nativeSectionsEmojisUnicode;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("CoreData(rowSize=");
-         var7.append(var1);
-         var7.append(", hasGuildData=");
-         var7.append(var4);
-         var7.append(", hasSearchData=");
-         var7.append(var2);
-         var7.append(", hasPremiumInlineRoadblock=");
-         var7.append(var3);
-         var7.append(", leading=");
-         var7.append(var8);
-         var7.append(", trailing=");
-         var7.append(var5);
-         var7.append(", nativeSectionsEmojis=");
-         var7.append(var6);
-         var7.append(", nativeSectionsEmojisUnicode=");
-         var7.append(var9);
-         var7.append(")");
-         return var7.toString();
+         val var2: Boolean = this.hasGuildData;
+         val var3: Boolean = this.hasSearchData;
+         val var4: Boolean = this.hasPremiumInlineRoadblock;
+         val var7: java.util.List = this.leading;
+         val var9: java.util.List = this.trailing;
+         val var5: java.util.List = this.nativeSectionsEmojis;
+         val var6: java.util.List = this.nativeSectionsEmojisUnicode;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("CoreData(rowSize=");
+         var8.append(var1);
+         var8.append(", hasGuildData=");
+         var8.append(var2);
+         var8.append(", hasSearchData=");
+         var8.append(var3);
+         var8.append(", hasPremiumInlineRoadblock=");
+         var8.append(var4);
+         var8.append(", leading=");
+         var8.append(var7);
+         var8.append(", trailing=");
+         var8.append(var9);
+         var8.append(", nativeSectionsEmojis=");
+         var8.append(var5);
+         var8.append(", nativeSectionsEmojisUnicode=");
+         var8.append(var6);
+         var8.append(")");
+         return var8.toString();
       }
 
       public companion object
@@ -344,7 +344,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
                var1 = (this as EmojiPickerItemData.CoreData.NativeSection.Guild).getEmojiCount();
             } else {
                if (this !is EmojiPickerItemData.CoreData.NativeSection.Unicode) {
-                  throw new B9.n();
+                  throw new A9.n();
                }
 
                var1 = (this as EmojiPickerItemData.CoreData.NativeSection.Unicode).getEmojiCount();

@@ -2,7 +2,7 @@ package com.discord.chat.bridge
 
 import com.discord.primitives.MessageId
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {

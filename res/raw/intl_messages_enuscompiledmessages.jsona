@@ -28,6 +28,7 @@
   "0x1HBA": "message edited",
   "Hym4i4": "edit blocked by automod",
   "Atp7FB": "failed to update message",
+  "FY/yLS": "server created successfully",
   "dO2aLi": [
     "Status updated to ",
     [
@@ -527,6 +528,7 @@
   "BbESsr": "Advanced Voice Activity",
   "qyGmGh": "Inactive Settings",
   "gUiIGR": "Age Verified",
+  "susqq6": "Thank you for verifying your age. This helps us to keep Discord safe.",
   "EcJBEB": [
     "To keep our users safe, we need to verify your age. We will only ask you for this once. ",
     [
@@ -573,7 +575,7 @@
   "M7mt7u": "Please confirm your age",
   "udnqh4": "Please enter a valid date of birth",
   "n3QjDA": [
-    "Before you can view this age-restricted channel, we need to verify your age. We will only ask you for this once. ",
+    "We use age groups to determine access to specific experiences. We will only ask you for this once. ",
     [
       8,
       "$link",
@@ -589,22 +591,6 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
-  "6ejLER": [
-    "Before you can view this age-restricted server, we need to verify your age. We will only ask you for this once. ",
-    [
-      8,
-      "$link",
-      [
-        "Why do I need to provide my birthday?"
-      ],
-      [
-        [
-          1,
-          "helpURL"
-        ]
-      ]
-    ]
-  ],
   "ZtuRtr": "This server contains sensitive content marked as age-restricted. Do you wish to proceed?",
   "6++3cX": [
     "You must be over legal age in order to view age-restricted servers. Learn more about our ",
@@ -693,9 +679,14 @@
     ],
     " to verify your age before your account will be deleted. Check your email for instructions on verifying your age."
   ],
-  "NR/zrK": "Sorry, there's an issue.",
+  "NR/zrK": "Discord is for ages 13 and up",
   "nCB6GR": "Unable to register",
   "htHOrq": "View Help Article",
+  "MjQbfn": "Unable to access server",
+  "SxY4IS": "We use age groups to determine access to certain experiences",
+  "u/xsKy": "Unable to join server",
+  "UYReTk": "Verify age group",
+  "lSgO/v": "We use age groups to determine access to certain experiences. We determined you're in the teen age group. If we made a mistake, you can reverify.",
   "+TBKLy": "Agree",
   "l1QVfn": "AKA",
   "2nYlT0": "Allow",
@@ -3265,6 +3256,51 @@
       ]
     ],
     ". This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
+  ],
+  "iIglwM": [
+    "By clicking ",
+    "\"",
+    [
+      1,
+      "buyButtonLabel"
+    ],
+    "\"",
+    ", you agree to the ",
+    [
+      8,
+      "$link",
+      [
+        "Paid Service Terms"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". ",
+    [
+      8,
+      "$b",
+      [
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
+        [
+          8,
+          "$link",
+          [
+            "“Virtual Goods” section"
+          ],
+          [
+            [
+              1,
+              "paidServiceTermURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
   ],
   "SKduys": [
     [
@@ -6556,26 +6592,6 @@
     ]
   ],
   "9T6N5+": "You cannot send messages to a user you have blocked.",
-  "+fBFYG": [
-    [
-      1,
-      "username"
-    ],
-    " changed the DM wallpaper. This feature is currently in Beta and visible on desktop only. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more."
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "A5aDw8": [
     "Above ",
     [
@@ -6661,6 +6677,39 @@
     ],
     " is not available. Head to Settings to set another default."
   ],
+  "LIIHR0": "Choose another emoji",
+  "3u/Je3": [
+    "You can't use ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " without an active Nitro subscription. Choose a different emoji for your double tap or ",
+    [
+      8,
+      "$link",
+      [
+        "renew Nitro"
+      ],
+      [
+        [
+          1,
+          "onRenewNitro"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "Nr6v29": "Got it",
+  "HRAWfH": "Custom emoji need Nitro",
   "QPJJKy": [
     "React with ",
     [
@@ -6678,6 +6727,14 @@
     " instantly. Or, tap here to set another default emoji."
   ],
   "rY+31d": "Double tap to react",
+  "EQnNv7": [
+    "Double tap a message to ",
+    [
+      8,
+      "emojiHook",
+      []
+    ]
+  ],
   "nKY0Fh": [
     "All done! Double tap to ",
     [
@@ -7843,7 +7900,22 @@
   "AlJyIy": "Error Fetching Developer Activity Shelf",
   "JfA7IC": "Developer Shelf Activity Override Enabled",
   "tYBBW1": "The activity was closed because it tried to open a disallowed web page.",
-  "xAW71d": "Start a casual game or watch party with your closest friends!",
+  "xAW71d": [
+    "Start a casual game or watch party with your closest friends! ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskUrl"
+        ]
+      ]
+    ]
+  ],
   "HOPqzc": "Activities in DMs",
   "JBnc7O": "Game has ended.",
   "hbiAOz": [
@@ -10295,17 +10367,6 @@
   "I5gL2N": "GIF",
   "3d0NmZ": "Confirm Reward",
   "gNZY/P": "Choose your Reward",
-  "xGzXNT": [
-    "You get one with each gift purchase. Collect all ",
-    [
-      1,
-      "rewardCount"
-    ],
-    " of them."
-  ],
-  "Rp0+ZG": "Choose Your Free Reward",
-  "baye/P": "Treat",
-  "XtIgwc": "Trick",
   "n6I6k5": "Woo! Accept Gift",
   "ilcBeX": "This gift has already been claimed.",
   "JZxgJS": "Sorry, you can only accept your own gift on the desktop app.",
@@ -19975,6 +20036,46 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
+  "mMgymZ": "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase.",
+  "h2nMp6": "Get one with each gift purchase.",
+  "6OUb3t": "Collect all 8 if you dare...",
+  "3JCuX1": "Choose your free reward",
+  "dAqTcH": "Snag a free decoration with a gift purchase",
+  "F/5kFB": "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?",
+  "UPFiIi": "Gift Nitro if you dare...",
+  "9rInzc": "It's time to pick: trick or treat? Gift Nitro during October, and get your choice of a chillingly, cool avatar decoration to keep.",
+  "CGgAyM": "Gift Nitro if you dare...",
+  "ruVnPj": "Choose a FREE reward",
+  "q4BJSE": "Yours to keep if you dare...",
+  "eDBuFx": [
+    [
+      1,
+      "rewardCount"
+    ],
+    " available ",
+    [
+      6,
+      "rewardCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " option"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " options"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "2UeOlZ": "Treat",
+  "6Zuiv7": "Trick",
   "1+boPj": "Happening Now",
   "zSG3Q0": [
     "Your message could not be delivered because this message contains a link blocked by Discord. You can learn more here: ",
@@ -31158,6 +31259,7 @@
     ],
     " minutes"
   ],
+  "BDUDam": "Quest Home",
   "MFGxFB": "This Quest can't be completed on macOS",
   "BV6xDg": "Use the desktop app to make progress!",
   "o6FLcH": "Promoted",
@@ -31458,6 +31560,7 @@
     "."
   ],
   "mOrpXF": "Start Playing!",
+  "Au8ug4": "No Orb Quests Available",
   "dYE1p6": [
     "Find this Quest again in User Settings ",
     [
@@ -34439,14 +34542,6 @@
     " already has Nitro"
   ],
   "9SNdf3": "This trial offer expired",
-  "1oPGmp": [
-    [
-      1,
-      "username"
-    ],
-    ", you got a 2 week trial of Nitro."
-  ],
-  "SGbw2N": "Open this DM on desktop to start your free trial.",
   "wFcUiI": "Failed to resolve channels for selected users",
   "leICvr": "Share Push Notification Logs",
   "+KNdnp": "Sharing",
@@ -34527,26 +34622,6 @@
   "MDOXJS": "Requires higher Server Boost Level",
   "Rtvk9f": "Discord Sounds",
   "Tj5Nws": "Soundmoji is currently only supported on Desktop.",
-  "MZlgQE": [
-    [
-      8,
-      "$i",
-      [
-        "hey there"
-      ]
-    ]
-  ],
-  "3SJZKC": "ASMR",
-  "I39onp": "Bubble",
-  "s5Qo8P": "Bloop",
-  "4iA55u": "Wumpus' Favorite",
-  "p3Hg5e": "Discord Default",
-  "1kbe6e": "Ducky",
-  "4TOv0t": "Quack",
-  "fMUEj4": "Lofi",
-  "aEsrnp": "Twinkle",
-  "zKG+ur": "Retro",
-  "Rrwrnp": "Power up!",
   "Z5OQNj": "❄️ Winter",
   "sWmtIy": "Mute",
   "NHJxcn": "Unmute",
@@ -38244,6 +38319,7 @@
     " age group. If we made a mistake, you can reverify."
   ],
   "PBG51t": "Reverify",
+  "El4aXl": "The information you provide is only used to confirm your age group, then it’s deleted",
   "/nicWl": "Retry",
   "LZO+HR": "Contact Us",
   "ty+iWF": "Request a manual review",
@@ -39910,6 +39986,32 @@
   "DisZzM": "View Per-server Profile",
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
+  "ynollp": "Earn Orbs",
+  "FIilKy": [
+    "You've collected ",
+    [
+      1,
+      "count"
+    ],
+    " Orbs!"
+  ],
+  "uJAMFR": "Earn Orbs",
+  "GPdvqa": "Redeem Orbs in Shop",
+  "97ztVl": "Keep on earning Orbs to claim some awesome prizes!",
+  "Heldho": [
+    "You now have enough Orbs to claim a ",
+    [
+      8,
+      "profileDecoHook",
+      [
+        "profileDeco"
+      ]
+    ],
+    " from the Shop!"
+  ],
+  "pGDUHx": "Profile Deco",
+  "wmcDys": "Claim with Orbs",
+  "y0WGqK": "Orbs Balance",
   "7gHWra": [
     "Error redeeming ",
     [

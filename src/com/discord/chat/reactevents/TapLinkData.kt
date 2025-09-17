@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import B9.s
+import A9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -265,18 +265,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       val var2: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var4: java.lang.String = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapLinkData(messageId=");
-      var3.append(var6);
-      var3.append(", title=");
-      var3.append(var2);
-      var3.append(", target=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapLinkData(messageId=");
+      var4.append(var6);
+      var4.append(", title=");
+      var4.append(var2);
+      var4.append(", target=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 }

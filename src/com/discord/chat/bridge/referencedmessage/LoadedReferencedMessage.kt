@@ -3,7 +3,7 @@ package com.discord.chat.bridge.referencedmessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage() {

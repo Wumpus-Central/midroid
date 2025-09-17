@@ -62,14 +62,14 @@ public object ContactSyncProvider {
       // 46: astore 1
       // 47: aload 2
       // 48: aconst_null
-      // 49: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 49: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 4c: goto 5b
       // 4f: aload 1
       // 50: athrow
       // 51: astore 4
       // 53: aload 2
       // 54: aload 1
-      // 55: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 55: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 58: aload 4
       // 5a: athrow
       // 5b: aload 1
@@ -94,8 +94,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var6 = var10;
-            var5 = var2;
+            var5 = var10;
+            var6 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -114,8 +114,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -124,8 +124,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -136,7 +136,7 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var5, var6);
+         return new ContactNameEntry(var6, var5);
       }
    }
 
@@ -282,7 +282,7 @@ public object ContactSyncProvider {
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
@@ -291,7 +291,7 @@ public object ContactSyncProvider {
       // 84: astore 1
       // 85: aload 3
       // 86: aload 2
-      // 87: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8a: aload 1
       // 8b: athrow
       // 8c: aload 2

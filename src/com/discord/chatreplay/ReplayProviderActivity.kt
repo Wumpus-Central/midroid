@@ -13,24 +13,24 @@ import java.nio.file.Path
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import qb.f
+import pb.f
 
 @SourceDebugExtension(["SMAP\nReplayProviderActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,111:1\n113#2:112\n1#3:113\n1557#4:114\n1628#4,3:115\n*S KotlinDebug\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n*L\n30#1:112\n61#1:114\n61#1:115,3\n*E\n"])
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {
-      val var3: java.lang.String = this.getFilesDir().getPath();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var3);
-      var2.append("/rows");
-      return new File(a.a(var2.toString(), new java.lang.String[0]).toString(), var1);
+      val var2: java.lang.String = this.getFilesDir().getPath();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var2);
+      var3.append("/rows");
+      return new File(a.a(var3.toString(), new java.lang.String[0]).toString(), var1);
    }
 
    private fun getReplaysList(): List<Replay> {
-      val var2: java.lang.String = this.getFilesDir().getPath();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var2);
-      var1.append("/rows");
-      val var5: Path = a.a(var1.toString(), new java.lang.String[0]);
+      val var1: java.lang.String = this.getFilesDir().getPath();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var1);
+      var2.append("/rows");
+      val var5: Path = a.a(var2.toString(), new java.lang.String[0]);
       val var8: Array<File> = new File(b.a(var5).toString()).listFiles();
       var var6: Array<File> = var8;
       if (var8 == null) {
@@ -47,9 +47,9 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
 
-      for (File var4 : var9) {
-         val var12: java.lang.String = var4.getName();
-         var7.add(new Replay(var12, var4.lastModified()));
+      for (File var10 : var9) {
+         val var12: java.lang.String = var10.getName();
+         var7.add(new Replay(var12, var10.lastModified()));
       }
 
       return var7;
@@ -95,10 +95,10 @@ public class ReplayProviderActivity : Activity {
       }
 
       public fun getReplaysListFromIntent(intent: Intent): List<Replay> {
-         val var3: java.lang.String = var1.getStringExtra("INTENT_EXTRA_REPLAYS_LIST");
-         val var2: kotlinx.serialization.json.Json.a = Json.d;
+         val var2: java.lang.String = var1.getStringExtra("INTENT_EXTRA_REPLAYS_LIST");
+         val var3: kotlinx.serialization.json.Json.a = Json.d;
          Json.d.a();
-         return var2.b(new f(Replay.Companion.serializer()), var3) as MutableList<Replay>;
+         return var3.b(new f(Replay.Companion.serializer()), var2) as MutableList<Replay>;
       }
 
       public fun requestReplayList(activity: Activity, requestCode: Int) {

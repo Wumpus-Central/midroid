@@ -1,6 +1,6 @@
 package com.discord.app_icon
 
-import B9.s
+import A9.s
 import com.discord.codegen.NativeAppIconModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt

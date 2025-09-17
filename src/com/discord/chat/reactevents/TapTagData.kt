@@ -5,7 +5,7 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType: String?) : TapTagData(var1, var2, var4), ReactEvent {
@@ -54,8 +54,8 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.tagType == null) {
          var1 = 0;
@@ -63,7 +63,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          var1 = this.tagType.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -71,18 +71,18 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.tagType;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapTagData(messageId=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", tagType=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.tagType;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapTagData(messageId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(", tagType=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

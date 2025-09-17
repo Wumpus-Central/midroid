@@ -4,7 +4,7 @@ import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g(with = MediaGalleryItemType.Serializer::class)
 public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
@@ -24,7 +24,7 @@ public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<MediaGalleryItemType> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = G9.a.a(var0);
    }
 
    init {

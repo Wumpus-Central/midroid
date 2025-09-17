@@ -2,7 +2,7 @@ package com.discord.portals.from_native
 
 import android.view.View
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
-import gb.x
+import fb.x
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlinx.coroutines.flow.Flow

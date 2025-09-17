@@ -5,7 +5,7 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId, triggerHaptic: Boolean? = ..., location: String?) : InitiateReplyData(
@@ -89,19 +89,19 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    public override fun toString(): String {
       val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.Boolean = this.triggerHaptic;
-      val var2: java.lang.String = this.location;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("InitiateReplyData(messageId=");
-      var5.append(var4);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", triggerHaptic=");
-      var5.append(var1);
-      var5.append(", location=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.triggerHaptic;
+      val var1: java.lang.String = this.location;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InitiateReplyData(messageId=");
+      var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(", triggerHaptic=");
+      var2.append(var5);
+      var2.append(", location=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

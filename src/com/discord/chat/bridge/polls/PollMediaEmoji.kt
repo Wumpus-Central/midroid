@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -79,13 +79,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = StringsKt.o(this.id);
          if (var7 != null) {
-            val var1: Long = var7.longValue();
+            val var2: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
             if (var9 != null) {
                return var9;
             }

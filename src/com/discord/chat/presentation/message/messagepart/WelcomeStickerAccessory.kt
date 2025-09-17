@@ -8,12 +8,12 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    public final val sticker: Sticker
 
    init {
-      val var5: java.lang.String = var1.getId-3Eiw7ao();
+      val var6: java.lang.String = var1.getId-3Eiw7ao();
       val var3: Long = var2.getId();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("welcome sticker ");
-      var6.append(var3);
-      super(var5, var6.toString(), false, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("welcome sticker ");
+      var5.append(var3);
+      super(var6, var5.toString(), false, 4, null);
       this.message = var1;
       this.sticker = var2;
    }

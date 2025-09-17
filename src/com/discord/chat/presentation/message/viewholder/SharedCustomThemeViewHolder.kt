@@ -11,7 +11,7 @@ public class SharedCustomThemeViewHolder(sharedCustomThemeView: SharedCustomThem
       this.sharedCustomThemeView = var1;
    }
 
-   public fun bind(accessory: SharedCustomThemeMessageAccessory, onTapPreview: (MessageId) -> Unit) {
-      this.sharedCustomThemeView.bind-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getData(), var1.getAuthor(), var2);
+   public fun bind(accessory: SharedCustomThemeMessageAccessory, onTapPreview: (MessageId) -> Unit, onViewed: (MessageId) -> Unit) {
+      this.sharedCustomThemeView.bind-pPZZVto(var1.getMessageId-3Eiw7ao(), var1.getData(), var1.getAuthor(), var2, var3);
    }
 }

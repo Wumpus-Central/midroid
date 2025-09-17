@@ -42,17 +42,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
    }
 
    public open fun configure(component: ThumbnailDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var11: java.lang.String = var3.getContainerId();
-      val var12: java.lang.String = var1.getId();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ThumbnailDisplayComponent(");
-      var13.append(var12);
-      var13.append(")");
-      val var17: SpoilerAttributes = var16.forGenericMedia(var1, var11, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var13: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var16: java.lang.String = var3.getContainerId();
+      val var11: java.lang.String = var1.getId();
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("ThumbnailDisplayComponent(");
+      var12.append(var11);
+      var12.append(")");
+      val var17: SpoilerAttributes = var13.forGenericMedia(var1, var16, var12.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var21: UnfurledMediaItem = var1.getMedia();
       val var20: MediaImageViewHolder = this.imageViewHolder;
-      val var6: Boolean = var1.isSpoiler();
+      val var8: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
          var18 = SpoilerAttributes.configure$default(var17, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
@@ -60,10 +60,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var8: Boolean = var1.isObscure();
-      val var7: Boolean = var1.isObscureAwaitingScan();
-      val var10: Boolean = var1.getObscureHideControls();
-      val var9: Boolean = var1.getObscureIsOpaque();
+      val var9: Boolean = var1.isObscure();
+      val var10: Boolean = var1.isObscureAwaitingScan();
+      val var7: Boolean = var1.getObscureHideControls();
+      val var6: Boolean = var1.getObscureIsOpaque();
       val var22: java.lang.String = var21.getProxyUrl();
       var var14: Int = var21.getWidth();
       var var4: Int;
@@ -87,12 +87,12 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var5,
          var21.getPlaceholder(),
          var21.getPlaceholderVersion(),
-         var6,
-         var18,
          var8,
-         var7,
-         var10,
+         var18,
          var9,
+         var10,
+         var7,
+         var6,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),

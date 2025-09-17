@@ -1,6 +1,6 @@
 package com.discord.audio
 
-import B9.s
+import A9.s
 import android.content.Context
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
@@ -67,12 +67,12 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          var3 = this.getReactApplicationContext();
          var3 = var2.getInstance((Context)var3);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         var3 = this.getReactApplicationContext();
-         var3 = var5.getInstance((Context)var3);
+         var3 = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         var3 = var3.getInstance(var5);
       }
 
-      this.audioManager = (DiscordAudioManagerInterface)var3;
+      this.audioManager = var3;
       var var6: Any = var3;
       if (var3 == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");

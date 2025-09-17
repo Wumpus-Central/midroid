@@ -1,7 +1,7 @@
 package com.discord.overlapping_circles
 
-import B9.j
-import B9.m
+import A9.j
+import A9.m
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
+               val var10: Context = this.getContext();
+               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
                val var15: Context = this.getContext();
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
-               val var9: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var10.getUri(var9));
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var9.getUri(var15));
             }
 
             val var21: Context = this.getContext();
@@ -134,9 +134,9 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var20: LayoutParams = new LayoutParams(-2, -1);
-         var20.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var20);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var19, var11);
       }
    }
 

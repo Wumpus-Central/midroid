@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.embed
 
-import B9.j
-import B9.m
-import H9.a
+import A9.j
+import A9.m
+import G9.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 import p1.e
 
 @g

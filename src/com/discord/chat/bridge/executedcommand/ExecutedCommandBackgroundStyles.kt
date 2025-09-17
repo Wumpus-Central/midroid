@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.executedcommand
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
@@ -76,18 +76,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var3: Int = this.color;
-      val var1: Int = this.borderRadius;
-      val var4: java.lang.Boolean = this.spaceAround;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ExecutedCommandBackgroundStyles(color=");
-      var2.append(var3);
-      var2.append(", borderRadius=");
-      var2.append(var1);
-      var2.append(", spaceAround=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: Int = this.color;
+      val var4: Int = this.borderRadius;
+      val var1: java.lang.Boolean = this.spaceAround;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ExecutedCommandBackgroundStyles(color=");
+      var3.append(var2);
+      var3.append(", borderRadius=");
+      var3.append(var4);
+      var3.append(", spaceAround=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

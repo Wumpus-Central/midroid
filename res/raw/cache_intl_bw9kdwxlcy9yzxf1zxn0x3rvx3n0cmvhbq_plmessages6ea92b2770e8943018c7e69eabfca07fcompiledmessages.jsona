@@ -1,0 +1,38 @@
+{
+  "DKHheX": "Poproś o streamowanie",
+  "s7bMT0": [
+    [
+      1,
+      "username"
+    ],
+    " prosi Cię o streamowanie ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "7pndSk": [
+    "Poproszono o streamowanie ",
+    [
+      1,
+      "applicationName"
+    ]
+  ],
+  "P0wwmJ": "Użytkownik już streamuje",
+  "u4QmWl": "Prośba wygasła",
+  "qRXatr": "Użytkownika nie ma na kanale głosowym",
+  "43zohI": "Gra nie jest uruchomiona",
+  "fac+eH": "Brak uprawnień",
+  "8HU1Mz": "Prośba wysłana",
+  "5+172d": "Streamuj",
+  "nAyuPj": "Prośba o streamowanie",
+  "d/qbCw": [
+    "Użytkownik ",
+    [
+      1,
+      "username"
+    ],
+    " poprosił Cię o streamowanie"
+  ],
+  "8B3U5O": "Poproszono o streamowanie"
+}

@@ -9,6 +9,6 @@ public final class O implements Function2 {
    public final TextDisplayComponentView e;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextDisplayComponentViewManager.a(this.d, this.e, (String)var1, (String)var2);
+      return TextDisplayComponentViewManager.m(this.d, this.e, (String)var1, (String)var2);
    }
 }

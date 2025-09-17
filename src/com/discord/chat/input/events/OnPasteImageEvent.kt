@@ -3,7 +3,7 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import mb.g
 
 @g
 public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
@@ -60,13 +60,13 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.url;
-      val var2: java.lang.String = this.type;
+      val var2: java.lang.String = this.url;
+      val var3: java.lang.String = this.type;
       val var1: StringBuilder = new StringBuilder();
       var1.append("OnPasteImageEvent(url=");
-      var1.append(var3);
-      var1.append(", type=");
       var1.append(var2);
+      var1.append(", type=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

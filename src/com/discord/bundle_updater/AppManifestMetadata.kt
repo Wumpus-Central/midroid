@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import B9.s
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
 
-@nb.g
+@mb.g
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -83,15 +83,15 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.build;
-      val var4: java.lang.String = this.releaseName;
+      val var4: java.lang.String = this.build;
+      val var3: java.lang.String = this.releaseName;
       val var2: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
       val var5: StringBuilder = new StringBuilder();
       var5.append("AppManifestMetadata(build=");
-      var5.append(var3);
-      var5.append(", releaseName=");
       var5.append(var4);
+      var5.append(", releaseName=");
+      var5.append(var3);
       var5.append(", commit=");
       var5.append(var2);
       var5.append(", confirmUpdate=");

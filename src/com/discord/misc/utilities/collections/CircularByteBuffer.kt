@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.collections
 
-import B9.s
+import A9.s
 import java.nio.charset.Charset
 import java.util.Arrays
 import java.util.Locale
@@ -343,28 +343,28 @@ public class CircularByteBuffer(maxByteCount: Int) {
       }
 
       public override fun toString(): String {
-         val var5: Int = this.linesCount;
-         val var1: Int = this.bytesUsed;
-         val var2: Int = this.bytesCapacity;
+         val var4: Int = this.linesCount;
+         val var2: Int = this.bytesUsed;
+         val var3: Int = this.bytesCapacity;
          val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
-         val var7: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
-         val var4: Int = this.headPosition;
-         val var3: Int = this.tailPosition;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("BufferStats(lines=");
-         var8.append(var5);
-         var8.append(", used=");
-         var8.append(var1);
-         var8.append("B/");
-         var8.append(var2);
-         var8.append("B (");
-         var8.append(var7);
-         var8.append("%), head=");
-         var8.append(var4);
-         var8.append(", tail=");
-         var8.append(var3);
-         var8.append(")");
-         return var8.toString();
+         val var8: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
+         val var5: Int = this.headPosition;
+         val var1: Int = this.tailPosition;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("BufferStats(lines=");
+         var7.append(var4);
+         var7.append(", used=");
+         var7.append(var2);
+         var7.append("B/");
+         var7.append(var3);
+         var7.append("B (");
+         var7.append(var8);
+         var7.append("%), head=");
+         var7.append(var5);
+         var7.append(", tail=");
+         var7.append(var1);
+         var7.append(")");
+         return var7.toString();
       }
    }
 

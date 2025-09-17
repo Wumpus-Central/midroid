@@ -1,6 +1,6 @@
 package com.discord.crash_reporting.system_logs
 
-import B9.s
+import A9.s
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context

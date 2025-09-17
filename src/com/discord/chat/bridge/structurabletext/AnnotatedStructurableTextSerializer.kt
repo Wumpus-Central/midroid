@@ -5,9 +5,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import pb.g
-import pb.e.i
-import qb.f
+import ob.g
+import ob.e.i
+import pb.f
 
 internal object AnnotatedStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = g.a("AnnotatedStructurableText", i.a)

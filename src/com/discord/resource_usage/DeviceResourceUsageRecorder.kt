@@ -1,12 +1,12 @@
 package com.discord.resource_usage
 
-import B9.s
-import Ob.e
+import A9.s
+import Nb.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
 import android.telephony.TelephonyManager
-import c2.b
+import b2.b
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap

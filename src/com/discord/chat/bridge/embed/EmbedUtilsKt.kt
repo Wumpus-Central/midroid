@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import B9.s
+import A9.s
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
@@ -211,20 +211,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var37: java.lang.String = var21.getEmbedUrl();
-         if (var37 == null) {
+         val var11: java.lang.String = var21.getEmbedUrl();
+         if (var11 == null) {
             return null;
          }
 
-         val var22: java.lang.String = getTag(var0);
-         val var11: MediaType = MediaType.IMAGE;
+         val var24: java.lang.String = getTag(var0);
+         val var10: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
-            var37,
+            var11,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var22,
-            var11,
+            var24,
+            var10,
             var4,
             ChannelId.box-impl(var1),
             var3,
@@ -251,8 +251,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             var30 = null;
          }
 
-         val var14: java.lang.String = getTag(var0);
-         val var15: MediaType = MediaType.VIDEO;
+         val var39: java.lang.String = getTag(var0);
+         val var14: MediaType = MediaType.VIDEO;
          val var33: EmbedMedia = var0.getVideo();
          val var34: java.lang.String;
          if (var33 != null) {
@@ -261,10 +261,9 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             var34 = null;
          }
 
-         val var16: EmbedMedia = var0.getVideo();
-         var12 = null;
-         if (var16 != null) {
-            var12 = var16.getPlaceholderVersion();
+         val var15: EmbedMedia = var0.getVideo();
+         if (var15 != null) {
+            var12 = var15.getPlaceholderVersion();
          }
 
          val var18: EmbedThumbnail = var0.getThumbnail();
@@ -273,7 +272,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             var4 = var18.getSrcIsAnimated();
          }
 
-         var17 = new MediaSource(var26, var30, var34, var12, var14, var15, false, ChannelId.box-impl(var1), var3, null, var5, var4, 512, null);
+         var17 = new MediaSource(var26, var30, var34, var12, var39, var14, false, ChannelId.box-impl(var1), var3, null, var5, var4, 512, null);
       }
    } else {
       val var27: EmbedMedia = var0.getVideo();
@@ -292,8 +291,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var32 = null;
       }
 
-      val var39: java.lang.String = getTag(var0);
-      val var40: MediaType = MediaType.GIFV;
+      val var40: java.lang.String = getTag(var0);
+      val var41: MediaType = MediaType.GIFV;
       val var35: EmbedMedia = var0.getVideo();
       val var36: java.lang.String;
       if (var35 != null) {
@@ -302,9 +301,10 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var36 = null;
       }
 
-      val var41: EmbedMedia = var0.getVideo();
-      if (var41 != null) {
-         var12 = var41.getPlaceholderVersion();
+      val var16: EmbedMedia = var0.getVideo();
+      var12 = null;
+      if (var16 != null) {
+         var12 = var16.getPlaceholderVersion();
       }
 
       val var19: EmbedThumbnail = var0.getThumbnail();
@@ -312,7 +312,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var7 = var19.getSrcIsAnimated();
       }
 
-      var17 = new MediaSource(var28, var32, var36, var12, var39, var40, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
+      var17 = new MediaSource(var28, var32, var36, var12, var40, var41, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
    }
 
    return var17;
