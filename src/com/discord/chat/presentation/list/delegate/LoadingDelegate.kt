@@ -1,7 +1,60 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.RuntimeException: Constructor com/discord/chat/presentation/list/delegate/BaseChatListItemDelegate.<init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;I)V not found
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
-*/
+package com.discord.chat.presentation.list.delegate
+
+import A9.n
+import android.content.Context
+import android.view.ViewGroup
+import com.discord.chat.bridge.row.LoadMoreButton
+import com.discord.chat.presentation.events.ChatEventHandler
+import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
+import com.discord.chat.presentation.list.item.ChatListItem
+import com.discord.chat.presentation.list.item.LoadingChatListItem
+import com.discord.chat.presentation.loading.ChatLoadingView
+import kotlin.jvm.functions.Function0
+
+public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
+   public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {
+      if (var2.isLoading()) {
+         var1.showProgress();
+      } else {
+         val var7: LoadMoreButton = var2.getButton();
+         val var4: Int = LoadingDelegate.WhenMappings.$EnumSwitchMapping$0[var2.getButton().getAction().getType().ordinal()];
+         val var6: Function0;
+         if (var4 != 1) {
+            if (var4 != 2) {
+               throw new n();
+            }
+
+            var6 = new Function0<Unit>(this.getEventHandler()) {
+               {
+                  super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesAfter", "onTapLoadMessagesAfter()V", 0);
+               }
+
+               public final void invoke() {
+                  (super.receiver as ChatEventHandler).onTapLoadMessagesAfter();
+               }
+            };
+         } else {
+            var6 = new Function0<Unit>(this.getEventHandler()) {
+               {
+                  super(0, var1, ChatEventHandler::class.java, "onTapLoadMessagesBefore", "onTapLoadMessagesBefore()V", 0);
+               }
+
+               public final void invoke() {
+                  (super.receiver as ChatEventHandler).onTapLoadMessagesBefore();
+               }
+            };
+         }
+
+         var1.showButton(var7, var6);
+      }
+   }
+
+   public open fun createView(parent: ViewGroup): ChatLoadingView {
+      val var2: Context = var1.getContext();
+      return new ChatLoadingView(var2, null, 2, null);
+   }
+
+   public override fun isForItem(item: ChatListItem, position: Int): Boolean {
+      return var1 is LoadingChatListItem;
+   }
+}
