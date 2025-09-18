@@ -9670,6 +9670,8 @@
       "cardinal"
     ]
   ],
+  "g5W1g4": "Nitro-kredit megszerezve",
+  "ERKK6u": "Jutalmak felfedezése",
   "J9Lu4u": [
     [
       1,
@@ -9692,6 +9694,7 @@
       ]
     ]
   ],
+  "fBmhEx": "Megéri kalandozni. Reméljük, örömödet leled a hosszabb ideig elérhető prémium jutalmakban.",
   "4SqnVF": [
     "Nitro (érvényességi idő: ",
     [
@@ -9701,6 +9704,7 @@
     ")"
   ],
   "3G0CTE": "Teljes fennmaradó idő",
+  "Jr6N+v": "Kreditek megtekintése",
   "+cGVV1": "Gyakran használt",
   "TdEu5e": "Barátok",
   "GbsGCg": "Barátságkezelés",
@@ -23756,8 +23760,12 @@
   "uy25Q0": "Az erről a szerverről származó matricák nem érhetők el",
   "xi46lp": "Korhatáros szerver",
   "ZmwvDQ": "Korhatáros csatorna",
+  "eknR8f": "A Discordtól leküldéses értesítéseket fogsz kapni az eszközödön az olyan tevékenységekről, mint az üzenetek, az említések, a barátkérelmek és az események.",
   "bthGZ2": "Leküldéses értesítéseket kaphatsz a Discord-tevékenységekről az eszközödön.",
   "5xWOXl": "Leküldéses értesítések bekapcsolása",
+  "SwOsUl": "Értesítések bekapcsolása",
+  "Xg7bTE": "Sosem fogsz lemaradni az üzeneteidről",
+  "/6SnPz": "A leküldéses értesítések ki vannak kapcsolva nálad.",
   "vSb3Bg": "Ne maradj le az üzeneteidről",
   "Gtctho": "Lazíts, játssz valamivel, vagy csak beszélgess. Koppints alább a kezdéshez!",
   "mufH2N": "A csatornák olyan helyek a szervereden, ahol az emberek különféle témákról beszélgethetnek.",

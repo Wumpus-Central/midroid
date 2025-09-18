@@ -9652,6 +9652,8 @@
       "cardinal"
     ]
   ],
+  "g5W1g4": "Credite Nitro obținute",
+  "ERKK6u": "Explorează avantajele",
   "J9Lu4u": [
     [
       1,
@@ -9674,6 +9676,7 @@
       ]
     ]
   ],
+  "fBmhEx": "Spiritul de aventură se răsplătește. Bucură-te de avantajele premium mai mult timp.",
   "4SqnVF": [
     [
       1,
@@ -9682,6 +9685,7 @@
     " de Nitro"
   ],
   "3G0CTE": "Timp total rămas",
+  "Jr6N+v": "Vezi credite",
   "+cGVV1": "Folosite frecvent",
   "TdEu5e": "Prieteni",
   "GbsGCg": "Gestionarea prieteniei",
@@ -23763,8 +23767,12 @@
   "uy25Q0": "Stickerele de pe acest server nu sunt disponibile",
   "xi46lp": "Server cu restricționare în funcție de vârstă",
   "ZmwvDQ": "Canal cu restricționare în funcție de vârstă",
+  "eknR8f": "Primește pe dispozitiv notificări push pentru activitățile de pe Discord, cum ar fi mesaje, mențiuni, cereri de prietenie și evenimente.",
   "bthGZ2": "Primește pe dispozitiv notificări push pentru activitățile de pe Discord.",
   "5xWOXl": "Activează notificările push",
+  "SwOsUl": "Activează notificările",
+  "Xg7bTE": "Nu rata niciun mesaj",
+  "/6SnPz": "Notificările push sunt dezactivate.",
   "vSb3Bg": "Nu rata mesaje",
   "Gtctho": "Petrece-ți timpul cu prietenii, joacă-te sau stai de vorbă. Atinge mai jos pentru a începe!",
   "mufH2N": "Canalele sunt locuri din cadrul server-ului în care oamenii pot discuta diverse subiecte.",

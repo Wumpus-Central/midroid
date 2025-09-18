@@ -481,6 +481,8 @@ public final class R {
       public static int images_native_custom_app_icons_pastelicon_pastelicon;
       public static int images_native_custom_app_icons_pirateicon_pirateicon;
       public static int images_native_custom_app_icons_sunseticon_sunseticon;
+      public static int images_native_custom_app_icons_treaticon_treaticon;
+      public static int images_native_custom_app_icons_trickicon_trickicon;
       public static int images_native_custom_app_icons_y2kicon_y2kicon;
       public static int images_native_emoji_ic_emoji_recent_color_24px;
       public static int images_native_empties_app_dock_no_permissions_dark;
@@ -1275,6 +1277,7 @@ public final class R {
       public static int modules_nuf_channels_native_images_star_pink;
       public static int modules_nuf_channels_native_images_star_purple;
       public static int modules_nuf_channels_native_images_voice_channels;
+      public static int modules_nuf_native_components_notification_notification_nudge;
       public static int modules_nuf_native_components_notification_notification_upsell;
       public static int modules_nuf_native_components_notification_redesign_notification_illustration;
       public static int modules_nuf_native_images_discoverabilityheader;
@@ -1330,6 +1333,7 @@ public final class R {
       public static int modules_premium_tiered_tenure_badging_native_images_asset_platinum_badge_small;
       public static int modules_premium_tiered_tenure_badging_native_images_asset_ruby_badge_small;
       public static int modules_premium_tiered_tenure_badging_native_images_asset_silver_badge_small;
+      public static int modules_quests_images_nitro_modal_header_background_v2;
       public static int modules_quests_images_quests_embed_mobile_missing;
       public static int modules_quests_images_wumpus_couch_gaming;
       public static int modules_quests_native_images_clouds_background;

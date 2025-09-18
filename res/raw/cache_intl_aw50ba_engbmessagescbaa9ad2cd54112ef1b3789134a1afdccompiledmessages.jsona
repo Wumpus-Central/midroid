@@ -9643,6 +9643,8 @@
       "cardinal"
     ]
   ],
+  "g5W1g4": "Nitro Credit Acquired",
+  "ERKK6u": "Explore Perks",
   "J9Lu4u": [
     [
       1,
@@ -9665,6 +9667,7 @@
       ]
     ]
   ],
+  "fBmhEx": "Adventuring pays off. Enjoy the additional time with your premium perks.",
   "4SqnVF": [
     [
       1,
@@ -9673,6 +9676,7 @@
     " of Nitro"
   ],
   "3G0CTE": "Total Time Remaining",
+  "Jr6N+v": "View Credits",
   "+cGVV1": "Frequently Used",
   "TdEu5e": "Friends",
   "GbsGCg": "Friendship Management",
@@ -23758,8 +23762,12 @@
   "bAVpRU": "Age-restricted server",
   "uy25Q0": "Stickers from this server are unavailable",
   "ZmwvDQ": "Age-Restricted Channel",
+  "eknR8f": "Receive push notifications for Discord activities like messages, mentions, friend requests and events on your device.",
   "bthGZ2": "Receive push notifications for Discord activities on your device.",
   "5xWOXl": "Turn on Push Notifications",
+  "SwOsUl": "Turn on notifications",
+  "Xg7bTE": "Don’t miss your messages",
+  "/6SnPz": "Your push notifications are off.",
   "vSb3Bg": "Don’t Miss Messages",
   "Gtctho": "Hang out, play games or just talk. Tap below to get started!",
   "mufH2N": "Channels are places in your server where people can talk about different topics.",
