@@ -408,13 +408,13 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    public fun clearAndApplyChatNodes(editId: String?, chatInputNodes: List<ChatInputNode>) {
       if (this.lastEditId == var1 || var1 == null) {
-         val var6: Editable = this.editText.getEditableText();
-         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
-         if (var5 != null) {
-            val var4: Int = var5.length;
+         val var5: Editable = this.editText.getEditableText();
+         val var6: Array<DCDInputSpan> = var5.getSpans(0, var5.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
+         if (var6 != null) {
+            val var4: Int = var6.length;
 
             for (int var3 = 0; var3 < var4; var3++) {
-               var6.removeSpan(var5[var3]);
+               var5.removeSpan(var6[var3]);
             }
          }
 
@@ -704,18 +704,18 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var1: Int = this.selectionStart;
          val var2: Int = this.selectionEnd;
          val var3: java.lang.String = this.text;
-         val var5: java.lang.String = this.editId;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("CurrentTextAndSelection(selectionStart=");
-         var4.append(var1);
-         var4.append(", selectionEnd=");
-         var4.append(var2);
-         var4.append(", text=");
-         var4.append(var3);
-         var4.append(", editId=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.lang.String = this.editId;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("CurrentTextAndSelection(selectionStart=");
+         var5.append(var1);
+         var5.append(", selectionEnd=");
+         var5.append(var2);
+         var5.append(", text=");
+         var5.append(var3);
+         var5.append(", editId=");
+         var5.append(var4);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

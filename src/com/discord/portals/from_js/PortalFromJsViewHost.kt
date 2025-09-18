@@ -96,12 +96,12 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
                );
          } else if (this.childView != null && !this.childViewValid()) {
             this.removeChildView();
-            val var11: CrashReporting = CrashReporting.INSTANCE;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("childView not valid before addView ");
-            var6.append(var4);
-            var11.addBreadcrumb(
-               var6.toString(),
+            val var6: CrashReporting = CrashReporting.INSTANCE;
+            val var11: StringBuilder = new StringBuilder();
+            var11.append("childView not valid before addView ");
+            var11.append(var4);
+            var6.addBreadcrumb(
+               var11.toString(),
                L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
                "portal"
             );
@@ -127,13 +127,13 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          if (this.childView == null) {
             this.addChildView(var1);
          } else {
-            var4 = this.portalId;
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Adding more than one child unsupported: ");
-            var7.append(var4);
-            var7.append(", previous: ");
-            var7.append(var8);
-            throw new IllegalArgumentException(var7.toString().toString());
+            val var7: java.lang.String = this.portalId;
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Adding more than one child unsupported: ");
+            var9.append(var7);
+            var9.append(", previous: ");
+            var9.append(var8);
+            throw new IllegalArgumentException(var9.toString().toString());
          }
       }
    }
@@ -177,8 +177,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
-            val var8: CrashReporting = CrashReporting.INSTANCE;
-            val var7: Pair = s.a("index", java.lang.String.valueOf(var1));
+            val var7: CrashReporting = CrashReporting.INSTANCE;
+            val var8: Pair = s.a("index", java.lang.String.valueOf(var1));
             var3 = this.portalId;
             if (this.portalId == null) {
                var3 = "";
@@ -195,7 +195,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
                var4 = "true";
             }
 
-            var8.addBreadcrumb("getChildAt of non-zero index", L.l(new Pair[]{var7, var15, var12, s.a("childViewIsNull", var4)}), "portal");
+            var7.addBreadcrumb("getChildAt of non-zero index", L.l(new Pair[]{var8, var15, var12, s.a("childViewIsNull", var4)}), "portal");
          }
 
          val var13: View;

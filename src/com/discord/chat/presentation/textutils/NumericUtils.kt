@@ -61,22 +61,23 @@ public object NumericUtils {
 
    public fun toRomanNumeral(number: Long): String {
       if (var1 >= 1L) {
-         val var6: TreeMap = romanNumeralMap;
-         var var8: java.lang.String = romanNumeralMap.floorKey(var1);
-         val var3: Long = (var8 as java.lang.Number).longValue();
+         val var8: TreeMap = romanNumeralMap;
+         var var6: Any = romanNumeralMap.floorKey(var1);
+         val var3: Long = (var6 as java.lang.Number).longValue();
+         val var10: java.lang.String;
          if (var1 == var3) {
-            var8 = (java.lang.String)var6.get(var1);
-            var8 = var8;
+            val var9: Any = var8.get(var1);
+            var10 = var9 as java.lang.String;
          } else {
-            val var7: Any = var6.get(var3);
-            val var12: java.lang.String = this.toRomanNumeral(var1 - var3);
+            val var7: Any = var8.get(var3);
+            var6 = this.toRomanNumeral(var1 - var3);
             val var11: StringBuilder = new StringBuilder();
             var11.append(var7);
-            var11.append(var12);
-            var8 = var11.toString();
+            var11.append((java.lang.String)var6);
+            var10 = var11.toString();
          }
 
-         return var8;
+         return var10;
       } else {
          val var5: StringBuilder = new StringBuilder();
          var5.append("Number must be at least 1. Provided: ");

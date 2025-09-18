@@ -118,9 +118,9 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          var6.add(var2.getConfiguredComponentView(var8 as Component, var12, this, var9));
       }
 
-      val var13: java.util.List = CollectionsKt.e0(var6);
-      val var14: LinearLayout = this.binding.childrenViews;
-      MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      val var14: java.util.List = CollectionsKt.e0(var6);
+      val var13: LinearLayout = this.binding.childrenViews;
+      MessageComponentsViewKt.replaceViews$default(var13, var14, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
       this.configureSpoiler(var1, var3);
    }
 

@@ -3212,6 +3212,7 @@
   "Bal8Cg": "You've collected the Orbs Apprentice Badge!",
   "SWm2am": "Your Profile Effect is updated!",
   "ivaAAw": "Popular Picks",
+  "0+rBWV": "Badge",
   "HSX4HR": [
     "Profile effect preview: ",
     [
@@ -6607,23 +6608,8 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
-  "bp8vRE": [
-    "Double tap any message to react with ",
-    [
-      8,
-      "$b",
-      [
-        ":",
-        [
-          1,
-          "emojiName"
-        ],
-        ":"
-      ]
-    ],
-    " instantly. You can personalize your default reaction emoji anytime."
-  ],
-  "tdsiOz": "Change Default",
+  "yIax8v": "Double tap any message to react instantly. You can change your default reaction emoji anytime.",
+  "tdsiOz": "Set as default",
   "F6lRAA": "Double tap to react",
   "5/l2ra": [
     "React with ",
@@ -8723,6 +8709,8 @@
     ],
     "."
   ],
+  "HYg2Hh": "Remove some files to upload new ones.",
+  "0PhgpK": "File upload limit reached",
   "pmAt6+": [
     "You need to upload at least ",
     [
@@ -8732,6 +8720,82 @@
     " files."
   ],
   "9ovjIC": "At least 1 file is required.",
+  "tyxwW1": [
+    "Upload ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "a file"
+        ],
+        "other": [
+          "up to ",
+          [
+            7
+          ],
+          " files"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "SAr319": [
+    "Upload ",
+    [
+      2,
+      "minValues"
+    ],
+    " files under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "ZG+3Cg": [
+    "Upload ",
+    [
+      2,
+      "minValues"
+    ],
+    "–",
+    [
+      2,
+      "maxValues"
+    ],
+    " files under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "/2JwTk": [
+    "Upload ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "File"
+        ],
+        "other": [
+          "Files"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "ZMirp6": "Unknown file",
   "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
@@ -30962,6 +31026,30 @@
       "claimDate"
     ]
   ],
+  "UuzHh4": [
+    "Play ",
+    [
+      1,
+      "activityName"
+    ],
+    " Activity on Discord for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes and earn ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "VYwSSk": [
     "Play any Activity on Discord for ",
     [
@@ -31295,6 +31383,19 @@
   "JiosAg": "View Requirements",
   "vTgCW1": "View Reward",
   "SdlRnJ": "No Quests Available",
+  "xHXCyc": [
+    "Play ",
+    [
+      1,
+      "activityName"
+    ],
+    " Activity on Discord for ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "1NaRSk": [
     "Play any Activity on Discord for ",
     [
@@ -40166,6 +40267,53 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
+  "Sxed/P": "Item will be available immediately in User Profile settings.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Pressing ",
+        "\"",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        "\" ",
+        "on an item from the Shop means you’re claiming a limited license to use this item on Discord. Learn more in the “Virtual Goods” section ",
+        [
+          8,
+          "$link",
+          [
+            "here"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". By Claiming this item, you agree to the ",
+    [
+      8,
+      "$link",
+      [
+        "Paid Services Terms"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". Orbs redemptions are non-refundable."
+  ],
+  "FhJ74u": "Nitro Credits apply automatically for the stated credit duration, either immediately or, if you have an active Nitro subscription, at the end of your current billing cycle.",
+  "APcKRk": "Once claimed, this badge will be automatically applied to your profile.",
   "dsmHMz": "Redeem Using",
   "zLch/f": "Redeem Using Orbs",
   "y0WGqK": "Orbs Balance",

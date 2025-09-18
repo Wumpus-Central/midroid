@@ -63,17 +63,17 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
 
    public override fun toString(): String {
       val var1: java.lang.String = this.attachmentUrl;
-      val var4: java.lang.String = this.attachmentName;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AttachmentLinkContentNode(attachmentUrl=");
-      var3.append(var1);
-      var3.append(", attachmentName=");
-      var3.append(var4);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.attachmentName;
+      val var3: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AttachmentLinkContentNode(attachmentUrl=");
+      var4.append(var1);
+      var4.append(", attachmentName=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -146,15 +146,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var2: ProgressBar = new ProgressBar(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var2.setIndeterminate(true);
-      val var1: FrameLayout = new FrameLayout(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-1, -1));
-      var1.addView(var2);
-      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var1.setClickable(true);
-      this.progressLayout = var1;
+      val var1: ProgressBar = new ProgressBar(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var1.setIndeterminate(true);
+      val var2: FrameLayout = new FrameLayout(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-1, -1));
+      var2.addView(var1);
+      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var2.setClickable(true);
+      this.progressLayout = var2;
       this.runOnActivity(new l(this));
    }
 
@@ -299,11 +299,11 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
-      val var3: ReactApplicationContext = this.reactContext;
+      val var2: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.d;
-      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
+      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
    }
 
    @ReactMethod

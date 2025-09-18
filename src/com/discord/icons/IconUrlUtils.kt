@@ -43,14 +43,14 @@ public object IconUrlUtils {
          try {
             val var12: a = Result.e;
             val var17: MediaProxy = MediaProxy.INSTANCE;
-            val var7: java.lang.String = Hosts.INSTANCE.getCDN();
-            val var13: StringBuilder = new StringBuilder();
-            var13.append(var7);
-            var13.append("/channel-icons/");
-            var13.append(var2);
-            var13.append("/");
-            var13.append(var3);
-            var11 = Result.b(var17.withSize(var13.toString(), false, var5, var3));
+            val var13: java.lang.String = Hosts.INSTANCE.getCDN();
+            val var7: StringBuilder = new StringBuilder();
+            var7.append(var13);
+            var7.append("/channel-icons/");
+            var7.append(var2);
+            var7.append("/");
+            var7.append(var3);
+            var11 = Result.b(var17.withSize(var7.toString(), false, var5, var3));
          } catch (var8: java.lang.Throwable) {
             val var10: a = Result.e;
             var11 = Result.b(c.a(var8));
@@ -112,14 +112,14 @@ public object IconUrlUtils {
          label26:
          try {
             val var13: a = Result.e;
-            var3 = Hosts.INSTANCE.getCDN();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var3);
-            var7.append("/icons/");
-            var7.append(var1);
-            var7.append("/");
-            var7.append(var2);
-            var12 = Result.b(var7.toString());
+            val var7: java.lang.String = Hosts.INSTANCE.getCDN();
+            val var14: StringBuilder = new StringBuilder();
+            var14.append(var7);
+            var14.append("/icons/");
+            var14.append(var1);
+            var14.append("/");
+            var14.append(var2);
+            var12 = Result.b(var14.toString());
          } catch (var8: java.lang.Throwable) {
             val var11: a = Result.e;
             var12 = Result.b(c.a(var8));
@@ -155,16 +155,16 @@ public object IconUrlUtils {
          && GuildId.isValid-impl(var2.unbox-impl())
          && var3 != null
          && UserId.isValid-impl(var3.unbox-impl())) {
-         val var7: java.lang.String = Hosts.INSTANCE.getCDN();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var7);
-         var6.append("/guilds/");
-         var6.append(var2);
-         var6.append("/users/");
-         var6.append(var3);
-         var6.append("/avatars/");
-         var6.append(var1);
-         return MediaProxy.INSTANCE.withSize(var6.toString(), var5, var4, var1);
+         val var6: java.lang.String = Hosts.INSTANCE.getCDN();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append(var6);
+         var7.append("/guilds/");
+         var7.append(var2);
+         var7.append("/users/");
+         var7.append(var3);
+         var7.append("/avatars/");
+         var7.append(var1);
+         return MediaProxy.INSTANCE.withSize(var7.toString(), var5, var4, var1);
       } else {
          return "";
       }
@@ -185,14 +185,14 @@ public object IconUrlUtils {
             label43:
             try {
                val var12: a = Result.e;
-               val var13: java.lang.String = Hosts.INSTANCE.getCDN();
-               val var18: StringBuilder = new StringBuilder();
-               var18.append(var13);
-               var18.append("/avatars/");
-               var18.append(var2);
-               var18.append("/");
-               var18.append(var3);
-               var11 = Result.b(MediaProxy.INSTANCE.withSize(var18.toString(), var5, var6, var3));
+               val var18: java.lang.String = Hosts.INSTANCE.getCDN();
+               val var13: StringBuilder = new StringBuilder();
+               var13.append(var18);
+               var13.append("/avatars/");
+               var13.append(var2);
+               var13.append("/");
+               var13.append(var3);
+               var11 = Result.b(MediaProxy.INSTANCE.withSize(var13.toString(), var5, var6, var3));
             } catch (var8: java.lang.Throwable) {
                val var17: a = Result.e;
                var11 = Result.b(c.a(var8));

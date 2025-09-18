@@ -294,63 +294,63 @@ internal sealed class FastestListPlaceholderType protected constructor() {
       }
 
       public override fun toString(): String {
-         val var14: Int = this.backgroundColor;
-         val var5: Float = this.borderRadius;
-         val var8: Float = this.borderTopLeftRadius;
-         val var3: Float = this.borderTopRightRadius;
-         val var9: Float = this.borderBottomLeftRadius;
-         val var4: Float = this.borderBottomRightRadius;
+         val var16: Int = this.backgroundColor;
+         val var9: Float = this.borderRadius;
+         val var11: Float = this.borderTopLeftRadius;
+         val var6: Float = this.borderTopRightRadius;
+         val var10: Float = this.borderBottomLeftRadius;
+         val var13: Float = this.borderBottomRightRadius;
          val var15: Int = this.color;
          val var17: Boolean = this.divider;
-         val var16: Int = this.dividerColor;
-         val var7: Float = this.dividerPaddingLeft;
-         val var6: Float = this.dividerPaddingRight;
-         val var1: Float = this.padding;
-         val var18: FastestListPlaceholderType.Shape.Type = this.shapeType;
+         val var14: Int = this.dividerColor;
+         val var1: Float = this.dividerPaddingLeft;
+         val var8: Float = this.dividerPaddingRight;
+         val var7: Float = this.padding;
+         val var19: FastestListPlaceholderType.Shape.Type = this.shapeType;
          val var12: Float = this.shapeSize;
-         val var13: Float = this.labelPadding;
-         val var2: Float = this.labelPaddingInnerRatio;
-         val var11: Float = this.labelSize;
-         val var10: Float = this.labelSecondarySize;
-         val var19: StringBuilder = new StringBuilder();
-         var19.append("FeedItem(backgroundColor=");
-         var19.append(var14);
-         var19.append(", borderRadius=");
-         var19.append(var5);
-         var19.append(", borderTopLeftRadius=");
-         var19.append(var8);
-         var19.append(", borderTopRightRadius=");
-         var19.append(var3);
-         var19.append(", borderBottomLeftRadius=");
-         var19.append(var9);
-         var19.append(", borderBottomRightRadius=");
-         var19.append(var4);
-         var19.append(", color=");
-         var19.append(var15);
-         var19.append(", divider=");
-         var19.append(var17);
-         var19.append(", dividerColor=");
-         var19.append(var16);
-         var19.append(", dividerPaddingLeft=");
-         var19.append(var7);
-         var19.append(", dividerPaddingRight=");
-         var19.append(var6);
-         var19.append(", padding=");
-         var19.append(var1);
-         var19.append(", shapeType=");
-         var19.append(var18);
-         var19.append(", shapeSize=");
-         var19.append(var12);
-         var19.append(", labelPadding=");
-         var19.append(var13);
-         var19.append(", labelPaddingInnerRatio=");
-         var19.append(var2);
-         var19.append(", labelSize=");
-         var19.append(var11);
-         var19.append(", labelSecondarySize=");
-         var19.append(var10);
-         var19.append(")");
-         return var19.toString();
+         val var3: Float = this.labelPadding;
+         val var4: Float = this.labelPaddingInnerRatio;
+         val var2: Float = this.labelSize;
+         val var5: Float = this.labelSecondarySize;
+         val var18: StringBuilder = new StringBuilder();
+         var18.append("FeedItem(backgroundColor=");
+         var18.append(var16);
+         var18.append(", borderRadius=");
+         var18.append(var9);
+         var18.append(", borderTopLeftRadius=");
+         var18.append(var11);
+         var18.append(", borderTopRightRadius=");
+         var18.append(var6);
+         var18.append(", borderBottomLeftRadius=");
+         var18.append(var10);
+         var18.append(", borderBottomRightRadius=");
+         var18.append(var13);
+         var18.append(", color=");
+         var18.append(var15);
+         var18.append(", divider=");
+         var18.append(var17);
+         var18.append(", dividerColor=");
+         var18.append(var14);
+         var18.append(", dividerPaddingLeft=");
+         var18.append(var1);
+         var18.append(", dividerPaddingRight=");
+         var18.append(var8);
+         var18.append(", padding=");
+         var18.append(var7);
+         var18.append(", shapeType=");
+         var18.append(var19);
+         var18.append(", shapeSize=");
+         var18.append(var12);
+         var18.append(", labelPadding=");
+         var18.append(var3);
+         var18.append(", labelPaddingInnerRatio=");
+         var18.append(var4);
+         var18.append(", labelSize=");
+         var18.append(var2);
+         var18.append(", labelSecondarySize=");
+         var18.append(var5);
+         var18.append(")");
+         return var18.toString();
       }
    }
 
@@ -504,12 +504,12 @@ internal sealed class FastestListPlaceholderType protected constructor() {
       }
 
       public override fun hashCode(): Int {
-         val var5: Int = java.lang.Float.hashCode(this.borderRadius);
-         val var6: Int = Integer.hashCode(this.color);
-         val var3: Int = Integer.hashCode(this.count);
-         val var8: Int = java.lang.Float.hashCode(this.gap);
-         val var7: Int = java.lang.Float.hashCode(this.paddingHorizontal);
-         val var4: Int = java.lang.Float.hashCode(this.paddingVertical);
+         val var6: Int = java.lang.Float.hashCode(this.borderRadius);
+         val var8: Int = Integer.hashCode(this.color);
+         val var4: Int = Integer.hashCode(this.count);
+         val var5: Int = java.lang.Float.hashCode(this.gap);
+         val var3: Int = java.lang.Float.hashCode(this.paddingHorizontal);
+         val var7: Int = java.lang.Float.hashCode(this.paddingVertical);
          var var2: Int = 0;
          val var1: Int;
          if (this.width == null) {
@@ -523,7 +523,7 @@ internal sealed class FastestListPlaceholderType protected constructor() {
          }
 
          return (
-                  ((((((((var5 * 31 + var6) * 31 + var3) * 31 + var8) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.type.hashCode()) * 31
+                  ((((((((var6 * 31 + var8) * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + this.type.hashCode()) * 31
                      + this.verticalAlignment.hashCode()
                )
                * 31
@@ -531,42 +531,42 @@ internal sealed class FastestListPlaceholderType protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: Float = this.borderRadius;
+         val var1: Float = this.borderRadius;
          val var6: Int = this.color;
          val var5: Int = this.count;
-         val var3: Float = this.gap;
-         val var4: Float = this.paddingHorizontal;
-         val var1: Float = this.paddingVertical;
-         val var8: java.lang.Float = this.width;
+         val var2: Float = this.gap;
+         val var3: Float = this.paddingHorizontal;
+         val var4: Float = this.paddingVertical;
+         val var9: java.lang.Float = this.width;
          val var11: java.lang.Float = this.height;
-         val var9: FastestListPlaceholderType.Shape.Type = this.type;
-         val var10: FastestListPlaceholderAlignment.Vertical = this.verticalAlignment;
+         val var8: FastestListPlaceholderType.Shape.Type = this.type;
+         val var12: FastestListPlaceholderAlignment.Vertical = this.verticalAlignment;
          val var7: FastestListPlaceholderAlignment.Horizontal = this.horizontalAlignment;
-         val var12: StringBuilder = new StringBuilder();
-         var12.append("Shape(borderRadius=");
-         var12.append(var2);
-         var12.append(", color=");
-         var12.append(var6);
-         var12.append(", count=");
-         var12.append(var5);
-         var12.append(", gap=");
-         var12.append(var3);
-         var12.append(", paddingHorizontal=");
-         var12.append(var4);
-         var12.append(", paddingVertical=");
-         var12.append(var1);
-         var12.append(", width=");
-         var12.append(var8);
-         var12.append(", height=");
-         var12.append(var11);
-         var12.append(", type=");
-         var12.append(var9);
-         var12.append(", verticalAlignment=");
-         var12.append(var10);
-         var12.append(", horizontalAlignment=");
-         var12.append(var7);
-         var12.append(")");
-         return var12.toString();
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("Shape(borderRadius=");
+         var10.append(var1);
+         var10.append(", color=");
+         var10.append(var6);
+         var10.append(", count=");
+         var10.append(var5);
+         var10.append(", gap=");
+         var10.append(var2);
+         var10.append(", paddingHorizontal=");
+         var10.append(var3);
+         var10.append(", paddingVertical=");
+         var10.append(var4);
+         var10.append(", width=");
+         var10.append(var9);
+         var10.append(", height=");
+         var10.append(var11);
+         var10.append(", type=");
+         var10.append(var8);
+         var10.append(", verticalAlignment=");
+         var10.append(var12);
+         var10.append(", horizontalAlignment=");
+         var10.append(var7);
+         var10.append(")");
+         return var10.toString();
       }
 
       public enum class Type {

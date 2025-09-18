@@ -139,8 +139,8 @@ public object ImageQualityCalculator {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
       var var11: Double = 0.0;
-      var var15: Double = 0.0;
       var var17: Double = 0.0;
+      var var15: Double = 0.0;
       var var13: Double = 0.0;
 
       var var9: Double;
@@ -149,24 +149,24 @@ public object ImageQualityCalculator {
             val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
             val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
             var11 += var21;
-            var15 += var19;
-            var17 += var21 * var21;
+            var17 += var19;
+            var15 += var21 * var21;
             var13 += var19 * var19;
             var9 += var21 * var19;
          }
       }
 
       val var23: Double = var26;
-      val var37: Double = var11 / var26;
-      val var36: Double = var15 / var26;
-      var17 = (var17 - var11 * var37) / var23;
-      var13 = (var13 - var15 * var36) / var23;
-      var9 = (var9 - var11 * var36) / var23;
-      var15 = var7;
+      val var36: Double = var11 / var26;
+      val var37: Double = var17 / var26;
+      var15 = (var15 - var11 * var36) / var23;
+      var13 = (var13 - var17 * var37) / var23;
+      var17 = (var9 - var11 * var37) / var23;
+      var9 = var7;
       var11 = var8;
-      var13 = (var37 * var37 + var36 * var36 + var15) * (var17 + var13 + var8);
-      if ((var37 * var37 + var36 * var36 + var15) * (var17 + var13 + var8) > 0.0) {
-         var9 = (var37 * 2.0 * var36 + var15) * (var9 * 2.0 + var11) / var13;
+      var13 = (var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8);
+      if ((var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var9) * (var17 * 2.0 + var11) / var13;
       } else {
          var9 = 0.0;
       }
@@ -287,24 +287,24 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
-                  var var7: Int;
+                  var var6: Int;
                   var var8: Int;
                   try {
-                     var7 = this.$originalBitmap.getWidth();
-                     var8 = this.$originalBitmap.getHeight();
+                     var8 = this.$originalBitmap.getWidth();
+                     var6 = this.$originalBitmap.getHeight();
                   } catch (var20: Exception) {
                      return null;
                   }
 
-                  val var6: Int = var7 * var8;
+                  val var7: Int = var8 * var6;
 
                   var var13: IntArray;
                   var var15: IntArray;
                   try {
-                     var13 = new int[var6];
-                     var15 = new int[var6];
-                     this.$originalBitmap.getPixels(var13, 0, var7, 0, 0, var7, var8);
-                     this.$compressedBitmap.getPixels(var15, 0, var7, 0, 0, var7, var8);
+                     var13 = new int[var7];
+                     var15 = new int[var7];
+                     this.$originalBitmap.getPixels(var13, 0, var8, 0, 0, var8, var6);
+                     this.$compressedBitmap.getPixels(var15, 0, var8, 0, 0, var8, var6);
                   } catch (var19: Exception) {
                      return null;
                   }
@@ -333,8 +333,8 @@ public object ImageQualityCalculator {
                      val var9: Long = System.nanoTime();
                      val var27: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      var1 = new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var7, var8),
-                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var7, var8),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var8, var6),
+                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var8, var6),
                         (System.nanoTime() - var9) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );
@@ -483,19 +483,19 @@ public object ImageQualityCalculator {
       }
 
       public override fun toString(): String {
-         val var3: Double = this.psnr;
-         val var1: Double = this.ssim;
-         val var7: Long = this.psnrCalculationTimeMs;
-         val var5: Long = this.ssimCalculationTimeMs;
+         val var1: Double = this.psnr;
+         val var3: Double = this.ssim;
+         val var5: Long = this.psnrCalculationTimeMs;
+         val var7: Long = this.ssimCalculationTimeMs;
          val var9: StringBuilder = new StringBuilder();
          var9.append("ImageQualityMetrics(psnr=");
-         var9.append(var3);
-         var9.append(", ssim=");
          var9.append(var1);
+         var9.append(", ssim=");
+         var9.append(var3);
          var9.append(", psnrCalculationTimeMs=");
-         var9.append(var7);
-         var9.append(", ssimCalculationTimeMs=");
          var9.append(var5);
+         var9.append(", ssimCalculationTimeMs=");
+         var9.append(var7);
          var9.append(")");
          return var9.toString();
       }

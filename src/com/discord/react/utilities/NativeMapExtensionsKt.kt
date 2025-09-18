@@ -128,14 +128,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 }
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
-   val var4: WritableNativeMap = new WritableNativeMap();
+   val var3: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var4;
+   return var3;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -167,38 +167,38 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 }
 
 public fun ReadableMap.toJson(): JSONObject {
-   val var2: JSONObject = new JSONObject();
-   val var3: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var3: JSONObject = new JSONObject();
+   val var2: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var3.hasNextKey()) {
-      val var1: java.lang.String = var3.nextKey();
+   while (var2.hasNextKey()) {
+      val var1: java.lang.String = var2.nextKey();
       switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()]) {
          case 1:
-            var2.put(var1, JSONObject.NULL);
+            var3.put(var1, JSONObject.NULL);
             break;
          case 2:
-            var2.put(var1, var0.getBoolean(var1));
+            var3.put(var1, var0.getBoolean(var1));
             break;
          case 3:
-            var2.put(var1, var0.getDouble(var1));
+            var3.put(var1, var0.getDouble(var1));
             break;
          case 4:
-            var2.put(var1, var0.getString(var1));
+            var3.put(var1, var0.getString(var1));
             break;
          case 5:
             val var6: ReadableMap = var0.getMap(var1);
-            var2.put(var1, toJson(var6));
+            var3.put(var1, toJson(var6));
             break;
          case 6:
             val var5: ReadableArray = var0.getArray(var1);
-            var2.put(var1, NativeArrayExtensionsKt.toJson(var5));
+            var3.put(var1, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new n();
       }
    }
 
-   return var2;
+   return var3;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -209,18 +209,18 @@ public fun ReadableMap.toJsonString(): String {
 @JvmSynthetic
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    val var1: Json = getJson();
-   val var2: java.lang.String = toJsonString(var0);
-   val var3: sb.b = var1.a();
+   val var3: java.lang.String = toJsonString(var0);
+   val var2: sb.b = var1.a();
    Intrinsics.reifiedOperationMarker(6, "T");
    MagicApiIntrinsics.voidMagicApiCall("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(k.d(var3, null), var2);
+   return (T)var1.b(k.d(var2, null), var3);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

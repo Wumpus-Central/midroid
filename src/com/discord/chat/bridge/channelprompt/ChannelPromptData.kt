@@ -151,30 +151,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.cameraButtonIcon;
-      val var4: java.lang.String = this.gifButtonIcon;
-      val var8: java.lang.String = this.emojiButtonIcon;
-      val var2: java.lang.String = this.gamingStatsButtonText;
-      val var5: java.lang.String = this.cameraButtonText;
+      val var7: java.lang.String = this.cameraButtonIcon;
+      val var8: java.lang.String = this.gifButtonIcon;
+      val var6: java.lang.String = this.emojiButtonIcon;
+      val var3: java.lang.String = this.gamingStatsButtonText;
+      val var2: java.lang.String = this.cameraButtonText;
       val var1: java.lang.String = this.gifButtonText;
-      val var7: java.lang.String = this.emojiButtonText;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ChannelPromptData(cameraButtonIcon=");
-      var6.append(var3);
-      var6.append(", gifButtonIcon=");
-      var6.append(var4);
-      var6.append(", emojiButtonIcon=");
-      var6.append(var8);
-      var6.append(", gamingStatsButtonText=");
-      var6.append(var2);
-      var6.append(", cameraButtonText=");
-      var6.append(var5);
-      var6.append(", gifButtonText=");
-      var6.append(var1);
-      var6.append(", emojiButtonText=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.emojiButtonText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChannelPromptData(cameraButtonIcon=");
+      var4.append(var7);
+      var4.append(", gifButtonIcon=");
+      var4.append(var8);
+      var4.append(", emojiButtonIcon=");
+      var4.append(var6);
+      var4.append(", gamingStatsButtonText=");
+      var4.append(var3);
+      var4.append(", cameraButtonText=");
+      var4.append(var2);
+      var4.append(", gifButtonText=");
+      var4.append(var1);
+      var4.append(", emojiButtonText=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -91,12 +91,12 @@ public data class PollAction(label: String,
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var3: java.lang.String = this.label;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var3);
-         var2.append("  •  ");
-         var2.append(var1);
-         return var2.toString();
+         val var2: java.lang.String = this.label;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append("  •  ");
+         var3.append(var1);
+         return var3.toString();
       }
    }
 
@@ -127,27 +127,27 @@ public data class PollAction(label: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
-      val var4: PollActionPresentation = this.presentation;
+      val var5: java.lang.String = this.label;
+      val var7: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var6: java.lang.String = this.type;
-      val var7: java.lang.String = this.secondaryLabel;
-      val var2: java.lang.String = this.accessibilityHint;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PollAction(label=");
-      var5.append(var3);
-      var5.append(", presentation=");
-      var5.append(var4);
-      var5.append(", enabled=");
-      var5.append(var1);
-      var5.append(", type=");
-      var5.append(var6);
-      var5.append(", secondaryLabel=");
-      var5.append(var7);
-      var5.append(", accessibilityHint=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.type;
+      val var2: java.lang.String = this.secondaryLabel;
+      val var6: java.lang.String = this.accessibilityHint;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollAction(label=");
+      var4.append(var5);
+      var4.append(", presentation=");
+      var4.append(var7);
+      var4.append(", enabled=");
+      var4.append(var1);
+      var4.append(", type=");
+      var4.append(var3);
+      var4.append(", secondaryLabel=");
+      var4.append(var2);
+      var4.append(", accessibilityHint=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

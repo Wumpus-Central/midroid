@@ -186,19 +186,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var5: NativeConnection = this.engineConnections.get(var1);
-      if (var5 == null) {
-         val var4: Log = Log.INSTANCE;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("[");
-         var3.append(var2);
-         var3.append("] no NativeConnection for connectionId=");
-         var3.append(var1);
-         var3.append(", returning null");
-         Log.w$default(var4, "MediaEngine", var3.toString(), null, 4, null);
+      val var4: NativeConnection = this.engineConnections.get(var1);
+      if (var4 == null) {
+         val var3: Log = Log.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("[");
+         var5.append(var2);
+         var5.append("] no NativeConnection for connectionId=");
+         var5.append(var1);
+         var5.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var5;
+      return var4;
    }
 
    @JvmStatic
@@ -879,7 +879,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 01a: new org/json/JSONObject
       // 01d: dup
       // 01e: invokespecial org/json/JSONObject.<init> ()V
-      // 021: astore 7
+      // 021: astore 8
       // 023: bipush 0
       // 024: anewarray 363
       // 027: astore 6
@@ -892,11 +892,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 034: invokespecial android/media/MediaCodecList.<init> (I)V
       // 037: invokevirtual android/media/MediaCodecList.getCodecInfos ()[Landroid/media/MediaCodecInfo;
       // 03a: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
-      // 03d: astore 8
-      // 03f: aload 8
+      // 03d: astore 7
+      // 03f: aload 7
       // 041: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 046: ifeq 143
-      // 049: aload 8
+      // 049: aload 7
       // 04b: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 050: checkcast android/media/MediaCodecInfo
       // 053: astore 9
@@ -1008,7 +1008,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 13b: astore 5
       // 13d: goto 0b9
       // 140: goto 03f
-      // 143: aload 7
+      // 143: aload 8
       // 145: ldc_w "available_video_encoders"
       // 148: new org/json/JSONArray
       // 14b: dup
@@ -1016,7 +1016,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 14e: invokespecial org/json/JSONArray.<init> (Ljava/lang/Object;)V
       // 151: invokevirtual org/json/JSONObject.put (Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
       // 154: pop
-      // 155: aload 7
+      // 155: aload 8
       // 157: ldc_w "available_video_decoders"
       // 15a: new org/json/JSONArray
       // 15d: dup
@@ -1024,7 +1024,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 160: invokespecial org/json/JSONArray.<init> (Ljava/lang/Object;)V
       // 163: invokevirtual org/json/JSONObject.put (Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
       // 166: pop
-      // 167: aload 7
+      // 167: aload 8
       // 169: invokevirtual org/json/JSONObject.toString ()Ljava/lang/String;
       // 16c: astore 4
       // 16e: aload 4

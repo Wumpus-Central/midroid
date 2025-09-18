@@ -75,21 +75,21 @@ public data class SharedCustomThemeMessageAccessory(channelId: ChannelId, messag
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: SharedCustomThemeData = this.data;
-      val var4: java.lang.String = this.author;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SharedCustomThemeMessageAccessory(channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var5);
-      var2.append(", data=");
-      var2.append(var3);
-      var2.append(", author=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: SharedCustomThemeData = this.data;
+      val var3: java.lang.String = this.author;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SharedCustomThemeMessageAccessory(channelId=");
+      var4.append(var5);
+      var4.append(", messageId=");
+      var4.append(var1);
+      var4.append(", data=");
+      var4.append(var2);
+      var4.append(", author=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

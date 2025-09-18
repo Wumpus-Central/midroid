@@ -38,12 +38,12 @@ public object PlayAssetDelivery {
                assetPackLocations.put(var11, var4);
             }
 
-            val var5: Log = Log.INSTANCE;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("Download of ");
-            var8.append(var11);
-            var8.append(" Asset complete");
-            Log.i$default(var5, "PlayAssetDelivery", var8.toString(), null, 4, null);
+            val var8: Log = Log.INSTANCE;
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Download of ");
+            var5.append(var11);
+            var5.append(" Asset complete");
+            Log.i$default(var8, "PlayAssetDelivery", var5.toString(), null, 4, null);
             var9 = java.lang.Boolean.TRUE;
          } else {
             label26: {
@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var10: Log = Log.INSTANCE;
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Download of ");
-               var6.append(var11);
-               var6.append(" Asset failed");
-               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
+               val var6: Log = Log.INSTANCE;
+               val var10: StringBuilder = new StringBuilder();
+               var10.append("Download of ");
+               var10.append(var11);
+               var10.append(" Asset failed");
+               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }
@@ -300,12 +300,12 @@ public object PlayAssetDelivery {
          var7 = null;
          if (var4.c() == 0) {
             if (var4.b() == null) {
-               val var9: Log = Log.INSTANCE;
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Asset ");
-               var8.append(var1);
-               var8.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var9, "PlayAssetDelivery", var8.toString(), null, 4, null);
+               val var8: Log = Log.INSTANCE;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Asset ");
+               var9.append(var1);
+               var9.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+               Log.w$default(var8, "PlayAssetDelivery", var9.toString(), null, 4, null);
                var7 = null;
             } else {
                var7 = var4.b();

@@ -150,13 +150,13 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    }
 
    private fun clearInlineMedia() {
-      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView;
-      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
-      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
+      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView;
+      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
+      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
       val var6: EmbedViewResizingMediaView = this.binding.inlineMediaView4;
 
       for (int var1 = 0; var1 < 4; var1++) {
-         val var7: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var2, var4, var3, var6}[var1];
+         val var7: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var4, var3, var2, var6}[var1];
          MediaView.setMediaData$default(
             var7, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262142, null
          );
@@ -458,20 +458,20 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var29 = "";
          }
 
-         val var22: StructurableText = var21.getName();
+         val var23: StructurableText = var21.getName();
          var var31: DraweeSpanStringBuilder;
-         if (var22 != null) {
+         if (var23 != null) {
             val var18: Context = var20.getContext();
-            val var23: TextPaint = var20.getBinding().name.getPaint();
+            val var22: TextPaint = var20.getBinding().name.getPaint();
             var31 = TextUtilsKt.toSpannable$default(
-               var22,
+               var23,
                var18,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var23,
+               var22,
                var24,
                var8,
                var12,
@@ -504,20 +504,20 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var30 = "";
          }
 
-         val var32: StructurableText = var21.getValue();
-         if (var32 != null) {
-            val var36: Context = var20.getContext();
-            val var35: TextPaint = var20.getBinding().value.getPaint();
+         val var35: StructurableText = var21.getValue();
+         if (var35 != null) {
+            val var32: Context = var20.getContext();
+            val var36: TextPaint = var20.getBinding().value.getPaint();
             val var34: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
             var31 = TextUtilsKt.toSpannable$default(
+               var35,
                var32,
-               var36,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var35,
+               var36,
                var24,
                var8,
                var12,
@@ -804,20 +804,20 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             }
          }
       } else {
-         val var78: StructurableText = var1.getTitle();
+         val var35: StructurableText = var1.getTitle();
          val var79: DraweeSpanStringBuilder;
-         if (var78 != null) {
-            val var34: Context = this.getContext();
-            val var35: TextPaint = this.binding.title.getPaint();
+         if (var35 != null) {
+            val var78: Context = this.getContext();
+            val var34: TextPaint = this.binding.title.getPaint();
             var79 = TextUtilsKt.toSpannable$default(
+               var35,
                var78,
-               var34,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var35,
+               var34,
                null,
                null,
                var22,

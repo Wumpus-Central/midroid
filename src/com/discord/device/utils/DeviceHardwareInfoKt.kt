@@ -239,7 +239,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 13
+   // 0d8: astore 14
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -263,17 +263,17 @@ internal fun maxCpuFreq(): String {
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 13
+   // 10a: aload 14
    // 10c: athrow
-   // 10d: astore 14
+   // 10d: astore 13
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 13
+   // 115: aload 14
    // 117: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 14
+   // 11e: aload 13
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -337,12 +337,12 @@ internal fun socName(): String {
       }
 
       var0 = a.a();
-      val var1: java.lang.String = b.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var0);
-      var2.append("_");
-      var2.append(var1);
-      return var2.toString();
+      val var2: java.lang.String = b.a();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(var0);
+      var1.append("_");
+      var1.append(var2);
+      return var1.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

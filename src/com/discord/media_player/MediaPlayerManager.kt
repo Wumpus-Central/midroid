@@ -258,9 +258,9 @@ public object MediaPlayerManager {
                         var5 = var6.getPlaybackRateFlow$media_player_release();
 
                         do {
-                           var26 = var5.getValue();
-                           val var19: Pair = var26 as Pair;
-                        } while (!var5.b(var26, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
+                           var15 = (MediaSource)var5.getValue();
+                           val var26: Pair = var15 as Pair;
+                        } while (!var5.b(var15, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
 
                         return Unit.a;
                      }
@@ -272,12 +272,12 @@ public object MediaPlayerManager {
                            }
 
                            var6.getPlaybackRateFlow$media_player_release().setValue(s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0)));
-                           val var18: MutableStateFlow = var6.getPlaybackProgressFlow$media_player_release();
+                           var5 = var6.getPlaybackProgressFlow$media_player_release();
 
                            do {
-                              var1 = var18.getValue();
+                              var1 = var5.getValue();
                            } while (
-                              !var18.b(
+                              !var5.b(
                                  var1,
                                  MediaPlayerManager.PlaybackProgress.copy$default(
                                     (MediaPlayerManager.PlaybackProgress)var1, null, ((MediaPlayerManager.PlaybackProgress)var1).getDurationMs(), 0L, 5, null

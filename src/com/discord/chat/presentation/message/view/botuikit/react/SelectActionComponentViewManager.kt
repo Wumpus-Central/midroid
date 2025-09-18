@@ -70,10 +70,10 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
    public fun setModel(view: SelectComponentView, model: ReadableMap) {
       var var3: Boolean;
       try {
-         val var5: Json = ComponentDeserializerKt.getJson();
-         val var19: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var19: Json = ComponentDeserializerKt.getJson();
+         val var5: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var15 = var5.b(var19, var14) as Component;
+         var15 = var19.b(var5, var14) as Component;
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();
