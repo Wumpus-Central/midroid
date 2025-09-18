@@ -105,11 +105,11 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
          }
 
          val var12: Log = Log.INSTANCE;
-         val var16: java.lang.String = toForegroundServiceTypeString(var4);
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("Foregrounding ForegroundService with type ");
-         var10.append(var16);
-         Log.i$foreground_service_release$default(var12, var10.toString(), null, 2, null);
+         val var10: java.lang.String = toForegroundServiceTypeString(var4);
+         val var16: StringBuilder = new StringBuilder();
+         var16.append("Foregrounding ForegroundService with type ");
+         var16.append(var10);
+         Log.i$foreground_service_release$default(var12, var16.toString(), null, 2, null);
          a.a(var0, var2, var3, var4);
       }
    }

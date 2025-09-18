@@ -152,33 +152,33 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = UserId.toString-impl(this.userId);
+      val var5: java.lang.String = UserId.toString-impl(this.userId);
       val var1: Int = this.usernameColor;
       val var7: java.lang.String = this.avatarURL;
       val var2: Int = this.targetUsernameColor;
-      val var4: AnnotatedStructurableText = this.content;
-      val var6: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var8: java.lang.Boolean = this.showAppsIcon;
+      val var6: AnnotatedStructurableText = this.content;
+      val var3: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var4: java.lang.Boolean = this.showAppsIcon;
       val var9: java.lang.Boolean = this.showControllerIcon;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ExecutedCommand(userId=");
-      var5.append(var3);
-      var5.append(", usernameColor=");
-      var5.append(var1);
-      var5.append(", avatarURL=");
-      var5.append(var7);
-      var5.append(", targetUsernameColor=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var4);
-      var5.append(", commandNameBackgroundStyles=");
-      var5.append(var6);
-      var5.append(", showAppsIcon=");
-      var5.append(var8);
-      var5.append(", showControllerIcon=");
-      var5.append(var9);
-      var5.append(")");
-      return var5.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ExecutedCommand(userId=");
+      var8.append(var5);
+      var8.append(", usernameColor=");
+      var8.append(var1);
+      var8.append(", avatarURL=");
+      var8.append(var7);
+      var8.append(", targetUsernameColor=");
+      var8.append(var2);
+      var8.append(", content=");
+      var8.append(var6);
+      var8.append(", commandNameBackgroundStyles=");
+      var8.append(var3);
+      var8.append(", showAppsIcon=");
+      var8.append(var4);
+      var8.append(", showControllerIcon=");
+      var8.append(var9);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

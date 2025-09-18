@@ -201,13 +201,13 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun finishWithResult(authCode: String?, authServerUrl: String?) {
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Finishing With Result. AuthCode: ");
-      var3.append(var1);
-      var3.append(", AuthServerUrl: ");
-      var3.append(var2);
-      Log.i$default(var4, "Samsung", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Finishing With Result. AuthCode: ");
+      var4.append(var1);
+      var4.append(", AuthServerUrl: ");
+      var4.append(var2);
+      Log.i$default(var3, "Samsung", var4.toString(), null, 4, null);
       if (var1 != null && !StringsKt.c0(var1) && var2 != null && !StringsKt.c0(var2)) {
          val var6: Intent = new Intent();
          var6.putExtra("com.discord.samsung.intent.extra.AUTH_CODE", var1);
@@ -231,14 +231,14 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var2: Log = Log.INSTANCE;
+      val var1: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var1: Intent = serviceIntent;
+      val var2: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var1, this.serviceConnection, 1)) {
-            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var2, this.serviceConnection, 1)) {
+            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }
@@ -371,14 +371,14 @@ public class SamsungConnectActivity : AppCompatActivity {
 
          public override fun toString(): String {
             val var1: java.lang.String = this.authCode;
-            val var3: java.lang.String = this.serverUrl;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Success(authCode=");
-            var2.append(var1);
-            var2.append(", serverUrl=");
-            var2.append(var3);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.lang.String = this.serverUrl;
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("Success(authCode=");
+            var3.append(var1);
+            var3.append(", serverUrl=");
+            var3.append(var2);
+            var3.append(")");
+            return var3.toString();
          }
       }
    }

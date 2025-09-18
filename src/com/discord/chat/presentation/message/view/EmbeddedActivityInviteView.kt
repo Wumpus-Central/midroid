@@ -184,11 +184,11 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
-      var2 = var3 * 9 / 16;
+      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var3 = var2 * 9 / 16;
       val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
       var4 = this.binding.itemHero;
-      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(

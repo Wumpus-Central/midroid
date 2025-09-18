@@ -135,9 +135,9 @@ public object CodeRules {
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
       var var9: Rule = var34.createTagRule(var1);
-      var7 = PATTERN_LEADING_WS_CONSUMER;
+      val var8: Pattern = PATTERN_LEADING_WS_CONSUMER;
       var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
-      val var8: Pattern = PATTERN_TEXT;
+      var7 = PATTERN_TEXT;
       val var32: java.util.List = CollectionsKt.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       var9 = toMatchGroupRule$default(this, var39, 0, var1.getCommentStyleProvider(), 1, null);
@@ -158,8 +158,8 @@ public object CodeRules {
             var50,
             toMatchGroupRule$default(this, var54, 0, var1.getKeywordStyleProvider(), 1, null),
             toMatchGroupRule$default(this, PATTERN_NUMBERS, 0, var1.getLiteralStyleProvider(), 1, null),
-            toMatchGroupRule$default(this, var7, 0, null, 3, null),
-            toMatchGroupRule$default(this, var8, 0, null, 3, null)
+            toMatchGroupRule$default(this, var8, 0, null, 3, null),
+            toMatchGroupRule$default(this, var7, 0, null, 3, null)
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
@@ -169,10 +169,10 @@ public object CodeRules {
          var1, var41, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
-      val var48: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
+      val var42: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
       val var52: Array<java.lang.String> = var51.getKEYWORDS();
       val var13: java.util.List = this.createGenericCodeRules(
-         var1, var48, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
+         var1, var42, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
       );
       return L.l(
          new Pair[]{

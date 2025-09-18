@@ -54,8 +54,8 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
       View var3 = a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.role_subscription_purchase_badge;
-         SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.role_subscription_purchase_card_bg;
             SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
             if (var4 != null) {
@@ -69,9 +69,9 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
                      TextView var2 = (TextView)a.a(var0, var1);
                      if (var2 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var8 = (TextView)a.a(var0, var1);
-                        if (var8 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var3, var6, var4, var5, var7, var2, var8);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var3, var8, var4, var5, var7, var2, var6);
                         }
                      }
                   }

@@ -51,25 +51,25 @@ public class ExternalPipTransitionView(context: Context) : View(var1) {
       }
 
       public fun tryHide(activity: Activity?, animate: Boolean) {
-         val var3: View;
+         var var3: ViewGroup = null;
+         val var4: View;
          if (var1 != null) {
-            var3 = ActivityExtensionsKt.getRootView(var1);
+            var4 = ActivityExtensionsKt.getRootView(var1);
          } else {
-            var3 = null;
+            var4 = null;
          }
 
-         var var5: ViewGroup = null;
-         if (var3 is ViewGroup) {
-            var5 = var3 as ViewGroup;
+         if (var4 is ViewGroup) {
+            var3 = var4 as ViewGroup;
          }
 
-         if (var5 != null) {
-            val var6: ExternalPipTransitionView = var5.findViewWithTag(ExternalPipTransitionView.access$getTransitionViewTag$cp()) as ExternalPipTransitionView;
-            if (var6 != null) {
+         if (var3 != null) {
+            val var5: ExternalPipTransitionView = var3.findViewWithTag(ExternalPipTransitionView.access$getTransitionViewTag$cp()) as ExternalPipTransitionView;
+            if (var5 != null) {
                if (var2) {
-                  ExternalPipTransitionView.fadeOut$default(var6, 0L, 0L, new j(var5, var6), 3, null);
+                  ExternalPipTransitionView.fadeOut$default(var5, 0L, 0L, new j(var3, var5), 3, null);
                } else {
-                  var5.removeView(var6);
+                  var3.removeView(var5);
                }
             }
          }
@@ -77,21 +77,21 @@ public class ExternalPipTransitionView(context: Context) : View(var1) {
 
       public fun tryShow(activity: Activity?) {
          this.tryHide(var1, false);
-         val var2: View;
+         var var2: ViewGroup = null;
+         val var3: View;
          if (var1 != null) {
-            var2 = ActivityExtensionsKt.getRootView(var1);
+            var3 = ActivityExtensionsKt.getRootView(var1);
          } else {
-            var2 = null;
+            var3 = null;
          }
 
-         var var4: ViewGroup = null;
-         if (var2 is ViewGroup) {
-            var4 = var2 as ViewGroup;
+         if (var3 is ViewGroup) {
+            var2 = var3 as ViewGroup;
          }
 
-         if (var4 != null) {
-            val var5: Context = var4.getContext();
-            var4.addView(new ExternalPipTransitionView(var5));
+         if (var2 != null) {
+            val var4: Context = var2.getContext();
+            var2.addView(new ExternalPipTransitionView(var4));
          }
       }
    }

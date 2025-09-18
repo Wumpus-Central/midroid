@@ -138,34 +138,34 @@ public object ImageQualityCalculator {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
       var var13: Double = 0.0;
-      var var17: Double = 0.0;
       var var15: Double = 0.0;
+      var var17: Double = 0.0;
       var var11: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var27 = 0; var27 < var6; var27++) {
-            val var19: Double = var1[(var5 + var25) * var3 + var4 + var27];
-            val var21: Double = var2[(var5 + var25) * var3 + var4 + var27];
-            var13 += var19;
-            var17 += var21;
-            var15 += var19 * var19;
-            var11 += var21 * var21;
-            var9 += var19 * var21;
+            val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
+            val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
+            var13 += var21;
+            var15 += var19;
+            var17 += var21 * var21;
+            var11 += var19 * var19;
+            var9 += var21 * var19;
          }
       }
 
       val var23: Double = var26;
-      val var37: Double = var13 / var26;
-      val var36: Double = var17 / var26;
-      var15 = (var15 - var13 * var37) / var23;
-      var11 = (var11 - var17 * var36) / var23;
-      var13 = (var9 - var13 * var36) / var23;
-      var17 = var7;
-      var9 = var8;
-      var11 = (var37 * var37 + var36 * var36 + var17) * (var15 + var11 + var8);
-      if ((var37 * var37 + var36 * var36 + var17) * (var15 + var11 + var8) > 0.0) {
-         var9 = (var37 * 2.0 * var36 + var17) * (var13 * 2.0 + var9) / var11;
+      val var36: Double = var13 / var26;
+      val var37: Double = var15 / var26;
+      var17 = (var17 - var13 * var36) / var23;
+      var11 = (var11 - var15 * var37) / var23;
+      var9 = (var9 - var13 * var37) / var23;
+      var15 = var7;
+      var13 = var8;
+      var11 = (var36 * var36 + var37 * var37 + var15) * (var17 + var11 + var8);
+      if ((var36 * var36 + var37 * var37 + var15) * (var17 + var11 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var15) * (var9 * 2.0 + var13) / var11;
       } else {
          var9 = 0.0;
       }
@@ -387,29 +387,29 @@ public object ImageQualityCalculator {
             } else {
                kotlin.c.b(var1);
 
-               var var3: Bitmap;
+               var var3: ImageQualityCalculator;
                var var5: Bitmap;
                try {
-                  var1 = ImageQualityCalculator.INSTANCE;
+                  var3 = ImageQualityCalculator.INSTANCE;
                   var5 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var3 = ImageQualityCalculator.access$decodeByteArraySafely(var1, this.$compressedData);
+                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(var3, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var5 != null && var3 != null) {
+               if (var5 != null && var1 != null) {
                   try {
                      this.label = 1;
-                     var3 = (Bitmap)var1.calculateQualityMetrics(var5, var3, this);
+                     var10 = var3.calculateQualityMetrics(var5, var1, this);
                   } catch (var6: Exception) {
                      return null;
                   }
 
-                  if (var3 === var4) {
+                  if (var10 === var4) {
                      return var4;
                   }
 
-                  return var3;
+                  return var10;
                }
             }
 
@@ -482,15 +482,15 @@ public object ImageQualityCalculator {
       }
 
       public override fun toString(): String {
-         val var3: Double = this.psnr;
-         val var1: Double = this.ssim;
+         val var1: Double = this.psnr;
+         val var3: Double = this.ssim;
          val var7: Long = this.psnrCalculationTimeMs;
          val var5: Long = this.ssimCalculationTimeMs;
          val var9: StringBuilder = new StringBuilder();
          var9.append("ImageQualityMetrics(psnr=");
-         var9.append(var3);
-         var9.append(", ssim=");
          var9.append(var1);
+         var9.append(", ssim=");
+         var9.append(var3);
          var9.append(", psnrCalculationTimeMs=");
          var9.append(var7);
          var9.append(", ssimCalculationTimeMs=");

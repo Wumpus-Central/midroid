@@ -152,31 +152,31 @@ public data class SoundmojiContentNode(soundId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.soundId;
-      val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.soundId;
+      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var6: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = this.content;
-      val var5: java.lang.String = this.guildId;
+      val var7: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var7: java.lang.String = this.emojiId;
-      val var8: java.lang.String = this.emojiName;
+      val var9: java.lang.String = this.emojiId;
+      val var2: java.lang.String = this.emojiName;
       val var4: StringBuilder = new StringBuilder();
       var4.append("SoundmojiContentNode(soundId=");
-      var4.append(var2);
+      var4.append(var5);
       var4.append(", channelId=");
-      var4.append(var9);
+      var4.append(var8);
       var4.append(", messageId=");
       var4.append(var6);
       var4.append(", content=");
       var4.append(var3);
       var4.append(", guildId=");
-      var4.append(var5);
+      var4.append(var7);
       var4.append(", jumboable=");
       var4.append(var1);
       var4.append(", emojiId=");
-      var4.append(var7);
+      var4.append(var9);
       var4.append(", emojiName=");
-      var4.append(var8);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

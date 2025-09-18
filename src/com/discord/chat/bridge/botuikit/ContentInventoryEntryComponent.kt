@@ -63,15 +63,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var2: java.lang.String = this.id;
+      val var4: ContentInventoryEntry = this.contentInventoryEntry;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ContentInventoryEntryComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var4);
-      var3.append(", contentInventoryEntry=");
       var3.append(var2);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

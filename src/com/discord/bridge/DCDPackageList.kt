@@ -205,6 +205,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
       var1.add(var2.getTurboPackageForModule("NativeStartupFlagsModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
+      var1.add(var2.getTurboPackageForModule("NativeTTIModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeArchitectureProvider", new g()));
       var2.addTurboPackages(
          var1,

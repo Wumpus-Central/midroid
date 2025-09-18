@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nTTIManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,92:1\n1557#2:93\n1628#2,3:94\n*S KotlinDebug\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n*L\n60#1:93\n60#1:94,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nTTIManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,97:1\n1557#2:98\n1628#2,3:99\n*S KotlinDebug\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n*L\n65#1:98\n65#1:99,3\n*E\n"])
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver = new TTIBroadcastReceiver()
 
@@ -59,7 +59,13 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    }
 
    public open fun getConstants(): MutableMap<String, Long> {
-      return L.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
+      val var1: TTILoggingApplication.Companion = TTILoggingApplication.Companion;
+      return L.m(
+         new Pair[]{
+            s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release()),
+            s.a("ApplicationStartedTimestamp", var1.getApplicationStartedTimestamp())
+         }
+      );
    }
 
    @ReactMethod
@@ -86,9 +92,9 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    public open fun initialize() {
       super.initialize();
       if (BuildConfig.logTTIMetrics) {
-         val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         var2.register(var1, this.ttiBroadcastReceiver);
+         val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var1.register(var2, this.ttiBroadcastReceiver);
       }
    }
 

@@ -1,69 +1,7 @@
-package com.discord.chat.presentation.list.delegate
-
-import android.annotation.SuppressLint
-import android.content.Context
-import android.view.ViewGroup
-import android.view.ViewGroup.LayoutParams
-import android.view.ViewGroup.MarginLayoutParams
-import androidx.recyclerview.widget.RecyclerView
-import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.BaseChatListAdapter
-import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
-import com.discord.chat.presentation.list.item.ChatListItem
-import com.discord.chat.presentation.list.item.DeserializationErrorMessageItem
-import com.discord.chat.presentation.message.ErrorMessageView
-import com.discord.misc.utilities.size.SizeUtilsKt
-import java.util.ArrayList
-import kotlin.jvm.internal.SourceDebugExtension
-
-@SourceDebugExtension(["SMAP\nDeserializationErrorMessageDelegate.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeserializationErrorMessageDelegate.kt\ncom/discord/chat/presentation/list/delegate/DeserializationErrorMessageDelegate\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,53:1\n176#2,2:54\n1567#3:56\n1598#3,4:57\n*S KotlinDebug\n*F\n+ 1 DeserializationErrorMessageDelegate.kt\ncom/discord/chat/presentation/list/delegate/DeserializationErrorMessageDelegate\n*L\n19#1:54,2\n40#1:56\n40#1:57,4\n*E\n"])
-public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
-   @JvmStatic
-   fun `bindView$lambda$1`(var0: BaseChatListItemDelegate.Metadata, var1: DeserializationErrorMessageItem, var2: Boolean): Unit {
-      val var5: RecyclerView.Adapter = var0.getHolder().getBindingAdapter();
-      val var13: BaseChatListAdapter = var5 as BaseChatListAdapter;
-      val var4: Int = var0.getHolder().getBindingAdapterPosition();
-      var1 = new DeserializationErrorMessageItem(var1.getMessage(), var2);
-      var var8: Any = var13.getItems();
-      val var6: ArrayList = new ArrayList(CollectionsKt.v(var8 as java.lang.Iterable, 10));
-      val var7: java.util.Iterator = (var8 as java.lang.Iterable).iterator();
-
-      for (int var3 = 0; var7.hasNext(); var3++) {
-         var8 = var7.next();
-         if (var3 < 0) {
-            CollectionsKt.u();
-         }
-
-         var8 = var8 as ChatListItem;
-         if (var3 == var4) {
-            var8 = var1;
-         }
-
-         var6.add(var8);
-      }
-
-      var13.setItems(var6);
-      var13.notifyItemChanged(var4);
-      return Unit.a;
-   }
-
-   @SuppressLint(["SetTextI18n"])
-   public open fun bindView(view: ErrorMessageView, item: DeserializationErrorMessageItem, metadata: Metadata<ErrorMessageView>) {
-      val var4: LayoutParams = var1.getLayoutParams();
-      (var4 as MarginLayoutParams).setMargins(SizeUtilsKt.getDpToPx(16), 0, SizeUtilsKt.getDpToPx(16), 0);
-      var1.setErrorMessage(var2.getMessage());
-      var1.setExpandInfo(var2.isExpanded(), new c(var3, var2));
-   }
-
-   public open fun createView(parent: ViewGroup): ErrorMessageView {
-      val var3: Context = var1.getContext();
-      val var4: ErrorMessageView = new ErrorMessageView(var3, null, 2, null);
-      val var2: Int = SizeUtilsKt.getDpToPx(8);
-      var4.setPadding(var2, var2, var2, var2);
-      return var4;
-   }
-
-   public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      return var1 is DeserializationErrorMessageItem;
-   }
-}
+/*
+$VF: Unable to decompile class
+Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+java.lang.RuntimeException: Constructor com/discord/chat/presentation/list/delegate/BaseChatListItemDelegate.<init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;I)V not found
+  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
+  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
+*/

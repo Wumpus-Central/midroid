@@ -41,9 +41,9 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
    private final val activityEventListener: <unrepresentable>
 
    init {
-      val var3: CredentialManager.a = CredentialManager.a;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      this.credentialManager = var3.a(var2);
+      val var2: CredentialManager.a = CredentialManager.a;
+      var1 = this.getReactApplicationContext();
+      this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 

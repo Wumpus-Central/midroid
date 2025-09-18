@@ -116,8 +116,8 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         return var5;
                      }
                   } else {
-                     val var9: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     val var8: FlowCollector = new FlowCollector(this.$onEvent) {
+                     val var8: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -160,7 +160,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var9.collect(var8, this) === var5) {
+                     if (var8.collect(var9, this) === var5) {
                         return var5;
                      }
                   }

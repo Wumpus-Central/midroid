@@ -174,9 +174,9 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    private fun tryConfigure(view: TextDisplayComponentView) {
       val var2: PartialData = this.viewToDataMapping.get(var1);
       if (var2 != null) {
-         val var4: Data = var2.toData();
-         if (var4 != null) {
-            var1.configure(var4.getComponent(), this.createTextDisplayComponentContext(var1, var4));
+         val var3: Data = var2.toData();
+         if (var3 != null) {
+            var1.configure(var3.getComponent(), this.createTextDisplayComponentContext(var1, var3));
             ViewMeasureExtensionsKt.measureAndLayout(var1);
          }
       }

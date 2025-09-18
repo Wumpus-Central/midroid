@@ -39,9 +39,9 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = k0.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      scope = kotlinx.coroutines.g.a(var1.Z0(T.b(var0)));
+      val var0: CompletableJob = k0.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      scope = kotlinx.coroutines.g.a(var0.Z0(T.b(var1)));
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
@@ -255,12 +255,12 @@ public object MediaPlayerManager {
                            return Unit.a;
                         }
 
-                        val var19: MutableStateFlow = var14.getPlaybackRateFlow$media_player_release();
+                        val var26: MutableStateFlow = var14.getPlaybackRateFlow$media_player_release();
 
                         do {
-                           var5 = var19.getValue();
-                           val var26: Pair = var5 as Pair;
-                        } while (!var19.b(var5, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
+                           var5 = var26.getValue();
+                           val var19: Pair = var5 as Pair;
+                        } while (!var26.b(var5, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
 
                         return Unit.a;
                      }
@@ -272,12 +272,12 @@ public object MediaPlayerManager {
                            }
 
                            var14.getPlaybackRateFlow$media_player_release().setValue(s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0)));
-                           val var11: MutableStateFlow = var14.getPlaybackProgressFlow$media_player_release();
+                           val var18: MutableStateFlow = var14.getPlaybackProgressFlow$media_player_release();
 
                            do {
-                              var5 = var11.getValue();
+                              var5 = var18.getValue();
                            } while (
-                              !var11.b(
+                              !var18.b(
                                  var5,
                                  MediaPlayerManager.PlaybackProgress.copy$default(
                                     (MediaPlayerManager.PlaybackProgress)var5, null, ((MediaPlayerManager.PlaybackProgress)var5).getDurationMs(), 0L, 5, null
@@ -322,8 +322,8 @@ public object MediaPlayerManager {
                         break label85;
                      }
 
-                     val var7: d0 = K.c();
-                     val var16: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
+                     val var16: d0 = K.c();
+                     val var7: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
                         final MediaPlayer $prevMediaPlayer;
                         int label;
 
@@ -354,7 +354,7 @@ public object MediaPlayerManager {
                      this.L$0 = var1;
                      this.L$1 = var24;
                      this.label = 1;
-                     if (cb.f.g(var7, var16, this) === var5) {
+                     if (cb.f.g(var16, var7, this) === var5) {
                         return var5;
                      }
                   }
@@ -364,11 +364,11 @@ public object MediaPlayerManager {
 
                val var9: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
 
-               val var20: Any;
+               val var25: Any;
                do {
-                  var20 = var9.getValue();
-                  val var25: Pair = var20 as Pair;
-               } while (!var9.b(var20, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
+                  var25 = var9.getValue();
+                  val var20: Pair = var25 as Pair;
+               } while (!var9.b(var25, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
 
                val var10: WeakReference = new WeakReference<>(this.$mediaPlayer);
                MediaPlayerManager.access$setActivePlayerRef$p(var10);

@@ -30,17 +30,17 @@ private fun enforceNotificationsCacheTTL(directory: File) {
       val var3: Long = System.currentTimeMillis();
       val var5: Array<File> = var0.listFiles();
       if (var5 != null) {
-         val var7: ArrayList = new ArrayList();
+         val var6: ArrayList = new ArrayList();
          val var2: Int = var5.length;
 
          for (int var1 = 0; var1 < var2; var1++) {
-            val var6: File = var5[var1];
+            var0 = var5[var1];
             if (var5[var1].isFile() && var3 - var5[var1].lastModified() > 864000000L) {
-               var7.add(var6);
+               var6.add(var0);
             }
          }
 
-         val var8: java.util.Iterator = var7.iterator();
+         val var8: java.util.Iterator = var6.iterator();
 
          while (var8.hasNext()) {
             (var8.next() as File).delete();

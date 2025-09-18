@@ -68,11 +68,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var1: View = this.getCurrentAccessoryView();
-      if (var1 != null) {
-         this.binding.sectionLayoutBox.removeView(var1);
+      val var2: View = this.getCurrentAccessoryView();
+      if (var2 != null) {
+         this.binding.sectionLayoutBox.removeView(var2);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
          }
       }
    }
@@ -125,15 +125,15 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
-                  val var12: FlexboxLayout = this.binding.sectionLayoutBox;
-                  val var16: SectionAccessory = var1.getAccessory();
-                  val var7: Boolean = var16 is SectionAccessory.Button;
+                  val var16: FlexboxLayout = this.binding.sectionLayoutBox;
+                  val var12: SectionAccessory = var1.getAccessory();
+                  val var7: Boolean = var12 is SectionAccessory.Button;
                   var var17: Byte = 2;
-                  if (!var7 && var16 is SectionAccessory.Thumbnail) {
+                  if (!var7 && var12 is SectionAccessory.Thumbnail) {
                      var17 = 0;
                   }
 
-                  var12.setFlexDirection(var17);
+                  var16.setFlexDirection(var17);
                }
 
                val var13: ConstraintLayout = this.binding.sectionComponentViewGroupErrorRow.getRoot();

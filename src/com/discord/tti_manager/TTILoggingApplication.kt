@@ -28,13 +28,13 @@ public abstract class TTILoggingApplication : Application {
          }
 
 
-      private final var applicationStartedTimestamp: Long
-         private final get() {
+      public final var applicationStartedTimestamp: Long
+         public final get() {
             return (TTILoggingApplication.access$getApplicationStartedTimestamp$delegate$cp().getValue(this, $$delegatedProperties[1]) as java.lang.Number)
                .longValue();
          }
 
-         private final set(<set-?>) {
+         public final set(<set-?>) {
             TTILoggingApplication.access$getApplicationStartedTimestamp$delegate$cp().setValue(this, $$delegatedProperties[1], var1);
          }
 
