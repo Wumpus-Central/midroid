@@ -3040,6 +3040,13 @@
     " görebilirsin."
   ],
   "rt69oq": "Nitro'ya dâhil",
+  "kWkpdH": [
+    "Nitro ile ",
+    [
+      1,
+      "price"
+    ]
+  ],
   "sPvyr6": [
     "Asıl fiyat: ",
     [
@@ -3106,6 +3113,14 @@
   "uYLGcn": "Rozetimi Görüntüle",
   "6gF4aW": "Süper!",
   "B25MUV": "Rozet profiline eklendi.",
+  "a/Y8PD": [
+    "Fiyat: ",
+    [
+      1,
+      "orbAmount"
+    ],
+    " Orbs"
+  ],
   "SWm2am": "Profil efektin güncellendi!",
   "ivaAAw": "Popüler Seçimler",
   "HSX4HR": [

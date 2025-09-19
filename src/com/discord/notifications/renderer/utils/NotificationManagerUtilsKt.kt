@@ -111,16 +111,16 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
    if (var5 != null) {
       label58:
       try {
-         val var13: kotlin.Result.a = Result.e;
-         var12 = Result.b(var5.getActiveNotifications());
+         val var14: kotlin.Result.a = Result.e;
+         var13 = Result.b(var5.getActiveNotifications());
       } catch (var9: java.lang.Throwable) {
-         val var18: kotlin.Result.a = Result.e;
-         var12 = Result.b(kotlin.c.a(var9));
+         val var12: kotlin.Result.a = Result.e;
+         var13 = Result.b(kotlin.c.a(var9));
          break label58;
       }
 
-      var5 = (NotificationManager)var12;
-      if (Result.g(var12)) {
+      var5 = (NotificationManager)var13;
+      if (Result.g(var13)) {
          var5 = null;
       }
 
@@ -135,11 +135,11 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var8: Regex = messageRegex;
-                  val var14: java.lang.String = var21.getTag();
-                  var15 = Regex.c(var8, var14, 0, 2, null);
-                  if (var15 != null) {
-                     val var22: java.util.List = var15.b();
+                  val var15: Regex = messageRegex;
+                  val var8: java.lang.String = var21.getTag();
+                  var16 = Regex.c(var15, var8, 0, 2, null);
+                  if (var16 != null) {
+                     val var22: java.util.List = var16.b();
                      if (var22 != null) {
                         var3 = var22.size();
                         break label45;
@@ -152,18 +152,18 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
                val var23: java.lang.String = var21.getTag();
                if (StringsKt.I(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
                   label38: {
-                     if (var15 != null) {
-                        val var16: java.util.List = var15.b();
-                        if (var16 != null) {
-                           var17 = var16.get(2) as java.lang.String;
+                     if (var16 != null) {
+                        val var17: java.util.List = var16.b();
+                        if (var17 != null) {
+                           var18 = var17.get(2) as java.lang.String;
                            break label38;
                         }
                      }
 
-                     var17 = null;
+                     var18 = null;
                   }
 
-                  if (var17 == var1) {
+                  if (var18 == var1) {
                      var20.add(var21);
                   }
                }
@@ -212,9 +212,9 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
                val var8: StringBuilder = new StringBuilder();
                var8.append("CALL_RING");
                var8.append(var9);
-               var9 = var8.toString();
-               val var19: java.lang.String = var18.getTag();
-               var5 = StringsKt.I(var19, var9, false, 2, null);
+               val var19: java.lang.String = var8.toString();
+               var9 = var18.getTag();
+               var5 = StringsKt.I(var9, var19, false, 2, null);
             }
 
             if (var5) {

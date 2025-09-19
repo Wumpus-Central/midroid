@@ -1379,9 +1379,9 @@ public final class R {
       public static int modules_stickers_native_images_sticker_search_empty;
       public static int modules_summaries_native_images_summary_indicator_end;
       public static int modules_summaries_native_images_summary_indicator_start;
-      public static int modules_system_dm_native_images_chatbubbletail;
-      public static int modules_system_dm_native_images_chatbubbletaillight;
-      public static int modules_system_dm_native_images_systemdmwumpus;
+      public static int modules_urgent_system_dm_native_images_chatbubbletail;
+      public static int modules_urgent_system_dm_native_images_chatbubbletaillight;
+      public static int modules_urgent_system_dm_native_images_systemdmwumpus;
       public static int modules_user_profile_images_banner_sample_banner;
       public static int modules_user_settings_images_app_installed_check;
       public static int modules_user_settings_images_lock;
@@ -1407,7 +1407,6 @@ public final class R {
       public static int modules_video_calls_native_images_spectator;
       public static int modules_video_calls_native_images_watch;
       public static int modules_video_calls_native_images_xbox_voice_upsell;
-      public static int modules_virtual_currency_images_native_coachmarkorb;
       public static int modules_voice_panel_native_images_activity;
       public static int modules_voice_panel_native_images_airplay;
       public static int modules_voice_panel_native_images_badconnection;

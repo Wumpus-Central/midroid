@@ -106,15 +106,15 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                }
 
-               val var11: FileDownloader = FileDownloader.INSTANCE;
-               val var9: Context = this.this$0.getContext();
-               val var7: java.lang.String = this.$config.getUrl();
+               val var6: FileDownloader = FileDownloader.INSTANCE;
+               val var7: Context = this.this$0.getContext();
+               val var9: java.lang.String = this.$config.getUrl();
                val var5: java.lang.String = this.$config.getAsset();
-               val var6: StringBuilder = new StringBuilder();
-               var6.append(var5);
-               var6.append(".json");
+               val var11: StringBuilder = new StringBuilder();
+               var11.append(var5);
+               var11.append(".json");
                val var12: Flow = FileDownloader.downloadFile$default(
-                  var11, var9, var7, var6.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+                  var6, var7, var9, var11.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
                val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
@@ -156,8 +156,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                  val var5: RLottieImageView = this.this$0;
                                  val var6: Context = this.this$0.getContext();
                                  val var7: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
-                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
+                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
                                  val var4x: Int = this.$config.getRenderMode();
                                  if (var4x != 0) {
                                     if (var4x != 1) {
@@ -169,7 +169,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var5.setAnimation(var6, var7, var3, var2x, var1);
+                                 var5.setAnimation(var6, var7, var2x, var3, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -377,15 +377,15 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var1: Int = this.widthDp;
          val var2: Int = this.heightDp;
-         val var6: java.lang.String = this.asset;
+         val var5: java.lang.String = this.asset;
          val var3: Int = this.renderMode;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Config(url=");
-         var7.append(var5);
+         var7.append(var6);
          var7.append(", animate=");
          var7.append(var4);
          var7.append(", widthDp=");
@@ -393,7 +393,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          var7.append(", heightDp=");
          var7.append(var2);
          var7.append(", asset=");
-         var7.append(var6);
+         var7.append(var5);
          var7.append(", renderMode=");
          var7.append(var3);
          var7.append(")");

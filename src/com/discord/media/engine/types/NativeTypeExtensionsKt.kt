@@ -35,20 +35,20 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
 }
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
+   val var6: ArrayList = new ArrayList();
    var var4: ArrayList = new ArrayList();
-   val var5: ArrayList = new ArrayList();
    val var3: Int = var0.length;
 
    for (int var1 = 0; var1 < var3; var1++) {
-      val var6: VideoInputDeviceDescription = var0[var1];
+      val var5: VideoInputDeviceDescription = var0[var1];
       if (var0[var1].getFacing() === VideoInputDeviceFacing.Front) {
-         var4.add(var6);
+         var6.add(var5);
       } else {
-         var5.add(var6);
+         var4.add(var5);
       }
    }
 
-   val var14: Pair = new Pair(var4, var5);
+   val var14: Pair = new Pair(var6, var4);
    val var8: java.util.List = CollectionsKt.e0(
       CollectionsKt.n(
          new VideoInputDeviceDescription[]{
@@ -89,9 +89,9 @@ internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
-   val var5: Pair = s.a("protocol", var0.getProtocol());
-   val var3: Pair = s.a("address", var0.getLocalAddress());
-   val var4: Pair = s.a("port", var0.getLocalPort());
+   val var3: Pair = s.a("protocol", var0.getProtocol());
+   val var4: Pair = s.a("address", var0.getLocalAddress());
+   val var5: Pair = s.a("port", var0.getLocalPort());
    val var1: Int = var0.getCreateConnectionTime();
    val var8: Pair;
    if (var1 != null) {
@@ -106,7 +106,7 @@ internal fun ConnectionInfo.toMap(): Map<String, Any> {
       var7 = s.a("connectTime", var6.intValue());
    }
 
-   return L.t(CollectionsKt.p(new Pair[]{var5, var3, var4, var8, var7}));
+   return L.t(CollectionsKt.p(new Pair[]{var3, var4, var5, var8, var7}));
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

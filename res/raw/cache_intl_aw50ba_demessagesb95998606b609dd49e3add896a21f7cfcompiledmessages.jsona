@@ -3066,6 +3066,13 @@
     " behältst du all deine Geschenkkäufe im Blick."
   ],
   "rt69oq": "Mit Nitro inbegriffen",
+  "kWkpdH": [
+    [
+      1,
+      "price"
+    ],
+    " mit Nitro"
+  ],
   "sPvyr6": [
     "Ursprünglicher Preis: ",
     [
@@ -3132,6 +3139,14 @@
   "uYLGcn": "Mein Abzeichen anzeigen",
   "6gF4aW": "Fantastabulös!",
   "B25MUV": "Das Abzeichen wurde deinem Profil hinzugefügt.",
+  "a/Y8PD": [
+    "Preis: ",
+    [
+      1,
+      "orbAmount"
+    ],
+    " Orbs"
+  ],
   "SWm2am": "Dein Profil-Effekt wurde aktualisiert!",
   "ivaAAw": "Beliebt",
   "HSX4HR": [
