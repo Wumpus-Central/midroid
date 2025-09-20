@@ -188,42 +188,42 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun toString(): String {
-      val var6: java.util.List = this.users;
+      val var9: java.util.List = this.users;
       val var1: Int = this.extraUsers;
       val var8: GuildId = this.guildId;
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var11: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var5: java.lang.String = this.channelName;
-      val var11: java.lang.String = this.guildName;
-      val var2: Boolean = this.deafened;
+      val var12: java.lang.String = this.guildName;
+      val var3: Boolean = this.deafened;
       val var4: Boolean = this.muted;
-      val var12: ConnectionQuality = this.connectionQuality;
-      val var3: Boolean = this.canGenerateInvite;
-      val var9: java.util.List = this.channelSelectorResults;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("MobileVoiceOverlayData(users=");
-      var10.append(var6);
-      var10.append(", extraUsers=");
-      var10.append(var1);
-      var10.append(", guildId=");
-      var10.append(var8);
-      var10.append(", channelId=");
-      var10.append(var7);
-      var10.append(", channelName=");
-      var10.append(var5);
-      var10.append(", guildName=");
-      var10.append(var11);
-      var10.append(", deafened=");
-      var10.append(var2);
-      var10.append(", muted=");
-      var10.append(var4);
-      var10.append(", connectionQuality=");
-      var10.append(var12);
-      var10.append(", canGenerateInvite=");
-      var10.append(var3);
-      var10.append(", channelSelectorResults=");
-      var10.append(var9);
-      var10.append(")");
-      return var10.toString();
+      val var10: ConnectionQuality = this.connectionQuality;
+      val var2: Boolean = this.canGenerateInvite;
+      val var6: java.util.List = this.channelSelectorResults;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MobileVoiceOverlayData(users=");
+      var7.append(var9);
+      var7.append(", extraUsers=");
+      var7.append(var1);
+      var7.append(", guildId=");
+      var7.append(var8);
+      var7.append(", channelId=");
+      var7.append(var11);
+      var7.append(", channelName=");
+      var7.append(var5);
+      var7.append(", guildName=");
+      var7.append(var12);
+      var7.append(", deafened=");
+      var7.append(var3);
+      var7.append(", muted=");
+      var7.append(var4);
+      var7.append(", connectionQuality=");
+      var7.append(var10);
+      var7.append(", canGenerateInvite=");
+      var7.append(var2);
+      var7.append(", channelSelectorResults=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

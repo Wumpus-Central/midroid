@@ -5541,41 +5541,42 @@
     <public type="id" name="view_interaction_status_label_icon" id="0x7f0a0434" />
     <public type="id" name="view_interaction_status_label_message" id="0x7f0a0435" />
     <public type="id" name="view_interaction_status_loading_dots" id="0x7f0a0436" />
-    <public type="id" name="view_offset_helper" id="0x7f0a0437" />
-    <public type="id" name="view_overlay" id="0x7f0a0438" />
-    <public type="id" name="view_progress_dots_1" id="0x7f0a0439" />
-    <public type="id" name="view_progress_dots_2" id="0x7f0a043a" />
-    <public type="id" name="view_progress_dots_3" id="0x7f0a043b" />
-    <public type="id" name="view_tag_instance_handle" id="0x7f0a043c" />
-    <public type="id" name="view_tag_native_id" id="0x7f0a043d" />
-    <public type="id" name="view_tree_disjoint_parent" id="0x7f0a043e" />
-    <public type="id" name="view_tree_lifecycle_owner" id="0x7f0a043f" />
-    <public type="id" name="view_tree_on_back_pressed_dispatcher_owner" id="0x7f0a0440" />
-    <public type="id" name="view_tree_saved_state_registry_owner" id="0x7f0a0441" />
-    <public type="id" name="view_tree_view_model_store_owner" id="0x7f0a0442" />
-    <public type="id" name="visible" id="0x7f0a0443" />
-    <public type="id" name="visible_removing_fragment_view_tag" id="0x7f0a0444" />
-    <public type="id" name="vote_counts" id="0x7f0a0445" />
-    <public type="id" name="vote_percentage" id="0x7f0a0446" />
-    <public type="id" name="wave" id="0x7f0a0447" />
-    <public type="id" name="welcome_reply_button" id="0x7f0a0448" />
-    <public type="id" name="welcome_reply_text" id="0x7f0a0449" />
-    <public type="id" name="when_playing" id="0x7f0a044a" />
-    <public type="id" name="wide" id="0x7f0a044b" />
-    <public type="id" name="wipe" id="0x7f0a044c" />
-    <public type="id" name="withText" id="0x7f0a044d" />
-    <public type="id" name="with_icon" id="0x7f0a044e" />
-    <public type="id" name="withinBounds" id="0x7f0a044f" />
-    <public type="id" name="wrap" id="0x7f0a0450" />
-    <public type="id" name="wrap_content" id="0x7f0a0451" />
-    <public type="id" name="wrap_reverse" id="0x7f0a0452" />
-    <public type="id" name="wrapper_controls" id="0x7f0a0453" />
-    <public type="id" name="wrapper_reset_rotate" id="0x7f0a0454" />
-    <public type="id" name="wrapper_rotate_by_angle" id="0x7f0a0455" />
-    <public type="id" name="wrapper_states" id="0x7f0a0456" />
-    <public type="id" name="xbox_icon" id="0x7f0a0457" />
-    <public type="id" name="year" id="0x7f0a0458" />
-    <public type="id" name="zoom" id="0x7f0a0459" />
+    <public type="id" name="view_is_transitioning" id="0x7f0a0437" />
+    <public type="id" name="view_offset_helper" id="0x7f0a0438" />
+    <public type="id" name="view_overlay" id="0x7f0a0439" />
+    <public type="id" name="view_progress_dots_1" id="0x7f0a043a" />
+    <public type="id" name="view_progress_dots_2" id="0x7f0a043b" />
+    <public type="id" name="view_progress_dots_3" id="0x7f0a043c" />
+    <public type="id" name="view_tag_instance_handle" id="0x7f0a043d" />
+    <public type="id" name="view_tag_native_id" id="0x7f0a043e" />
+    <public type="id" name="view_tree_disjoint_parent" id="0x7f0a043f" />
+    <public type="id" name="view_tree_lifecycle_owner" id="0x7f0a0440" />
+    <public type="id" name="view_tree_on_back_pressed_dispatcher_owner" id="0x7f0a0441" />
+    <public type="id" name="view_tree_saved_state_registry_owner" id="0x7f0a0442" />
+    <public type="id" name="view_tree_view_model_store_owner" id="0x7f0a0443" />
+    <public type="id" name="visible" id="0x7f0a0444" />
+    <public type="id" name="visible_removing_fragment_view_tag" id="0x7f0a0445" />
+    <public type="id" name="vote_counts" id="0x7f0a0446" />
+    <public type="id" name="vote_percentage" id="0x7f0a0447" />
+    <public type="id" name="wave" id="0x7f0a0448" />
+    <public type="id" name="welcome_reply_button" id="0x7f0a0449" />
+    <public type="id" name="welcome_reply_text" id="0x7f0a044a" />
+    <public type="id" name="when_playing" id="0x7f0a044b" />
+    <public type="id" name="wide" id="0x7f0a044c" />
+    <public type="id" name="wipe" id="0x7f0a044d" />
+    <public type="id" name="withText" id="0x7f0a044e" />
+    <public type="id" name="with_icon" id="0x7f0a044f" />
+    <public type="id" name="withinBounds" id="0x7f0a0450" />
+    <public type="id" name="wrap" id="0x7f0a0451" />
+    <public type="id" name="wrap_content" id="0x7f0a0452" />
+    <public type="id" name="wrap_reverse" id="0x7f0a0453" />
+    <public type="id" name="wrapper_controls" id="0x7f0a0454" />
+    <public type="id" name="wrapper_reset_rotate" id="0x7f0a0455" />
+    <public type="id" name="wrapper_rotate_by_angle" id="0x7f0a0456" />
+    <public type="id" name="wrapper_states" id="0x7f0a0457" />
+    <public type="id" name="xbox_icon" id="0x7f0a0458" />
+    <public type="id" name="year" id="0x7f0a0459" />
+    <public type="id" name="zoom" id="0x7f0a045a" />
     <public type="integer" name="abc_config_activityDefaultDur" id="0x7f0b0000" />
     <public type="integer" name="abc_config_activityShortDur" id="0x7f0b0001" />
     <public type="integer" name="app_bar_elevation_anim_duration" id="0x7f0b0002" />

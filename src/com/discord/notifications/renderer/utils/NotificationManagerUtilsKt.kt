@@ -183,16 +183,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var15: kotlin.Result.a = Result.e;
-         var14 = Result.b(var6.getActiveNotifications());
+         val var14: kotlin.Result.a = Result.e;
+         var13 = Result.b(var6.getActiveNotifications());
       } catch (var10: java.lang.Throwable) {
-         val var13: kotlin.Result.a = Result.e;
-         var14 = Result.b(kotlin.c.a(var10));
+         val var15: kotlin.Result.a = Result.e;
+         var13 = Result.b(kotlin.c.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var14;
-      if (Result.g(var14)) {
+      var6 = (NotificationManager)var13;
+      if (Result.g(var13)) {
          var6 = null;
       }
 

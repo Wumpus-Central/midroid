@@ -134,14 +134,14 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun <T : Component> recycleComponent(componentView: ComponentView<T>) {
-      val var4: java.lang.String = var1.getComponentType().getSimpleName();
-      if (var4 != null) {
-         val var5: java.util.Map = this.viewCache;
-         val var3: Any = this.viewCache.get(var4);
+      val var5: java.lang.String = var1.getComponentType().getSimpleName();
+      if (var5 != null) {
+         val var4: java.util.Map = this.viewCache;
+         val var3: Any = this.viewCache.get(var5);
          var var2: Any = var3;
          if (var3 == null) {
             var2 = new ArrayList();
-            var5.put(var4, var2);
+            var4.put(var5, var2);
          }
 
          (var2 as java.util.List).add(var1);

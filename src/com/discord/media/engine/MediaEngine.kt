@@ -262,10 +262,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = MediaEngine.Companion;
-               var var3: Bitmap = this.$bitmap;
+               var var3: MediaEngine.Companion = MediaEngine.Companion;
+               var1 = this.$bitmap;
                this.label = 1;
-               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
+               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -899,14 +899,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 049: aload 8
       // 04b: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 050: checkcast android/media/MediaCodecInfo
-      // 053: astore 9
-      // 055: aload 9
+      // 053: astore 10
+      // 055: aload 10
       // 057: invokevirtual android/media/MediaCodecInfo.getName ()Ljava/lang/String;
-      // 05a: astore 10
-      // 05c: aload 10
+      // 05a: astore 9
+      // 05c: aload 9
       // 05e: ldc_w "getName(...)"
       // 061: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 064: aload 9
+      // 064: aload 10
       // 066: invokevirtual android/media/MediaCodecInfo.getSupportedTypes ()[Ljava/lang/String;
       // 069: astore 11
       // 06b: aload 11
@@ -956,7 +956,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 0cf: getstatic android/os/Build$VERSION.SDK_INT I
       // 0d2: bipush 29
       // 0d4: if_icmplt 0ef
-      // 0d7: aload 9
+      // 0d7: aload 10
       // 0d9: invokestatic com/discord/a.a (Landroid/media/MediaCodecInfo;)Z
       // 0dc: ifeq 0e7
       // 0df: ldc_w "(HW)"
@@ -975,7 +975,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 0fc: aastore
       // 0fd: dup
       // 0fe: bipush 1
-      // 0ff: aload 10
+      // 0ff: aload 9
       // 101: aastore
       // 102: dup
       // 103: bipush 2
@@ -992,7 +992,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 114: aconst_null
       // 115: invokestatic kotlin/collections/CollectionsKt.p0 (Ljava/lang/Iterable;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Ljava/lang/CharSequence;ILjava/lang/CharSequence;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Ljava/lang/String;
       // 118: astore 4
-      // 11a: aload 9
+      // 11a: aload 10
       // 11c: invokevirtual android/media/MediaCodecInfo.isEncoder ()Z
       // 11f: ifeq 131
       // 122: aload 6

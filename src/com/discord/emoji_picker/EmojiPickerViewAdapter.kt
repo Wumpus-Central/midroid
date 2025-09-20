@@ -68,27 +68,27 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    public fun findFirstItemPositionAboveOrBelowPosition(position: Int, itemType: Int): Int {
       val var5: Int = this.getItemCount();
-      var var3: Int = var1;
+      var var4: Int = var1;
 
       while (true) {
-         var var4: Int = var1;
-         if (var3 < 0) {
-            while (var4 < var5) {
-               if (this.getItemViewType(var4) == var2) {
-                  return var4;
+         var var3: Int = var1;
+         if (var4 < 0) {
+            while (var3 < var5) {
+               if (this.getItemViewType(var3) == var2) {
+                  return var3;
                }
 
-               var4++;
+               var3++;
             }
 
             return -1;
          }
 
-         if (this.getItemViewType(var3) == var2) {
-            return var3;
+         if (this.getItemViewType(var4) == var2) {
+            return var4;
          }
 
-         var3--;
+         var4--;
       }
    }
 
@@ -107,14 +107,14 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          var4 = kotlin.ranges.d.n(var1, var2);
       }
 
-      val var8: java.util.Iterator = var4.iterator();
+      val var5: java.util.Iterator = var4.iterator();
       var2 = 0;
       var1 = 0;
 
-      while (var8.hasNext()) {
-         val var5: EmojiPickerItem = this.getItem((var8 as I).nextInt());
-         if (var5 !is EmojiPickerItem.Emoji && var5 !is EmojiPickerItem.EmojiPlaceholder) {
-            if (var5 !is EmojiPickerItem.Category) {
+      while (var5.hasNext()) {
+         val var8: EmojiPickerItem = this.getItem((var5 as I).nextInt());
+         if (var8 !is EmojiPickerItem.Emoji && var8 !is EmojiPickerItem.EmojiPlaceholder) {
+            if (var8 !is EmojiPickerItem.Category) {
                continue;
             }
          } else {

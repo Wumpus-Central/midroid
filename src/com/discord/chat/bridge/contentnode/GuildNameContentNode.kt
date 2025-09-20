@@ -66,16 +66,16 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.content;
-      val var1: java.lang.String = this.icon;
+      val var2: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.content;
+      val var4: java.lang.String = this.icon;
       val var3: StringBuilder = new StringBuilder();
       var3.append("GuildNameContentNode(guildId=");
-      var3.append(var4);
-      var3.append(", content=");
       var3.append(var2);
-      var3.append(", icon=");
+      var3.append(", content=");
       var3.append(var1);
+      var3.append(", icon=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

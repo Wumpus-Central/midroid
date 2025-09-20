@@ -49,9 +49,9 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var3: Window = this.getWindow();
+      var2.initialize(var3);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -76,7 +76,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          TTILoggingApplication.Companion.trackActivityDelegateInitialized();
          val var3: CrashReporting = CrashReporting.INSTANCE;
          if (CrashReporting.INSTANCE.isCrashedLastRun() == java.lang.Boolean.TRUE) {
-            CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, 6, null);
+            CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, null, 14, null);
             val var4: Future = BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, null, 2, null);
             if (var4 != null) {
                var4.get();

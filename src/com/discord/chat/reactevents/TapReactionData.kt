@@ -113,19 +113,19 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: ReactionView.Reaction = this.reaction;
-      val var2: java.lang.Boolean = this.isBurst;
-      val var5: java.lang.String = this.location;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: ReactionView.Reaction = this.reaction;
+      val var4: java.lang.Boolean = this.isBurst;
+      val var3: java.lang.String = this.location;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapReactionData(messageId=");
-      var1.append(var4);
-      var1.append(", reaction=");
-      var1.append(var3);
-      var1.append(", isBurst=");
-      var1.append(var2);
-      var1.append(", location=");
       var1.append(var5);
+      var1.append(", reaction=");
+      var1.append(var2);
+      var1.append(", isBurst=");
+      var1.append(var4);
+      var1.append(", location=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

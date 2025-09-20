@@ -41,19 +41,19 @@ internal object SystemLogReport {
    @JvmStatic
    fun `recordSentryCrash$lambda$3`(var0: SentryStackFrame): java.lang.CharSequence {
       val var2: java.lang.String = var0.u();
-      val var1: java.lang.String = var0.s();
-      val var3: java.lang.String = var0.r();
-      val var4: Int = var0.t();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append(var2);
-      var5.append(".");
-      var5.append(var1);
-      var5.append("(");
-      var5.append(var3);
-      var5.append(":");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = var0.s();
+      val var1: java.lang.String = var0.r();
+      val var5: Int = var0.t();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var2);
+      var4.append(".");
+      var4.append(var3);
+      var4.append("(");
+      var4.append(var1);
+      var4.append(":");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    @JvmStatic
@@ -71,15 +71,15 @@ internal object SystemLogReport {
          var3 = false;
       }
 
-      val var9: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-      val var8: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
-      val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
+      val var6: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+      val var9: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
+      val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
       if (!var3) {
          var2 = null;
       }
 
-      var1.invoke(var6, var2, var8);
-      var9.clear(var0);
+      var1.invoke(var8, var2, var9);
+      var6.clear(var0);
       return Unit.a;
    }
 

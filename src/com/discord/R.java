@@ -1423,6 +1423,13 @@ public final class R {
       }
    }
 
+   public static final class id {
+      public static int view_is_transitioning;
+
+      private id() {
+      }
+   }
+
    public static final class integer {
       public static int react_native_dev_server_port;
 

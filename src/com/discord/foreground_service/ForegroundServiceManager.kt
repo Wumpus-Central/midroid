@@ -44,20 +44,20 @@ public object ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -252,18 +252,18 @@ public object ForegroundServiceManager {
       // 0a: ldc_w "serviceConfigurations"
       // 0d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
       // 10: new com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
-      // 13: astore 4
-      // 15: new java/lang/ref/WeakReference
-      // 18: astore 3
-      // 19: aload 3
-      // 1a: aload 1
-      // 1b: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 1e: aload 4
-      // 20: aload 3
-      // 21: aload 2
-      // 22: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
-      // 25: aload 0
-      // 26: aload 4
+      // 13: astore 3
+      // 14: new java/lang/ref/WeakReference
+      // 17: astore 4
+      // 19: aload 4
+      // 1b: aload 1
+      // 1c: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
+      // 1f: aload 3
+      // 20: aload 4
+      // 22: aload 2
+      // 23: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
+      // 26: aload 0
+      // 27: aload 3
       // 28: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleQueueOperation (Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;)V
       // 2b: aload 0
       // 2c: monitorexit
@@ -471,14 +471,14 @@ public object ForegroundServiceManager {
 
          public override fun toString(): String {
             val var3: WeakReference = this.contextRef;
-            val var2: java.util.List = this.serviceConfigurations;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("CreateOrUpdate(contextRef=");
-            var1.append(var3);
-            var1.append(", serviceConfigurations=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.util.List = this.serviceConfigurations;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("CreateOrUpdate(contextRef=");
+            var2.append(var3);
+            var2.append(", serviceConfigurations=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
 
@@ -512,12 +512,12 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Destroy(contextRef=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Destroy(contextRef=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

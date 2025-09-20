@@ -232,21 +232,21 @@ public class DebugPrintableCollection {
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
-      // 0c4: astore 7
+      // 0c4: astore 8
       // 0c6: new java/lang/StringBuilder
-      // 0c9: astore 8
-      // 0cb: aload 8
+      // 0c9: astore 7
+      // 0cb: aload 7
       // 0cd: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d0: aload 8
+      // 0d0: aload 7
       // 0d2: ldc_w "Exception: "
       // 0d5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0d8: pop
-      // 0d9: aload 8
-      // 0db: aload 7
+      // 0d9: aload 7
+      // 0db: aload 8
       // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e0: pop
       // 0e1: aload 2
-      // 0e2: aload 8
+      // 0e2: aload 7
       // 0e4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0e7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ea: pop

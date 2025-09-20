@@ -26252,6 +26252,14 @@
     ],
     " (without pineapple)"
   ],
+  "BByGU1": [
+    "Answer ",
+    [
+      1,
+      "number"
+    ],
+    " removed"
+  ],
   "8DAM+/": "You voted for this answer",
   "qbir+/": "Poll answers",
   "wqBc7O": [
@@ -31169,12 +31177,12 @@
       1,
       "activityName"
     ],
-    " Activity on Discord for ",
+    " in Discord for ",
     [
       2,
       "streamingDurationRequirement"
     ],
-    " minutes and earn ",
+    " minutes to unlock ",
     [
       8,
       "$b",
@@ -31354,8 +31362,7 @@
     "."
   ],
   "rxf+n5": "Invalid Quest",
-  "hRIVy8": "Launch Quest",
-  "ToGcxM": "Launch Activity Quest",
+  "hRIVy8": "Launch Quest in Discord",
   "LLLLPD": "Learn More",
   "nPThNT": "Check For Launches",
   "GXqvCw": [
@@ -31527,7 +31534,7 @@
       1,
       "activityName"
     ],
-    " Activity on Discord for ",
+    " in Discord for ",
     [
       1,
       "minutes"
@@ -31624,6 +31631,7 @@
     ],
     "."
   ],
+  "Ie9++v": "Play Now in Discord",
   "wmOh/v": [
     "Play ",
     [

@@ -456,8 +456,8 @@ public data class GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor: Int? =
          var6 = this.bodyText.hashCode();
       }
 
-      val var30: Int = Integer.hashCode(this.backgroundColor);
-      val var29: Int = Integer.hashCode(this.borderColor);
+      val var29: Int = Integer.hashCode(this.backgroundColor);
+      val var30: Int = Integer.hashCode(this.borderColor);
       val var7: Int;
       if (this.canBeAccepted == null) {
          var7 = 0;
@@ -600,9 +600,9 @@ public data class GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor: Int? =
          var26 = this.onlineText.hashCode();
       }
 
-      val var34: Int = Integer.hashCode(this.bannerColor);
-      val var33: Int = Integer.hashCode(this.bannerColorSecondary);
-      val var35: Int = java.lang.Boolean.hashCode(this.hasProfileOverflow);
+      val var33: Int = Integer.hashCode(this.bannerColor);
+      val var35: Int = Integer.hashCode(this.bannerColorSecondary);
+      val var34: Int = java.lang.Boolean.hashCode(this.hasProfileOverflow);
       val var27: Int;
       if (this.badgeIconUrl == null) {
          var27 = 0;
@@ -664,10 +664,10 @@ public data class GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor: Int? =
                                                                                                                                                                                                                                                                               + var6
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
-                                                                                                                                                                                                                                                                     + var30
+                                                                                                                                                                                                                                                                     + var29
                                                                                                                                                                                                                                                                )
                                                                                                                                                                                                                                                                * 31
-                                                                                                                                                                                                                                                            + var29
+                                                                                                                                                                                                                                                            + var30
                                                                                                                                                                                                                                                       )
                                                                                                                                                                                                                                                       * 31
                                                                                                                                                                                                                                                    + var7
@@ -736,13 +736,13 @@ public data class GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor: Int? =
                                                       + var26
                                                 )
                                                 * 31
-                                             + var34
+                                             + var33
                                        )
                                        * 31
-                                    + var33
+                                    + var35
                               )
                               * 31
-                           + var35
+                           + var34
                      )
                      * 31
                   + var27
@@ -752,114 +752,114 @@ public data class GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor: Int? =
    }
 
    public override fun toString(): String {
-      val var32: Int = this.acceptLabelBackgroundColor;
-      val var21: Int = this.acceptLabelBorderColor;
-      val var33: Int = this.acceptLabelColor;
-      val var8: java.lang.String = this.acceptLabelText;
-      val var34: Int = this.bodyTextColor;
-      val var16: java.lang.String = this.bodyText;
-      val var3: Int = this.backgroundColor;
-      val var5: Int = this.borderColor;
-      val var9: java.lang.Boolean = this.canBeAccepted;
-      val var12: java.lang.Boolean = this.embedCanBeTapped;
+      val var24: Int = this.acceptLabelBackgroundColor;
+      val var19: Int = this.acceptLabelBorderColor;
+      val var16: Int = this.acceptLabelColor;
+      val var23: java.lang.String = this.acceptLabelText;
+      val var13: Int = this.bodyTextColor;
+      val var9: java.lang.String = this.bodyText;
+      val var2: Int = this.backgroundColor;
+      val var4: Int = this.borderColor;
+      val var11: java.lang.Boolean = this.canBeAccepted;
+      val var21: java.lang.Boolean = this.embedCanBeTapped;
       val var1: Int = this.headerColor;
-      val var22: java.lang.String = this.headerText;
-      val var18: Int = this.resolvingGradientEnd;
-      val var26: Int = this.resolvingGradientStart;
-      val var13: java.lang.Boolean = this.splashHasRadialGradient;
-      val var15: Int = this.splashOpacity;
-      val var20: java.lang.String = this.splashUrl;
-      val var23: java.lang.String = this.inviteSplash;
-      val var11: java.lang.String = this.subtitle;
-      val var30: Int = this.subtitleColor;
-      val var29: Int = this.thumbnailBackgroundColor;
-      val var19: Int = this.thumbnailCornerRadius;
-      val var14: java.lang.String = this.thumbnailText;
-      val var17: java.lang.String = this.thumbnailUrl;
-      val var35: Int = this.titleColor;
-      val var31: java.lang.String = this.titleText;
-      val var24: InviteType = this.type;
-      val var10: CodedLinkExtendedType = this.extendedType;
-      val var25: java.lang.String = this.memberText;
-      val var27: java.lang.String = this.onlineText;
-      val var2: Int = this.bannerColor;
-      val var4: Int = this.bannerColorSecondary;
+      val var28: java.lang.String = this.headerText;
+      val var20: Int = this.resolvingGradientEnd;
+      val var33: Int = this.resolvingGradientStart;
+      val var8: java.lang.Boolean = this.splashHasRadialGradient;
+      val var10: Int = this.splashOpacity;
+      val var17: java.lang.String = this.splashUrl;
+      val var18: java.lang.String = this.inviteSplash;
+      val var14: java.lang.String = this.subtitle;
+      val var7: Int = this.subtitleColor;
+      val var15: Int = this.thumbnailBackgroundColor;
+      val var29: Int = this.thumbnailCornerRadius;
+      val var32: java.lang.String = this.thumbnailText;
+      val var35: java.lang.String = this.thumbnailUrl;
+      val var36: Int = this.titleColor;
+      val var34: java.lang.String = this.titleText;
+      val var30: InviteType = this.type;
+      val var22: CodedLinkExtendedType = this.extendedType;
+      val var12: java.lang.String = this.memberText;
+      val var26: java.lang.String = this.onlineText;
+      val var5: Int = this.bannerColor;
+      val var3: Int = this.bannerColorSecondary;
       val var6: Boolean = this.hasProfileOverflow;
-      val var36: java.lang.String = this.badgeIconUrl;
-      val var7: java.lang.String = this.establishedText;
-      val var28: StringBuilder = new StringBuilder();
-      var28.append("GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor=");
-      var28.append(var32);
-      var28.append(", acceptLabelBorderColor=");
-      var28.append(var21);
-      var28.append(", acceptLabelColor=");
-      var28.append(var33);
-      var28.append(", acceptLabelText=");
-      var28.append(var8);
-      var28.append(", bodyTextColor=");
-      var28.append(var34);
-      var28.append(", bodyText=");
-      var28.append(var16);
-      var28.append(", backgroundColor=");
-      var28.append(var3);
-      var28.append(", borderColor=");
-      var28.append(var5);
-      var28.append(", canBeAccepted=");
-      var28.append(var9);
-      var28.append(", embedCanBeTapped=");
-      var28.append(var12);
-      var28.append(", headerColor=");
-      var28.append(var1);
-      var28.append(", headerText=");
-      var28.append(var22);
-      var28.append(", resolvingGradientEnd=");
-      var28.append(var18);
-      var28.append(", resolvingGradientStart=");
-      var28.append(var26);
-      var28.append(", splashHasRadialGradient=");
-      var28.append(var13);
-      var28.append(", splashOpacity=");
-      var28.append(var15);
-      var28.append(", splashUrl=");
-      var28.append(var20);
-      var28.append(", inviteSplash=");
-      var28.append(var23);
-      var28.append(", subtitle=");
-      var28.append(var11);
-      var28.append(", subtitleColor=");
-      var28.append(var30);
-      var28.append(", thumbnailBackgroundColor=");
-      var28.append(var29);
-      var28.append(", thumbnailCornerRadius=");
-      var28.append(var19);
-      var28.append(", thumbnailText=");
-      var28.append(var14);
-      var28.append(", thumbnailUrl=");
-      var28.append(var17);
-      var28.append(", titleColor=");
-      var28.append(var35);
-      var28.append(", titleText=");
-      var28.append(var31);
-      var28.append(", type=");
-      var28.append(var24);
-      var28.append(", extendedType=");
-      var28.append(var10);
-      var28.append(", memberText=");
-      var28.append(var25);
-      var28.append(", onlineText=");
-      var28.append(var27);
-      var28.append(", bannerColor=");
-      var28.append(var2);
-      var28.append(", bannerColorSecondary=");
-      var28.append(var4);
-      var28.append(", hasProfileOverflow=");
-      var28.append(var6);
-      var28.append(", badgeIconUrl=");
-      var28.append(var36);
-      var28.append(", establishedText=");
-      var28.append(var7);
-      var28.append(")");
-      return var28.toString();
+      val var25: java.lang.String = this.badgeIconUrl;
+      val var27: java.lang.String = this.establishedText;
+      val var31: StringBuilder = new StringBuilder();
+      var31.append("GuildProfileInviteEmbedImpl(acceptLabelBackgroundColor=");
+      var31.append(var24);
+      var31.append(", acceptLabelBorderColor=");
+      var31.append(var19);
+      var31.append(", acceptLabelColor=");
+      var31.append(var16);
+      var31.append(", acceptLabelText=");
+      var31.append(var23);
+      var31.append(", bodyTextColor=");
+      var31.append(var13);
+      var31.append(", bodyText=");
+      var31.append(var9);
+      var31.append(", backgroundColor=");
+      var31.append(var2);
+      var31.append(", borderColor=");
+      var31.append(var4);
+      var31.append(", canBeAccepted=");
+      var31.append(var11);
+      var31.append(", embedCanBeTapped=");
+      var31.append(var21);
+      var31.append(", headerColor=");
+      var31.append(var1);
+      var31.append(", headerText=");
+      var31.append(var28);
+      var31.append(", resolvingGradientEnd=");
+      var31.append(var20);
+      var31.append(", resolvingGradientStart=");
+      var31.append(var33);
+      var31.append(", splashHasRadialGradient=");
+      var31.append(var8);
+      var31.append(", splashOpacity=");
+      var31.append(var10);
+      var31.append(", splashUrl=");
+      var31.append(var17);
+      var31.append(", inviteSplash=");
+      var31.append(var18);
+      var31.append(", subtitle=");
+      var31.append(var14);
+      var31.append(", subtitleColor=");
+      var31.append(var7);
+      var31.append(", thumbnailBackgroundColor=");
+      var31.append(var15);
+      var31.append(", thumbnailCornerRadius=");
+      var31.append(var29);
+      var31.append(", thumbnailText=");
+      var31.append(var32);
+      var31.append(", thumbnailUrl=");
+      var31.append(var35);
+      var31.append(", titleColor=");
+      var31.append(var36);
+      var31.append(", titleText=");
+      var31.append(var34);
+      var31.append(", type=");
+      var31.append(var30);
+      var31.append(", extendedType=");
+      var31.append(var22);
+      var31.append(", memberText=");
+      var31.append(var12);
+      var31.append(", onlineText=");
+      var31.append(var26);
+      var31.append(", bannerColor=");
+      var31.append(var5);
+      var31.append(", bannerColorSecondary=");
+      var31.append(var3);
+      var31.append(", hasProfileOverflow=");
+      var31.append(var6);
+      var31.append(", badgeIconUrl=");
+      var31.append(var25);
+      var31.append(", establishedText=");
+      var31.append(var27);
+      var31.append(")");
+      return var31.toString();
    }
 
    public companion object {
