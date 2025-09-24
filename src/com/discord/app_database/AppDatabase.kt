@@ -33,11 +33,11 @@ public object AppDatabase {
       if (var4 != null && !(var4 == "")) {
          val var2: java.lang.String = this.databaseName(var4);
          DiscordMobileApi.openAsync(var2);
-         val var5: Log = Log.INSTANCE;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("speculatively opening ");
-         var3.append(var2);
-         Log.i$default(var5, "AppDatabase", var3.toString(), null, 4, null);
+         val var3: Log = Log.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("speculatively opening ");
+         var5.append(var2);
+         Log.i$default(var3, "AppDatabase", var5.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }

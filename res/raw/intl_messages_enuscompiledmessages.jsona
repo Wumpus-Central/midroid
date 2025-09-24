@@ -2378,20 +2378,20 @@
         "No SLA on resolution."
       ]
     ],
-    " No guarantee of resolution. Very minor cosmetic issues that users will likely not notice, or minor functionality issues that will not be encountered by users during expected usage of the app."
+    " These should be very minor cosmetic issues that most users are unlikely to experience, or minor functionality issues that we believe affect very few users."
   ],
-  "Ia0skZ": "Low (P2)",
-  "Kmg64O": [
+  "Ia0skZ": "Low (P3)",
+  "nC7pv7": [
     [
       8,
       "$b",
       [
-        "Will not be fixed."
+        "90 Day SLA on resolution."
       ]
     ],
-    " P3 allows us to acknowledge that something is an issue for tracking purposes, but with no expectation that it will be fixed."
+    " Intended for minor functionality issues or noticeable cosmetic issues that only affect a small subset of users. Generally, this should be used as a bucket for “we should fix this, but does not require the urgency of a 14 day SLA”."
   ],
-  "KGsyFx": "Very Low (P3)",
+  "9LSuy8": "Medium (P2)",
   "6mpW09": "Something is broken on this screen",
   "ZiWcJy": "Submitting",
   "Uuqbcn": "Submitting Bug",
@@ -2950,20 +2950,6 @@
     ],
     " Decoration"
   ],
-  "IQQYeX": [
-    "Avatar Decoration: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
-  "eVNt6O": [
-    "Nameplate: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "2keXk5": [
     [
       1,
@@ -2977,13 +2963,6 @@
       "itemName"
     ],
     " Profile Effect"
-  ],
-  "x/MGW1": [
-    "Profile Effect: ",
-    [
-      1,
-      "itemName"
-    ]
   ],
   "Ofrqj4": [
     "Bundle includes: ",
@@ -3056,7 +3035,7 @@
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
   "PpoJzs": "Your gift",
-  "VdGtwc": [
+  "rsEdd3": [
     "By clicking ",
     "\"",
     [
@@ -3099,7 +3078,7 @@
         ]
       ]
     ],
-    ". This purchase is non-refundable. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
+    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
   ],
   "R0vK0N": "Select a friend",
   "3YfczM": "Hey! Your friend already has this. Try sending something else.",
@@ -3180,6 +3159,8 @@
     " Make your name stand out no matter where you are. Nameplates are now available for purchase on mobile!"
   ],
   "4wA9a2": "Shop Anywhere, Anytime",
+  "V+IE9/": "Join Nitro to unlock access to this nameplate!",
+  "a6SrkZ": "Upgrade to unlock access to this nameplate!",
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -3202,6 +3183,10 @@
       ]
     ]
   ],
+  "uYLGcn": "View My Badge",
+  "6gF4aW": "Sweet!",
+  "B25MUV": "The badge has been added to your profile.",
+  "Bal8Cg": "You've collected the Orbs Apprentice Badge!",
   "SWm2am": "Your Profile Effect is updated!",
   "ivaAAw": "Popular Picks",
   "HSX4HR": [
@@ -3212,51 +3197,6 @@
     ]
   ],
   "tf1ZZ2": "Your profile is updated!",
-  "zFXJX1": [
-    "By clicking ",
-    "\"",
-    [
-      1,
-      "buyButtonLabel"
-    ],
-    "\"",
-    ", you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Paid Service Terms"
-      ],
-      [
-        [
-          1,
-          "paidServiceTermURL"
-        ]
-      ]
-    ],
-    ". ",
-    [
-      8,
-      "$b",
-      [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "“Virtual Goods” section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
-      ]
-    ],
-    ". This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
-  ],
   "iIglwM": [
     "By clicking ",
     "\"",
@@ -6662,6 +6602,31 @@
   ],
   "tdsiOz": "Change Default",
   "F6lRAA": "Double tap to react",
+  "5/l2ra": [
+    "React with ",
+    [
+      8,
+      "emojiNameHook",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " instantly. Or ",
+    [
+      8,
+      "tapHereHook",
+      [
+        "tap here"
+      ]
+    ],
+    " to set another default emoji."
+  ],
+  "6RUX7e": "Double tap to react",
   "WZGLFh": [
     [
       8,
@@ -6677,6 +6642,7 @@
     ],
     " is not available. Head to Settings to set another default."
   ],
+  "CL5mWl": "Emoji is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
   "3u/Je3": [
     "You can't use ",
@@ -6733,6 +6699,30 @@
       8,
       "emojiHook",
       []
+    ]
+  ],
+  "wHTk2N": "Edit default",
+  "VrWSNj": "Choose double tap emoji",
+  "C2tQIS": [
+    [
+      8,
+      "protipHook",
+      [
+        "PROTIP:"
+      ]
+    ],
+    " Double tap to react with ",
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
     ]
   ],
   "nKY0Fh": [
@@ -7895,7 +7885,6 @@
     " is only for adult players. Please play responsibly."
   ],
   "SSDPOD": "You’re about to use an age-restricted activity",
-  "wJNK8P": "Already in Activity",
   "uGDCc3": "This Activity is not currently available on this OS",
   "AlJyIy": "Error Fetching Developer Activity Shelf",
   "JfA7IC": "Developer Shelf Activity Override Enabled",
@@ -20036,6 +20025,21 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
+  "pDrI0t": [
+    [
+      1,
+      "category"
+    ],
+    " variant: ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "sBk8mZ": "You Rang?",
+  "9PzTtL": "Mr. Jack O’ Lantern",
+  "RbkXxc": "Rest in Peace",
+  "FW3Qp6": "Just Hangin’",
   "mMgymZ": "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase.",
   "h2nMp6": "Get one with each gift purchase.",
   "6OUb3t": "Collect all 8 if you dare...",
@@ -20089,7 +20093,6 @@
   "wb7QJy": "Ads",
   "j+d6RE": "Your Activity",
   "JN9c39": "Servers",
-  "M4ddeX": "Programs",
   "0dO1t7": "Messages",
   "rfe/x8": "Account",
   "yaLeEB": "Support Tickets",
@@ -22119,6 +22122,7 @@
   "NbhSIy": "Unverify Member",
   "6QlTeH": "Verify Member",
   "+vt7w8": "Make Discord Yours",
+  "kpMomJ": "Custom profiles",
   "e6RscX": "Mark As Read",
   "RpE9k5": "Mark Unread",
   "COq6kp": "Open Link",
@@ -23860,6 +23864,23 @@
   "s7vIQU": "New Override",
   "vPHdPz": "New Permission",
   "QBMHvL": "new role",
+  "CN0Hvb": [
+    "We announced updates to our policies in August, which are now in effect. Check out our ",
+    [
+      8,
+      "$link",
+      [
+        "article here"
+      ],
+      [
+        [
+          1,
+          "url"
+        ]
+      ]
+    ],
+    " for a summary of these changes, and read the full policies below."
+  ],
   "7glvXl": "Terms of Service and Policy Updates",
   "4WNcpq": "New Thread",
   "FCRiT0": "New Unreads",
@@ -23871,6 +23892,7 @@
   "DOb6x8": "Nitro Favorites",
   "M9AIt7": "Get exclusive access to certain new features before they’re released to everyone.",
   "LgHbnJ": "Enjoy An Upgraded Discord",
+  "xT1Vfn": "500MB Uploads",
   "37MFFh": "Get this cool badge for being a Nitro subscriber.",
   "LTaxu7": "Show Up The Way You Want",
   "H4/NBA": "Special Member Pricing",
@@ -28905,6 +28927,7 @@
   "vlHicH": "Custom profiles and more!",
   "ky8rxc": "Remix any media with Early Access",
   "myyAEh": "HD video streaming",
+  "zTk8Ul": "Color app themes and more!",
   "+qqh6u": [
     "Your ",
     [
@@ -30855,22 +30878,8 @@
     ],
     "."
   ],
-  "BfgxRk": [
-    "Play any of ",
-    [
-      8,
-      "$link",
-      [
-        "these select games"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ],
-    " for ",
+  "2GJLKy": [
+    "Play eligible games for ",
     [
       2,
       "targetMinutes"
@@ -30888,8 +30897,35 @@
     ],
     "."
   ],
-  "2GJLKy": [
-    "Play eligible games for ",
+  "1votFx": [
+    "Play any of these select games for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "CDeHur": [
+    "Play any of ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "these select games"
+      ]
+    ],
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31364,6 +31400,36 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "Hu8SKS": [
+    "Play any eligible game for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes"
+  ],
+  "gbtCpa": [
+    "Play any eligible game on desktop or a ",
+    [
+      8,
+      "$link",
+      [
+        "connected console"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
+    ],
+    " for ",
+    [
+      2,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "bUyEZW": "We automatically check for launched games, but no one’s perfect. Hit the refresh button to check if you’ve launched any eligible games on your connected console.",
   "umdNio": "Start Video Quest",
   "smG9qq": [
@@ -37811,21 +37877,7 @@
       ]
     ]
   ],
-  "+USXQE": "By clicking Agree, you acknowledge that you agree to Discord’s Terms of Service and have read our Privacy Policy.",
-  "zHolhY": [
-    "We announced our annual updates to our policies last month, which are now in effect. Check out our ",
-    [
-      8,
-      "$link",
-      [
-        "blog post"
-      ],
-      [
-        "https://discord.com/blog/important-policy-updates"
-      ]
-    ],
-    " for a summary of these changes, and read the full policies below."
-  ],
+  "+USXQE": "By clicking Agree, you agree to Discord’s Terms of Service and acknowledge that you have read our Privacy Policy.",
   "KI+BSU": [
     "By clicking “Create Account,” you agree to Discord's ",
     [
@@ -40501,6 +40553,34 @@
       "long"
     ]
   ],
+  "zR1+09": [
+    "Add up to ",
+    [
+      6,
+      "numGames",
+      {
+        "one": [
+          [
+            7
+          ],
+          " game"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " games"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wiXdER": "Choose 1 game",
+  "sUQar6": "Favorite game",
+  "SqNnur": "Games in rotation",
+  "scOKER": "Games I like",
+  "bWSQwc": "Want to play",
   "0/xHFB": "Windows",
   "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",
@@ -40537,7 +40617,6 @@
   "H9jz+f": "Yellow",
   "p89ACg": "Yes",
   "LuZzxs": "You",
-  "CAqwXl": "Your Friends",
   "wQ6ur6": [
     "You are Game Friends from ",
     [

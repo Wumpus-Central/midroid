@@ -33,7 +33,7 @@ import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import y2.f
 
-@SourceDebugExtension(["SMAP\nActivityInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,217:1\n257#2,2:218\n257#2,2:220\n257#2,2:222\n257#2,2:224\n257#2,2:226\n257#2,2:228\n257#2,2:230\n257#2,2:232\n257#2,2:234\n257#2,2:236\n327#2,4:238\n327#2,4:242\n257#2,2:246\n1557#3:248\n1628#3,3:249\n*S KotlinDebug\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n*L\n96#1:218,2\n115#1:220,2\n116#1:222,2\n117#1:224,2\n120#1:226,2\n121#1:228,2\n122#1:230,2\n126#1:232,2\n127#1:234,2\n128#1:236,2\n145#1:238,4\n153#1:242,4\n179#1:246,2\n180#1:248\n180#1:249,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nActivityInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,212:1\n257#2,2:213\n257#2,2:215\n257#2,2:217\n257#2,2:219\n257#2,2:221\n257#2,2:223\n257#2,2:225\n257#2,2:227\n257#2,2:229\n257#2,2:231\n327#2,4:233\n327#2,4:237\n257#2,2:241\n1557#3:243\n1628#3,3:244\n*S KotlinDebug\n*F\n+ 1 ActivityInviteEmbedView.kt\ncom/discord/activity_invites/ActivityInviteEmbedView\n*L\n73#1:213,2\n92#1:215,2\n93#1:217,2\n94#1:219,2\n97#1:221,2\n98#1:223,2\n99#1:225,2\n105#1:227,2\n106#1:229,2\n107#1:231,2\n134#1:233,4\n142#1:237,4\n173#1:241,2\n174#1:243\n174#1:244,3\n*E\n"])
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
       var1, var2, var3
    ) {
@@ -54,30 +54,13 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    }
 
    init {
-      val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
+      val var4: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
       this.grayscalePostprocessor$delegate = j.a(m.i, new com.discord.activity_invites.a());
-      this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
-      val var6: SimpleDraweeView = var5.startImage;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(8));
-      val var7: TextView = var5.header;
-      var5.header.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      SetTextSizeSpKt.setTextSizeSp(var7, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryBold);
-      var var4: TextView = var5.bottomEndLabel;
-      var5.bottomEndLabel.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
-      val var8: DiscordFont = DiscordFont.PrimarySemibold;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      var4 = var5.heroText;
-      var5.heroText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      DiscordFontUtilsKt.setDiscordFont(var4, var8);
-      val var9: TextView = var5.subtext;
-      var5.subtext.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimaryMedium);
-      var5.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, com.discord.theme.R.color.green_360));
-      var5.bgGradient.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundSecondary()));
+      val var5: SimpleDraweeView = var4.startImage;
+      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
+      var4.button.setBackgroundColor(ColorUtilsKt.getColorCompat(this, com.discord.theme.R.color.green_360));
    }
 
    private fun buildImageConfig(imageUri: String?, listening: Boolean, joinable: Boolean): com.discord.activity_invites.ActivityInviteEmbedView.ImageConfig {
@@ -122,6 +105,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
             throw new n();
          }
 
+         this.binding.bgGradient.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getBackgroundSecondary()));
          val var10: View = this.binding.bgGradient;
          val var7: ActivityInviteEmbedView.ImageConfig.End = var1 as ActivityInviteEmbedView.ImageConfig.End;
          val var2: Byte;
@@ -175,6 +159,10 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var3: TextView = this.binding.bottomEndLabel;
       ViewUtilsKt.setOptionalText(var3, var1);
       this.binding.bottomEndLabel.setTextColor(var2);
+      val var4: TextView = this.binding.bottomEndLabel;
+      SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
+      val var5: TextView = this.binding.bottomEndLabel;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
    }
 
    private fun setButtonText(buttonText: String?) {
@@ -221,17 +209,28 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
    }
 
    private fun setHeaderText(headerText: CharSequence?) {
-      val var2: TextView = this.binding.header;
+      this.binding.header.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var var2: TextView = this.binding.header;
+      SetTextSizeSpKt.setTextSizeSp(var2, 12.0F);
+      var2 = this.binding.header;
+      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryBold);
+      var2 = this.binding.header;
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
    private fun setHeroText(text: CharSequence?) {
-      val var2: TextView = this.binding.heroText;
+      this.binding.heroText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      var var2: TextView = this.binding.heroText;
+      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
+      var2 = this.binding.heroText;
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
    private fun setSubtext(text: CharSequence?) {
-      val var2: TextView = this.binding.subtext;
+      this.binding.subtext.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
+      var var2: TextView = this.binding.subtext;
+      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
+      var2 = this.binding.subtext;
       ViewUtilsKt.setOptionalText(var2, var1);
    }
 
@@ -248,6 +247,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       ctaText: String,
       onButtonClickListener: OnClickListener
    ) {
+      this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       this.setHeaderText(var3);
       this.setButtonText(var10);
       this.setAvatars(var5);
@@ -342,18 +342,18 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.uri;
-            val var1: Boolean = this.fullSize;
-            val var2: Boolean = this.grayscale;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("End(uri=");
-            var3.append(var4);
-            var3.append(", fullSize=");
-            var3.append(var1);
-            var3.append(", grayscale=");
-            var3.append(var2);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.lang.String = this.uri;
+            val var2: Boolean = this.fullSize;
+            val var1: Boolean = this.grayscale;
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("End(uri=");
+            var4.append(var3);
+            var4.append(", fullSize=");
+            var4.append(var2);
+            var4.append(", grayscale=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
       }
 

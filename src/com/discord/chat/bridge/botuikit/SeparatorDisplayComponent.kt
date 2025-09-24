@@ -62,18 +62,18 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var2: Boolean = this.divider;
-      val var3: SeparatorSpacingSize = this.spacing;
+      val var5: SeparatorSpacingSize = this.spacing;
       val var4: StringBuilder = new StringBuilder();
       var4.append("SeparatorDisplayComponent(type=");
       var4.append(var1);
       var4.append(", id=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", divider=");
       var4.append(var2);
       var4.append(", spacing=");
-      var4.append(var3);
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

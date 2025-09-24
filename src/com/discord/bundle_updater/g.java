@@ -7,6 +7,6 @@ public final class g implements Function0 {
    public final BundleUpdaterManager d;
 
    public final Object invoke() {
-      return BundleUpdaterManager.d(this.d);
+      return BundleUpdaterManager.e(this.d);
    }
 }

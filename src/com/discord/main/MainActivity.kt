@@ -12,12 +12,13 @@ import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
+import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
    private fun currentReactContext(): ReactContext? {
-      return this.getReactInstanceManager().getCurrentReactContext();
+      return this.getReactActivityDelegate().getCurrentReactContext();
    }
 
    public override fun getActivityDelegate(): ActivityDelegate {
@@ -30,12 +31,12 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            val var3: Context = this.getContext();
-            var2.handleIntent(var3, var1);
-            val var5: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            val var4: Context = this.getContext();
-            var5.handleIntent(var4, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            val var2: Context = this.getContext();
+            var3.handleIntent(var2, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            val var5: Context = this.getContext();
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             BundleUpdater.Companion.instance().handleIntent(var1);
          }
@@ -56,6 +57,11 @@ public class MainActivity : ReactActivity {
 
    public override fun getNameOfComponent(): String {
       return "Discord";
+   }
+
+   protected override fun onCreate(savedInstanceState: Bundle?) {
+      super.onCreate(var1);
+      TTIModule.Companion.setStaticMainActivityCreationTime(System.currentTimeMillis());
    }
 
    public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {

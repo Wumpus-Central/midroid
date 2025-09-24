@@ -16,9 +16,9 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
    val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
-   val var6: java.lang.String = var1.getString("content");
+   val var5: java.lang.String = var1.getString("content");
    var0 = ServiceNotificationConfiguration.Companion;
-   val var5: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
+   val var6: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
    var var2: ReadableMap = var1.getMap("contentAction");
    val var10: ServiceNotificationConfiguration.Action;
    if (var2 != null) {
@@ -46,7 +46,7 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
       var2 = CollectionsKt.k();
    }
 
-   return new ServiceNotificationConfiguration(var4, var6, var5, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
+   return new ServiceNotificationConfiguration(var4, var5, var6, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
@@ -67,13 +67,13 @@ private fun Companion.parseAction(readableMap: ReadableMap): Action {
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
    val var6: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
-   val var5: java.util.Iterator = var3.iterator();
+   val var4: java.util.Iterator = var3.iterator();
 
-   while (var5.hasNext()) {
-      val var2: Int = (var5 as I).nextInt();
-      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var4: ReadableMap = var1.getMap(var2);
-      var6.add(parse(var7, var4));
+   while (var4.hasNext()) {
+      val var2: Int = (var4 as I).nextInt();
+      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var7: ReadableMap = var1.getMap(var2);
+      var6.add(parse(var5, var7));
    }
 
    return var6;

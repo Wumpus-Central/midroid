@@ -443,11 +443,11 @@ public class APNGView(context: Context) : m(var1) {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var1);
-            var5.append(var6);
-            var1 = var5.toString();
+            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var1);
+            var6.append(var5);
+            var1 = var6.toString();
          }
 
          return var1;
@@ -534,9 +534,9 @@ public class APNGView(context: Context) : m(var1) {
       }
 
       public override fun hashCode(): Int {
-         val var3: Int = this.url.hashCode();
-         val var5: Int = java.lang.Boolean.hashCode(this.animate);
-         val var4: Int = java.lang.Boolean.hashCode(this.showLoading);
+         val var5: Int = this.url.hashCode();
+         val var4: Int = java.lang.Boolean.hashCode(this.animate);
+         val var3: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
          if (this.widthDp == null) {
@@ -549,31 +549,31 @@ public class APNGView(context: Context) : m(var1) {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var2: Boolean = this.animate;
          val var1: Boolean = this.showLoading;
          val var3: Int = this.widthDp;
-         val var6: Int = this.heightDp;
-         val var4: java.lang.String = this.cacheDirectory;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Config(url=");
-         var5.append(var7);
-         var5.append(", animate=");
-         var5.append(var2);
-         var5.append(", showLoading=");
-         var5.append(var1);
-         var5.append(", widthDp=");
-         var5.append(var3);
-         var5.append(", heightDp=");
-         var5.append(var6);
-         var5.append(", cacheDirectory=");
-         var5.append(var4);
-         var5.append(")");
-         return var5.toString();
+         val var4: Int = this.heightDp;
+         val var7: java.lang.String = this.cacheDirectory;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Config(url=");
+         var6.append(var5);
+         var6.append(", animate=");
+         var6.append(var2);
+         var6.append(", showLoading=");
+         var6.append(var1);
+         var6.append(", widthDp=");
+         var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var4);
+         var6.append(", cacheDirectory=");
+         var6.append(var7);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

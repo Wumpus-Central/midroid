@@ -20,6 +20,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
@@ -71,10 +72,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                c.b(var1);
             } else {
                c.b(var1);
-               var1 = FileDownloader.downloadFile$default(
+               val var4: Flow = FileDownloader.downloadFile$default(
                   FileDownloader.INSTANCE, this.$context, this.$url, this.$fileName, this.$soundDirectory, false, 16, null
                );
-               val var4: FlowCollector = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
+               var1 = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
                   final int $key;
                   final SoundManager $soundManager;
                   final Function1<Integer, Unit> $soundResIdPrepared;
@@ -271,8 +272,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            return Unit.a;
                         }
 
-                        val var10: d0 = K.c();
-                        var5 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                        var5 = K.c();
+                        val var10: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                            int label;
 
                            {
@@ -298,7 +299,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            }
                         };
                         ((<unrepresentable>)var13).label = 3;
-                        if (f.g(var10, (Function2)var5, (Continuation)var13) === var15) {
+                        if (f.g((CoroutineContext)var5, var10, (Continuation)var13) === var15) {
                            return var15;
                         }
                      }
@@ -307,7 +308,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                   }
                };
                this.label = 1;
-               if (var1.collect(var4, this) === var3) {
+               if (var4.collect(var1, this) === var3) {
                   return var3;
                }
             }

@@ -38,13 +38,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
-      val var18: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var5: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var18.getSplashUrl(), var1.getConstrainedWidth());
-      var5.setTitleText(var18.getTitleText());
-      var5.setHeaderText(var18.getHeaderText());
-      var5.setSubtitleText-Tu_1QLM(
-         var18.getStructurableSubtitleText(),
+      val var11: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var8: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var11.getSplashUrl(), var1.getConstrainedWidth());
+      var8.setTitleText(var11.getTitleText());
+      var8.setHeaderText(var11.getHeaderText());
+      var8.setSubtitleText-Tu_1QLM(
+         var11.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -204,9 +204,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var5.setNoParticipantsText(var18.getNoParticipantsText());
-      var5.setLaunchButton(var18.getAcceptLabelText(), var18.getAcceptLabelBackgroundColor(), var18.getCtaEnabled());
-      var5.setAvatarUris(var18.getParticipantAvatarUris());
-      var5.setOnLaunchButtonClickListener(new k(this, var1));
+      var8.setNoParticipantsText(var11.getNoParticipantsText());
+      var8.setLaunchButton(var11.getAcceptLabelText(), var11.getAcceptLabelBackgroundColor(), var11.getCtaEnabled());
+      var8.setAvatarUris(var11.getParticipantAvatarUris());
+      var8.setOnLaunchButtonClickListener(new k(this, var1));
    }
 }

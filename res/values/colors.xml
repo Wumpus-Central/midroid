@@ -949,6 +949,8 @@
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6ffffff</color>
     <color name="transparent">#00000000</color>
+    <color name="treat_background">#ff7955cc</color>
+    <color name="trick_background">#ff28144c</color>
     <color name="twitch">#ff9147ff</color>
     <color name="twitch_secondary">#ff772ce8</color>
     <color name="twitter">#ff1da1f2</color>

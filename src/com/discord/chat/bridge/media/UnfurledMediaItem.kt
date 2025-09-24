@@ -127,9 +127,9 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = this.url.hashCode();
+      val var7: Int = this.url.hashCode();
       val var8: Int = this.proxyUrl.hashCode();
-      val var7: Int = this.loadingState.hashCode();
+      val var9: Int = this.loadingState.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.height == null) {
@@ -170,40 +170,40 @@ public data class UnfurledMediaItem(url: String,
          var6 = this.contentScanMetadata.hashCode();
       }
 
-      return ((((((((var9 * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return ((((((((var7 * 31 + var8) * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var10: java.lang.String = this.proxyUrl;
+      val var9: java.lang.String = this.url;
+      val var2: java.lang.String = this.proxyUrl;
       val var5: UnfurledMediaLoadingState = this.loadingState;
-      val var8: Int = this.height;
-      val var6: Int = this.width;
-      val var2: java.lang.String = this.contentType;
-      val var3: java.lang.String = this.placeholder;
-      val var9: Int = this.placeholderVersion;
-      val var7: ContentScanMetadata = this.contentScanMetadata;
+      val var6: Int = this.height;
+      val var7: Int = this.width;
+      val var8: java.lang.String = this.contentType;
+      val var10: java.lang.String = this.placeholder;
+      val var3: Int = this.placeholderVersion;
+      val var4: ContentScanMetadata = this.contentScanMetadata;
       val var1: Boolean = this.srcIsAnimated;
       val var11: StringBuilder = new StringBuilder();
       var11.append("UnfurledMediaItem(url=");
-      var11.append(var4);
+      var11.append(var9);
       var11.append(", proxyUrl=");
-      var11.append(var10);
+      var11.append(var2);
       var11.append(", loadingState=");
       var11.append(var5);
       var11.append(", height=");
-      var11.append(var8);
-      var11.append(", width=");
       var11.append(var6);
-      var11.append(", contentType=");
-      var11.append(var2);
-      var11.append(", placeholder=");
-      var11.append(var3);
-      var11.append(", placeholderVersion=");
-      var11.append(var9);
-      var11.append(", contentScanMetadata=");
+      var11.append(", width=");
       var11.append(var7);
+      var11.append(", contentType=");
+      var11.append(var8);
+      var11.append(", placeholder=");
+      var11.append(var10);
+      var11.append(", placeholderVersion=");
+      var11.append(var3);
+      var11.append(", contentScanMetadata=");
+      var11.append(var4);
       var11.append(", srcIsAnimated=");
       var11.append(var1);
       var11.append(")");

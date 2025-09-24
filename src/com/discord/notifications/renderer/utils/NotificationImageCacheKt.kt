@@ -28,19 +28,19 @@ fun `access$enforceNotificationsCacheTTL`(var0: File) {
 private fun enforceNotificationsCacheTTL(directory: File) {
    if (var0.exists()) {
       val var3: Long = System.currentTimeMillis();
-      val var6: Array<File> = var0.listFiles();
-      if (var6 != null) {
-         val var5: ArrayList = new ArrayList();
-         val var2: Int = var6.length;
+      val var5: Array<File> = var0.listFiles();
+      if (var5 != null) {
+         val var6: ArrayList = new ArrayList();
+         val var2: Int = var5.length;
 
          for (int var1 = 0; var1 < var2; var1++) {
-            var0 = var6[var1];
-            if (var6[var1].isFile() && var3 - var6[var1].lastModified() > 864000000L) {
-               var5.add(var0);
+            var0 = var5[var1];
+            if (var5[var1].isFile() && var3 - var5[var1].lastModified() > 864000000L) {
+               var6.add(var0);
             }
          }
 
-         val var8: java.util.Iterator = var5.iterator();
+         val var8: java.util.Iterator = var6.iterator();
 
          while (var8.hasNext()) {
             (var8.next() as File).delete();

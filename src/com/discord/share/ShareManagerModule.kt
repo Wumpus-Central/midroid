@@ -15,9 +15,9 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun addListener(type: String) {
-      val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.register(var2, this.shareBroadcastReceiver);
+      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.register(var3, this.shareBroadcastReceiver);
    }
 
    public open fun getName(): String {

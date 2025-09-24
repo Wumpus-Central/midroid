@@ -208,12 +208,12 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
       val var3: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-      val var5: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var5.getInsetMargins().set(-var3, var3, -var3, var3);
-      var5.setOnClickListener(new l(var5, var0));
-      var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var5));
-      var5.setOnMovingStateChanged(new n(var0, var5));
-      return var5;
+      val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
+      var4.getInsetMargins().set(-var3, var3, -var3, var3);
+      var4.setOnClickListener(new l(var4, var0));
+      var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
+      var4.setOnMovingStateChanged(new n(var0, var4));
+      return var4;
    }
 
    @JvmStatic

@@ -108,11 +108,11 @@ public data class SeparatorRow(changeType: ChangeType,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.changeType.hashCode();
-      val var7: Int = Integer.hashCode(this.index);
-      val var4: Int = this.text.hashCode();
-      val var5: Int = this.id.hashCode();
-      val var6: Int = Integer.hashCode(this.color);
+      val var6: Int = this.changeType.hashCode();
+      val var5: Int = Integer.hashCode(this.index);
+      val var7: Int = this.text.hashCode();
+      val var8: Int = this.id.hashCode();
+      val var4: Int = Integer.hashCode(this.color);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollTo == null) {
@@ -132,37 +132,37 @@ public data class SeparatorRow(changeType: ChangeType,
          var3 = this.summary.hashCode();
       }
 
-      return ((((((var8 * 31 + var7) * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var6 * 31 + var5) * 31 + var7) * 31 + var8) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var6: ChangeType = this.changeType;
+      val var7: ChangeType = this.changeType;
       val var1: Int = this.index;
-      val var7: java.lang.String = this.text;
-      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.text;
+      val var5: java.lang.String = this.id;
       val var2: Int = this.color;
-      val var4: java.lang.Boolean = this.scrollTo;
-      val var8: java.lang.Boolean = this.isBeforeContent;
+      val var6: java.lang.Boolean = this.scrollTo;
+      val var3: java.lang.Boolean = this.isBeforeContent;
       val var9: Summary = this.summary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SeparatorRow(changeType=");
-      var5.append(var6);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", text=");
-      var5.append(var7);
-      var5.append(", id=");
-      var5.append(var3);
-      var5.append(", color=");
-      var5.append(var2);
-      var5.append(", scrollTo=");
-      var5.append(var4);
-      var5.append(", isBeforeContent=");
-      var5.append(var8);
-      var5.append(", summary=");
-      var5.append(var9);
-      var5.append(")");
-      return var5.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("SeparatorRow(changeType=");
+      var8.append(var7);
+      var8.append(", index=");
+      var8.append(var1);
+      var8.append(", text=");
+      var8.append(var4);
+      var8.append(", id=");
+      var8.append(var5);
+      var8.append(", color=");
+      var8.append(var2);
+      var8.append(", scrollTo=");
+      var8.append(var6);
+      var8.append(", isBeforeContent=");
+      var8.append(var3);
+      var8.append(", summary=");
+      var8.append(var9);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

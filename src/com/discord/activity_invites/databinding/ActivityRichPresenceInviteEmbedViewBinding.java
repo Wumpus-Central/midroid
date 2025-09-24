@@ -107,87 +107,87 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
    @NonNull
    public static ActivityRichPresenceInviteEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.action_wrapper;
-      LinearLayout var10 = (LinearLayout)a.a(var0, var1);
-      if (var10 != null) {
+      LinearLayout var16 = (LinearLayout)a.a(var0, var1);
+      if (var16 != null) {
          var1 = R.id.activity_icon;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.button;
-            DCDButton var11 = (DCDButton)a.a(var0, var1);
-            if (var11 != null) {
+            DCDButton var6 = (DCDButton)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.content_container;
-               ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
-               if (var12 != null) {
+               ConstraintLayout var20 = (ConstraintLayout)a.a(var0, var1);
+               if (var20 != null) {
                   var1 = R.id.desktop_icon;
-                  SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var14 != null) {
+                  SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.footer_container;
-                     ConstraintLayout var13 = (ConstraintLayout)a.a(var0, var1);
-                     if (var13 != null) {
+                     ConstraintLayout var11 = (ConstraintLayout)a.a(var0, var1);
+                     if (var11 != null) {
                         var1 = R.id.footer_content;
-                        LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-                        if (var4 != null) {
+                        LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.footer_label;
-                           TextView var15 = (TextView)a.a(var0, var1);
-                           if (var15 != null) {
+                           TextView var9 = (TextView)a.a(var0, var1);
+                           if (var9 != null) {
                               var1 = R.id.gradient_background;
-                              View var20 = a.a(var0, var1);
-                              if (var20 != null) {
+                              View var13 = a.a(var0, var1);
+                              if (var13 != null) {
                                  var1 = R.id.header_text;
-                                 TextView var5 = (TextView)a.a(var0, var1);
-                                 if (var5 != null) {
+                                 TextView var19 = (TextView)a.a(var0, var1);
+                                 if (var19 != null) {
                                     var1 = R.id.party_avatars;
-                                    OverlappingCirclesView var19 = (OverlappingCirclesView)a.a(var0, var1);
-                                    if (var19 != null) {
+                                    OverlappingCirclesView var3 = (OverlappingCirclesView)a.a(var0, var1);
+                                    if (var3 != null) {
                                        var1 = R.id.party_container;
-                                       ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
-                                       if (var8 != null) {
+                                       ConstraintLayout var21 = (ConstraintLayout)a.a(var0, var1);
+                                       if (var21 != null) {
                                           var1 = R.id.party_size_text;
-                                          TextView var6 = (TextView)a.a(var0, var1);
-                                          if (var6 != null) {
+                                          TextView var15 = (TextView)a.a(var0, var1);
+                                          if (var15 != null) {
                                              var1 = R.id.playstation_icon;
-                                             SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-                                             if (var9 != null) {
+                                             SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                                             if (var12 != null) {
                                                 var1 = R.id.subtitle;
-                                                TextView var21 = (TextView)a.a(var0, var1);
-                                                if (var21 != null) {
+                                                TextView var18 = (TextView)a.a(var0, var1);
+                                                if (var18 != null) {
                                                    var1 = R.id.subtitle_container;
-                                                   ConstraintLayout var17 = (ConstraintLayout)a.a(var0, var1);
-                                                   if (var17 != null) {
+                                                   ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
+                                                   if (var10 != null) {
                                                       var1 = R.id.subtitle_icon;
-                                                      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                                                      if (var7 != null) {
+                                                      SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
+                                                      if (var14 != null) {
                                                          var1 = R.id.text_content_wrapper;
-                                                         LinearLayout var16 = (LinearLayout)a.a(var0, var1);
-                                                         if (var16 != null) {
+                                                         LinearLayout var17 = (LinearLayout)a.a(var0, var1);
+                                                         if (var17 != null) {
                                                             var1 = R.id.title;
-                                                            TextView var2 = (TextView)a.a(var0, var1);
-                                                            if (var2 != null) {
+                                                            TextView var4 = (TextView)a.a(var0, var1);
+                                                            if (var4 != null) {
                                                                var1 = R.id.xbox_icon;
-                                                               SimpleDraweeView var18 = (SimpleDraweeView)a.a(var0, var1);
-                                                               if (var18 != null) {
+                                                               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                                                               if (var5 != null) {
                                                                   return new ActivityRichPresenceInviteEmbedViewBinding(
                                                                      var0,
-                                                                     var10,
-                                                                     var3,
-                                                                     var11,
-                                                                     var12,
-                                                                     var14,
-                                                                     var13,
-                                                                     var4,
-                                                                     var15,
-                                                                     var20,
-                                                                     var5,
-                                                                     var19,
-                                                                     var8,
-                                                                     var6,
-                                                                     var9,
-                                                                     var21,
-                                                                     var17,
-                                                                     var7,
                                                                      var16,
+                                                                     var7,
+                                                                     var6,
+                                                                     var20,
                                                                      var2,
-                                                                     var18
+                                                                     var11,
+                                                                     var8,
+                                                                     var9,
+                                                                     var13,
+                                                                     var19,
+                                                                     var3,
+                                                                     var21,
+                                                                     var15,
+                                                                     var12,
+                                                                     var18,
+                                                                     var10,
+                                                                     var14,
+                                                                     var17,
+                                                                     var4,
+                                                                     var5
                                                                   );
                                                                }
                                                             }

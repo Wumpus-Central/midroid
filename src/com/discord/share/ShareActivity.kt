@@ -5,14 +5,16 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import com.discord.react_activities.ReactActivity
+import com.discord.react_activities.RootViewInterface
+import com.discord.react_activities.RootViewUtils
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.facebook.react.ReactRootView
+import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.Intrinsics
 
 public class ShareActivity : ReactActivity {
    public override fun getActivityDelegate(): ActivityDelegate {
       return new ReactActivity.ActivityDelegate(this) {
-         private ReactRootView rootView;
          private ShareProps shareProps;
          final ShareActivity this$0;
 
@@ -36,23 +38,18 @@ public class ShareActivity : ReactActivity {
                val var7: java.util.List = var4.getAttachments();
                val var5: ShareActivity = this.this$0;
 
-               for (ShareProps.Attachment var9 : var7) {
-                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var9.getUri()), 1);
+               for (ShareProps.Attachment var8 : var7) {
+                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var8.getUri()), 1);
                }
             }
          }
 
          @Override
          protected ReactRootView createRootView() {
-            val var2: ReactRootView = super.createRootView();
-            this.rootView = var2;
-            var var1: ReactRootView = var2;
-            if (var2 == null) {
-               Intrinsics.throwUninitializedPropertyAccessException("rootView");
-               var1 = null;
-            }
-
-            return var1;
+            val var1: Context = this.getContext();
+            val var2: com.discord.react_activities.ReactRootView = new com.discord.react_activities.ReactRootView(var1);
+            var2.setIsFabric(this.isFabricEnabled());
+            return var2;
          }
 
          protected Bundle getLaunchOptions() {
@@ -73,20 +70,24 @@ public class ShareActivity : ReactActivity {
          public boolean onNewIntent(Intent var1) {
             if (var1 != null) {
                this.updateShareProps(var1);
+               val var2: ReactContext = this.getCurrentReactContext();
                var var3: ShareProps = null;
-               var var2: ReactRootView = this.rootView;
-               if (this.rootView == null) {
-                  Intrinsics.throwUninitializedPropertyAccessException("rootView");
-                  var2 = null;
-               }
-
-               if (this.shareProps == null) {
-                  Intrinsics.throwUninitializedPropertyAccessException("shareProps");
+               val var5: RootViewInterface;
+               if (var2 != null) {
+                  var5 = RootViewUtils.INSTANCE.getRootView(var2);
                } else {
-                  var3 = this.shareProps;
+                  var5 = null;
                }
 
-               var2.setAppProperties(var3.toBundle());
+               if (var5 != null) {
+                  if (this.shareProps == null) {
+                     Intrinsics.throwUninitializedPropertyAccessException("shareProps");
+                  } else {
+                     var3 = this.shareProps;
+                  }
+
+                  var5.setAppProperties(var3.toBundle());
+               }
             }
 
             return super.onNewIntent(var1);

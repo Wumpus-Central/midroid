@@ -69,39 +69,39 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
    @NonNull
    public static ViewOverlayMenuBinding bind(@NonNull View var0) {
       int var1 = R.id.disconnect_btn;
-      SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
-      if (var12 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.menu_bottom;
-         CardView var11 = (CardView)a.a(var0, var1);
-         if (var11 != null) {
+         CardView var4 = (CardView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.menu_top;
-            CardView var10 = (CardView)a.a(var0, var1);
-            if (var10 != null) {
+            CardView var9 = (CardView)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.menu_top_status_container;
-               ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
-               if (var2 != null) {
+               ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.mute_toggle;
-                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.overlay_channel_name;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var11 = (TextView)a.a(var0, var1);
+                     if (var11 != null) {
                         var1 = R.id.overlay_guild_name;
-                        TextView var7 = (TextView)a.a(var0, var1);
-                        if (var7 != null) {
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.overlay_invite_link;
-                           TextView var6 = (TextView)a.a(var0, var1);
-                           if (var6 != null) {
+                           TextView var5 = (TextView)a.a(var0, var1);
+                           if (var5 != null) {
                               var1 = R.id.overlay_network_icon;
-                              SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var9 != null) {
+                              SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var2 != null) {
                                  var1 = R.id.overlay_open_app;
-                                 TextView var5 = (TextView)a.a(var0, var1);
-                                 if (var5 != null) {
+                                 TextView var12 = (TextView)a.a(var0, var1);
+                                 if (var12 != null) {
                                     var1 = R.id.overlay_switch_channels;
-                                    TextView var4 = (TextView)a.a(var0, var1);
-                                    if (var4 != null) {
-                                       return new ViewOverlayMenuBinding(var0, var12, var11, var10, var2, var3, var8, var7, var6, var9, var5, var4);
+                                    TextView var10 = (TextView)a.a(var0, var1);
+                                    if (var10 != null) {
+                                       return new ViewOverlayMenuBinding(var0, var3, var4, var9, var6, var7, var11, var8, var5, var2, var12, var10);
                                     }
                                  }
                               }

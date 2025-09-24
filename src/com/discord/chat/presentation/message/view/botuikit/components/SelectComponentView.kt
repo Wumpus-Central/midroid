@@ -219,27 +219,27 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var13: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var21: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
-                           val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           val var35: java.lang.String = var13.getIconSrc();
-                           val var12: Int = var13.getIconColor();
+                           val var35: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var13: java.lang.String = var21.getIconSrc();
+                           val var12: Int = var21.getIconColor();
                            val var16: Boolean;
-                           if (var13.getType() === SelectOptionType.USER) {
+                           if (var21.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var22, var35, var12, var16);
+                           this.setImage(var35, var13, var12, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;
                         }
                      }
 
-                     val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                     var21.setVisibility(8);
+                     val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     var22.setVisibility(8);
                   }
                }
             }

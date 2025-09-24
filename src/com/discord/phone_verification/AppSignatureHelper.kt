@@ -112,12 +112,12 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
                var8 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var25: Log = Log.INSTANCE;
+               val var9: Log = Log.INSTANCE;
                val var23: java.lang.String = TAG;
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Hash ");
-               var9.append(var8);
-               Log.i$default(var25, var23, var9.toString(), null, 4, null);
+               val var25: StringBuilder = new StringBuilder();
+               var25.append("Hash ");
+               var25.append(var8);
+               Log.i$default(var9, var23, var25.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
@@ -151,10 +151,10 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var8: java.lang.String = var3.toString();
-            val var12: MessageDigest = MessageDigest.getInstance("SHA-256");
-            var12.update(f.a(var8));
-            val var9: ByteArray = var12.digest();
+            val var12: java.lang.String = var3.toString();
+            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
+            var8.update(f.a(var12));
+            val var9: ByteArray = var8.digest();
             val var10: java.lang.String = Base64.encodeToString(h.n(var9, 0, 9), 3);
             var2 = var10.substring(0, 11);
             val var5: Log = Log.INSTANCE;

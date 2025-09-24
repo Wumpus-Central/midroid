@@ -47,13 +47,13 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = Arrays.toString((Object[])this.guildVersions);
-      val var1: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
+      val var1: java.lang.String = Arrays.toString((Object[])this.guildVersions);
+      val var2: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
       val var3: StringBuilder = new StringBuilder();
       var3.append("DatabaseVersions(guildVersions=");
-      var3.append(var2);
-      var3.append(", nonGuildVersions=");
       var3.append(var1);
+      var3.append(", nonGuildVersions=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

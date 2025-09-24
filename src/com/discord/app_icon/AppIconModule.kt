@@ -24,16 +24,16 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
    }
 
    public override fun getCurrentIcon(promise: Promise) {
-      val var3: AppIconUtil = AppIconUtil.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var3.getCurrentAppIcon(var2).getId())));
+      val var2: AppIconUtil = AppIconUtil.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var2.getCurrentAppIcon(var3).getId())));
    }
 
    public override fun setIcon(id: String, promise: Promise) {
       try {
-         val var4: AppIconUtil = AppIconUtil.INSTANCE;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         var4.setAppIcon(var3, var1);
+         val var3: AppIconUtil = AppIconUtil.INSTANCE;
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         var3.setAppIcon(var4, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

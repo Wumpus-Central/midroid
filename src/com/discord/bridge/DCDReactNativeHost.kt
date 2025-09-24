@@ -1,9 +1,12 @@
 package com.discord.bridge
 
 import android.app.Application
+import android.content.Context
 import com.discord.bundle_updater.BundleUpdater
 import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
+import com.facebook.react.runtime.ReactSurfaceImpl
+import com.facebook.react.runtime.ReactSurfaceView
 import java.io.File
 import java.util.ArrayList
 
@@ -19,6 +22,10 @@ public class DCDReactNativeHost(application: Application) : DefaultReactNativeHo
          return java.lang.Boolean.TRUE;
       }
 
+
+   public open fun createReactSurfaceView(context: Context, surfaceImpl: ReactSurfaceImpl): ReactSurfaceView? {
+      return new com.discord.react_activities.ReactSurfaceView(var1, var2);
+   }
 
    protected open fun getBundleAssetName(): String {
       return "index.android.bundle";

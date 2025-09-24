@@ -35,10 +35,10 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
       this.inputUri = var2;
       val var6: IntRange = kotlin.ranges.d.s(0, this.getTrackCount());
       val var103: ArrayList = new ArrayList(CollectionsKt.v(var6, 10));
-      val var118: java.util.Iterator = var6.iterator();
+      val var120: java.util.Iterator = var6.iterator();
 
-      while (var118.hasNext()) {
-         var103.add(this.getTrackFormat((var118 as I).nextInt()));
+      while (var120.hasNext()) {
+         var103.add(this.getTrackFormat((var120 as I).nextInt()));
       }
 
       this.srcTrackFormats = var103;
@@ -47,7 +47,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
       var var132: java.lang.String;
       do {
          val var4: Boolean = var7.hasNext();
-         var119 = null;
+         var121 = null;
          if (!var4) {
             var104 = null;
             break;
@@ -62,7 +62,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
       var7 = this.srcTrackFormats.iterator();
 
       do {
-         var105 = var119;
+         var105 = var121;
          if (!var7.hasNext()) {
             break;
          }
@@ -80,36 +80,36 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
             val var107: kotlin.Result.a = Result.e;
             var106 = Result.b(var135.getInteger("width"));
          } catch (var17: java.lang.Throwable) {
-            val var120: kotlin.Result.a = Result.e;
+            val var122: kotlin.Result.a = Result.e;
             var106 = Result.b(kotlin.c.a(var17));
             break label154;
          }
 
-         var var121: Any = var106;
+         var var123: Any = var106;
          if (Result.g(var106)) {
-            var121 = 640;
+            var123 = 640;
          }
 
-         this.width = (var121 as java.lang.Number).intValue();
+         this.width = (var123 as java.lang.Number).intValue();
 
          label148:
          try {
             var108 = Result.b(var135.getInteger("height"));
          } catch (var16: java.lang.Throwable) {
-            var121 = Result.e;
+            var123 = Result.e;
             var108 = Result.b(kotlin.c.a(var16));
             break label148;
          }
 
-         var121 = var108;
+         var123 = var108;
          if (Result.g(var108)) {
-            var121 = 480;
+            var123 = 480;
          }
 
-         this.height = (var121 as java.lang.Number).intValue();
-         var121 = MediaFormatUtilsKt.getProfileName(var135);
-         var var109: java.lang.String = (java.lang.String)var121;
-         if (var121 == null) {
+         this.height = (var123 as java.lang.Number).intValue();
+         var123 = MediaFormatUtilsKt.getProfileName(var135);
+         var var109: java.lang.String = (java.lang.String)var123;
+         if (var123 == null) {
             var109 = "unknown";
          }
 
@@ -129,84 +129,84 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
             var111 = "unknown";
          }
 
-         var var117: Boolean;
+         var var119: Boolean;
          label185: {
             this.videoFormat = var111;
             if (var135.containsKey("color-transfer")) {
-               var117 = true;
+               var119 = true;
                if (var135.getInteger("color-transfer") == 7) {
                   break label185;
                }
 
-               var117 = true;
+               var119 = true;
                if (var135.getInteger("color-transfer") == 6) {
                   break label185;
                }
             }
 
             if (var135.containsKey("color-standard") && var135.getInteger("color-standard") == 6) {
-               var117 = true;
+               var119 = true;
             } else {
-               var117 = false;
+               var119 = false;
             }
          }
 
-         this.isHDRContent = var117;
+         this.isHDRContent = var119;
 
          label130:
          try {
-            var112 = Result.b(var135.getInteger("frame-rate"));
+            var113 = Result.b(var135.getInteger("frame-rate"));
          } catch (var15: java.lang.Throwable) {
-            var121 = Result.e;
-            var112 = Result.b(kotlin.c.a(var15));
+            val var112: kotlin.Result.a = Result.e;
+            var113 = Result.b(kotlin.c.a(var15));
             break label130;
          }
 
-         if (Result.e(var112) != null) {
+         if (Result.e(var113) != null) {
             label125:
             try {
-               var112 = Result.b((int)var135.getFloat("frame-rate"));
+               var113 = Result.b((int)var135.getFloat("frame-rate"));
             } catch (var14: java.lang.Throwable) {
-               var121 = Result.e;
-               var112 = Result.b(kotlin.c.a(var14));
+               val var114: kotlin.Result.a = Result.e;
+               var113 = Result.b(kotlin.c.a(var14));
                break label125;
             }
          }
 
-         var121 = var112;
-         if (Result.g(var112)) {
-            var121 = 30;
+         var123 = var113;
+         if (Result.g(var113)) {
+            var123 = 30;
          }
 
-         this.frameRate = (var121 as java.lang.Number).intValue();
+         this.frameRate = (var123 as java.lang.Number).intValue();
          this.bitRate = h.a(this, this.srcTrackFormats.indexOf(var135));
 
          label119:
          try {
-            var113 = Result.b(var135.getFloat("i-frame-interval"));
+            var116 = Result.b(var135.getFloat("i-frame-interval"));
          } catch (var13: java.lang.Throwable) {
-            var121 = Result.e;
-            var113 = Result.b(kotlin.c.a(var13));
+            val var115: kotlin.Result.a = Result.e;
+            var116 = Result.b(kotlin.c.a(var13));
             break label119;
          }
 
-         if (Result.e(var113) != null) {
+         if (Result.e(var116) != null) {
             label114:
             try {
-               var113 = Result.b((float)var135.getInteger("i-frame-interval"));
+               var116 = Result.b((float)var135.getInteger("i-frame-interval"));
             } catch (var12: java.lang.Throwable) {
-               val var114: kotlin.Result.a = Result.e;
-               var113 = Result.b(kotlin.c.a(var12));
+               var123 = Result.e;
+               var116 = Result.b(kotlin.c.a(var12));
                break label114;
             }
          }
 
-         var121 = var113;
-         if (Result.g(var113)) {
-            var121 = 5.0F;
+         var123 = var116;
+         if (Result.g(var116)) {
+            var123 = 5.0F;
          }
 
-         this.keyFrameIntervalSeconds = (var121 as java.lang.Number).floatValue();
+         this.keyFrameIntervalSeconds = (var123 as java.lang.Number).floatValue();
 
          label1068: {
             label106: {
@@ -240,12 +240,12 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
             }
          }
 
-         var var115: Any = var100;
+         var var117: Any = var100;
          if (Result.g(var100)) {
-            var115 = 0;
+            var117 = 0;
          }
 
-         this.rotationDegrees = (var115 as java.lang.Number).intValue();
+         this.rotationDegrees = (var117 as java.lang.Number).intValue();
       } else {
          this.width = 640;
          this.height = 480;
@@ -341,22 +341,22 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
    }
 
    private fun getAVCBitrate(width: Int, height: Int, frameRate: Int): Int {
-      var var5: Int = -1;
-      var var4: Int = 0;
+      var var4: Int = -1;
+      var var5: Int = 0;
 
-      while (var4 < 2) {
+      while (var5 < 2) {
          var var6: Int = 0;
 
          var var7: Int;
          while (true) {
-            var7 = var5;
+            var7 = var4;
             if (var6 >= 5) {
                break;
             }
 
             var7 = new int[]{8, 6, 5, 4, 0}[var6];
-            if (CamcorderProfile.hasProfile(var4, var7)) {
-               val var10: CamcorderProfile = CamcorderProfile.get(var4, var7);
+            if (CamcorderProfile.hasProfile(var5, var7)) {
+               val var10: CamcorderProfile = CamcorderProfile.get(var5, var7);
                var var8: Boolean = true;
                val var14: Boolean;
                if (var1 == var10.videoFrameWidth && var2 == var10.videoFrameHeight) {
@@ -370,8 +370,8 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
                }
 
                if ((var14 || var8) && var3 == var10.videoFrameRate && var10.videoCodec == 2) {
-                  var7 = var5;
-                  if (var5 < var10.videoBitRate) {
+                  var7 = var4;
+                  if (var4 < var10.videoBitRate) {
                      var7 = var10.videoBitRate;
                   }
                   break;
@@ -381,11 +381,11 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
             var6++;
          }
 
-         var4++;
-         var5 = var7;
+         var5++;
+         var4 = var7;
       }
 
-      var var15: Int = var5;
+      var var15: Int = var4;
       if (var15.intValue() == -1) {
          var15 = null;
       }
@@ -557,21 +557,21 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : o8.a(v
       }
 
       public override fun toString(): String {
-         val var3: Int = this.colorTransfer;
-         val var4: Int = this.colorStandard;
-         val var5: Int = this.colorRange;
-         val var2: ByteBuffer = this.hdrStaticInfo;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ColorFormatSettings(colorTransfer=");
-         var1.append(var3);
-         var1.append(", colorStandard=");
-         var1.append(var4);
-         var1.append(", colorRange=");
-         var1.append(var5);
-         var1.append(", hdrStaticInfo=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var4: Int = this.colorTransfer;
+         val var1: Int = this.colorStandard;
+         val var3: Int = this.colorRange;
+         val var5: ByteBuffer = this.hdrStaticInfo;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ColorFormatSettings(colorTransfer=");
+         var2.append(var4);
+         var2.append(", colorStandard=");
+         var2.append(var1);
+         var2.append(", colorRange=");
+         var2.append(var3);
+         var2.append(", hdrStaticInfo=");
+         var2.append(var5);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

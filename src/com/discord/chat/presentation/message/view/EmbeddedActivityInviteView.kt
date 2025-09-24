@@ -168,7 +168,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    }
 
    public fun setSplash(splashUrl: String?, constrainedWidth: Int) {
-      val var4: SimpleDraweeView = this.binding.itemHero;
+      var var4: SimpleDraweeView = this.binding.itemHero;
       var var3: Boolean;
       if (var1 != null) {
          var3 = 1;
@@ -184,11 +184,11 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
-      var2 = var3 * 9 / 16;
-      val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-      val var5: SimpleDraweeView = this.binding.itemHero;
-      var9.resizeLayoutParams(var5, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
+      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var3 = var2 * 9 / 16;
+      val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+      var4 = this.binding.itemHero;
+      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(

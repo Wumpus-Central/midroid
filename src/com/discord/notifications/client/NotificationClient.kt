@@ -103,7 +103,7 @@ public class NotificationClient {
       // 068: goto 073
       // 06b: astore 1
       // 06c: goto 263
-      // 06f: astore 1
+      // 06f: astore 2
       // 070: goto 243
       // 073: aload 2
       // 074: invokevirtual com/discord/notifications/api/NotificationData.getNotifTypeId ()Ljava/lang/String;
@@ -318,17 +318,17 @@ public class NotificationClient {
       // 240: aload 6
       // 242: athrow
       // 243: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 246: astore 2
+      // 246: astore 1
       // 247: ldc com/discord/notifications/client/NotificationClient
       // 249: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
       // 24c: astore 6
       // 24e: aload 6
       // 250: ldc_w "getSimpleName(...)"
       // 253: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 256: aload 2
+      // 256: aload 1
       // 257: aload 6
       // 259: ldc_w "Error appending notification to cache file"
-      // 25c: aload 1
+      // 25c: aload 2
       // 25d: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
       // 260: aload 0
       // 261: monitorexit
@@ -380,9 +380,9 @@ public class NotificationClient {
    }
 
    private fun showNotification(context: Context, notificationData: NotificationData, notificationDataMap: Map<String, String>, makeOrUpdateShortcut: Boolean) {
-      val var11: CrashReporting = CrashReporting.INSTANCE;
-      val var9: Pair = s.a("type", var2.getType());
-      var var12: Pair = s.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
+      val var9: CrashReporting = CrashReporting.INSTANCE;
+      var var12: Pair = s.a("type", var2.getType());
+      val var11: Pair = s.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
       var var8: java.lang.String = var2.getMessageId-N_6c4I0();
       var var10: java.lang.String = "null";
       if (var8 == null) {
@@ -392,7 +392,7 @@ public class NotificationClient {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var11, "Kotlin NotificationClient received Notification.", L.l(new Pair[]{var9, var12, s.a("messageId", var8)}), null, 4, null
+         var9, "Kotlin NotificationClient received Notification.", L.l(new Pair[]{var12, var11, s.a("messageId", var8)}), null, 4, null
       );
       if (this.cache.isAuthed(var1)) {
          val var82: SilentNotificationManager = SilentNotificationManager.Companion.get(var1);
@@ -410,9 +410,9 @@ public class NotificationClient {
                   var5 = var82.shouldDisplayNotification(var2);
                   var70 = var2.getReceivingUserId-wUX8bhU();
                } catch (var33: Exception) {
-                  val var34: Log = Log.INSTANCE;
-                  val var51: java.lang.String = NotificationClient.class.getSimpleName();
-                  var34.e(var51, "Unable to display notification", var33);
+                  val var50: Log = Log.INSTANCE;
+                  val var34: java.lang.String = NotificationClient.class.getSimpleName();
+                  var50.e(var34, "Unable to display notification", var33);
                   return;
                }
 
@@ -421,9 +421,9 @@ public class NotificationClient {
                      try {
                         var73 = UserId.toString-impl(var70.unbox-impl());
                      } catch (var32: Exception) {
-                        val var35: Log = Log.INSTANCE;
-                        val var52: java.lang.String = NotificationClient.class.getSimpleName();
-                        var35.e(var52, "Unable to display notification", var32);
+                        val var51: Log = Log.INSTANCE;
+                        val var35: java.lang.String = NotificationClient.class.getSimpleName();
+                        var51.e(var35, "Unable to display notification", var32);
                         return;
                      }
 
@@ -436,9 +436,9 @@ public class NotificationClient {
                   try {
                      var8 = this.cache.getCurrentUserId(var1);
                   } catch (var31: Exception) {
-                     val var36: Log = Log.INSTANCE;
-                     val var53: java.lang.String = NotificationClient.class.getSimpleName();
-                     var36.e(var53, "Unable to display notification", var31);
+                     val var52: Log = Log.INSTANCE;
+                     val var36: java.lang.String = NotificationClient.class.getSimpleName();
+                     var52.e(var36, "Unable to display notification", var31);
                      return;
                   }
                }
@@ -455,9 +455,9 @@ public class NotificationClient {
                      var13 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
                      var74 = NotificationDataUtilsKt.getContent(var2, var1, true);
                   } catch (var30: Exception) {
-                     val var37: Log = Log.INSTANCE;
-                     val var54: java.lang.String = NotificationClient.class.getSimpleName();
-                     var37.e(var54, "Unable to display notification", var30);
+                     val var53: Log = Log.INSTANCE;
+                     val var37: java.lang.String = NotificationClient.class.getSimpleName();
+                     var53.e(var37, "Unable to display notification", var30);
                      return;
                   }
 
@@ -466,9 +466,9 @@ public class NotificationClient {
                      try {
                         var75 = var74.toString();
                      } catch (var29: Exception) {
-                        val var38: Log = Log.INSTANCE;
-                        val var55: java.lang.String = NotificationClient.class.getSimpleName();
-                        var38.e(var55, "Unable to display notification", var29);
+                        val var54: Log = Log.INSTANCE;
+                        val var38: java.lang.String = NotificationClient.class.getSimpleName();
+                        var54.e(var38, "Unable to display notification", var29);
                         return;
                      }
                   } else {
@@ -481,9 +481,9 @@ public class NotificationClient {
                      var16 = java.lang.String.valueOf(var2.getChannelId-qMVnFVQ());
                      var17 = var2.getMessageId-N_6c4I0();
                   } catch (var28: Exception) {
-                     val var39: Log = Log.INSTANCE;
-                     val var56: java.lang.String = NotificationClient.class.getSimpleName();
-                     var39.e(var56, "Unable to display notification", var28);
+                     val var55: Log = Log.INSTANCE;
+                     val var39: java.lang.String = NotificationClient.class.getSimpleName();
+                     var55.e(var39, "Unable to display notification", var28);
                      return;
                   }
 
@@ -491,9 +491,9 @@ public class NotificationClient {
                      try {
                         var10 = MessageId.toString-impl(var17);
                      } catch (var27: Exception) {
-                        val var40: Log = Log.INSTANCE;
-                        val var57: java.lang.String = NotificationClient.class.getSimpleName();
-                        var40.e(var57, "Unable to display notification", var27);
+                        val var56: Log = Log.INSTANCE;
+                        val var40: java.lang.String = NotificationClient.class.getSimpleName();
+                        var56.e(var40, "Unable to display notification", var27);
                         return;
                      }
                   }
@@ -501,9 +501,9 @@ public class NotificationClient {
                   try {
                      var15.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var14, var13, var75, var16, var10));
                   } catch (var26: Exception) {
-                     val var41: Log = Log.INSTANCE;
-                     val var58: java.lang.String = NotificationClient.class.getSimpleName();
-                     var41.e(var58, "Unable to display notification", var26);
+                     val var57: Log = Log.INSTANCE;
+                     val var41: java.lang.String = NotificationClient.class.getSimpleName();
+                     var57.e(var41, "Unable to display notification", var26);
                      return;
                   }
                }
@@ -516,18 +516,18 @@ public class NotificationClient {
                         .display(var1, var2, this.cache.getCurrentUsername(var1), var3, this.getBehaviors(var1), var4, this.shouldNotifyEveryTime(var1));
                      var82.onDisplayNotification(var2);
                   } catch (var25: Exception) {
-                     val var42: Log = Log.INSTANCE;
-                     val var59: java.lang.String = NotificationClient.class.getSimpleName();
-                     var42.e(var59, "Unable to display notification", var25);
+                     val var58: Log = Log.INSTANCE;
+                     val var42: java.lang.String = NotificationClient.class.getSimpleName();
+                     var58.e(var42, "Unable to display notification", var25);
                      return;
                   }
                } else {
                   try {
                      var82.onSilentNotification(var2);
                   } catch (var24: Exception) {
-                     val var43: Log = Log.INSTANCE;
-                     val var60: java.lang.String = NotificationClient.class.getSimpleName();
-                     var43.e(var60, "Unable to display notification", var24);
+                     val var59: Log = Log.INSTANCE;
+                     val var43: java.lang.String = NotificationClient.class.getSimpleName();
+                     var59.e(var43, "Unable to display notification", var24);
                      return;
                   }
                }
@@ -539,9 +539,9 @@ public class NotificationClient {
 
                   var72 = NotificationDataUtilsKt.getKvMessage(var2, var3.get("message") as java.lang.String);
                } catch (var23: Exception) {
-                  val var44: Log = Log.INSTANCE;
-                  val var61: java.lang.String = NotificationClient.class.getSimpleName();
-                  var44.e(var61, "Unable to display notification", var23);
+                  val var60: Log = Log.INSTANCE;
+                  val var44: java.lang.String = NotificationClient.class.getSimpleName();
+                  var60.e(var44, "Unable to display notification", var23);
                   return;
                }
 
@@ -550,35 +550,35 @@ public class NotificationClient {
                      var76 = var2.getMessageId-N_6c4I0();
                      var78 = var2.getChannelId-qMVnFVQ();
                   } catch (var22: Exception) {
-                     val var45: Log = Log.INSTANCE;
-                     val var62: java.lang.String = NotificationClient.class.getSimpleName();
-                     var45.e(var62, "Unable to display notification", var22);
+                     val var61: Log = Log.INSTANCE;
+                     val var45: java.lang.String = NotificationClient.class.getSimpleName();
+                     var61.e(var45, "Unable to display notification", var22);
                      return;
                   }
 
                   if (var76 != null && var78 != null) {
                      try {
                         var12 = (Pair)var3.get("receiving_user_id");
-                        val var64: StringBuilder = new StringBuilder();
-                        var64.append("@account.");
-                        var64.append(var12);
-                        var65 = var64.toString();
+                        val var67: StringBuilder = new StringBuilder();
+                        var67.append("@account.");
+                        var67.append(var12);
+                        var68 = var67.toString();
                         var84 = var2.getGuildId-qOKuAAo();
                      } catch (var21: Exception) {
-                        val var46: Log = Log.INSTANCE;
-                        val var63: java.lang.String = NotificationClient.class.getSimpleName();
-                        var46.e(var63, "Unable to display notification", var21);
+                        val var62: Log = Log.INSTANCE;
+                        val var46: java.lang.String = NotificationClient.class.getSimpleName();
+                        var62.e(var46, "Unable to display notification", var21);
                         return;
                      }
 
-                     var var50: java.lang.String = null;
+                     var var63: java.lang.String = null;
                      if (var84 != null) {
                         try {
-                           var50 = GuildId.toString-impl(var84.unbox-impl());
+                           var63 = GuildId.toString-impl(var84.unbox-impl());
                         } catch (var20: Exception) {
-                           val var47: Log = Log.INSTANCE;
-                           val var66: java.lang.String = NotificationClient.class.getSimpleName();
-                           var47.e(var66, "Unable to display notification", var20);
+                           val var64: Log = Log.INSTANCE;
+                           val var47: java.lang.String = NotificationClient.class.getSimpleName();
+                           var64.e(var47, "Unable to display notification", var20);
                            return;
                         }
                      }
@@ -588,11 +588,11 @@ public class NotificationClient {
                         val var77: java.lang.String = MessageId.toString-impl(var76);
                         val var81: kotlinx.serialization.json.Json.a = Json.d;
                         Json.d.a();
-                        DiscordMobileApi.putMessage(var65, var50, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
+                        DiscordMobileApi.putMessage(var68, var63, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
                      } catch (var19: Exception) {
-                        val var48: Log = Log.INSTANCE;
-                        val var67: java.lang.String = NotificationClient.class.getSimpleName();
-                        var48.e(var67, "Unable to display notification", var19);
+                        val var65: Log = Log.INSTANCE;
+                        val var48: java.lang.String = NotificationClient.class.getSimpleName();
+                        var65.e(var48, "Unable to display notification", var19);
                         return;
                      }
                   }
@@ -603,9 +603,9 @@ public class NotificationClient {
                      HeadlessTasks.Companion.startHeadlessTask$default(HeadlessTasks.Companion, var1, "BackgroundSync", 30000L, false, null, true, 24, null);
                   }
                } catch (var18: Exception) {
-                  val var49: Log = Log.INSTANCE;
-                  val var68: java.lang.String = NotificationClient.class.getSimpleName();
-                  var49.e(var68, "Unable to display notification", var18);
+                  val var66: Log = Log.INSTANCE;
+                  val var49: java.lang.String = NotificationClient.class.getSimpleName();
+                  var66.e(var49, "Unable to display notification", var18);
                }
             }
          }
@@ -702,11 +702,11 @@ public class NotificationClient {
    }
 
    public fun markNotificationAsDirectReply(context: Context, channelId: Long) {
-      val var5: NotificationRenderer = this.renderer;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MESSAGE_CREATE");
-      var4.append(var2);
-      var5.markNotificationAsDirectReply(var1, var4.toString(), "", true);
+      val var4: NotificationRenderer = this.renderer;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MESSAGE_CREATE");
+      var5.append(var2);
+      var4.markNotificationAsDirectReply(var1, var5.toString(), "", true);
    }
 
    public fun onDirectReplySuccess(context: Context, data: String) {
@@ -724,10 +724,10 @@ public class NotificationClient {
    }
 
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
-      val var6: tb.a.a = tb.a.b;
-      val var5: KSerializer = NotificationData.Companion.serializer();
-      val var4: java.util.Map = L.x(var2);
-      var4.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
+      val var4: tb.a.a = tb.a.b;
+      val var6: KSerializer = NotificationData.Companion.serializer();
+      val var5: java.util.Map = L.x(var2);
+      var5.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
       val var3: java.lang.String;
       if (this.shouldDisplayNotification.invoke() as java.lang.Boolean) {
          var3 = "background";
@@ -735,8 +735,8 @@ public class NotificationClient {
          var3 = "active";
       }
 
-      var4.put("app_state", var3);
-      val var8: NotificationData = var6.d(var5, var4) as NotificationData;
+      var5.put("app_state", var3);
+      val var8: NotificationData = var4.d(var6, var5) as NotificationData;
       this.appendNotificationToCacheFile(var1, var8);
       this.showNotification(var1, var8, var2, true);
    }

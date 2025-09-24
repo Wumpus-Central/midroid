@@ -38,12 +38,12 @@ public object PlayAssetDelivery {
                assetPackLocations.put(var11, var4);
             }
 
-            val var8: Log = Log.INSTANCE;
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Download of ");
-            var5.append(var11);
-            var5.append(" Asset complete");
-            Log.i$default(var8, "PlayAssetDelivery", var5.toString(), null, 4, null);
+            val var5: Log = Log.INSTANCE;
+            val var8: StringBuilder = new StringBuilder();
+            var8.append("Download of ");
+            var8.append(var11);
+            var8.append(" Asset complete");
+            Log.i$default(var5, "PlayAssetDelivery", var8.toString(), null, 4, null);
             var9 = java.lang.Boolean.TRUE;
          } else {
             label26: {
@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var6: Log = Log.INSTANCE;
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Download of ");
-               var10.append(var11);
-               var10.append(" Asset failed");
-               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
+               val var10: Log = Log.INSTANCE;
+               val var6: StringBuilder = new StringBuilder();
+               var6.append("Download of ");
+               var6.append(var11);
+               var6.append(" Asset failed");
+               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }
@@ -248,68 +248,72 @@ public object PlayAssetDelivery {
       // 07: aload 1
       // 08: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 0d: checkcast java/util/List
-      // 10: astore 1
-      // 11: aload 1
-      // 12: ifnull 4c
-      // 15: aload 1
-      // 16: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
-      // 1b: astore 4
-      // 1d: aload 4
-      // 1f: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 24: ifeq 42
-      // 27: aload 4
+      // 10: astore 4
+      // 12: aload 4
+      // 14: ifnull 4d
+      // 17: aload 4
+      // 19: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
+      // 1e: astore 1
+      // 1f: aload 1
+      // 20: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 25: ifeq 42
+      // 28: aload 1
       // 29: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 2e: checkcast kotlin/jvm/functions/Function1
       // 31: iload 2
       // 32: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
       // 35: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 3a: pop
-      // 3b: goto 1d
+      // 3b: goto 1f
       // 3e: astore 1
-      // 3f: goto 4f
-      // 42: aload 1
-      // 43: invokeinterface java/util/List.clear ()V 1
-      // 48: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 4b: astore 1
-      // 4c: aload 3
-      // 4d: monitorexit
-      // 4e: return
-      // 4f: aload 3
-      // 50: monitorexit
-      // 51: aload 1
-      // 52: athrow
+      // 3f: goto 50
+      // 42: aload 4
+      // 44: invokeinterface java/util/List.clear ()V 1
+      // 49: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 4c: astore 1
+      // 4d: aload 3
+      // 4e: monitorexit
+      // 4f: return
+      // 50: aload 3
+      // 51: monitorexit
+      // 52: aload 1
+      // 53: athrow
    }
 
-   public fun getOrFetchAssetPackLocation(assetPackName: String, successCallback: ((Boolean) -> Unit)? = null): String? {
-      val var4: AssetPackLocation = assetPackLocations.get(var1);
-      var var3: AssetPackLocation = var4;
-      if (var4 == null) {
-         var3 = this.fetchAssetPackLocation(var1, var2);
+   public fun getAssetPackLocation(assetPackName: String, tryToFetch: Boolean, successCallback: ((Boolean) -> Unit)? = null): String? {
+      val var6: AssetPackLocation = assetPackLocations.get(var1);
+      var var4: AssetPackLocation = var6;
+      if (var6 == null) {
+         if (var2) {
+            var4 = this.fetchAssetPackLocation(var1, var3);
+         } else {
+            var4 = null;
+         }
       }
 
-      var var5: java.lang.String;
-      if (var3 == null) {
-         var5 = null;
-      } else if (var3.c() == 1) {
-         var5 = null;
+      var var7: java.lang.String;
+      if (var4 == null) {
+         var7 = null;
+      } else if (var4.c() == 1) {
+         var7 = null;
       } else {
-         var5 = null;
-         if (var3.c() == 0) {
-            if (var3.b() == null) {
-               val var7: Log = Log.INSTANCE;
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Asset ");
-               var6.append(var1);
-               var6.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var7, "PlayAssetDelivery", var6.toString(), null, 4, null);
-               var5 = null;
+         var7 = null;
+         if (var4.c() == 0) {
+            if (var4.b() == null) {
+               val var8: Log = Log.INSTANCE;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Asset ");
+               var9.append(var1);
+               var9.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+               Log.w$default(var8, "PlayAssetDelivery", var9.toString(), null, 4, null);
+               var7 = null;
             } else {
-               var5 = var3.b();
+               var7 = var4.b();
             }
          }
       }
 
-      return var5;
+      return var7;
    }
 
    public fun initialize(applicationContext: Context) {
