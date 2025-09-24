@@ -36,11 +36,11 @@ public object NativePermissionPromise {
 
    @JvmStatic
    fun `generate$lambda$1`(var0: Function0, var1: Array<Any>) {
-      val var2: CrashReporting = CrashReporting.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("NativePermissionPromise: Rejection: ");
-      var3.append(var1);
-      CrashReporting.addBreadcrumb$default(var2, var3.toString(), null, null, null, 14, null);
+      val var3: CrashReporting = CrashReporting.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("NativePermissionPromise: Rejection: ");
+      var2.append(var1);
+      CrashReporting.addBreadcrumb$default(var3, var2.toString(), null, null, null, 14, null);
       var0.invoke();
    }
 

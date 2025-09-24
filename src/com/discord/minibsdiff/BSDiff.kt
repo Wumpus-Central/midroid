@@ -25,8 +25,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var21: ByteArray = new byte[1000000];
       val var20: ByteArray = new byte[1000000];
+      val var21: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -50,22 +50,22 @@ public object BSDiff {
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var21[var7] += var20[var7];
+                  var20[var7] += var21[var7];
                }
 
-               var6.write(var21, 0, var8);
+               var6.write(var20, 0, var8);
             }
 
             var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
-               var6.write(var21, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
+               var6.write(var20, 0, var22);
             }
 
             var1.seek(var1.getFilePointer() + var13);
@@ -183,18 +183,18 @@ public object BSDiff {
       // a3: goto e4
       // a6: astore 3
       // a7: goto d9
-      // aa: astore 2
+      // aa: astore 3
       // ab: goto ce
       // ae: astore 3
       // af: goto c2
-      // b2: astore 6
-      // b4: aload 6
+      // b2: astore 7
+      // b4: aload 7
       // b6: athrow
-      // b7: astore 7
+      // b7: astore 6
       // b9: aload 3
-      // ba: aload 6
+      // ba: aload 7
       // bc: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // bf: aload 7
+      // bf: aload 6
       // c1: athrow
       // c2: aload 3
       // c3: athrow
@@ -204,13 +204,13 @@ public object BSDiff {
       // c8: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cb: aload 6
       // cd: athrow
-      // ce: aload 2
+      // ce: aload 3
       // cf: athrow
-      // d0: astore 3
+      // d0: astore 2
       // d1: aload 5
-      // d3: aload 2
+      // d3: aload 3
       // d4: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d7: aload 3
+      // d7: aload 2
       // d8: athrow
       // d9: aload 3
       // da: athrow

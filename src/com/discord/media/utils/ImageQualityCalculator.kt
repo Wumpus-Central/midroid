@@ -137,35 +137,35 @@ public object ImageQualityCalculator {
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
-      var var11: Double = 0.0;
-      var var17: Double = 0.0;
-      var var15: Double = 0.0;
       var var13: Double = 0.0;
+      var var15: Double = 0.0;
+      var var17: Double = 0.0;
+      var var11: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var27 = 0; var27 < var6; var27++) {
-            val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
-            val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
-            var11 += var21;
-            var17 += var19;
-            var15 += var21 * var21;
-            var13 += var19 * var19;
-            var9 += var21 * var19;
+            val var19: Double = var1[(var5 + var25) * var3 + var4 + var27];
+            val var21: Double = var2[(var5 + var25) * var3 + var4 + var27];
+            var13 += var19;
+            var15 += var21;
+            var17 += var19 * var19;
+            var11 += var21 * var21;
+            var9 += var19 * var21;
          }
       }
 
       val var23: Double = var26;
-      val var36: Double = var11 / var26;
-      val var37: Double = var17 / var26;
-      var15 = (var15 - var11 * var36) / var23;
-      var13 = (var13 - var17 * var37) / var23;
-      var11 = (var9 - var11 * var37) / var23;
+      val var36: Double = var13 / var26;
+      val var37: Double = var15 / var26;
+      var17 = (var17 - var13 * var36) / var23;
+      var11 = (var11 - var15 * var37) / var23;
+      var13 = (var9 - var13 * var37) / var23;
       var9 = var7;
-      var17 = var8;
-      var13 = (var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8);
-      if ((var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8) > 0.0) {
-         var9 = (var36 * 2.0 * var37 + var9) * (var11 * 2.0 + var17) / var13;
+      var15 = var8;
+      var11 = (var36 * var36 + var37 * var37 + var9) * (var17 + var11 + var8);
+      if ((var36 * var36 + var37 * var37 + var9) * (var17 + var11 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var9) * (var13 * 2.0 + var15) / var11;
       } else {
          var9 = 0.0;
       }
@@ -226,15 +226,15 @@ public object ImageQualityCalculator {
       val var3: Int = var1.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: Int = var1[var2];
+         val var5: Int = var1[var2];
          val var4: Int = var1[var2] shr 24 and 255;
          if ((var1[var2] shr 24 and 255) != 0) {
             if (var4 != 255) {
-               var8[var2] = kotlin.ranges.d.l((var6 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.d.l(
-                  (var6 shr 16 and 255) * 255 / var4, 0, 255
-               ) shl 16 or kotlin.ranges.d.l((var6 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
+               var8[var2] = kotlin.ranges.d.l((var5 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.d.l(
+                  (var5 shr 16 and 255) * 255 / var4, 0, 255
+               ) shl 16 or kotlin.ranges.d.l((var5 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
             } else {
-               var8[var2] = var6;
+               var8[var2] = var5;
             }
          } else {
             var8[var2] = 0;
@@ -387,29 +387,29 @@ public object ImageQualityCalculator {
             } else {
                kotlin.c.b(var1);
 
-               var var3: Bitmap;
-               var var5: ImageQualityCalculator;
+               var var3: ImageQualityCalculator;
+               var var5: Bitmap;
                try {
-                  var5 = ImageQualityCalculator.INSTANCE;
-                  var3 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(var5, this.$compressedData);
+                  var3 = ImageQualityCalculator.INSTANCE;
+                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
+                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(var3, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var3 != null && var1 != null) {
+               if (var5 != null && var1 != null) {
                   try {
                      this.label = 1;
-                     var3 = (Bitmap)var5.calculateQualityMetrics(var3, var1, this);
+                     var10 = var3.calculateQualityMetrics(var5, var1, this);
                   } catch (var6: Exception) {
                      return null;
                   }
 
-                  if (var3 === var4) {
+                  if (var10 === var4) {
                      return var4;
                   }
 
-                  return var3;
+                  return var10;
                }
             }
 
@@ -482,19 +482,19 @@ public object ImageQualityCalculator {
       }
 
       public override fun toString(): String {
-         val var3: Double = this.psnr;
-         val var1: Double = this.ssim;
-         val var5: Long = this.psnrCalculationTimeMs;
-         val var7: Long = this.ssimCalculationTimeMs;
+         val var1: Double = this.psnr;
+         val var3: Double = this.ssim;
+         val var7: Long = this.psnrCalculationTimeMs;
+         val var5: Long = this.ssimCalculationTimeMs;
          val var9: StringBuilder = new StringBuilder();
          var9.append("ImageQualityMetrics(psnr=");
-         var9.append(var3);
-         var9.append(", ssim=");
          var9.append(var1);
+         var9.append(", ssim=");
+         var9.append(var3);
          var9.append(", psnrCalculationTimeMs=");
-         var9.append(var5);
-         var9.append(", ssimCalculationTimeMs=");
          var9.append(var7);
+         var9.append(", ssimCalculationTimeMs=");
+         var9.append(var5);
          var9.append(")");
          return var9.toString();
       }

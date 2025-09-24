@@ -61,7 +61,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nMessageViewReplyPreview.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,421:1\n327#2,4:422\n255#2:427\n257#2,2:428\n257#2,2:430\n257#2,2:432\n257#2,2:434\n311#2:436\n327#2,4:437\n312#2:441\n257#2,2:442\n257#2,2:444\n257#2,2:446\n257#2,2:448\n257#2,2:450\n257#2,2:452\n257#2,2:454\n257#2,2:456\n257#2,2:458\n257#2,2:460\n257#2,2:462\n257#2,2:464\n257#2,2:466\n257#2,2:468\n257#2,2:470\n257#2,2:472\n257#2,2:474\n257#2,2:476\n37#2,2:478\n55#2:480\n257#2,2:481\n257#2,2:483\n257#2,2:485\n257#2,2:487\n257#2,2:489\n257#2,2:491\n257#2,2:493\n257#2,2:495\n257#2,2:497\n257#2,2:499\n257#2,2:501\n1#3:426\n*S KotlinDebug\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n*L\n102#1:422,4\n70#1:427\n118#1:428,2\n132#1:430,2\n138#1:432,2\n140#1:434,2\n157#1:436\n157#1:437,4\n157#1:441\n177#1:442,2\n178#1:444,2\n179#1:446,2\n182#1:448,2\n188#1:450,2\n194#1:452,2\n196#1:454,2\n198#1:456,2\n208#1:458,2\n209#1:460,2\n210#1:462,2\n256#1:464,2\n257#1:466,2\n258#1:468,2\n260#1:470,2\n261#1:472,2\n263#1:474,2\n270#1:476,2\n278#1:478,2\n278#1:480\n338#1:481,2\n339#1:483,2\n341#1:485,2\n342#1:487,2\n343#1:489,2\n349#1:491,2\n350#1:493,2\n415#1:495,2\n416#1:497,2\n417#1:499,2\n418#1:501,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nMessageViewReplyPreview.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,429:1\n327#2,4:430\n255#2:435\n257#2,2:436\n257#2,2:438\n257#2,2:440\n257#2,2:442\n311#2:444\n327#2,4:445\n312#2:449\n257#2,2:450\n257#2,2:452\n257#2,2:454\n257#2,2:456\n257#2,2:458\n257#2,2:460\n257#2,2:462\n257#2,2:464\n257#2,2:466\n257#2,2:468\n257#2,2:470\n257#2,2:472\n257#2,2:474\n257#2,2:476\n257#2,2:478\n257#2,2:480\n257#2,2:482\n257#2,2:484\n37#2,2:486\n55#2:488\n257#2,2:489\n257#2,2:491\n257#2,2:493\n257#2,2:495\n257#2,2:497\n257#2,2:499\n257#2,2:501\n257#2,2:503\n257#2,2:505\n257#2,2:507\n257#2,2:509\n257#2,2:511\n257#2,2:513\n1#3:434\n*S KotlinDebug\n*F\n+ 1 MessageViewReplyPreview.kt\ncom/discord/chat/presentation/message/MessageViewReplyPreview\n*L\n102#1:430,4\n70#1:435\n118#1:436,2\n132#1:438,2\n138#1:440,2\n140#1:442,2\n157#1:444\n157#1:445,4\n157#1:449\n180#1:450,2\n181#1:452,2\n182#1:454,2\n185#1:456,2\n191#1:458,2\n197#1:460,2\n199#1:462,2\n201#1:464,2\n211#1:466,2\n212#1:468,2\n213#1:470,2\n259#1:472,2\n260#1:474,2\n261#1:476,2\n263#1:478,2\n264#1:480,2\n266#1:482,2\n273#1:484,2\n281#1:486,2\n281#1:488\n344#1:489,2\n345#1:491,2\n347#1:493,2\n348#1:495,2\n349#1:497,2\n355#1:499,2\n356#1:501,2\n357#1:503,2\n422#1:505,2\n423#1:507,2\n424#1:509,2\n425#1:511,2\n426#1:513,2\n*E\n"])
 public class MessageViewReplyPreview  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2), SpineParentMessage {
    private final val binding: MessageViewReplyPreviewBinding
    private final val replyTextLineBounds: Rect
@@ -327,6 +327,8 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       var3.setVisibility(8);
       val var4: SimpleDraweeView = this.binding.replyTrailingIcon;
       var4.setVisibility(8);
+      val var5: ClanTagChipletView = this.binding.tagChiplet;
+      var5.setVisibility(8);
    }
 
    public fun configureExecutedCommand(
@@ -354,22 +356,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       var23.setVisibility(8);
       val var24: SimpleDraweeView = this.binding.replyTrailingIcon;
       var24.setVisibility(8);
-      val var25: MessageContentView = this.binding.replyText;
-      val var26: LinearLayout = this.binding.replyLeadingViews;
-      val var12: AnnotatedStructurableText = var2.getContent();
-      val var11: Context = this.getContext();
+      val var25: ClanTagChipletView = this.binding.tagChiplet;
+      var25.setVisibility(8);
+      val var26: MessageContentView = this.binding.replyText;
+      val var27: LinearLayout = this.binding.replyLeadingViews;
+      val var11: AnnotatedStructurableText = var2.getContent();
+      val var12: Context = this.getContext();
       val var13: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
       val var8: Float = TextUtilsKt.getBaselineHeightPx(var13);
-      val var27: TextPaint = this.binding.replyText.getPaint();
+      val var28: TextPaint = this.binding.replyText.getPaint();
       val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var12,
          var11,
+         var12,
          var1,
          var3,
          var4,
          var5,
          var6,
-         var27,
+         var28,
          new r0(var7, var1),
          null,
          null,
@@ -394,7 +398,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       );
       val var16: MessageContentView = this.binding.replyText;
       SpannableExtensionsKt.coverWithSpan(var14, new BackgroundSpanDrawer(var16));
-      var25.setDraweeSpanStringBuilder(ReplyUtilsKt.createReplyContent(var26, var14));
+      var26.setDraweeSpanStringBuilder(ReplyUtilsKt.createReplyContent(var27, var14));
       val var15: MessageContentView = this.binding.replyText;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(var15, true);
       this.binding.replyAuthorAvatar.setImageURI(var2.getAvatarURL());
@@ -470,23 +474,23 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var28: MessageContentView = this.binding.replyText;
             val var44: LinearLayout = this.binding.replyLeadingViews;
             val var14: StructurableText = var12.getSystemContent();
-            val var63: Context = this.getContext();
-            val var69: java.lang.String = var11.getId-3Eiw7ao();
-            val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var9: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var8: Boolean = var11.getShouldShowRoleDot();
-            var2 = var11.getShouldShowRoleOnName();
+            val var69: Context = this.getContext();
+            val var63: java.lang.String = var11.getId-3Eiw7ao();
+            val var8: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            var2 = var11.getShouldShowRoleDot();
+            val var9: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
             val var56: TextPaint = this.binding.replyText.getPaint();
             val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
                var14,
-               var63,
                var69,
-               var7,
-               var9,
+               var63,
                var8,
+               var7,
                var2,
+               var9,
                var56,
                null,
                null,
@@ -519,10 +523,10 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var71: StructurableText = var11.getContent();
             val var70: Context = this.getContext();
             val var66: java.lang.String = var11.getId-3Eiw7ao();
-            val var38: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var37: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
-            val var39: Boolean = var11.getShouldShowRoleOnName();
+            val var39: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var38: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var37: Boolean = var11.getShouldShowRoleDot();
+            var2 = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
@@ -530,10 +534,10 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                var71,
                var70,
                var66,
+               var39,
                var38,
                var37,
                var2,
-               var39,
                var59,
                null,
                null,

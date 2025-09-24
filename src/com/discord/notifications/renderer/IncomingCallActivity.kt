@@ -162,15 +162,15 @@ public class IncomingCallActivity : AppCompatActivity {
                   var4 = this.this$0.findViewById(R.id.declineCallContainer);
                   var7 = this.this$0.findViewById(R.id.acceptCallText);
                   var5 = this.this$0.findViewById(R.id.declineCallText);
-                  val var10: Context = this.this$0.getApplicationContext();
-                  var var11: ReactAsset = ReactAsset.CallDisconnect;
-                  var var12: Context = this.this$0.getApplicationContext();
-                  val var31: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var11.getUri(var12));
-                  var12 = this.this$0.getApplicationContext();
-                  var11 = ReactAsset.CallConnect;
+                  var var10: Context = this.this$0.getApplicationContext();
+                  var var12: ReactAsset = ReactAsset.CallDisconnect;
+                  val var11: Context = this.this$0.getApplicationContext();
+                  val var33: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var12.getUri(var11));
+                  var10 = this.this$0.getApplicationContext();
+                  var12 = ReactAsset.CallConnect;
                   val var13: Context = this.this$0.getApplicationContext();
-                  val var35: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var12, var11.getUri(var13));
-                  val var33: G = db.f.b((CoroutineScope)var8, null, null, new Function2<CoroutineScope, Continuation, Object>(this.this$0, var31, null) {
+                  val var32: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var12.getUri(var13));
+                  val var35: G = db.f.b((CoroutineScope)var8, null, null, new Function2<CoroutineScope, Continuation, Object>(this.this$0, var33, null) {
                      final java.lang.String $callDisconnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -212,7 +212,7 @@ public class IncomingCallActivity : AppCompatActivity {
                         return var1;
                      }
                   }, 3, null);
-                  var8 = db.f.b((CoroutineScope)var8, null, null, new Function2<CoroutineScope, Continuation, Object>(this.this$0, var35, null) {
+                  var8 = db.f.b((CoroutineScope)var8, null, null, new Function2<CoroutineScope, Continuation, Object>(this.this$0, var32, null) {
                      final java.lang.String $callConnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -261,18 +261,18 @@ public class IncomingCallActivity : AppCompatActivity {
                   this.L$4 = var7;
                   this.L$5 = var5;
                   this.label = 1;
-                  var8 = db.d.b(new G[]{var33, (G)var8}, this);
+                  var8 = db.d.b(new G[]{var35, (G)var8}, this);
                   if (var8 === var9) {
                      return var9;
                   }
                }
 
-               var9 = (var8 as java.util.List).get(0) as Bitmap;
-               var8 = (var8 as java.util.List).get(1) as Bitmap;
-               var9 = Bitmap.createScaledBitmap((Bitmap)var9, 110, 110, true);
-               var4.setImageBitmap((Bitmap)var9);
+               val var21: Bitmap = (var8 as java.util.List).get(0) as Bitmap;
+               var9 = (var8 as java.util.List).get(1) as Bitmap;
+               var8 = Bitmap.createScaledBitmap(var21, 110, 110, true);
+               var4.setImageBitmap((Bitmap)var8);
                var4.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
-               var8 = Bitmap.createScaledBitmap((Bitmap)var8, 110, 110, true);
+               var8 = Bitmap.createScaledBitmap((Bitmap)var9, 110, 110, true);
                var1.setImageBitmap((Bitmap)var8);
                var1.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
                var8 = this.this$0.getApplicationContext();
@@ -350,8 +350,8 @@ public class IncomingCallActivity : AppCompatActivity {
                      var1 = null;
                   }
 
-                  val var9: java.lang.String = this.this$0.getIntent().getStringExtra("userAvatar");
-                  val var8: java.lang.String = this.this$0.getIntent().getStringExtra("userGuildAvatar");
+                  val var8: java.lang.String = this.this$0.getIntent().getStringExtra("userAvatar");
+                  val var9: java.lang.String = this.this$0.getIntent().getStringExtra("userGuildAvatar");
                   val var16: Int = this.this$0.getIntent().getIntExtra("userDiscriminator", 0);
                   val var10: java.lang.String = this.this$0.getIntent().getStringExtra("guildId");
                   var var3x: GuildId = null;
@@ -371,7 +371,7 @@ public class IncomingCallActivity : AppCompatActivity {
                      var7,
                      null,
                      null,
-                     new Function2<CoroutineScope, Continuation, Object>(this.this$0, var8, var3x, var1, var9, var16, null) {
+                     new Function2<CoroutineScope, Continuation, Object>(this.this$0, var9, var3x, var1, var8, var16, null) {
                         final GuildId $guildId;
                         final java.lang.String $userAvatar;
                         final int $userDiscriminator;

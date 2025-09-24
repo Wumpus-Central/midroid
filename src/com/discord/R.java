@@ -367,7 +367,6 @@ public final class R {
       public static int design_components_illustration_native_redesign_generated_images_img_invite_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_no_results_alt_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_no_results_darker;
-      public static int design_components_illustration_native_redesign_generated_images_img_nsfw_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_pins_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_search_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_spotify_error_darker;
@@ -804,8 +803,6 @@ public final class R {
       public static int images_native_img_nitro_tier_0_icon_80px;
       public static int images_native_img_no_results;
       public static int images_native_img_no_results_dark_theme;
-      public static int images_native_img_nsfw_dark_theme;
-      public static int images_native_img_nsfw_light_theme;
       public static int images_native_img_poop_dark;
       public static int images_native_img_poop_light;
       public static int images_native_img_remote_auth_loaded;
@@ -1214,6 +1211,7 @@ public final class R {
       public static int modules_guild_settings_roles_native_images_illustrationlightlarge;
       public static int modules_guild_templates_native_images_ic_guild_template;
       public static int modules_guilds_bar_native_images_wumpus_wave;
+      public static int modules_hang_status_images_native_diceicon;
       public static int modules_hang_status_images_native_original_brb;
       public static int modules_hang_status_images_native_original_chillin;
       public static int modules_hang_status_images_native_original_gaming;

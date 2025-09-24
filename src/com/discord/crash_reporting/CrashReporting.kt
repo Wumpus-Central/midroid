@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("553927d4-898b-4152-beb4-1424bf66a528");
+      var5.setProguardUuid("fbc1e771-6a58-4272-98be-b82c64811558");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -108,8 +108,8 @@ public object CrashReporting {
    ) {
       val var5: e = new e(var1);
 
-      for (Entry var7 : var2.entrySet()) {
-         var5.p(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var5.p(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var5.o(var3);

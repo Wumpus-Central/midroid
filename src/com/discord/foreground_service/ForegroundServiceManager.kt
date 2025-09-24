@@ -471,14 +471,14 @@ public object ForegroundServiceManager {
 
          public override fun toString(): String {
             val var2: WeakReference = this.contextRef;
-            val var1: java.util.List = this.serviceConfigurations;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("CreateOrUpdate(contextRef=");
-            var3.append(var2);
-            var3.append(", serviceConfigurations=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.util.List = this.serviceConfigurations;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("CreateOrUpdate(contextRef=");
+            var1.append(var2);
+            var1.append(", serviceConfigurations=");
+            var1.append(var3);
+            var1.append(")");
+            return var1.toString();
          }
       }
 
@@ -512,12 +512,12 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Destroy(contextRef=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Destroy(contextRef=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

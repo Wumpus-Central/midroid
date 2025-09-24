@@ -64,9 +64,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-      val var27: TextPaint = this.messageContentView.getPaint();
+      val var26: TextPaint = this.messageContentView.getPaint();
       val var25: FontManager = FontManager.INSTANCE;
-      val var26: Context = this.messageContentView.getContext();
+      val var27: Context = this.messageContentView.getContext();
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
@@ -98,7 +98,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var27, var25.getScaledSpToPx(16, var26))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var26, var25.getScaledSpToPx(16, var27))
          );
    }
 }

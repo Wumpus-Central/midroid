@@ -193,9 +193,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = 0;
+         var28 = (byte)0;
       } else {
-         var28 = 8;
+         var28 = (byte)8;
       }
 
       var36.setVisibility(var28);
@@ -203,7 +203,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var37: SimpleDraweeView = this.view.banner;
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,10 +211,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var3 / var4;
+         var4 = var28 / var4;
          val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
          val var38: SimpleDraweeView = this.view.banner;
-         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var52.resizeLayoutParams(var38, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);

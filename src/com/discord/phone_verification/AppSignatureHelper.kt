@@ -107,26 +107,26 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var23: java.lang.String;
+            var var8: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
-               var23 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var25: Log = Log.INSTANCE;
-               val var9: java.lang.String = TAG;
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Hash ");
-               var8.append(var23);
-               Log.i$default(var25, var9, var8.toString(), null, 4, null);
+               var8 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var9: Log = Log.INSTANCE;
+               val var23: java.lang.String = TAG;
+               val var25: StringBuilder = new StringBuilder();
+               var25.append("Hash ");
+               var25.append(var8);
+               Log.i$default(var9, var23, var25.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
                break;
             }
 
-            if (var23 != null) {
+            if (var8 != null) {
                try {
-                  var22.add(var23);
+                  var22.add(var8);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   CollectionsKt.k();
@@ -147,7 +147,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
       private fun hash(packageName: String, signature: String): String? {
          try {
-            var var3: StringBuilder = new StringBuilder();
+            val var3: StringBuilder = new StringBuilder();
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
@@ -157,14 +157,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             val var9: ByteArray = var8.digest();
             val var10: java.lang.String = Base64.encodeToString(h.n(var9, 0, 9), 3);
             var2 = var10.substring(0, 11);
-            val var5: Log = Log.INSTANCE;
+            val var13: Log = Log.INSTANCE;
             val var4: java.lang.String = this.getTAG();
-            var3 = new StringBuilder();
-            var3.append("pkg: ");
-            var3.append(var1);
-            var3.append(" -- hash: ");
-            var3.append(var2);
-            Log.i$default(var5, var4, var3.toString(), null, 4, null);
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("pkg: ");
+            var5.append(var1);
+            var5.append(" -- hash: ");
+            var5.append(var2);
+            Log.i$default(var13, var4, var5.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;
