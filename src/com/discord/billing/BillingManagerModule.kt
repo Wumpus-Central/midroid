@@ -75,9 +75,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var10: j = new j(var4);
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      var1.getProducts(var7, var3, var4, var10, var9);
+      val var9: j = new j(var4);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      var1.getProducts(var7, var3, var4, var9, var10);
    }
 
    @JvmStatic

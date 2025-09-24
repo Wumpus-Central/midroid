@@ -80,60 +80,74 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          val var12: StringBuilder = new StringBuilder();
          var12.append("Non-zero index child added ");
          var12.append(var2);
-         var13.addBreadcrumb(
+         CrashReporting.addBreadcrumb$default(
+            var13,
             var12.toString(),
             L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
-            "portal"
+            "portal",
+            null,
+            8,
+            null
          );
          this.otherViews.put(var2, var1);
       } else {
          if (this.childView == var1) {
-            CrashReporting.INSTANCE
-               .addBreadcrumb(
-                  "Same child added again",
-                  L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
-                  "portal"
-               );
+            CrashReporting.addBreadcrumb$default(
+               CrashReporting.INSTANCE,
+               "Same child added again",
+               L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
+               "portal",
+               null,
+               8,
+               null
+            );
          } else if (this.childView != null && !this.childViewValid()) {
             this.removeChildView();
-            val var11: CrashReporting = CrashReporting.INSTANCE;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("childView not valid before addView ");
-            var6.append(var4);
-            var11.addBreadcrumb(
-               var6.toString(),
+            val var6: CrashReporting = CrashReporting.INSTANCE;
+            val var11: StringBuilder = new StringBuilder();
+            var11.append("childView not valid before addView ");
+            var11.append(var4);
+            CrashReporting.addBreadcrumb$default(
+               var6,
+               var11.toString(),
                L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
-               "portal"
+               "portal",
+               null,
+               8,
+               null
             );
          }
 
          if (this.childView != null) {
-            CrashReporting.INSTANCE
-               .addBreadcrumb(
-                  "Attempting to add different child when one already exists",
-                  L.l(
-                     new Pair[]{
-                        s.a("portalId", var4),
-                        s.a("prevPortalId", var8),
-                        s.a("existing", java.lang.String.valueOf(this.childView)),
-                        s.a("new", var1.toString()),
-                        s.a("index", java.lang.String.valueOf(var2))
-                     }
-                  ),
-                  "portal_error"
-               );
+            CrashReporting.addBreadcrumb$default(
+               CrashReporting.INSTANCE,
+               "Attempting to add different child when one already exists",
+               L.l(
+                  new Pair[]{
+                     s.a("portalId", var4),
+                     s.a("prevPortalId", var8),
+                     s.a("existing", java.lang.String.valueOf(this.childView)),
+                     s.a("new", var1.toString()),
+                     s.a("index", java.lang.String.valueOf(var2))
+                  }
+               ),
+               "portal_error",
+               null,
+               8,
+               null
+            );
          }
 
          if (this.childView == null) {
             this.addChildView(var1);
          } else {
-            val var7: java.lang.String = this.portalId;
-            val var9: StringBuilder = new StringBuilder();
-            var9.append("Adding more than one child unsupported: ");
-            var9.append(var7);
-            var9.append(", previous: ");
-            var9.append(var8);
-            throw new IllegalArgumentException(var9.toString().toString());
+            var4 = this.portalId;
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Adding more than one child unsupported: ");
+            var7.append(var4);
+            var7.append(", previous: ");
+            var7.append(var8);
+            throw new IllegalArgumentException(var7.toString().toString());
          }
       }
    }
@@ -173,7 +187,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             var4 = "true";
          }
 
-         var20.addBreadcrumb("About to crash from getChildAt", L.l(new Pair[]{var9, var19, var14, s.a("childViewIsNull", var4)}), "portal");
+         CrashReporting.addBreadcrumb$default(
+            var20, "About to crash from getChildAt", L.l(new Pair[]{var9, var19, var14, s.a("childViewIsNull", var4)}), "portal", null, 8, null
+         );
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
@@ -194,7 +210,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
                var4 = "true";
             }
 
-            var7.addBreadcrumb("getChildAt of non-zero index", L.l(new Pair[]{var8, var15, var12, s.a("childViewIsNull", var4)}), "portal");
+            CrashReporting.addBreadcrumb$default(
+               var7, "getChildAt of non-zero index", L.l(new Pair[]{var8, var15, var12, s.a("childViewIsNull", var4)}), "portal", null, 8, null
+            );
          }
 
          val var13: View;
@@ -302,7 +320,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             var2 = "false";
          }
 
-         var5.addBreadcrumb("removeViewAt of non-zero index", L.l(new Pair[]{var6, var10, var9, s.a("childViewIsNull", var2)}), "portal");
+         CrashReporting.addBreadcrumb$default(
+            var5, "removeViewAt of non-zero index", L.l(new Pair[]{var6, var10, var9, s.a("childViewIsNull", var2)}), "portal", null, 8, null
+         );
       }
 
       if (var1 == 0) {

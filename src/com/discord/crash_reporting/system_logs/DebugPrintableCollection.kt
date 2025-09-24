@@ -74,19 +74,19 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 13
+      // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
       // 5d: astore 12
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 14
-      // 64: aload 14
+      // 62: astore 13
+      // 64: aload 13
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
       // 6a: aload 12
       // 6c: aload 2
-      // 6d: aload 14
+      // 6d: aload 13
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 13
+      // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
       // 79: aload 12
@@ -232,21 +232,21 @@ public class DebugPrintableCollection {
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
-      // 0c4: astore 7
+      // 0c4: astore 8
       // 0c6: new java/lang/StringBuilder
-      // 0c9: astore 8
-      // 0cb: aload 8
+      // 0c9: astore 7
+      // 0cb: aload 7
       // 0cd: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d0: aload 8
+      // 0d0: aload 7
       // 0d2: ldc_w "Exception: "
       // 0d5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0d8: pop
-      // 0d9: aload 8
-      // 0db: aload 7
+      // 0d9: aload 7
+      // 0db: aload 8
       // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e0: pop
       // 0e1: aload 2
-      // 0e2: aload 8
+      // 0e2: aload 7
       // 0e4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0e7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ea: pop
@@ -354,15 +354,15 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.tag;
+         val var3: java.lang.String = this.tag;
          val var1: WeakReference = this.reference;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("DebugPrintableRef(tag=");
-         var3.append(var2);
-         var3.append(", reference=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("DebugPrintableRef(tag=");
+         var2.append(var3);
+         var2.append(", reference=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

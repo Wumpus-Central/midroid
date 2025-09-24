@@ -5,7 +5,7 @@ import io.sentry.Hint;
 import io.sentry.SentryEvent;
 
 // $VF: synthetic class
-public final class a implements io.sentry.n2.d {
+public final class a implements io.sentry.m2.d {
    public final Context a;
 
    public final SentryEvent a(SentryEvent var1, Hint var2) {

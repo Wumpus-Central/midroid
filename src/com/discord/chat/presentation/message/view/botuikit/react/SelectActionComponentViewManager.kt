@@ -77,13 +77,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();
-         val var4: java.lang.String = var8.getMessage();
-         val var13: StringBuilder = new StringBuilder();
-         var13.append("Error while deserializing ");
-         var13.append(var9);
-         var13.append(": ");
-         var13.append(var4);
-         throw new IllegalStateException(var13.toString().toString());
+         val var13: java.lang.String = var8.getMessage();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Error while deserializing ");
+         var4.append(var9);
+         var4.append(": ");
+         var4.append(var13);
+         throw new IllegalStateException(var4.toString().toString());
       }
 
       if (var3) {
@@ -92,22 +92,22 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       } else {
          try {
             val var11: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var21: java.lang.String = (var15.getClass()::class).getSimpleName();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Expected ");
-            var17.append(var11);
-            var17.append(" but got ");
-            var17.append(var21);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Expected ");
+            var21.append(var11);
+            var21.append(" but got ");
+            var21.append(var17);
+            throw new IllegalStateException(var21.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var20: java.lang.String = var7.getMessage();
-            val var16: StringBuilder = new StringBuilder();
-            var16.append("Error while deserializing ");
-            var16.append(var10);
-            var16.append(": ");
-            var16.append(var20);
-            throw new IllegalStateException(var16.toString().toString());
+            val var16: java.lang.String = var7.getMessage();
+            val var20: StringBuilder = new StringBuilder();
+            var20.append("Error while deserializing ");
+            var20.append(var10);
+            var20.append(": ");
+            var20.append(var16);
+            throw new IllegalStateException(var20.toString().toString());
          }
       }
    }

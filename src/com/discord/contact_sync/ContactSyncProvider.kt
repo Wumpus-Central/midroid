@@ -141,17 +141,17 @@ public object ContactSyncProvider {
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      val var7: LinkedHashMap = new LinkedHashMap();
-      val var8: Cursor = var1.getContentResolver()
+      val var8: LinkedHashMap = new LinkedHashMap();
+      val var7: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
-      if (var8 == null) {
-         return var7;
+      if (var7 == null) {
+         return var8;
       } else {
-         while (var8.moveToNext()) {
-            val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var9: java.lang.String = this.getColumnString(var8, "data4");
-            val var10: java.lang.String = this.getColumnString(var8, "_id");
-            var var3: java.lang.String = this.getColumnString(var8, "contact_id");
+         while (var7.moveToNext()) {
+            val var6: java.lang.String = this.getColumnString(var7, "display_name");
+            val var9: java.lang.String = this.getColumnString(var7, "data4");
+            val var10: java.lang.String = this.getColumnString(var7, "_id");
+            var var3: java.lang.String = this.getColumnString(var7, "contact_id");
             if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
@@ -178,7 +178,7 @@ public object ContactSyncProvider {
                }
 
                val var2: Boolean;
-               if (this.getColumnString(var8, "photo_file_id") != null) {
+               if (this.getColumnString(var7, "photo_file_id") != null) {
                   var2 = true;
                } else {
                   var2 = false;
@@ -190,13 +190,13 @@ public object ContactSyncProvider {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
 
-         var8.close();
-         return var7;
+         var7.close();
+         return var8;
       }
    }
 
@@ -276,7 +276,7 @@ public object ContactSyncProvider {
       // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 6e: astore 1
       // 6f: goto 78
-      // 72: astore 2
+      // 72: astore 1
       // 73: goto 82
       // 76: aconst_null
       // 77: astore 1
@@ -286,13 +286,13 @@ public object ContactSyncProvider {
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
-      // 82: aload 2
+      // 82: aload 1
       // 83: athrow
-      // 84: astore 1
+      // 84: astore 2
       // 85: aload 3
-      // 86: aload 2
+      // 86: aload 1
       // 87: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 1
+      // 8a: aload 2
       // 8b: athrow
       // 8c: aload 2
       // 8d: areturn

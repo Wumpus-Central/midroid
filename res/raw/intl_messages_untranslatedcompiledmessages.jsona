@@ -2,13 +2,7 @@
   "gnLLSE": "One Up",
   "6kp9Hx": "[attachment]",
   "tUu8V1": "Background",
-  "SymzJC": "Earn More Orbs",
-  "B1oJtb": "Information about orbs",
-  "gGtZp6": "Orbs Balance",
-  "9JpRfH": "Try Orbs",
-  "WrzJBQ": "Redeem Orbs in Shop",
   "W+j15e": "Get my stats!",
-  "q9EGpq": "Checkout",
   "bhdB9/": "Join on PlayStation (sp-int)",
   "BDiXtb": "Transfer to PlayStation (sp-int)",
   "gsG63t": "Preview",
@@ -201,75 +195,6 @@
   "19ldCA": "Choose 3 or more featured servers you’re interested in.",
   "XG+2Q0": "Join in",
   "VMWjXV": "Loading comments...",
-  "jM1jAA": [
-    "mentioned you in ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "90AwBw": [
-    "From ",
-    [
-      1,
-      "guildName"
-    ],
-    "."
-  ],
-  "1P7pvb": [
-    "From ",
-    [
-      1,
-      "guildName1"
-    ],
-    ", ",
-    [
-      1,
-      "guildName2"
-    ],
-    ", ",
-    "& ",
-    [
-      1,
-      "numGuildsRemaining"
-    ],
-    " more."
-  ],
-  "66UdFh": [
-    [
-      6,
-      "unreadsCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " more mention"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " more mentions"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "QiuZ+P": [
-    "From ",
-    [
-      1,
-      "guildName1"
-    ],
-    " & ",
-    [
-      1,
-      "guildName2"
-    ],
-    "."
-  ],
   "Ac2OZG": "ALPHA",
   "zQJqxM": "Recent Conversation",
   "mPPce3": "Replied to:",
@@ -490,16 +415,9 @@
   "fEUR7e": "Topic is sensitive or offensive",
   "eP8yWV": "Disabled when notification is set to all messages",
   "k0Q31N": "Join in!",
-  "KTZrmp": "Maybe Later",
-  "rCbDnp": "Start Earning Orbs",
-  "m84e7e": "Earn from Quests. Spend in Shop. Reward your Play.",
-  "Kf926e": "Orbs are now on mobile",
-  "l7SN5u": "Redeem Using",
-  "JXvc4O": "Your Redemption",
-  "+T44OT": "Check your balance, earn, and redeem Orbs all in one place",
-  "ykMHjY": "Your Orbs are here!",
   "JafL6u": "PlayStation Network",
   "+Gyklp": "Completed!",
+  "5UAi5+": "Randomize Status",
   "wqHXNj": "Report User Profile",
   "QU/Rw8": "Allows members to talk in voice and hear others in this channel's threads.",
   "LsS8xc": "Allows members to talk in voice and hear others in this channel's threads.",
@@ -556,7 +474,6 @@
   "fFTJTE": "brb",
   "vkpn7+": "Chilling",
   "vybY9f": "chilling",
-  "UVSEhY": "Grubbin",
   "b6AscH": "In the zone",
   "D5eCT0": "studying",
   "lZslwM": "GAMING",

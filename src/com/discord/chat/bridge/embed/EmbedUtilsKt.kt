@@ -59,12 +59,12 @@ public fun Embed.getMediaType(): EmbedType {
 
 public fun Embed.getTag(): String {
    val var1: java.lang.String = var0.getClass().getSimpleName();
-   val var3: java.lang.String = var0.getType().name();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(": ");
-   var2.append(var3);
-   return var2.toString();
+   val var2: java.lang.String = var0.getType().name();
+   val var3: StringBuilder = new StringBuilder();
+   var3.append(var1);
+   var3.append(": ");
+   var3.append(var2);
+   return var3.toString();
 }
 
 public fun Embed.getTargetDimensions(): Pair<Int?, Int?> {
@@ -211,20 +211,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var24: java.lang.String = var21.getEmbedUrl();
-         if (var24 == null) {
+         val var37: java.lang.String = var21.getEmbedUrl();
+         if (var37 == null) {
             return null;
          }
 
-         val var10: java.lang.String = getTag(var0);
-         val var11: MediaType = MediaType.IMAGE;
+         val var11: java.lang.String = getTag(var0);
+         val var10: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
-            var24,
+            var37,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var10,
             var11,
+            var10,
             var4,
             ChannelId.box-impl(var1),
             var3,
@@ -291,8 +291,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var32 = null;
       }
 
-      val var41: java.lang.String = getTag(var0);
-      val var40: MediaType = MediaType.GIFV;
+      val var40: java.lang.String = getTag(var0);
+      val var41: MediaType = MediaType.GIFV;
       val var35: EmbedMedia = var0.getVideo();
       val var36: java.lang.String;
       if (var35 != null) {
@@ -312,7 +312,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var7 = var19.getSrcIsAnimated();
       }
 
-      var17 = new MediaSource(var28, var32, var36, var12, var41, var40, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
+      var17 = new MediaSource(var28, var32, var36, var12, var40, var41, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
    }
 
    return var17;

@@ -35,22 +35,22 @@ public object DeepLinks {
             var9 = "true";
          }
 
-         val var7: Builder = Uri.parse(var4).buildUpon();
-         val var11: Uri = var7.build();
-         var7.clearQuery();
+         val var11: Builder = Uri.parse(var4).buildUpon();
+         val var5: Uri = var11.build();
+         var11.clearQuery();
 
-         for (java.lang.String var6 : var11.getQueryParameterNames()) {
-            if (!(var6 == "fromAppsFlyer")) {
-               val var10: java.util.Iterator = var11.getQueryParameters(var6).iterator();
+         for (java.lang.String var7 : var5.getQueryParameterNames()) {
+            if (!(var7 == "fromAppsFlyer")) {
+               val var10: java.util.Iterator = var5.getQueryParameters(var7).iterator();
 
                while (var10.hasNext()) {
-                  var7.appendQueryParameter(var6, var10.next() as java.lang.String);
+                  var11.appendQueryParameter(var7, var10.next() as java.lang.String);
                }
             }
          }
 
-         var7.appendQueryParameter("fromAppsFlyer", var9);
-         return var7.toString();
+         var11.appendQueryParameter("fromAppsFlyer", var9);
+         return var11.toString();
       }
    }
 
@@ -61,7 +61,7 @@ public object DeepLinks {
    public fun init(context: Context) {
       val var2: AppsFlyerLib = AppsFlyerLib.getInstance();
       if (var2 == null) {
-         CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Initial attempt: Unable to get AppsFlyer instance", null, null, 6, null);
+         CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Initial attempt: Unable to get AppsFlyer instance", null, null, null, 14, null);
          val var3: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
          var3.schedule(new a(var3), 2L, TimeUnit.SECONDS);
       } else {

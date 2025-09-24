@@ -95,12 +95,12 @@ public class PerformanceTracing : MarkerListener {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
          if (CollectionsKt.X(this.wildcardEventNames, var3)) {
-            val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var3);
-            var6.append(" ");
-            var6.append(var4);
-            var2 = var6.toString();
+            val var6: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var3);
+            var4.append(" ");
+            var4.append(var6);
+            var2 = var4.toString();
          }
 
          return var2;
@@ -555,16 +555,16 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.name;
-         val var4: java.lang.String = this.tag;
-         val var3: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var4: java.lang.String = this.name;
+         val var3: java.lang.String = this.tag;
+         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
          val var2: StringBuilder = new StringBuilder();
          var2.append("TransactionMarker(name=");
-         var2.append(var1);
-         var2.append(", tag=");
          var2.append(var4);
-         var2.append(", markerEnd=");
+         var2.append(", tag=");
          var2.append(var3);
+         var2.append(", markerEnd=");
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }

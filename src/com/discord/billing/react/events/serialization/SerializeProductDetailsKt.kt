@@ -29,11 +29,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       if (var6.e() == "inapp") {
          val var11: ProductDetails.b = var6.c();
          if (var11 == null) {
-            var3 = var6.d();
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("Could not find oneTimePurchaseOfferDetails for product: ");
-            var13.append(var3);
-            throw new AssertionError(var13.toString());
+            val var13: java.lang.String = var6.d();
+            val var19: StringBuilder = new StringBuilder();
+            var19.append("Could not find oneTimePurchaseOfferDetails for product: ");
+            var19.append(var13);
+            throw new AssertionError(var19.toString());
          }
 
          var1 = var11.b();
@@ -64,23 +64,23 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            val var17: java.lang.String = var6.d();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Could not find pricingPhase for product: ");
-            var21.append(var17);
-            throw new AssertionError(var21.toString());
+            var3 = var6.d();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Could not find pricingPhase for product: ");
+            var17.append(var3);
+            throw new AssertionError(var17.toString());
          }
 
          var1 = var16.d();
          var3 = var16.c();
          var4 = var16.b();
          var12 = var16.e();
-         val var10: java.util.Iterator = var9.iterator();
+         val var23: java.util.Iterator = var9.iterator();
 
-         while (var10.hasNext()) {
-            val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
-            if (var23 != null) {
-               var8.add(var23);
+         while (var23.hasNext()) {
+            val var10: java.lang.String = (var23.next() as ProductDetails.d).b();
+            if (var10 != null) {
+               var8.add(var10);
             }
          }
       } else {

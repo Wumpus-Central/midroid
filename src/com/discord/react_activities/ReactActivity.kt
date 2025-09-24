@@ -76,7 +76,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          TTILoggingApplication.Companion.trackActivityDelegateInitialized();
          val var3: CrashReporting = CrashReporting.INSTANCE;
          if (CrashReporting.INSTANCE.isCrashedLastRun() == java.lang.Boolean.TRUE) {
-            CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, 6, null);
+            CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, null, 14, null);
             val var4: Future = BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, null, 2, null);
             if (var4 != null) {
                var4.get();

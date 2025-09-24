@@ -300,12 +300,12 @@ public object PlayAssetDelivery {
          var7 = null;
          if (var4.c() == 0) {
             if (var4.b() == null) {
-               val var8: Log = Log.INSTANCE;
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Asset ");
-               var9.append(var1);
-               var9.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var8, "PlayAssetDelivery", var9.toString(), null, 4, null);
+               val var9: Log = Log.INSTANCE;
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Asset ");
+               var8.append(var1);
+               var8.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+               Log.w$default(var9, "PlayAssetDelivery", var8.toString(), null, 4, null);
                var7 = null;
             } else {
                var7 = var4.b();

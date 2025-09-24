@@ -2,7 +2,7 @@ package com.discord.chat.presentation.list
 
 import com.discord.chat.presentation.list.item.PortalViewChatListItem
 
-public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, updateId: Int) : ChannelChatListAdapterUpdate(var2, new q(), new r()) {
+public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, updateId: Int) : ChannelChatListAdapterUpdate(var2, new t(), new u()) {
    public final val portalChatListItem: PortalViewChatListItem?
    public open val updateId: Int
 

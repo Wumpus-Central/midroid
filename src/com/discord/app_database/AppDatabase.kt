@@ -31,13 +31,13 @@ public object AppDatabase {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !(var4 == "")) {
-         val var2: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var2);
-         val var3: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("speculatively opening ");
-         var5.append(var2);
-         Log.i$default(var3, "AppDatabase", var5.toString(), null, 4, null);
+         val var3: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var3);
+         val var5: Log = Log.INSTANCE;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("speculatively opening ");
+         var2.append(var3);
+         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -63,14 +63,14 @@ public object AppDatabase {
             var1 = this.databaseName(var1);
             val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
             val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-            var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-            val var23: kotlinx.serialization.json.Json.a = Json.d;
-            var23.a();
-            var26 = var23.b(new z0(GuildVersion::class, GuildVersion.Companion.serializer()), var6) as Array<GuildVersion>;
-            var23.a();
-            var27 = var23.b(new z0(NonGuildVersion::class, NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
-            var23.a();
-            var16 = var23.b(new z0(CacheVersion::class, CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
+            val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+            val var15: kotlinx.serialization.json.Json.a = Json.d;
+            var15.a();
+            var26 = var15.b(new z0(GuildVersion::class, GuildVersion.Companion.serializer()), var6) as Array<GuildVersion>;
+            var15.a();
+            var27 = var15.b(new z0(NonGuildVersion::class, NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+            var15.a();
+            var16 = var15.b(new z0(CacheVersion::class, CacheVersion.Companion.serializer()), var23) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;

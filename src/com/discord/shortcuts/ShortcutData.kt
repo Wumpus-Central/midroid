@@ -64,19 +64,19 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
       private const val KEY_DATA: String
 
       public fun createShortcutIntent(context: Context, action: String, clazz: Class<*>, tag: String, data: Map<String, String?>): Intent {
-         val var8: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
-         val var6: java.util.List = CollectionsKt.c();
+         val var6: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
+         val var8: java.util.List = CollectionsKt.c();
 
          for (Entry var12 : var5.entrySet()) {
             var4 = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var6.add(var4);
-               var6.add(var13);
+               var8.add(var4);
+               var8.add(var13);
             }
          }
 
-         val var7: Intent = var8.putExtra("discord_shortcut_data", CollectionsKt.a(var6).toArray(new java.lang.String[0]));
+         val var7: Intent = var6.putExtra("discord_shortcut_data", CollectionsKt.a(var8).toArray(new java.lang.String[0]));
          return var7;
       }
 

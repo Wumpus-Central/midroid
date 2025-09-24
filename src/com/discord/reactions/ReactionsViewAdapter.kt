@@ -166,9 +166,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var3: ThemeManager = ThemeManager.INSTANCE;
-      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var3.setThemeOverride(this.theme);
+      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var4.setThemeOverride(this.theme);
       val var8: Any;
       if (var2 != 46) {
          if (var2 != 47) {
@@ -189,7 +189,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var8 = new ReactionViewHolder(var11);
       }
 
-      var3.setThemeOverride(var4);
+      var4.setThemeOverride(var3);
       return (RecyclerView.ViewHolder)var8;
    }
 

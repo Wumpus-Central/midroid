@@ -838,6 +838,7 @@
     <item type="id" name="view_interaction_status_label_icon" />
     <item type="id" name="view_interaction_status_label_message" />
     <item type="id" name="view_interaction_status_loading_dots" />
+    <item type="id" name="view_is_transitioning" />
     <item type="id" name="view_offset_helper" />
     <item type="id" name="view_overlay" />
     <item type="id" name="view_progress_dots_1" />

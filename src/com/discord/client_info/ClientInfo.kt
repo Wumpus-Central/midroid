@@ -62,7 +62,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@298.14.0-1+298114"
+   public const val SENTRY_RELEASE: String = "discord_android@299.11.0-1+299111"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -107,7 +107,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "304ef521-c139-4ee8-a659-c768a8855468"
+   public const val PROGUARD_UUID: String = "371f473e-0cfc-47e2-bd43-38d6453b67a8"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
@@ -146,11 +146,11 @@ public object ClientInfo {
       flavor = var4;
       buildType = var5;
       this.setPackageName(var1.getPackageName());
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("Discord-Android/");
-      var8.append(var3);
-      var8.append(";RNA");
-      var9.init(var1, var8.toString());
+      val var8: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var8.init(var1, var9.toString());
    }
 }
