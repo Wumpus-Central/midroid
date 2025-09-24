@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater

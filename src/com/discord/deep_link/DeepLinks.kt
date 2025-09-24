@@ -36,15 +36,15 @@ public object DeepLinks {
          }
 
          val var11: Builder = Uri.parse(var4).buildUpon();
-         val var5: Uri = var11.build();
+         val var6: Uri = var11.build();
          var11.clearQuery();
 
-         for (java.lang.String var7 : var5.getQueryParameterNames()) {
-            if (!(var7 == "fromAppsFlyer")) {
-               val var10: java.util.Iterator = var5.getQueryParameters(var7).iterator();
+         for (java.lang.String var5 : var6.getQueryParameterNames()) {
+            if (!(var5 == "fromAppsFlyer")) {
+               val var7: java.util.Iterator = var6.getQueryParameters(var5).iterator();
 
-               while (var10.hasNext()) {
-                  var11.appendQueryParameter(var7, var10.next() as java.lang.String);
+               while (var7.hasNext()) {
+                  var11.appendQueryParameter(var5, var7.next() as java.lang.String);
                }
             }
          }
@@ -75,20 +75,20 @@ public object DeepLinks {
             @Override
             public void onDeepLinking(DeepLinkResult var1) {
                if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
-                  val var4: DeepLink = var1.getDeepLink();
-                  if (var4 != null) {
-                     val var2: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var4);
-                     if (var2 != null) {
+                  val var2: DeepLink = var1.getDeepLink();
+                  if (var2 != null) {
+                     val var4: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var2);
+                     if (var4 != null) {
                         if (DeepLinks.access$getInitialUrl$p() == null) {
-                           DeepLinks.access$setInitialUrl$p(new Pair(var2, var4.isDeferred() == java.lang.Boolean.TRUE));
+                           DeepLinks.access$setInitialUrl$p(new Pair(var4, var2.isDeferred() == java.lang.Boolean.TRUE));
                         }
 
                         try {
-                           val var5: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var2));
-                           val var6: Context = this.$context;
-                           var5.addFlags(268435456);
-                           var5.setPackage(var6.getPackageName());
-                           this.$context.startActivity(var5);
+                           val var6: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var4));
+                           val var5: Context = this.$context;
+                           var6.addFlags(268435456);
+                           var6.setPackage(var5.getPackageName());
+                           this.$context.startActivity(var6);
                         } catch (var3: Exception) {
                            CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
                         }

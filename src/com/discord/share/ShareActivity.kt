@@ -25,9 +25,9 @@ public class ShareActivity : ReactActivity {
 
          private final void updateShareProps(Intent var1) {
             if (var1 != null) {
-               val var3: ShareProps.Companion = ShareProps.Companion;
-               val var2: Context = this.getContext();
-               val var6: ShareProps = var3.createShareProps(var1, var2);
+               val var2: ShareProps.Companion = ShareProps.Companion;
+               val var3: Context = this.getContext();
+               val var6: ShareProps = var2.createShareProps(var1, var3);
                this.shareProps = var6;
                var var4: ShareProps = var6;
                if (var6 == null) {

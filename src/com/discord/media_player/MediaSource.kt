@@ -1,6 +1,6 @@
 package com.discord.media_player
 
-import A9.n
+import B9.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 
@@ -254,9 +254,9 @@ public data class MediaSource(sourceUrl: String? = ...,
          var4 = this.placeholderVersion.hashCode();
       }
 
-      val var10: Int = this.featureTag.hashCode();
-      val var12: Int = this.type.hashCode();
-      val var11: Int = java.lang.Boolean.hashCode(this.shouldAutoPlay);
+      val var12: Int = this.featureTag.hashCode();
+      val var11: Int = this.type.hashCode();
+      val var10: Int = java.lang.Boolean.hashCode(this.shouldAutoPlay);
       val var5: Int;
       if (this.channelId == null) {
          var5 = 0;
@@ -289,20 +289,20 @@ public data class MediaSource(sourceUrl: String? = ...,
          var9 = this.srcIsAnimated.hashCode();
       }
 
-      return ((((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var10) * 31 + var12) * 31 + var11) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var8)
+      return ((((((((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var12) * 31 + var11) * 31 + var10) * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var8)
             * 31
          + var9;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.sourceUrl;
-      val var9: java.lang.String = this.previewUrl;
-      val var6: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
-      val var5: java.lang.String = this.featureTag;
-      val var7: MediaType = this.type;
+      val var6: java.lang.String = this.sourceUrl;
+      val var8: java.lang.String = this.previewUrl;
+      val var5: java.lang.String = this.placeholder;
+      val var7: Int = this.placeholderVersion;
+      val var9: java.lang.String = this.featureTag;
+      val var4: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
-      val var8: ChannelId = this.channelId;
+      val var3: ChannelId = this.channelId;
       val var14: java.lang.String;
       if (this.messageId == null) {
          var14 = "null";
@@ -310,32 +310,32 @@ public data class MediaSource(sourceUrl: String? = ...,
          var14 = MessageId.toString-impl(this.messageId);
       }
 
-      val var11: Int = this.index;
-      val var10: java.lang.Double = this.portal;
+      val var10: Int = this.index;
+      val var11: java.lang.Double = this.portal;
       val var12: java.lang.Boolean = this.srcIsAnimated;
       val var13: StringBuilder = new StringBuilder();
       var13.append("MediaSource(sourceUrl=");
-      var13.append(var3);
-      var13.append(", previewUrl=");
-      var13.append(var9);
-      var13.append(", placeholder=");
       var13.append(var6);
-      var13.append(", placeholderVersion=");
-      var13.append(var4);
-      var13.append(", featureTag=");
+      var13.append(", previewUrl=");
+      var13.append(var8);
+      var13.append(", placeholder=");
       var13.append(var5);
-      var13.append(", type=");
+      var13.append(", placeholderVersion=");
       var13.append(var7);
+      var13.append(", featureTag=");
+      var13.append(var9);
+      var13.append(", type=");
+      var13.append(var4);
       var13.append(", shouldAutoPlay=");
       var13.append(var1);
       var13.append(", channelId=");
-      var13.append(var8);
+      var13.append(var3);
       var13.append(", messageId=");
       var13.append(var14);
       var13.append(", index=");
-      var13.append(var11);
-      var13.append(", portal=");
       var13.append(var10);
+      var13.append(", portal=");
+      var13.append(var11);
       var13.append(", srcIsAnimated=");
       var13.append(var12);
       var13.append(")");

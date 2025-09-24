@@ -36,7 +36,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(F9.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(G9.b.c(var7), 1);
       var8.C();
       val var13: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0<Unit>(var13, var1) {
@@ -115,7 +115,7 @@ internal object Transcoder {
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             if (this.$continuation.c()) {
-               val var3: kotlin.Result.a = Result.e;
+               val var4: kotlin.Result.a = Result.e;
                this.$continuation.resumeWith(Result.b(kotlin.c.a(new CancellationException("Video transcoding was cancelled"))));
             }
          }
@@ -124,7 +124,7 @@ internal object Transcoder {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var3: kotlin.Result.a = Result.e;
+            val var4: kotlin.Result.a = Result.e;
             this.$continuation.resumeWith(Result.b(this.$outputUri));
          }
 
@@ -160,7 +160,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === F9.b.e()) {
+      if (var12 === G9.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

@@ -1352,13 +1352,11 @@
   "X2L3OT": "You cannot add or remove reactions in archived threads.",
   "BTs4KS": "Close Post",
   "wiIevb": "Close Thread",
-  "7lc4V1": "Compressing files...",
   "GnuJ5u": "unknown",
   "IPzNKC": "double tap to enlarge",
   "XONG6O": "Media Selector",
   "eOB2eX": "Description (Alt Text)",
   "RNH1jo": "Add a description",
-  "Dmx3f3": "Server processing...",
   "qqyp/f": [
     "You can only upload ",
     [
@@ -3229,6 +3227,7 @@
       "orbPrice"
     ]
   ],
+  "4ivm+P": "Check out your new badge!",
   "uYLGcn": "View My Badge",
   "6gF4aW": "Sweet!",
   "B25MUV": "The badge has been added to your profile.",
@@ -5302,6 +5301,13 @@
       },
       0,
       "cardinal"
+    ]
+  ],
+  "jnq5Hh": [
+    "Error, ",
+    [
+      1,
+      "errorMessage"
     ]
   ],
   "fYvzER": "Oops, you forgot something. Please add at least one answer.",
@@ -20225,6 +20231,7 @@
       "guildName"
     ]
   ],
+  "m9gRVF": "Looks like we’re having trouble connecting…",
   "2JA2GB": [
     "Your account must be at least ",
     [
@@ -20708,6 +20715,140 @@
   "jcRSp6": "Blur image-based media that may contain sexually explicit or suggestive material involving adults in DMs and servers",
   "E6UmXV": "Blur added to mature sexual media",
   "Gtck/v": "Mature Sexual Media Filter",
+  "5l/hlp": "We won't share the content or report category",
+  "BlAMmZ": [
+    "You shared this report with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wr4IT0": [
+    "Report shared with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "!"
+  ],
+  "HqyWeH": [
+    "Share report with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ytCpKi": "Ignore",
   "tFY5ZW": "Ignored",
   "VFWjc3": [
@@ -29450,102 +29591,6 @@
       "cardinal"
     ]
   ],
-  "ZsgnLC": [
-    [
-      6,
-      "days",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " day Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Days Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "Y0HCVV": [
-    [
-      6,
-      "months",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Month Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Months Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "8awlzM": [
-    [
-      6,
-      "weeks",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Week Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Weeks Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "ns1zkZ": [
-    [
-      6,
-      "years",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Year Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Years Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "6Cdzo6": [
     [
       6,
@@ -29753,102 +29798,6 @@
     [
       1,
       "price"
-    ]
-  ],
-  "kLnKcX": [
-    [
-      6,
-      "days",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " day free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " days free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "azyIQ0": [
-    [
-      6,
-      "months",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " month free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " months free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "3GVMLi": [
-    [
-      6,
-      "weeks",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " week free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " weeks free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "sqDHKC": [
-    [
-      6,
-      "years",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " year free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " years free"
-        ]
-      },
-      0,
-      "cardinal"
     ]
   ],
   "TkTvBw": "Sweet!",
@@ -31214,6 +31163,83 @@
     ],
     "."
   ],
+  "C+2RxM": [
+    "Try ",
+    [
+      1,
+      "activityName"
+    ],
+    " powered by ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " in Discord and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    ". No install required."
+  ],
+  "0NNM3t": [
+    "Try ",
+    [
+      1,
+      "activityName"
+    ],
+    " powered by ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " in Discord. No install required. Play ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes to unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "2GJLKy": [
     "Play eligible games for ",
     [
@@ -31539,7 +31565,7 @@
       1,
       "minutes"
     ],
-    " minutes"
+    " minutes."
   ],
   "1NaRSk": [
     "Play any Activity on Discord for ",
@@ -31855,6 +31881,102 @@
     ],
     " Quest"
   ],
+  "+qoymJ": "Try in Discord",
+  "03VJqq": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open and win ",
+    [
+      1,
+      "questReward"
+    ],
+    "."
+  ],
+  "1AcTqq": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " for ",
+    [
+      1,
+      "duration"
+    ],
+    " and keep it for longer with Nitro!"
+  ],
+  "ztXW8f": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    ". Keep it with Nitro!"
+  ],
+  "enQ3jY": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " for ",
+    [
+      1,
+      "duration"
+    ],
+    "."
+  ],
+  "fe7XeX": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "r9s3Ul": "Rewind 10 seconds",
   "zWDcND": "Skip ahead 10 seconds",
   "bDSZOz": "Toggle captions",
@@ -31975,6 +32097,24 @@
     ],
     "."
   ],
+  "e+K3xM": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and win ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "."
+  ],
   "mOrpXF": "Start Playing!",
   "Au8ug4": "No Orb Quests Available",
   "dYE1p6": [
@@ -32014,30 +32154,6 @@
     [
       1,
       "date"
-    ]
-  ],
-  "Iaj5LS": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          [
-            1,
-            "filename"
-          ],
-          " queued"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Files queued"
-        ]
-      },
-      0,
-      "cardinal"
     ]
   ],
   "WgVYR0": "Files",

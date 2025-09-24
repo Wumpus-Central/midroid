@@ -94,22 +94,22 @@ public data class ChatListUpdate(items: List<ChatListItem>,
 
    public override fun toString(): String {
       val var2: java.util.List = this.items;
-      val var5: ChatListAction = this.action;
-      val var6: java.util.List = this.listOperations;
+      val var6: ChatListAction = this.action;
+      val var5: java.util.List = this.listOperations;
       val var1: Int = this.changesetUpdateId;
-      val var4: java.lang.Boolean = this.forceReload;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChatListUpdate(items=");
-      var3.append(var2);
-      var3.append(", action=");
-      var3.append(var5);
-      var3.append(", listOperations=");
-      var3.append(var6);
-      var3.append(", changesetUpdateId=");
-      var3.append(var1);
-      var3.append(", forceReload=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.Boolean = this.forceReload;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChatListUpdate(items=");
+      var4.append(var2);
+      var4.append(", action=");
+      var4.append(var6);
+      var4.append(", listOperations=");
+      var4.append(var5);
+      var4.append(", changesetUpdateId=");
+      var4.append(var1);
+      var4.append(", forceReload=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

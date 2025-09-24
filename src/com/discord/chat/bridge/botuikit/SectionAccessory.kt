@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g(with = SectionAccessory.Serializer::class)
 public sealed interface SectionAccessory<T extends Component> {

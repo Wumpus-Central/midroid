@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.safetysystemnotification
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class SafetySystemNotificationEmbed(titleText: String,
@@ -137,10 +137,10 @@ public data class SafetySystemNotificationEmbed(titleText: String,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.titleText.hashCode();
-      val var9: Int = this.titleIcon.hashCode();
-      val var8: Int = this.subtitleText.hashCode();
-      val var7: Int = this.descriptionText.hashCode();
+      val var8: Int = this.titleText.hashCode();
+      val var7: Int = this.titleIcon.hashCode();
+      val var9: Int = this.subtitleText.hashCode();
+      val var10: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.primaryCtaText == null) {
@@ -181,47 +181,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var10 * 31 + var9) * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var8 * 31 + var7) * 31 + var9) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
       val var12: java.lang.String = this.titleText;
-      val var3: java.lang.String = this.titleIcon;
+      val var2: java.lang.String = this.titleIcon;
       val var5: java.lang.String = this.subtitleText;
-      val var1: java.lang.String = this.descriptionText;
-      val var4: java.lang.String = this.primaryCtaText;
-      val var2: java.lang.String = this.primaryCtaType;
+      val var9: java.lang.String = this.descriptionText;
+      val var6: java.lang.String = this.primaryCtaText;
+      val var10: java.lang.String = this.primaryCtaType;
       val var8: java.lang.String = this.primaryCtaKey;
-      val var10: java.lang.String = this.secondaryCtaText;
-      val var6: java.lang.String = this.secondaryCtaType;
+      val var4: java.lang.String = this.secondaryCtaText;
+      val var7: java.lang.String = this.secondaryCtaType;
       val var11: java.lang.String = this.secondaryCtaKey;
-      val var9: FooterTheme = this.footerTheme;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("SafetySystemNotificationEmbed(titleText=");
-      var7.append(var12);
-      var7.append(", titleIcon=");
-      var7.append(var3);
-      var7.append(", subtitleText=");
-      var7.append(var5);
-      var7.append(", descriptionText=");
-      var7.append(var1);
-      var7.append(", primaryCtaText=");
-      var7.append(var4);
-      var7.append(", primaryCtaType=");
-      var7.append(var2);
-      var7.append(", primaryCtaKey=");
-      var7.append(var8);
-      var7.append(", secondaryCtaText=");
-      var7.append(var10);
-      var7.append(", secondaryCtaType=");
-      var7.append(var6);
-      var7.append(", secondaryCtaKey=");
-      var7.append(var11);
-      var7.append(", footerTheme=");
-      var7.append(var9);
-      var7.append(")");
-      return var7.toString();
+      val var3: FooterTheme = this.footerTheme;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SafetySystemNotificationEmbed(titleText=");
+      var1.append(var12);
+      var1.append(", titleIcon=");
+      var1.append(var2);
+      var1.append(", subtitleText=");
+      var1.append(var5);
+      var1.append(", descriptionText=");
+      var1.append(var9);
+      var1.append(", primaryCtaText=");
+      var1.append(var6);
+      var1.append(", primaryCtaType=");
+      var1.append(var10);
+      var1.append(", primaryCtaKey=");
+      var1.append(var8);
+      var1.append(", secondaryCtaText=");
+      var1.append(var4);
+      var1.append(", secondaryCtaType=");
+      var1.append(var7);
+      var1.append(", secondaryCtaKey=");
+      var1.append(var11);
+      var1.append(", footerTheme=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

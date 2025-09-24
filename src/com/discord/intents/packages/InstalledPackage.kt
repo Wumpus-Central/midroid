@@ -1,6 +1,6 @@
 package com.discord.intents.packages
 
-import G9.a
+import H9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 

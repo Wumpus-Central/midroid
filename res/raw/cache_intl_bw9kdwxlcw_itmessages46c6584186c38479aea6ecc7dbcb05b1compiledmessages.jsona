@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Il tuo account è stato sbloccato",
+  "d9Ykjo": "Codice di conferma",
+  "bFbsV1": "Inserisci la tua e-mail",
+  "RRBNpq": "Avanti",
+  "0DHxys": [
+    "Non sei tu? ",
+    [
+      8,
+      "$link",
+      [
+        "Esci"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Potremmo chiedere altre cose lungo il percorso, tipo se sei un robot",
+  "Ks6opq": "Avvia",
+  "I2Ctk5": "Completa i passaggi qui sotto per sbloccare il tuo account",
+  "RRamMD": "Account bloccato",
+  "ah0EUl": "Invia di nuovo il codice",
+  "2+Lyn5": [
+    "Invia di nuovo il codice tra ",
+    [
+      1,
+      "countdown"
+    ],
+    " secondi"
+  ],
+  "3AXMYm": "Impossibile inviare di nuovo il codice di verifica",
+  "dSkE/P": "Verifica il gruppo di età",
+  "o4D6fn": "Aggiorna",
+  "VBZJJi": "Aggiorna l'app per continuare.",
+  "yxqMCA": "Aggiornamento necessario",
+  "wq2RDg": "Verifica",
+  "PfbG6O": "Codice di verifica non valido",
+  "aveKoK": "Abbiamo appena inviato un codice di verifica al tuo indirizzo e-mail. Potrebbero volerci alcuni minuti prima che arrivi",
+  "Qm6K/v": "Verifica la tua e-mail"
+}

@@ -3,7 +3,7 @@ package com.discord.primitives
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public inline class UserId : SnowflakePrimitive {

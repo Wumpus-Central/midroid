@@ -1,7 +1,7 @@
 package com.discord.image.fresco.postprocessors.processors
 
-import A9.n
-import A9.s
+import B9.n
+import B9.s
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.LinearGradient
@@ -53,8 +53,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var4: Float = var1.getWidth();
-      val var6: Float = var1.getHeight();
+      val var2: Float = var1.getWidth();
+      val var8: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -67,7 +67,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var4, var6, var15);
+      var18.drawRect(0.0F, 0.0F, var2, var8, var15);
    }
 
    public companion object {

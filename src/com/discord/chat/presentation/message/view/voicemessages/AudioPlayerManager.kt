@@ -42,7 +42,7 @@ public object AudioPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = fb.x.a(null);
+      val var0: MutableStateFlow = gb.x.a(null);
       _currentPlayerSourceFlow = var0;
       currentPlayerSourceFlow = var0;
    }
@@ -396,27 +396,27 @@ public object AudioPlayerManager {
             var1 = ChannelId.hashCode-impl(this.channelId.unbox-impl());
          }
 
-         val var3: Int = MessageId.hashCode-impl(this.messageId);
-         val var4: Int = this.url.hashCode();
+         val var4: Int = MessageId.hashCode-impl(this.messageId);
+         val var3: Int = this.url.hashCode();
          if (this.index != null) {
             var2 = this.index.hashCode();
          }
 
-         return ((var1 * 31 + var3) * 31 + var4) * 31 + var2;
+         return ((var1 * 31 + var4) * 31 + var3) * 31 + var2;
       }
 
       public override fun toString(): String {
          val var1: ChannelId = this.channelId;
-         val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-         val var2: java.lang.String = this.url;
+         val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var3: java.lang.String = this.url;
          val var4: Int = this.index;
          val var5: StringBuilder = new StringBuilder();
          var5.append("AudioSource(channelId=");
          var5.append(var1);
          var5.append(", messageId=");
-         var5.append(var3);
-         var5.append(", url=");
          var5.append(var2);
+         var5.append(", url=");
+         var5.append(var3);
          var5.append(", index=");
          var5.append(var4);
          var5.append(")");

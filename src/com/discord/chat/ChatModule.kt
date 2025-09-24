@@ -1,10 +1,8 @@
 package com.discord.chat
 
-import A9.s
-import F9.b
+import B9.s
+import G9.b
 import android.content.Context
-import cb.T
-import cb.k0
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -21,6 +19,8 @@ import com.discord.logging.PIIKt
 import com.discord.serialization.SerializerUtils
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
+import db.T
+import db.k0
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import java.util.concurrent.CancellationException
@@ -38,16 +38,16 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONArray
 import org.json.JSONObject
-import pb.f
+import qb.f
 
 public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = k0.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      moduleScope = g.a(var1.Z0(T.b(var0)));
+      val var0: CompletableJob = k0.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      moduleScope = g.a(var0.X0(T.b(var1)));
    }
 
    init {
@@ -170,15 +170,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           val var52: Json = ChatModule.access$getJson$cp();
-                           var1 = this.$rowsJSON;
-                           var52.a();
-                           var64 = var52.b(new f(Row.Companion.serializer()), var1) as java.util.List;
+                           var1 = ChatModule.access$getJson$cp();
+                           val var5: java.lang.String = this.$rowsJSON;
+                           var1.a();
+                           var64 = var1.b(new f(Row.Companion.serializer()), var5) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              val var24: Json = ChatModule.access$getJson$cp();
+                              var1 = ChatModule.access$getJson$cp();
                               val var53: java.lang.String = this.$scrollDataJSON;
-                              var24.a();
-                              var1 = var24.b(ChatScrollData.Companion.serializer(), var53) as ChatScrollData;
+                              var1.a();
+                              var1 = var1.b(ChatScrollData.Companion.serializer(), var53) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -205,9 +205,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               null
                            );
                            CrashReporting.captureException$default(var20, new Exception("Failed to update rows", var19), false, 2, null);
-                           var1 = this.$rowsJSON;
+                           val var21: java.lang.String = this.$rowsJSON;
                            val var4: java.lang.String = var19.getMessage();
-                           var3x.handleError(var1, var4, this.$changesetUpdateId);
+                           var3x.handleError(var21, var4, this.$changesetUpdateId);
                            break label131;
                         }
 
@@ -247,9 +247,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            null
                         );
                         CrashReporting.captureException$default(var25, new Exception("Failed to update rows", var18), false, 2, null);
-                        var1 = this.$rowsJSON;
+                        val var26: java.lang.String = this.$rowsJSON;
                         var55 = var18.getMessage();
-                        var3x.handleError(var1, var55, this.$changesetUpdateId);
+                        var3x.handleError(var26, var55, this.$changesetUpdateId);
                         break label131;
                      }
 
@@ -288,9 +288,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  null
                               );
                               CrashReporting.captureException$default(var27, new Exception("Failed to update rows", var11), false, 2, null);
-                              var1 = this.$rowsJSON;
+                              val var28: java.lang.String = this.$rowsJSON;
                               var55 = var11.getMessage();
-                              var3x.handleError(var1, var55, this.$changesetUpdateId);
+                              var3x.handleError(var28, var55, this.$changesetUpdateId);
                               break;
                            }
 
@@ -321,9 +321,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                     null
                                  );
                                  CrashReporting.captureException$default(var30, new Exception("Failed to update rows", var10), false, 2, null);
-                                 var1 = this.$rowsJSON;
+                                 val var31: java.lang.String = this.$rowsJSON;
                                  var55 = var10.getMessage();
-                                 var3x.handleError(var1, var55, this.$changesetUpdateId);
+                                 var3x.handleError(var31, var55, this.$changesetUpdateId);
                                  break;
                               }
                            }
@@ -405,9 +405,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var38 = null;
                            }
 
-                           var var7: LinkedHashMap;
+                           var var7: java.util.Iterator;
                            var var8: java.util.List;
-                           var var67: java.util.Iterator;
+                           var var67: LinkedHashMap;
                            try {
                               if (var38 !is ErrorMessage) {
                                  break label127;
@@ -418,12 +418,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var66: java.lang.String = var6.toString();
                               var1 = var42.findErroringFields(var66, Message::class);
                               var8 = PIIKt.getPIIFieldNames(Message::class);
-                              var7 = new LinkedHashMap();
+                              var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
                               }
 
-                              var67 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var7 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var39: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -457,13 +457,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            while (true) {
                               var var9: Entry;
                               try {
-                                 if (!var67.hasNext()) {
+                                 if (!var7.hasNext()) {
                                     break;
                                  }
 
-                                 var9 = var67.next() as Entry;
+                                 var9 = var7.next() as Entry;
                                  if (var8.contains(var9.getKey())) {
-                                    var7.put(var9.getKey(), "<REDACTED>");
+                                    var67.put(var9.getKey(), "<REDACTED>");
                                     continue;
                                  }
                               } catch (var17: Exception) {
@@ -497,7 +497,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               }
 
                               try {
-                                 var7.put(var9.getKey(), var9.getValue());
+                                 var67.put(var9.getKey(), var9.getValue());
                               } catch (var13: Exception) {
                                  val var46: CrashReporting = CrashReporting.INSTANCE;
                                  CrashReporting.addBreadcrumb$default(
@@ -530,15 +530,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            }
 
                            try {
-                              val var68: CrashReporting = CrashReporting.INSTANCE;
-                              CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var7, null, null, 12, null);
-                              val var50: java.lang.String = CollectionsKt.p0(
+                              val var69: CrashReporting = CrashReporting.INSTANCE;
+                              CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var67, null, null, 12, null);
+                              val var70: java.lang.String = CollectionsKt.p0(
                                  (var1 as SerializerUtils.SerializerError.Data).getData().keySet(), ",", null, null, 0, null, null, 62, null
                               );
-                              val var70: StringBuilder = new StringBuilder();
-                              var70.append("Could not deserialize message. Bad Fields: ");
-                              var70.append(var50);
-                              CrashReporting.captureException$default(var68, new Exception(var70.toString()), false, 2, null);
+                              val var50: StringBuilder = new StringBuilder();
+                              var50.append("Could not deserialize message. Bad Fields: ");
+                              var50.append(var70);
+                              CrashReporting.captureException$default(var69, new Exception(var50.toString()), false, 2, null);
                            } catch (var12: Exception) {
                               val var48: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -617,7 +617,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       }
 
       private fun withChatManager(tag: Int, block: (ChatListManager, Continuation<Unit>) -> Any?) {
-         cb.f.d(
+         db.f.d(
             ChatModule.access$getModuleScope$cp(), null, null, new Function2<CoroutineScope, Continuation, Object>(var2, this.getChatListManager(var1), null) {
                final Function2<ChatListManager, Continuation, Object> $block;
                final ChatListManager $manager;
@@ -647,10 +647,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      c.b(var1);
                   } else {
                      c.b(var1);
-                     val var4: Function2 = this.$block;
-                     var1 = this.$manager;
+                     var1 = this.$block;
+                     val var4: ChatListManager = this.$manager;
                      this.label = 1;
-                     if (var4.invoke(var1, this) === var3) {
+                     if (var1.invoke(var4, this) === var3) {
                         return var3;
                      }
                   }

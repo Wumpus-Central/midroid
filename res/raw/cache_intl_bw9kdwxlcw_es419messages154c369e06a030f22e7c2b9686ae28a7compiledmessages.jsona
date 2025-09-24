@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Tu cuenta ha sido desbloqueada",
+  "d9Ykjo": "Código de confirmación",
+  "bFbsV1": "Ingresa tu correo electrónico",
+  "RRBNpq": "Siguiente",
+  "0DHxys": [
+    "¿No eres tú? ",
+    [
+      8,
+      "$link",
+      [
+        "Cerrar sesión"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Podemos pedirte más verificaciones durante el proceso, para asegurarnos de que no seas un robot.",
+  "Ks6opq": "Iniciar",
+  "I2Ctk5": "Completa los pasos a continuación para desbloquear tu cuenta",
+  "RRamMD": "Cuenta bloqueada",
+  "ah0EUl": "Reenviar código",
+  "2+Lyn5": [
+    "Reenviar código en ",
+    [
+      1,
+      "countdown"
+    ],
+    " segundos"
+  ],
+  "3AXMYm": "Error al reenviar el código de verificación",
+  "dSkE/P": "Verificar grupo de edad",
+  "o4D6fn": "Actualizar",
+  "VBZJJi": "Actualiza la aplicación para continuar.",
+  "yxqMCA": "Actualización requerido",
+  "wq2RDg": "Verificar",
+  "PfbG6O": "Código de verificación inválido",
+  "aveKoK": "Acabamos de enviar un código de verificación a tu dirección de correo electrónico. Puede tardar unos minutos en llegar",
+  "Qm6K/v": "Verifica tu correo electrónico"
+}

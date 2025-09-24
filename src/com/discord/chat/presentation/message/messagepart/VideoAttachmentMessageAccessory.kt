@@ -145,10 +145,10 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = ChannelId.hashCode-impl(this.channelId);
+      val var6: Int = ChannelId.hashCode-impl(this.channelId);
       val var5: Int = MessageId.hashCode-impl(this.messageId);
       val var3: Int = Integer.hashCode(this.index);
-      val var6: Int = this.attachment.hashCode();
+      val var4: Int = this.attachment.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -164,7 +164,7 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
       }
 
       return (
-               (((((((var4 * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31
+               (((((((var6 * 31 + var5) * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31
                   + java.lang.Boolean.hashCode(this.useNewAltTextButton)
             )
             * 31
@@ -172,21 +172,21 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: Int = this.index;
       val var11: Attachment = this.attachment;
       val var8: java.lang.Float = this.attachmentsOpacity;
-      val var1: Int = this.constrainedWidth;
-      val var2: Int = this.radiusPx;
+      val var2: Int = this.constrainedWidth;
+      val var1: Int = this.radiusPx;
       val var9: SpoilerAttributes = this.spoilerAttributes;
       val var4: Boolean = this.useNewAltTextButton;
       val var5: Boolean = this.hideMediaPlayButton;
       val var10: StringBuilder = new StringBuilder();
       var10.append("VideoAttachmentMessageAccessory(channelId=");
-      var10.append(var7);
-      var10.append(", messageId=");
       var10.append(var6);
+      var10.append(", messageId=");
+      var10.append(var7);
       var10.append(", index=");
       var10.append(var3);
       var10.append(", attachment=");
@@ -194,9 +194,9 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
       var10.append(", attachmentsOpacity=");
       var10.append(var8);
       var10.append(", constrainedWidth=");
-      var10.append(var1);
-      var10.append(", radiusPx=");
       var10.append(var2);
+      var10.append(", radiusPx=");
+      var10.append(var1);
       var10.append(", spoilerAttributes=");
       var10.append(var9);
       var10.append(", useNewAltTextButton=");

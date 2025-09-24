@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.embed
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class EmbedThumbnail(url: String,
@@ -182,39 +182,39 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
-      val var8: java.lang.String = this.videoUrl;
+      val var8: java.lang.String = this.url;
+      val var10: java.lang.String = this.proxyURL;
+      val var4: java.lang.String = this.videoUrl;
       val var2: Int = this.height;
       val var1: Int = this.width;
-      val var11: java.lang.Boolean = this.gifv;
-      val var5: java.lang.Boolean = this.showPlayButton;
-      val var10: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
+      val var7: java.lang.Boolean = this.gifv;
+      val var9: java.lang.Boolean = this.showPlayButton;
+      val var5: java.lang.String = this.placeholder;
+      val var11: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedThumbnail(url=");
-      var7.append(var9);
-      var7.append(", proxyURL=");
-      var7.append(var4);
-      var7.append(", videoUrl=");
-      var7.append(var8);
-      var7.append(", height=");
-      var7.append(var2);
-      var7.append(", width=");
-      var7.append(var1);
-      var7.append(", gifv=");
-      var7.append(var11);
-      var7.append(", showPlayButton=");
-      var7.append(var5);
-      var7.append(", placeholder=");
-      var7.append(var10);
-      var7.append(", placeholderVersion=");
-      var7.append(var6);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EmbedThumbnail(url=");
+      var6.append(var8);
+      var6.append(", proxyURL=");
+      var6.append(var10);
+      var6.append(", videoUrl=");
+      var6.append(var4);
+      var6.append(", height=");
+      var6.append(var2);
+      var6.append(", width=");
+      var6.append(var1);
+      var6.append(", gifv=");
+      var6.append(var7);
+      var6.append(", showPlayButton=");
+      var6.append(var9);
+      var6.append(", placeholder=");
+      var6.append(var5);
+      var6.append(", placeholderVersion=");
+      var6.append(var11);
+      var6.append(", srcIsAnimated=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

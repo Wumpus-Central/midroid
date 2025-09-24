@@ -83,8 +83,8 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
 
    public override fun hashCode(): Int {
       val var3: Int = this.tag.hashCode();
-      val var4: Int = ChannelId.hashCode-impl(this.channelId);
-      val var2: Int = java.lang.Boolean.hashCode(this.isFullscreenCallUI);
+      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var4: Int = java.lang.Boolean.hashCode(this.isFullscreenCallUI);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -92,7 +92,7 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var1 = GuildId.hashCode-impl(this.guildId.unbox-impl());
       }
 
-      return (((var3 * 31 + var4) * 31 + var2) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
+      return (((var3 * 31 + var2) * 31 + var4) * 31 + var1) * 31 + UserId.hashCode-impl(this.userId);
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {

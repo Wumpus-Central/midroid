@@ -1,7 +1,7 @@
 package com.discord.resource_usage
 
-import A9.s
-import Nb.e
+import B9.s
+import Ob.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION

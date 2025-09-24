@@ -75,11 +75,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
       val var4: Function1 = var1.getAttributes().getLabel();
-      var var5: Context = this.getContext();
+      val var5: Context = this.getContext();
       val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
-      val var6: Function1 = var1.getAttributes().getDescription();
-      var5 = this.getContext();
-      var3.configure(var8, var6.invoke(var5) as java.lang.String, new P0(this, var2));
+      val var9: Function1 = var1.getAttributes().getDescription();
+      val var6: Context = this.getContext();
+      var3.configure(var8, var9.invoke(var6) as java.lang.String, new P0(this, var2));
    }
 
    @JvmStatic

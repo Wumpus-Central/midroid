@@ -40,11 +40,11 @@ public final class ConnectionsRoleTagViewBinding implements ViewBinding {
    @NonNull
    public static ConnectionsRoleTagViewBinding bind(@NonNull View var0) {
       int var1 = R.id.connections_role_tag_container;
-      CardView var2 = (CardView)a.a(var0, var1);
-      if (var2 != null) {
+      CardView var4 = (CardView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.role_name;
-         TextView var6 = (TextView)a.a(var0, var1);
-         if (var6 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.verified_check_icon;
             ImageView var3 = (ImageView)a.a(var0, var1);
             if (var3 != null) {
@@ -52,9 +52,9 @@ public final class ConnectionsRoleTagViewBinding implements ViewBinding {
                ImageView var5 = (ImageView)a.a(var0, var1);
                if (var5 != null) {
                   var1 = R.id.verified_check_icon_container;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-                  if (var4 != null) {
-                     return new ConnectionsRoleTagViewBinding(var0, var2, var6, var3, var5, var4);
+                  FrameLayout var6 = (FrameLayout)a.a(var0, var1);
+                  if (var6 != null) {
+                     return new ConnectionsRoleTagViewBinding(var0, var4, var2, var3, var5, var6);
                   }
                }
             }

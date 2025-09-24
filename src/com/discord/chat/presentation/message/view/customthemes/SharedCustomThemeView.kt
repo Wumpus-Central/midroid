@@ -42,15 +42,15 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var5: SharedCustomThemeViewBinding = SharedCustomThemeViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
       this.nitroWheelIcon = new SimpleDraweeView(var1);
-      val var4: View = var5.getRoot();
-      val var6: GradientDrawable = new GradientDrawable();
-      var6.setShape(0);
-      var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
-      var6.setColor(ThemeManagerKt.getTheme().getBgModStrong());
-      var6.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
-      var4.setBackground(var6);
+      val var6: View = var5.getRoot();
+      val var4: GradientDrawable = new GradientDrawable();
+      var4.setShape(0);
+      var4.setCornerRadius((float)SizeUtilsKt.getDpToPx(8));
+      var4.setColor(ThemeManagerKt.getTheme().getBgModStrong());
+      var4.setStroke(SizeUtilsKt.getDpToPx(2), ThemeManagerKt.getTheme().getBorderSubtle());
+      var6.setBackground(var4);
       val var3: Int = SizeUtilsKt.getDpToPx(12);
-      var4.setPadding(var3, var3, var3, var3);
+      var6.setPadding(var3, var3, var3, var3);
    }
 
    @JvmStatic
@@ -71,18 +71,18 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       this.binding.previewBtn.setText(var2.getPreviewLabel());
       this.binding.previewBtn.setCornerRadius(this.binding.previewBtn.getHeight() / 2);
       this.binding.previewBtn.setOnClickButtonListener(new a(var4, var1));
-      val var8: ThemePreviewView = this.binding.themePreview;
+      val var12: ThemePreviewView = this.binding.themePreview;
       val var16: java.util.List = var2.getColors();
-      val var12: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
+      val var8: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var6 : var16) {
+      for (java.lang.String var17 : var16) {
          val var7: StringBuilder = new StringBuilder();
          var7.append("#");
-         var7.append(var6);
-         var12.add(var7.toString());
+         var7.append(var17);
+         var8.add(var7.toString());
       }
 
-      var8.setHexColors(var12);
+      var12.setHexColors(var8);
       this.binding.themePreview.setGradientAngle(var2.getGradientAngle());
       this.binding.previewHeading.setText(var2.getPreviewHeading());
       this.binding.previewHeading.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
@@ -112,9 +112,9 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
-      for (java.lang.String var5 : var4) {
+      for (java.lang.String var6 : var4) {
          val var8: TextView = new TextView(this.getContext());
-         var8.setText(var5);
+         var8.setText(var6);
          var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
          var8.setTextSize(14.0F);
          var3.add(var8);

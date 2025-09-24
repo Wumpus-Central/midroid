@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import A9.s
+import B9.s
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
@@ -39,18 +39,18 @@ public object BundleUpdaterUtils {
 
    public fun getManifestFromFile(file: File): AppManifest {
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = K9.i.f(var1, null, 1, null);
+      val var3: java.lang.String = L9.i.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
 
    public fun md5(file: File): String {
       label18: {
-         val var10: BufferedSource = Wb.m.d(Wb.m.k(var1));
+         val var10: BufferedSource = Xb.m.d(Xb.m.k(var1));
 
          var var12: java.lang.String;
          try {
-            val var11: Wb.j = Wb.j.m.a(Wb.m.b());
+            val var11: Xb.j = Xb.j.m.a(Xb.m.b());
             var10.M1(var11);
             var12 = var11.a().r();
          } catch (var5: java.lang.Throwable) {
@@ -59,11 +59,11 @@ public object BundleUpdaterUtils {
             try {
                throw var2;
             } catch (var4: java.lang.Throwable) {
-               K9.c.a(var10, var5);
+               L9.c.a(var10, var5);
             }
          }
 
-         K9.c.a(var10, null);
+         L9.c.a(var10, null);
          return var12;
       }
    }

@@ -1,24 +1,17 @@
 package com.discord.image.fresco.tiled
 
-import F9.b
-import G2.d
 import android.content.res.Resources
-import android.graphics.Bitmap
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
-import android.graphics.drawable.BitmapDrawable
 import android.view.MotionEvent
-import cb.K
-import cb.f
-import cb.k0
 import com.facebook.common.references.CloseableReference
-import com.facebook.datasource.DataSource
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
-import com.facebook.imagepipeline.request.ImageRequest
+import db.K
+import db.f
+import db.k0
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CompletableJob
@@ -44,7 +37,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.Z0(K.c().Z1()));
+      this.scope = g.a(var4.X0(K.c().Z1()));
    }
 
    private fun load() {
@@ -52,253 +45,9 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
          this.scope,
          null,
          null,
-         new Function2<CoroutineScope, Continuation, Object>(this, null) {
-            long J$0;
-            private Object L$0;
-            int label;
-            final TiledDraweeController this$0;
-
-            {
-               super(2, var2x);
-               this.this$0 = var1;
-            }
-
-            public final Continuation create(Object var1, Continuation var2) {
-               val var3: Function2 = new <anonymous constructor>(this.this$0, var2);
-               var3.L$0 = var1;
-               return var3;
-            }
-
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
-               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-            }
-
-            // $VF: Duplicated exception handlers to handle obfuscated exceptions
-            // $VF: Could not inline inconsistent finally blocks
-            // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-            public final Object invokeSuspend(Object var1) {
-               var var7: Any;
-               var var8: DataSource;
-               label1424: {
-                  var8 = (DataSource)b.e();
-                  var var9: Bitmap = null;
-                  val var3x: Long;
-                  if (this.label != 0) {
-                     if (this.label != 1) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                     }
-
-                     var3x = this.J$0;
-                     var8 = this.L$0 as DataSource;
-                     var7 = this.L$0 as DataSource;
-
-                     try {
-                        c.b(var1);
-                     } catch (var25: java.lang.Throwable) {
-                        var8 = var25;
-                        break label1424;
-                     }
-                  } else {
-                     c.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
-                     var3x = System.currentTimeMillis();
-                     var7 = ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0));
-                     val var252: DataSource = d.a().k((ImageRequest)var7, var1);
-
-                     try {
-                        var7 = K.b();
-                        val var10: Function2 = new Function2<CoroutineScope, Continuation, Object>(var252, null) {
-                           final DataSource $dataSource;
-                           int label;
-
-                           {
-                              super(2, var2x);
-                              this.$dataSource = var1;
-                           }
-
-                           public final Continuation create(Object var1, Continuation var2) {
-                              return new <anonymous constructor>(this.$dataSource, var2);
-                           }
-
-                           public final Object invoke(CoroutineScope var1, Continuation var2x) {
-                              return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-                           }
-
-                           public final Object invokeSuspend(Object var1) {
-                              b.e();
-                              if (this.label == 0) {
-                                 c.b(var1);
-                                 return A2.c.c(this.$dataSource);
-                              } else {
-                                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                              }
-                           }
-                        };
-                        this.L$0 = var252;
-                        this.J$0 = var3x;
-                        this.label = 1;
-                        var7 = f.g((CoroutineContext)var7, var10, this);
-                     } catch (var24: java.lang.Throwable) {
-                        break label1424;
-                     }
-
-                     if (var7 === var8) {
-                        return var8;
-                     }
-
-                     var8 = var252;
-                     var1 = (BitmapDrawable)var7;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var1 = var1 as CloseableReference;
-                  } catch (var23: java.lang.Throwable) {
-                     var8 = var23;
-                     break label1424;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     TiledDraweeController.access$setMyImageReference$p(this.this$0, var1);
-                  } catch (var22: java.lang.Throwable) {
-                     var8 = var22;
-                     break label1424;
-                  }
-
-                  val var254: e;
-                  if (var1 != null) {
-                     var7 = var8;
-
-                     try {
-                        var254 = var1.w0() as e;
-                     } catch (var21: java.lang.Throwable) {
-                        var8 = var21;
-                        break label1424;
-                     }
-                  } else {
-                     var254 = null;
-                  }
-
-                  var7 = var8;
-
-                  label131: {
-                     label163: {
-                        try {
-                           if (var254 !is u3.d) {
-                              break label163;
-                           }
-                        } catch (var20: java.lang.Throwable) {
-                           var8 = var20;
-                           break label1424;
-                        }
-
-                        var7 = var8;
-
-                        try {
-                           var1 = var254 as u3.d;
-                           break label131;
-                        } catch (var19: java.lang.Throwable) {
-                           var8 = var19;
-                           break label1424;
-                        }
-                     }
-
-                     var1 = null;
-                  }
-
-                  if (var1 != null) {
-                     var7 = var8;
-
-                     try {
-                        var9 = var1.B1();
-                     } catch (var18: java.lang.Throwable) {
-                        var8 = var18;
-                        break label1424;
-                     }
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var1 = new BitmapDrawable;
-                  } catch (var17: java.lang.Throwable) {
-                     var8 = var17;
-                     break label1424;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var1./* $VF: Unable to resugar constructor */<init>(TiledDraweeController.access$getResources$p(this.this$0), var9);
-                  } catch (var16: java.lang.Throwable) {
-                     var8 = var16;
-                     break label1424;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var259 = this.this$0;
-                  } catch (var15: java.lang.Throwable) {
-                     var8 = var15;
-                     break label1424;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var1.setTileModeXY(TiledDraweeController.access$getTileMode$p(var259), TiledDraweeController.access$getTileMode$p(var259));
-                  } catch (var14: java.lang.Throwable) {
-                     var8 = var14;
-                     break label1424;
-                  }
-
-                  var7 = var8;
-
-                  var var5: Long;
-                  try {
-                     var5 = System.currentTimeMillis();
-                  } catch (var13: java.lang.Throwable) {
-                     var8 = var13;
-                     break label1424;
-                  }
-
-                  var var257: Boolean = false;
-                  if (var5 - var3x >= 120L) {
-                     var257 = true;
-                  }
-
-                  var7 = var8;
-
-                  try {
-                     var260 = TiledDraweeController.access$getHierarchy$p(this.this$0);
-                  } catch (var12: java.lang.Throwable) {
-                     var8 = var12;
-                     break label1424;
-                  }
-
-                  if (var260 != null) {
-                     var7 = var8;
-
-                     try {
-                        var260.f(var1, 1.0F, var257 xor true);
-                     } catch (var11: java.lang.Throwable) {
-                        var8 = var11;
-                        break label1424;
-                     }
-                  }
-
-                  var8.close();
-                  return Unit.a;
-               }
-
-               var7.close();
-               throw var8;
-            }
-         },
+         new Function2<CoroutineScope, Continuation, Object>(this, null)// $VF: Couldn't be decompiled
+   // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   ,
          3,
          null
       );
@@ -331,7 +80,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return var4 == this.url && this.myImageReference != null && this.myImageReference.A0();
+         return var4 == this.url && this.myImageReference != null && this.myImageReference.z0();
       }
    }
 

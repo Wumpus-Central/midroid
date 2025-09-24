@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>) : BaseLayoutComponent() {
@@ -85,19 +85,19 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.errorText;
-      val var4: java.util.List = this.components;
+      val var4: java.lang.String = this.id;
+      val var2: java.lang.String = this.errorText;
+      val var3: java.util.List = this.components;
       val var6: SectionAccessory = this.accessory;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SectionComponent(type=");
       var5.append(var1);
       var5.append(", id=");
-      var5.append(var2);
-      var5.append(", errorText=");
-      var5.append(var3);
-      var5.append(", components=");
       var5.append(var4);
+      var5.append(", errorText=");
+      var5.append(var2);
+      var5.append(", components=");
+      var5.append(var3);
       var5.append(", accessory=");
       var5.append(var6);
       var5.append(")");

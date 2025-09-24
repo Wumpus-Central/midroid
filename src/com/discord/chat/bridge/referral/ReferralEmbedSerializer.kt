@@ -3,8 +3,8 @@ package com.discord.chat.bridge.referral
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
-import qb.d
-import qb.g
+import rb.d
+import rb.g
 
 public object ReferralEmbedSerializer : d(ReferralEmbed::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<ReferralEmbed> {

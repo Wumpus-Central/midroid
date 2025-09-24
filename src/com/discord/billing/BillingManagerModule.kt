@@ -24,9 +24,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         A9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
-         A9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
-         A9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         B9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
+         B9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
+         B9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }

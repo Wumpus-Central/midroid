@@ -47,7 +47,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    VerticalSpacingItemDecoration.SpacingProviderView {
    private final var bottomSpacingPx: Int?
 
-   private final val shadowView: SimpleDraweeSpanTextView by A9.j.b(new E0(this))
+   private final val shadowView: SimpleDraweeSpanTextView by B9.j.b(new E0(this))
       private final get() {
          return this.shadowView$delegate.getValue() as SimpleDraweeSpanTextView;
       }
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 52: aload 5
          // 54: aload 7
          // 56: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // 59: istore 4
-         // 5b: aload 5
-         // 5d: aload 7
-         // 5f: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // 62: istore 3
+         // 59: istore 3
+         // 5a: aload 5
+         // 5c: aload 7
+         // 5e: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // 61: istore 4
          // 63: aload 1
          // 64: invokevirtual android/view/View.getContext ()Landroid/content/Context;
          // 67: astore 7
@@ -376,8 +376,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 6b: ldc "getContext(...)"
          // 6d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
          // 70: aload 5
-         // 72: iload 4
-         // 74: iload 3
+         // 72: iload 3
+         // 73: iload 4
          // 75: aload 7
          // 77: getstatic com/discord/react_strings/I18nMessage.SPOILER_HIDDEN_A11Y_LABEL Lcom/discord/react_strings/I18nMessage;
          // 7a: aconst_null

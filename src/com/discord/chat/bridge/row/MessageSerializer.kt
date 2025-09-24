@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.row
 
-import A9.c
+import B9.c
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -11,8 +11,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import ob.g
-import ob.e.i
+import pb.g
+import pb.e.i
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor

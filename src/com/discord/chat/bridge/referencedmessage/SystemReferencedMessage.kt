@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.referencedmessage
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class SystemReferencedMessage(content: String) : ReferencedMessage() {
@@ -34,12 +34,12 @@ public data class SystemReferencedMessage(content: String) : ReferencedMessage()
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SystemReferencedMessage(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SystemReferencedMessage(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

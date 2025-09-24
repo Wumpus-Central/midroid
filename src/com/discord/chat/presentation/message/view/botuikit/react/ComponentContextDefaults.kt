@@ -25,126 +25,126 @@ public object ComponentContextDefaults {
 
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$21`(var0: java.lang.String): Unit {
-      throw new A9.o("onTapButtonActionComponent not implemented");
+      throw new B9.o("onTapButtonActionComponent not implemented");
    }
 
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$22`(var0: java.lang.String): Unit {
-      throw new A9.o("onTapButtonLinkComponent not implemented");
+      throw new B9.o("onTapButtonLinkComponent not implemented");
    }
 
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$23`(var0: java.lang.String): Unit {
-      throw new A9.o("onTapSelectActionComponent not implemented");
+      throw new B9.o("onTapSelectActionComponent not implemented");
    }
 
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$24`(var0: UserId, var1: java.lang.String, var2: java.lang.String): Unit {
-      throw new A9.o("onTapContentInventoryEntry not implemented");
+      throw new B9.o("onTapContentInventoryEntry not implemented");
    }
 
    @JvmStatic
    fun `GENERAL_HANDLERS$lambda$0`(var0: java.lang.String, var1: java.lang.String): Unit {
-      throw new A9.o("onLinkClicked not implemented");
+      throw new B9.o("onLinkClicked not implemented");
    }
 
    @JvmStatic
    fun `GENERAL_HANDLERS$lambda$1`(): Unit {
-      throw new A9.o("onTapSpoiler not implemented");
+      throw new B9.o("onTapSpoiler not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$10`(var0: CommandMentionContentNode): Unit {
-      throw new A9.o("onLongPressCommand not implemented");
+      throw new B9.o("onLongPressCommand not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$11`(): Unit {
-      throw new A9.o("onTapSpoiler not implemented");
+      throw new B9.o("onTapSpoiler not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$12`(var0: java.lang.String): Unit {
-      throw new A9.o("onTapTimestamp not implemented");
+      throw new B9.o("onTapTimestamp not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$13`(var0: InlineCodeContentNode): Unit {
-      throw new A9.o("onTapInlineCode not implemented");
+      throw new B9.o("onTapInlineCode not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$14`(var0: EmojiContentNode): Unit {
-      throw new A9.o("onTapEmoji not implemented");
+      throw new B9.o("onTapEmoji not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$15`(var0: SoundmojiContentNode): Unit {
-      throw new A9.o("onTapSoundmoji not implemented");
+      throw new B9.o("onTapSoundmoji not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$2`(var0: LinkContentNode): Unit {
-      throw new A9.o("onLinkClicked not implemented");
+      throw new B9.o("onLinkClicked not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$3`(var0: LinkContentNode): Unit {
-      throw new A9.o("onLinkLongClicked not implemented");
+      throw new B9.o("onLinkLongClicked not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$4`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String): Unit {
-      throw new A9.o("onTapChannel not implemented");
+      throw new B9.o("onTapChannel not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$5`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String): Unit {
-      throw new A9.o("onLongPressChannel not implemented");
+      throw new B9.o("onLongPressChannel not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$6`(var0: java.lang.String): Unit {
-      throw new A9.o("onTapAttachmentLink not implemented");
+      throw new B9.o("onTapAttachmentLink not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$7`(var0: java.lang.String, var1: java.lang.String): Unit {
-      throw new A9.o("onLongPressAttachmentLink not implemented");
+      throw new B9.o("onLongPressAttachmentLink not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$8`(var0: java.lang.String, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String): Unit {
-      throw new A9.o("onTapMention not implemented");
+      throw new B9.o("onTapMention not implemented");
    }
 
    @JvmStatic
    fun `MARKDOWN_HANDLERS$lambda$9`(var0: CommandMentionContentNode): Unit {
-      throw new A9.o("onTapCommand not implemented");
+      throw new B9.o("onTapCommand not implemented");
    }
 
    @JvmStatic
    fun `MEDIA_HANDLERS$lambda$16`(var0: View, var1: java.lang.String, var2: Int, var3: java.lang.Double): Unit {
-      throw new A9.o("onMediaItemClicked not implemented");
+      throw new B9.o("onMediaItemClicked not implemented");
    }
 
    @JvmStatic
    fun `MEDIA_HANDLERS$lambda$17`(var0: java.lang.String, var1: Int): Unit {
-      throw new A9.o("onMediaItemLongClicked not implemented");
+      throw new B9.o("onMediaItemLongClicked not implemented");
    }
 
    @JvmStatic
    fun `MEDIA_HANDLERS$lambda$18`(): Unit {
-      throw new A9.o("onMediaItemSpoilerClicked not implemented");
+      throw new B9.o("onMediaItemSpoilerClicked not implemented");
    }
 
    @JvmStatic
    fun `MEDIA_HANDLERS$lambda$19`(var0: java.lang.String): Unit {
-      throw new A9.o("onMediaItemAltTextButtonClicked not implemented");
+      throw new B9.o("onMediaItemAltTextButtonClicked not implemented");
    }
 
    @JvmStatic
    fun `MEDIA_HANDLERS$lambda$20`(var0: Boolean): Unit {
-      throw new A9.o("onMediaItemObscureToggle not implemented");
+      throw new B9.o("onMediaItemObscureToggle not implemented");
    }
 }

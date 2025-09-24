@@ -1,8 +1,8 @@
 package com.discord.core
 
-import A9.s
-import F9.b
+import B9.s
 import G2.d
+import G9.b
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -16,9 +16,6 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
-import cb.K
-import cb.d0
-import cb.f
 import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -27,6 +24,9 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import db.K
+import db.d0
+import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -130,8 +130,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            12,
                            null
                         );
-                        val var6: d0 = K.c();
-                        var1 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        var1 = K.c();
+                        val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -165,7 +165,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        return if (f.g(var6, var1, this) != var5) Unit.a else var5;
+                        return if (f.g(var1, var6, this) != var5) Unit.a else var5;
                      }
                   } else if (this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -175,10 +175,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var22 != 0 && var3 != 0) {
-                     var1 = new Size(var22, var3);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var3 != 0 && var22 != 0) {
+                     var1 = new Size(var3, var22);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -199,8 +199,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            12,
                            null
                         );
-                        val var24: d0 = K.c();
-                        val var15: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        val var15: d0 = K.c();
+                        val var24: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -234,7 +234,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var24, var15, this) != var5) {
+                        if (f.g(var15, var24, this) != var5) {
                            return Unit.a;
                         }
 
@@ -242,9 +242,9 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      }
 
                      try {
-                        val var17: ContentResolver = this.this$0.getContext().getContentResolver();
-                        val var26: java.lang.String = this.$uri.getLastPathSegment();
-                        var1 = Thumbnails.getThumbnail(var17, java.lang.Long.parseLong(var26), 1, null);
+                        val var26: ContentResolver = this.this$0.getContext().getContentResolver();
+                        val var17: java.lang.String = this.$uri.getLastPathSegment();
+                        var1 = Thumbnails.getThumbnail(var26, java.lang.Long.parseLong(var17), 1, null);
                      } catch (var11: Exception) {
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
@@ -255,8 +255,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            12,
                            null
                         );
-                        val var25: d0 = K.c();
-                        val var16: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        val var16: d0 = K.c();
+                        val var25: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -290,7 +290,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var25, var16, this) != var5) {
+                        if (f.g(var16, var25, this) != var5) {
                            return Unit.a;
                         }
 
@@ -311,8 +311,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            12,
                            null
                         );
-                        val var27: d0 = K.c();
-                        val var19: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        val var19: d0 = K.c();
+                        val var27: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -346,7 +346,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var27, var19, this) != var5) {
+                        if (f.g(var19, var27, this) != var5) {
                            return Unit.a;
                         }
 
@@ -419,8 +419,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         12,
                         null
                      );
-                     val var28: d0 = K.c();
-                     val var20: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                     val var20: d0 = K.c();
+                     val var28: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                         final Uri $uri;
                         int label;
                         final LocalImageThumbnailView this$0;
@@ -454,7 +454,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 2;
-                     if (f.g(var28, var20, this) != var5) {
+                     if (f.g(var20, var28, this) != var5) {
                         return Unit.a;
                      }
 

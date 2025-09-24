@@ -10,6 +10,7 @@ import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.CrashReporting
 import com.discord.crash_reporting.PerformanceTracing
 import com.discord.deep_link.DeepLinks
+import com.discord.image.fresco.FrescoModuleDiscord
 import com.discord.lifecycle.AppLifecycle
 import com.discord.media_player.CacheDataSourceFactory
 import com.discord.networking.ReactNetworking
@@ -43,51 +44,79 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
 
 
    private final var initializeReactNativeLatch: CountDownLatch
+   private final var soloaderLoaded: CountDownLatch
 
    @JvmStatic
-   fun `initialize$lambda$0`(var0: MainApplication): Unit {
+   fun `attachBaseContext$lambda$0`(var0: Context, var1: MainApplication): Unit {
       SoLoaderUtils.INSTANCE.init(var0);
-      DefaultNewArchitectureEntryPoint.load(true, true, false);
+      var1.soloaderLoaded.countDown();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `initialize$lambda$2`(var0: MainApplication): Unit {
+      var0.soloaderLoaded.await();
+      FrescoModuleDiscord.Companion.startFrescoInitializationAsync(var0);
+      DefaultNewArchitectureEntryPoint.load(true, true, true);
+      UIManagerConstantsCache.getInstance().init(var0);
       var0.initializeReactNativeLatch.countDown();
       HermesExecutor.loadLibrary();
       return Unit.a;
    }
 
-   public override fun initialize() {
+   @JvmStatic
+   fun `initialize$lambda$3`(var0: MainApplication): Unit {
       var var3: TTIMetrics;
-      var var5: java.lang.String;
+      var var4: java.lang.String;
       label11: {
-         E9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
+         AppDatabase.INSTANCE.initializeAppDatabase(var0);
          var3 = TTIMetrics.INSTANCE;
-         TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
-         ReactMarkerListener.INSTANCE.start();
-         Cache.Companion.quickInitCache(this);
-         TTIMetrics.record$default(var3, "quickInitCache()", 0L, null, false, 14, null);
-         AppDatabase.INSTANCE.initializeAppDatabase(this);
-         TTIMetrics.record$default(var3, "initializeAppDatabase()", 0L, null, false, 14, null);
-         I18nUtil.Companion.getInstance().allowRTL(this, false);
+         TTIMetrics.record$default(TTIMetrics.INSTANCE, "initializeAppDatabase()", 0L, null, false, 14, null);
+         I18nUtil.Companion.getInstance().allowRTL(var0, false);
          TTIMetrics.record$default(var3, "I18nUtil.allowRtl()", 0L, null, false, 14, null);
-         val var1: BundleUpdater.Companion = BundleUpdater.Companion;
-         BundleUpdater.Companion.init(this);
-         TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "300.0", 300200, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
-         TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
-         CacheDataSourceFactory.Companion.init(this);
-         TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
-         val var4: BundleUpdater.OtaBundle = var1.instance().getBundle();
-         if (var4 != null) {
-            val var2: java.lang.String = var4.getReleaseName();
-            var5 = var2;
+         val var1: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
+         if (var1 != null) {
+            val var2: java.lang.String = var1.getReleaseName();
+            var4 = var2;
             if (var2 != null) {
                break label11;
             }
          }
 
-         var5 = "discord_android@300.0.0-2+300200";
+         var4 = "discord_android@300.3.0-2+300203";
       }
 
-      CrashReporting.INSTANCE.init(this, var5);
+      CrashReporting.INSTANCE.init(var0, var4);
       TTIMetrics.record$default(var3, "CrashReporting.init()", 0L, null, false, 14, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onCreate$lambda$1`(var0: MainApplication): Unit {
+      DeepLinks.INSTANCE.init(var0);
+      return Unit.a;
+   }
+
+   protected open fun attachBaseContext(base: Context) {
+      super.attachBaseContext(var1);
+      F9.a.b(false, false, null, "helperReactNativeLoader", 10, new c(var1, this), 7, null);
+   }
+
+   public override fun initialize() {
+      F9.a.b(false, false, null, "ReactNativeLoader", 10, new d(this), 7, null);
+      val var1: TTIMetrics = TTIMetrics.INSTANCE;
+      TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
+      ReactMarkerListener.INSTANCE.start();
+      Cache.Companion.quickInitCache(this);
+      TTIMetrics.record$default(var1, "quickInitCache()", 0L, null, false, 14, null);
+      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      BundleUpdater.Companion.init(this);
+      TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
+      ClientInfo.INSTANCE.init(this, "300.3", 300203, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
+      TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
+      CacheDataSourceFactory.Companion.init(this);
+      TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
+      F9.a.b(false, false, null, null, 0, new e(this), 31, null);
       PerformanceTracing.Companion.get().start();
       ReactNetworking.INSTANCE.patchReactNetworking();
       RLottieUtils.INSTANCE.init();
@@ -96,15 +125,14 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       AppLifecycle.INSTANCE.init();
       ReactForkOverrides.INSTANCE.init();
       AudioPlayerManager.INSTANCE.init(this);
-      TTIMetrics.record$default(var3, "AudioPlayerManager.init()", 0L, null, false, 14, null);
+      TTIMetrics.record$default(var1, "AudioPlayerManager.init()", 0L, null, false, 14, null);
       PlayAssetDelivery.INSTANCE.initialize(this);
       this.initializeReactNativeLatch.await();
-      TTIMetrics.record$default(var3, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
+      TTIMetrics.record$default(var1, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
    }
 
    public override fun onCreate() {
       super.onCreate();
-      UIManagerConstantsCache.getInstance().init(this);
-      DeepLinks.INSTANCE.init(this);
+      F9.a.b(false, false, null, null, 0, new b(this), 31, null);
    }
 }

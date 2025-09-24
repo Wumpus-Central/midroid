@@ -1,7 +1,7 @@
 package com.discord.overlapping_circles
 
-import A9.j
-import A9.m
+import B9.j
+import B9.m
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var9: Context = this.getContext();
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
                val var15: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var10.getUri(var15));
+               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var10: Context = this.getContext();
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var9.getUri(var10));
             }
 
             val var21: Context = this.getContext();

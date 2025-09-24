@@ -1,7 +1,7 @@
 package com.discord.chat.reactevents
 
-import A9.n
-import A9.s
+import B9.n
+import B9.s
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode

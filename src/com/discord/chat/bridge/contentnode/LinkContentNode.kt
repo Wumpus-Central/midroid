@@ -3,7 +3,7 @@ package com.discord.chat.bridge.contentnode
 import com.discord.chat.bridge.rolecolors.RoleColors
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 @SourceDebugExtension(["SMAP\nLinkContentNode.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,268:1\n8#2:269\n*S KotlinDebug\n*F\n+ 1 LinkContentNode.kt\ncom/discord/chat/bridge/contentnode/LinkContentNode\n*L\n66#1:269\n*E\n"])
@@ -130,14 +130,14 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
 
    public override fun toString(): String {
       val var1: java.util.List = this.content;
-      val var3: LinkContextData = this.target;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LinkContentNode(content=");
-      var2.append(var1);
-      var2.append(", target=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: LinkContextData = this.target;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkContentNode(content=");
+      var3.append(var1);
+      var3.append(", target=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

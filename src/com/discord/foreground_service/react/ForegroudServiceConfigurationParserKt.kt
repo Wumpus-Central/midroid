@@ -50,30 +50,30 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
-   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
-   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
+   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
+   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
    val var2: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
    val var5: ReadableMap = var1.getMap("data");
    if (var5 != null) {
       val var7: java.util.Map = NativeMapExtensionsKt.toStringMap(var5);
       if (var7 != null) {
-         return new ServiceNotificationConfiguration.Action(var3, var4, var2, var7);
+         return new ServiceNotificationConfiguration.Action(var4, var3, var2, var7);
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var3, var4, var2, L.h());
+   return new ServiceNotificationConfiguration.Action(var4, var3, var2, L.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
    val var6: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
-   val var7: java.util.Iterator = var3.iterator();
+   val var4: java.util.Iterator = var3.iterator();
 
-   while (var7.hasNext()) {
-      val var2: Int = (var7 as I).nextInt();
-      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var4: ReadableMap = var1.getMap(var2);
-      var6.add(parse(var5, var4));
+   while (var4.hasNext()) {
+      val var2: Int = (var4 as I).nextInt();
+      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var5: ReadableMap = var1.getMap(var2);
+      var6.add(parse(var7, var5));
    }
 
    return var6;

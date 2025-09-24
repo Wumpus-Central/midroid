@@ -1,6 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import F9.b
+import G9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -8,13 +8,13 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.RectShape
 import android.webkit.URLUtil
-import cb.K
-import cb.f
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
+import db.K
+import db.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
@@ -117,16 +117,16 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                   if (this.label == 0) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var3.isResource()) {
-                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var2x.isResource()) {
+                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
-                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
-                     } else if (var3.getUri().getScheme() == "file") {
-                        var1 = Drawable.createFromPath(var3.getUri().getPath());
+                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
+                     } else if (var2x.getUri().getScheme() == "file") {
+                        var1 = Drawable.createFromPath(var2x.getUri().getPath());
                      } else {
-                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var8: URLConnection = new URL(var2x.getSource()).openConnection();
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();
                         var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));

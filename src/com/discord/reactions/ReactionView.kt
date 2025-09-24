@@ -66,7 +66,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = N9.a.c(var2.getOpacity() * (float)255);
+         var3 = O9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -178,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean, showingFullLabel: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var6: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var3) {
          this.binding.reactionCountSwitcher.setVisibility(8);
       } else {
@@ -190,16 +190,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             if (var1 > var4) {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_up);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_up);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_up);
             } else {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_down);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_down);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_down);
             }
 
-            var5.setText(java.lang.String.valueOf(var1));
+            var6.setText(java.lang.String.valueOf(var1));
          } else {
-            var5.setCurrentText(java.lang.String.valueOf(var1));
+            var6.setCurrentText(java.lang.String.valueOf(var1));
          }
 
          this.currentCount = var1;
@@ -372,9 +372,9 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
          val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var11: Context = this.getContext();
-         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var11: RenderableEmoji = var1.getEmoji().renderable();
+         val var9: Context = this.getContext();
+         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

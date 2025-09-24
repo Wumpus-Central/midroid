@@ -22,18 +22,18 @@ public abstract class NativeBrowserManagerModuleSpec extends ReactContextBaseJav
    public final Map<String, Object> getConstants() {
       Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var2 = new HashSet<>(Arrays.asList("isChromeInstalled", "selectedBrowser"));
-         HashSet var3 = new HashSet();
+         HashSet var3 = new HashSet<>(Arrays.asList("isChromeInstalled", "selectedBrowser"));
+         HashSet var2 = new HashSet();
          HashSet var4 = new HashSet(var1.keySet());
-         var4.removeAll(var2);
          var4.removeAll(var3);
+         var4.removeAll(var2);
          if (!var4.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
          }
 
-         var2.removeAll(var1.keySet());
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
+         var3.removeAll(var1.keySet());
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
          }
       }
 

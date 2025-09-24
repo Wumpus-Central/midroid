@@ -4,9 +4,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import mb.g
-import pb.f
-import qb.q
+import nb.g
+import qb.f
+import rb.q
 
 @g
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -84,24 +84,24 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.members;
-      val var4: java.util.List = this.users;
-      val var2: JsonObject = this.message;
-      val var5: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("KvMessageEntry(members=");
-      var6.append(var3);
-      var6.append(", users=");
-      var6.append(var4);
-      var6.append(", message=");
-      var6.append(var2);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", channelId=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.util.List = this.members;
+      val var3: java.util.List = this.users;
+      val var6: JsonObject = this.message;
+      val var4: java.lang.String = MessageId.toString-impl(this.id);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("KvMessageEntry(members=");
+      var1.append(var5);
+      var1.append(", users=");
+      var1.append(var3);
+      var1.append(", message=");
+      var1.append(var6);
+      var1.append(", id=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {
