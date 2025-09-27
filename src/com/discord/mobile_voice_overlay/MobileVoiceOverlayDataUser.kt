@@ -72,15 +72,15 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = UserId.toString-impl(this.userId);
-      val var4: java.lang.String = this.avatar;
+      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: java.lang.String = this.avatar;
       val var2: Boolean = this.speaking;
       val var1: Int = this.discriminator;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MobileVoiceOverlayDataUser(userId=");
-      var5.append(var3);
-      var5.append(", avatar=");
       var5.append(var4);
+      var5.append(", avatar=");
+      var5.append(var3);
       var5.append(", speaking=");
       var5.append(var2);
       var5.append(", discriminator=");

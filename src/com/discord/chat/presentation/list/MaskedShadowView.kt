@@ -38,7 +38,7 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
          this.path.reset();
          this.path.addRoundRect(0.0F, 0.0F, (float)this.getWidth(), (float)this.getHeight(), this.borderRadius, this.borderRadius, Direction.CW);
          if (VERSION.SDK_INT >= 26) {
-            s.a(var1, this.path);
+            x.a(var1, this.path);
          } else {
             var1.clipPath(this.path, Op.DIFFERENCE);
          }

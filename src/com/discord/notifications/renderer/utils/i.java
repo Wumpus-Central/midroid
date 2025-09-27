@@ -9,6 +9,6 @@ public final class i implements Function1 {
    public final NotificationData d;
 
    public final Object invoke(Object var1) {
-      return NotificationDataUtilsKt.v(this.d, (RenderContext)var1);
+      return NotificationDataUtilsKt.x(this.d, (RenderContext)var1);
    }
 }

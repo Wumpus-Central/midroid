@@ -49,14 +49,14 @@ public data class VideoInputDeviceDescription(name: String, guid: String, facing
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.name;
-      val var1: java.lang.String = this.guid;
+      val var1: java.lang.String = this.name;
+      val var4: java.lang.String = this.guid;
       val var3: VideoInputDeviceFacing = this.facing;
       val var2: StringBuilder = new StringBuilder();
       var2.append("VideoInputDeviceDescription(name=");
-      var2.append(var4);
-      var2.append(", guid=");
       var2.append(var1);
+      var2.append(", guid=");
+      var2.append(var4);
       var2.append(", facing=");
       var2.append(var3);
       var2.append(")");

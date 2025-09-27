@@ -328,7 +328,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/s.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokestatic com/discord/chat/presentation/list/x.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

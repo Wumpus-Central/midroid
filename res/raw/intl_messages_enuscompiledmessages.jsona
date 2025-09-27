@@ -3221,6 +3221,7 @@
       ]
     ]
   ],
+  "wu4gyc": "Not Available",
   "lOtBOD": [
     "Redeem for ",
     [
@@ -8197,6 +8198,18 @@
   "G99XFh": "an Activity",
   "969dEB": "Embed Links",
   "sMOuub": "Emoji",
+  "PJsjbG": [
+    "Added a new emoji, ",
+    [
+      1,
+      "emoji"
+    ],
+    " in ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "SYlkPj": [
     [
       8,
@@ -10253,6 +10266,7 @@
       ]
     ]
   ],
+  "NbveHB": "This is not available for users with a Nitro subscription on mobile.",
   "fBmhEx": "Adventuring pays off. Enjoy the additional time with your premium perks.",
   "4SqnVF": [
     [
@@ -31179,7 +31193,7 @@
     "."
   ],
   "C+2RxM": [
-    "Try ",
+    "Participate in ",
     [
       1,
       "activityName"
@@ -31215,7 +31229,7 @@
     ". No install required."
   ],
   "0NNM3t": [
-    "Try ",
+    "Participate in ",
     [
       1,
       "activityName"
@@ -31686,7 +31700,17 @@
     ],
     " minutes"
   ],
+  "jQEfRU": "Complete Quest",
+  "oisrFh": "Copy Quest ID",
+  "IcljUl": "Embedded Quest Preview",
+  "cKSLr6": "Random Progress",
+  "JF6W6+": "Reset Dismissibility",
+  "taqkwM": "Reset Quest",
+  "Zw8jxs": "Select or enter Quest ID",
+  "rNGQfH": "Share quest link",
+  "Ape+mp": "Preview Controls",
   "BDUDam": "Quest Preview",
+  "tx5Ax8": "View in Preview Tool",
   "MFGxFB": "This Quest can't be completed on macOS",
   "BV6xDg": "Use the desktop app to make progress!",
   "o6FLcH": "Promoted",
@@ -40583,7 +40607,7 @@
         ]
       ]
     ],
-    ". By Claiming this item, you agree to the ",
+    ". By redeeming using Orbs, you agree to the ",
     [
       8,
       "$link",

@@ -146,16 +146,16 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    }
 
    private fun setFooter(footer: StructurableText, messageId: MessageId) {
-      val var5: SimpleDraweeSpanTextView = this.binding.footer;
-      val var4: Context = var5.getContext();
-      val var6: FontMetrics = var5.getPaint().getFontMetrics();
+      val var4: SimpleDraweeSpanTextView = this.binding.footer;
+      val var5: Context = var4.getContext();
+      val var6: FontMetrics = var4.getPaint().getFontMetrics();
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var6);
-      val var7: TextPaint = var5.getPaint();
+      val var7: TextPaint = var4.getPaint();
       ViewUtilsKt.setOptionalText(
-         var5,
+         var4,
          TextUtilsKt.toSpannable$default(
             var1,
-            var4,
+            var5,
             var2,
             false,
             false,
@@ -185,7 +185,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
             null
          )
       );
-      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var5, false, 1, null);
+      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var4, false, 1, null);
    }
 
    private fun setSubtitle(subtitle: CharSequence?) {

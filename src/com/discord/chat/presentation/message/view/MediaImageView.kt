@@ -44,18 +44,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
+      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
       this.spoilerViewManager = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var4.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var3: TextView = var4.imageAltText;
-      var4.imageAltText.setImportantForAccessibility(4);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
-      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
-      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var4: TextView = var3.imageAltText;
+      var3.imageAltText.setImportantForAccessibility(4);
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
+      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
+      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?, srcIsAnimated: Boolean) {
@@ -209,8 +209,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
       val var33: SpoilerViewManager = this.spoilerViewManager;
-      val var28: ConstraintLayout = this.binding.container;
-      val var34: SimpleDraweeView = this.binding.image;
+      val var31: ConstraintLayout = this.binding.container;
+      val var28: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,7 +223,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var33.configureSpoiler(var8, this, var28, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      var33.configureSpoiler(var8, this, var31, var28, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
       val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var29: ConstraintLayout = this.binding.container;
       var32.configureAttachmentOverlay(this, var29, var9, var10);
@@ -358,14 +358,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
+         val var2: Int = this.width;
+         val var1: Int = this.height;
          val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var1);
-         var3.append(", height=");
          var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
          var3.append(", resizeMode=");
          var3.append(var4);
          var3.append(")");

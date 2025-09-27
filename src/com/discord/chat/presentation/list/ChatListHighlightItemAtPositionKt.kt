@@ -19,12 +19,12 @@ fun a(var0: View, var1: ValueAnimator) {
 }
 
 private fun View.animateBackgroundColor(delay: Long, startColor: Int, endColor: Int) {
-   animateBackgroundColor$anim(var1, var0, var3, var4, new d(var4, var3, var1, var0));
+   animateBackgroundColor$anim(var1, var0, var3, var4, new f(var4, var3, var1, var0));
 }
 
 fun `animateBackgroundColor$anim`(var0: Long, var2: View, var3: Int, var4: Int, var5: (Animator?) -> Unit) {
    val var6: ValueAnimator = ValueAnimator.ofArgb(new int[]{var3, var4});
-   var6.addUpdateListener(new f(var2));
+   var6.addUpdateListener(new h(var2));
    var6.addListener(new AnimatorListener(var5) {
       final Function1 $onEnd;
 
@@ -53,7 +53,7 @@ fun `animateBackgroundColor$anim`(var0: Long, var2: View, var3: Int, var4: Int, 
 @JvmSynthetic
 fun `animateBackgroundColor$anim$default`(var0: Long, var2: View, var3: Int, var4: Int, var5: Function1, var6: Int, var7: Any) {
    if ((var6 and 16) != 0) {
-      var5 = new e();
+      var5 = new g();
    }
 
    animateBackgroundColor$anim(var0, var2, var3, var4, (Function1<? super Animator, Unit>)var5);

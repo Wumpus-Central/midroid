@@ -91,16 +91,16 @@ public sealed class RenderableEmoji protected constructor() {
       public override fun toString(): String {
          val var1: Long = this.emojiId;
          val var3: Boolean = this.isAnimated;
-         val var4: java.lang.String = this.alt;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CustomWithEmojiId(emojiId=");
-         var5.append(var1);
-         var5.append(", isAnimated=");
-         var5.append(var3);
-         var5.append(", alt=");
-         var5.append(var4);
-         var5.append(")");
-         return var5.toString();
+         val var5: java.lang.String = this.alt;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CustomWithEmojiId(emojiId=");
+         var4.append(var1);
+         var4.append(", isAnimated=");
+         var4.append(var3);
+         var4.append(", alt=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
    }
 
@@ -173,10 +173,10 @@ public sealed class RenderableEmoji protected constructor() {
       fun Unicode(var1: java.lang.String) {
          super(null);
          this.surrogates = var1;
-         val var2: java.lang.String = Surrogates.withoutDiversity-impl(var1);
+         val var3: java.lang.String = Surrogates.withoutDiversity-impl(var1);
          var1 = null;
-         if (RenderableEmoji.access$getExceptions$cp().contains(var2)) {
-            var1 = var2;
+         if (RenderableEmoji.access$getExceptions$cp().contains(var3)) {
+            var1 = var3;
          }
 
          this.exception = var1;

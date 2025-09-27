@@ -61,7 +61,7 @@ public interface ChatListChildView {
                MeasureSpec.makeMeasureSpec(var0.getMeasuredWidth(), 1073741824), MeasureSpec.makeMeasureSpec(var0.getMeasuredHeight(), 1073741824)
             );
             if (!(var5 == var0.getCurrentKey())) {
-               var0.post(new c(var0));
+               var0.post(new e(var0));
             }
          } else {
             var0.superOnMeasure(var1, var2);

@@ -201,13 +201,13 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
             var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
-         val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
-         val var6: EmojiPickerItem = this.getItem(var2);
-         var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
+         val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
+         val var9: EmojiPickerItem = this.getItem(var2);
+         var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var7: EmojiPickerItem = this.getItem(var2);
-         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
+         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var10: EmojiPickerItem = this.getItem(var2);
+         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else {

@@ -14,9 +14,9 @@ public object NumericUtils {
       val var1: java.util.List = StringsKt.split$default("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var0: ArrayList = new ArrayList();
 
-      for (Object var2 : var1) {
-         if ((var2 as java.lang.String).length() != 0) {
-            var0.add(var2);
+      for (var1 : var1) {
+         if ((var1 as java.lang.String).length() != 0) {
+            var0.add(var1);
          }
       }
 

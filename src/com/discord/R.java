@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_5olwysrn2u4eu445i2utsxlrca_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_5olwysrn2u4eu445i2utsxlrca_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_5olwysrn2u4eu445i2utsxlrca_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_5olwysrn2u4eu445i2utsxlrca_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_dposxn3d2h6xqdwymmsmtr4i24_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_dposxn3d2h6xqdwymmsmtr4i24_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_dposxn3d2h6xqdwymmsmtr4i24_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_dposxn3d2h6xqdwymmsmtr4i24_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -262,6 +262,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_qrcodeicon;
       public static int design_components_icon_native_redesign_generated_images_questsicon;
       public static int design_components_icon_native_redesign_generated_images_reactionicon;
+      public static int design_components_icon_native_redesign_generated_images_redoicon;
       public static int design_components_icon_native_redesign_generated_images_refreshicon;
       public static int design_components_icon_native_redesign_generated_images_retryicon;
       public static int design_components_icon_native_redesign_generated_images_roboticon;
@@ -326,7 +327,9 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_trophyicon;
       public static int design_components_icon_native_redesign_generated_images_tvicon;
       public static int design_components_icon_native_redesign_generated_images_twitterneutralicon;
+      public static int design_components_icon_native_redesign_generated_images_undoicon;
       public static int design_components_icon_native_redesign_generated_images_unknowngameicon;
+      public static int design_components_icon_native_redesign_generated_images_unsendicon;
       public static int design_components_icon_native_redesign_generated_images_uploadicon;
       public static int design_components_icon_native_redesign_generated_images_usercheckicon;
       public static int design_components_icon_native_redesign_generated_images_usercircleicon;

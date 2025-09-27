@@ -114,9 +114,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
+      val var8: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -126,15 +126,15 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 52: aload 5
          // 54: aload 7
          // 56: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // 59: istore 4
-         // 5b: aload 5
-         // 5d: aload 7
-         // 5f: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // 62: istore 3
+         // 59: istore 3
+         // 5a: aload 5
+         // 5c: aload 7
+         // 5e: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // 61: istore 4
          // 63: aload 1
          // 64: invokevirtual android/view/View.getContext ()Landroid/content/Context;
          // 67: astore 7
@@ -376,8 +376,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 6b: ldc "getContext(...)"
          // 6d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
          // 70: aload 5
-         // 72: iload 4
-         // 74: iload 3
+         // 72: iload 3
+         // 73: iload 4
          // 75: aload 7
          // 77: getstatic com/discord/react_strings/I18nMessage.SPOILER_HIDDEN_A11Y_LABEL Lcom/discord/react_strings/I18nMessage;
          // 7a: aconst_null

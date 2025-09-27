@@ -23,17 +23,17 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun getItem(position: Int): EmojiPickerItem {
-      val var5: Array<java.util.List> = this.dataSets;
+      val var6: Array<java.util.List> = this.dataSets;
       val var4: Int = this.dataSets.length;
       var var2: Int = 0;
 
       for (int var3 = 0; var2 < var4; var2++) {
-         val var6: java.util.List = var5[var2];
-         if (var1 < var5[var2].size() + var3) {
-            return var6.get(var1 - var3) as EmojiPickerItem;
+         val var5: java.util.List = var6[var2];
+         if (var1 < var6[var2].size() + var3) {
+            return var5.get(var1 - var3) as EmojiPickerItem;
          }
 
-         var3 += var6.size();
+         var3 += var5.size();
       }
 
       val var7: StringBuilder = new StringBuilder();
@@ -73,14 +73,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
-      val var3: Array<java.util.List> = this.dataSets;
-      val var4: java.util.List = var1.getLeading();
-      var4.set(0, this.coreData.getLeading().get(0));
-      var3[0] = var4;
-      val var8: Array<java.util.List> = this.dataSets;
-      val var6: java.util.List = var1.getTrailing();
-      var6.set(CollectionsKt.m(var6), CollectionsKt.r0(this.coreData.getTrailing()));
-      var8[3] = var6;
+      val var4: Array<java.util.List> = this.dataSets;
+      val var5: java.util.List = var1.getLeading();
+      var5.set(0, this.coreData.getLeading().get(0));
+      var4[0] = var5;
+      val var6: Array<java.util.List> = this.dataSets;
+      val var8: java.util.List = var1.getTrailing();
+      var8.set(CollectionsKt.m(var8), CollectionsKt.r0(this.coreData.getTrailing()));
+      var6[3] = var8;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = CollectionsKt.k();
          this.dataSets[2] = CollectionsKt.k();
@@ -198,9 +198,9 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
             var2.put(IdUtilsKt.convertToId((var7.next() as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle()), var1);
          }
 
-         for (EmojiPickerItem var8 : var0.trailing) {
-            if (var8 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var8 as EmojiPickerItem.Category).getTitle()), var1);
+         for (EmojiPickerItem var5 : var0.trailing) {
+            if (var5 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var5 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }
@@ -307,30 +307,30 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
       public override fun toString(): String {
          val var1: Int = this.rowSize;
-         val var2: Boolean = this.hasGuildData;
-         val var3: Boolean = this.hasSearchData;
-         val var4: Boolean = this.hasPremiumInlineRoadblock;
-         val var7: java.util.List = this.leading;
+         val var4: Boolean = this.hasGuildData;
+         val var2: Boolean = this.hasSearchData;
+         val var3: Boolean = this.hasPremiumInlineRoadblock;
+         val var9: java.util.List = this.leading;
          val var5: java.util.List = this.trailing;
-         val var9: java.util.List = this.nativeSectionsEmojis;
-         val var8: java.util.List = this.nativeSectionsEmojisUnicode;
+         val var8: java.util.List = this.nativeSectionsEmojis;
+         val var7: java.util.List = this.nativeSectionsEmojisUnicode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("CoreData(rowSize=");
          var6.append(var1);
          var6.append(", hasGuildData=");
-         var6.append(var2);
-         var6.append(", hasSearchData=");
-         var6.append(var3);
-         var6.append(", hasPremiumInlineRoadblock=");
          var6.append(var4);
+         var6.append(", hasSearchData=");
+         var6.append(var2);
+         var6.append(", hasPremiumInlineRoadblock=");
+         var6.append(var3);
          var6.append(", leading=");
-         var6.append(var7);
+         var6.append(var9);
          var6.append(", trailing=");
          var6.append(var5);
          var6.append(", nativeSectionsEmojis=");
-         var6.append(var9);
-         var6.append(", nativeSectionsEmojisUnicode=");
          var6.append(var8);
+         var6.append(", nativeSectionsEmojisUnicode=");
+         var6.append(var7);
          var6.append(")");
          return var6.toString();
       }

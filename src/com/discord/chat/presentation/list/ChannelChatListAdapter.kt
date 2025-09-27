@@ -2,6 +2,7 @@ package com.discord.chat.presentation.list
 
 import android.annotation.SuppressLint
 import android.view.View
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.events.ChatEventHandler
@@ -12,6 +13,7 @@ import com.discord.chat.presentation.list.item.PortalViewChatListItem
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.logging.Log
 import com.discord.misc.utilities.threading.ThreadUtilsKt
+import com.discord.tti_measurement_view.FirstDrawDoneListener
 import java.util.LinkedList
 import java.util.Queue
 import java.util.UUID
@@ -23,22 +25,32 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
-@SourceDebugExtension(["SMAP\nChannelChatListAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,231:1\n14#2,5:232\n14#2,5:245\n14#2,5:250\n14#2,5:255\n388#3,7:237\n1863#3,2:260\n1#4:244\n*S KotlinDebug\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n*L\n38#1:232,5\n95#1:245,5\n106#1:250,5\n127#1:255,5\n64#1:237,7\n163#1:260,2\n*E\n"])
-public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider) : BaseChatListAdapter(
-      var2, var3
-   ) {
+@SourceDebugExtension(["SMAP\nChannelChatListAdapter.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,250:1\n14#2,5:251\n14#2,5:264\n14#2,5:269\n14#2,5:274\n388#3,7:256\n1863#3,2:279\n1#4:263\n*S KotlinDebug\n*F\n+ 1 ChannelChatListAdapter.kt\ncom/discord/chat/presentation/list/ChannelChatListAdapter\n*L\n40#1:251,5\n97#1:264,5\n108#1:269,5\n129#1:274,5\n66#1:256,7\n165#1:279,2\n*E\n"])
+public class ChannelChatListAdapter(doLayout: () -> Unit,
+   eventHandlerProvider: () -> ChatEventHandler,
+   messageComponentProvider: () -> ComponentProvider,
+   onFirstDraw: () -> Unit = new b()
+) : BaseChatListAdapter(var2, var3) {
    public final val doLayout: () -> Unit
+   public final var onFirstDraw: () -> Unit
    private final var portalChatListItem: PortalViewChatListItem?
    private final var firstMessageItemPosition: Int
    private final val updateQueue: Queue<ChannelChatListAdapterUpdate>
    private final var isProcessingUpdate: Boolean
    private final var processNextUpdateJob: Job?
    private final var updateCount: Int
+   private final var reportedFirstDrawYet: Boolean
 
    init {
       this.doLayout = var1;
+      this.onFirstDraw = var4;
       this.firstMessageItemPosition = -1;
       this.updateQueue = new LinkedList<>();
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(): Unit {
+      return Unit.a;
    }
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
@@ -53,11 +65,16 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
          } else if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = access$getLOGGING_TAG$cp();
-            Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = access$getLOGGING_TAG$cp();
+            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$11`(var0: ChannelChatListAdapter) {
+      var0.onFirstDraw.invoke();
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
@@ -134,11 +151,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
@@ -269,12 +286,12 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
    }
 
    @JvmStatic
-   fun `setItems$lambda$3`(var0: Boolean): Unit {
+   fun `setItems$lambda$4`(var0: Boolean): Unit {
       return Unit.a;
    }
 
    @JvmStatic
-   fun `setItems$lambda$4`(): Unit {
+   fun `setItems$lambda$5`(): Unit {
       return Unit.a;
    }
 
@@ -308,6 +325,17 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       return this.firstMessageItemPosition;
    }
 
+   public open fun onBindViewHolder(holder: ViewHolder, position: Int, payloads: MutableList<Any?>) {
+      super.onBindViewHolder(var1, var2, var3);
+      if (!this.reportedFirstDrawYet && !(this.items as java.util.List).isEmpty()) {
+         val var4: ChatListItem = (this.items as java.util.List).get(var2) as ChatListItem;
+         if (var4 !is PortalViewChatListItem && var4 !is LoadingChatListItem) {
+            this.reportedFirstDrawYet = true;
+            FirstDrawDoneListener.registerForNextDraw(var1.itemView, new a(this));
+         }
+      }
+   }
+
    public fun onHostDetached() {
       if (ThreadUtilsKt.isOnMainThread()) {
          val var3: Job = access$getProcessNextUpdateJob$p(this);
@@ -328,7 +356,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
    }
 
    public open fun setItems(items: List<ChatListItem>) {
-      setItems$default(this, var1, null, new a(), new b(), null, 16, null);
+      setItems$default(this, var1, null, new c(), new d(), null, 16, null);
    }
 
    public fun setItems(

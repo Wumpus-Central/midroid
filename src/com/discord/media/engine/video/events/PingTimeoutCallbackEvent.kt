@@ -80,8 +80,8 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
       val var3: Int = this.connectionId;
       val var6: java.lang.String = this.server;
       val var4: Int = this.port;
-      val var2: Int = this.seq;
-      val var1: Int = this.timeout;
+      val var1: Int = this.seq;
+      val var2: Int = this.timeout;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PingTimeoutCallbackEvent(connectionId=");
       var5.append(var3);
@@ -90,9 +90,9 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
       var5.append(", port=");
       var5.append(var4);
       var5.append(", seq=");
-      var5.append(var2);
-      var5.append(", timeout=");
       var5.append(var1);
+      var5.append(", timeout=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }

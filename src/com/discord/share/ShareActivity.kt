@@ -38,8 +38,8 @@ public class ShareActivity : ReactActivity {
                val var7: java.util.List = var4.getAttachments();
                val var5: ShareActivity = this.this$0;
 
-               for (ShareProps.Attachment var9 : var7) {
-                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var9.getUri()), 1);
+               for (ShareProps.Attachment var8 : var7) {
+                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var8.getUri()), 1);
                }
             }
          }
