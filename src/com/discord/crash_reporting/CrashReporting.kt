@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("371f473e-0cfc-47e2-bd43-38d6453b67a8");
+      var5.setProguardUuid("fecc0bdf-0900-4c5d-99b3-0f27b6339a5f");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -108,8 +108,8 @@ public object CrashReporting {
    ) {
       val var5: e = new e(var1);
 
-      for (Entry var7 : var2.entrySet()) {
-         var5.p(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var5.p(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var5.o(var3);
@@ -183,20 +183,20 @@ public object CrashReporting {
    }
 
    public fun init(context: Context, releaseName: String) {
-      val var3: ClientInfo = ClientInfo.INSTANCE;
+      val var4: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var4: java.lang.String = Build.DEVICE;
-         if (StringsKt.N(var4, "vivo", false, 2, null)) {
+         val var3: java.lang.String = Build.DEVICE;
+         if (StringsKt.N(var3, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
+      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var3.isProdBuild()) {
+      } else if (!var4.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";

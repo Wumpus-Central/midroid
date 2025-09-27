@@ -17,7 +17,7 @@ private fun Configuration.modifyFontScale(context: Context): Configuration {
 }
 
 public fun Context.setFontScaleDeprecated() {
-   val var2: Resources = var0.getResources();
-   val var1: Configuration = var0.getResources().getConfiguration();
-   var2.updateConfiguration(modifyFontScale(var1, var0), var0.getResources().getDisplayMetrics());
+   val var1: Resources = var0.getResources();
+   val var2: Configuration = var0.getResources().getConfiguration();
+   var1.updateConfiguration(modifyFontScale(var2, var0), var0.getResources().getDisplayMetrics());
 }

@@ -85,13 +85,13 @@ public object AudioPlayerManager {
    }
 
    private fun maybeCreateDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource, durationMs: Long): com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress? {
-      val var5: java.util.Map = currentProgressMap;
+      val var4: java.util.Map = currentProgressMap;
       if (currentProgressMap.get(var1) != null) {
          return null;
       } else {
-         val var4: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
-         var5.put(var1, var4);
-         return var4;
+         val var5: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
+         var4.put(var1, var5);
+         return var5;
       }
    }
 
@@ -299,16 +299,16 @@ public object AudioPlayerManager {
          this.maybeCreateDuration(var2, var3);
          if (this.requestAudioFocus()) {
             var8.setValue(var2);
-            val var9: MediaPlayer = mediaPlayer;
+            val var6: MediaPlayer = mediaPlayer;
             val var7: MediaSource = AudioPlayerUtilsKt.toMediaSource$default(var2, null, 1, null);
-            val var6: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
-            if (var6 != null) {
-               var3 = var6.getCurrentProgress();
+            val var9: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
+            if (var9 != null) {
+               var3 = var9.getCurrentProgress();
             } else {
                var3 = 0L;
             }
 
-            MediaPlayer.preparePlayer$default(var9, var7, true, false, var3, null, null, 52, null);
+            MediaPlayer.preparePlayer$default(var6, var7, true, false, var3, null, null, 52, null);
          }
       }
 
@@ -319,14 +319,14 @@ public object AudioPlayerManager {
 
    public fun storeDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource?) {
       if (this.hasCurrentPlayer(var1)) {
-         val var4: MediaPlayer = mediaPlayer;
+         val var3: MediaPlayer = mediaPlayer;
          if (mediaPlayer != null) {
             val var2: java.util.Map = currentProgressMap;
-            var var3: AudioPlayerManager.CurrentProgress = var2.get(var1) as AudioPlayerManager.CurrentProgress;
-            if (var3 != null) {
-               var3 = AudioPlayerManager.CurrentProgress.copy$default(var3, var4.currentPositionMs(), 0L, 2, null);
-               if (var3 != null) {
-                  var2.put(var1, var3);
+            val var4: AudioPlayerManager.CurrentProgress = var2.get(var1) as AudioPlayerManager.CurrentProgress;
+            if (var4 != null) {
+               val var5: AudioPlayerManager.CurrentProgress = AudioPlayerManager.CurrentProgress.copy$default(var4, var3.currentPositionMs(), 0L, 2, null);
+               if (var5 != null) {
+                  var2.put(var1, var5);
                }
             }
          }
@@ -407,16 +407,16 @@ public object AudioPlayerManager {
 
       public override fun toString(): String {
          val var1: ChannelId = this.channelId;
-         val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-         val var2: java.lang.String = this.url;
+         val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var3: java.lang.String = this.url;
          val var4: Int = this.index;
          val var5: StringBuilder = new StringBuilder();
          var5.append("AudioSource(channelId=");
          var5.append(var1);
          var5.append(", messageId=");
-         var5.append(var3);
-         var5.append(", url=");
          var5.append(var2);
+         var5.append(", url=");
+         var5.append(var3);
          var5.append(", index=");
          var5.append(var4);
          var5.append(")");
@@ -467,13 +467,13 @@ public object AudioPlayerManager {
       }
 
       public override fun toString(): String {
-         val var1: Long = this.currentProgress;
-         val var3: Long = this.durationMs;
+         val var3: Long = this.currentProgress;
+         val var1: Long = this.durationMs;
          val var5: StringBuilder = new StringBuilder();
          var5.append("CurrentProgress(currentProgress=");
-         var5.append(var1);
-         var5.append(", durationMs=");
          var5.append(var3);
+         var5.append(", durationMs=");
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

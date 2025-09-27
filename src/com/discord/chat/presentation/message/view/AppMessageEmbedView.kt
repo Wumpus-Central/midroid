@@ -56,15 +56,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var5: java.lang.String = var2.getMessageId();
-      val var6: java.lang.String = var2.getAppId();
+      val var6: java.lang.String = var2.getMessageId();
+      val var5: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
+      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
    }
 
    @JvmStatic
@@ -83,13 +83,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var3: Int = var1.get("r") as Int;
-      val var2: Int = var1.get("g") as Int;
+      val var2: Int = var1.get("r") as Int;
+      val var3: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var3 == null || var2 == null || var4 == null) {
+      if (var2 == null || var3 == null || var4 == null) {
          return null;
       } else {
-         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
+         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
       }
    }
 
@@ -193,9 +193,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = (byte)0;
+         var28 = 0;
       } else {
-         var28 = (byte)8;
+         var28 = 8;
       }
 
       var36.setVisibility(var28);
@@ -203,7 +203,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var37: SimpleDraweeView = this.view.banner;
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,19 +211,19 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var28 / var4;
+         var4 = var3 / var4;
          val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
          val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var14.setText(var40);
+         val var40: TextView = this.view.title;
+         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var40.setText(var53);
       } else {
          val var41: TextView = this.view.title;
          var41.setVisibility(8);
@@ -273,8 +273,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
                var31 = false;
             }
 
-            val var55: java.lang.String = var63.getLabel();
-            val var61: java.lang.String = var63.getId();
+            val var61: java.lang.String = var63.getLabel();
+            val var55: java.lang.String = var63.getId();
             val var64: java.lang.Boolean = var63.getDisabled();
             val var12: Boolean;
             if (var64 != null) {
@@ -314,14 +314,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var71.setAlpha(var7);
-            var71.setText(var55);
+            var71.setText(var61);
             var71.setBackgroundColor(var10);
             var71.setTextColor(var9);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
             var71.setLayoutParams(var67);
-            var71.setOnClickButtonListener(new d(this, var2, var1, var61));
+            var71.setOnClickButtonListener(new d(this, var2, var1, var55));
             this.view.actionsContainer.addView(var71);
          }
 

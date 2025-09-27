@@ -77,13 +77,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();
-         val var13: java.lang.String = var8.getMessage();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Error while deserializing ");
-         var4.append(var9);
-         var4.append(": ");
-         var4.append(var13);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: java.lang.String = var8.getMessage();
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("Error while deserializing ");
+         var13.append(var9);
+         var13.append(": ");
+         var13.append(var4);
+         throw new IllegalStateException(var13.toString().toString());
       }
 
       if (var3) {
@@ -101,13 +101,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
             throw new IllegalStateException(var21.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var16: java.lang.String = var7.getMessage();
-            val var20: StringBuilder = new StringBuilder();
-            var20.append("Error while deserializing ");
-            var20.append(var10);
-            var20.append(": ");
-            var20.append(var16);
-            throw new IllegalStateException(var20.toString().toString());
+            val var20: java.lang.String = var7.getMessage();
+            val var16: StringBuilder = new StringBuilder();
+            var16.append("Error while deserializing ");
+            var16.append(var10);
+            var16.append(": ");
+            var16.append(var20);
+            throw new IllegalStateException(var16.toString().toString());
          }
       }
    }

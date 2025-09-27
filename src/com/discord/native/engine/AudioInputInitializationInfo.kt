@@ -41,14 +41,14 @@ public data class AudioInputInitializationInfo(description: AudioInputDeviceDesc
    }
 
    public override fun toString(): String {
-      val var3: AudioInputDeviceDescription = this.description;
+      val var4: AudioInputDeviceDescription = this.description;
       val var1: Long = this.timeToInitializedNanos;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AudioInputInitializationInfo(description=");
-      var4.append(var3);
-      var4.append(", timeToInitializedNanos=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioInputInitializationInfo(description=");
+      var3.append(var4);
+      var3.append(", timeToInitializedNanos=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

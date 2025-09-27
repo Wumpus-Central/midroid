@@ -186,13 +186,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var2: Int = this.maxRed - this.minRed;
-            val var1: Int = this.maxGreen - this.minGreen;
+            val var1: Int = this.maxRed - this.minRed;
+            val var2: Int = this.maxGreen - this.minGreen;
             val var3: Int = this.maxBlue - this.minBlue;
             val var4: Byte;
-            if (var2 >= var1 && var2 >= this.maxBlue - this.minBlue) {
+            if (var1 >= var2 && var1 >= this.maxBlue - this.minBlue) {
                var4 = -3;
-            } else if (var1 >= var2 && var1 >= var3) {
+            } else if (var2 >= var1 && var2 >= var3) {
                var4 = -2;
             } else {
                var4 = -1;
@@ -216,12 +216,12 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                var4 = 0;
 
                while (true) {
-                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
-                  val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
-                  var6 += var9;
-                  var5 += Color.red(var10) * var9;
-                  var3 += Color.green(var10) * var9;
-                  var4 += var9 * Color.blue(var10);
+                  val var9: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
+                  val var10: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var9);
+                  var6 += var10;
+                  var5 += Color.red(var9) * var10;
+                  var3 += Color.green(var9) * var10;
+                  var4 += var10 * Color.blue(var9);
                   if (var7 == var8) {
                      break;
                   }

@@ -73,21 +73,21 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.authorId;
-      val var2: java.lang.String = this.contentId;
-      val var4: java.lang.String = this.tappedElement;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapContentInventoryEntryEmbedData(messageId=");
-      var3.append(var1);
-      var3.append(", authorId=");
-      var3.append(var5);
-      var3.append(", contentId=");
-      var3.append(var2);
-      var3.append(", tappedElement=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.authorId;
+      val var3: java.lang.String = this.contentId;
+      val var5: java.lang.String = this.tappedElement;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapContentInventoryEntryEmbedData(messageId=");
+      var2.append(var4);
+      var2.append(", authorId=");
+      var2.append(var1);
+      var2.append(", contentId=");
+      var2.append(var3);
+      var2.append(", tappedElement=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

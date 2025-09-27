@@ -1,25 +1,7 @@
-package com.discord.chat.presentation.list.delegate
-
-import android.content.Context
-import android.view.ViewGroup
-import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
-import com.discord.chat.presentation.list.item.ChatListItem
-import com.discord.chat.presentation.list.item.SeparatorChatListItem
-import com.discord.chat.presentation.separator.SeparatorView
-
-public class SeparatorDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
-   public open fun bindView(view: SeparatorView, item: SeparatorChatListItem, metadata: Metadata<SeparatorView>) {
-      var1.setColor(var2.getColor());
-      var1.setText(var2.getText());
-   }
-
-   public open fun createView(parent: ViewGroup): SeparatorView {
-      val var2: Context = var1.getContext();
-      return new SeparatorView(var2, null, 2, null);
-   }
-
-   public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      return var1 is SeparatorChatListItem;
-   }
-}
+/*
+$VF: Unable to decompile class
+Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+java.lang.RuntimeException: Constructor com/discord/chat/presentation/list/delegate/BaseChatListItemDelegate.<init>(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;I)V not found
+  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
+  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
+*/

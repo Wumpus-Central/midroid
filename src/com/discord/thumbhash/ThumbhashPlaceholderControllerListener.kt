@@ -78,8 +78,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                   } else {
                      c.b(var1);
                      var3x = this.L$0 as CoroutineScope;
-                     val var5: CoroutineDispatcher = K.a();
-                     var1 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
+                     var1 = K.a();
+                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -110,7 +110,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      };
                      this.L$0 = var3x;
                      this.label = 1;
-                     var1 = (Function2)f.g(var5, var1, this);
+                     var1 = (CoroutineDispatcher)f.g(var1, var5, this);
                      if (var1 === var4) {
                         return var4;
                      }

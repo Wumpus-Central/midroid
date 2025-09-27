@@ -16,13 +16,13 @@ internal class LoggingLineNumberTree : c {
       )
 
    private fun getCalleStackTraceElement(): StackTraceElement {
-      val var4: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
-      val var2: Int = var4.length;
+      val var3: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
+      val var2: Int = var3.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
-         val var3: StackTraceElement = var4[var1];
-         if (!this.ignoreClasses.contains(var4[var1].getClassName())) {
-            return var3;
+         val var4: StackTraceElement = var3[var1];
+         if (!this.ignoreClasses.contains(var3[var1].getClassName())) {
+            return var4;
          }
       }
 

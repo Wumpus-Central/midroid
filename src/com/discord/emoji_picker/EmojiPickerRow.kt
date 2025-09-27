@@ -184,22 +184,22 @@ internal data class EmojiPickerRow(rowContentWidth: Double,
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.id;
-         val var6: java.lang.String = this.name;
-         val var5: java.lang.String = this.url;
-         val var2: Boolean = this.animated;
-         val var1: Boolean = this.disabled;
+         val var5: java.lang.String = this.id;
+         val var3: java.lang.String = this.name;
+         val var6: java.lang.String = this.url;
+         val var1: Boolean = this.animated;
+         val var2: Boolean = this.disabled;
          val var4: StringBuilder = new StringBuilder();
          var4.append("Emoji(id=");
-         var4.append(var3);
-         var4.append(", name=");
-         var4.append(var6);
-         var4.append(", url=");
          var4.append(var5);
+         var4.append(", name=");
+         var4.append(var3);
+         var4.append(", url=");
+         var4.append(var6);
          var4.append(", animated=");
-         var4.append(var2);
-         var4.append(", disabled=");
          var4.append(var1);
+         var4.append(", disabled=");
+         var4.append(var2);
          var4.append(")");
          return var4.toString();
       }
