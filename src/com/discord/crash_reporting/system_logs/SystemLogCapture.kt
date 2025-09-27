@@ -16,16 +16,16 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var5: Array<StackTraceElement> = var1.getStackTrace();
-      val var3: Int = var5.length;
+      val var6: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var6.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: StackTraceElement = var5[var2];
+         val var4: StackTraceElement = var6[var2];
          val var7: CircularByteBuffer = this.buffer;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("    ");
-         var4.append(var6);
-         var7.addLine(var4.toString());
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("    ");
+         var5.append(var4);
+         var7.addLine(var5.toString());
       }
    }
 
@@ -168,14 +168,14 @@ internal class SystemLogCapture {
                      this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
                   }
                } catch (var4: Exception) {
-                  val var2: CircularByteBuffer = this.buffer;
-                  val var3: StringBuilder = new StringBuilder();
-                  var3.append("Exception getting system logs, will restart logcat. '");
-                  val var1: Any;
-                  var3.append(var1);
-                  var3.append("'");
-                  var2.addLine(var3.toString());
-                  this.addExceptionToBuffer((Exception)var1);
+                  val var3: CircularByteBuffer = this.buffer;
+                  val var1: StringBuilder = new StringBuilder();
+                  var1.append("Exception getting system logs, will restart logcat. '");
+                  val var2: Any;
+                  var1.append(var2);
+                  var1.append("'");
+                  var3.addLine(var1.toString());
+                  this.addExceptionToBuffer((Exception)var2);
                }
             } catch (var5: java.lang.Throwable) {
                Thread.sleep(2000L);

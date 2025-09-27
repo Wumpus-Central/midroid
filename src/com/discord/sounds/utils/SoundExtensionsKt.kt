@@ -14,6 +14,7 @@ import db.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -271,8 +272,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            return Unit.a;
                         }
 
-                        val var10: d0 = K.c();
-                        var5 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                        var5 = K.c();
+                        val var10: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                            int label;
 
                            {
@@ -298,7 +299,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            }
                         };
                         ((<unrepresentable>)var13).label = 3;
-                        if (f.g(var10, (Function2)var5, (Continuation)var13) === var15) {
+                        if (f.g((CoroutineContext)var5, var10, (Continuation)var13) === var15) {
                            return var15;
                         }
                      }
@@ -321,11 +322,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 }
 
 internal fun getRemoteSoundFilename(url: String): String {
-   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(".mp3");
-   return var2.toString();
+   var0 = Uri.parse(var0).getLastPathSegment();
+   val var1: StringBuilder = new StringBuilder();
+   var1.append(var0);
+   var1.append(".mp3");
+   return var1.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {

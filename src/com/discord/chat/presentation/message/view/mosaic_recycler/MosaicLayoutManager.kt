@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.R
+import com.discord.logging.Log
 
 public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager {
    public final val context: Context
@@ -23,169 +24,179 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
 
    private fun fill(recycler: Recycler?) {
       if (var1 != null) {
-         this.detachAndScrapAttachedViews(var1);
-         val var10: Int = (this.availableWidth - this.spacingPx * 2) / 3;
-         val var14: Int = this.getItemCount();
-         var var6: Int = 0;
-         var var5: Int = 0;
-         var var11: Int = 0;
-         var var12: Int = 0;
+         if (this.getChildCount() > 0) {
+            try {
+               this.detachAndScrapAttachedViews(var1);
+            } catch (var20: IllegalArgumentException) {
+               val var21: java.lang.String = var20.getMessage();
+               if (var21 != null && StringsKt.N(var21, "Scrapped or attached views may not be recycled", false, 2, null)) {
+                  val var22: Log = Log.INSTANCE;
+                  val var18: java.lang.String = var20.getMessage();
+                  val var19: StringBuilder = new StringBuilder();
+                  var19.append("Skipping layout due to nested RecyclerView timing conflict: ");
+                  var19.append(var18);
+                  Log.e$default(var22, "MosaicLayoutManager", var19.toString(), null, 4, null);
+                  return;
+               }
 
-         while (var11 < var14) {
-            var var17: Pair;
-            var var20: Int = this.getItemCount();
-            label108:
-            if (var20 != 1) {
-               if (var20 != 2) {
-                  if (var20 == 3) {
-                     var17 = new Pair;
-                     val var18: Int = 2;
-                     if (var11 == 0) {
-                        var17./* $VF: Unable to resugar constructor */<init>(var18, 4);
+               throw var20;
+            }
+         }
+
+         val var6: Int = (this.availableWidth - this.spacingPx * 2) / 3;
+         val var15: Int = this.getItemCount();
+         var var25: Int = 0;
+         var var11: Int = 0;
+         var var10: Int = 0;
+         var var23: Int = 0;
+
+         while (var10 < var15) {
+            var var34: Pair;
+            var var26: Int = this.getItemCount();
+            label122:
+            if (var26 != 1) {
+               if (var26 != 2) {
+                  if (var26 == 3) {
+                     var34 = new Pair;
+                     val var37: Int = 2;
+                     if (var10 == 0) {
+                        var34./* $VF: Unable to resugar constructor */<init>(var37, 4);
                      } else {
-                        var17./* $VF: Unable to resugar constructor */<init>(var18, 2);
+                        var34./* $VF: Unable to resugar constructor */<init>(var37, 2);
                      }
-                     break label108;
+                     break label122;
                   }
 
-                  if (var20 != 4) {
-                     var20 = this.getItemCount() % 3;
-                     if (var11 < var20) {
-                        var17 = new Pair(var20, 6 / var20);
+                  if (var26 != 4) {
+                     var26 = this.getItemCount() % 3;
+                     if (var10 < var26) {
+                        var34 = new Pair(var26, 6 / var26);
                      } else {
-                        var17 = new Pair(3, 2);
+                        var34 = new Pair(3, 2);
                      }
-                     break label108;
+                     break label122;
                   }
                }
 
-               var17 = new Pair(2, 3);
+               var34 = new Pair(2, 3);
             } else {
-               var17 = new Pair(1, 6);
+               var34 = new Pair(1, 6);
             }
 
-            val var13: Int = (var17.a() as java.lang.Number).intValue();
-            val var15: Int = (var17.b() as java.lang.Number).intValue();
-            val var19: View = var1.o(var11);
-            val var16: Boolean = var19 is MosaicView;
-            val var36: MosaicView;
-            if (var19 is MosaicView) {
-               var36 = var19 as MosaicView;
+            val var12: Int = (var34.a() as java.lang.Number).intValue();
+            val var16: Int = (var34.b() as java.lang.Number).intValue();
+            val var38: View = var1.o(var10);
+            val var17: Boolean = var38 is MosaicView;
+            val var35: MosaicView;
+            if (var38 is MosaicView) {
+               var35 = var38 as MosaicView;
             } else {
-               var36 = null;
+               var35 = null;
             }
 
             val var2: Float;
-            if (var36 != null) {
-               var2 = var36.getSingleAspectRatio();
+            if (var35 != null) {
+               var2 = var35.getSingleAspectRatio();
             } else {
                var2 = 1.0F;
             }
 
-            var var26: Int;
-            label99: {
-               var var7: Int;
+            var var7: Int;
+            label113: {
                var var8: Int;
                var var9: Int;
-               label98: {
-                  if (this.getItemCount() == 1) {
-                     var7 = this.availableWidth;
-                     var26 = (int)(this.availableWidth / var2);
-                     var8 = (int)(this.availableWidth / var2);
-                     if (var26 > this.mediaMaxHeight) {
-                        var7 = (int)(this.mediaMaxHeight * var2);
+               if (this.getItemCount() == 1) {
+                  var26 = this.availableWidth;
+                  val var14: Int = (int)(this.availableWidth / var2);
+                  var8 = var23;
+                  var9 = var25;
+                  var7 = var14;
+                  if (var14 > this.mediaMaxHeight) {
+                     var26 = (int)(this.mediaMaxHeight * var2);
+                     var7 = this.mediaMaxHeight;
+                     break label113;
+                  }
+               } else {
+                  if (this.getItemCount() == 3) {
+                     if (var10 == 0) {
+                        var26 = var6 * 2 + this.spacingPx;
+                     } else {
                         var26 = var6;
-                        var20 = var5;
-                        var5 = this.mediaMaxHeight;
-                        var6 = var7;
-                        break label99;
                      }
                   } else {
-                     if (this.getItemCount() == 3) {
-                        if (var11 == 0) {
-                           var20 = var10 * 2 + this.spacingPx;
-                        } else {
-                           var20 = var10;
-                        }
-                     } else {
-                        var20 = (this.availableWidth - (var13 - 1) * this.spacingPx) / var13;
-                     }
-
-                     var26 = this.getItemCount();
-                     if (var26 != 3) {
-                        if (var26 != 4 && var13 < 3) {
-                           var26 = var10 * 2 + this.spacingPx;
-                        } else {
-                           var26 = var10;
-                        }
-                     } else {
-                        var26 = var20;
-                     }
-
-                     var7 = var20;
-                     var8 = var26;
-                     if (this.getItemCount() == 3) {
-                        var9 = var6;
-                        var7 = var20;
-                        var8 = var26;
-                        if (var11 == 2) {
-                           var9 = var6 + 4;
-                           var5 = this.spacingPx * 2;
-                           var7 = var20;
-                           var8 = var26;
-                        }
-                        break label98;
-                     }
+                     var26 = (this.availableWidth - (var12 - 1) * this.spacingPx) / var12;
                   }
 
-                  var9 = var6;
+                  var7 = this.getItemCount();
+                  if (var7 != 3) {
+                     if (var7 != 4 && var12 < 3) {
+                        var7 = var6 * 2 + this.spacingPx;
+                     } else {
+                        var7 = var6;
+                     }
+                  } else {
+                     var7 = var26;
+                  }
+
+                  var8 = var23;
+                  var9 = var25;
+                  if (this.getItemCount() == 3) {
+                     var8 = var23;
+                     var9 = var25;
+                     if (var10 == 2) {
+                        var8 = var23 + 4;
+                        var9 = this.spacingPx * 2;
+                     }
+                  }
                }
 
-               var26 = var9;
-               var20 = var5;
-               var6 = var7;
-               var5 = var8;
+               var23 = var8;
+               var25 = var9;
             }
 
-            this.addView(var19);
-            this.measureChildWithMargins(var19, 0, 0);
-            var var34: Int;
+            this.addView(var38);
+            this.measureChildWithMargins(var38, 0, 0);
+            var var31: Int;
             if (this.getItemCount() == 3) {
-               var34 = var13;
+               var31 = var12;
             } else {
-               var34 = var13 - 1;
+               var31 = var12 - 1;
             }
 
-            var34 = a.c((float)Math.ceil((double)((float)(this.availableWidth - var34 * this.spacingPx) / 6.0F * (float)var26 + (float)var20)));
-            this.layoutDecoratedWithMargins(var19, var34, var12, var34 + var6, var12 + var5);
-            var var37: MosaicView = null;
-            if (var16) {
-               var37 = var19 as MosaicView;
+            var31 = a.c((float)Math.ceil((double)((float)(this.availableWidth - var31 * this.spacingPx) / 6.0F * (float)var23 + (float)var25)));
+            this.layoutDecoratedWithMargins(var38, var31, var11, var31 + var26, var11 + var7);
+            val var36: MosaicView;
+            if (var17) {
+               var36 = var38 as MosaicView;
+            } else {
+               var36 = null;
             }
 
-            if (var37 != null) {
-               var37.setMosaicSize(var6, var5);
+            if (var36 != null) {
+               var36.setMosaicSize(var26, var7);
             }
 
             if (this.getItemCount() > 1) {
-               var6 = var26 + var15;
-               var26 = var20 + this.spacingPx;
-               var20 += this.spacingPx;
+               var31 = var23 + var16;
+               var23 = var25 + this.spacingPx;
+               var25 += this.spacingPx;
                if (this.getItemCount() == 3) {
-                  var20 = var26 + this.spacingPx;
+                  var25 = var23 + this.spacingPx;
                }
 
-               if (var6 >= 6) {
-                  var12 += this.spacingPx + var5;
-                  var6 = 0;
-                  var20 = 0;
+               var23 = var31;
+               var26 = var11;
+               if (var31 >= 6) {
+                  var26 = var11 + this.spacingPx + var7;
+                  var23 = 0;
+                  var25 = 0;
                }
             } else {
-               var6 = var26;
+               var26 = var11;
             }
 
-            var11++;
-            var5 = var20;
+            var10++;
+            var11 = var26;
          }
       }
    }

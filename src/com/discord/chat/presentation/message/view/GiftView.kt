@@ -199,23 +199,23 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.c((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         val var32: TextView = this.binding.title;
+         val var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var32.setTextColor(var27.getTitleColor());
-         var var11: java.lang.CharSequence = var32.getText();
+         var11.setTextColor(var27.getTitleColor());
+         val var32: java.lang.CharSequence = var11.getText();
          var var20: Byte;
-         if (!StringsKt.c0(var11)) {
+         if (!StringsKt.c0(var32)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var32.setVisibility(var20);
+         var11.setVisibility(var20);
          val var33: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
          var33.setTextColor(var27.getSubtitleColor());
-         var11 = var33.getText();
-         if (!StringsKt.c0(var11)) {
+         val var35: java.lang.CharSequence = var33.getText();
+         if (!StringsKt.c0(var35)) {
             var20 = 0;
          } else {
             var20 = 8;
@@ -239,17 +239,17 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var34: TextView = this.binding.body;
+            val var29: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var34.setTextColor(var17.getBodyTextColor());
-            val var29: java.lang.CharSequence = var34.getText();
-            if (!StringsKt.c0(var29)) {
+            var29.setTextColor(var17.getBodyTextColor());
+            val var34: java.lang.CharSequence = var29.getText();
+            if (!StringsKt.c0(var34)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var34.setVisibility(var20);
+            var29.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());

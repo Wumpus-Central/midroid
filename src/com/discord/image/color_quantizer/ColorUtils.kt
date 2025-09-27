@@ -55,23 +55,23 @@ internal object ColorUtils {
 
    @JvmStatic
    public fun RGBtoHSL(r: Int, g: Int, b: Int, hsl: FloatArray) {
-      val var9: Float = var0 / 255.0F;
+      val var10: Float = var0 / 255.0F;
       val var8: Float = var1 / 255.0F;
-      val var7: Float = var2 / 255.0F;
-      val var10: Float = Math.max(var9, Math.max(var8, (float)var2 / 255.0F));
-      var var4: Float = Math.min(var9, Math.min(var8, (float)var2 / 255.0F));
-      var var5: Float = var10 - var4;
-      val var6: Float = (var10 + var4) / 2.0F;
-      if (var10 == var4) {
+      val var9: Float = var2 / 255.0F;
+      val var7: Float = Math.max(var10, Math.max(var8, (float)var2 / 255.0F));
+      var var4: Float = Math.min(var10, Math.min(var8, (float)var2 / 255.0F));
+      var var5: Float = var7 - var4;
+      val var6: Float = (var7 + var4) / 2.0F;
+      if (var7 == var4) {
          var4 = 0.0F;
          var5 = 0.0F;
       } else {
-         if (var10 == var9) {
-            var4 = (var8 - var7) / var5 % 6.0F;
-         } else if (var10 == var8) {
-            var4 = (var7 - var9) / var5 + 2.0F;
+         if (var7 == var10) {
+            var4 = (var8 - var9) / var5 % 6.0F;
+         } else if (var7 == var8) {
+            var4 = (var9 - var10) / var5 + 2.0F;
          } else {
-            var4 = (var9 - var8) / var5 + 4.0F;
+            var4 = (var10 - var8) / var5 + 4.0F;
          }
 
          var5 = var5 / (1.0F - Math.abs(2.0F * var6 - 1.0F));

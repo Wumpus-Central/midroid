@@ -22,14 +22,14 @@ internal object IdentifyPayload {
          throw new IllegalArgumentException("path cannot have zero elements");
       } else {
          if (var4 != 1) {
-            val var7: java.lang.String = var2.get(0) as java.lang.String;
-            val var6: JsonElement = var1.get(var7) as JsonElement;
-            if (var6 !is JsonObject) {
+            val var6: java.lang.String = var2.get(0) as java.lang.String;
+            val var7: JsonElement = var1.get(var6) as JsonElement;
+            if (var7 !is JsonObject) {
                return var1;
             }
 
             val var8: java.util.Map = L.x(var1);
-            var8.put(var7, INSTANCE.put(var6 as JsonObject, var2.subList(1, var2.size()), var3));
+            var8.put(var6, INSTANCE.put(var7 as JsonObject, var2.subList(1, var2.size()), var3));
             var1 = new JsonObject(var8);
          } else {
             val var11: java.lang.String = var2.get(0) as java.lang.String;
@@ -96,12 +96,12 @@ internal object IdentifyPayload {
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var21 = var14[var15];
-            var6 = INSTANCE;
+            var6 = var14[var15];
+            var21 = INSTANCE;
             var13 = INSTANCE.put(
                var13,
-               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var21).getId()}),
-               ((IdentifyPayload)var6).toJson((NonGuildVersion)var21)
+               CollectionsKt.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}),
+               ((IdentifyPayload)var21).toJson((NonGuildVersion)var6)
             );
          }
 

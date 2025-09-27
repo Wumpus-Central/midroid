@@ -30,15 +30,15 @@ public final class MessageComponentContainerViewBinding implements ViewBinding {
    @NonNull
    public static MessageComponentContainerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.accent_border;
-      View var3 = a.a(var0, var1);
-      if (var3 != null) {
+      View var2 = a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.children_views;
-         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-         if (var4 != null) {
+         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.spoiler;
-            SpoilerView var2 = (SpoilerView)a.a(var0, var1);
-            if (var2 != null) {
-               return new MessageComponentContainerViewBinding(var0, var3, var4, var2);
+            SpoilerView var4 = (SpoilerView)a.a(var0, var1);
+            if (var4 != null) {
+               return new MessageComponentContainerViewBinding(var0, var2, var3, var4);
             }
          }
       }

@@ -15,24 +15,24 @@ import kotlin.Result.a
 public object IconUrlUtils {
    public fun getApplicationIcon(applicationId: ApplicationId?, imageId: String?, size: Int = ...): String {
       val var4: MediaProxy = MediaProxy.INSTANCE;
-      val var5: java.lang.String = Hosts.INSTANCE.getCDN();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var5);
-      var6.append("/app-icons/");
-      var6.append(var1);
-      var6.append("/");
-      var6.append(var2);
-      return var4.withSize(var6.toString(), false, var3, null);
+      val var6: java.lang.String = Hosts.INSTANCE.getCDN();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append(var6);
+      var5.append("/app-icons/");
+      var5.append(var1);
+      var5.append("/");
+      var5.append(var2);
+      return var4.withSize(var5.toString(), false, var3, null);
    }
 
    public fun getCustomEmojiUrl(emojiId: Long, animate: Boolean, size: Int? = null): String {
-      val var5: MediaProxy = MediaProxy.INSTANCE;
+      val var6: MediaProxy = MediaProxy.INSTANCE;
       val var7: java.lang.String = Hosts.INSTANCE.getCDN();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var7);
-      var6.append("/emojis/");
-      var6.append(var1);
-      return var5.withSize(var6.toString(), var3, var4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append(var7);
+      var5.append("/emojis/");
+      var5.append(var1);
+      return var6.withSize(var5.toString(), var3, var4, null);
    }
 
    public fun getForChannel(context: Context, id: ChannelId?, icon: String?, isGroupDM: Boolean, size: Int? = ...): String {
@@ -127,14 +127,14 @@ public object IconUrlUtils {
          }
 
          if (Result.e(var12) != null) {
-            var3 = Hosts.INSTANCE.getAPI();
-            val var16: StringBuilder = new StringBuilder();
-            var16.append(var3);
-            var16.append("/guilds/");
-            var16.append(var1);
-            var16.append("/icons/");
-            var16.append(var2);
-            var12 = var16.toString();
+            val var16: java.lang.String = Hosts.INSTANCE.getAPI();
+            val var15: StringBuilder = new StringBuilder();
+            var15.append(var16);
+            var15.append("/guilds/");
+            var15.append(var1);
+            var15.append("/icons/");
+            var15.append(var2);
+            var12 = var15.toString();
          }
 
          var10 = var6.withSize(var12 as java.lang.String, var4, var5, var2);

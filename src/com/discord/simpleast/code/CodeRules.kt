@@ -81,11 +81,11 @@ public object CodeRules {
          var1, var3, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
       );
       val var15: Pattern = this.createSingleLineCommentPattern("//");
-      val var16: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
-      val var20: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
+      val var20: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
+      val var16: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       var3 = this.createGenericCodeRules(
          var1,
-         CollectionsKt.n(new Rule[]{var16, toMatchGroupRule$default(this, var20, 0, var1.getLiteralStyleProvider(), 1, null)}),
+         CollectionsKt.n(new Rule[]{var20, toMatchGroupRule$default(this, var16, 0, var1.getLiteralStyleProvider(), 1, null)}),
          new java.lang.String[]{"message|enum|extend|service"},
          new java.lang.String[]{"true|false", "string|bool|double|float|bytes", "int32|uint32|sint32|int64|unit64|sint64", "map"},
          "required|repeated|optional|option|oneof|default|reserved",
@@ -134,11 +134,11 @@ public object CodeRules {
       );
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
-      var var9: Rule = var34.createTagRule(var1);
+      var var10: Rule = var34.createTagRule(var1);
       var7 = PATTERN_LEADING_WS_CONSUMER;
-      var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
+      var var9: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
       val var8: Pattern = PATTERN_TEXT;
-      val var32: java.util.List = CollectionsKt.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
+      val var32: java.util.List = CollectionsKt.n(new Rule[]{var31, var10, var9, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       var9 = toMatchGroupRule$default(this, var39, 0, var1.getCommentStyleProvider(), 1, null);
       val var43: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
@@ -163,16 +163,16 @@ public object CodeRules {
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
-      val var37: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
+      val var41: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
       val var46: Array<java.lang.String> = var45.getKEYWORDS();
       val var38: java.util.List = this.createGenericCodeRules(
-         var1, var37, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
+         var1, var41, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
-      val var42: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
+      val var48: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
       val var52: Array<java.lang.String> = var51.getKEYWORDS();
       val var13: java.util.List = this.createGenericCodeRules(
-         var1, var42, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
+         var1, var48, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
       );
       return L.l(
          new Pair[]{

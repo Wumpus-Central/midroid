@@ -43,11 +43,11 @@ public final class ForwardBreadcrumbViewBinding implements ViewBinding {
    @NonNull
    public static ForwardBreadcrumbViewBinding bind(@NonNull View var0) {
       int var1 = R.id.arrow;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.label;
             TextView var6 = (TextView)a.a(var0, var1);
             if (var6 != null) {
@@ -57,7 +57,7 @@ public final class ForwardBreadcrumbViewBinding implements ViewBinding {
                   var1 = R.id.timestamp;
                   TextView var5 = (TextView)a.a(var0, var1);
                   if (var5 != null) {
-                     return new ForwardBreadcrumbViewBinding(var0, var3, var2, var6, var4, var5);
+                     return new ForwardBreadcrumbViewBinding(var0, var2, var3, var6, var4, var5);
                   }
                }
             }

@@ -111,6 +111,7 @@
   ],
   "Xkfav7": "Ignorer l'alerte",
   "xs0juL": "Ignorer le menu contextuel",
+  "pfChQk": "Chargement",
   "b6uC3d": "case à cocher",
   "fKyfcX": "image, bouton",
   "/SCpvr": "vidéo, bouton",
@@ -746,21 +747,12 @@
   "w5beJC": "Nous sommes là pour t'aider !",
   "xfAlNz": "Mises à jour de la communauté",
   "COObWV": [
-    "En cliquant sur « Acheter », tu acceptes les ",
+    "En cliquant sur « ",
     [
-      8,
-      "$link",
-      [
-        "Conditions d'Utilisation"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
+      1,
+      "ctaText"
     ],
-    " et les ",
+    " », tu acceptes les ",
     [
       8,
       "$link",
@@ -782,21 +774,12 @@
     " jusqu'à ce que tu résilies cet abonnement. Les prix peuvent être modifiés avec un préavis. Tu peux le résilier à tout moment en te rendant dans les paramètres du Google Play Store jusqu'à un délai de 24 heures avant la fin de la période en cours."
   ],
   "7wpqfn": [
-    "En cliquant sur « Acheter », tu acceptes les ",
+    "En cliquant sur « ",
     [
-      8,
-      "$link",
-      [
-        "Conditions d'Utilisation"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
+      1,
+      "ctaText"
     ],
-    " et les ",
+    " », tu acceptes les ",
     [
       8,
       "$link",
@@ -875,6 +858,43 @@
   "vgvbiI": "Oh non !",
   "DOarTE": "Ou continue en payant dans l'application",
   "ycleJS": "Une erreur s'est produite lors de l'ouverture de notre page de facturation. Merci d'attendre quelques instants et de réessayer.",
+  "wvvuCQ": [
+    "Prendre un abonnement Nitro mensuel (",
+    [
+      1,
+      "discountPercentage"
+    ],
+    " % de réduction sur le 1er mois)"
+  ],
+  "juYDmZ": [
+    [
+      8,
+      "$b",
+      [
+        "En optant pour le paiement dans l'application ci-dessous, tu achètes un abonnement qui se renouvelle automatiquement."
+      ]
+    ],
+    " Cela signifie que nous facturerons ton compte Apple aujourd'hui et continuerons de le facturer tou(te)s les ",
+    [
+      1,
+      "interval"
+    ],
+    " jusqu'à ce que tu résilies cet abonnement. Les prix peuvent être modifiés avec un préavis. Tu peux le résilier à tout moment en te rendant dans les paramètres de l'App Store jusqu'à un délai de 24 heures avant la fin de la période en cours. Les ",
+    [
+      8,
+      "$link",
+      [
+        "Conditions des Services Payants"
+      ],
+      [
+        [
+          1,
+          "paidURL"
+        ]
+      ]
+    ],
+    " s'appliquent."
+  ],
   "HU3RFx": "Applications",
   "Nu5Yi4": "Voici toutes les applications qui font des choses super cool pour rendre ton expérience de Discord encore plus méga cool. Si tu sens que trop de cool tue le cool, pas de problème : tu peux les supprimer à tout moment.",
   "NgXl3N": "Ajouter l'application",
@@ -1690,7 +1710,18 @@
     ". Les sites comme celui-ci peuvent t'inciter à partager tes informations personnelles et peuvent également voler ton mot de passe ou installer des programmes non désirés sur ton appareil."
   ],
   "2B3wj4": "Tu te diriges vers un site dangereux",
+  "SymzJC": "Obtiens plus d'Orbs",
+  "B1oJtb": "Informations sur les Orbs",
   "gGtZp6": "Solde d'Orbs",
+  "zPaLLy": [
+    "Solde d'Orbs : ",
+    [
+      1,
+      "balance"
+    ]
+  ],
+  "9JpRfH": "Essaie les Orbs",
+  "LaMEFB": "Tu peux récupérer une récompense !",
   "WrzJBQ": "Échange des Orbs dans la Boutique",
   "5MBJ5O": "Bannir",
   "ZbeITU": "Bannissements",
@@ -2456,6 +2487,7 @@
   ],
   "1i1bUl": "Outrepasse les candidatures d'adhésion",
   "jvd/LC": "Les nouveaux membres qui rejoignent le serveur via ce lien seront ajoutés immédiatement sans passer par les candidatures d'adhésion.",
+  "kqcjeX": "Ignorer le mode lent",
   "JJogjo": "Appeler",
   "v05Xd3": "Appel terminé",
   "SBDnp6": [
@@ -6523,7 +6555,8 @@
   "i4jeWV": "Terminé",
   "JdIQ/f": "Ne plus demander",
   "5E9SBw": "Ne plus afficher ce message.",
-  "tdsiOz": "Changer l'option par défaut",
+  "yIax8v": "Appuie deux fois sur n'importe quel message pour réagir instantanément. Tu peux changer ton émoji de réaction par défaut à tout moment.",
+  "tdsiOz": "Définir par défaut",
   "F6lRAA": "Appuie deux fois pour réagir",
   "5/l2ra": [
     "Réagis instantanément avec ",
@@ -8506,6 +8539,23 @@
     ],
     "."
   ],
+  "/2JwTk": [
+    "Uploader ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "fichier"
+        ],
+        "other": [
+          "fichiers"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ZMirp6": "Fichier inconnu",
   "M6qV8v": "50 Mo",
   "yMOW8P": "100 Mo",
@@ -8723,8 +8773,71 @@
   "UfqmIS": "Cette image s'affichera en haut de ta liste de salons.",
   "/B6PR0": "Décris ta communauté. Cette description s'affichera dans une intégration externe du lien d'invitation de ce serveur.",
   "HEA/DQ": "Les membres n'auront le droit d'envoyer qu'un message et de créer qu'un fil lors de cet intervalle de temps, à moins qu'ils ne possèdent les permissions Gérer le salon ou Gérer les messages.",
-  "a+1pdH": "Les membres n'auront le droit de créer qu'un post lors de cet intervalle de temps, à moins qu'ils ne possèdent les permissions Gérer le salon ou Gérer les messages.",
+  "wW2MWl": [
+    "Les membres n'auront le droit d'envoyer qu'un message et de créer qu'un fil lors de cet intervalle de temps, à moins qu'ils ne possèdent les permissions Ignorer le mode lent, Gérer le salon ou Gérer les messages. ",
+    [
+      8,
+      "$link",
+      [
+        "Ceci changera le ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "a+1pdH": "Les membres n'auront le droit de créer qu'un post lors de cet intervalle de temps, à moins qu'ils ne possèdent la permission Gérer les messages.",
+  "EIQq9v": [
+    "Les membres n'auront le droit de créer qu'un post lors de cet intervalle de temps, à moins qu'ils ne possèdent la permission Ignorer le mode lent ou Gérer les messages. ",
+    [
+      8,
+      "$link",
+      [
+        "Ceci changera le ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "OMmNCg": "Les membres n'auront le droit d'envoyer qu'un message lors de cet intervalle de temps, à moins qu'ils ne possèdent les permissions Gérer le salon ou Gérer les messages.",
+  "8sTC8v": [
+    "Les membres n'auront le droit d'envoyer qu'un message lors de cet intervalle de temps, à moins qu'ils ne possèdent les permissions Ignorer le mode lent, Gérer le salon ou Gérer les messages. ",
+    [
+      8,
+      "$link",
+      [
+        "Ceci changera le ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "BT9zR0": "Ce salon est dédié à l'envoi de messages d'événement du système. Tu peux les désactiver à n'importe quel moment.",
   "3yOX19": "Incite les membres du chat à discuter lorsque ce salon reste inactif trop longtemps.",
   "NvnW+f": "Envoie des infos utiles pour la configuration du serveur.",
@@ -9833,6 +9946,41 @@
       "time"
     ],
     " de Nitro"
+  ],
+  "93PGOD": [
+    "Tes ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " de crédits Nitro"
+      ]
+    ],
+    " commencent dès maintenant ! Profite de tes avantages premium jusqu'au ",
+    [
+      1,
+      "expirationDate"
+    ],
+    "."
+  ],
+  "8fyBPT": [
+    "Tes ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " de crédits Nitro"
+      ]
+    ],
+    " seront utilisés automatiquement à la fin de ton cycle de facturation actuel."
   ],
   "3G0CTE": "Temps total restant",
   "Jr6N+v": "Voir les crédits",
@@ -19621,7 +19769,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "On a sonné ?",
+  "sBk8mZ": "Bouh !",
   "9PzTtL": "M. Citrouille",
   "RbkXxc": "R.I.P.",
   "FW3Qp6": "Toile de fond",
@@ -20051,6 +20199,140 @@
   "jcRSp6": "Floute le contenu média à base d'images pouvant contenir du matériel sexuellement explicite ou suggestif impliquant des adultes dans les MP et les serveurs.",
   "E6UmXV": "Flou ajouté au contenu média sexuel mature",
   "Gtck/v": "Filtre de contenu média sexuel mature",
+  "5l/hlp": "Nous ne partagerons ni le contenu ni la catégorie du signalement.",
+  "BlAMmZ": [
+    "Tu as partagé ce signalement avec ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " et ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " et ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wr4IT0": [
+    "Signalement partagé avec ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " et ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " et ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " !"
+  ],
+  "HqyWeH": [
+    "Partage le signalement avec ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " et ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " et ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ytCpKi": "Ignorer",
   "tFY5ZW": "Ignoré",
   "VFWjc3": [
@@ -23550,7 +23832,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "Nous te suggérons d'ajouter un numéro de téléphone à tes paramètres d'authentification à 2 facteurs en cas de pépin.",
   "7590PT": "Récupère ton abonnement Nitro gratuit !",
   "HFwRpq": "L'utilisateur peut avoir du mal à se connecter à l'appel.",
   "HcoRu7": "Notifications",
@@ -25172,7 +25453,12 @@
   "HEuagI": "ou",
   "UmsfHB": "Orange",
   "KTZrmp": "Peut-être plus tard",
+  "rCbDnp": "Commence à gagner des Orbs",
+  "m84e7e": "Gagnes-en avec des quêtes. Dépense-les dans la Boutique. Tire profit de tes sessions de jeu.",
+  "Kf926e": "Les Orbs sont maintenant sur mobile",
   "EBYkzs": "Exclusivités des Orbs",
+  "+T44OT": "Consulte ton solde, et gagne et échange des Orbs dans un seul et même endroit.",
+  "ykMHjY": "Tes Orbs sont là !",
   "bhrgkJ": [
     "À l'origine ",
     [
@@ -25472,6 +25758,14 @@
       "emojiName"
     ],
     " (sans ananas)"
+  ],
+  "BByGU1": [
+    "Réponse ",
+    [
+      1,
+      "number"
+    ],
+    " supprimée"
   ],
   "8DAM+/": "Tu as voté pour cette réponse",
   "qbir+/": "Réponses au sondage",
@@ -30180,6 +30474,30 @@
     ],
     "."
   ],
+  "UuzHh4": [
+    "Joue à ",
+    [
+      1,
+      "activityName"
+    ],
+    " dans Discord pendant ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes pour déverrouiller ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "VYwSSk": [
     "Joue à n'importe quelle Activité sur Discord pendant ",
     [
@@ -30187,6 +30505,83 @@
       "streamingDurationRequirement"
     ],
     " minutes et gagne ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "C+2RxM": [
+    "Essaie ",
+    [
+      1,
+      "activityName"
+    ],
+    " en collaboration avec ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " dans Discord et déverrouille ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    ". Aucune installation requise."
+  ],
+  "0NNM3t": [
+    "Essaie ",
+    [
+      1,
+      "activityName"
+    ],
+    " en collaboration avec ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " dans Discord. Aucune installation requise. Joue ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minute pour déverrouiller ",
     [
       8,
       "$b",
@@ -30347,7 +30742,7 @@
     "."
   ],
   "rxf+n5": "Quête invalide",
-  "hRIVy8": "Démarrer la quête",
+  "hRIVy8": "Lancer la quête dans Discord",
   "LLLLPD": "En savoir plus",
   "nPThNT": "Vérifie les jeux lancés",
   "GXqvCw": [
@@ -30514,17 +30909,17 @@
   "vTgCW1": "Voir la récompense",
   "SdlRnJ": "Aucune quête disponible",
   "xHXCyc": [
-    "Joue à l'Activité ",
+    "Joue à ",
     [
       1,
       "activityName"
     ],
-    " sur Discord pendant ",
+    " dans Discord pendant ",
     [
       1,
       "minutes"
     ],
-    " minutes"
+    " minutes."
   ],
   "1NaRSk": [
     "Joue à n'importe quelle Activité sur Discord pendant ",
@@ -30838,6 +31233,102 @@
       "questName"
     ]
   ],
+  "+qoymJ": "Essayer dans Discord",
+  "03VJqq": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes avec ton client Discord ouvert et gagne ceci : ",
+    [
+      1,
+      "questReward"
+    ],
+    "."
+  ],
+  "1AcTqq": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes avec ton client Discord ouvert pour déverrouiller ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " pendant ",
+    [
+      1,
+      "duration"
+    ],
+    ", et garde cette récompense plus longtemps avec Nitro !"
+  ],
+  "ztXW8f": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes avec ton client Discord ouvert pour déverrouiller ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    ", et garde cette récompense avec Nitro !"
+  ],
+  "enQ3jY": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes avec ton client Discord ouvert pour déverrouiller ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " pendant ",
+    [
+      1,
+      "duration"
+    ],
+    "."
+  ],
+  "fe7XeX": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "r9s3Ul": "Revenir 10 s en arrière",
   "zWDcND": "Avancer de 10 secondes",
   "bDSZOz": "Activer/Désactiver les sous-titres",
@@ -30952,6 +31443,24 @@
       "targetMinutes"
     ],
     " minutes pour gagner ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "."
+  ],
+  "e+K3xM": [
+    "Utilise ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " pendant ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes et gagne ",
     [
       1,
       "rewardNameWithArticle"
@@ -32319,6 +32828,9 @@
   "XREf9v": "Permet aux membres d'envoyer des fichiers ou médias dans ces salons.",
   "WK9r7O": "Permet aux membres d'envoyer des fichiers ou médias dans ce salon.",
   "OqNY09": "Permet aux membres de bannir de manière permanente et de supprimer l'historique des messages d'autres membres de ce serveur.",
+  "S2ZE5e": "Permet aux membres d'envoyer des messages sans être affectés par le mode lent.",
+  "C4t1Xl": "Permet aux membres d'envoyer des messages dans ces salons sans être affectés par le mode lent.",
+  "Ha1xb2": "Permet aux membres d'envoyer des messages dans ce salon sans être affectés par le mode lent.",
   "b8B++v": "Permet aux membres de changer leur propre pseudo en un nom personnalisé utilisé uniquement sur ce serveur.",
   "3GCm/f": "Permet aux membres de rejoindre les salons vocaux et d'entendre les autres.",
   "stA0Hh": "Permet aux membres de rejoindre ces salons vocaux et d'entendre les autres.",
@@ -39240,6 +39752,48 @@
   ],
   "pGDUHx": "Déco de profil",
   "Sxed/P": "L'objet sera disponible immédiatement dans les paramètres du Profil d'utilisateur.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Appuyer sur « ",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        " » pour un article de la Boutique signifie que tu récupères une licence limitée pour utiliser cet article sur Discord. Tu peux en savoir plus à ce propos dans la section « Biens Virtuels » ",
+        [
+          8,
+          "$link",
+          [
+            "ici"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". En récupérant cet article, tu acceptes les ",
+    [
+      8,
+      "$link",
+      [
+        "Conditions des Services Payants"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". Les articles récupérés avec des Orbs ne sont pas remboursables."
+  ],
   "FhJ74u": "Les crédits Nitro s'appliquent automatiquement pour la durée de crédit indiquée, soit immédiatement, soit (si tu as un abonnement Nitro actif) à la fin de ton cycle de facturation actuel.",
   "APcKRk": "Une fois récupéré, ce badge sera automatiquement appliqué à ton profil.",
   "zLch/f": "Récupérer avec des Orbs",
@@ -39754,6 +40308,7 @@
   "wiXdER": "Choisis 1 jeu",
   "sUQar6": "Jeu favori",
   "SqNnur": "Jeux en alternance",
+  "gKoO1N": "Tu dois enregistrer ou réinitialiser tes modifications avant de fermer ton profil.",
   "scOKER": "Jeux que j'aime",
   "bWSQwc": "Envie de jouer",
   "0/xHFB": "Windows",

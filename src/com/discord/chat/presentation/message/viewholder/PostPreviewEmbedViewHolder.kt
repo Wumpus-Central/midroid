@@ -28,17 +28,17 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
    }
 
    public fun bind(postPreviewEmbed: PostPreviewEmbed, onTapPostPreviewEmbed: (GuildId, ChannelId, ChannelId, MessageId) -> Unit, spoilerConfig: SpoilerConfig?) {
-      val var10: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var11: java.lang.String = var1.getTitle();
-      val var14: java.lang.String = var1.getSubtitle();
+      val var12: PostPreviewEmbedView = this.postPreviewEmbedView;
+      val var15: java.lang.String = var1.getTitle();
+      val var10: java.lang.String = var1.getSubtitle();
       val var9: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
-      val var16: java.lang.String = var1.getCoverImage();
+      val var11: java.lang.String = var1.getCoverImage();
       val var18: java.lang.String = var1.getBlurredCoverImage();
-      val var17: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var15: StructurableText = var1.getFooter();
-      val var12: java.lang.String = var1.getCoverImageOverlayText();
-      val var13: java.lang.String = var1.getBackgroundImage();
+      val var13: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var16: StructurableText = var1.getFooter();
+      val var14: java.lang.String = var1.getCoverImageOverlayText();
+      val var17: java.lang.String = var1.getBackgroundImage();
       val var21: E = new E(var2, var1);
       val var8: Boolean = var1.getShouldSpoiler();
       var var19: java.lang.Boolean = var1.getObscureAwaitingScan();
@@ -65,6 +65,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var7 = false;
       }
 
-      var10.setPostPreviewEmbed-4itWklQ(var11, var14, var9, var4, var15, var17, var16, var18, var12, var13, var21, var8, var5, var6, var7, var3);
+      var12.setPostPreviewEmbed-4itWklQ(var15, var10, var9, var4, var16, var13, var11, var18, var14, var17, var21, var8, var5, var6, var7, var3);
    }
 }

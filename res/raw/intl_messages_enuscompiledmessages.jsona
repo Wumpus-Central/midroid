@@ -111,6 +111,7 @@
   ],
   "Xkfav7": "Dismiss alert",
   "xs0juL": "Dismiss context menu",
+  "pfChQk": "Loading",
   "b6uC3d": "checkbox",
   "fKyfcX": "image, button",
   "/SCpvr": "video, button",
@@ -1717,6 +1718,14 @@
   "SymzJC": "Earn more Orbs",
   "B1oJtb": "Information about orbs",
   "gGtZp6": "Orbs Balance",
+  "zPaLLy": [
+    "Orbs balance: ",
+    [
+      1,
+      "balance"
+    ],
+    " orbs"
+  ],
   "9JpRfH": "Try Orbs",
   "LaMEFB": "You’re able to claim a reward!",
   "WrzJBQ": "Redeem Orbs in Shop",
@@ -3226,6 +3235,14 @@
       1,
       "orbPrice"
     ]
+  ],
+  "yi41qa": [
+    "Redeem for ",
+    [
+      1,
+      "orbPrice"
+    ],
+    " orbs"
   ],
   "4ivm+P": "Check out your new badge!",
   "uYLGcn": "View My Badge",
@@ -24392,7 +24409,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "We suggest adding a phone to your 2 factor authentication settings as a backup.",
   "7590PT": "Claim Your Free Nitro!",
   "GPqVWV": [
     "Only ",
@@ -31670,7 +31686,7 @@
     ],
     " minutes"
   ],
-  "BDUDam": "Quest Home",
+  "BDUDam": "Quest Preview",
   "MFGxFB": "This Quest can't be completed on macOS",
   "BV6xDg": "Use the desktop app to make progress!",
   "o6FLcH": "Promoted",
@@ -40531,6 +40547,13 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
+  "W4DfeH": [
+    [
+      1,
+      "orbAmount"
+    ],
+    " orbs"
+  ],
   "Sxed/P": "Item will be available immediately in User Profile settings.",
   "5qdUrK": [
     [

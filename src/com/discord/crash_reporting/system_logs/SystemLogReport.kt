@@ -28,14 +28,14 @@ internal object SystemLogReport {
    }
 
    private fun recordBreadcrumb(msg: String, category: String) {
-      val var5: Log = Log.INSTANCE;
-      val var3: java.lang.String = TAG;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Breadcrumb, [");
-      var4.append(var2);
-      var4.append("]: ");
-      var4.append(var1);
-      Log.i$default(var5, var3, var4.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: java.lang.String = TAG;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Breadcrumb, [");
+      var5.append(var2);
+      var5.append("]: ");
+      var5.append(var1);
+      Log.i$default(var3, var4, var5.toString(), null, 4, null);
    }
 
    @JvmStatic
@@ -71,15 +71,15 @@ internal object SystemLogReport {
          var3 = false;
       }
 
-      val var6: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-      val var8: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
-      val var9: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
+      val var9: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+      val var6: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
+      val var8: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
       if (!var3) {
          var2 = null;
       }
 
-      var1.invoke(var9, var2, var8);
-      var6.clear(var0);
+      var1.invoke(var8, var2, var6);
+      var9.clear(var0);
       return Unit.a;
    }
 
@@ -134,13 +134,13 @@ internal object SystemLogReport {
       var7.append(var17);
       var7.append(": ");
       var7.append(var9);
-      val var16: java.lang.String = var7.toString();
+      val var18: java.lang.String = var7.toString();
       var var10: java.lang.String = null;
       if (var14 != null) {
          var10 = StringsKt.d1(var14, 1000);
       }
 
-      SystemLogReport.LastSentryCrashCache.INSTANCE.set(var1, new SystemLogReport.SentryCrashData(var16, var10));
+      SystemLogReport.LastSentryCrashCache.INSTANCE.set(var1, new SystemLogReport.SentryCrashData(var18, var10));
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?, com.discord.crash_reporting.system_logs.SystemLogReport.SentryCrashData?) -> Unit) {
@@ -251,15 +251,15 @@ internal object SystemLogReport {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.message;
-         val var2: java.lang.String = this.callStackTrace;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("SentryCrashData(message=");
-         var1.append(var3);
-         var1.append(", callStackTrace=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.message;
+         val var3: java.lang.String = this.callStackTrace;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("SentryCrashData(message=");
+         var2.append(var1);
+         var2.append(", callStackTrace=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

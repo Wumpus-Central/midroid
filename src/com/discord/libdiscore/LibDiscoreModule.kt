@@ -17,9 +17,9 @@ public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactCont
    public fun bridgeJSIFunctions(): Boolean {
       try {
          val var4: ReactApplicationContext = this.getReactApplicationContext();
-         val var3: CallInvokerHolder = var4.getCatalystInstance().getJSCallInvokerHolder();
-         val var2: JavaScriptContextHolder = var4.getJavaScriptContextHolder();
-         this.jniBridgeJSIFunctions(var4, var2.get(), var3);
+         val var2: CallInvokerHolder = var4.getCatalystInstance().getJSCallInvokerHolder();
+         val var3: JavaScriptContextHolder = var4.getJavaScriptContextHolder();
+         this.jniBridgeJSIFunctions(var4, var3.get(), var2);
       } catch (var5: Exception) {
          return false;
       }

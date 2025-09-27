@@ -111,6 +111,7 @@
   ],
   "Xkfav7": "Avvisa varning",
   "xs0juL": "Avvisa kontextmeny",
+  "pfChQk": "Laddar",
   "b6uC3d": "kryssruta",
   "fKyfcX": "bild, knapp",
   "/SCpvr": "video, knapp",
@@ -743,21 +744,12 @@
   "w5beJC": "Vi är här för att hjälpa!",
   "xfAlNz": "Communityuppdateringar",
   "COObWV": [
-    "Genom att klicka på ”Köp” godkänner du våra ",
+    "Genom att klicka på ”",
     [
-      8,
-      "$link",
-      [
-        "Användarvillkor"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
+      1,
+      "ctaText"
     ],
-    " och ",
+    "” godkänner du våra ",
     [
       8,
       "$link",
@@ -779,21 +771,12 @@
     " tills du avbryter den. Priser kan ändras, men du får då ett meddelande i förväg. Du kan avbryta när som helst upp till 24 timmar innan din nuvarande period löper ut i inställningarna i Google Play-butiken."
   ],
   "7wpqfn": [
-    "Genom att klicka på ”Köp” godkänner du våra ",
+    "Genom att klicka på ”",
     [
-      8,
-      "$link",
-      [
-        "Användarvillkor"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
+      1,
+      "ctaText"
     ],
-    " och ",
+    "” godkänner du våra ",
     [
       8,
       "$link",
@@ -872,6 +855,43 @@
   "vgvbiI": "Åh nej!",
   "DOarTE": "Eller fortsätt med betalning i appen",
   "ycleJS": "Ett fel uppstod när vi skulle öppna vår faktureringssida. Vänta och försök igen.",
+  "wvvuCQ": [
+    "Skaffa Nitro per månad (",
+    [
+      1,
+      "discountPercentage"
+    ],
+    " % rabatt på första månaden)"
+  ],
+  "juYDmZ": [
+    [
+      8,
+      "$b",
+      [
+        "Genom att välja betalning i appen nedan, köper du en löpande prenumeration."
+      ]
+    ],
+    " Detta innebär att vi debiterar ditt Apple-ID-konto i dag och fortsätter att debitera dig varje ",
+    [
+      1,
+      "interval"
+    ],
+    " tills du avbryter den. Priser kan ändras, men du får då ett meddelande i förväg. Du kan avbryta när som helst upp till 24 timmar innan din nuvarande period löper ut i inställningarna i App Store. ",
+    [
+      8,
+      "$link",
+      [
+        "Villkor för betaltjänster"
+      ],
+      [
+        [
+          1,
+          "paidURL"
+        ]
+      ]
+    ],
+    " gäller."
+  ],
   "HU3RFx": "Applikationer",
   "Nu5Yi4": "Här är alla apparna som gör festliga saker för att göra din Discord-upplevelse ännu roligare. Om det blir för livat, kan du ta bort dem när som helst.",
   "NgXl3N": "Lägg till app",
@@ -1686,7 +1706,18 @@
     ". Den här typen av webbplatser kan försöka lura dig att dela personuppgifter, stjäla ditt lösenord eller installera oönskad mjukvara på din enhet."
   ],
   "2B3wj4": "Farlig webbplats föröver",
-  "gGtZp6": "Orbs–saldo",
+  "SymzJC": "Tjäna fler klot",
+  "B1oJtb": "Information om Orbs",
+  "gGtZp6": "Orbs-saldo",
+  "zPaLLy": [
+    "Orbs-saldo: ",
+    [
+      1,
+      "balance"
+    ]
+  ],
+  "9JpRfH": "Prova Orbs",
+  "LaMEFB": "Du kan hämta en belöning!",
   "WrzJBQ": "Lös in Orbs i butiken",
   "5MBJ5O": "Bannlys",
   "ZbeITU": "Bannlysningar",
@@ -2446,6 +2477,7 @@
   ],
   "1i1bUl": "Kringgå ansökningskrav",
   "jvd/LC": "Nya medlemmar som ansluter via den här länken kommer att gå med omedelbart utan att gå igenom ansökningsprocessen.",
+  "kqcjeX": "Åsidosätt långsamt läge",
   "JJogjo": "Starta samtal",
   "v05Xd3": "Samtal avslutat",
   "SBDnp6": [
@@ -6505,7 +6537,8 @@
   "i4jeWV": "Klar",
   "JdIQ/f": "Fråga inte igen",
   "5E9SBw": "Visa inte det här igen.",
-  "tdsiOz": "Ändra standard",
+  "yIax8v": "Dubbeltryck på vilket meddelande som helst för att reagera direkt. Du kan ändra din standardreaktionsemoji när som helst.",
+  "tdsiOz": "Ställ in som standard",
   "F6lRAA": "Dubbeltryck för att reagera",
   "5/l2ra": [
     "Reagera med ",
@@ -8520,6 +8553,23 @@
     ],
     "."
   ],
+  "/2JwTk": [
+    "Ladda upp ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "fil"
+        ],
+        "other": [
+          "filer"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ZMirp6": "Okänd fil",
   "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
@@ -8736,8 +8786,71 @@
   "UfqmIS": "Bilden visas ovanför din kanallista.",
   "/B6PR0": "Beskriv din community. Beskrivningen kommer att visas i externa inbäddningar för denna servers inbjudningslänk.",
   "HEA/DQ": "Medlemmar kommer att begränsas till att skicka ett meddelande och skapa en tråd per intervall, såvida de inte har behörigheterna Hantera kanaler eller Hantera meddelanden.",
-  "a+1pdH": "Medlemmar kommer att begränsas till att skapa en post per intervall, såvida de inte har behörigheterna Hantera kanal eller Hantera meddelanden.",
+  "wW2MWl": [
+    "Medlemmar kommer att begränsas till att skicka ett meddelande och skapa en tråd per intervall, såvida de inte har behörigheterna Åsidosätt långsamt läge, Hantera kanal eller Hantera meddelanden. ",
+    [
+      8,
+      "$link",
+      [
+        "Detta kommer att ändras ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "a+1pdH": "Medlemmar kommer att begränsas till att skapa en post per intervall, såvida de inte har behörigheten Hantera poster.",
+  "EIQq9v": [
+    "Medlemmar kommer att begränsas till att skapa en post per intervall, såvida de inte har behörigheterna Åsidosätt långsamt läge eller Hantera poster. ",
+    [
+      8,
+      "$link",
+      [
+        "Detta kommer att ändras ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "OMmNCg": "Medlemmar kommer att begränsas till att skicka ett meddelande per intervall, såvida de inte har behörigheterna Hantera kanaler eller Hantera meddelanden.",
+  "8sTC8v": [
+    "Medlemmar kommer att begränsas till att skicka ett meddelande per intervall, såvida de inte har behörigheterna Åsidosätt långsamt läge, Hantera kanal eller Hantera meddelanden. ",
+    [
+      8,
+      "$link",
+      [
+        "Detta kommer att ändras ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "BT9zR0": "Det är till den här kanalen vi skickar systemhändelsemeddelanden. Du kan stänga av dessa när du vill.",
   "3yOX19": "Uppmana medlemmar att chatta när den här kanalen har varit inaktiv ett tag.",
   "NvnW+f": "Skicka praktiska tips om serverinställningarna.",
@@ -9836,6 +9949,41 @@
       "time"
     ],
     " med Nitro"
+  ],
+  "93PGOD": [
+    "Din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro-kredit"
+      ]
+    ],
+    " börjar nu! Njut av dina premiumförmåner fram till ",
+    [
+      1,
+      "expirationDate"
+    ],
+    "."
+  ],
+  "8fyBPT": [
+    "Din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro-kredit"
+      ]
+    ],
+    " kommer att användas automatiskt i slutet av din nuvarande faktureringscykel."
   ],
   "3G0CTE": "Total återstående tid",
   "Jr6N+v": "Visa krediter",
@@ -19560,7 +19708,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "Ringde du?",
+  "sBk8mZ": "Bu!",
   "9PzTtL": "Herr Jack O' Lantern",
   "RbkXxc": "Vila i frid",
   "FW3Qp6": "Hänger bara",
@@ -19990,6 +20138,140 @@
   "jcRSp6": "Förser bildbaserade media som kan innehålla sexuellt explicit eller suggestivt material som involverar vuxna med oskärpa i DM och servrar",
   "E6UmXV": "Oskärpa tillagt till media med vuxet sexuellt innehåll",
   "Gtck/v": "Filter för media med vuxet sexuellt innehåll",
+  "5l/hlp": "Vi kommer inte att dela innehåll eller anmälningskategori",
+  "BlAMmZ": [
+    "Du delade den här anmälan med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " och ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " och ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wr4IT0": [
+    "Anmälan delad med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " och ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " och ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "!"
+  ],
+  "HqyWeH": [
+    "Dela anmälan med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " och ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " och ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ytCpKi": "Ignorera",
   "tFY5ZW": "Ignorera",
   "VFWjc3": [
@@ -23479,7 +23761,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "Vi föreslår att du lägger till en telefon till din tvåfaktorsautentisering som backup.",
   "7590PT": "Hämta ditt gratis Nitro!",
   "HFwRpq": "Användaren kan ha problem med att ansluta till samtalet.",
   "HcoRu7": "Aviseringar",
@@ -25087,7 +25368,12 @@
   "HEuagI": "eller",
   "UmsfHB": "Orange",
   "KTZrmp": "Kanske senare",
+  "rCbDnp": "Börja tjäna Orbs",
+  "m84e7e": "Du belönas för uppdrag. Och handlar i butiken. Det ska löna sig att spela.",
+  "Kf926e": "Orbs finns nu på mobilen",
   "EBYkzs": "Orbs-exklusiva artiklar",
+  "+T44OT": "Kolla ditt saldo, tjäna och lös in Orbs på ett och samma ställe.",
+  "ykMHjY": "Dina Orbs är här!",
   "bhrgkJ": [
     "Ursprungligen känd som ",
     [
@@ -25389,6 +25675,14 @@
       "emojiName"
     ],
     " (utan ananas)"
+  ],
+  "BByGU1": [
+    "Svar ",
+    [
+      1,
+      "number"
+    ],
+    " togs bort"
   ],
   "8DAM+/": "Du har röstat för det här svaret",
   "wqBc7O": [
@@ -30095,6 +30389,30 @@
       "claimDate"
     ]
   ],
+  "UuzHh4": [
+    "Spela ",
+    [
+      1,
+      "activityName"
+    ],
+    " på Discord i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter för att låsa upp ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "VYwSSk": [
     "Spela valfri aktivitet på Discord i ",
     [
@@ -30102,6 +30420,83 @@
       "streamingDurationRequirement"
     ],
     " minuter och tjäna ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "C+2RxM": [
+    "Prova ",
+    [
+      1,
+      "activityName"
+    ],
+    " från ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " på Discord och lås upp ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    ". Ingen installation krävs."
+  ],
+  "0NNM3t": [
+    "Prova ",
+    [
+      1,
+      "activityName"
+    ],
+    " från ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " på Discord. Ingen installation krävs. Spela i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter för att låsa upp ",
     [
       8,
       "$b",
@@ -30262,7 +30657,7 @@
     "."
   ],
   "rxf+n5": "Ogiltigt uppdrag",
-  "hRIVy8": "Starta uppdrag",
+  "hRIVy8": "Starta uppdrag på Discord",
   "LLLLPD": "Läs mer",
   "nPThNT": "Kolla efter starter",
   "GXqvCw": [
@@ -30429,7 +30824,7 @@
   "vTgCW1": "Visa belöning",
   "SdlRnJ": "Det finns inga uppdrag",
   "xHXCyc": [
-    "Spela aktiviteten ",
+    "Spela ",
     [
       1,
       "activityName"
@@ -30439,7 +30834,7 @@
       1,
       "minutes"
     ],
-    " minuter"
+    " minuter."
   ],
   "1NaRSk": [
     "Spela valfri aktivitet på Discord i ",
@@ -30741,6 +31136,102 @@
       "questName"
     ]
   ],
+  "+qoymJ": "Prova på Discord",
+  "03VJqq": [
+    "Använd ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter med din Discord-klient öppen och vinn ",
+    [
+      1,
+      "questReward"
+    ],
+    "."
+  ],
+  "1AcTqq": [
+    "Använd ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter med din Discord-klient öppen för att låsa upp ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " i ",
+    [
+      1,
+      "duration"
+    ],
+    " och behåll den längre med Nitro!"
+  ],
+  "ztXW8f": [
+    "Använd ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter med din Discord-klient öppen för att låsa upp ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    ". Behåll den med Nitro!"
+  ],
+  "enQ3jY": [
+    "Använd ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minuter med din Discord-klient öppen för att låsa upp ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " i ",
+    [
+      1,
+      "duration"
+    ],
+    "."
+  ],
+  "fe7XeX": [
+    "Använd ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      1,
+      "minutes"
+    ],
+    " minuter"
+  ],
   "r9s3Ul": "Spola tillbaka 10 sekunder",
   "zWDcND": "Hoppa fram 10 sekunder",
   "bDSZOz": "Växla bildtexter",
@@ -30845,6 +31336,24 @@
   ],
   "NIimTk": [
     "Spela ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minuter och vinn ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "."
+  ],
+  "e+K3xM": [
+    "Använd ",
     [
       1,
       "gameTitle"
@@ -32206,6 +32715,9 @@
   "XREf9v": "Låter medlemmarna ladda upp filer och media i de här kanalerna.",
   "WK9r7O": "Låter medlemmarna ladda upp filer och media i den här kanalen.",
   "OqNY09": "Låter medlemmar permanent bannlysa och ta bort meddelandehistorik för andra medlemmar på den här servern.",
+  "S2ZE5e": "Låter medlemmar skicka meddelanden utan att påverkas av långsamt läge.",
+  "C4t1Xl": "Låter medlemmar skicka meddelanden i dessa kanaler utan att påverkas av långsamt läge.",
+  "Ha1xb2": "Låter medlemmar skicka meddelanden i den här kanalen utan att påverkas av långsamt läge.",
   "b8B++v": "Låter medlemmarna ändra sina eget smeknamn, ett anpassat namn för just den här servern.",
   "3GCm/f": "Låter medlemmarna gå med i en röstkanal och höra andra.",
   "stA0Hh": "Låter medlemmarna gå med i de här röstkanalerna och höra andra.",
@@ -39088,6 +39600,48 @@
   ],
   "pGDUHx": "Profildekoration",
   "Sxed/P": "Föremålet blir tillgängligt omedelbart i inställningarna för din användarprofil.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Genom att trycka på ”",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        "” på en artikel från butiken innebär det att du hämtar en begränsad licens för att använda denna artikel på Discord. Läs mer i avsnittet ”Virtuella varor” ",
+        [
+          8,
+          "$link",
+          [
+            "här"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". Genom att hämta denna artikel godkänner du våra ",
+    [
+      8,
+      "$link",
+      [
+        "Villkor för betaltjänster"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". Inlösningar av Orbs är ej återbetalningsbara."
+  ],
   "FhJ74u": "Nitro-krediter tillämpas automatiskt för den angivna kredittiden, antingen omedelbart eller, om du har en aktiv Nitro-prenumeration, i slutet av din nuvarande faktureringscykel.",
   "APcKRk": "När du har hämtat det här märket kommer det automatiskt att tillämpas på din profil.",
   "zLch/f": "Lös in med Orbs",
@@ -39604,6 +40158,7 @@
   "wiXdER": "Välj ett spel",
   "sUQar6": "Favoritspel",
   "SqNnur": "Spel i rotation",
+  "gKoO1N": "Du måste spara eller återställa dina ändringar innan du stänger din profil.",
   "scOKER": "Spel jag gillar",
   "bWSQwc": "Vill spela",
   "0/xHFB": "Windows",

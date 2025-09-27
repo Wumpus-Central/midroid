@@ -295,12 +295,12 @@ public data class MediaSource(sourceUrl: String? = ...,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.sourceUrl;
-      val var6: java.lang.String = this.previewUrl;
-      val var9: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
-      val var3: java.lang.String = this.featureTag;
-      val var8: MediaType = this.type;
+      val var6: java.lang.String = this.sourceUrl;
+      val var8: java.lang.String = this.previewUrl;
+      val var4: java.lang.String = this.placeholder;
+      val var3: Int = this.placeholderVersion;
+      val var9: java.lang.String = this.featureTag;
+      val var7: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
       val var5: ChannelId = this.channelId;
       val var14: java.lang.String;
@@ -310,22 +310,22 @@ public data class MediaSource(sourceUrl: String? = ...,
          var14 = MessageId.toString-impl(this.messageId);
       }
 
-      val var10: Int = this.index;
+      val var11: Int = this.index;
       val var13: java.lang.Double = this.portal;
-      val var11: java.lang.Boolean = this.srcIsAnimated;
+      val var10: java.lang.Boolean = this.srcIsAnimated;
       val var12: StringBuilder = new StringBuilder();
       var12.append("MediaSource(sourceUrl=");
-      var12.append(var7);
-      var12.append(", previewUrl=");
       var12.append(var6);
-      var12.append(", placeholder=");
-      var12.append(var9);
-      var12.append(", placeholderVersion=");
-      var12.append(var4);
-      var12.append(", featureTag=");
-      var12.append(var3);
-      var12.append(", type=");
+      var12.append(", previewUrl=");
       var12.append(var8);
+      var12.append(", placeholder=");
+      var12.append(var4);
+      var12.append(", placeholderVersion=");
+      var12.append(var3);
+      var12.append(", featureTag=");
+      var12.append(var9);
+      var12.append(", type=");
+      var12.append(var7);
       var12.append(", shouldAutoPlay=");
       var12.append(var1);
       var12.append(", channelId=");
@@ -333,11 +333,11 @@ public data class MediaSource(sourceUrl: String? = ...,
       var12.append(", messageId=");
       var12.append(var14);
       var12.append(", index=");
-      var12.append(var10);
+      var12.append(var11);
       var12.append(", portal=");
       var12.append(var13);
       var12.append(", srcIsAnimated=");
-      var12.append(var11);
+      var12.append(var10);
       var12.append(")");
       return var12.toString();
    }

@@ -111,6 +111,7 @@
   ],
   "Xkfav7": "Afvis alarm",
   "xs0juL": "Afvis kontekstmenu",
+  "pfChQk": "Indlæser",
   "b6uC3d": "afkrydsningsfelt",
   "fKyfcX": "billede, knap",
   "/SCpvr": "video, knap",
@@ -745,23 +746,12 @@
   "COObWV": [
     "Ved at klikke på ",
     "\"",
-    "Køb",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "accepterer du Discords ",
-    [
-      8,
-      "$link",
-      [
-        "servicevilkår"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " og ",
     [
       8,
       "$link",
@@ -785,23 +775,12 @@
   "7wpqfn": [
     "Ved at klikke på ",
     "\"",
-    "Køb",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "accepterer du Discords ",
-    [
-      8,
-      "$link",
-      [
-        "servicevilkår"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " og ",
     [
       8,
       "$link",
@@ -880,6 +859,43 @@
   "vgvbiI": "Åh nej!",
   "DOarTE": "Eller fortsæt med betaling i appen",
   "ycleJS": "Der opstod en fejl ved åbning af vores faktureringsside. Vent venligst, og prøv igen.",
+  "wvvuCQ": [
+    "Få Nitro månedligt (",
+    [
+      1,
+      "discountPercentage"
+    ],
+    " % rabat på din første måned)"
+  ],
+  "juYDmZ": [
+    [
+      8,
+      "$b",
+      [
+        "Ved at vælge betaling i appen nedenfor køber du et løbende abonnement."
+      ]
+    ],
+    " Dette betyder, at vi debiterer din Apple ID-Konto i dag og fortsætter med at debitere dig hver ",
+    [
+      1,
+      "interval"
+    ],
+    ", indtil du opsiger abonnementet. Eventuelle prisændringer vil blive varslet. Du kan opsige abonnementet når som helst op til 24 timer, før din nuværende periode slutter under Indstillinger i App Store. ",
+    [
+      8,
+      "$link",
+      [
+        "Vilkår for betalte tjenester"
+      ],
+      [
+        [
+          1,
+          "paidURL"
+        ]
+      ]
+    ],
+    " er gældende."
+  ],
   "HU3RFx": "Applikationer",
   "Nu5Yi4": "Her findes alle de apps, som laver superfede ting for at gøre din Discord-oplevelse endnu federe. Hvis oplevelsen bliver for fed, kan du fjerne dem når som helst.",
   "NgXl3N": "Tilføj app",
@@ -1695,7 +1711,18 @@
     ". Websteder som disse kan forsøge at narre dig til at dele personlige oplysninger, stjæle din adgangskode eller installere uønsket software på din enhed."
   ],
   "2B3wj4": "Farligt websted forude",
+  "SymzJC": "Optjen flere Orbs",
+  "B1oJtb": "Information om Orbs",
   "gGtZp6": "Orb-saldo",
+  "zPaLLy": [
+    "Orbs-saldo: ",
+    [
+      1,
+      "balance"
+    ]
+  ],
+  "9JpRfH": "Prøv Orbs",
+  "LaMEFB": "Du kan hente en belønning!",
   "WrzJBQ": "Indløs Orbs i Shop",
   "5MBJ5O": "Udeluk",
   "ZbeITU": "Udelukkelser",
@@ -2459,6 +2486,7 @@
   ],
   "1i1bUl": "Spring ansøgninger om at deltage over",
   "jvd/LC": "Nye medlemmer, der tilslutter sig via dette link, vil deltage med det samme uden at skulle udfylde ansøgninger om tilslutning.",
+  "kqcjeX": "Omgå langsom tilstand",
   "JJogjo": "Opkald",
   "v05Xd3": "Opkald afsluttet",
   "SBDnp6": [
@@ -6533,7 +6561,8 @@
   "i4jeWV": "Færdig",
   "JdIQ/f": "Spørg mig ikke igen",
   "5E9SBw": "Vis mig ikke dette igen.",
-  "tdsiOz": "Skift standard",
+  "yIax8v": "Dobbelttryk på en besked for at reagere øjeblikkeligt. Du kan ændre din standard-emoji til reaktioner når som helst.",
+  "tdsiOz": "Indstil som standard",
   "F6lRAA": "Dobbelttryk for at reagere",
   "5/l2ra": [
     "Reager med ",
@@ -8549,6 +8578,23 @@
     ],
     "."
   ],
+  "/2JwTk": [
+    "Upload ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "fil"
+        ],
+        "other": [
+          "filer"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ZMirp6": "Ukendt fil",
   "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
@@ -8765,8 +8811,71 @@
   "UfqmIS": "Dette billede ses øverst på din kanalliste.",
   "/B6PR0": "Beskriv dit community. Denne beskrivelse bliver vist i eksterne indlejringer i denne servers invitationslink.",
   "HEA/DQ": "Medlemmerne vil være begrænset til at sende én besked pr. dette tidsinterval, medmindre de har tilladelse til at Administrere kanaler eller beskeder.",
-  "a+1pdH": "Medlemmer kan kun lave ét opslag inden for dette interval, medmindre de har tilladelse til kanalstyring eller beskedstyring.",
+  "wW2MWl": [
+    "Medlemmer vil være begrænset til at kun at kunne sende én besked og oprette én tråd pr. dette interval, medmindre de har tilladelserne Omgå langsom tilstand, Administrer kanal eller Administrer beskeder. ",
+    [
+      8,
+      "$link",
+      [
+        "Dette vil ændre sig den ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "a+1pdH": "Medlemmer vil være begrænset til kun at kunne lave ét opslag pr. dette interval, medmindre de har tilladelsen Administrer opslag.",
+  "EIQq9v": [
+    "Medlemmer vil være begrænset til kun at kunne lave ét opslag inden pr. dette interval, medmindre de har tilladelserne Omgå langsom tilstand eller Administrer opslag. ",
+    [
+      8,
+      "$link",
+      [
+        "Dette vil ændre sig den ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "OMmNCg": "Medlemmerne vil være begrænset til at sende én besked pr. dette tidsinterval, medmindre de har tilladelse til kanalstyring eller beskedstyring.",
+  "8sTC8v": [
+    "Medlemmer vil være begrænset til at kun at kunne sende én besked pr. dette interval, medmindre de har tilladelserne Omgå langsom tilstand, Administrer kanal eller Administrer beskeder. ",
+    [
+      8,
+      "$link",
+      [
+        "Dette vil ændre sig den ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "BT9zR0": "Dette er kanalen, hvor vi sender systembegivenheds-beskeder til. Disse kan slås fra når som helst.",
   "3yOX19": "Du kan opfordre medlemmerne til at chatte, når denne kanal har været inaktiv i et stykke tid.",
   "NvnW+f": "Send hjælpsomme tips til opsætning af server.",
@@ -9868,6 +9977,41 @@
       "time"
     ],
     " af Nitro"
+  ],
+  "93PGOD": [
+    "Din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro-kredit"
+      ]
+    ],
+    " begynder nu! Nyd dine Premium-fordele indtil ",
+    [
+      1,
+      "expirationDate"
+    ],
+    "."
+  ],
+  "8fyBPT": [
+    "Din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro-kredit"
+      ]
+    ],
+    " bruges automatisk ved udløbet af din nuværende faktureringsperiode."
   ],
   "3G0CTE": "Samlet tid tilbage",
   "Jr6N+v": "Se kreditter",
@@ -19706,7 +19850,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "Du ringede?",
+  "sBk8mZ": "Bøh!",
   "9PzTtL": "Hr. Jack O'Lantern",
   "RbkXxc": "Hvil i fred",
   "FW3Qp6": "Hænger bare ud",
@@ -20136,6 +20280,140 @@
   "jcRSp6": "Slør billedbaserede medier, der kan indeholde seksuelt eksplicit eller antydende materiale med voksne i direkte beskeder og servere",
   "E6UmXV": "Sløring føjet til voksne seksuelle medier",
   "Gtck/v": "Filter for voksne seksuelle medier",
+  "5l/hlp": "Vi deler ikke indholdet eller kategorien for anmeldelsen",
+  "BlAMmZ": [
+    "Du delte denne anmeldelse med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " og ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " og ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wr4IT0": [
+    "Anmeld delt med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " og ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " og ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "!"
+  ],
+  "HqyWeH": [
+    "Del anmeldelse med ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " og ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " og ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ytCpKi": "Ignorér",
   "tFY5ZW": "Ignoreret",
   "VFWjc3": [
@@ -23648,7 +23926,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "Vi foreslår dig at tilføje et telefonnummer til dine to-faktor autentificeringsindstillinger som en backup.",
   "7590PT": "Hent dit gratis Nitro!",
   "HFwRpq": "Brugeren har muligvis problemer med at oprette forbindelse til opkaldet.",
   "HcoRu7": "Meddelelser",
@@ -25268,7 +25545,12 @@
   "HEuagI": "eller",
   "UmsfHB": "Orange",
   "KTZrmp": "Måske senere",
+  "rCbDnp": "Begynd at optjene Orbs",
+  "m84e7e": "Optjen fra missioner. Brug i Shop. Bliv belønnet for at spille.",
+  "Kf926e": "Orbs er nu på mobilen",
   "EBYkzs": "Eksklusivt for Orbs",
+  "+T44OT": "Tjek din saldo, optjen, og indløs Orbs på ét sted.",
+  "ykMHjY": "Dine Orbs er her!",
   "bhrgkJ": [
     "Tidligere kendt som ",
     [
@@ -25568,6 +25850,14 @@
       "emojiName"
     ],
     " (uden ananas)"
+  ],
+  "BByGU1": [
+    "Svar ",
+    [
+      1,
+      "number"
+    ],
+    " fjernet"
   ],
   "8DAM+/": "Du stemte på dette svar",
   "wqBc7O": [
@@ -30262,6 +30552,30 @@
       "claimDate"
     ]
   ],
+  "UuzHh4": [
+    "Spil ",
+    [
+      1,
+      "activityName"
+    ],
+    " i Discord i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter for at låse op for ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "VYwSSk": [
     "Spil enhver aktivitet på Discord i ",
     [
@@ -30269,6 +30583,83 @@
       "streamingDurationRequirement"
     ],
     " minutter, og tjen ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "C+2RxM": [
+    "Prøv ",
+    [
+      1,
+      "activityName"
+    ],
+    " drevet af ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " i Discord, og lås op for ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    ". Ingen installation påkrævet."
+  ],
+  "0NNM3t": [
+    "Prøv ",
+    [
+      1,
+      "activityName"
+    ],
+    " drevet af ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " i Discord. Ingen installation påkrævet. Spil ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter for at låse op for ",
     [
       8,
       "$b",
@@ -30429,7 +30820,7 @@
     "."
   ],
   "rxf+n5": "Ugyldig mission",
-  "hRIVy8": "Åbn mission",
+  "hRIVy8": "Åbn mission i Discord",
   "LLLLPD": "Få mere at vide",
   "nPThNT": "Tjek, om der er spil kørende",
   "GXqvCw": [
@@ -30601,12 +30992,12 @@
       1,
       "activityName"
     ],
-    "-aktivitet på Discord i ",
+    " i Discord i ",
     [
       1,
       "minutes"
     ],
-    " minutter"
+    " minutter."
   ],
   "1NaRSk": [
     "Spil enhver aktivitet på Discord i ",
@@ -30912,6 +31303,102 @@
     ],
     " Mission"
   ],
+  "+qoymJ": "Prøv i Discord",
+  "03VJqq": [
+    "Spil ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter med din Discord-klient åben, og vind ",
+    [
+      1,
+      "questReward"
+    ],
+    "."
+  ],
+  "1AcTqq": [
+    "Spil ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter med din Discord-klient åben, og lås op for ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " i ",
+    [
+      1,
+      "duration"
+    ],
+    ", og behold den i længere tid med Nitro!"
+  ],
+  "ztXW8f": [
+    "Spil ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter med din Discord-klient åben for at låse op for ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    ". Behold den med Nitro!"
+  ],
+  "enQ3jY": [
+    "Spil ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutter med din Discord-klient åben, og lås op for ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " i ",
+    [
+      1,
+      "duration"
+    ],
+    "."
+  ],
+  "fe7XeX": [
+    "Brug ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutter"
+  ],
   "r9s3Ul": "Spol 10 sekunder tilbage",
   "zWDcND": "Spring 10 sekunder frem",
   "bDSZOz": "Slå undertekster til og fra",
@@ -31016,6 +31503,24 @@
   ],
   "NIimTk": [
     "Spil ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " i ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutter, og vind ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "."
+  ],
+  "e+K3xM": [
+    "Brug ",
     [
       1,
       "gameTitle"
@@ -32381,6 +32886,9 @@
   "XREf9v": "Giver medlemmer mulighed for at uploade filer eller medier i disse kanaler.",
   "WK9r7O": "Giver medlemmer mulighed for at uploade filer eller medier i denne kanal.",
   "OqNY09": "Lader medlemmer bandlyse andre medlemmer af denne server permanent og slette vedkommendes beskedhistorik.",
+  "S2ZE5e": "Tillader medlemmer at sende beskeder uden at blive påvirket af langsom tilstand.",
+  "C4t1Xl": "Tillader medlemmer at sende beskeder i disse kanaler uden at blive påvirket af langsom tilstand.",
+  "Ha1xb2": "Tillader medlemmer at sende beskeder i denne kanal uden at blive påvirket af langsom tilstand.",
   "b8B++v": "Giver medlemmerne mulighed for at ændre deres eget kaldenavn, et brugerdefineret navn for netop denne server.",
   "3GCm/f": "Giver medlemmer mulighed for at deltage i stemmekanaler og høre andre.",
   "stA0Hh": "Giver medlemmer mulighed for at joine disse talekanaler og høre andre.",
@@ -39208,6 +39716,53 @@
   ],
   "pGDUHx": "Profil-deko",
   "Sxed/P": "Varen vil være tilgængelig med det samme i Brugerprofilindstillinger.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Når du trykker på ",
+        "\"",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        "\" ",
+        "på en vare fra shoppen, betyder det, at du får en begrænset licens til at bruge denne vare på Discord. Få mere at vide i afsnittet ",
+        "\"",
+        "Virtuelle varer",
+        "\" ",
+        [
+          8,
+          "$link",
+          [
+            "her"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". Ved at modtage denne vare accepterer du Discords ",
+    [
+      8,
+      "$link",
+      [
+        "vilkår for betalte tjenester"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". Orbs-indløsninger kan ikke refunderes."
+  ],
   "FhJ74u": "Nitro-kreditter gælder automatisk for den angivne kreditvarighed, enten med det samme eller, hvis du har et aktivt Nitro-abonnement, ved afslutningen af din nuværende faktureringscyklus.",
   "APcKRk": "Når dette emblem er indløst, vil det automatisk blive tilføjet til din profil.",
   "zLch/f": "Indløs med Orbs",
@@ -39724,6 +40279,7 @@
   "wiXdER": "Vælg et spil",
   "sUQar6": "Yndlingsspil",
   "SqNnur": "Spil i rotation",
+  "gKoO1N": "Du skal gemme eller nulstille dine ændringer, før du lukker din profil.",
   "scOKER": "Spil, jeg godt kan lide",
   "bWSQwc": "Vil gerne spille",
   "0/xHFB": "Windows",

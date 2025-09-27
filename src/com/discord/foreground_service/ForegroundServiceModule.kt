@@ -27,18 +27,18 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
 
    @ReactMethod
    public fun startService(parameters: ReadableArray) {
-      val var5: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
-      val var3: Log = Log.INSTANCE;
-      val var2: Int = var5.size();
+      val var3: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
+      val var5: Log = Log.INSTANCE;
+      val var2: Int = var3.size();
       val var4: StringBuilder = new StringBuilder();
       var4.append("startService: ForegroundService with ");
       var4.append(var2);
       var4.append(" configurations");
-      Log.i$foreground_service_release$default(var3, var4.toString(), null, 2, null);
-      if (var5.isEmpty()) {
-         Log.i$foreground_service_release$default(var3, "Couldn't start ForegroundService, no service configurations provided.", null, 2, null);
+      Log.i$foreground_service_release$default(var5, var4.toString(), null, 2, null);
+      if (var3.isEmpty()) {
+         Log.i$foreground_service_release$default(var5, "Couldn't start ForegroundService, no service configurations provided.", null, 2, null);
       } else {
-         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var5);
+         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var3);
       }
    }
 

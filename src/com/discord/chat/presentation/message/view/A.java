@@ -9,9 +9,10 @@ import kotlin.jvm.functions.Function2;
 public final class A implements OnClickListener {
    public final Function2 d;
    public final MediaSource e;
-   public final int i;
+   public final boolean i;
+   public final EmbedView m;
 
    public final void onClick(View var1) {
-      EmbedView.e(this.d, this.e, this.i, var1);
+      EmbedView.g(this.d, this.e, this.i, this.m, var1);
    }
 }

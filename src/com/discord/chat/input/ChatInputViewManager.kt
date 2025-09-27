@@ -94,11 +94,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var2: ThemedReactContext = this.$reactContext;
+            val var2: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var3: ThemedReactContext = this.$reactContext;
             val var4: ChatInputRootView = this.$view;
-            val var3: java.lang.String = var1.toString();
-            var5.emitEvent(var2, var4, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
+            val var5: java.lang.String = var1.toString();
+            var2.emitEvent(var3, var4, new OnPasteImageEvent(var5, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

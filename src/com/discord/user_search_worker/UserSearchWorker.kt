@@ -201,11 +201,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var20: java.lang.String = var23.getKey() as java.lang.String;
+         val var16: java.lang.String = var23.getKey() as java.lang.String;
          val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
          val var28: UserSearchQuerySetFilters = var24.getFilters();
          if (var28 == null || var28.getFriends() == var2 || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var20, var24);
+            this.searchUsers(var16, var24);
          }
       }
    }
@@ -245,18 +245,18 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
             val var27: UserSearchTransformedUser = var26.getValue() as UserSearchTransformedUser;
             val var17: java.lang.String = var27.getUsername();
             if (this.isValid(var16, var27, var2)) {
-               val var33: java.lang.Double = var2.getBoosters().get(var16);
+               val var32: java.lang.Double = var2.getBoosters().get(var16);
                val var3: Double;
-               if (var33 != null) {
-                  var3 = var33;
+               if (var32 != null) {
+                  var3 = var32;
                } else {
                   var3 = 0.0;
                }
 
                val var5: Double = var2.getBoosterFallback();
-               val var32: UserSearchWorkerResult;
+               val var37: UserSearchWorkerResult;
                if (var16 == var12) {
-                  var32 = new UserSearchWorkerResult(var16, var17, var16, this.calculateScore(10.0, var3, var5));
+                  var37 = new UserSearchWorkerResult(var16, var17, var16, this.calculateScore(10.0, var3, var5));
                } else {
                   val var30: java.util.List;
                   if (var7) {
@@ -284,46 +284,46 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                      );
                   }
 
-                  val var40: java.util.Iterator = CollectionsKt.e0(var30).iterator();
+                  val var39: java.util.Iterator = CollectionsKt.e0(var30).iterator();
                   val var31: Regex = var23;
                   var var24: UserSearchWorkerResult = null;
 
-                  while (var40.hasNext()) {
-                     var10 = var40.next() as java.lang.String;
-                     val var37: UserSearchWorker.Companion.LocalResult;
+                  while (var39.hasNext()) {
+                     var10 = var39.next() as java.lang.String;
+                     val var36: UserSearchWorker.Companion.LocalResult;
                      if (var14.a(var10)) {
-                        var37 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(10.0, var3, var5));
+                        var36 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(10.0, var3, var5));
                      } else if (var31.a(var10)) {
-                        var37 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(5.0, var3, var5));
+                        var36 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(5.0, var3, var5));
                      } else if (this.fuzzySearch(var12, UserSearchWorker.Companion.access$strippedOfDiacritics(Companion, var10))) {
-                        var37 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(1.0, var3, var5));
+                        var36 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(1.0, var3, var5));
                      } else {
-                        var37 = null;
+                        var36 = null;
                      }
 
-                     var var39: UserSearchWorkerResult;
-                     var39 = var24;
+                     var var38: UserSearchWorkerResult;
+                     var38 = var24;
                      label78:
-                     if (var37 != null) {
+                     if (var36 != null) {
                         if (var24 != null) {
-                           var39 = var24;
-                           if (!(var24.getScore() < var37.getScore())) {
+                           var38 = var24;
+                           if (!(var24.getScore() < var36.getScore())) {
                               break label78;
                            }
                         }
 
-                        var39 = new UserSearchWorkerResult(var16, var17, var37.getComparator(), var37.getScore());
+                        var38 = new UserSearchWorkerResult(var16, var17, var36.getComparator(), var36.getScore());
                      }
 
-                     var24 = var39;
+                     var24 = var38;
                   }
 
-                  var32 = var24;
+                  var37 = var24;
                   var23 = var31;
                }
 
-               if (var32 != null) {
-                  var13.add(var32);
+               if (var37 != null) {
+                  var13.add(var37);
                }
             }
          }

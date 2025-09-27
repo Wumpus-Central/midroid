@@ -12,8 +12,8 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    val var1: Double = var0.getDouble("rowContentWidth");
-   val var4: Int = var0.getInt("rowContentPaddingVertical");
-   val var3: Int = var0.getInt("itemSize");
+   val var3: Int = var0.getInt("rowContentPaddingVertical");
+   val var4: Int = var0.getInt("itemSize");
    val var10: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var14: IntRange = NativeArrayExtensionsKt.sizeRange(var10);
    val var9: ArrayList = new ArrayList(CollectionsKt.v(var14, 10));
@@ -75,5 +75,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var9.add(var7);
    }
 
-   return new StickerPickerRow(var1, var4, var3, var9);
+   return new StickerPickerRow(var1, var3, var4, var9);
 }

@@ -39,9 +39,9 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: CompletableJob = k0.b(null, 1, null);
-      val var1: ExecutorService = Executors.newSingleThreadExecutor();
-      scope = kotlinx.coroutines.g.a(var0.X0(T.b(var1)));
+      val var1: CompletableJob = k0.b(null, 1, null);
+      val var0: ExecutorService = Executors.newSingleThreadExecutor();
+      scope = kotlinx.coroutines.g.a(var1.X0(T.b(var0)));
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
@@ -322,8 +322,8 @@ public object MediaPlayerManager {
                         break label85;
                      }
 
-                     val var16: d0 = K.c();
-                     val var7: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
+                     val var7: d0 = K.c();
+                     val var16: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
                         final MediaPlayer $prevMediaPlayer;
                         int label;
 
@@ -354,7 +354,7 @@ public object MediaPlayerManager {
                      this.L$0 = var1;
                      this.L$1 = var24;
                      this.label = 1;
-                     if (db.f.g(var16, var7, this) === var5) {
+                     if (db.f.g(var7, var16, this) === var5) {
                         return var5;
                      }
                   }
@@ -362,22 +362,22 @@ public object MediaPlayerManager {
                   var15 = var1;
                }
 
-               val var20: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
+               val var9: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
 
                val var25: Any;
                do {
-                  var25 = var20.getValue();
-                  val var9: Pair = var25 as Pair;
-               } while (!var20.d(var25, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
+                  var25 = var9.getValue();
+                  val var20: Pair = var25 as Pair;
+               } while (!var9.d(var25, s.a(var15, kotlin.coroutines.jvm.internal.b.c(1.0))));
 
-               val var17: WeakReference = new WeakReference<>(this.$mediaPlayer);
-               MediaPlayerManager.access$setActivePlayerRef$p(var17);
-               val var10: Job = MediaPlayerManager.access$getActiveMonitoringJob$p();
-               if (var10 != null) {
-                  v.f(var10, "New progress monitor override", null, 2, null);
+               val var10: WeakReference = new WeakReference<>(this.$mediaPlayer);
+               MediaPlayerManager.access$setActivePlayerRef$p(var10);
+               val var17: Job = MediaPlayerManager.access$getActiveMonitoringJob$p();
+               if (var17 != null) {
+                  v.f(var17, "New progress monitor override", null, 2, null);
                }
 
-               MediaPlayerManager.access$setActiveMonitoringJob$p(MediaPlayerManager.access$startProgressMonitor(MediaPlayerManager.INSTANCE, var17));
+               MediaPlayerManager.access$setActiveMonitoringJob$p(MediaPlayerManager.access$startProgressMonitor(MediaPlayerManager.INSTANCE, var10));
                return Unit.a;
             }
          },

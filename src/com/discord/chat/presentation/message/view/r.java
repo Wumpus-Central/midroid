@@ -1,15 +1,18 @@
 package com.discord.chat.presentation.message.view;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import kotlin.jvm.functions.Function1;
+import android.view.View.OnClickListener;
+import com.discord.media_player.MediaSource;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class r implements OnLongClickListener {
-   public final Function1 d;
-   public final String e;
+public final class r implements OnClickListener {
+   public final Function2 d;
+   public final MediaSource e;
+   public final boolean i;
+   public final EmbedView m;
 
-   public final boolean onLongClick(View var1) {
-      return EmbedView.j(this.d, this.e, var1);
+   public final void onClick(View var1) {
+      EmbedView.d(this.d, this.e, this.i, this.m, var1);
    }
 }

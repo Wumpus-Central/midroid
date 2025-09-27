@@ -64,13 +64,13 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.type;
-      val var2: java.lang.String = this.context;
+      val var2: java.lang.String = this.type;
+      val var3: java.lang.String = this.context;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapSeparatorData(type=");
-      var1.append(var3);
-      var1.append(", context=");
       var1.append(var2);
+      var1.append(", context=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

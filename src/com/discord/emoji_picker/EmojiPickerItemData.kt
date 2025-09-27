@@ -198,9 +198,9 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
             var2.put(IdUtilsKt.convertToId((var7.next() as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle()), var1);
          }
 
-         for (EmojiPickerItem var5 : var0.trailing) {
-            if (var5 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var5 as EmojiPickerItem.Category).getTitle()), var1);
+         for (EmojiPickerItem var8 : var0.trailing) {
+            if (var8 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var8 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }
@@ -307,30 +307,30 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
       public override fun toString(): String {
          val var1: Int = this.rowSize;
-         val var4: Boolean = this.hasGuildData;
+         val var2: Boolean = this.hasGuildData;
          val var3: Boolean = this.hasSearchData;
-         val var2: Boolean = this.hasPremiumInlineRoadblock;
-         val var5: java.util.List = this.leading;
-         val var7: java.util.List = this.trailing;
-         val var8: java.util.List = this.nativeSectionsEmojis;
-         val var9: java.util.List = this.nativeSectionsEmojisUnicode;
+         val var4: Boolean = this.hasPremiumInlineRoadblock;
+         val var7: java.util.List = this.leading;
+         val var5: java.util.List = this.trailing;
+         val var9: java.util.List = this.nativeSectionsEmojis;
+         val var8: java.util.List = this.nativeSectionsEmojisUnicode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("CoreData(rowSize=");
          var6.append(var1);
          var6.append(", hasGuildData=");
-         var6.append(var4);
+         var6.append(var2);
          var6.append(", hasSearchData=");
          var6.append(var3);
          var6.append(", hasPremiumInlineRoadblock=");
-         var6.append(var2);
+         var6.append(var4);
          var6.append(", leading=");
-         var6.append(var5);
-         var6.append(", trailing=");
          var6.append(var7);
+         var6.append(", trailing=");
+         var6.append(var5);
          var6.append(", nativeSectionsEmojis=");
-         var6.append(var8);
-         var6.append(", nativeSectionsEmojisUnicode=");
          var6.append(var9);
+         var6.append(", nativeSectionsEmojisUnicode=");
+         var6.append(var8);
          var6.append(")");
          return var6.toString();
       }

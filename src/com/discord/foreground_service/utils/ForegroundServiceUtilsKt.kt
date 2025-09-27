@@ -18,20 +18,20 @@ import java.util.ArrayList
 @SuppressLint(["InlinedApi"])
 private fun buildServiceTypeChain(requestedType: Type, context: Context): List<Int> {
    val var7: ArrayList = new ArrayList();
-   val var2: Int = VERSION.SDK_INT;
-   val var6: Int = 128;
-   val var8: Int = 32;
-   if (var2 < 34) {
-      val var3: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
-      if (var3 != 1) {
-         if (var3 != 2) {
-            if (var3 != 3) {
+   val var3: Int = VERSION.SDK_INT;
+   val var8: Int = 128;
+   val var6: Int = 32;
+   if (var3 < 34) {
+      val var2: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
+      if (var2 != 1) {
+         if (var2 != 2) {
+            if (var2 != 3) {
                throw new n();
             }
 
-            var7.add(var8);
-         } else if (var2 >= 30) {
             var7.add(var6);
+         } else if (var3 >= 30) {
+            var7.add(var8);
          }
       }
    } else {
@@ -55,12 +55,12 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
 
       if (var12 && var10) {
          var7.add(160);
-         var7.add(var8);
          var7.add(var6);
+         var7.add(var8);
       } else if (var12) {
-         var7.add(var8);
-      } else if (var10) {
          var7.add(var6);
+      } else if (var10) {
+         var7.add(var8);
       }
    }
 
@@ -134,13 +134,13 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
                return;
             } catch (var9: SecurityException) {
                var11 = var9;
-               val var8: Log = Log.INSTANCE;
+               val var6: Log = Log.INSTANCE;
                val var7: java.lang.String = toForegroundServiceTypeString(var4);
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Service promotion of type ");
-               var6.append(var7);
-               var6.append(" failed, trying next in chain");
-               var8.w$foreground_service_release(var6.toString(), var9);
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Service promotion of type ");
+               var8.append(var7);
+               var8.append(" failed, trying next in chain");
+               var6.w$foreground_service_release(var8.toString(), var9);
             }
          }
 

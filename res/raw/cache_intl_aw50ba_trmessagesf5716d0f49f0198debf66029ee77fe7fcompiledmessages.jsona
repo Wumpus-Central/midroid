@@ -110,6 +110,7 @@
   ],
   "Xkfav7": "Uyarıyı kapat",
   "xs0juL": "İçerik menüsünü kapat",
+  "pfChQk": "Yükleniyor",
   "b6uC3d": "onay kutucuğu",
   "fKyfcX": "görsel, buton",
   "/SCpvr": "video, buton",
@@ -740,23 +741,12 @@
   "xfAlNz": "Topluluk Güncellemeleri",
   "COObWV": [
     "\"",
-    "Satın Al",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "butonuna tıklayarak ",
-    [
-      8,
-      "$link",
-      [
-        "Hizmet Koşullarını"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " ve ",
     [
       8,
       "$link",
@@ -779,23 +769,12 @@
   ],
   "7wpqfn": [
     "\"",
-    "Satın Al",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "butonuna tıklayarak ",
-    [
-      8,
-      "$link",
-      [
-        "Hizmet Koşullarını"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " ve ",
     [
       8,
       "$link",
@@ -873,6 +852,43 @@
   "vgvbiI": "Olamaz!",
   "DOarTE": "Ya da uygulama içi ödeme yöntemiyle devam et",
   "ycleJS": "Faturalandırma sayfamızı açarken bir hata oluştu. Lütfen bekleyip tekrar dene.",
+  "wvvuCQ": [
+    "Aylık Nitro Al (İlk Ay %",
+    [
+      1,
+      "discountPercentage"
+    ],
+    " İndirimli)"
+  ],
+  "juYDmZ": [
+    [
+      8,
+      "$b",
+      [
+        "Aşağıdaki uygulama içi ödemeyi seçerek yenilenen bir abonelik satın alıyorsun."
+      ]
+    ],
+    " Yani bugün Apple ID hesabından ücret alacağız ve sen iptal edene kadar da her ",
+    [
+      1,
+      "interval"
+    ],
+    " senden ücret almaya devam edeceğiz anlamına gelir. Fiyatlar sana bildirilerek değiştirilebilir. Güncel fatura döneminin son 24 saatine kadar App Store ayarlarından istediğin zaman iptal edebilirsin. ",
+    [
+      8,
+      "$link",
+      [
+        "Ücretli Hizmet Koşulları"
+      ],
+      [
+        [
+          1,
+          "paidURL"
+        ]
+      ]
+    ],
+    " geçerlidir."
+  ],
   "HU3RFx": "Uygulamalar",
   "Nu5Yi4": "İşte Discord deneyimini daha süper havalı yapmak için süper havalı şeyler yapan bütün uygulamalar. Eğer bu kadar esinti fazla gelirse, istediğin zaman onları kaldırabilirsin.",
   "NgXl3N": "Uygulamayı Ekle",
@@ -1689,7 +1705,18 @@
     ". Bunun gibi web siteleri kişisel bilgilerini paylaşman için seni kandırmayı, şifreni çalmayı ya da cihazına istenmeyen yazılımlar yüklemeyi deneyebilir."
   ],
   "2B3wj4": "Tehlikeli Web Sitesi",
+  "SymzJC": "Daha fazla Küre kazan",
+  "B1oJtb": "Orbs hakkında bilgi",
   "gGtZp6": "Orbs Bakiyesi",
+  "zPaLLy": [
+    "Orbs bakiyesi: ",
+    [
+      1,
+      "balance"
+    ]
+  ],
+  "9JpRfH": "Orbs'ları dene",
+  "LaMEFB": "Bir ödül alabilirsin!",
   "WrzJBQ": "Mağaza'dan Orbs Al",
   "5MBJ5O": "Yasakla",
   "ZbeITU": "Yasaklar",
@@ -2447,6 +2474,7 @@
   ],
   "1i1bUl": "Katılma Başvurularını Atla",
   "jvd/LC": "Bu bağlantı aracılığıyla katılan yeni üyeler, başvuru sürecini atlayarak hemen katılacaklar.",
+  "kqcjeX": "Yavaş Modu Atla",
   "JJogjo": "Ara",
   "v05Xd3": "Arama Sona Erdi",
   "SBDnp6": [
@@ -6490,7 +6518,8 @@
   "i4jeWV": "Bitti",
   "JdIQ/f": "Bir daha sorma",
   "5E9SBw": "Bunu bana bir daha gösterme.",
-  "tdsiOz": "Varsayılanı değiştir",
+  "yIax8v": "Herhangi bir mesaja iki kez dokunarak anında tepki ver. Varsayılan tepki emojini istediğin zaman değiştirebilirsin.",
+  "tdsiOz": "Varsayılan olarak ayarla",
   "F6lRAA": "Tepki vermek için çift dokun",
   "5/l2ra": [
     [
@@ -8485,6 +8514,23 @@
     ],
     " dosya yükle."
   ],
+  "/2JwTk": [
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "Dosya"
+        ],
+        "other": [
+          "Dosya"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " Yükle"
+  ],
   "ZMirp6": "Bilinmeyen dosya",
   "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
@@ -8698,8 +8744,71 @@
   "UfqmIS": "Bu görsel, kanal listenin en üstünde görüntülenecek.",
   "/B6PR0": "Topluluğunu tarif et. Bu açıklama, bu sunucunun davet bağlantısının dış eklemelerinde görüntülenecektir.",
   "HEA/DQ": "Kanal Yönetimi ve Mesaj Yönetimi yetkileri olmayan üyelerin mesaj gönderme ve alt başlık oluşturma sıklığı bu sürede bir tane ile kısıtlanır.",
-  "a+1pdH": "Kanal Yönetimi ve Mesaj Yönetimi yetkileri olmayan üyelerin gönderi oluşturma sıklığı bu sürede bir tane ile kısıtlanır.",
+  "wW2MWl": [
+    "Yavaş Modu Atlama, Kanal Yönetimi veya Mesaj Yönetimi yetkileri olmayan üyelerin mesaj gönderme ve alt başlık oluşturma sıklığı bu sürede bir tane ile kısıtlanır. ",
+    [
+      8,
+      "$link",
+      [
+        "Bu, ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        " tarihinde değişecektir."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "a+1pdH": "Gönderi Yönetimi yetkileri olmayan üyelerin paylaşım yapma sıklığı bu sürede bir tane ile kısıtlanır.",
+  "EIQq9v": [
+    "Yavaş Modu Atlama veya Gönderi Yönetimi yetkileri olmayan üyelerin mesaj gönderme ve alt başlık oluşturma sıklığı bu sürede bir tane ile kısıtlanır. ",
+    [
+      8,
+      "$link",
+      [
+        "Bu, ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        " tarihinde değişecektir."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "OMmNCg": "Kanal Yönetimi ve Mesaj Yönetimi yetkileri olmayan üyelerin mesaj gönderme sıklığı bu sürede bir tane ile kısıtlanır.",
+  "8sTC8v": [
+    "Yavaş Modu Atlama, Kanal Yönetimi veya Mesaj Yönetimi yetkileri olmayan üyelerin mesaj gönderme sıklığı bu sürede bir tane ile kısıtlanır. ",
+    [
+      8,
+      "$link",
+      [
+        "Bu, ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        " tarihinde değişecektir."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "BT9zR0": "Sistem etkinlik mesajlarını bu kanala gönderiyoruz. Bunları istediğin zaman kapatabilirsin.",
   "3yOX19": "Bu kanal belirli bir süreliğine aktif olmazsa üyeleri sohbet etmeye çağır.",
   "NvnW+f": "Sunucu kurulumu için yardımcı ipuçları gönder.",
@@ -9801,6 +9910,39 @@
       "time"
     ],
     " süreliğine Nitro"
+  ],
+  "93PGOD": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro kredin"
+      ]
+    ],
+    " şimdi başlıyor! ",
+    [
+      1,
+      "expirationDate"
+    ],
+    " tarihine kadar ayrıcalıklı avantajlarının keyfini çıkar."
+  ],
+  "8fyBPT": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro kredin"
+      ]
+    ],
+    " mevcut faturalandırma döngüsünün sonunda otomatik olarak kullanılacak."
   ],
   "3G0CTE": "Toplam Kalan Süre",
   "Jr6N+v": "Kredileri Gör",
@@ -19663,7 +19805,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "Sen mi aradın?",
+  "sBk8mZ": "Böö!",
   "9PzTtL": "Bay Jack O' Lantern",
   "RbkXxc": "Huzur içinde yat",
   "FW3Qp6": "Sadece Takılıyoruz",
@@ -20068,6 +20210,142 @@
   "jcRSp6": "DM'lerde ve sunucularda yetişkinlerin bulunduğu cinsel konulu veya müstehcen içerik barındırabilecek görsel medyaları bulanıklaştır",
   "E6UmXV": "Yetişkin cinsel içerikli medya bulanıklaştırıldı",
   "Gtck/v": "Yetişkin Cinsel İçerikli Medya Filtresi",
+  "5l/hlp": "İçeriği veya kategoriyi paylaşmayacağız ve bildirmeyeceğiz",
+  "BlAMmZ": [
+    "Bu raporu ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " ve ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " ve ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ile paylaştın"
+  ],
+  "wr4IT0": [
+    "Rapor ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " ve ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " ve ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ile paylaşıldı!"
+  ],
+  "HqyWeH": [
+    "Raporu ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " ve ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          " ve ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ile paylaş"
+  ],
   "ytCpKi": "Yok Say",
   "tFY5ZW": "Yok Sayıldı",
   "VFWjc3": [
@@ -23570,7 +23848,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "Destek olarak 2 aşamalı kimlik doğrulama ayarlarına bir telefon eklemeni öneririz.",
   "7590PT": "Ücretsiz Nitro'nu Kullanmaya Başla!",
   "HFwRpq": "Kullanıcı, çağrıya bağlanmada sorun yaşıyor olabilir.",
   "HcoRu7": "Bildirimler",
@@ -25187,7 +25464,12 @@
   "HEuagI": "ya da",
   "UmsfHB": "Turuncu",
   "KTZrmp": "Belki Daha Sonra",
+  "rCbDnp": "Orbs Kazanmaya Başla",
+  "m84e7e": "Görevlerden kazan. Mağazada harca. Oynayışını ödüllendir.",
+  "Kf926e": "Orbs artık mobilde",
   "EBYkzs": "Orbs Özel",
+  "+T44OT": "Bakiyeni kontrol et, kazan ve Orbs'ları tek bir yerde al.",
+  "ykMHjY": "Orbs'ların burada!",
   "bhrgkJ": [
     "Önceden ",
     [
@@ -25488,6 +25770,14 @@
       "emojiName"
     ],
     " (ananassız)"
+  ],
+  "BByGU1": [
+    "Yanıt ",
+    [
+      1,
+      "number"
+    ],
+    " kaldırıldı"
   ],
   "8DAM+/": "Bu yanıt için oy verdin.",
   "wqBc7O": [
@@ -30165,6 +30455,30 @@
     ],
     " tarihinde aldın"
   ],
+  "UuzHh4": [
+    "Discord'da ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "activityName"
+    ],
+    " oyna ve ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    " ödülünün kilidini aç."
+  ],
   "VYwSSk": [
     "Discord'da ",
     [
@@ -30183,6 +30497,83 @@
       ]
     ],
     " kazan."
+  ],
+  "C+2RxM": [
+    "Discord'da ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " tarafından geliştirilen ",
+    [
+      1,
+      "activityName"
+    ],
+    " oyununu dene ve ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    " ödülünün kilidini aç. Kurulum gerekmez."
+  ],
+  "0NNM3t": [
+    "Discord'da ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " tarafından geliştirilen ",
+    [
+      1,
+      "activityName"
+    ],
+    " oyununu dene. Kurulum gerekmez. ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika oyna ve ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    " ödülünün kilidini aç."
   ],
   "2GJLKy": [
     [
@@ -30329,7 +30720,7 @@
     " ödülünün kilidini aç."
   ],
   "rxf+n5": "Geçersiz Görev",
-  "hRIVy8": "Görevi Başlat",
+  "hRIVy8": "Görevi Discord'da Başlat",
   "LLLLPD": "Daha Fazla Bilgi Edin",
   "nPThNT": "Başlatmaları Kontrol Et",
   "GXqvCw": [
@@ -30497,14 +30888,14 @@
     "Discord'da ",
     [
       1,
-      "minutes"
-    ],
-    " dakika boyunca ",
-    [
-      1,
       "activityName"
     ],
-    " Etkinliğini oyna"
+    " oyununu ",
+    [
+      1,
+      "minutes"
+    ],
+    " dakika oyna."
   ],
   "1NaRSk": [
     "Discord'da ",
@@ -30799,6 +31190,101 @@
     ],
     " Görevi"
   ],
+  "+qoymJ": "Discord'da dene",
+  "03VJqq": [
+    "Discord istemcisi açıkken ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna ve ",
+    [
+      1,
+      "questReward"
+    ],
+    " kazan."
+  ],
+  "1AcTqq": [
+    "Discord istemcisi açıkken ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna; ",
+    [
+      1,
+      "duration"
+    ],
+    " için ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " ödülünün kilidini aç ve Nitro ile daha da uzun kullan!"
+  ],
+  "ztXW8f": [
+    "Discord istemcisi açıkken ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna ve ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " ödülünün kilidini aç. Nitro ile ödüle sahip ol!"
+  ],
+  "enQ3jY": [
+    "Discord istemcisi açıkken ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna ve ",
+    [
+      1,
+      "duration"
+    ],
+    " için ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " ödülünün kilidini aç."
+  ],
+  "fe7XeX": [
+    [
+      1,
+      "minutes"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna"
+  ],
   "r9s3Ul": "10 saniye geri sar",
   "zWDcND": "10 saniye ileri atla",
   "bDSZOz": "Alt yazıları aç/kapat",
@@ -30898,6 +31384,23 @@
     " Videosunu izle"
   ],
   "NIimTk": [
+    [
+      2,
+      "targetMinutes"
+    ],
+    " dakika boyunca ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " oyna ve ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " kazan."
+  ],
+  "e+K3xM": [
     [
       2,
       "targetMinutes"
@@ -32255,6 +32758,9 @@
   "XREf9v": "Üyelerin bu kanallara dosya yükleyebilmesini sağlar.",
   "WK9r7O": "Üyelerin bu kanala dosya yükleyebilmesini sağlar.",
   "OqNY09": "Üyelerin sunucudaki diğer üyeleri kalıcı olarak yasaklamalarına ve onların mesaj geçmişlerini sunucudan silmelerine izin ver.",
+  "S2ZE5e": "Üyelerin yavaş moddan etkilenmeden mesaj göndermelerine izin verir.",
+  "C4t1Xl": "Üyelerin bu kanallarda yavaş moddan etkilenmeden mesaj göndermelerine izin verir.",
+  "Ha1xb2": "Üyelerin yavaş moddan etkilenmeden bu kanalda mesajlar göndermelerine izin verir.",
   "b8B++v": "Üyelerin kendilerine bu sunucuya özel birer takma ad seçebilmesini sağlar.",
   "3GCm/f": "Üyelerin ses kanallarına katılabilmesini ve başkalarını dinleyebilmesini sağlar.",
   "stA0Hh": "Üyelerin bu ses kanallarına katılabilmesini ve başkalarını dinleyebilmesini sağlar.",
@@ -39144,6 +39650,54 @@
   ],
   "pGDUHx": "Profil Dekoru",
   "Sxed/P": "Eşya, Kullanıcı Profili ayarlarında anında mevcut olacak.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Mağazadan bir ürünü ",
+        "\"",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        "\" ",
+        "dediğinde Discord üzerinde bu ürünü kullanma hakkı için sınırlı bir lisans talep etmiş oluyorsun. ",
+        "\"",
+        "Sanal Varlıklar",
+        "\" ",
+        "bölümünde daha fazla bilgiye ",
+        [
+          8,
+          "$link",
+          [
+            "buradan"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    " ulaşabilirsin. Bu ürünü alarak ",
+    [
+      8,
+      "$link",
+      [
+        "Ücretli Hizmet Koşulları'nı"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    " kabul etmiş olursun. Orbs iadeleri mümkün değildir."
+  ],
   "FhJ74u": "Nitro Kredileri, belirtilen kredi süresi için ya hemen ya da aktif bir Nitro aboneliğin varsa mevcut faturalandırma döngüsünün sonunda otomatik olarak uygulanır.",
   "APcKRk": "Alındıktan sonra bu rozet otomatik olarak profiline uygulanacak.",
   "zLch/f": "Orbs Kullanarak Al",
@@ -39662,6 +40216,7 @@
   "wiXdER": "Bir oyun seç",
   "sUQar6": "Favori oyun",
   "SqNnur": "Dönüşümlü oyunlar",
+  "gKoO1N": "Profilini kapatmadan önce değişikliklerini kaydet veya sıfırla.",
   "scOKER": "Sevdiğim oyunlar",
   "bWSQwc": "Oynamak istiyorum",
   "0/xHFB": "Windows",

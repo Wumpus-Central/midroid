@@ -79,8 +79,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 02d: ifnonnull 033
       // 030: goto 11e
       // 033: getstatic android/os/Build$VERSION.SDK_INT I
-      // 036: istore 2
-      // 037: iload 2
+      // 036: istore 3
+      // 037: iload 3
       // 038: bipush 29
       // 03a: if_icmplt 077
       // 03d: aload 7
@@ -92,8 +92,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 050: astore 6
       // 052: aload 6
       // 054: invokevirtual java/lang/Number.intValue ()I
-      // 057: istore 3
-      // 058: iload 3
+      // 057: istore 2
+      // 058: iload 2
       // 059: bipush 1
       // 05a: if_icmpne 060
       // 05d: goto 063
@@ -109,7 +109,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 072: areturn
       // 073: astore 1
       // 074: goto 111
-      // 077: iload 2
+      // 077: iload 3
       // 078: bipush 29
       // 07a: if_icmplt 092
       // 07d: aload 7
@@ -198,12 +198,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var3 != null) {
-         if (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
-            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
-               && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
-               this.lastProcessedPath = var3.getPath();
+      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var2 != null) {
+         if (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var2.getPath(), false, 2, null)) {
+            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
+               && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
+               this.lastProcessedPath = var2.getPath();
                this.onScreenshot.invoke();
             }
          }

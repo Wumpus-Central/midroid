@@ -87,21 +87,21 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.Boolean = this.triggerHaptic;
       val var5: java.lang.String = this.location;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("InitiateReplyData(messageId=");
-      var1.append(var4);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(", triggerHaptic=");
-      var1.append(var3);
-      var1.append(", location=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("InitiateReplyData(messageId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", triggerHaptic=");
+      var4.append(var3);
+      var4.append(", location=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

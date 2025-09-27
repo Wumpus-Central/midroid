@@ -160,13 +160,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
    @JvmStatic
    fun `createVoiceConnection$lambda$46`(var0: Function2, var1: ConnectionInfo, var2: java.lang.String) {
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("On created with ");
-      var3.append(var1);
-      var3.append(", ");
-      var3.append(var2);
-      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("On created with ");
+      var4.append(var1);
+      var4.append(", ");
+      var4.append(var2);
+      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       val var5: java.util.Map = kotlin.collections.L.x(NativeTypeExtensionsKt.toMap(var1));
       var5.put("connectCallbackScheduledMs", System.nanoTime() / (long)1000000);
       var0.invoke(var2, var5);
@@ -908,15 +908,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 061: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 064: aload 9
       // 066: invokevirtual android/media/MediaCodecInfo.getSupportedTypes ()[Ljava/lang/String;
-      // 069: astore 4
-      // 06b: aload 4
+      // 069: astore 12
+      // 06b: aload 12
       // 06d: ldc_w "getSupportedTypes(...)"
       // 070: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
-      // 07a: astore 12
-      // 07c: aload 4
+      // 07a: astore 4
+      // 07c: aload 12
       // 07e: arraylength
       // 07f: istore 3
       // 080: bipush 0
@@ -924,7 +924,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 082: iload 2
       // 083: iload 3
       // 084: if_icmpge 0b0
-      // 087: aload 4
+      // 087: aload 12
       // 089: iload 2
       // 08a: aaload
       // 08b: astore 11
@@ -937,13 +937,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 099: aconst_null
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
-      // 0a0: aload 12
+      // 0a0: aload 4
       // 0a2: aload 11
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1
       // 0ad: goto 082
-      // 0b0: aload 12
+      // 0b0: aload 4
       // 0b2: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
       // 0b7: astore 11
       // 0b9: aload 11
