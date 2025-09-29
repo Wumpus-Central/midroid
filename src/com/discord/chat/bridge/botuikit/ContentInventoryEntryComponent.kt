@@ -49,8 +49,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -58,22 +58,22 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var4: ContentInventoryEntry = this.contentInventoryEntry;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ContentInventoryEntryComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var2);
-      var3.append(", contentInventoryEntry=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: ContentInventoryEntry = this.contentInventoryEntry;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContentInventoryEntryComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var2);
+      var4.append(", contentInventoryEntry=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

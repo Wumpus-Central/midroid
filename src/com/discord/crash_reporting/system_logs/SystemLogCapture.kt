@@ -8,7 +8,7 @@ import java.io.File
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nSystemLogCapture.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,124:1\n13409#2,2:125\n*S KotlinDebug\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n*L\n106#1:125,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nSystemLogCapture.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,138:1\n13409#2,2:139\n*S KotlinDebug\n*F\n+ 1 SystemLogCapture.kt\ncom/discord/crash_reporting/system_logs/SystemLogCapture\n*L\n106#1:139,2\n*E\n"])
 internal class SystemLogCapture {
    private final val buffer: CircularByteBuffer = new CircularByteBuffer(262144)
    private final val tombstoneBuffer: CircularByteBuffer = new CircularByteBuffer(51200)
@@ -16,16 +16,16 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var5: Array<StackTraceElement> = var1.getStackTrace();
-      val var3: Int = var5.length;
+      val var7: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var7.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var4: StackTraceElement = var5[var2];
+         val var5: StackTraceElement = var7[var2];
          val var6: CircularByteBuffer = this.buffer;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("    ");
-         var7.append(var4);
-         var6.addLine(var7.toString());
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("    ");
+         var4.append(var5);
+         var6.addLine(var4.toString());
       }
    }
 
@@ -112,32 +112,32 @@ internal class SystemLogCapture {
       // 5d: invokevirtual java/lang/Process.destroy ()V
       // 60: aload 2
       // 61: athrow
-      // 62: astore 3
+      // 62: astore 1
       // 63: aload 0
       // 64: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
-      // 67: astore 2
+      // 67: astore 3
       // 68: new java/lang/StringBuilder
       // 6b: dup
       // 6c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 6f: astore 1
-      // 70: aload 1
+      // 6f: astore 2
+      // 70: aload 2
       // 71: ldc "Exception starting logcat process '"
       // 73: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 76: pop
-      // 77: aload 1
-      // 78: aload 3
+      // 77: aload 2
+      // 78: aload 1
       // 79: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 7c: pop
-      // 7d: aload 1
+      // 7d: aload 2
       // 7e: ldc "'"
       // 80: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 83: pop
-      // 84: aload 2
-      // 85: aload 1
+      // 84: aload 3
+      // 85: aload 2
       // 86: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 89: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
       // 8c: aload 0
-      // 8d: aload 3
+      // 8d: aload 1
       // 8e: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
       // 91: return
    }
@@ -206,7 +206,13 @@ internal class SystemLogCapture {
       private const val THREAD_SLEEP_MS: Long
 
       internal fun shouldIncludeLogLine(line: String): Boolean {
-         return StringsKt.N(var1, "chatty  : uid=", false, 2, null) xor true;
+         if (StringsKt.N(var1, "chatty  : uid=", false, 2, null)) {
+            return false;
+         } else if (StringsKt.N(var1, "OpenSLESRecorder", false, 2, null)) {
+            return StringsKt.N(var1, " E ", false, 2, null);
+         } else {
+            return true;
+         }
       }
    }
 }

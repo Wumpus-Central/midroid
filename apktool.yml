@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 298015
-  versionName: 298.15 - Stable
+  versionCode: 299016
+  versionName: 299.16 - Stable
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -507,6 +507,8 @@ doNotCompress:
 - res/raw/design_components_lottieicon_native_generated_lotties_nitrogem9.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_notificationstab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_servertab.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_spendearnorbs.lottie
+- res/raw/design_components_lottieicon_native_generated_lotties_spendearnorbslighttheme.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
 - res/raw/design_intl_manacompiledmessages.jsona
 - res/raw/emojis_json.gz

@@ -77,11 +77,11 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
    @NonNull
    public static EmbeddedActivityInviteViewBinding bind(@NonNull View var0) {
       int var1 = R.id.barrier_footer;
-      Barrier var3 = (Barrier)a.a(var0, var1);
-      if (var3 != null) {
+      Barrier var8 = (Barrier)a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.item_bottom_container;
-         ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-         if (var6 != null) {
+         ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.item_header;
             TextView var13 = (TextView)a.a(var0, var1);
             if (var13 != null) {
@@ -89,14 +89,14 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
                SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
                if (var4 != null) {
                   var1 = R.id.item_subtitle;
-                  MessageContentView var9 = (MessageContentView)a.a(var0, var1);
-                  if (var9 != null) {
+                  MessageContentView var7 = (MessageContentView)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.item_title;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var9 = (TextView)a.a(var0, var1);
+                     if (var9 != null) {
                         var1 = R.id.launch_button;
-                        DCDButton var7 = (DCDButton)a.a(var0, var1);
-                        if (var7 != null) {
+                        DCDButton var6 = (DCDButton)a.a(var0, var1);
+                        if (var6 != null) {
                            var1 = R.id.no_participants_text;
                            TextView var11 = (TextView)a.a(var0, var1);
                            if (var11 != null) {
@@ -107,13 +107,13 @@ public final class EmbeddedActivityInviteViewBinding implements ViewBinding {
                                  FrameLayout var12 = (FrameLayout)a.a(var0, var1);
                                  if (var12 != null) {
                                     var1 = R.id.subtitle_icon;
-                                    SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var2 != null) {
+                                    SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var3 != null) {
                                        var1 = R.id.subtitle_top_barrier;
-                                       Barrier var5 = (Barrier)a.a(var0, var1);
-                                       if (var5 != null) {
+                                       Barrier var2 = (Barrier)a.a(var0, var1);
+                                       if (var2 != null) {
                                           return new EmbeddedActivityInviteViewBinding(
-                                             var0, var3, var6, var13, var4, var9, var8, var7, var11, var10, var12, var2, var5
+                                             var0, var8, var5, var13, var4, var7, var9, var6, var11, var10, var12, var3, var2
                                           );
                                        }
                                     }

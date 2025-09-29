@@ -747,23 +747,12 @@
   "COObWV": [
     "By clicking ",
     "\"",
-    "Purchase",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Terms of Service"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " and ",
     [
       8,
       "$link",
@@ -787,23 +776,12 @@
   "7wpqfn": [
     "By clicking ",
     "\"",
-    "Purchase",
+    [
+      1,
+      "ctaText"
+    ],
     "\" ",
     "you agree to the ",
-    [
-      8,
-      "$link",
-      [
-        "Terms of Service"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " and ",
     [
       8,
       "$link",
@@ -882,6 +860,43 @@
   "vgvbiI": "Oh no!",
   "DOarTE": "Or, continue with in-app payment",
   "ycleJS": "There was an error opening our billing page. Please wait and try again.",
+  "wvvuCQ": [
+    "Get Nitro Monthly (",
+    [
+      1,
+      "discountPercentage"
+    ],
+    "% Off 1st Month)"
+  ],
+  "juYDmZ": [
+    [
+      8,
+      "$b",
+      [
+        "By opting for the in-app payment below, you are purchasing a recurring subscription."
+      ]
+    ],
+    " This means we'll charge your Apple ID account today and continue to charge you every ",
+    [
+      1,
+      "interval"
+    ],
+    " until you cancel. Prices subject to change with notice to you. You can cancel any time up to 24 hours before your current period ends in the App Store Settings. ",
+    [
+      8,
+      "$link",
+      [
+        "Paid Services Terms"
+      ],
+      [
+        [
+          1,
+          "paidURL"
+        ]
+      ]
+    ],
+    " apply."
+  ],
   "HU3RFx": "Applications",
   "Nu5Yi4": "Here's all the apps that are doing super cool things to make your Discord experience super cooler. If it gets too chilly, you can remove them at any time.",
   "NgXl3N": "Add App",
@@ -1701,6 +1716,12 @@
     ". Websites like these might try to trick you into sharing personal information, steal your password, or install unwanted software on your device."
   ],
   "2B3wj4": "Dangerous Website Ahead",
+  "SymzJC": "Earn more Orbs",
+  "B1oJtb": "Information about orbs",
+  "gGtZp6": "Orbs Balance",
+  "9JpRfH": "Try Orbs",
+  "LaMEFB": "You’re able to claim a reward!",
+  "WrzJBQ": "Redeem Orbs in Shop",
   "5MBJ5O": "Ban",
   "ZbeITU": "Bans",
   "z3cK5u": "We looked as hard as we could, but no banned users were found matching that search.",
@@ -2467,6 +2488,7 @@
   ],
   "1i1bUl": "Bypass Join Applications",
   "jvd/LC": "New members joining through this link will join immediately without going through join applications.",
+  "kqcjeX": "Bypass Slowmode",
   "JJogjo": "Call",
   "v05Xd3": "Call Ended",
   "SBDnp6": [
@@ -2823,6 +2845,8 @@
   "6eXLcH": "Show Channel Details",
   "ohhhDA": "Search, members, media, pins, threads, and more",
   "3tYNDQ": "Reply to Message",
+  "q9EGpq": "Checkout",
+  "hws7bG": "Order Summary",
   "RzWDqa": "Check it out",
   "VkKicX": "Clear",
   "O8k7Oz": "Clear all",
@@ -3100,6 +3124,13 @@
     "."
   ],
   "rt69oq": "Included with Nitro",
+  "kWkpdH": [
+    [
+      1,
+      "price"
+    ],
+    " with Nitro"
+  ],
   "sPvyr6": [
     "Original price: ",
     [
@@ -3183,12 +3214,36 @@
       ]
     ]
   ],
+  "lOtBOD": [
+    "Redeem for ",
+    [
+      8,
+      "orbIconHook",
+      [
+        "orbIcon"
+      ]
+    ],
+    " ",
+    [
+      1,
+      "orbPrice"
+    ]
+  ],
   "uYLGcn": "View My Badge",
   "6gF4aW": "Sweet!",
   "B25MUV": "The badge has been added to your profile.",
   "Bal8Cg": "You've collected the Orbs Apprentice Badge!",
+  "a/Y8PD": [
+    "Price: ",
+    [
+      1,
+      "orbAmount"
+    ],
+    " orbs"
+  ],
   "SWm2am": "Your Profile Effect is updated!",
   "ivaAAw": "Popular Picks",
+  "0+rBWV": "Badge",
   "HSX4HR": [
     "Profile effect preview: ",
     [
@@ -6584,23 +6639,8 @@
   "i4jeWV": "Done",
   "JdIQ/f": "Don't ask again",
   "5E9SBw": "Don't show me this again.",
-  "bp8vRE": [
-    "Double tap any message to react with ",
-    [
-      8,
-      "$b",
-      [
-        ":",
-        [
-          1,
-          "emojiName"
-        ],
-        ":"
-      ]
-    ],
-    " instantly. You can personalize your default reaction emoji anytime."
-  ],
-  "tdsiOz": "Change Default",
+  "yIax8v": "Double tap any message to react instantly. You can change your default reaction emoji anytime.",
+  "tdsiOz": "Set as default",
   "F6lRAA": "Double tap to react",
   "5/l2ra": [
     "React with ",
@@ -6693,14 +6733,7 @@
     " instantly. Or, tap here to set another default emoji."
   ],
   "rY+31d": "Double tap to react",
-  "EQnNv7": [
-    "Double tap a message to ",
-    [
-      8,
-      "emojiHook",
-      []
-    ]
-  ],
+  "1EUr/f": "Double tap a message to",
   "wHTk2N": "Edit default",
   "VrWSNj": "Choose double tap emoji",
   "C2tQIS": [
@@ -8686,6 +8719,114 @@
     ],
     "MB"
   ],
+  "dy6viI": [
+    "You can upload up to ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "1 file"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " files"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "."
+  ],
+  "HYg2Hh": "Remove some files to upload new ones.",
+  "0PhgpK": "File upload limit reached",
+  "pmAt6+": [
+    "You need to upload at least ",
+    [
+      2,
+      "minValues"
+    ],
+    " files."
+  ],
+  "9ovjIC": "At least 1 file is required.",
+  "tyxwW1": [
+    "Upload ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "a file"
+        ],
+        "other": [
+          "up to ",
+          [
+            7
+          ],
+          " files"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "SAr319": [
+    "Upload ",
+    [
+      2,
+      "minValues"
+    ],
+    " files under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "ZG+3Cg": [
+    "Upload ",
+    [
+      2,
+      "minValues"
+    ],
+    "–",
+    [
+      2,
+      "maxValues"
+    ],
+    " files under ",
+    [
+      1,
+      "maxSize"
+    ],
+    "."
+  ],
+  "/2JwTk": [
+    "Upload ",
+    [
+      6,
+      "maxValues",
+      {
+        "one": [
+          "File"
+        ],
+        "other": [
+          "Files"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "ZMirp6": "Unknown file",
   "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
@@ -8906,8 +9047,71 @@
   "UfqmIS": "This image will display at the top of your channels list.",
   "/B6PR0": "Describe your community. This description will be displayed in external embeds of this server’s invite link.",
   "HEA/DQ": "Members will be restricted to sending one message and creating one thread per this interval, unless they have Manage Channel or Manage Messages permissions.",
-  "a+1pdH": "Members will be restricted to creating one post per this interval, unless they have Manage Channel or Manage Messages permissions.",
+  "wW2MWl": [
+    "Members will be restricted to sending one message and creating one thread per this interval, unless they have Bypass Slowmode, Manage Channel, or Manage Messages permissions. ",
+    [
+      8,
+      "$link",
+      [
+        "This will change on ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "a+1pdH": "Members will be restricted to creating one post per this interval, unless they have the Manage Posts permission.",
+  "EIQq9v": [
+    "Members will be restricted to creating one post per this interval, unless they have Bypass Slowmode or Manage Posts permissions. ",
+    [
+      8,
+      "$link",
+      [
+        "This will change on ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "OMmNCg": "Members will be restricted to sending one message per this interval, unless they have Manage Channel or Manage Messages permissions.",
+  "8sTC8v": [
+    "Members will be restricted to sending one message per this interval, unless they have Bypass Slowmode, Manage Channel, or Manage Messages permissions. ",
+    [
+      8,
+      "$link",
+      [
+        "This will change on ",
+        [
+          1,
+          "breakingChangeDate"
+        ],
+        "."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "BT9zR0": "This is the channel we send system event messages to. These can be turned off at any time.",
   "3yOX19": "Prompt members to chat after this channel has been inactive for a while.",
   "NvnW+f": "Send helpful tips for server setup.",
@@ -10002,6 +10206,8 @@
       "cardinal"
     ]
   ],
+  "g5W1g4": "Nitro Credit Acquired",
+  "ERKK6u": "Explore Perks",
   "J9Lu4u": [
     [
       1,
@@ -10024,6 +10230,7 @@
       ]
     ]
   ],
+  "fBmhEx": "Adventuring pays off. Enjoy the additional time with your premium perks.",
   "4SqnVF": [
     [
       1,
@@ -10031,7 +10238,43 @@
     ],
     " of Nitro"
   ],
+  "93PGOD": [
+    "Your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro credit"
+      ]
+    ],
+    " begins now! Enjoy your premium perks until ",
+    [
+      1,
+      "expirationDate"
+    ],
+    "."
+  ],
+  "8fyBPT": [
+    "Your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "duration"
+        ],
+        " Nitro credit"
+      ]
+    ],
+    " will be used automatically at the end of your current billing cycle."
+  ],
   "3G0CTE": "Total Time Remaining",
+  "Jr6N+v": "View Credits",
   "+cGVV1": "Frequently Used",
   "TdEu5e": "Friends",
   "GbsGCg": "Friendship Management",
@@ -20036,7 +20279,7 @@
       "name"
     ]
   ],
-  "sBk8mZ": "You Rang?",
+  "sBk8mZ": "Boo!",
   "9PzTtL": "Mr. Jack O’ Lantern",
   "RbkXxc": "Rest in Peace",
   "FW3Qp6": "Just Hangin’",
@@ -20047,6 +20290,54 @@
   "dAqTcH": "Snag a free decoration with a gift purchase",
   "F/5kFB": "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?",
   "UPFiIi": "Gift Nitro if you dare...",
+  "gI6Yvr": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " month"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " months"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the spooky season!"
+  ],
+  "rSS+oq": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " year"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " years"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the spooky season!"
+  ],
   "9rInzc": "It's time to pick: trick or treat? Gift Nitro during October, and get your choice of a chillingly, cool avatar decoration to keep.",
   "CGgAyM": "Gift Nitro if you dare...",
   "ruVnPj": "Choose a FREE reward",
@@ -24475,6 +24766,13 @@
   "uy25Q0": "Stickers from this server are unavailable",
   "xi46lp": "Age-Restricted Server",
   "ZmwvDQ": "Age-Restricted Channel",
+  "eknR8f": "Receive push notifications for Discord activities like messages, mentions, friend requests, and events on your device.",
+  "bthGZ2": "Receive push notifications for Discord activities on your device.",
+  "5xWOXl": "Turn on Push Notifications",
+  "SwOsUl": "Turn on notifications",
+  "Xg7bTE": "Don't miss your messages",
+  "/6SnPz": "Your push notifications are off.",
+  "vSb3Bg": "Don't Miss Messages",
   "Gtctho": "Hang out, play games, or just talk. Tap below to get started!",
   "mufH2N": "Channels are places in your server where people can talk about different topics.",
   "Ay9429": "These are your channels",
@@ -25647,7 +25945,13 @@
   "bkqux8": "Heads up!",
   "HEuagI": "or",
   "UmsfHB": "Orange",
+  "KTZrmp": "Maybe Later",
+  "rCbDnp": "Start Earning Orbs",
+  "m84e7e": "Earn from Quests. Spend in Shop. Reward your Play.",
+  "Kf926e": "Orbs are now on mobile",
   "EBYkzs": "Orbs Exclusives",
+  "+T44OT": "Check your balance, earn, and redeem Orbs all in one place.",
+  "ykMHjY": "Your Orbs are here!",
   "bhrgkJ": [
     "Originally known as ",
     [
@@ -25947,6 +26251,14 @@
       "emojiName"
     ],
     " (without pineapple)"
+  ],
+  "BByGU1": [
+    "Answer ",
+    [
+      1,
+      "number"
+    ],
+    " removed"
   ],
   "8DAM+/": "You voted for this answer",
   "qbir+/": "Poll answers",
@@ -30859,6 +31171,30 @@
       "claimDate"
     ]
   ],
+  "UuzHh4": [
+    "Play ",
+    [
+      1,
+      "activityName"
+    ],
+    " in Discord for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes to unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "VYwSSk": [
     "Play any Activity on Discord for ",
     [
@@ -31026,7 +31362,7 @@
     "."
   ],
   "rxf+n5": "Invalid Quest",
-  "ToGcxM": "Launch Activity Quest",
+  "hRIVy8": "Launch Quest in Discord",
   "LLLLPD": "Learn More",
   "nPThNT": "Check For Launches",
   "GXqvCw": [
@@ -31192,6 +31528,19 @@
   "JiosAg": "View Requirements",
   "vTgCW1": "View Reward",
   "SdlRnJ": "No Quests Available",
+  "xHXCyc": [
+    "Play ",
+    [
+      1,
+      "activityName"
+    ],
+    " in Discord for ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "1NaRSk": [
     "Play any Activity on Discord for ",
     [
@@ -31282,6 +31631,7 @@
     ],
     "."
   ],
+  "Ie9++v": "Play Now in Discord",
   "wmOh/v": [
     "Play ",
     [
@@ -33019,6 +33369,9 @@
   "XREf9v": "Allows members to upload files or media in these channels.",
   "WK9r7O": "Allows members to upload files or media in this channel.",
   "OqNY09": "Allows members to permanently ban and delete the message history of other members from this server.",
+  "S2ZE5e": "Allows members to send messages without being affected by slowmode.",
+  "C4t1Xl": "Allows members to send messages in these channels without being affected by slowmode.",
+  "Ha1xb2": "Allows members to send messages in this channel without being affected by slowmode.",
   "b8B++v": "Allows members to change their own nickname, a custom name for just this server.",
   "3GCm/f": "Allows members to join voice channels and hear others.",
   "stA0Hh": "Allows members to join these voice channels and hear others.",
@@ -34493,6 +34846,7 @@
   "96WKND": "Double tap to react emoji",
   "bNqkDw": "Overlay",
   "+U02+v": "General",
+  "GP7JLC": "Careful — you have unsaved changes!",
   "xERCnZ": [
     "Are you sure you want to delete ",
     [
@@ -40062,7 +40416,54 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
-  "wmcDys": "Claim with Orbs",
+  "Sxed/P": "Item will be available immediately in User Profile settings.",
+  "5qdUrK": [
+    [
+      8,
+      "$b",
+      [
+        "Pressing ",
+        "\"",
+        [
+          1,
+          "buyButtonLabel"
+        ],
+        "\" ",
+        "on an item from the Shop means you’re claiming a limited license to use this item on Discord. Learn more in the “Virtual Goods” section ",
+        [
+          8,
+          "$link",
+          [
+            "here"
+          ],
+          [
+            [
+              1,
+              "virtualGoodsURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". By Claiming this item, you agree to the ",
+    [
+      8,
+      "$link",
+      [
+        "Paid Services Terms"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". Orbs redemptions are non-refundable."
+  ],
+  "FhJ74u": "Nitro Credits apply automatically for the stated credit duration, either immediately or, if you have an active Nitro subscription, at the end of your current billing cycle.",
+  "APcKRk": "Once claimed, this badge will be automatically applied to your profile.",
+  "zLch/f": "Redeem Using Orbs",
   "y0WGqK": "Orbs Balance",
   "7gHWra": [
     "Error redeeming ",
@@ -40579,6 +40980,7 @@
   "wiXdER": "Choose 1 game",
   "sUQar6": "Favorite game",
   "SqNnur": "Games in rotation",
+  "gKoO1N": "You must save or reset your changes before closing your profile.",
   "scOKER": "Games I like",
   "bWSQwc": "Want to play",
   "0/xHFB": "Windows",

@@ -1,15 +1,10 @@
 package com.discord.chat.presentation.list;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import androidx.recyclerview.widget.RecyclerView;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class t implements AnimatorUpdateListener {
-   public final SwipeHelper a;
-   public final RecyclerView b;
-
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      SwipeHelper.d(this.a, this.b, var1);
+public final class t implements Function1 {
+   public final Object invoke(Object var1) {
+      return PortalViewUpdate.a((Boolean)var1);
    }
 }

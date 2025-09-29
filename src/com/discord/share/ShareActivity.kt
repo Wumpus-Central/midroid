@@ -25,9 +25,9 @@ public class ShareActivity : ReactActivity {
 
          private final void updateShareProps(Intent var1) {
             if (var1 != null) {
-               val var2: ShareProps.Companion = ShareProps.Companion;
-               val var3: Context = this.getContext();
-               val var6: ShareProps = var2.createShareProps(var1, var3);
+               val var3: ShareProps.Companion = ShareProps.Companion;
+               val var2: Context = this.getContext();
+               val var6: ShareProps = var3.createShareProps(var1, var2);
                this.shareProps = var6;
                var var4: ShareProps = var6;
                if (var6 == null) {
@@ -38,8 +38,8 @@ public class ShareActivity : ReactActivity {
                val var7: java.util.List = var4.getAttachments();
                val var5: ShareActivity = this.this$0;
 
-               for (ShareProps.Attachment var8 : var7) {
-                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var8.getUri()), 1);
+               for (ShareProps.Attachment var9 : var7) {
+                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var9.getUri()), 1);
                }
             }
          }

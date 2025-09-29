@@ -99,20 +99,20 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var6: java.lang.String = this.seeMoreLabel;
-      val var3: Int = this.seeMoreLabelColor;
-      val var5: java.lang.Boolean = this.forceShow;
+      val var3: java.lang.String = this.seeMoreLabel;
+      val var5: Int = this.seeMoreLabelColor;
+      val var6: java.lang.Boolean = this.forceShow;
       val var4: StringBuilder = new StringBuilder();
       var4.append("Truncation(numberOfLines=");
       var4.append(var1);
       var4.append(", expandable=");
       var4.append(var2);
       var4.append(", seeMoreLabel=");
-      var4.append(var6);
-      var4.append(", seeMoreLabelColor=");
       var4.append(var3);
-      var4.append(", forceShow=");
+      var4.append(", seeMoreLabelColor=");
       var4.append(var5);
+      var4.append(", forceShow=");
+      var4.append(var6);
       var4.append(")");
       return var4.toString();
    }

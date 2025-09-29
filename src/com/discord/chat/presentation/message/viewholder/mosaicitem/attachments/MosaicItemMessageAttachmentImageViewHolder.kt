@@ -29,7 +29,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       shouldAutoPlayGif: Boolean
    ) {
       val var25: Attachment = var2.getAttachment();
-      val var22: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var23: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -38,11 +38,11 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var24: java.lang.String = var25.getUrl();
+      val var21: java.lang.String = var25.getUrl();
       val var10: Int = var25.getWidth();
       val var9: Int = var25.getHeight();
-      val var21: java.lang.String = var25.getPlaceholder();
-      val var23: Int = var25.getPlaceholderVersion();
+      val var22: java.lang.String = var25.getPlaceholder();
+      val var24: Int = var25.getPlaceholderVersion();
       val var11: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
@@ -116,11 +116,11 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var24,
+         var21,
          var10,
          var9,
-         var21,
-         var23,
+         var22,
+         var24,
          var17,
          var30,
          var12,
@@ -137,7 +137,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var3 xor true,
          var4,
          var5,
-         var22,
+         var23,
          var29,
          var8,
          var27,

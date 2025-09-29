@@ -80,18 +80,18 @@ internal object IdentifyPayload {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         val var12: JsonObject = var6 as JsonObject;
-         var21 = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         val var8: Array<GuildVersion> = var2.getGuildVersions();
-         var6 = new LinkedHashMap(d.d(L.d(var8.length), 16));
-         var var5: Int = var8.length;
+         var21 = var6 as JsonObject;
+         val var8: java.util.List = CollectionsKt.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var12: Array<GuildVersion> = var2.getGuildVersions();
+         var6 = new LinkedHashMap(d.d(L.d(var12.length), 16));
+         var var5: Int = var12.length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(var8[var3].getId(), g.c(var8[var3].getVersion()));
+            val var24: Pair = s.a(var12[var3].getId(), g.c(var12[var3].getVersion()));
             var6.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put(var12, (java.util.List<java.lang.String>)var21, new JsonObject(var6));
+         var var13: JsonObject = this.put((JsonObject)var21, var8, new JsonObject(var6));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 

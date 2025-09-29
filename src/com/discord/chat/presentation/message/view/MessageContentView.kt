@@ -114,9 +114,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var8: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
+      val var9: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
       var var7: Int = var2.getNumberOfLines();
-      val var9: Boolean = var2.getExpandable();
+      val var8: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -126,15 +126,15 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var8) {
-         if (var8) {
+      if (var3 > var7 || var9) {
+         if (var9) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var9) {
+         if (var8) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
@@ -394,30 +394,30 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 8f: ldc com/discord/span/utilities/spannable/EmojiAccessibilitySpan
          // 91: invokevirtual android/text/SpannableStringBuilder.getSpans (IILjava/lang/Class;)[Ljava/lang/Object;
          // 94: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
-         // 97: astore 6
-         // 99: aload 6
-         // 9b: invokeinterface java/util/Iterator.hasNext ()Z 1
-         // a0: ifeq c7
-         // a3: aload 6
-         // a5: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-         // aa: checkcast com/discord/span/utilities/spannable/EmojiAccessibilitySpan
-         // ad: astore 1
+         // 97: astore 1
+         // 98: aload 1
+         // 99: invokeinterface java/util/Iterator.hasNext ()Z 1
+         // 9e: ifeq c8
+         // a1: aload 1
+         // a2: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+         // a7: checkcast com/discord/span/utilities/spannable/EmojiAccessibilitySpan
+         // aa: astore 6
+         // ac: aload 5
          // ae: aload 5
-         // b0: aload 5
-         // b2: aload 1
-         // b3: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // b6: aload 5
-         // b8: aload 1
+         // b0: aload 6
+         // b2: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
+         // b5: aload 5
+         // b7: aload 6
          // b9: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // bc: aload 1
-         // bd: invokevirtual com/discord/span/utilities/spannable/EmojiAccessibilitySpan.getName ()Ljava/lang/String;
-         // c0: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-         // c3: pop
-         // c4: goto 99
-         // c7: aload 2
-         // c8: aload 5
-         // ca: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.V0 (Ljava/lang/CharSequence;)V
-         // cd: return
+         // bc: aload 6
+         // be: invokevirtual com/discord/span/utilities/spannable/EmojiAccessibilitySpan.getName ()Ljava/lang/String;
+         // c1: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+         // c4: pop
+         // c5: goto 98
+         // c8: aload 2
+         // c9: aload 5
+         // cb: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.V0 (Ljava/lang/CharSequence;)V
+         // ce: return
       }
    }
 }

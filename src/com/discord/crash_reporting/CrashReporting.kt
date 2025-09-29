@@ -9,8 +9,8 @@ import com.discord.logging.Log
 import io.sentry.Hint
 import io.sentry.IScope
 import io.sentry.SentryEvent
+import io.sentry.SentryLevel
 import io.sentry.e
-import io.sentry.e2
 import io.sentry.p1
 import io.sentry.android.core.SentryAndroidOptions
 import io.sentry.android.core.v0
@@ -27,7 +27,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
-@SourceDebugExtension(["SMAP\nCrashReporting.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,196:1\n216#2,2:197\n*S KotlinDebug\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n*L\n178#1:197,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nCrashReporting.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,209:1\n216#2,2:210\n1#3:212\n*S KotlinDebug\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n*L\n189#1:210,2\n*E\n"])
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
       private set
@@ -51,22 +51,22 @@ public object CrashReporting {
    fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
       var3.l(CollectionsKt.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
-      val var5: e2;
+      val var5: SentryLevel;
       if (var4 != 1) {
          if (var4 != 2) {
             throw new n();
          }
 
-         var5 = e2.WARNING;
+         var5 = SentryLevel.WARNING;
       } else {
-         var5 = e2.INFO;
+         var5 = SentryLevel.INFO;
       }
 
       p1.k(var1, var5);
    }
 
    private fun handleBeforeSend(context: Context, event: SentryEvent): SentryEvent {
-      if (var2.r0() === e2.FATAL) {
+      if (var2.r0() === SentryLevel.FATAL) {
          SystemLogReport.INSTANCE.recordSentryCrash(var1, var2);
       }
 
@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("9bd96382-c915-46f9-ab4d-6bd316f1739f");
+      var5.setProguardUuid("9f116d05-a4a0-42a6-b330-9460e4645071");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -100,16 +100,41 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = L.h(), breadcrumbCategory: String? = null) {
-      val var4: e = new e(var1);
+   public fun addBreadcrumb(
+      breadcrumbMessage: String,
+      breadcrumbData: Map<String, String> = L.h(),
+      breadcrumbCategory: String? = null,
+      level: com.discord.crash_reporting.CrashReporting.BreadcrumbLevel? = null
+   ) {
+      val var5: e = new e(var1);
 
       for (Entry var6 : var2.entrySet()) {
-         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+         var5.p(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
-      var4.n(var3);
+      var5.o(var3);
+      if (var4 != null) {
+         var5.q(INSTANCE.breadcrumbLevelToSentryLevel(var4));
+      }
+
       Log.i$default(Log.INSTANCE, "SentryBreadcrumb", var1, null, 4, null);
-      p1.e(var4);
+      p1.e(var5);
+   }
+
+   public fun breadcrumbLevelToSentryLevel(level: com.discord.crash_reporting.CrashReporting.BreadcrumbLevel): SentryLevel {
+      val var2: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$1[var1.ordinal()];
+      val var3: SentryLevel;
+      if (var2 != 1) {
+         if (var2 != 2) {
+            throw new n();
+         }
+
+         var3 = SentryLevel.ERROR;
+      } else {
+         var3 = SentryLevel.WARNING;
+      }
+
+      return var3;
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
@@ -158,20 +183,20 @@ public object CrashReporting {
    }
 
    public fun init(context: Context, releaseName: String) {
-      val var3: ClientInfo = ClientInfo.INSTANCE;
+      val var4: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var4: java.lang.String = Build.DEVICE;
-         if (StringsKt.N(var4, "vivo", false, 2, null)) {
+         val var3: java.lang.String = Build.DEVICE;
+         if (StringsKt.N(var3, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
+      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var3.isProdBuild()) {
+      } else if (!var4.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
@@ -179,6 +204,26 @@ public object CrashReporting {
 
       v0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
       isCrashedLastRun = p1.v();
+   }
+
+   public enum class BreadcrumbLevel {
+      ERROR,
+      WARNING      @JvmStatic
+      private EnumEntries $ENTRIES;
+      @JvmStatic
+      private CrashReporting.BreadcrumbLevel[] $VALUES;
+
+      @JvmStatic
+      fun {
+         val var0: Array<CrashReporting.BreadcrumbLevel> = $values();
+         $VALUES = var0;
+         $ENTRIES = G9.a.a(var0);
+      }
+
+      @JvmStatic
+      fun getEntries(): EnumEntries {
+         return $ENTRIES;
+      }
    }
 
    public enum class ErrorLevel {

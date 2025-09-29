@@ -263,15 +263,15 @@ public data class PollAnswerAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = MessageId.hashCode-impl(this.messageId);
-      val var5: Int = this.resources.hashCode();
-      val var11: Int = this.answer.hashCode();
-      val var6: Int = this.attachments.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.canTapAnswers);
-      val var3: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
-      val var4: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
+      val var9: Int = MessageId.hashCode-impl(this.messageId);
+      val var6: Int = this.resources.hashCode();
+      val var7: Int = this.answer.hashCode();
+      val var3: Int = this.attachments.hashCode();
+      val var11: Int = java.lang.Boolean.hashCode(this.canTapAnswers);
+      val var4: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
+      val var5: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
       val var8: Int = java.lang.Boolean.hashCode(this.hasVoted);
-      val var7: Int = java.lang.Boolean.hashCode(this.isExpired);
+      val var10: Int = java.lang.Boolean.hashCode(this.isExpired);
       var var2: Int = 0;
       val var1: Int;
       if (this.myAvatarUrl == null) {
@@ -295,18 +295,18 @@ public data class PollAnswerAccessory(messageId: MessageId,
                                                                      (
                                                                               (
                                                                                        (
-                                                                                                ((((var10 * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var9)
+                                                                                                ((((var9 * 31 + var6) * 31 + var7) * 31 + var3) * 31 + var11)
                                                                                                       * 31
-                                                                                                   + var3
+                                                                                                   + var4
                                                                                              )
                                                                                              * 31
-                                                                                          + var4
+                                                                                          + var5
                                                                                     )
                                                                                     * 31
                                                                                  + var8
                                                                            )
                                                                            * 31
-                                                                        + var7
+                                                                        + var10
                                                                   )
                                                                   * 31
                                                                + var1
@@ -331,56 +331,56 @@ public data class PollAnswerAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var17: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var16: PollResources = this.resources;
-      val var13: PollAnswer = this.answer;
-      val var9: java.util.List = this.attachments;
+      val var12: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var15: PollResources = this.resources;
+      val var10: PollAnswer = this.answer;
+      val var16: java.util.List = this.attachments;
       val var2: Boolean = this.canTapAnswers;
-      val var4: Boolean = this.canSelectMultipleAnswers;
-      val var7: Boolean = this.canShowVoteCounts;
-      val var8: Boolean = this.hasVoted;
-      val var3: Boolean = this.isExpired;
-      val var11: java.lang.String = this.myAvatarUrl;
-      val var12: PollChatAnswerInteractionType = this.interactionType;
+      val var5: Boolean = this.canSelectMultipleAnswers;
+      val var3: Boolean = this.canShowVoteCounts;
+      val var7: Boolean = this.hasVoted;
+      val var1: Boolean = this.isExpired;
+      val var9: java.lang.String = this.myAvatarUrl;
+      val var11: PollChatAnswerInteractionType = this.interactionType;
       val var14: java.lang.String = this.tapAccessibilityLabel;
-      val var5: Boolean = this.shouldAnimateTransition;
+      val var4: Boolean = this.shouldAnimateTransition;
       val var6: Boolean = this.shouldAnimateEmoji;
-      val var1: Boolean = this.shouldAutoPlayGifs;
-      val var15: PollStyleSet = this.styleSet;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("PollAnswerAccessory(messageId=");
-      var10.append(var17);
-      var10.append(", resources=");
-      var10.append(var16);
-      var10.append(", answer=");
-      var10.append(var13);
-      var10.append(", attachments=");
-      var10.append(var9);
-      var10.append(", canTapAnswers=");
-      var10.append(var2);
-      var10.append(", canSelectMultipleAnswers=");
-      var10.append(var4);
-      var10.append(", canShowVoteCounts=");
-      var10.append(var7);
-      var10.append(", hasVoted=");
-      var10.append(var8);
-      var10.append(", isExpired=");
-      var10.append(var3);
-      var10.append(", myAvatarUrl=");
-      var10.append(var11);
-      var10.append(", interactionType=");
-      var10.append(var12);
-      var10.append(", tapAccessibilityLabel=");
-      var10.append(var14);
-      var10.append(", shouldAnimateTransition=");
-      var10.append(var5);
-      var10.append(", shouldAnimateEmoji=");
-      var10.append(var6);
-      var10.append(", shouldAutoPlayGifs=");
-      var10.append(var1);
-      var10.append(", styleSet=");
-      var10.append(var15);
-      var10.append(")");
-      return var10.toString();
+      val var8: Boolean = this.shouldAutoPlayGifs;
+      val var13: PollStyleSet = this.styleSet;
+      val var17: StringBuilder = new StringBuilder();
+      var17.append("PollAnswerAccessory(messageId=");
+      var17.append(var12);
+      var17.append(", resources=");
+      var17.append(var15);
+      var17.append(", answer=");
+      var17.append(var10);
+      var17.append(", attachments=");
+      var17.append(var16);
+      var17.append(", canTapAnswers=");
+      var17.append(var2);
+      var17.append(", canSelectMultipleAnswers=");
+      var17.append(var5);
+      var17.append(", canShowVoteCounts=");
+      var17.append(var3);
+      var17.append(", hasVoted=");
+      var17.append(var7);
+      var17.append(", isExpired=");
+      var17.append(var1);
+      var17.append(", myAvatarUrl=");
+      var17.append(var9);
+      var17.append(", interactionType=");
+      var17.append(var11);
+      var17.append(", tapAccessibilityLabel=");
+      var17.append(var14);
+      var17.append(", shouldAnimateTransition=");
+      var17.append(var4);
+      var17.append(", shouldAnimateEmoji=");
+      var17.append(var6);
+      var17.append(", shouldAutoPlayGifs=");
+      var17.append(var8);
+      var17.append(", styleSet=");
+      var17.append(var13);
+      var17.append(")");
+      return var17.toString();
    }
 }

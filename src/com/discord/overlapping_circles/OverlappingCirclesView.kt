@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var10: Context = this.getContext();
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
                val var9: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var10.getUri(var9));
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -328,7 +328,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/p.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokestatic com/discord/chat/presentation/list/s.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

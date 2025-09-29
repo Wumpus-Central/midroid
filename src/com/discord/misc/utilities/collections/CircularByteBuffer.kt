@@ -212,16 +212,16 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 09: aload 0
       // 0a: getfield com/discord/misc/utilities/collections/CircularByteBuffer.lines Lkotlin/collections/ArrayDeque;
       // 0d: invokevirtual kotlin/collections/e.size ()I
-      // 10: istore 3
+      // 10: istore 2
       // 11: aload 0
       // 12: getfield com/discord/misc/utilities/collections/CircularByteBuffer.size I
-      // 15: istore 2
+      // 15: istore 3
       // 16: aload 0
       // 17: getfield com/discord/misc/utilities/collections/CircularByteBuffer.maxByteCount I
       // 1a: istore 4
       // 1c: iload 4
       // 1e: ifle 2b
-      // 21: iload 2
+      // 21: iload 3
       // 22: i2f
       // 23: iload 4
       // 25: i2f
@@ -233,8 +233,8 @@ public class CircularByteBuffer(maxByteCount: Int) {
       // 2d: goto 28
       // 30: new com/discord/misc/utilities/collections/CircularByteBuffer$BufferStats
       // 33: dup
-      // 34: iload 3
-      // 35: iload 2
+      // 34: iload 2
+      // 35: iload 3
       // 36: iload 4
       // 38: fload 1
       // 39: aload 0
@@ -343,24 +343,24 @@ public class CircularByteBuffer(maxByteCount: Int) {
       }
 
       public override fun toString(): String {
-         val var1: Int = this.linesCount;
-         val var2: Int = this.bytesUsed;
-         val var3: Int = this.bytesCapacity;
+         val var5: Int = this.linesCount;
+         val var3: Int = this.bytesUsed;
+         val var1: Int = this.bytesCapacity;
          val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
          val var8: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
-         val var5: Int = this.headPosition;
+         val var2: Int = this.headPosition;
          val var4: Int = this.tailPosition;
          val var7: StringBuilder = new StringBuilder();
          var7.append("BufferStats(lines=");
-         var7.append(var1);
+         var7.append(var5);
          var7.append(", used=");
-         var7.append(var2);
-         var7.append("B/");
          var7.append(var3);
+         var7.append("B/");
+         var7.append(var1);
          var7.append("B (");
          var7.append(var8);
          var7.append("%), head=");
-         var7.append(var5);
+         var7.append(var2);
          var7.append(", tail=");
          var7.append(var4);
          var7.append(")");
