@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -60,18 +60,18 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.channelId;
       val var3: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.summaryId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSummaryJumpData(channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(", summaryId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.summaryId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapSummaryJumpData(channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(", summaryId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -61,9 +61,9 @@ public class PromiseWrapper(promise: Promise,
 
    public open fun reject(code: String, message: String?, throwable: Throwable?) {
       val var6: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, var2, var3, null)) as PromiseWrapper.Rejection;
-      val var5: Promise = this.promise;
-      val var7: java.lang.String = var6.getCode();
-      var5.reject(var7, var6.getMessage(), var6.getThrowable());
+      val var7: Promise = this.promise;
+      var1 = var6.getCode();
+      var7.reject(var1, var6.getMessage(), var6.getThrowable());
    }
 
    public open fun reject(code: String?, message: String?, throwable: Throwable?, userInfo: WritableMap?) {
@@ -72,19 +72,19 @@ public class PromiseWrapper(promise: Promise,
    }
 
    public open fun reject(code: String, throwable: Throwable?) {
-      val var6: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, var2, null)) as PromiseWrapper.Rejection;
-      val var3: Promise = this.promise;
-      var1 = var6.getCode();
-      var3.reject(var1, var6.getThrowable());
+      val var5: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, var2, null)) as PromiseWrapper.Rejection;
+      val var6: Promise = this.promise;
+      val var3: java.lang.String = var5.getCode();
+      var6.reject(var3, var5.getThrowable());
    }
 
    public open fun reject(code: String, throwable: Throwable?, userInfo: WritableMap) {
       val var4: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, var2, var3)) as PromiseWrapper.Rejection;
-      val var6: Promise = this.promise;
-      val var7: java.lang.String = var4.getCode();
-      val var8: java.lang.Throwable = var4.getThrowable();
+      val var7: Promise = this.promise;
+      val var8: java.lang.String = var4.getCode();
+      val var6: java.lang.Throwable = var4.getThrowable();
       val var9: WritableMap = var4.getUserInfo();
-      var6.reject(var7, var8, var9);
+      var7.reject(var8, var6, var9);
    }
 
    public open fun reject(throwable: Throwable) {

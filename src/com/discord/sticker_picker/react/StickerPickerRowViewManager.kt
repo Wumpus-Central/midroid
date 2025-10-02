@@ -1,6 +1,6 @@
 package com.discord.sticker_picker.react
 
-import A9.s
+import B9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.sticker_picker.StickerPickerRowView
 import com.discord.sticker_picker.react_events.OnLongPressStickerEvent

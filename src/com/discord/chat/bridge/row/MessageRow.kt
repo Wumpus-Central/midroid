@@ -9,7 +9,7 @@ import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.bridge.truncation.Truncation
 import com.discord.chat.presentation.root.MessageContextType
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class MessageRow(index: Int,
@@ -297,53 +297,53 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var6: ChangeType = this.changeType;
-      val var15: java.lang.Boolean = this.jumped;
-      val var5: MessageBase = this.message;
-      val var12: java.lang.Boolean = this.canAddNewReactions;
+      val var14: ChangeType = this.changeType;
+      val var9: java.lang.Boolean = this.jumped;
+      val var3: MessageBase = this.message;
+      val var16: java.lang.Boolean = this.canAddNewReactions;
       val var4: java.lang.String = this.addReactionLabel;
-      val var3: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var8: ReactionsTheme = this.reactionsTheme;
+      val var10: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var12: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var13: MessageFrame = this.messageFrame;
-      val var14: Int = this.reactTag;
-      val var10: Truncation = this.truncation;
-      val var7: BackgroundHighlight = this.backgroundHighlight;
-      val var9: SwipeActionsType = this.swipeActions;
-      val var11: MessageContextType = this.contextType;
-      val var16: StringBuilder = new StringBuilder();
-      var16.append("MessageRow(index=");
-      var16.append(var1);
-      var16.append(", changeType=");
-      var16.append(var6);
-      var16.append(", jumped=");
-      var16.append(var15);
-      var16.append(", message=");
-      var16.append(var5);
-      var16.append(", canAddNewReactions=");
-      var16.append(var12);
-      var16.append(", addReactionLabel=");
-      var16.append(var4);
-      var16.append(", addNewReactionAccessibilityLabel=");
-      var16.append(var3);
-      var16.append(", reactionsTheme=");
-      var16.append(var8);
-      var16.append(", renderContentOnly=");
-      var16.append(var2);
-      var16.append(", messageFrame=");
-      var16.append(var13);
-      var16.append(", reactTag=");
-      var16.append(var14);
-      var16.append(", truncation=");
-      var16.append(var10);
-      var16.append(", backgroundHighlight=");
-      var16.append(var7);
-      var16.append(", swipeActions=");
-      var16.append(var9);
-      var16.append(", contextType=");
-      var16.append(var11);
-      var16.append(")");
-      return var16.toString();
+      val var8: MessageFrame = this.messageFrame;
+      val var13: Int = this.reactTag;
+      val var11: Truncation = this.truncation;
+      val var15: BackgroundHighlight = this.backgroundHighlight;
+      val var5: SwipeActionsType = this.swipeActions;
+      val var7: MessageContextType = this.contextType;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MessageRow(index=");
+      var6.append(var1);
+      var6.append(", changeType=");
+      var6.append(var14);
+      var6.append(", jumped=");
+      var6.append(var9);
+      var6.append(", message=");
+      var6.append(var3);
+      var6.append(", canAddNewReactions=");
+      var6.append(var16);
+      var6.append(", addReactionLabel=");
+      var6.append(var4);
+      var6.append(", addNewReactionAccessibilityLabel=");
+      var6.append(var10);
+      var6.append(", reactionsTheme=");
+      var6.append(var12);
+      var6.append(", renderContentOnly=");
+      var6.append(var2);
+      var6.append(", messageFrame=");
+      var6.append(var8);
+      var6.append(", reactTag=");
+      var6.append(var13);
+      var6.append(", truncation=");
+      var6.append(var11);
+      var6.append(", backgroundHighlight=");
+      var6.append(var15);
+      var6.append(", swipeActions=");
+      var6.append(var5);
+      var6.append(", contextType=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

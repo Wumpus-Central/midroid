@@ -132,11 +132,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var9.bind(var6, var10, var4, this.reactionsTheme);
       } else {
          if (var1 !is AddReactionViewHolder) {
-            val var15: Class = var1.getClass();
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("Invalid view holder type ");
-            var12.append(var15);
-            throw new IllegalStateException(var12.toString().toString());
+            val var12: Class = var1.getClass();
+            val var15: StringBuilder = new StringBuilder();
+            var15.append("Invalid view holder type ");
+            var15.append(var12);
+            throw new IllegalStateException(var15.toString().toString());
          }
 
          val var20: AddReactionViewHolder = var1 as AddReactionViewHolder;
@@ -166,9 +166,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var3: ThemeManager = ThemeManager.INSTANCE;
-      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var3.setThemeOverride(this.theme);
+      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var4.setThemeOverride(this.theme);
       val var8: Any;
       if (var2 != 46) {
          if (var2 != 47) {
@@ -189,7 +189,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var8 = new ReactionViewHolder(var11);
       }
 
-      var3.setThemeOverride(var4);
+      var4.setThemeOverride(var3);
       return (RecyclerView.ViewHolder)var8;
    }
 

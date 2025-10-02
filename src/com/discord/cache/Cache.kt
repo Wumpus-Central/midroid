@@ -1,6 +1,6 @@
 package com.discord.cache
 
-import A9.j
+import B9.j
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
@@ -33,7 +33,7 @@ public class Cache(reactContext: Context) {
    init {
       this.sharedPrefs$delegate = j.b(new a(var1));
       this.fastCacheSharedPrefs$delegate = j.b(new b(var1));
-      E9.a.b(false, false, null, null, 0, new c(this), 31, null);
+      F9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic
@@ -85,8 +85,8 @@ public class Cache(reactContext: Context) {
             val var5: Editor = var2.edit();
             var5.putBoolean("initialized", true);
 
-            for (java.lang.String var4 : var3) {
-               var5.putString(var4, this.getSharedPrefs().getString(var4, null));
+            for (java.lang.String var7 : var3) {
+               var5.putString(var7, this.getSharedPrefs().getString(var7, null));
             }
 
             var5.apply();

@@ -4,7 +4,7 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import mb.g
+import nb.g
 
 @g(with = UserSearchData.Serializer::class)
 internal sealed class UserSearchData protected constructor() {
@@ -14,13 +14,13 @@ internal sealed class UserSearchData protected constructor() {
       }
    }
 
-   internal object Serializer : qb.d(UserSearchData::class) {
+   internal object Serializer : rb.d(UserSearchData::class) {
       protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<UserSearchData> {
          var var6: java.lang.String;
          label34: {
-            val var3: JsonElement = qb.g.o(var1).get("type") as JsonElement;
+            val var3: JsonElement = rb.g.o(var1).get("type") as JsonElement;
             if (var3 != null) {
-               val var5: JsonPrimitive = qb.g.p(var3);
+               val var5: JsonPrimitive = rb.g.p(var3);
                if (var5 != null) {
                   var6 = var5.a();
                   break label34;

@@ -9,6 +9,6 @@ public final class e implements Function1 {
    public final Embed d;
 
    public final Object invoke(Object var1) {
-      return NotificationDataUtilsKt.l(this.d, (RenderContext)var1);
+      return NotificationDataUtilsKt.m(this.d, (RenderContext)var1);
    }
 }

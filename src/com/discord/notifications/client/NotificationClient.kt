@@ -1,6 +1,6 @@
 package com.discord.notifications.client
 
-import A9.s
+import B9.s
 import T1.a
 import T1.b
 import android.content.Context
@@ -71,23 +71,23 @@ public class NotificationClient {
       // 024: invokestatic androidx/core/app/NotificationManagerCompat.g (Landroid/content/Context;)Landroidx/core/app/NotificationManagerCompat;
       // 027: invokevirtual androidx/core/app/NotificationManagerCompat.a ()Z
       // 02a: istore 5
-      // 02c: new qb/p
+      // 02c: new rb/p
       // 02f: astore 1
       // 030: aload 1
-      // 031: invokespecial qb/p.<init> ()V
+      // 031: invokespecial rb/p.<init> ()V
       // 034: aload 1
       // 035: ldc "push_action_type"
       // 037: aload 2
       // 038: invokevirtual com/discord/notifications/api/NotificationData.getType ()Ljava/lang/String;
-      // 03b: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 03e: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 03b: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 03e: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 041: pop
       // 042: aload 1
       // 043: ldc "os_enabled"
       // 045: iload 5
       // 047: invokestatic java/lang/Boolean.valueOf (Z)Ljava/lang/Boolean;
-      // 04a: invokestatic qb/g.b (Ljava/lang/Boolean;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 04d: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 04a: invokestatic rb/g.b (Ljava/lang/Boolean;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 04d: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 050: pop
       // 051: aload 2
       // 052: invokevirtual com/discord/notifications/api/NotificationData.getTimeReceived ()Ljava/lang/String;
@@ -97,14 +97,14 @@ public class NotificationClient {
       // 05c: aload 1
       // 05d: ldc "timestamp"
       // 05f: aload 7
-      // 061: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 064: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 061: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 064: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 067: pop
       // 068: goto 073
       // 06b: astore 1
-      // 06c: goto 263
+      // 06c: goto 264
       // 06f: astore 1
-      // 070: goto 243
+      // 070: goto 244
       // 073: aload 2
       // 074: invokevirtual com/discord/notifications/api/NotificationData.getNotifTypeId ()Ljava/lang/String;
       // 077: astore 7
@@ -113,8 +113,8 @@ public class NotificationClient {
       // 07e: aload 1
       // 07f: ldc "notif_type_id"
       // 081: aload 7
-      // 083: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 086: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 083: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 086: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 089: pop
       // 08a: aload 2
       // 08b: invokevirtual com/discord/notifications/api/NotificationData.getNotifInstanceId ()Ljava/lang/String;
@@ -124,8 +124,8 @@ public class NotificationClient {
       // 095: aload 1
       // 096: ldc "notif_instance_id"
       // 098: aload 7
-      // 09a: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 09d: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 09a: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 09d: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 0a0: pop
       // 0a1: aload 2
       // 0a2: invokevirtual com/discord/notifications/api/NotificationData.getJoinId ()Ljava/lang/String;
@@ -135,8 +135,8 @@ public class NotificationClient {
       // 0ac: aload 1
       // 0ad: ldc "join_id"
       // 0af: aload 7
-      // 0b1: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 0b4: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 0b1: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 0b4: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 0b7: pop
       // 0b8: aload 2
       // 0b9: invokevirtual com/discord/notifications/api/NotificationData.getUserId-wUX8bhU ()Lcom/discord/primitives/UserId;
@@ -148,8 +148,8 @@ public class NotificationClient {
       // 0c6: aload 7
       // 0c8: invokevirtual com/discord/primitives/UserId.unbox-impl ()J
       // 0cb: invokestatic com/discord/primitives/UserId.toString-impl (J)Ljava/lang/String;
-      // 0ce: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 0d1: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 0ce: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 0d1: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 0d4: pop
       // 0d5: aload 2
       // 0d6: invokevirtual com/discord/notifications/api/NotificationData.getReceivingUserId-wUX8bhU ()Lcom/discord/primitives/UserId;
@@ -161,8 +161,8 @@ public class NotificationClient {
       // 0e4: aload 7
       // 0e6: invokevirtual com/discord/primitives/UserId.unbox-impl ()J
       // 0e9: invokestatic com/discord/primitives/UserId.toString-impl (J)Ljava/lang/String;
-      // 0ec: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 0ef: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 0ec: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 0ef: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 0f2: pop
       // 0f3: aload 2
       // 0f4: invokevirtual com/discord/notifications/api/NotificationData.getMessageId-N_6c4I0 ()Ljava/lang/String;
@@ -175,8 +175,8 @@ public class NotificationClient {
       // 104: invokestatic com/discord/primitives/MessageId.box-impl (Ljava/lang/String;)Lcom/discord/primitives/MessageId;
       // 107: invokevirtual com/discord/primitives/MessageId.unbox-impl ()Ljava/lang/String;
       // 10a: invokestatic com/discord/primitives/MessageId.toString-impl (Ljava/lang/String;)Ljava/lang/String;
-      // 10d: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 110: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 10d: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 110: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 113: pop
       // 114: aload 2
       // 115: invokevirtual com/discord/notifications/api/NotificationData.getMessageType ()Ljava/lang/Integer;
@@ -188,8 +188,8 @@ public class NotificationClient {
       // 123: aload 7
       // 125: invokevirtual java/lang/Number.intValue ()I
       // 128: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 12b: invokestatic qb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 12e: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 12b: invokestatic rb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 12e: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 131: pop
       // 132: aload 2
       // 133: invokevirtual com/discord/notifications/api/NotificationData.getGuildId-qOKuAAo ()Lcom/discord/primitives/GuildId;
@@ -201,8 +201,8 @@ public class NotificationClient {
       // 141: aload 7
       // 143: invokevirtual com/discord/primitives/GuildId.unbox-impl ()J
       // 146: invokestatic com/discord/primitives/GuildId.toString-impl (J)Ljava/lang/String;
-      // 149: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 14c: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 149: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 14c: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 14f: pop
       // 150: aload 2
       // 151: invokevirtual com/discord/notifications/api/NotificationData.getChannelId-qMVnFVQ ()Lcom/discord/primitives/ChannelId;
@@ -214,8 +214,8 @@ public class NotificationClient {
       // 15f: aload 7
       // 161: invokevirtual com/discord/primitives/ChannelId.unbox-impl ()J
       // 164: invokestatic com/discord/primitives/ChannelId.toString-impl (J)Ljava/lang/String;
-      // 167: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 16a: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 167: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 16a: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 16d: pop
       // 16e: aload 2
       // 16f: invokevirtual com/discord/notifications/api/NotificationData.getChannelType ()Ljava/lang/Integer;
@@ -227,8 +227,8 @@ public class NotificationClient {
       // 17d: aload 7
       // 17f: invokevirtual java/lang/Number.intValue ()I
       // 182: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 185: invokestatic qb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 188: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 185: invokestatic rb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 188: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 18b: pop
       // 18c: aload 2
       // 18d: invokevirtual com/discord/notifications/api/NotificationData.getRelationshipType ()Ljava/lang/Integer;
@@ -240,8 +240,8 @@ public class NotificationClient {
       // 19b: aload 7
       // 19d: invokevirtual java/lang/Number.intValue ()I
       // 1a0: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-      // 1a3: invokestatic qb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 1a6: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 1a3: invokestatic rb/g.c (Ljava/lang/Number;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 1a6: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 1a9: pop
       // 1aa: aload 2
       // 1ab: invokevirtual com/discord/notifications/api/NotificationData.getMentionType ()Ljava/lang/String;
@@ -251,8 +251,8 @@ public class NotificationClient {
       // 1b5: aload 1
       // 1b6: ldc_w "mention_type"
       // 1b9: aload 7
-      // 1bb: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 1be: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 1bb: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 1be: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 1c1: pop
       // 1c2: aload 2
       // 1c3: invokevirtual com/discord/notifications/api/NotificationData.getAppState ()Ljava/lang/String;
@@ -262,11 +262,11 @@ public class NotificationClient {
       // 1cb: aload 1
       // 1cc: ldc_w "app_state"
       // 1cf: aload 2
-      // 1d0: invokestatic qb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 1d3: invokevirtual qb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
+      // 1d0: invokestatic rb/g.d (Ljava/lang/String;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 1d3: invokevirtual rb/p.b (Ljava/lang/String;Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonElement;
       // 1d6: pop
       // 1d7: aload 1
-      // 1d8: invokevirtual qb/p.a ()Lkotlinx/serialization/json/JsonObject;
+      // 1d8: invokevirtual rb/p.a ()Lkotlinx/serialization/json/JsonObject;
       // 1db: astore 2
       // 1dc: new java/io/FileOutputStream
       // 1df: astore 7
@@ -283,13 +283,13 @@ public class NotificationClient {
       // 1f6: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
       // 1f9: astore 6
       // 1fb: aload 6
-      // 1fd: invokeinterface mb/f.a ()Lsb/b; 1
+      // 1fd: invokeinterface nb/f.a ()Ltb/b; 1
       // 202: pop
       // 203: aload 6
       // 205: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
       // 208: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
       // 20b: aload 2
-      // 20c: invokeinterface mb/n.c (Lmb/i;Ljava/lang/Object;)Ljava/lang/String; 3
+      // 20c: invokeinterface nb/n.c (Lnb/i;Ljava/lang/Object;)Ljava/lang/String; 3
       // 211: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
       // 214: invokevirtual java/lang/String.getBytes (Ljava/nio/charset/Charset;)[B
       // 217: astore 2
@@ -306,37 +306,37 @@ public class NotificationClient {
       // 22d: astore 2
       // 22e: aload 1
       // 22f: aconst_null
-      // 230: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 233: goto 260
-      // 236: astore 2
-      // 237: aload 2
-      // 238: athrow
-      // 239: astore 6
-      // 23b: aload 1
-      // 23c: aload 2
-      // 23d: invokestatic K9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 240: aload 6
-      // 242: athrow
-      // 243: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 246: astore 2
-      // 247: ldc com/discord/notifications/client/NotificationClient
-      // 249: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
-      // 24c: astore 6
-      // 24e: aload 6
-      // 250: ldc_w "getSimpleName(...)"
-      // 253: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 256: aload 2
-      // 257: aload 6
-      // 259: ldc_w "Error appending notification to cache file"
-      // 25c: aload 1
-      // 25d: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-      // 260: aload 0
-      // 261: monitorexit
-      // 262: return
-      // 263: aload 0
-      // 264: monitorexit
-      // 265: aload 1
-      // 266: athrow
+      // 230: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 233: goto 261
+      // 236: astore 6
+      // 238: aload 6
+      // 23a: athrow
+      // 23b: astore 2
+      // 23c: aload 1
+      // 23d: aload 6
+      // 23f: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 242: aload 2
+      // 243: athrow
+      // 244: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
+      // 247: astore 2
+      // 248: ldc com/discord/notifications/client/NotificationClient
+      // 24a: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
+      // 24d: astore 6
+      // 24f: aload 6
+      // 251: ldc_w "getSimpleName(...)"
+      // 254: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 257: aload 2
+      // 258: aload 6
+      // 25a: ldc_w "Error appending notification to cache file"
+      // 25d: aload 1
+      // 25e: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+      // 261: aload 0
+      // 262: monitorexit
+      // 263: return
+      // 264: aload 0
+      // 265: monitorexit
+      // 266: aload 1
+      // 267: athrow
    }
 
    private fun getBehaviors(context: Context): NotificationBehaviors? {
@@ -446,13 +446,13 @@ public class NotificationClient {
                if (var8 != null) {
                   var var6: Long;
                   var var13: java.lang.String;
-                  var var14: java.lang.String;
-                  var var15: PushNotificationMonitor;
+                  var var14: PushNotificationMonitor;
+                  var var15: java.lang.String;
                   try {
-                     var15 = PushNotificationMonitor.INSTANCE;
+                     var14 = PushNotificationMonitor.INSTANCE;
                      var13 = var2.getType();
                      var6 = System.currentTimeMillis();
-                     var14 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
+                     var15 = NotificationDataUtilsKt.getTitle(var2, var1).toString();
                      var74 = NotificationDataUtilsKt.getContent(var2, var1, true);
                   } catch (var30: Exception) {
                      val var54: Log = Log.INSTANCE;
@@ -499,7 +499,7 @@ public class NotificationClient {
                   }
 
                   try {
-                     var15.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var13, var14, var75, var16, var10));
+                     var14.logPushNotification(var1, var8, new PushNotificationMeta(var6, var5 xor true, var13, var15, var75, var16, var10));
                   } catch (var26: Exception) {
                      val var58: Log = Log.INSTANCE;
                      val var41: java.lang.String = NotificationClient.class.getSimpleName();
@@ -571,14 +571,14 @@ public class NotificationClient {
                         return;
                      }
 
-                     var var47: java.lang.String = null;
+                     var var50: java.lang.String = null;
                      if (var84 != null) {
                         try {
-                           var47 = GuildId.toString-impl(var84.unbox-impl());
+                           var50 = GuildId.toString-impl(var84.unbox-impl());
                         } catch (var20: Exception) {
                            val var66: Log = Log.INSTANCE;
-                           val var48: java.lang.String = NotificationClient.class.getSimpleName();
-                           var66.e(var48, "Unable to display notification", var20);
+                           val var47: java.lang.String = NotificationClient.class.getSimpleName();
+                           var66.e(var47, "Unable to display notification", var20);
                            return;
                         }
                      }
@@ -588,11 +588,11 @@ public class NotificationClient {
                         val var77: java.lang.String = MessageId.toString-impl(var76);
                         val var81: kotlinx.serialization.json.Json.a = Json.d;
                         Json.d.a();
-                        DiscordMobileApi.putMessage(var65, var47, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
+                        DiscordMobileApi.putMessage(var65, var50, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
                      } catch (var19: Exception) {
                         val var67: Log = Log.INSTANCE;
-                        val var49: java.lang.String = NotificationClient.class.getSimpleName();
-                        var67.e(var49, "Unable to display notification", var19);
+                        val var48: java.lang.String = NotificationClient.class.getSimpleName();
+                        var67.e(var48, "Unable to display notification", var19);
                         return;
                      }
                   }
@@ -604,8 +604,8 @@ public class NotificationClient {
                   }
                } catch (var18: Exception) {
                   val var68: Log = Log.INSTANCE;
-                  val var50: java.lang.String = NotificationClient.class.getSimpleName();
-                  var68.e(var50, "Unable to display notification", var18);
+                  val var49: java.lang.String = NotificationClient.class.getSimpleName();
+                  var68.e(var49, "Unable to display notification", var18);
                }
             }
          }
@@ -702,17 +702,17 @@ public class NotificationClient {
    }
 
    public fun markNotificationAsDirectReply(context: Context, channelId: Long) {
-      val var4: NotificationRenderer = this.renderer;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MESSAGE_CREATE");
-      var5.append(var2);
-      var4.markNotificationAsDirectReply(var1, var5.toString(), "", true);
+      val var5: NotificationRenderer = this.renderer;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MESSAGE_CREATE");
+      var4.append(var2);
+      var5.markNotificationAsDirectReply(var1, var4.toString(), "", true);
    }
 
    public fun onDirectReplySuccess(context: Context, data: String) {
       val var3: NotificationData = DirectReplyMessage.Companion.toNotificationData(var2);
-      val var5: Pair = s.a("type", var3.getType());
-      val var4: Pair = s.a("channel_id", java.lang.String.valueOf(var3.getChannelId-qMVnFVQ()));
+      val var4: Pair = s.a("type", var3.getType());
+      val var5: Pair = s.a("channel_id", java.lang.String.valueOf(var3.getChannelId-qMVnFVQ()));
       var2 = var3.getMessageId-N_6c4I0();
       if (var2 == null) {
          var2 = "null";
@@ -720,14 +720,14 @@ public class NotificationClient {
          var2 = MessageId.toString-impl(var2);
       }
 
-      this.showNotification(var1, var3, L.l(new Pair[]{var5, var4, s.a("message_id", var2)}), false);
+      this.showNotification(var1, var3, L.l(new Pair[]{var4, var5, s.a("message_id", var2)}), false);
    }
 
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
-      val var6: tb.a.a = tb.a.b;
-      val var5: KSerializer = NotificationData.Companion.serializer();
-      val var4: java.util.Map = L.x(var2);
-      var4.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
+      val var5: ub.a.a = ub.a.b;
+      val var4: KSerializer = NotificationData.Companion.serializer();
+      val var6: java.util.Map = L.x(var2);
+      var6.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
       val var3: java.lang.String;
       if (this.shouldDisplayNotification.invoke() as java.lang.Boolean) {
          var3 = "background";
@@ -735,8 +735,8 @@ public class NotificationClient {
          var3 = "active";
       }
 
-      var4.put("app_state", var3);
-      val var8: NotificationData = var6.d(var5, var4) as NotificationData;
+      var6.put("app_state", var3);
+      val var8: NotificationData = var5.d(var4, var6) as NotificationData;
       this.appendNotificationToCacheFile(var1, var8);
       this.showNotification(var1, var8, var2, true);
    }

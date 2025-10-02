@@ -1,8 +1,8 @@
 package com.discord.core
 
-import A9.s
-import F9.b
+import B9.s
 import G2.d
+import G9.b
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -16,9 +16,6 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
-import cb.K
-import cb.d0
-import cb.f
 import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -27,6 +24,9 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import db.K
+import db.d0
+import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -175,10 +175,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var22 != 0 && var3 != 0) {
-                     var1 = new Size(var22, var3);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var3 != 0 && var22 != 0) {
+                     var1 = new Size(var3, var22);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -242,9 +242,9 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      }
 
                      try {
-                        val var26: ContentResolver = this.this$0.getContext().getContentResolver();
-                        val var17: java.lang.String = this.$uri.getLastPathSegment();
-                        var1 = Thumbnails.getThumbnail(var26, java.lang.Long.parseLong(var17), 1, null);
+                        val var17: ContentResolver = this.this$0.getContext().getContentResolver();
+                        val var26: java.lang.String = this.$uri.getLastPathSegment();
+                        var1 = Thumbnails.getThumbnail(var17, java.lang.Long.parseLong(var26), 1, null);
                      } catch (var11: Exception) {
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
@@ -364,8 +364,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
 
                   try {
-                     val var7: d0 = K.c();
-                     val var29: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, var4, this.$uri, var1, null) {
+                     val var29: d0 = K.c();
+                     val var7: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, var4, this.$uri, var1, null) {
                         final Bitmap $bitmap;
                         final boolean $isBitmapEmpty;
                         final Uri $uri;
@@ -408,7 +408,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 1;
-                     var1 = f.g(var7, var29, this);
+                     var1 = f.g(var29, var7, this);
                   } catch (var9: Exception) {
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,

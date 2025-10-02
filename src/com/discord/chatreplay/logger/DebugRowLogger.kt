@@ -1,8 +1,8 @@
 package com.discord.chatreplay.logger
 
 import H1.a
-import K9.c
-import K9.p
+import L9.c
+import L9.p
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -68,36 +68,36 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    }
 
    private fun maybeInsertDelay() {
-      val var3: Long = System.currentTimeMillis();
+      val var1: Long = System.currentTimeMillis();
       if (this.lastUpdateTimestamp != null) {
-         val var1: Long = this.lastUpdateTimestamp.longValue();
+         val var3: Long = this.lastUpdateTimestamp.longValue();
          val var6: StringBuilder = new StringBuilder();
          var6.append("{\"delayMs\":");
-         var6.append(var3 - var1);
+         var6.append(var1 - var3);
          var6.append("}");
          this.appendLine(var6.toString());
       }
 
-      this.lastUpdateTimestamp = var3;
+      this.lastUpdateTimestamp = var1;
    }
 
    private fun writeJson() {
       label18: {
          val var2: BooleanRef = new BooleanRef();
          val var1: FileOutputStream = new FileOutputStream(this.jsonFile);
-         val var3: Charset = Charsets.UTF_8;
+         val var4: Charset = Charsets.UTF_8;
          val var12: OutputStreamWriter = new OutputStreamWriter(var1, Charsets.UTF_8);
 
          try {
             var12.write("[\n");
-            p.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new a(var2, var12));
+            p.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var13: java.lang.Throwable = var7;
+            val var3: java.lang.Throwable = var7;
 
             try {
-               throw var13;
+               throw var3;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

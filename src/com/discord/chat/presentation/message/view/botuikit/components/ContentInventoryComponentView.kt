@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import A9.m
+import B9.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = A9.j.a(m.i, new e(this));
+      this.binding$delegate = B9.j.a(m.i, new e(this));
    }
 
    @JvmStatic

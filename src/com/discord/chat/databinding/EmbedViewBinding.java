@@ -130,107 +130,107 @@ public final class EmbedViewBinding implements ViewBinding {
    @NonNull
    public static EmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.author_avatar;
-      SimpleDraweeView var23 = (SimpleDraweeView)a.a(var0, var1);
-      if (var23 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.author_container;
-         LinearLayout var18 = (LinearLayout)a.a(var0, var1);
-         if (var18 != null) {
+         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.author_name;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.border;
-               View var3 = a.a(var0, var1);
-               if (var3 != null) {
+               View var16 = a.a(var0, var1);
+               if (var16 != null) {
                   var1 = R.id.description;
-                  SimpleDraweeSpanTextView var21 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var21 != null) {
+                  SimpleDraweeSpanTextView var9 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.error;
-                     TextView var22 = (TextView)a.a(var0, var1);
-                     if (var22 != null) {
+                     TextView var15 = (TextView)a.a(var0, var1);
+                     if (var15 != null) {
                         var1 = R.id.error_icon;
-                        SimpleDraweeView var25 = (SimpleDraweeView)a.a(var0, var1);
-                        if (var25 != null) {
+                        SimpleDraweeView var17 = (SimpleDraweeView)a.a(var0, var1);
+                        if (var17 != null) {
                            var1 = R.id.fields_bottom_wrap;
-                           LinearLayout var24 = (LinearLayout)a.a(var0, var1);
-                           if (var24 != null) {
+                           LinearLayout var25 = (LinearLayout)a.a(var0, var1);
+                           if (var25 != null) {
                               var1 = R.id.fields_container;
-                              LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-                              if (var2 != null) {
+                              LinearLayout var14 = (LinearLayout)a.a(var0, var1);
+                              if (var14 != null) {
                                  var1 = R.id.fields_top_wrap;
-                                 LinearLayout var11 = (LinearLayout)a.a(var0, var1);
-                                 if (var11 != null) {
+                                 LinearLayout var21 = (LinearLayout)a.a(var0, var1);
+                                 if (var21 != null) {
                                     var1 = R.id.footer_avatar;
-                                    SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                                    if (var6 != null) {
+                                    SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                                    if (var7 != null) {
                                        var1 = R.id.footer_container;
-                                       LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                                       if (var7 != null) {
+                                       LinearLayout var10 = (LinearLayout)a.a(var0, var1);
+                                       if (var10 != null) {
                                           var1 = R.id.footer_text;
-                                          TextView var5 = (TextView)a.a(var0, var1);
-                                          if (var5 != null) {
+                                          TextView var11 = (TextView)a.a(var0, var1);
+                                          if (var11 != null) {
                                              var1 = R.id.image_blur_bg;
-                                             FrameLayout var10 = (FrameLayout)a.a(var0, var1);
-                                             if (var10 != null) {
+                                             FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                                             if (var2 != null) {
                                                 var1 = R.id.inline_media_container;
-                                                ConstraintLayout var19 = (ConstraintLayout)a.a(var0, var1);
-                                                if (var19 != null) {
+                                                ConstraintLayout var18 = (ConstraintLayout)a.a(var0, var1);
+                                                if (var18 != null) {
                                                    var1 = R.id.inline_media_view;
-                                                   EmbedViewResizingMediaView var17 = (EmbedViewResizingMediaView)a.a(var0, var1);
-                                                   if (var17 != null) {
+                                                   EmbedViewResizingMediaView var5 = (EmbedViewResizingMediaView)a.a(var0, var1);
+                                                   if (var5 != null) {
                                                       var1 = R.id.inline_media_view2;
-                                                      EmbedViewResizingMediaView var16 = (EmbedViewResizingMediaView)a.a(var0, var1);
-                                                      if (var16 != null) {
+                                                      EmbedViewResizingMediaView var13 = (EmbedViewResizingMediaView)a.a(var0, var1);
+                                                      if (var13 != null) {
                                                          var1 = R.id.inline_media_view3;
-                                                         EmbedViewResizingMediaView var15 = (EmbedViewResizingMediaView)a.a(var0, var1);
-                                                         if (var15 != null) {
+                                                         EmbedViewResizingMediaView var24 = (EmbedViewResizingMediaView)a.a(var0, var1);
+                                                         if (var24 != null) {
                                                             var1 = R.id.inline_media_view4;
-                                                            EmbedViewResizingMediaView var9 = (EmbedViewResizingMediaView)a.a(var0, var1);
-                                                            if (var9 != null) {
+                                                            EmbedViewResizingMediaView var23 = (EmbedViewResizingMediaView)a.a(var0, var1);
+                                                            if (var23 != null) {
                                                                var1 = R.id.media_view;
-                                                               EmbedViewResizingMediaView var8 = (EmbedViewResizingMediaView)a.a(var0, var1);
-                                                               if (var8 != null) {
+                                                               EmbedViewResizingMediaView var26 = (EmbedViewResizingMediaView)a.a(var0, var1);
+                                                               if (var26 != null) {
                                                                   var1 = R.id.provider;
-                                                                  SimpleDraweeSpanTextView var12 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                                                                  if (var12 != null) {
+                                                                  SimpleDraweeSpanTextView var20 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                                                                  if (var20 != null) {
                                                                      var1 = R.id.spacer;
-                                                                     Space var13 = (Space)a.a(var0, var1);
-                                                                     if (var13 != null) {
+                                                                     Space var8 = (Space)a.a(var0, var1);
+                                                                     if (var8 != null) {
                                                                         var1 = R.id.spoiler;
-                                                                        SpoilerView var20 = (SpoilerView)a.a(var0, var1);
-                                                                        if (var20 != null) {
+                                                                        SpoilerView var19 = (SpoilerView)a.a(var0, var1);
+                                                                        if (var19 != null) {
                                                                            var1 = R.id.thumbnail;
-                                                                           SimpleDraweeView var26 = (SimpleDraweeView)a.a(var0, var1);
-                                                                           if (var26 != null) {
+                                                                           SimpleDraweeView var22 = (SimpleDraweeView)a.a(var0, var1);
+                                                                           if (var22 != null) {
                                                                               var1 = R.id.title;
-                                                                              SimpleDraweeSpanTextView var14 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                                                                              if (var14 != null) {
+                                                                              SimpleDraweeSpanTextView var12 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                                                                              if (var12 != null) {
                                                                                  return new EmbedViewBinding(
                                                                                     var0,
-                                                                                    var23,
-                                                                                    var18,
+                                                                                    var6,
                                                                                     var4,
                                                                                     var3,
-                                                                                    var21,
-                                                                                    var22,
-                                                                                    var25,
-                                                                                    var24,
-                                                                                    var2,
-                                                                                    var11,
-                                                                                    var6,
-                                                                                    var7,
-                                                                                    var5,
-                                                                                    var10,
-                                                                                    var19,
-                                                                                    var17,
                                                                                     var16,
-                                                                                    var15,
                                                                                     var9,
-                                                                                    var8,
-                                                                                    var12,
+                                                                                    var15,
+                                                                                    var17,
+                                                                                    var25,
+                                                                                    var14,
+                                                                                    var21,
+                                                                                    var7,
+                                                                                    var10,
+                                                                                    var11,
+                                                                                    var2,
+                                                                                    var18,
+                                                                                    var5,
                                                                                     var13,
-                                                                                    var20,
+                                                                                    var24,
+                                                                                    var23,
                                                                                     var26,
-                                                                                    var14
+                                                                                    var20,
+                                                                                    var8,
+                                                                                    var19,
+                                                                                    var22,
+                                                                                    var12
                                                                                  );
                                                                               }
                                                                            }

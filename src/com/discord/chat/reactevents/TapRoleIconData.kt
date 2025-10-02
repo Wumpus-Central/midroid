@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class TapRoleIconData(roleName: String, roleIconSource: String) : ReactEvent {
@@ -52,13 +52,13 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.roleName;
-      val var3: java.lang.String = this.roleIconSource;
+      val var3: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.roleIconSource;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapRoleIconData(roleName=");
-      var1.append(var2);
-      var1.append(", roleIconSource=");
       var1.append(var3);
+      var1.append(", roleIconSource=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

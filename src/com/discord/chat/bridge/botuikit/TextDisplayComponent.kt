@@ -2,7 +2,7 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component() {
@@ -56,16 +56,16 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var3: StructurableText = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TextDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: StructurableText = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TextDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

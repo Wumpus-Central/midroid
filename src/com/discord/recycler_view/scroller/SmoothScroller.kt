@@ -1,6 +1,6 @@
 package com.discord.recycler_view.scroller
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.i

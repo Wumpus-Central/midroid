@@ -13,56 +13,54 @@ public fun SimpleDraweeView.setOptionalImageUrl(
    controllerListener: ControllerListener<in Any>? = null
 ) {
    if (var1 != null && !StringsKt.c0(var1)) {
-      val var8: Uri = f.r(var1);
-      if (var8 != null) {
-         var var5: Boolean;
-         var var7: java.lang.Boolean;
-         label58: {
-            label57: {
-               var7 = java.lang.Boolean.TRUE;
-               if (var3 == java.lang.Boolean.TRUE) {
-                  val var13: java.lang.String = var8.getLastPathSegment();
-                  if (var13 != null && StringsKt.s(var13, ".webp", true)) {
-                     break label57;
-                  }
-
-                  val var14: java.lang.String = var8.getLastPathSegment();
-                  if (var14 != null && StringsKt.s(var14, ".avif", true)) {
-                     break label57;
-                  }
-               }
-
-               var5 = false;
-               break label58;
-            }
-
+      val var10: Uri = f.r(var1);
+      if (var10 != null) {
+         val var9: java.lang.String = var10.getLastPathSegment();
+         val var5: Boolean;
+         if (var9 != null && StringsKt.s(var9, ".gif", true)) {
             var5 = true;
+         } else {
+            var5 = false;
          }
 
          var var6: Boolean;
-         label47: {
-            if (!(var2 == var7)) {
-               val var11: java.lang.String = var8.getLastPathSegment();
-               if ((var11 == null || !StringsKt.s(var11, ".gif", true)) && !var5) {
-                  var6 = false;
-                  break label47;
-               }
-            }
+         if (var9 != null && StringsKt.s(var9, ".webp", true)) {
+            var6 = true;
+         } else {
+            var6 = false;
+         }
 
+         val var7: Boolean;
+         if (var9 != null && StringsKt.s(var9, ".avif", true)) {
+            var7 = true;
+         } else {
+            var7 = false;
+         }
+
+         if (!(var3 == java.lang.Boolean.TRUE) || !var6 && !var7) {
+            var6 = false;
+         } else {
             var6 = true;
          }
 
-         val var12: Builder = var8.buildUpon();
-         var1 = var8.getLastPathSegment();
+         val var8: Boolean;
+         if ((var5 || var6) && !(var2 == java.lang.Boolean.FALSE)) {
+            var8 = true;
+         } else {
+            var8 = false;
+         }
+
+         val var13: Builder = var10.buildUpon();
+         var1 = var10.getLastPathSegment();
          if (var1 != null && StringsKt.s(var1, ".avif", true)) {
-            var12.appendQueryParameter("format", "webp");
+            var13.appendQueryParameter("format", "webp");
          }
 
-         if (var6 && var5) {
-            var12.appendQueryParameter("animated", "true");
+         if (var8 && var6) {
+            var13.appendQueryParameter("animated", "true");
          }
 
-         var0.setController(var0.getControllerBuilder().B(var6).E(var4).b(var12.build()).c(var0.getController()).a());
+         var0.setController(var0.getControllerBuilder().B(var8).E(var4).b(var13.build()).c(var0.getController()).a());
          var0.setVisibility(0);
       }
    } else {

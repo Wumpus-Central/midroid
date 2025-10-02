@@ -1,11 +1,10 @@
 package com.discord.chat.presentation.list;
 
-// $VF: synthetic class
-public final class c implements Runnable {
-   public final ChatListChildView d;
+import kotlin.jvm.functions.Function1;
 
-   @Override
-   public final void run() {
-      ChatListChildView.DefaultImpls.a(this.d);
+// $VF: synthetic class
+public final class c implements Function1 {
+   public final Object invoke(Object var1) {
+      return ChannelChatListAdapter.c((Boolean)var1);
    }
 }

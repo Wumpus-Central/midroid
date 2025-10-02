@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import A9.j
+import B9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt

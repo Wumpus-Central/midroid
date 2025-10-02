@@ -72,7 +72,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var3;
       val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var4;
-      this.forwardBarPaint$delegate = A9.j.b(new Q());
+      this.forwardBarPaint$delegate = B9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -98,10 +98,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : kotlin.sequences.k.L(androidx.core.view.f0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 

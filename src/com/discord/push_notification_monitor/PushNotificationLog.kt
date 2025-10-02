@@ -1,7 +1,7 @@
 package com.discord.push_notification_monitor
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = CollectionsKt.k()) {
@@ -38,12 +38,12 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.pushNotifications;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PushNotificationLog(pushNotifications=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.pushNotifications;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PushNotificationLog(pushNotifications=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

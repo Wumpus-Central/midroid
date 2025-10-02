@@ -1,6 +1,6 @@
 package com.discord.user_search_worker
 
-import A9.n
+import B9.n
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -201,11 +201,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
-         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var28: UserSearchQuerySetFilters = var24.getFilters();
-         if (var28 == null || var28.getFriends() == var2 || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var16, var24);
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
+         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var24: UserSearchQuerySetFilters = var28.getFilters();
+         if (var24 == null || var24.getFriends() == var2 || var24.getGuild() != null && var8.contains(var24.getGuild())) {
+            this.searchUsers(var20, var28);
          }
       }
    }
@@ -260,9 +260,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var29: java.util.List;
                   if (var7) {
-                     val var11: java.lang.String = var26.getUsername();
+                     val var18: java.lang.String = var26.getUsername();
                      var10 = var26.getGlobalName();
-                     val var18: java.lang.String = var26.getFriendNickname();
+                     val var11: java.lang.String = var26.getFriendNickname();
                      val var19: java.util.Map = var26.getNicknames();
                      val var27: UserSearchQuerySetFilters = var2.getFilters();
                      val var28: java.lang.String;
@@ -272,7 +272,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var28 = null;
                      }
 
-                     var29 = CollectionsKt.n(new java.lang.String[]{var11, var10, var18, (java.lang.String)var19.get(var28)});
+                     var29 = CollectionsKt.n(new java.lang.String[]{var18, var10, var11, (java.lang.String)var19.get(var28)});
                   } else {
                      if (var7) {
                         throw new n();
@@ -324,7 +324,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
             }
          }
 
-         this.onResults.invoke(CollectionsKt.M0(CollectionsKt.K0(var13, D9.a.b(new Function1[]{new b(), new c()})), var2.getLimit()), var12, var1);
+         this.onResults.invoke(CollectionsKt.M0(CollectionsKt.K0(var13, E9.a.b(new Function1[]{new b(), new c()})), var2.getLimit()), var12, var1);
       }
    }
 

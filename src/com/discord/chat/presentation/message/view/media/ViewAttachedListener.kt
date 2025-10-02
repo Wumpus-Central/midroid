@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.media
 
-import A9.j
+import B9.j
 import C1.a
 import C1.b
 import C1.c
@@ -56,11 +56,11 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
    public open fun onViewDetachedFromWindow(view: View) {
       var1.removeCallbacks(this.isAttachedRunnable);
-      val var2: ViewTreeObserver = var1.getViewTreeObserver();
-      if (var2 != null) {
-         val var3: ViewScrollStateListener = this.getScrollStateListener();
-         var3.reset();
-         var2.removeOnScrollChangedListener(var3);
+      val var3: ViewTreeObserver = var1.getViewTreeObserver();
+      if (var3 != null) {
+         val var2: ViewScrollStateListener = this.getScrollStateListener();
+         var2.reset();
+         var3.removeOnScrollChangedListener(var2);
       }
 
       this.viewAttached.invoke(java.lang.Boolean.FALSE);

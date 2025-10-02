@@ -1,6 +1,6 @@
 package com.discord.react_gesture_handler.passthrough_touch
 
-import A9.s
+import B9.s
 import com.discord.react_gesture_handler.passthrough_touch.events.OnTouchDownData
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule

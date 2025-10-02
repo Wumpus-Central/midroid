@@ -4,7 +4,7 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import qb.d
+import rb.d
 
 internal object StructurableTextSerializer : d(StructurableText::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<StructurableText> {

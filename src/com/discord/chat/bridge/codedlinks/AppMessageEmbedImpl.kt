@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class AppMessageEmbedImpl(backgroundColor: Int = 0,
@@ -504,8 +504,8 @@ public data class AppMessageEmbedImpl(backgroundColor: Int = 0,
    }
 
    public override fun hashCode(): Int {
-      val var36: Int = Integer.hashCode(this.backgroundColor);
-      val var34: Int = Integer.hashCode(this.borderColor);
+      val var34: Int = Integer.hashCode(this.backgroundColor);
+      val var36: Int = Integer.hashCode(this.borderColor);
       val var35: Int = Integer.hashCode(this.headerColor);
       var var33: Int = 0;
       val var1: Int;
@@ -776,9 +776,9 @@ public data class AppMessageEmbedImpl(backgroundColor: Int = 0,
                                                                                                                                                                                                                                                                                                                         (
                                                                                                                                                                                                                                                                                                                                  (
                                                                                                                                                                                                                                                                                                                                           (
-                                                                                                                                                                                                                                                                                                                                                   var36
+                                                                                                                                                                                                                                                                                                                                                   var34
                                                                                                                                                                                                                                                                                                                                                          * 31
-                                                                                                                                                                                                                                                                                                                                                      + var34
+                                                                                                                                                                                                                                                                                                                                                      + var36
                                                                                                                                                                                                                                                                                                                                                 )
                                                                                                                                                                                                                                                                                                                                                 * 31
                                                                                                                                                                                                                                                                                                                                              + var35
@@ -893,126 +893,126 @@ public data class AppMessageEmbedImpl(backgroundColor: Int = 0,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.backgroundColor;
+      val var1: Int = this.backgroundColor;
       val var3: Int = this.borderColor;
-      val var1: Int = this.headerColor;
-      val var8: java.lang.String = this.headerText;
-      val var18: InviteType = this.type;
-      val var26: Int = this.acceptLabelBackgroundColor;
-      val var25: Int = this.acceptLabelBorderColor;
-      val var36: Int = this.acceptLabelColor;
-      val var37: java.lang.String = this.acceptLabelText;
-      val var32: java.lang.String = this.bodyText;
-      val var38: Int = this.bodyTextColor;
-      val var16: java.lang.Boolean = this.canBeAccepted;
-      val var7: java.lang.Boolean = this.embedCanBeTapped;
-      val var20: Int = this.resolvingGradientEnd;
-      val var12: Int = this.resolvingGradientStart;
-      val var9: java.lang.Boolean = this.splashHasRadialGradient;
-      val var6: Int = this.splashOpacity;
-      val var19: java.lang.String = this.splashUrl;
-      val var31: java.lang.String = this.inviteSplash;
-      val var24: java.lang.String = this.subtitle;
-      val var39: Int = this.subtitleColor;
-      val var4: Int = this.thumbnailBackgroundColor;
-      val var35: Int = this.thumbnailCornerRadius;
-      val var10: java.lang.String = this.thumbnailText;
-      val var28: java.lang.String = this.thumbnailUrl;
-      val var29: Int = this.titleColor;
-      val var17: java.lang.String = this.titleText;
-      val var27: java.lang.String = this.appId;
-      val var13: java.lang.String = this.messageId;
-      val var33: java.lang.String = this.title;
-      val var11: java.lang.String = this.header;
-      val var15: java.lang.String = this.info;
-      val var23: java.lang.String = this.tagline;
-      val var34: java.util.List = this.gradientColors;
-      val var30: java.lang.String = this.staticBannerSrc;
-      val var21: java.lang.String = this.iconSrc;
-      val var40: java.lang.String = this.embedUrl;
-      val var5: java.lang.String = this.bannerRatio;
-      val var14: java.util.List = this.actions;
-      val var22: StringBuilder = new StringBuilder();
-      var22.append("AppMessageEmbedImpl(backgroundColor=");
-      var22.append(var2);
-      var22.append(", borderColor=");
-      var22.append(var3);
-      var22.append(", headerColor=");
-      var22.append(var1);
-      var22.append(", headerText=");
-      var22.append(var8);
-      var22.append(", type=");
-      var22.append(var18);
-      var22.append(", acceptLabelBackgroundColor=");
-      var22.append(var26);
-      var22.append(", acceptLabelBorderColor=");
-      var22.append(var25);
-      var22.append(", acceptLabelColor=");
-      var22.append(var36);
-      var22.append(", acceptLabelText=");
-      var22.append(var37);
-      var22.append(", bodyText=");
-      var22.append(var32);
-      var22.append(", bodyTextColor=");
-      var22.append(var38);
-      var22.append(", canBeAccepted=");
-      var22.append(var16);
-      var22.append(", embedCanBeTapped=");
-      var22.append(var7);
-      var22.append(", resolvingGradientEnd=");
-      var22.append(var20);
-      var22.append(", resolvingGradientStart=");
-      var22.append(var12);
-      var22.append(", splashHasRadialGradient=");
-      var22.append(var9);
-      var22.append(", splashOpacity=");
-      var22.append(var6);
-      var22.append(", splashUrl=");
-      var22.append(var19);
-      var22.append(", inviteSplash=");
-      var22.append(var31);
-      var22.append(", subtitle=");
-      var22.append(var24);
-      var22.append(", subtitleColor=");
-      var22.append(var39);
-      var22.append(", thumbnailBackgroundColor=");
-      var22.append(var4);
-      var22.append(", thumbnailCornerRadius=");
-      var22.append(var35);
-      var22.append(", thumbnailText=");
-      var22.append(var10);
-      var22.append(", thumbnailUrl=");
-      var22.append(var28);
-      var22.append(", titleColor=");
-      var22.append(var29);
-      var22.append(", titleText=");
-      var22.append(var17);
-      var22.append(", appId=");
-      var22.append(var27);
-      var22.append(", messageId=");
-      var22.append(var13);
-      var22.append(", title=");
-      var22.append(var33);
-      var22.append(", header=");
-      var22.append(var11);
-      var22.append(", info=");
-      var22.append(var15);
-      var22.append(", tagline=");
-      var22.append(var23);
-      var22.append(", gradientColors=");
-      var22.append(var34);
-      var22.append(", staticBannerSrc=");
-      var22.append(var30);
-      var22.append(", iconSrc=");
-      var22.append(var21);
-      var22.append(", embedUrl=");
-      var22.append(var40);
-      var22.append(", bannerRatio=");
-      var22.append(var5);
-      var22.append(", actions=");
-      var22.append(var14);
-      var22.append(")");
-      return var22.toString();
+      val var2: Int = this.headerColor;
+      val var29: java.lang.String = this.headerText;
+      val var25: InviteType = this.type;
+      val var13: Int = this.acceptLabelBackgroundColor;
+      val var22: Int = this.acceptLabelBorderColor;
+      val var5: Int = this.acceptLabelColor;
+      val var36: java.lang.String = this.acceptLabelText;
+      val var4: java.lang.String = this.bodyText;
+      val var15: Int = this.bodyTextColor;
+      val var20: java.lang.Boolean = this.canBeAccepted;
+      val var21: java.lang.Boolean = this.embedCanBeTapped;
+      val var34: Int = this.resolvingGradientEnd;
+      val var6: Int = this.resolvingGradientStart;
+      val var40: java.lang.Boolean = this.splashHasRadialGradient;
+      val var11: Int = this.splashOpacity;
+      val var23: java.lang.String = this.splashUrl;
+      val var32: java.lang.String = this.inviteSplash;
+      val var27: java.lang.String = this.subtitle;
+      val var12: Int = this.subtitleColor;
+      val var16: Int = this.thumbnailBackgroundColor;
+      val var28: Int = this.thumbnailCornerRadius;
+      val var24: java.lang.String = this.thumbnailText;
+      val var37: java.lang.String = this.thumbnailUrl;
+      val var14: Int = this.titleColor;
+      val var30: java.lang.String = this.titleText;
+      val var10: java.lang.String = this.appId;
+      val var17: java.lang.String = this.messageId;
+      val var7: java.lang.String = this.title;
+      val var33: java.lang.String = this.header;
+      val var8: java.lang.String = this.info;
+      val var31: java.lang.String = this.tagline;
+      val var39: java.util.List = this.gradientColors;
+      val var35: java.lang.String = this.staticBannerSrc;
+      val var26: java.lang.String = this.iconSrc;
+      val var38: java.lang.String = this.embedUrl;
+      val var18: java.lang.String = this.bannerRatio;
+      val var19: java.util.List = this.actions;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("AppMessageEmbedImpl(backgroundColor=");
+      var9.append(var1);
+      var9.append(", borderColor=");
+      var9.append(var3);
+      var9.append(", headerColor=");
+      var9.append(var2);
+      var9.append(", headerText=");
+      var9.append(var29);
+      var9.append(", type=");
+      var9.append(var25);
+      var9.append(", acceptLabelBackgroundColor=");
+      var9.append(var13);
+      var9.append(", acceptLabelBorderColor=");
+      var9.append(var22);
+      var9.append(", acceptLabelColor=");
+      var9.append(var5);
+      var9.append(", acceptLabelText=");
+      var9.append(var36);
+      var9.append(", bodyText=");
+      var9.append(var4);
+      var9.append(", bodyTextColor=");
+      var9.append(var15);
+      var9.append(", canBeAccepted=");
+      var9.append(var20);
+      var9.append(", embedCanBeTapped=");
+      var9.append(var21);
+      var9.append(", resolvingGradientEnd=");
+      var9.append(var34);
+      var9.append(", resolvingGradientStart=");
+      var9.append(var6);
+      var9.append(", splashHasRadialGradient=");
+      var9.append(var40);
+      var9.append(", splashOpacity=");
+      var9.append(var11);
+      var9.append(", splashUrl=");
+      var9.append(var23);
+      var9.append(", inviteSplash=");
+      var9.append(var32);
+      var9.append(", subtitle=");
+      var9.append(var27);
+      var9.append(", subtitleColor=");
+      var9.append(var12);
+      var9.append(", thumbnailBackgroundColor=");
+      var9.append(var16);
+      var9.append(", thumbnailCornerRadius=");
+      var9.append(var28);
+      var9.append(", thumbnailText=");
+      var9.append(var24);
+      var9.append(", thumbnailUrl=");
+      var9.append(var37);
+      var9.append(", titleColor=");
+      var9.append(var14);
+      var9.append(", titleText=");
+      var9.append(var30);
+      var9.append(", appId=");
+      var9.append(var10);
+      var9.append(", messageId=");
+      var9.append(var17);
+      var9.append(", title=");
+      var9.append(var7);
+      var9.append(", header=");
+      var9.append(var33);
+      var9.append(", info=");
+      var9.append(var8);
+      var9.append(", tagline=");
+      var9.append(var31);
+      var9.append(", gradientColors=");
+      var9.append(var39);
+      var9.append(", staticBannerSrc=");
+      var9.append(var35);
+      var9.append(", iconSrc=");
+      var9.append(var26);
+      var9.append(", embedUrl=");
+      var9.append(var38);
+      var9.append(", bannerRatio=");
+      var9.append(var18);
+      var9.append(", actions=");
+      var9.append(var19);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

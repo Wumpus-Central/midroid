@@ -1,4 +1,4 @@
-@file:SourceDebugExtension(["SMAP\nNotificationDataUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationDataUtils.kt\ncom/discord/notifications/renderer/utils/NotificationDataUtilsKt\n+ 2 SpannableStringBuilder.kt\nandroidx/core/text/SpannableStringBuilderKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 JsonElementBuilders.kt\nkotlinx/serialization/json/JsonElementBuildersKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,823:1\n87#2:824\n74#2,2:825\n115#2:827\n74#2,4:828\n1557#3:832\n1628#3,3:833\n27#4,4:836\n27#4,4:840\n1#5:844\n*S KotlinDebug\n*F\n+ 1 NotificationDataUtils.kt\ncom/discord/notifications/renderer/utils/NotificationDataUtilsKt\n*L\n641#1:824\n641#1:825,2\n641#1:827\n641#1:828,4\n717#1:832\n717#1:833,3\n761#1:836,4\n787#1:840,4\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nNotificationDataUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationDataUtils.kt\ncom/discord/notifications/renderer/utils/NotificationDataUtilsKt\n+ 2 SpannableStringBuilder.kt\nandroidx/core/text/SpannableStringBuilderKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 JsonElementBuilders.kt\nkotlinx/serialization/json/JsonElementBuildersKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,832:1\n87#2:833\n74#2,2:834\n115#2:836\n74#2,4:837\n1557#3:841\n1628#3,3:842\n27#4,4:845\n27#4,4:849\n1#5:853\n*S KotlinDebug\n*F\n+ 1 NotificationDataUtils.kt\ncom/discord/notifications/renderer/utils/NotificationDataUtilsKt\n*L\n650#1:833\n650#1:834,2\n650#1:836\n650#1:837,4\n726#1:841\n726#1:842,3\n770#1:845,4\n796#1:849,4\n*E\n"])
 
 package com.discord.notifications.renderer.utils
 
@@ -58,55 +58,55 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 
 @JvmSynthetic
-fun a(var0: NotificationData, var1: RenderContext): Unit {
-   return renderMessageContent$lambda$9(var0, var1);
+fun a(var0: java.lang.String, var1: RenderContext): Unit {
+   return getSystemMessageUserJoin__NT_lnE$lambda$25$lambda$24(var0, var1);
 }
 
 @JvmSynthetic
 fun b(var0: NotificationData, var1: RenderContext): Unit {
-   return getTitle$lambda$6(var0, var1);
+   return renderMessageContent$lambda$9(var0, var1);
 }
 
 @JvmSynthetic
 fun c(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$17(var0, var1);
+   return getTitle$lambda$6(var0, var1);
 }
 
 @JvmSynthetic
 fun d(var0: NotificationData, var1: RenderContext): Unit {
-   return renderMessageContent$lambda$10(var0, var1);
+   return getContent$lambda$17(var0, var1);
 }
 
 @JvmSynthetic
 fun e(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$15(var0, var1);
+   return renderMessageContent$lambda$10(var0, var1);
 }
 
 @JvmSynthetic
 fun f(var0: NotificationData, var1: RenderContext): Unit {
-   return getTitle$lambda$3(var0, var1);
+   return getContent$lambda$15(var0, var1);
 }
 
 @JvmSynthetic
 fun g(var0: NotificationData, var1: RenderContext): Unit {
-   return getBotDMMuteAction$lambda$30(var0, var1);
+   return getTitle$lambda$3(var0, var1);
 }
 
 public fun NotificationData.getAuthor(): JsonObject {
    val var3: java.lang.String = var0.getUserAvatar();
    val var4: UserId = var0.getUserId-wUX8bhU();
    val var1: Long = var4.unbox-impl();
-   val var5: java.lang.String = var0.getUserUsername();
-   val var6: qb.p = new qb.p();
+   val var6: java.lang.String = var0.getUserUsername();
+   val var5: rb.p = new rb.p();
    if (var3 != null) {
-      qb.f.c(var6, "avatar", var3);
+      rb.f.c(var5, "avatar", var3);
    }
 
-   qb.f.c(var6, "id", UserId.toString-impl(var1));
-   qb.f.c(var6, "username", var5);
-   qb.f.c(var6, "globalName", var0.getUserGlobalName());
-   qb.f.a(var6, "incomplete", java.lang.Boolean.TRUE);
-   return var6.a();
+   rb.f.c(var5, "id", UserId.toString-impl(var1));
+   rb.f.c(var5, "username", var6);
+   rb.f.c(var5, "globalName", var0.getUserGlobalName());
+   rb.f.a(var5, "incomplete", java.lang.Boolean.TRUE);
+   return var5.a();
 }
 
 public fun NotificationData.getBotDMMuteAction(context: Context): Action? {
@@ -115,7 +115,7 @@ public fun NotificationData.getBotDMMuteAction(context: Context): Action? {
       if (var4 != null) {
          return new NotificationCompat.Action.a(
                R.drawable.ic_notifications_off_24dp,
-               I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MUTE_APP_DM, new q(var0)),
+               I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MUTE_APP_DM, new r(var0)),
                NotificationAction.DefaultImpls.toPendingIntent$default(
                   new MuteAction(getTag(var0), var0.getGuildId-qOKuAAo(), var4.unbox-impl(), -1, null), var1, 0, false, 6, null
                )
@@ -127,7 +127,7 @@ public fun NotificationData.getBotDMMuteAction(context: Context): Action? {
    return null;
 }
 
-fun `getBotDMMuteAction$lambda$30`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getBotDMMuteAction$lambda$31`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("app", var0.getUserUsername());
    return Unit.a;
 }
@@ -163,12 +163,12 @@ public fun NotificationData.getCallAction(context: Context, isAcceptAction: Bool
 
             val var13: Pair;
             if (var2) {
-               var13 = A9.s.a(
+               var13 = B9.s.a(
                   I18nUtilsKt.i18nFormat$default(var1, I18nMessage.JOIN_CALL, null, 2, null),
                   ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.green_360)
                );
             } else {
-               var13 = A9.s.a(
+               var13 = B9.s.a(
                   I18nUtilsKt.i18nFormat$default(var1, I18nMessage.DECLINE, null, 2, null),
                   ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.red_400)
                );
@@ -176,21 +176,21 @@ public fun NotificationData.getCallAction(context: Context, isAcceptAction: Bool
 
             val var16: java.lang.CharSequence = var13.a() as java.lang.CharSequence;
             var var5: Int = (var13.b() as java.lang.Number).intValue();
-            val var20: SpannableStringBuilder = new SpannableStringBuilder();
-            val var11: StyleSpan = new StyleSpan(1);
-            var var4: Int = var20.length();
-            val var14: ForegroundColorSpan = new ForegroundColorSpan(var5);
-            var5 = var20.length();
-            var20.append(var16);
-            var20.setSpan(var14, var5, var20.length(), 17);
-            var20.setSpan(var11, var4, var20.length(), 17);
+            val var14: SpannableStringBuilder = new SpannableStringBuilder();
+            val var20: StyleSpan = new StyleSpan(1);
+            var var4: Int = var14.length();
+            val var11: ForegroundColorSpan = new ForegroundColorSpan(var5);
+            var5 = var14.length();
+            var14.append(var16);
+            var14.setSpan(var11, var5, var14.length(), 17);
+            var14.setSpan(var20, var4, var14.length(), 17);
             if (var2) {
                var4 = R.drawable.ic_call_24dp;
             } else {
                var4 = R.drawable.ic_call_disconnect_24dp;
             }
 
-            return new NotificationCompat.Action.a(var4, var20, var12).c();
+            return new NotificationCompat.Action.a(var4, var14, var12).c();
          }
       }
 
@@ -216,10 +216,10 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
             val var13: Int = var0.getGuildScheduledEventEntityType();
             if ((var13 == null || var13 != 2) && (var13 == null || var13 != 1)) {
                if (var13 != null && var13 == 3) {
-                  var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY, new p(var0));
+                  var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY, new q(var0));
                }
             } else {
-               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_BODY, new o(var0));
+               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_BODY, new p(var0));
             }
          }
          break;
@@ -235,17 +235,17 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
          break;
       case -1263316859:
          if (var5.equals("STAGE_INSTANCE_CREATE")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_BODY, new m(var0));
+            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_BODY, new n(var0));
          }
          break;
       case -1237752112:
          if (var5.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_BODY, new k(var0));
+            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_BODY, new m(var0));
          }
          break;
       case -437641071:
          if (var5.equals("FORUM_THREAD_CREATED")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE, new n(var0));
+            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE, new o(var0));
          }
          break;
       case -45642698:
@@ -257,7 +257,7 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
          if (var5.equals("ACTIVITY_START")) {
             val var12: Int = var0.getActivityType();
             if (var12 != null && var12 == 0) {
-               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_BODY_START_GAME, new i(var0));
+               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_BODY_START_GAME, new j(var0));
             }
          }
          break;
@@ -273,7 +273,7 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
                if (var11 != null && var11 == 3 || var11 != null && var11 == 1) {
                   val var10: Int = var0.getMessageActivityType();
                   if (var10 != null && var10 == 1) {
-                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN, new h(var0));
+                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN, new i(var0));
                   } else {
                      var4 = renderMessageContent(var0, var1, var2);
                   }
@@ -285,7 +285,7 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
                } else {
                   var8 = var0.getMessageActivityType();
                   if (var8 != null && var8 == 1) {
-                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, new g(var0));
+                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, new h(var0));
                   } else {
                      var4 = renderMessageContent(var0, var1, var2);
                   }
@@ -295,18 +295,12 @@ public fun NotificationData.getContent(context: Context, forLogs: Boolean): Char
          break;
       case 1770025841:
          if (var5.equals("CALL_RING")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.OVERLAY_FRIEND_CALLING, new j(var0));
+            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.OVERLAY_FRIEND_CALLING, new k(var0));
          }
       default:
    }
 
    return (java.lang.CharSequence)var4;
-}
-
-fun `getContent$lambda$14`(var0: NotificationData, var1: RenderContext): Unit {
-   var1.getArgs().put("user", var0.getUserUsername());
-   var1.getArgs().put("game", var0.getMessageApplicationName());
-   return Unit.a;
 }
 
 fun `getContent$lambda$15`(var0: NotificationData, var1: RenderContext): Unit {
@@ -316,40 +310,46 @@ fun `getContent$lambda$15`(var0: NotificationData, var1: RenderContext): Unit {
 }
 
 fun `getContent$lambda$16`(var0: NotificationData, var1: RenderContext): Unit {
+   var1.getArgs().put("user", var0.getUserUsername());
+   var1.getArgs().put("game", var0.getMessageApplicationName());
+   return Unit.a;
+}
+
+fun `getContent$lambda$17`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("username", var0.getUserUsername());
    var1.getArgs().put("gameName", var0.getActivityName());
    return Unit.a;
 }
 
-fun `getContent$lambda$17`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$18`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("name", var0.getUserUsername());
    return Unit.a;
 }
 
-fun `getContent$lambda$18`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$19`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("name", var0.getApplicationName());
    return Unit.a;
 }
 
-fun `getContent$lambda$19`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$20`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("username", var0.getUserUsername());
    var1.getArgs().put("topic", var0.getStageInstanceTopic());
    return Unit.a;
 }
 
-fun `getContent$lambda$20`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$21`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("channelName", var0.getChannelName());
    var1.getArgs().put("userUsername", var0.getUserUsername());
    return Unit.a;
 }
 
-fun `getContent$lambda$21`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$22`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("topic", var0.getStageInstanceTopic());
    var1.getArgs().put("username", var0.getUserUsername());
    return Unit.a;
 }
 
-fun `getContent$lambda$22`(var0: NotificationData, var1: RenderContext): Unit {
+fun `getContent$lambda$23`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("topic", var0.getStageInstanceTopic());
    return Unit.a;
 }
@@ -439,7 +439,7 @@ internal fun NotificationData.getGroupKey(): String {
 }
 
 internal fun NotificationData.getIconUrl(context: Context): String {
-   val var5: java.lang.String = var0.getType();
+   var var5: java.lang.String = var0.getType();
    switch (var5.hashCode()) {
       case -1502317553:
          val var14: java.lang.String;
@@ -527,14 +527,14 @@ internal fun NotificationData.getIconUrl(context: Context): String {
       && (var9 == null || var9 != 11)
       && (var9 == null || var9 != 12)) {
       val var6: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var11: ChannelId = var0.getChannelId-qMVnFVQ();
-      val var10: java.lang.String = var0.getChannelIcon();
+      val var10: ChannelId = var0.getChannelId-qMVnFVQ();
+      var5 = var0.getChannelIcon();
       val var8: Int = var0.getChannelType();
       if (var8 == null || var8 != 3) {
          var3 = false;
       }
 
-      return IconUrlUtils.getForChannel-JYSGpIY$default(var6, var1, var11, var10, var3, null, 16, null);
+      return IconUrlUtils.getForChannel-JYSGpIY$default(var6, var1, var10, var5, var3, null, 16, null);
    } else {
       return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
    }
@@ -556,9 +556,9 @@ internal fun NotificationData.getIconUrlForAvatar(context: Context): String {
 }
 
 public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
-   val var3: java.lang.String = var0.getMessageId-N_6c4I0();
-   val var2: ChannelId = var0.getChannelId-qMVnFVQ();
-   if (var3 != null && var2 != null && var0.getType() == "MESSAGE_CREATE") {
+   val var2: java.lang.String = var0.getMessageId-N_6c4I0();
+   val var3: ChannelId = var0.getChannelId-qMVnFVQ();
+   if (var2 != null && var3 != null && var0.getType() == "MESSAGE_CREATE") {
       val var4: NotificationMessage = var0.getMessage();
       if (var1 != null && var4 != null) {
          val var9: JsonElement = Json.d.g(var1);
@@ -566,20 +566,20 @@ public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
          val var5: JsonObject = var4.getAuthor();
          val var13: java.util.List = CollectionsKt.A0(CollectionsKt.e(var5), var4.getMentions());
          val var12: ArrayList = new ArrayList(CollectionsKt.v(var13, 10));
-         val var6: java.util.Iterator = var13.iterator();
+         val var14: java.util.Iterator = var13.iterator();
 
-         while (var6.hasNext()) {
-            val var14: java.util.Map = L.x(var6.next() as JsonObject);
-            var14.put("incomplete", qb.g.b(java.lang.Boolean.TRUE));
-            var12.add(new JsonObject(var14));
+         while (var14.hasNext()) {
+            val var6: java.util.Map = L.x(var14.next() as JsonObject);
+            var6.put("incomplete", rb.g.b(java.lang.Boolean.TRUE));
+            var12.add(new JsonObject(var6));
          }
 
-         return new KvMessageEntry(var11, var12, qb.g.o(var9), var3, var2.unbox-impl(), null);
+         return new KvMessageEntry(var11, var12, rb.g.o(var9), var2, var3.unbox-impl(), null);
       }
 
       try {
          val var10: JsonObject = getAuthor(var0);
-         return new KvMessageEntry(CollectionsKt.k(), CollectionsKt.e(var10), toNotificationMessage(var0, var10), var3, var2.unbox-impl(), null);
+         return new KvMessageEntry(CollectionsKt.k(), CollectionsKt.e(var10), toNotificationMessage(var0, var10), var2, var3.unbox-impl(), null);
       } catch (var7: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var7, false, 2, null);
       }
@@ -618,10 +618,10 @@ public fun getMissedCallText(context: Context, username: String, isDM: Boolean):
    return if (var2)
       I18nUtilsKt.i18nFormat$default(var0, I18nMessage.MISSED_CALL_NOTIFICATION, null, 2, null).toString()
       else
-      I18nUtilsKt.i18nFormat(var0, I18nMessage.MISSED_CALL_NOTIFICATION_FROM, new x(var1)).toString();
+      I18nUtilsKt.i18nFormat(var0, I18nMessage.MISSED_CALL_NOTIFICATION_FROM, new y(var1)).toString();
 }
 
-fun `getMissedCallText$lambda$35`(var0: java.lang.String, var1: RenderContext): Unit {
+fun `getMissedCallText$lambda$36`(var0: java.lang.String, var1: RenderContext): Unit {
    var1.getArgs().put("name", var0);
    return Unit.a;
 }
@@ -833,10 +833,10 @@ private fun getSystemMessageUserJoin(context: Context, userId: UserId?, userName
       var3 = 0L;
    }
 
-   return I18nUtilsKt.i18nFormat(var0, var5.get((int)(var3 % (long)var5.size())) as I18nMessage, new w(var2));
+   return I18nUtilsKt.i18nFormat(var0, var5.get((int)(var3 % (long)var5.size())) as I18nMessage, new x(var2));
 }
 
-fun `getSystemMessageUserJoin__NT_lnE$lambda$24$lambda$23`(var0: java.lang.String, var1: RenderContext): Unit {
+fun `getSystemMessageUserJoin__NT_lnE$lambda$25$lambda$24`(var0: java.lang.String, var1: RenderContext): Unit {
    var1.getArgs().put("username", var0);
    return Unit.a;
 }
@@ -849,11 +849,11 @@ public fun NotificationData.getTag(): String {
             case -1502317553:
                if (var1.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
                   var1 = var0.getType();
-                  val var30: java.lang.String = var0.getDeeplink();
-                  val var14: StringBuilder = new StringBuilder();
-                  var14.append(var1);
-                  var14.append(var30);
-                  return var14.toString();
+                  val var14: java.lang.String = var0.getDeeplink();
+                  val var30: StringBuilder = new StringBuilder();
+                  var30.append(var1);
+                  var30.append(var14);
+                  return var30.toString();
                }
                break label75;
             case -1489275252:
@@ -864,11 +864,11 @@ public fun NotificationData.getTag(): String {
             case -1327124998:
                if (var1.equals("RELATIONSHIP_ADD")) {
                   var1 = var0.getType();
-                  val var28: UserId = var0.getUserId-wUX8bhU();
-                  val var11: StringBuilder = new StringBuilder();
-                  var11.append(var1);
-                  var11.append(var28);
-                  return var11.toString();
+                  val var11: UserId = var0.getUserId-wUX8bhU();
+                  val var28: StringBuilder = new StringBuilder();
+                  var28.append(var1);
+                  var28.append(var11);
+                  return var28.toString();
                }
                break label75;
             case -1263316859:
@@ -879,11 +879,11 @@ public fun NotificationData.getTag(): String {
             case -1237752112:
                if (var1.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
                   var1 = var0.getType();
-                  val var27: ApplicationId = var0.getApplicationId-UtIrSio();
-                  val var10: StringBuilder = new StringBuilder();
-                  var10.append(var1);
-                  var10.append(var27);
-                  return var10.toString();
+                  val var10: ApplicationId = var0.getApplicationId-UtIrSio();
+                  val var27: StringBuilder = new StringBuilder();
+                  var27.append(var1);
+                  var27.append(var10);
+                  return var27.toString();
                }
                break label75;
             case -437641071:
@@ -894,11 +894,11 @@ public fun NotificationData.getTag(): String {
             case -45642698:
                if (var1.equals("FRIEND_SUGGESTION_CREATE")) {
                   var1 = var0.getType();
-                  val var9: UserId = var0.getUserId-wUX8bhU();
-                  val var26: StringBuilder = new StringBuilder();
-                  var26.append(var1);
-                  var26.append(var9);
-                  return var26.toString();
+                  val var26: UserId = var0.getUserId-wUX8bhU();
+                  val var9: StringBuilder = new StringBuilder();
+                  var9.append(var1);
+                  var9.append(var26);
+                  return var9.toString();
                }
                break label75;
             case 74682093:
@@ -908,14 +908,14 @@ public fun NotificationData.getTag(): String {
                break label76;
             case 974015250:
                if (var1.equals("ACTIVITY_START")) {
-                  val var24: java.lang.String = var0.getType();
-                  val var16: Int = var0.getActivityType();
-                  val var31: java.lang.String = var0.getActivityName();
-                  val var7: StringBuilder = new StringBuilder();
-                  var7.append(var24);
-                  var7.append(var16);
-                  var7.append(var31);
-                  return var7.toString();
+                  var1 = var0.getType();
+                  val var24: Int = var0.getActivityType();
+                  val var7: java.lang.String = var0.getActivityName();
+                  val var31: StringBuilder = new StringBuilder();
+                  var31.append(var1);
+                  var31.append(var24);
+                  var31.append(var7);
+                  return var31.toString();
                }
                break label75;
             case 998188116:
@@ -952,29 +952,29 @@ public fun NotificationData.getTag(): String {
          }
 
          var1 = var0.getType();
-         val var29: ChannelId = var0.getChannelId-qMVnFVQ();
-         val var12: StringBuilder = new StringBuilder();
-         var12.append(var1);
-         var12.append(var29);
-         return var12.toString();
+         val var12: ChannelId = var0.getChannelId-qMVnFVQ();
+         val var29: StringBuilder = new StringBuilder();
+         var29.append(var1);
+         var29.append(var12);
+         return var29.toString();
       }
 
-      val var17: java.lang.String = var0.getType();
-      val var25: ChannelId = var0.getChannelId-qMVnFVQ();
+      val var25: java.lang.String = var0.getType();
+      val var17: ChannelId = var0.getChannelId-qMVnFVQ();
       val var8: java.lang.String = var0.getTimeReceived();
       val var32: StringBuilder = new StringBuilder();
-      var32.append(var17);
       var32.append(var25);
+      var32.append(var17);
       var32.append(var8);
       return var32.toString();
    }
 
-   val var13: java.lang.String = var0.getType();
-   val var22: StringBuilder = new StringBuilder();
-   var22.append("Unknown notification type: ");
-   var22.append(var13);
-   var22.append(".");
-   throw new IllegalArgumentException(var22.toString());
+   val var22: java.lang.String = var0.getType();
+   val var13: StringBuilder = new StringBuilder();
+   var13.append("Unknown notification type: ");
+   var13.append(var22);
+   var13.append(".");
+   throw new IllegalArgumentException(var13.toString());
 }
 
 public fun NotificationData.getTimedMuteAction(context: Context, numMessages: Int): Action? {
@@ -1004,9 +1004,9 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
             return "";
          }
 
-         val var17: java.lang.String = var0.getTitle();
-         var7 = var17;
-         if (var17 == null) {
+         val var19: java.lang.String = var0.getTitle();
+         var7 = var19;
+         if (var19 == null) {
             return "";
          }
          break;
@@ -1014,13 +1014,13 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
          if (!var3.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
             return "";
          } else {
-            val var23: Int = var0.getGuildScheduledEventEntityType();
-            if (var23 == null) {
+            val var25: Int = var0.getGuildScheduledEventEntityType();
+            if (var25 == null) {
                var3 = "";
             } else {
                var3 = "";
-               if (var23 == 1) {
-                  return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE, new t(var0));
+               if (var25 == 1) {
+                  return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE, new u(var0));
                }
             }
 
@@ -1031,51 +1031,51 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
             return "";
          }
 
-         val var16: java.lang.String = var0.getUserUsername();
-         var7 = var16;
-         if (var16 == null) {
+         val var18: java.lang.String = var0.getUserUsername();
+         var7 = var18;
+         if (var18 == null) {
             return "";
          }
          break;
       case -1263316859:
-         val var29: Any;
+         val var32: Any;
          if (!var3.equals("STAGE_INSTANCE_CREATE")) {
-            var29 = "";
+            var32 = "";
          } else {
-            var29 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_TITLE, new r(var0));
+            var32 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_TITLE, new s(var0));
          }
 
-         return (java.lang.CharSequence)var29;
+         return (java.lang.CharSequence)var32;
       case -1237752112:
-         val var28: Any;
+         val var31: Any;
          if (!var3.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
-            var28 = "";
+            var31 = "";
          } else {
-            var28 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_TITLE, null, 2, null);
+            var31 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_TITLE, null, 2, null);
          }
 
-         return (java.lang.CharSequence)var28;
+         return (java.lang.CharSequence)var31;
       case -437641071:
-         val var27: Any;
+         val var30: Any;
          if (!var3.equals("FORUM_THREAD_CREATED")) {
-            var27 = "";
+            var30 = "";
          } else {
-            var27 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE, new s(var0));
+            var30 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE, new t(var0));
          }
 
-         return (java.lang.CharSequence)var27;
+         return (java.lang.CharSequence)var30;
       case -45642698:
          if (!var3.equals("FRIEND_SUGGESTION_CREATE")) {
             return "";
          } else {
-            val var31: java.lang.CharSequence;
+            val var34: java.lang.CharSequence;
             if (StringsKt.v(var0.getPlatformUserUsername(), var0.getUserUsername(), false, 2, null)) {
-               var31 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_CONTACT_TITLE, new u(var0));
+               var34 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_CONTACT_TITLE, new v(var0));
             } else {
-               var31 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_TITLE, new v(var0));
+               var34 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_TITLE, new w(var0));
             }
 
-            return var31;
+            return var34;
          }
       case 974015250:
          if (!var3.equals("ACTIVITY_START")) {
@@ -1099,32 +1099,50 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
          }
 
          val var5: Int = var0.getChannelType();
-         if ((var5 == null || var5 != 0)
-            && (var5 == null || var5 != 2)
-            && (var5 == null || var5 != 5)
-            && (var5 == null || var5 != 10)
-            && (var5 == null || var5 != 11)
-            && (var5 == null || var5 != 12)) {
+         if (var5 != null && var5 == 0
+            || var5 != null && var5 == 2
+            || var5 != null && var5 == 5
+            || var5 != null && var5 == 10
+            || var5 != null && var5 == 11
+            || var5 != null && var5 == 12) {
+            val var15: Int = var0.getMessageType();
+            if (var15 != null && var15 == 63) {
+               val var17: java.lang.String = var0.getUserUsername();
+               var7 = var17;
+               if (var17 == null) {
+                  return "";
+               }
+               break;
+            }
+
+            val var16: java.lang.String = var0.getGuildName();
+            val var8: java.lang.String = var0.getChannelName();
+            val var24: StringBuilder = new StringBuilder();
+            var24.append(var16);
+            var24.append(" #");
+            var24.append(var8);
+            return var24.toString();
+         } else {
             if (var5 != null && var5 == 1) {
                if (var0.getInviteGuildName() != null && var0.getUserUsername() != null) {
-                  val var22: Int = var0.getInviteTitleVariant();
-                  if (var22 != null && var22 == 1) {
+                  val var23: Int = var0.getInviteTitleVariant();
+                  if (var23 != null && var23 == 1) {
                      return I18nUtilsKt.i18nFormat(var1, I18nMessage.INVITED_YOU_TO_GUILD, new a(var0));
                   }
 
-                  if (var22 != null && var22 == 2) {
+                  if (var23 != null && var23 == 2) {
                      return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_INVITE_FROM_EMOJI, new l(var0));
                   }
 
-                  val var15: java.lang.String = var0.getUserUsername();
-                  var7 = var15;
-                  if (var15 == null) {
-                     return "";
-                  }
-               } else {
                   val var14: java.lang.String = var0.getUserUsername();
                   var7 = var14;
                   if (var14 == null) {
+                     return "";
+                  }
+               } else {
+                  val var13: java.lang.String = var0.getUserUsername();
+                  var7 = var13;
+                  if (var13 == null) {
                      return "";
                   }
                }
@@ -1144,32 +1162,24 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
                return var3;
             }
 
-            val var13: java.lang.String = var0.getUserUsername();
-            var7 = var13;
-            if (var13 == null) {
+            val var12: java.lang.String = var0.getUserUsername();
+            var7 = var12;
+            if (var12 == null) {
                return "";
             }
             break;
          }
-
-         val var12: java.lang.String = var0.getGuildName();
-         var3 = var0.getChannelName();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append(var12);
-         var8.append(" #");
-         var8.append(var3);
-         return var8.toString();
       case 1770025841:
          if (!var3.equals("CALL_RING")) {
             return "";
          }
 
-         val var19: Int = var0.getChannelType();
-         if (var19 != null && var19 == 1) {
+         val var21: Int = var0.getChannelType();
+         if (var21 != null && var21 == 1) {
             return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.INCOMING_CALL, null, 2, null);
          }
 
-         if (var19 != null && var19 == 3) {
+         if (var21 != null && var21 == 3) {
             val var11: java.lang.String = var0.getChannelName();
             var7 = var11;
             if (var11 == null) {
@@ -1179,12 +1189,12 @@ public fun NotificationData.getTitle(context: Context): CharSequence {
          }
 
          val var10: java.lang.String = var0.getChannelName();
-         val var6: java.lang.String = var0.getGuildName();
-         val var20: StringBuilder = new StringBuilder();
-         var20.append(var10);
-         var20.append(", ");
-         var20.append(var6);
-         return var20.toString();
+         var3 = var0.getGuildName();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var10);
+         var6.append(", ");
+         var6.append(var3);
+         return var6.toString();
       default:
          return "";
    }
@@ -1235,7 +1245,7 @@ fun h(var0: NotificationData, var1: RenderContext): Unit {
 
 @JvmSynthetic
 fun i(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$18(var0, var1);
+   return renderMessageContent$lambda$14(var0, var1);
 }
 
 internal fun NotificationData.isCall(): Boolean {
@@ -1272,47 +1282,47 @@ internal fun NotificationData.isGroupConversation(): Boolean {
 
 @JvmSynthetic
 fun j(var0: NotificationData, var1: RenderContext): Unit {
+   return getContent$lambda$18(var0, var1);
+}
+
+@JvmSynthetic
+fun k(var0: NotificationData, var1: RenderContext): Unit {
    return getContent$lambda$19(var0, var1);
 }
 
 @JvmSynthetic
-fun k(var0: java.lang.String, var1: RenderContext): Unit {
-   return getMissedCallText$lambda$35(var0, var1);
+fun l(var0: NotificationData, var1: RenderContext): Unit {
+   return getContent$lambda$23(var0, var1);
 }
 
 @JvmSynthetic
-fun l(var0: Embed, var1: RenderContext): Unit {
+fun m(var0: Embed, var1: RenderContext): Unit {
    return renderMessageContent$lambda$12(var0, var1);
 }
 
 @JvmSynthetic
-fun m(var0: NotificationData, var1: RenderContext): Unit {
+fun n(var0: NotificationData, var1: RenderContext): Unit {
    return getContent$lambda$22(var0, var1);
 }
 
 @JvmSynthetic
-fun n(var0: NotificationData, var1: RenderContext): Unit {
-   return getTitle$lambda$2(var0, var1);
-}
-
-@JvmSynthetic
 fun o(var0: NotificationData, var1: RenderContext): Unit {
-   return getTitle$lambda$1(var0, var1);
+   return getBotDMMuteAction$lambda$31(var0, var1);
 }
 
 @JvmSynthetic
 fun p(var0: NotificationData, var1: RenderContext): Unit {
+   return getTitle$lambda$2(var0, var1);
+}
+
+@JvmSynthetic
+fun q(var0: NotificationData, var1: RenderContext): Unit {
+   return getTitle$lambda$1(var0, var1);
+}
+
+@JvmSynthetic
+fun r(var0: NotificationData, var1: RenderContext): Unit {
    return getTitle$lambda$5(var0, var1);
-}
-
-@JvmSynthetic
-fun q(var0: java.lang.String, var1: RenderContext): Unit {
-   return getSystemMessageUserJoin__NT_lnE$lambda$24$lambda$23(var0, var1);
-}
-
-@JvmSynthetic
-fun r(var0: Sticker, var1: RenderContext): Unit {
-   return renderMessageContent$lambda$7(var0, var1);
 }
 
 private fun renderLogAwareNotificationMessageContent(forLogs: Boolean, messageContent: String?): CharSequence? {
@@ -1342,7 +1352,7 @@ internal fun NotificationData.renderMessageContent(context: Context, forLogs: Bo
 
    val var7: Any;
    if (var4 != null) {
-      var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STICKER_NOTIFICATION_BODY, new y(var4));
+      var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STICKER_NOTIFICATION_BODY, new z(var4));
    } else if (var0.getAttachmentTextVariant() != null) {
       val var10: Int = var0.getAttachmentTextVariant();
       if (var10 != null && var10 == 1) {
@@ -1355,29 +1365,34 @@ internal fun NotificationData.renderMessageContent(context: Context, forLogs: Bo
          var7 = var0.getMessageContent();
       }
    } else {
-      val var11: Int = var0.getMessageReferenceType();
-      if (var11 != null && var11 == 1) {
+      val var12: Int = var0.getMessageReferenceType();
+      if (var12 != null && var12 == 1) {
          var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MESSAGE_FORWARDED_NOTIFICATION_BODY, null, 2, null);
       } else if (var0.getActivityInstanceId() == null || var0.getMessageContent() != null && !(var0.getMessageContent() == "")) {
          if (MessageFlagKt.hasMessageFlag(var0.getMessageFlags(), MessageFlag.IS_VOICE_MESSAGE)) {
             var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.VOICE_MESSAGES_SENT_NOTIFICATION, null, 2, null);
          } else {
             val var6: NotificationMessage = var0.getMessage();
-            var var12: Poll = null;
+            var var13: Poll = null;
             if (var6 != null) {
-               var12 = var6.getPoll();
+               var13 = var6.getPoll();
             }
 
-            if (var12 != null) {
+            if (var13 != null) {
                var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_SENT_NOTIFICATION, new d(var0));
             } else {
-               val var13: Int = var0.getMessageType();
-               if (var13 != null && var13 == 46) {
+               val var14: Int = var0.getMessageType();
+               if (var14 != null && var14 == 46) {
                   var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_RESULTS_NOTIFICATION, new e(var9));
-               } else if (var0.getInviteGuildName() != null) {
-                  var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.JOIN_GUILD_NAME, new f(var0));
                } else {
-                  var7 = renderLogAwareNotificationMessageContent(var2, var0.getMessageContent());
+                  val var11: Int = var0.getMessageType();
+                  if (var11 != null && var11 == 63) {
+                     var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.EMOJI_ADDED_NOTIFICATION_BODY, new f(var0));
+                  } else if (var0.getInviteGuildName() != null) {
+                     var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.JOIN_GUILD_NAME, new g(var0));
+                  } else {
+                     var7 = renderLogAwareNotificationMessageContent(var2, var0.getMessageContent());
+                  }
                }
             }
          }
@@ -1452,6 +1467,25 @@ fun `renderMessageContent$lambda$12`(var0: Embed, var1: RenderContext): Unit {
 }
 
 fun `renderMessageContent$lambda$13`(var0: NotificationData, var1: RenderContext): Unit {
+   val var5: java.util.Map = var1.getArgs();
+   val var4: java.lang.String = var0.getMessageContent();
+   var var2: java.lang.String = var4;
+   if (var4 == null) {
+      var2 = "???";
+   }
+
+   var5.put("emoji", var2);
+   val var7: java.util.Map = var1.getArgs();
+   var var6: java.lang.String = var0.getGuildName();
+   if (var6 == null) {
+      var6 = "???";
+   }
+
+   var7.put("guildName", var6);
+   return Unit.a;
+}
+
+fun `renderMessageContent$lambda$14`(var0: NotificationData, var1: RenderContext): Unit {
    var1.getArgs().put("guildName", var0.getInviteGuildName());
    return Unit.a;
 }
@@ -1472,8 +1506,8 @@ fun `renderMessageContent$lambda$9`(var0: NotificationData, var1: RenderContext)
 }
 
 @JvmSynthetic
-fun s(var0: NotificationData, var1: RenderContext): Unit {
-   return getTitle$lambda$4(var0, var1);
+fun s(var0: java.lang.String, var1: RenderContext): Unit {
+   return getMissedCallText$lambda$36(var0, var1);
 }
 
 internal fun NotificationData.shouldUseBigText(): Boolean {
@@ -1499,8 +1533,8 @@ internal fun NotificationData.shouldUseMessagingStyle(): Boolean {
 }
 
 @JvmSynthetic
-fun t(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$20(var0, var1);
+fun t(var0: Sticker, var1: RenderContext): Unit {
+   return renderMessageContent$lambda$7(var0, var1);
 }
 
 private fun Bitmap.toIconCompat(): IconCompat {
@@ -1517,49 +1551,54 @@ public fun NotificationData.toNotificationMessage(author: JsonObject): JsonObjec
       var2 = 0L;
    }
 
-   val var8: Int = var0.getMessageType();
-   var8;
-   val var12: java.lang.String = var0.getMessageId-N_6c4I0();
+   val var12: Int = var0.getMessageType();
+   var12;
+   val var8: java.lang.String = var0.getMessageId-N_6c4I0();
    val var9: ChannelId = var0.getChannelId-qMVnFVQ();
    val var4: Long = var9.unbox-impl();
    val var11: GuildId = var0.getGuildId-qOKuAAo();
-   val var13: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
-   val var10: qb.p = new qb.p();
-   qb.f.c(var10, "content", var6);
-   qb.f.b(var10, "flags", var2);
-   qb.f.b(var10, "type", var8);
-   qb.f.c(var10, "id", MessageId.toString-impl(var12));
-   qb.f.c(var10, "channel_id", ChannelId.toString-impl(var4));
-   qb.f.c(var10, "timestamp", var13);
-   var10.b("author", var1);
+   val var10: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
+   val var13: rb.p = new rb.p();
+   rb.f.c(var13, "content", var6);
+   rb.f.b(var13, "flags", var2);
+   rb.f.b(var13, "type", var12);
+   rb.f.c(var13, "id", MessageId.toString-impl(var8));
+   rb.f.c(var13, "channel_id", ChannelId.toString-impl(var4));
+   rb.f.c(var13, "timestamp", var10);
+   var13.b("author", var1);
    if (var11 != null) {
-      qb.f.c(var10, "guild_id", GuildId.toString-impl(var11.unbox-impl()));
+      rb.f.c(var13, "guild_id", GuildId.toString-impl(var11.unbox-impl()));
    }
 
-   return var10.a();
+   return var13.a();
 }
 
 @JvmSynthetic
 fun u(var0: NotificationData, var1: RenderContext): Unit {
-   return renderMessageContent$lambda$8(var0, var1);
+   return getTitle$lambda$4(var0, var1);
 }
 
 @JvmSynthetic
 fun v(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$16(var0, var1);
+   return getContent$lambda$20(var0, var1);
 }
 
 @JvmSynthetic
 fun w(var0: NotificationData, var1: RenderContext): Unit {
-   return getContent$lambda$14(var0, var1);
+   return renderMessageContent$lambda$8(var0, var1);
 }
 
 @JvmSynthetic
 fun x(var0: NotificationData, var1: RenderContext): Unit {
-   return renderMessageContent$lambda$13(var0, var1);
+   return getContent$lambda$16(var0, var1);
 }
 
 @JvmSynthetic
 fun y(var0: NotificationData, var1: RenderContext): Unit {
+   return renderMessageContent$lambda$13(var0, var1);
+}
+
+@JvmSynthetic
+fun z(var0: NotificationData, var1: RenderContext): Unit {
    return getContent$lambda$21(var0, var1);
 }

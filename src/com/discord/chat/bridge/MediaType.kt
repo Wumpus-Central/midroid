@@ -1,6 +1,6 @@
 package com.discord.chat.bridge
 
-import G9.a
+import H9.a
 import kotlin.enums.EnumEntries
 
 public enum class MediaType(type: String) {

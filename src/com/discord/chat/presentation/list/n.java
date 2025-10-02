@@ -7,6 +7,6 @@ public final class n implements Function0 {
    public final ChatListView d;
 
    public final Object invoke() {
-      return ChatListView.b0(this.d);
+      return ChatListView.Q(this.d);
    }
 }

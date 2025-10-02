@@ -1,6 +1,6 @@
 package com.discord.crash_reporting
 
-import A9.n
+import B9.n
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -80,16 +80,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var8);
-      var6.append("/sentry");
-      var5.setCacheDirPath(var6.toString());
+      val var6: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var6);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("0cd88f99-72bd-49a7-b1ab-b6fafef90407");
+      var5.setProguardUuid("47b64cf9-7f96-4413-9b3f-f438dff85db4");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -108,8 +108,8 @@ public object CrashReporting {
    ) {
       val var5: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var5.p(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var7 : var2.entrySet()) {
+         var5.p(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
       }
 
       var5.o(var3);
@@ -138,7 +138,7 @@ public object CrashReporting {
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", A9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", B9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(var1.getClass()::class)) {
@@ -217,7 +217,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.BreadcrumbLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = G9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic
@@ -237,7 +237,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = G9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

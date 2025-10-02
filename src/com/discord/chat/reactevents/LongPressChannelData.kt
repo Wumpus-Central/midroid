@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
@@ -112,19 +112,19 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
+      val var5: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.originalLink;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LongPressChannelData(guildId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", messageId=");
       var1.append(var5);
-      var1.append(", originalLink=");
+      var1.append(", channelId=");
       var1.append(var4);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(", originalLink=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

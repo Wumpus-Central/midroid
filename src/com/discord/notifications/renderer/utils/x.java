@@ -8,6 +8,6 @@ public final class x implements Function1 {
    public final String d;
 
    public final Object invoke(Object var1) {
-      return NotificationDataUtilsKt.k(this.d, (RenderContext)var1);
+      return NotificationDataUtilsKt.a(this.d, (RenderContext)var1);
    }
 }

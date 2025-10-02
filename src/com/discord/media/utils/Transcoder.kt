@@ -36,7 +36,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(F9.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(G9.b.c(var7), 1);
       var8.C();
       val var9: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0<Unit>(var9, var1) {
@@ -160,7 +160,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === F9.b.e()) {
+      if (var12 === G9.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

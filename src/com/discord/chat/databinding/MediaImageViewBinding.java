@@ -53,21 +53,21 @@ public final class MediaImageViewBinding implements ViewBinding {
       ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
       if (var6 != null) {
          var1 = R.id.gif_indicator;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.image;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.image_alt_text;
-               TextView var3 = (TextView)a.a(var0, var1);
-               if (var3 != null) {
+               TextView var4 = (TextView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.image_blur_bg;
-                  FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                  if (var7 != null) {
+                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.media_view_alt_text_button;
-                     AltTextButtonView var4 = (AltTextButtonView)a.a(var0, var1);
-                     if (var4 != null) {
-                        return new MediaImageViewBinding(var0, var6, var5, var2, var3, var7, var4);
+                     AltTextButtonView var7 = (AltTextButtonView)a.a(var0, var1);
+                     if (var7 != null) {
+                        return new MediaImageViewBinding(var0, var6, var2, var5, var4, var3, var7);
                      }
                   }
                }

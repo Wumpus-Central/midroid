@@ -3,7 +3,7 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public class TapForwardFooterData(snapshotIndex: Int, channelId: String, messageId: String) : ReactEvent {

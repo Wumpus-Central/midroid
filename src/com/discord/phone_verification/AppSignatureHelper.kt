@@ -1,10 +1,10 @@
 package com.discord.phone_verification
 
-import A9.j
+import B9.j
 import X1.a
 import X1.b
 import X1.c
-import Xb.f
+import Yb.f
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -107,26 +107,25 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var23: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
-               var23 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var9: Log = Log.INSTANCE;
+               var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var23: Log = Log.INSTANCE;
                val var8: java.lang.String = TAG;
-               val var25: StringBuilder = new StringBuilder();
-               var25.append("Hash ");
-               var25.append(var23);
-               Log.i$default(var9, var8, var25.toString(), null, 4, null);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var25);
+               Log.i$default(var23, var8, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
                break;
             }
 
-            if (var23 != null) {
+            if (var25 != null) {
                try {
-                  var22.add(var23);
+                  var22.add(var25);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   CollectionsKt.k();
