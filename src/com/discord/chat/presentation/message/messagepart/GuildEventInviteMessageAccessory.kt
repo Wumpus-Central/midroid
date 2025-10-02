@@ -121,10 +121,10 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
       val var8: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
       val var6: GuildEventInviteEmbedImpl = this.invite;
-      val var2: Boolean = this.shouldAnimateEmoji;
-      val var4: Boolean = this.shouldShowLinkDecorations;
-      val var5: Boolean = this.shouldShowRoleDot;
-      val var3: Boolean = this.shouldShowRoleOnName;
+      val var3: Boolean = this.shouldAnimateEmoji;
+      val var2: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowRoleDot;
+      val var5: Boolean = this.shouldShowRoleOnName;
       val var7: StringBuilder = new StringBuilder();
       var7.append("GuildEventInviteMessageAccessory(messageId=");
       var7.append(var8);
@@ -133,13 +133,13 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
       var7.append(", invite=");
       var7.append(var6);
       var7.append(", shouldAnimateEmoji=");
-      var7.append(var2);
-      var7.append(", shouldShowLinkDecorations=");
-      var7.append(var4);
-      var7.append(", shouldShowRoleDot=");
-      var7.append(var5);
-      var7.append(", shouldShowRoleOnName=");
       var7.append(var3);
+      var7.append(", shouldShowLinkDecorations=");
+      var7.append(var2);
+      var7.append(", shouldShowRoleDot=");
+      var7.append(var4);
+      var7.append(", shouldShowRoleOnName=");
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }

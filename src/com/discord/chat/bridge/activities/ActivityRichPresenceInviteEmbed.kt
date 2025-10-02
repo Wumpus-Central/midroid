@@ -22,6 +22,7 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    partyMemberAvatarURIs: List<String>? = null,
    partySizeText: String? = null,
    platformIconKeys: List<String>? = null,
+   coverImageUrl: String? = null,
    subtitle: String? = null,
    title: String? = null
 ) {
@@ -39,6 +40,7 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    public final val partyMemberAvatarURIs: List<String>?
    public final val partySizeText: String?
    public final val platformIconKeys: List<String>?
+   public final val coverImageUrl: String?
    public final val subtitle: String?
    public final val title: String?
 
@@ -46,11 +48,11 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    fun {
       val var1: f = new f(new a(RGBAColorModel::class, RGBAColorModel.$serializer.INSTANCE, new KSerializer[0]));
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, null, null, var1, null, null, null, null, null, null, new f(E0.a), null, new f(var0), null, null};
+      $childSerializers = new KSerializer[]{null, null, null, null, var1, null, null, null, null, null, null, new f(E0.a), null, new f(var0), null, null, null};
    }
 
    fun ActivityRichPresenceInviteEmbed() {
-      this(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 65535, null);
+      this(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 131071, null);
    }
 
    init {
@@ -68,8 +70,9 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
       this.partyMemberAvatarURIs = var12;
       this.partySizeText = var13;
       this.platformIconKeys = var14;
-      this.subtitle = var15;
-      this.title = var16;
+      this.coverImageUrl = var15;
+      this.subtitle = var16;
+      this.title = var17;
    }
 
    public operator fun component1(): Boolean? {
@@ -97,10 +100,14 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    }
 
    public operator fun component15(): String? {
-      return this.subtitle;
+      return this.coverImageUrl;
    }
 
    public operator fun component16(): String? {
+      return this.subtitle;
+   }
+
+   public operator fun component17(): String? {
       return this.title;
    }
 
@@ -151,10 +158,11 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
       partyMemberAvatarURIs: List<String>? = var0.partyMemberAvatarURIs,
       partySizeText: String? = var0.partySizeText,
       platformIconKeys: List<String>? = var0.platformIconKeys,
+      coverImageUrl: String? = var0.coverImageUrl,
       subtitle: String? = var0.subtitle,
       title: String? = var0.title
    ): ActivityRichPresenceInviteEmbed {
-      return new ActivityRichPresenceInviteEmbed(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16);
+      return new ActivityRichPresenceInviteEmbed(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -192,6 +200,8 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
             return false;
          } else if (!(this.platformIconKeys == var1.platformIconKeys)) {
             return false;
+         } else if (!(this.coverImageUrl == var1.coverImageUrl)) {
+            return false;
          } else if (!(this.subtitle == var1.subtitle)) {
             return false;
          } else {
@@ -201,7 +211,7 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    }
 
    public override fun hashCode(): Int {
-      var var16: Int = 0;
+      var var17: Int = 0;
       val var1: Int;
       if (this.ctaButtonEnabled == null) {
          var1 = 0;
@@ -301,14 +311,21 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
       }
 
       val var15: Int;
-      if (this.subtitle == null) {
+      if (this.coverImageUrl == null) {
          var15 = 0;
       } else {
-         var15 = this.subtitle.hashCode();
+         var15 = this.coverImageUrl.hashCode();
+      }
+
+      val var16: Int;
+      if (this.subtitle == null) {
+         var16 = 0;
+      } else {
+         var16 = this.subtitle.hashCode();
       }
 
       if (this.title != null) {
-         var16 = this.title.hashCode();
+         var17 = this.title.hashCode();
       }
 
       return (
@@ -321,93 +338,104 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
                                                                      (
                                                                               (
                                                                                        (
-                                                                                                ((((var1 * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5)
+                                                                                                (
+                                                                                                         (
+                                                                                                                  (((var1 * 31 + var2) * 31 + var3) * 31 + var4)
+                                                                                                                        * 31
+                                                                                                                     + var5
+                                                                                                               )
+                                                                                                               * 31
+                                                                                                            + var6
+                                                                                                      )
                                                                                                       * 31
-                                                                                                   + var6
+                                                                                                   + var7
                                                                                              )
                                                                                              * 31
-                                                                                          + var7
+                                                                                          + var8
                                                                                     )
                                                                                     * 31
-                                                                                 + var8
+                                                                                 + var9
                                                                            )
                                                                            * 31
-                                                                        + var9
+                                                                        + var10
                                                                   )
                                                                   * 31
-                                                               + var10
+                                                               + var11
                                                          )
                                                          * 31
-                                                      + var11
+                                                      + var12
                                                 )
                                                 * 31
-                                             + var12
+                                             + var13
                                        )
                                        * 31
-                                    + var13
+                                    + var14
                               )
                               * 31
-                           + var14
+                           + var15
                      )
                      * 31
-                  + var15
+                  + var16
             )
             * 31
-         + var16;
+         + var17;
    }
 
    public override fun toString(): String {
-      val var15: java.lang.Boolean = this.ctaButtonEnabled;
-      val var1: java.lang.String = this.ctaButtonText;
-      val var4: java.lang.Boolean = this.ctaButtonIsLoading;
+      val var10: java.lang.Boolean = this.ctaButtonEnabled;
+      val var16: java.lang.String = this.ctaButtonText;
+      val var13: java.lang.Boolean = this.ctaButtonIsLoading;
       val var2: java.lang.String = this.footerLabel;
-      val var12: java.util.List = this.gradientColors;
-      val var16: java.lang.String = this.headerText;
-      val var10: java.lang.String = this.iconSrc;
-      val var8: java.lang.Boolean = this.isActive;
-      val var3: java.lang.Boolean = this.isPlatformSupported;
-      val var11: java.lang.Boolean = this.isSpotifyParty;
-      val var14: Int = this.maxPartySize;
-      val var9: java.util.List = this.partyMemberAvatarURIs;
-      val var5: java.lang.String = this.partySizeText;
-      val var6: java.util.List = this.platformIconKeys;
-      val var7: java.lang.String = this.subtitle;
-      val var17: java.lang.String = this.title;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ActivityRichPresenceInviteEmbed(ctaButtonEnabled=");
-      var13.append(var15);
-      var13.append(", ctaButtonText=");
-      var13.append(var1);
-      var13.append(", ctaButtonIsLoading=");
-      var13.append(var4);
-      var13.append(", footerLabel=");
-      var13.append(var2);
-      var13.append(", gradientColors=");
-      var13.append(var12);
-      var13.append(", headerText=");
-      var13.append(var16);
-      var13.append(", iconSrc=");
-      var13.append(var10);
-      var13.append(", isActive=");
-      var13.append(var8);
-      var13.append(", isPlatformSupported=");
-      var13.append(var3);
-      var13.append(", isSpotifyParty=");
-      var13.append(var11);
-      var13.append(", maxPartySize=");
-      var13.append(var14);
-      var13.append(", partyMemberAvatarURIs=");
-      var13.append(var9);
-      var13.append(", partySizeText=");
-      var13.append(var5);
-      var13.append(", platformIconKeys=");
-      var13.append(var6);
-      var13.append(", subtitle=");
-      var13.append(var7);
-      var13.append(", title=");
-      var13.append(var17);
-      var13.append(")");
-      return var13.toString();
+      val var18: java.util.List = this.gradientColors;
+      val var6: java.lang.String = this.headerText;
+      val var1: java.lang.String = this.iconSrc;
+      val var15: java.lang.Boolean = this.isActive;
+      val var7: java.lang.Boolean = this.isPlatformSupported;
+      val var17: java.lang.Boolean = this.isSpotifyParty;
+      val var11: Int = this.maxPartySize;
+      val var3: java.util.List = this.partyMemberAvatarURIs;
+      val var12: java.lang.String = this.partySizeText;
+      val var8: java.util.List = this.platformIconKeys;
+      val var14: java.lang.String = this.coverImageUrl;
+      val var9: java.lang.String = this.subtitle;
+      val var5: java.lang.String = this.title;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActivityRichPresenceInviteEmbed(ctaButtonEnabled=");
+      var4.append(var10);
+      var4.append(", ctaButtonText=");
+      var4.append(var16);
+      var4.append(", ctaButtonIsLoading=");
+      var4.append(var13);
+      var4.append(", footerLabel=");
+      var4.append(var2);
+      var4.append(", gradientColors=");
+      var4.append(var18);
+      var4.append(", headerText=");
+      var4.append(var6);
+      var4.append(", iconSrc=");
+      var4.append(var1);
+      var4.append(", isActive=");
+      var4.append(var15);
+      var4.append(", isPlatformSupported=");
+      var4.append(var7);
+      var4.append(", isSpotifyParty=");
+      var4.append(var17);
+      var4.append(", maxPartySize=");
+      var4.append(var11);
+      var4.append(", partyMemberAvatarURIs=");
+      var4.append(var3);
+      var4.append(", partySizeText=");
+      var4.append(var12);
+      var4.append(", platformIconKeys=");
+      var4.append(var8);
+      var4.append(", coverImageUrl=");
+      var4.append(var14);
+      var4.append(", subtitle=");
+      var4.append(var9);
+      var4.append(", title=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

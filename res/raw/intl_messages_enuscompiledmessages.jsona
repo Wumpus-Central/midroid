@@ -2427,8 +2427,8 @@
   "7p5pqq": "URL (optional)",
   "CQmAZW": "What did you expect to see?",
   "Wj3LW1": "Build Override",
-  "nOunHB": "Apply",
-  "tX4xrq": "Clear",
+  "nOunHB": "Apply Build Override",
+  "tX4xrq": "Clear Build Override",
   "8eRE6e": "Build expired",
   "RCYGoq": "Commit Hash",
   "GOEF0N": [
@@ -3296,23 +3296,9 @@
       8,
       "$b",
       [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "“Virtual Goods” section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord."
       ]
-    ],
-    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
+    ]
   ],
   "SKduys": [
     [
@@ -5349,6 +5335,7 @@
   ],
   "IhMxgo": "Remove Emoji",
   "CZeRhY": "Replace Emoji",
+  "OPsckJ": "Poll created!",
   "QwbTSU": "Create Private Threads",
   "25rKnZ": "Create Public Threads",
   "6dIB4e": "Create Server",
@@ -6705,6 +6692,21 @@
       ]
     ],
     " is not available. Head to Settings to set another default."
+  ],
+  "Dz4vkp": [
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " is not available because this server doesn't allow external emojis."
   ],
   "CL5mWl": "Emoji is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
@@ -8786,7 +8788,6 @@
     ],
     " files."
   ],
-  "9ovjIC": "At least 1 file is required.",
   "tyxwW1": [
     "Upload ",
     [
@@ -20409,6 +20410,10 @@
   ],
   "2UeOlZ": "Treat",
   "6Zuiv7": "Trick",
+  "d8R2VF": "Hang Status",
+  "pwvT9v": "Set Voice Activity",
+  "KPop4u": "Set status",
+  "qstQub": "Add a status",
   "1+boPj": "Happening Now",
   "zSG3Q0": [
     "Your message could not be delivered because this message contains a link blocked by Discord. You can learn more here: ",
@@ -31700,9 +31705,13 @@
     ],
     " minutes"
   ],
+  "Y9DnPT": "All",
+  "rjVPdH": "Quest Bar",
+  "MAvIf3": "Card",
   "jQEfRU": "Complete Quest",
   "oisrFh": "Copy Quest ID",
-  "IcljUl": "Embedded Quest Preview",
+  "AswoU1": "Embed",
+  "habP/P": "Embedded Quest",
   "cKSLr6": "Random Progress",
   "JF6W6+": "Reset Dismissibility",
   "taqkwM": "Reset Quest",
@@ -32222,6 +32231,7 @@
   "wCxBOT": "Focus Mode (BETA)",
   "CYVgLC": "With Focus Mode, Discord will no longer show in-app, desktop notifications or play message sounds, just like with DND. Would you like to switch to Online?",
   "B+cbLS": "Switch to Online?",
+  "5UAi5+": "Randomize Status",
   "Whhv4+": "You are being rate limited.",
   "m9O1gY": "React",
   "gHp0Cw": "Reactions",
@@ -35615,9 +35625,19 @@
   "oF6+W1": "Start Verification",
   "oCqlGB": "Start Video Call",
   "focH1t": "Start Voice Call",
+  "30yqZW": "Gonna BRB",
+  "fFTJTE": "brb",
+  "vkpn7+": "Chilling",
+  "vybY9f": "chilling",
+  "IeolFR": "my first status",
   "jaNpQE": "Do Not Disturb",
+  "b6AscH": "In the zone",
+  "D5eCT0": "studying",
+  "lZslwM": "GAMING",
+  "wvWdTU": "gaming",
   "qWbtVV": "Idle",
   "bg24HB": "Invisible",
+  "74vS//": "Right now, I'm -",
   "Vv0abG": "Offline",
   "WbGtnJ": "Online",
   "9hghLC": "Online via mobile",
@@ -35630,6 +35650,8 @@
       "endTime"
     ]
   ],
+  "di6IFx": "Watchin' stuff",
+  "s8xFaG": "watching stuff",
   "Xp+X2d": "Always animate",
   "IlLT7e": "Animate on interaction",
   "2ExvRk": "This controls when stickers animate. This is currently overridden by your reduced motion preferences.",

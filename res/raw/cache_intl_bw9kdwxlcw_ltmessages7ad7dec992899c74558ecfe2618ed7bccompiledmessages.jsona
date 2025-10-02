@@ -1,0 +1,22 @@
+{
+  "RpMIT0": [
+    "Naudojame amžiaus grupes, kad nustatytume prieigą prie tam tikrų dalykų. ",
+    [
+      8,
+      "$link",
+      [
+        "Sužinoti daugiau"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "eJmat7": "Paprastai greičiausias ir visiškai automatinis. Tau reikės tik kameros.",
+  "2yLvkZ": "Nufilmuok asmenukės tipo vaizdo įrašą",
+  "ZdmRwc": "Tau reikės vairuotojo pažymėjimo, paso ar kito asmens dokumento. Tada padaryk asmenukę, kad patvirtintum, jog tai tu.",
+  "dwkwo6": "Nuskaityk dokumentą"
+}

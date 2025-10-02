@@ -31,11 +31,11 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                val var21: java.lang.String = var20.getMessage();
                if (var21 != null && StringsKt.N(var21, "Scrapped or attached views may not be recycled", false, 2, null)) {
                   val var22: Log = Log.INSTANCE;
-                  val var19: java.lang.String = var20.getMessage();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Skipping layout due to nested RecyclerView timing conflict: ");
-                  var18.append(var19);
-                  Log.e$default(var22, "MosaicLayoutManager", var18.toString(), null, 4, null);
+                  val var18: java.lang.String = var20.getMessage();
+                  val var19: StringBuilder = new StringBuilder();
+                  var19.append("Skipping layout due to nested RecyclerView timing conflict: ");
+                  var19.append(var18);
+                  Log.e$default(var22, "MosaicLayoutManager", var19.toString(), null, 4, null);
                   return;
                }
 

@@ -89,9 +89,9 @@ internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
-   val var5: Pair = s.a("protocol", var0.getProtocol());
-   val var3: Pair = s.a("address", var0.getLocalAddress());
-   val var4: Pair = s.a("port", var0.getLocalPort());
+   val var3: Pair = s.a("protocol", var0.getProtocol());
+   val var4: Pair = s.a("address", var0.getLocalAddress());
+   val var5: Pair = s.a("port", var0.getLocalPort());
    val var1: Int = var0.getCreateConnectionTime();
    val var8: Pair;
    if (var1 != null) {
@@ -106,7 +106,7 @@ internal fun ConnectionInfo.toMap(): Map<String, Any> {
       var7 = s.a("connectTime", var6.intValue());
    }
 
-   return L.t(CollectionsKt.p(new Pair[]{var5, var3, var4, var8, var7}));
+   return L.t(CollectionsKt.p(new Pair[]{var3, var4, var5, var8, var7}));
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

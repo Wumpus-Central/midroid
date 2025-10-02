@@ -24,7 +24,7 @@ public class DCDReactNativeHost(application: Application) : DefaultReactNativeHo
 
 
    public open fun createReactSurfaceView(context: Context, surfaceImpl: ReactSurfaceImpl): ReactSurfaceView? {
-      return new com.discord.react_activities.ReactSurfaceView(var1, var2);
+      return new com.discord.react_rootview.ReactSurfaceView(var1, var2);
    }
 
    protected open fun getBundleAssetName(): String {

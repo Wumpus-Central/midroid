@@ -33,7 +33,7 @@ import kotlinx.coroutines.CoroutineScope
 import org.jetbrains.annotations.NotNull
 import org.webrtc.VideoFrame
 
-@SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n+ 2 Debug.kt\ncom/discord/media/engine/types/Debug\n+ 3 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,755:1\n38#2,4:756\n58#2,4:760\n44#2,7:764\n44#2,7:771\n41#3,13:778\n41#3,13:791\n41#3,13:804\n41#3,13:817\n41#3,13:830\n41#3,13:843\n59#3,7:856\n41#3,13:863\n41#3,13:876\n59#3,7:889\n41#3,13:896\n41#3,13:909\n59#3,7:922\n41#3,13:929\n41#3,13:942\n41#3,13:955\n41#3,13:968\n45#3,9:981\n41#3,13:990\n41#3,13:1003\n59#3,7:1016\n59#3,7:1023\n59#3,3:1030\n63#3,3:1036\n59#3,7:1039\n59#3,7:1046\n41#3,13:1053\n41#3,13:1067\n3829#4:1033\n4344#4,2:1034\n1#5:1066\n*S KotlinDebug\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n*L\n77#1:756,4\n91#1:760,4\n100#1:764,7\n115#1:771,7\n123#1:778,13\n128#1:791,13\n140#1:804,13\n145#1:817,13\n150#1:830,13\n155#1:843,13\n160#1:856,7\n170#1:863,13\n175#1:876,13\n180#1:889,7\n192#1:896,13\n197#1:909,13\n202#1:922,7\n214#1:929,13\n219#1:942,13\n229#1:955,13\n244#1:968,13\n261#1:981,9\n272#1:990,13\n275#1:1003,13\n280#1:1016,7\n290#1:1023,7\n300#1:1030,3\n300#1:1036,3\n332#1:1039,7\n352#1:1046,7\n364#1:1053,13\n720#1:1067,13\n308#1:1033\n308#1:1034,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n+ 2 Debug.kt\ncom/discord/media/engine/types/Debug\n+ 3 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,758:1\n38#2,4:759\n58#2,4:763\n44#2,7:767\n44#2,7:774\n41#3,13:781\n41#3,13:794\n41#3,13:807\n41#3,13:820\n41#3,13:833\n41#3,13:846\n59#3,7:859\n41#3,13:866\n41#3,13:879\n59#3,7:892\n41#3,13:899\n41#3,13:912\n59#3,7:925\n41#3,13:932\n41#3,13:945\n41#3,13:958\n41#3,13:971\n45#3,9:984\n41#3,13:993\n41#3,13:1006\n59#3,7:1019\n59#3,7:1026\n59#3,3:1033\n63#3,3:1039\n59#3,7:1042\n59#3,7:1049\n41#3,13:1056\n41#3,13:1070\n3829#4:1036\n4344#4,2:1037\n1#5:1069\n*S KotlinDebug\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n*L\n77#1:759,4\n91#1:763,4\n100#1:767,7\n115#1:774,7\n123#1:781,13\n128#1:794,13\n140#1:807,13\n145#1:820,13\n150#1:833,13\n155#1:846,13\n160#1:859,7\n170#1:866,13\n175#1:879,13\n180#1:892,7\n192#1:899,13\n197#1:912,13\n202#1:925,7\n214#1:932,13\n219#1:945,13\n229#1:958,13\n244#1:971,13\n261#1:984,9\n272#1:993,13\n275#1:1006,13\n280#1:1019,7\n290#1:1026,7\n300#1:1033,3\n300#1:1039,3\n332#1:1042,7\n352#1:1049,7\n364#1:1056,13\n723#1:1070,13\n308#1:1036\n308#1:1037,2\n*E\n"])
 public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = db.K.a()) {
    private final val context: Context
    private final val instanceCreationNs: Long
@@ -186,19 +186,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var4: NativeConnection = this.engineConnections.get(var1);
-      if (var4 == null) {
+      val var5: NativeConnection = this.engineConnections.get(var1);
+      if (var5 == null) {
          val var3: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("[");
-         var5.append(var2);
-         var5.append("] no NativeConnection for connectionId=");
-         var5.append(var1);
-         var5.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("[");
+         var4.append(var2);
+         var4.append("] no NativeConnection for connectionId=");
+         var4.append(var1);
+         var4.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var4;
+      return var5;
    }
 
    @JvmStatic
@@ -262,10 +262,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var var3: MediaEngine.Companion = MediaEngine.Companion;
-               var1 = this.$bitmap;
+               var1 = MediaEngine.Companion;
+               var var3: Bitmap = this.$bitmap;
                this.label = 1;
-               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
+               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -881,10 +881,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 01e: invokespecial org/json/JSONObject.<init> ()V
       // 021: astore 7
       // 023: bipush 0
-      // 024: anewarray 363
+      // 024: anewarray 367
       // 027: astore 6
       // 029: bipush 0
-      // 02a: anewarray 363
+      // 02a: anewarray 367
       // 02d: astore 5
       // 02f: new android/media/MediaCodecList
       // 032: dup
@@ -915,7 +915,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
-      // 07a: astore 4
+      // 07a: astore 11
       // 07c: aload 12
       // 07e: arraylength
       // 07f: istore 3
@@ -927,23 +927,23 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 087: aload 12
       // 089: iload 2
       // 08a: aaload
-      // 08b: astore 11
-      // 08d: aload 11
+      // 08b: astore 4
+      // 08d: aload 4
       // 08f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 092: aload 11
+      // 092: aload 4
       // 094: ldc_w "video"
       // 097: bipush 0
       // 098: bipush 2
       // 099: aconst_null
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
-      // 0a0: aload 4
-      // 0a2: aload 11
+      // 0a0: aload 11
+      // 0a2: aload 4
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1
       // 0ad: goto 082
-      // 0b0: aload 4
+      // 0b0: aload 11
       // 0b2: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
       // 0b7: astore 11
       // 0b9: aload 11
@@ -968,7 +968,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 0ef: ldc_w ""
       // 0f2: astore 4
       // 0f4: bipush 3
-      // 0f5: anewarray 363
+      // 0f5: anewarray 367
       // 0f8: dup
       // 0f9: bipush 0
       // 0fa: aload 12
@@ -1678,7 +1678,11 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
    }
 
-   @SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,755:1\n1#2:756\n*E\n"])
+   internal fun updateFieldTrial(key: String, value: String) {
+      this.getEngine().updateFieldTrial(var1, var2);
+   }
+
+   @SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,758:1\n1#2:759\n*E\n"])
    public companion object {
       private const val TAG: String
       private const val THUMBNAIL_JPEG_QUALITY: Int
@@ -1806,15 +1810,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var3: ScreenCapturer = this.screenCapturer;
+         val var2: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ScreenCapturerForConnection(screenCapturer=");
-         var2.append(var3);
-         var2.append(", connectionId=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScreenCapturerForConnection(screenCapturer=");
+         var3.append(var2);
+         var3.append(", connectionId=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

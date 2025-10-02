@@ -9,7 +9,7 @@ import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceSettingsModuleSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
-import com.discord.react_activities.RootViewUtils
+import com.discord.react_rootview.RootViewUtils
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap

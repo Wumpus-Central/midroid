@@ -275,6 +275,27 @@
   "c9BHsr": "Total amount that your teen spent in the last week.",
   "85PtWl": "Total amount that you spent in the last week.",
   "bdBmq6": "Activity",
+  "pzKKoK": [
+    [
+      2,
+      "messageCount"
+    ],
+    " messages"
+  ],
+  "Lq9Sen": "Top Servers",
+  "BxbvS0": "Top Users",
+  "Fjwpen": [
+    [
+      2,
+      "dmsSent"
+    ],
+    " messages  •  ",
+    [
+      2,
+      "callCount"
+    ],
+    " calls"
+  ],
   "fwQgEx": [
     "Added ",
     [
@@ -339,6 +360,7 @@
   "mK40bm": "Cancel request",
   "czincX": "Do nothing",
   "ahKIJC": "Parental Controls",
+  "7aYkh4": "Filter messages from server members your teen may not know",
   "w0JA3N": [
     [
       6,

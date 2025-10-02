@@ -67,7 +67,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       try {
          var14 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var1 = Result.e;
+         var14 = Result.e;
          var14 = Result.b(c.a(var2));
          break label30;
       }

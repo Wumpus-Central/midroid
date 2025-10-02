@@ -1,0 +1,22 @@
+{
+  "RpMIT0": [
+    "Korcsoportok alapján határozzuk meg, hogy ki fér hozzá bizonyos élményekhez. ",
+    [
+      8,
+      "$link",
+      [
+        "További tájékoztatás"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "eJmat7": "Általában a leggyorsabb és teljesen automatikus. Csak kamerára van hozzá szükség.",
+  "2yLvkZ": "Videós szelfi készítése",
+  "ZdmRwc": "Jogosítványra, útlevélre vagy egyéb személyazonosító okmányra van hozzá szükség. Majd egy fényképes szelfire, hogy megerősítsük, te vagy az.",
+  "dwkwo6": "A személyazonosító okmányod beolvasása"
+}

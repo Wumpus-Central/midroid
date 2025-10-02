@@ -21,6 +21,7 @@ public final class R {
       public static int bottom_end_label;
       public static int button;
       public static int content_container;
+      public static int cover_image;
       public static int desktop_icon;
       public static int end_image;
       public static int footer_container;

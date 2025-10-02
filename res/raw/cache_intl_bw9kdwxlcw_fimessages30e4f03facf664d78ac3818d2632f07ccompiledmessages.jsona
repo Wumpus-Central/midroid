@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Tilisi on palautettu käyttöön",
+  "d9Ykjo": "Vahvistuskoodi",
+  "bFbsV1": "Anna sähköpostiosoitteesi",
+  "RRBNpq": "Seuraava",
+  "0DHxys": [
+    "Eikö tämä ole sinä? ",
+    [
+      8,
+      "$link",
+      [
+        "Kirjaudu ulos"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Saatamme myöhemmissä vaiheissa esittää jatkokysymyksiä – esimerkiksi siitä, oletko robotti",
+  "Ks6opq": "Käynnistä",
+  "I2Ctk5": "Palauta tilisi käyttöön suorittamalla alla olevat vaiheet",
+  "RRamMD": "Tili lukittu",
+  "ah0EUl": "Lähetä koodi uudelleen",
+  "2+Lyn5": [
+    "Lähetä koodi uudelleen ",
+    [
+      1,
+      "countdown"
+    ],
+    " sekunnin kuluttua"
+  ],
+  "3AXMYm": "Vahvistuskoodin lähettäminen epäonnistui",
+  "dSkE/P": "Vahvista ikäryhmä",
+  "o4D6fn": "Päivitä",
+  "VBZJJi": "Päivitä sovellus, jos haluat jatkaa.",
+  "yxqMCA": "Päivitys tarvitaan",
+  "wq2RDg": "Vahvista",
+  "PfbG6O": "Virheellinen vahvistuskoodi",
+  "aveKoK": "Lähetimme juuri vahvistuskoodin sähköpostiosoitteeseesi. Sen saapuminen voi kestää muutaman minuutin",
+  "Qm6K/v": "Vahvista sähköpostiosoitteesi"
+}

@@ -21,7 +21,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.C();
-   val var3: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
+   val var4: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -54,11 +54,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: kotlin.Result.a = Result.e;
+               val var6: kotlin.Result.a = Result.e;
                var5.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: kotlin.Result.a = Result.e;
+               val var2: kotlin.Result.a = Result.e;
                Result.b(c.a(var3));
                return;
             }
@@ -68,8 +68,8 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var4: kotlin.Result.a = Result.e;
-      var0.startConnection(var3);
+      val var3: kotlin.Result.a = Result.e;
+      var0.startConnection(var4);
       var8 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
       val var7: kotlin.Result.a = Result.e;

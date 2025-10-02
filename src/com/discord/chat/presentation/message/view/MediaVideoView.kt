@@ -185,10 +185,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       val var34: MediaView = this.binding.mediaView;
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var38: SpoilerViewManager = this.spoilerViewManager;
+      val var41: SpoilerViewManager = this.spoilerViewManager;
+      val var38: ConstraintLayout = this.binding.container;
       val var35: ConstraintLayout = this.binding.container;
-      val var42: ConstraintLayout = this.binding.container;
-      val var41: MediaView = this.binding.mediaView;
+      val var42: MediaView = this.binding.mediaView;
       if (var14 && !var11) {
          var11 = true;
       } else {
@@ -201,7 +201,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var38.configureSpoiler(var13, var35, var42, var41, null, var11, var15, var12, var10, var16, var17);
+      var41.configureSpoiler(var13, var38, var35, var42, null, var11, var15, var12, var10, var16, var17);
       val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var36: ConstraintLayout = this.binding.container;
       var39.configureAttachmentOverlay(this, var36, var10, var18);
@@ -332,13 +332,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
@@ -386,14 +386,14 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       public override fun toString(): String {
          val var1: java.lang.String = this.sourceUrl;
-         val var2: java.lang.String = this.previewUrl;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetUrl(sourceUrl=");
-         var3.append(var1);
-         var3.append(", previewUrl=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.previewUrl;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TargetUrl(sourceUrl=");
+         var2.append(var1);
+         var2.append(", previewUrl=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }
