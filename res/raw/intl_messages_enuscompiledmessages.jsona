@@ -6706,6 +6706,21 @@
     ],
     " is not available. Head to Settings to set another default."
   ],
+  "Dz4vkp": [
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " is not available because this server doesn't allow external emojis."
+  ],
   "CL5mWl": "Emoji is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
   "3u/Je3": [
@@ -8786,7 +8801,6 @@
     ],
     " files."
   ],
-  "9ovjIC": "At least 1 file is required.",
   "tyxwW1": [
     "Upload ",
     [
