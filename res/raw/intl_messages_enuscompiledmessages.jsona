@@ -3296,23 +3296,9 @@
       8,
       "$b",
       [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "“Virtual Goods” section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord."
       ]
-    ],
-    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
+    ]
   ],
   "SKduys": [
     [
