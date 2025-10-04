@@ -46,15 +46,15 @@ public class ReactViewManagerOverride : ReactViewManager {
             var5 = var8;
          }
 
-         val var14: java.lang.String = var2.getClass().getName();
-         val var15: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
-         var15.o("react.viewmanager");
-         var15.p("isTransitioning", var11);
-         var15.p("wantsToAddToSameParent", var6);
-         var15.p("isParentClipping", var7);
-         var15.p("isChildClipped", var5);
-         var15.p("childClassType", var14);
-         p1.e(var15);
+         val var15: java.lang.String = var2.getClass().getName();
+         val var14: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
+         var14.o("react.viewmanager");
+         var14.p("isTransitioning", var11);
+         var14.p("wantsToAddToSameParent", var6);
+         var14.p("isParentClipping", var7);
+         var14.p("isChildClipped", var5);
+         var14.p("childClassType", var15);
+         p1.e(var14);
          if (!var2.isAttachedToWindow()) {
             var2.post(new Runnable(this, var1, var2, var3) {
                final View $child;
