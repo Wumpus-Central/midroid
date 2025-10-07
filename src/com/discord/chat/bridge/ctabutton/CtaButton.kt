@@ -82,21 +82,21 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var4: Int = this.textColor;
-      val var3: Int = this.backgroundColor;
-      val var5: java.lang.String = this.callback;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CtaButton(text=");
-      var2.append(var1);
-      var2.append(", textColor=");
-      var2.append(var4);
-      var2.append(", backgroundColor=");
-      var2.append(var3);
-      var2.append(", callback=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = this.text;
+      val var3: Int = this.textColor;
+      val var1: Int = this.backgroundColor;
+      val var2: java.lang.String = this.callback;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CtaButton(text=");
+      var4.append(var5);
+      var4.append(", textColor=");
+      var4.append(var3);
+      var4.append(", backgroundColor=");
+      var4.append(var1);
+      var4.append(", callback=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

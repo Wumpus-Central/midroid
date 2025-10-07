@@ -21559,8 +21559,6 @@
   "3XVNys": "Kopiraj poveznicu na pozivnicu",
   "VNe8Pz": "Uredi pozivnicu.",
   "Ckxb6u": "Pozovi na pridruživanje",
-  "2Gbof3": "Pozivnica je istekla",
-  "jfrMtr": "Popunjeno",
   "x1UXGR": "Igra je završila. Želiš li pokrenuti neku drugu?",
   "pkq6Vl": "Pozivnica za igru",
   "hC/Ze3": "Pozovi da se pridruži",
@@ -21579,11 +21577,6 @@
     ]
   ],
   "KC26NT": "Pridružen/a",
-  "5crb4u": "Pridruži se preko Androida",
-  "c3EWuL": "Pridruži se aplikacijom za računalo",
-  "ZozYtr": "Pridruži se preko iOSa",
-  "/ak8Mj": "Pridruži se putem PlayStationa",
-  "HEY5dX": "Pridruži se preko Xboxa",
   "84qx9v": "Zabava slušanja je završena!",
   "fMs6ub": "Pridružit ćeš se u Androidu.",
   "aqN8U1": "Pridružit ćeš se na desktopu.",
@@ -21639,7 +21632,6 @@
       ]
     ]
   ],
-  "B9kbnZ": "Zabava gledanja je gotova!",
   "IA6uDQ": [
     "Šalješ zahtjev za pridruživanjem zabavi u aplikaciji ",
     [
@@ -39892,7 +39884,6 @@
   "IEpCBQ": "Korisničko ime",
   "GPfy3N": "Potrebno je korisničko ime.",
   "YEOwDA": "Koga želiš dodati kao prijatelja?",
-  "OKsSCQ": "Zatraži pridruživanje",
   "OzCsIC": "Natječe se u",
   "XWSHTU": [
     "Poveži ",

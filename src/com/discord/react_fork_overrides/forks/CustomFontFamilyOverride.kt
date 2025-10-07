@@ -154,16 +154,16 @@ internal object CustomFontFamilyOverride {
             var10 = StringsKt.A(StringsKt.A(StringsKt.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var25[var5];
+            var var12: java.lang.String = var28[var5];
             val var13: StringBuilder = new StringBuilder();
             var13.append("fonts/");
-            var13.append(var10);
+            var13.append(var9);
             var13.append(var12);
             var12 = var13.toString();
 

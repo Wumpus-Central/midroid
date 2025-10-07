@@ -458,20 +458,20 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var29 = "";
          }
 
-         val var18: StructurableText = var21.getName();
-         val var31: DraweeSpanStringBuilder;
-         if (var18 != null) {
-            val var23: Context = var20.getContext();
-            val var22: TextPaint = var20.getBinding().name.getPaint();
+         val var22: StructurableText = var21.getName();
+         var var31: DraweeSpanStringBuilder;
+         if (var22 != null) {
+            val var18: Context = var20.getContext();
+            val var23: TextPaint = var20.getBinding().name.getPaint();
             var31 = TextUtilsKt.toSpannable$default(
+               var22,
                var18,
-               var23,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var22,
+               var23,
                var24,
                var8,
                var12,
@@ -504,14 +504,13 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var30 = "";
          }
 
-         val var34: StructurableText = var21.getValue();
-         val var33: DraweeSpanStringBuilder;
-         if (var34 != null) {
+         val var36: StructurableText = var21.getValue();
+         if (var36 != null) {
             val var32: Context = var20.getContext();
             val var35: TextPaint = var20.getBinding().value.getPaint();
-            val var36: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
-            var33 = TextUtilsKt.toSpannable$default(
-               var34,
+            val var34: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
+            var31 = TextUtilsKt.toSpannable$default(
+               var36,
                var32,
                var2,
                var3,
@@ -536,16 +535,16 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var36),
+               TextUtilsKt.getBaselineHeightPx(var34),
                null,
                49011712,
                null
             );
          } else {
-            var33 = null;
+            var31 = null;
          }
 
-         var20.setValue(var30, var33, var9);
+         var20.setValue(var30, var31, var9);
       }
    }
 
@@ -805,20 +804,20 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             }
          }
       } else {
-         val var35: StructurableText = var1.getTitle();
+         val var78: StructurableText = var1.getTitle();
          val var79: DraweeSpanStringBuilder;
-         if (var35 != null) {
-            val var34: Context = this.getContext();
-            val var78: TextPaint = this.binding.title.getPaint();
+         if (var78 != null) {
+            val var35: Context = this.getContext();
+            val var34: TextPaint = this.binding.title.getPaint();
             var79 = TextUtilsKt.toSpannable$default(
+               var78,
                var35,
-               var34,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var78,
+               var34,
                null,
                null,
                var22,
@@ -873,21 +872,21 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var50 = "";
          }
 
-         val var87: StructurableText = var1.getDescription();
+         val var83: StructurableText = var1.getDescription();
          val var72: DraweeSpanStringBuilder;
-         if (var87 != null) {
+         if (var83 != null) {
             val var81: Context = this.getContext();
-            val var83: TextPaint = this.binding.description.getPaint();
+            val var87: TextPaint = this.binding.description.getPaint();
             val var86: FontMetrics = this.binding.description.getPaint().getFontMetrics();
             var72 = TextUtilsKt.toSpannable$default(
-               var87,
+               var83,
                var81,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var83,
+               var87,
                new x(var17, var4),
                var18,
                var22,

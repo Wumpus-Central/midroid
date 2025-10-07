@@ -11,11 +11,11 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
    }
 
    public fun bind(safetySystemNotificationEmbed: SafetySystemNotificationEmbed, onTapCta: (String, String) -> Unit) {
-      val var13: SafetySystemNotificationView = this.safetySystemNotificationView;
-      val var12: java.lang.String = var1.getTitleText();
-      val var11: java.lang.String = var1.getTitleIcon();
-      val var14: java.lang.String = var1.getSubtitleText();
-      val var10: java.lang.String = var1.getDescriptionText();
+      val var14: SafetySystemNotificationView = this.safetySystemNotificationView;
+      val var10: java.lang.String = var1.getTitleText();
+      val var13: java.lang.String = var1.getTitleIcon();
+      val var12: java.lang.String = var1.getSubtitleText();
+      val var11: java.lang.String = var1.getDescriptionText();
       var var4: java.lang.String = var1.getPrimaryCtaText();
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -52,6 +52,6 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
          var8 = "";
       }
 
-      var13.setContent(var12, var11, var14, var10, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
+      var14.setContent(var10, var13, var12, var11, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
    }
 }

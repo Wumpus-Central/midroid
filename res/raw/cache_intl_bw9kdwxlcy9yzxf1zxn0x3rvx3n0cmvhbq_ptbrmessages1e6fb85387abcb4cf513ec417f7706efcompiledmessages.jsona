@@ -1,23 +1,5 @@
 {
   "DKHheX": "Pedir para a transmitir",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " está pedindo para você transmitir ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "Você pediu para alguém transmitir ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Transmissão em andamento",
   "u4QmWl": "Solicitação expirado",
   "qRXatr": "Não está no canal de voz",

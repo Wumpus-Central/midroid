@@ -137,32 +137,32 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Attachment = this.attachment;
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var9: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
       val var6: java.lang.Float = this.attachmentsOpacity;
-      val var7: UserId = this.authorId;
-      val var9: Int = this.color;
+      val var5: UserId = this.authorId;
+      val var8: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("AudioAttachmentMessageAccessory(channelId=");
-      var8.append(var3);
-      var8.append(", messageId=");
-      var8.append(var5);
-      var8.append(", attachment=");
-      var8.append(var4);
-      var8.append(", attachmentIndex=");
-      var8.append(var1);
-      var8.append(", attachmentsOpacity=");
-      var8.append(var6);
-      var8.append(", authorId=");
-      var8.append(var7);
-      var8.append(", color=");
-      var8.append(var9);
-      var8.append(", isVoiceMessage=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioAttachmentMessageAccessory(channelId=");
+      var3.append(var7);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", attachment=");
+      var3.append(var9);
+      var3.append(", attachmentIndex=");
+      var3.append(var1);
+      var3.append(", attachmentsOpacity=");
+      var3.append(var6);
+      var3.append(", authorId=");
+      var3.append(var5);
+      var3.append(", color=");
+      var3.append(var8);
+      var3.append(", isVoiceMessage=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

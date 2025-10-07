@@ -20908,8 +20908,6 @@
   "3XVNys": "Copy Invite Link",
   "VNe8Pz": "Edit invite link.",
   "Ckxb6u": "Ask to Join",
-  "2Gbof3": "Invite Expired",
-  "jfrMtr": "Full",
   "x1UXGR": "Game has ended. Start a new one?",
   "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
@@ -20928,11 +20926,6 @@
     ]
   ],
   "KC26NT": "Joined",
-  "5crb4u": "Join via Android",
-  "c3EWuL": "Join via Desktop App",
-  "ZozYtr": "Join via iOS",
-  "/ak8Mj": "Join via PlayStation",
-  "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
   "fMs6ub": "You’ll be joined on Android.",
   "aqN8U1": "You’ll be joined on Desktop.",
@@ -20990,7 +20983,6 @@
     ],
     " party"
   ],
-  "B9kbnZ": "The watching party is over!",
   "IA6uDQ": [
     "You are asking to join a(n) ",
     [
@@ -38580,7 +38572,6 @@
   "IEpCBQ": "Username",
   "GPfy3N": "Username is required.",
   "YEOwDA": "Who would you like to add as a friend?",
-  "OKsSCQ": "Ask to Join",
   "OzCsIC": "Competing in",
   "XWSHTU": [
     "Connect ",

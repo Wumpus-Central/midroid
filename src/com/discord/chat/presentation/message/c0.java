@@ -14,6 +14,6 @@ public final class c0 implements OnLongClickListener {
    public final MediaType m;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.e(this.d, this.e, this.i, this.m, var1);
+      return MessageView.f(this.d, this.e, this.i, this.m, var1);
    }
 }

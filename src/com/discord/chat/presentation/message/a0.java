@@ -11,6 +11,6 @@ public final class a0 implements OnClickListener {
    public final ChatEventHandler e;
 
    public final void onClick(View var1) {
-      MessageView.s(this.d, this.e, var1);
+      MessageView.r(this.d, this.e, var1);
    }
 }

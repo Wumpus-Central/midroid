@@ -20945,8 +20945,6 @@
   "3XVNys": "Copiar enlace de invitación",
   "VNe8Pz": "Editar enlace de invitación.",
   "Ckxb6u": "Pedir unirse",
-  "2Gbof3": "Invitación expirada",
-  "jfrMtr": "Lleno",
   "x1UXGR": "El juego ha terminado. ¿Quieres empezar uno nuevo?",
   "pkq6Vl": "Invitación al juego",
   "hC/Ze3": "Invitar a unirse",
@@ -20965,11 +20963,6 @@
     ]
   ],
   "KC26NT": "Te has unido",
-  "5crb4u": "Unirse a través de Android",
-  "c3EWuL": "Unirse con la aplicación de escritorio",
-  "ZozYtr": "Unirse a través de iOS",
-  "/ak8Mj": "Unirte a través de PlayStation",
-  "HEY5dX": "Unirse a través de Xbox",
   "84qx9v": "¡La sesión de escucha ha acabado!",
   "fMs6ub": "Te unirás en Android.",
   "aqN8U1": "Te unirás en el escritorio.",
@@ -21025,7 +21018,6 @@
       ]
     ]
   ],
-  "B9kbnZ": "¡La sesión de visionado ha terminado!",
   "IA6uDQ": [
     "Estás pidiendo unirte a un grupo en ",
     [
@@ -38724,7 +38716,6 @@
   "IEpCBQ": "Nombre de usuario",
   "GPfy3N": "Nombre de usuario obligatorio.",
   "YEOwDA": "¿A quién quieres añadir como amigo?",
-  "OKsSCQ": "Pedir unirse",
   "OzCsIC": "Compitiendo en",
   "XWSHTU": [
     "Conectar ",

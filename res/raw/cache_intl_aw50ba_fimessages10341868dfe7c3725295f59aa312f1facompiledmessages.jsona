@@ -20965,8 +20965,6 @@
   "3XVNys": "Kopioi kutsulinkki",
   "VNe8Pz": "Muokkaa kutsulinkkiä.",
   "Ckxb6u": "Lähetä liittymispyyntö",
-  "2Gbof3": "Kutsu vanhentunut",
-  "jfrMtr": "Täynnä",
   "x1UXGR": "Peli on päättynyt. Aloitetaanko uusi?",
   "pkq6Vl": "Pelikutsu",
   "hC/Ze3": "Kutsu liittymään",
@@ -20985,11 +20983,6 @@
     ]
   ],
   "KC26NT": "Liitytty",
-  "5crb4u": "Liity Androidin kautta",
-  "c3EWuL": "Liity työpöytäsovelluksen kautta",
-  "ZozYtr": "Liity iOS:n kautta",
-  "/ak8Mj": "Liity PlayStationilla",
-  "HEY5dX": "Liity Xboxin kautta",
   "84qx9v": "Ryhmäkuuntelu on ohi!",
   "fMs6ub": "Sinut yhdistetään Android-laitteella.",
   "aqN8U1": "Sinut yhdistetään tietokoneella.",
@@ -21045,7 +21038,6 @@
       ]
     ]
   ],
-  "B9kbnZ": "Ryhmäkatselu on ohi!",
   "IA6uDQ": [
     "Olet lähettämässä pyynnön liittyä ryhmään sovelluksessa ",
     [
@@ -38706,7 +38698,6 @@
   "IEpCBQ": "Käyttäjänimi",
   "GPfy3N": "Käyttäjänimi vaaditaan.",
   "YEOwDA": "Kenet haluat lisätä kaveriksi?",
-  "OKsSCQ": "Pyydä liittyä mukaan",
   "OzCsIC": "Kisaamassa:",
   "XWSHTU": [
     "Yhdistä palveluun ",

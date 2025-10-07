@@ -11,6 +11,6 @@ public final class f implements OnClickListener {
    public final ChannelPromptActionsAccessory e;
 
    public final void onClick(View var1) {
-      ChannelPromptActionsViewHolder.b(this.d, this.e, var1);
+      ChannelPromptActionsViewHolder.e(this.d, this.e, var1);
    }
 }

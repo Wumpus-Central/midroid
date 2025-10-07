@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.viewholder;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import kotlin.jvm.functions.Function2;
+import com.discord.chat.presentation.message.messagepart.ChannelPromptActionsAccessory;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class e implements OnClickListener {
-   public final Function2 d;
-   public final String e;
-   public final long i;
+   public final Function3 d;
+   public final ChannelPromptActionsAccessory e;
 
    public final void onClick(View var1) {
-      AutoModerationNotificationEmbedViewHolder.b(this.d, this.e, this.i, var1);
+      ChannelPromptActionsViewHolder.b(this.d, this.e, var1);
    }
 }

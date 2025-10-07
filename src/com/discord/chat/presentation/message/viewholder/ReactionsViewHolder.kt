@@ -39,6 +39,6 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       onReactionLongPress: (Reaction) -> Unit,
       theme: DiscordTheme? = null
    ) {
-      this.reactionsView.setReactions(var1, var2, var3, var4, var5, var6, new F(var7), new G(var8), var9);
+      this.reactionsView.setReactions(var1, var2, var3, var4, var5, var6, new E(var7), new F(var8), var9);
    }
 }

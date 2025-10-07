@@ -20924,8 +20924,6 @@
   "3XVNys": "Copiază link-ul de invitație",
   "VNe8Pz": "Editează link-ul de invitație.",
   "Ckxb6u": "Cere să te alături",
-  "2Gbof3": "Invitație expirată",
-  "jfrMtr": "Plin",
   "x1UXGR": "Jocul s-a încheiat. Vrei să începi unul nou?",
   "pkq6Vl": "Invitație la joc",
   "hC/Ze3": "Invită să se alăture",
@@ -20944,11 +20942,6 @@
     ]
   ],
   "KC26NT": "Te-ai alăturat",
-  "5crb4u": "Alătură-te prin Android",
-  "c3EWuL": "Alătură-te folosind aplicația pentru desktop",
-  "ZozYtr": "Alătură-te prin iOS",
-  "/ak8Mj": "Alătură-te de pe PlayStation",
-  "HEY5dX": "Alătură-te prin Xbox",
   "84qx9v": "Ascultarea a luat sfârșit!",
   "fMs6ub": "Te vom conecta pe Android.",
   "aqN8U1": "Te vom conecta pe Desktop.",
@@ -21004,7 +20997,6 @@
       ]
     ]
   ],
-  "B9kbnZ": "Vizionarea a luat sfârșit!",
   "IA6uDQ": [
     "Ceri să te alături unui grup de ",
     [
@@ -38647,7 +38639,6 @@
   "IEpCBQ": "Nume de utilizator",
   "GPfy3N": "Numele de utilizator este necesar.",
   "YEOwDA": "Pe cine vrei să adaugi ca prieten?",
-  "OKsSCQ": "Cere să te alături",
   "OzCsIC": "Concurează în",
   "XWSHTU": [
     "Conectează ",

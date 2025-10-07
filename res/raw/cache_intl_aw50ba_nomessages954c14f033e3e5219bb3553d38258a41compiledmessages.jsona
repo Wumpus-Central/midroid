@@ -20881,8 +20881,6 @@
   "3XVNys": "Kopier invitasjonslenke",
   "VNe8Pz": "Rediger invitasjonslenke.",
   "Ckxb6u": "Be om å bli med",
-  "2Gbof3": "Invitasjonen er utløpt",
-  "jfrMtr": "Full",
   "x1UXGR": "Spillet er avsluttet. Starte et nytt?",
   "pkq6Vl": "Spillinvitasjon",
   "hC/Ze3": "Inviter til å bli med",
@@ -20901,11 +20899,6 @@
     ]
   ],
   "KC26NT": "Ble med i",
-  "5crb4u": "Bli med via Android",
-  "c3EWuL": "Bli med via skrivebordsprogrammet",
-  "ZozYtr": "Bli med via iOS",
-  "/ak8Mj": "Bli med via PlayStation",
-  "HEY5dX": "Bli med via Xbox",
   "84qx9v": "Lyttefesten er over!",
   "fMs6ub": "Du blir med på Android.",
   "aqN8U1": "Du blir med i desktop-appen.",
@@ -20963,7 +20956,6 @@
     ],
     "-partyet ditt"
   ],
-  "B9kbnZ": "Tittefesten er over!",
   "IA6uDQ": [
     "Du ber om å bli med i et ",
     [
@@ -38615,7 +38607,6 @@
   "IEpCBQ": "Brukernavn",
   "GPfy3N": "Brukernavn er påkrevd.",
   "YEOwDA": "Hvem vil du legge til som venn?",
-  "OKsSCQ": "Be om å bli med",
   "OzCsIC": "Kjemper i",
   "XWSHTU": [
     "Koble til ",

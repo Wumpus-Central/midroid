@@ -20970,8 +20970,6 @@
   "3XVNys": "Davet Bağlantısını Kopyala",
   "VNe8Pz": "Davet bağlantısını düzenle.",
   "Ckxb6u": "Katılma İzni İste",
-  "2Gbof3": "Davetin Geçerliliği Bitti",
-  "jfrMtr": "Dolu",
   "x1UXGR": "Oyun sona erdi. Yeni bir taneye başlamak ister misin?",
   "pkq6Vl": "Oyun Daveti",
   "hC/Ze3": "Katılmaya Davet Et",
@@ -20990,11 +20988,6 @@
     " İzlemeye Davet Et"
   ],
   "KC26NT": "Katıldın",
-  "5crb4u": "Android ile katıl",
-  "c3EWuL": "Masaüstü Uygulaması ile Katıl",
-  "ZozYtr": "iOS ile katıl",
-  "/ak8Mj": "PlayStation üzerinden katıl",
-  "HEY5dX": "Xbox ile katıl",
   "84qx9v": "Dinleme partisi sona erdi!",
   "fMs6ub": "Android'den katılacaksın.",
   "aqN8U1": "Masaüstünden katılacaksın.",
@@ -21052,7 +21045,6 @@
     ],
     " partine katılmak istiyor"
   ],
-  "B9kbnZ": "İzleme partisi sona erdi!",
   "IA6uDQ": [
     "Bir ",
     [
@@ -38641,7 +38633,6 @@
   "IEpCBQ": "Kullanıcı Adı",
   "GPfy3N": "Kullanıcı adı gerekli.",
   "YEOwDA": "Arkadaşın olarak kimi eklemek istersin?",
-  "OKsSCQ": "Katılma İzni İste",
   "OzCsIC": "Şu yarışmada yarışıyor:",
   "XWSHTU": [
     [

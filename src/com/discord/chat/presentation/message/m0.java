@@ -6,6 +6,6 @@ import kotlin.jvm.functions.Function2;
 // $VF: synthetic class
 public final class m0 implements Function2 {
    public final Object invoke(Object var1, Object var2) {
-      return MessageView.k((MessageAccessory)var1, (MessageAccessory)var2);
+      return MessageView.b((MessageAccessory)var1, (MessageAccessory)var2);
    }
 }

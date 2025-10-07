@@ -170,27 +170,27 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var11: MessageAccessoriesView.Companion = Companion;
       val var12: Resources = this.getResources();
       this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
-      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var13: java.util.Iterator = var5.iterator();
+         val var16: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var13.hasNext()) {
+            if (!var16.hasNext()) {
                break;
             }
 
-            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var16.setShowThreadSpine(var9);
+      var13.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

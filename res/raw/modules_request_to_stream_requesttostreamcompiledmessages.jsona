@@ -1,23 +1,5 @@
 {
   "DKHheX": "Ask to Stream",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " is asking you to stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "You asked someone to stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Already streaming",
   "u4QmWl": "Request expired",
   "qRXatr": "Not in voice channel",

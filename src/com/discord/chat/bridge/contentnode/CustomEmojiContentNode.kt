@@ -71,19 +71,19 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var6: java.lang.String = this.alt;
+      val var4: java.lang.String = this.alt;
       val var5: java.lang.String = this.src;
-      val var4: java.lang.String = this.frozenSrc;
+      val var6: java.lang.String = this.frozenSrc;
       val var1: Boolean = this.jumboable;
       val var7: StringBuilder = new StringBuilder();
       var7.append("CustomEmojiContentNode(id=");
       var7.append(var2);
       var7.append(", alt=");
-      var7.append(var6);
+      var7.append(var4);
       var7.append(", src=");
       var7.append(var5);
       var7.append(", frozenSrc=");
-      var7.append(var4);
+      var7.append(var6);
       var7.append(", jumboable=");
       var7.append(var1);
       var7.append(")");

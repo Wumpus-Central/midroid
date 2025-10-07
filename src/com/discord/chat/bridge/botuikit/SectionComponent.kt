@@ -71,8 +71,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -80,28 +80,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
+      val var5: java.lang.String = this.errorText;
       val var3: java.util.List = this.components;
-      val var5: SectionAccessory = this.accessory;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SectionComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var2);
-      var6.append(", errorText=");
-      var6.append(var4);
-      var6.append(", components=");
-      var6.append(var3);
-      var6.append(", accessory=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var6: SectionAccessory = this.accessory;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SectionComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var2);
+      var4.append(", errorText=");
+      var4.append(var5);
+      var4.append(", components=");
+      var4.append(var3);
+      var4.append(", accessory=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

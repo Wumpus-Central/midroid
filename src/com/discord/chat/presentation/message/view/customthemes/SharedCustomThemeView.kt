@@ -71,18 +71,18 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       this.binding.previewBtn.setText(var2.getPreviewLabel());
       this.binding.previewBtn.setCornerRadius(this.binding.previewBtn.getHeight() / 2);
       this.binding.previewBtn.setOnClickButtonListener(new a(var4, var1));
-      val var12: ThemePreviewView = this.binding.themePreview;
+      val var8: ThemePreviewView = this.binding.themePreview;
       val var16: java.util.List = var2.getColors();
-      val var8: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
+      val var12: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var6 : var16) {
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("#");
-         var7.append(var6);
-         var8.add(var7.toString());
+      for (java.lang.String var7 : var16) {
+         val var17: StringBuilder = new StringBuilder();
+         var17.append("#");
+         var17.append(var7);
+         var12.add(var17.toString());
       }
 
-      var12.setHexColors(var8);
+      var8.setHexColors(var12);
       this.binding.themePreview.setGradientAngle(var2.getGradientAngle());
       this.binding.previewHeading.setText(var2.getPreviewHeading());
       this.binding.previewHeading.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
@@ -113,11 +113,11 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
       for (java.lang.String var5 : var4) {
-         val var6: TextView = new TextView(this.getContext());
-         var6.setText(var5);
-         var6.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var6.setTextSize(14.0F);
-         var3.add(var6);
+         val var8: TextView = new TextView(this.getContext());
+         var8.setText(var5);
+         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var8.setTextSize(14.0F);
+         var3.add(var8);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

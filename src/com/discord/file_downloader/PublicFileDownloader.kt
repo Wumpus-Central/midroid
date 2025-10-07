@@ -286,8 +286,8 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var1 = var20;
                   var23 = var1;
+                  var1 = var20;
                }
 
                val var24: c = new c(var23);

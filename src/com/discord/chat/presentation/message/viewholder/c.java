@@ -1,16 +1,16 @@
 package com.discord.chat.presentation.message.viewholder;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.discord.chat.presentation.message.messagepart.AudioAttachmentMessageAccessory;
+import android.view.View.OnClickListener;
 import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class c implements OnLongClickListener {
+public final class c implements OnClickListener {
    public final Function2 d;
-   public final AudioAttachmentMessageAccessory e;
+   public final String e;
+   public final long i;
 
-   public final boolean onLongClick(View var1) {
-      return AudioPlayerViewHolder.b(this.d, this.e, var1);
+   public final void onClick(View var1) {
+      AutoModerationNotificationEmbedViewHolder.c(this.d, this.e, this.i, var1);
    }
 }

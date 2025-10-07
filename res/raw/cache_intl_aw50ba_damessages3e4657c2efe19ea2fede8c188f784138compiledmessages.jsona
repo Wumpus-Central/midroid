@@ -21037,8 +21037,6 @@
   "3XVNys": "Kopier invitationslink",
   "VNe8Pz": "Rediger invitationslink.",
   "Ckxb6u": "Spørg om at deltage",
-  "2Gbof3": "Invitation udløbet",
-  "jfrMtr": "Fyldt",
   "x1UXGR": "Spillet er slut",
   "pkq6Vl": "Spilinvitation",
   "hC/Ze3": "Invitation til at slutte sig til",
@@ -21057,11 +21055,6 @@
     ]
   ],
   "KC26NT": "Tilsluttede sig",
-  "5crb4u": "Tilslut via Android",
-  "c3EWuL": "Deltag vha. pc-appen",
-  "ZozYtr": "Tilslut via iOS",
-  "/ak8Mj": "Deltag via PlayStation",
-  "HEY5dX": "Tilslut via Xbox",
   "84qx9v": "Lytteselskabet er forbi.",
   "fMs6ub": "Du vil blive tilsluttet på Android.",
   "aqN8U1": "Du vil blive tilsluttet på computeren.",
@@ -21119,7 +21112,6 @@
     ],
     "-fest"
   ],
-  "B9kbnZ": "Kiggeselskabet er forbi.",
   "IA6uDQ": [
     "Du beder om at deltage i en ",
     [
@@ -38702,7 +38694,6 @@
   "IEpCBQ": "Brugernavn",
   "GPfy3N": "Brugernavn er påkrævet.",
   "YEOwDA": "Hvem vil du tilføje som ven?",
-  "OKsSCQ": "Spørg om at deltage",
   "OzCsIC": "Konkurrerer i",
   "XWSHTU": [
     "Forbind ",

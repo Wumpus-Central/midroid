@@ -264,14 +264,15 @@
       "cardinal"
     ]
   ],
-  "aOLJDw": "Total spent",
-  "SIgpS0": [
-    "Purchases — ",
+  "NMYKsr": "Total purchases",
+  "FPViWF": [
+    "Total Purchases — ",
     [
-      2,
-      "count"
+      1,
+      "amount"
     ]
   ],
+  "cqIdqa": "All purchases your teen made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
   "c9BHsr": "Total amount that your teen spent in the last week.",
   "85PtWl": "Total amount that you spent in the last week.",
   "bdBmq6": "Activity",

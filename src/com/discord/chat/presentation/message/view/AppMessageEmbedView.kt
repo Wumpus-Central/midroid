@@ -273,8 +273,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
                var31 = false;
             }
 
-            val var55: java.lang.String = var63.getLabel();
-            val var61: java.lang.String = var63.getId();
+            val var61: java.lang.String = var63.getLabel();
+            val var55: java.lang.String = var63.getId();
             val var64: java.lang.Boolean = var63.getDisabled();
             val var12: Boolean;
             if (var64 != null) {
@@ -314,14 +314,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var71.setAlpha(var7);
-            var71.setText(var55);
+            var71.setText(var61);
             var71.setBackgroundColor(var9);
             var71.setTextColor(var10);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
             var71.setLayoutParams(var67);
-            var71.setOnClickButtonListener(new d(this, var2, var1, var61));
+            var71.setOnClickButtonListener(new d(this, var2, var1, var55));
             this.view.actionsContainer.addView(var71);
          }
 

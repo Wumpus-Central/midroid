@@ -21027,8 +21027,6 @@
   "3XVNys": "Einladungslink kopieren",
   "VNe8Pz": "Einladungslink bearbeiten.",
   "Ckxb6u": "Beitrittsanfrage",
-  "2Gbof3": "Einladung abgelaufen",
-  "jfrMtr": "Voll",
   "x1UXGR": "Spiel ist beendet. Neues Spiel starten?",
   "pkq6Vl": "Spieleinladung",
   "hC/Ze3": "Zum Beitritt einladen",
@@ -21049,11 +21047,6 @@
     " anzuschauen."
   ],
   "KC26NT": "Beigetreten",
-  "5crb4u": "Über Android beitreten",
-  "c3EWuL": "Über Desktop-App beitreten",
-  "ZozYtr": "Über iOS beitreten",
-  "/ak8Mj": "Über PlayStation beitreten",
-  "HEY5dX": "Über Xbox beitreten",
   "84qx9v": "Die Hörerparty ist vorbei!",
   "fMs6ub": "Du wirst auf Android verbunden.",
   "aqN8U1": "Du wirst auf dem Desktop verbunden.",
@@ -21108,7 +21101,6 @@
     ],
     " beizutreten"
   ],
-  "B9kbnZ": "Die Zuschauerparty ist vorbei!",
   "IA6uDQ": [
     "Du bittest darum, einer Gruppe in ",
     [
@@ -38677,7 +38669,6 @@
   "IEpCBQ": "Benutzername",
   "GPfy3N": "Benutzername ist erforderlich.",
   "YEOwDA": "Wen möchtest du als Freund hinzufügen?",
-  "OKsSCQ": "Beitrittsanfrage",
   "OzCsIC": "Tritt an in",
   "XWSHTU": [
     [

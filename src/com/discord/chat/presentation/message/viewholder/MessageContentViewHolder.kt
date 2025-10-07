@@ -64,9 +64,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-      val var25: TextPaint = this.messageContentView.getPaint();
-      val var27: FontManager = FontManager.INSTANCE;
-      val var26: Context = this.messageContentView.getContext();
+      val var26: TextPaint = this.messageContentView.getPaint();
+      val var25: FontManager = FontManager.INSTANCE;
+      val var27: Context = this.messageContentView.getContext();
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
@@ -75,7 +75,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getShouldShowLinkDecorations(),
             var1.getShouldShowRoleDot(),
             var1.getShouldShowRoleOnName(),
-            new C(var2, var1),
+            new B(var2, var1),
             var3,
             var4,
             var5,
@@ -90,7 +90,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var14,
             var15,
             var16,
-            new D(var1),
+            new C(var1),
             var1.getBottomSpacingPx(),
             var1.getConstrainedWidth(),
             var1.isForwardedContent(),
@@ -98,7 +98,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var27.getScaledSpToPx(16, var26))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var26, var25.getScaledSpToPx(16, var27))
          );
    }
 }

@@ -11,6 +11,6 @@ public final class k0 implements OnLongClickListener {
    public final Message e;
 
    public final boolean onLongClick(View var1) {
-      return MessageView.f(this.d, this.e, var1);
+      return MessageView.i(this.d, this.e, var1);
    }
 }

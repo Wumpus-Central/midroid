@@ -20919,8 +20919,6 @@
   "3XVNys": "Meghívó link másolása",
   "VNe8Pz": "Meghívó link szerkesztése.",
   "Ckxb6u": "Csatlakozás kérése",
-  "2Gbof3": "Meghívó lejárt",
-  "jfrMtr": "Tele",
   "x1UXGR": "A játék véget ért. Szeretnél újat indítani?",
   "pkq6Vl": "Játékmeghívó",
   "hC/Ze3": "Meghívás csatlakozásra",
@@ -20939,11 +20937,6 @@
     ]
   ],
   "KC26NT": "Csatlakozva",
-  "5crb4u": "Csatlakozás Android segítségével",
-  "c3EWuL": "Csatlakozás asztali alkalmazással",
-  "ZozYtr": "Csatlakozás iOS segítségével",
-  "/ak8Mj": "Csatlakozás PlayStation felületén keresztül",
-  "HEY5dX": "Csatlakozás Xbox segítségével",
   "84qx9v": "A zenehallgatásnak vége!",
   "fMs6ub": "Android rendszerű eszközön fogsz csatlakozni.",
   "aqN8U1": "Asztali eszközön fogsz csatlakozni.",
@@ -21001,7 +20994,6 @@
     ],
     "-partidhoz"
   ],
-  "B9kbnZ": "A megnézésnek vége!",
   "IA6uDQ": [
     "Jelzed a csatlakozási szándékodat egy ",
     [
@@ -38627,7 +38619,6 @@
   "IEpCBQ": "Felhasználónév",
   "GPfy3N": "Felhasználónév megadása kötelező.",
   "YEOwDA": "Kit szeretnél hozzáadni barátként?",
-  "OKsSCQ": "Csatlakozás kérése",
   "OzCsIC": "Itt versenyezik:",
   "XWSHTU": [
     [

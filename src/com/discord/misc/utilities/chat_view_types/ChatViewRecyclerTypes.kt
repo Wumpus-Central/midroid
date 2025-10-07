@@ -15,7 +15,6 @@ public object ChatViewRecyclerTypes {
    public const val WELCOME_STICKER: Int = 14
    public const val GUILD_EVENT_INVITE: Int = 15
    public const val GIFT: Int = 16
-   public const val ACTIVITY_INVITE_EMBED: Int = 17
    public const val EPHEMERAL_INDICATION: Int = 18
    public const val INTERACTION_STATUS: Int = 19
    public const val FORUM_POST_ACTION_BAR: Int = 20

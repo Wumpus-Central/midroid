@@ -373,7 +373,6 @@ public final class R {
       public static int design_components_illustration_native_redesign_generated_images_img_no_results_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_pins_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_search_empty_darker;
-      public static int design_components_illustration_native_redesign_generated_images_img_spotify_error_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_stream_ended_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_stream_failed_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_text_in_voice_empty_state_darker;
@@ -815,8 +814,6 @@ public final class R {
       public static int images_native_img_search_empty_dark;
       public static int images_native_img_search_empty_light;
       public static int images_native_img_security;
-      public static int images_native_img_spotify_error_dark;
-      public static int images_native_img_spotify_error_light;
       public static int images_native_img_text_in_voice_empty_state_dark;
       public static int images_native_img_text_in_voice_empty_state_light;
       public static int images_native_img_transfer_arrow;

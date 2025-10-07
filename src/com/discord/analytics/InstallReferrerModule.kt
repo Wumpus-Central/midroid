@@ -21,18 +21,18 @@ import kotlinx.coroutines.g
 public class InstallReferrerModule(context: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    @ReactMethod
    public fun get(promise: Promise) {
-      val var4: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var3: ObjectRef = new ObjectRef();
-      var3.element = var4.getString("referrer", null);
-      val var2: Int = var4.getInt("attempts", 0);
-      if (var3.element != null) {
-         var1.resolve(var3.element);
+      val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
+      val var4: ObjectRef = new ObjectRef();
+      var4.element = var3.getString("referrer", null);
+      val var2: Int = var3.getInt("attempts", 0);
+      if (var4.element != null) {
+         var1.resolve(var4.element);
       } else if (var2 < 10) {
          f.d(
             g.b(),
             null,
             null,
-            new Function2<CoroutineScope, Continuation, Object>(new ObjectRef(), this, var3, var4, var1, var2, null) {
+            new Function2<CoroutineScope, Continuation, Object>(new ObjectRef(), this, var4, var3, var1, var2, null) {
                final int $attempts;
                final ObjectRef<InstallReferrerClient> $client;
                final SharedPreferences $prefs;
@@ -144,15 +144,14 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                     c.b(var1);
                                     var196 = this.L$0 as CoroutineScope;
                                     var3x = this.$client;
-                                    val var10: InstallReferrerModule = this.this$0;
+                                    val var9: InstallReferrerModule = this.this$0;
                                     var4 = this.$referrer;
                                     var5 = this.$prefs;
                                     var1 = this.$promise;
 
-                                    var var199: InstallReferrerClient;
                                     try {
-                                       val var9: a = Result.e;
-                                       var199 = InstallReferrerClient.newBuilder(InstallReferrerModule.access$getReactApplicationContext(var10)).build();
+                                       val var10: a = Result.e;
+                                       var199 = InstallReferrerClient.newBuilder(InstallReferrerModule.access$getReactApplicationContext(var9)).build();
                                        var3x.element = var199;
                                     } catch (var22: java.lang.Throwable) {
                                        val var170: a = Result.e;

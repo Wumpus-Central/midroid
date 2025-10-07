@@ -11,6 +11,6 @@ public final class l0 implements OnClickListener {
    public final Message e;
 
    public final void onClick(View var1) {
-      MessageView.p(this.d, this.e, var1);
+      MessageView.o(this.d, this.e, var1);
    }
 }

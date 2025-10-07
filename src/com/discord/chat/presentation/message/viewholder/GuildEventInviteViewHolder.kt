@@ -47,14 +47,14 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    }
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
-      val var14: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var17: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var14.getHeaderIcon(), var14.getHeaderText(), var14.getHeaderColor());
-      var17.setCreatorAvatar(var14.getCreatorAvatar());
-      var17.setBadge(var14.getBadgeIcon(), var14.getBadgeCount());
-      var17.setTitle(var14.getTitleText(), var14.getTitleColor());
-      var17.setDescription-iRUqyQU(
-         var14.getContent(),
+      val var13: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var6: GuildEventInviteView = this.guildEventInviteView;
+      this.guildEventInviteView.setHeader(var13.getHeaderIcon(), var13.getHeaderText(), var13.getHeaderColor());
+      var6.setCreatorAvatar(var13.getCreatorAvatar());
+      var6.setBadge(var13.getBadgeIcon(), var13.getBadgeCount());
+      var6.setTitle(var13.getTitleText(), var13.getTitleColor());
+      var6.setDescription-iRUqyQU(
+         var13.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
@@ -169,7 +169,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
-         new o(this),
+         new n(this),
          new Function1<java.lang.String, Unit>(this.eventHandler) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
@@ -218,16 +218,16 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var17.setGuild(var14.getGuildName(), var14.getGuildIcon());
-      var17.setChannel(var14.getChannelIcon(), var14.getChannelName());
-      var17.setAcceptButton(
-         var14.getAcceptLabelIcon(),
-         var14.getAcceptLabelText(),
-         var14.getAcceptLabelColor(),
-         var14.getAcceptLabelBorderColor(),
-         var14.getAcceptLabelBackgroundColor(),
-         new p(this, var1)
+      var6.setGuild(var13.getGuildName(), var13.getGuildIcon());
+      var6.setChannel(var13.getChannelIcon(), var13.getChannelName());
+      var6.setAcceptButton(
+         var13.getAcceptLabelIcon(),
+         var13.getAcceptLabelText(),
+         var13.getAcceptLabelColor(),
+         var13.getAcceptLabelBorderColor(),
+         var13.getAcceptLabelBackgroundColor(),
+         new o(this, var1)
       );
-      var17.setSecondaryButton(var14.getSecondaryActionIcon(), new q(this, var1));
+      var6.setSecondaryButton(var13.getSecondaryActionIcon(), new p(this, var1));
    }
 }

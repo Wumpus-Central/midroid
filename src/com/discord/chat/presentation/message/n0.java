@@ -9,6 +9,6 @@ public final class n0 implements Comparator {
 
    @Override
    public final int compare(Object var1, Object var2) {
-      return MessageView.i(this.d, var1, var2);
+      return MessageView.h(this.d, var1, var2);
    }
 }

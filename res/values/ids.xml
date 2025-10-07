@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="above_bottom_row_barrier" />
     <item type="id" name="accent_border" />
     <item type="id" name="acceptButton" />
     <item type="id" name="acceptButtonGradient" />
@@ -109,7 +108,6 @@
     <item type="id" name="avatar" />
     <item type="id" name="avatar_container" />
     <item type="id" name="avatar_placeholder" />
-    <item type="id" name="avatars" />
     <item type="id" name="background_image" />
     <item type="id" name="badge" />
     <item type="id" name="badge_container" />
@@ -119,14 +117,12 @@
     <item type="id" name="barrier_button" />
     <item type="id" name="barrier_footer" />
     <item type="id" name="barrier_header" />
-    <item type="id" name="bg_gradient" />
     <item type="id" name="blocked_message_group_button" />
     <item type="id" name="blocked_messages" />
     <item type="id" name="blur_view" />
     <item type="id" name="body" />
     <item type="id" name="body_text" />
     <item type="id" name="border" />
-    <item type="id" name="bottom_end_label" />
     <item type="id" name="bottom_guideline" />
     <item type="id" name="browser_actions_header_text" />
     <item type="id" name="browser_actions_menu_item_icon" />
@@ -220,7 +216,6 @@
     <item type="id" name="emoji" />
     <item type="id" name="emoji_button" />
     <item type="id" name="empty_results" />
-    <item type="id" name="end_image" />
     <item type="id" name="end_padder" />
     <item type="id" name="error" />
     <item type="id" name="error_icon" />
@@ -343,7 +338,6 @@
     <item type="id" name="header_text" />
     <item type="id" name="header_title" />
     <item type="id" name="heading" />
-    <item type="id" name="hero_text" />
     <item type="id" name="hide_button" />
     <item type="id" name="hide_ime_id" />
     <item type="id" name="home" />
@@ -702,7 +696,6 @@
     <item type="id" name="splash" />
     <item type="id" name="split_action_bar" />
     <item type="id" name="spoiler" />
-    <item type="id" name="start_image" />
     <item type="id" name="start_spacer" />
     <item type="id" name="state_aspect_ratio" />
     <item type="id" name="state_rotate" />
@@ -711,7 +704,6 @@
     <item type="id" name="sticker_view" />
     <item type="id" name="submenuarrow" />
     <item type="id" name="submit_area" />
-    <item type="id" name="subtext" />
     <item type="id" name="subtitle" />
     <item type="id" name="subtitleGradient" />
     <item type="id" name="subtitle_container" />

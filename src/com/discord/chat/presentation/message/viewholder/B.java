@@ -1,15 +1,16 @@
 package com.discord.chat.presentation.message.viewholder;
 
-import com.discord.chat.presentation.events.ChatEventHandler;
-import com.discord.primitives.UserId;
-import kotlin.jvm.functions.Function3;
+import com.discord.chat.bridge.contentnode.LinkContentNode;
+import com.discord.chat.presentation.message.messagepart.MessageContentAccessory;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class B implements Function3 {
-   public final ChatEventHandler d;
-   public final String e;
+public final class B implements Function1 {
+   public final Function2 d;
+   public final MessageContentAccessory e;
 
-   public final Object invoke(Object var1, Object var2, Object var3) {
-      return MessageComponentsViewHolder.c(this.d, this.e, (UserId)var1, (String)var2, (String)var3);
+   public final Object invoke(Object var1) {
+      return MessageContentViewHolder.c(this.d, this.e, (LinkContentNode)var1);
    }
 }

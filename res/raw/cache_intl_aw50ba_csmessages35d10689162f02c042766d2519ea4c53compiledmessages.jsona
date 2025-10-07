@@ -21679,8 +21679,6 @@
   "3XVNys": "Kopírovat zvací odkaz",
   "VNe8Pz": "Upravit zvací odkaz.",
   "Ckxb6u": "Požádat o vstup",
-  "2Gbof3": "Platnost pozvánky vypršela",
-  "jfrMtr": "Plno",
   "x1UXGR": "Hra skončila. Chceš začít novou?",
   "pkq6Vl": "Pozvánka do hry",
   "hC/Ze3": "Pozvat k připojení",
@@ -21699,11 +21697,6 @@
     ]
   ],
   "KC26NT": "Připojeno",
-  "5crb4u": "Přidat se přes Android",
-  "c3EWuL": "Přidat se přes aplikaci",
-  "ZozYtr": "Přidat se přes iOS",
-  "/ak8Mj": "Přidat se přes PlayStation",
-  "HEY5dX": "Přidat se přes Xbox",
   "84qx9v": "Skupina k poslechu skončila!",
   "fMs6ub": "Připojíš se na Androidu.",
   "aqN8U1": "Připojíš se na počítači.",
@@ -21759,7 +21752,6 @@
       ]
     ]
   ],
-  "B9kbnZ": "Skupina ke sledování skončila!",
   "IA6uDQ": [
     "Chceš se připojit k party v aplikaci ",
     [
@@ -39924,7 +39916,6 @@
   "IEpCBQ": "Uživatelské jméno",
   "GPfy3N": "Uživatelské jméno je povinné.",
   "YEOwDA": "Koho si chceš přidat mezi přátele?",
-  "OKsSCQ": "Požádat o vstup",
   "OzCsIC": "Soutěží v",
   "XWSHTU": [
     "Připojit ",

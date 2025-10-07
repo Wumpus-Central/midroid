@@ -58,24 +58,24 @@ public final class PollImageOnlyAnswerViewBinding implements ViewBinding {
       SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.avatar_placeholder;
-         Space var2 = (Space)a.a(var0, var1);
-         if (var2 != null) {
+         Space var7 = (Space)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.image;
             PollMediaView var6 = (PollMediaView)a.a(var0, var1);
             if (var6 != null) {
                var1 = R.id.info_bar;
-               Flow var7 = (Flow)a.a(var0, var1);
-               if (var7 != null) {
+               Flow var8 = (Flow)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.selected_icon;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
+                     TextView var2 = (TextView)a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.vote_percentage;
                         TextView var3 = (TextView)a.a(var0, var1);
                         if (var3 != null) {
-                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var4, var2, var6, var7, var8, var5, var3);
+                           return new PollImageOnlyAnswerViewBinding((ConstraintLayout)var0, var4, var7, var6, var8, var5, var2, var3);
                         }
                      }
                   }

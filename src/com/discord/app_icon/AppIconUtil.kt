@@ -76,16 +76,16 @@ public object AppIconUtil {
       if (var4 != null) {
          val var9: PackageManager = var1.getPackageManager();
 
-         for (AppIcon var7 : AppIcon.getEntries()) {
-            val var5: ComponentName = new ComponentName(var1, var7.getAlias());
+         for (AppIcon var5 : AppIcon.getEntries()) {
+            val var6: ComponentName = new ComponentName(var1, var5.getAlias());
             val var3: Boolean;
-            if (var7 === var4) {
+            if (var5 === var4) {
                var3 = true;
             } else {
                var3 = false;
             }
 
-            this.setComponentState(var9, var5, var3);
+            this.setComponentState(var9, var6, var3);
          }
       } else {
          val var8: StringBuilder = new StringBuilder();

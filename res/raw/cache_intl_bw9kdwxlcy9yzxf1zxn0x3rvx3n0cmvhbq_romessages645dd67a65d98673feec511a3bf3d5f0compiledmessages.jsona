@@ -1,23 +1,5 @@
 {
   "DKHheX": "Cere streaming",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " îți cere să faci streaming la ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "I-ai cerut cuiva să facă streaming la ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Face deja streaming",
   "u4QmWl": "Cerere expirată",
   "qRXatr": "Nu este în canalul de voce",

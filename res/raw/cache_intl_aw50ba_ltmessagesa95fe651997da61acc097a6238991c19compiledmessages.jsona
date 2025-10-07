@@ -21620,8 +21620,6 @@
   "3XVNys": "Kopijuoti pakvietimo nuorodą",
   "VNe8Pz": "Redaguoti pakvietimo nuorodą.",
   "Ckxb6u": "Prašyti prisijungimo",
-  "2Gbof3": "Pakvietimo Laikas Baigėsi",
-  "jfrMtr": "Pilna",
   "x1UXGR": "Žaidimas baigėsi. Pradėti naują?",
   "pkq6Vl": "Kvietimas žaisti",
   "hC/Ze3": "Kviečiame prisijungti prie",
@@ -21640,11 +21638,6 @@
     ]
   ],
   "KC26NT": "Prisijungė",
-  "5crb4u": "Prisijungti per Android",
-  "c3EWuL": "Prisijungti per darbalaukio programėlę",
-  "ZozYtr": "Prisijungti per iOS",
-  "/ak8Mj": "Prisijungti per PlayStation",
-  "HEY5dX": "Prisijungti per Xbox",
   "84qx9v": "Klausymosi vakarėlis baigtas!",
   "fMs6ub": "Būsi prijungtas (-a) per Android.",
   "aqN8U1": "Būsi prijungtas (-a) per kompiuterį.",
@@ -21702,7 +21695,6 @@
     ],
     " vakarėlio"
   ],
-  "B9kbnZ": "Žiūrėjimo vakarėlis baigtas!",
   "IA6uDQ": [
     "Prašai prisijungti prie ",
     [
@@ -39870,7 +39862,6 @@
   "IEpCBQ": "Slapyvardis",
   "GPfy3N": "Privaloma nurodyti naudotojo vardą.",
   "YEOwDA": "Ką norėtum pridėti į draugus?",
-  "OKsSCQ": "Prašyti prisijungimo",
   "OzCsIC": "Varžosi",
   "XWSHTU": [
     "Prijungti ",
