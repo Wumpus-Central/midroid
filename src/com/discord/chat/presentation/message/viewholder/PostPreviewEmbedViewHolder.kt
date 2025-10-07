@@ -28,17 +28,17 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
    }
 
    public fun bind(postPreviewEmbed: PostPreviewEmbed, onTapPostPreviewEmbed: (GuildId, ChannelId, ChannelId, MessageId) -> Unit, spoilerConfig: SpoilerConfig?) {
-      val var14: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var16: java.lang.String = var1.getTitle();
-      val var12: java.lang.String = var1.getSubtitle();
-      val var17: java.lang.String = var1.getCtaText();
+      val var17: PostPreviewEmbedView = this.postPreviewEmbedView;
+      val var9: java.lang.String = var1.getTitle();
+      val var15: java.lang.String = var1.getSubtitle();
+      val var10: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
-      val var9: java.lang.String = var1.getCoverImage();
-      val var18: java.lang.String = var1.getBlurredCoverImage();
-      val var13: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var15: StructurableText = var1.getFooter();
-      val var11: java.lang.String = var1.getCoverImageOverlayText();
-      val var10: java.lang.String = var1.getBackgroundImage();
+      val var12: java.lang.String = var1.getCoverImage();
+      val var16: java.lang.String = var1.getBlurredCoverImage();
+      val var18: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var13: StructurableText = var1.getFooter();
+      val var14: java.lang.String = var1.getCoverImageOverlayText();
+      val var11: java.lang.String = var1.getBackgroundImage();
       val var21: E = new E(var2, var1);
       val var8: Boolean = var1.getShouldSpoiler();
       var var19: java.lang.Boolean = var1.getObscureAwaitingScan();
@@ -65,6 +65,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var7 = false;
       }
 
-      var14.setPostPreviewEmbed-4itWklQ(var16, var12, var17, var4, var15, var13, var9, var18, var11, var10, var21, var8, var5, var6, var7, var3);
+      var17.setPostPreviewEmbed-4itWklQ(var9, var15, var10, var4, var13, var18, var12, var16, var14, var11, var21, var8, var5, var6, var7, var3);
    }
 }

@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Tvoj je račun otključan",
+  "d9Ykjo": "Kôd potvrde",
+  "bFbsV1": "Unesi svoju e-poštu",
+  "RRBNpq": "Dalje",
+  "0DHxys": [
+    "To nisi ti? ",
+    [
+      8,
+      "$link",
+      [
+        "Odjavi se"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Putem te možemo tražiti dodatne informacije, primjerice, možemo te pitati jesi li robot",
+  "Ks6opq": "Pokreni",
+  "I2Ctk5": "Dovrši korake u nastavku da otključaš svoj račun",
+  "RRamMD": "Račun je zaključan",
+  "ah0EUl": "Ponovno pošalji kôd",
+  "2+Lyn5": [
+    "Ponovno pošalji kôd za ",
+    [
+      1,
+      "countdown"
+    ],
+    " sekundi"
+  ],
+  "3AXMYm": "Ponovno slanje potvrdnog koda nije uspjelo",
+  "dSkE/P": "Potvrdi dobnu skupinu",
+  "o4D6fn": "Ažuriraj",
+  "VBZJJi": "Ažuriraj aplikaciju da nastaviš.",
+  "yxqMCA": "Potrebno je ažurirati",
+  "wq2RDg": "Potvrdi",
+  "PfbG6O": "Nevažeći potvrdni kôd",
+  "aveKoK": "Upravo smo poslali potvrdni kôd na tvoju adresu e-pošte. Može proći nekoliko minuta dok ne stigne",
+  "Qm6K/v": "Potvrdi svoju e-poštu"
+}

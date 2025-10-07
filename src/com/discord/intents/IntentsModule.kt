@@ -82,14 +82,14 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    public override fun canOpenUrlScheme(urlScheme: String): Boolean {
-      var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
-      val var2: PackageManager = this.reactContext.getPackageManager();
-      if (var1 != null) {
+      val var2: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
+      val var4: PackageManager = this.reactContext.getPackageManager();
+      if (var2 != null) {
          try {
             if (VERSION.SDK_INT >= 33) {
-               q.a(var2, var1, p.a(0L));
+               q.a(var4, var2, p.a(0L));
             } else {
-               var2.getPackageInfo(var1, 0);
+               var4.getPackageInfo(var2, 0);
             }
 
             return true;

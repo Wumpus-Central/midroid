@@ -1,19 +1,24 @@
 package com.discord.chat.presentation.list
 
+import android.content.Context
 import android.view.View
+import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.tti_measurement_view.TTIMeasurementView
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDChatListManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatListManagerInterface
+import java.lang.ref.WeakReference
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 
 @ReactModule(name = "DCDChatList")
-@SourceDebugExtension(["SMAP\nChatListViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatListViewManager.kt\ncom/discord/chat/presentation/list/ChatListViewManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,45:1\n1#2:46\n*E\n"])
+@SourceDebugExtension(["SMAP\nChatListViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatListViewManager.kt\ncom/discord/chat/presentation/list/ChatListViewManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,72:1\n1#2:73\n*E\n"])
 public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListManagerInterface<ChatListView> {
    private final val mDelegate: DCDChatListManagerDelegate<ChatListView, ChatListViewManager> = new DCDChatListManagerDelegate(this)
+   private final var weakProvider: Pair<WeakReference<Context>, ComponentProvider>?
+   private final val lock: Any
 
    @JvmStatic
    fun `addView$lambda$3`(var0: TTIMeasurementView, var1: ChatListView): Unit {
@@ -31,6 +36,89 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       return Unit.a;
    }
 
+   private fun getExistingProvider(context: Context): ComponentProvider? {
+      val var4: Pair = this.weakProvider;
+      var var2: ComponentProvider = null;
+      if (this.weakProvider != null) {
+         val var6: WeakReference = this.weakProvider.a() as WeakReference;
+         val var7: ComponentProvider = var4.b() as ComponentProvider;
+         val var5: Context = var6.get() as Context;
+         var2 = null;
+         if (var5 != null) {
+            var2 = null;
+            if (var5 === var1) {
+               var2 = var7;
+            }
+         }
+      }
+
+      return var2;
+   }
+
+   private fun getOrCreateComponentProvider(context: Context): ComponentProvider {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: aload 1
+      // 02: invokespecial com/discord/chat/presentation/list/ChatListViewManager.getExistingProvider (Landroid/content/Context;)Lcom/discord/chat/presentation/message/view/botuikit/ComponentProvider;
+      // 05: astore 2
+      // 06: aload 2
+      // 07: ifnull 0c
+      // 0a: aload 2
+      // 0b: areturn
+      // 0c: aload 0
+      // 0d: getfield com/discord/chat/presentation/list/ChatListViewManager.lock Ljava/lang/Object;
+      // 10: astore 2
+      // 11: aload 2
+      // 12: monitorenter
+      // 13: aload 0
+      // 14: aload 1
+      // 15: invokespecial com/discord/chat/presentation/list/ChatListViewManager.getExistingProvider (Landroid/content/Context;)Lcom/discord/chat/presentation/message/view/botuikit/ComponentProvider;
+      // 18: astore 3
+      // 19: aload 3
+      // 1a: ifnull 21
+      // 1d: aload 2
+      // 1e: monitorexit
+      // 1f: aload 3
+      // 20: areturn
+      // 21: new com/discord/chat/presentation/message/view/botuikit/ComponentProvider
+      // 24: astore 3
+      // 25: aload 3
+      // 26: aload 1
+      // 27: bipush 1
+      // 28: invokespecial com/discord/chat/presentation/message/view/botuikit/ComponentProvider.<init> (Landroid/content/Context;Z)V
+      // 2b: new java/lang/ref/WeakReference
+      // 2e: astore 4
+      // 30: aload 4
+      // 32: aload 1
+      // 33: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
+      // 36: aload 0
+      // 37: aload 4
+      // 39: aload 3
+      // 3a: invokestatic B9/s.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+      // 3d: putfield com/discord/chat/presentation/list/ChatListViewManager.weakProvider Lkotlin/Pair;
+      // 40: aload 2
+      // 41: monitorexit
+      // 42: aload 3
+      // 43: areturn
+      // 44: astore 1
+      // 45: aload 2
+      // 46: monitorexit
+      // 47: aload 1
+      // 48: athrow
+   }
+
    public open fun addView(parent: ChatListView, child: View, index: Int) {
       val var4: Boolean = var2 is TTIMeasurementView;
       val var5: TTIMeasurementView = var2 as TTIMeasurementView;
@@ -39,7 +127,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatListView {
-      return new ChatListView(var1, null, 0, 6, null);
+      return new ChatListView(var1, this.getOrCreateComponentProvider(var1));
    }
 
    protected open fun getDelegate(): DCDChatListManagerDelegate<ChatListView, ChatListViewManager> {

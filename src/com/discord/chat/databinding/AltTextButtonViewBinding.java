@@ -27,12 +27,12 @@ public final class AltTextButtonViewBinding implements ViewBinding {
    @NonNull
    public static AltTextButtonViewBinding bind(@NonNull View var0) {
       int var1 = R.id.alt_text_container;
-      FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-      if (var3 != null) {
+      FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.alt_text_label;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new AltTextButtonViewBinding((FrameLayout)var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new AltTextButtonViewBinding((FrameLayout)var0, var2, var3);
          }
       }
 

@@ -5,8 +5,10 @@ import kotlin.jvm.functions.Function0;
 // $VF: synthetic class
 public final class k implements Function0 {
    public final ChatListView d;
+   public final boolean e;
+   public final int i;
 
    public final Object invoke() {
-      return ChatListView.U(this.d);
+      return ChatListView.Q(this.d, this.e, this.i);
    }
 }

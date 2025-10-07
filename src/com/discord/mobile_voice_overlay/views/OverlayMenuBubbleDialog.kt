@@ -45,8 +45,8 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
 
    public constructor(context: Context) : super(var1) {
-      val var2: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      this.binding = var2;
+      val var3: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
+      this.binding = var3;
       this.adapter = new VoiceUserAdapter();
       this.onGetInvitePressed = new d();
       this.onSwitchChannelsPressed = new l();
@@ -54,17 +54,17 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       this.onMutePressed = new n();
       this.onDisconnectPressed = new o();
       this.onShowSelectorDialog = new p();
-      var2.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new q(this));
-      var2.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new r(this));
-      var2.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new s(this));
-      var2.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
-      var2.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new k(this));
+      var3.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new q(this));
+      var3.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new r(this));
+      var3.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new s(this));
+      var3.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
+      var3.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new k(this));
       this.setClipChildren(false);
-      val var3: TextView = var2.overlayMembersOverflowText;
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryExtraBold);
-      SetTextSizeSpKt.setTextSizeSp(var3, 20.0F);
-      val var4: TextView = var2.overlayMembersOverflowText;
-      var2.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var2: TextView = var3.overlayMembersOverflowText;
+      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryExtraBold);
+      SetTextSizeSpKt.setTextSizeSp(var2, 20.0F);
+      val var4: TextView = var3.overlayMembersOverflowText;
+      var3.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
    }
 

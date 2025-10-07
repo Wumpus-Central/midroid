@@ -34,8 +34,8 @@ public class ReactViewManagerOverride : ReactViewManager {
             var11 = false;
          }
 
-         val var7: Boolean = var2.getParent() == var1;
-         val var6: Boolean = var1.getRemoveClippedSubviews();
+         val var6: Boolean = var2.getParent() == var1;
+         val var7: Boolean = var1.getRemoveClippedSubviews();
          val var10: Any = var2.getTag(id.view_clipped);
          var8 = null;
          if (var10 is java.lang.Boolean) {
@@ -50,8 +50,8 @@ public class ReactViewManagerOverride : ReactViewManager {
          val var14: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
          var14.o("react.viewmanager");
          var14.p("isTransitioning", var11);
-         var14.p("wantsToAddToSameParent", var7);
-         var14.p("isParentClipping", var6);
+         var14.p("wantsToAddToSameParent", var6);
+         var14.p("isParentClipping", var7);
          var14.p("isChildClipped", var5);
          var14.p("childClassType", var15);
          p1.e(var14);

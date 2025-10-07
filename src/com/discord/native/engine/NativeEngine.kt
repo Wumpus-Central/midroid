@@ -136,6 +136,9 @@ public class NativeEngine(context: Context, logLevel: Int) {
    public external fun stopLocalAudioRecording(callback: com.discord.native.engine.NativeEngine.StopLocalAudioRecordingCallback) {
    }
 
+   public external fun updateFieldTrial(key: String, value: String) {
+   }
+
    public fun interface AudioInputInitializationCallback {
       public abstract fun onAudioInputInitialized(info: AudioInputInitializationInfo) {
       }

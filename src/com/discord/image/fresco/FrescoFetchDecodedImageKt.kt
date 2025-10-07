@@ -136,16 +136,16 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
    label16:
    try {
-      val var4: kotlin.Result.a = Result.e;
-      var8 = Result.b(Uri.parse(var1));
+      val var8: kotlin.Result.a = Result.e;
+      var7 = Result.b(Uri.parse(var1));
    } catch (var5: java.lang.Throwable) {
-      val var7: kotlin.Result.a = Result.e;
-      var8 = Result.b(c.a(var5));
+      val var4: kotlin.Result.a = Result.e;
+      var7 = Result.b(c.a(var5));
       break label16;
    }
 
-   var var9: Any = var8;
-   if (Result.g(var8)) {
+   var var9: Any = var7;
+   if (Result.g(var7)) {
       var9 = null;
    }
 

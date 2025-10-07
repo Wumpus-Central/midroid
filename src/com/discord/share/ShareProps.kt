@@ -107,21 +107,21 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.text;
-      val var1: java.util.List = this.attachments;
-      val var4: java.lang.String = this.targetChannelId;
-      val var2: java.lang.String = this.targetUserId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ShareProps(text=");
-      var3.append(var5);
-      var3.append(", attachments=");
-      var3.append(var1);
-      var3.append(", targetChannelId=");
-      var3.append(var4);
-      var3.append(", targetUserId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.text;
+      val var4: java.util.List = this.attachments;
+      val var5: java.lang.String = this.targetChannelId;
+      val var3: java.lang.String = this.targetUserId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ShareProps(text=");
+      var2.append(var1);
+      var2.append(", attachments=");
+      var2.append(var4);
+      var2.append(", targetChannelId=");
+      var2.append(var5);
+      var2.append(", targetUserId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -265,11 +265,11 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          val var20: java.util.List = this.getUriExtras(var1);
          val var11: ArrayList = new ArrayList(CollectionsKt.v(var20, 10));
 
-         for (Uri var21 : var20) {
+         for (Uri var8 : var20) {
             val var9: ContentResolver = var2.getContentResolver();
-            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var21);
-            val var10: java.lang.String = var21.toString();
-            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var21)));
+            val var10: java.lang.String = GetFileNameKt.getFileName(var9, var8);
+            val var22: java.lang.String = var8.toString();
+            var11.add(new ShareProps.Attachment(var10, var22, var2.getContentResolver().getType(var8)));
          }
 
          return new ShareProps(var14, var11, var4, var5);

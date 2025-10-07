@@ -1,5 +1,6 @@
 package com.discord.react_activities
 
+import a4.b
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Configuration
@@ -17,10 +18,12 @@ import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.ReactHost
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactNativeHost
+import com.facebook.react.ReactRootView
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import com.facebook.react.internal.featureflags.ReactNativeFeatureFlags
 import java.util.concurrent.Future
+import r2.a
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    protected open fun attachBaseContext(newBase: Context) {
@@ -45,16 +48,16 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    public open fun onConfigurationChanged(newConfig: Configuration) {
       super.onConfigurationChanged(var1);
-      a4.b.m.a(this, var1);
+      b.m.a(this, var1);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -87,9 +90,9 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected open fun createRootView(): com.facebook.react.ReactRootView? {
+      protected open fun createRootView(): ReactRootView? {
          val var1: Context = this.getContext();
-         val var2: ReactRootView = new ReactRootView(var1);
+         val var2: com.discord.react_rootview.ReactRootView = new com.discord.react_rootview.ReactRootView(var1);
          var2.setIsFabric(this.isFabricEnabled());
          return var2;
       }
@@ -120,7 +123,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
 
          if (var2 == null) {
-            r2.a.J("ReactActivityDelegate", "No current ReactContext, skipping onPause");
+            a.J("ReactActivityDelegate", "No current ReactContext, skipping onPause");
          } else {
             if (this.this$0 === var2.getCurrentActivity()) {
                super.onPause();
