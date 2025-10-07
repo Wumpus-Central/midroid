@@ -3,7 +3,7 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
@@ -53,14 +53,14 @@ internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stat
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.stateUpdateJSON;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
-      var3.append(var1);
-      var3.append(", stateUpdateJSON=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.stateUpdateJSON;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SecureFramesStateUpdateCallbackEvent(connectionId=");
+      var2.append(var1);
+      var2.append(", stateUpdateJSON=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

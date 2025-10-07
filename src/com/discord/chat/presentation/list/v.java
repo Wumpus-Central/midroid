@@ -1,15 +1,14 @@
 package com.discord.chat.presentation.list;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import androidx.recyclerview.widget.RecyclerView;
+import com.discord.tti_measurement_view.TTIMeasurementView;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class v implements AnimatorUpdateListener {
-   public final SwipeHelper a;
-   public final RecyclerView b;
+public final class v implements Function0 {
+   public final TTIMeasurementView d;
+   public final ChatListView e;
 
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      SwipeHelper.b(this.a, this.b, var1);
+   public final Object invoke() {
+      return ChatListViewManager.b(this.d, this.e);
    }
 }

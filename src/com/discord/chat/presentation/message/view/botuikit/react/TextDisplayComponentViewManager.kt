@@ -40,22 +40,22 @@ import org.json.JSONObject
 public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComponentView> {
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         A9.s.a("onTapLink", TapLinkData::class),
-         A9.s.a("onLongPressLink", LongPressLinkData::class),
-         A9.s.a("onTapAttachmentLink", TapAttachmentLinkData::class),
-         A9.s.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
-         A9.s.a("onTapMention", TapMentionData::class),
-         A9.s.a("onTapTimestamp", TapTimestampEvent::class),
-         A9.s.a("onTapInlineCode", TapInlineCodeEvent::class),
-         A9.s.a("onTapEmoji", TapEmojiData::class)
+         B9.s.a("onTapLink", TapLinkData::class),
+         B9.s.a("onLongPressLink", LongPressLinkData::class),
+         B9.s.a("onTapAttachmentLink", TapAttachmentLinkData::class),
+         B9.s.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
+         B9.s.a("onTapMention", TapMentionData::class),
+         B9.s.a("onTapTimestamp", TapTimestampEvent::class),
+         B9.s.a("onTapInlineCode", TapInlineCodeEvent::class),
+         B9.s.a("onTapEmoji", TapEmojiData::class)
       )
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
    private fun createTextDisplayComponentContext(view: TextDisplayComponentView, data: Data): ComponentContext {
-      val var3: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
-      val var4: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
+      val var4: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
+      val var3: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
       return new ComponentContext(
-         var3,
+         var4,
          ComponentContextDefaults.INSTANCE.getGENERAL_HANDLERS(),
          var2.getMarkdownTextRenderOptions(),
          new MarkdownTextRenderEventHandlers(
@@ -74,8 +74,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             new I(this, var1),
             new J()
          ),
-         var4.getMEDIA_HANDLERS(),
-         var4.getCOMPONENT_HANDLERS(),
+         var3.getMEDIA_HANDLERS(),
+         var3.getCOMPONENT_HANDLERS(),
          new WidthInfo(0, 0, 0, 4, null),
          false,
          false,

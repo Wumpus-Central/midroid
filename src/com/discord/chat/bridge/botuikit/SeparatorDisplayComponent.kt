@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class SeparatorDisplayComponent(type: Int, id: String, divider: Boolean, spacing: SeparatorSpacingSize) : Component() {

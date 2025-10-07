@@ -5,7 +5,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 @SourceDebugExtension(["SMAP\nPollStyleSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollStyleSet.kt\ncom/discord/chat/bridge/polls/PollStyleSet\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,58:1\n1#2:59\n*E\n"])
@@ -298,37 +298,37 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var6: Int = this.border;
+      val var7: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var7: Int = this.fill;
-      val var8: Int = this.label;
+      val var4: Int = this.fill;
+      val var10: Int = this.label;
       val var1: Float = this.opacity;
-      val var10: Int = this.answerBackground;
-      val var9: Int = this.answerFill;
+      val var9: Int = this.answerBackground;
+      val var11: Int = this.answerFill;
       val var5: PollRadioStyle = this.radioStyle;
-      val var4: Int = this.radioBackground;
-      val var11: Int = this.radioForeground;
+      val var6: Int = this.radioBackground;
+      val var8: Int = this.radioForeground;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PollStyleSet(border=");
-      var3.append(var6);
+      var3.append(var7);
       var3.append(", borderWidth=");
       var3.append(var2);
       var3.append(", fill=");
-      var3.append(var7);
+      var3.append(var4);
       var3.append(", label=");
-      var3.append(var8);
+      var3.append(var10);
       var3.append(", opacity=");
       var3.append(var1);
       var3.append(", answerBackground=");
-      var3.append(var10);
-      var3.append(", answerFill=");
       var3.append(var9);
+      var3.append(", answerFill=");
+      var3.append(var11);
       var3.append(", radioStyle=");
       var3.append(var5);
       var3.append(", radioBackground=");
-      var3.append(var4);
+      var3.append(var6);
       var3.append(", radioForeground=");
-      var3.append(var11);
+      var3.append(var8);
       var3.append(")");
       return var3.toString();
    }

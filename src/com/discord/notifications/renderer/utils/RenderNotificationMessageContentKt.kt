@@ -18,7 +18,7 @@ public fun renderNotificationMessageContent(content: String): String {
    val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
    val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var3.h(var4.h(var0, new z()), new A());
+   var var13: java.lang.String = var3.h(var4.h(var0, new A()), new B());
    var var14: java.lang.String = var0;
 
    while (true) {
@@ -80,9 +80,9 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.c().a();
-      val var12: Int = var6.c().g();
-      var14 = StringsKt.v0(var14, var2, var12 + 1, var10).toString();
+      val var12: Int = var6.c().a();
+      val var2: Int = var6.c().g();
+      var14 = StringsKt.v0(var14, var12, var2 + 1, var10).toString();
       var13 = StringsKt.v0(var13, var6.c().a(), var6.c().g() + 1, var10).toString();
    }
 }

@@ -89,7 +89,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
    public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
          new SimpleDraweeView(var1)
       ) {
-      private final val placeholder: Drawable by A9.j.b(new B())
+      private final val placeholder: Drawable by B9.j.b(new B())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }

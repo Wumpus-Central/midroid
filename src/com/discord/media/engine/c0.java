@@ -9,6 +9,6 @@ public final class c0 implements Function1 {
    public final Callback d;
 
    public final Object invoke(Object var1) {
-      return <unrepresentable>.d(this.d, (List)var1);
+      return <unrepresentable>.a(this.d, (List)var1);
    }
 }

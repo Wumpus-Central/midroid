@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
@@ -447,15 +447,15 @@ public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
    }
 
    public override fun hashCode(): Int {
-      val var30: Int = Integer.hashCode(this.backgroundColor);
-      val var33: Int = Integer.hashCode(this.borderColor);
+      val var36: Int = Integer.hashCode(this.backgroundColor);
+      val var31: Int = Integer.hashCode(this.borderColor);
       val var28: Int = Integer.hashCode(this.headerColor);
-      val var32: Int = this.headerText.hashCode();
-      val var31: Int = this.type.hashCode();
-      val var34: Int = this.titleText.hashCode();
-      val var35: Int = this.subtitle.hashCode();
-      val var29: Int = this.helpCenterArticleLabel.hashCode();
-      val var36: Int = this.helpCenterArticleURL.hashCode();
+      val var30: Int = this.headerText.hashCode();
+      val var34: Int = this.type.hashCode();
+      val var35: Int = this.titleText.hashCode();
+      val var29: Int = this.subtitle.hashCode();
+      val var32: Int = this.helpCenterArticleLabel.hashCode();
+      val var33: Int = this.helpCenterArticleURL.hashCode();
       var var27: Int = 0;
       val var1: Int;
       if (this.acceptLabelBackgroundColor == null) {
@@ -625,8 +625,8 @@ public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
          var24 = this.titleColor.hashCode();
       }
 
-      val var38: Int = this.extendedType.hashCode();
-      val var37: Int = this.guildName.hashCode();
+      val var37: Int = this.extendedType.hashCode();
+      val var38: Int = this.guildName.hashCode();
       val var25: Int;
       if (this.guildIcon == null) {
          var25 = 0;
@@ -681,30 +681,30 @@ public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                                                                                (
                                                                                                                                                                                                                                                                                                                         (
                                                                                                                                                                                                                                                                                                                                  (
-                                                                                                                                                                                                                                                                                                                                          var30
+                                                                                                                                                                                                                                                                                                                                          var36
                                                                                                                                                                                                                                                                                                                                                 * 31
-                                                                                                                                                                                                                                                                                                                                             + var33
+                                                                                                                                                                                                                                                                                                                                             + var31
                                                                                                                                                                                                                                                                                                                                        )
                                                                                                                                                                                                                                                                                                                                        * 31
                                                                                                                                                                                                                                                                                                                                     + var28
                                                                                                                                                                                                                                                                                                                               )
                                                                                                                                                                                                                                                                                                                               * 31
-                                                                                                                                                                                                                                                                                                                           + var32
+                                                                                                                                                                                                                                                                                                                           + var30
                                                                                                                                                                                                                                                                                                                      )
                                                                                                                                                                                                                                                                                                                      * 31
-                                                                                                                                                                                                                                                                                                                  + var31
+                                                                                                                                                                                                                                                                                                                  + var34
                                                                                                                                                                                                                                                                                                             )
                                                                                                                                                                                                                                                                                                             * 31
-                                                                                                                                                                                                                                                                                                         + var34
+                                                                                                                                                                                                                                                                                                         + var35
                                                                                                                                                                                                                                                                                                    )
                                                                                                                                                                                                                                                                                                    * 31
-                                                                                                                                                                                                                                                                                                + var35
+                                                                                                                                                                                                                                                                                                + var29
                                                                                                                                                                                                                                                                                           )
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var29
+                                                                                                                                                                                                                                                                                       + var32
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var36
+                                                                                                                                                                                                                                                                              + var33
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
                                                                                                                                                                                                                                                                      + var1
@@ -779,10 +779,10 @@ public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
                                                       + var24
                                                 )
                                                 * 31
-                                             + var38
+                                             + var37
                                        )
                                        * 31
-                                    + var37
+                                    + var38
                               )
                               * 31
                            + var25
@@ -795,123 +795,123 @@ public data class GuildInviteDisabledEmbedImpl(backgroundColor: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
+      val var2: Int = this.backgroundColor;
       val var3: Int = this.borderColor;
-      val var2: Int = this.headerColor;
-      val var39: java.lang.String = this.headerText;
-      val var7: InviteType = this.type;
-      val var35: java.lang.String = this.titleText;
-      val var27: java.lang.String = this.subtitle;
-      val var20: java.lang.String = this.helpCenterArticleLabel;
-      val var30: java.lang.String = this.helpCenterArticleURL;
-      val var5: Int = this.acceptLabelBackgroundColor;
-      val var18: Int = this.acceptLabelBorderColor;
-      val var37: Int = this.acceptLabelColor;
-      val var29: java.lang.String = this.acceptLabelText;
-      val var8: java.lang.String = this.bodyText;
-      val var31: Int = this.bodyTextColor;
-      val var32: java.lang.Boolean = this.canBeAccepted;
-      val var4: java.lang.String = this.channelIcon;
-      val var9: java.lang.String = this.channelName;
-      val var12: java.lang.Boolean = this.embedCanBeTapped;
-      val var13: java.lang.String = this.memberText;
-      val var24: java.lang.String = this.onlineText;
-      val var11: Int = this.resolvingGradientEnd;
-      val var25: Int = this.resolvingGradientStart;
-      val var14: java.lang.Boolean = this.splashHasRadialGradient;
-      val var21: Int = this.splashOpacity;
-      val var36: java.lang.String = this.splashUrl;
-      val var33: java.lang.String = this.inviteSplash;
-      val var38: Int = this.subtitleColor;
-      val var10: Int = this.thumbnailBackgroundColor;
-      val var17: Int = this.thumbnailCornerRadius;
-      val var16: java.lang.String = this.thumbnailText;
-      val var6: java.lang.String = this.thumbnailUrl;
-      val var15: Int = this.titleColor;
-      val var22: CodedLinkExtendedType = this.extendedType;
-      val var23: java.lang.String = this.guildName;
-      val var34: java.lang.String = this.guildIcon;
-      val var28: java.lang.String = this.headerIcon;
+      val var1: Int = this.headerColor;
+      val var36: java.lang.String = this.headerText;
+      val var16: InviteType = this.type;
+      val var21: java.lang.String = this.titleText;
+      val var20: java.lang.String = this.subtitle;
+      val var22: java.lang.String = this.helpCenterArticleLabel;
+      val var38: java.lang.String = this.helpCenterArticleURL;
+      val var23: Int = this.acceptLabelBackgroundColor;
+      val var12: Int = this.acceptLabelBorderColor;
+      val var13: Int = this.acceptLabelColor;
+      val var9: java.lang.String = this.acceptLabelText;
+      val var29: java.lang.String = this.bodyText;
+      val var32: Int = this.bodyTextColor;
+      val var4: java.lang.Boolean = this.canBeAccepted;
+      val var37: java.lang.String = this.channelIcon;
+      val var17: java.lang.String = this.channelName;
+      val var30: java.lang.Boolean = this.embedCanBeTapped;
+      val var15: java.lang.String = this.memberText;
+      val var26: java.lang.String = this.onlineText;
+      val var28: Int = this.resolvingGradientEnd;
+      val var35: Int = this.resolvingGradientStart;
+      val var18: java.lang.Boolean = this.splashHasRadialGradient;
+      val var34: Int = this.splashOpacity;
+      val var7: java.lang.String = this.splashUrl;
+      val var5: java.lang.String = this.inviteSplash;
+      val var39: Int = this.subtitleColor;
+      val var6: Int = this.thumbnailBackgroundColor;
+      val var24: Int = this.thumbnailCornerRadius;
+      val var33: java.lang.String = this.thumbnailText;
+      val var8: java.lang.String = this.thumbnailUrl;
+      val var14: Int = this.titleColor;
+      val var10: CodedLinkExtendedType = this.extendedType;
+      val var25: java.lang.String = this.guildName;
+      val var31: java.lang.String = this.guildIcon;
+      val var11: java.lang.String = this.headerIcon;
       val var19: java.lang.String = this.badgeIconUrl;
-      val var26: StringBuilder = new StringBuilder();
-      var26.append("GuildInviteDisabledEmbedImpl(backgroundColor=");
-      var26.append(var1);
-      var26.append(", borderColor=");
-      var26.append(var3);
-      var26.append(", headerColor=");
-      var26.append(var2);
-      var26.append(", headerText=");
-      var26.append(var39);
-      var26.append(", type=");
-      var26.append(var7);
-      var26.append(", titleText=");
-      var26.append(var35);
-      var26.append(", subtitle=");
-      var26.append(var27);
-      var26.append(", helpCenterArticleLabel=");
-      var26.append(var20);
-      var26.append(", helpCenterArticleURL=");
-      var26.append(var30);
-      var26.append(", acceptLabelBackgroundColor=");
-      var26.append(var5);
-      var26.append(", acceptLabelBorderColor=");
-      var26.append(var18);
-      var26.append(", acceptLabelColor=");
-      var26.append(var37);
-      var26.append(", acceptLabelText=");
-      var26.append(var29);
-      var26.append(", bodyText=");
-      var26.append(var8);
-      var26.append(", bodyTextColor=");
-      var26.append(var31);
-      var26.append(", canBeAccepted=");
-      var26.append(var32);
-      var26.append(", channelIcon=");
-      var26.append(var4);
-      var26.append(", channelName=");
-      var26.append(var9);
-      var26.append(", embedCanBeTapped=");
-      var26.append(var12);
-      var26.append(", memberText=");
-      var26.append(var13);
-      var26.append(", onlineText=");
-      var26.append(var24);
-      var26.append(", resolvingGradientEnd=");
-      var26.append(var11);
-      var26.append(", resolvingGradientStart=");
-      var26.append(var25);
-      var26.append(", splashHasRadialGradient=");
-      var26.append(var14);
-      var26.append(", splashOpacity=");
-      var26.append(var21);
-      var26.append(", splashUrl=");
-      var26.append(var36);
-      var26.append(", inviteSplash=");
-      var26.append(var33);
-      var26.append(", subtitleColor=");
-      var26.append(var38);
-      var26.append(", thumbnailBackgroundColor=");
-      var26.append(var10);
-      var26.append(", thumbnailCornerRadius=");
-      var26.append(var17);
-      var26.append(", thumbnailText=");
-      var26.append(var16);
-      var26.append(", thumbnailUrl=");
-      var26.append(var6);
-      var26.append(", titleColor=");
-      var26.append(var15);
-      var26.append(", extendedType=");
-      var26.append(var22);
-      var26.append(", guildName=");
-      var26.append(var23);
-      var26.append(", guildIcon=");
-      var26.append(var34);
-      var26.append(", headerIcon=");
-      var26.append(var28);
-      var26.append(", badgeIconUrl=");
-      var26.append(var19);
-      var26.append(")");
-      return var26.toString();
+      val var27: StringBuilder = new StringBuilder();
+      var27.append("GuildInviteDisabledEmbedImpl(backgroundColor=");
+      var27.append(var2);
+      var27.append(", borderColor=");
+      var27.append(var3);
+      var27.append(", headerColor=");
+      var27.append(var1);
+      var27.append(", headerText=");
+      var27.append(var36);
+      var27.append(", type=");
+      var27.append(var16);
+      var27.append(", titleText=");
+      var27.append(var21);
+      var27.append(", subtitle=");
+      var27.append(var20);
+      var27.append(", helpCenterArticleLabel=");
+      var27.append(var22);
+      var27.append(", helpCenterArticleURL=");
+      var27.append(var38);
+      var27.append(", acceptLabelBackgroundColor=");
+      var27.append(var23);
+      var27.append(", acceptLabelBorderColor=");
+      var27.append(var12);
+      var27.append(", acceptLabelColor=");
+      var27.append(var13);
+      var27.append(", acceptLabelText=");
+      var27.append(var9);
+      var27.append(", bodyText=");
+      var27.append(var29);
+      var27.append(", bodyTextColor=");
+      var27.append(var32);
+      var27.append(", canBeAccepted=");
+      var27.append(var4);
+      var27.append(", channelIcon=");
+      var27.append(var37);
+      var27.append(", channelName=");
+      var27.append(var17);
+      var27.append(", embedCanBeTapped=");
+      var27.append(var30);
+      var27.append(", memberText=");
+      var27.append(var15);
+      var27.append(", onlineText=");
+      var27.append(var26);
+      var27.append(", resolvingGradientEnd=");
+      var27.append(var28);
+      var27.append(", resolvingGradientStart=");
+      var27.append(var35);
+      var27.append(", splashHasRadialGradient=");
+      var27.append(var18);
+      var27.append(", splashOpacity=");
+      var27.append(var34);
+      var27.append(", splashUrl=");
+      var27.append(var7);
+      var27.append(", inviteSplash=");
+      var27.append(var5);
+      var27.append(", subtitleColor=");
+      var27.append(var39);
+      var27.append(", thumbnailBackgroundColor=");
+      var27.append(var6);
+      var27.append(", thumbnailCornerRadius=");
+      var27.append(var24);
+      var27.append(", thumbnailText=");
+      var27.append(var33);
+      var27.append(", thumbnailUrl=");
+      var27.append(var8);
+      var27.append(", titleColor=");
+      var27.append(var14);
+      var27.append(", extendedType=");
+      var27.append(var10);
+      var27.append(", guildName=");
+      var27.append(var25);
+      var27.append(", guildIcon=");
+      var27.append(var31);
+      var27.append(", headerIcon=");
+      var27.append(var11);
+      var27.append(", badgeIconUrl=");
+      var27.append(var19);
+      var27.append(")");
+      return var27.toString();
    }
 
    public companion object {

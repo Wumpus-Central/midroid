@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.threads
 
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class ThreadEmbed(title: String,
@@ -119,27 +119,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.title;
-      val var5: java.lang.String = this.messageCountLabel;
-      val var6: java.lang.String = this.messagePreviewString;
-      val var1: java.lang.Boolean = this.archived;
-      val var4: java.lang.String = this.archivedIconUrl;
-      val var7: ThreadEmbedMessage = this.referencedMessage;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThreadEmbed(title=");
-      var2.append(var3);
-      var2.append(", messageCountLabel=");
-      var2.append(var5);
-      var2.append(", messagePreviewString=");
-      var2.append(var6);
-      var2.append(", archived=");
-      var2.append(var1);
-      var2.append(", archivedIconUrl=");
-      var2.append(var4);
-      var2.append(", referencedMessage=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = this.title;
+      val var6: java.lang.String = this.messageCountLabel;
+      val var1: java.lang.String = this.messagePreviewString;
+      val var3: java.lang.Boolean = this.archived;
+      val var2: java.lang.String = this.archivedIconUrl;
+      val var4: ThreadEmbedMessage = this.referencedMessage;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ThreadEmbed(title=");
+      var7.append(var5);
+      var7.append(", messageCountLabel=");
+      var7.append(var6);
+      var7.append(", messagePreviewString=");
+      var7.append(var1);
+      var7.append(", archived=");
+      var7.append(var3);
+      var7.append(", archivedIconUrl=");
+      var7.append(var2);
+      var7.append(", referencedMessage=");
+      var7.append(var4);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

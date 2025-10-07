@@ -56,17 +56,17 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var4: Message = this.message;
-      val var2: MessageContext = this.messageContext;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FlaggedMessageEmbedAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", message=");
-      var3.append(var4);
-      var3.append(", messageContext=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: MessageContext = this.messageContext;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("FlaggedMessageEmbedAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", message=");
+      var2.append(var4);
+      var2.append(", messageContext=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

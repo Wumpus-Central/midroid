@@ -63,14 +63,14 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          val var1: Long = System.currentTimeMillis() - this.initStartMs;
          val var3: Long = this.longDispatchThresholdMs;
          if (var1 < this.longDispatchThresholdMs) {
-            val var6: Log = Log.INSTANCE;
-            val var5: java.lang.String = this.name;
+            val var5: Log = Log.INSTANCE;
+            val var6: java.lang.String = this.name;
             val var7: StringBuilder = new StringBuilder();
-            var7.append(var5);
+            var7.append(var6);
             var7.append(": queued tasks  took ");
             var7.append(var1);
             var7.append(" ms");
-            Log.i$default(var6, var5, var7.toString(), null, 4, null);
+            Log.i$default(var5, var6, var7.toString(), null, 4, null);
          } else {
             val var10: Log = Log.INSTANCE;
             val var9: java.lang.String = this.name;

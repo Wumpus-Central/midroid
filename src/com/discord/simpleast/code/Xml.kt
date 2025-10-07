@@ -1,6 +1,6 @@
 package com.discord.simpleast.code
 
-import A9.s
+import B9.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode

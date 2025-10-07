@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import A9.n
+import B9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
@@ -12,7 +12,7 @@ import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.MagicApiIntrinsics
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import mb.k
+import nb.k
 import org.json.JSONObject
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
@@ -128,14 +128,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 }
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
-   val var3: WritableNativeMap = new WritableNativeMap();
+   val var4: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var3;
+   return var4;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -210,7 +210,7 @@ public fun ReadableMap.toJsonString(): String {
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    val var1: Json = getJson();
    val var3: java.lang.String = toJsonString(var0);
-   val var2: sb.b = var1.a();
+   val var2: tb.b = var1.a();
    Intrinsics.reifiedOperationMarker(6, "T");
    MagicApiIntrinsics.voidMagicApiCall("kotlinx.serialization.serializer.withModule");
    return (T)var1.b(k.d(var2, null), var3);
@@ -219,8 +219,8 @@ public inline fun <reified T> ReadableMap.toKotlinObject(): T {
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

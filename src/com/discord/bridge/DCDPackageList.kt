@@ -33,6 +33,7 @@ import com.discord.suspense_visible_view.SuspenseVisibleViewPackage
 import com.discord.thumbhash.ThumbhashPackage
 import com.discord.tti_measurement_view.TTIMeasurementViewPackage
 import com.discord.view.ReactViewManagerOverride
+import com.discord.view.ScreenStackViewManagerOverride
 import com.discord.view.ScreenViewManagerOverride
 import com.discord.wakelock.WakelockPackage
 import com.discord.zoom_layout.ZoomLayoutPackage
@@ -69,7 +70,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
 
    @JvmStatic
    fun `getPackages$lambda$12`(var0: ReactApplicationContext): ViewManager {
-      return new ReactViewManagerOverride();
+      return new ScreenStackViewManagerOverride();
    }
 
    @JvmStatic
@@ -78,7 +79,12 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
    }
 
    @JvmStatic
-   fun `getPackages$lambda$14`(var0: ReactApplicationContext): NativeModule {
+   fun `getPackages$lambda$14`(var0: ReactApplicationContext): ViewManager {
+      return new ReactViewManagerOverride();
+   }
+
+   @JvmStatic
+   fun `getPackages$lambda$15`(var0: ReactApplicationContext): NativeModule {
       return new NativeArchitectureProviderSpec(var0) {
          {
             super(var1);
@@ -166,8 +172,8 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(new a(), new l()));
-      var1.add(var2.getViewManagers(new m(), new n(), new o(), new b(), new c(), new d(), new e(), new f(), new g(), new h(), new i(), new j()));
+      var1.add(var2.getLegacyPackageForModuleWithViewManager(new a(), new n()));
+      var1.add(var2.getViewManagers(new o(), new p(), new b(), new c(), new d(), new e(), new f(), new g(), new h(), new i(), new j(), new k(), new l()));
       var1.add(var2.getTurboPackageForModule("NativeAdsModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeAppDatabaseModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeAppIconModule", <unrepresentable>.INSTANCE));
@@ -218,7 +224,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
       var1.add(var2.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeTTIModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeArchitectureProvider", new k()));
+      var1.add(var2.getTurboPackageForModule("NativeArchitectureProvider", new m()));
       var2.addTurboPackages(
          var1,
          new APNGPackage(),

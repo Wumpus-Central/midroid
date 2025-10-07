@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import A9.n
+import B9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
@@ -246,11 +246,11 @@ public fun <V> Collection<Map<String, Any>>.toNativeArrayOfMaps(): ReadableNativ
 public fun ReadableArray.toStringList(): List<String> {
    val var2: IntRange = sizeRange(var0);
    val var1: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
-   val var3: java.util.Iterator = var2.iterator();
+   val var4: java.util.Iterator = var2.iterator();
 
-   while (var3.hasNext()) {
-      val var4: java.lang.String = var0.getString((var3 as I).nextInt());
-      var1.add(var4);
+   while (var4.hasNext()) {
+      val var3: java.lang.String = var0.getString((var4 as I).nextInt());
+      var1.add(var3);
    }
 
    return var1;

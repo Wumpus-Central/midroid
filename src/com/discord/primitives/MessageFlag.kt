@@ -1,6 +1,6 @@
 package com.discord.primitives
 
-import G9.a
+import H9.a
 import kotlin.enums.EnumEntries
 
 public enum class MessageFlag(value: Long) {

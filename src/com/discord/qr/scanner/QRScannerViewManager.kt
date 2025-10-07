@@ -1,6 +1,6 @@
 package com.discord.qr.scanner
 
-import A9.s
+import B9.s
 import com.discord.qr.scanner.events.OnQRCodeFoundEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule

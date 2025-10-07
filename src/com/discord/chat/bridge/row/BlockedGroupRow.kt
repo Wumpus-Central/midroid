@@ -2,7 +2,7 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class BlockedGroupRow(index: Int,
@@ -117,14 +117,14 @@ public data class BlockedGroupRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = Integer.hashCode(this.index);
+      val var7: Int = Integer.hashCode(this.index);
       val var8: Int = this.changeType.hashCode();
-      val var6: Int = Integer.hashCode(this.color);
-      val var4: Int = Integer.hashCode(this.borderColor);
-      val var3: Int = Integer.hashCode(this.backgroundColor);
-      val var7: Int = this.text.hashCode();
-      val var2: Int = java.lang.Boolean.hashCode(this.revealed);
-      val var5: Int = this.button.hashCode();
+      val var3: Int = Integer.hashCode(this.color);
+      val var2: Int = Integer.hashCode(this.borderColor);
+      val var6: Int = Integer.hashCode(this.backgroundColor);
+      val var9: Int = this.text.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.revealed);
+      val var4: Int = this.button.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -132,40 +132,40 @@ public data class BlockedGroupRow(index: Int,
          var1 = this.content.hashCode();
       }
 
-      return (((((((var9 * 31 + var8) * 31 + var6) * 31 + var4) * 31 + var3) * 31 + var7) * 31 + var2) * 31 + var5) * 31 + var1;
+      return (((((((var7 * 31 + var8) * 31 + var3) * 31 + var2) * 31 + var6) * 31 + var9) * 31 + var5) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var7: ChangeType = this.changeType;
+      val var9: ChangeType = this.changeType;
       val var3: Int = this.color;
       val var2: Int = this.borderColor;
       val var4: Int = this.backgroundColor;
-      val var9: java.lang.String = this.text;
+      val var8: java.lang.String = this.text;
       val var5: Boolean = this.revealed;
-      val var8: BlockedGroupButton = this.button;
+      val var6: BlockedGroupButton = this.button;
       val var10: java.util.List = this.content;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("BlockedGroupRow(index=");
-      var6.append(var1);
-      var6.append(", changeType=");
-      var6.append(var7);
-      var6.append(", color=");
-      var6.append(var3);
-      var6.append(", borderColor=");
-      var6.append(var2);
-      var6.append(", backgroundColor=");
-      var6.append(var4);
-      var6.append(", text=");
-      var6.append(var9);
-      var6.append(", revealed=");
-      var6.append(var5);
-      var6.append(", button=");
-      var6.append(var8);
-      var6.append(", content=");
-      var6.append(var10);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("BlockedGroupRow(index=");
+      var7.append(var1);
+      var7.append(", changeType=");
+      var7.append(var9);
+      var7.append(", color=");
+      var7.append(var3);
+      var7.append(", borderColor=");
+      var7.append(var2);
+      var7.append(", backgroundColor=");
+      var7.append(var4);
+      var7.append(", text=");
+      var7.append(var8);
+      var7.append(", revealed=");
+      var7.append(var5);
+      var7.append(", button=");
+      var7.append(var6);
+      var7.append(", content=");
+      var7.append(var10);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

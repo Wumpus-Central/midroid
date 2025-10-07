@@ -111,6 +111,7 @@
   ],
   "Xkfav7": "Dismiss alert",
   "xs0juL": "Dismiss context menu",
+  "pfChQk": "Loading",
   "b6uC3d": "checkbox",
   "fKyfcX": "image, button",
   "/SCpvr": "video, button",
@@ -1352,13 +1353,11 @@
   "X2L3OT": "You cannot add or remove reactions in archived threads.",
   "BTs4KS": "Close Post",
   "wiIevb": "Close Thread",
-  "7lc4V1": "Compressing files...",
   "GnuJ5u": "unknown",
   "IPzNKC": "double tap to enlarge",
   "XONG6O": "Media Selector",
   "eOB2eX": "Description (Alt Text)",
   "RNH1jo": "Add a description",
-  "Dmx3f3": "Server processing...",
   "qqyp/f": [
     "You can only upload ",
     [
@@ -1719,6 +1718,14 @@
   "SymzJC": "Earn more Orbs",
   "B1oJtb": "Information about orbs",
   "gGtZp6": "Orbs Balance",
+  "zPaLLy": [
+    "Orbs balance: ",
+    [
+      1,
+      "balance"
+    ],
+    " orbs"
+  ],
   "9JpRfH": "Try Orbs",
   "LaMEFB": "You’re able to claim a reward!",
   "WrzJBQ": "Redeem Orbs in Shop",
@@ -3214,6 +3221,7 @@
       ]
     ]
   ],
+  "wu4gyc": "Not Available",
   "lOtBOD": [
     "Redeem for ",
     [
@@ -3229,6 +3237,15 @@
       "orbPrice"
     ]
   ],
+  "yi41qa": [
+    "Redeem for ",
+    [
+      1,
+      "orbPrice"
+    ],
+    " orbs"
+  ],
+  "4ivm+P": "Check out your new badge!",
   "uYLGcn": "View My Badge",
   "6gF4aW": "Sweet!",
   "B25MUV": "The badge has been added to your profile.",
@@ -3279,23 +3296,9 @@
       8,
       "$b",
       [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
-        [
-          8,
-          "$link",
-          [
-            "“Virtual Goods” section"
-          ],
-          [
-            [
-              1,
-              "paidServiceTermURL"
-            ]
-          ]
-        ]
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord."
       ]
-    ],
-    ". This purchase is non-refundable. Item will be available immediately in User Profile settings."
+    ]
   ],
   "SKduys": [
     [
@@ -5304,6 +5307,13 @@
       "cardinal"
     ]
   ],
+  "jnq5Hh": [
+    "Error, ",
+    [
+      1,
+      "errorMessage"
+    ]
+  ],
   "fYvzER": "Oops, you forgot something. Please add at least one answer.",
   "HMrgcn": "Are you sure?",
   "2BR5R0": "Back to editing",
@@ -6681,6 +6691,21 @@
       ]
     ],
     " is not available. Head to Settings to set another default."
+  ],
+  "Dz4vkp": [
+    [
+      8,
+      "$b",
+      [
+        ":",
+        [
+          1,
+          "emojiName"
+        ],
+        ":"
+      ]
+    ],
+    " is not available because this server doesn't allow external emojis."
   ],
   "CL5mWl": "Emoji is not available. Head to Settings to set another default.",
   "LIIHR0": "Choose another emoji",
@@ -8174,6 +8199,18 @@
   "G99XFh": "an Activity",
   "969dEB": "Embed Links",
   "sMOuub": "Emoji",
+  "PJsjbG": [
+    "Added a new emoji, ",
+    [
+      1,
+      "emoji"
+    ],
+    " in ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "SYlkPj": [
     [
       8,
@@ -8750,7 +8787,6 @@
     ],
     " files."
   ],
-  "9ovjIC": "At least 1 file is required.",
   "tyxwW1": [
     "Upload ",
     [
@@ -10230,6 +10266,7 @@
       ]
     ]
   ],
+  "NbveHB": "This is not available for users with a Nitro subscription on mobile.",
   "fBmhEx": "Adventuring pays off. Enjoy the additional time with your premium perks.",
   "4SqnVF": [
     [
@@ -20225,6 +20262,7 @@
       "guildName"
     ]
   ],
+  "m9gRVF": "Looks like we’re having trouble connecting…",
   "2JA2GB": [
     "Your account must be at least ",
     [
@@ -20708,6 +20746,140 @@
   "jcRSp6": "Blur image-based media that may contain sexually explicit or suggestive material involving adults in DMs and servers",
   "E6UmXV": "Blur added to mature sexual media",
   "Gtck/v": "Mature Sexual Media Filter",
+  "5l/hlp": "We won't share the content or report category",
+  "BlAMmZ": [
+    "You shared this report with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "wr4IT0": [
+    "Report shared with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    "!"
+  ],
+  "HqyWeH": [
+    "Share report with ",
+    [
+      6,
+      "count",
+      {
+        "=1": [
+          [
+            1,
+            "parent1"
+          ]
+        ],
+        "=2": [
+          [
+            1,
+            "parent1"
+          ],
+          " and ",
+          [
+            1,
+            "parent2"
+          ]
+        ],
+        "other": [
+          [
+            1,
+            "parent1"
+          ],
+          ", ",
+          [
+            1,
+            "parent2"
+          ],
+          ", and ",
+          [
+            1,
+            "parent3"
+          ]
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "ytCpKi": "Ignore",
   "tFY5ZW": "Ignored",
   "VFWjc3": [
@@ -23360,7 +23532,6 @@
   "gnkqzc": "If you are still seeing this screen after updating, please reach out to support.",
   "kkjNHR": "You need to update your app to join this server.",
   "P8tvKC": "Mention",
-  "GRZF9/": "Mentions",
   "Y78KGB": "Mention @everyone, @here, and All Roles",
   "5atMLS": "Notify everyone in this channel.",
   "VDUAHB": "Mention @everyone when a Stage starts",
@@ -24252,7 +24423,6 @@
       "code"
     ]
   ],
-  "B2hnhY": "We suggest adding a phone to your 2 factor authentication settings as a backup.",
   "7590PT": "Claim Your Free Nitro!",
   "GPqVWV": [
     "Only ",
@@ -29450,102 +29620,6 @@
       "cardinal"
     ]
   ],
-  "ZsgnLC": [
-    [
-      6,
-      "days",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " day Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Days Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "Y0HCVV": [
-    [
-      6,
-      "months",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Month Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Months Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "8awlzM": [
-    [
-      6,
-      "weeks",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Week Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Weeks Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "ns1zkZ": [
-    [
-      6,
-      "years",
-      {
-        "=1": [
-          "Try ",
-          [
-            7
-          ],
-          " Year Free"
-        ],
-        "other": [
-          "Try ",
-          [
-            7
-          ],
-          " Years Free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
   "6Cdzo6": [
     [
       6,
@@ -29753,102 +29827,6 @@
     [
       1,
       "price"
-    ]
-  ],
-  "kLnKcX": [
-    [
-      6,
-      "days",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " day free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " days free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "azyIQ0": [
-    [
-      6,
-      "months",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " month free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " months free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "3GVMLi": [
-    [
-      6,
-      "weeks",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " week free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " weeks free"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "sqDHKC": [
-    [
-      6,
-      "years",
-      {
-        "=1": [
-          "Start my ",
-          [
-            7
-          ],
-          " year free"
-        ],
-        "other": [
-          "Start my ",
-          [
-            7
-          ],
-          " years free"
-        ]
-      },
-      0,
-      "cardinal"
     ]
   ],
   "TkTvBw": "Sweet!",
@@ -31214,6 +31192,83 @@
     ],
     "."
   ],
+  "C+2RxM": [
+    "Participate in ",
+    [
+      1,
+      "activityName"
+    ],
+    " powered by ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " in Discord and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    ". No install required."
+  ],
+  "0NNM3t": [
+    "Participate in ",
+    [
+      1,
+      "activityName"
+    ],
+    " powered by ",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "providerName"
+        ]
+      ],
+      [
+        [
+          1,
+          "providerLink"
+        ]
+      ]
+    ],
+    " in Discord. No install required. Play ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes to unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "questReward"
+        ]
+      ]
+    ],
+    "."
+  ],
   "2GJLKy": [
     "Play eligible games for ",
     [
@@ -31539,7 +31594,7 @@
       1,
       "minutes"
     ],
-    " minutes"
+    " minutes."
   ],
   "1NaRSk": [
     "Play any Activity on Discord for ",
@@ -31645,7 +31700,17 @@
     ],
     " minutes"
   ],
-  "BDUDam": "Quest Home",
+  "jQEfRU": "Complete Quest",
+  "oisrFh": "Copy Quest ID",
+  "IcljUl": "Embedded Quest Preview",
+  "cKSLr6": "Random Progress",
+  "JF6W6+": "Reset Dismissibility",
+  "taqkwM": "Reset Quest",
+  "Zw8jxs": "Select or enter Quest ID",
+  "rNGQfH": "Share quest link",
+  "Ape+mp": "Preview Controls",
+  "BDUDam": "Quest Preview",
+  "tx5Ax8": "View in Preview Tool",
   "MFGxFB": "This Quest can't be completed on macOS",
   "BV6xDg": "Use the desktop app to make progress!",
   "o6FLcH": "Promoted",
@@ -31855,6 +31920,102 @@
     ],
     " Quest"
   ],
+  "+qoymJ": "Try in Discord",
+  "03VJqq": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open and win ",
+    [
+      1,
+      "questReward"
+    ],
+    "."
+  ],
+  "1AcTqq": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " for ",
+    [
+      1,
+      "duration"
+    ],
+    " and keep it for longer with Nitro!"
+  ],
+  "ztXW8f": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    ". Keep it with Nitro!"
+  ],
+  "enQ3jY": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "streamingDurationRequirement"
+    ],
+    " minutes with your Discord client open to unlock ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    " for ",
+    [
+      1,
+      "duration"
+    ],
+    "."
+  ],
+  "fe7XeX": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      1,
+      "minutes"
+    ],
+    " minutes"
+  ],
   "r9s3Ul": "Rewind 10 seconds",
   "zWDcND": "Skip ahead 10 seconds",
   "bDSZOz": "Toggle captions",
@@ -31975,6 +32136,24 @@
     ],
     "."
   ],
+  "e+K3xM": [
+    "Use ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and win ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "."
+  ],
   "mOrpXF": "Start Playing!",
   "Au8ug4": "No Orb Quests Available",
   "dYE1p6": [
@@ -32014,30 +32193,6 @@
     [
       1,
       "date"
-    ]
-  ],
-  "Iaj5LS": [
-    [
-      6,
-      "count",
-      {
-        "=1": [
-          [
-            1,
-            "filename"
-          ],
-          " queued"
-        ],
-        "other": [
-          [
-            1,
-            "count"
-          ],
-          " Files queued"
-        ]
-      },
-      0,
-      "cardinal"
     ]
   ],
   "WgVYR0": "Files",
@@ -40416,6 +40571,13 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
+  "W4DfeH": [
+    [
+      1,
+      "orbAmount"
+    ],
+    " orbs"
+  ],
   "Sxed/P": "Item will be available immediately in User Profile settings.",
   "5qdUrK": [
     [
@@ -40445,7 +40607,7 @@
         ]
       ]
     ],
-    ". By Claiming this item, you agree to the ",
+    ". By redeeming using Orbs, you agree to the ",
     [
       8,
       "$link",

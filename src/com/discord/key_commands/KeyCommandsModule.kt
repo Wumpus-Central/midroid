@@ -1,6 +1,6 @@
 package com.discord.key_commands
 
-import A9.s
+import B9.s
 import com.discord.codegen.NativeKeyCommandsModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
 

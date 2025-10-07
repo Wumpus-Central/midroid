@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react_events
 
-import A9.s
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap

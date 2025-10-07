@@ -1,6 +1,6 @@
 package com.discord.portals.from_js
 
-import A9.s
+import B9.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup.LayoutParams
@@ -76,13 +76,13 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       }
 
       if (var2 != 0) {
-         val var13: CrashReporting = CrashReporting.INSTANCE;
-         val var12: StringBuilder = new StringBuilder();
-         var12.append("Non-zero index child added ");
-         var12.append(var2);
+         val var12: CrashReporting = CrashReporting.INSTANCE;
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("Non-zero index child added ");
+         var13.append(var2);
          CrashReporting.addBreadcrumb$default(
-            var13,
-            var12.toString(),
+            var12,
+            var13.toString(),
             L.l(new Pair[]{s.a("portalId", var4), s.a("prevPortalId", var8), s.a("child", var1.toString()), s.a("index", java.lang.String.valueOf(var2))}),
             "portal",
             null,
@@ -193,8 +193,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
-            val var7: CrashReporting = CrashReporting.INSTANCE;
-            val var8: Pair = s.a("index", java.lang.String.valueOf(var1));
+            val var8: CrashReporting = CrashReporting.INSTANCE;
+            val var7: Pair = s.a("index", java.lang.String.valueOf(var1));
             var3 = this.portalId;
             if (this.portalId == null) {
                var3 = "";
@@ -211,7 +211,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             }
 
             CrashReporting.addBreadcrumb$default(
-               var7, "getChildAt of non-zero index", L.l(new Pair[]{var8, var15, var12, s.a("childViewIsNull", var4)}), "portal", null, 8, null
+               var8, "getChildAt of non-zero index", L.l(new Pair[]{var7, var15, var12, s.a("childViewIsNull", var4)}), "portal", null, 8, null
             );
          }
 

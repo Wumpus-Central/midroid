@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.events
 
-import A9.s
+import B9.s
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.DoubleTapMessageEvent

@@ -257,17 +257,17 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    public open fun anchorOn(targetView: View) {
-      val var3: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
-      val var5: Point = this.setAnchorAround(var3[0] - this.screenOffset[0], var3[1] - this.screenOffset[1]);
+      val var4: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
+      val var5: Point = this.setAnchorAround(var4[0] - this.screenOffset[0], var4[1] - this.screenOffset[1]);
       animateToCoordinate$default(this, var5.x, var5.y, null, 4, null);
    }
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
-      var var4: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
-      val var11: Int = this.screenOffset[1];
-      var4 = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var11, var2), var4 - this.getHeight()));
+      val var6: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var6 - this.getWidth()));
+      val var10: Int = this.screenOffset[1];
+      val var11: Int = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var10, var2), var11 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {

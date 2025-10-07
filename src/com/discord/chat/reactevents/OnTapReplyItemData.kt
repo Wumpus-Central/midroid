@@ -4,7 +4,7 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class OnTapReplyItemData(messageId: MessageId) : OnTapReplyItemData(var1), ReactEvent {
@@ -42,12 +42,12 @@ public data class OnTapReplyItemData(messageId: MessageId) : OnTapReplyItemData(
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnTapReplyItemData(messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnTapReplyItemData(messageId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

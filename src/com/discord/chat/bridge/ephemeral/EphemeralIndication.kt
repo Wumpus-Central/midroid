@@ -2,7 +2,7 @@ package com.discord.chat.bridge.ephemeral
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import mb.g
+import nb.g
 
 @g
 public data class EphemeralIndication(content: StructurableText, helpArticleLink: String, helpButtonAccessibilityLabel: String) {
@@ -59,18 +59,18 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var4: StructurableText = this.content;
+      val var1: StructurableText = this.content;
       val var2: java.lang.String = this.helpArticleLink;
-      val var3: java.lang.String = this.helpButtonAccessibilityLabel;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("EphemeralIndication(content=");
-      var1.append(var4);
-      var1.append(", helpArticleLink=");
-      var1.append(var2);
-      var1.append(", helpButtonAccessibilityLabel=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EphemeralIndication(content=");
+      var3.append(var1);
+      var3.append(", helpArticleLink=");
+      var3.append(var2);
+      var3.append(", helpButtonAccessibilityLabel=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -5,26 +5,26 @@ import android.view.View
 import com.facebook.react.uimanager.ThemedReactContext
 
 @SuppressLint(["ViewConstructor"])
-internal class TTIMeasurementView(context: ThemedReactContext) : View(var1) {
-   private final var onMeasurementListener: ((TTIMeasurementView, Double) -> Unit)?
-   private final var measurementSent: Boolean
+public class TTIMeasurementView(context: ThemedReactContext) : View(var1) {
+   public final var measurementListener: ((TTIMeasurementView, Double) -> Unit)?
+   public final var measurementSent: Boolean
 
-   private fun registerForNextDraw() {
-      if (!this.measurementSent) {
-         this.measurementSent = true;
-         FirstDrawDoneListener.registerForNextDraw(this, new b(this));
-      }
+   private fun registerDrawListener() {
+      FirstDrawDoneListener.registerForNextDraw(this, new b(this));
    }
 
    @JvmStatic
-   fun `registerForNextDraw$lambda$0`(var0: TTIMeasurementView) {
-      if (var0.onMeasurementListener != null) {
-         var0.onMeasurementListener.invoke(var0, (double)System.currentTimeMillis());
+   fun `registerDrawListener$lambda$0`(var0: TTIMeasurementView) {
+      if (!var0.measurementSent) {
+         var0.measurementSent = true;
+         if (var0.measurementListener != null) {
+            var0.measurementListener.invoke(var0, (double)System.currentTimeMillis());
+         }
       }
    }
 
    public fun setOnMeasurementListener(listener: (TTIMeasurementView, Double) -> Unit) {
-      this.onMeasurementListener = var1;
-      this.registerForNextDraw();
+      this.measurementListener = var1;
+      this.registerDrawListener();
    }
 }

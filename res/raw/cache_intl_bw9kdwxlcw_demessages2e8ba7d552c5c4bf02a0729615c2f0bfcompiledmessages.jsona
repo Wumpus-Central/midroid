@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Dein Account wurde freigeschaltet",
+  "d9Ykjo": "Bestätigungscode",
+  "bFbsV1": "Deine E-Mail-Adresse eingeben",
+  "RRBNpq": "Weiter",
+  "0DHxys": [
+    "Nicht du? ",
+    [
+      8,
+      "$link",
+      [
+        "Abmelden"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Wir könnten unterwegs nach weiteren Rückmeldungen fragen, nur um zu schauen, ob du vielleicht ein Roboter bist",
+  "Ks6opq": "Starten",
+  "I2Ctk5": "Schließe die unten aufgeführten Schritte ab, um deinen Account freizuschalten",
+  "RRamMD": "Account gesperrt",
+  "ah0EUl": "Code erneut senden",
+  "2+Lyn5": [
+    "Code in ",
+    [
+      1,
+      "countdown"
+    ],
+    " Sekunden erneut senden"
+  ],
+  "3AXMYm": "Verifizierungscode konnte nicht erneut gesendet werden",
+  "dSkE/P": "Altersgruppe verifizieren",
+  "o4D6fn": "Update",
+  "VBZJJi": "Bitte aktualisiere die App, um fortzufahren.",
+  "yxqMCA": "Update erforderlich",
+  "wq2RDg": "Verifizieren",
+  "PfbG6O": "Ungültiger Verifizierungscode",
+  "aveKoK": "Wir haben dir gerade einen Verifizierungscode an deine E-Mail-Adresse gesendet. Es kann ein paar Minuten dauern, bis er ankommt.",
+  "Qm6K/v": "Verifiziere deine E-Mail-Adresse"
+}

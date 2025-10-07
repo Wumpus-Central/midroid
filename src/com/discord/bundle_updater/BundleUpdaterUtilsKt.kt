@@ -2,7 +2,7 @@
 
 package com.discord.bundle_updater
 
-import K9.p
+import L9.p
 import android.content.res.AssetManager
 import java.io.BufferedReader
 import java.io.InputStream
@@ -34,11 +34,11 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
          try {
             throw var2;
          } catch (var3: java.lang.Throwable) {
-            K9.c.a(var10, var4);
+            L9.c.a(var10, var4);
          }
       }
 
-      K9.c.a(var10, null);
+      L9.c.a(var10, null);
       return var12;
    }
 }

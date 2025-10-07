@@ -1,7 +1,23 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.RuntimeException: Constructor com/discord/simpleast/core/node/Node.<init>(Ljava/util/Collection;I)V not found
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.ExprUtil.getSyntheticParametersMask(ExprUtil.java:49)
-  at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:959)
-*/
+package com.discord.simpleast.core.node
+
+import android.text.SpannableStringBuilder
+
+public open class TextNode<R>(content: String) : Node(null, 1) {
+   public final val content: String
+
+   init {
+      this.content = var1;
+   }
+
+   public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
+      var1.append(this.content);
+   }
+
+   public override fun toString(): String {
+      val var1: StringBuilder = new StringBuilder();
+      var1.append(this.getClass().getSimpleName());
+      var1.append(": ");
+      var1.append(this.content);
+      return var1.toString();
+   }
+}

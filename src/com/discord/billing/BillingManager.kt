@@ -2,8 +2,6 @@ package com.discord.billing
 
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
-import cb.K
-import cb.U
 import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingResult
 import com.android.billingclient.api.ProductDetails
@@ -13,6 +11,8 @@ import com.discord.billing.types.QueryProductDetailsParams
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import db.K
+import db.U
 import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -199,7 +199,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               F9.b.e();
+               G9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -226,11 +226,11 @@ internal class BillingManager(isProdBuild: Boolean,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var6 : var2) {
-            val var3: Function3 = this.onPurchaseUpdated;
-            val var4: java.lang.String = var1.i();
-            val var7: java.lang.String = var1.e();
-            var3.invoke(var4, var7, var6);
+         for (java.lang.String var7 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
+            val var3: java.lang.String = var1.i();
+            val var6: java.lang.String = var1.e();
+            var4.invoke(var3, var6, var7);
          }
       }
    }
@@ -275,12 +275,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var7: CoroutineScope = this.getCoroutineScope(var5);
-         cb.f.d(
-            var7,
+         val var6: CoroutineScope = this.getCoroutineScope(var5);
+         db.f.d(
+            var6,
             K.a(),
             null,
-            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation, Object>(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -411,7 +411,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = G9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       init {
@@ -473,15 +473,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var3: BillingResult = this.billingResult;
-         val var1: java.util.List = this.productDetails;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ProductDetailsResponse(billingResult=");
-         var2.append(var3);
-         var2.append(", productDetails=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: BillingResult = this.billingResult;
+         val var3: java.util.List = this.productDetails;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("ProductDetailsResponse(billingResult=");
+         var1.append(var2);
+         var1.append(", productDetails=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

@@ -10,6 +10,6 @@ public final class g implements d1.h {
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.d(this.a, var1, var2);
+      <unrepresentable>.a(this.a, var1, var2);
    }
 }

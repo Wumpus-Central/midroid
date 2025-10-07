@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.intent
 
-import L9.a
+import M9.a
 import android.content.Intent
 import android.os.Parcelable
 import androidx.core.content.c

@@ -1,6 +1,6 @@
 package com.discord.crash_reporting
 
-import A9.s
+import B9.s
 import com.discord.crash_reporting.react_events.CrashReportEvent
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
@@ -47,7 +47,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             var5.addBreadcrumb(
-               var6, L.l(new Pair[]{s.a("message", var7), s.a("stacktrace", A9.c.b(var2))}), "react.softexception", CrashReporting.BreadcrumbLevel.ERROR
+               var6, L.l(new Pair[]{s.a("message", var7), s.a("stacktrace", B9.c.b(var2))}), "react.softexception", CrashReporting.BreadcrumbLevel.ERROR
             );
             Log.INSTANCE.e(var1, "Unhandled SoftException", var2);
          }
@@ -67,9 +67,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun addListener(type: String) {
       if (CrashReporting.INSTANCE.isCrashedLastRun() == java.lang.Boolean.TRUE) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var3.reportLastCrash$crash_reporting_release(var2, new d(this));
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         var2.reportLastCrash$crash_reporting_release(var3, new d(this));
       }
    }
 
@@ -88,9 +88,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
+      val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
    }
 
    public open fun getName(): String {
@@ -99,16 +99,16 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var2.fetch(var3)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      var2.initSystemLogCapture(var1);
+      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.initSystemLogCapture(var2);
       ReactSoftExceptionLogger.addListener(this.reactSoftExceptionListener);
       r2.a.x(new FLogDelegate());
    }
@@ -125,8 +125,8 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun setUser(user: ReadableMap) {
       val var2: Boolean = var1.getBoolean("staff");
-      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var4.getInstance(var3).setStaff(var2);
+      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      var3.getInstance(var4).setStaff(var2);
    }
 }

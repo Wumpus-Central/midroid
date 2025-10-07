@@ -26,12 +26,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var0: java.lang.String = Regex.e.c("libdiscord_version");
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var1.append(var0);
-      var1.append("\\].+))");
-      regexExtractTombstone = new Regex(var1.toString());
+      val var1: java.lang.String = Regex.e.c("libdiscord_version");
+      val var0: StringBuilder = new StringBuilder();
+      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var0.append(var1);
+      var0.append("\\].+))");
+      regexExtractTombstone = new Regex(var0.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -50,7 +50,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         E9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         F9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -99,25 +99,24 @@ internal object SystemLogUtils {
             val var21: Sequence = kotlin.sequences.k.B(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
             );
-            val var13: HashSet = V.e(
+            val var8: HashSet = V.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
                var7 = var21.iterator();
 
-               val var8: Any;
                do {
                   if (!var7.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (var13.contains((java.lang.String)var8));
+                  var14 = var7.next();
+               } while (var8.contains((java.lang.String)var14));
 
-               var14 = var8 as java.lang.String;
+               var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
             val var22: java.lang.String = kotlin.sequences.k.z(var21, "\n", null, null, 0, null, null, 62, null);
@@ -131,7 +130,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -556,26 +555,26 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var4: java.lang.String = this.text;
-         val var6: java.lang.String = this.cause;
-         val var2: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
+         val var3: java.lang.String = this.cause;
+         val var7: java.lang.String = this.groupBy;
+         val var6: java.lang.String = this.origin;
          val var5: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Tombstone(text=");
-         var3.append(var4);
-         var3.append(", cause=");
-         var3.append(var6);
-         var3.append(", groupBy=");
-         var3.append(var2);
-         var3.append(", origin=");
-         var3.append(var1);
-         var3.append(", groupHash=");
-         var3.append(var5);
-         var3.append(", textHash=");
-         var3.append(var7);
-         var3.append(")");
-         return var3.toString();
+         val var1: java.lang.String = this.textHash;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Tombstone(text=");
+         var2.append(var4);
+         var2.append(", cause=");
+         var2.append(var3);
+         var2.append(", groupBy=");
+         var2.append(var7);
+         var2.append(", origin=");
+         var2.append(var6);
+         var2.append(", groupHash=");
+         var2.append(var5);
+         var2.append(", textHash=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }
