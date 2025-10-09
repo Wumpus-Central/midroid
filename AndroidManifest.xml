@@ -171,6 +171,8 @@
                 <data android:host="discord.com" android:pathPattern="/activate" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPrefix="/activities" android:scheme="https"/>
                 <data android:host="*.discord.com" android:pathPrefix="/activities" android:scheme="https"/>
+                <data android:host="discord.com" android:pathPrefix="/shop" android:scheme="https"/>
+                <data android:host="*.discord.com" android:pathPrefix="/shop" android:scheme="https"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>

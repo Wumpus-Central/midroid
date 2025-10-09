@@ -13,6 +13,9 @@ import com.facebook.react.viewmanagers.DCDLocalImageThumbnailManagerInterface
 public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbnailView>, DCDLocalImageThumbnailManagerInterface<LocalImageThumbnailView> {
    private final val mDelegate: DCDLocalImageThumbnailManagerDelegate<LocalImageThumbnailView, LocalImageThumbnailViewManager> =
       new DCDLocalImageThumbnailManagerDelegate(this)
+      private final var lastUri: Uri?
+   private final var lastWidthDp: Int?
+   private final var lastHeightDp: Int?
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): LocalImageThumbnailView {
       return new LocalImageThumbnailView(var1, null, 0, 6, null);
@@ -32,7 +35,14 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
          val var5: Uri = Uri.parse(var2.getString("uri"));
          val var3: Int = (int)var2.getDouble("width");
          val var4: Int = (int)var2.getDouble("height");
-         var1.setLocalImageSource(var5, var3, var4);
+         if (this.lastUri == var5 && this.lastWidthDp != null && this.lastWidthDp == var3 && this.lastHeightDp != null && this.lastHeightDp == var4) {
+            return;
+         } else {
+            this.lastUri = var5;
+            this.lastWidthDp = var3;
+            this.lastHeightDp = var4;
+            var1.setLocalImageSource(var5, var3, var4);
+         }
       }
    }
 

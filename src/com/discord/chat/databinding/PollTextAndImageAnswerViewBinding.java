@@ -55,27 +55,27 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
    @NonNull
    public static PollTextAndImageAnswerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var7 = (PollCheckboxView)a.a(var0, var1);
-      if (var7 != null) {
+      PollCheckboxView var4 = (PollCheckboxView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.image;
          PollMediaView var5 = (PollMediaView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.percentage_bar_background;
                View var3 = a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var6 = (FrameLayout)a.a(var0, var1);
-                  if (var6 != null) {
+                  FrameLayout var7 = (FrameLayout)a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.vote_counts;
                      TextView var2 = (TextView)a.a(var0, var1);
                      if (var2 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var7, var5, var8, var3, var6, var2, var4);
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var4, var5, var6, var3, var7, var2, var8);
                         }
                      }
                   }

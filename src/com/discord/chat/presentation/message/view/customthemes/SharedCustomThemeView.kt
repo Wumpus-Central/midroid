@@ -75,11 +75,11 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var16: java.util.List = var2.getColors();
       val var12: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
 
-      for (java.lang.String var7 : var16) {
-         val var17: StringBuilder = new StringBuilder();
-         var17.append("#");
-         var17.append(var7);
-         var12.add(var17.toString());
+      for (java.lang.String var6 : var16) {
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("#");
+         var7.append(var6);
+         var12.add(var7.toString());
       }
 
       var8.setHexColors(var12);
@@ -112,12 +112,12 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
       val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
 
-      for (java.lang.String var5 : var4) {
-         val var8: TextView = new TextView(this.getContext());
-         var8.setText(var5);
-         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var8.setTextSize(14.0F);
-         var3.add(var8);
+      for (java.lang.String var6 : var4) {
+         val var5: TextView = new TextView(this.getContext());
+         var5.setText(var6);
+         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var5.setTextSize(14.0F);
+         var3.add(var5);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

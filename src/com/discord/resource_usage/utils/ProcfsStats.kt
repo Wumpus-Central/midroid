@@ -60,13 +60,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var1: Long = this.totalTime;
-      val var3: Long = this.rssPages;
+      val var3: Long = this.totalTime;
+      val var1: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var1);
-      var5.append(", rssPages=");
       var5.append(var3);
+      var5.append(", rssPages=");
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -103,17 +103,17 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 008: invokevirtual java/io/File.exists ()Z
          // 00b: ifeq 112
          // 00e: getstatic kotlin/text/Charsets.UTF_8 Ljava/nio/charset/Charset;
-         // 011: astore 10
+         // 011: astore 13
          // 013: new java/io/InputStreamReader
          // 016: astore 12
          // 018: new java/io/FileInputStream
-         // 01b: astore 13
-         // 01d: aload 13
+         // 01b: astore 10
+         // 01d: aload 10
          // 01f: aload 1
          // 020: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
          // 023: aload 12
-         // 025: aload 13
-         // 027: aload 10
+         // 025: aload 10
+         // 027: aload 13
          // 029: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
          // 02c: new java/io/BufferedReader
          // 02f: astore 10
@@ -198,28 +198,28 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 0c6: checkcast java/lang/String
          // 0c9: lconst_0
          // 0ca: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0cd: lstore 6
+         // 0cd: lstore 8
          // 0cf: aload 1
          // 0d0: bipush 14
          // 0d2: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0d7: checkcast java/lang/String
          // 0da: lconst_0
          // 0db: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0de: lstore 8
+         // 0de: lstore 4
          // 0e0: aload 1
          // 0e1: bipush 23
          // 0e3: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0e8: checkcast java/lang/String
          // 0eb: lconst_0
          // 0ec: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0ef: lstore 4
+         // 0ef: lstore 6
          // 0f1: new com/discord/resource_usage/utils/ProcfsStats
          // 0f4: astore 10
          // 0f6: aload 10
-         // 0f8: lload 6
-         // 0fa: lload 8
+         // 0f8: lload 8
+         // 0fa: lload 4
          // 0fc: ladd
-         // 0fd: lload 4
+         // 0fd: lload 6
          // 0ff: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V
          // 102: goto 112
          // 105: aload 12

@@ -131,25 +131,25 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.guildId;
-      val var6: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.guildId;
+      val var5: java.lang.String = this.messageId;
       val var1: java.lang.String = this.originalLink;
-      val var3: java.util.List = this.inContent;
-      val var7: java.util.List = this.content;
+      val var4: java.util.List = this.inContent;
+      val var6: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ChannelMentionContentNode(channelId=");
-      var2.append(var5);
+      var2.append(var3);
       var2.append(", guildId=");
-      var2.append(var4);
+      var2.append(var7);
       var2.append(", messageId=");
-      var2.append(var6);
+      var2.append(var5);
       var2.append(", originalLink=");
       var2.append(var1);
       var2.append(", inContent=");
-      var2.append(var3);
+      var2.append(var4);
       var2.append(", content=");
-      var2.append(var7);
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }

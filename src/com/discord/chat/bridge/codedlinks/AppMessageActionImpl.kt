@@ -63,14 +63,14 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var1: java.lang.String = this.label;
+      val var1: java.lang.String = this.id;
+      val var3: java.lang.String = this.label;
       val var2: java.lang.Boolean = this.disabled;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppMessageActionImpl(id=");
-      var4.append(var3);
-      var4.append(", label=");
       var4.append(var1);
+      var4.append(", label=");
+      var4.append(var3);
       var4.append(", disabled=");
       var4.append(var2);
       var4.append(")");

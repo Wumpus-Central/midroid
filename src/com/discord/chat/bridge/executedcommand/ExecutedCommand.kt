@@ -153,30 +153,30 @@ public data class ExecutedCommand(userId: UserId,
 
    public override fun toString(): String {
       val var3: java.lang.String = UserId.toString-impl(this.userId);
-      val var2: Int = this.usernameColor;
-      val var6: java.lang.String = this.avatarURL;
-      val var1: Int = this.targetUsernameColor;
-      val var8: AnnotatedStructurableText = this.content;
-      val var5: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var1: Int = this.usernameColor;
+      val var5: java.lang.String = this.avatarURL;
+      val var2: Int = this.targetUsernameColor;
+      val var6: AnnotatedStructurableText = this.content;
+      val var7: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
       val var9: java.lang.Boolean = this.showAppsIcon;
-      val var7: java.lang.Boolean = this.showControllerIcon;
+      val var8: java.lang.Boolean = this.showControllerIcon;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ExecutedCommand(userId=");
       var4.append(var3);
       var4.append(", usernameColor=");
-      var4.append(var2);
-      var4.append(", avatarURL=");
-      var4.append(var6);
-      var4.append(", targetUsernameColor=");
       var4.append(var1);
-      var4.append(", content=");
-      var4.append(var8);
-      var4.append(", commandNameBackgroundStyles=");
+      var4.append(", avatarURL=");
       var4.append(var5);
+      var4.append(", targetUsernameColor=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var6);
+      var4.append(", commandNameBackgroundStyles=");
+      var4.append(var7);
       var4.append(", showAppsIcon=");
       var4.append(var9);
       var4.append(", showControllerIcon=");
-      var4.append(var7);
+      var4.append(var8);
       var4.append(")");
       return var4.toString();
    }

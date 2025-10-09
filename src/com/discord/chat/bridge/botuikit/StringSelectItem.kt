@@ -102,23 +102,23 @@ public data class StringSelectItem(label: String,
 
    public override fun toString(): String {
       val var5: java.lang.String = this.label;
-      val var4: java.lang.String = this.value;
-      val var2: ComponentEmoji = this.emoji;
-      val var6: java.lang.String = this.description;
-      val var3: java.lang.Boolean = this.default;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("StringSelectItem(label=");
-      var1.append(var5);
-      var1.append(", value=");
-      var1.append(var4);
-      var1.append(", emoji=");
-      var1.append(var2);
-      var1.append(", description=");
-      var1.append(var6);
-      var1.append(", default=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.value;
+      val var3: ComponentEmoji = this.emoji;
+      val var1: java.lang.String = this.description;
+      val var4: java.lang.Boolean = this.default;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("StringSelectItem(label=");
+      var6.append(var5);
+      var6.append(", value=");
+      var6.append(var2);
+      var6.append(", emoji=");
+      var6.append(var3);
+      var6.append(", description=");
+      var6.append(var1);
+      var6.append(", default=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

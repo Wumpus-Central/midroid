@@ -149,7 +149,9 @@
     ]
   ],
   "HvsFJS": "New friends that your teen added in the last week.",
+  "BkVb1d": "New friends that your teen added or accepted",
   "1/QpPz": "New friends that you added in the last week.",
+  "mpHHfX": "New friends that you added or accepted",
   "EMCf6u": [
     "We built Family Center to provide you with more context on how your teen uses Discord so you can work together on building positive online behaviors. ",
     [
@@ -184,6 +186,10 @@
   ],
   "goKE2d": "Stay informed about how your teen is using Discord.",
   "T7GyW1": "Keep your parents informed, while maintaining your privacy.",
+  "obi47u": "Avatar Decoration",
+  "VS1fKi": "Bundle",
+  "nNGEHh": "Nameplate",
+  "RX8BMT": "Profile Effect",
   "CcrbCw": "Active servers",
   "rcPInZ": [
     "Active Servers — ",
@@ -192,20 +198,23 @@
       "count"
     ]
   ],
-  "dcvNX1": "Servers that your teen has sent messages in within the last week.",
+  "BLgIrq": "Servers where your teen joined a voice or video call or sent a message.",
   "c0NgBQ": "Servers that your teen has been active in (sent messages or joined voice chat) within the last week.",
-  "823ugY": "Servers that you have sent messages in within the last week. These are not invite links, your parents will not be able to click on them.",
+  "sSJaub": "Servers where you joined a voice or video call or sent a message. Guardians only see names of your active servers, but can't click or join them from here.",
   "DLVyFx": "Servers that you have been active in (sent messages or joined voice chat) within the last week. These are not invite links, your parents will not be able to click on them.",
   "NulX9/": "Servers joined",
+  "uav9Bg": "New servers",
   "7feG7e": [
-    "Servers Joined — ",
+    "New Servers — ",
     [
       2,
       "count"
     ]
   ],
   "Lmz9Vl": "New servers that your teen joined in the last week.",
+  "LVNgTE": "New servers your teen joined or created.",
   "MTFxYW": "New servers that you joined in the last week. These are not invite links, your parents will not be able to click on them.",
+  "TA8GFh": "New servers you joined or created. Guardians only see names of servers, but can't click or join them from here.",
   "5JmNgo": [
     [
       2,
@@ -241,7 +250,7 @@
   ],
   "g1ZX6u": "Your activity today",
   "s3qSVl": "Your activity since yesterday",
-  "Q/D/0d": "ACTIVITY SUMMARY",
+  "KrLnkJ": "Activity Summary",
   "7hqFl5": [
     "VISIBLE TO ",
     [
@@ -264,6 +273,28 @@
       "cardinal"
     ]
   ],
+  "tazvHR": [
+    "Visible to ",
+    [
+      2,
+      "activeLinks"
+    ],
+    " family ",
+    [
+      6,
+      "activeLinks",
+      {
+        "one": [
+          "member"
+        ],
+        "other": [
+          "members"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "NMYKsr": "Total purchases",
   "FPViWF": [
     "Total Purchases — ",
@@ -273,8 +304,7 @@
     ]
   ],
   "cqIdqa": "All purchases your teen made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
-  "c9BHsr": "Total amount that your teen spent in the last week.",
-  "85PtWl": "Total amount that you spent in the last week.",
+  "85PtWl": "All purchases you made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
   "bdBmq6": "Activity",
   "pzKKoK": [
     [
@@ -326,7 +356,9 @@
   "IHd5cX": "Last called today",
   "wOsfxs": "Last called yesterday",
   "w7j/Li": "Users that your teen had calls with in 1:1 DMs and group chats in the last week.",
+  "aiAhnZ": "Users that your teen had a voice or video call with one-on-one or in a group chat. Does not include servers.",
   "SCIaWF": "Calls you had in 1:1 DMs and group chats in the last week.",
+  "4ufgd3": "Users that you had a voice or video call with one-on-one or in a group chat. Does not include servers.",
   "kvTgWF": "Users messaged",
   "4T3zWV": [
     "Users Messaged — ",
@@ -336,7 +368,9 @@
     ]
   ],
   "cY19ub": "Users that your teen messaged in 1:1 DMs and group chats in the last week.",
+  "w4wmnZ": "Users that your teen messaged one-on-one or in a group chat. Does not include servers.",
   "K5r+sL": "Users that you messaged in 1:1 DMs and group chats in the last week.",
+  "foTzbW": "Users that you messaged one-on-one or in a group chat. Does not include servers.",
   "qvKjp6": [
     "Last messaged ",
     [
@@ -347,7 +381,7 @@
   ],
   "fLBUx8": "Last messaged today",
   "cHHgxM": "Last messaged yesterday",
-  "eo4Fxs": "In voice",
+  "eo4Fxs": "In voice & video",
   "eGFWUV": [
     "Voice Minutes — ",
     [
@@ -355,8 +389,7 @@
       "count"
     ]
   ],
-  "Mx+/eX": "Total time that your teen spent in voice channels in the last week.",
-  "n3otj4": "Total time that you spent in voice channels in the last week.",
+  "O/AElp": "Minutes spent in calls across direct messages, group chats, and servers",
   "HynllZ": "Cancel parent connection request?",
   "mK40bm": "Cancel request",
   "czincX": "Do nothing",
@@ -408,6 +441,30 @@
       ]
     ]
   ],
+  "i284fX": [
+    "Some settings are managed by your guardian. Check in with them to make changes. ",
+    [
+      8,
+      "hook",
+      [
+        [
+          6,
+          "count",
+          {
+            "one": [
+              "Message your guardian"
+            ],
+            "other": [
+              "Message your guardians"
+            ]
+          },
+          0,
+          "cardinal"
+        ]
+      ]
+    ],
+    "."
+  ],
   "ZhaNu7": "Use my teen's Discord activity to personalize Sponsored Content",
   "cnCK6e": [
     "Allows us to personalize Sponsored Content, like Quests, using your teen's Discord activity, such as the games they play. If you opt out, your teen may still see Quests, but they won’t be personalized. ",
@@ -425,8 +482,9 @@
       ]
     ]
   ],
-  "ahKIJC": "Parental Controls",
+  "ahKIJC": "Teen Account Settings",
   "7aYkh4": "Filter messages from server members your teen may not know",
+  "Sv236e": "You can manage certain settings for your teen’s account. Your teen will not be able to adjust these specific settings on their own. We encourage you to talk to your teen about how to customize these settings.",
   "w0JA3N": [
     [
       6,
@@ -443,7 +501,17 @@
       "cardinal"
     ]
   ],
-  "X9rW0t": "Some of your settings are managed by your parent. Ask them if you'd like to change a setting",
+  "X9rW0t": [
+    "Some ",
+    [
+      8,
+      "openSettingsHook",
+      [
+        "settings"
+      ]
+    ],
+    " are managed by your guardian. Check in with them to make changes."
+  ],
   "1xBHHR": "To protect your teen's privacy, you will not be able to see the contents of their messages or calls.",
   "0QDVFB": "Your parents will not see the contents of your messages or calls.",
   "82y87e": "What your teen writes or says",
@@ -451,13 +519,34 @@
   "2OqtJC": "FAMILY CENTER DOES NOT SHARE:",
   "TCzk/f": "FAMILY CENTER WILL NEVER SHARE WITH YOUR PARENTS:",
   "DxFKkZ": "Names and avatars",
+  "S2ss5e": "New friends that your teen added or accepted",
+  "l0ChgI": "New friends that you added or accepted",
   "/zMYZW": "Recently added friends",
+  "JvJ3Pz": "New friends",
   "WrY56O": "Names, icons, and member counts",
+  "fEgtLS": "Includes servers your teen has recently joined, created, sent a message in, or participated in via voice or video call.",
+  "LDu4Ul": "Includes servers you have recently joined, created, sent a message in, or participated in via voice or video call.",
   "44NEx8": "Servers joined or participated in",
-  "YU7aaW": "WHAT ARE CONNECTED PARENTS ABLE TO SEE?",
-  "Sm8Gq6": "WHAT ARE CONNECTED PARENTS ABLE TO SEE?",
+  "3Orpws": "What are connected parents able to see?",
+  "WGz9DQ": "What are connected parents and guardians able to see?",
+  "f28y/v": "What are connected parents able to see?",
+  "+yrQhY": "What are connected parents and guardians able to see?",
+  "ep6mdH": "All purchases your teen made, including Shop and subscriptions",
+  "dES/2t": "All purchases you have made, including Shop and subscriptions",
+  "PjM3r6": "Total purchases",
+  "TeNlMT": "If they choose to share a report they filed, you'll be notified via email",
+  "tHTyRk": "You have the option to share a report after you submit it. If you choose to share, your guardian will be notified via email",
+  "0cuLn5": "Reports shared by your teen",
+  "30+sio": "Reports shared by you",
+  "tdgcf3": "You can manage certain settings for your teen's account that they can't edit on their own.",
+  "wZejZm": "Your guardian will be able to manage some settings for your account that you can't edit on your own.",
+  "UCuHMz": "Teen Account Settings",
   "KBgAra": "Names, avatars, and times of last message or call",
+  "oYf9Pz": "This includes direct messages and group chats",
   "Z3G+8v": "Users messaged or called in direct or group chats",
+  "4SCALi": "Users messaged or called",
+  "Ief2xc": "Minutes spent in calls across direct messages, group chats, and servers",
+  "GNs2ZG": "Total time spent in voice or video",
   "LcM8BQ": "Declining your parent’s request will send them a notification that you declined their request.",
   "cXgKMD": "Notice",
   "teIRCQ": "Decline parent connection request?",
@@ -564,12 +653,15 @@
   "6JkHSk": "Why Family Center?",
   "bmhCnJ": "You can see who your teen is talking to, while still respecting their privacy.",
   "5RZ8Tk": "Message contents are never shared with your parents.",
+  "qITXhY": "Guardians won't see the private contents of your messages",
   "001l3t": "Messages stay private",
   "1xPTwM": "Setup is as simple as using your phone to scan the QR code your teen shows you.",
   "Rm/6a2": "Setup is as simple as having your parent scan a QR code.",
+  "+pi4Ym": "Setup is as easy as having your guardian scan the QR code you show them.",
   "hhOuMT": "Easily connect",
-  "68zfxM": "You and your teen see the exact same information, so you’re on the same page.",
+  "68zfxM": "You and your teen see the exact same information, so you're on the same page.",
   "XKnFFh": "You and your parents see the exact same information.",
+  "t7SkFx": "You and your guardian see the same information, so you're on the same page.",
   "yipAeH": "Transparent sharing",
   "KOwsf3": [
     "Text DISCORD to 741741 to speak to a trained volunteer crisis counselor at Crisis Text Line, available 24/7. ",
@@ -745,6 +837,7 @@
   "8rLBxM": "Once they give consent for you to view their activity data, you’re good to go.",
   "MZn1tL": "Have your teen accept the connection request",
   "Ta9byc": "Connect with Parent",
+  "8SLtqa": "Connect with Guardian",
   "gVWG+/": "My Family",
   "ISg34u": "Send Connection Request",
   "GH11eH": "Connect with your Teen:",

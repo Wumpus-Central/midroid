@@ -212,10 +212,10 @@ public object MessageViewManagers {
             val var3: MessageViewManagers = MessageViewManagers.INSTANCE;
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
-            val var6: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var8: Context = var1.getContext();
-            var1.setMessage(var6, var5, MessageViewManagers.access$getEventHandler(var3, var7, var8));
+            val var5: Message = var4 as Message;
+            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 

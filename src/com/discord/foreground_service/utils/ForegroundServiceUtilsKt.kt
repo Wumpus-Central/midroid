@@ -124,23 +124,23 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
             var4 = (var14.next() as java.lang.Number).intValue();
 
             try {
-               val var15: Log = Log.INSTANCE;
+               val var16: Log = Log.INSTANCE;
                val var12: java.lang.String = toForegroundServiceTypeString(var4);
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("Attempting to promote service with type: ");
-               var16.append(var12);
-               Log.i$foreground_service_release$default(var15, var16.toString(), null, 2, null);
+               val var15: StringBuilder = new StringBuilder();
+               var15.append("Attempting to promote service with type: ");
+               var15.append(var12);
+               Log.i$foreground_service_release$default(var16, var15.toString(), null, 2, null);
                a.a(var0, var2, var3, var4);
                return;
             } catch (var9: SecurityException) {
                var11 = var9;
-               val var7: Log = Log.INSTANCE;
-               val var6: java.lang.String = toForegroundServiceTypeString(var4);
+               val var6: Log = Log.INSTANCE;
+               val var7: java.lang.String = toForegroundServiceTypeString(var4);
                val var8: StringBuilder = new StringBuilder();
                var8.append("Service promotion of type ");
-               var8.append(var6);
+               var8.append(var7);
                var8.append(" failed, trying next in chain");
-               var7.w$foreground_service_release(var8.toString(), var9);
+               var6.w$foreground_service_release(var8.toString(), var9);
             }
          }
 

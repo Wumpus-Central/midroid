@@ -1,15 +1,10 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.sticker.Sticker;
-import com.discord.chat.presentation.message.messagepart.MessageAccessory;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class P implements Function1 {
-   public final MessageAccessoriesAdapter d;
-   public final MessageAccessory e;
-
-   public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.F(this.d, this.e, (Sticker)var1);
+public final class P implements Function0 {
+   public final Object invoke() {
+      return MessageAccessoriesView.Q();
    }
 }

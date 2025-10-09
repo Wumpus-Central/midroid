@@ -62,17 +62,17 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
       this.chatListAdapter = new ChannelChatListAdapter(new com.discord.chat.presentation.list.i(this), new m(this), new n(this), null, 8, null);
       this.onFirstDrawDoneCallback = new o();
       this.scroller = new Scroller(this);
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, null, 14, null);
-      this.linearLayoutManager = var3;
-      val var4: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
+      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, null, 14, null);
+      this.linearLayoutManager = var4;
+      val var3: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
          SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(30), false, 8, null
       );
-      this.verticalSpacingItemDecoration = var4;
+      this.verticalSpacingItemDecoration = var3;
       this.scrollStateObserver = new ChatScrollStateObserver(new p(this));
       this.isFirstLayout = true;
       this.setRecycledViewPool(SharedRecycledViewPools.INSTANCE.getChatListViewPool());
-      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var4);
-      this.setLayoutManager(var3);
+      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var3);
+      this.setLayoutManager(var4);
       this.setAdapter(this.chatListAdapter);
       this.addScrollStateListener();
       this.chatListAdapter.fillAdapter(this);
@@ -159,15 +159,15 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var7: Any = var2.get(this);
-         val var5: CrashReporting = CrashReporting.INSTANCE;
+         val var5: Any = var2.get(this);
+         val var7: CrashReporting = CrashReporting.INSTANCE;
          val var3: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
          val var4: StringBuilder = new StringBuilder();
          var4.append("About to crash because of ChatList, dumping update log:\n");
          var4.append(var3);
          var4.append("\n Recycler State: ");
-         var4.append(var7);
-         CrashReporting.addBreadcrumb$default(var5, var4.toString(), null, null, null, 14, null);
+         var4.append(var5);
+         CrashReporting.addBreadcrumb$default(var7, var4.toString(), null, null, null, 14, null);
          throw var6;
       }
    }
@@ -236,31 +236,23 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
                      ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .updateFirstAndLastMessageVisibilityData(this.this$0);
-                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
-                        .getChatListVisibilityCalculator$chat_release()
-                        .getFirstMessagePosition();
-                     val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
-                        .getChatListVisibilityCalculator$chat_release()
-                        .getFirstMessagePercentVisible();
                      val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
-                        .getLastMessagePosition();
+                        .getFirstMessagePosition();
                      val var7: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
+                        .getFirstMessagePercentVisible();
+                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                        .getChatListVisibilityCalculator$chat_release()
+                        .getLastMessagePosition();
+                     val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                        .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePercentVisible();
-                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var1 >= 0 && var2 >= 0) {
+                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var2 >= 0 && var1 >= 0) {
                         ChatListView.access$setFirstLayout$p(this.this$0, false);
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
                         if (var3) {
-                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
-                           if (var4 == null) {
-                              Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-                              var4 = null;
-                           }
-
-                           var4.onFirstLayout(var2, var7, var1, var6);
-                        } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
                               Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -269,6 +261,14 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
                            }
 
                            var4.onFirstLayout(var1, var6, var2, var7);
+                        } else {
+                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
+                           if (var4 == null) {
+                              Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
+                              var4 = null;
+                           }
+
+                           var4.onFirstLayout(var2, var7, var1, var6);
                         }
                      }
                   }

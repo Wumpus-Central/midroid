@@ -50,18 +50,18 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
       if (var2 != null) {
          val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          if (var3 != null) {
-            val var6: java.util.Iterator = var3.iterator();
+            val var4: java.util.Iterator = var3.iterator();
 
-            while (var6.hasNext()) {
-               val var5: ReadableMap = var2.getMap((var6 as I).nextInt());
-               val var4: java.lang.String = var5.getString("shape");
-               if (var4 == "circle") {
+            while (var4.hasNext()) {
+               val var5: ReadableMap = var2.getMap((var4 as I).nextInt());
+               val var6: java.lang.String = var5.getString("shape");
+               if (var6 == "circle") {
                   var1.addCircleCutout(
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("size"))
                   );
-               } else if (var4 == "rounded-rect") {
+               } else if (var6 == "rounded-rect") {
                   var1.addRoundedRectCutout(
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),

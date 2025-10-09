@@ -80,17 +80,17 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var3: ChannelType = this.channelType;
-      val var1: java.lang.String = this.iconType;
-      val var4: java.lang.String = this.icon;
+      val var1: ChannelType = this.channelType;
+      val var4: java.lang.String = this.iconType;
+      val var3: java.lang.String = this.icon;
       val var5: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ChannelNameContentNode(channelType=");
-      var2.append(var3);
-      var2.append(", iconType=");
       var2.append(var1);
-      var2.append(", icon=");
+      var2.append(", iconType=");
       var2.append(var4);
+      var2.append(", icon=");
+      var2.append(var3);
       var2.append(", content=");
       var2.append(var5);
       var2.append(")");

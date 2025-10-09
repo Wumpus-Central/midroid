@@ -67,18 +67,18 @@ public object PortalFromNativeContextManager {
    }
 
    public fun registerView(portal: Double, portalView: PortalHolderViewGroup, onViewRegistered: (() -> Unit)? = null) {
-      val var5: PortalFromNativeContext = portalContextMap.get(var1);
-      if (var5 != null) {
-         val var6: View = var5.getView().get();
-         if (var6 != null && !(var6.getParent() == var3)) {
-            var5.getRemoveViewFromParent().invoke(var6);
-            var3.addView(var6);
+      val var6: PortalFromNativeContext = portalContextMap.get(var1);
+      if (var6 != null) {
+         val var5: View = var6.getView().get();
+         if (var5 != null && !(var5.getParent() == var3)) {
+            var6.getRemoveViewFromParent().invoke(var5);
+            var3.addView(var5);
             ViewMeasureExtensionsKt.measureAndLayout(var3);
             if (var4 != null) {
                var4.invoke();
             }
 
-            var5.getOnViewAddedToPortal().invoke(var6);
+            var6.getOnViewAddedToPortal().invoke(var5);
             _portalContextIdsFlow.setValue(PortalFromNativeContextManager.Event.PortalRegistered.INSTANCE);
          }
       }
