@@ -8861,6 +8861,7 @@
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
   "pEasFR": "Filter",
+  "UdhTtr": "Filters",
   "+B9e19": "Filter Options",
   "C6S5jY": "Find consoles",
   "8SuVoK": "Finish",
@@ -31389,6 +31390,15 @@
       "expirationDate"
     ]
   ],
+  "vjLqAQ": "Reward",
+  "Hufmsr": "Quest Type",
+  "urZl39": "See all Quests",
+  "nwdKFB": "No results found.",
+  "PBfFn5": "There is nothing to see here",
+  "Jg17Ul": "Avatar Decoration",
+  "O/J2kp": "In-Game Rewards",
+  "1nJR4u": "Play",
+  "e0iISE": "Watch",
   "V6htNz": "Find this again in User Settings > Quests",
   "28Ql29": [
     [
@@ -32081,6 +32091,11 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "IB22n5": "Expiring Soon",
+  "tZXJIS": "Sort by",
+  "K6oEu7": "Most Recent",
+  "BB+2tb": "Started",
+  "gBfXPT": "Suggested",
   "Hu8SKS": [
     "Play any eligible game for ",
     [
@@ -35882,15 +35897,11 @@
   "oF6+W1": "Start Verification",
   "oCqlGB": "Start Video Call",
   "focH1t": "Start Voice Call",
-  "30yqZW": "Gonna BRB",
   "fFTJTE": "brb",
-  "vkpn7+": "Chilling",
   "vybY9f": "chilling",
   "IeolFR": "my first status",
   "jaNpQE": "Do Not Disturb",
-  "b6AscH": "In the zone",
   "D5eCT0": "studying",
-  "lZslwM": "GAMING",
   "wvWdTU": "gaming",
   "qWbtVV": "Idle",
   "bg24HB": "Invisible",
@@ -35907,7 +35918,6 @@
       "endTime"
     ]
   ],
-  "di6IFx": "Watchin' stuff",
   "s8xFaG": "watching stuff",
   "Xp+X2d": "Always animate",
   "IlLT7e": "Animate on interaction",
@@ -39614,6 +39624,7 @@
   "11pdXV": "unknown-game",
   "dtwqPT": "Unknown server",
   "n+olu7": "Unknown Integration",
+  "zksHZG": "Please update Discord to view this message",
   "YV4F/v": "unknown-role",
   "30mdIy": "Unknown User",
   "sKdZ6e": "unknown-user",
@@ -40851,6 +40862,7 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
+  "ElYQFR": "Orbs",
   "W4DfeH": [
     [
       1,

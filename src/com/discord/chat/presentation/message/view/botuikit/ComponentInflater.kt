@@ -24,12 +24,13 @@ import com.discord.chat.presentation.message.view.botuikit.components.SelectComp
 import com.discord.chat.presentation.message.view.botuikit.components.SeparatorDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ThumbnailDisplayComponentView
+import com.discord.chat.presentation.message.view.botuikit.components.UnknownComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.media_gallery.MediaGalleryDisplayComponentView
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nComponentInflater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,93:1\n381#2,7:94\n381#2,7:101\n381#2,7:108\n*S KotlinDebug\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n*L\n45#1:94,7\n54#1:101,7\n70#1:108,7\n*E\n"])
+@SourceDebugExtension(["SMAP\nComponentInflater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,94:1\n381#2,7:95\n381#2,7:102\n381#2,7:109\n*S KotlinDebug\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n*L\n46#1:95,7\n55#1:102,7\n71#1:109,7\n*E\n"])
 public class ComponentInflater(context: Context, preInflateRecycledViews: Boolean) {
    public final val context: Context
    private final val viewCache: MutableMap<String, MutableList<ComponentView<out Component>>>
@@ -45,13 +46,13 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
             var var4: Int = var5;
             if (var3 >= 20) {
                while (var4 < 10) {
-                  val var12: java.util.Map = this.viewCache;
-                  val var13: java.lang.String = ActionRowComponent.class.getSimpleName();
-                  val var11: Any = var12.get(var13);
+                  val var13: java.util.Map = this.viewCache;
+                  val var12: java.lang.String = ActionRowComponent.class.getSimpleName();
+                  val var11: Any = var13.get(var12);
                   var var10: Any = var11;
                   if (var11 == null) {
                      var10 = new ArrayList();
-                     var12.put(var13, var10);
+                     var13.put(var12, var10);
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
@@ -60,13 +61,13 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                break;
             }
 
-            val var7: java.util.Map = this.viewCache;
-            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
-            val var6: Any = var7.get(var8);
+            val var8: java.util.Map = this.viewCache;
+            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
+            val var6: Any = var8.get(var7);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var7.put(var8, var9);
+               var8.put(var7, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
@@ -76,57 +77,56 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    }
 
    private fun <T : Component> inflateComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      val var5: Any;
+      var var3: Any;
       if (var1 is ActionRowComponent) {
-         var5 = ActionRowComponentView.Companion.inflateComponent(this.context);
+         var3 = ActionRowComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is ButtonComponent) {
-         var5 = ButtonComponentView.Companion.inflateComponent(this.context);
+         var3 = ButtonComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is SelectComponent) {
-         var5 = SelectComponentView.Companion.inflateComponent(this.context);
+         var3 = SelectComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is SectionComponent) {
-         var5 = SectionComponentView.Companion.inflateComponent(this.context);
+         var3 = SectionComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is TextDisplayComponent) {
-         var5 = TextDisplayComponentView.Companion.inflateComponent(this.context);
+         var3 = TextDisplayComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is ThumbnailDisplayComponent) {
-         var5 = ThumbnailDisplayComponentView.Companion.inflateComponent(this.context);
+         var3 = ThumbnailDisplayComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is MediaGalleryDisplayComponent) {
-         var5 = MediaGalleryDisplayComponentView.Companion.inflateComponent(this.context);
+         var3 = MediaGalleryDisplayComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is FileDisplayComponent) {
-         var5 = FileDisplayComponentView.Companion.inflateComponent(this.context);
+         var3 = FileDisplayComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is SeparatorDisplayComponent) {
-         var5 = SeparatorDisplayComponentView.Companion.inflateComponent(this.context);
+         var3 = SeparatorDisplayComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is ContentInventoryEntryComponent) {
-         var5 = ContentInventoryComponentView.Companion.inflateComponent(this.context, var2);
+         var3 = ContentInventoryComponentView.Companion.inflateComponent(this.context, var2);
       } else if (var1 is ContainerComponent) {
-         var5 = ContainerComponentView.Companion.inflateComponent(this.context);
+         var3 = ContainerComponentView.Companion.inflateComponent(this.context);
       } else {
-         var5 = null;
+         var3 = UnknownComponentView.Companion.inflateComponent(this.context);
       }
 
-      var var6: Any = null;
-      if (var5 != null) {
-         var6 = var5;
+      if (var3 == null) {
+         var3 = null;
       }
 
-      return (ComponentView<T>)var6;
+      return (ComponentView<T>)var3;
    }
 
    public fun <T : Component> getComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      val var4: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
-      var var5: ComponentView = null;
+      val var5: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
+      var var4: ComponentView = null;
       val var6: ComponentView;
-      if (var4 != null) {
-         var6 = CollectionsKt.H(var4) as ComponentView;
+      if (var5 != null) {
+         var6 = CollectionsKt.H(var5) as ComponentView;
       } else {
          var6 = null;
       }
 
       if (var6 != null) {
-         var5 = var6;
+         var4 = var6;
       }
 
-      var var7: ComponentView = var5;
-      if (var5 == null) {
+      var var7: ComponentView = var4;
+      if (var4 == null) {
          var7 = this.inflateComponent(var1, var2);
       }
 

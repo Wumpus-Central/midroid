@@ -56,10 +56,10 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
    @JvmStatic
    fun `setTimeoutMillis$lambda$1`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
       val var4: RecyclerView = var1.component1();
-      val var2: Int = var1.component2();
-      val var3: Int = var1.component3();
+      val var3: Int = var1.component2();
+      val var2: Int = var1.component3();
       if (var0.onScrolled != null) {
-         var0.onScrolled.invoke(var4, var2, var3);
+         var0.onScrolled.invoke(var4, var3, var2);
       }
 
       return Unit.a;

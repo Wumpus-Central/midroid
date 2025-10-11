@@ -44,10 +44,10 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      val var5: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var7: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
       for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
-         var5.a(
+         var7.a(
             0,
             var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
@@ -56,7 +56,7 @@ internal object ServiceNotification {
          );
       }
 
-      return var5.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
+      return var7.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {

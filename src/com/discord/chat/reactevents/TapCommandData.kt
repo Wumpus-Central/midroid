@@ -78,17 +78,17 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.channelId;
       val var2: java.lang.String = this.commandId;
-      val var3: java.lang.String = this.commandName;
+      val var1: java.lang.String = this.commandName;
       val var5: java.lang.String = this.commandKey;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapCommandData(channelId=");
-      var4.append(var1);
+      var4.append(var3);
       var4.append(", commandId=");
       var4.append(var2);
       var4.append(", commandName=");
-      var4.append(var3);
+      var4.append(var1);
       var4.append(", commandKey=");
       var4.append(var5);
       var4.append(")");

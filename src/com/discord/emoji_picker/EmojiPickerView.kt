@@ -152,7 +152,7 @@ internal class EmojiPickerView(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemsChanged(position: Int?, count: Int?) {
-      val var4: Boolean = this.isComputingLayout();
+      val var3: Boolean = this.isComputingLayout();
       val var5: java.lang.String;
       if (var1 != null) {
          if (var2 != null) {
@@ -175,15 +175,15 @@ internal class EmojiPickerView(context: Context,
          var var9: Pair;
          var var10: Pair;
          var var11: CrashReporting;
-         var var13: Pair;
+         var var12: Pair;
          var var14: Pair;
          label31: {
             var11 = CrashReporting.INSTANCE;
-            var9 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
-            var7 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
-            var10 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var4));
-            var13 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
-            var8 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
+            var12 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
+            var8 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
+            var9 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var3));
+            var10 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
+            var7 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
             var14 = B9.s.a("adapterTypeChange", var5);
             if (var1 != null) {
                val var6: java.lang.String = var1.toString();
@@ -208,7 +208,7 @@ internal class EmojiPickerView(context: Context,
          CrashReporting.addBreadcrumb$default(
             var11,
             "About to crash from EmojiPickerView.",
-            L.l(new Pair[]{var9, var7, var10, var13, var8, var14, var19, B9.s.a("count", var17)}),
+            L.l(new Pair[]{var12, var8, var9, var10, var7, var14, var19, B9.s.a("count", var17)}),
             null,
             null,
             12,
@@ -340,9 +340,9 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var3: Context = this.getContext();
-      var2.setUseTier0UpsellContent(var3, var1);
+      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var2: Context = this.getContext();
+      var3.setUseTier0UpsellContent(var2, var1);
    }
 
    public open fun startViewTransition(view: View?) {

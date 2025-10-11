@@ -45,8 +45,8 @@ public sealed interface PostProcessor {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
 
-            for (PostProcessor var6 : var2) {
-               var4.add($$INSTANCE.create(var6));
+            for (PostProcessor var3 : var2) {
+               var4.add($$INSTANCE.create(var3));
             }
 
             var5 = new CompositePostprocessor(var4);

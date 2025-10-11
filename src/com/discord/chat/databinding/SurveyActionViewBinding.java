@@ -40,15 +40,15 @@ public final class SurveyActionViewBinding implements ViewBinding {
       SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.chat_list_feedback_icon;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.survey_background;
-            LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-            if (var5 != null) {
+            LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.survey_card;
                CardView var4 = (CardView)a.a(var0, var1);
                if (var4 != null) {
-                  return new SurveyActionViewBinding(var0, var2, var3, var5, var4);
+                  return new SurveyActionViewBinding(var0, var2, var5, var3, var4);
                }
             }
          }

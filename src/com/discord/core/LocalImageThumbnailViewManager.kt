@@ -33,15 +33,15 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
    public open fun setLocalImageSource(view: LocalImageThumbnailView, source: ReadableMap?) {
       if (var2 != null) {
          val var5: Uri = Uri.parse(var2.getString("uri"));
-         val var3: Int = (int)var2.getDouble("width");
-         val var4: Int = (int)var2.getDouble("height");
-         if (this.lastUri == var5 && this.lastWidthDp != null && this.lastWidthDp == var3 && this.lastHeightDp != null && this.lastHeightDp == var4) {
+         val var4: Int = (int)var2.getDouble("width");
+         val var3: Int = (int)var2.getDouble("height");
+         if (this.lastUri == var5 && this.lastWidthDp != null && this.lastWidthDp == var4 && this.lastHeightDp != null && this.lastHeightDp == var3) {
             return;
          } else {
             this.lastUri = var5;
-            this.lastWidthDp = var3;
-            this.lastHeightDp = var4;
-            var1.setLocalImageSource(var5, var3, var4);
+            this.lastWidthDp = var4;
+            this.lastHeightDp = var3;
+            var1.setLocalImageSource(var5, var4, var3);
          }
       }
    }

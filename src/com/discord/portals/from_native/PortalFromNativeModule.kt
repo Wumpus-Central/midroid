@@ -19,6 +19,7 @@ import db.K
 import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
 import nb.g
@@ -142,8 +143,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = K.a();
-                  val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                  val var6: CoroutineDispatcher = K.a();
+                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
                      int label;
 
                      {
@@ -178,7 +179,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var1, var6, this) === var5) {
+                  if (f.g(var6, var1, this) === var5) {
                      return var5;
                   }
                }

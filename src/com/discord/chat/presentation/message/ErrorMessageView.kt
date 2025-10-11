@@ -54,6 +54,14 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
       var0.invoke(var1 xor true);
    }
 
+   public fun hideHeader() {
+      this.binding.header.setVisibility(4);
+   }
+
+   public fun setErrorLabel(label: CharSequence) {
+      this.binding.errorLabel.setText(var1);
+   }
+
    public fun setErrorMessage(message: ErrorMessage) {
       this.binding.errorLabel.setText(var1.getStackTrace());
    }

@@ -295,12 +295,12 @@ public data class MediaSource(sourceUrl: String? = ...,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.sourceUrl;
-      val var4: java.lang.String = this.previewUrl;
-      val var9: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
-      val var7: java.lang.String = this.featureTag;
-      val var3: MediaType = this.type;
+      val var3: java.lang.String = this.sourceUrl;
+      val var6: java.lang.String = this.previewUrl;
+      val var8: java.lang.String = this.placeholder;
+      val var7: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.featureTag;
+      val var9: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
       val var5: ChannelId = this.channelId;
       val var14: java.lang.String;
@@ -311,34 +311,34 @@ public data class MediaSource(sourceUrl: String? = ...,
       }
 
       val var11: Int = this.index;
-      val var12: java.lang.Double = this.portal;
-      val var10: java.lang.Boolean = this.srcIsAnimated;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("MediaSource(sourceUrl=");
-      var13.append(var8);
-      var13.append(", previewUrl=");
-      var13.append(var4);
-      var13.append(", placeholder=");
-      var13.append(var9);
-      var13.append(", placeholderVersion=");
-      var13.append(var6);
-      var13.append(", featureTag=");
-      var13.append(var7);
-      var13.append(", type=");
-      var13.append(var3);
-      var13.append(", shouldAutoPlay=");
-      var13.append(var1);
-      var13.append(", channelId=");
-      var13.append(var5);
-      var13.append(", messageId=");
-      var13.append(var14);
-      var13.append(", index=");
-      var13.append(var11);
-      var13.append(", portal=");
-      var13.append(var12);
-      var13.append(", srcIsAnimated=");
-      var13.append(var10);
-      var13.append(")");
-      return var13.toString();
+      val var10: java.lang.Double = this.portal;
+      val var13: java.lang.Boolean = this.srcIsAnimated;
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("MediaSource(sourceUrl=");
+      var12.append(var3);
+      var12.append(", previewUrl=");
+      var12.append(var6);
+      var12.append(", placeholder=");
+      var12.append(var8);
+      var12.append(", placeholderVersion=");
+      var12.append(var7);
+      var12.append(", featureTag=");
+      var12.append(var4);
+      var12.append(", type=");
+      var12.append(var9);
+      var12.append(", shouldAutoPlay=");
+      var12.append(var1);
+      var12.append(", channelId=");
+      var12.append(var5);
+      var12.append(", messageId=");
+      var12.append(var14);
+      var12.append(", index=");
+      var12.append(var11);
+      var12.append(", portal=");
+      var12.append(var10);
+      var12.append(", srcIsAnimated=");
+      var12.append(var13);
+      var12.append(")");
+      return var12.toString();
    }
 }

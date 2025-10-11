@@ -60,8 +60,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -74,7 +74,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -82,19 +82,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var5: java.lang.Boolean = this.primary;
-      val var3: java.lang.Boolean = this.secondary;
+      val var3: java.lang.Boolean = this.primary;
+      val var2: java.lang.Boolean = this.secondary;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapInviteEvent(messageId=");
-      var4.append(var2);
+      var4.append(var5);
       var4.append(", index=");
       var4.append(var1);
       var4.append(", primary=");
-      var4.append(var5);
-      var4.append(", secondary=");
       var4.append(var3);
+      var4.append(", secondary=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

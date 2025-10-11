@@ -150,11 +150,11 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Long.hashCode(this.playWallTimeMs);
-      val var7: Int = java.lang.Long.hashCode(this.stallMs);
-      val var3: Int = Integer.hashCode(this.stallCount);
-      val var4: Int = Integer.hashCode(this.seekCount);
-      val var5: Int = java.lang.Long.hashCode(this.firstPlayWaitingMs);
+      val var4: Int = java.lang.Long.hashCode(this.playWallTimeMs);
+      val var5: Int = java.lang.Long.hashCode(this.stallMs);
+      val var6: Int = Integer.hashCode(this.stallCount);
+      val var7: Int = Integer.hashCode(this.seekCount);
+      val var3: Int = java.lang.Long.hashCode(this.firstPlayWaitingMs);
       var var2: Int = 0;
       val var1: Int;
       if (this.mediaSource == null) {
@@ -171,7 +171,7 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       return (
                (
                         (
-                                 (((((((var6 * 31 + var7) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var2) * 31
+                                 (((((((var4 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var3) * 31 + var1) * 31 + var8) * 31 + var2) * 31
                                     + Integer.hashCode(this.fatalErrorCount)
                               )
                               * 31
@@ -189,43 +189,43 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun toString(): String {
-      val var10: Long = this.playWallTimeMs;
-      val var8: Long = this.stallMs;
-      val var3: Int = this.stallCount;
-      val var2: Int = this.seekCount;
-      val var12: Long = this.firstPlayWaitingMs;
-      val var18: java.lang.String = this.mediaSource;
+      val var12: Long = this.playWallTimeMs;
+      val var6: Long = this.stallMs;
+      val var5: Int = this.stallCount;
+      val var3: Int = this.seekCount;
+      val var8: Long = this.firstPlayWaitingMs;
+      val var16: java.lang.String = this.mediaSource;
       val var1: Float = this.fileDurationSec;
-      val var16: java.lang.String = this.mimeType;
-      val var5: Int = this.fatalErrorCount;
+      val var18: java.lang.String = this.mimeType;
+      val var2: Int = this.fatalErrorCount;
       val var4: Int = this.nonFatalErrorCount;
-      val var6: Long = this.totalDroppedFrames;
-      val var14: Long = this.totalBandwidthBytes;
+      val var14: Long = this.totalDroppedFrames;
+      val var10: Long = this.totalBandwidthBytes;
       val var17: StringBuilder = new StringBuilder();
       var17.append("MediaPlayFinishedAnalytics(playWallTimeMs=");
-      var17.append(var10);
-      var17.append(", stallMs=");
-      var17.append(var8);
-      var17.append(", stallCount=");
-      var17.append(var3);
-      var17.append(", seekCount=");
-      var17.append(var2);
-      var17.append(", firstPlayWaitingMs=");
       var17.append(var12);
+      var17.append(", stallMs=");
+      var17.append(var6);
+      var17.append(", stallCount=");
+      var17.append(var5);
+      var17.append(", seekCount=");
+      var17.append(var3);
+      var17.append(", firstPlayWaitingMs=");
+      var17.append(var8);
       var17.append(", mediaSource=");
-      var17.append(var18);
+      var17.append(var16);
       var17.append(", fileDurationSec=");
       var17.append(var1);
       var17.append(", mimeType=");
-      var17.append(var16);
+      var17.append(var18);
       var17.append(", fatalErrorCount=");
-      var17.append(var5);
+      var17.append(var2);
       var17.append(", nonFatalErrorCount=");
       var17.append(var4);
       var17.append(", totalDroppedFrames=");
-      var17.append(var6);
-      var17.append(", totalBandwidthBytes=");
       var17.append(var14);
+      var17.append(", totalBandwidthBytes=");
+      var17.append(var10);
       var17.append(")");
       return var17.toString();
    }

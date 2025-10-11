@@ -1,7 +1,6 @@
 package com.discord.react_activities
 
 import a4.b
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
@@ -15,15 +14,9 @@ import com.discord.scale.FontScaleUtilsKt
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
-import com.facebook.react.ReactHost
-import com.facebook.react.ReactInstanceManager
-import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactRootView
-import com.facebook.react.bridge.ReactContext
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
-import com.facebook.react.internal.featureflags.ReactNativeFeatureFlags
 import java.util.concurrent.Future
-import r2.a
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    protected open fun attachBaseContext(newBase: Context) {
@@ -99,36 +92,6 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
       protected open fun isFabricEnabled(): Boolean {
          return DefaultNewArchitectureEntryPoint.getFabricEnabled();
-      }
-
-      @SuppressLint(["VisibleForTests"])
-      public open fun onPause() {
-         var var2: ReactContext;
-         if (ReactNativeFeatureFlags.enableBridgelessArchitecture()) {
-            val var4: ReactHost = this.getReactHost();
-            var2 = null;
-            if (var4 != null) {
-               var2 = var4.getCurrentReactContext();
-            }
-         } else {
-            val var6: ReactNativeHost = this.getReactNativeHost();
-            var2 = null;
-            if (var6 != null) {
-               val var7: ReactInstanceManager = var6.getReactInstanceManager();
-               var2 = null;
-               if (var7 != null) {
-                  var2 = var7.getCurrentReactContext();
-               }
-            }
-         }
-
-         if (var2 == null) {
-            a.J("ReactActivityDelegate", "No current ReactContext, skipping onPause");
-         } else {
-            if (this.this$0 === var2.getCurrentActivity()) {
-               super.onPause();
-            }
-         }
       }
    }
 

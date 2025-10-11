@@ -95,13 +95,13 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   .a()
             ) as PipelineDraweeControllerBuilder;
          val var12: java.lang.String = var1.getGiftCode();
-         val var8: java.lang.String = var1.getSplashUrl();
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("splash-");
-         var15.append(var12);
-         var15.append("-");
-         var15.append(var8);
-         var9 = ((var14.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         val var15: java.lang.String = var1.getSplashUrl();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("splash-");
+         var8.append(var12);
+         var8.append("-");
+         var8.append(var15);
+         var9 = ((var14.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -239,17 +239,17 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var34: TextView = this.binding.body;
+            val var29: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var34.setTextColor(var17.getBodyTextColor());
-            val var29: java.lang.CharSequence = var34.getText();
-            if (!StringsKt.c0(var29)) {
+            var29.setTextColor(var17.getBodyTextColor());
+            val var34: java.lang.CharSequence = var29.getText();
+            if (!StringsKt.c0(var34)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var34.setVisibility(var20);
+            var29.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());

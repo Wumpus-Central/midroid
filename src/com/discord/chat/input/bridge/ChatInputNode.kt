@@ -117,30 +117,30 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.type;
-      val var2: Int = this.location;
-      val var1: Int = this.length;
+      val var2: Int = this.type;
+      val var1: Int = this.location;
+      val var3: Int = this.length;
       val var8: ChatInputNodeStyle = this.style;
       val var4: Boolean = this.deleteNodeOnBackspace;
-      val var6: TapAction = this.tapAction;
+      val var7: TapAction = this.tapAction;
       val var5: Boolean = this.editDisabled;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ChatInputNode(type=");
-      var7.append(var3);
-      var7.append(", location=");
-      var7.append(var2);
-      var7.append(", length=");
-      var7.append(var1);
-      var7.append(", style=");
-      var7.append(var8);
-      var7.append(", deleteNodeOnBackspace=");
-      var7.append(var4);
-      var7.append(", tapAction=");
-      var7.append(var6);
-      var7.append(", editDisabled=");
-      var7.append(var5);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChatInputNode(type=");
+      var6.append(var2);
+      var6.append(", location=");
+      var6.append(var1);
+      var6.append(", length=");
+      var6.append(var3);
+      var6.append(", style=");
+      var6.append(var8);
+      var6.append(", deleteNodeOnBackspace=");
+      var6.append(var4);
+      var6.append(", tapAction=");
+      var6.append(var7);
+      var6.append(", editDisabled=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

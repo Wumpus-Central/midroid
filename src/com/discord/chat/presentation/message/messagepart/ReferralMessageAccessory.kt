@@ -45,14 +45,14 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: ReferralEmbed = this.referral;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ReferralMessageAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", referral=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: ReferralEmbed = this.referral;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ReferralMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", referral=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }
