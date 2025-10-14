@@ -1,6 +1,8 @@
 package com.discord.view
 
 import android.annotation.SuppressLint
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -15,6 +17,11 @@ import java.util.ArrayList
 @SuppressLint(["ViewConstructor"])
 public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
    private final val inTransitionViews: MutableList<Pair<ViewGroup, View>> = new ArrayList()
+
+   @JvmStatic
+   fun `startRemovalTransition$lambda$0`(var0: ScreenOverride) {
+      var0.startRemovalTransition();
+   }
 
    private fun startTransitionRecursive(parent: ViewGroup?) {
       if (var1 != null) {
@@ -44,8 +51,8 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
       if (this.isBeingRemoved()) {
          this.setBeingRemoved(false);
 
-         for (Pair var2 : CollectionsKt.P(this.inTransitionViews)) {
-            (var2.a() as ViewGroup).endViewTransition(var2.b() as View);
+         for (Pair var1 : CollectionsKt.P(this.inTransitionViews)) {
+            (var1.a() as ViewGroup).endViewTransition(var1.b() as View);
          }
 
          this.inTransitionViews.clear();
@@ -56,11 +63,14 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
    }
 
    public open fun startRemovalTransition() {
-      if (!this.isBeingRemoved()) {
+      val var1: Looper = Looper.getMainLooper();
+      if (!(Looper.myLooper() == var1)) {
+         new Handler(var1).post(new a(this));
+      } else if (!this.isBeingRemoved()) {
          this.setBeingRemoved(true);
-         val var1: e = e.n("ScreenOverride: calling startRemovalTransition (w/ patch)");
-         var1.o("react.viewmanager");
-         p1.e(var1);
+         val var2: e = e.n("ScreenOverride: calling startRemovalTransition (w/ patch)");
+         var2.o("react.viewmanager");
+         p1.e(var2);
          this.startTransitionRecursive(this);
       }
    }
