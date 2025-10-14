@@ -111,15 +111,15 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
       var14.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
-      val var17: Float = var3 / 2 - this.getResources().getDimension(com.discord.channel_spine.R.dimen.spine_width) / 2;
-      val var5: Float = this.getResources().getDimension(R.dimen.message_reply_leading_views_margin_start);
+      val var5: Float = var3 / 2 - this.getResources().getDimension(com.discord.channel_spine.R.dimen.spine_width) / 2;
+      val var17: Float = this.getResources().getDimension(R.dimen.message_reply_leading_views_margin_start);
       var6.replySpline.configureAsReplySpline();
       val var7: ChannelSpineView = var6.replySpline;
       val var15: android.view.ViewGroup.LayoutParams = var7.getLayoutParams();
       if (var15 != null) {
          val var16: MarginLayoutParams = var15 as MarginLayoutParams;
-         (var15 as MarginLayoutParams).width = (int)(var3 - var5 - var17);
-         var16.setMarginStart((int)var17);
+         (var15 as MarginLayoutParams).width = (int)(var3 - var17 - var5);
+         var16.setMarginStart((int)var5);
          var7.setLayoutParams(var16);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
@@ -305,13 +305,13 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       if (this.binding.replyText.getWidth() > 0) {
          this.binding.replyText.measure(MeasureSpec.makeMeasureSpec(this.binding.replyText.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          this.binding.replyText.getLineBounds(0, this.replyTextLineBounds);
-         val var2: Int = this.replyTextLineBounds.bottom;
-         val var1: Int = this.replyTextLineBounds.top;
-         val var4: LinearLayout = this.binding.replyLeadingViews;
-         val var6: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-         if (var6 != null) {
-            var6.height = var2 - var1;
-            var4.setLayoutParams(var6);
+         val var1: Int = this.replyTextLineBounds.bottom;
+         val var2: Int = this.replyTextLineBounds.top;
+         val var6: LinearLayout = this.binding.replyLeadingViews;
+         val var4: android.view.ViewGroup.LayoutParams = var6.getLayoutParams();
+         if (var4 != null) {
+            var4.height = var1 - var2;
+            var6.setLayoutParams(var4);
          } else {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
@@ -351,7 +351,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       val var21: TextView = this.binding.replyAuthorName;
       var21.setVisibility(8);
       val var22: SimpleDraweeView = this.binding.replyAuthorAvatar;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var22, false, new q0(var7, var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var22, false, new p0(var7, var1, var2), 1, null);
       val var23: SimpleDraweeView = this.binding.replyIcon;
       var23.setVisibility(8);
       val var24: SimpleDraweeView = this.binding.replyTrailingIcon;
@@ -374,19 +374,19 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          var5,
          var6,
          var28,
-         new r0(var7, var1),
+         new q0(var7, var1),
          null,
          null,
          null,
          null,
          null,
          null,
+         new r0(var7),
          new s0(var7),
-         new t0(var7),
          null,
          null,
          null,
-         new u0(var2),
+         new t0(var2),
          null,
          null,
          false,
@@ -405,7 +405,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    public fun configureReply(reply: ReferencedMessage, showSpine: Boolean = true, onClick: () -> Unit) {
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new v0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new u0(var3), 1, null);
       if (var1 is LoadedReferencedMessage) {
          val var12: LoadedReferencedMessage = var1 as LoadedReferencedMessage;
          val var11: Message = (var1 as LoadedReferencedMessage).getMessage();
@@ -473,24 +473,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          if (var12.getSystemContent() != null) {
             val var28: MessageContentView = this.binding.replyText;
             val var44: LinearLayout = this.binding.replyLeadingViews;
-            val var69: StructurableText = var12.getSystemContent();
+            val var14: StructurableText = var12.getSystemContent();
             val var63: Context = this.getContext();
-            val var14: java.lang.String = var11.getId-3Eiw7ao();
+            val var69: java.lang.String = var11.getId-3Eiw7ao();
             val var8: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var9: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
             val var7: Boolean = var11.getShouldShowRoleDot();
-            var2 = var11.getShouldShowRoleOnName();
+            val var9: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
             val var56: TextPaint = this.binding.replyText.getPaint();
             val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var69,
-               var63,
                var14,
+               var63,
+               var69,
                var8,
-               var9,
-               var7,
                var2,
+               var7,
+               var9,
                var56,
                null,
                null,
@@ -520,24 +520,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          } else if (var11.getContent() != null) {
             val var29: MessageContentView = this.binding.replyText;
             val var46: LinearLayout = this.binding.replyLeadingViews;
-            val var71: StructurableText = var11.getContent();
+            val var70: StructurableText = var11.getContent();
             val var66: Context = this.getContext();
-            val var70: java.lang.String = var11.getId-3Eiw7ao();
+            val var71: java.lang.String = var11.getId-3Eiw7ao();
             var2 = MessageKt.shouldAnimateEmoji(var11);
-            val var39: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var38: Boolean = MessageKt.shouldShowLinkDecorations(var11);
             val var37: Boolean = var11.getShouldShowRoleDot();
-            val var38: Boolean = var11.getShouldShowRoleOnName();
+            val var39: Boolean = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
             val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var71,
-               var66,
                var70,
+               var66,
+               var71,
                var2,
-               var39,
-               var37,
                var38,
+               var37,
+               var39,
                var59,
                null,
                null,

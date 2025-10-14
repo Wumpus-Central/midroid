@@ -52,13 +52,13 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.type;
-      val var3: java.lang.String = this.id;
+      val var3: java.lang.String = this.type;
+      val var1: java.lang.String = this.id;
       val var2: StringBuilder = new StringBuilder();
       var2.append("BuildOverrideCookieBuild(type=");
-      var2.append(var1);
-      var2.append(", id=");
       var2.append(var3);
+      var2.append(", id=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

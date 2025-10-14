@@ -91,18 +91,18 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       val var2: Int = this.fontSize;
       val var1: Int = this.color;
       val var3: BackgroundStyle = this.backgroundStyle;
-      val var5: ChatInputNodeFontWeight = this.fontWeight;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatInputNodeStyle(fontSize=");
-      var4.append(var2);
-      var4.append(", color=");
-      var4.append(var1);
-      var4.append(", backgroundStyle=");
-      var4.append(var3);
-      var4.append(", fontWeight=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: ChatInputNodeFontWeight = this.fontWeight;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ChatInputNodeStyle(fontSize=");
+      var5.append(var2);
+      var5.append(", color=");
+      var5.append(var1);
+      var5.append(", backgroundStyle=");
+      var5.append(var3);
+      var5.append(", fontWeight=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

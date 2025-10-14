@@ -5233,6 +5233,7 @@
   ],
   "8Qqkc3": "Don’t leave the answer field hanging! Please add some text.",
   "NNHVlp": "Type your answer",
+  "+G3oRk": "Poll creation canceled",
   "A4PJ1t": "Tap to change poll duration",
   "bGHzxc": "Duration",
   "mb8A/P": "2 weeks",
@@ -8860,6 +8861,7 @@
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
   "pEasFR": "Filter",
+  "UdhTtr": "Filters",
   "+B9e19": "Filter Options",
   "C6S5jY": "Find consoles",
   "8SuVoK": "Finish",
@@ -12575,6 +12577,7 @@
     ]
   ],
   "8mQ6x8": "Roles Removed",
+  "Z5SUur": "Server is too busy, please try again later.",
   "5k6FfX": "Create Team",
   "9HU3ZW": "Enable",
   "5mfqpa": [
@@ -21473,8 +21476,6 @@
   "3XVNys": "Copy Invite Link",
   "VNe8Pz": "Edit invite link.",
   "Ckxb6u": "Ask to Join",
-  "2Gbof3": "Invite Expired",
-  "jfrMtr": "Full",
   "x1UXGR": "Game has ended. Start a new one?",
   "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
@@ -21493,11 +21494,6 @@
     ]
   ],
   "KC26NT": "Joined",
-  "5crb4u": "Join via Android",
-  "c3EWuL": "Join via Desktop App",
-  "ZozYtr": "Join via iOS",
-  "/ak8Mj": "Join via PlayStation",
-  "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
   "fMs6ub": "You'll be joined on Android.",
   "aqN8U1": "You'll be joined on Desktop.",
@@ -21555,7 +21551,6 @@
     ],
     " party"
   ],
-  "B9kbnZ": "The watching party is over!",
   "IA6uDQ": [
     "You are asking to join a ",
     [
@@ -23635,6 +23630,29 @@
   "MXSMtr": "You're forwarding content from a staff-only server to a non-staff channel!",
   "YrV3Iy": "Hey, Listen!",
   "kwmYkp": "Message forwarded!",
+  "WCMsy8": [
+    "New messages from ",
+    [
+      6,
+      "numPeople",
+      {
+        "one": [
+          [
+            7
+          ],
+          " person"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " people"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "J3s8JC": [
     "This message was sent from the game ",
     [
@@ -24247,6 +24265,7 @@
   "l1dkSE": "Announcement Channel",
   "MFGE5+": "Publish",
   "qr9dEB": "Announcement",
+  "JQ/1n5": "New Folder",
   "TyAuoa": "New Post",
   "3hF1W1": "New Group",
   "Sh/xND": [
@@ -25021,6 +25040,28 @@
             "count"
           ],
           " audio files"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "knOfkZ": [
+    [
+      6,
+      "num",
+      {
+        "one": [
+          [
+            7
+          ],
+          " server"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " servers"
         ]
       },
       0,
@@ -30912,6 +30953,201 @@
   "JALI2N": "Quests",
   "kUQLMD": "Accept Quest",
   "l7E81t": "Accept Quest",
+  "H485IC": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "Action ",
+        "& ",
+        "Adventure Quest"
+      ]
+    ],
+    " titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "DUsNmZ": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "Family-Friendly"
+      ]
+    ],
+    " titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "cWP8/f": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "Winter Holiday Playfest"
+      ]
+    ],
+    " event titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "8+sIJy": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "New Years’s Fresh Start"
+      ]
+    ],
+    " event titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "X+UCjo": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "Racing ",
+        "& ",
+        "Sports"
+      ]
+    ],
+    " titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "3XS8Nj": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "RPG ",
+        "& ",
+        "MMO"
+      ]
+    ],
+    " titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "6o4n1d": [
+    "Play any of the ",
+    [
+      8,
+      "gameSheetHook",
+      [
+        "Creative Sandbox Quest"
+      ]
+    ],
+    " titles for ",
+    [
+      2,
+      "targetMinutes"
+    ],
+    " minutes and unlock ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "rewardNameWithArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "R7mv+P": "Hang tight, adventurer! New quests will be available soon.",
   "APddvL": [
     "Claim by ",
@@ -31087,6 +31323,32 @@
     "> ",
     "Quests."
   ],
+  "5bQWND": [
+    [
+      1,
+      "gamePublisher"
+    ],
+    " is promoting ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " on Discord by partnering with us to offer this Quest. This Quest is available for all users in User Settings ",
+    "> ",
+    "Quests."
+  ],
+  "euizJS": [
+    [
+      1,
+      "gamePublisher"
+    ],
+    " is promoting ",
+    [
+      1,
+      "gameTitle"
+    ],
+    " on Discord by partnering with us to offer this Quest. This Quest is available for all users in Quest Home at the top of the Direct Messages list."
+  ],
   "Piihy8": [
     [
       1,
@@ -31128,6 +31390,15 @@
       "expirationDate"
     ]
   ],
+  "vjLqAQ": "Reward",
+  "Hufmsr": "Quest Type",
+  "urZl39": "See all Quests",
+  "nwdKFB": "No results found.",
+  "PBfFn5": "There is nothing to see here",
+  "Jg17Ul": "Avatar Decoration",
+  "O/J2kp": "In-Game Rewards",
+  "1nJR4u": "Play",
+  "e0iISE": "Watch",
   "V6htNz": "Find this again in User Settings > Quests",
   "28Ql29": [
     [
@@ -31417,6 +31688,7 @@
   ],
   "rxf+n5": "Invalid Quest",
   "hRIVy8": "Launch Quest in Discord",
+  "CkUzLS": "Launch Quest",
   "LLLLPD": "Learn More",
   "nPThNT": "Check For Launches",
   "GXqvCw": [
@@ -31686,6 +31958,7 @@
     "."
   ],
   "Ie9++v": "Play Now in Discord",
+  "E4kW5O": "Play Now",
   "wmOh/v": [
     "Play ",
     [
@@ -31818,6 +32091,11 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
+  "IB22n5": "Expiring Soon",
+  "tZXJIS": "Sort by",
+  "K6oEu7": "Most Recent",
+  "BB+2tb": "Started",
+  "gBfXPT": "Suggested",
   "Hu8SKS": [
     "Play any eligible game for ",
     [
@@ -35619,15 +35897,11 @@
   "oF6+W1": "Start Verification",
   "oCqlGB": "Start Video Call",
   "focH1t": "Start Voice Call",
-  "30yqZW": "Gonna BRB",
   "fFTJTE": "brb",
-  "vkpn7+": "Chilling",
   "vybY9f": "chilling",
   "IeolFR": "my first status",
   "jaNpQE": "Do Not Disturb",
-  "b6AscH": "In the zone",
   "D5eCT0": "studying",
-  "lZslwM": "GAMING",
   "wvWdTU": "gaming",
   "qWbtVV": "Idle",
   "bg24HB": "Invisible",
@@ -35644,7 +35918,6 @@
       "endTime"
     ]
   ],
-  "di6IFx": "Watchin' stuff",
   "s8xFaG": "watching stuff",
   "Xp+X2d": "Always animate",
   "IlLT7e": "Animate on interaction",
@@ -39349,7 +39622,9 @@
   "J90oLS": "unknown-channel",
   "/ZjyYG": "Please update Discord to access this channel",
   "11pdXV": "unknown-game",
+  "dtwqPT": "Unknown server",
   "n+olu7": "Unknown Integration",
+  "zksHZG": "Please update Discord to view this message",
   "YV4F/v": "unknown-role",
   "30mdIy": "Unknown User",
   "sKdZ6e": "unknown-user",
@@ -39518,7 +39793,6 @@
   "IEpCBQ": "Username",
   "GPfy3N": "Username is required.",
   "YEOwDA": "Who would you like to add as a friend?",
-  "OKsSCQ": "Ask to Join",
   "OzCsIC": "Competing in",
   "XWSHTU": [
     "Connect ",
@@ -39527,7 +39801,6 @@
       "platform"
     ]
   ],
-  "04B8fH": "Currently",
   "FMbL3t": "Clear failed",
   "2TbM/P": "Playing a game",
   "kUEnxM": "Listening",
@@ -39681,6 +39954,7 @@
     ")"
   ],
   "Jpkr/v": "Streaming",
+  "Hi4toa": "Voice status",
   "GpNXjI": "Watching",
   "kXrAq6": [
     [
@@ -40588,6 +40862,7 @@
     " from the Shop!"
   ],
   "pGDUHx": "Profile Deco",
+  "ElYQFR": "Orbs",
   "W4DfeH": [
     [
       1,

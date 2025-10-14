@@ -186,9 +186,9 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var34: MediaView = this.binding.mediaView;
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
       val var41: SpoilerViewManager = this.spoilerViewManager;
-      val var38: ConstraintLayout = this.binding.container;
+      val var42: ConstraintLayout = this.binding.container;
       val var35: ConstraintLayout = this.binding.container;
-      val var42: MediaView = this.binding.mediaView;
+      val var38: MediaView = this.binding.mediaView;
       if (var14 && !var11) {
          var11 = true;
       } else {
@@ -201,10 +201,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var41.configureSpoiler(var13, var38, var35, var42, null, var11, var15, var12, var10, var16, var17);
-      val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var36: ConstraintLayout = this.binding.container;
-      var39.configureAttachmentOverlay(this, var36, var10, var18);
+      var41.configureSpoiler(var13, var42, var35, var38, null, var11, var15, var12, var10, var16, var17);
+      val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var39: ConstraintLayout = this.binding.container;
+      var36.configureAttachmentOverlay(this, var39, var10, var18);
    }
 
    public fun setDescription(description: String?, hint: String?) {

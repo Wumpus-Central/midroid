@@ -31,11 +31,11 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                val var21: java.lang.String = var20.getMessage();
                if (var21 != null && StringsKt.N(var21, "Scrapped or attached views may not be recycled", false, 2, null)) {
                   val var22: Log = Log.INSTANCE;
-                  val var18: java.lang.String = var20.getMessage();
-                  val var19: StringBuilder = new StringBuilder();
-                  var19.append("Skipping layout due to nested RecyclerView timing conflict: ");
-                  var19.append(var18);
-                  Log.e$default(var22, "MosaicLayoutManager", var19.toString(), null, 4, null);
+                  val var19: java.lang.String = var20.getMessage();
+                  val var18: StringBuilder = new StringBuilder();
+                  var18.append("Skipping layout due to nested RecyclerView timing conflict: ");
+                  var18.append(var19);
+                  Log.e$default(var22, "MosaicLayoutManager", var18.toString(), null, 4, null);
                   return;
                }
 
@@ -108,8 +108,8 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                if (this.getItemCount() == 1) {
                   var26 = this.availableWidth;
                   val var14: Int = (int)(this.availableWidth / var2);
-                  var9 = var23;
-                  var8 = var25;
+                  var8 = var23;
+                  var9 = var25;
                   var7 = var14;
                   if (var14 > this.mediaMaxHeight) {
                      var26 = (int)(this.mediaMaxHeight * var2);
@@ -138,20 +138,20 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                      var7 = var26;
                   }
 
-                  var9 = var23;
-                  var8 = var25;
+                  var8 = var23;
+                  var9 = var25;
                   if (this.getItemCount() == 3) {
-                     var9 = var23;
-                     var8 = var25;
+                     var8 = var23;
+                     var9 = var25;
                      if (var10 == 2) {
-                        var9 = var23 + 4;
-                        var8 = this.spacingPx * 2;
+                        var8 = var23 + 4;
+                        var9 = this.spacingPx * 2;
                      }
                   }
                }
 
-               var23 = var9;
-               var25 = var8;
+               var23 = var8;
+               var25 = var9;
             }
 
             this.addView(var38);

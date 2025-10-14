@@ -17,7 +17,6 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactDelegate
-import com.facebook.react.ReactHost
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.bridge.JSBundleLoader
@@ -29,21 +28,29 @@ import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.runtime.ReactHostImpl
 import com.facebook.react.runtime.internal.bolts.Task
 import com.jakewharton.processphoenix.ProcessPhoenix
+import db.I
+import db.K
+import db.k0
 import java.io.File
 import java.lang.reflect.Field
 import java.lang.reflect.Method
+import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
+import kotlinx.coroutines.CoroutineScope
 
-@SourceDebugExtension(["SMAP\nBundleUpdaterManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,242:1\n8#2:243\n8#2:245\n1#3:244\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n*L\n104#1:243\n232#1:245\n*E\n"])
+@SourceDebugExtension(["SMAP\nBundleUpdaterManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,253:1\n8#2:254\n8#2:256\n1#3:255\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n*L\n115#1:254\n243#1:256\n*E\n"])
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
+   private final val coroutineScope: CoroutineScope
    private final var progressLayout: ViewGroup?
 
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(s.a("BundleDownloaded", BundleDownloadedEvent::class), s.a("OtaUpdateChecked", OtaCheckAttemptEvent::class));
+      this.coroutineScope = kotlinx.coroutines.g.a(K.c().X0(k0.b(null, 1, null)));
    }
 
    @JvmStatic
@@ -146,15 +153,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var2: ProgressBar = new ProgressBar(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var2.setIndeterminate(true);
-      val var1: FrameLayout = new FrameLayout(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-1, -1));
-      var1.addView(var2);
-      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var1.setClickable(true);
-      this.progressLayout = var1;
+      val var1: ProgressBar = new ProgressBar(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var1.setIndeterminate(true);
+      val var2: FrameLayout = new FrameLayout(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-1, -1));
+      var2.addView(var1);
+      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var2.setClickable(true);
+      this.progressLayout = var2;
       this.runOnActivity(new l(this));
    }
 
@@ -165,92 +172,124 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun updateBridgeless() {
-      val var2: Activity = this.reactContext.getCurrentActivity();
-      val var7: ReactActivity;
-      if (var2 is ReactActivity) {
-         var7 = var2 as ReactActivity;
+      var var1: Activity = this.reactContext.getCurrentActivity();
+      val var4: ReactActivity;
+      if (var1 is ReactActivity) {
+         var4 = var1 as ReactActivity;
+      } else {
+         var4 = null;
+      }
+
+      label61: {
+         if (var4 != null) {
+            val var5: ReactDelegate = var4.getReactDelegate();
+            if (var5 != null) {
+               var6 = var5.getReactHost();
+               break label61;
+            }
+         }
+
+         var6 = null;
+      }
+
+      val var7: ReactHostImpl;
+      if (var6 is ReactHostImpl) {
+         var7 = var6 as ReactHostImpl;
       } else {
          var7 = null;
       }
 
-      var var9: ReactHost;
-      label66: {
-         if (var7 != null) {
-            val var3: ReactDelegate = var7.getReactDelegate();
-            if (var3 != null) {
-               var9 = var3.getReactHost();
-               break label66;
-            }
-         }
-
-         var9 = null;
-      }
-
-      val var10: ReactHostImpl;
-      if (var9 is ReactHostImpl) {
-         var10 = var9 as ReactHostImpl;
-      } else {
-         var10 = null;
-      }
-
-      var var13: java.lang.String;
-      label60: {
-         val var4: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
-         if (var4 != null) {
-            val var12: File = var4.getLocation();
-            if (var12 != null) {
-               var13 = var12.getAbsolutePath();
-               break label60;
-            }
-         }
-
-         var13 = null;
-      }
-
+      var var11: java.lang.String;
       label55: {
-         if (var13 != null) {
-            val var5: JSBundleLoader = JSBundleLoader.createFileLoader(var13);
-            var14 = var5;
-            if (var5 != null) {
+         val var2: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
+         if (var2 != null) {
+            val var10: File = var2.getLocation();
+            if (var10 != null) {
+               var11 = var10.getAbsolutePath();
                break label55;
             }
          }
 
-         var14 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
+         var11 = null;
       }
 
-      val var16: Method;
-      if (var10 != null) {
-         var16 = var10.getClass().getDeclaredMethod("loadBundle", JSBundleLoader.class);
+      label50: {
+         if (var11 != null) {
+            val var3: JSBundleLoader = JSBundleLoader.createFileLoader(var11);
+            var12 = var3;
+            if (var3 != null) {
+               break label50;
+            }
+         }
+
+         var12 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
+      }
+
+      val var13: Method;
+      if (var7 != null) {
+         var13 = var7.getClass().getDeclaredMethod("loadBundle", JSBundleLoader.class);
       } else {
-         var16 = null;
+         var13 = null;
       }
 
-      if (var16 != null) {
-         var16.setAccessible(true);
+      if (var13 != null) {
+         var13.setAccessible(true);
       }
 
-      if (var16 != null) {
-         var9 = (ReactHost)var16.invoke(var10, var14);
+      if (var13 != null) {
+         var1 = (Activity)var13.invoke(var7, var12);
+      } else {
+         var1 = null;
+      }
+
+      val var9: Task;
+      if (var1 is Task) {
+         var9 = var1 as Task;
       } else {
          var9 = null;
       }
 
-      var var15: Task = null;
-      if (var9 is Task) {
-         var15 = var9 as Task;
+      if (var9 != null) {
+         var9.waitForCompletion();
       }
 
-      if (var15 != null) {
-         var15.waitForCompletion();
-      }
+      db.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+         int label;
+         final BundleUpdaterManager this$0;
 
-      if (var7 != null) {
-         val var8: ReactDelegate = var7.getReactDelegate();
-         if (var8 != null) {
-            var8.reload();
+         {
+            super(2, var2x);
+            this.this$0 = var1;
          }
-      }
+
+         public final Continuation create(Object var1, Continuation var2) {
+            return new <anonymous constructor>(this.this$0, var2);
+         }
+
+         public final Object invoke(CoroutineScope var1, Continuation var2x) {
+            return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+         }
+
+         public final Object invokeSuspend(Object var1) {
+            val var3: Any = G9.b.e();
+            if (this.label != 0) {
+               if (this.label != 1) {
+                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+               }
+
+               kotlin.c.b(var1);
+            } else {
+               kotlin.c.b(var1);
+               this.label = 1;
+               if (I.a(1000L, this) === var3) {
+                  return var3;
+               }
+            }
+
+            ProcessPhoenix.b(BundleUpdaterManager.access$getReactContext$p(this.this$0));
+            return Unit.a;
+         }
+      }, 3, null);
    }
 
    private fun updateLegacy() {

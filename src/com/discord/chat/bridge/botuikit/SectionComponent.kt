@@ -86,8 +86,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
+      val var3: java.lang.String = this.errorText;
+      val var4: java.util.List = this.components;
       val var5: SectionAccessory = this.accessory;
       val var6: StringBuilder = new StringBuilder();
       var6.append("SectionComponent(type=");
@@ -95,9 +95,9 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
       var6.append(", id=");
       var6.append(var2);
       var6.append(", errorText=");
-      var6.append(var4);
-      var6.append(", components=");
       var6.append(var3);
+      var6.append(", components=");
+      var6.append(var4);
       var6.append(", accessory=");
       var6.append(var5);
       var6.append(")");

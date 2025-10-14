@@ -127,9 +127,9 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = this.url.hashCode();
-      val var8: Int = this.proxyUrl.hashCode();
-      val var7: Int = this.loadingState.hashCode();
+      val var7: Int = this.url.hashCode();
+      val var9: Int = this.proxyUrl.hashCode();
+      val var8: Int = this.loadingState.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.height == null) {
@@ -170,44 +170,44 @@ public data class UnfurledMediaItem(url: String,
          var6 = this.contentScanMetadata.hashCode();
       }
 
-      return ((((((((var9 * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return ((((((((var7 * 31 + var9) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var11: java.lang.String = this.url;
-      val var2: java.lang.String = this.proxyUrl;
-      val var5: UnfurledMediaLoadingState = this.loadingState;
-      val var7: Int = this.height;
-      val var4: Int = this.width;
-      val var3: java.lang.String = this.contentType;
-      val var8: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
-      val var9: ContentScanMetadata = this.contentScanMetadata;
+      val var10: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyUrl;
+      val var11: UnfurledMediaLoadingState = this.loadingState;
+      val var5: Int = this.height;
+      val var3: Int = this.width;
+      val var6: java.lang.String = this.contentType;
+      val var9: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
+      val var2: ContentScanMetadata = this.contentScanMetadata;
       val var1: Boolean = this.srcIsAnimated;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("UnfurledMediaItem(url=");
-      var10.append(var11);
-      var10.append(", proxyUrl=");
-      var10.append(var2);
-      var10.append(", loadingState=");
-      var10.append(var5);
-      var10.append(", height=");
-      var10.append(var7);
-      var10.append(", width=");
-      var10.append(var4);
-      var10.append(", contentType=");
-      var10.append(var3);
-      var10.append(", placeholder=");
-      var10.append(var8);
-      var10.append(", placeholderVersion=");
-      var10.append(var6);
-      var10.append(", contentScanMetadata=");
-      var10.append(var9);
-      var10.append(", srcIsAnimated=");
-      var10.append(var1);
-      var10.append(")");
-      return var10.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("UnfurledMediaItem(url=");
+      var7.append(var10);
+      var7.append(", proxyUrl=");
+      var7.append(var8);
+      var7.append(", loadingState=");
+      var7.append(var11);
+      var7.append(", height=");
+      var7.append(var5);
+      var7.append(", width=");
+      var7.append(var3);
+      var7.append(", contentType=");
+      var7.append(var6);
+      var7.append(", placeholder=");
+      var7.append(var9);
+      var7.append(", placeholderVersion=");
+      var7.append(var4);
+      var7.append(", contentScanMetadata=");
+      var7.append(var2);
+      var7.append(", srcIsAnimated=");
+      var7.append(var1);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

@@ -1,23 +1,5 @@
 {
   "DKHheX": "Chiedi di fare streaming",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " ti sta chiedendo di fare lo streaming di ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "Hai chiesto a qualcuno di fare lo streaming di ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Già in streaming",
   "u4QmWl": "Richiesta scaduta",
   "qRXatr": "Non nel canale vocale",

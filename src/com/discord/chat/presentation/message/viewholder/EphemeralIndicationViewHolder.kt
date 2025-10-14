@@ -43,7 +43,7 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
                   (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
                }
             },
-            new l(this, var1)
+            new k(this, var1)
          );
    }
 }

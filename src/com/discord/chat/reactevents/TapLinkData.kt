@@ -141,11 +141,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             NativeMapExtensionsKt.put(var5, "addSpace", var8);
          }
       } else {
-         val var11: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Missing target type data: ");
-         var4.append(var2);
-         Log.e$default(var11, "TapLink", var4.toString(), null, 4, null);
+         val var4: Log = Log.INSTANCE;
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("Missing target type data: ");
+         var11.append(var2);
+         Log.e$default(var4, "TapLink", var11.toString(), null, 4, null);
       }
 
       return var5;
@@ -178,15 +178,16 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
+         var var4: TapLinkData;
          label37: {
-            var1 = var1;
+            var4 = var1 as TapLinkData;
             if (this.messageId == null) {
-               if (var1.messageId == null) {
+               if (var4.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var1.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+            } else if (var4.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                break label37;
             }
 
@@ -195,12 +196,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!(this.title == var1.title)) {
+         } else if (!(this.title == var4.title)) {
             return false;
-         } else if (!(this.target == var1.target)) {
+         } else if (!(this.target == var4.target)) {
             return false;
          } else {
-            return this.content == var1.content;
+            return this.content == var4.content;
          }
       }
    }
@@ -263,19 +264,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var2: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapLinkData(messageId=");
-      var5.append(var6);
-      var5.append(", title=");
-      var5.append(var4);
-      var5.append(", target=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.title;
+      val var4: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapLinkData(messageId=");
+      var2.append(var6);
+      var2.append(", title=");
+      var2.append(var3);
+      var2.append(", target=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -18,20 +18,20 @@ import java.util.ArrayList
 @SuppressLint(["InlinedApi"])
 private fun buildServiceTypeChain(requestedType: Type, context: Context): List<Int> {
    val var8: ArrayList = new ArrayList();
-   val var2: Int = VERSION.SDK_INT;
-   val var6: Int = 128;
-   val var7: Int = 32;
-   if (var2 < 34) {
-      val var3: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
-      if (var3 != 1) {
-         if (var3 != 2) {
-            if (var3 != 3) {
+   val var3: Int = VERSION.SDK_INT;
+   val var7: Int = 128;
+   val var6: Int = 32;
+   if (var3 < 34) {
+      val var2: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
+      if (var2 != 1) {
+         if (var2 != 2) {
+            if (var2 != 3) {
                throw new n();
             }
 
-            var8.add(var7);
-         } else if (var2 >= 30) {
             var8.add(var6);
+         } else if (var3 >= 30) {
+            var8.add(var7);
          }
       }
    } else {
@@ -55,12 +55,12 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
 
       if (var12 && var10) {
          var8.add(160);
-         var8.add(var7);
          var8.add(var6);
+         var8.add(var7);
       } else if (var12) {
-         var8.add(var7);
-      } else if (var10) {
          var8.add(var6);
+      } else if (var10) {
+         var8.add(var7);
       }
    }
 

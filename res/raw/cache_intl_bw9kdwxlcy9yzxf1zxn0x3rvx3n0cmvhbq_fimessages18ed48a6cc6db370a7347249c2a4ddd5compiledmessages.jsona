@@ -1,23 +1,5 @@
 {
   "DKHheX": "Pyydä striimaamaan",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " pyytää sinua striimaamaan tätä: ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "Pyysit jotakuta striimaamaan tätä: ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Striimi on jo käynnissä",
   "u4QmWl": "Pyyntö vanhentunut",
   "qRXatr": "Ei puhekanavalla",

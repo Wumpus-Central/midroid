@@ -25,36 +25,36 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
    }
 
    init {
-      val var4: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
-      val var6: ImageView = var4.separatorDot;
-      var4.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(4));
-      val var3: TextView = var4.flaggedMessageKeyword;
-      val var7: DiscordFont = DiscordFont.PrimaryMedium;
+      val var6: FlaggedMessageEmbedFooterViewBinding = FlaggedMessageEmbedFooterViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      val var4: ImageView = var6.separatorDot;
+      var6.separatorDot.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierAccent());
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
+      val var3: TextView = var6.flaggedMessageKeyword;
+      val var5: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F, 15.0F);
       var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      val var5: TextView = var4.flaggedMessageRuleName;
-      DiscordFontUtilsKt.setDiscordFont(var5, var7);
-      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F, 15.0F);
-      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      val var7: TextView = var6.flaggedMessageRuleName;
+      DiscordFontUtilsKt.setDiscordFont(var7, var5);
+      SetTextSizeSpKt.setTextSizeSp(var7, 12.0F, 15.0F);
+      var7.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
    }
 
    public fun setAutomodContext(autoModerationContext: AutoModerationContext) {
       val var4: java.lang.String = var1.getKeywordDisplayText();
-      val var5: java.lang.String = var1.getRuleDisplayText();
+      val var6: java.lang.String = var1.getRuleDisplayText();
       if (var4 != null && !(var4 == "")) {
          this.binding.flaggedMessageKeyword.setText(var4);
       }
 
-      if (var5 != null && !(var5 == "")) {
-         this.binding.flaggedMessageRuleName.setText(var5);
+      if (var6 != null && !(var6 == "")) {
+         this.binding.flaggedMessageRuleName.setText(var6);
       }
 
-      val var6: ImageView = this.binding.separatorDot;
+      val var5: ImageView = this.binding.separatorDot;
       var var2: Boolean;
-      if (var4 != null && !(var4 == "") && var5 != null && !(var5 == "")) {
+      if (var4 != null && !(var4 == "") && var6 != null && !(var6 == "")) {
          var2 = 1;
       } else {
          var2 = 0;
@@ -66,6 +66,6 @@ public class FlaggedMessageEmbedFooterView  public constructor(context: Context,
          var2 = 8;
       }
 
-      var6.setVisibility(var2);
+      var5.setVisibility(var2);
    }
 }

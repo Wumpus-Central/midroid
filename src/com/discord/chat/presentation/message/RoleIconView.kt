@@ -68,7 +68,7 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout(v
          var6.setDraweeSpanStringBuilder(
             RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var5, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
          );
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new w0(var2, var1, (RenderableEmoji)var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new v0(var2, var1, (RenderableEmoji)var8), 1, null);
       }
    }
 }

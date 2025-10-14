@@ -1,23 +1,5 @@
 {
   "DKHheX": "Yêu cầu Stream",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " đang yêu cầu bạn stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "Bạn đã yêu cầu người khác stream ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Đang stream rồi",
   "u4QmWl": "Yêu cầu đã hết hạn",
   "qRXatr": "Không ở trong kênh thoại",

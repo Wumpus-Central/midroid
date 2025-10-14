@@ -188,14 +188,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
       val var5: NativeConnection = this.engineConnections.get(var1);
       if (var5 == null) {
-         val var3: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("[");
-         var4.append(var2);
-         var4.append("] no NativeConnection for connectionId=");
-         var4.append(var1);
-         var4.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+         val var4: Log = Log.INSTANCE;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("[");
+         var3.append(var2);
+         var3.append("] no NativeConnection for connectionId=");
+         var3.append(var1);
+         var3.append(", returning null");
+         Log.w$default(var4, "MediaEngine", var3.toString(), null, 4, null);
       }
 
       return var5;
@@ -915,7 +915,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
-      // 07a: astore 11
+      // 07a: astore 4
       // 07c: aload 12
       // 07e: arraylength
       // 07f: istore 3
@@ -927,23 +927,23 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 087: aload 12
       // 089: iload 2
       // 08a: aaload
-      // 08b: astore 4
-      // 08d: aload 4
+      // 08b: astore 11
+      // 08d: aload 11
       // 08f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 092: aload 4
+      // 092: aload 11
       // 094: ldc_w "video"
       // 097: bipush 0
       // 098: bipush 2
       // 099: aconst_null
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
-      // 0a0: aload 11
-      // 0a2: aload 4
+      // 0a0: aload 4
+      // 0a2: aload 11
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1
       // 0ad: goto 082
-      // 0b0: aload 11
+      // 0b0: aload 4
       // 0b2: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
       // 0b7: astore 11
       // 0b9: aload 11
@@ -1810,15 +1810,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var2: ScreenCapturer = this.screenCapturer;
+         val var3: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScreenCapturerForConnection(screenCapturer=");
-         var3.append(var2);
-         var3.append(", connectionId=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ScreenCapturerForConnection(screenCapturer=");
+         var2.append(var3);
+         var2.append(", connectionId=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

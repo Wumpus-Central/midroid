@@ -53,16 +53,16 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    ) {
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var10: TextView = this.binding.altRemixTag;
+         val var11: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var11: Context = this.getContext();
-            var9 = ColorUtilsKt.getColorCompat(var11, R.color.white);
+            val var10: Context = this.getContext();
+            var9 = ColorUtilsKt.getColorCompat(var10, R.color.white);
          }
 
-         var10.setTextColor(var9);
+         var11.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          if (var2 != null) {
             var9 = var2;
@@ -73,7 +73,7 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
 
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new S(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new Q(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          var14.setVisibility(0);
          if (var3 != null) {
