@@ -1,0 +1,22 @@
+{
+  "RpMIT0": [
+    "Määritämme pääsyn tiettyihin kokemuksiin ikäryhmän perusteella. ",
+    [
+      8,
+      "$link",
+      [
+        "Lisätietoja"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "eJmat7": "Yleensä nopein ja täysin automaattinen. Tarvitset vain kameran.",
+  "2yLvkZ": "Ota videoselfie",
+  "ZdmRwc": "Tarvitset ajokortin, passin tai muun henkilöllisyystodistuksen. Vahvista sitten selfiellä, että kyseessä olet sinä.",
+  "dwkwo6": "Skannaa henkilöllisyystodistus"
+}

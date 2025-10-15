@@ -182,9 +182,9 @@ public object MarkdownRules {
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(2);
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(1), var1.end(1));
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(2);
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(1), var1.end(1));
       }
    }
 

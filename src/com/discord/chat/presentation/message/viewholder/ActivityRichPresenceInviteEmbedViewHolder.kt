@@ -40,10 +40,10 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var5 = false;
       }
 
-      val var17: java.lang.String = var9.getFooterLabel();
-      val var12: java.util.List = var9.getGradientColors();
+      val var12: java.lang.String = var9.getFooterLabel();
+      val var13: java.util.List = var9.getGradientColors();
       val var14: java.lang.String = var9.getHeaderText();
-      val var13: java.lang.String = var9.getIconSrc();
+      val var17: java.lang.String = var9.getIconSrc();
       var var15: java.lang.Boolean = var9.isActive();
       val var6: Boolean;
       if (var15 != null) {
@@ -69,10 +69,10 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var4,
          var16,
          var5,
-         var17,
          var12,
-         var14,
          var13,
+         var14,
+         var17,
          var6,
          var7,
          var3,
@@ -80,6 +80,7 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var9.getPartyMemberAvatarURIs(),
          var9.getPartySizeText(),
          var9.getPlatformIconKeys(),
+         var9.getCoverImageUrl(),
          var9.getSubtitle(),
          var9.getTitle()
       );

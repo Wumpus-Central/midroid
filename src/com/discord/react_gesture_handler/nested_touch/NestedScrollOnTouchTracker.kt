@@ -114,13 +114,13 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                } else {
                   var var7: Int = (int)var2.getX() - var20.getTotalPaddingLeft() + var20.getScrollX();
                   val var28: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
-                  val var5: Float = var20.getLayout().getLineRight(var28);
-                  val var6: Float = var20.getLayout().getLineLeft(var28);
-                  val var4: Float = var7;
-                  if (var7 > var5 || var7 >= 0 && var7 < var6) {
+                  val var4: Float = var20.getLayout().getLineRight(var28);
+                  val var5: Float = var20.getLayout().getLineLeft(var28);
+                  val var6: Float = var7;
+                  if (var7 > var4 || var7 >= 0 && var7 < var5) {
                      var14 = new NestedClickableSpan[0];
                   } else {
-                     var7 = var20.getLayout().getOffsetForHorizontal(var28, var4);
+                     var7 = var20.getLayout().getOffsetForHorizontal(var28, var6);
                      var14 = var31.getSpans(var7, var7, NestedClickableSpan.class);
                   }
                }
@@ -278,10 +278,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                               this.$view.setPressed(true);
                            }
 
-                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
-                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
+                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
+                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
                            this.label = 2;
-                           if (I.a(var5 - var12, this) === var7) {
+                           if (I.a(var12 - var5, this) === var7) {
                               return var7;
                            }
                         }

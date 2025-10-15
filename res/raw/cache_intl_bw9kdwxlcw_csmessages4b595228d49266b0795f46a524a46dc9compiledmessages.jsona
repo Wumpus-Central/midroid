@@ -1,0 +1,44 @@
+{
+  "/fHz9f": "Tvůj účet byl odemčen",
+  "d9Ykjo": "Ověřovací kód",
+  "bFbsV1": "Zadej svůj e-mail",
+  "RRBNpq": "Další",
+  "0DHxys": [
+    "Nejsi to ty? ",
+    [
+      8,
+      "$link",
+      [
+        "Odhlásit se"
+      ],
+      [
+        [
+          1,
+          "handleLogOut"
+        ]
+      ]
+    ]
+  ],
+  "0TnUrK": "Později tě můžeme požádat o další kontrolu, když nám budeš připadat jako robot",
+  "Ks6opq": "Začít",
+  "I2Ctk5": "Dokonči kroky níže a odemkni svůj účet",
+  "RRamMD": "Účet byl uzamčen",
+  "ah0EUl": "Poslat kód znovu",
+  "2+Lyn5": [
+    "Znovu poslat kód za ",
+    [
+      1,
+      "countdown"
+    ],
+    " s"
+  ],
+  "3AXMYm": "Ověřovací kód se nepodařilo znovu odeslat",
+  "dSkE/P": "Ověřit věkovou skupinu",
+  "o4D6fn": "Aktualizovat",
+  "VBZJJi": "Aktualizuj aplikaci, ať můžeš pokračovat.",
+  "yxqMCA": "Je vyžadována aktualizace",
+  "wq2RDg": "Ověřit",
+  "PfbG6O": "Neplatný ověřovací kód",
+  "aveKoK": "Právě jsme odeslali ověřovací kód na tvou e-mailovou adresu. Může trvat pár minut, než dorazí",
+  "Qm6K/v": "Ověř svůj e-mail"
+}

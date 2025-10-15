@@ -31,7 +31,6 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.SourceDebugExtension
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.Json
 import org.json.JSONObject
 
@@ -52,10 +51,10 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
    private fun createTextDisplayComponentContext(view: TextDisplayComponentView, data: Data): ComponentContext {
-      val var4: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
-      val var3: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
+      val var3: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
+      val var4: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
       return new ComponentContext(
-         var4,
+         var3,
          ComponentContextDefaults.INSTANCE.getGENERAL_HANDLERS(),
          var2.getMarkdownTextRenderOptions(),
          new MarkdownTextRenderEventHandlers(
@@ -74,8 +73,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             new I(this, var1),
             new J()
          ),
-         var3.getMEDIA_HANDLERS(),
-         var3.getCOMPONENT_HANDLERS(),
+         var4.getMEDIA_HANDLERS(),
+         var4.getCOMPONENT_HANDLERS(),
          new WidthInfo(0, 0, 0, 4, null),
          false,
          false,
@@ -232,8 +231,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    @ReactProp(name = "model")
    public fun setModel(view: TextDisplayComponentView, model: ReadableMap) {
       val var6: java.util.Map = this.viewToDataMapping;
-      var var5: Any = this.viewToDataMapping.get(var1);
-      var var4: StringBuilder = (StringBuilder)var5;
+      var var5: Json = this.viewToDataMapping.get(var1);
+      var var4: StringBuilder = var5;
       if (var5 == null) {
          var4 = new PartialData(null, null, 3, null);
          var6.put(var1, var4);
@@ -241,20 +240,20 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
 
       var var3: Boolean;
       try {
-         val var25: Json = ComponentDeserializerKt.getJson();
-         var5 = ComponentSerializer.INSTANCE;
+         var5 = ComponentDeserializerKt.getJson();
+         val var25: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var15: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var16 = var25.b((DeserializationStrategy)var5, var15) as Component;
+         var16 = var5.b(var25, var15) as Component;
          var3 = var16 is TextDisplayComponent;
       } catch (var9: Exception) {
          val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-         var4 = var9.getMessage();
-         val var14: StringBuilder = new StringBuilder();
-         var14.append("Error while deserializing ");
-         var14.append(var10);
-         var14.append(": ");
-         var14.append((java.lang.String)var4);
-         throw new IllegalStateException(var14.toString().toString());
+         val var14: java.lang.String = var9.getMessage();
+         var4 = new StringBuilder();
+         var4.append("Error while deserializing ");
+         var4.append(var10);
+         var4.append(": ");
+         var4.append(var14);
+         throw new IllegalStateException(var4.toString().toString());
       }
 
       if (var3) {
@@ -272,13 +271,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             throw new IllegalStateException(var4.toString().toString());
          } catch (var8: Exception) {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            val var22: java.lang.String = var8.getMessage();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Error while deserializing ");
-            var17.append(var11);
-            var17.append(": ");
-            var17.append(var22);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = var8.getMessage();
+            var4 = new StringBuilder();
+            var4.append("Error while deserializing ");
+            var4.append(var11);
+            var4.append(": ");
+            var4.append(var17);
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
    }

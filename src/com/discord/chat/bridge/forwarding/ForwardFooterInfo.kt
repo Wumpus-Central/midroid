@@ -63,9 +63,9 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.timestampLabel.hashCode();
+      val var2: Int = this.timestampLabel.hashCode();
       val var3: Int = this.originLabel.hashCode();
-      val var2: Int = this.accessibilityLabel.hashCode();
+      val var4: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
          var1 = 0;
@@ -73,21 +73,21 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
+      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: java.lang.String = this.timestampLabel;
-      val var3: java.lang.String = this.originLabel;
-      val var2: java.lang.String = this.accessibilityLabel;
+      val var2: java.lang.String = this.originLabel;
+      val var3: java.lang.String = this.accessibilityLabel;
       val var5: java.lang.String = this.originIconUrl;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ForwardFooterInfo(timestampLabel=");
       var4.append(var1);
       var4.append(", originLabel=");
-      var4.append(var3);
-      var4.append(", accessibilityLabel=");
       var4.append(var2);
+      var4.append(", accessibilityLabel=");
+      var4.append(var3);
       var4.append(", originIconUrl=");
       var4.append(var5);
       var4.append(")");

@@ -68,11 +68,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var1: View = this.getCurrentAccessoryView();
-      if (var1 != null) {
-         this.binding.sectionLayoutBox.removeView(var1);
+      val var2: View = this.getCurrentAccessoryView();
+      if (var2 != null) {
+         this.binding.sectionLayoutBox.removeView(var2);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
          }
       }
    }

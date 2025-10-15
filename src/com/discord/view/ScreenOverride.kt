@@ -44,8 +44,8 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
       if (this.isBeingRemoved()) {
          this.setBeingRemoved(false);
 
-         for (Pair var2 : CollectionsKt.P(this.inTransitionViews)) {
-            (var2.a() as ViewGroup).endViewTransition(var2.b() as View);
+         for (Pair var1 : CollectionsKt.P(this.inTransitionViews)) {
+            (var1.a() as ViewGroup).endViewTransition(var1.b() as View);
          }
 
          this.inTransitionViews.clear();

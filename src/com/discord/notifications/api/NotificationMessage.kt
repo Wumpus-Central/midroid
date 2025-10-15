@@ -111,24 +111,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = CollectionsK
    }
 
    public override fun toString(): String {
-      val var5: java.util.List = this.stickerItems;
+      val var1: java.util.List = this.stickerItems;
       val var3: JsonObject = this.author;
-      val var4: java.util.List = this.mentions;
-      val var1: Poll = this.poll;
+      val var5: java.util.List = this.mentions;
+      val var2: Poll = this.poll;
       val var6: java.util.List = this.embeds;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("NotificationMessage(stickerItems=");
-      var2.append(var5);
-      var2.append(", author=");
-      var2.append(var3);
-      var2.append(", mentions=");
-      var2.append(var4);
-      var2.append(", poll=");
-      var2.append(var1);
-      var2.append(", embeds=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("NotificationMessage(stickerItems=");
+      var4.append(var1);
+      var4.append(", author=");
+      var4.append(var3);
+      var4.append(", mentions=");
+      var4.append(var5);
+      var4.append(", poll=");
+      var4.append(var2);
+      var4.append(", embeds=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

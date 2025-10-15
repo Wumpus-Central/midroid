@@ -49,12 +49,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var9: ObscureOverlayView = this.binding.obscure;
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var5: Function1 = var3.getLabel();
-      var var6: Context = this.getContext();
-      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
+      val var6: Function1 = var3.getLabel();
+      val var5: Context = this.getContext();
+      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
       val var8: Function1 = var3.getDescription();
-      var6 = this.getContext();
-      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      val var12: Context = this.getContext();
+      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
    }
 
    @JvmStatic

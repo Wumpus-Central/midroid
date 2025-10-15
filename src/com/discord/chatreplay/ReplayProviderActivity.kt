@@ -18,11 +18,11 @@ import qb.f
 @SourceDebugExtension(["SMAP\nReplayProviderActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,111:1\n113#2:112\n1#3:113\n1557#4:114\n1628#4,3:115\n*S KotlinDebug\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n*L\n30#1:112\n61#1:114\n61#1:115,3\n*E\n"])
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {
-      val var3: java.lang.String = this.getFilesDir().getPath();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var3);
-      var2.append("/rows");
-      return new File(a.a(var2.toString(), new java.lang.String[0]).toString(), var1);
+      val var2: java.lang.String = this.getFilesDir().getPath();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var2);
+      var3.append("/rows");
+      return new File(a.a(var3.toString(), new java.lang.String[0]).toString(), var1);
    }
 
    private fun getReplaysList(): List<Replay> {
@@ -47,20 +47,20 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
 
-      for (File var10 : var9) {
-         val var12: java.lang.String = var10.getName();
-         var7.add(new Replay(var12, var10.lastModified()));
+      for (File var4 : var9) {
+         val var12: java.lang.String = var4.getName();
+         var7.add(new Replay(var12, var4.lastModified()));
       }
 
       return var7;
    }
 
    private fun grantAccessToFile(toPackage: String, file: File): Uri {
-      val var4: java.lang.String = this.getPackageName();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append(".replays");
-      val var5: Uri = FileProvider.getUriForFile(this, var3.toString(), var2);
+      val var3: java.lang.String = this.getPackageName();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append(".replays");
+      val var5: Uri = FileProvider.getUriForFile(this, var4.toString(), var2);
       this.grantUriPermission(var1, var5, 1);
       return var5;
    }

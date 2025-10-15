@@ -299,11 +299,11 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
+      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
-      val var2: ReactApplicationContext = this.reactContext;
+      val var3: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.d;
-      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
+      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
    }
 
    @ReactMethod
