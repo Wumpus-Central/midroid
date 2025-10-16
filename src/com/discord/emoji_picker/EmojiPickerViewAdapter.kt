@@ -189,16 +189,16 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    public open fun onBindViewHolder(holder: EmojiPickerViewHolder, position: Int) {
       if (var1 is EmojiPickerViewHolder.Category) {
-         val var3: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
-         val var4: EmojiPickerItem = this.getItem(var2);
-         var3.onBindViewHolder(var4 as EmojiPickerItem.Category);
+         val var4: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
+         val var3: EmojiPickerItem = this.getItem(var2);
+         var4.onBindViewHolder(var3 as EmojiPickerItem.Category);
       } else if (var1 is EmojiPickerViewHolder.EmojiPlaceholder) {
          (var1 as EmojiPickerViewHolder.EmojiPlaceholder).onBindViewHolder(this.emojiSize, this.emojiMargin);
       } else if (var1 is EmojiPickerViewHolder.Emoji) {
-         val var5: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
-         val var8: EmojiPickerItem = this.getItem(var2);
-         var5.onBindViewHolder(
-            var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
+         val var8: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
+         val var5: EmojiPickerItem = this.getItem(var2);
+         var8.onBindViewHolder(
+            var5 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
          val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;

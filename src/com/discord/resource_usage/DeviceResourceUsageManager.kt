@@ -7,11 +7,10 @@ import android.system.Os
 import android.system.OsConstants
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nDeviceResourceUsageManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceResourceUsageManager.kt\ncom/discord/resource_usage/DeviceResourceUsageManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,135:1\n1#2:136\n*E\n"])
+@SourceDebugExtension(["SMAP\nDeviceResourceUsageManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceResourceUsageManager.kt\ncom/discord/resource_usage/DeviceResourceUsageManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,132:1\n1#2:133\n*E\n"])
 internal class DeviceResourceUsageManager(context: Context) {
    private final val activityManager: ActivityManager
    private final var thread: Thread?
-   private final var activeThreadId: Long?
    private final val threadSync: Any
 
    public final var cpuUsagePercent: Double
@@ -51,7 +50,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       try {
          var14 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var14 = Result.e;
+         var1 = Result.e;
          var14 = Result.b(c.a(var3));
          break label36;
       }
@@ -67,7 +66,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       try {
          var14 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var14 = Result.e;
+         var1 = Result.e;
          var14 = Result.b(c.a(var2));
          break label30;
       }
@@ -107,117 +106,109 @@ internal class DeviceResourceUsageManager(context: Context) {
       //
       // Bytecode:
       // 00: aconst_null
-      // 01: astore 7
+      // 01: astore 6
       // 03: aconst_null
-      // 04: astore 8
+      // 04: astore 5
       // 06: aload 0
       // 07: getfield com/discord/resource_usage/DeviceResourceUsageManager.threadSync Ljava/lang/Object;
-      // 0a: astore 9
-      // 0c: aload 9
+      // 0a: astore 7
+      // 0c: aload 7
       // 0e: monitorenter
       // 0f: aload 0
-      // 10: getfield com/discord/resource_usage/DeviceResourceUsageManager.activeThreadId Ljava/lang/Long;
-      // 13: astore 10
+      // 10: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
+      // 13: astore 9
       // 15: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
-      // 18: invokevirtual java/lang/Thread.getId ()J
-      // 1b: lstore 5
-      // 1d: aload 10
-      // 1f: ifnonnull 25
-      // 22: goto 32
-      // 25: aload 10
-      // 27: invokevirtual java/lang/Long.longValue ()J
-      // 2a: lstore 3
-      // 2b: lload 3
-      // 2c: lload 5
-      // 2e: lcmp
-      // 2f: ifeq 36
-      // 32: aload 9
-      // 34: monitorexit
-      // 35: return
-      // 36: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 39: astore 10
-      // 3b: aload 9
-      // 3d: monitorexit
-      // 3e: invokestatic java/lang/Thread.interrupted ()Z
-      // 41: ifeq 45
-      // 44: return
-      // 45: aload 0
-      // 46: getfield com/discord/resource_usage/DeviceResourceUsageManager.memoryInfo Landroid/app/ActivityManager$MemoryInfo;
-      // 49: astore 9
-      // 4b: aload 0
-      // 4c: getfield com/discord/resource_usage/DeviceResourceUsageManager.activityManager Landroid/app/ActivityManager;
-      // 4f: aload 9
-      // 51: invokevirtual android/app/ActivityManager.getMemoryInfo (Landroid/app/ActivityManager$MemoryInfo;)V
-      // 54: aload 9
-      // 56: getfield android/app/ActivityManager$MemoryInfo.lowMemory Z
-      // 59: ifeq 65
-      // 5c: ldc2_w 1000
-      // 5f: invokestatic java/lang/Thread.sleep (J)V
-      // 62: goto 06
-      // 65: getstatic com/discord/resource_usage/utils/ProcfsStats.Companion Lcom/discord/resource_usage/utils/ProcfsStats$Companion;
-      // 68: invokevirtual com/discord/resource_usage/utils/ProcfsStats$Companion.readStatFile ()Lcom/discord/resource_usage/utils/ProcfsStats;
-      // 6b: astore 9
-      // 6d: invokestatic java/lang/System.currentTimeMillis ()J
-      // 70: lstore 3
-      // 71: aload 7
-      // 73: ifnull c5
-      // 76: aload 8
-      // 78: ifnull c5
-      // 7b: aload 9
-      // 7d: ifnull c5
-      // 80: lload 3
-      // 81: aload 8
-      // 83: invokevirtual java/lang/Long.longValue ()J
-      // 86: lsub
-      // 87: l2d
-      // 88: ldc2_w 1000.0
-      // 8b: ddiv
-      // 8c: dstore 1
-      // 8d: aload 0
-      // 8e: aload 9
-      // 90: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
-      // 93: aload 7
-      // 95: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
-      // 98: lsub
-      // 99: bipush 100
-      // 9b: i2l
-      // 9c: lmul
-      // 9d: l2d
-      // 9e: getstatic com/discord/resource_usage/DeviceResourceUsageManager.SC_CLK_TCK J
-      // a1: l2d
-      // a2: dload 1
-      // a3: dmul
-      // a4: ddiv
-      // a5: aload 0
-      // a6: getfield com/discord/resource_usage/DeviceResourceUsageManager.cpuCoreCount I
-      // a9: bipush 1
-      // aa: invokestatic java/lang/Math.max (II)I
-      // ad: i2d
-      // ae: ddiv
-      // af: putfield com/discord/resource_usage/DeviceResourceUsageManager.cpuUsagePercent D
-      // b2: aload 0
-      // b3: aload 9
-      // b5: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getRssPages ()J
-      // b8: getstatic com/discord/resource_usage/DeviceResourceUsageManager.SC_PAGE_SIZE J
-      // bb: lmul
-      // bc: sipush 1024
-      // bf: i2l
-      // c0: ldiv
-      // c1: l2i
-      // c2: putfield com/discord/resource_usage/DeviceResourceUsageManager.memoryRssKB I
-      // c5: lload 3
-      // c6: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // c9: astore 8
-      // cb: ldc2_w 1000
-      // ce: invokestatic java/lang/Thread.sleep (J)V
-      // d1: aload 9
-      // d3: astore 7
-      // d5: goto 06
-      // d8: astore 7
-      // da: aload 9
-      // dc: monitorexit
-      // dd: aload 7
-      // df: athrow
+      // 18: astore 8
+      // 1a: aload 9
+      // 1c: aload 8
+      // 1e: if_acmpeq 25
+      // 21: aload 7
+      // 23: monitorexit
+      // 24: return
+      // 25: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 28: astore 8
+      // 2a: aload 7
+      // 2c: monitorexit
+      // 2d: invokestatic java/lang/Thread.interrupted ()Z
+      // 30: ifeq 34
+      // 33: return
+      // 34: aload 0
+      // 35: getfield com/discord/resource_usage/DeviceResourceUsageManager.memoryInfo Landroid/app/ActivityManager$MemoryInfo;
+      // 38: astore 7
+      // 3a: aload 0
+      // 3b: getfield com/discord/resource_usage/DeviceResourceUsageManager.activityManager Landroid/app/ActivityManager;
+      // 3e: aload 7
+      // 40: invokevirtual android/app/ActivityManager.getMemoryInfo (Landroid/app/ActivityManager$MemoryInfo;)V
+      // 43: aload 7
+      // 45: getfield android/app/ActivityManager$MemoryInfo.lowMemory Z
+      // 48: ifeq 54
+      // 4b: ldc2_w 1000
+      // 4e: invokestatic java/lang/Thread.sleep (J)V
+      // 51: goto 06
+      // 54: getstatic com/discord/resource_usage/utils/ProcfsStats.Companion Lcom/discord/resource_usage/utils/ProcfsStats$Companion;
+      // 57: invokevirtual com/discord/resource_usage/utils/ProcfsStats$Companion.readStatFile ()Lcom/discord/resource_usage/utils/ProcfsStats;
+      // 5a: astore 7
+      // 5c: invokestatic java/lang/System.currentTimeMillis ()J
+      // 5f: lstore 3
+      // 60: aload 6
+      // 62: ifnull b4
+      // 65: aload 5
+      // 67: ifnull b4
+      // 6a: aload 7
+      // 6c: ifnull b4
+      // 6f: lload 3
+      // 70: aload 5
+      // 72: invokevirtual java/lang/Long.longValue ()J
+      // 75: lsub
+      // 76: l2d
+      // 77: ldc2_w 1000.0
+      // 7a: ddiv
+      // 7b: dstore 1
+      // 7c: aload 0
+      // 7d: aload 7
+      // 7f: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
+      // 82: aload 6
+      // 84: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
+      // 87: lsub
+      // 88: bipush 100
+      // 8a: i2l
+      // 8b: lmul
+      // 8c: l2d
+      // 8d: getstatic com/discord/resource_usage/DeviceResourceUsageManager.SC_CLK_TCK J
+      // 90: l2d
+      // 91: dload 1
+      // 92: dmul
+      // 93: ddiv
+      // 94: aload 0
+      // 95: getfield com/discord/resource_usage/DeviceResourceUsageManager.cpuCoreCount I
+      // 98: bipush 1
+      // 99: invokestatic java/lang/Math.max (II)I
+      // 9c: i2d
+      // 9d: ddiv
+      // 9e: putfield com/discord/resource_usage/DeviceResourceUsageManager.cpuUsagePercent D
+      // a1: aload 0
+      // a2: aload 7
+      // a4: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getRssPages ()J
+      // a7: getstatic com/discord/resource_usage/DeviceResourceUsageManager.SC_PAGE_SIZE J
+      // aa: lmul
+      // ab: sipush 1024
+      // ae: i2l
+      // af: ldiv
+      // b0: l2i
+      // b1: putfield com/discord/resource_usage/DeviceResourceUsageManager.memoryRssKB I
+      // b4: lload 3
+      // b5: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
+      // b8: astore 5
+      // ba: ldc2_w 1000
+      // bd: invokestatic java/lang/Thread.sleep (J)V
+      // c0: aload 7
+      // c2: astore 6
+      // c4: goto 06
+      // c7: astore 5
+      // c9: aload 7
+      // cb: monitorexit
+      // cc: aload 5
+      // ce: athrow
    }
 
    @JvmStatic
@@ -248,42 +239,35 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 06: monitorenter
       // 07: aload 0
       // 08: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: new b2/a
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: aload 0
       // 12: invokespecial b2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
-      // 15: bipush 1
+      // 15: aload 0
       // 16: bipush 1
-      // 17: aconst_null
-      // 18: ldc_w "DeviceResourceUsageMonitor"
-      // 1b: bipush 2
-      // 1c: aload 3
-      // 1d: bipush 4
-      // 1e: aconst_null
-      // 1f: invokestatic F9/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
-      // 22: astore 3
-      // 23: aload 0
-      // 24: aload 3
-      // 25: invokevirtual java/lang/Thread.getId ()J
-      // 28: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 2b: putfield com/discord/resource_usage/DeviceResourceUsageManager.activeThreadId Ljava/lang/Long;
-      // 2e: aload 0
-      // 2f: aload 3
-      // 30: putfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
-      // 33: aload 1
-      // 34: monitorexit
-      // 35: aload 2
-      // 36: ifnull 3d
-      // 39: aload 2
-      // 3a: invokevirtual java/lang/Thread.interrupt ()V
-      // 3d: return
-      // 3e: astore 2
-      // 3f: aload 1
-      // 40: monitorexit
-      // 41: aload 2
-      // 42: athrow
+      // 17: bipush 1
+      // 18: aconst_null
+      // 19: ldc_w "DeviceResourceUsageMonitor"
+      // 1c: bipush 2
+      // 1d: aload 2
+      // 1e: bipush 4
+      // 1f: aconst_null
+      // 20: invokestatic F9/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 23: putfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
+      // 26: aload 1
+      // 27: monitorexit
+      // 28: aload 3
+      // 29: ifnull 30
+      // 2c: aload 3
+      // 2d: invokevirtual java/lang/Thread.interrupt ()V
+      // 30: return
+      // 31: astore 2
+      // 32: aload 1
+      // 33: monitorexit
+      // 34: aload 2
+      // 35: athrow
    }
 
    public fun stop() {
@@ -308,21 +292,18 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 0c: aload 0
       // 0d: aconst_null
       // 0e: putfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
-      // 11: aload 0
-      // 12: aconst_null
-      // 13: putfield com/discord/resource_usage/DeviceResourceUsageManager.activeThreadId Ljava/lang/Long;
-      // 16: aload 1
-      // 17: monitorexit
-      // 18: aload 2
-      // 19: ifnull 20
-      // 1c: aload 2
-      // 1d: invokevirtual java/lang/Thread.interrupt ()V
-      // 20: return
-      // 21: astore 2
-      // 22: aload 1
-      // 23: monitorexit
-      // 24: aload 2
-      // 25: athrow
+      // 11: aload 1
+      // 12: monitorexit
+      // 13: aload 2
+      // 14: ifnull 1b
+      // 17: aload 2
+      // 18: invokevirtual java/lang/Thread.interrupt ()V
+      // 1b: return
+      // 1c: astore 2
+      // 1d: aload 1
+      // 1e: monitorexit
+      // 1f: aload 2
+      // 20: athrow
    }
 
    public companion object {

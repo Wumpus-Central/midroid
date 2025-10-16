@@ -10,6 +10,12 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
 
 public class KeyboardModule(reactContext: ReactApplicationContext) : NativeKeyboardModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `onKeyboardChanged$lambda$0`(var0: Boolean) {
       KeyboardManager.INSTANCE.onKeyboardChanged$keyboard_release(var0);
@@ -28,7 +34,7 @@ public class KeyboardModule(reactContext: ReactApplicationContext) : NativeKeybo
    }
 
    public override fun dismissGlobalKeyboard() {
-      val var1: Activity = this.getCurrentActivity();
+      val var1: Activity = this.reactContext.getCurrentActivity();
       if (var1 != null) {
          KeyboardExtensionsKt.hideKeyboard(var1);
       }

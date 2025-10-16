@@ -8,6 +8,12 @@ import l1.a
 import l1.b
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `requestRating$lambda$0`(var0: Promise): Unit {
       var0.resolve(0);
@@ -21,7 +27,7 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun requestRating(promise: Promise) {
-      val var2: Activity = this.getCurrentActivity();
+      val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 == null) {
          var1.reject(new IllegalStateException("current activity is null"));
       } else {

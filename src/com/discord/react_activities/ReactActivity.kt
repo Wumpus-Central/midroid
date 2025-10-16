@@ -42,15 +42,17 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public open fun onConfigurationChanged(newConfig: Configuration) {
       super.onConfigurationChanged(var1);
       b.m.a(this, var1);
+      val var2: Context = this.getApplicationContext();
+      FontScaleUtilsKt.setFontScaleDeprecated(var2);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var3: Window = this.getWindow();
+      var2.initialize(var3);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);

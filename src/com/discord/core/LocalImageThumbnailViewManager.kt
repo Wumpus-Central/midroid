@@ -1,6 +1,7 @@
 package com.discord.core
 
 import android.net.Uri
+import com.discord.logging.Log
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.SimpleViewManager
@@ -36,6 +37,15 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
          val var4: Int = (int)var2.getDouble("width");
          val var3: Int = (int)var2.getDouble("height");
          if (this.lastUri == var5 && this.lastWidthDp != null && this.lastWidthDp == var4 && this.lastHeightDp != null && this.lastHeightDp == var3) {
+            val var9: Log = Log.INSTANCE;
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("\ud83d\udeab DUPLICATE PROPS - Skipping duplicate request for URI: ");
+            var6.append(var5);
+            var6.append(" - Size: ");
+            var6.append(var4);
+            var6.append("x");
+            var6.append(var3);
+            Log.i$default(var9, "LocalImageThumbnailViewManager", var6.toString(), null, 4, null);
             return;
          } else {
             this.lastUri = var5;

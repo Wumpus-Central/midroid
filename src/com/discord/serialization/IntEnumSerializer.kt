@@ -24,16 +24,16 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       val var8: java.lang.String = var1.getSimpleName();
       this.serialName = var8;
       val var5: Array<Any> = a.b(var1).getEnumConstants();
-      val var9: Array<IntEnum> = var5 as Array<IntEnum>;
+      val var6: Array<IntEnum> = var5 as Array<IntEnum>;
       this.choices = (T[])var5;
-      val var6: ArrayList = new ArrayList((var5 as Array<IntEnum>).length);
-      val var4: Int = var9.length;
+      val var9: ArrayList = new ArrayList((var5 as Array<IntEnum>).length);
+      val var4: Int = var6.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
-         var6.add(var9[var3].getSerialNumber());
+         var9.add(var6[var3].getSerialNumber());
       }
 
-      val var7: Array<Int> = var6.toArray(new Integer[0]);
+      val var7: Array<Int> = var9.toArray(new Integer[0]);
       this.choicesNumbers = var7;
       this.descriptor = g.a(this.serialName, f.a);
       if (var7.length == this.choices.length) {
@@ -55,15 +55,15 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             val var9: IntEnum = this.choices[var2];
             return (T)var9;
          } else {
-            val var11: java.lang.String = this.serialName;
+            val var8: java.lang.String = this.serialName;
             var3 = this.choices.length;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append(var2);
-            var8.append(" is not among valid ");
-            var8.append(var11);
-            var8.append(" choices, choices size is ");
-            var8.append(var3);
-            throw new IllegalStateException(var8.toString().toString());
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var2);
+            var11.append(" is not among valid ");
+            var11.append(var8);
+            var11.append(" choices, choices size is ");
+            var11.append(var3);
+            throw new IllegalStateException(var11.toString().toString());
          }
       } else {
          val var6: java.lang.String = this.serialName;

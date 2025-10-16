@@ -23,6 +23,12 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,105:1\n1#2:106\n*E\n"])
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `getStableSafeAreaInsets$lambda$1`(var0: Int, var1: Int, var2: Int, var3: Int): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
@@ -36,7 +42,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    @JvmStatic
    fun `setNavigationBarContrastEnforced$lambda$4`(var0: SafeAreaInsetsModule, var1: Boolean) {
       if (VERSION.SDK_INT < 35) {
-         var var3: Activity = var0.getCurrentActivity();
+         var var3: Activity = var0.reactContext.getCurrentActivity();
          if (var3 != null) {
             val var6: Window = var3.getWindow();
             if (var6 != null) {
@@ -44,7 +50,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
             }
          }
 
-         var3 = var0.getCurrentActivity();
+         var3 = var0.reactContext.getCurrentActivity();
          if (var3 != null) {
             val var8: Window = var3.getWindow();
             if (var8 != null) {
@@ -54,7 +60,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
 
       if (VERSION.SDK_INT >= 29) {
-         val var4: Activity = var0.getCurrentActivity();
+         val var4: Activity = var0.reactContext.getCurrentActivity();
          if (var4 != null) {
             val var5: Window = var4.getWindow();
             if (var5 != null) {
@@ -87,7 +93,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun getImeInsets(exludeSytemBars: Boolean): Double {
-      val var8: Activity = this.getCurrentActivity();
+      val var8: Activity = this.reactContext.getCurrentActivity();
       var var9: Insets = null;
       val var11: WindowInsetsCompat;
       if (var8 != null) {
@@ -112,7 +118,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       if (var5 <= 0) {
          return 0.0;
       } else {
-         val var12: Activity = this.getCurrentActivity();
+         val var12: Activity = this.reactContext.getCurrentActivity();
          var var6: Int = 0;
          if (var12 != null) {
             if (var11 != null) {
@@ -142,18 +148,18 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun getStableSafeAreaInsets(): WritableMap {
       val var1: c = new c();
-      val var2: Activity = this.getCurrentActivity();
-      val var4: Int = 0;
-      if (var2 == null) {
-         return var1.invoke(var4, var4, var4, var4) as WritableMap;
+      val var3: Activity = this.reactContext.getCurrentActivity();
+      val var2: Int = 0;
+      if (var3 == null) {
+         return var1.invoke(var2, var2, var2, var2) as WritableMap;
       } else {
-         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var2);
-         if (var3 == null) {
-            return var1.invoke(var4, var4, var4, var4) as WritableMap;
+         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var4 == null) {
+            return var1.invoke(var2, var2, var2, var2) as WritableMap;
          } else {
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var2, true);
-            return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            return var1.invoke(Math.max(var5.a, var6.a), Math.max(var5.b, var6.b), Math.max(var5.c, var6.c), Math.max(var5.d, var6.d)) as WritableMap;
          }
       }
    }

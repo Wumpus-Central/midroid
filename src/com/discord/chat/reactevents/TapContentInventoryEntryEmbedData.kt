@@ -73,17 +73,17 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.authorId;
-      val var3: java.lang.String = this.contentId;
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.authorId;
+      val var4: java.lang.String = this.contentId;
       val var2: java.lang.String = this.tappedElement;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapContentInventoryEntryEmbedData(messageId=");
-      var5.append(var4);
-      var5.append(", authorId=");
       var5.append(var1);
-      var5.append(", contentId=");
+      var5.append(", authorId=");
       var5.append(var3);
+      var5.append(", contentId=");
+      var5.append(var4);
       var5.append(", tappedElement=");
       var5.append(var2);
       var5.append(")");

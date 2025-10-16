@@ -64,8 +64,8 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
 
    public override fun hashCode(): Int {
       val var2: Int = this.timestampLabel.hashCode();
-      val var4: Int = this.originLabel.hashCode();
-      val var3: Int = this.accessibilityLabel.hashCode();
+      val var3: Int = this.originLabel.hashCode();
+      val var4: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
          var1 = 0;
@@ -73,25 +73,25 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var2 * 31 + var4) * 31 + var3) * 31 + var1;
+      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.timestampLabel;
-      val var4: java.lang.String = this.originLabel;
-      val var1: java.lang.String = this.accessibilityLabel;
-      val var5: java.lang.String = this.originIconUrl;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ForwardFooterInfo(timestampLabel=");
-      var2.append(var3);
-      var2.append(", originLabel=");
-      var2.append(var4);
-      var2.append(", accessibilityLabel=");
-      var2.append(var1);
-      var2.append(", originIconUrl=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.timestampLabel;
+      val var5: java.lang.String = this.originLabel;
+      val var4: java.lang.String = this.accessibilityLabel;
+      val var2: java.lang.String = this.originIconUrl;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardFooterInfo(timestampLabel=");
+      var3.append(var1);
+      var3.append(", originLabel=");
+      var3.append(var5);
+      var3.append(", accessibilityLabel=");
+      var3.append(var4);
+      var3.append(", originIconUrl=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

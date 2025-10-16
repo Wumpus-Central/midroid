@@ -12,8 +12,8 @@ import com.facebook.drawee.view.SimpleDraweeView
 import db.K
 import db.f
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
@@ -66,8 +66,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                }
 
                public final Object invokeSuspend(Object var1) {
-                  var var3x: Any = b.e();
-                  var var4: Any;
+                  val var4: Any = b.e();
+                  val var3x: CoroutineScope;
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -75,12 +75,11 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
 
                      var3x = this.L$0 as CoroutineScope;
                      c.b(var1);
-                     var4 = var1;
                   } else {
                      c.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
-                     var4 = K.a();
-                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
+                     var3x = this.L$0 as CoroutineScope;
+                     val var5: CoroutineDispatcher = K.a();
+                     var1 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -109,18 +108,16 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                            }
                         }
                      };
-                     this.L$0 = var1;
+                     this.L$0 = var3x;
                      this.label = 1;
-                     var4 = f.g((CoroutineContext)var4, var5, this);
-                     if (var4 === var3x) {
-                        return var3x;
+                     var1 = (Function2)f.g(var5, var1, this);
+                     if (var1 === var4) {
+                        return var4;
                      }
-
-                     var3x = var1;
                   }
 
-                  val var7: Bitmap = var4 as Bitmap;
-                  if (!g.i((CoroutineScope)var3x)) {
+                  val var7: Bitmap = var1 as Bitmap;
+                  if (!g.i(var3x)) {
                      return Unit.a;
                   } else {
                      (ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getHierarchy() as GenericDraweeHierarchy)

@@ -3291,6 +3291,14 @@
       ]
     ]
   ],
+  "JUV1tL": [
+    [
+      1,
+      "sender"
+    ],
+    " gifted you a Bundle!"
+  ],
+  "iJ8829": "You have been gifted a Bundle!",
   "SKduys": [
     [
       1,
@@ -8083,8 +8091,7 @@
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " people are"
         ]
@@ -8900,11 +8907,13 @@
   "+/6Nv7": "Forgot Password?",
   "R04ENT": "Clear Server Name",
   "/+OQEh": "Status updates from people you talk to.",
+  "E6O06u": "Receive a notification when your friend comes online for more than a few minutes.",
   "l3yoAQ": "You are receiving notifications from all activity in this server, but you can override it here",
   "mUbulZ": "You are receiving notifications from all messages in this server, but you can override it here",
   "GGAdHR": "You are receiving notifications from only mentions in this server, but you can override it here",
   "t0mEt7": "You can’t get notifications from this channel nor change settings until you unmute this channel.",
   "oWF6eX": "Receive notifications when your messages are reacted to.",
+  "XdihbG": "Receive a notification when your friend comes back to Discord after a long break",
   "rngMNz": "Receive a notification when your closest friends join voice channels in servers with 200 members or fewer.",
   "aTVNen": [
     "Oops! You've caught an ultra rare error. This is probably our fault, so please try again or check ",
@@ -10409,6 +10418,7 @@
     ],
     ")"
   ],
+  "uvIi//": "Friends Online",
   "NdQ+lJ": "Find a friend faster with a personal nickname. It will only be visible to you in your direct messages.",
   "vyodkJ": "Who can send you a friend request",
   "mGr3CQ": "Everyone",
@@ -20404,6 +20414,17 @@
   ],
   "2UeOlZ": "Treat",
   "6Zuiv7": "Trick",
+  "ydMZ2t": "Happy Halloween! Make sure to bring your server back from the dead.",
+  "MElQER": "Modding a dead server? That’s called crypt keeping.",
+  "aRr1ur": "The voice call is coming from inside the house…",
+  "AL/Soa": "OooOOOooO have a very spoopy Halloween season.",
+  "w2pMur": "Brewing up a bone-chilling ringtone...",
+  "WB9eZm": "BoooOOOOooOo0o!",
+  "rE+3z8": "In voice chat, everyone's a spirit.",
+  "qvtjMz": "Verifying your servers (probably) aren't haunted.",
+  "irDT8f": "We’re getting into the “spirit” of Halloween.",
+  "TlJKIS": "Are you a ghost or are you just invisible?",
+  "m+xpaG": "What’s lurking in the chat (other than you)?",
   "d8R2VF": "Hang Status",
   "3XKWcH": "Saved",
   "aSMptL": "Remove from Saved",
@@ -21477,6 +21498,7 @@
   "VNe8Pz": "Edit invite link.",
   "Ckxb6u": "Ask to Join",
   "x1UXGR": "Game has ended. Start a new one?",
+  "Ek+51t": "Game has ended.",
   "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
   "/8czHx": [
@@ -25250,8 +25272,7 @@
         ],
         "other": [
           [
-            1,
-            "num"
+            7
           ],
           " users"
         ]
@@ -30959,12 +30980,10 @@
       8,
       "gameSheetHook",
       [
-        "Action ",
-        "& ",
-        "Adventure Quest"
+        "Action Packed event titles"
       ]
     ],
-    " titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -30988,10 +31007,10 @@
       8,
       "gameSheetHook",
       [
-        "Family-Friendly"
+        "Fun for Everyone event titles"
       ]
     ],
-    " titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31015,10 +31034,12 @@
       8,
       "gameSheetHook",
       [
-        "Winter Holiday Playfest"
+        "Snow Day ",
+        "& ",
+        "Chill event titles"
       ]
     ],
-    " event titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31042,10 +31063,10 @@
       8,
       "gameSheetHook",
       [
-        "New Years’s Fresh Start"
+        "2025 Game Over event titles"
       ]
     ],
-    " event titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31069,12 +31090,10 @@
       8,
       "gameSheetHook",
       [
-        "Racing ",
-        "& ",
-        "Sports"
+        "Speed Run event titles"
       ]
     ],
-    " titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31098,12 +31117,10 @@
       8,
       "gameSheetHook",
       [
-        "RPG ",
-        "& ",
-        "MMO"
+        "Need More Mana event titles"
       ]
     ],
-    " titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -31127,10 +31144,10 @@
       8,
       "gameSheetHook",
       [
-        "Creative Sandbox Quest"
+        "Creative Mode event titles"
       ]
     ],
-    " titles for ",
+    " for ",
     [
       2,
       "targetMinutes"
@@ -32436,7 +32453,6 @@
     "."
   ],
   "mOrpXF": "Start Playing!",
-  "Au8ug4": "No Orb Quests Available",
   "dYE1p6": [
     "Find this Quest again in User Settings ",
     [
@@ -35479,7 +35495,7 @@
   "MDOXJS": "Requires higher Server Boost Level",
   "Rtvk9f": "Discord Sounds",
   "Tj5Nws": "Soundmoji is currently only supported on Desktop.",
-  "Z5OQNj": "❄️ Winter",
+  "+LasFR": "🎃 Halloween",
   "sWmtIy": "Mute",
   "NHJxcn": "Unmute",
   "JOtgS0": "[Original Message Deleted]",
@@ -40198,6 +40214,7 @@
   "kcuWvb": "They won't be notified",
   "b33pLC": "Show Profile?",
   "QbcRCA": "Don't show this again",
+  "Zyn45e": "Friends Return",
   "cduTBA": "User Settings",
   "NepzEx": "About Me",
   "yb7itb": "Didn't get the email? Make sure to check your spam folder.",

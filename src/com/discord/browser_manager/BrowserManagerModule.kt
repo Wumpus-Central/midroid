@@ -8,6 +8,12 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `openInAppURL$lambda$1`(var0: Promise, var1: Exception): Unit {
       var0.reject(null, var1.getMessage(), var1, null);
@@ -34,7 +40,7 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
 
    public override fun openInAppURL(url: String, promise: Promise) {
       val var4: BrowserManager = BrowserManager.INSTANCE;
-      var var3: Any = this.getCurrentActivity();
+      var var3: Any = this.reactContext.getCurrentActivity();
       if (var3 == null) {
          var3 = this.getReactApplicationContext();
       }

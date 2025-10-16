@@ -306,27 +306,83 @@
   "cqIdqa": "All purchases your teen made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
   "85PtWl": "All purchases you made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
   "bdBmq6": "Activity",
-  "pzKKoK": [
+  "IYqGMD": [
     [
-      2,
-      "messageCount"
+      6,
+      "messageCount",
+      {
+        "one": [
+          "1 message"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " messages"
+        ]
+      },
+      0,
+      "cardinal"
     ],
-    " messages"
+    " • ",
+    [
+      6,
+      "callCount",
+      {
+        "one": [
+          "1 call"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " calls"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "L/Cj7e": [
+    [
+      6,
+      "callCount",
+      {
+        "one": [
+          "1 call"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " calls"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "6X1F0t": [
+    [
+      6,
+      "messageCount",
+      {
+        "one": [
+          "1 message"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " messages"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
   ],
   "Lq9Sen": "Top Servers",
   "BxbvS0": "Top Users",
-  "Fjwpen": [
-    [
-      2,
-      "dmsSent"
-    ],
-    " messages  •  ",
-    [
-      2,
-      "callCount"
-    ],
-    " calls"
-  ],
   "fwQgEx": [
     "Added ",
     [

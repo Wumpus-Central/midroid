@@ -112,20 +112,20 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var3: java.lang.String = this.src;
+      val var5: java.lang.String = this.name;
+      val var2: java.lang.String = this.src;
       val var6: java.lang.String = this.displayName;
-      val var5: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var4: java.lang.Boolean = this.animated;
       val var1: StringBuilder = new StringBuilder();
       var1.append("MessageReactionEmoji(name=");
-      var1.append(var2);
+      var1.append(var5);
       var1.append(", src=");
-      var1.append(var3);
+      var1.append(var2);
       var1.append(", displayName=");
       var1.append(var6);
       var1.append(", id=");
-      var1.append(var5);
+      var1.append(var3);
       var1.append(", animated=");
       var1.append(var4);
       var1.append(")");

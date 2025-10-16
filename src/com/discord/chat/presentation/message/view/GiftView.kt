@@ -199,23 +199,23 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.c((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         val var11: TextView = this.binding.title;
+         val var32: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var11.setTextColor(var27.getTitleColor());
-         val var32: java.lang.CharSequence = var11.getText();
+         var32.setTextColor(var27.getTitleColor());
+         var var11: java.lang.CharSequence = var32.getText();
          var var20: Byte;
-         if (!StringsKt.c0(var32)) {
+         if (!StringsKt.c0(var11)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var11.setVisibility(var20);
+         var32.setVisibility(var20);
          val var33: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
          var33.setTextColor(var27.getSubtitleColor());
-         val var35: java.lang.CharSequence = var33.getText();
-         if (!StringsKt.c0(var35)) {
+         var11 = var33.getText();
+         if (!StringsKt.c0(var11)) {
             var20 = 0;
          } else {
             var20 = 8;

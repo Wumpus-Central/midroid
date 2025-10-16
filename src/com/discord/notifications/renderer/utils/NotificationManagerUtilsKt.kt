@@ -46,16 +46,16 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
    if (var4 != null) {
       label35:
       try {
-         val var11: kotlin.Result.a = Result.e;
-         var10 = Result.b(var4.getActiveNotifications());
+         val var10: kotlin.Result.a = Result.e;
+         var9 = Result.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var9: kotlin.Result.a = Result.e;
-         var10 = Result.b(kotlin.c.a(var6));
+         val var13: kotlin.Result.a = Result.e;
+         var9 = Result.b(kotlin.c.a(var6));
          break label35;
       }
 
-      var4 = (NotificationManager)var10;
-      if (Result.g(var10)) {
+      var4 = (NotificationManager)var9;
+      if (Result.g(var9)) {
          var4 = null;
       }
 
@@ -67,13 +67,13 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 
          while (true) {
             if (var2 >= var3) {
-               var13 = null;
+               var12 = null;
                break;
             }
 
-            val var12: StatusBarNotification = var15[var2];
+            val var11: StatusBarNotification = var15[var2];
             if (var15[var2].getTag() == var1) {
-               var13 = var12;
+               var12 = var11;
                break;
             }
 
@@ -81,8 +81,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          }
 
          var8 = null;
-         if (var13 != null) {
-            var8 = var13.getNotification();
+         if (var12 != null) {
+            var8 = var12.getNotification();
          }
       }
    }
@@ -135,9 +135,9 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var14: Regex = messageRegex;
-                  val var8: java.lang.String = var21.getTag();
-                  var15 = Regex.c(var14, var8, 0, 2, null);
+                  val var8: Regex = messageRegex;
+                  val var14: java.lang.String = var21.getTag();
+                  var15 = Regex.c(var8, var14, 0, 2, null);
                   if (var15 != null) {
                      val var22: java.util.List = var15.b();
                      if (var22 != null) {
@@ -183,16 +183,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var14: kotlin.Result.a = Result.e;
-         var13 = Result.b(var6.getActiveNotifications());
-      } catch (var10: java.lang.Throwable) {
          val var15: kotlin.Result.a = Result.e;
-         var13 = Result.b(kotlin.c.a(var10));
+         var14 = Result.b(var6.getActiveNotifications());
+      } catch (var10: java.lang.Throwable) {
+         val var13: kotlin.Result.a = Result.e;
+         var14 = Result.b(kotlin.c.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var13;
-      if (Result.g(var13)) {
+      var6 = (NotificationManager)var14;
+      if (Result.g(var14)) {
          var6 = null;
       }
 
@@ -208,13 +208,13 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
             if (var17[var3].getTag() == null) {
                var5 = false;
             } else {
-               var var8: java.lang.String = ChannelId.toString-impl(var1);
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("CALL_RING");
-               var9.append(var8);
-               var8 = var9.toString();
-               val var20: java.lang.String = var18.getTag();
-               var5 = StringsKt.I(var20, var8, false, 2, null);
+               var var9: java.lang.String = ChannelId.toString-impl(var1);
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("CALL_RING");
+               var8.append(var9);
+               val var19: java.lang.String = var8.toString();
+               var9 = var18.getTag();
+               var5 = StringsKt.I(var9, var19, false, 2, null);
             }
 
             if (var5) {

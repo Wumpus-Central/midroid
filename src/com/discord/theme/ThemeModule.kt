@@ -7,9 +7,15 @@ import com.facebook.react.bridge.ReactApplicationContext
 import i2.f3
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `updateTheme$lambda$0`(var0: ThemeModule) {
-      val var1: Activity = var0.getCurrentActivity();
+      val var1: Activity = var0.reactContext.getCurrentActivity();
       if (var1 != null) {
          ActivityThemeUtils.INSTANCE.updateActivityTheming$theme_release(var1);
       }
@@ -60,7 +66,7 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMod
             ThemeManager.INSTANCE.setMidnightTheme();
          }
 
-         val var3: Activity = this.getCurrentActivity();
+         val var3: Activity = this.reactContext.getCurrentActivity();
          if (var3 != null) {
             var3.runOnUiThread(new f3(this));
          }

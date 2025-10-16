@@ -17,33 +17,34 @@ import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
+   public final val reactContext: ReactApplicationContext
    private final var currentPromise: Promise?
-
-   private final val webauthn: WebAuthn = new WebAuthn(new Function1<java.lang.String, Unit>(this) {
-      {
-         super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
-      }
-
-      public final void invoke(java.lang.String var1) {
-         SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
-      }
-   }, new Function1<java.lang.String, Unit>(this) {
-      {
-         super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
-      }
-
-      public final void invoke(java.lang.String var1) {
-         SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
-      }
-   })
-
+   private final val webauthn: WebAuthn
    private final val credentialManager: CredentialManager
    private final val activityEventListener: <unrepresentable>
 
    init {
-      val var2: CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      this.credentialManager = var2.a(var1);
+      this.reactContext = var1;
+      this.webauthn = new WebAuthn(new Function1<java.lang.String, Unit>(this) {
+         {
+            super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke(java.lang.String var1) {
+            SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
+         }
+      }, new Function1<java.lang.String, Unit>(this) {
+         {
+            super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke(java.lang.String var1) {
+            SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
+         }
+      });
+      val var3: CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -90,7 +91,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("device does not support passkeys"));
       } else {
          this.currentPromise = var2;
-         val var3: Activity = this.getCurrentActivity();
+         val var3: Activity = this.reactContext.getCurrentActivity();
          db.f.d(
             m.a(var3 as LifecycleOwner),
             null,
@@ -110,7 +111,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("already running"));
       } else {
          this.currentPromise = var2;
-         this.webauthn.authenticateSecurityKey(var1, this.getCurrentActivity());
+         this.webauthn.authenticateSecurityKey(var1, this.reactContext.getCurrentActivity());
       }
    }
 
@@ -141,7 +142,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("device does not support passkeys"));
       } else {
          this.currentPromise = var2;
-         val var3: Activity = this.getCurrentActivity();
+         val var3: Activity = this.reactContext.getCurrentActivity();
          db.f.d(
             m.a(var3 as LifecycleOwner),
             null,
@@ -161,7 +162,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("already running"));
       } else {
          this.currentPromise = var2;
-         this.webauthn.registerSecurityKey(var1, this.getCurrentActivity());
+         this.webauthn.registerSecurityKey(var1, this.reactContext.getCurrentActivity());
       }
    }
 

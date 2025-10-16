@@ -86,22 +86,22 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    public override fun toString(): String {
       val var1: Int = this.type;
       val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.errorText;
+      val var6: java.lang.String = this.errorText;
       val var4: java.util.List = this.components;
-      val var5: SectionAccessory = this.accessory;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SectionComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var2);
-      var6.append(", errorText=");
-      var6.append(var3);
-      var6.append(", components=");
-      var6.append(var4);
-      var6.append(", accessory=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var3: SectionAccessory = this.accessory;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SectionComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var2);
+      var5.append(", errorText=");
+      var5.append(var6);
+      var5.append(", components=");
+      var5.append(var4);
+      var5.append(", accessory=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

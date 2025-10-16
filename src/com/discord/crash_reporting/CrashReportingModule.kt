@@ -99,16 +99,16 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.initSystemLogCapture(var2);
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      var2.initSystemLogCapture(var1);
       ReactSoftExceptionLogger.addListener(this.reactSoftExceptionListener);
       r2.a.x(new FLogDelegate());
    }

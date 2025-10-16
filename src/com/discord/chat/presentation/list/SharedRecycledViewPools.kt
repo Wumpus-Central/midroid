@@ -27,9 +27,9 @@ public object SharedRecycledViewPools {
 
    @JvmStatic
    fun {
-      val var0: Pair = B9.s.a(RegularMessageDelegate.class, 50);
-      val var1: Int = 25;
-      recycledViewPoolSizes = L.l(new Pair[]{var0, B9.s.a(SystemMessageDelegate.class, var1), B9.s.a(SeparatorDelegate.class, var1)});
+      val var1: Pair = B9.s.a(RegularMessageDelegate.class, 50);
+      val var0: Int = 25;
+      recycledViewPoolSizes = L.l(new Pair[]{var1, B9.s.a(SystemMessageDelegate.class, var0), B9.s.a(SeparatorDelegate.class, var0)});
    }
 
    @JvmStatic
@@ -45,9 +45,9 @@ public object SharedRecycledViewPools {
    public fun configureChatListViewPoolSizes(delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>) {
       for (Entry var6 : recycledViewPoolSizes.entrySet()) {
          var var5: Class = var6.getKey() as Class;
-         val var2: Int = (var6.getValue() as java.lang.Number).intValue();
+         val var3: Int = (var6.getValue() as java.lang.Number).intValue();
          var5 = (Class)var1.get(var5);
-         INSTANCE.getChatListViewPool().setMaxRecycledViews((var5 as java.lang.Number).intValue(), var2);
+         INSTANCE.getChatListViewPool().setMaxRecycledViews((var5 as java.lang.Number).intValue(), var3);
       }
    }
 }

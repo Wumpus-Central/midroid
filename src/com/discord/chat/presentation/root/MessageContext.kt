@@ -160,8 +160,8 @@ public data class MessageContext(showDivider: Boolean = false,
 
    public override fun hashCode(): Int {
       val var6: Int = java.lang.Boolean.hashCode(this.showDivider);
-      val var5: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var3: Int = this.addReactionLabel.hashCode();
+      val var3: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var5: Int = this.addReactionLabel.hashCode();
       val var4: Int = this.addNewReactionAccessibilityLabel.hashCode();
       var var2: Int = 0;
       val var1: Int;
@@ -181,7 +181,7 @@ public data class MessageContext(showDivider: Boolean = false,
                         (
                                  (
                                           (
-                                                   ((((((var6 * 31 + var5) * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var7) * 31 + var2) * 31
+                                                   ((((((var6 * 31 + var3) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var7) * 31 + var2) * 31
                                                       + java.lang.Boolean.hashCode(this.useAttachmentGridLayout)
                                                 )
                                                 * 31
@@ -201,46 +201,46 @@ public data class MessageContext(showDivider: Boolean = false,
    }
 
    public override fun toString(): String {
-      val var1: Boolean = this.showDivider;
-      val var5: Boolean = this.canAddNewReactions;
-      val var10: java.lang.String = this.addReactionLabel;
-      val var13: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var8: ReactionsTheme = this.reactionsTheme;
-      val var6: Boolean = this.usingGradientTheme;
+      val var3: Boolean = this.showDivider;
+      val var4: Boolean = this.canAddNewReactions;
+      val var13: java.lang.String = this.addReactionLabel;
+      val var10: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var11: ReactionsTheme = this.reactionsTheme;
+      val var5: Boolean = this.usingGradientTheme;
       val var12: Truncation = this.truncation;
-      val var4: Boolean = this.useAttachmentGridLayout;
-      val var7: Boolean = this.useAttachmentUploadPreview;
-      val var2: Boolean = this.enableSwipeToReply;
-      val var3: Boolean = this.enableSwipeToEdit;
-      val var11: java.lang.String = this.obscureLearnMoreLabel;
-      val var14: MessageContextType = this.contextType;
+      val var1: Boolean = this.useAttachmentGridLayout;
+      val var2: Boolean = this.useAttachmentUploadPreview;
+      val var6: Boolean = this.enableSwipeToReply;
+      val var7: Boolean = this.enableSwipeToEdit;
+      val var14: java.lang.String = this.obscureLearnMoreLabel;
+      val var8: MessageContextType = this.contextType;
       val var9: StringBuilder = new StringBuilder();
       var9.append("MessageContext(showDivider=");
-      var9.append(var1);
+      var9.append(var3);
       var9.append(", canAddNewReactions=");
-      var9.append(var5);
+      var9.append(var4);
       var9.append(", addReactionLabel=");
-      var9.append(var10);
-      var9.append(", addNewReactionAccessibilityLabel=");
       var9.append(var13);
+      var9.append(", addNewReactionAccessibilityLabel=");
+      var9.append(var10);
       var9.append(", reactionsTheme=");
-      var9.append(var8);
+      var9.append(var11);
       var9.append(", usingGradientTheme=");
-      var9.append(var6);
+      var9.append(var5);
       var9.append(", truncation=");
       var9.append(var12);
       var9.append(", useAttachmentGridLayout=");
-      var9.append(var4);
+      var9.append(var1);
       var9.append(", useAttachmentUploadPreview=");
-      var9.append(var7);
-      var9.append(", enableSwipeToReply=");
       var9.append(var2);
+      var9.append(", enableSwipeToReply=");
+      var9.append(var6);
       var9.append(", enableSwipeToEdit=");
-      var9.append(var3);
+      var9.append(var7);
       var9.append(", obscureLearnMoreLabel=");
-      var9.append(var11);
-      var9.append(", contextType=");
       var9.append(var14);
+      var9.append(", contextType=");
+      var9.append(var8);
       var9.append(")");
       return var9.toString();
    }

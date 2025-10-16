@@ -29,7 +29,7 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
    }
 
    public open fun getScreenSize(): WritableNativeMap {
-      val var1: MetricsSize = DeviceMetrics.INSTANCE.getScreenSize(this.getCurrentActivity());
+      val var1: MetricsSize = DeviceMetrics.INSTANCE.getScreenSize(this.reactContext.getCurrentActivity());
       if (var1 != null) {
          val var2: WritableNativeMap = var1.serialize();
          if (var2 != null) {
@@ -41,28 +41,28 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
-      val var10: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
-      val var5: Pair = s.a("device", Build.DEVICE);
-      val var1: Pair = s.a("deviceModel", Build.MODEL);
+      val var1: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
+      val var6: Pair = s.a("device", Build.DEVICE);
+      val var5: Pair = s.a("deviceModel", Build.MODEL);
       val var7: Pair = s.a("deviceBrand", Build.BRAND);
       val var2: Pair = s.a("deviceProduct", Build.PRODUCT);
-      val var9: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
-      val var8: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
-      val var3: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
-      val var4: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
-      val var6: Context = this.reactContext.getApplicationContext();
+      val var3: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
+      val var10: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
+      val var9: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
+      val var8: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
+      val var4: Context = this.reactContext.getApplicationContext();
       return L.m(
          new Pair[]{
-            var10,
-            var5,
             var1,
+            var6,
+            var5,
             var7,
             var2,
+            var3,
+            var10,
             var9,
             var8,
-            var3,
-            var4,
-            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var6)),
+            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var4)),
             s.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq()),
             s.a("timeZone", TimeZone.getDefault().getID())
          }
@@ -70,7 +70,7 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
    }
 
    public open fun getWindowSize(): WritableNativeMap {
-      val var1: MetricsSize = DeviceMetrics.INSTANCE.getWindowSize(this.getCurrentActivity());
+      val var1: MetricsSize = DeviceMetrics.INSTANCE.getWindowSize(this.reactContext.getCurrentActivity());
       if (var1 != null) {
          val var2: WritableNativeMap = var1.serialize();
          if (var2 != null) {

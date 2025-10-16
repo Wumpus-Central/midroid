@@ -29,7 +29,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       shouldAutoPlayGif: Boolean
    ) {
       val var25: Attachment = var2.getAttachment();
-      val var24: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var22: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -39,11 +39,11 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          }
       });
       val var21: java.lang.String = var25.getUrl();
-      val var10: Int = var25.getWidth();
+      val var9: Int = var25.getWidth();
       val var11: Int = var25.getHeight();
-      val var22: java.lang.String = var25.getPlaceholder();
-      val var23: Int = var25.getPlaceholderVersion();
-      val var9: Int = var2.getRadiusPx();
+      val var23: java.lang.String = var25.getPlaceholder();
+      val var24: Int = var25.getPlaceholderVersion();
+      val var10: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -93,10 +93,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       val var19: Boolean = var25.getShowDescription();
-      val var37: java.lang.String = var25.getDescription();
-      val var35: java.lang.String = var25.getHint();
+      val var35: java.lang.String = var25.getDescription();
+      val var37: java.lang.String = var25.getHint();
       val var18: Boolean = var2.getUseNewAltTextButton();
-      val var27: Function1 = new Function1<java.lang.String, Unit>(var1) {
+      val var28: Function1 = new Function1<java.lang.String, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -105,8 +105,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       };
-      val var28: java.lang.String = var25.getRole();
-      val var29: java.lang.String = var25.getFilename();
+      val var29: java.lang.String = var25.getRole();
+      val var27: java.lang.String = var25.getFilename();
       val var36: java.lang.Boolean = var25.getSrcIsAnimated();
       val var16: Boolean;
       if (var36 != null) {
@@ -117,10 +117,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
 
       super.bind(
          var21,
-         var10,
+         var9,
          var11,
-         var22,
          var23,
+         var24,
          var17,
          var30,
          var12,
@@ -128,19 +128,19 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var14,
          var15,
          var19,
-         var37,
          var35,
+         var37,
          var18,
-         var27,
-         var9,
+         var28,
+         var10,
          var20,
          var3 xor true,
          var4,
          var5,
-         var24,
-         var28,
-         var8,
+         var22,
          var29,
+         var8,
+         var27,
          var16
       );
    }

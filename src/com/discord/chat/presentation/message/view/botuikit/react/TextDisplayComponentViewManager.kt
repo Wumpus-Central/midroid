@@ -51,10 +51,10 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
    private fun createTextDisplayComponentContext(view: TextDisplayComponentView, data: Data): ComponentContext {
-      val var4: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
-      val var3: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
+      val var3: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
+      val var4: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
       return new ComponentContext(
-         var4,
+         var3,
          ComponentContextDefaults.INSTANCE.getGENERAL_HANDLERS(),
          var2.getMarkdownTextRenderOptions(),
          new MarkdownTextRenderEventHandlers(
@@ -73,8 +73,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             new I(this, var1),
             new J()
          ),
-         var3.getMEDIA_HANDLERS(),
-         var3.getCOMPONENT_HANDLERS(),
+         var4.getMEDIA_HANDLERS(),
+         var4.getCOMPONENT_HANDLERS(),
          new WidthInfo(0, 0, 0, 4, null),
          false,
          false,

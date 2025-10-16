@@ -165,7 +165,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun purchase(productId: String, userId: String, promise: Promise) {
       BillingManager.purchase$default(
-         this.billingManager, this.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
+         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
       );
    }
 
@@ -175,6 +175,6 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      this.billingManager.purchase(this.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
+      this.billingManager.purchase(this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
    }
 }

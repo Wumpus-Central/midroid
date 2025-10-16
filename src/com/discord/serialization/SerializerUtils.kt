@@ -24,14 +24,14 @@ public object SerializerUtils {
       } else {
          val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var5 : c.a(var2)) {
-            val var4: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
+         for (KProperty1 var7 : c.a(var2)) {
+            val var4: JsonElement = (var3 as JsonObject).get(var7.getName()) as JsonElement;
             if (var4 == null) {
-               if (!var5.getReturnType().isMarkedNullable()) {
-                  var6.put(var5.getName(), "null");
+               if (!var7.getReturnType().isMarkedNullable()) {
+                  var6.put(var7.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var5, var4)) {
-               var6.put(var5.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var7, var4)) {
+               var6.put(var7.getName(), var4.toString());
             }
          }
 

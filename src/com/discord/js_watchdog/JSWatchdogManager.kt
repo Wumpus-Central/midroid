@@ -206,11 +206,11 @@ public object JSWatchdogManager {
 
                      if (var15 > 1000L) {
                         try {
-                           val var7: Log = Log.INSTANCE;
-                           val var19: StringBuilder = new StringBuilder();
-                           var19.append("Exceeded JS stall threshold [based on previous ping]: ");
-                           var19.append(var15);
-                           Log.i$default(var7, "JSWatchdogManager", var19.toString(), null, 4, null);
+                           val var19: Log = Log.INSTANCE;
+                           val var7: StringBuilder = new StringBuilder();
+                           var7.append("Exceeded JS stall threshold [based on previous ping]: ");
+                           var7.append(var15);
+                           Log.i$default(var19, "JSWatchdogManager", var7.toString(), null, 4, null);
                            var1.element = true;
                            JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var15, var5, var4);
                         } catch (var10: Exception) {
@@ -223,8 +223,8 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var18: Timer = new Timer();
-                        val var20: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
+                        val var20: Timer = new Timer();
+                        val var21: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
                            final java.lang.String $sessionId$inlined;
@@ -242,8 +242,8 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var18.scheduleAtFixedRate(var20, 1500L, 1000L);
-                        JSWatchdogManager.access$setFreezeTimer$p(var20);
+                        var20.scheduleAtFixedRate(var21, 1500L, 1000L);
+                        JSWatchdogManager.access$setFreezeTimer$p(var21);
                      }
                   } catch (var9: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var9);
