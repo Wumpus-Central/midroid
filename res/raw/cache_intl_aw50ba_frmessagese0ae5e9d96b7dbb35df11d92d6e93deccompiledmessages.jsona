@@ -8644,10 +8644,12 @@
   "+/6Nv7": "Mot de passe oublié ?",
   "R04ENT": "Supprimer le nom du serveur",
   "/+OQEh": "Mises à jour du statut des personnes avec qui tu discutes.",
+  "E6O06u": "Reçois une notification lorsque ton ami(e) est en ligne pendant plusieurs minutes.",
   "mUbulZ": "Tu reçois des notifications pour tous les messages sur ce serveur, mais tu peux modifier ce choix ici",
   "GGAdHR": "Tu reçois des notifications uniquement pour les mentions sur ce serveur, mais tu peux modifier ce choix ici",
   "t0mEt7": "Pour recevoir des notifications de ce salon ou modifier des paramètres, tu dois rétablir les notifications de ce salon.",
   "oWF6eX": "Reçois des notifications lorsque quelqu'un réagit à tes messages.",
+  "XdihbG": "Reçois une notification lorsque ton ami(e) revient sur Discord après une longue pause",
   "rngMNz": "Reçois une notification lorsque tes amis les plus proches rejoignent des salons vocaux sur des serveurs avec 200 membres ou moins.",
   "aTVNen": [
     "Oups ! Une erreur très rare s'est produite. C'est probablement de notre faute, nous te recommandons donc de réessayer ou de consulter ",
@@ -10123,6 +10125,7 @@
     ],
     "."
   ],
+  "uvIi//": "Ami(e)s en ligne",
   "NdQ+lJ": "Trouver un ami est plus facile s'il dispose d'un pseudo personnel. Il ne sera visible que par toi dans les messages privés.",
   "vyodkJ": "Qui peut t'envoyer une demande d'ami",
   "mGr3CQ": "Tout le monde",
@@ -39169,6 +39172,7 @@
   "kcuWvb": "Il ou elle ne sera pas notifié(e)",
   "b33pLC": "Afficher le profil ?",
   "QbcRCA": "Ne plus afficher",
+  "Zyn45e": "Des ami(e)s de retour",
   "cduTBA": "Paramètres utilisateur",
   "NepzEx": "À propos de moi",
   "yb7itb": "Tu n'as pas reçu l'email ? Pense à bien vérifier ton dossier de spam.",

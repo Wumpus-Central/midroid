@@ -8672,10 +8672,12 @@
   "+/6Nv7": "Hai dimenticato la password?",
   "R04ENT": "Elimina il nome del server",
   "/+OQEh": "Aggiornamenti di stato dalle persone con cui parli.",
+  "E6O06u": "Ricevi una notifica quando il tuo amico è online per più di qualche minuto.",
   "mUbulZ": "Ricevi le notifiche di tutti i messaggi in questo server, ma qui puoi annullare questa funzione",
   "GGAdHR": "Ricevi le notifiche solo dalle menzioni in questo server, ma qui puoi annullare questa funzione",
   "t0mEt7": "Non puoi ricevere notifiche da questo canale o modificare le impostazioni finché non togli il silenziamento.",
   "oWF6eX": "Ricevi notifiche quando vengono aggiunte reazioni ai tuoi messaggi.",
+  "XdihbG": "Ricevi una notifica quando il tuo amico torna su Discord dopo una lunga pausa",
   "rngMNz": "Ricevi una notifica quando i tuoi amici più stretti si uniscono ai canali vocali nei server con 200 membri o meno.",
   "aTVNen": [
     "Oops! Sei incappato in un errore ultra raro. È probabilmente colpa nostra, prova di nuovo o controlla lo ",
@@ -10142,6 +10144,7 @@
     ],
     "."
   ],
+  "uvIi//": "Amici online",
   "NdQ+lJ": "Trova gli amici più velocemente usando i nickname personalizzati. Saranno visibili solo a te nei tuoi messaggi diretti.",
   "vyodkJ": "Chi può inviarti una richiesta di amicizia",
   "mGr3CQ": "Tutti",
@@ -39119,6 +39122,7 @@
   "kcuWvb": "Non riceverà alcun avviso",
   "b33pLC": "Mostrare il profilo?",
   "QbcRCA": "Non mostrare più",
+  "Zyn45e": "Gli amici tornano",
   "cduTBA": "Impostazioni utente",
   "NepzEx": "Chi sono",
   "yb7itb": "Non hai ricevuto l'e-mail? Assicurati di controllare la tua cartella spam.",

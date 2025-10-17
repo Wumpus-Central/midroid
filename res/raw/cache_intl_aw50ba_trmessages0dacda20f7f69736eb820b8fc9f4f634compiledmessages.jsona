@@ -8620,10 +8620,12 @@
   "+/6Nv7": "Şifreyi mi unuttun?",
   "R04ENT": "Sunucu Adını Sil",
   "/+OQEh": "Konuştuğun insanlardan durum güncellemeleri.",
+  "E6O06u": "Arkadaşın birkaç dakikadan fazla çevrim içi olduğunda bildirim al.",
   "mUbulZ": "Bu sunucudaki tüm mesajlar için bildirim alıyorsun, ama bu ayarı buradan geçersiz hale getirebilirsin",
   "GGAdHR": "Sadece, bu sunucudaki bahsetmeler için bildirim alıyorsun, ama bu ayarı buradan geçersiz hale getirebilirsin",
   "t0mEt7": "Bu kanaldaki susturmayı kaldırmadan bu kanaldan bildirim alamaz veya ayarları değiştiremezsin.",
   "oWF6eX": "Mesajlarına tepki verildiğinde bildirim al.",
+  "XdihbG": "Arkadaşın uzun bir aradan sonra Discord'a döndüğünde bildirim al",
   "rngMNz": "Yakın arkadaşların, 200 veya daha az üyeye sahip sunuculardaki ses kanallarına katıldığında bildirim al.",
   "aTVNen": [
     "Tüh! Son derece ender rastlanan bir hatayla karşılaştın. Bu muhtemelen bizden kaynaklanıyor. O yüzden lütfen tekrar dene veya ",
@@ -10087,6 +10089,7 @@
     ],
     "."
   ],
+  "uvIi//": "Çevrim İçi Arkadaşlar",
   "NdQ+lJ": "Kişisel takma adıyla arkadaşını daha hızlı bul. Direkt mesajlarında sadece sana görünecek.",
   "vyodkJ": "Sana kimler arkadaşlık isteği gönderebilir",
   "mGr3CQ": "Herkes",
@@ -39068,6 +39071,7 @@
   "kcuWvb": "Profil sahibinin haberi olmayacak",
   "b33pLC": "Profil Gösterilsin Mi?",
   "QbcRCA": "Bunu bir daha gösterme",
+  "Zyn45e": "Arkadaşların Geri Döndü",
   "cduTBA": "Kullanıcı Ayarları",
   "NepzEx": "Hakkımda",
   "yb7itb": "E-posta hesabına gelmedi mi? İstenmeyen posta klasörünü de kontrol etmeyi unutma.",

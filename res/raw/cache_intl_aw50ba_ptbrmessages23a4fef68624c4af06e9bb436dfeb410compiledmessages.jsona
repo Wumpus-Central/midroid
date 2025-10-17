@@ -8668,10 +8668,12 @@
   "+/6Nv7": "Esqueceu a senha?",
   "R04ENT": "Limpar nome do servidor",
   "/+OQEh": "Atualizações de status das pessoas com quem você fala.",
+  "E6O06u": "Receba uma notificação quando seu amigo ficar online por mais de alguns minutos.",
   "mUbulZ": "Você está recebendo notificação de todas as mensagem neste servidor, mas você pode alterar essa configuração aqui",
   "GGAdHR": "Você está recebendo notificações apenas de menções neste servidor, mas você pode alterar essa configuração aqui",
   "t0mEt7": "Você não receberá notificações deste canal nem poderá alterar configurações até dessilenciá-lo.",
   "oWF6eX": "Receba notificações quando reagem às suas mensagens.",
+  "XdihbG": "Receba uma notificação quando seu amigo voltar ao Discord após uma longa pausa",
   "rngMNz": "Receba uma notificação quando seus amigos próximos se juntarem a um canal de voz em servidores com 200 membros ou menos.",
   "aTVNen": [
     "Opa! Você encontrou um erro selvagem lendário. Provavelmente é nossa culpa, então tente novamente ou confira ",
@@ -10150,6 +10152,7 @@
     ],
     "."
   ],
+  "uvIi//": "Amigos online",
   "NdQ+lJ": "Encontre um amigo mais facilmente com apelidos personalizados. Ele só ficará visível nas suas mensagens diretas.",
   "vyodkJ": "Quem pode enviar um pedido de amizade para você",
   "mGr3CQ": "Todos",
@@ -39142,6 +39145,7 @@
   "kcuWvb": "Eles não serão notificados",
   "b33pLC": "Exibir perfil?",
   "QbcRCA": "Não mostrar isso novamente",
+  "Zyn45e": "Seus amigos retornam",
   "cduTBA": "Configurações de usuário",
   "NepzEx": "Sobre mim",
   "yb7itb": "Não recebeu o e-mail? Verifique também a sua pasta de spam.",

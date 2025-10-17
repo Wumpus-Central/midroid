@@ -8656,10 +8656,12 @@
   "+/6Nv7": "Glömt lösenord?",
   "R04ENT": "Rensa servernamn",
   "/+OQEh": "Statusuppdateringar från personer du pratar med.",
+  "E6O06u": "Få en avisering när din vän är online i mer än några minuter.",
   "mUbulZ": "Du får aviseringar för alla meddelanden i den här servern, men du kan ändra det här",
   "GGAdHR": "Du får aviseringar endast för omnämningar i den här servern, men du kan ändra det här",
   "t0mEt7": "Du kan inte få aviseringar från den här kanalen eller ändra dess inställningar förrän du slutat tysta den.",
   "oWF6eX": "Få aviseringar när dina meddelanden får reaktioner.",
+  "XdihbG": "Få en avisering när din vän kommer tillbaka till Discord efter en lång paus",
   "rngMNz": "Få en avisering när dina närmaste vänner går med i röstkanaler på servrar med 200 medlemmar eller färre.",
   "aTVNen": [
     "Oops! Du har råkat ut för ett extremt ovanligt fel. Det är antagligen vårt fel, så testa igen eller kolla på ",
@@ -10125,6 +10127,7 @@
     ],
     "."
   ],
+  "uvIi//": "Vänner online",
   "NdQ+lJ": "Med ett personligt smeknamn kan du hitta en vän snabbare. Det kommer bara att synas för dig, och då bara i dina direktmeddelanden.",
   "vyodkJ": "Vem som kan skicka en vänförfrågan till dig",
   "mGr3CQ": "Alla",
@@ -39016,6 +39019,7 @@
   "kcuWvb": "De får ingen avisering",
   "b33pLC": "Visa profil?",
   "QbcRCA": "Visa inte det här igen",
+  "Zyn45e": "Vänner återvänder",
   "cduTBA": "Användarinställningar",
   "NepzEx": "Om mig",
   "yb7itb": "Fick du inte mejlet? Titta i skräppostmappen.",

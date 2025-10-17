@@ -8625,10 +8625,12 @@
   "+/6Nv7": "Passwort vergessen?",
   "R04ENT": "Servernamen löschen",
   "/+OQEh": "Status-Updates von Personen, mit denen du Kontakt hast.",
+  "E6O06u": "Erhalte eine Benachrichtigung, wenn dein Freund länger als ein paar Minuten online ist.",
   "mUbulZ": "Du erhältst Benachrichtigungen zu allen Nachrichten auf diesem Server, aber du kannst die Einstellungen hier überschreiben",
   "GGAdHR": "Du erhältst nur Benachrichtigungen zu Erwähnungen auf diesem Server, aber du kannst die Einstellungen hier überschreiben",
   "t0mEt7": "Du kannst von diesem Kanal weder Benachrichtigungen erhalten noch die Einstellungen ändern, bis du die Stummschaltung dieses Kanals wieder aufhebst.",
   "oWF6eX": "Erhalte Benachrichtigungen, wenn auf deine Nachrichten reagiert wird.",
+  "XdihbG": "Erhalte eine Benachrichtigung, wenn dein Freund nach einer langen Pause wieder zu Discord zurückkommt.",
   "rngMNz": "Erhalte eine Benachrichtigung, wenn deine engsten Freunde Sprachkanälen auf Servern mit maximal 200 Mitgliedern beitreten.",
   "aTVNen": [
     "Nanu?! Ein wilder Fehler erscheint. Wir sollten ihn besser wieder einfangen. Das könnte eine Weile dauern – ",
@@ -10116,6 +10118,7 @@
     ],
     "."
   ],
+  "uvIi//": "Freunde online",
   "NdQ+lJ": "Finde Freunde schneller mit persönlichen Nicknames. Sie sind nur in deinen Direktnachrichten zu sehen.",
   "vyodkJ": "Wer dir eine Freundschaftsanfrage senden kann",
   "mGr3CQ": "Jeder",
@@ -39107,6 +39110,7 @@
   "kcuWvb": "Der Benutzer wird nicht benachrichtigt",
   "b33pLC": "Profil anzeigen?",
   "QbcRCA": "Nicht erneut anzeigen",
+  "Zyn45e": "Freunde kehren zurück",
   "cduTBA": "Benutzereinstellungen",
   "NepzEx": "Über mich",
   "yb7itb": "Hast du die E-Mail nicht bekommen? Überprüfe deinen Spam-Ordner.",

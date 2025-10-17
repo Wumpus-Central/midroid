@@ -8663,10 +8663,12 @@
   "+/6Nv7": "¿Has olvidado la contraseña?",
   "R04ENT": "Borrar nombre del servidor",
   "/+OQEh": "Actualizaciones de estado de la gente con la que hablas.",
+  "E6O06u": "Recibe una notificación cuando tu amigo esté en línea más de unos pocos minutos.",
   "mUbulZ": "Estás recibiendo notificaciones de todos los mensajes en este servidor, pero puedes cambiarlo aquí",
   "GGAdHR": "Estás recibiendo notificaciones solo de las menciones en este servidor, pero puedes cambiarlo aquí",
   "t0mEt7": "No puedes recibir notificaciones de este canal ni cambiar los ajustes hasta que desactives el silencio de este canal.",
   "oWF6eX": "Recibe notificaciones cuando alguien reaccione a tus mensajes.",
+  "XdihbG": "Recibe una notificación cuando tu amigo vuelva a Discord después de un largo descanso.",
   "rngMNz": "Recibe una notificación cuando tus amigos más cercanos se unan a canales de voz en servidores con 200 miembros o menos.",
   "aTVNen": [
     "¡Vaya! Se ha producido un error supermegarraro. Probablemente sea culpa nuestra, así que vuelve a intentarlo o consulta ",
@@ -10151,6 +10153,7 @@
     ],
     "."
   ],
+  "uvIi//": "Amigos en línea",
   "NdQ+lJ": "Encuentra más rápido a tus amigos con los apodos de amigo. Solo los podrás ver en los mensajes directos.",
   "vyodkJ": "Quién puede enviarte solicitudes de amistad",
   "mGr3CQ": "Todo el mundo",
@@ -39151,6 +39154,7 @@
   "kcuWvb": "No tendrá ninguna notificación",
   "b33pLC": "¿Mostrar el perfil?",
   "QbcRCA": "No volver a mostrar",
+  "Zyn45e": "Regreso de amigo",
   "cduTBA": "Ajustes de usuario",
   "NepzEx": "Sobre mí",
   "yb7itb": "¿No has recibido el correo electrónico? Asegúrate de comprobar la carpeta de spam.",

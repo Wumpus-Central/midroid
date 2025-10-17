@@ -8681,10 +8681,12 @@
   "+/6Nv7": "Glemt adgangskode?",
   "R04ENT": "Ryd servernavn",
   "/+OQEh": "Statusopdateringer fra mennesker, du taler med.",
+  "E6O06u": "Modtag en meddelelse, når din ven kommer online i mere end et par minutter.",
   "mUbulZ": "Du modtager underretninger fra alle meddelelser på denne server, men du kan tilsidesætte det her",
   "GGAdHR": "Du modtager underretninger vedrørende alle omtaler på denne server, men du kan tilsidesætte det her",
   "t0mEt7": "Du kan ikke modtage beskeder fra denne kanal og heller ikke ændre indstillinger, før du ophæver stumheden for denne kanal.",
   "oWF6eX": "Modtag notifikationer, når dine beskeder bliver reageret på.",
+  "XdihbG": "Modtag en meddelelse, når din ven vender tilbage til Discord efter en lang pause",
   "rngMNz": "Få en notifikation når dine nærmeste venner tilslutter sig stemmekanaler på servere med 200 eller færre medlemmer.",
   "aTVNen": [
     "Ups! Du har oplevet en meget sjælden fejl. Dette er sandsynligvis vores skyld, så prøv venligst igen eller tjek ",
@@ -10153,6 +10155,7 @@
     ],
     "."
   ],
+  "uvIi//": "Venner online",
   "NdQ+lJ": "Find en ven hurtigere med et personligt kaldenavn. Det vil kun være synligt for dig i dine direkte beskeder.",
   "vyodkJ": "Hvem kan sende dig en venneanmodning",
   "mGr3CQ": "Alle",
@@ -39130,6 +39133,7 @@
   "kcuWvb": "De får ikke besked",
   "b33pLC": "Vis profil?",
   "QbcRCA": "Vis ikke dette igen",
+  "Zyn45e": "Venner vender tilbage",
   "cduTBA": "Brugerindstillinger",
   "NepzEx": "Om mig",
   "yb7itb": "Har du ikke fået e-mailen? Husk at kigge i din spam-mappe.",
