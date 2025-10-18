@@ -144,11 +144,11 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
 
          // $VF: monitorexit
       } else {
-         val var5: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var5);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Expected to be on android main thread. Current: ");
+         var5.append(var2);
+         throw new IllegalStateException(var5.toString().toString());
       }
    }
 
@@ -163,21 +163,21 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer(var1), Surface
 
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var5: Log = Log.INSTANCE;
-         val var6: java.lang.String = access$getName(this);
+         val var6: Log = Log.INSTANCE;
+         val var9: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("createEglSurface (");
-         var9.append(var2);
-         var9.append(" total)");
-         Log.i$default(var5, var6, var9.toString(), null, 4, null);
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("createEglSurface (");
+         var5.append(var2);
+         var5.append(" total)");
+         Log.i$default(var6, var9, var5.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var7);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var4);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 

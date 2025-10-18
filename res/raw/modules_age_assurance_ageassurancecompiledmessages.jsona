@@ -15,8 +15,27 @@
       ]
     ]
   ],
+  "1/6wtb": "Restore access to Discord by verifying your age using one of the options below.",
   "eJmat7": "Usually fastest and totally automatic. All you need is a camera.",
   "2yLvkZ": "Take a video selfie",
   "ZdmRwc": "You’ll need a driver’s license, passport, or other ID. Then a photo selfie to confirm it’s you.",
-  "dwkwo6": "Scan your ID"
+  "dwkwo6": "Scan your ID",
+  "htWh1N": [
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ],
+    " on our Help Center"
+  ],
+  "cR6339": "No age verification methods available. This may be an error.",
+  "hDvmYG": "Reload"
 }

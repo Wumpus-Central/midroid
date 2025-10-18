@@ -4,15 +4,15 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import pb.g
-import pb.e.i
+import sc.j
+import sc.e.i
 
 public abstract class ComponentUnionSerializer<T> : KSerializer {
    public abstract val unionName: String
 
    public open val descriptor: SerialDescriptor
       public open get() {
-         return g.a(this.getUnionName(), i.a);
+         return j.b(this.getUnionName(), i.a);
       }
 
 

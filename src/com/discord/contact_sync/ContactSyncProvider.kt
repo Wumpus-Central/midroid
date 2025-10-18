@@ -62,14 +62,14 @@ public object ContactSyncProvider {
       // 45: astore 1
       // 46: aload 2
       // 47: aconst_null
-      // 48: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 48: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 4b: goto 5a
       // 4e: aload 4
       // 50: athrow
       // 51: astore 1
       // 52: aload 2
       // 53: aload 4
-      // 55: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 55: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 58: aload 1
       // 59: athrow
       // 5a: aload 1
@@ -94,8 +94,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var5 = var10;
-            var6 = var2;
+            var6 = var10;
+            var5 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -114,8 +114,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var5 = var4;
-               var6 = var13;
+               var6 = var4;
+               var5 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -124,8 +124,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var5 = var4;
-               var6 = var13;
+               var6 = var4;
+               var5 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -136,7 +136,7 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var6, var5);
+         return new ContactNameEntry(var5, var6);
       }
    }
 
@@ -149,10 +149,10 @@ public object ContactSyncProvider {
       } else {
          while (var8.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var10: java.lang.String = this.getColumnString(var8, "data4");
-            val var9: java.lang.String = this.getColumnString(var8, "_id");
+            val var9: java.lang.String = this.getColumnString(var8, "data4");
+            val var10: java.lang.String = this.getColumnString(var8, "_id");
             var var3: java.lang.String = this.getColumnString(var8, "contact_id");
-            if (var9 != null && var3 != null) {
+            if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -184,13 +184,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var10 != null) {
+               if (var9 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
@@ -282,7 +282,7 @@ public object ContactSyncProvider {
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
@@ -291,7 +291,7 @@ public object ContactSyncProvider {
       // 84: astore 2
       // 85: aload 3
       // 86: aload 1
-      // 87: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8a: aload 2
       // 8b: athrow
       // 8c: aload 2

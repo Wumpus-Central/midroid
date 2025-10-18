@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.polls
 
-import H9.a
+import Ja.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g(with = PollLayoutType.Serializer::class)
+@m(with = PollLayoutType.Serializer::class)
 public enum class PollLayoutType(serialNumber: Int) : IntEnum {
    IMAGE_ONLY(2),
    TEXT_AND_IMAGE(1),

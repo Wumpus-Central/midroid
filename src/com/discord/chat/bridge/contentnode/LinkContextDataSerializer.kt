@@ -3,14 +3,15 @@ package com.discord.chat.bridge.contentnode
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rb.g
+import uc.e
+import uc.h
 
-private object LinkContextDataSerializer : rb.d(LinkContextData::class) {
+private object LinkContextDataSerializer : e(LinkContextData::class) {
    protected open fun selectDeserializer(element: JsonElement): KSerializer<out LinkContextData> {
       val var2: KSerializer;
       if (var1 is JsonPrimitive) {
          var2 = LinkContextData.LinkUrl.Companion.serializer();
-      } else if (g.o(var1).containsKey("action")) {
+      } else if (h.n(var1).containsKey("action")) {
          var2 = LinkContextData.LinkContext.Companion.serializer();
       } else {
          var2 = LinkContextData.BindDoNothing.INSTANCE.serializer();

@@ -10,9 +10,9 @@ public final class a implements Function1 {
    public final BooleanRef d;
    public final VideoSink e;
    public final MediaEngine i;
-   public final String m;
+   public final String s;
 
    public final Object invoke(Object var1) {
-      return AttachedVideoSinks.c(this.d, this.e, this.i, this.m, (String)var1);
+      return AttachedVideoSinks.c(this.d, this.e, this.i, this.s, (String)var1);
    }
 }

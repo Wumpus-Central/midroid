@@ -1,6 +1,6 @@
 package com.discord.device.utils
 
-import B9.n
+import Da.p
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
@@ -52,7 +52,7 @@ public object DeviceReducedMotion {
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new n();
+               throw new p();
             }
 
             var3 = this.isSystemReducedMotionEnabled(var1);
@@ -80,7 +80,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = Ja.a.a(var0);
       }
 
       @JvmStatic

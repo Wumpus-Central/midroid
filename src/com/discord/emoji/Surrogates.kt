@@ -68,7 +68,7 @@ public inline class Surrogates {
    @JvmStatic
    public fun withoutDiversity(): String {
       val var1: CharArray = Character.toChars(var0.codePointAt(0));
-      return h.i0(var1, "", null, null, 0, null, null, 62, null);
+      return k.r0(var1, "", null, null, 0, null, null, 62, null);
    }
 
    override fun equals(var1: Any): Boolean {

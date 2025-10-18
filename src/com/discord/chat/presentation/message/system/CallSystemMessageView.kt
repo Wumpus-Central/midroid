@@ -28,11 +28,11 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
-import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import db.K
+import gc.K
 import java.util.ArrayList
 import java.util.Arrays
 import kotlin.coroutines.Continuation
@@ -46,8 +46,8 @@ import org.jetbrains.annotations.NotNull
 
 @SourceDebugExtension(["SMAP\nCallSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CallSystemMessageView.kt\ncom/discord/chat/presentation/message/system/CallSystemMessageView\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,158:1\n1557#2:159\n1628#2,3:160\n*S KotlinDebug\n*F\n+ 1 CallSystemMessageView.kt\ncom/discord/chat/presentation/message/system/CallSystemMessageView\n*L\n120#1:159\n120#1:160,3\n*E\n"])
 public class CallSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2) {
-   private final val greenIconColor: Int = ColorUtilsKt.getColorCompat(this, R.color.green_360)
-   private final val redIconColor: Int = ColorUtilsKt.getColorCompat(this, R.color.red_400)
+   private final val greenIconColor: Int = ColorUtilsKt.getColorCompat(this, color.green_360)
+   private final val redIconColor: Int = ColorUtilsKt.getColorCompat(this, color.red_400)
    private final val grayIconColor: Int
    private final val binding: CallSystemMessageViewBinding
 
@@ -99,15 +99,15 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var19: StringBuilder = new StringBuilder();
-      var19.append("Binding ");
-      var19.append(var9);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var19.toString(), null, 2, null);
+      val var9: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var19: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var19);
+      AttachedViewCoroutineScope.cancelAllWork$default(var9, var13.toString(), null, 2, null);
       if (var1.isCallActive() == var7) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
-         db.f.d(
+         gc.f.d(
             CoroutineViewUtilsKt.getAttachedScope(this),
             null,
             null,
@@ -133,7 +133,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                }
 
                public final Object invokeSuspend(Object var1) {
-                  val var3: Any = G9.b.e();
+                  val var3: Any = Ia.b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -142,9 +142,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     val var4: CallSystemMessageView = this.this$0;
-                     var1 = Lifecycle.State.m;
-                     val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
+                     val var5: CallSystemMessageView = this.this$0;
+                     var1 = Lifecycle.State.s;
+                     val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -166,7 +166,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           val var3: Any = G9.b.e();
+                           val var3: Any = Ia.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -176,8 +176,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                            } else {
                               kotlin.c.b(var1);
                               var1 = Duration.e;
-                              val var6: Flow = gb.e.n(
-                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, cb.b.n), Duration.e.c()), this.$start) {
+                              val var6: Flow = jc.e.r(
+                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, ec.b.t), Duration.e.c()), this.$start) {
                                     final long $start$inlined;
                                     final Flow $this_unsafeTransform$inlined;
 
@@ -229,7 +229,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                    }
 
                                                    var var5: Any = ((<unrepresentable>)var9).result;
-                                                   val var11: Any = G9.b.e();
+                                                   val var11: Any = Ia.b.e();
                                                    if (((<unrepresentable>)var9).label != 0) {
                                                       if (((<unrepresentable>)var9).label != 1) {
                                                          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -241,8 +241,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                       var5 = this.$this_unsafeFlow;
                                                       var1 = var1;
                                                       val var7: kotlin.time.Duration.a = Duration.e;
-                                                      val var8: java.lang.Comparable = kotlin.ranges.d.f(
-                                                         Duration.m(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, cb.b.m)),
+                                                      val var8: java.lang.Comparable = kotlin.ranges.e.g(
+                                                         Duration.m(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, ec.b.s)),
                                                          Duration.m(Duration.e.c())
                                                       );
                                                       ((<unrepresentable>)var9).label = 1;
@@ -256,7 +256,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                              },
                                              var2x
                                           );
-                                       return if (var3x === G9.b.e()) var3x else Unit.a;
+                                       return if (var3x === Ia.b.e()) var3x else Unit.a;
                                     }
                                  },
                                  K.a()
@@ -274,17 +274,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                     val var8: CallSystemMessageView = this.this$0;
                                     val var9: Message = this.$message;
                                     val var6x: Long = Duration.v(var1);
-                                    val var4x: Int = Duration.z(var1);
-                                    val var5: Int = Duration.B(var1);
-                                    Duration.A(var1);
+                                    val var5: Int = Duration.z(var1);
+                                    val var4x: Int = Duration.C(var1);
+                                    Duration.B(var1);
                                     val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
                                     val var10: java.lang.String = java.lang.String.format(
                                        "%02d:%02d:%02d%s",
                                        Arrays.copyOf(
                                           new Object[]{
-                                             kotlin.coroutines.jvm.internal.b.e(var6x),
-                                             kotlin.coroutines.jvm.internal.b.d(var4x),
-                                             kotlin.coroutines.jvm.internal.b.d(var5),
+                                             kotlin.coroutines.jvm.internal.b.f(var6x),
+                                             kotlin.coroutines.jvm.internal.b.e(var5),
+                                             kotlin.coroutines.jvm.internal.b.e(var4x),
                                              var9.getDescription()
                                           },
                                           4
@@ -304,7 +304,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var4, var1, var5, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var5, var1, var4, this) === var3) {
                         return var3;
                      }
                   }
@@ -349,7 +349,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
          public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
             super.onInitializeAccessibilityNodeInfo(var1, var2);
             val var3: Context = this.this$0.getContext();
-            var2.N0(I18nUtilsKt.i18nFormat$default(var3, I18nMessage.A11Y_ROLE_BUTTON, null, 2, null));
+            var2.S0(I18nUtilsKt.i18nFormat$default(var3, I18nMessage.A11Y_ROLE_BUTTON, null, 2, null));
          }
 
          @Override

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class StrikethroughContentNode(content: List<ContentNode>) : ContentNode() {
    public final val content: List<ContentNode>
 

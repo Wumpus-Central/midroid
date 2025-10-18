@@ -3,11 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       totalDurationSecs: Float,
       startDurationSecs: Float,
@@ -108,8 +109,8 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
          + this.attachmentId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

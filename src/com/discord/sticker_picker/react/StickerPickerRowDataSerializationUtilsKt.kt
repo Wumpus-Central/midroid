@@ -20,7 +20,7 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
    val var11: java.util.Iterator = var14.iterator();
 
    while (var11.hasNext()) {
-      var var5: Int = (var11 as I).nextInt();
+      var var5: Int = (var11 as L).nextInt();
       val var6: Boolean = var9.isNull(var5);
       var var7: StickerPickerRow.Sticker = null;
       if (!var6) {
@@ -34,10 +34,10 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
 
          var7 = null;
          if (var16 != null) {
-            val var20: ReadableMap = var9.getMap(var5);
-            val var12: java.lang.String = NativeMapExtensionsKt.getNonNullString(var20, "stickerId");
-            val var21: java.lang.String = NativeMapExtensionsKt.getNonNullString(var20, "stickerName");
-            var5 = var20.getInt("stickerType");
+            val var12: ReadableMap = var9.getMap(var5);
+            val var21: java.lang.String = NativeMapExtensionsKt.getNonNullString(var12, "stickerId");
+            val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var12, "stickerName");
+            var5 = var12.getInt("stickerType");
             val var17: StickerPickerRow.Sticker.Type;
             if (var5 != 1) {
                if (var5 != 2) {
@@ -61,13 +61,13 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
             }
 
             var7 = new StickerPickerRow.Sticker(
-               var12,
                var21,
+               var20,
                var17,
-               var20.getBoolean("stickerAnimated"),
-               NativeMapExtensionsKt.getNonNullString(var20, "stickerUrl"),
-               var20.getBoolean("stickerDisabled"),
-               var20.getBoolean("stickerOpaque")
+               var12.getBoolean("stickerAnimated"),
+               NativeMapExtensionsKt.getNonNullString(var12, "stickerUrl"),
+               var12.getBoolean("stickerDisabled"),
+               var12.getBoolean("stickerOpaque")
             );
          }
       }

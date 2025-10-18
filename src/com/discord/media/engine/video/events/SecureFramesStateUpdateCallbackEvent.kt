@@ -3,9 +3,9 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class SecureFramesStateUpdateCallbackEvent(connectionId: Int, stateUpdateJSON: String) : ReactEvent {
    public final val connectionId: Int
    public final val stateUpdateJSON: String

@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import x1.a;
 
 public final class GuildViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class GuildViewBinding implements ViewBinding {
    @NonNull
    public static GuildViewBinding bind(@NonNull View var0) {
       int var1 = R.id.guild_avatar;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.guild_text;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new GuildViewBinding(var0, var3, var2);
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
+            return new GuildViewBinding(var0, var2, var3);
          }
       }
 

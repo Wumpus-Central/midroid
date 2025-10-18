@@ -2,7 +2,7 @@ package com.discord.misc.utilities.coroutines
 
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
-import db.S
+import gc.S
 import kotlin.coroutines.CoroutineContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.v

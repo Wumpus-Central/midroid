@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    public final val r: Int
    public final val g: Int

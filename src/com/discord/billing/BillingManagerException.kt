@@ -65,6 +65,21 @@ public sealed class BillingManagerException protected constructor(reason: String
 
          return (BillingManagerException)var2;
       }
+
+      public fun wrap(e: Exception, context: String): BillingManagerException {
+         if (var1 is BillingManagerException) {
+            var1 = var1;
+         } else {
+            val var5: java.lang.String = var1.getMessage();
+            val var3: StringBuilder = new StringBuilder();
+            var3.append(var2);
+            var3.append(" exception: ");
+            var3.append(var5);
+            var1 = new BillingManagerException.BillingException(var3.toString());
+         }
+
+         return var1;
+      }
    }
 
    public class DeveloperErrorException(code: Int) : BillingManagerException {

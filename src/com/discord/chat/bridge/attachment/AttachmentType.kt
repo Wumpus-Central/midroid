@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.attachment
 
-import H9.a
+import Ja.a
 import kotlin.enums.EnumEntries
 
 public enum class AttachmentType(indexLabel: String) {

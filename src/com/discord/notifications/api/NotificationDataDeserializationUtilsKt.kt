@@ -2,7 +2,7 @@
 
 package com.discord.notifications.api
 
-import B9.s
+import Da.v
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -24,28 +24,28 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var5 : var9.entrySet()) {
-            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
-               var3.put(var5.getKey(), var5.getValue());
+         for (Entry var4 : var9.entrySet()) {
+            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
+               var3.put(var4.getKey(), var4.getValue());
             }
          }
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var20 : var3.entrySet()) {
-            var var24: Any = var20.getKey();
-            val var21: Any = var20.getValue();
-            var24 = var24 as java.lang.String;
-            var12.add(s.a(var24, var21 as java.lang.String));
+         for (Entry var24 : var3.entrySet()) {
+            var var20: Any = var24.getKey();
+            val var25: Any = var24.getValue();
+            var20 = var20 as java.lang.String;
+            var12.add(v.a(var20, var25 as java.lang.String));
          }
 
-         var9 = L.t(var12);
+         var9 = O.u(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = L.h();
+      var9 = O.i();
    }
 
    var var19: ChannelId;

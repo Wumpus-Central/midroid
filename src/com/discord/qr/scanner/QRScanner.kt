@@ -34,17 +34,17 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    }
 
    init {
-      val var5: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
-      val var4: CodeScanner = new CodeScanner(var1, var5.qrScanner);
+      val var6: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      val var4: CodeScanner = new CodeScanner(var1, var6.qrScanner);
       this.codeScanner = var4;
       this.runnable = new a(this);
       this.onCodeFound = new b();
       this.onCodeNotFound = new c();
-      var5.getRoot().setBackgroundColor(-16777216);
-      val var6: CodeScannerView = var5.qrScanner;
-      var6.setVisibility(0);
-      var5.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
+      var6.getRoot().setBackgroundColor(-16777216);
+      val var5: CodeScannerView = var6.qrScanner;
+      var5.setVisibility(0);
+      var6.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
       var4.a0(-1);
       var4.f0(CodeScanner.K);
       var4.b0(this);
@@ -71,7 +71,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       this.codeScanner.g0();
    }
 
-   public override fun onDecoded(result: Result) {
+   public open fun onDecoded(result: Result) {
       val var2: java.lang.String = var1.f();
       if (var2 != null && URLUtil.isValidUrl(var2)) {
          this.onCodeFound.invoke(var2);
@@ -85,7 +85,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       this.codeScanner.U();
    }
 
-   public override fun onError(thrown: Throwable) {
+   public open fun onError(thrown: Throwable) {
       CrashReporting.captureException$default(CrashReporting.INSTANCE, var1, false, 2, null);
       this.onCodeNotFound.invoke();
    }

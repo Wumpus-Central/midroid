@@ -1,6 +1,6 @@
 package com.discord.minibsdiff
 
-import Q1.a
+import Q2.a
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
@@ -25,8 +25,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var21: ByteArray = new byte[1000000];
       val var20: ByteArray = new byte[1000000];
+      val var21: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -39,37 +39,37 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var17 > var9) {
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var17 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var21[var7] += var20[var7];
+                  var20[var7] += var21[var7];
                }
 
-               var6.write(var21, 0, var8);
+               var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var17).iterator();
+            var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
-               var6.write(var21, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
+               var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var13);
-            var11 += var15 + var17;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var17 + var13;
          }
 
          var6.close();
@@ -77,7 +77,7 @@ public object BSDiff {
    }
 
    private fun chunkRange(total: Long): Sequence<Int> {
-      return k.B(CollectionsKt.V(d.r(d.t(0, var1), 1000000L)), new a(var1));
+      return k.C(CollectionsKt.X(e.u(e.w(0, var1), 1000000L)), new a(var1));
    }
 
    @JvmStatic
@@ -165,68 +165,68 @@ public object BSDiff {
       // 84: astore 6
       // 86: aload 3
       // 87: aconst_null
-      // 88: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 88: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8b: aload 2
       // 8c: aconst_null
-      // 8d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8d: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 90: aload 5
       // 92: aconst_null
-      // 93: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 93: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 96: aload 4
       // 98: aconst_null
-      // 99: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 99: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 9c: aload 1
       // 9d: aconst_null
-      // 9e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 9e: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // a1: return
-      // a2: astore 3
+      // a2: astore 2
       // a3: goto e5
       // a6: astore 2
       // a7: goto da
-      // aa: astore 2
+      // aa: astore 3
       // ab: goto cf
       // ae: astore 6
       // b0: goto c3
-      // b3: astore 7
-      // b5: aload 7
+      // b3: astore 6
+      // b5: aload 6
       // b7: athrow
-      // b8: astore 6
+      // b8: astore 7
       // ba: aload 3
-      // bb: aload 7
-      // bd: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // c0: aload 6
+      // bb: aload 6
+      // bd: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // c0: aload 7
       // c2: athrow
       // c3: aload 6
       // c5: athrow
       // c6: astore 3
       // c7: aload 2
       // c8: aload 6
-      // ca: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ca: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cd: aload 3
       // ce: athrow
-      // cf: aload 2
+      // cf: aload 3
       // d0: athrow
-      // d1: astore 3
+      // d1: astore 2
       // d2: aload 5
-      // d4: aload 2
-      // d5: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d8: aload 3
+      // d4: aload 3
+      // d5: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // d8: aload 2
       // d9: athrow
       // da: aload 2
       // db: athrow
       // dc: astore 3
       // dd: aload 4
       // df: aload 2
-      // e0: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // e0: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // e3: aload 3
       // e4: athrow
-      // e5: aload 3
+      // e5: aload 2
       // e6: athrow
-      // e7: astore 2
+      // e7: astore 3
       // e8: aload 1
-      // e9: aload 3
-      // ea: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // ed: aload 2
+      // e9: aload 2
+      // ea: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ed: aload 3
       // ee: athrow
    }
 

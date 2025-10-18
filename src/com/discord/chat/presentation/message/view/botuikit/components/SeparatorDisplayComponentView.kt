@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import B9.n
+import Da.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -46,7 +46,7 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       if (var6 != 1) {
          if (var6 != 2) {
             if (var6 != 3) {
-               throw new n();
+               throw new p();
             }
 
             var4 = 0;

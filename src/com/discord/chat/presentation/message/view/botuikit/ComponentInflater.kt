@@ -112,21 +112,21 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    }
 
    public fun <T : Component> getComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      val var5: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
-      var var4: ComponentView = null;
+      val var4: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
+      var var5: ComponentView = null;
       val var6: ComponentView;
-      if (var5 != null) {
-         var6 = CollectionsKt.H(var5) as ComponentView;
+      if (var4 != null) {
+         var6 = CollectionsKt.J(var4) as ComponentView;
       } else {
          var6 = null;
       }
 
       if (var6 != null) {
-         var4 = var6;
+         var5 = var6;
       }
 
-      var var7: ComponentView = var4;
-      if (var4 == null) {
+      var var7: ComponentView = var5;
+      if (var5 == null) {
          var7 = this.inflateComponent(var1, var2);
       }
 

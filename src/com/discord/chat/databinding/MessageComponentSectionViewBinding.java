@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.google.android.flexbox.FlexboxLayout;
-import y0.a;
+import x1.a;
 
 public final class MessageComponentSectionViewBinding implements ViewBinding {
    @NonNull

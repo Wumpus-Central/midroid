@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class TapSummaryData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
    public final val channelId: String
    public final val messageId: String
@@ -55,21 +56,21 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
       return (this.channelId.hashCode() * 31 + this.messageId.hashCode()) * 31 + this.summaryId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.summaryId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.summaryId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapSummaryData(channelId=");
       var2.append(var3);
       var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(", summaryId=");
       var2.append(var1);
+      var2.append(", summaryId=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

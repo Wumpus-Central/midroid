@@ -3,9 +3,9 @@ package com.discord.media_player.reactevents
 import com.discord.media_player.MediaSource
 import com.discord.primitives.MessageId
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, channelId: String?, messageId: MessageId?, attachmentIndex: Int?) : MediaPlayerPlaybackSource(
       var1, var2, var3, var4, var5
    ) {
@@ -54,23 +54,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         val var3: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         val var4: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
          if (!(this.id == (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!(this.assetUrl == var3.assetUrl)) {
+         } else if (!(this.assetUrl == var4.assetUrl)) {
             return false;
-         } else if (!(this.channelId == var3.channelId)) {
+         } else if (!(this.channelId == var4.channelId)) {
             return false;
          } else {
             var var2: Boolean;
             label37: {
                if (this.messageId == null) {
-                  if (var3.messageId == null) {
+                  if (var4.messageId == null) {
                      var2 = true;
                      break label37;
                   }
-               } else if (var3.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+               } else if (var4.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                   break label37;
                }
 
@@ -80,7 +80,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             if (!var2) {
                return false;
             } else {
-               return this.attachmentIndex == var3.attachmentIndex;
+               return this.attachmentIndex == var4.attachmentIndex;
             }
          }
       }

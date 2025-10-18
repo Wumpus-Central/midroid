@@ -1715,7 +1715,7 @@
     ". Websites like these might try to trick you into sharing personal information, steal your password, or install unwanted software on your device."
   ],
   "2B3wj4": "Dangerous Website Ahead",
-  "SymzJC": "Earn more Orbs",
+  "SymzJC": "Earn Orbs",
   "B1oJtb": "Information about orbs",
   "gGtZp6": "Orbs Balance",
   "zPaLLy": [
@@ -26101,6 +26101,8 @@
   "dA1dSU": "This is a required question.",
   "0KL0oq": "Agree and Finish 🎉",
   "prJqwc": "Read & Agree to Server Rules",
+  "iAcrqa": "Tap the link in your email to sign in instantly — no password needed.",
+  "6Ecytr": "Check your email for a login link",
   "lJ9sZW": [
     [
       8,
@@ -28120,6 +28122,21 @@
   "ymCPxs": "Better video resolutions for all your streams. Stream apps and games in sweet, sweet HD.",
   "A0U9fn": "Hype up the chat with action-packed, animated reactions.",
   "taMwg4": "Unlimited Super Reactions",
+  "mYS7ub": [
+    [
+      8,
+      "$link",
+      [
+        "Terms Apply."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
   "HI+cfn": [
     "Upload what you want with increased ",
     [
@@ -39482,7 +39499,7 @@
   "wePEBA": "Interact with your security key",
   "aVMiX1": "You may need to tap your device or confirm a prompt.",
   "cY/IOj": "Name your security key",
-  "Jzd+z8": "What do you want to call this thing?",
+  "Jzd+z8": "Choose a name for your new key",
   "vrOCCg": "Register a Security Key",
   "oibaQU": "Let's go",
   "5dyZ1d": "Finish",

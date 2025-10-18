@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.polls
 
+import Da.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -16,8 +17,8 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.SourceDebugExtension
@@ -87,7 +88,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new B9.n();
+                     throw new p();
                   }
 
                   val var18: TextView = this.binding.actionText;
@@ -107,49 +108,49 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   DCDButton.setBackgroundRectangle$default(
                      this.binding.actionButton, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
+                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new e(var1, var5, var2, var4));
                   var11 = var21;
                }
             } else {
-               val var22: DCDButton = this.binding.actionButton;
-               var22.setVisibility(8);
-               val var23: TextView = this.binding.actionText;
+               val var24: DCDButton = this.binding.actionButton;
+               var24.setVisibility(8);
+               val var25: TextView = this.binding.actionText;
                this.binding.actionText.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-               DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimarySemibold);
-               var23.setText(var1.getLabel());
-               var23.setClickable(true);
-               var23.setOnClickListener(new d(var1, var5, var2, var4));
+               DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimarySemibold);
+               var25.setText(var1.getLabel());
+               var25.setClickable(true);
+               var25.setOnClickListener(new d(var1, var5, var2, var4));
                var var12: PollsActionAccessibilityDelegate = null;
                if (var1.getType() != null) {
                   var12 = new PollsActionAccessibilityDelegate(var1);
                }
 
-               var23.setAccessibilityDelegate(var12);
-               var11 = var23;
+               var25.setAccessibilityDelegate(var12);
+               var11 = var25;
             }
          } else {
-            val var24: DCDButton = this.binding.actionButton;
-            var24.setVisibility(8);
-            val var25: TextView = this.binding.actionText;
-            var25.setVisibility(0);
-            var25.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-            DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimaryMedium);
-            var25.setText(var1.getFullTextLabel());
+            val var22: DCDButton = this.binding.actionButton;
+            var22.setVisibility(8);
+            val var23: TextView = this.binding.actionText;
+            var23.setVisibility(0);
+            var23.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+            DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
+            var23.setText(var1.getFullTextLabel());
             if (var1.getType() == null) {
                var8 = false;
             }
 
-            var25.setClickable(var8);
-            var25.setOnClickListener(new c(var1, var5, var2, var4));
+            var23.setClickable(var8);
+            var23.setOnClickListener(new c(var1, var5, var2, var4));
             var var13: PollsActionAccessibilityDelegate = null;
             if (var1.getType() != null) {
                var13 = new PollsActionAccessibilityDelegate(var1);
             }
 
-            var25.setAccessibilityDelegate(var13);
-            var11 = var25;
+            var23.setAccessibilityDelegate(var13);
+            var11 = var23;
          }
 
          var11.setEnabled(var1.getEnabled());

@@ -7,13 +7,13 @@ import com.google.firebase.messaging.RemoteMessage
 import kotlin.jvm.functions.Function1
 
 public class MessagingService : FirebaseMessagingService {
-   public open fun onMessageReceived(remoteMessage: RemoteMessage) {
+   public override fun onMessageReceived(remoteMessage: RemoteMessage) {
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: java.util.Map = var1.o();
+      val var3: java.util.Map = var1.q();
       var2.onNotificationReceived(this, var3);
    }
 
-   public open fun onNewToken(token: String) {
+   public override fun onNewToken(token: String) {
       NotificationClient.Companion.getInstance().setToken(var1);
    }
 

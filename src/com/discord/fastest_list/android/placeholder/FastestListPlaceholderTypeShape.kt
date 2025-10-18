@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import B9.n
+import Da.p
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup
@@ -35,7 +35,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
          this.paint = var2;
       }
 
-      public override fun draw(canvas: Canvas) {
+      public open fun draw(canvas: Canvas) {
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();
@@ -56,14 +56,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
          var var5: Float;
          if (this.config.getCount() > 1) {
-            var2 = var2 - this.config.getCount() * var3;
-            var5 = this.config.getCount() - 1;
+            var5 = var2 - this.config.getCount() * var3;
+            var2 = this.config.getCount() - 1;
          } else {
-            var2 = var2 - var3;
-            var5 = 2;
+            var5 = var2 - var3;
+            var2 = 2;
          }
 
-         val var6: Float = var2 / var5;
+         val var6: Float = var5 / var2;
          val var8: Int = this.config.getCount();
 
          for (int var9 = 0; var9 < var8; var9++) {
@@ -76,14 +76,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
             var var10: Int = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$1[this.config.getType().ordinal()];
             if (var10 != 1) {
                if (var10 != 2) {
-                  throw new n();
+                  throw new p();
                }
 
                var10 = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getVerticalAlignment().ordinal()];
                if (var10 != 1) {
                   if (var10 != 2) {
                      if (var10 != 3) {
-                        throw new n();
+                        throw new p();
                      }
 
                      var2 = var7 / 2.0F - var4 / 2.0F;

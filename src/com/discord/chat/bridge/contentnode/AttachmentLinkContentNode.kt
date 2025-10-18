@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode() {
    public final val attachmentUrl: String
    public final val attachmentName: String
@@ -49,8 +49,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -58,22 +58,22 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
+      val var2: java.lang.String = this.attachmentName;
       val var3: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AttachmentLinkContentNode(attachmentUrl=");
-      var2.append(var4);
-      var2.append(", attachmentName=");
-      var2.append(var1);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AttachmentLinkContentNode(attachmentUrl=");
+      var1.append(var4);
+      var1.append(", attachmentName=");
+      var1.append(var2);
+      var1.append(", content=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

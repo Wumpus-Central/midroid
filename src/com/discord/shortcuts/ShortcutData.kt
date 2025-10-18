@@ -47,14 +47,14 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
 
    public override fun toString(): String {
       val var2: java.lang.String = this.tag;
-      val var1: java.util.Map = this.data;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ShortcutData(tag=");
-      var3.append(var2);
-      var3.append(", data=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ShortcutData(tag=");
+      var1.append(var2);
+      var1.append(", data=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    @SourceDebugExtension(["SMAP\nShortcutData.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShortcutData.kt\ncom/discord/shortcuts/ShortcutData$Companion\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n*L\n1#1,60:1\n216#2,2:61\n37#3,2:63\n1317#4,2:65\n*S KotlinDebug\n*F\n+ 1 ShortcutData.kt\ncom/discord/shortcuts/ShortcutData$Companion\n*L\n31#1:61,2\n37#1:63,2\n48#1:65,2\n*E\n"])
@@ -89,12 +89,12 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = L.c();
+            val var11: java.util.Map = O.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = h.A(var6);
+               val var7: Sequence = k.J(var6);
                if (var7 != null) {
-                  val var8: Sequence = k.m(var7, 2);
+                  val var8: Sequence = kotlin.sequences.k.n(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
                         val var9: java.lang.String = var5.get(0) as java.lang.String;
@@ -105,7 +105,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                }
             }
 
-            var10 = new ShortcutData(var2, L.b(var11));
+            var10 = new ShortcutData(var2, O.b(var11));
          } else {
             var10 = null;
          }

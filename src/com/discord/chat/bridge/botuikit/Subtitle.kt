@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescription: String? = null, clickable: ContentInventoryEntryClickable? = null) {
    public final val badgeUrl: String?
    public final val text: String
@@ -87,21 +87,21 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.badgeUrl;
-      val var1: java.lang.String = this.text;
+      val var3: java.lang.String = this.badgeUrl;
+      val var2: java.lang.String = this.text;
       val var4: java.lang.String = this.ariaDescription;
-      val var5: ContentInventoryEntryClickable = this.clickable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Subtitle(badgeUrl=");
-      var3.append(var2);
-      var3.append(", text=");
-      var3.append(var1);
-      var3.append(", ariaDescription=");
-      var3.append(var4);
-      var3.append(", clickable=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var1: ContentInventoryEntryClickable = this.clickable;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Subtitle(badgeUrl=");
+      var5.append(var3);
+      var5.append(", text=");
+      var5.append(var2);
+      var5.append(", ariaDescription=");
+      var5.append(var4);
+      var5.append(", clickable=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

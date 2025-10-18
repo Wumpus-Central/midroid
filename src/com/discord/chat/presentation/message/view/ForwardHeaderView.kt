@@ -13,13 +13,12 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 
-public class ForwardHeaderView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2),
-   VerticalSpacingItemDecoration.SpacingProviderView {
+public class ForwardHeaderView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2), SpacingProviderView {
    public final val binding: ForwardHeaderViewBinding
 
    fun ForwardHeaderView(var1: Context) {
@@ -42,7 +41,7 @@ public class ForwardHeaderView  public constructor(context: Context, attrs: Attr
       var3.label.setTextColor(ThemeManagerKt.getTheme().getTextLowContrast());
    }
 
-   public override fun spacingPxOverride(): Int {
+   public open fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

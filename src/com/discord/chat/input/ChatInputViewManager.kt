@@ -30,7 +30,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
-import qb.f
+import tc.f
 
 @ReactModule(name = "DCDChatInput")
 @SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,328:1\n123#2:329\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n326#1:329\n*E\n"])
@@ -94,11 +94,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var4: ThemedReactContext = this.$reactContext;
-            val var3: ChatInputRootView = this.$view;
+            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var5: ThemedReactContext = this.$reactContext;
+            val var4: ChatInputRootView = this.$view;
             val var2: java.lang.String = var1.toString();
-            var5.emitEvent(var4, var3, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            var3.emitEvent(var5, var4, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

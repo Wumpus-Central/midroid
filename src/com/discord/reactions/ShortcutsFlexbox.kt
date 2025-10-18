@@ -4,7 +4,6 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.view.View.OnClickListener
-import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.reactions.ReactionView.Reaction
@@ -46,9 +45,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var2: Context = this.getContext();
       val var4: ReactionView = new ReactionView(var2, null, 2, null);
       this.addView(var4, var1);
-      val var3: LayoutParams = var4.getLayoutParams();
-      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
-      (var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
+      val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+      val var5: FlexboxLayout.LayoutParams = var3 as FlexboxLayout.LayoutParams;
+      (var3 as FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(4), SizeUtilsKt.getDpToPx(4));
       var4.setLayoutParams(var5);
       return var4;
    }
@@ -58,8 +57,8 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       if (var1 < this.getChildCount() - 1) {
          val var2: View = this.getChildAt(var1);
          var4 = var2 as ReactionView;
-         val var3: LayoutParams = (var2 as ReactionView).getLayoutParams();
-         var4.setLayoutParams(var3 as com.google.android.flexbox.FlexboxLayout.LayoutParams);
+         val var3: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
+         var4.setLayoutParams(var3 as FlexboxLayout.LayoutParams);
          var4.setVisibility(0);
       } else {
          var4 = this.createAndAddReactionView(this.getChildCount() - 1);
@@ -98,9 +97,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    private fun setShortcutMargins(shortcutView: AddReactionView) {
-      val var2: LayoutParams = var1.getLayoutParams();
-      val var3: com.google.android.flexbox.FlexboxLayout.LayoutParams = var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
-      (var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(6), SizeUtilsKt.getDpToPx(4));
+      val var2: android.view.ViewGroup.LayoutParams = var1.getLayoutParams();
+      val var3: FlexboxLayout.LayoutParams = var2 as FlexboxLayout.LayoutParams;
+      (var2 as FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(6), SizeUtilsKt.getDpToPx(4));
       var1.setLayoutParams(var3);
    }
 

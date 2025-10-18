@@ -1,6 +1,6 @@
 package com.discord.channel_spine
 
-import B9.n
+import Da.p
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -13,6 +13,7 @@ import android.view.View
 import android.view.View.MeasureSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
@@ -76,7 +77,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       if (!this.isInEditMode()) {
          var3 = ThemeManagerKt.getTheme().getBackgroundAccent();
       } else {
-         var3 = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.primary_500);
+         var3 = ColorUtilsKt.getColorCompat(var1, color.primary_500);
       }
 
       var4.setColor(var3);
@@ -118,7 +119,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       val var4: Float;
       if (var9 != 1) {
          if (var9 != 2) {
-            throw new n();
+            throw new p();
          }
 
          var4 = this.yOfRow(var1, var2 + 1);
@@ -133,24 +134,24 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      var5 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var8: Float = this.getMeasuredWidth();
+      var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      var5 = this.getMeasuredWidth();
       val var7: Float = this.horizontalPadding;
-      var1 = this.arcPercent() * this.getMeasuredWidth();
+      val var8: Float = this.arcPercent() * this.getMeasuredWidth();
       var2 = var10[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
-            throw new n();
+            throw new p();
          }
 
-         this.arcRect.set(var6, var5, var6 + var1, var1 + var5);
+         this.arcRect.set(var6, var1, var6 + var8, var8 + var1);
       } else {
-         this.arcRect.set(var6, var5 - var1, var1 + var6, var5);
+         this.arcRect.set(var6, var1 - var8, var8 + var6, var1);
       }
 
       var11.moveTo(var6, var4);
       var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var8 - var7, var5);
+      var11.lineTo(var5 - var7, var1);
       return var11;
    }
 
@@ -236,7 +237,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
                var6 = MeasureSpec.getSize(var2);
             }
          } else {
-            var6 = d.g(var3, (float)MeasureSpec.getSize(var2));
+            var6 = e.h(var3, (float)MeasureSpec.getSize(var2));
          }
 
          var var8: Boolean = false;
@@ -267,7 +268,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = Ja.a.a(var0);
       }
 
       init {

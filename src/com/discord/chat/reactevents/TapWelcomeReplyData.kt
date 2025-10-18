@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import B9.s
+import Da.v
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -46,9 +46,9 @@ public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : T
       return java.lang.Long.hashCode(this.stickerId) * 31 + MessageId.hashCode-impl(this.messageId);
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("messageId", MessageId.toString-impl(this.messageId)), s.a("stickerId", java.lang.String.valueOf(this.stickerId))
+         new Pair[]{v.a("messageId", MessageId.toString-impl(this.messageId)), v.a("stickerId", java.lang.String.valueOf(this.stickerId))}
       );
    }
 

@@ -23,7 +23,7 @@ import org.json.JSONObject
 @ReactModule(name = "SelectActionComponentView")
 @SourceDebugExtension(["SMAP\nSelectActionComponentViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n+ 2 ComponentDeserializer.kt\ncom/discord/chat/presentation/message/view/botuikit/react/deserialization/ComponentDeserializerKt\n*L\n1#1,70:1\n14#2,10:71\n*S KotlinDebug\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n*L\n34#1:71,10\n*E\n"])
 public class SelectActionComponentViewManager : SimpleViewManager<SelectComponentView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(B9.s.a("onTap", OnSelectComponentTapEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{Da.v.a("onTap", OnSelectComponentTapEvent::class)})
 
    private fun createSelectComponentContext(onTap: () -> Unit): ComponentContext {
       val var2: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
@@ -70,10 +70,10 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
    public fun setModel(view: SelectComponentView, model: ReadableMap) {
       var var3: Boolean;
       try {
-         val var5: Json = ComponentDeserializerKt.getJson();
-         val var19: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var19: Json = ComponentDeserializerKt.getJson();
+         val var5: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var15 = var5.b(var19, var14) as Component;
+         var15 = var19.b(var5, var14) as Component;
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();

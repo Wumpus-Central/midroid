@@ -1,6 +1,6 @@
 package com.discord.segmented.control
 
-import B9.s
+import Da.v
 import android.annotation.SuppressLint
 import android.graphics.Color
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -21,7 +21,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @ReactModule(name = "DCDSegmentedControl")
 @SourceDebugExtension(["SMAP\nSegmentedControlViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SegmentedControlViewManager.kt\ncom/discord/segmented/control/SegmentedControlViewManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,108:1\n1611#2,9:109\n1863#2:118\n1864#2:120\n1620#2:121\n1611#2,9:122\n1863#2:131\n1864#2:133\n1620#2:134\n1#3:119\n1#3:132\n*S KotlinDebug\n*F\n+ 1 SegmentedControlViewManager.kt\ncom/discord/segmented/control/SegmentedControlViewManager\n*L\n50#1:109,9\n50#1:118\n50#1:120\n50#1:121\n57#1:122,9\n57#1:131\n57#1:133\n57#1:134\n50#1:119\n57#1:132\n*E\n"])
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onValueChange", ValueChangeEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("onValueChange", ValueChangeEvent::class))
    private final val delegate: DCDSegmentedControlManagerDelegate<SegmentedControlView, SegmentedControlViewManager>
 
    @JvmStatic
@@ -43,11 +43,11 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDSegmentedControl";
    }
 
@@ -59,7 +59,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var5: java.util.Iterator = var4.iterator();
 
          while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as I).nextInt());
+            val var6: java.lang.String = var2.getString((var5 as L).nextInt());
             if (var6 != null) {
                var3.add(var6);
             }
@@ -117,7 +117,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var5: java.util.Iterator = var4.iterator();
 
          while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as I).nextInt());
+            val var6: java.lang.String = var2.getString((var5 as L).nextInt());
             if (var6 != null) {
                var3.add(var6);
             }

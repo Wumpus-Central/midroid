@@ -1,11 +1,11 @@
 package com.discord.serialization
 
-import S9.b
+import Ua.b
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
-import nb.h
-import rb.g
+import qc.n
+import uc.h
 
 @JvmSynthetic
 fun `access$parseProperty`(var0: KProperty1, var1: JsonElement): Boolean {
@@ -16,23 +16,23 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
    try {
       val var4: KClass = b.b(var0.getReturnType());
       if (var4 == java.lang.String::class) {
-         g.p(var1).a();
+         h.o(var1).c();
       } else if (var4 == Int::class) {
-         g.l(g.p(var1));
+         h.k(h.o(var1));
       } else if (var4 == java.lang.Double::class) {
-         g.i(g.p(var1));
+         h.i(h.o(var1));
       } else if (var4 == java.lang.Boolean::class) {
-         g.f(g.p(var1));
+         h.f(h.o(var1));
       } else if (var4 == java.lang.Long::class) {
-         g.r(g.p(var1));
+         h.q(h.o(var1));
       } else {
          if (!(var4 == java.lang.Float::class)) {
             return true;
          }
 
-         g.k(g.p(var1));
+         h.j(h.o(var1));
       }
-   } catch (IllegalArgumentException | var3: h) {
+   } catch (IllegalArgumentException | var3: n) {
       return false;
    }
 

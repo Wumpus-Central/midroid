@@ -1,6 +1,6 @@
 package com.discord.self_measured_view
 
-import B9.s
+import Da.v
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -41,12 +41,12 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
                this.stateWrapper
                   .updateState(
                      NativeMapExtensionsKt.nativeMapOf(
-                        s.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), s.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
+                        v.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), v.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
                      )
                   );
             }
          } else {
-            val var8: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
+            val var8: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class);
             if (var8 != null) {
                this.reactContext.runOnNativeModulesQueueThread(new b(var8, this));
             }

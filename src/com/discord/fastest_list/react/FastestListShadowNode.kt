@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react
 
-import B9.n
+import Da.p
 import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
@@ -26,11 +26,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setDefaultPadding(spacingType: Int, padding: Float) {
-      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append(" does not support default padding");
-      throw new IllegalStateException(var3.toString().toString());
+      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append(" does not support default padding");
+      throw new IllegalStateException(var4.toString().toString());
    }
 
    public open fun setPadding(spacingType: Int, padding: Float) {
@@ -51,7 +51,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
             throw new IllegalStateException(var7.toString().toString());
          case 0:
          default:
-            throw new n();
+            throw new p();
          case 1:
             val var6: RectF = this.padding;
             this.padding.left = var2;

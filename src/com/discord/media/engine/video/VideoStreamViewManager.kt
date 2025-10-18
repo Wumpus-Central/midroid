@@ -27,11 +27,11 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDVideoRenderer";
    }
 

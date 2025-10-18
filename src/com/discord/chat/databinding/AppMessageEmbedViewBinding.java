@@ -13,7 +13,7 @@ import com.discord.chat.R;
 import com.discord.core.DCDButton;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import x1.a;
 
 public final class AppMessageEmbedViewBinding implements ViewBinding {
    @NonNull
@@ -84,49 +84,49 @@ public final class AppMessageEmbedViewBinding implements ViewBinding {
    @NonNull
    public static AppMessageEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.actions_container;
-      LinearLayout var10 = (LinearLayout)a.a(var0, var1);
-      if (var10 != null) {
+      LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.app_icon;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.banner;
-            SimpleDraweeView var15 = (SimpleDraweeView)a.a(var0, var1);
-            if (var15 != null) {
+            SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.barrier_footer;
-               Barrier var13 = (Barrier)a.a(var0, var1);
-               if (var13 != null) {
+               Barrier var11 = (Barrier)a.a(var0, var1);
+               if (var11 != null) {
                   var1 = R.id.header;
-                  TextView var8 = (TextView)a.a(var0, var1);
-                  if (var8 != null) {
+                  TextView var14 = (TextView)a.a(var0, var1);
+                  if (var14 != null) {
                      var1 = R.id.info;
-                     TextView var3 = (TextView)a.a(var0, var1);
-                     if (var3 != null) {
+                     TextView var9 = (TextView)a.a(var0, var1);
+                     if (var9 != null) {
                         var1 = R.id.item_bottom_container;
-                        ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-                        if (var6 != null) {
+                        ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
+                        if (var12 != null) {
                            var1 = R.id.link_icon;
-                           DCDButton var12 = (DCDButton)a.a(var0, var1);
-                           if (var12 != null) {
+                           DCDButton var3 = (DCDButton)a.a(var0, var1);
+                           if (var3 != null) {
                               var1 = R.id.link_icon_title;
-                              DCDButton var7 = (DCDButton)a.a(var0, var1);
-                              if (var7 != null) {
+                              DCDButton var10 = (DCDButton)a.a(var0, var1);
+                              if (var10 != null) {
                                  var1 = R.id.participants;
-                                 OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
-                                 if (var5 != null) {
+                                 OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
+                                 if (var4 != null) {
                                     var1 = R.id.participants_text;
-                                    TextView var9 = (TextView)a.a(var0, var1);
-                                    if (var9 != null) {
+                                    TextView var6 = (TextView)a.a(var0, var1);
+                                    if (var6 != null) {
                                        var1 = R.id.player_icon;
-                                       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var2 != null) {
+                                       SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var13 != null) {
                                           var1 = R.id.tagline;
-                                          TextView var14 = (TextView)a.a(var0, var1);
-                                          if (var14 != null) {
+                                          TextView var15 = (TextView)a.a(var0, var1);
+                                          if (var15 != null) {
                                              var1 = R.id.title;
-                                             TextView var11 = (TextView)a.a(var0, var1);
-                                             if (var11 != null) {
+                                             TextView var2 = (TextView)a.a(var0, var1);
+                                             if (var2 != null) {
                                                 return new AppMessageEmbedViewBinding(
-                                                   var0, var10, var4, var15, var13, var8, var3, var6, var12, var7, var5, var9, var2, var14, var11
+                                                   var0, var5, var7, var8, var11, var14, var9, var12, var3, var10, var4, var6, var13, var15, var2
                                                 );
                                              }
                                           }

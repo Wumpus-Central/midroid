@@ -1,7 +1,7 @@
 package com.discord.foreground_service.utils
 
-import B9.n
-import K1.a
+import Da.p
+import K2.a
 import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.Service
@@ -17,21 +17,21 @@ import java.util.ArrayList
 
 @SuppressLint(["InlinedApi"])
 private fun buildServiceTypeChain(requestedType: Type, context: Context): List<Int> {
-   val var6: ArrayList = new ArrayList();
-   val var3: Int = VERSION.SDK_INT;
-   val var7: Int = 128;
-   val var8: Int = 32;
-   if (var3 < 34) {
-      val var2: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
-      if (var2 != 1) {
-         if (var2 != 2) {
-            if (var2 != 3) {
-               throw new n();
+   val var8: ArrayList = new ArrayList();
+   val var2: Int = VERSION.SDK_INT;
+   val var6: Int = 128;
+   val var7: Int = 32;
+   if (var2 < 34) {
+      val var3: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
+      if (var3 != 1) {
+         if (var3 != 2) {
+            if (var3 != 3) {
+               throw new p();
             }
 
-            var6.add(var8);
-         } else if (var3 >= 30) {
-            var6.add(var7);
+            var8.add(var7);
+         } else if (var2 >= 30) {
+            var8.add(var6);
          }
       }
    } else {
@@ -54,18 +54,18 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
       }
 
       if (var12 && var10) {
-         var6.add(160);
-         var6.add(var8);
-         var6.add(var7);
+         var8.add(160);
+         var8.add(var7);
+         var8.add(var6);
       } else if (var12) {
-         var6.add(var8);
+         var8.add(var7);
       } else if (var10) {
-         var6.add(var7);
+         var8.add(var6);
       }
    }
 
-   var6.add(1);
-   return var6;
+   var8.add(1);
+   return var8;
 }
 
 private fun hasForegroundServiceMediaProjectionPermission(context: Context): Boolean {
@@ -110,7 +110,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
       var0.startForeground(var2, var3);
    } else {
       var var4: Int = var3.extras.getInt("permissionType", -1);
-      val var5: ServiceNotificationConfiguration.Type = CollectionsKt.j0(ServiceNotificationConfiguration.Type.getEntries(), var4) as ServiceNotificationConfiguration.Type;
+      val var5: ServiceNotificationConfiguration.Type = CollectionsKt.l0(ServiceNotificationConfiguration.Type.getEntries(), var4) as ServiceNotificationConfiguration.Type;
       if (var5 == null) {
          val var10: StringBuilder = new StringBuilder();
          var10.append("Unknown service type: ");
@@ -157,7 +157,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
 internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): ComponentName? {
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = K1.b.a(var0, var1);
+      var2 = K2.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }

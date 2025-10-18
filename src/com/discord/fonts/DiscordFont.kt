@@ -1,6 +1,6 @@
 package com.discord.fonts
 
-import H9.a
+import Ja.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -109,17 +109,17 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          if (var1 == null) {
             return null;
          } else {
-            val var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
+            var var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
             val var4: java.util.Iterator = var3.iterator();
 
             while (true) {
                if (var4.hasNext()) {
-                  val var7: Any = var4.next();
-                  if (!((var7 as Entry).getValue() == var1)) {
+                  var3 = (java.util.Set)var4.next();
+                  if (!((var3 as Entry).getValue() == var1)) {
                      continue;
                   }
 
-                  var5 = var7;
+                  var5 = var3;
                   break;
                }
 

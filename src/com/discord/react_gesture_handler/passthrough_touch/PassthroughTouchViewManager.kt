@@ -1,6 +1,6 @@
 package com.discord.react_gesture_handler.passthrough_touch
 
-import B9.s
+import Da.v
 import com.discord.react_gesture_handler.passthrough_touch.events.OnTouchDownData
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -13,7 +13,7 @@ import com.facebook.react.viewmanagers.PassthroughTouchViewManagerInterface
 internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchViewGroup>, PassthroughTouchViewManagerInterface<PassthroughTouchViewGroup> {
    private final val mDelegate: PassthroughTouchViewManagerDelegate<PassthroughTouchViewGroup, PassthroughTouchViewManager> =
       new PassthroughTouchViewManagerDelegate(this)
-      private final val reactEvents: ReactEvents = new ReactEvents(s.a("onTouchDown", OnTouchDownData::class))
+      private final val reactEvents: ReactEvents = new ReactEvents(v.a("onTouchDown", OnTouchDownData::class))
 
    @JvmStatic
    fun `createViewInstance$lambda$1$lambda$0`(var0: PassthroughTouchViewManager, var1: ThemedReactContext, var2: PassthroughTouchViewGroup): Unit {
@@ -31,11 +31,11 @@ internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchVi
       return this.mDelegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "PassthroughTouchView";
    }
 

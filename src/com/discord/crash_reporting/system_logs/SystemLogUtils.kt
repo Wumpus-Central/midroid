@@ -50,7 +50,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         F9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         Ha.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -94,12 +94,12 @@ internal object SystemLogUtils {
          if (StringsKt.c0(var19)) {
             return null;
          } else {
-            val var11: kotlin.text.f = kotlin.text.f.m;
-            val var17: Regex = new Regex("^Cause: (.+)$", kotlin.text.f.m);
-            val var21: Sequence = kotlin.sequences.k.B(
+            val var11: kotlin.text.i = kotlin.text.i.s;
+            val var17: Regex = new Regex("^Cause: (.+)$", kotlin.text.i.s);
+            val var21: Sequence = kotlin.sequences.k.C(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
             );
-            val var8: HashSet = V.e(
+            val var8: HashSet = Y.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
@@ -119,7 +119,7 @@ internal object SystemLogUtils {
                var13 = "Unknown";
             }
 
-            val var22: java.lang.String = kotlin.sequences.k.z(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = kotlin.sequences.k.A(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -150,7 +150,7 @@ internal object SystemLogUtils {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
       val var3: ByteArray = var1.getBytes(Charsets.UTF_8);
       val var4: ByteArray = var2.digest(var3);
-      return kotlin.collections.h.h0(var4, "", null, null, 0, null, new j(), 30, null);
+      return kotlin.collections.k.q0(var4, "", null, null, 0, null, new j(), 30, null);
    }
 
    @JvmStatic
@@ -221,7 +221,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var31 = var30.listIterator(var30.size());
+                           var32 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -235,7 +235,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var31.hasPrevious()) {
+                              if (!var32.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -250,7 +250,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var8 = (java.lang.String)var31.previous();
+                              var31 = var32.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -263,7 +263,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (var8.length() <= 0) {
+                              if ((var31 as java.lang.String).length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -278,7 +278,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var8;
+                              var7 = var31 as java.lang.String;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -555,8 +555,8 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var2: java.lang.String = this.text;
-         val var1: java.lang.String = this.cause;
-         val var6: java.lang.String = this.groupBy;
+         val var6: java.lang.String = this.cause;
+         val var1: java.lang.String = this.groupBy;
          val var3: java.lang.String = this.origin;
          val var5: java.lang.String = this.groupHash;
          val var4: java.lang.String = this.textHash;
@@ -564,9 +564,9 @@ internal object SystemLogUtils {
          var7.append("Tombstone(text=");
          var7.append(var2);
          var7.append(", cause=");
-         var7.append(var1);
-         var7.append(", groupBy=");
          var7.append(var6);
+         var7.append(", groupBy=");
+         var7.append(var1);
          var7.append(", origin=");
          var7.append(var3);
          var7.append(", groupHash=");

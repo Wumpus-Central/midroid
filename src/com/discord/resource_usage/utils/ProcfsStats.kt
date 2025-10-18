@@ -60,13 +60,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var3: Long = this.totalTime;
-      val var1: Long = this.rssPages;
+      val var1: Long = this.totalTime;
+      val var3: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var3);
-      var5.append(", rssPages=");
       var5.append(var1);
+      var5.append(", rssPages=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -169,7 +169,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 08f: astore 1
          // 090: aload 10
          // 092: aconst_null
-         // 093: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+         // 093: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
          // 096: aload 11
          // 098: astore 10
          // 09a: aload 1
@@ -197,29 +197,29 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 0c0: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0c5: checkcast java/lang/String
          // 0c8: lconst_0
-         // 0c9: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0cc: lstore 6
+         // 0c9: invokestatic Mc/c.T (Ljava/lang/String;J)J
+         // 0cc: lstore 4
          // 0ce: aload 1
          // 0cf: bipush 14
          // 0d1: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0d6: checkcast java/lang/String
          // 0d9: lconst_0
-         // 0da: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0dd: lstore 4
+         // 0da: invokestatic Mc/c.T (Ljava/lang/String;J)J
+         // 0dd: lstore 8
          // 0df: aload 1
          // 0e0: bipush 23
          // 0e2: invokeinterface java/util/List.get (I)Ljava/lang/Object; 2
          // 0e7: checkcast java/lang/String
          // 0ea: lconst_0
-         // 0eb: invokestatic Jb/c.T (Ljava/lang/String;J)J
-         // 0ee: lstore 8
+         // 0eb: invokestatic Mc/c.T (Ljava/lang/String;J)J
+         // 0ee: lstore 6
          // 0f0: new com/discord/resource_usage/utils/ProcfsStats
          // 0f3: astore 10
          // 0f5: aload 10
-         // 0f7: lload 6
-         // 0f9: lload 4
+         // 0f7: lload 4
+         // 0f9: lload 8
          // 0fb: ladd
-         // 0fc: lload 8
+         // 0fc: lload 6
          // 0fe: invokespecial com/discord/resource_usage/utils/ProcfsStats.<init> (JJ)V
          // 101: goto 111
          // 104: aload 1
@@ -227,7 +227,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
          // 106: astore 12
          // 108: aload 10
          // 10a: aload 1
-         // 10b: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+         // 10b: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
          // 10e: aload 12
          // 110: athrow
          // 111: aload 10

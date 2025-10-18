@@ -97,7 +97,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
       if (var12 != null) {
-         val var8: java.util.List = CollectionsKt.M0(var12, 3);
+         val var8: java.util.List = CollectionsKt.P0(var12, 3);
          var9 = null;
          if (var8 != null) {
             val var13: ArrayList = new ArrayList(CollectionsKt.v(var8, 10));
@@ -119,7 +119,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var14 = CollectionsKt.k();
       }
 
-      var24.setItems((java.util.List<OverlappingItem>)var14);
+      var24.setItems((java.util.List)var14);
       var var17: Boolean;
       if (var3 > 0) {
          var17 = 1;
@@ -136,7 +136,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @nb.g
+   @qc.m
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -233,21 +233,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.channelIconURL;
-         val var3: java.lang.String = this.chatIconURL;
+         val var2: java.lang.String = this.channelIconURL;
+         val var5: java.lang.String = this.chatIconURL;
          val var4: ArrayList = this.avatarURLs;
-         val var5: java.lang.String = this.channelName;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("MessageBundleHeader(channelIconURL=");
-         var2.append(var1);
-         var2.append(", chatIconURL=");
-         var2.append(var3);
-         var2.append(", avatarURLs=");
-         var2.append(var4);
-         var2.append(", channelName=");
-         var2.append(var5);
-         var2.append(")");
-         return var2.toString();
+         val var3: java.lang.String = this.channelName;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundleHeader(channelIconURL=");
+         var1.append(var2);
+         var1.append(", chatIconURL=");
+         var1.append(var5);
+         var1.append(", avatarURLs=");
+         var1.append(var4);
+         var1.append(", channelName=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
 
       public companion object {

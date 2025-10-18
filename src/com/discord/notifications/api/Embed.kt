@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class Embed(fields: List<EmbedField>? = null) {
    public final val fields: List<EmbedField>?
 

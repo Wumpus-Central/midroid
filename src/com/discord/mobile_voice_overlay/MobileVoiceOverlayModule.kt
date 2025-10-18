@@ -17,7 +17,7 @@ import kotlinx.serialization.json.Json
 
 @SourceDebugExtension(["SMAP\nMobileVoiceOverlayModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 3 NativeMapExtensions.kt\ncom/discord/react/utilities/NativeMapExtensionsKt\n+ 4 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,77:1\n22#2,8:78\n22#2,8:88\n22#2,8:98\n137#3:86\n137#3:96\n123#4:87\n123#4:97\n*S KotlinDebug\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n*L\n54#1:78,8\n61#1:88,8\n68#1:98,8\n60#1:86\n67#1:96\n60#1:87\n67#1:97\n*E\n"])
 public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlayModuleSpec(var1) {
-   private final val mobileVoiceOverlay: MobileVoiceOverlay by B9.j.b(new r(this))
+   private final val mobileVoiceOverlay: MobileVoiceOverlay by Da.l.b(new r(this))
       private final get() {
          return this.mobileVoiceOverlay$delegate.getValue() as MobileVoiceOverlay;
       }
@@ -41,7 +41,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
       return Unit.a;
    }
 
-   public override fun enableOverlay(promise: Promise) {
+   public open fun enableOverlay(promise: Promise) {
       val var2: WindowUtils = WindowUtils.INSTANCE;
       val var3: ReactApplicationContext = this.getReactApplicationContext();
       if (var2.canDrawOverlay(var3)) {
@@ -56,6 +56,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                this.$promise = var2;
             }
 
+            @Override
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
@@ -66,6 +67,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                }
             }
 
+            @Override
             public void onNewIntent(Intent var1) {
             }
          };
@@ -79,7 +81,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
       }
    }
 
-   public override fun hideOverlay() {
+   public open fun hideOverlay() {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$getMobileVoiceOverlay(this).hideOverlay$mobile_voice_overlay_release();
       } else {
@@ -98,7 +100,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
       }
    }
 
-   public override fun setData(data: ReadableMap?) {
+   public open fun setData(data: ReadableMap?) {
       if (var1 != null) {
          val var2: Json = NativeMapExtensionsKt.getJson();
          val var3: java.lang.String = NativeMapExtensionsKt.toJsonString(var1);
@@ -127,7 +129,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
       }
    }
 
-   public override fun showOverlay(assets: ReadableMap?) {
+   public open fun showOverlay(assets: ReadableMap?) {
       if (var1 != null) {
          val var2: Json = NativeMapExtensionsKt.getJson();
          val var3: java.lang.String = NativeMapExtensionsKt.toJsonString(var1);

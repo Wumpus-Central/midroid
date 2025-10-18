@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class TapMentionData(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) : ReactEvent {
    public final val userId: String?
    public final val channelId: String
@@ -88,26 +89,26 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       return ((var1 * 31 + var4) * 31 + var2) * 31 + var3;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = this.userId;
-      val var4: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleName;
-      val var3: java.lang.String = this.parsedUserId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapMentionData(userId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var4);
-      var5.append(", roleName=");
-      var5.append(var1);
-      var5.append(", parsedUserId=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.roleName;
+      val var1: java.lang.String = this.parsedUserId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapMentionData(userId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var3);
+      var4.append(", roleName=");
+      var4.append(var5);
+      var4.append(", parsedUserId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

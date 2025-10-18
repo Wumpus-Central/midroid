@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.row
 
-import B9.n
+import Da.p
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
@@ -41,7 +41,7 @@ public fun MessageBase.toChatListMessageItem(
       }
    } else {
       if (var0 !is ErrorMessage) {
-         throw new n();
+         throw new p();
       }
 
       var8 = new DeserializationErrorMessageItem(var0 as ErrorMessage, false, 2, null);
@@ -51,8 +51,8 @@ public fun MessageBase.toChatListMessageItem(
 }
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
-   val var4: MessageBase = var0.getMessage();
-   val var3: MessageFrame = var0.getMessageFrame();
+   val var3: MessageBase = var0.getMessage();
+   val var4: MessageFrame = var0.getMessageFrame();
    val var2: MessageFrame = var0.getMessageFrame();
    val var5: MessageFrameType;
    if (var2 != null) {
@@ -69,7 +69,7 @@ public fun MessageRow.toChatListMessageItem(): ChatListItem {
    }
 
    return toChatListMessageItem(
-      var4, var3, MessageContextKt.getMessageContext(var0), var1, var0.getRenderContentOnly(), var0.getReactTag(), var0.getBackgroundHighlight()
+      var3, var4, MessageContextKt.getMessageContext(var0), var1, var0.getRenderContentOnly(), var0.getReactTag(), var0.getBackgroundHighlight()
    );
 }
 

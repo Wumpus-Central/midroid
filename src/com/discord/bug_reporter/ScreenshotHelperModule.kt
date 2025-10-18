@@ -1,6 +1,6 @@
 package com.discord.bug_reporter
 
-import B9.s
+import Da.v
 import android.content.ContentResolver
 import com.discord.bug_reporter.react.events.ScreenshotTakenEvent
 import com.discord.reactevents.ReactEvents
@@ -17,7 +17,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("screenshotTaken", ScreenshotTakenEvent::class));
+      this.reactEvents = new ReactEvents(new Pair[]{v.a("screenshotTaken", ScreenshotTakenEvent::class)});
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 

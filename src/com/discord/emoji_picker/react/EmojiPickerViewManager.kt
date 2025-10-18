@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import B9.s
+import Da.v
 import android.view.View
 import com.discord.emoji_picker.EmojiPickerCache
 import com.discord.emoji_picker.EmojiPickerItem
@@ -37,13 +37,15 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    private final val emojiPickerCaches: MutableMap<EmojiPickerView, EmojiPickerCache> = new LinkedHashMap()
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         s.a("onPressEmoji", OnPressEmojiEvent::class),
-         s.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
-         s.a("onScroll", OnScrollEvent::class),
-         s.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
-         s.a("onScrollEndDrag", OnScrollEndDragEvent::class),
-         s.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
-         s.a("onShowNitroUpsell", OnShowNitroUpsell::class)
+         new Pair[]{
+            v.a("onPressEmoji", OnPressEmojiEvent::class),
+            v.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
+            v.a("onScroll", OnScrollEvent::class),
+            v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
+            v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
+            v.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
+            v.a("onShowNitroUpsell", OnShowNitroUpsell::class)
+         }
       )
 
    @JvmStatic
@@ -104,8 +106,8 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): EmojiPickerView {
       val var9: ReadableMap = var2.getMap("config");
-      val var4: Float = var2.getFloat("paddingTop", 0.0F);
-      val var3: Float = var2.getFloat("paddingBottom", 0.0F);
+      val var3: Float = var2.getFloat("paddingTop", 0.0F);
+      val var4: Float = var2.getFloat("paddingBottom", 0.0F);
       val var5: Int = var2.getInt("emojiSize", -1);
       val var6: Int = var2.getInt("emojiMargin", -1);
       val var8: ReadableMap = var2.getMap("emojiData");
@@ -114,7 +116,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
             if (var6 != -1) {
                if (var8 != null) {
                   val var12: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.INSTANCE
-                     .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var3, var4);
+                     .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var4, var3);
                   val var10: EmojiPickerView = new EmojiPickerView(
                      var1,
                      var5,

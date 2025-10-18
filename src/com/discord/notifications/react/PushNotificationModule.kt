@@ -1,10 +1,10 @@
 package com.discord.notifications.react
 
-import B9.s
-import V1.a
-import V1.b
-import V1.c
-import V1.d
+import Da.v
+import V2.a
+import V2.b
+import V2.c
+import V2.d
 import com.discord.cache.Cache
 import com.discord.notifications.client.NotificationClient
 import com.discord.notifications.fcm.MessagingService
@@ -33,7 +33,7 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         s.a("register", RegisterEvent::class), s.a("notification", NotificationEvent::class), s.a("localNotification", LocalNotificationEvent::class)
+         v.a("register", RegisterEvent::class), v.a("notification", NotificationEvent::class), v.a("localNotification", LocalNotificationEvent::class)
       );
       MessagingService.Companion.init();
       NotificationClient.Companion.getInstance().setShouldDisplayNotification(new a(this));
@@ -76,9 +76,9 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
          var1 = true;
       }
 
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.setIsAuthed(var4, var1);
+      val var4: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.setIsAuthed(var3, var1);
    }
 
    @ReactMethod
@@ -107,27 +107,27 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun getLightsEnabled(promise: Promise) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.resolve(var2.isLightsEnabled(var3));
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(var3.isLightsEnabled(var2));
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "PushNotificationAndroid";
    }
 
    @ReactMethod
    public fun getSoundsEnabled(promise: Promise) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.resolve(var3.isSoundsEnabled(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(var2.isSoundsEnabled(var3));
    }
 
    @ReactMethod
    public fun getVibrationsEnabled(promise: Promise) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.resolve(var3.isVibrationsEnabled(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.resolve(var2.isVibrationsEnabled(var3));
    }
 
    @ReactMethod
@@ -164,12 +164,12 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
          }
       }
 
-      val var7: LinkedHashMap = new LinkedHashMap(L.d(var2.size()));
+      val var7: LinkedHashMap = new LinkedHashMap(O.e(var2.size()));
 
       for (Entry var4 : var2.entrySet()) {
-         val var9: Any = var4.getKey();
+         val var8: Any = var4.getKey();
          val var10: Any = var4.getValue();
-         var7.put(var9, var10);
+         var7.put(var8, var10);
       }
 
       NotificationClient.Companion.getInstance().showLocalNotification(this.reactContext, var7);
@@ -205,9 +205,9 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setCurrentUser(username: String?, userId: String?) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.setCurrentUser(var4, var1, var2);
+      val var4: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.setCurrentUser(var3, var1, var2);
    }
 
    @ReactMethod
@@ -226,16 +226,16 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setSoundsEnabled(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.setSoundsEnabled(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.setSoundsEnabled(var3, var1);
    }
 
    @ReactMethod
    public fun setVibrationsEnabled(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.setVibrationsEnabled(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.setVibrationsEnabled(var3, var1);
    }
 
    @ReactMethod

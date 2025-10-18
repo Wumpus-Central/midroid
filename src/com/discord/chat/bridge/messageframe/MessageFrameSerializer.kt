@@ -8,11 +8,11 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import rb.d
-import rb.g
+import uc.e
+import uc.h
 
 @SourceDebugExtension(["SMAP\nMessageFrameSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,41:1\n11165#2:42\n11500#2,3:43\n*S KotlinDebug\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n*L\n13#1:42\n13#1:43,3\n*E\n"])
-public object MessageFrameSerializer : d(MessageFrame::class) {
+public object MessageFrameSerializer : e(MessageFrame::class) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
@@ -39,11 +39,11 @@ public object MessageFrameSerializer : d(MessageFrame::class) {
       var var2: java.util.List;
       label17: {
          var2 = knownTypes;
-         var1 = g.o(var1).get("type") as JsonElement;
+         var1 = h.n(var1).get("type") as JsonElement;
          if (var1 != null) {
-            val var4: JsonPrimitive = g.p(var1);
+            val var4: JsonPrimitive = h.o(var1);
             if (var4 != null) {
-               var5 = g.l(var4);
+               var5 = h.k(var4);
                break label17;
             }
          }
@@ -52,7 +52,7 @@ public object MessageFrameSerializer : d(MessageFrame::class) {
       }
 
       val var6: Any;
-      if (CollectionsKt.X(var2, var5)) {
+      if (CollectionsKt.Z(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

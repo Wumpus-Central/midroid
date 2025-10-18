@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class CustomEmojiContentNode(id: Long, alt: String, src: String, frozenSrc: String, jumboable: Boolean = false) : EmojiContentNode() {
    public final val id: Long
    public final val alt: String
@@ -71,19 +71,19 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var6: java.lang.String = this.alt;
-      val var7: java.lang.String = this.src;
-      val var5: java.lang.String = this.frozenSrc;
+      val var7: java.lang.String = this.alt;
+      val var5: java.lang.String = this.src;
+      val var6: java.lang.String = this.frozenSrc;
       val var1: Boolean = this.jumboable;
       val var4: StringBuilder = new StringBuilder();
       var4.append("CustomEmojiContentNode(id=");
       var4.append(var2);
       var4.append(", alt=");
-      var4.append(var6);
-      var4.append(", src=");
       var4.append(var7);
-      var4.append(", frozenSrc=");
+      var4.append(", src=");
       var4.append(var5);
+      var4.append(", frozenSrc=");
+      var4.append(var6);
       var4.append(", jumboable=");
       var4.append(var1);
       var4.append(")");

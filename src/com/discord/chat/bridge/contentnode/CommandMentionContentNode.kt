@@ -2,9 +2,9 @@ package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class CommandMentionContentNode(channelId: ChannelId, commandId: String, commandName: String, commandKey: String, content: List<ContentNode>) : CommandMentionContentNode(
       var1, var3, var4, var5, var6
    ) {
@@ -75,24 +75,24 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.commandId;
-      val var3: java.lang.String = this.commandName;
-      val var6: java.lang.String = this.commandKey;
-      val var4: java.util.List = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("CommandMentionContentNode(channelId=");
-      var5.append(var1);
-      var5.append(", commandId=");
-      var5.append(var2);
-      var5.append(", commandName=");
-      var5.append(var3);
-      var5.append(", commandKey=");
-      var5.append(var6);
-      var5.append(", content=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var5: java.lang.String = this.commandKey;
+      val var3: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CommandMentionContentNode(channelId=");
+      var4.append(var6);
+      var4.append(", commandId=");
+      var4.append(var1);
+      var4.append(", commandName=");
+      var4.append(var2);
+      var4.append(", commandKey=");
+      var4.append(var5);
+      var4.append(", content=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

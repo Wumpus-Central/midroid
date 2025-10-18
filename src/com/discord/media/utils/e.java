@@ -9,9 +9,9 @@ public final class e implements Function1 {
    public final int d;
    public final boolean e;
    public final MediaResolver i;
-   public final Uri m;
+   public final Uri s;
 
    public final Object invoke(Object var1) {
-      return MediaResolver.a(this.d, this.e, this.i, this.m, (Compression)var1);
+      return MediaResolver.a(this.d, this.e, this.i, this.s, (Compression)var1);
    }
 }

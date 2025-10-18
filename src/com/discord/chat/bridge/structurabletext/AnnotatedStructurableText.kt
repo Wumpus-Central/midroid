@@ -2,9 +2,9 @@ package com.discord.chat.bridge.structurabletext
 
 import com.discord.chat.bridge.contentnode.ContentNode
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g(with = AnnotatedStructurableTextSerializer::class)
+@m(with = AnnotatedStructurableTextSerializer::class)
 public data class AnnotatedStructurableText(content: List<ContentNode>) : StructurableText() {
    public final val content: List<ContentNode>
    public open val hasContent: Boolean

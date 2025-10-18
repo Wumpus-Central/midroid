@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class TapGameIconData(gameApplicationId: String, timestamp: String) : ReactEvent {
    public final val gameApplicationId: String
    public final val timestamp: String
@@ -47,18 +48,18 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
       return this.gameApplicationId.hashCode() * 31 + this.timestamp.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.gameApplicationId;
-      val var3: java.lang.String = this.timestamp;
+      val var3: java.lang.String = this.gameApplicationId;
+      val var2: java.lang.String = this.timestamp;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapGameIconData(gameApplicationId=");
-      var1.append(var2);
-      var1.append(", timestamp=");
       var1.append(var3);
+      var1.append(", timestamp=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

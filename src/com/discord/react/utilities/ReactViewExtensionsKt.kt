@@ -2,7 +2,7 @@
 
 package com.discord.react.utilities
 
-import B9.j
+import Da.l
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode
@@ -15,7 +15,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by j.b(new e())
+private final val viewOperationQueueMethod: Method by l.b(new e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -56,11 +56,11 @@ fun `queueManualLayout$lambda$3`(var0: ReactContext, var1: Int) {
    val var2: UIImplementation = getUIImplementation(var0);
    val var4: ReactShadowNode = var2.resolveShadowNode(var1);
    if (var4 != null) {
-      val var5: UIViewOperationQueue = getUIViewOperationQueue(var2);
-      if (var5 != null) {
-         val var3: ReactShadowNode = var4.getParent();
-         var5.enqueueUpdateLayout(
-            var3.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight(), YogaDirection.e
+      val var3: UIViewOperationQueue = getUIViewOperationQueue(var2);
+      if (var3 != null) {
+         val var5: ReactShadowNode = var4.getParent();
+         var3.enqueueUpdateLayout(
+            var5.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight(), YogaDirection.e
          );
       }
    }

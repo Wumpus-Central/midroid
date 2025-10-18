@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.message.view.media
 
-import C1.d
+import C2.d
 import android.view.View
 import android.view.ViewTreeObserver.OnScrollChangedListener
-import t6.f
+import v7.f
 
 public class ViewScrollStateListener(view: View, viewScrolling: (Boolean) -> Unit) : OnScrollChangedListener {
    private final val view: View

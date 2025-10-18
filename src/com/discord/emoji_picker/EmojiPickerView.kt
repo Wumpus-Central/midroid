@@ -62,8 +62,8 @@ internal class EmojiPickerView(context: Context,
 
 
    init {
-      this.visibilityTracker$delegate = B9.j.b(new o(var11, this));
-      this.scroller$delegate = B9.j.b(new p(this, var13, var10, var6, var7, var8));
+      this.visibilityTracker$delegate = Da.l.b(new o(var11, this));
+      this.scroller$delegate = Da.l.b(new p(this, var13, var10, var6, var7, var8));
       this.premiumUpsellGradientDecoration = new EmojiPickerPremiumUpsellGradientBackground(var1, var12);
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -123,11 +123,11 @@ internal class EmojiPickerView(context: Context,
    }
 
    private fun configureRecycledViewPool() {
-      val var1: Int = this.getTypedLayoutManager().getSpanCount() * 20;
-      val var2: Int = this.getTypedLayoutManager().getSpanCount();
-      this.setItemViewCacheSize(var1 / 4);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var1);
-      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var2);
+      val var2: Int = this.getTypedLayoutManager().getSpanCount() * 20;
+      val var1: Int = this.getTypedLayoutManager().getSpanCount();
+      this.setItemViewCacheSize(var2 / 4);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.EMOJI.ordinal(), var2);
+      this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.CATEGORY.ordinal(), var1);
       this.getRecycledViewPool().setMaxRecycledViews(EmojiPickerItem.ItemType.FOOTER_UPSELL.ordinal(), 1);
    }
 
@@ -139,7 +139,7 @@ internal class EmojiPickerView(context: Context,
             && var1 !is EmojiPickerItem.FooterUpsell
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
-            throw new B9.n();
+            throw new Da.p();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
@@ -152,7 +152,7 @@ internal class EmojiPickerView(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemsChanged(position: Int?, count: Int?) {
-      val var4: Boolean = this.isComputingLayout();
+      val var3: Boolean = this.isComputingLayout();
       val var5: java.lang.String;
       if (var1 != null) {
          if (var2 != null) {
@@ -171,20 +171,20 @@ internal class EmojiPickerView(context: Context,
          ViewMeasureExtensionsKt.measureAndLayout(this);
       } catch (var15: Exception) {
          var var7: Pair;
-         var var8: Pair;
+         var var8: CrashReporting;
          var var9: Pair;
-         var var11: CrashReporting;
+         var var10: Pair;
+         var var11: Pair;
          var var12: Pair;
-         var var13: Pair;
          var var14: Pair;
          label31: {
-            var11 = CrashReporting.INSTANCE;
-            var9 = B9.s.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
-            var12 = B9.s.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
-            var8 = B9.s.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var4));
-            var7 = B9.s.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
-            var13 = B9.s.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
-            var14 = B9.s.a("adapterTypeChange", var5);
+            var8 = CrashReporting.INSTANCE;
+            var12 = Da.v.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
+            var7 = Da.v.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
+            var9 = Da.v.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var3));
+            var10 = Da.v.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
+            var11 = Da.v.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
+            var14 = Da.v.a("adapterTypeChange", var5);
             if (var1 != null) {
                val var6: java.lang.String = var1.toString();
                var16 = var6;
@@ -196,7 +196,7 @@ internal class EmojiPickerView(context: Context,
             var16 = "null";
          }
 
-         val var19: Pair = B9.s.a("position", var16);
+         val var19: Pair = Da.v.a("position", var16);
          var var17: java.lang.String = "null";
          if (var2 != null) {
             var17 = var2.toString();
@@ -206,9 +206,9 @@ internal class EmojiPickerView(context: Context,
          }
 
          CrashReporting.addBreadcrumb$default(
-            var11,
+            var8,
             "About to crash from EmojiPickerView.",
-            L.l(new Pair[]{var9, var12, var8, var7, var13, var14, var19, B9.s.a("count", var17)}),
+            O.m(new Pair[]{var12, var7, var9, var10, var11, var14, var19, Da.v.a("count", var17)}),
             null,
             null,
             12,
@@ -419,18 +419,18 @@ internal class EmojiPickerView(context: Context,
 
       public override fun toString(): String {
          val var4: Boolean = this.animateEmoji;
-         val var3: Boolean = this.scrollFastOptimizationEnabled;
+         val var2: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var2: Boolean = this.disableAnimationsOnScroll;
+         val var3: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
          var5.append(var4);
          var5.append(", scrollFastOptimizationEnabled=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var2);
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

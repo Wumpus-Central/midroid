@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.media
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class ContentScanMetadata(version: Int, flags: Long) {
    public final val version: Int
    public final val flags: Long

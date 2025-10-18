@@ -232,8 +232,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       val var9: Function1 = this.emitReactEvent;
       val var7: Boolean = var1.isAtBottom();
-      val var8: Boolean = var1.isDragging();
-      val var6: Boolean = var1.isSettling();
+      val var6: Boolean = var1.isDragging();
+      val var8: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -246,8 +246,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             var7,
             var3,
             var4,
-            var8,
             var6,
+            var8,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),
@@ -462,6 +462,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new TapPollAnswer(ChannelId.toString-impl(var1), MessageId.toString-impl(var3), var4));
    }
 
+   @Da.c
    public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
       this.emitReactEvent.invoke(new TapPollSubmitVote(ChannelId.toString-impl(var1), MessageId.toString-impl(var3)));
    }

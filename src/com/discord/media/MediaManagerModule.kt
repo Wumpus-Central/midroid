@@ -1,8 +1,8 @@
 package com.discord.media
 
-import B9.n
-import B9.s
-import G9.b
+import Da.p
+import Da.v
+import Ia.b
 import android.media.MediaCodecInfo
 import android.media.MediaCodecList
 import android.media.MediaCodecInfo.VideoCapabilities
@@ -14,6 +14,9 @@ import com.discord.crash_reporting.CrashReporting
 import com.discord.device.e
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.PublicFileDownloader
+import com.discord.file_downloader.DownloadState.Completed
+import com.discord.file_downloader.DownloadState.Failure
+import com.discord.file_downloader.DownloadState.InProgress
 import com.discord.logging.Log
 import com.discord.media.react.events.CompressionProgressEvent
 import com.discord.media.utils.EncodingConfig
@@ -30,8 +33,8 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableArray
 import com.facebook.react.bridge.WritableMap
-import db.K
-import db.f
+import gc.K
+import gc.f
 import java.util.Locale
 import java.util.Map.Entry
 import java.util.concurrent.CancellationException
@@ -45,7 +48,7 @@ import kotlinx.coroutines.flow.FlowCollector
 
 @SourceDebugExtension(["SMAP\nMediaManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaManagerModule.kt\ncom/discord/media/MediaManagerModule\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,748:1\n1310#2:749\n12574#2,2:750\n1311#2:752\n1#3:753\n*S KotlinDebug\n*F\n+ 1 MediaManagerModule.kt\ncom/discord/media/MediaManagerModule\n*L\n337#1:749\n338#1:750,2\n337#1:752\n*E\n"])
 public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("compression-progress", CompressionProgressEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("compression-progress", CompressionProgressEvent::class))
    private final val scope: CoroutineScope = g.b()
    private final val mediaResolver: MediaResolver
 
@@ -58,18 +61,18 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       if (var1 % var5.getWidthAlignment() != 0 || var2 % var5.getHeightAlignment() != 0) {
          val var16: WritableMap = Arguments.createMap();
          var16.putString("type", "resolution_alignment");
-         val var6: Int = var5.getWidthAlignment();
-         val var7: Int = var5.getHeightAlignment();
+         val var7: Int = var5.getWidthAlignment();
+         val var6: Int = var5.getHeightAlignment();
          val var17: StringBuilder = new StringBuilder();
          var17.append("Resolution must be aligned to ");
-         var17.append(var6);
-         var17.append("x");
          var17.append(var7);
+         var17.append("x");
+         var17.append(var6);
          var16.putString("message", var17.toString());
-         val var18: WritableMap = Arguments.createMap();
-         var18.putInt("width", var1);
-         var18.putInt("height", var2);
-         var16.putMap("current", var18);
+         val var11: WritableMap = Arguments.createMap();
+         var11.putInt("width", var1);
+         var11.putInt("height", var2);
+         var16.putMap("current", var11);
          val var19: WritableMap = Arguments.createMap();
          var19.putInt("width", var5.getWidthAlignment());
          var19.putInt("height", var5.getHeightAlignment());
@@ -91,18 +94,18 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          var12.putMap("current", var14);
          var8.pushMap(var12);
       } else if (!var5.areSizeAndRateSupported(var1, var2, var3)) {
-         val var13: WritableMap = Arguments.createMap();
-         var13.putString("type", "frameRate");
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("Frame rate ");
-         var15.append(var3);
-         var15.append(" not supported at resolution ");
-         var15.append(var1);
-         var15.append("x");
-         var15.append(var2);
-         var13.putString("message", var15.toString());
-         var13.putDouble("current", var3);
-         var8.pushMap(var13);
+         val var15: WritableMap = Arguments.createMap();
+         var15.putString("type", "frameRate");
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("Frame rate ");
+         var13.append(var3);
+         var13.append(" not supported at resolution ");
+         var13.append(var1);
+         var13.append("x");
+         var13.append(var2);
+         var15.putString("message", var13.toString());
+         var15.putDouble("current", var3);
+         var8.pushMap(var15);
       }
 
       return var8;
@@ -417,6 +420,24 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          K.b(),
          new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.ExitExprent.toJava(ExitExprent.java:86)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
          var2
       );
@@ -427,6 +448,24 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          K.b(),
          new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.ExitExprent.toJava(ExitExprent.java:86)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
          var2
       );
@@ -485,24 +524,25 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
             // $VF: Could not inline inconsistent finally blocks
             // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
             public final Object invokeSuspend(Object var1) {
-               label243: {
-                  label242: {
-                     var var718: Pair;
-                     var var731: Pair;
-                     label247: {
-                        label3564: {
-                           var var673: StringBuilder;
-                           label3560: {
+               label241: {
+                  label240: {
+                     var var717: Pair;
+                     var var728: Pair;
+                     label245: {
+                        label3537: {
+                           var var693: StringBuilder;
+                           label3533: {
                               var var10: Any;
                               var var702: java.lang.String;
-                              var var714: ByteArray;
-                              label251: {
-                                 label252: {
-                                    label253: {
+                              var var713: ByteArray;
+                              label249: {
+                                 label250: {
+                                    label251: {
                                        var10 = b.e();
                                        val var6: Promise;
                                        var var7: Any;
-                                       val var662: java.lang.String;
+                                       val var663: java.lang.String;
+                                       val var701: MediaManagerModule;
                                        if (this.label != 0) {
                                           if (this.label != 1) {
                                              if (this.label != 2) {
@@ -517,108 +557,108 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                                                       try {
                                                          c.b(var1);
                                                       } catch (var18: java.lang.Throwable) {
-                                                         var673 = Result.e;
+                                                         val var668: kotlin.Result.a = Result.e;
                                                          var1 = Result.b(c.a(var18));
-                                                         break label243;
+                                                         break label241;
                                                       }
 
-                                                      var673 = var1;
+                                                      var693 = var1;
                                                       var1 = var703;
-                                                      break label3560;
+                                                      break label3533;
                                                    }
 
-                                                   var714 = this.L$3 as ByteArray;
-                                                   val var730: Promise = this.L$2 as Promise;
+                                                   var713 = this.L$3 as ByteArray;
+                                                   val var727: Promise = this.L$2 as Promise;
                                                    var702 = this.L$1 as java.lang.String;
-                                                   var673 = this.L$0 as java.lang.String;
+                                                   var693 = this.L$0 as java.lang.String;
 
                                                    try {
                                                       c.b(var1);
                                                    } catch (var25: java.lang.Throwable) {
-                                                      var673 = Result.e;
+                                                      val var667: kotlin.Result.a = Result.e;
                                                       var1 = Result.b(c.a(var25));
-                                                      break label243;
+                                                      break label241;
                                                    }
 
-                                                   var720 = var1;
-                                                   var1 = var730;
-                                                   break label251;
+                                                   var719 = var1;
+                                                   var1 = var727;
+                                                   break label249;
                                                 }
 
                                                 val var712: Promise = this.L$3 as Promise;
                                                 var702 = this.L$2 as java.lang.String;
-                                                var673 = this.L$1 as java.lang.String;
-                                                val var729: MediaManagerModule = this.L$0 as MediaManagerModule;
+                                                var693 = this.L$1 as java.lang.String;
+                                                val var726: MediaManagerModule = this.L$0 as MediaManagerModule;
 
                                                 try {
                                                    c.b(var1);
                                                 } catch (var24: java.lang.Throwable) {
-                                                   var673 = Result.e;
+                                                   val var666: kotlin.Result.a = Result.e;
                                                    var1 = Result.b(c.a(var24));
-                                                   break label243;
+                                                   break label241;
                                                 }
 
-                                                var719 = var1;
+                                                var718 = var1;
                                                 var1 = var712;
-                                                var713 = var729;
-                                                break label252;
+                                                var711 = var726;
+                                                break label250;
                                              }
 
-                                             var718 = this.L$4 as Pair;
+                                             var717 = this.L$4 as Pair;
                                              val var9: Promise = this.L$3 as Promise;
-                                             var711 = this.L$2 as java.lang.String;
-                                             var673 = this.L$1 as java.lang.String;
-                                             var701 = this.L$0 as MediaManagerModule;
+                                             var702 = this.L$2 as java.lang.String;
+                                             var693 = this.L$1 as java.lang.String;
+                                             var711 = this.L$0 as MediaManagerModule;
 
                                              try {
                                                 c.b(var1);
                                              } catch (var33: java.lang.Throwable) {
-                                                var673 = Result.e;
+                                                val var664: kotlin.Result.a = Result.e;
                                                 var1 = Result.b(c.a(var33));
-                                                break label243;
+                                                break label241;
                                              }
 
-                                             var728 = var1;
+                                             var725 = var1;
                                              var1 = var9;
-                                             break label253;
+                                             break label251;
                                           }
 
                                           var6 = this.L$3 as Promise;
                                           var702 = this.L$2 as java.lang.String;
-                                          var673 = this.L$1 as java.lang.String;
+                                          var693 = this.L$1 as java.lang.String;
                                           val var8: MediaManagerModule = this.L$0 as MediaManagerModule;
 
                                           try {
                                              c.b(var1);
                                           } catch (var32: java.lang.Throwable) {
-                                             var673 = Result.e;
+                                             val var661: kotlin.Result.a = Result.e;
                                              var1 = Result.b(c.a(var32));
-                                             break label243;
+                                             break label241;
                                           }
 
                                           var7 = var1;
-                                          var662 = var702;
+                                          var663 = var702;
                                           var701 = var8;
                                        } else {
                                           c.b(var1);
-                                          val var664: CoroutineScope = this.L$0 as CoroutineScope;
+                                          val var669: CoroutineScope = this.L$0 as CoroutineScope;
                                           var701 = this.this$0;
-                                          var673 = this.$originalUri;
-                                          var662 = this.$compressedUri;
+                                          var693 = this.$originalUri;
+                                          var663 = this.$compressedUri;
                                           var6 = this.$promise;
 
                                           try {
                                              var7 = Result.e;
                                              this.L$0 = var701;
-                                             this.L$1 = var673;
-                                             this.L$2 = var662;
+                                             this.L$1 = var693;
+                                             this.L$2 = var663;
                                              this.L$3 = var6;
                                              this.label = 1;
-                                             var7 = MediaManagerModule.access$getImageDimensions(var701, (java.lang.String)var673, this);
+                                             var7 = MediaManagerModule.access$getImageDimensions(var701, (java.lang.String)var693, this);
                                           } catch (var31: java.lang.Throwable) {
-                                             var673 = Result.e;
+                                             val var670: kotlin.Result.a = Result.e;
                                              var1 = Result.b(c.a(var31));
-                                             break label243;
+                                             break label241;
                                           }
 
                                           if (var7 === var10) {
@@ -626,306 +666,301 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                                           }
                                        }
 
-                                       var var735: Pair;
                                        try {
-                                          var735 = var7 as Pair;
+                                          var717 = var7 as Pair;
                                           this.L$0 = var701;
-                                          this.L$1 = var673;
-                                          this.L$2 = var662;
+                                          this.L$1 = var693;
+                                          this.L$2 = var663;
                                           this.L$3 = var6;
-                                          this.L$4 = var735;
+                                          this.L$4 = var717;
                                           this.label = 2;
-                                          var728 = MediaManagerModule.access$getImageDimensions(var701, var662, this);
+                                          var725 = MediaManagerModule.access$getImageDimensions(var701, var663, this);
                                        } catch (var30: java.lang.Throwable) {
-                                          var673 = Result.e;
+                                          val var671: kotlin.Result.a = Result.e;
                                           var1 = Result.b(c.a(var30));
-                                          break label243;
+                                          break label241;
                                        }
 
-                                       if (var728 === var10) {
+                                       if (var725 === var10) {
                                           return var10;
                                        }
 
-                                       var711 = var662;
+                                       var711 = var701;
+                                       var702 = var663;
                                        var1 = var6;
-                                       var718 = var735;
                                     }
 
                                     try {
-                                       var731 = var728 as Pair;
+                                       var728 = var725 as Pair;
                                     } catch (var29: java.lang.Throwable) {
-                                       var673 = Result.e;
+                                       val var672: kotlin.Result.a = Result.e;
                                        var1 = Result.b(c.a(var29));
-                                       break label243;
+                                       break label241;
                                     }
 
-                                    if (var718 == null) {
+                                    if (var717 == null) {
                                        try {
                                           val var708: StringBuilder = new StringBuilder();
                                           var708.append("Failed to get original image dimensions from URI: ");
-                                          var708.append((java.lang.String)var673);
+                                          var708.append((java.lang.String)var693);
                                           var1.reject("quality_metrics_error", var708.toString());
-                                          break label242;
+                                          break label240;
                                        } catch (var28: java.lang.Throwable) {
-                                          var673 = Result.e;
+                                          val var688: kotlin.Result.a = Result.e;
                                           var1 = Result.b(c.a(var28));
-                                          break label243;
+                                          break label241;
                                        }
                                     }
 
-                                    if (var731 == null) {
+                                    if (var728 == null) {
                                        try {
-                                          var673 = new StringBuilder();
-                                          var673.append("Failed to get compressed image dimensions from URI: ");
-                                          var673.append(var711);
-                                          var1.reject("quality_metrics_error", var673.toString());
-                                          break label242;
+                                          var693 = new StringBuilder();
+                                          var693.append("Failed to get compressed image dimensions from URI: ");
+                                          var693.append(var702);
+                                          var1.reject("quality_metrics_error", var693.toString());
+                                          break label240;
                                        } catch (var27: java.lang.Throwable) {
-                                          val var696: kotlin.Result.a = Result.e;
+                                          val var687: kotlin.Result.a = Result.e;
                                           var1 = Result.b(c.a(var27));
-                                          break label243;
+                                          break label241;
                                        }
                                     }
 
                                     var var3x: Int;
-                                    var var667: Int;
+                                    var var692: Int;
                                     try {
-                                       var3x = (var718.c() as java.lang.Number).intValue();
-                                       var667 = (var731.c() as java.lang.Number).intValue();
+                                       var692 = (var717.c() as java.lang.Number).intValue();
+                                       var3x = (var728.c() as java.lang.Number).intValue();
                                     } catch (var26: java.lang.Throwable) {
-                                       val var677: kotlin.Result.a = Result.e;
+                                       val var673: kotlin.Result.a = Result.e;
                                        var1 = Result.b(c.a(var26));
-                                       break label243;
+                                       break label241;
                                     }
 
-                                    if (var3x != var667) {
-                                       break label247;
+                                    if (var692 != var3x) {
+                                       break label245;
                                     }
 
                                     try {
-                                       if ((var718.d() as java.lang.Number).intValue() != (var731.d() as java.lang.Number).intValue()) {
-                                          break label247;
+                                       if ((var717.d() as java.lang.Number).intValue() != (var728.d() as java.lang.Number).intValue()) {
+                                          break label245;
                                        }
                                     } catch (var34: java.lang.Throwable) {
-                                       val var678: kotlin.Result.a = Result.e;
+                                       val var674: kotlin.Result.a = Result.e;
                                        var1 = Result.b(c.a(var34));
-                                       break label243;
+                                       break label241;
                                     }
 
                                     try {
-                                       if ((var718.c() as java.lang.Number).intValue() > 8192 || (var718.d() as java.lang.Number).intValue() > 8192) {
-                                          break label3564;
+                                       if ((var717.c() as java.lang.Number).intValue() > 8192 || (var717.d() as java.lang.Number).intValue() > 8192) {
+                                          break label3537;
                                        }
                                     } catch (var35: java.lang.Throwable) {
-                                       val var679: kotlin.Result.a = Result.e;
+                                       val var675: kotlin.Result.a = Result.e;
                                        var1 = Result.b(c.a(var35));
-                                       break label243;
+                                       break label241;
                                     }
 
                                     try {
-                                       this.L$0 = var701;
-                                       this.L$1 = var673;
-                                       this.L$2 = var711;
+                                       this.L$0 = var711;
+                                       this.L$1 = var693;
+                                       this.L$2 = var702;
                                        this.L$3 = var1;
                                        this.L$4 = null;
                                        this.label = 3;
-                                       var732 = MediaManagerModule.access$loadImageDataFromUri(var701, (java.lang.String)var673, this);
+                                       var718 = MediaManagerModule.access$loadImageDataFromUri(var711, (java.lang.String)var693, this);
                                     } catch (var23: java.lang.Throwable) {
-                                       val var680: kotlin.Result.a = Result.e;
+                                       val var676: kotlin.Result.a = Result.e;
                                        var1 = Result.b(c.a(var23));
-                                       break label243;
+                                       break label241;
                                     }
 
-                                    if (var732 === var10) {
+                                    if (var718 === var10) {
                                        return var10;
                                     }
-
-                                    var713 = var701;
-                                    var702 = var711;
-                                    var719 = var732;
                                  }
 
                                  try {
-                                    var724 = var719 as ByteArray;
-                                    this.L$0 = var673;
+                                    var721 = var718 as ByteArray;
+                                    this.L$0 = var693;
                                     this.L$1 = var702;
                                     this.L$2 = var1;
-                                    this.L$3 = var724;
+                                    this.L$3 = var721;
                                     this.label = 4;
-                                    var733 = MediaManagerModule.access$loadImageDataFromUri(var713, var702, this);
+                                    var729 = MediaManagerModule.access$loadImageDataFromUri(var711, var702, this);
                                  } catch (var22: java.lang.Throwable) {
-                                    val var681: kotlin.Result.a = Result.e;
+                                    val var677: kotlin.Result.a = Result.e;
                                     var1 = Result.b(c.a(var22));
-                                    break label243;
+                                    break label241;
                                  }
 
-                                 var714 = var724;
-                                 var720 = var733;
-                                 if (var733 === var10) {
+                                 var713 = var721;
+                                 var719 = var729;
+                                 if (var729 === var10) {
                                     return var10;
                                  }
                               }
 
                               try {
-                                 var725 = var720 as ByteArray;
+                                 var722 = var719 as ByteArray;
                               } catch (var21: java.lang.Throwable) {
-                                 val var682: kotlin.Result.a = Result.e;
+                                 val var678: kotlin.Result.a = Result.e;
                                  var1 = Result.b(c.a(var21));
-                                 break label243;
+                                 break label241;
                               }
 
-                              if (var714 == null) {
+                              if (var713 == null) {
                                  try {
                                     val var705: StringBuilder = new StringBuilder();
                                     var705.append("Failed to load original image data from URI: ");
-                                    var705.append((java.lang.String)var673);
+                                    var705.append((java.lang.String)var693);
                                     var1.reject("quality_metrics_error", var705.toString());
-                                    break label242;
+                                    break label240;
                                  } catch (var20: java.lang.Throwable) {
-                                    val var691: kotlin.Result.a = Result.e;
+                                    val var684: kotlin.Result.a = Result.e;
                                     var1 = Result.b(c.a(var20));
-                                    break label243;
+                                    break label241;
                                  }
                               }
 
-                              if (var725 == null) {
+                              if (var722 == null) {
                                  try {
-                                    var673 = new StringBuilder();
-                                    var673.append("Failed to load compressed image data from URI: ");
-                                    var673.append(var702);
-                                    var1.reject("quality_metrics_error", var673.toString());
-                                    break label242;
+                                    var693 = new StringBuilder();
+                                    var693.append("Failed to load compressed image data from URI: ");
+                                    var693.append(var702);
+                                    var1.reject("quality_metrics_error", var693.toString());
+                                    break label240;
                                  } catch (var19: java.lang.Throwable) {
-                                    val var689: kotlin.Result.a = Result.e;
+                                    val var683: kotlin.Result.a = Result.e;
                                     var1 = Result.b(c.a(var19));
-                                    break label243;
+                                    break label241;
                                  }
                               }
 
                               try {
-                                 val var684: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
+                                 val var694: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                                  this.L$0 = var1;
                                  this.L$1 = null;
                                  this.L$2 = null;
                                  this.L$3 = null;
                                  this.label = 5;
-                                 var673 = (StringBuilder)var684.calculateQualityMetrics(var714, var725, this);
+                                 var693 = (StringBuilder)var694.calculateQualityMetrics(var713, var722, this);
                               } catch (var17: java.lang.Throwable) {
-                                 val var683: kotlin.Result.a = Result.e;
+                                 val var679: kotlin.Result.a = Result.e;
                                  var1 = Result.b(c.a(var17));
-                                 break label243;
+                                 break label241;
                               }
 
-                              if (var673 === var10) {
+                              if (var693 === var10) {
                                  return var10;
                               }
                            }
 
                            try {
-                              var686 = var673 as ImageQualityCalculator.ImageQualityMetrics;
+                              var695 = var693 as ImageQualityCalculator.ImageQualityMetrics;
                            } catch (var16: java.lang.Throwable) {
-                              val var685: kotlin.Result.a = Result.e;
+                              val var680: kotlin.Result.a = Result.e;
                               var1 = Result.b(c.a(var16));
-                              break label243;
+                              break label241;
                            }
 
-                           if (var686 == null) {
+                           if (var695 == null) {
                               try {
                                  var1.reject("quality_metrics_error", "Failed to calculate quality metrics");
                               } catch (var15: java.lang.Throwable) {
-                                 val var687: kotlin.Result.a = Result.e;
+                                 val var681: kotlin.Result.a = Result.e;
                                  var1 = Result.b(c.a(var15));
-                                 break label243;
+                                 break label241;
                               }
                            } else {
                               try {
                                  val var704: WritableMap = Arguments.createMap();
-                                 var704.putDouble("psnr", var686.getPsnr());
-                                 var704.putDouble("ssim", var686.getSsim());
-                                 var704.putInt("psnrCalculationTimeMs", (int)var686.getPsnrCalculationTimeMs());
-                                 var704.putInt("ssimCalculationTimeMs", (int)var686.getSsimCalculationTimeMs());
+                                 var704.putDouble("psnr", var695.getPsnr());
+                                 var704.putDouble("ssim", var695.getSsim());
+                                 var704.putInt("psnrCalculationTimeMs", (int)var695.getPsnrCalculationTimeMs());
+                                 var704.putInt("ssimCalculationTimeMs", (int)var695.getSsimCalculationTimeMs());
                                  var1.resolve(var704);
                               } catch (var14: java.lang.Throwable) {
-                                 val var688: kotlin.Result.a = Result.e;
+                                 val var682: kotlin.Result.a = Result.e;
                                  var1 = Result.b(c.a(var14));
-                                 break label243;
+                                 break label241;
                               }
                            }
-                           break label242;
+                           break label240;
                         }
 
                         try {
-                           val var693: Any = var718.c();
-                           val var715: Any = var718.d();
-                           val var706: StringBuilder = new StringBuilder();
-                           var706.append("Image too large for quality metrics calculation: ");
-                           var706.append(var693);
-                           var706.append("x");
-                           var706.append(var715);
-                           var706.append(" (max: 8192x8192)");
-                           var1.reject("quality_metrics_error", var706.toString());
-                           break label242;
+                           val var697: Any = var717.c();
+                           val var706: Any = var717.d();
+                           val var714: StringBuilder = new StringBuilder();
+                           var714.append("Image too large for quality metrics calculation: ");
+                           var714.append(var697);
+                           var714.append("x");
+                           var714.append(var706);
+                           var714.append(" (max: 8192x8192)");
+                           var1.reject("quality_metrics_error", var714.toString());
+                           break label240;
                         } catch (var13: java.lang.Throwable) {
-                           val var692: kotlin.Result.a = Result.e;
+                           val var685: kotlin.Result.a = Result.e;
                            var1 = Result.b(c.a(var13));
-                           break label243;
+                           break label241;
                         }
                      }
 
                      try {
-                        val var695: Any = var718.c();
-                        val var707: Any = var718.d();
-                        val var716: Any = var731.c();
-                        val var734: Any = var731.d();
-                        val var726: StringBuilder = new StringBuilder();
-                        var726.append("Image dimensions do not match: original(");
-                        var726.append(var695);
-                        var726.append("x");
-                        var726.append(var707);
-                        var726.append(") vs compressed(");
-                        var726.append(var716);
-                        var726.append("x");
-                        var726.append(var734);
-                        var726.append(")");
-                        var1.reject("quality_metrics_error", var726.toString());
+                        val var698: Any = var717.c();
+                        val var707: Any = var717.d();
+                        val var715: Any = var728.c();
+                        val var730: Any = var728.d();
+                        val var723: StringBuilder = new StringBuilder();
+                        var723.append("Image dimensions do not match: original(");
+                        var723.append(var698);
+                        var723.append("x");
+                        var723.append(var707);
+                        var723.append(") vs compressed(");
+                        var723.append(var715);
+                        var723.append("x");
+                        var723.append(var730);
+                        var723.append(")");
+                        var1.reject("quality_metrics_error", var723.toString());
                      } catch (var12: java.lang.Throwable) {
-                        val var694: kotlin.Result.a = Result.e;
+                        val var686: kotlin.Result.a = Result.e;
                         var1 = Result.b(c.a(var12));
-                        break label243;
+                        break label241;
                      }
                   }
 
-                  label141:
+                  label139:
                   try {
                      var1 = Result.b(Unit.a);
                   } catch (var11: java.lang.Throwable) {
-                     val var699: kotlin.Result.a = Result.e;
+                     val var689: kotlin.Result.a = Result.e;
                      var1 = Result.b(c.a(var11));
-                     break label141;
+                     break label139;
                   }
                }
 
-               val var717: java.lang.String = this.$originalUri;
-               var var709: java.lang.String = this.$compressedUri;
+               var var709: java.lang.String = this.$originalUri;
+               val var716: java.lang.String = this.$compressedUri;
                val var700: Promise = this.$promise;
-               val var727: java.lang.Throwable = Result.e(var1);
-               if (var727 != null) {
-                  val var665: CrashReporting = CrashReporting.INSTANCE;
+               val var690: java.lang.Throwable = Result.e(var1);
+               if (var690 != null) {
+                  val var724: CrashReporting = CrashReporting.INSTANCE;
                   CrashReporting.addBreadcrumb$default(
                      CrashReporting.INSTANCE,
                      "Failed to calculate image quality metrics",
-                     L.l(new Pair[]{s.a("originalUri", var717), s.a("compressedUri", var709)}),
+                     O.m(new Pair[]{v.a("originalUri", var709), v.a("compressedUri", var716)}),
                      null,
                      null,
                      12,
                      null
                   );
-                  CrashReporting.captureException$default(var665, var727, false, 2, null);
-                  var709 = var727.getMessage();
-                  val var666: StringBuilder = new StringBuilder();
-                  var666.append("Error calculating image quality metrics: ");
-                  var666.append(var709);
-                  var700.reject("quality_metrics_error", var666.toString());
+                  CrashReporting.captureException$default(var724, var690, false, 2, null);
+                  var709 = var690.getMessage();
+                  val var691: StringBuilder = new StringBuilder();
+                  var691.append("Error calculating image quality metrics: ");
+                  var691.append(var709);
+                  var700.reject("quality_metrics_error", var691.toString());
                }
 
                return Unit.a;
@@ -1010,9 +1045,9 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
             } else {
                c.b(var1);
                val var4: java.lang.String = MediaAssetUtils.INSTANCE.guessFileName(this.$uri, this.$contentType);
-               val var5: PublicFileDownloader = PublicFileDownloader.INSTANCE;
-               var1 = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-               val var8: Flow = PublicFileDownloader.downloadFile$default(var5, var1, this.$uri, var4, null, 8, null);
+               var1 = PublicFileDownloader.INSTANCE;
+               val var5: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+               val var8: Flow = PublicFileDownloader.downloadFile$default(var1, var5, this.$uri, var4, null, 8, null);
                val var7: FlowCollector = new FlowCollector(this.$promise) {
                   final Promise $promise;
 
@@ -1021,12 +1056,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   }
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
-                     if (var1 is DownloadState.Completed) {
+                     if (var1 is Completed) {
                         this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(true));
-                     } else if (var1 is DownloadState.Failure) {
+                     } else if (var1 is Failure) {
                         this.$promise.reject(new IllegalStateException("Unable to download asset."));
-                     } else if (var1 !is DownloadState.InProgress) {
-                        throw new n();
+                     } else if (var1 !is InProgress) {
+                        throw new p();
                      }
 
                      return Unit.a;
@@ -1043,8 +1078,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       }, 2, null);
    }
 
-   public open fun getConstants(): Map<String, List<String>> {
-      return L.e(s.a("supportedExtensions", CollectionsKt.n(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
+   public override fun getConstants(): Map<String, List<String>> {
+      return O.f(v.a("supportedExtensions", CollectionsKt.n(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
    }
 
    @ReactMethod
@@ -1092,11 +1127,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       try {
          var2.resolve(this.detectMediaOrigin(var1));
       } catch (var6: Exception) {
-         val var5: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Failed to detect media origin for URI: ");
-         var4.append(var1);
-         var5.e("MediaManagerModule", var4.toString(), var6);
+         val var4: Log = Log.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Failed to detect media origin for URI: ");
+         var5.append(var1);
+         var4.e("MediaManagerModule", var5.toString(), var6);
          val var7: WritableMap = Arguments.createMap();
          var7.putString("source", "unknown");
          var7.putString("confidence", "low");
@@ -1104,7 +1139,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "MediaManager";
    }
 
@@ -1146,15 +1181,15 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                if (this.label == 0) {
                   c.b(var1);
                   var1 = this.L$0 as CoroutineScope;
-                  val var4: MediaManagerModule = this.this$0;
+                  val var3x: MediaManagerModule = this.this$0;
                   val var2x: Uri = this.$inputUri;
                   var1 = this.$promise;
 
                   label77: {
-                     var var63: WritableMap;
+                     var var65: java.util.Iterator;
                      try {
-                        val var3x: kotlin.Result.a = Result.e;
-                        val var62: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var4);
+                        val var4: kotlin.Result.a = Result.e;
+                        val var62: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var3x);
                         val var59: java.util.Map = var62.handleVideoMetadata(var2x);
                         var63 = Arguments.createMap();
                         var65 = var59.entrySet().iterator();
@@ -1209,14 +1244,14 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                            }
 
                            try {
-                              val var64: java.lang.String = var67.getClass().getName();
-                              val var66: StringBuilder = new StringBuilder();
-                              var66.append("Unsupported value type ");
-                              var66.append(var64);
-                              var66.append(" for key [");
-                              var66.append(var60);
-                              var66.append("]");
-                              throw new IllegalArgumentException(var66.toString());
+                              val var66: java.lang.String = var67.getClass().getName();
+                              val var64: StringBuilder = new StringBuilder();
+                              var64.append("Unsupported value type ");
+                              var64.append(var66);
+                              var64.append(" for key [");
+                              var64.append(var60);
+                              var64.append("]");
+                              throw new IllegalArgumentException(var64.toString());
                            } catch (var7: java.lang.Throwable) {
                               val var55: kotlin.Result.a = Result.e;
                               var1 = Result.b(c.a(var7));
@@ -1253,7 +1288,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       );
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       g.d(this.scope, new CancellationException("Module destroyed"));
    }
@@ -1294,18 +1329,18 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       label58: {
          label57: {
             try {
-               var6 = var1.getInt("width");
-               var5 = var1.getInt("height");
+               var5 = var1.getInt("width");
+               var6 = var1.getInt("height");
                var3 = var1.getDouble("frameRate");
                if (var1.getBoolean("isHEVC")) {
                   break label57;
                }
             } catch (var16: Exception) {
-               val var17: java.lang.String = var16.getMessage();
-               val var7: StringBuilder = new StringBuilder();
-               var7.append("Error checking video encoding support: ");
-               var7.append(var17);
-               var2.reject("ERROR", var7.toString());
+               val var7: java.lang.String = var16.getMessage();
+               val var17: StringBuilder = new StringBuilder();
+               var17.append("Error checking video encoding support: ");
+               var17.append(var7);
+               var2.reject("ERROR", var17.toString());
                return;
             }
 
@@ -1322,35 +1357,35 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          var27 = Arguments.createMap();
          var8 = this.getEncoderInfo(var18);
       } catch (var15: Exception) {
-         val var19: java.lang.String = var15.getMessage();
-         val var26: StringBuilder = new StringBuilder();
-         var26.append("Error checking video encoding support: ");
-         var26.append(var19);
-         var2.reject("ERROR", var26.toString());
+         val var26: java.lang.String = var15.getMessage();
+         val var19: StringBuilder = new StringBuilder();
+         var19.append("Error checking video encoding support: ");
+         var19.append(var26);
+         var2.reject("ERROR", var19.toString());
          return;
       }
 
       if (var8 == null) {
          try {
             var27.putBoolean("isSupported", false);
-            val var10: WritableArray = Arguments.createArray();
-            val var32: WritableMap = Arguments.createMap();
-            var32.putString("type", "codec_not_found");
-            val var9: StringBuilder = new StringBuilder();
-            var9.append("No encoder found for mime type: ");
-            var9.append(var18);
-            var32.putString("message", var9.toString());
-            var10.pushMap(var32);
-            var27.putArray("failures", var10);
+            val var32: WritableArray = Arguments.createArray();
+            val var9: WritableMap = Arguments.createMap();
+            var9.putString("type", "codec_not_found");
+            val var10: StringBuilder = new StringBuilder();
+            var10.append("No encoder found for mime type: ");
+            var10.append(var18);
+            var9.putString("message", var10.toString());
+            var32.pushMap(var9);
+            var27.putArray("failures", var32);
             var27.putMap("capabilities", Arguments.createMap());
             var2.resolve(var27);
             return;
          } catch (var14: Exception) {
-            val var20: java.lang.String = var14.getMessage();
-            val var28: StringBuilder = new StringBuilder();
-            var28.append("Error checking video encoding support: ");
-            var28.append(var20);
-            var2.reject("ERROR", var28.toString());
+            val var28: java.lang.String = var14.getMessage();
+            val var20: StringBuilder = new StringBuilder();
+            var20.append("Error checking video encoding support: ");
+            var20.append(var28);
+            var2.reject("ERROR", var20.toString());
          }
       } else {
          label42: {
@@ -1358,29 +1393,29 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                var27.putString("encoderName", var8.getName());
                val var22: VideoCapabilities = var8.getCapabilitiesForType(var18).getVideoCapabilities();
                var27.putMap("capabilities", this.createCapabilitiesMap(var22));
-               val var23: WritableArray = this.checkEncodingConstraints(var6, var5, var3, var22);
+               val var23: WritableArray = this.checkEncodingConstraints(var5, var6, var3, var22);
                if (var23.size() > 0) {
                   var27.putBoolean("isSupported", false);
                   var27.putArray("failures", var23);
                   break label42;
                }
             } catch (var13: Exception) {
-               val var21: java.lang.String = var13.getMessage();
-               val var29: StringBuilder = new StringBuilder();
-               var29.append("Error checking video encoding support: ");
-               var29.append(var21);
-               var2.reject("ERROR", var29.toString());
+               val var29: java.lang.String = var13.getMessage();
+               val var21: StringBuilder = new StringBuilder();
+               var21.append("Error checking video encoding support: ");
+               var21.append(var29);
+               var2.reject("ERROR", var21.toString());
                return;
             }
 
             try {
                var27.putBoolean("isSupported", true);
             } catch (var12: Exception) {
-               val var24: java.lang.String = var12.getMessage();
-               val var30: StringBuilder = new StringBuilder();
-               var30.append("Error checking video encoding support: ");
-               var30.append(var24);
-               var2.reject("ERROR", var30.toString());
+               val var30: java.lang.String = var12.getMessage();
+               val var24: StringBuilder = new StringBuilder();
+               var24.append("Error checking video encoding support: ");
+               var24.append(var30);
+               var2.reject("ERROR", var24.toString());
                return;
             }
          }
@@ -1388,11 +1423,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          try {
             var2.resolve(var27);
          } catch (var11: Exception) {
-            val var25: java.lang.String = var11.getMessage();
-            val var31: StringBuilder = new StringBuilder();
-            var31.append("Error checking video encoding support: ");
-            var31.append(var25);
-            var2.reject("ERROR", var31.toString());
+            val var31: java.lang.String = var11.getMessage();
+            val var25: StringBuilder = new StringBuilder();
+            var25.append("Error checking video encoding support: ");
+            var25.append(var31);
+            var2.reject("ERROR", var25.toString());
          }
       }
    }
@@ -1403,17 +1438,17 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun resolveToMediaFilePath(uri: String, options: ReadableMap?, promise: Promise) {
-      var var9: Int;
+      var var6: Int;
       var var10: Boolean;
       var var11: Boolean;
       var var12: Boolean;
       var var13: Uri;
       label17: {
          var13 = Uri.parse(var1);
-         var9 = (int)(NativeMapExtensionsKt.getDouble(var2, "compressionQuality", 1.0) * 100);
-         var12 = NativeMapExtensionsKt.getBoolean(var2, "isLowQuality", false);
-         var11 = NativeMapExtensionsKt.getBoolean(var2, "skipVideoTranscode", false);
-         var10 = NativeMapExtensionsKt.getBoolean(var2, "useOriginalIfSmaller", false);
+         var6 = (int)(NativeMapExtensionsKt.getDouble(var2, "compressionQuality", 1.0) * 100);
+         var10 = NativeMapExtensionsKt.getBoolean(var2, "isLowQuality", false);
+         var12 = NativeMapExtensionsKt.getBoolean(var2, "skipVideoTranscode", false);
+         var11 = NativeMapExtensionsKt.getBoolean(var2, "useOriginalIfSmaller", false);
          if (var2 != null) {
             var2 = var2.getMap("encodingConfig");
             if (var2 != null) {
@@ -1431,11 +1466,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   );
                   break label17;
                } catch (var14: Exception) {
-                  val var18: java.lang.String = var14.getMessage();
-                  val var15: StringBuilder = new StringBuilder();
-                  var15.append("Invalid encodingConfig: ");
-                  var15.append(var18);
-                  var3.reject(new IllegalArgumentException(var15.toString()));
+                  var1 = var14.getMessage();
+                  val var18: StringBuilder = new StringBuilder();
+                  var18.append("Invalid encodingConfig: ");
+                  var18.append(var1);
+                  var3.reject(new IllegalArgumentException(var18.toString()));
                   return;
                }
             }
@@ -1448,7 +1483,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          this.scope,
          null,
          null,
-         new Function2<CoroutineScope, Continuation, Object>(this, var13, var9, var12, var11, var10, var17, var3, var1, null) {
+         new Function2<CoroutineScope, Continuation, Object>(this, var13, var6, var10, var12, var11, var17, var3, var1, null) {
             final EncodingConfig $encodingConfig;
             final int $imageCompressionQuality;
             final Uri $inputUri;
@@ -1520,12 +1555,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                      c.b(var1);
                      val var25: CoroutineScope = this.L$0 as CoroutineScope;
                      val var9: MediaManagerModule = this.this$0;
-                     val var26: Uri = this.$inputUri;
+                     val var8: Uri = this.$inputUri;
                      val var30: Int = this.$imageCompressionQuality;
                      val var3x: Boolean = this.$isLowQuality;
-                     val var4: Boolean = this.$skipVideoTranscode;
-                     val var5: Boolean = this.$useOriginalIfSmaller;
-                     val var8: EncodingConfig = this.$encodingConfig;
+                     val var5: Boolean = this.$skipVideoTranscode;
+                     val var4: Boolean = this.$useOriginalIfSmaller;
+                     val var26: EncodingConfig = this.$encodingConfig;
                      var6 = this.$promise;
 
                      try {
@@ -1533,7 +1568,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                         val var35: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var9);
                         this.L$0 = var6;
                         this.label = 1;
-                        var1 = (kotlin.Result.a)var35.resolveToUri$media_release(var26, var30, var3x, var4, var5, var8, this);
+                        var1 = (kotlin.Result.a)var35.resolveToUri$media_release(var8, var30, var3x, var5, var4, var26, this);
                      } catch (var12: java.lang.Throwable) {
                         var1 = Result.e;
                         var1 = Result.b(c.a(var12));
@@ -1556,30 +1591,30 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   }
                }
 
-               val var31: Promise = this.$promise;
+               val var32: Promise = this.$promise;
                val var37: java.lang.String = this.$uri;
                val var33: MediaManagerModule = this.this$0;
-               val var32: Uri = this.$inputUri;
-               val var36: java.lang.Throwable = Result.e(var1);
-               if (var36 != null) {
-                  if (var36 is CancellationException) {
-                     var31.reject(var36);
+               val var31: Uri = this.$inputUri;
+               val var29: java.lang.Throwable = Result.e(var1);
+               if (var29 != null) {
+                  if (var29 is CancellationException) {
+                     var32.reject(var29);
                   }
 
-                  val var29: CrashReporting = CrashReporting.INSTANCE;
-                  val var38: Pair = s.a("uri", var37);
+                  val var36: CrashReporting = CrashReporting.INSTANCE;
+                  val var38: Pair = v.a("uri", var37);
                   val var34: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var33);
                   CrashReporting.addBreadcrumb$default(
-                     var29,
+                     var36,
                      "Failed to resolve URI to file",
-                     L.l(new Pair[]{var38, s.a("mimeType", java.lang.String.valueOf(var34.getMimeType(var32)))}),
+                     O.m(new Pair[]{var38, v.a("mimeType", java.lang.String.valueOf(var34.getMimeType(var31)))}),
                      null,
                      null,
                      12,
                      null
                   );
-                  CrashReporting.captureException$default(var29, var36, false, 2, null);
-                  var31.reject(var36);
+                  CrashReporting.captureException$default(var36, var29, false, 2, null);
+                  var32.reject(var29);
                }
 
                return Unit.a;

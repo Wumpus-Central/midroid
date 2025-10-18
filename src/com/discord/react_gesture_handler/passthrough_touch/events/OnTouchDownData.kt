@@ -3,9 +3,9 @@ package com.discord.react_gesture_handler.passthrough_touch.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public class OnTouchDownData : ReactEvent {
    override fun serialize(): WritableMap {
       return ReactEvent.DefaultImpls.serialize(this);

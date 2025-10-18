@@ -37,7 +37,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return h.w(h.w(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
+      return k.E(k.E(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])
@@ -104,7 +104,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 078
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 6
@@ -168,7 +168,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 109: astore 1
       // 10a: aload 7
       // 10c: aconst_null
-      // 10d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10d: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 110: aload 1
       // 111: areturn
       // 112: aload 6
@@ -176,12 +176,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 115: astore 1
       // 116: aload 7
       // 118: aload 6
-      // 11a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11a: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11d: aload 1
       // 11e: athrow
       // 11f: aload 7
       // 121: aconst_null
-      // 122: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 122: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 125: aconst_null
       // 126: areturn
    }
@@ -324,23 +324,23 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var1: Long = this.id;
-         val var6: java.lang.String = this.fileName;
-         val var7: java.lang.String = this.relativePath;
-         val var5: Uri = this.uri;
+         val var7: java.lang.String = this.fileName;
+         val var8: java.lang.String = this.relativePath;
+         val var6: Uri = this.uri;
          val var3: Long = this.dateAdded;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("ScreenshotData(id=");
-         var8.append(var1);
-         var8.append(", fileName=");
-         var8.append(var6);
-         var8.append(", relativePath=");
-         var8.append(var7);
-         var8.append(", uri=");
-         var8.append(var5);
-         var8.append(", dateAdded=");
-         var8.append(var3);
-         var8.append(")");
-         return var8.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ScreenshotData(id=");
+         var5.append(var1);
+         var5.append(", fileName=");
+         var5.append(var7);
+         var5.append(", relativePath=");
+         var5.append(var8);
+         var5.append(", uri=");
+         var5.append(var6);
+         var5.append(", dateAdded=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

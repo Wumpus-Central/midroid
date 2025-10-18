@@ -1,6 +1,6 @@
 package com.discord.media.react
 
-import B9.s
+import Da.v
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -18,16 +18,16 @@ internal class GetPhotosData(edges: List<ContentResolverMedia>) {
 
    private fun ContentResolverMedia.toNativeMap(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("type", java.lang.String.valueOf(var1.getMediaType())),
-         s.a(
+         v.a("type", java.lang.String.valueOf(var1.getMediaType())),
+         v.a(
             "image",
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("uri", java.lang.String.valueOf(var1.getUri())),
-               s.a("mimeType", var1.getMimeType()),
-               s.a("filename", var1.getName()),
-               s.a("width", var1.getWidth()),
-               s.a("height", var1.getHeight()),
-               s.a("playableDuration", var1.getDuration())
+               v.a("uri", java.lang.String.valueOf(var1.getUri())),
+               v.a("mimeType", var1.getMimeType()),
+               v.a("filename", var1.getName()),
+               v.a("width", var1.getWidth()),
+               v.a("height", var1.getHeight()),
+               v.a("playableDuration", var1.getDuration())
             )
          )
       );
@@ -39,10 +39,10 @@ internal class GetPhotosData(edges: List<ContentResolverMedia>) {
       val var3: java.util.Iterator = var2.iterator();
 
       while (var3.hasNext()) {
-         var1.add(NativeMapExtensionsKt.nativeMapOf(s.a("node", this.toNativeMap(var3.next() as ContentResolverMedia))));
+         var1.add(NativeMapExtensionsKt.nativeMapOf(v.a("node", this.toNativeMap(var3.next() as ContentResolverMedia))));
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(s.a("edges", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null)));
+      return NativeMapExtensionsKt.nativeMapOf(v.a("edges", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null)));
    }
 
    public companion object {

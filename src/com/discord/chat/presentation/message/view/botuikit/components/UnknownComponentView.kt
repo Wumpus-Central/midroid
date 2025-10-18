@@ -28,10 +28,10 @@ public class UnknownComponentView  public constructor(context: Context, attrs: A
    }
 
    public open fun configure(component: UnknownComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var5: ErrorMessageView = this.binding.errorMessageView;
+      val var4: ErrorMessageView = this.binding.errorMessageView;
       this.binding.errorMessageView.hideHeader();
-      val var4: Context = var5.getContext();
-      var5.setErrorLabel(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.UNKNOWN_MESSAGE_UPDATE_DISCORD, null, 2, null));
+      val var5: Context = var4.getContext();
+      var4.setErrorLabel(I18nUtilsKt.i18nFormat$default(var5, I18nMessage.UNKNOWN_MESSAGE_UPDATE_DISCORD, null, 2, null));
    }
 
    public override fun getComponentType(): KClass<UnknownComponent> {

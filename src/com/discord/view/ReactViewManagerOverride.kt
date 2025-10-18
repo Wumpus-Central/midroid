@@ -1,8 +1,8 @@
 package com.discord.view
 
 import android.view.View
-import com.discord.R
-import com.facebook.react.R.id
+import com.discord.R.id
+import com.facebook.react.R
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.views.view.ReactViewGroup
@@ -12,9 +12,9 @@ import io.sentry.p1
 
 @ReactModule(canOverrideExistingModule = true, name = "RCTView")
 public class ReactViewManagerOverride : ReactViewManager {
-   public open fun addView(parent: ReactViewGroup, child: View, index: Int) {
+   public override fun addView(parent: ReactViewGroup, child: View, index: Int) {
       if (var2.getParent() != null) {
-         var var8: java.lang.Boolean = (java.lang.Boolean)var2.getTag(R.id.view_is_transitioning);
+         var var8: java.lang.Boolean = (java.lang.Boolean)var2.getTag(id.view_is_transitioning);
          if (var8 is java.lang.Boolean) {
             var8 = var8;
          } else {
@@ -31,7 +31,7 @@ public class ReactViewManagerOverride : ReactViewManager {
 
          val var6: Boolean = var2.getParent() == var1;
          val var7: Boolean = var1.getRemoveClippedSubviews();
-         val var10: Any = var2.getTag(id.view_clipped);
+         val var10: Any = var2.getTag(R.id.view_clipped);
          var8 = null;
          if (var10 is java.lang.Boolean) {
             var8 = var10 as java.lang.Boolean;
@@ -41,15 +41,15 @@ public class ReactViewManagerOverride : ReactViewManager {
             var5 = var8;
          }
 
-         val var15: java.lang.String = var2.getClass().getName();
-         val var14: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
-         var14.o("react.viewmanager");
-         var14.p("isTransitioning", var11);
-         var14.p("wantsToAddToSameParent", var6);
-         var14.p("isParentClipping", var7);
-         var14.p("isChildClipped", var5);
-         var14.p("childClassType", var15);
-         p1.e(var14);
+         val var14: java.lang.String = var2.getClass().getName();
+         val var15: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
+         var15.o("react.viewmanager");
+         var15.p("isTransitioning", var11);
+         var15.p("wantsToAddToSameParent", var6);
+         var15.p("isParentClipping", var7);
+         var15.p("isChildClipped", var5);
+         var15.p("childClassType", var14);
+         p1.e(var15);
       }
 
       super.addView(var1, var2, var3);

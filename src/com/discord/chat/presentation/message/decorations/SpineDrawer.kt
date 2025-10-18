@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.decorations
 
-import B9.j
+import Da.l
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.channel_spine.ChannelSpineView
 import com.discord.chat.R
 import com.discord.theme.ThemeManagerKt
-import y1.d
-import y1.e
+import y2.d
+import y2.e
 
 public class SpineDrawer(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final val context: Context
@@ -36,8 +36,8 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
    init {
       this.context = var1;
       this.contentStartPositionPx = var2;
-      this.lineDrawable$delegate = j.b(new d(this));
-      this.splineView$delegate = j.b(new e(this));
+      this.lineDrawable$delegate = l.b(new d(this));
+      this.splineView$delegate = l.b(new e(this));
       this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
       this.spineRect = new Rect();
    }
@@ -61,11 +61,11 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
    public fun drawSpineCurve(canvas: Canvas, parent: RecyclerView, child: View, viewToCenterSpine: View, middle: Int) {
       var1.save();
       var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
-      val var6: Int = var3.getTop();
       val var8: Int = var3.getTop();
-      val var7: Int = (var4.getBottom() - var4.getTop()) / 2;
+      val var7: Int = var3.getTop();
+      val var6: Int = (var4.getBottom() - var4.getTop()) / 2;
       val var9: Int = this.itemPaddingOffset;
-      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var6, this.contentStartPositionPx, var8 + var7 + var9);
+      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var8, this.contentStartPositionPx, var7 + var6 + var9);
       val var11: ChannelSpineView = this.getSplineView();
       var11.setRowHeight((float)(var10.height() / 2));
       var11.measure(MeasureSpec.makeMeasureSpec(var10.width(), 1073741824), MeasureSpec.makeMeasureSpec(var10.height(), 1073741824));

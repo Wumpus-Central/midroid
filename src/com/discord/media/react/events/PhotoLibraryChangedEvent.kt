@@ -3,9 +3,9 @@ package com.discord.media.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal class PhotoLibraryChangedEvent : ReactEvent {
    override fun serialize(): WritableMap {
       return ReactEvent.DefaultImpls.serialize(this);

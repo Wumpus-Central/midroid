@@ -2,7 +2,7 @@
 
 package com.discord.contact_sync.react
 
-import J1.a
+import J2.a
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -15,9 +15,9 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import qb.E0
-import qb.U
-import qb.f
+import tc.P0
+import tc.W
+import tc.f
 
 @JvmSynthetic
 fun a(var0: Any): Any {
@@ -84,8 +84,8 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new U(E0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
-      val var4: java.util.Collection = var3.values();
+      var11 = var10.c(new W(P0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
+      val var4: java.lang.Iterable = var3.values();
       var12 = new ArrayList(CollectionsKt.v(var4, 10));
       var13 = var4.iterator();
    } catch (var8: SecurityException) {

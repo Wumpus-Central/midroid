@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.emoji.RenderableEmoji
-import com.discord.reactions.ReactionView
+import com.discord.reactions.ReactionView.Emoji
+import com.discord.reactions.ReactionView.Emoji.DefaultImpls
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
-public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
-   ReactionView.Emoji {
+@m
+public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) : Emoji {
    public open val name: String?
    public open val src: String
    public open val displayName: String
@@ -74,12 +74,12 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
    }
 
-   override fun getEmojiId(): java.lang.String {
-      return ReactionView.Emoji.DefaultImpls.getEmojiId(this);
+   fun getEmojiId(): java.lang.String {
+      return DefaultImpls.getEmojiId(this);
    }
 
-   override fun getShouldAnimate(): Boolean {
-      return ReactionView.Emoji.DefaultImpls.getShouldAnimate(this);
+   fun getShouldAnimate(): Boolean {
+      return DefaultImpls.getShouldAnimate(this);
    }
 
    public override fun hashCode(): Int {
@@ -107,29 +107,29 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
-   override fun renderable(): RenderableEmoji {
-      return ReactionView.Emoji.DefaultImpls.renderable(this);
+   fun renderable(): RenderableEmoji {
+      return DefaultImpls.renderable(this);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var3: java.lang.String = this.name;
+      val var5: java.lang.String = this.src;
       val var6: java.lang.String = this.displayName;
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.Boolean = this.animated;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageReactionEmoji(name=");
-      var1.append(var5);
-      var1.append(", src=");
-      var1.append(var2);
-      var1.append(", displayName=");
-      var1.append(var6);
-      var1.append(", id=");
-      var1.append(var3);
-      var1.append(", animated=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.id;
+      val var1: java.lang.Boolean = this.animated;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageReactionEmoji(name=");
+      var2.append(var3);
+      var2.append(", src=");
+      var2.append(var5);
+      var2.append(", displayName=");
+      var2.append(var6);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", animated=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

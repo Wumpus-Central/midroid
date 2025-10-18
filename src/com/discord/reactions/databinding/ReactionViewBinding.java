@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import y0.a;
+import x1.a;
 
 public final class ReactionViewBinding implements ViewBinding {
    @NonNull
@@ -48,24 +48,24 @@ public final class ReactionViewBinding implements ViewBinding {
    @NonNull
    public static ReactionViewBinding bind(@NonNull View var0) {
       int var1 = R.id.reaction_count_1;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var7 = (TextView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.reaction_count_2;
          TextView var3 = (TextView)a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.reaction_count_switcher;
-            TextSwitcher var6 = (TextSwitcher)a.a(var0, var1);
-            if (var6 != null) {
+            TextSwitcher var5 = (TextSwitcher)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.reaction_emoji;
-               SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.reaction_label_left;
-                  TextView var4 = (TextView)a.a(var0, var1);
-                  if (var4 != null) {
+                  TextView var2 = (TextView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.reaction_label_right;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new ReactionViewBinding(var0, var2, var3, var6, var5, var4, var7);
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new ReactionViewBinding(var0, var7, var3, var5, var4, var2, var6);
                      }
                   }
                }
@@ -87,7 +87,6 @@ public final class ReactionViewBinding implements ViewBinding {
    }
 
    @NonNull
-   @Override
    public View getRoot() {
       return this.rootView;
    }

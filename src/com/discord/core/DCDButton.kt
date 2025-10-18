@@ -1,6 +1,6 @@
 package com.discord.core
 
-import L6.k
+import N7.k
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -98,7 +98,7 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    public fun setBackgroundRectangle(color: Int, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
       this.setBackgroundColor(var1);
       val var6: MaterialButton = this.button;
-      val var5: L6.k.b = k.a();
+      val var5: N7.k.b = k.a();
       var5.o((float)var2);
       var6.setShapeAppearanceModel(var5.m());
       if (var3 != null) {

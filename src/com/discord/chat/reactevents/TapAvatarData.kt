@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class TapAvatarData(messageId: String, userId: String) : ReactEvent {
    public final val messageId: String
    public final val userId: String
@@ -47,20 +48,20 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
       return this.messageId.hashCode() * 31 + this.userId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var1: java.lang.String = this.userId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapAvatarData(messageId=");
-      var2.append(var3);
-      var2.append(", userId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapAvatarData(messageId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

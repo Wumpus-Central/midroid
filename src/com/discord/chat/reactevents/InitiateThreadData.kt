@@ -3,11 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelId) : InitiateThreadData(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val channelId: ChannelId
@@ -49,8 +50,8 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
       return MessageId.hashCode-impl(this.messageId) * 31 + ChannelId.hashCode-impl(this.channelId);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

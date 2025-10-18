@@ -1,6 +1,6 @@
 package com.discord.keyboard
 
-import O1.a
+import O2.a
 import android.app.Activity
 import android.view.View
 import android.view.Window
@@ -21,7 +21,7 @@ public class KeyboardModule(reactContext: ReactApplicationContext) : NativeKeybo
       KeyboardManager.INSTANCE.onKeyboardChanged$keyboard_release(var0);
    }
 
-   public override fun clearCurrentFocusAndDismissKeyboard() {
+   public open fun clearCurrentFocusAndDismissKeyboard() {
       val var1: Window = ViewUtilsKt.getWindow(this.getReactApplicationContext());
       if (var1 != null) {
          val var2: View = var1.getCurrentFocus();
@@ -33,14 +33,14 @@ public class KeyboardModule(reactContext: ReactApplicationContext) : NativeKeybo
       this.dismissGlobalKeyboard();
    }
 
-   public override fun dismissGlobalKeyboard() {
+   public open fun dismissGlobalKeyboard() {
       val var1: Activity = this.reactContext.getCurrentActivity();
       if (var1 != null) {
          KeyboardExtensionsKt.hideKeyboard(var1);
       }
    }
 
-   public override fun onKeyboardChanged(opened: Boolean) {
+   public open fun onKeyboardChanged(opened: Boolean) {
       this.getReactApplicationContext().runOnUiQueueThread(new a(var1));
    }
 }

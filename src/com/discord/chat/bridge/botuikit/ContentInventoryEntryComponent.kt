@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component() {
    public open val type: Int
    public open val id: String
@@ -63,15 +63,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var2: java.lang.String = this.id;
+      val var3: ContentInventoryEntry = this.contentInventoryEntry;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ContentInventoryEntryComponent(type=");
       var4.append(var1);
       var4.append(", id=");
-      var4.append(var3);
-      var4.append(", contentInventoryEntry=");
       var4.append(var2);
+      var4.append(", contentInventoryEntry=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

@@ -1,16 +1,16 @@
 package com.discord.media_player.reactevents
 
-import B9.s
+import Da.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import nb.g
-import nb.k
-import ub.a
+import qc.m
+import qc.w
+import xc.a
 
-@g
+@m
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
    public final val source: MediaPlayerPlaybackSource?
    public final val time: Long
@@ -68,9 +68,9 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    }
 
    public override fun serialize(): WritableMap {
-      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(s.a("time", this.time), s.a("duration", this.duration));
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(v.a("time", this.time), v.a("duration", this.duration));
       if (this.source != null) {
-         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(k.b(MediaPlayerPlaybackSource.class), this.source)));
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(w.b(MediaPlayerPlaybackSource.class), this.source)));
       }
 
       return var1;

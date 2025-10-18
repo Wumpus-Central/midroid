@@ -1,6 +1,6 @@
 package com.discord.billing.types
 
-import H9.a
+import Ja.a
 import kotlin.enums.EnumEntries
 
 internal enum class ProductType(rawProductType: String) {

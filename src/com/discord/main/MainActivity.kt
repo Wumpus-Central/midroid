@@ -1,5 +1,6 @@
 package com.discord.main
 
+import Da.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -43,12 +44,14 @@ public class MainActivity : ReactActivity {
             var7.handleIntent(var5, var1);
          }
 
+         @Override
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
             this.parseIntent(var2);
          }
 
+         @Override
          public boolean onNewIntent(Intent var1) {
             this.parseIntent(var1);
             this.this$0.setIntent(var1);
@@ -66,6 +69,7 @@ public class MainActivity : ReactActivity {
       TTIModule.Companion.setStaticMainActivityCreationTime(System.currentTimeMillis());
    }
 
+   @c
    public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
       super.onPictureInPictureModeChanged(var1);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
@@ -76,7 +80,7 @@ public class MainActivity : ReactActivity {
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public open fun onUserLeaveHint() {
+   public override fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

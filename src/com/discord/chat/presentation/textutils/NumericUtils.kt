@@ -14,9 +14,9 @@ public object NumericUtils {
       val var1: java.util.List = StringsKt.split$default("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var0: ArrayList = new ArrayList();
 
-      for (Object var2 : var1) {
-         if ((var2 as java.lang.String).length() != 0) {
-            var0.add(var2);
+      for (var1 : var1) {
+         if ((var1 as java.lang.String).length() != 0) {
+            var0.add(var1);
          }
       }
 
@@ -43,13 +43,13 @@ public object NumericUtils {
          if (var1 <= 26L) {
             return letters.get((int)var1 - 1);
          } else {
-            val var10: Long = kotlin.ranges.d.e(var1 % (long)26, 1L);
-            val var9: java.lang.String = this.toLetter(var1 / (long)26);
-            val var11: java.lang.String = this.toLetter(var10);
-            val var8: StringBuilder = new StringBuilder();
-            var8.append(var9);
-            var8.append(var11);
-            return var8.toString();
+            val var10: Long = kotlin.ranges.e.f(var1 % (long)26, 1L);
+            val var11: java.lang.String = this.toLetter(var1 / (long)26);
+            val var8: java.lang.String = this.toLetter(var10);
+            val var9: StringBuilder = new StringBuilder();
+            var9.append(var11);
+            var9.append(var8);
+            return var9.toString();
          }
       } else {
          val var7: StringBuilder = new StringBuilder();

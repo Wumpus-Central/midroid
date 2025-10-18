@@ -2,8 +2,8 @@ package com.discord.reactevents
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableMap
-import nb.k
-import ub.a
+import qc.w
+import xc.a
 
 public interface ReactEvent {
    public open fun serialize(): WritableMap {
@@ -13,7 +13,7 @@ public interface ReactEvent {
    internal class DefaultImpls {
       @JvmStatic
       fun serialize(var0: ReactEvent): WritableMap {
-         return NativeMapExtensionsKt.toNativeMap(a.b.e(k.b(var0.getClass()), var0));
+         return NativeMapExtensionsKt.toNativeMap(a.b.e(w.b(var0.getClass()), var0));
       }
    }
 }

@@ -60,7 +60,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    init {
-      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
+      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -69,10 +69,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var4;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
-      this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = B9.j.b(new P());
+      this.accessoriesAdapter = var3;
+      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
+      this.transitionResilientLinearLayoutManager = var4;
+      this.forwardBarPaint$delegate = Da.l.b(new P());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -85,8 +85,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var3);
-      this.setAdapter(var4);
+      this.setLayoutManager(var4);
+      this.setAdapter(var3);
    }
 
    @JvmStatic
@@ -97,7 +97,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : kotlin.sequences.k.L(androidx.core.view.f0.a(this))) {
+      for (Pair var3 : kotlin.sequences.k.M(androidx.core.view.f0.a(this))) {
          val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
@@ -136,11 +136,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -170,27 +170,27 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var12: MessageAccessoriesView.Companion = Companion;
       val var11: Resources = this.getResources();
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
-      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var16: java.util.Iterator = var5.iterator();
+         val var13: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var16.hasNext()) {
+            if (!var13.hasNext()) {
                break;
             }
 
-            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var13.setShowThreadSpine(var9);
+      var16.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

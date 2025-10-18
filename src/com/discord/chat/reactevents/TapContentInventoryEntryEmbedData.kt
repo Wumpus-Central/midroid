@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
    public final val messageId: String
    public final val authorId: String
@@ -68,26 +69,26 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
       return ((this.messageId.hashCode() * 31 + this.authorId.hashCode()) * 31 + this.contentId.hashCode()) * 31 + this.tappedElement.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.authorId;
-      val var4: java.lang.String = this.contentId;
+      val var4: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.authorId;
+      val var1: java.lang.String = this.contentId;
       val var2: java.lang.String = this.tappedElement;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapContentInventoryEntryEmbedData(messageId=");
-      var5.append(var1);
-      var5.append(", authorId=");
-      var5.append(var3);
-      var5.append(", contentId=");
-      var5.append(var4);
-      var5.append(", tappedElement=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapContentInventoryEntryEmbedData(messageId=");
+      var3.append(var4);
+      var3.append(", authorId=");
+      var3.append(var5);
+      var3.append(", contentId=");
+      var3.append(var1);
+      var3.append(", tappedElement=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

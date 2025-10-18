@@ -1,6 +1,6 @@
 package com.discord.user_search_worker.react_events
 
-import B9.s
+import Da.v
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -67,41 +67,41 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
    }
 
    public override fun serialize(): WritableMap {
-      val var2: Pair = s.a("uuid", this.uuid);
-      val var3: Pair = s.a("type", this.type);
-      val var4: Pair = s.a("query", this.query);
+      val var3: Pair = v.a("uuid", this.uuid);
+      val var4: Pair = v.a("type", this.type);
+      val var1: Pair = v.a("query", this.query);
       val var5: java.util.List = this.results;
-      val var1: ArrayList = new ArrayList(CollectionsKt.v(this.results, 10));
+      val var2: ArrayList = new ArrayList(CollectionsKt.v(this.results, 10));
 
       for (UserSearchWorkerResult var7 : var5) {
-         var1.add(
+         var2.add(
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("id", var7.getId()), s.a("username", var7.getUsername()), s.a("comparator", var7.getComparator()), s.a("score", var7.getScore())
+               v.a("id", var7.getId()), v.a("username", var7.getUsername()), v.a("comparator", var7.getComparator()), v.a("score", var7.getScore())
             )
          );
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         var2,
          var3,
-         s.a("payload", NativeMapExtensionsKt.nativeMapOf(var4, s.a("results", NativeArrayExtensionsKt.toNativeArray$default(var1, null, 1, null))))
+         var4,
+         v.a("payload", NativeMapExtensionsKt.nativeMapOf(var1, v.a("results", NativeArrayExtensionsKt.toNativeArray$default(var2, null, 1, null))))
       );
    }
 
    public override fun toString(): String {
       val var1: java.util.List = this.results;
-      val var4: java.lang.String = this.query;
-      val var5: java.lang.String = this.uuid;
-      val var2: java.lang.String = this.type;
+      val var2: java.lang.String = this.query;
+      val var4: java.lang.String = this.uuid;
+      val var5: java.lang.String = this.type;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ReturnResultsEvent(results=");
       var3.append(var1);
       var3.append(", query=");
-      var3.append(var4);
-      var3.append(", uuid=");
-      var3.append(var5);
-      var3.append(", type=");
       var3.append(var2);
+      var3.append(", uuid=");
+      var3.append(var4);
+      var3.append(", type=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }

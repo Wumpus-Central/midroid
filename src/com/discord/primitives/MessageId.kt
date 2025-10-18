@@ -4,9 +4,9 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.discord.snowflake.SnowflakeUtils
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public inline class MessageId : Parcelable {
    public final val value: String
 

@@ -1,6 +1,6 @@
 package com.discord.portals.from_native
 
-import B9.s
+import Da.v
 import android.app.Activity
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
@@ -14,14 +14,14 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import db.I
-import db.K
-import db.f
+import gc.I
+import gc.K
+import gc.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec(var1) {
    @JvmStatic
@@ -29,14 +29,14 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
       PortalFromNativeContextManager.INSTANCE.unregisterView(var0);
    }
 
-   public override fun unregisterView(portal: Double) {
+   public open fun unregisterView(portal: Double) {
       val var3: Activity = this.getReactApplicationContext().getCurrentActivity();
       if (var3 != null) {
          var3.runOnUiThread(new c(var1));
       }
    }
 
-   @g
+   @m
    internal data class OnPortalViewLoadedEvent(portal: Double) : ReactEvent {
       public final val portal: Double
 
@@ -90,7 +90,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
    public class ViewManager : ViewGroupManager<PortalHolderViewGroup>, DCDPortalViewManagerInterface<PortalHolderViewGroup> {
       private final val delegate: DCDPortalViewManagerDelegate<PortalHolderViewGroup, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> =
          new DCDPortalViewManagerDelegate(this)
-         private final val reactEvents: ReactEvents = new ReactEvents(s.a("onPortalViewLoaded", PortalFromNativeModule.OnPortalViewLoadedEvent::class))
+         private final val reactEvents: ReactEvents = new ReactEvents(v.a("onPortalViewLoaded", PortalFromNativeModule.OnPortalViewLoadedEvent::class))
 
       protected open fun createViewInstance(reactContext: ThemedReactContext): PortalHolderViewGroup {
          return new PortalHolderViewGroup(var1);
@@ -100,7 +100,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
          return this.delegate;
       }
 
-      public open fun getName(): String {
+      public override fun getName(): String {
          return "DCDPortalView";
       }
 
@@ -133,7 +133,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = G9.b.e();
+               val var5: Any = Ia.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -159,7 +159,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = G9.b.e();
+                        val var3: Any = Ia.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

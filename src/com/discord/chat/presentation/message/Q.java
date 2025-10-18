@@ -9,9 +9,9 @@ public final class Q implements OnClickListener {
    public final ChatEventHandler d;
    public final String e;
    public final long i;
-   public final String m;
+   public final String s;
 
    public final void onClick(View var1) {
-      MessageAltRemixTagView.a(this.d, this.e, this.i, this.m, var1);
+      MessageAltRemixTagView.a(this.d, this.e, this.i, this.s, var1);
    }
 }

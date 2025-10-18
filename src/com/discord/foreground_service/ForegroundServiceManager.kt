@@ -1,6 +1,6 @@
 package com.discord.foreground_service
 
-import B9.n
+import Da.p
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -12,6 +12,7 @@ import com.discord.foreground_service.utils.Wakelocks
 import com.discord.misc.utilities.intent.IntentUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
+import com.discord.notifications.actions.intents.NotificationAction.Companion
 import com.discord.permissions.NativePermissionManagerModule
 import com.discord.permissions.NativePermissionPromise
 import com.facebook.react.bridge.NativeModule
@@ -76,7 +77,7 @@ public object ForegroundServiceManager {
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  throw new n();
+                  throw new p();
                }
 
                var7.requestForegroundServicePermissionScreenShareWithMic(var5);
@@ -92,11 +93,11 @@ public object ForegroundServiceManager {
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2`(var0: ServiceNotificationConfiguration.Type, var1: ReactApplicationContext): Unit {
       val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = var0.name();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Create or update service with configuration type ");
-      var4.append(var3);
-      Log.i$foreground_service_release$default(var2, var4.toString(), null, 2, null);
+      val var4: java.lang.String = var0.name();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Create or update service with configuration type ");
+      var3.append(var4);
+      Log.i$foreground_service_release$default(var2, var3.toString(), null, 2, null);
       ForegroundService.Companion.start(var1, new d());
       return Unit.a;
    }
@@ -145,7 +146,7 @@ public object ForegroundServiceManager {
             INSTANCE.handleCreateOrUpdateService(var1 as ForegroundServiceManager.ForegroundServiceOperation.CreateOrUpdate);
          } else {
             if (var1 !is ForegroundServiceManager.ForegroundServiceOperation.Destroy) {
-               throw new n();
+               throw new p();
             }
 
             INSTANCE.handleDestroyService(var1 as ForegroundServiceManager.ForegroundServiceOperation.Destroy);
@@ -165,7 +166,7 @@ public object ForegroundServiceManager {
    }
 
    public fun handleIntent(context: Context, intent: Intent): Unit? {
-      val var4: NotificationAction.Companion = NotificationAction.Companion;
+      val var4: Companion = NotificationAction.Companion;
       val var6: NotificationAction;
       if (IntentUtilsKt.hasExtra(var2, GenericAction::class)) {
          var6 = (androidx.core.content.c.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
@@ -470,15 +471,15 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var3: java.util.List = this.serviceConfigurations;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("CreateOrUpdate(contextRef=");
-            var2.append(var1);
-            var2.append(", serviceConfigurations=");
-            var2.append(var3);
-            var2.append(")");
-            return var2.toString();
+            val var3: WeakReference = this.contextRef;
+            val var2: java.util.List = this.serviceConfigurations;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("CreateOrUpdate(contextRef=");
+            var1.append(var3);
+            var1.append(", serviceConfigurations=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
 

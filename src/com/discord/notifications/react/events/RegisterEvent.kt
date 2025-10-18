@@ -3,9 +3,9 @@ package com.discord.notifications.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class RegisterEvent(token: String) : ReactEvent {
    public final val token: String
 

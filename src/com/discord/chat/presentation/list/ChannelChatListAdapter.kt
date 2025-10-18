@@ -87,7 +87,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          if (this.items != null) {
             if (!(var5 as java.util.Collection).isEmpty()) {
                var5 = this.items;
-               if (CollectionsKt.r0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
+               if (CollectionsKt.t0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
                   var2 = true;
                   break label64;
                }
@@ -100,7 +100,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       var var3: Boolean = false;
       if (var2) {
          var3 = false;
-         if (CollectionsKt.t0(var6) !is LoadingChatListItem) {
+         if (CollectionsKt.v0(var6) !is LoadingChatListItem) {
             var3 = true;
          }
       }
@@ -108,7 +108,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       var var9: java.util.List = var6;
       if (var3) {
          val var10: PortalViewChatListItem = this.portalChatListItem;
-         var9 = CollectionsKt.B0(var6, var10);
+         var9 = CollectionsKt.D0(var6, var10);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -132,7 +132,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
                this.notifyItemRangeInserted((var11 as ListOperation.InsertRange).getFirst(), (var11 as ListOperation.InsertRange).getCount());
             } else {
                if (var11 !is ListOperation.RemoveRange) {
-                  throw new B9.n();
+                  throw new Da.p();
                }
 
                this.notifyItemRangeRemoved((var11 as ListOperation.RemoveRange).getFirst(), (var11 as ListOperation.RemoveRange).getCount());
@@ -151,16 +151,16 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
    private fun processPortalViewUpdate(update: PortalViewUpdate) {
-      val var3: Boolean = CollectionsKt.t0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
+      val var3: Boolean = CollectionsKt.v0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
       var var2: Boolean;
       if (var1.getPortalChatListItem() != null) {
          var2 = 1;
@@ -188,21 +188,21 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new B9.n();
+               throw new Da.p();
             }
 
-            val var5: java.util.List = CollectionsKt.V0(this.getChatListItems$chat_release());
+            val var5: java.util.List = CollectionsKt.Z0(this.getChatListItems$chat_release());
             var2 = CollectionsKt.m(this.getChatListItems$chat_release());
             val var7: PortalViewChatListItem = var1.getPortalChatListItem();
             var5.set(var2, var7);
             var8 = var5;
          } else {
-            var8 = CollectionsKt.a0(this.getChatListItems$chat_release(), 1);
+            var8 = CollectionsKt.c0(this.getChatListItems$chat_release(), 1);
          }
       } else {
          val var13: java.util.List = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
-         var8 = CollectionsKt.B0(var13, var9);
+         var8 = CollectionsKt.D0(var13, var9);
       }
 
       this.setChatListItems$chat_release(var8);
@@ -211,7 +211,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new B9.n();
+               throw new Da.p();
             }
 
             this.notifyItemChanged(CollectionsKt.m(this.getChatListItems$chat_release()));
@@ -238,7 +238,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processPortalViewUpdate(this, var1 as PortalViewUpdate);
          } else {
             if (var1 !is ChatListItemUpdate) {
-               throw new B9.n();
+               throw new Da.p();
             }
 
             access$processChatListItemUpdate(this, var1 as ChatListItemUpdate);
@@ -247,7 +247,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, db.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+         access$setProcessNextUpdateJob$p(this, gc.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -265,7 +265,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             }
 
             public final Object invokeSuspend(Object var1) {
-               G9.b.e();
+               Ia.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -347,11 +347,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -402,7 +402,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = Ja.a.a(var0);
       }
 
       @JvmStatic

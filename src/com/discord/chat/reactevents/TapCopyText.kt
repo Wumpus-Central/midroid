@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import B9.s
+import Da.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
    public final val text: CharSequence
 
@@ -39,7 +39,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("text", this.text.toString()));
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("text", this.text.toString())});
    }
 
    public override fun toString(): String {

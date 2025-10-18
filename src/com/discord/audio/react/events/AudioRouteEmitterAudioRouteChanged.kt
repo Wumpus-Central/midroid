@@ -1,11 +1,12 @@
 package com.discord.audio.react.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
    public final val routeType: String
    public final val multipleRoutesAvailable: Boolean
@@ -47,8 +48,8 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
       return this.routeType.hashCode() * 31 + java.lang.Boolean.hashCode(this.multipleRoutesAvailable);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

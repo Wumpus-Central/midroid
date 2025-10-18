@@ -48,7 +48,7 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
       return new FastestListLayoutManager.FastestListLayoutManagerException(var0);
    }
 
-   protected override fun calculateExtraLayoutSpace(state: State, extraLayoutSpace: IntArray) {
+   protected open fun calculateExtraLayoutSpace(state: State, extraLayoutSpace: IntArray) {
       if (this.scrollingForward) {
          var2[1] = this.getExtraLayoutSpace();
       } else {

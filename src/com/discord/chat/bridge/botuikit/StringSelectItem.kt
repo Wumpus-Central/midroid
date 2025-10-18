@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g
+@m
 public data class StringSelectItem(label: String,
    value: String,
    emoji: ComponentEmoji? = null,
@@ -101,24 +101,24 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.label;
-      val var1: java.lang.String = this.value;
-      val var3: ComponentEmoji = this.emoji;
+      val var1: java.lang.String = this.label;
+      val var4: java.lang.String = this.value;
+      val var6: ComponentEmoji = this.emoji;
       val var5: java.lang.String = this.description;
-      val var6: java.lang.Boolean = this.default;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("StringSelectItem(label=");
-      var2.append(var4);
-      var2.append(", value=");
-      var2.append(var1);
-      var2.append(", emoji=");
-      var2.append(var3);
-      var2.append(", description=");
-      var2.append(var5);
-      var2.append(", default=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.Boolean = this.default;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("StringSelectItem(label=");
+      var3.append(var1);
+      var3.append(", value=");
+      var3.append(var4);
+      var3.append(", emoji=");
+      var3.append(var6);
+      var3.append(", description=");
+      var3.append(var5);
+      var3.append(", default=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

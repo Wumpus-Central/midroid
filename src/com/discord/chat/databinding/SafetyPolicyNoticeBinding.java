@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import x1.a;
 
 public final class SafetyPolicyNoticeBinding implements ViewBinding {
    @NonNull
@@ -48,24 +48,24 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
    @NonNull
    public static SafetyPolicyNoticeBinding bind(@NonNull View var0) {
       int var1 = R.id.description;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var5 = (TextView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.footer;
-         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
-         if (var3 != null) {
+         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.learn_more;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var7 = (TextView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var5 = (TextView)a.a(var0, var1);
-                  if (var5 != null) {
+                  TextView var4 = (TextView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.title;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var2, var3, var4, var6, var5, var7);
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SafetyPolicyNoticeBinding(var0, var5, var2, var3, var7, var4, var6);
                      }
                   }
                }

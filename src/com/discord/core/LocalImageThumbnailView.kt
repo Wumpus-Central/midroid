@@ -1,7 +1,7 @@
 package com.discord.core
 
-import B9.s
-import G2.d
+import Da.v
+import G3.d
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -20,9 +20,9 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import db.K
-import db.d0
-import db.f
+import gc.K
+import gc.d0
+import gc.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -110,7 +110,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
             // $VF: Duplicated exception handlers to handle obfuscated exceptions
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = G9.b.e();
+               val var5: Any = Ia.b.e();
                if (this.label != 0) {
                   if (this.label == 1) {
                      try {
@@ -120,14 +120,14 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           L.l(new Pair[]{s.a("exception", var8.toString()), s.a("url", this.$uri.toString())}),
+                           O.m(new Pair[]{v.a("exception", var8.toString()), v.a("url", this.$uri.toString())}),
                            null,
                            null,
                            12,
                            null
                         );
-                        var1 = K.c();
-                        val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        val var6: d0 = K.c();
+                        var1 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -147,7 +147,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              G9.b.e();
+                              Ia.b.e();
                               if (this.label == 0) {
                                  c.b(var1);
                                  LocalImageThumbnailView.access$toggleImages(this.this$0, true);
@@ -161,7 +161,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        return if (f.g(var1, var6, this) != var5) Unit.a else var5;
+                        return if (f.g(var6, var1, this) != var5) Unit.a else var5;
                      }
                   } else if (this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -171,10 +171,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  var var19: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var3 != 0 && var19 != 0) {
-                     var1 = new Size(var3, var19);
+                  var var19: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var19 != 0 && var3 != 0) {
+                     var1 = new Size(var19, var3);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -187,14 +187,14 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,
                         "DCDLocalImageThumbnail - Failed to load thumbnail",
-                        L.l(new Pair[]{s.a("exception", var11.toString()), s.a("url", this.$uri.toString())}),
+                        O.m(new Pair[]{v.a("exception", var11.toString()), v.a("url", this.$uri.toString())}),
                         null,
                         null,
                         12,
                         null
                      );
-                     val var14: d0 = K.c();
-                     val var21: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                     val var21: d0 = K.c();
+                     val var14: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                         final Uri $uri;
                         int label;
                         final LocalImageThumbnailView this$0;
@@ -214,7 +214,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           G9.b.e();
+                           Ia.b.e();
                            if (this.label == 0) {
                               c.b(var1);
                               LocalImageThumbnailView.access$toggleImages(this.this$0, true);
@@ -228,7 +228,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 2;
-                     if (f.g(var14, var21, this) != var5) {
+                     if (f.g(var21, var14, this) != var5) {
                         return Unit.a;
                      }
 
@@ -242,14 +242,14 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           L.l(new Pair[]{s.a("exception", var10.toString()), s.a("url", this.$uri.toString())}),
+                           O.m(new Pair[]{v.a("exception", var10.toString()), v.a("url", this.$uri.toString())}),
                            null,
                            null,
                            12,
                            null
                         );
-                        val var16: d0 = K.c();
-                        val var23: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                        val var23: d0 = K.c();
+                        val var16: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -269,7 +269,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              G9.b.e();
+                              Ia.b.e();
                               if (this.label == 0) {
                                  c.b(var1);
                                  LocalImageThumbnailView.access$toggleImages(this.this$0, true);
@@ -283,7 +283,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var16, var23, this) != var5) {
+                        if (f.g(var23, var16, this) != var5) {
                            return Unit.a;
                         }
 
@@ -301,8 +301,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
 
                   try {
-                     val var26: d0 = K.c();
-                     val var25: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, var4, this.$uri, var1, null) {
+                     val var25: d0 = K.c();
+                     val var26: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, var4, this.$uri, var1, null) {
                         final Bitmap $bitmap;
                         final boolean $isBitmapEmpty;
                         final Uri $uri;
@@ -326,7 +326,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           G9.b.e();
+                           Ia.b.e();
                            if (this.label == 0) {
                               c.b(var1);
                               LocalImageThumbnailView.access$toggleImages(this.this$0, this.$isBitmapEmpty);
@@ -345,19 +345,19 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 1;
-                     var1 = f.g(var26, var25, this);
+                     var1 = f.g(var25, var26, this);
                   } catch (var9: Exception) {
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,
                         "DCDLocalImageThumbnail - Failed to load thumbnail",
-                        L.l(new Pair[]{s.a("exception", var9.toString()), s.a("url", this.$uri.toString())}),
+                        O.m(new Pair[]{v.a("exception", var9.toString()), v.a("url", this.$uri.toString())}),
                         null,
                         null,
                         12,
                         null
                      );
-                     val var17: d0 = K.c();
-                     val var24: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
+                     val var24: d0 = K.c();
+                     val var17: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, this.$uri, null) {
                         final Uri $uri;
                         int label;
                         final LocalImageThumbnailView this$0;
@@ -377,7 +377,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           G9.b.e();
+                           Ia.b.e();
                            if (this.label == 0) {
                               c.b(var1);
                               LocalImageThumbnailView.access$toggleImages(this.this$0, true);
@@ -391,7 +391,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 2;
-                     if (f.g(var17, var24, this) != var5) {
+                     if (f.g(var24, var17, this) != var5) {
                         return Unit.a;
                      }
 

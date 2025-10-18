@@ -1,13 +1,13 @@
 package com.discord.chat.bridge
 
-import H9.a
+import Ja.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
+import qc.m
 
-@g(with = ChannelType.Serializer::class)
+@m(with = ChannelType.Serializer::class)
 public enum class ChannelType(serialNumber: Int) : IntEnum {
    ANNOUNCEMENT_THREAD(10),
    DM(1),

@@ -25,8 +25,8 @@ import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.Locale
@@ -51,7 +51,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    init {
       val var4: AppMessageEmbedViewBinding = AppMessageEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       this.view = var4;
-      this.textColor = ColorUtilsKt.getColorCompat(var1, R.color.primary_230);
+      this.textColor = ColorUtilsKt.getColorCompat(var1, color.primary_230);
       this.setDefaultBackground(this);
    }
 
@@ -114,14 +114,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimaryNormal);
       var var16: DCDButton = var13.linkIcon;
       val var56: Context = var13.linkIcon.getContext();
-      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var56, R.color.transparent));
+      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var56, color.transparent));
       val var57: ReactAsset = ReactAsset.Link;
       var var17: Context = var16.getContext();
       var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
       var16.setTextColor(this.textColor);
       var16 = var13.linkIconTitle;
       var17 = var13.linkIconTitle.getContext();
-      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var17, R.color.transparent));
+      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var17, color.transparent));
       var17 = var16.getContext();
       var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
       var16.setTextColor(this.textColor);
@@ -193,9 +193,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var28) {
-         var28 = (byte)0;
+         var28 = 0;
       } else {
-         var28 = (byte)8;
+         var28 = 8;
       }
 
       var36.setVisibility(var28);
@@ -203,7 +203,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var37: SimpleDraweeView = this.view.banner;
          var37.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var28 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,19 +211,19 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var28 / var4;
+         var4 = var3 / var4;
          val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
          val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var28, (int)var4, var28, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var14.setText(var40);
+         val var40: TextView = this.view.title;
+         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var40.setText(var53);
       } else {
          val var41: TextView = this.view.title;
          var41.setVisibility(8);
@@ -257,7 +257,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       if (var47 != null && !var47.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var48: java.util.Iterator = CollectionsKt.D0(var1.getActions()).iterator();
+         val var48: java.util.Iterator = CollectionsKt.F0(var1.getActions()).iterator();
 
          for (int var21 = 0; var48.hasNext(); var21++) {
             var14 = (TextView)var48.next();
@@ -284,14 +284,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             val var65: Context = this.getContext();
-            var var9: Int = ColorUtilsKt.getColorCompat(var65, R.color.white_500);
+            var var9: Int = ColorUtilsKt.getColorCompat(var65, color.white_500);
             val var66: Context = this.getContext();
-            val var11: Int = ColorUtilsKt.getColorCompat(var66, R.color.black_500);
+            val var11: Int = ColorUtilsKt.getColorCompat(var66, color.black_500);
             val var10: Int;
             if (var31) {
                var10 = var9;
             } else {
-               var10 = y.c.k(var9, 30);
+               var10 = q0.c.k(var9, 30);
             }
 
             if (var31) {
@@ -360,7 +360,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       val var2: Context = this.getContext();
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          var1,
-         ColorUtilsKt.getColorCompat(var2, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
+         ColorUtilsKt.getColorCompat(var2, ThemeManagerKt.getTheme().getColorRes(color.primary_130, color.primary_630)),
          SizeUtilsKt.getDpToPx(12),
          null,
          0,

@@ -1,13 +1,14 @@
 package com.discord.chat.presentation.message.view.botuikit.react
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
 
-@nb.g
+@qc.m
 internal class OnSelectComponentTapEvent : ReactEvent {
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public companion object {
