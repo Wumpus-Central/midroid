@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4778",
-    "commit": "e2a8995300c15e0100cb27cae568a492149f459a",
+    "build": "4779",
+    "commit": "d22ab2db7f9287fbda420879f32020f155b15831",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "b7753167c1a77311cc9b3f47a965c37c",
+    "app/src/main/assets/index.android.bundle": "cc9b0427e1035acc6ff781b36bb41ecc",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_qeggmxuhy3ccsrg3i2nugrqq3i_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1331_qeggmxuhy3ccsrg3i2nugrqq3i_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
@@ -3458,7 +3458,7 @@
     "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "5e8ceaed587c3c96253d28ec43cdb11a",
     "app/src/main/res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_age_assurance_ageassurancecompiledmessages.jsona": "6e8c2b3a46c4c0ee1755ef3db4ab85d0",
-    "app/src/main/res/raw/modules_checkpoint_checkpointcompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
+    "app/src/main/res/raw/modules_checkpoint_checkpointcompiledmessages.jsona": "a44fa2655cec805bc3013a08606b3db0",
     "app/src/main/res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona": "5d607775d6330ec3b8886ce3a6657c25",
     "app/src/main/res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_custom_status_statuscompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",

@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 303203
-  versionName: 303.3 - Alpha
+  versionCode: 303204
+  versionName: 303.4 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -562,7 +562,6 @@ doNotCompress:
 - res/raw/design_intl_manacompiledmessages.jsona
 - res/raw/emojis_json.gz
 - res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
-- res/raw/modules_checkpoint_checkpointcompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
 - res/raw/modules_custom_status_statuscompiledmessages.jsona
 - res/raw/modules_display_name_styles_intl_displaynamestylescompiledmessages.jsona
