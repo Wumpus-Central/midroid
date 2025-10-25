@@ -30,7 +30,7 @@ public class SamsungConnectActivity : AppCompatActivity {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.e(var2);
+            val var5: a = com.msc.sa.aidl.a.a.c(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -56,7 +56,7 @@ public class SamsungConnectActivity : AppCompatActivity {
             }
 
             try {
-               var38 = var5.g0("97t47j218f", "dummy", "com.discord", var37);
+               var38 = var5.f0("97t47j218f", "dummy", "com.discord", var37);
                val var41: StringBuilder = new StringBuilder();
                var41.append("Samsung Account service connection established: ");
                var41.append(var38);
@@ -80,7 +80,7 @@ public class SamsungConnectActivity : AppCompatActivity {
                try {
                   val var42: Bundle = new Bundle();
                   var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.r0(1221, var38, var42);
+                  val var3: Boolean = var5.m0(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
@@ -202,13 +202,13 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun finishWithResult(authCode: String?, authServerUrl: String?) {
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Finishing With Result. AuthCode: ");
-      var3.append(var1);
-      var3.append(", AuthServerUrl: ");
-      var3.append(var2);
-      Log.i$default(var4, "Samsung", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Finishing With Result. AuthCode: ");
+      var4.append(var1);
+      var4.append(", AuthServerUrl: ");
+      var4.append(var2);
+      Log.i$default(var3, "Samsung", var4.toString(), null, 4, null);
       if (var1 != null && !StringsKt.c0(var1) && var2 != null && !StringsKt.c0(var2)) {
          val var6: Intent = new Intent();
          var6.putExtra("com.discord.samsung.intent.extra.AUTH_CODE", var1);
@@ -371,15 +371,15 @@ public class SamsungConnectActivity : AppCompatActivity {
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.authCode;
-            val var3: java.lang.String = this.serverUrl;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Success(authCode=");
-            var1.append(var2);
-            var1.append(", serverUrl=");
-            var1.append(var3);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.lang.String = this.authCode;
+            val var2: java.lang.String = this.serverUrl;
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("Success(authCode=");
+            var3.append(var1);
+            var3.append(", serverUrl=");
+            var3.append(var2);
+            var3.append(")");
+            return var3.toString();
          }
       }
    }

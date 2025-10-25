@@ -1,11 +1,11 @@
 package com.discord.deep_link
 
-import Da.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import xa.v
 
 public class DeepLinkManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    @ReactMethod

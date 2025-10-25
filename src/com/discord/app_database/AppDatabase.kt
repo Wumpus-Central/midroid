@@ -5,7 +5,7 @@ import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import tc.K0
+import nc.K0
 
 @SourceDebugExtension(["SMAP\nAppDatabase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppDatabase.kt\ncom/discord/app_database/AppDatabase\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,91:1\n123#2:92\n123#2:93\n123#2:94\n12574#3,2:95\n*S KotlinDebug\n*F\n+ 1 AppDatabase.kt\ncom/discord/app_database/AppDatabase\n*L\n69#1:92\n70#1:93\n71#1:94\n78#1:95,2\n*E\n"])
 public object AppDatabase {
@@ -126,6 +126,6 @@ public object AppDatabase {
 
    public fun initializeAppDatabase(context: Context) {
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      Ha.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
+      Ba.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
    }
 }

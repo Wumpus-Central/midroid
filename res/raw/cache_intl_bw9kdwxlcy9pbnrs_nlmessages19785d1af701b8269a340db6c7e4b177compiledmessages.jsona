@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "We hebben hier een ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Dit wordt allemaal lokaal beheerd en heeft het globale i18n-systeem ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " vervangen."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Gebruik hooks zoals ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " voor speciale content."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Deze string bevat een ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", met een in de string gedefinieerde URL."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Deze link maakt gebruik van een ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     " die tijdens runtime wordt verstrekt."
   ],
-  "swfLzc": "Dit bericht is afkomstig van een apart bestand"
+  "swfLzV": [
+    "Dit bericht is afkomstig van een apart bestand"
+  ]
 }

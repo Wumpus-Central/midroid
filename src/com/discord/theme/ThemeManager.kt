@@ -1,6 +1,5 @@
 package com.discord.theme
 
-import Da.p
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -12,6 +11,7 @@ import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.p
 
 @SourceDebugExtension(["SMAP\nThemeManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThemeManager.kt\ncom/discord/theme/ThemeManager\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,131:1\n381#2,7:132\n*S KotlinDebug\n*F\n+ 1 ThemeManager.kt\ncom/discord/theme/ThemeManager\n*L\n38#1:132,7\n*E\n"])
 public object ThemeManager {
@@ -54,10 +54,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new DarkerTheme(var9, var3);
@@ -69,10 +69,10 @@ public object ThemeManager {
                var10 = null;
             }
 
+            var3 = resourceTheme;
             if (resourceTheme == null) {
                Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-            } else {
-               var3 = resourceTheme;
+               var3 = null;
             }
 
             var8 = new LightTheme(var10, var3);

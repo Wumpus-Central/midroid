@@ -64,24 +64,24 @@ public final class MediaViewBinding implements ViewBinding {
          SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
          if (var6 != null) {
             var1 = R.id.inline_media_loading_indicator;
-            ProgressBar var4 = (ProgressBar)a.a(var0, var1);
-            if (var4 != null) {
+            ProgressBar var9 = (ProgressBar)a.a(var0, var1);
+            if (var9 != null) {
                var1 = R.id.inline_media_play_button;
-               ImageView var8 = (ImageView)a.a(var0, var1);
-               if (var8 != null) {
+               ImageView var3 = (ImageView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.inline_media_volume_toggle;
-                  SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var3 != null) {
+                  SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.overlay_tag;
-                     ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
-                     if (var9 != null) {
+                     ConstraintLayout var7 = (ConstraintLayout)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.overlay_tag_icon;
                         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
                         if (var5 != null) {
                            var1 = R.id.overlay_tag_text;
-                           TextView var7 = (TextView)a.a(var0, var1);
-                           if (var7 != null) {
-                              return new MediaViewBinding(var0, var2, var6, var4, var8, var3, var9, var5, var7);
+                           TextView var8 = (TextView)a.a(var0, var1);
+                           if (var8 != null) {
+                              return new MediaViewBinding(var0, var2, var6, var9, var3, var4, var7, var5, var8);
                            }
                         }
                      }

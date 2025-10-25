@@ -1,7 +1,7 @@
 package com.discord.security_key;
 
 // $VF: synthetic class
-public final class c implements t7.d {
+public final class c implements n7.d {
    public final WebAuthn a;
 
    @Override

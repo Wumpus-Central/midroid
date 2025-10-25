@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Il tuo account è stato sbloccato",
-  "d9Ykjo": "Codice di conferma",
-  "bFbsV1": "Inserisci la tua e-mail",
-  "RRBNpq": "Avanti",
-  "0DHxys": [
+  "/fHz9S": [
+    "Il tuo account è stato sbloccato"
+  ],
+  "d9Ykjr": [
+    "Codice di conferma"
+  ],
+  "bFbsV6": [
+    "Inserisci la tua e-mail"
+  ],
+  "RRBNpv": [
+    "Avanti"
+  ],
+  "0DHxym": [
     "Non sei tu? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Potremmo chiedere altre cose lungo il percorso, tipo se sei un robot",
-  "Ks6opq": "Avvia",
-  "I2Ctk5": "Completa i passaggi qui sotto per sbloccare il tuo account",
-  "RRamMD": "Account bloccato",
-  "ah0EUl": "Invia di nuovo il codice",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Potremmo chiedere altre cose lungo il percorso, tipo se sei un robot"
+  ],
+  "Ks6opt": [
+    "Avvia"
+  ],
+  "I2Ctk1": [
+    "Completa i passaggi qui sotto per sbloccare il tuo account"
+  ],
+  "RRamMH": [
+    "Account bloccato"
+  ],
+  "ah0EUu": [
+    "Invia di nuovo il codice"
+  ],
+  "2+Lyn0": [
     "Invia di nuovo il codice tra ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " secondi"
   ],
-  "3AXMYm": "Impossibile inviare di nuovo il codice di verifica",
-  "dSkE/P": "Verifica il gruppo di età",
-  "o4D6fn": "Aggiorna",
-  "VBZJJi": "Aggiorna l'app per continuare.",
-  "yxqMCA": "Aggiornamento necessario",
-  "wq2RDg": "Verifica",
-  "PfbG6O": "Codice di verifica non valido",
-  "aveKoK": "Abbiamo appena inviato un codice di verifica al tuo indirizzo e-mail. Potrebbero volerci alcuni minuti prima che arrivi",
-  "Qm6K/v": "Verifica la tua e-mail"
+  "3AXMYu": [
+    "Impossibile inviare di nuovo il codice di verifica"
+  ],
+  "dSkE/A": [
+    "Verifica il gruppo di età"
+  ],
+  "o4D6fm": [
+    "Aggiorna"
+  ],
+  "VBZJJg": [
+    "Aggiorna l'app per continuare."
+  ],
+  "yxqMCD": [
+    "Aggiornamento necessario"
+  ],
+  "wq2RDq": [
+    "Verifica"
+  ],
+  "PfbG6H": [
+    "Codice di verifica non valido"
+  ],
+  "aveKoG": [
+    "Abbiamo appena inviato un codice di verifica al tuo indirizzo e-mail. Potrebbero volerci alcuni minuti prima che arrivi"
+  ],
+  "Qm6K/s": [
+    "Verifica la tua e-mail"
+  ]
 }

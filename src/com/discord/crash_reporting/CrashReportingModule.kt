@@ -1,7 +1,5 @@
 package com.discord.crash_reporting
 
-import Da.e
-import Da.v
 import com.discord.crash_reporting.react_events.CrashReportEvent
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
@@ -17,6 +15,8 @@ import com.facebook.react.bridge.ReactSoftExceptionLogger
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReactSoftExceptionLogger.ReactSoftExceptionListener
 import io.sentry.react.RNSentryModule
+import xa.e
+import xa.v
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    public final val reactContext: ReactApplicationContext
@@ -100,9 +100,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod

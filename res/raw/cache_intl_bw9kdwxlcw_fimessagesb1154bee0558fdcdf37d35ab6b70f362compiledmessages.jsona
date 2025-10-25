@@ -15,10 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "Yleensä nopein ja täysin automaattinen. Tarvitset vain kameran.",
-  "2yLvkZ": "Ota videoselfie",
-  "ZdmRwc": "Tarvitset ajokortin, passin tai muun henkilöllisyystodistuksen. Vahvista sitten selfiellä, että kyseessä olet sinä.",
-  "dwkwo6": "Skannaa henkilöllisyystodistus",
-  "cR6339": "Menetelmiä iän vahvistamiseen ei ole käytettävissä. Kyseessä voi olla virhe.",
-  "hDvmYG": "Lataa uudelleen"
+  "eJmat5": [
+    "Yleensä nopein ja täysin automaattinen. Tarvitset vain kameran."
+  ],
+  "2yLvkS": [
+    "Ota videoselfie"
+  ],
+  "ZdmRwW": [
+    "Tarvitset ajokortin, passin tai muun henkilöllisyystodistuksen. Vahvista sitten selfiellä, että kyseessä olet sinä."
+  ],
+  "dwkwo0": [
+    "Skannaa henkilöllisyystodistus"
+  ],
+  "cR6336": [
+    "Menetelmiä iän vahvistamiseen ei ole käytettävissä. Kyseessä voi olla virhe."
+  ],
+  "hDvmYP": [
+    "Lataa uudelleen"
+  ]
 }

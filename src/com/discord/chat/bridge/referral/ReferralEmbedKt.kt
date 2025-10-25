@@ -6,7 +6,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import uc.h
+import oc.h
 
 @JvmSynthetic
 fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boolean {

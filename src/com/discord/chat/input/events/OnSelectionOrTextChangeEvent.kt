@@ -3,8 +3,8 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: String, editId: String) : ReactEvent {
@@ -71,17 +71,17 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    public override fun toString(): String {
       val var1: Int = this.start;
       val var2: Int = this.end;
-      val var4: java.lang.String = this.text;
-      val var3: java.lang.String = this.editId;
+      val var3: java.lang.String = this.text;
+      val var4: java.lang.String = this.editId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnSelectionOrTextChangeEvent(start=");
       var5.append(var1);
       var5.append(", end=");
       var5.append(var2);
       var5.append(", text=");
-      var5.append(var4);
-      var5.append(", editId=");
       var5.append(var3);
+      var5.append(", editId=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

@@ -1,7 +1,6 @@
 package com.discord.foreground_service.service
 
-import Da.v
-import Ga.a
+import Aa.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -17,6 +16,7 @@ import com.discord.notifications.renderer.R.drawable
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
 import v0.d
+import xa.v
 
 @SourceDebugExtension(["SMAP\nServiceNotification.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,105:1\n1053#2:106\n1863#2,2:107\n*S KotlinDebug\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n*L\n25#1:106\n83#1:107,2\n*E\n"])
 internal object ServiceNotification {
@@ -42,17 +42,17 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      val var7: NotificationCompat.Builder = var4.v(var6).T(drawable.ic_notification_24dp).K(true).S(true);
+      val var5: NotificationCompat.Builder = var4.v(var6).T(drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
-         var7.a(
+      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
+         var5.a(
             0,
-            var5.getTitle(),
-            DefaultImpls.toPendingIntent$default(new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null)
+            var7.getTitle(),
+            DefaultImpls.toPendingIntent$default(new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null)
          );
       }
 
-      return var7.A(d.a(v.a("permissionType", var2.getType().ordinal()))).g();
+      return var5.A(d.a(v.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {

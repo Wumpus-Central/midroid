@@ -1,58 +1,170 @@
 {
-  "tq859/": "Quais problemas você enfrentou?",
-  "PL2l6O": "Microfone ou áudio",
-  "FVhMw8": "Conexão ou latência",
-  "Moa3W1": "Pessoas na chamada",
-  "0ZBLiY": "Transmissão",
-  "TVTIT0": "Transmissão",
-  "0WFzPj": "Câmera",
-  "kbbtws": "Outras pessoas reclamaram do meu áudio",
-  "Q5Dsa2": "O áudio de outras pessoas tinha eco",
-  "1DnNRE": "A qualidade de áudio de outras pessoas estava baixa",
-  "ftSvQ0": "Eu não consegui ouvir ninguém",
-  "GWypHx": "Ninguém conseguiu me ouvir",
-  "2IG95O": "Não consegui ouvir o áudio do meu jogo",
-  "4qlGrK": "Tive problemas ao usar o viva-voz",
-  "05VSjo": "Não consegui usar o dispositivo de áudio correto",
-  "anHk19": "Alguém estava emitindo muito ruído de fundo",
-  "RK9DUl": "A voz de alguém estava picando",
-  "yGe0BA": "A voz de alguém soou robótica",
-  "1o77Iy": "A voz de alguém estava muito baixa ou muito alta",
-  "RGRgmJ": "O áudio estava atrasado",
-  "gMHKDA": "Não consegui me conectar",
-  "y5k8Ji": "Minha latência era muito alta em uma chamada",
-  "y06Ays": "Demorou muito para eu me conectar",
-  "K5vYQE": "A voz de alguém estava picando",
-  "f2914u": "A voz de alguém soou robótica",
-  "zk+QLy": "O áudio e o vídeo estavam dessincronizados",
-  "PLBRzM": "As pessoas se portaram de forma tóxica ou inadequada",
-  "zIC+8f": "Disseram que minha transmissão tinha uma baixa qualidade de áudio",
-  "RRZZZW": "Disseram que minha transmissão era uma tela preta",
-  "8ceyQ0": "Disseram que minha transmissão estava borrada ou pixelada",
-  "w+kiDA": "Ninguém conseguiu carregar minha transmissão",
-  "JS6akJ": "Disseram que o vídeo e o áudio da minha transmissão estavam dessincronizados",
-  "3PKSkZ": "Disseram que minha transmissão estava travando ou congelando",
-  "iMxexM": "Disseram que minha transmissão estava com lag",
-  "HaZSCw": "Disseram que não dava pra ouvir minha transmissão",
-  "TaIrh4": "Não consegui ouvir o áudio do meu jogo",
-  "/nlKuL": "Minha transmissão foi interrompida inesperadamente",
-  "k7bdGB": "A transmissão tinha baixa qualidade do áudio",
-  "aml28/": "A transmissão era uma tela preta",
-  "qdBn3N": "A transmissão estava borrada ou pixelada",
-  "jU9Zs7": "Não consegui carregar a transmissão",
-  "JfAvQk": "O áudio e o vídeo da transmissão estavam dessincronizados",
-  "V3EeCA": "A transmissão estava congelando ou travando",
-  "hi1Y39": "A transmissão estava com atraso",
-  "DOOloq": "Não consegui ouvir a transmissão",
-  "jPD99/": "A transmissão foi interrompida inesperadamente",
-  "ie5nCA": "Meu fundo virtual tinha objetos ou artefatos piscando",
-  "zYumoq": "Meu fundo virtual não estava sendo enquadrado corretamente",
-  "Gg/Y1d": "Meu fundo virtual tinha lag quando eu me mexia",
-  "calUNj": "Meu fundo virtual estava borrado ou tinha uma aura",
-  "Bh+02d": "Minha câmera exibiu uma tela preta",
-  "QbC6LS": "Não consegui ligar minha câmera",
-  "k7Ido6": "O feed da câmera de alguém estava borrado ou pixelado",
-  "8I/GUF": "A imagem da câmera de outra pessoa estava travando ou congelando",
-  "R+wqwc": "A câmera de alguém exibiu uma tela preta",
-  "vRDE5O": "O áudio e o vídeo estavam dessincronizados"
+  "tq8598": [
+    "Quais problemas você enfrentou?"
+  ],
+  "PL2l6A": [
+    "Microfone ou áudio"
+  ],
+  "FVhMw6": [
+    "Conexão ou latência"
+  ],
+  "Moa3W9": [
+    "Pessoas na chamada"
+  ],
+  "0ZBLiZ": [
+    "Transmissão"
+  ],
+  "TVTIT1": [
+    "Transmissão"
+  ],
+  "0WFzPh": [
+    "Câmera"
+  ],
+  "kbbtwi": [
+    "Outras pessoas reclamaram do meu áudio"
+  ],
+  "Q5Dsaz": [
+    "O áudio de outras pessoas tinha eco"
+  ],
+  "1DnNRO": [
+    "A qualidade de áudio de outras pessoas estava baixa"
+  ],
+  "ftSvQ0": [
+    "Eu não consegui ouvir ninguém"
+  ],
+  "GWypH+": [
+    "Ninguém conseguiu me ouvir"
+  ],
+  "2IG95D": [
+    "Não consegui ouvir o áudio do meu jogo"
+  ],
+  "4qlGrO": [
+    "Tive problemas ao usar o viva-voz"
+  ],
+  "05VSjm": [
+    "Não consegui usar o dispositivo de áudio correto"
+  ],
+  "anHk1/": [
+    "Alguém estava emitindo muito ruído de fundo"
+  ],
+  "RK9DUi": [
+    "A voz de alguém estava picando"
+  ],
+  "yGe0BL": [
+    "A voz de alguém soou robótica"
+  ],
+  "1o77I3": [
+    "A voz de alguém estava muito baixa ou muito alta"
+  ],
+  "RGRgmM": [
+    "O áudio estava atrasado"
+  ],
+  "gMHKDJ": [
+    "Não consegui me conectar"
+  ],
+  "y5k8Jq": [
+    "Minha latência era muito alta em uma chamada"
+  ],
+  "y06Ayn": [
+    "Demorou muito para eu me conectar"
+  ],
+  "K5vYQA": [
+    "A voz de alguém estava picando"
+  ],
+  "f2914v": [
+    "A voz de alguém soou robótica"
+  ],
+  "zk+QL1": [
+    "O áudio e o vídeo estavam dessincronizados"
+  ],
+  "PLBRzF": [
+    "As pessoas se portaram de forma tóxica ou inadequada"
+  ],
+  "zIC+8Y": [
+    "Disseram que minha transmissão tinha uma baixa qualidade de áudio"
+  ],
+  "RRZZZb": [
+    "Disseram que minha transmissão era uma tela preta"
+  ],
+  "8ceyQy": [
+    "Disseram que minha transmissão estava borrada ou pixelada"
+  ],
+  "w+kiDF": [
+    "Ninguém conseguiu carregar minha transmissão"
+  ],
+  "JS6akP": [
+    "Disseram que o vídeo e o áudio da minha transmissão estavam dessincronizados"
+  ],
+  "3PKSkd": [
+    "Disseram que minha transmissão estava travando ou congelando"
+  ],
+  "iMxexK": [
+    "Disseram que minha transmissão estava com lag"
+  ],
+  "HaZSC3": [
+    "Disseram que não dava pra ouvir minha transmissão"
+  ],
+  "TaIrh5": [
+    "Não consegui ouvir o áudio do meu jogo"
+  ],
+  "/nlKuG": [
+    "Minha transmissão foi interrompida inesperadamente"
+  ],
+  "k7bdGE": [
+    "A transmissão tinha baixa qualidade do áudio"
+  ],
+  "aml28x": [
+    "A transmissão era uma tela preta"
+  ],
+  "qdBn3L": [
+    "A transmissão estava borrada ou pixelada"
+  ],
+  "jU9Zs8": [
+    "Não consegui carregar a transmissão"
+  ],
+  "JfAvQp": [
+    "O áudio e o vídeo da transmissão estavam dessincronizados"
+  ],
+  "V3EeCH": [
+    "A transmissão estava congelando ou travando"
+  ],
+  "hi1Y39": [
+    "A transmissão estava com atraso"
+  ],
+  "DOOlop": [
+    "Não consegui ouvir a transmissão"
+  ],
+  "jPD998": [
+    "A transmissão foi interrompida inesperadamente"
+  ],
+  "ie5nCG": [
+    "Meu fundo virtual tinha objetos ou artefatos piscando"
+  ],
+  "zYumoj": [
+    "Meu fundo virtual não estava sendo enquadrado corretamente"
+  ],
+  "Gg/Y1X": [
+    "Meu fundo virtual tinha lag quando eu me mexia"
+  ],
+  "calUNv": [
+    "Meu fundo virtual estava borrado ou tinha uma aura"
+  ],
+  "Bh+02d": [
+    "Minha câmera exibiu uma tela preta"
+  ],
+  "QbC6La": [
+    "Não consegui ligar minha câmera"
+  ],
+  "k7Idoz": [
+    "O feed da câmera de alguém estava borrado ou pixelado"
+  ],
+  "8I/GUL": [
+    "A imagem da câmera de outra pessoa estava travando ou congelando"
+  ],
+  "R+wqwU": [
+    "A câmera de alguém exibiu uma tela preta"
+  ],
+  "vRDE5O": [
+    "O áudio e o vídeo estavam dessincronizados"
+  ]
 }

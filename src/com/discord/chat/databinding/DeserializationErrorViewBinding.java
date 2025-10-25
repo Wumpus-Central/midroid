@@ -47,8 +47,8 @@ public final class DeserializationErrorViewBinding implements ViewBinding {
    @NonNull
    public static DeserializationErrorViewBinding bind(@NonNull View var0) {
       int var1 = R.id.cause_header;
-      TextView var7 = (TextView)a.a(var0, var1);
-      if (var7 != null) {
+      TextView var6 = (TextView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.copy_button;
          Button var3 = (Button)a.a(var0, var1);
          if (var3 != null) {
@@ -56,15 +56,15 @@ public final class DeserializationErrorViewBinding implements ViewBinding {
             TextView var4 = (TextView)a.a(var0, var1);
             if (var4 != null) {
                var1 = R.id.header;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var7 = (TextView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.json;
                   TextView var5 = (TextView)a.a(var0, var1);
                   if (var5 != null) {
                      var1 = R.id.json_header;
                      TextView var2 = (TextView)a.a(var0, var1);
                      if (var2 != null) {
-                        return new DeserializationErrorViewBinding(var0, var7, var3, var4, var6, var5, var2);
+                        return new DeserializationErrorViewBinding(var0, var6, var3, var4, var7, var5, var2);
                      }
                   }
                }

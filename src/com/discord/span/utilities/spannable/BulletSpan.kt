@@ -8,7 +8,9 @@ import android.graphics.Path.Direction
 import android.text.Layout
 import android.text.Spanned
 import android.text.style.LeadingMarginSpan
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nBulletSpan.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BulletSpan.kt\ncom/discord/span/utilities/spannable/BulletSpan\n+ 2 Canvas.kt\nandroidx/core/graphics/CanvasKt\n*L\n1#1,98:1\n44#2,8:99\n*S KotlinDebug\n*F\n+ 1 BulletSpan.kt\ncom/discord/span/utilities/spannable/BulletSpan\n*L\n72#1:99,8\n*E\n"])
 public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true, bulletRadius: Int = 4, strokeWidth: Float = 4.0F, style: Style = Style.FILL) :
    LeadingMarginSpan {
    private final val mGapWidth: Int
@@ -41,41 +43,53 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
       first: Boolean,
       l: Layout
    ) {
-      if ((var8 as Spanned).getSpanStart(this) == var9) {
-         val var14: Style = var2.getStyle();
-         if (this.mWantColor) {
-            var6 = var2.getColor();
-            var2.setColor(this.mColor);
-         } else {
-            var6 = 0;
-         }
-
-         var2.setStyle(this.mStyle);
-         if (this.mStyle === Style.STROKE || this.mStyle === Style.FILL_AND_STROKE) {
-            var2.setStrokeWidth(this.mStrokeWidth);
-         }
-
-         if (var1.isHardwareAccelerated()) {
-            if (sBulletPath == null) {
-               val var17: Path = new Path();
-               var17.addCircle(0.0F, 0.0F, (float)this.mBulletRadius * 1.2F, Direction.CW);
-               sBulletPath = var17;
+      label42: {
+         if ((var8 as Spanned).getSpanStart(this) == var9) {
+            val var21: Style = var2.getStyle();
+            if (this.mWantColor) {
+               var6 = var2.getColor();
+               var2.setColor(this.mColor);
+            } else {
+               var6 = 0;
             }
 
-            var1.save();
-            var1.translate((float)var3 + (float)var4 * 1.2F * (float)this.mBulletRadius, (float)(var5 + var7) / 2.0F);
-            val var18: Path = sBulletPath;
-            var1.drawPath(var18, var2);
-            var1.restore();
-         } else {
-            var1.drawCircle((float)(var3 + var4 * this.mBulletRadius), (float)(var5 + var7) / 2.0F, (float)this.mBulletRadius, var2);
-         }
+            var2.setStyle(this.mStyle);
+            if (this.mStyle === Style.STROKE || this.mStyle === Style.FILL_AND_STROKE) {
+               var2.setStrokeWidth(this.mStrokeWidth);
+            }
 
-         if (this.mWantColor) {
-            var2.setColor(var6);
-         }
+            if (var1.isHardwareAccelerated()) {
+               if (sBulletPath == null) {
+                  val var24: Path = new Path();
+                  var24.addCircle(0.0F, 0.0F, (float)this.mBulletRadius * 1.2F, Direction.CW);
+                  sBulletPath = var24;
+               }
 
-         var2.setStyle(var14);
+               val var14: Float = var3;
+               val var16: Float = var4;
+               val var15: Float = this.mBulletRadius;
+               val var13: Float = (var5 + var7) / 2.0F;
+               var3 = var1.save();
+               var1.translate(var14 + var16 * 1.2F * var15, var13);
+
+               try {
+                  val var25: Path = sBulletPath;
+                  var1.drawPath(var25, var2);
+               } catch (var17: java.lang.Throwable) {
+                  var1.restoreToCount(var3);
+               }
+
+               var1.restoreToCount(var3);
+            } else {
+               var1.drawCircle((float)(var3 + var4 * this.mBulletRadius), (float)(var5 + var7) / 2.0F, (float)this.mBulletRadius, var2);
+            }
+
+            if (this.mWantColor) {
+               var2.setColor(var6);
+            }
+
+            var2.setStyle(var21);
+         }
       }
    }
 

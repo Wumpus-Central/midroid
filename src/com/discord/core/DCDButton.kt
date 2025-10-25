@@ -1,6 +1,6 @@
 package com.discord.core
 
-import N7.k
+import H7.k
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -36,19 +36,19 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    init {
       val var3: DcdButtonBinding = DcdButtonBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
-      val var4: MaterialButton = var3.button;
-      this.button = var4;
-      val var5: ProgressBar = var3.progress;
-      this.progress = var5;
+      val var5: MaterialButton = var3.button;
+      this.button = var5;
+      val var4: ProgressBar = var3.progress;
+      this.progress = var4;
       val var6: ProgressDots = var3.loadingDots;
       this.loadingDots = var6;
-      var4.setStateListAnimator(null);
-      var4.setMinimumHeight(var5.getHeight());
-      var4.setMinHeight(var5.getHeight());
-      var4.setMinimumWidth(var5.getWidth());
-      var4.setMinWidth(var5.getWidth());
-      var4.setInsetTop(0);
-      var4.setInsetBottom(0);
+      var5.setStateListAnimator(null);
+      var5.setMinimumHeight(var4.getHeight());
+      var5.setMinHeight(var4.getHeight());
+      var5.setMinimumWidth(var4.getWidth());
+      var5.setMinWidth(var4.getWidth());
+      var5.setInsetTop(0);
+      var5.setInsetBottom(0);
       this.setTextSizeSp(14.0F);
       this.setDiscordFont(DiscordFont.PrimarySemibold);
       this.setButtonPadding();
@@ -98,7 +98,7 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    public fun setBackgroundRectangle(color: Int, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
       this.setBackgroundColor(var1);
       val var6: MaterialButton = this.button;
-      val var5: N7.k.b = k.a();
+      val var5: H7.k.b = k.a();
       var5.o((float)var2);
       var6.setShapeAppearanceModel(var5.m());
       if (var3 != null) {

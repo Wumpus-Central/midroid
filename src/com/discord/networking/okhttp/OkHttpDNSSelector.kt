@@ -1,8 +1,7 @@
 package com.discord.networking.okhttp
 
-import Da.p
-import Ga.a
-import Lc.l
+import Aa.a
+import Fc.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -10,6 +9,7 @@ import java.util.ArrayList
 import java.util.Comparator
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.p
 
 @SourceDebugExtension(["SMAP\nOkHttpDNSSelector.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OkHttpDNSSelector.kt\ncom/discord/networking/okhttp/OkHttpDNSSelector\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,35:1\n1053#2:36\n1053#2:37\n774#2:38\n865#2,2:39\n774#2:41\n865#2,2:42\n*S KotlinDebug\n*F\n+ 1 OkHttpDNSSelector.kt\ncom/discord/networking/okhttp/OkHttpDNSSelector\n*L\n25#1:36\n26#1:37\n27#1:38\n27#1:39,2\n28#1:41\n28#1:42,2\n*E\n"])
 internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode) : l {
@@ -97,7 +97,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = Ja.a.a(var0);
+         $ENTRIES = Da.a.a(var0);
       }
 
       init {

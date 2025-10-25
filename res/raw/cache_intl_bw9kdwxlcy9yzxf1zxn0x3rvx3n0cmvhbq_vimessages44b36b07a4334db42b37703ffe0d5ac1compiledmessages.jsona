@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Yêu cầu Stream",
-  "P0wwmJ": "Đang stream rồi",
-  "u4QmWl": "Yêu cầu đã hết hạn",
-  "qRXatr": "Không ở trong kênh thoại",
-  "43zohI": "Không đang chạy trò chơi",
-  "fac+eH": "Không có quyền hạn",
-  "8HU1Mz": "Đã gửi yêu cầu",
-  "5+172d": "Stream",
-  "nAyuPj": "Yêu Cầu Stream",
-  "d/qbCw": [
+  "DKHhec": [
+    "Yêu cầu Stream"
+  ],
+  "P0wwmM": [
+    "Đang stream rồi"
+  ],
+  "u4QmWl": [
+    "Yêu cầu đã hết hạn"
+  ],
+  "qRXats": [
+    "Không ở trong kênh thoại"
+  ],
+  "43zohO": [
+    "Không đang chạy trò chơi"
+  ],
+  "fac+eE": [
+    "Không có quyền hạn"
+  ],
+  "8HU1M2": [
+    "Đã gửi yêu cầu"
+  ],
+  "5+172e": [
+    "Stream"
+  ],
+  "nAyuPp": [
+    "Yêu Cầu Stream"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " đã yêu cầu bạn stream"
   ],
-  "8B3U5O": "Bạn đã yêu cầu người khác stream"
+  "8B3U5O": [
+    "Bạn đã yêu cầu người khác stream"
+  ]
 }

@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Opzione sfondo per regalo: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Scatola",
-  "AJ4iio": "Torta",
-  "P5keo6": "Forziere",
-  "w84vER": "Caffè",
-  "6dCq/v": "Tazza",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Scatola delle feste",
-  "aubYGR": "Torta delle feste",
-  "vjxYqa": "Forziere delle feste",
-  "bHuJLS": "Caffè delle feste",
-  "M6cPwM": "Palla di vetro con neve",
-  "GzPel5": "Scatola"
+  "B9XqQk": [
+    "Scatola"
+  ],
+  "AJ4iir": [
+    "Torta"
+  ],
+  "P5keo3": [
+    "Forziere"
+  ],
+  "w84vET": [
+    "Caffè"
+  ],
+  "6dCq/u": [
+    "Tazza"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Scatola delle feste"
+  ],
+  "aubYGR": [
+    "Torta delle feste"
+  ],
+  "vjxYqU": [
+    "Forziere delle feste"
+  ],
+  "bHuJLa": [
+    "Caffè delle feste"
+  ],
+  "M6cPwB": [
+    "Palla di vetro con neve"
+  ],
+  "GzPel1": [
+    "Scatola"
+  ]
 }

@@ -36,7 +36,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(Ia.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(Ca.b.c(var7), 1);
       var8.C();
       val var13: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0<Unit>(var13, var1) {
@@ -96,7 +96,7 @@ internal object Transcoder {
       }
 
       val var14: com.linkedin.android.litr.d = new com.linkedin.android.litr.d.b().c(true).b(var5.getProgressUpdateGranularity()).a();
-      var13.h(var1, var3.getInputUri(), var4, var9, var3.getAudioFormat(), new i9.a(var6, var13, var1, var8, var4) {
+      var13.h(var1, var3.getInputUri(), var4, var9, var3.getAudioFormat(), new c9.a(var6, var13, var1, var8, var4) {
          final CancellableContinuation $continuation;
          final Function1<java.lang.Float, Unit> $onProgress;
          final Uri $outputUri;
@@ -111,7 +111,7 @@ internal object Transcoder {
             this.$outputUri = var5;
          }
 
-         public void onCancelled(java.lang.String var1, java.util.List<j9.a> var2) {
+         public void onCancelled(java.lang.String var1, java.util.List<d9.a> var2) {
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             if (this.$continuation.c()) {
@@ -120,15 +120,15 @@ internal object Transcoder {
             }
          }
 
-         public void onCompleted(java.lang.String var1, java.util.List<j9.a> var2) {
+         public void onCompleted(java.lang.String var1, java.util.List<d9.a> var2) {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: kotlin.Result.a = Result.e;
+            val var3: kotlin.Result.a = Result.e;
             this.$continuation.resumeWith(Result.b(this.$outputUri));
          }
 
-         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<j9.a> var3) {
+         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<d9.a> var3) {
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             val var4: kotlin.Result.a = Result.e;
@@ -160,7 +160,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === Ia.b.e()) {
+      if (var12 === Ca.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

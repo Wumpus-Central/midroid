@@ -1,6 +1,5 @@
 package com.discord.safearea
 
-import Da.v
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -21,6 +20,7 @@ import d3.b
 import d3.c
 import d3.d
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,112:1\n1#2:113\n*E\n"])
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec(var1) {
@@ -149,16 +149,16 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    public open fun getStableSafeAreaInsets(): WritableMap? {
       val var1: c = new c();
-      val var3: Activity = this.reactContext.getCurrentActivity();
-      if (var3 == null) {
+      val var4: Activity = this.reactContext.getCurrentActivity();
+      if (var4 == null) {
          return null;
       } else {
-         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
-         if (var4 == null) {
+         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var4);
+         if (var3 == null) {
             return null;
          } else {
-            val var2: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            val var2: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var4, true);
             return var1.invoke(Math.max(var2.a, var5.a), Math.max(var2.b, var5.b), Math.max(var2.c, var5.c), Math.max(var2.d, var5.d)) as WritableMap;
          }
       }

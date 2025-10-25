@@ -19,12 +19,12 @@ public object DCDModuleProvider {
       return CollectionsKt.C(var1, var2);
    }
 
-   @Da.c
+   @xa.c
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
       return getLegacyPackageForModuleWithViewManager$default(this, var1, null, 2, null);
    }
 
-   @Da.c
+   @xa.c
    public fun getLegacyPackageForModuleWithViewManager(
       onNativeModule: ((ReactApplicationContext) -> ReactContextBaseJavaModule)? = null,
       onViewManager: ((ReactApplicationContext) -> ViewManager<*, LayoutShadowNode>)? = null

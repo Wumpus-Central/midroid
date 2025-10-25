@@ -197,7 +197,7 @@
                 <data android:host="action" android:pathPattern="/oauth2/authorize" android:scheme="discord"/>
                 <data android:host="action" android:pathPattern="/connect/authorize" android:scheme="discord"/>
             </intent-filter>
-            <intent-filter>
+            <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
                 <category android:name="android.intent.category.BROWSABLE"/>
@@ -420,7 +420,6 @@
                 <action android:name="com.discord.intent.action.NOTIFICATION_ACTION"/>
             </intent-filter>
         </receiver>
-        <meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="AIzaSyD-4L6bgKMixqBRtrG2UktVXK6IexXlsog"/>
         <activity android:name="com.discord.samsung.SamsungConnectActivity"/>
         <receiver android:exported="true" android:name="com.discord.file_downloader.PublicFileDownloader$PublicFileDownloadBroadcastReceiver">
             <intent-filter>
@@ -475,7 +474,6 @@
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <service android:exported="true" android:name="com.google.android.gms.nearby.exposurenotification.WakeUpService" android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK"/>
         <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.0.0"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>

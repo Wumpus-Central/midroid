@@ -1,10 +1,10 @@
 package com.discord.device.utils
 
-import Da.p
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
 import kotlin.enums.EnumEntries
+import xa.p
 
 public object DeviceReducedMotion {
    private final var motionPreference: com.discord.device.utils.DeviceReducedMotion.MotionPreference = DeviceReducedMotion.MotionPreference.AUTO
@@ -80,7 +80,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = Ja.a.a(var0);
+         $ENTRIES = Da.a.a(var0);
       }
 
       @JvmStatic

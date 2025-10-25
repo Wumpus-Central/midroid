@@ -23,7 +23,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nAudioPlayerWipeAnimatorManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 Animator.kt\nandroidx/core/animation/AnimatorKt\n*L\n1#1,184:1\n1#2:185\n85#3,18:186\n*S KotlinDebug\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n*L\n177#1:186,18\n*E\n"])
+@SourceDebugExtension(["SMAP\nAudioPlayerWipeAnimatorManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 Animator.kt\nandroidx/core/animation/AnimatorKt\n+ 4 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,184:1\n1#2:185\n85#3,18:186\n27#4:204\n*S KotlinDebug\n*F\n+ 1 AudioPlayerWipeAnimatorManager.kt\ncom/discord/chat/presentation/message/view/voicemessages/AudioPlayerWipeAnimatorManager\n*L\n177#1:186,18\n38#1:204\n*E\n"])
 public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlayerViewBinding) {
    private final val brand500: Int
    private final val argbEvaluator: ArgbEvaluator
@@ -70,12 +70,12 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    init {
       this.brand500 = var1.getColor(color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = Da.l.b(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = Da.l.b(new E());
-      this.scaleAnimator$delegate = Da.l.b(new F(var2, this));
-      this.textColorAnimator$delegate = Da.l.b(new G(var2));
-      this.buttonIconColorAnimator$delegate = Da.l.b(new H(var2));
-      this.progressColorAnimator$delegate = Da.l.b(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = xa.l.a(new D(var1));
+      this.buttonContainerActiveDrawable$delegate = xa.l.a(new E());
+      this.scaleAnimator$delegate = xa.l.a(new F(var2, this));
+      this.textColorAnimator$delegate = xa.l.a(new G(var2));
+      this.buttonIconColorAnimator$delegate = xa.l.a(new H(var2));
+      this.progressColorAnimator$delegate = xa.l.a(new I(var2));
    }
 
    @JvmStatic
@@ -262,53 +262,53 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var8: Long = 0L;
+      var var7: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var8 = 0L;
+         var7 = 0L;
          if (this.animateToPlay != var1) {
-            var8 = 0L;
+            var7 = 0L;
             if (this.animatorSet != null) {
-               var var4: Long = 0L;
+               var var3: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var4 = this.animatorSet.getDuration();
+                     var3 = this.animatorSet.getDuration();
                   } else {
-                     var4 = 0L;
+                     var3 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var8 = y.a(this.animatorSet);
+                     var7 = y.a(this.animatorSet);
                   } else {
-                     var8 = 0L;
+                     var7 = 0L;
                   }
 
-                  var var15: java.lang.Long = var4 - var8;
-                  var4 = var15.longValue();
-                  if (0L > var4 || var4 >= 201L) {
+                  var var15: java.lang.Long = var3 - var7;
+                  var3 = var15.longValue();
+                  if (0L > var3 || var3 >= 201L) {
                      var15 = null;
                   }
 
-                  var4 = 0L;
+                  var3 = 0L;
                   if (var15 != null) {
-                     var4 = var15;
+                     var3 = var15;
                   }
                }
 
-               var8 = var4;
+               var7 = var3;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var8 = var4;
+                  var7 = var3;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var17: AnimatorSet = this.getAnimatorSet(var1, var8, var2);
+      val var17: AnimatorSet = this.getAnimatorSet(var1, var7, var2);
       var17.start();
       this.animatorSet = var17;
    }

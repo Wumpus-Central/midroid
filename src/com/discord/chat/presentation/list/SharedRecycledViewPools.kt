@@ -13,13 +13,13 @@ import kotlin.jvm.internal.SourceDebugExtension
 public object SharedRecycledViewPools {
    private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
 
-   public final val chatListViewPool: NoneClearingRecycledViewPool by Da.l.b(new A())
+   public final val chatListViewPool: NoneClearingRecycledViewPool by xa.l.a(new A())
       public final get() {
          return chatListViewPool$delegate.getValue() as NoneClearingRecycledViewPool;
       }
 
 
-   public final val accessoriesViewPool: AccessoriesViewPool by Da.l.b(new B())
+   public final val accessoriesViewPool: AccessoriesViewPool by xa.l.a(new B())
       public final get() {
          return accessoriesViewPool$delegate.getValue() as AccessoriesViewPool;
       }
@@ -27,9 +27,9 @@ public object SharedRecycledViewPools {
 
    @JvmStatic
    fun {
-      val var0: Pair = Da.v.a(RegularMessageDelegate.class, 50);
-      val var1: Int = 25;
-      recycledViewPoolSizes = O.m(new Pair[]{var0, Da.v.a(SystemMessageDelegate.class, var1), Da.v.a(SeparatorDelegate.class, var1)});
+      val var1: Pair = xa.v.a(RegularMessageDelegate.class, 50);
+      val var0: Int = 25;
+      recycledViewPoolSizes = O.m(new Pair[]{var1, xa.v.a(SystemMessageDelegate.class, var0), xa.v.a(SeparatorDelegate.class, var0)});
    }
 
    @JvmStatic
@@ -43,11 +43,11 @@ public object SharedRecycledViewPools {
    }
 
    public fun configureChatListViewPoolSizes(delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>) {
-      for (Entry var5 : recycledViewPoolSizes.entrySet()) {
-         val var6: Class = var5.getKey() as Class;
-         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
-         val var7: Any = var1.get(var6);
-         INSTANCE.getChatListViewPool().setMaxRecycledViews((var7 as java.lang.Number).intValue(), var2);
+      for (Entry var6 : recycledViewPoolSizes.entrySet()) {
+         var var5: Class = var6.getKey() as Class;
+         val var2: Int = (var6.getValue() as java.lang.Number).intValue();
+         var5 = (Class)var1.get(var5);
+         INSTANCE.getChatListViewPool().setMaxRecycledViews((var5 as java.lang.Number).intValue(), var2);
       }
    }
 }

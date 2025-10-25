@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import Ja.a
+import Da.a
 import android.content.Context
 import kotlin.enums.EnumEntries
 

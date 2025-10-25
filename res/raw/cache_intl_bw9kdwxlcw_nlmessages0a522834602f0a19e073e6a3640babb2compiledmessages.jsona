@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Je account is ontgrendeld",
-  "d9Ykjo": "Bevestigingscode",
-  "bFbsV1": "Voer je e-mailadres in",
-  "RRBNpq": "Volgende",
-  "0DHxys": [
+  "/fHz9S": [
+    "Je account is ontgrendeld"
+  ],
+  "d9Ykjr": [
+    "Bevestigingscode"
+  ],
+  "bFbsV6": [
+    "Voer je e-mailadres in"
+  ],
+  "RRBNpv": [
+    "Volgende"
+  ],
+  "0DHxym": [
     "Ben jij dit niet? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "We kunnen later nog meer informatie vragen, bijvoorbeeld of je een robot bent",
-  "Ks6opq": "Starten",
-  "I2Ctk5": "Voltooi de onderstaande stappen om je account te ontgrendelen",
-  "RRamMD": "Account vergrendeld",
-  "ah0EUl": "Code opnieuw sturen",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "We kunnen later nog meer informatie vragen, bijvoorbeeld of je een robot bent"
+  ],
+  "Ks6opt": [
+    "Starten"
+  ],
+  "I2Ctk1": [
+    "Voltooi de onderstaande stappen om je account te ontgrendelen"
+  ],
+  "RRamMH": [
+    "Account vergrendeld"
+  ],
+  "ah0EUu": [
+    "Code opnieuw sturen"
+  ],
+  "2+Lyn0": [
     "Code wordt over ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " seconden opnieuw verstuurd"
   ],
-  "3AXMYm": "Verificatiecode opnieuw versturen mislukt",
-  "dSkE/P": "Leeftijdsgroep verifiëren",
-  "o4D6fn": "Update",
-  "VBZJJi": "Update de app om door te gaan.",
-  "yxqMCA": "Update vereist",
-  "wq2RDg": "Verifiëren",
-  "PfbG6O": "Ongeldige verificatiecode",
-  "aveKoK": "We hebben een verificatiecode gestuurd naar je e-mailadres. Het kan een paar minuten duren voordat deze aankomt",
-  "Qm6K/v": "Verifieer je e-mail"
+  "3AXMYu": [
+    "Verificatiecode opnieuw versturen mislukt"
+  ],
+  "dSkE/A": [
+    "Leeftijdsgroep verifiëren"
+  ],
+  "o4D6fm": [
+    "Update"
+  ],
+  "VBZJJg": [
+    "Update de app om door te gaan."
+  ],
+  "yxqMCD": [
+    "Update vereist"
+  ],
+  "wq2RDq": [
+    "Verifiëren"
+  ],
+  "PfbG6H": [
+    "Ongeldige verificatiecode"
+  ],
+  "aveKoG": [
+    "We hebben een verificatiecode gestuurd naar je e-mailadres. Het kan een paar minuten duren voordat deze aankomt"
+  ],
+  "Qm6K/s": [
+    "Verifieer je e-mail"
+  ]
 }

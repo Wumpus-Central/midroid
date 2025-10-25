@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Hesabın açıldı",
-  "d9Ykjo": "Onay kodu",
-  "bFbsV1": "E-postanı gir",
-  "RRBNpq": "Sonraki",
-  "0DHxys": [
+  "/fHz9S": [
+    "Hesabın açıldı"
+  ],
+  "d9Ykjr": [
+    "Onay kodu"
+  ],
+  "bFbsV6": [
+    "E-postanı gir"
+  ],
+  "RRBNpv": [
+    "Sonraki"
+  ],
+  "0DHxym": [
     "Sen değil misin? ",
     [
       8,
@@ -19,25 +27,53 @@
       ]
     ]
   ],
-  "0TnUrK": "Süreç boyunca \"robot musun?\" gibi daha fazla güncelleme talep edebiliriz",
-  "Ks6opq": "Başla",
-  "I2Ctk5": "Hesabını açmak için aşağıdaki adımları tamamla",
-  "RRamMD": "Hesap kilitlendi",
-  "ah0EUl": "Kodu yeniden gönder",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Süreç boyunca \"robot musun?\" gibi daha fazla güncelleme talep edebiliriz"
+  ],
+  "Ks6opt": [
+    "Başla"
+  ],
+  "I2Ctk1": [
+    "Hesabını açmak için aşağıdaki adımları tamamla"
+  ],
+  "RRamMH": [
+    "Hesap kilitlendi"
+  ],
+  "ah0EUu": [
+    "Kodu yeniden gönder"
+  ],
+  "2+Lyn0": [
     [
       1,
       "countdown"
     ],
     " saniye içinde kodu yeniden gönder"
   ],
-  "3AXMYm": "Doğrulama kodu yeniden gönderilemedi",
-  "dSkE/P": "Yaş grubunu doğrula",
-  "o4D6fn": "Güncelle",
-  "VBZJJi": "Devam edebilmek için uygulamayı güncelle.",
-  "yxqMCA": "Güncelleme Gerekli",
-  "wq2RDg": "Doğrula",
-  "PfbG6O": "Geçersiz doğrulama kodu",
-  "aveKoK": "E-posta adresine bir doğrulama kodu gönderdik. Gelmesi birkaç dakika sürebilir",
-  "Qm6K/v": "E-postanı doğrula"
+  "3AXMYu": [
+    "Doğrulama kodu yeniden gönderilemedi"
+  ],
+  "dSkE/A": [
+    "Yaş grubunu doğrula"
+  ],
+  "o4D6fm": [
+    "Güncelle"
+  ],
+  "VBZJJg": [
+    "Devam edebilmek için uygulamayı güncelle."
+  ],
+  "yxqMCD": [
+    "Güncelleme Gerekli"
+  ],
+  "wq2RDq": [
+    "Doğrula"
+  ],
+  "PfbG6H": [
+    "Geçersiz doğrulama kodu"
+  ],
+  "aveKoG": [
+    "E-posta adresine bir doğrulama kodu gönderdik. Gelmesi birkaç dakika sürebilir"
+  ],
+  "Qm6K/s": [
+    "E-postanı doğrula"
+  ]
 }

@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Közvetítés kérése",
-  "P0wwmJ": "Már zajlik a közvetítés",
-  "u4QmWl": "A kérés lejárt",
-  "qRXatr": "Nincs a hangcsatornában",
-  "43zohI": "Nem futó játék",
-  "fac+eH": "Nincs jogosultság",
-  "8HU1Mz": "Kérés elküldve",
-  "5+172d": "Élő közvetítés",
-  "nAyuPj": "Közvetítési kérés",
-  "d/qbCw": [
+  "DKHhec": [
+    "Közvetítés kérése"
+  ],
+  "P0wwmM": [
+    "Már zajlik a közvetítés"
+  ],
+  "u4QmWl": [
+    "A kérés lejárt"
+  ],
+  "qRXats": [
+    "Nincs a hangcsatornában"
+  ],
+  "43zohO": [
+    "Nem futó játék"
+  ],
+  "fac+eE": [
+    "Nincs jogosultság"
+  ],
+  "8HU1M2": [
+    "Kérés elküldve"
+  ],
+  "5+172e": [
+    "Élő közvetítés"
+  ],
+  "nAyuPp": [
+    "Közvetítési kérés"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " megkért, hogy közvetíts"
   ],
-  "8B3U5O": "Megkértél valakit, hogy közvetítsen"
+  "8B3U5O": [
+    "Megkértél valakit, hogy közvetítsen"
+  ]
 }

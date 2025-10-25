@@ -1,9 +1,9 @@
 package com.discord.crash_reporting
 
-import Da.e
-import Da.v
 import com.discord.crash_reporting.CrashReporting.BreadcrumbLevel
 import com.discord.logging.Log
+import xa.e
+import xa.v
 
 public class FLogDelegate : r3.c {
    private fun addSentryBreadcrumb(level: BreadcrumbLevel, message: String, throwable: Throwable? = null) {

@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Požádat o streamování",
-  "P0wwmJ": "Už streamuješ",
-  "u4QmWl": "Žádost vypršela",
-  "qRXatr": "Není v hlasovém kanálu",
-  "43zohI": "Hra není spuštěna",
-  "fac+eH": "Žádné oprávnění",
-  "8HU1Mz": "Žádost odeslána",
-  "5+172d": "Stream",
-  "nAyuPj": "Žádost o streamování",
-  "d/qbCw": [
+  "DKHhec": [
+    "Požádat o streamování"
+  ],
+  "P0wwmM": [
+    "Už streamuješ"
+  ],
+  "u4QmWl": [
+    "Žádost vypršela"
+  ],
+  "qRXats": [
+    "Není v hlasovém kanálu"
+  ],
+  "43zohO": [
+    "Hra není spuštěna"
+  ],
+  "fac+eE": [
+    "Žádné oprávnění"
+  ],
+  "8HU1M2": [
+    "Žádost odeslána"
+  ],
+  "5+172e": [
+    "Stream"
+  ],
+  "nAyuPp": [
+    "Žádost o streamování"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " tě žádá o streamování"
   ],
-  "8B3U5O": "Požádal/a jsi někoho o streamování"
+  "8B3U5O": [
+    "Požádal/a jsi někoho o streamování"
+  ]
 }

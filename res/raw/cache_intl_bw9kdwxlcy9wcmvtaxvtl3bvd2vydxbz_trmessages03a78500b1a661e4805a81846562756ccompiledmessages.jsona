@@ -1,6 +1,8 @@
 {
-  "FJZeZG": "Takviye ile yeni rol stillerini aç.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Takviye ile yeni rol stillerini aç."
+  ],
+  "VpEDJc": [
     "Belli rolleri ",
     [
       1,
@@ -8,17 +10,23 @@
     ],
     " yap"
   ],
-  "+/IHLi": "sihirli",
-  "tBhCys": "\"Holografik\" rol tarzı herhangi bir renk seçmeni gerektirmez.",
-  "vQz+6e": "Gradyan",
-  "7lwpzc": [
+  "+/IHLl": [
+    "sihirli"
+  ],
+  "tBhCyr": [
+    "\"Holografik\" rol tarzı herhangi bir renk seçmeni gerektirmez."
+  ],
+  "vQz+6W": [
+    "Gradyan"
+  ],
+  "7lwpzR": [
     "Masaüstünde Discord'u aç ve yeni Takviye Avantajlarını açıp yapılandır: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

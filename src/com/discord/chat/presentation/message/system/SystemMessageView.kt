@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.system
 
-import Da.v
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -51,6 +50,7 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 @SourceDebugExtension(["SMAP\nSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,354:1\n257#2,2:355\n1872#3,3:357\n*S KotlinDebug\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n*L\n121#1:355,2\n223#1:357,3\n*E\n"])
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2), SpineParentMessage {
@@ -108,10 +108,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       if (var20 != null) {
          val var13: ArrayList = this.accessories;
          val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var11: Boolean = var1.getShouldShowRoleDot();
-         val var10: Boolean = var1.getShouldShowRoleOnName();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var8: Boolean = var1.getShouldShowRoleDot();
+         val var11: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
@@ -139,10 +139,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             new MessageContentAccessory(
                var14,
                var20,
-               var8,
                var9,
-               var11,
                var10,
+               var8,
+               var11,
                var5,
                var6,
                var7,
@@ -173,9 +173,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       if (var12 != null && var12.intValue() <= 1) {
          val var33: ArrayList = this.accessories;
          val var28: java.lang.String = var1.getId-3Eiw7ao();
-         val var31: java.lang.String = var1.getUsername();
-         val var23: Context = this.binding.getRoot().getContext();
-         var33.add(new RoleSubscriptionPurchaseAccessory(var28, var31, MessageKt.avatarUrl(var1, var23), var3, false, null));
+         val var23: java.lang.String = var1.getUsername();
+         val var31: Context = this.binding.getRoot().getContext();
+         var33.add(new RoleSubscriptionPurchaseAccessory(var28, var23, MessageKt.avatarUrl(var1, var31), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();

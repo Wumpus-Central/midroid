@@ -1,6 +1,5 @@
 package com.discord.fastest_list.android.placeholder
 
-import Da.p
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
@@ -14,6 +13,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.random.c
+import xa.p
 
 @SourceDebugExtension(["SMAP\nFastestListPlaceholderTypeFeedItem.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FastestListPlaceholderTypeFeedItem.kt\ncom/discord/fastest_list/android/placeholder/FastestListPlaceholderTypeFeedItem\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,167:1\n381#2,7:168\n*S KotlinDebug\n*F\n+ 1 FastestListPlaceholderTypeFeedItem.kt\ncom/discord/fastest_list/android/placeholder/FastestListPlaceholderTypeFeedItem\n*L\n22#1:168,7\n*E\n"])
 internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestListPlaceholder() {
@@ -243,8 +243,8 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
                throw new p();
             }
 
-            val var4: Float = (var15 - this.config.getShapeSize()) / 2.0F;
-            var1.drawRect(this.config.getPadding(), var4, this.config.getShapeSize(), this.config.getShapeSize() + var4, this.paint);
+            val var3: Float = (var15 - this.config.getShapeSize()) / 2.0F;
+            var1.drawRect(this.config.getPadding(), var3, this.config.getShapeSize(), this.config.getShapeSize() + var3, this.paint);
          } else {
             var1.drawCircle(
                this.config.getShapeSize() / 2.0F + this.config.getPadding(),
@@ -254,28 +254,28 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
             );
          }
 
-         val var8: Float = this.config.getLabelSize();
-         val var5: Float = this.config.getLabelSecondarySize();
+         val var12: Float = this.config.getLabelSize();
+         val var19: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var21: Float = var8 / 2;
-         val var19: Float = var5 / 2;
-         val var20: Float = this.config.getLabelPaddingInnerRatio() * var8 / var6;
-         val var9: Float = this.config.getLabelPaddingInnerRatio() * var5 / var6;
+         val var21: Float = var12 / 2;
+         val var20: Float = var19 / 2;
+         val var5: Float = this.config.getLabelPaddingInnerRatio() * var12 / var6;
+         val var9: Float = this.config.getLabelPaddingInnerRatio() * var19 / var6;
          var6 = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
          val var13: Float = var14;
          val var11: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
          val var10: Float = var15;
-         val var23: Float = (var15 - (var8 + var5)) / 2.0F + var8;
+         val var23: Float = (var15 - (var12 + var19)) / 2.0F + var12;
          var1.drawRoundRect(
             var6,
-            ((float)var15 - (var8 + var5)) / 2.0F + var20,
+            ((float)var15 - (var12 + var19)) / 2.0F + var5,
             this.labelWidthRatio * var11,
-            ((float)var15 - (var8 + var5)) / 2.0F + var8 - var20,
+            ((float)var15 - (var12 + var19)) / 2.0F + var12 - var5,
             var21,
             var21,
             this.paint
          );
-         var1.drawRoundRect(var6, var23 + var9, var11 * this.labelWidthRatioSecondary, var23 + var5 - var9, var19, var19, this.paint);
+         var1.drawRoundRect(var6, var23 + var9, var11 * this.labelWidthRatioSecondary, var23 + var19 - var9, var20, var20, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(

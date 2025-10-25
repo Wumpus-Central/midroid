@@ -1,8 +1,8 @@
 package com.discord.app_database
 
 import java.util.Arrays
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {

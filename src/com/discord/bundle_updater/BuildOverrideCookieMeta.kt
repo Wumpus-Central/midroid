@@ -1,16 +1,16 @@
 package com.discord.bundle_updater
 
-import Da.v
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import tc.P0
-import tc.Q
-import tc.W
+import nc.P0
+import nc.Q
+import nc.W
+import xa.v
 
-@qc.m
+@kc.m
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -28,7 +28,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: P0 = P0.a;
-      $childSerializers = new KSerializer[]{null, null, new tc.f(P0.a), new tc.f(var0), null, new W(var0, Q.a)};
+      $childSerializers = new KSerializer[]{null, null, new nc.f(P0.a), new nc.f(var0), null, new W(var0, Q.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -147,8 +147,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = v.a("expiresAt", this.expiresAt);
-      val var3: Pair = v.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = v.a("expiresAt", this.expiresAt);
+      val var4: Pair = v.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -163,38 +163,38 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var7: Pair = v.a("allowedVersions", var9);
-      val var6: Pair = v.a("allowLoggedOut", this.allowLoggedOut);
+      val var6: Pair = v.a("allowedVersions", var9);
+      val var7: Pair = v.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{var4, var3, var5, var7, var6, v.a("experiments", var12)});
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{var3, var4, var5, var6, var7, v.a("experiments", var12)});
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.expiresAt;
-      val var4: java.lang.String = this.releaseChannel;
-      val var6: java.util.List = this.validForUserIds;
-      val var5: java.util.List = this.allowedVersions;
-      val var3: java.lang.Boolean = this.allowLoggedOut;
+      val var2: java.lang.String = this.expiresAt;
+      val var5: java.lang.String = this.releaseChannel;
+      val var3: java.util.List = this.validForUserIds;
+      val var6: java.util.List = this.allowedVersions;
+      val var7: java.lang.Boolean = this.allowLoggedOut;
       val var1: java.util.Map = this.experiments;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BuildOverrideCookieMeta(expiresAt=");
-      var2.append(var7);
-      var2.append(", releaseChannel=");
-      var2.append(var4);
-      var2.append(", validForUserIds=");
-      var2.append(var6);
-      var2.append(", allowedVersions=");
-      var2.append(var5);
-      var2.append(", allowLoggedOut=");
-      var2.append(var3);
-      var2.append(", experiments=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("BuildOverrideCookieMeta(expiresAt=");
+      var4.append(var2);
+      var4.append(", releaseChannel=");
+      var4.append(var5);
+      var4.append(", validForUserIds=");
+      var4.append(var3);
+      var4.append(", allowedVersions=");
+      var4.append(var6);
+      var4.append(", allowLoggedOut=");
+      var4.append(var7);
+      var4.append(", experiments=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -1,8 +1,8 @@
 package com.discord.appreview
 
-import X7.b
-import X7.c
-import a8.a
+import R7.b
+import R7.c
+import U7.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager

@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Erstellt von ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Vorschau des benutzerdefinierten Farbschemas",
-  "qZMUoK": "So wird dein Farbschema auf allen Discord-Geräten angezeigt.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Vorschau des benutzerdefinierten Farbschemas"
+  ],
+  "qZMUoL": [
+    "So wird dein Farbschema auf allen Discord-Geräten angezeigt."
+  ],
+  "v15Ipv": [
     "Bei aktivierter Synchronisierung können benutzerdefinierte Schemata [Beta], die auf dem Desktop erstellt wurden, dein Mobilgerät-Schema beeinflussen. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Benutzerdefiniertes Schema",
-  "KSBBpK": "Benutzerdefiniertes Schema"
+  "yl1iMm": [
+    "Benutzerdefiniertes Schema"
+  ],
+  "KSBBpC": [
+    "Benutzerdefiniertes Schema"
+  ]
 }

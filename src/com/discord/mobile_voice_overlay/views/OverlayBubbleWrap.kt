@@ -266,8 +266,8 @@ public abstract class OverlayBubbleWrap : OverlayView {
       val var6: Int = var3.right;
       this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var6 - this.getWidth()));
       var1 = this.screenOffset[1];
-      val var11: Int = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var11 - this.getHeight()));
+      val var10: Int = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var10 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {

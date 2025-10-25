@@ -3,8 +3,8 @@ package com.discord.chat.bridge.contentnode
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import uc.e
-import uc.h
+import oc.e
+import oc.h
 
 private object LinkContextDataSerializer : e(LinkContextData::class) {
    protected open fun selectDeserializer(element: JsonElement): KSerializer<out LinkContextData> {

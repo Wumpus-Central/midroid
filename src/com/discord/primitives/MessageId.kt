@@ -3,8 +3,8 @@ package com.discord.primitives
 import android.os.Parcel
 import android.os.Parcelable
 import com.discord.snowflake.SnowflakeUtils
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public inline class MessageId : Parcelable {

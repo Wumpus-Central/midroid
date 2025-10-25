@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Qui c'è un ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Tutto questo è gestito localmente e ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " sostituito il sistema globale i18n."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Usa hook come ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " per contenuti speciali."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Questa stringa ha un ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", con l'URL definito nella stringa."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Questo link usa un ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     " fornito a runtime."
   ],
-  "swfLzc": "Questo messaggio proviene da un file separato"
+  "swfLzV": [
+    "Questo messaggio proviene da un file separato"
+  ]
 }

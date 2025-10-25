@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class BlockedGroupContent(message: MessageBase) {

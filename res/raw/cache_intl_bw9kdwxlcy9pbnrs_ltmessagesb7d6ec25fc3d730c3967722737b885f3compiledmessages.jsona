@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Čia turime ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Visa tai valdoma vietoje ir ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " pasaulinės i18n sistemos."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Specialiam turiniui naudok kabliukus kaip ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     "."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Ši eilutė turi ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", kurios url adresas apibrėžtas eilutėje."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Šiai nuorodai naudojama ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     ", pateikiama paleidimo metu."
   ],
-  "swfLzc": "Ši žinutė gaunama iš atskiro failo"
+  "swfLzV": [
+    "Ši žinutė gaunama iš atskiro failo"
+  ]
 }

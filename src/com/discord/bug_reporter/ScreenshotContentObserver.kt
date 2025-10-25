@@ -66,7 +66,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 00d: invokevirtual android/content/ContentResolver.query (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
       // 010: astore 7
       // 012: aload 7
-      // 014: ifnull 11f
+      // 014: ifnull 11e
       // 017: aload 7
       // 019: invokeinterface android/database/Cursor.moveToFirst ()Z 1
       // 01e: ifeq 028
@@ -77,12 +77,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 029: astore 6
       // 02b: aload 6
       // 02d: ifnonnull 033
-      // 030: goto 11f
+      // 030: goto 11e
       // 033: getstatic android/os/Build$VERSION.SDK_INT I
-      // 036: istore 2
-      // 037: iload 2
+      // 036: istore 3
+      // 037: iload 3
       // 038: bipush 29
-      // 03a: if_icmplt 078
+      // 03a: if_icmplt 077
       // 03d: aload 7
       // 03f: aload 7
       // 041: ldc "is_pending"
@@ -92,8 +92,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 050: astore 6
       // 052: aload 6
       // 054: invokevirtual java/lang/Number.intValue ()I
-      // 057: istore 3
-      // 058: iload 3
+      // 057: istore 2
+      // 058: iload 2
       // 059: bipush 1
       // 05a: if_icmpne 060
       // 05d: goto 063
@@ -101,89 +101,89 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 061: astore 6
       // 063: aload 6
       // 065: ifnull 06b
-      // 068: goto 078
+      // 068: goto 077
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
-      // 073: astore 6
-      // 075: goto 112
-      // 078: iload 2
-      // 079: bipush 29
-      // 07b: if_icmplt 093
-      // 07e: aload 7
-      // 080: aload 7
-      // 082: ldc "relative_path"
-      // 084: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
-      // 089: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
-      // 08e: astore 6
-      // 090: goto 0bb
-      // 093: aload 7
-      // 095: aload 7
-      // 097: ldc "_data"
-      // 099: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
-      // 09e: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
-      // 0a3: astore 6
-      // 0a5: aload 6
-      // 0a7: ldc "getString(...)"
-      // 0a9: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0ac: aload 6
-      // 0ae: bipush 47
-      // 0b0: aconst_null
-      // 0b1: bipush 2
-      // 0b2: aconst_null
-      // 0b3: invokestatic kotlin/text/StringsKt.W0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
-      // 0b6: astore 6
-      // 0b8: goto 090
-      // 0bb: aload 7
-      // 0bd: aload 7
-      // 0bf: ldc "_id"
-      // 0c1: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
-      // 0c6: invokeinterface android/database/Cursor.getLong (I)J 2
-      // 0cb: lstore 4
-      // 0cd: aload 7
-      // 0cf: aload 7
-      // 0d1: ldc "_display_name"
-      // 0d3: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
-      // 0d8: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
-      // 0dd: astore 8
-      // 0df: aload 8
-      // 0e1: ldc "getString(...)"
-      // 0e3: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0e6: aload 6
-      // 0e8: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 0eb: new com/discord/bug_reporter/ScreenshotContentObserver$ScreenshotData
-      // 0ee: dup
-      // 0ef: lload 4
-      // 0f1: aload 8
-      // 0f3: aload 6
-      // 0f5: aload 1
-      // 0f6: aload 7
-      // 0f8: aload 7
-      // 0fa: ldc "date_added"
-      // 0fc: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
-      // 101: invokeinterface android/database/Cursor.getLong (I)J 2
-      // 106: invokespecial com/discord/bug_reporter/ScreenshotContentObserver$ScreenshotData.<init> (JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;J)V
-      // 109: astore 1
-      // 10a: aload 7
-      // 10c: aconst_null
-      // 10d: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 110: aload 1
-      // 111: areturn
-      // 112: aload 6
-      // 114: athrow
-      // 115: astore 1
-      // 116: aload 7
-      // 118: aload 6
-      // 11a: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 11d: aload 1
-      // 11e: athrow
-      // 11f: aload 7
-      // 121: aconst_null
-      // 122: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 125: aconst_null
-      // 126: areturn
+      // 073: astore 1
+      // 074: goto 111
+      // 077: iload 3
+      // 078: bipush 29
+      // 07a: if_icmplt 092
+      // 07d: aload 7
+      // 07f: aload 7
+      // 081: ldc "relative_path"
+      // 083: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
+      // 088: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
+      // 08d: astore 6
+      // 08f: goto 0ba
+      // 092: aload 7
+      // 094: aload 7
+      // 096: ldc "_data"
+      // 098: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
+      // 09d: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
+      // 0a2: astore 6
+      // 0a4: aload 6
+      // 0a6: ldc "getString(...)"
+      // 0a8: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0ab: aload 6
+      // 0ad: bipush 47
+      // 0af: aconst_null
+      // 0b0: bipush 2
+      // 0b1: aconst_null
+      // 0b2: invokestatic kotlin/text/StringsKt.W0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+      // 0b5: astore 6
+      // 0b7: goto 08f
+      // 0ba: aload 7
+      // 0bc: aload 7
+      // 0be: ldc "_id"
+      // 0c0: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
+      // 0c5: invokeinterface android/database/Cursor.getLong (I)J 2
+      // 0ca: lstore 4
+      // 0cc: aload 7
+      // 0ce: aload 7
+      // 0d0: ldc "_display_name"
+      // 0d2: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
+      // 0d7: invokeinterface android/database/Cursor.getString (I)Ljava/lang/String; 2
+      // 0dc: astore 8
+      // 0de: aload 8
+      // 0e0: ldc "getString(...)"
+      // 0e2: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0e5: aload 6
+      // 0e7: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
+      // 0ea: new com/discord/bug_reporter/ScreenshotContentObserver$ScreenshotData
+      // 0ed: dup
+      // 0ee: lload 4
+      // 0f0: aload 8
+      // 0f2: aload 6
+      // 0f4: aload 1
+      // 0f5: aload 7
+      // 0f7: aload 7
+      // 0f9: ldc "date_added"
+      // 0fb: invokeinterface android/database/Cursor.getColumnIndex (Ljava/lang/String;)I 2
+      // 100: invokeinterface android/database/Cursor.getLong (I)J 2
+      // 105: invokespecial com/discord/bug_reporter/ScreenshotContentObserver$ScreenshotData.<init> (JLjava/lang/String;Ljava/lang/String;Landroid/net/Uri;J)V
+      // 108: astore 1
+      // 109: aload 7
+      // 10b: aconst_null
+      // 10c: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10f: aload 1
+      // 110: areturn
+      // 111: aload 1
+      // 112: athrow
+      // 113: astore 6
+      // 115: aload 7
+      // 117: aload 1
+      // 118: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11b: aload 6
+      // 11d: athrow
+      // 11e: aload 7
+      // 120: aconst_null
+      // 121: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 124: aconst_null
+      // 125: areturn
    }
 
    private fun Long.isWithinCurrentTimeWindow(window: Long): Boolean {
@@ -198,12 +198,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var2 != null) {
-         if (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var2.getPath(), false, 2, null)) {
-            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
-               && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
-               this.lastProcessedPath = var2.getPath();
+      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var3 != null) {
+         if (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
+            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
+               && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
+               this.lastProcessedPath = var3.getPath();
                this.onScreenshot.invoke();
             }
          }
@@ -221,9 +221,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var3: java.lang.String = var2.toString();
-         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         if (StringsKt.I(var3, var4, false, 2, null)) {
+         val var4: java.lang.String = var2.toString();
+         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         if (StringsKt.I(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -323,24 +323,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var1: Long = this.id;
-         val var7: java.lang.String = this.fileName;
-         val var8: java.lang.String = this.relativePath;
-         val var6: Uri = this.uri;
-         val var3: Long = this.dateAdded;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("ScreenshotData(id=");
-         var5.append(var1);
-         var5.append(", fileName=");
-         var5.append(var7);
-         var5.append(", relativePath=");
-         var5.append(var8);
-         var5.append(", uri=");
-         var5.append(var6);
-         var5.append(", dateAdded=");
-         var5.append(var3);
-         var5.append(")");
-         return var5.toString();
+         val var3: Long = this.id;
+         val var6: java.lang.String = this.fileName;
+         val var7: java.lang.String = this.relativePath;
+         val var5: Uri = this.uri;
+         val var1: Long = this.dateAdded;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("ScreenshotData(id=");
+         var8.append(var3);
+         var8.append(", fileName=");
+         var8.append(var6);
+         var8.append(", relativePath=");
+         var8.append(var7);
+         var8.append(", uri=");
+         var8.append(var5);
+         var8.append(", dateAdded=");
+         var8.append(var1);
+         var8.append(")");
+         return var8.toString();
       }
    }
 }

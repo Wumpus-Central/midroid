@@ -6,7 +6,9 @@ import android.net.Uri
 import android.provider.ContactsContract.Data
 import android.provider.ContactsContract.CommonDataKinds.Phone
 import java.util.LinkedHashMap
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nContactSyncProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContactSyncProvider.kt\ncom/discord/contact_sync/ContactSyncProvider\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,169:1\n29#2:170\n*S KotlinDebug\n*F\n+ 1 ContactSyncProvider.kt\ncom/discord/contact_sync/ContactSyncProvider\n*L\n142#1:170\n*E\n"])
 public object ContactSyncProvider {
    private fun Uri.asBase64BitmapString(context: Context, quality: Int = 100): String? {
       // $VF: Couldn't be decompiled
@@ -31,49 +33,49 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 5a
+      // 0e: ifnull 5c
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 44
+      // 17: ifnull 46
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 4
-      // 20: new java/io/ByteArrayOutputStream
-      // 23: astore 1
-      // 24: aload 1
-      // 25: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 28: aload 4
+      // 1e: astore 1
+      // 1f: new java/io/ByteArrayOutputStream
+      // 22: astore 4
+      // 24: aload 4
+      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 29: aload 1
       // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
       // 2d: iload 3
-      // 2e: aload 1
-      // 2f: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 32: pop
-      // 33: aload 1
-      // 34: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 37: bipush 0
-      // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
-      // 3b: astore 1
-      // 3c: goto 46
-      // 3f: astore 4
-      // 41: goto 4e
-      // 44: aconst_null
-      // 45: astore 1
-      // 46: aload 2
-      // 47: aconst_null
-      // 48: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4b: goto 5a
-      // 4e: aload 4
-      // 50: athrow
-      // 51: astore 1
-      // 52: aload 2
-      // 53: aload 4
-      // 55: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 58: aload 1
-      // 59: athrow
+      // 2e: aload 4
+      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 33: pop
+      // 34: aload 4
+      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 39: bipush 0
+      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 3d: astore 1
+      // 3e: goto 48
+      // 41: astore 4
+      // 43: goto 50
+      // 46: aconst_null
+      // 47: astore 1
+      // 48: aload 2
+      // 49: aconst_null
+      // 4a: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4d: goto 5c
+      // 50: aload 4
+      // 52: athrow
+      // 53: astore 1
+      // 54: aload 2
+      // 55: aload 4
+      // 57: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 5a: aload 1
-      // 5b: areturn
+      // 5b: athrow
+      // 5c: aload 1
+      // 5d: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -94,8 +96,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var6 = var10;
-            var5 = var2;
+            var5 = var10;
+            var6 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -114,8 +116,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -124,8 +126,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -136,7 +138,7 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var5, var6);
+         return new ContactNameEntry(var6, var5);
       }
    }
 
@@ -224,7 +226,7 @@ public object ContactSyncProvider {
       // 0d: invokevirtual android/content/Context.getContentResolver ()Landroid/content/ContentResolver;
       // 10: getstatic android/provider/ContactsContract$CommonDataKinds$Phone.CONTENT_URI Landroid/net/Uri;
       // 13: bipush 2
-      // 14: anewarray 140
+      // 14: anewarray 143
       // 17: dup
       // 18: bipush 0
       // 19: ldc "_id"
@@ -235,7 +237,7 @@ public object ContactSyncProvider {
       // 20: aastore
       // 21: ldc "_id = ?"
       // 23: bipush 1
-      // 24: anewarray 140
+      // 24: anewarray 143
       // 27: dup
       // 28: bipush 0
       // 29: aload 2
@@ -282,7 +284,7 @@ public object ContactSyncProvider {
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
@@ -291,7 +293,7 @@ public object ContactSyncProvider {
       // 84: astore 2
       // 85: aload 3
       // 86: aload 1
-      // 87: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8a: aload 2
       // 8b: athrow
       // 8c: aload 2

@@ -3,8 +3,8 @@ package com.discord.bug_reporter.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 internal class ScreenshotTakenEvent : ReactEvent {

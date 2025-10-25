@@ -34,13 +34,13 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
    }
 
    init {
-      val var6: EmbedFieldViewBinding = EmbedFieldViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var6;
+      val var4: EmbedFieldViewBinding = EmbedFieldViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
       this.setOrientation(1);
-      val var4: SimpleDraweeSpanTextView = var6.name;
-      var6.name.setTextColor(ColorUtilsKt.getThemeColor(var1, color.primary_500, color.primary_100));
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      val var5: SimpleDraweeSpanTextView = var6.value;
+      val var6: SimpleDraweeSpanTextView = var4.name;
+      var4.name.setTextColor(ColorUtilsKt.getThemeColor(var1, color.primary_500, color.primary_100));
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      val var5: SimpleDraweeSpanTextView = var4.value;
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextNormal());

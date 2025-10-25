@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Da.p
 import android.content.Context
 import android.graphics.PorterDuffColorFilter
 import android.graphics.PorterDuff.Mode
@@ -49,8 +48,9 @@ import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
+import xa.p
 
-@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n1872#3,3:292\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n260#1:292,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 Uri.kt\nandroidx/core/net/UriKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n29#3:292\n1872#4,3:293\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n207#1:292\n260#1:293,3\n*E\n"])
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
    ComponentView<SelectComponent> {
    public final val binding: MessageComponentSelectViewBinding
@@ -80,8 +80,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    init {
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      this.progressDots$delegate = Da.l.b(new i(this));
-      this.postProcessor$delegate = Da.l.b(new j());
+      this.progressDots$delegate = xa.l.a(new i(this));
+      this.postProcessor$delegate = xa.l.a(new j());
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
       this.setPadding(var3, var3, var3, var3);

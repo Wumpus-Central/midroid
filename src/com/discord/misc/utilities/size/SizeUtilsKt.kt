@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.size
 
-import Qa.a
+import Ka.a
 import android.content.res.Resources
 import android.util.TypedValue
 

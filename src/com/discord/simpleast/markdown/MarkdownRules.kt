@@ -116,12 +116,12 @@ public object MarkdownRules {
          if (var4 == null) {
             var4 = var1.group(3);
          }
-         for (Object var12 : var2.parse(var4, var3, this.innerRules)) {
-            if (var12 == null) {
+         for (var4 : var2.parse(var4, var3, this.innerRules)) {
+            if (var4 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var12 as Node);
+            var5.addChild(var4 as Node);
          }
 
          label42: {

@@ -1,58 +1,170 @@
 {
-  "tq859/": "Missä sinulla oli ongelmia?",
-  "PL2l6O": "Mikrofoni tai ääni",
-  "FVhMw8": "Yhteys tai latenssi",
-  "Moa3W1": "Ihmiset puhelussa",
-  "0ZBLiY": "Striimaus",
-  "TVTIT0": "Striimin katselu",
-  "0WFzPj": "Kamera",
-  "kbbtws": "Muut valittivat ääneni laadusta",
-  "Q5Dsa2": "Muiden äänessä oli kaikua",
-  "1DnNRE": "Muiden äänet olivat heikkolaatuiset",
-  "ftSvQ0": "En kuullut kenenkään ääntä",
-  "GWypHx": "Muut eivät kuulleet minua lainkaan",
-  "2IG95O": "En kuullut pelini ääniä",
-  "4qlGrK": "Minulla oli vaikeuksia kaiuttimen käytössä",
-  "05VSjo": "En pystynyt käyttämään oikeaa äänilaitetta",
-  "anHk19": "Jonkun toisen äänissä oli paljon taustamelua",
-  "RK9DUl": "Jonkun toisen äänet pätkivät",
-  "yGe0BA": "Jonkun toisen ääni kuulosti robottimaiselta",
-  "1o77Iy": "Jonkun toisen ääni oli liian hiljainen tai luja",
-  "RGRgmJ": "Äänet kuuluivat jäljessä",
-  "gMHKDA": "En saanut muodostettua yhteyttä",
-  "y5k8Ji": "Latenssi oli suuri puhelun aikana",
-  "y06Ays": "Yhteyden muodostaminen kesti kauan",
-  "K5vYQE": "Jonkun toisen äänet pätkivät",
-  "f2914u": "Jonkun toisen ääni kuulosti robottimaiselta",
-  "zk+QLy": "Ääni ja kuva olivat epätahdissa",
-  "PLBRzM": "Ihmiset olivat toksisia tai käyttäytyivät epäasiallisesti",
-  "zIC+8f": "Muut sanoivat, että striimini äänenlaatu oli heikko",
-  "RRZZZW": "Muut sanoivat, että striimini näkyi mustana näyttönä",
-  "8ceyQ0": "Muut sanoivat striimi olleen sumea tai pikselöitynyt",
-  "w+kiDA": "Muut eivät saaneet ladattua striimiäni",
-  "JS6akJ": "Muut kertoivat striimini kuvan ja äänten olleen epätahdissa",
-  "3PKSkZ": "Muut kertoivat striimini kuvan pysähtelevän tai nykivän",
-  "iMxexM": "Muut sanoivat ääneni olevan jäljessä kuvasta",
-  "HaZSCw": "Muut sanoivat, etteivät striimini äänet kuuluneet",
-  "TaIrh4": "En kuullut pelini ääniä",
-  "/nlKuL": "Striimini toisto päättyi odottamatta",
-  "k7bdGB": "Striimin äänenlaatu oli heikko",
-  "aml28/": "Striimi näkyi mustana ruutuna",
-  "qdBn3N": "Striimi oli sumea tai pikselöitynyt",
-  "jU9Zs7": "En saanut ladattua striimiä",
-  "JfAvQk": "Striimin ääni ja kuva olivat epätahdissa",
-  "V3EeCA": "Striimin kuva pysähteli tai nyki",
-  "hi1Y39": "Striimi lagasi",
-  "DOOloq": "En kuullut striimin ääniä",
-  "jPD99/": "Striimin toisto päättyi odottamatta",
-  "ie5nCA": "Virtuaalitaustassani oli vilkkuvia objekteja tai artefakteja",
-  "zYumoq": "Virtuaalitaustani ei rajautunut oikein",
-  "Gg/Y1d": "Virtuaalitaustani ei pysynyt liikkeideni perässä",
-  "calUNj": "Virtuaalitaustani oli sumea tai ympärilläni näkyi sädekehä",
-  "Bh+02d": "Kamerakuvanani näkyi vain musta ruutu",
-  "QbC6LS": "En löytänyt kameraani tai en saanut kytkettyä sitä päälle",
-  "k7Ido6": "Jonkun toisen kameran kuva oli sumea tai pikselöitynyt",
-  "8I/GUF": "Jonkun toisen kamerakuva pysähteli tai nyki",
-  "R+wqwc": "Jonkun toisen kamerakuvana näkyi vain musta ruutu",
-  "vRDE5O": "Ääni ja kuva olivat epätahdissa"
+  "tq8598": [
+    "Missä sinulla oli ongelmia?"
+  ],
+  "PL2l6A": [
+    "Mikrofoni tai ääni"
+  ],
+  "FVhMw6": [
+    "Yhteys tai latenssi"
+  ],
+  "Moa3W9": [
+    "Ihmiset puhelussa"
+  ],
+  "0ZBLiZ": [
+    "Striimaus"
+  ],
+  "TVTIT1": [
+    "Striimin katselu"
+  ],
+  "0WFzPh": [
+    "Kamera"
+  ],
+  "kbbtwi": [
+    "Muut valittivat ääneni laadusta"
+  ],
+  "Q5Dsaz": [
+    "Muiden äänessä oli kaikua"
+  ],
+  "1DnNRO": [
+    "Muiden äänet olivat heikkolaatuiset"
+  ],
+  "ftSvQ0": [
+    "En kuullut kenenkään ääntä"
+  ],
+  "GWypH+": [
+    "Muut eivät kuulleet minua lainkaan"
+  ],
+  "2IG95D": [
+    "En kuullut pelini ääniä"
+  ],
+  "4qlGrO": [
+    "Minulla oli vaikeuksia kaiuttimen käytössä"
+  ],
+  "05VSjm": [
+    "En pystynyt käyttämään oikeaa äänilaitetta"
+  ],
+  "anHk1/": [
+    "Jonkun toisen äänissä oli paljon taustamelua"
+  ],
+  "RK9DUi": [
+    "Jonkun toisen äänet pätkivät"
+  ],
+  "yGe0BL": [
+    "Jonkun toisen ääni kuulosti robottimaiselta"
+  ],
+  "1o77I3": [
+    "Jonkun toisen ääni oli liian hiljainen tai luja"
+  ],
+  "RGRgmM": [
+    "Äänet kuuluivat jäljessä"
+  ],
+  "gMHKDJ": [
+    "En saanut muodostettua yhteyttä"
+  ],
+  "y5k8Jq": [
+    "Latenssi oli suuri puhelun aikana"
+  ],
+  "y06Ayn": [
+    "Yhteyden muodostaminen kesti kauan"
+  ],
+  "K5vYQA": [
+    "Jonkun toisen äänet pätkivät"
+  ],
+  "f2914v": [
+    "Jonkun toisen ääni kuulosti robottimaiselta"
+  ],
+  "zk+QL1": [
+    "Ääni ja kuva olivat epätahdissa"
+  ],
+  "PLBRzF": [
+    "Ihmiset olivat toksisia tai käyttäytyivät epäasiallisesti"
+  ],
+  "zIC+8Y": [
+    "Muut sanoivat, että striimini äänenlaatu oli heikko"
+  ],
+  "RRZZZb": [
+    "Muut sanoivat, että striimini näkyi mustana näyttönä"
+  ],
+  "8ceyQy": [
+    "Muut sanoivat striimi olleen sumea tai pikselöitynyt"
+  ],
+  "w+kiDF": [
+    "Muut eivät saaneet ladattua striimiäni"
+  ],
+  "JS6akP": [
+    "Muut kertoivat striimini kuvan ja äänten olleen epätahdissa"
+  ],
+  "3PKSkd": [
+    "Muut kertoivat striimini kuvan pysähtelevän tai nykivän"
+  ],
+  "iMxexK": [
+    "Muut sanoivat ääneni olevan jäljessä kuvasta"
+  ],
+  "HaZSC3": [
+    "Muut sanoivat, etteivät striimini äänet kuuluneet"
+  ],
+  "TaIrh5": [
+    "En kuullut pelini ääniä"
+  ],
+  "/nlKuG": [
+    "Striimini toisto päättyi odottamatta"
+  ],
+  "k7bdGE": [
+    "Striimin äänenlaatu oli heikko"
+  ],
+  "aml28x": [
+    "Striimi näkyi mustana ruutuna"
+  ],
+  "qdBn3L": [
+    "Striimi oli sumea tai pikselöitynyt"
+  ],
+  "jU9Zs8": [
+    "En saanut ladattua striimiä"
+  ],
+  "JfAvQp": [
+    "Striimin ääni ja kuva olivat epätahdissa"
+  ],
+  "V3EeCH": [
+    "Striimin kuva pysähteli tai nyki"
+  ],
+  "hi1Y39": [
+    "Striimi lagasi"
+  ],
+  "DOOlop": [
+    "En kuullut striimin ääniä"
+  ],
+  "jPD998": [
+    "Striimin toisto päättyi odottamatta"
+  ],
+  "ie5nCG": [
+    "Virtuaalitaustassani oli vilkkuvia objekteja tai artefakteja"
+  ],
+  "zYumoj": [
+    "Virtuaalitaustani ei rajautunut oikein"
+  ],
+  "Gg/Y1X": [
+    "Virtuaalitaustani ei pysynyt liikkeideni perässä"
+  ],
+  "calUNv": [
+    "Virtuaalitaustani oli sumea tai ympärilläni näkyi sädekehä"
+  ],
+  "Bh+02d": [
+    "Kamerakuvanani näkyi vain musta ruutu"
+  ],
+  "QbC6La": [
+    "En löytänyt kameraani tai en saanut kytkettyä sitä päälle"
+  ],
+  "k7Idoz": [
+    "Jonkun toisen kameran kuva oli sumea tai pikselöitynyt"
+  ],
+  "8I/GUL": [
+    "Jonkun toisen kamerakuva pysähteli tai nyki"
+  ],
+  "R+wqwU": [
+    "Jonkun toisen kamerakuvana näkyi vain musta ruutu"
+  ],
+  "vRDE5O": [
+    "Ääni ja kuva olivat epätahdissa"
+  ]
 }

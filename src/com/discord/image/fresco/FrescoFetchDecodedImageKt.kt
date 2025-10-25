@@ -1,9 +1,9 @@
-@file:SourceDebugExtension(["SMAP\nFrescoFetchDecodedImage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,108:1\n1#2:109\n314#3,11:110\n*S KotlinDebug\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n*L\n74#1:110,11\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nFrescoFetchDecodedImage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 Uri.kt\nandroidx/core/net/UriKt\n+ 4 CancellableContinuation.kt\nkotlinx/coroutines/CancellableContinuationKt\n*L\n1#1,109:1\n1#2:110\n29#3:111\n29#3:112\n314#4,11:113\n*S KotlinDebug\n*F\n+ 1 FrescoFetchDecodedImage.kt\ncom/discord/image/fresco/FrescoFetchDecodedImageKt\n*L\n28#1:111\n66#1:112\n75#1:113,11\n*E\n"])
 
 package com.discord.image.fresco
 
+import Ca.b
 import G3.d
-import Ia.b
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -87,22 +87,43 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 }
 
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
-   label15:
-   try {
-      val var9: kotlin.Result.a = Result.e;
-      var8 = Result.b(Uri.parse(var1));
-   } catch (var6: java.lang.Throwable) {
-      val var5: kotlin.Result.a = Result.e;
-      var8 = Result.b(c.a(var6));
-      break label15;
+   label38: {
+      try {
+         val var6: kotlin.Result.a = Result.e;
+      } catch (var9: java.lang.Throwable) {
+         val var19: kotlin.Result.a = Result.e;
+         var20 = Result.b(c.a(var9));
+         break label38;
+      }
+
+      val var22: Uri;
+      if (var1 != null) {
+         try {
+            var22 = Uri.parse(var1);
+         } catch (var8: java.lang.Throwable) {
+            val var21: kotlin.Result.a = Result.e;
+            var20 = Result.b(c.a(var8));
+            break label38;
+         }
+      } else {
+         var22 = null;
+      }
+
+      label26:
+      try {
+         var20 = Result.b(var22);
+      } catch (var7: java.lang.Throwable) {
+         val var23: kotlin.Result.a = Result.e;
+         var20 = Result.b(c.a(var7));
+         break label26;
+      }
    }
 
-   var var10: Any = var8;
-   if (Result.g(var8)) {
-      var10 = null;
+   if (Result.g(var20)) {
+      var20 = null;
    }
 
-   return fetchDecodedImage(var0, var10 as Uri, var2, var3, var4);
+   return fetchDecodedImage(var0, var20 as Uri, var2, var3, var4);
 }
 
 public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
@@ -134,22 +155,43 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 }
 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
-   label16:
-   try {
-      val var8: kotlin.Result.a = Result.e;
-      var7 = Result.b(Uri.parse(var1));
-   } catch (var5: java.lang.Throwable) {
-      val var4: kotlin.Result.a = Result.e;
-      var7 = Result.b(c.a(var5));
-      break label16;
+   label38: {
+      try {
+         val var20: kotlin.Result.a = Result.e;
+      } catch (var8: java.lang.Throwable) {
+         val var5: kotlin.Result.a = Result.e;
+         var18 = Result.b(c.a(var8));
+         break label38;
+      }
+
+      val var19: Uri;
+      if (var1 != null) {
+         try {
+            var19 = Uri.parse(var1);
+         } catch (var7: java.lang.Throwable) {
+            val var21: kotlin.Result.a = Result.e;
+            var18 = Result.b(c.a(var7));
+            break label38;
+         }
+      } else {
+         var19 = null;
+      }
+
+      label26:
+      try {
+         var18 = Result.b(var19);
+      } catch (var6: java.lang.Throwable) {
+         val var22: kotlin.Result.a = Result.e;
+         var18 = Result.b(c.a(var6));
+         break label26;
+      }
    }
 
-   var var9: Any = var7;
-   if (Result.g(var7)) {
-      var9 = null;
+   if (Result.g(var18)) {
+      var18 = null;
    }
 
-   fetchDecodedImage(var0, var9 as Uri, var2, var3);
+   fetchDecodedImage(var0, var18 as Uri, var2, var3);
 }
 
 @JvmSynthetic

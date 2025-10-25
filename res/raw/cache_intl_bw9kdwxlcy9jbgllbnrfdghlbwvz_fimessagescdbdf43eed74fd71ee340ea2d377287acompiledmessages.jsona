@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Luonut: ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Mukautetun teeman esikatselu",
-  "qZMUoK": "Tältä teemasi näyttää kaikissa Discord-laitteissa.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Mukautetun teeman esikatselu"
+  ],
+  "qZMUoL": [
+    "Tältä teemasi näyttää kaikissa Discord-laitteissa."
+  ],
+  "v15Ipv": [
     "Kun synkronointi on käytössä, työpöytäversiossa luodut mukautetut teemat [beetaominaisuus] voivat vaikuttaa mobiiliversiosi teemaan. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Mukautettu teema",
-  "KSBBpK": "Mukautettu teema"
+  "yl1iMm": [
+    "Mukautettu teema"
+  ],
+  "KSBBpC": [
+    "Mukautettu teema"
+  ]
 }

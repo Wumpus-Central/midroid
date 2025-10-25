@@ -1,10 +1,10 @@
 package com.discord.crash_reporting.system_logs
 
-import Da.v
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
+import xa.v
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -123,14 +123,14 @@ internal object HistoricalProcessExitReason {
 
       public override fun toString(): String {
          val var3: java.lang.String = this.reason;
-         val var1: java.lang.String = this.description;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Reason(reason=");
-         var2.append(var3);
-         var2.append(", description=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = this.description;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Reason(reason=");
+         var1.append(var3);
+         var1.append(", description=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

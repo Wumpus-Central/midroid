@@ -27,10 +27,10 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            val var4: WindowMetrics = B1.a.a.a().a(var1);
+            val var2: WindowMetrics = B1.a.a.a().a(var1);
             if (VERSION.SDK_INT >= 34) {
-               val var2: Insets = var4.b().g(WindowInsetsCompat.n.h() or WindowInsetsCompat.n.b());
-               return new MetricsSize(var4.a().width() - var2.a - var2.c, var4.a().height() - var2.b - var2.d);
+               val var4: Insets = var2.b().g(WindowInsetsCompat.n.h() or WindowInsetsCompat.n.b());
+               return new MetricsSize(var2.a().width() - var4.a - var4.c, var2.a().height() - var4.b - var4.d);
             }
          } catch (var3: Exception) {
          }

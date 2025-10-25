@@ -8,6 +8,7 @@ import android.net.Uri
 import com.discord.logging.Log
 import java.io.IOException
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    private final var mediaPlayer: MediaPlayer?
@@ -267,6 +268,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
       }
    }
 
+   @SourceDebugExtension(["SMAP\nSoundPlayer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SoundPlayer.kt\ncom/discord/sounds/SoundPlayer$Companion\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,181:1\n29#2:182\n*S KotlinDebug\n*F\n+ 1 SoundPlayer.kt\ncom/discord/sounds/SoundPlayer$Companion\n*L\n173#1:182\n*E\n"])
    public companion object {
       private fun createMediaPlayer(context: Context, usage: Int, soundResId: Int?, filePath: String?): MediaPlayer {
          val var5: MediaPlayer = new MediaPlayer();

@@ -15,10 +15,10 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var14: java.lang.String = var3.h(var4.h(var0, new A()), new B());
+   var var14: java.lang.String = var4.h(var3.h(var0, new A()), new B());
    var var13: java.lang.String = var0;
 
    while (true) {
@@ -81,9 +81,9 @@ public fun renderNotificationMessageContent(content: String): String {
       }
 
       val var2: Int = var6.c().q();
-      val var12: Int = var6.c().y();
+      val var12: Int = var6.c().t();
       var13 = StringsKt.v0(var13, var2, var12 + 1, var10).toString();
-      var14 = StringsKt.v0(var14, var6.c().q(), var6.c().y() + 1, var10).toString();
+      var14 = StringsKt.v0(var14, var6.c().q(), var6.c().t() + 1, var10).toString();
    }
 }
 

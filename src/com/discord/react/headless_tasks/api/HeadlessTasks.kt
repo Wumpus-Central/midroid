@@ -46,12 +46,12 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public override fun toString(): String {
-      val var1: HeadlessJsTaskConfig = this.taskConfig;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("HeadlessTasks(taskConfig=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: HeadlessJsTaskConfig = this.taskConfig;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("HeadlessTasks(taskConfig=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    @SourceDebugExtension(["SMAP\nHeadlessTasks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HeadlessTasks.kt\ncom/discord/react/headless_tasks/api/HeadlessTasks$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,86:1\n1#2:87\n*E\n"])

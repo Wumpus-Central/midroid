@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.sticker
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class Sticker(id: Long,
@@ -117,11 +117,11 @@ public data class Sticker(id: Long,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = java.lang.Long.hashCode(this.id);
-      val var6: Int = this.formatType.hashCode();
-      val var4: Int = this.name.hashCode();
-      val var5: Int = this.asset.hashCode();
-      val var7: Int = this.url.hashCode();
+      val var7: Int = java.lang.Long.hashCode(this.id);
+      val var4: Int = this.formatType.hashCode();
+      val var6: Int = this.name.hashCode();
+      val var3: Int = this.asset.hashCode();
+      val var5: Int = this.url.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.width == null) {
@@ -134,39 +134,39 @@ public data class Sticker(id: Long,
          var2 = this.height.hashCode();
       }
 
-      return (((((((var3 * 31 + var6) * 31 + var4) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
+      return (((((((var7 * 31 + var4) * 31 + var6) * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
          + this.accessibilityLabel.hashCode();
    }
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var7: StickerFormatType = this.formatType;
-      val var10: java.lang.String = this.name;
-      val var8: java.lang.String = this.asset;
-      val var9: java.lang.String = this.url;
-      val var4: Int = this.width;
-      val var11: Int = this.height;
+      val var9: StickerFormatType = this.formatType;
+      val var5: java.lang.String = this.name;
+      val var10: java.lang.String = this.asset;
+      val var11: java.lang.String = this.url;
+      val var7: Int = this.width;
+      val var4: Int = this.height;
       val var1: Int = this.renderMode;
-      val var5: java.lang.String = this.accessibilityLabel;
+      val var8: java.lang.String = this.accessibilityLabel;
       val var6: StringBuilder = new StringBuilder();
       var6.append("Sticker(id=");
       var6.append(var2);
       var6.append(", formatType=");
-      var6.append(var7);
-      var6.append(", name=");
-      var6.append(var10);
-      var6.append(", asset=");
-      var6.append(var8);
-      var6.append(", url=");
       var6.append(var9);
-      var6.append(", width=");
-      var6.append(var4);
-      var6.append(", height=");
+      var6.append(", name=");
+      var6.append(var5);
+      var6.append(", asset=");
+      var6.append(var10);
+      var6.append(", url=");
       var6.append(var11);
+      var6.append(", width=");
+      var6.append(var7);
+      var6.append(", height=");
+      var6.append(var4);
       var6.append(", renderMode=");
       var6.append(var1);
       var6.append(", accessibilityLabel=");
-      var6.append(var5);
+      var6.append(var8);
       var6.append(")");
       return var6.toString();
    }

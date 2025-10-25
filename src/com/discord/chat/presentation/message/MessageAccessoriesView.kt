@@ -72,7 +72,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var3;
       val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var4;
-      this.forwardBarPaint$delegate = Da.l.b(new P());
+      this.forwardBarPaint$delegate = xa.l.a(new P());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -98,10 +98,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : kotlin.sequences.k.M(androidx.core.view.f0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -136,11 +136,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var2: Float = leftMarginPx;
          val var3: Float = leftMarginPx;
+         val var2: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -170,27 +170,27 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var12: MessageAccessoriesView.Companion = Companion;
       val var11: Resources = this.getResources();
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
-      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var13: java.util.Iterator = var5.iterator();
+         val var16: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var13.hasNext()) {
+            if (!var16.hasNext()) {
                break;
             }
 
-            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var16.setShowThreadSpine(var9);
+      var13.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

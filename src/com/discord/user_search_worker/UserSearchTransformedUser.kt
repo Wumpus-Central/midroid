@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import Da.v
 import java.util.ArrayList
 import java.util.Map.Entry
+import kc.m
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -11,11 +11,11 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import qc.m
-import sc.j
-import sc.e.i
-import uc.f
-import uc.h
+import mc.j
+import mc.e.i
+import oc.f
+import oc.h
+import xa.v
 
 @m(with = UserSearchTransformedUser.Serializer::class)
 internal data class UserSearchTransformedUser(id: String,
@@ -142,30 +142,30 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.id;
-      val var4: java.lang.String = this.username;
-      val var5: java.lang.Boolean = this.isBot;
-      val var1: java.lang.Boolean = this.isFriend;
+      val var4: java.lang.String = this.id;
+      val var1: java.lang.String = this.username;
+      val var6: java.lang.Boolean = this.isBot;
+      val var8: java.lang.Boolean = this.isFriend;
       val var2: java.lang.String = this.friendNickname;
-      val var7: java.lang.String = this.globalName;
+      val var5: java.lang.String = this.globalName;
       val var3: java.util.Map = this.nicknames;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("UserSearchTransformedUser(id=");
-      var8.append(var6);
-      var8.append(", username=");
-      var8.append(var4);
-      var8.append(", isBot=");
-      var8.append(var5);
-      var8.append(", isFriend=");
-      var8.append(var1);
-      var8.append(", friendNickname=");
-      var8.append(var2);
-      var8.append(", globalName=");
-      var8.append(var7);
-      var8.append(", nicknames=");
-      var8.append(var3);
-      var8.append(")");
-      return var8.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("UserSearchTransformedUser(id=");
+      var7.append(var4);
+      var7.append(", username=");
+      var7.append(var1);
+      var7.append(", isBot=");
+      var7.append(var6);
+      var7.append(", isFriend=");
+      var7.append(var8);
+      var7.append(", friendNickname=");
+      var7.append(var2);
+      var7.append(", globalName=");
+      var7.append(var5);
+      var7.append(", nicknames=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {
@@ -198,7 +198,7 @@ internal data class UserSearchTransformedUser(id: String,
                   val var2: ArrayList = new ArrayList((var11 as java.util.Map).size());
 
                   for (Entry var13 : var12.entrySet()) {
-                     val var4: java.lang.String = var13.getKey() as java.lang.String;
+                     val var3: java.lang.String = var13.getKey() as java.lang.String;
                      val var14: JsonElement = var13.getValue() as JsonElement;
                      val var15: java.lang.String;
                      if (h.o(var14).k()) {
@@ -207,7 +207,7 @@ internal data class UserSearchTransformedUser(id: String,
                         var15 = null;
                      }
 
-                     var2.add(v.a(var4, var15));
+                     var2.add(v.a(var3, var15));
                   }
 
                   var16 = O.u(var2);

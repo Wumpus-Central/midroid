@@ -1,6 +1,8 @@
 {
-  "rdfRys": "Tenemos un «const static codeSpan = 2;» aquí.",
-  "HMvECw": [
+  "rdfRyh": [
+    "Tenemos un «const static codeSpan = 2;» aquí."
+  ],
+  "HMvEC5": [
     "Todo esto se gestiona localmente y ",
     [
       8,
@@ -11,7 +13,7 @@
     ],
     " ha sustituido el sistema global de i18n."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Usa hooks como ",
     [
       8,
@@ -25,7 +27,7 @@
     ],
     " para el contenido especial."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Esta cadena tiene un ",
     [
       8,
@@ -39,7 +41,7 @@
     ],
     ", con la url definida en la cadena."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Este enlace usa un ",
     [
       8,
@@ -56,5 +58,7 @@
     ],
     " que se proporciona en tiempo de ejecución."
   ],
-  "swfLzc": "Este mensaje proviene de un archivo independiente"
+  "swfLzV": [
+    "Este mensaje proviene de un archivo independiente"
+  ]
 }

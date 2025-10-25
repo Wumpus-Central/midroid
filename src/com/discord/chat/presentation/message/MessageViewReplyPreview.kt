@@ -201,11 +201,11 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          }
 
          val var11: LinkBackgroundStyle = new LinkBackgroundStyle(var10, var13, var15);
-         val var14: java.lang.Boolean = var0.getShowAppsIcon();
-         val var16: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var16: java.lang.Boolean = var0.getShowAppsIcon();
+         val var14: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var8: ReactAsset;
-         if (var14 == java.lang.Boolean.TRUE) {
-            if (var0.getShowControllerIcon() == var16) {
+         if (var16 == java.lang.Boolean.TRUE) {
+            if (var0.getShowControllerIcon() == var14) {
                var8 = ReactAsset.GameController;
             } else {
                var8 = ReactAsset.AppsIcon;
@@ -473,24 +473,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          if (var12.getSystemContent() != null) {
             val var28: MessageContentView = this.binding.replyText;
             val var44: LinearLayout = this.binding.replyLeadingViews;
-            val var14: StructurableText = var12.getSystemContent();
-            val var69: Context = this.getContext();
+            val var69: StructurableText = var12.getSystemContent();
+            val var14: Context = this.getContext();
             val var63: java.lang.String = var11.getId-3Eiw7ao();
-            val var9: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            val var8: Boolean = MessageKt.shouldShowLinkDecorations(var11);
             var2 = var11.getShouldShowRoleDot();
-            val var8: Boolean = var11.getShouldShowRoleOnName();
+            val var9: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
             val var56: TextPaint = this.binding.replyText.getPaint();
             val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var14,
                var69,
+               var14,
                var63,
-               var9,
                var7,
-               var2,
                var8,
+               var2,
+               var9,
                var56,
                null,
                null,
@@ -520,24 +520,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          } else if (var11.getContent() != null) {
             val var29: MessageContentView = this.binding.replyText;
             val var46: LinearLayout = this.binding.replyLeadingViews;
-            val var70: StructurableText = var11.getContent();
+            val var66: StructurableText = var11.getContent();
             val var71: Context = this.getContext();
-            val var66: java.lang.String = var11.getId-3Eiw7ao();
+            val var70: java.lang.String = var11.getId-3Eiw7ao();
             var2 = MessageKt.shouldAnimateEmoji(var11);
             val var37: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var39: Boolean = var11.getShouldShowRoleDot();
-            val var38: Boolean = var11.getShouldShowRoleOnName();
+            val var38: Boolean = var11.getShouldShowRoleDot();
+            val var39: Boolean = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
             val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var70,
-               var71,
                var66,
+               var71,
+               var70,
                var2,
                var37,
-               var39,
                var38,
+               var39,
                var59,
                null,
                null,
@@ -569,7 +569,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          }
       } else {
          if (var1 !is SystemReferencedMessage) {
-            throw new Da.p();
+            throw new xa.p();
          }
 
          val var47: ChannelSpineView = this.binding.replySpline;

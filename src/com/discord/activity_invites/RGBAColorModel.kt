@@ -1,7 +1,7 @@
 package com.discord.activity_invites
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class RGBAColorModel(r: Float, g: Float, b: Float, a: Float) {

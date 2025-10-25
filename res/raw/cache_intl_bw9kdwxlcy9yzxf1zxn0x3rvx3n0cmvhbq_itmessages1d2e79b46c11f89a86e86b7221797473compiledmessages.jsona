@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Chiedi di fare streaming",
-  "P0wwmJ": "Già in streaming",
-  "u4QmWl": "Richiesta scaduta",
-  "qRXatr": "Non nel canale vocale",
-  "43zohI": "Non c'è un gioco in corso",
-  "fac+eH": "Nessun permesso",
-  "8HU1Mz": "Richiesta inviata",
-  "5+172d": "Fai streaming",
-  "nAyuPj": "Richiesta di fare streaming",
-  "d/qbCw": [
+  "DKHhec": [
+    "Chiedi di fare streaming"
+  ],
+  "P0wwmM": [
+    "Già in streaming"
+  ],
+  "u4QmWl": [
+    "Richiesta scaduta"
+  ],
+  "qRXats": [
+    "Non nel canale vocale"
+  ],
+  "43zohO": [
+    "Non c'è un gioco in corso"
+  ],
+  "fac+eE": [
+    "Nessun permesso"
+  ],
+  "8HU1M2": [
+    "Richiesta inviata"
+  ],
+  "5+172e": [
+    "Fai streaming"
+  ],
+  "nAyuPp": [
+    "Richiesta di fare streaming"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " ti ha chiesto di fare streaming"
   ],
-  "8B3U5O": "Hai chiesto a qualcuno di fare streaming"
+  "8B3U5O": [
+    "Hai chiesto a qualcuno di fare streaming"
+  ]
 }

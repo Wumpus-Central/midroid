@@ -20,7 +20,7 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
 
    public fun startSmsRetriever() {
       val var1: D6.b = a.a(this.context);
-      var1.I();
+      var1.x();
    }
 
    public fun unregisterReceiver() {

@@ -1,12 +1,11 @@
 package com.discord.file_downloader
 
-import Da.l
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
 import com.discord.resource_usage.DeviceResourceUsageRecorder.Companion
+import dc.e
 import java.io.File
 import java.util.Map.Entry
-import jc.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -18,10 +17,11 @@ import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
 import org.jetbrains.annotations.NotNull
+import xa.l
 
 @SourceDebugExtension(["SMAP\nFileDownloader.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileDownloader.kt\ncom/discord/file_downloader/FileDownloader\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 OkHttpClient.kt\nokhttp3/OkHttpClient$Builder\n*L\n1#1,88:1\n1863#2,2:89\n563#3:91\n*S KotlinDebug\n*F\n+ 1 FileDownloader.kt\ncom/discord/file_downloader/FileDownloader\n*L\n33#1:89,2\n21#1:91\n*E\n"])
 public object FileDownloader {
-   private final val defaultClient: OkHttpClient by l.b(new a())
+   private final val defaultClient: OkHttpClient by l.a(new a())
       private final get() {
          return defaultClient$delegate.getValue() as OkHttpClient;
       }
@@ -46,8 +46,8 @@ public object FileDownloader {
    public fun downloadBlob(fileUrl: String, headers: Map<String, String> = O.i(), client: OkHttpClient = var0.getDefaultClient()): Response {
       val var4: okhttp3.Request.Builder = new okhttp3.Request.Builder();
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.a(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.a(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       return var3.b(var4.l(var1).b()).execute();

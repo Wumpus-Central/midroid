@@ -3,8 +3,8 @@ package com.discord.chat.reactevents
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class TapUsernameData(messageId: String, userId: String) : ReactEvent {
@@ -53,13 +53,13 @@ public data class TapUsernameData(messageId: String, userId: String) : ReactEven
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.userId;
+      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.userId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapUsernameData(messageId=");
-      var1.append(var2);
-      var1.append(", userId=");
       var1.append(var3);
+      var1.append(", userId=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

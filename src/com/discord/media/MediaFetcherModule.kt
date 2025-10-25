@@ -1,6 +1,5 @@
 package com.discord.media
 
-import Da.v
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -13,6 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 @SourceDebugExtension(["SMAP\nMediaFetcherModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,63:1\n1062#2:64\n*S KotlinDebug\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n*L\n32#1:64\n*E\n"])
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -44,7 +44,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getPhotos(params: ReadableMap, promise: Promise) {
-      val var3: Int = var1.getInt("first");
+      val var4: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -52,26 +52,26 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var4: Int;
+      var var3: Int;
       try {
-         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var12: ReactApplicationContext = this.getReactApplicationContext();
-         var16 = CollectionsKt.P0(CollectionsKt.M0(var6.getMedia(var12, var7, var3, var5), new Comparator() {
+         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var6: ReactApplicationContext = this.getReactApplicationContext();
+         var16 = CollectionsKt.P0(CollectionsKt.M0(var7.getMedia(var6, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return Ga.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return Aa.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var3);
-         var4 = var16.size();
+         }), var4);
+         var3 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var4 == var3) {
+      if (var3 == var4) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
                v.a("start_cursor", java.lang.String.valueOf((CollectionsKt.j0(var16) as ContentResolverMedia).getUri())),

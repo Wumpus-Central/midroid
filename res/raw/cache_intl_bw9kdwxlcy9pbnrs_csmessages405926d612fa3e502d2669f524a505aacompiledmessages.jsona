@@ -1,6 +1,8 @@
 {
-  "rdfRys": "Tady máme „const static codeSpan = 2;“.",
-  "HMvECw": [
+  "rdfRyh": [
+    "Tady máme „const static codeSpan = 2;“."
+  ],
+  "HMvEC5": [
     "Tohle všechno se spravuje lokálně a ",
     [
       8,
@@ -11,7 +13,7 @@
     ],
     " nenahradilo globální systém i18n."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Pro speciální obsah používej hooky jako například ",
     [
       8,
@@ -25,7 +27,7 @@
     ],
     "."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Tento řetězec má ",
     [
       8,
@@ -39,7 +41,7 @@
     ],
     " s URL definovanou v rámci řetězce."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Tento odkaz využívá ",
     [
       8,
@@ -56,5 +58,7 @@
     ],
     " zadaný při spuštění."
   ],
-  "swfLzc": "Tato zpráva pochází ze samostatného souboru"
+  "swfLzV": [
+    "Tato zpráva pochází ze samostatného souboru"
+  ]
 }

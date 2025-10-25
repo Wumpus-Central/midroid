@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Geschenk-Hintergrundoption: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Schachtel",
-  "AJ4iio": "Kuchen",
-  "P5keo6": "Truhe",
-  "w84vER": "Kaffee",
-  "6dCq/v": "Tasse",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Festtagsschachtel",
-  "aubYGR": "Festtagskuchen",
-  "vjxYqa": "Festtagstruhe",
-  "bHuJLS": "Festtagskaffee",
-  "M6cPwM": "Schneekugel",
-  "GzPel5": "Box"
+  "B9XqQk": [
+    "Schachtel"
+  ],
+  "AJ4iir": [
+    "Kuchen"
+  ],
+  "P5keo3": [
+    "Truhe"
+  ],
+  "w84vET": [
+    "Kaffee"
+  ],
+  "6dCq/u": [
+    "Tasse"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Festtagsschachtel"
+  ],
+  "aubYGR": [
+    "Festtagskuchen"
+  ],
+  "vjxYqU": [
+    "Festtagstruhe"
+  ],
+  "bHuJLa": [
+    "Festtagskaffee"
+  ],
+  "M6cPwB": [
+    "Schneekugel"
+  ],
+  "GzPel1": [
+    "Box"
+  ]
 }

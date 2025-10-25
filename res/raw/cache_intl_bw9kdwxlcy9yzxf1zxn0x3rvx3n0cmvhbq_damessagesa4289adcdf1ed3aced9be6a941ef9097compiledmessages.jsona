@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Bed om stream",
-  "P0wwmJ": "Streamer allerede",
-  "u4QmWl": "Anmodning udløbet",
-  "qRXatr": "Ikke i stemmekanal",
-  "43zohI": "Spiller ikke spillet",
-  "fac+eH": "Ingen tilladelse",
-  "8HU1Mz": "Anmodning sendt",
-  "5+172d": "Stream",
-  "nAyuPj": "Stream-anmodning",
-  "d/qbCw": [
+  "DKHhec": [
+    "Bed om stream"
+  ],
+  "P0wwmM": [
+    "Streamer allerede"
+  ],
+  "u4QmWl": [
+    "Anmodning udløbet"
+  ],
+  "qRXats": [
+    "Ikke i stemmekanal"
+  ],
+  "43zohO": [
+    "Spiller ikke spillet"
+  ],
+  "fac+eE": [
+    "Ingen tilladelse"
+  ],
+  "8HU1M2": [
+    "Anmodning sendt"
+  ],
+  "5+172e": [
+    "Stream"
+  ],
+  "nAyuPp": [
+    "Stream-anmodning"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " bad dig om at streame"
   ],
-  "8B3U5O": "Du bad nogen om at streame"
+  "8B3U5O": [
+    "Du bad nogen om at streame"
+  ]
 }

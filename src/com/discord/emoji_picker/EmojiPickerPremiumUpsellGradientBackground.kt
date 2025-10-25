@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.theme.R.color
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nEmojiPickerPremiumUpsellGradientBackground.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,128:1\n1328#2,3:129\n8#3:132\n*S KotlinDebug\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n*L\n68#1:129,3\n99#1:132\n*E\n"])
+@SourceDebugExtension(["SMAP\nEmojiPickerPremiumUpsellGradientBackground.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n+ 2 ViewGroup.kt\nandroidx/core/view/ViewGroupKt\n+ 3 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 4 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,129:1\n48#2:130\n1328#3,3:131\n8#4:134\n*S KotlinDebug\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n*L\n58#1:130\n69#1:131,3\n100#1:134\n*E\n"])
 public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTier0UpsellContent: Boolean) : RecyclerView.ItemDecoration {
    private final var useTier0UpsellContent: Boolean
    private final var linearGradientColors: IntArray

@@ -11,7 +11,9 @@ import android.os.Build.VERSION
 import android.util.AttributeSet
 import android.view.View
 import com.discord.misc.utilities.size.SizeUtilsKt
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nMaskedShadowView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MaskedShadowView.kt\ncom/discord/chat/presentation/list/MaskedShadowView\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,83:1\n404#2:84\n404#2:85\n*S KotlinDebug\n*F\n+ 1 MaskedShadowView.kt\ncom/discord/chat/presentation/list/MaskedShadowView\n*L\n30#1:84\n41#1:85\n*E\n"])
 public class MaskedShadowView  public constructor(context: Context, attrs: AttributeSet? = null) : View(var1, var2) {
    private final var shadowColor: String = "#28000000"
    private final var borderRadius: Float
@@ -43,12 +45,12 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
             var1.clipPath(this.path, Op.DIFFERENCE);
          }
 
-         val var9: Float = this.shadowElevation / 2;
+         val var6: Float = this.shadowElevation / 2;
          var1.drawRoundRect(
             -(this.shadowElevation / (float)2),
             0.0F,
-            (float)this.getWidth() + var9,
-            (float)this.getHeight() + var9,
+            (float)this.getWidth() + var6,
+            (float)this.getHeight() + var6,
             this.borderRadius,
             this.borderRadius,
             this.shadowPaint

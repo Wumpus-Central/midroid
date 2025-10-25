@@ -7,10 +7,10 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Environment
+import cc.p
 import com.discord.file_downloader.utils.FilenameSanitizedKt
-import ic.p
+import dc.e
 import java.util.LinkedHashMap
-import jc.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
@@ -78,38 +78,38 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface ic/t.f (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface cc/t.f (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
       // 46: goto 78
       // 49: astore 1
       // 4a: goto 89
       // 4d: new com/discord/file_downloader/DownloadState$Failure
-      // 50: astore 5
+      // 50: astore 8
       // 52: new java/lang/IllegalStateException
-      // 55: astore 7
+      // 55: astore 5
       // 57: new java/io/FileNotFoundException
-      // 5a: astore 8
-      // 5c: aload 8
+      // 5a: astore 7
+      // 5c: aload 7
       // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 7
-      // 63: aload 8
+      // 61: aload 5
+      // 63: aload 7
       // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 68: aload 5
-      // 6a: aload 7
+      // 68: aload 8
+      // 6a: aload 5
       // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6f: aload 1
-      // 70: aload 5
-      // 72: invokeinterface ic/t.f (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 70: aload 8
+      // 72: invokeinterface cc/t.f (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 77: pop
       // 78: aload 1
       // 79: aconst_null
       // 7a: bipush 1
       // 7b: aconst_null
-      // 7c: invokestatic ic/t$a.a (Lic/t;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 7c: invokestatic cc/t$a.a (Lcc/t;Ljava/lang/Throwable;ILjava/lang/Object;)Z
       // 7f: istore 6
       // 81: aload 2
       // 82: aconst_null
-      // 83: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 83: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 86: iload 6
       // 88: ireturn
       // 89: aload 1
@@ -117,7 +117,7 @@ public object PublicFileDownloader {
       // 8b: astore 5
       // 8d: aload 2
       // 8e: aload 1
-      // 8f: invokestatic Na/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8f: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 92: aload 5
       // 94: athrow
    }
@@ -172,7 +172,7 @@ public object PublicFileDownloader {
                      var var7: LongRef;
                      label86: {
                         label87: {
-                           var9 = Ia.b.e();
+                           var9 = Ca.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {
@@ -216,13 +216,13 @@ public object PublicFileDownloader {
                            }
 
                            val var22: Any = this.$context.getSystemService("download");
-                           val var11: DownloadManager = var22 as DownloadManager;
+                           val var26: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.element = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var11.enqueue(
+                              var3x = var26.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.element = var3x;
@@ -236,7 +236,7 @@ public object PublicFileDownloader {
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.f(var23.element), new b(var23, var1, var11, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.f(var23.element), new b(var23, var1, var26, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
                                  var7 = var23;
@@ -247,13 +247,13 @@ public object PublicFileDownloader {
                            }
 
                            try {
-                              val var31: DownloadState.Failure = new DownloadState.Failure(
+                              val var27: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var23;
                               this.label = 2;
-                              var27 = var1.j(var31, this);
+                              var28 = var1.j(var27, this);
                            } catch (var14: Exception) {
                               var7 = var23;
                               var6 = var1;
@@ -261,19 +261,19 @@ public object PublicFileDownloader {
                               break label86;
                            }
 
-                           if (var27 === var9) {
+                           if (var28 === var9) {
                               return var9;
                            }
 
-                           var20 = var1;
                            var1 = var23;
+                           var20 = var1;
                         }
 
                         var7 = var1;
                         var6 = var20;
 
                         try {
-                           kotlin.coroutines.jvm.internal.b.a(ic.t.a.a(var20, null, 1, null));
+                           kotlin.coroutines.jvm.internal.b.a(cc.t.a.a(var20, null, 1, null));
                            break label80;
                         } catch (var13: Exception) {
                            var1 = var13;
@@ -281,7 +281,7 @@ public object PublicFileDownloader {
                      }
 
                      var6.f(new DownloadState.Failure(var1));
-                     kotlin.coroutines.jvm.internal.b.a(ic.t.a.a(var6, null, 1, null));
+                     kotlin.coroutines.jvm.internal.b.a(cc.t.a.a(var6, null, 1, null));
                      var1 = var7;
                      var20 = var6;
                   }

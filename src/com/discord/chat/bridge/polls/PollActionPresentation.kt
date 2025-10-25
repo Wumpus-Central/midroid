@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import Da.l
-import Da.o
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 import q2.a
-import qc.m
+import xa.l
+import xa.o
 
 @m
 public enum class PollActionPresentation {
@@ -17,7 +17,7 @@ public enum class PollActionPresentation {
    @JvmStatic
    private PollActionPresentation[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.e, new a());
+   private Lazy $cachedSerializer$delegate = l.b(o.e, new a());
    @JvmStatic
    public PollActionPresentation.Companion Companion = new PollActionPresentation.Companion(null);
 
@@ -25,7 +25,7 @@ public enum class PollActionPresentation {
    fun {
       val var0: Array<PollActionPresentation> = $values();
       $VALUES = var0;
-      $ENTRIES = Ja.a.a(var0);
+      $ENTRIES = Da.a.a(var0);
    }
 
    @JvmStatic

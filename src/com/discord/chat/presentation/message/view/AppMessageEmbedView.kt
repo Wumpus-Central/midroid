@@ -212,9 +212,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var3 / var4;
-         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var52: SimpleDraweeView = this.view.banner;
-         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var38: SimpleDraweeView = this.view.banner;
+         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(8);

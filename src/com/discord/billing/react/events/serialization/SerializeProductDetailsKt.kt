@@ -2,13 +2,13 @@
 
 package com.discord.billing.react.events.serialization
 
-import Da.v
 import com.android.billingclient.api.ProductDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    val var5: ArrayList = new ArrayList(CollectionsKt.v(var0, 10));

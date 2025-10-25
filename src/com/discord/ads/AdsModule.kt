@@ -1,6 +1,5 @@
 package com.discord.ads
 
-import Da.v
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -17,6 +16,7 @@ import java.util.concurrent.CancellationException
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicReference
+import xa.v
 
 public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleSpec(var1) {
    private final val adExecutor: ExecutorService = Executors.newSingleThreadExecutor()

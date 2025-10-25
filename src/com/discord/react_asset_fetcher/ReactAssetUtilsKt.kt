@@ -1,7 +1,11 @@
 package com.discord.react_asset_fetcher
 
-import Ia.b
+import Ca.b
+import ac.K
+import ac.f
 import android.content.Context
+import android.content.res.Resources
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -13,8 +17,6 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
-import gc.K
-import gc.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
@@ -126,10 +128,12 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      } else if (var3.getUri().getScheme() == "file") {
                         var1 = Drawable.createFromPath(var3.getUri().getPath());
                      } else {
-                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
-                        val var9: HttpURLConnection = var8 as HttpURLConnection;
-                        (var8 as HttpURLConnection).connect();
-                        var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));
+                        val var9: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var10: HttpURLConnection = var9 as HttpURLConnection;
+                        (var9 as HttpURLConnection).connect();
+                        val var11: Bitmap = BitmapFactory.decodeStream(var10.getInputStream());
+                        val var8: Resources = var1.getResources();
+                        var1 = new BitmapDrawable(var8, var11);
                      }
 
                      return var1;

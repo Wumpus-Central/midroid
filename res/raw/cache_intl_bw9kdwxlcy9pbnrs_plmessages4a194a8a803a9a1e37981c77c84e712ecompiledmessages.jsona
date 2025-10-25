@@ -1,6 +1,8 @@
 {
-  "rdfRys": "Mamy tutaj „const static codeSpan = 2;”.",
-  "HMvECw": [
+  "rdfRyh": [
+    "Mamy tutaj „const static codeSpan = 2;”."
+  ],
+  "HMvEC5": [
     "Wszystko to jest zarządzane lokalnie i ",
     [
       8,
@@ -11,7 +13,7 @@
     ],
     " zastąpiło globalnego systemu i18n."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Użyj haków takich jak ",
     [
       8,
@@ -25,7 +27,7 @@
     ],
     " dla specjalnej zawartości."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Ten tekst zawiera ",
     [
       8,
@@ -39,7 +41,7 @@
     ],
     " z adresem URL zdefiniowanym w tekście."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "To łącze jest ",
     [
       8,
@@ -56,5 +58,7 @@
     ],
     " dostarczonym w czasie działania."
   ],
-  "swfLzc": "Ta wiadomość pochodzi z osobnego pliku"
+  "swfLzV": [
+    "Ta wiadomość pochodzi z osobnego pliku"
+  ]
 }

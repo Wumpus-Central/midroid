@@ -106,7 +106,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       // 36: aload 0
       // 37: aload 3
       // 38: aload 4
-      // 3a: invokestatic Da/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+      // 3a: invokestatic xa/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
       // 3d: putfield com/discord/chat/presentation/list/ChatListViewManager.weakProvider Lkotlin/Pair;
       // 40: aload 2
       // 41: monitorexit

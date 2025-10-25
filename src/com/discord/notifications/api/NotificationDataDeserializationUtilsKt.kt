@@ -2,7 +2,6 @@
 
 package com.discord.notifications.api
 
-import Da.v
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -11,6 +10,7 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
@@ -24,19 +24,19 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var4 : var9.entrySet()) {
-            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
-               var3.put(var4.getKey(), var4.getValue());
+         for (Entry var6 : var9.entrySet()) {
+            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+               var3.put(var6.getKey(), var6.getValue());
             }
          }
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var24 : var3.entrySet()) {
-            var var20: Any = var24.getKey();
-            val var25: Any = var24.getValue();
-            var20 = var20 as java.lang.String;
-            var12.add(v.a(var20, var25 as java.lang.String));
+         for (Entry var20 : var3.entrySet()) {
+            var var24: Any = var20.getKey();
+            val var21: Any = var20.getValue();
+            var24 = var24 as java.lang.String;
+            var12.add(v.a(var24, var21 as java.lang.String));
          }
 
          var9 = O.u(var12);

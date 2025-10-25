@@ -1,7 +1,7 @@
 package com.discord.chat.bridge
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public sealed class MessageBase protected constructor() {

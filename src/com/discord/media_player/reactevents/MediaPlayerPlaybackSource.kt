@@ -2,8 +2,8 @@ package com.discord.media_player.reactevents
 
 import com.discord.media_player.MediaSource
 import com.discord.primitives.MessageId
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, channelId: String?, messageId: MessageId?, attachmentIndex: Int?) : MediaPlayerPlaybackSource(
@@ -54,23 +54,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         val var4: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         val var3: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
          if (!(this.id == (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!(this.assetUrl == var4.assetUrl)) {
+         } else if (!(this.assetUrl == var3.assetUrl)) {
             return false;
-         } else if (!(this.channelId == var4.channelId)) {
+         } else if (!(this.channelId == var3.channelId)) {
             return false;
          } else {
             var var2: Boolean;
             label37: {
                if (this.messageId == null) {
-                  if (var4.messageId == null) {
+                  if (var3.messageId == null) {
                      var2 = true;
                      break label37;
                   }
-               } else if (var4.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
+               } else if (var3.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
                   break label37;
                }
 
@@ -80,7 +80,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             if (!var2) {
                return false;
             } else {
-               return this.attachmentIndex == var4.attachmentIndex;
+               return this.attachmentIndex == var3.attachmentIndex;
             }
          }
       }
@@ -124,9 +124,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var2: java.lang.String = this.assetUrl;
-      val var3: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.assetUrl;
+      val var2: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -137,11 +137,11 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       val var5: Int = this.attachmentIndex;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaPlayerPlaybackSource(id=");
-      var6.append(var4);
-      var6.append(", assetUrl=");
-      var6.append(var2);
-      var6.append(", channelId=");
       var6.append(var3);
+      var6.append(", assetUrl=");
+      var6.append(var4);
+      var6.append(", channelId=");
+      var6.append(var2);
       var6.append(", messageId=");
       var6.append(var7);
       var6.append(", attachmentIndex=");

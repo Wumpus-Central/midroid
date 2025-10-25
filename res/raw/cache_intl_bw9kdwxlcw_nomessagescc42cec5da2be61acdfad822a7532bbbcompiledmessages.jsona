@@ -15,10 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "Vanligvis raskest og helt automatisk. Du trenger bare et kamera.",
-  "2yLvkZ": "Ta en videoselfie",
-  "ZdmRwc": "Du trenger førerkort, pass eller annen ID. Deretter må du ta en selfie for å bekrefte at det er deg.",
-  "dwkwo6": "Skann ID-en",
-  "cR6339": "Ingen metoder for verifisering av alder er tilgjengelig. Dette kan være en feil.",
-  "hDvmYG": "Last inn på nytt"
+  "eJmat5": [
+    "Vanligvis raskest og helt automatisk. Du trenger bare et kamera."
+  ],
+  "2yLvkS": [
+    "Ta en videoselfie"
+  ],
+  "ZdmRwW": [
+    "Du trenger førerkort, pass eller annen ID. Deretter må du ta en selfie for å bekrefte at det er deg."
+  ],
+  "dwkwo0": [
+    "Skann ID-en"
+  ],
+  "cR6336": [
+    "Ingen metoder for verifisering av alder er tilgjengelig. Dette kan være en feil."
+  ],
+  "hDvmYP": [
+    "Last inn på nytt"
+  ]
 }

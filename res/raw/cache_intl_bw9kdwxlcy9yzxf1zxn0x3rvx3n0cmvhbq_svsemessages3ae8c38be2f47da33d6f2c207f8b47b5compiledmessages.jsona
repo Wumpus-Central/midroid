@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Be att streama",
-  "P0wwmJ": "Streamar redan",
-  "u4QmWl": "Begäran har gått ut",
-  "qRXatr": "Inte i röstkanal",
-  "43zohI": "Kör inte spelet",
-  "fac+eH": "Ingen behörighet",
-  "8HU1Mz": "Begäran skickad",
-  "5+172d": "Streama",
-  "nAyuPj": "Streambegäran",
-  "d/qbCw": [
+  "DKHhec": [
+    "Be att streama"
+  ],
+  "P0wwmM": [
+    "Streamar redan"
+  ],
+  "u4QmWl": [
+    "Begäran har gått ut"
+  ],
+  "qRXats": [
+    "Inte i röstkanal"
+  ],
+  "43zohO": [
+    "Kör inte spelet"
+  ],
+  "fac+eE": [
+    "Ingen behörighet"
+  ],
+  "8HU1M2": [
+    "Begäran skickad"
+  ],
+  "5+172e": [
+    "Streama"
+  ],
+  "nAyuPp": [
+    "Streambegäran"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " bad dig att streama"
   ],
-  "8B3U5O": "Du har bett någon att streama"
+  "8B3U5O": [
+    "Du har bett någon att streama"
+  ]
 }

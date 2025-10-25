@@ -1,14 +1,14 @@
 package com.discord.media_player.reactevents
 
-import Da.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kc.m
+import kc.w
 import kotlinx.serialization.KSerializer
-import qc.m
-import qc.w
-import xc.a
+import rc.a
+import xa.v
 
 @m
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -78,15 +78,15 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
 
    public override fun toString(): String {
       val var5: MediaPlayerPlaybackSource = this.source;
-      val var3: Long = this.time;
-      val var1: Long = this.duration;
+      val var1: Long = this.time;
+      val var3: Long = this.duration;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaPlayerPlaybackProgressUpdated(source=");
       var6.append(var5);
       var6.append(", time=");
-      var6.append(var3);
-      var6.append(", duration=");
       var6.append(var1);
+      var6.append(", duration=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

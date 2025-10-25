@@ -7,8 +7,8 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import uc.e
-import uc.h
+import oc.e
+import oc.h
 
 public object RowSerializer : e(Row::class) {
    private const val CHANGE_TYPE_DELETE: String = "3"

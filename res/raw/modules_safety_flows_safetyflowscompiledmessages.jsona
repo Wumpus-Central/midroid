@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Your account has been unlocked",
-  "d9Ykjo": "Confirmation code",
-  "bFbsV1": "Enter your email",
-  "RRBNpq": "Next",
-  "0DHxys": [
+  "/fHz9S": [
+    "Your account has been unlocked"
+  ],
+  "d9Ykjr": [
+    "Confirmation code"
+  ],
+  "bFbsV6": [
+    "Enter your email"
+  ],
+  "RRBNpv": [
+    "Next"
+  ],
+  "0DHxym": [
     "Not you? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "We may ask for more follow-ups along the way, like if you're a robot",
-  "Ks6opq": "Start",
-  "I2Ctk5": "Complete the steps below to unlock your account",
-  "RRamMD": "Account Locked",
-  "ah0EUl": "Resend code",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "We may ask for more follow-ups along the way, like if you're a robot"
+  ],
+  "Ks6opt": [
+    "Start"
+  ],
+  "I2Ctk1": [
+    "Complete the steps below to unlock your account"
+  ],
+  "RRamMH": [
+    "Account Locked"
+  ],
+  "ah0EUu": [
+    "Resend code"
+  ],
+  "2+Lyn0": [
     "Resend code in ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " seconds"
   ],
-  "3AXMYm": "Failed to resend verification code",
-  "dSkE/P": "Verify age group",
-  "o4D6fn": "Update",
-  "VBZJJi": "Please update the app to continue.",
-  "yxqMCA": "Update Required",
-  "wq2RDg": "Verify",
-  "PfbG6O": "Invalid verification code",
-  "aveKoK": "We just sent a verification code to your email address. It may take a few minutes to arrive",
-  "Qm6K/v": "Verify your email"
+  "3AXMYu": [
+    "Failed to resend verification code"
+  ],
+  "dSkE/A": [
+    "Verify age group"
+  ],
+  "o4D6fm": [
+    "Update"
+  ],
+  "VBZJJg": [
+    "Please update the app to continue."
+  ],
+  "yxqMCD": [
+    "Update Required"
+  ],
+  "wq2RDq": [
+    "Verify"
+  ],
+  "PfbG6H": [
+    "Invalid verification code"
+  ],
+  "aveKoG": [
+    "We just sent a verification code to your email address. It may take a few minutes to arrive"
+  ],
+  "Qm6K/s": [
+    "Verify your email"
+  ]
 }

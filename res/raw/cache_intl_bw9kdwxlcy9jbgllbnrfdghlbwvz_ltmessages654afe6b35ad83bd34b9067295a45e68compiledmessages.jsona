@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Sukurta ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Tinkintos temos peržiūra",
-  "qZMUoK": "Taip tavo tema atrodys visuose Discord įrenginiuose.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Tinkintos temos peržiūra"
+  ],
+  "qZMUoL": [
+    "Taip tavo tema atrodys visuose Discord įrenginiuose."
+  ],
+  "v15Ipv": [
     "Kai sinchronizavimas įjungtas, kompiuteryje sukurtos tinkintos temos [beta versija] gali paveikti mobiliąją temą. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Tinkinta tema",
-  "KSBBpK": "Tinkinta tema"
+  "yl1iMm": [
+    "Tinkinta tema"
+  ],
+  "KSBBpC": [
+    "Tinkinta tema"
+  ]
 }

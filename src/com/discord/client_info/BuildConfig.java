@@ -4,9 +4,9 @@ public final class BuildConfig {
    public static final String BUILD_TYPE = "release";
    public static final boolean DEBUG = false;
    public static final String LIBRARY_PACKAGE_NAME = "com.discord.client_info";
-   public static final String PROGUARD_UUID = "35bf0d70-265b-4f7a-855c-2721fd652a8b";
+   public static final String PROGUARD_UUID = "d7a914c1-306b-4a88-8d6e-596a990bd414";
    public static final String SENTRY_ALPHA_BETA_DSN = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
    public static final String SENTRY_DSN = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
-   public static final String SENTRY_RELEASE = "discord_android@303.4.0-2+303204";
+   public static final String SENTRY_RELEASE = "discord_android@303.6.0-2+303206";
    public static final String SENTRY_STAFF_DSN = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
 }

@@ -1,6 +1,5 @@
 package com.discord.share
 
-import Da.v
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -16,6 +15,7 @@ import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 @SourceDebugExtension(["SMAP\nShareBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n+ 2 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n*L\n1#1,69:1\n14#2:70\n*S KotlinDebug\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n*L\n28#1:70\n*E\n"])
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
@@ -41,10 +41,10 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var7: ReactEvents = this.reactEvents;
-         val var4: ReactApplicationContext = this.reactApplicationContext;
+         val var4: ReactEvents = this.reactEvents;
+         val var7: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
-         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 

@@ -109,9 +109,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
    }
 
    public open fun onBindViewHolder(holder: ViewHolder, position: Int) {
-      val var7: ThemeManager = ThemeManager.INSTANCE;
-      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var7.setThemeOverride(this.theme);
+      val var8: ThemeManager = ThemeManager.INSTANCE;
+      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var8.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -162,7 +162,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : Adapter {
          var20.bind(var11, var14, var5, this.reactionsTheme);
       }
 
-      var7.setThemeOverride(var8);
+      var8.setThemeOverride(var7);
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

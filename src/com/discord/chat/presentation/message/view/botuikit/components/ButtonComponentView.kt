@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Da.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -32,6 +31,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
+import xa.p
 
 @SourceDebugExtension(["SMAP\nButtonComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ButtonComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ButtonComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,218:1\n257#2,2:219\n278#2,2:221\n257#2,2:223\n278#2,2:225\n*S KotlinDebug\n*F\n+ 1 ButtonComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ButtonComponentView\n*L\n94#1:219,2\n98#1:221,2\n119#1:223,2\n160#1:225,2\n*E\n"])
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
@@ -59,16 +59,16 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
-      this.progressDots$delegate = Da.l.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      this.progressDots$delegate = xa.l.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
+      val var5: SimpleDraweeView = var6.linkIcon;
       this.configureLinkIcon(var5);
    }
 

@@ -1,6 +1,5 @@
 package com.discord.animatable_underlay
 
-import Da.p
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -15,7 +14,10 @@ import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.SourceDebugExtension
+import xa.p
 
+@SourceDebugExtension(["SMAP\nAnimatableUnderlay.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AnimatableUnderlay.kt\ncom/discord/animatable_underlay/AnimatableUnderlay\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,182:1\n404#2:183\n*S KotlinDebug\n*F\n+ 1 AnimatableUnderlay.kt\ncom/discord/animatable_underlay/AnimatableUnderlay\n*L\n48#1:183\n*E\n"])
 public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
    private final var height: Float
    private final var width: Float
@@ -180,7 +182,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = Ja.a.a(var0);
+         $ENTRIES = Da.a.a(var0);
       }
 
       @JvmStatic
@@ -227,7 +229,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = Ja.a.a(var0);
+         $ENTRIES = Da.a.a(var0);
       }
 
       @JvmStatic

@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Ton compte a été déverrouillé",
-  "d9Ykjo": "Code de confirmation",
-  "bFbsV1": "Saisis ton e-mail",
-  "RRBNpq": "Suivant",
-  "0DHxys": [
+  "/fHz9S": [
+    "Ton compte a été déverrouillé"
+  ],
+  "d9Ykjr": [
+    "Code de confirmation"
+  ],
+  "bFbsV6": [
+    "Saisis ton e-mail"
+  ],
+  "RRBNpv": [
+    "Suivant"
+  ],
+  "0DHxym": [
     "Ce n'est pas toi ? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Il se peut qu'on te demande plein d'autres choses, genre « Es-tu un robot ? »",
-  "Ks6opq": "Commencer",
-  "I2Ctk5": "Termine les étapes ci-dessous pour déverrouiller ton compte",
-  "RRamMD": "Compte bloqué",
-  "ah0EUl": "Renvoyer le code",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Il se peut qu'on te demande plein d'autres choses, genre « Es-tu un robot ? »"
+  ],
+  "Ks6opt": [
+    "Commencer"
+  ],
+  "I2Ctk1": [
+    "Termine les étapes ci-dessous pour déverrouiller ton compte"
+  ],
+  "RRamMH": [
+    "Compte bloqué"
+  ],
+  "ah0EUu": [
+    "Renvoyer le code"
+  ],
+  "2+Lyn0": [
     "Renvoyer le code dans ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " secondes"
   ],
-  "3AXMYm": "Échec du renvoi du code de vérification",
-  "dSkE/P": "Vérifier le groupe d'âge",
-  "o4D6fn": "Mettre à jour",
-  "VBZJJi": "Merci de mettre à jour l'application pour continuer.",
-  "yxqMCA": "Mise à jour requise",
-  "wq2RDg": "Vérifier",
-  "PfbG6O": "Code de vérification invalide",
-  "aveKoK": "Nous venons d'envoyer un code de vérification à ton adresse e-mail. Cela peut prendre quelques minutes pour qu'il arrive.",
-  "Qm6K/v": "Vérifie ton e-mail"
+  "3AXMYu": [
+    "Échec du renvoi du code de vérification"
+  ],
+  "dSkE/A": [
+    "Vérifier le groupe d'âge"
+  ],
+  "o4D6fm": [
+    "Mettre à jour"
+  ],
+  "VBZJJg": [
+    "Merci de mettre à jour l'application pour continuer."
+  ],
+  "yxqMCD": [
+    "Mise à jour requise"
+  ],
+  "wq2RDq": [
+    "Vérifier"
+  ],
+  "PfbG6H": [
+    "Code de vérification invalide"
+  ],
+  "aveKoG": [
+    "Nous venons d'envoyer un code de vérification à ton adresse e-mail. Cela peut prendre quelques minutes pour qu'il arrive."
+  ],
+  "Qm6K/s": [
+    "Vérifie ton e-mail"
+  ]
 }

@@ -1,23 +1,31 @@
 {
-  "FJZeZG": "Odemkni nové styly rolí pomocí vylepšení.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Odemkni nové styly rolí pomocí vylepšení."
+  ],
+  "VpEDJc": [
     "Chci, aby konkrétní role byly ",
     [
       1,
       "magical"
     ]
   ],
-  "+/IHLi": "magické",
-  "tBhCys": "Styl role „Holografický“ nevyžaduje výběr žádné barvy.",
-  "vQz+6e": "Barevný přechod",
-  "7lwpzc": [
+  "+/IHLl": [
+    "magické"
+  ],
+  "tBhCyr": [
+    "Styl role „Holografický“ nevyžaduje výběr žádné barvy."
+  ],
+  "vQz+6W": [
+    "Barevný přechod"
+  ],
+  "7lwpzR": [
     "Otevři Discord na počítači a odemkni a nastav nové výhody vylepšení: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

@@ -1,14 +1,14 @@
 package com.discord.misc.utilities.coroutines
 
-import Da.h
-import Ia.b
-import gc.I
+import Ca.b
+import ac.I
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
 import org.jetbrains.annotations.NotNull
+import xa.h
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -66,12 +66,12 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                   val var10: <unrepresentable> = var2 as <unrepresentable>;
                   if (((var2 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
                      var10.label = (var2 as <unrepresentable>).label + Integer.MIN_VALUE;
-                     var13 = var10;
+                     var12 = var10;
                      break label39;
                   }
                }
 
-               var13 = new d(this, var2) {
+               var12 = new d(this, var2) {
                   Object L$0;
                   Object L$1;
                   int label;
@@ -91,49 +91,49 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                };
             }
 
-            var var11: Any = ((<unrepresentable>)var13).result;
-            var var15: Any = b.e();
-            if (((<unrepresentable>)var13).label != 0) {
-               if (((<unrepresentable>)var13).label == 1) {
-                  c.b(var11);
+            var var15: Any = ((<unrepresentable>)var12).result;
+            val var11: Any = b.e();
+            val var13: <unrepresentable>;
+            if (((<unrepresentable>)var12).label != 0) {
+               if (((<unrepresentable>)var12).label == 1) {
+                  c.b(var15);
                   return Unit.a;
                }
 
-               if (((<unrepresentable>)var13).label != 2) {
+               if (((<unrepresentable>)var12).label != 2) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               var15 = ((<unrepresentable>)var13).L$1;
-               var1 = ((<unrepresentable>)var13).L$0 as <unrepresentable>;
-               c.b(var11);
+               var1 = ((<unrepresentable>)var12).L$1;
+               var13 = ((<unrepresentable>)var12).L$0 as <unrepresentable>;
+               c.b(var15);
             } else {
-               c.b(var11);
-               val var8: Long = System.currentTimeMillis();
-               val var6: Long = var8 - this.$timeLastEmitted.element;
-               val var4: Long = this.$timeoutMillis;
-               if (var6 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.element = var8;
-                  var11 = this.$collector;
-                  ((<unrepresentable>)var13).label = 1;
-                  if (var11.emit(var1, (Continuation)var13) === var15) {
-                     return var15;
+               c.b(var15);
+               val var6: Long = System.currentTimeMillis();
+               val var4: Long = var6 - this.$timeLastEmitted.element;
+               val var8: Long = this.$timeoutMillis;
+               if (var4 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.element = var6;
+                  var15 = this.$collector;
+                  ((<unrepresentable>)var12).label = 1;
+                  if (var15.emit(var1, (Continuation)var12) === var11) {
+                     return var11;
                   }
 
                   return Unit.a;
                }
 
-               ((<unrepresentable>)var13).L$0 = this;
-               ((<unrepresentable>)var13).L$1 = var1;
-               ((<unrepresentable>)var13).label = 2;
-               if (I.a(var4 - var6, (Continuation)var13) === var15) {
-                  return var15;
+               ((<unrepresentable>)var12).L$0 = this;
+               ((<unrepresentable>)var12).L$1 = var1;
+               ((<unrepresentable>)var12).label = 2;
+               if (I.a(var8 - var4, (Continuation)var12) === var11) {
+                  return var11;
                }
 
-               var15 = var1;
-               var1 = this;
+               var13 = this;
             }
 
-            var1.$this_collectWithLeadingDebounce.a(var15);
+            var13.$this_collectWithLeadingDebounce.a(var1);
             return Unit.a;
          }
       };

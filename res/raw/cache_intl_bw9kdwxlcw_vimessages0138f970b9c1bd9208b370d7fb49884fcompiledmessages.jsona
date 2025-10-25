@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Tài khoản của bạn đã được mở khóa",
-  "d9Ykjo": "Mã xác nhận",
-  "bFbsV1": "Nhập email của bạn",
-  "RRBNpq": "Tiếp theo",
-  "0DHxys": [
+  "/fHz9S": [
+    "Tài khoản của bạn đã được mở khóa"
+  ],
+  "d9Ykjr": [
+    "Mã xác nhận"
+  ],
+  "bFbsV6": [
+    "Nhập email của bạn"
+  ],
+  "RRBNpv": [
+    "Tiếp theo"
+  ],
+  "0DHxym": [
     "Không phải bạn? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Chúng tôi có thể có thêm yêu cầu bổ sung, như thể bạn là một robot",
-  "Ks6opq": "Bắt đầu",
-  "I2Ctk5": "Hoàn thành các bước bên dưới để mở khóa tài khoản của bạn",
-  "RRamMD": "Tài Khoản Đã Khóa",
-  "ah0EUl": "Gửi lại mã",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Chúng tôi có thể có thêm yêu cầu bổ sung, như thể bạn là một robot"
+  ],
+  "Ks6opt": [
+    "Bắt đầu"
+  ],
+  "I2Ctk1": [
+    "Hoàn thành các bước bên dưới để mở khóa tài khoản của bạn"
+  ],
+  "RRamMH": [
+    "Tài Khoản Đã Khóa"
+  ],
+  "ah0EUu": [
+    "Gửi lại mã"
+  ],
+  "2+Lyn0": [
     "Gửi lại mã sau ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " giây"
   ],
-  "3AXMYm": "Không gửi lại được mã xác minh",
-  "dSkE/P": "Xác minh nhóm tuổi",
-  "o4D6fn": "Cập nhật",
-  "VBZJJi": "Vui lòng cập nhật ứng dụng để tiếp tục.",
-  "yxqMCA": "Cần Cập Nhật",
-  "wq2RDg": "Xác nhận",
-  "PfbG6O": "Mã xác minh không hợp lệ",
-  "aveKoK": "Chúng tôi vừa gửi mã xác minh đến địa chỉ email của bạn. Có thể mất vài phút để mã xác minh đến nơi",
-  "Qm6K/v": "Xác minh email của bạn"
+  "3AXMYu": [
+    "Không gửi lại được mã xác minh"
+  ],
+  "dSkE/A": [
+    "Xác minh nhóm tuổi"
+  ],
+  "o4D6fm": [
+    "Cập nhật"
+  ],
+  "VBZJJg": [
+    "Vui lòng cập nhật ứng dụng để tiếp tục."
+  ],
+  "yxqMCD": [
+    "Cần Cập Nhật"
+  ],
+  "wq2RDq": [
+    "Xác nhận"
+  ],
+  "PfbG6H": [
+    "Mã xác minh không hợp lệ"
+  ],
+  "aveKoG": [
+    "Chúng tôi vừa gửi mã xác minh đến địa chỉ email của bạn. Có thể mất vài phút để mã xác minh đến nơi"
+  ],
+  "Qm6K/s": [
+    "Xác minh email của bạn"
+  ]
 }

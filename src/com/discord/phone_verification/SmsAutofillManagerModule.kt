@@ -1,12 +1,12 @@
 package com.discord.phone_verification
 
-import Da.v
 import X2.d
 import com.discord.phone_verification.reactevents.VerificationCodeReceivedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import xa.v
 
 public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactEvents: ReactEvents = new ReactEvents(v.a("verificationCodeReceived", VerificationCodeReceivedEvent::class))

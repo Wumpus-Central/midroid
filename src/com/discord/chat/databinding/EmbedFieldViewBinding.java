@@ -26,12 +26,12 @@ public final class EmbedFieldViewBinding implements ViewBinding {
    @NonNull
    public static EmbedFieldViewBinding bind(@NonNull View var0) {
       int var1 = R.id.name;
-      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.value;
-         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new EmbedFieldViewBinding(var0, var2, var3);
+         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new EmbedFieldViewBinding(var0, var3, var2);
          }
       }
 

@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.root
 
-import Da.v
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.ChatModule
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.ChatListView
+import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
@@ -17,51 +17,188 @@ import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.flow.Flow
+import xa.v
 
-@SourceDebugExtension(["SMAP\nChatView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,129:1\n14#2,5:130\n14#2,5:135\n14#2,5:140\n*S KotlinDebug\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n*L\n49#1:130,5\n54#1:135,5\n64#1:140,5\n*E\n"])
+@SourceDebugExtension(["SMAP\nChatView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,154:1\n14#2,5:155\n14#2,5:160\n14#2,5:165\n*S KotlinDebug\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n*L\n50#1:155,5\n55#1:160,5\n65#1:165,5\n*E\n"])
 public class ChatView(context: Context) : ReactViewGroup(var1) {
    private final lateinit var chatList: ChatListView
    private final lateinit var eventHandler: ChatEventHandler
    private final var inverted: Boolean
 
    private fun attachPortalViewToChatList(portalView: View) {
-      var1.addOnLayoutChangeListener(new a(var1, this));
+      var1.addOnLayoutChangeListener(new b(var1, this));
       var1.setVisibility(4);
    }
 
    @JvmStatic
-   fun `attachPortalViewToChatList$lambda$4`(
+   fun `attachPortalViewToChatList$lambda$5`(
       var0: View, var1: ChatView, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
+      var var11: Boolean;
       if (var0.getMeasuredHeight() > 0 && var0.getMeasuredWidth() > 0) {
-         var var14: ChatListView = var1.chatList;
+         var11 = true;
+      } else {
+         var11 = false;
+      }
+
+      var var13: java.lang.String = null;
+      if (var11) {
+         var var18: ChatListView = var1.chatList;
          if (var1.chatList == null) {
             Intrinsics.throwUninitializedPropertyAccessException("chatList");
-            var14 = null;
+            var18 = null;
          }
 
-         if (!var14.isComputingLayout()) {
-            val var15: Pair;
-            if (var0.getMeasuredWidth() == var0.getLayoutParams().width && var0.getMeasuredHeight() == var0.getLayoutParams().height) {
-               var15 = null;
+         if (!var18.isComputingLayout()) {
+            label35: {
+               if (var0.getMeasuredWidth() == var0.getLayoutParams().width) {
+                  var11 = false;
+                  if (var0.getMeasuredHeight() == var0.getLayoutParams().height) {
+                     break label35;
+                  }
+               }
+
+               var11 = true;
+            }
+
+            val var20: Pair;
+            if (var11) {
+               var20 = v.a(var0.getMeasuredWidth(), var0.getMeasuredHeight());
             } else {
-               var15 = v.a(var0.getMeasuredWidth(), var0.getMeasuredHeight());
+               var20 = null;
             }
 
-            if (var0.getParent() is ChatView) {
-               val var16: ViewParent = var0.getParent();
-               (var16 as ViewGroup).removeView(var0);
+            val var28: CrashReporting = CrashReporting.INSTANCE;
+            var3 = var0.getMeasuredWidth();
+            var4 = var0.getMeasuredHeight();
+            val var29: ViewParent = var0.getParent();
+            if (var29 != null) {
+               var13 = var29.getClass().getSimpleName();
             }
 
-            var var13: ChatListView = var1.chatList;
-            if (var1.chatList == null) {
-               Intrinsics.throwUninitializedPropertyAccessException("chatList");
+            val var30: StringBuilder = new StringBuilder();
+            var30.append("PortalView will detach from ChatView and portal into ChatListView; measured=");
+            var30.append(var3);
+            var30.append("x");
+            var30.append(var4);
+            var30.append(", hasDimChanged=");
+            var30.append(var11);
+            var30.append(", parent=");
+            var30.append(var13);
+            CrashReporting.addBreadcrumb$default(var28, var30.toString(), null, null, null, 14, null);
+            var1.post(new a(var0, var1, var20));
+            return;
+         }
+      }
+
+      val var19: CrashReporting = CrashReporting.INSTANCE;
+      var var17: ChatListView = var1.chatList;
+      if (var1.chatList == null) {
+         Intrinsics.throwUninitializedPropertyAccessException("chatList");
+         var17 = null;
+      }
+
+      val var27: Boolean = var17.isComputingLayout();
+      var3 = var0.getMeasuredWidth();
+      var4 = var0.getMeasuredHeight();
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("PortalView layout change skipped; valid=");
+      var16.append(var11);
+      var16.append(", computingLayout=");
+      var16.append(var27);
+      var16.append(", measured=");
+      var16.append(var3);
+      var16.append("x");
+      var16.append(var4);
+      CrashReporting.addBreadcrumb$default(var19, var16.toString(), null, null, null, 14, null);
+   }
+
+   // $VF: Duplicated exception handlers to handle obfuscated exceptions
+   @JvmStatic
+   fun `attachPortalViewToChatList$lambda$5$lambda$4`(var0: View, var1: ChatView, var2: Pair) {
+      var var3: Pair;
+      var var5: Pair;
+      label47: {
+         label52: {
+            try {
+               if (var0.getParent() is ChatView) {
+                  val var12: ViewParent = var0.getParent();
+                  (var12 as ViewGroup).removeView(var0);
+               }
+            } catch (var9: Exception) {
+               var11 = CrashReporting.INSTANCE;
+               var3 = v.a("portalView", var0.toString());
+               var5 = v.a("parent", var0.getParent().toString());
+               var10 = var1.chatList;
+               if (var1.chatList != null) {
+                  break label47;
+               }
+               break label52;
+            }
+
+            try {
+               var15 = var1.chatList;
+            } catch (var8: Exception) {
+               var11 = CrashReporting.INSTANCE;
+               var3 = v.a("portalView", var0.toString());
+               var5 = v.a("parent", var0.getParent().toString());
+               var10 = var1.chatList;
+               if (var1.chatList != null) {
+                  break label47;
+               }
+               break label52;
+            }
+
+            var var13: ChatListView = var15;
+            if (var15 == null) {
+               try {
+                  Intrinsics.throwUninitializedPropertyAccessException("chatList");
+               } catch (var7: Exception) {
+                  var11 = CrashReporting.INSTANCE;
+                  var3 = v.a("portalView", var0.toString());
+                  var5 = v.a("parent", var0.getParent().toString());
+                  var10 = var1.chatList;
+                  if (var1.chatList != null) {
+                     break label47;
+                  }
+                  break label52;
+               }
+
                var13 = null;
             }
 
-            var13.setPortalView(var0, var15);
+            try {
+               var13.setPortalView(var0, var2);
+               val var14: CrashReporting = CrashReporting.INSTANCE;
+               val var16: StringBuilder = new StringBuilder();
+               var16.append("PortalView portaled into ChatListView; measuredDims=");
+               var16.append(var2);
+               CrashReporting.addBreadcrumb$default(var14, var16.toString(), null, null, null, 14, null);
+               return;
+            } catch (var6: Exception) {
+               var11 = CrashReporting.INSTANCE;
+               var3 = v.a("portalView", var0.toString());
+               var5 = v.a("parent", var0.getParent().toString());
+               var10 = var1.chatList;
+               if (var1.chatList != null) {
+                  break label47;
+               }
+            }
          }
+
+         Intrinsics.throwUninitializedPropertyAccessException("chatList");
+         var10 = null;
       }
+
+      CrashReporting.addBreadcrumb$default(
+         var11,
+         "ChatList exception: failed to reparent portalView to ChatListView",
+         O.m(new Pair[]{var3, var5, v.a("chatListView", var10.toString())}),
+         null,
+         null,
+         12,
+         null
+      );
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams?) {

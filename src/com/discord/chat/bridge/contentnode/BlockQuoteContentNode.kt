@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class BlockQuoteContentNode(content: List<ContentNode>) : ContentNode() {

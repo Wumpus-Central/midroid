@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Pyydä striimaamaan",
-  "P0wwmJ": "Striimi on jo käynnissä",
-  "u4QmWl": "Pyyntö vanhentunut",
-  "qRXatr": "Ei puhekanavalla",
-  "43zohI": "Ei suorita peliä",
-  "fac+eH": "Ei käyttöoikeutta",
-  "8HU1Mz": "Pyyntö lähetetty",
-  "5+172d": "Striimaa",
-  "nAyuPj": "Striimauspyyntö",
-  "d/qbCw": [
+  "DKHhec": [
+    "Pyydä striimaamaan"
+  ],
+  "P0wwmM": [
+    "Striimi on jo käynnissä"
+  ],
+  "u4QmWl": [
+    "Pyyntö vanhentunut"
+  ],
+  "qRXats": [
+    "Ei puhekanavalla"
+  ],
+  "43zohO": [
+    "Ei suorita peliä"
+  ],
+  "fac+eE": [
+    "Ei käyttöoikeutta"
+  ],
+  "8HU1M2": [
+    "Pyyntö lähetetty"
+  ],
+  "5+172e": [
+    "Striimaa"
+  ],
+  "nAyuPp": [
+    "Striimauspyyntö"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " pyysi sinua striimaamaan"
   ],
-  "8B3U5O": "Pyysit jotakuta striimaamaan"
+  "8B3U5O": [
+    "Pyysit jotakuta striimaamaan"
+  ]
 }

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.customthemes
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class SharedCustomThemeData(colors: List<String>,
@@ -128,33 +128,33 @@ public data class SharedCustomThemeData(colors: List<String>,
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.colors;
+      val var9: java.util.List = this.colors;
       val var1: Float = this.gradientAngle;
-      val var9: java.lang.String = this.createdBy;
-      val var8: java.lang.String = this.createdByAvatarUrl;
-      val var3: java.lang.String = this.nitroWheelIconUrl;
-      val var6: java.lang.String = this.previewLabel;
-      val var5: java.lang.String = this.previewHeading;
+      val var6: java.lang.String = this.createdBy;
+      val var2: java.lang.String = this.createdByAvatarUrl;
+      val var4: java.lang.String = this.nitroWheelIconUrl;
+      val var8: java.lang.String = this.previewLabel;
+      val var3: java.lang.String = this.previewHeading;
       val var7: java.lang.String = this.createdByLabel;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SharedCustomThemeData(colors=");
-      var4.append(var2);
-      var4.append(", gradientAngle=");
-      var4.append(var1);
-      var4.append(", createdBy=");
-      var4.append(var9);
-      var4.append(", createdByAvatarUrl=");
-      var4.append(var8);
-      var4.append(", nitroWheelIconUrl=");
-      var4.append(var3);
-      var4.append(", previewLabel=");
-      var4.append(var6);
-      var4.append(", previewHeading=");
-      var4.append(var5);
-      var4.append(", createdByLabel=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SharedCustomThemeData(colors=");
+      var5.append(var9);
+      var5.append(", gradientAngle=");
+      var5.append(var1);
+      var5.append(", createdBy=");
+      var5.append(var6);
+      var5.append(", createdByAvatarUrl=");
+      var5.append(var2);
+      var5.append(", nitroWheelIconUrl=");
+      var5.append(var4);
+      var5.append(", previewLabel=");
+      var5.append(var8);
+      var5.append(", previewHeading=");
+      var5.append(var3);
+      var5.append(", createdByLabel=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

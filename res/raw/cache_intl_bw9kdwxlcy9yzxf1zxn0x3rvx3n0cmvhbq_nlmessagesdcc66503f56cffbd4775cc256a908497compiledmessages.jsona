@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Vragen om te streamen",
-  "P0wwmJ": "Al aan het streamen",
-  "u4QmWl": "Verzoek verlopen",
-  "qRXatr": "Niet in spraakkanaal",
-  "43zohI": "Game niet actief",
-  "fac+eH": "Geen machtiging",
-  "8HU1Mz": "Aanvraag verstuurd",
-  "5+172d": "Streamen",
-  "nAyuPj": "Streamverzoek",
-  "d/qbCw": [
+  "DKHhec": [
+    "Vragen om te streamen"
+  ],
+  "P0wwmM": [
+    "Al aan het streamen"
+  ],
+  "u4QmWl": [
+    "Verzoek verlopen"
+  ],
+  "qRXats": [
+    "Niet in spraakkanaal"
+  ],
+  "43zohO": [
+    "Game niet actief"
+  ],
+  "fac+eE": [
+    "Geen machtiging"
+  ],
+  "8HU1M2": [
+    "Aanvraag verstuurd"
+  ],
+  "5+172e": [
+    "Streamen"
+  ],
+  "nAyuPp": [
+    "Streamverzoek"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " heeft je gevraagd om te streamen"
   ],
-  "8B3U5O": "Je hebt iemand gevraagd om te streamen"
+  "8B3U5O": [
+    "Je hebt iemand gevraagd om te streamen"
+  ]
 }

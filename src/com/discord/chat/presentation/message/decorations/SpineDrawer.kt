@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.decorations
 
-import Da.l
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
@@ -11,9 +10,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.channel_spine.ChannelSpineView
 import com.discord.chat.R
 import com.discord.theme.ThemeManagerKt
+import kotlin.jvm.internal.SourceDebugExtension
+import xa.l
 import y2.d
 import y2.e
 
+@SourceDebugExtension(["SMAP\nSpineDrawer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SpineDrawer.kt\ncom/discord/chat/presentation/message/decorations/SpineDrawer\n+ 2 Canvas.kt\nandroidx/core/graphics/CanvasKt\n*L\n1#1,101:1\n27#2,7:102\n27#2,7:109\n*S KotlinDebug\n*F\n+ 1 SpineDrawer.kt\ncom/discord/chat/presentation/message/decorations/SpineDrawer\n*L\n55#1:102,7\n78#1:109,7\n*E\n"])
 public class SpineDrawer(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final val context: Context
    private final val contentStartPositionPx: Int
@@ -36,8 +38,8 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
    init {
       this.context = var1;
       this.contentStartPositionPx = var2;
-      this.lineDrawable$delegate = l.b(new d(this));
-      this.splineView$delegate = l.b(new e(this));
+      this.lineDrawable$delegate = l.a(new d(this));
+      this.splineView$delegate = l.a(new e(this));
       this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
       this.spineRect = new Rect();
    }
@@ -59,33 +61,49 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
    }
 
    public fun drawSpineCurve(canvas: Canvas, parent: RecyclerView, child: View, viewToCenterSpine: View, middle: Int) {
-      var1.save();
-      var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
-      val var8: Int = var3.getTop();
-      val var7: Int = var3.getTop();
-      val var6: Int = (var4.getBottom() - var4.getTop()) / 2;
-      val var9: Int = this.itemPaddingOffset;
-      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var8, this.contentStartPositionPx, var7 + var6 + var9);
-      val var11: ChannelSpineView = this.getSplineView();
-      var11.setRowHeight((float)(var10.height() / 2));
-      var11.measure(MeasureSpec.makeMeasureSpec(var10.width(), 1073741824), MeasureSpec.makeMeasureSpec(var10.height(), 1073741824));
-      var11.layout(0, 0, var10.width(), var10.height());
-      var1.translate((float)var10.left, (float)var10.top);
-      var11.draw(var1);
-      var1.restore();
+      label13: {
+         val var9: Int = var1.save();
+
+         try {
+            var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
+            val var7: Int = var3.getTop();
+            val var8: Int = var3.getTop();
+            val var6: Int = (var4.getBottom() - var4.getTop()) / 2;
+            val var10: Int = this.itemPaddingOffset;
+            val var14: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var7, this.contentStartPositionPx, var8 + var6 + var10);
+            val var13: ChannelSpineView = this.getSplineView();
+            var13.setRowHeight((float)(var14.height() / 2));
+            var13.measure(MeasureSpec.makeMeasureSpec(var14.width(), 1073741824), MeasureSpec.makeMeasureSpec(var14.height(), 1073741824));
+            var13.layout(0, 0, var14.width(), var14.height());
+            var1.translate((float)var14.left, (float)var14.top);
+            var13.draw(var1);
+         } catch (var11: java.lang.Throwable) {
+            var1.restoreToCount(var9);
+         }
+
+         var1.restoreToCount(var9);
+      }
    }
 
    public fun drawSpinePiece(canvas: Canvas, parent: RecyclerView, child: View, middle: Int, topOffsetPx: Int = 0) {
-      var1.save();
-      var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
-      val var6: PaintDrawable = this.getLineDrawable();
-      var6.setBounds(
-         var4 - var6.getIntrinsicWidth() / 2,
-         this.spineRect.top + var5,
-         (int)Math.ceil((double)var4 + (double)var6.getIntrinsicWidth() / (double)2),
-         this.spineRect.bottom
-      );
-      var6.draw(var1);
-      var1.restore();
+      label13: {
+         val var6: Int = var1.save();
+
+         try {
+            var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
+            val var9: PaintDrawable = this.getLineDrawable();
+            var9.setBounds(
+               var4 - var9.getIntrinsicWidth() / 2,
+               this.spineRect.top + var5,
+               (int)Math.ceil((double)var4 + (double)var9.getIntrinsicWidth() / (double)2),
+               this.spineRect.bottom
+            );
+            var9.draw(var1);
+         } catch (var7: java.lang.Throwable) {
+            var1.restoreToCount(var6);
+         }
+
+         var1.restoreToCount(var6);
+      }
    }
 }

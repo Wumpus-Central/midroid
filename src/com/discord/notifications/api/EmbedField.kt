@@ -1,7 +1,7 @@
 package com.discord.notifications.api
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class EmbedField(name: String? = null, value: String? = null) {
@@ -61,13 +61,13 @@ public data class EmbedField(name: String? = null, value: String? = null) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var1: java.lang.String = this.value;
+      val var1: java.lang.String = this.name;
+      val var3: java.lang.String = this.value;
       val var2: StringBuilder = new StringBuilder();
       var2.append("EmbedField(name=");
-      var2.append(var3);
-      var2.append(", value=");
       var2.append(var1);
+      var2.append(", value=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

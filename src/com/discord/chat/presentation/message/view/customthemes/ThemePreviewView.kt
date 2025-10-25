@@ -14,7 +14,7 @@ import com.facebook.react.uimanager.PixelUtil
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nThemePreviewView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThemePreviewView.kt\ncom/discord/chat/presentation/message/view/customthemes/ThemePreviewView\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,110:1\n1557#2:111\n1628#2,3:112\n*S KotlinDebug\n*F\n+ 1 ThemePreviewView.kt\ncom/discord/chat/presentation/message/view/customthemes/ThemePreviewView\n*L\n22#1:111\n22#1:112,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nThemePreviewView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ThemePreviewView.kt\ncom/discord/chat/presentation/message/view/customthemes/ThemePreviewView\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,110:1\n404#2:111\n404#2:115\n1557#3:112\n1628#3,2:113\n1630#3:116\n*S KotlinDebug\n*F\n+ 1 ThemePreviewView.kt\ncom/discord/chat/presentation/message/view/customthemes/ThemePreviewView\n*L\n38#1:111\n22#1:115\n22#1:112\n22#1:113,2\n22#1:116\n*E\n"])
 public class ThemePreviewView  public constructor(context: Context, attrs: AttributeSet? = null) : View(var1, var2) {
    private final var colors: IntArray = new int[]{Color.parseColor("#ff6A00"), Color.parseColor("#ffD500")}
    private final var angleDegrees: Float
@@ -38,13 +38,13 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
          }
 
          val var1: Double = Math.toRadians((double)this.angleDegrees - (double)90);
-         var var5: Float = (float)Math.cos(var1);
-         var var6: Float = (float)Math.sin(var1);
+         var var7: Float = (float)Math.cos(var1);
+         var var5: Float = (float)Math.sin(var1);
          val var4: Float = this.getWidth() / 2.0F;
          val var3: Float = this.getHeight() / 2.0F;
-         val var7: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
-         var5 = var5 * var7;
-         var6 = var6 * var7;
+         val var6: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
+         var7 = var7 * var6;
+         var5 = var5 * var6;
          var9 = this.colors.length;
 
          val var14: FloatArray;
@@ -52,7 +52,7 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
             var14[var8] = (float)var8 / (this.colors.length - 1);
          }
 
-         val var15: LinearGradient = new LinearGradient(var4 - var5, var3 - var6, var4 + var5, var3 + var6, this.colors, var14, TileMode.CLAMP);
+         val var15: LinearGradient = new LinearGradient(var4 - var7, var3 - var5, var4 + var7, var3 + var5, this.colors, var14, TileMode.CLAMP);
          this.shader = var15;
          this.paint.setShader(var15);
       }

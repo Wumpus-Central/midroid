@@ -1,6 +1,6 @@
 package com.discord.native.engine
 
-import Ja.a
+import Da.a
 import kotlin.enums.EnumEntries
 
 public enum class VideoInputDeviceFacing {

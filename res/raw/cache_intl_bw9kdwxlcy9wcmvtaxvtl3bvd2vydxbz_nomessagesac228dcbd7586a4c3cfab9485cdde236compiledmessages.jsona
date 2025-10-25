@@ -1,23 +1,31 @@
 {
-  "FJZeZG": "Lås opp nye rollestiler med boosting.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Lås opp nye rollestiler med boosting."
+  ],
+  "VpEDJc": [
     "Gjør bestemte roller ",
     [
       1,
       "magical"
     ]
   ],
-  "+/IHLi": "magiske",
-  "tBhCys": "«Holografisk»-rollestilen krever ikke at du velger farger.",
-  "vQz+6e": "Gradient",
-  "7lwpzc": [
+  "+/IHLl": [
+    "magiske"
+  ],
+  "tBhCyr": [
+    "«Holografisk»-rollestilen krever ikke at du velger farger."
+  ],
+  "vQz+6W": [
+    "Gradient"
+  ],
+  "7lwpzR": [
     "Åpne Discord på en datamaskin for å låse opp og konfigurere nye boost-fordeler: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

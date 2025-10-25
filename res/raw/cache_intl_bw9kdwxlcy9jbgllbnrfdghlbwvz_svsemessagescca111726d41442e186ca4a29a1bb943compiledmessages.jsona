@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Skapat av ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Förhandsgranskning av anpassat tema",
-  "qZMUoK": "Så här kommer ditt tema att se ut på alla Discord-enheter.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Förhandsgranskning av anpassat tema"
+  ],
+  "qZMUoL": [
+    "Så här kommer ditt tema att se ut på alla Discord-enheter."
+  ],
+  "v15Ipv": [
     "När synkronisering är aktiverad kan anpassade teman som [Beta] skapade på datorn påverka ditt mobiltema. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Anpassat tema",
-  "KSBBpK": "Anpassat tema"
+  "yl1iMm": [
+    "Anpassat tema"
+  ],
+  "KSBBpC": [
+    "Anpassat tema"
+  ]
 }

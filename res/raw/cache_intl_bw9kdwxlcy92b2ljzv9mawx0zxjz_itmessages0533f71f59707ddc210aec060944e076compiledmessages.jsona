@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Grotta",
-  "qRFFLC": "Deep fried",
-  "lFIyMz": "Fantasma",
-  "fPU01d": "Megafono",
-  "KN+v7+": "Coniglio spaziale",
-  "kHmvdn": "Boss cibernetico"
+  "Xypb3z": [
+    "Grotta"
+  ],
+  "qRFFLK": [
+    "Deep fried"
+  ],
+  "lFIyM/": [
+    "Fantasma"
+  ],
+  "fPU01d": [
+    "Megafono"
+  ],
+  "KN+v77": [
+    "Coniglio spaziale"
+  ],
+  "kHmvdt": [
+    "Boss cibernetico"
+  ]
 }

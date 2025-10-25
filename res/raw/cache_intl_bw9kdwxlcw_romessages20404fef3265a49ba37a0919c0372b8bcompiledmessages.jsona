@@ -15,10 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "De obicei este cea mai rapidă variantă și este total automată. N-ai nevoie decât de o cameră.",
-  "2yLvkZ": "Fă-ți un selfie video",
-  "ZdmRwc": "Ai nevoie de permisul de conducere, pașaport sau alt act de identitate. Apoi, de un selfie foto pentru a confirma că ești tu.",
-  "dwkwo6": "Scanează-ți actul de identitate",
-  "cR6339": "Nu sunt disponibile metode de verificare a vârstei. S-ar putea să fie o eroare.",
-  "hDvmYG": "Reîncarcă"
+  "eJmat5": [
+    "De obicei este cea mai rapidă variantă și este total automată. N-ai nevoie decât de o cameră."
+  ],
+  "2yLvkS": [
+    "Fă-ți un selfie video"
+  ],
+  "ZdmRwW": [
+    "Ai nevoie de permisul de conducere, pașaport sau alt act de identitate. Apoi, de un selfie foto pentru a confirma că ești tu."
+  ],
+  "dwkwo0": [
+    "Scanează-ți actul de identitate"
+  ],
+  "cR6336": [
+    "Nu sunt disponibile metode de verificare a vârstei. S-ar putea să fie o eroare."
+  ],
+  "hDvmYP": [
+    "Reîncarcă"
+  ]
 }

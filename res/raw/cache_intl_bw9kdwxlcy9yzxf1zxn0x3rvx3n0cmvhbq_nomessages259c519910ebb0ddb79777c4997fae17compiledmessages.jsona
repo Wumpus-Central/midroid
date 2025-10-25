@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Be om å strømme",
-  "P0wwmJ": "Strømmer allerede",
-  "u4QmWl": "Forespørsel utløpt",
-  "qRXatr": "Ikke i talekanal",
-  "43zohI": "Kjører ikke spill",
-  "fac+eH": "Ingen tillatelser",
-  "8HU1Mz": "Forespørsel sendt",
-  "5+172d": "Strøm",
-  "nAyuPj": "Strømmeforespørsel",
-  "d/qbCw": [
+  "DKHhec": [
+    "Be om å strømme"
+  ],
+  "P0wwmM": [
+    "Strømmer allerede"
+  ],
+  "u4QmWl": [
+    "Forespørsel utløpt"
+  ],
+  "qRXats": [
+    "Ikke i talekanal"
+  ],
+  "43zohO": [
+    "Kjører ikke spill"
+  ],
+  "fac+eE": [
+    "Ingen tillatelser"
+  ],
+  "8HU1M2": [
+    "Forespørsel sendt"
+  ],
+  "5+172e": [
+    "Strøm"
+  ],
+  "nAyuPp": [
+    "Strømmeforespørsel"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " ba deg om å strømme"
   ],
-  "8B3U5O": "Du ba noen om å strømme"
+  "8B3U5O": [
+    "Du ba noen om å strømme"
+  ]
 }

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import qc.m
 
 @m
 public data class MessageFrameJump(type: MessageFrameType, guildName: String? = null, channelName: String? = null) : MessageFrame() {
@@ -66,16 +66,16 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var1: MessageFrameType = this.type;
+      val var2: MessageFrameType = this.type;
       val var3: java.lang.String = this.guildName;
-      val var2: java.lang.String = this.channelName;
+      val var1: java.lang.String = this.channelName;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MessageFrameJump(type=");
-      var4.append(var1);
+      var4.append(var2);
       var4.append(", guildName=");
       var4.append(var3);
       var4.append(", channelName=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

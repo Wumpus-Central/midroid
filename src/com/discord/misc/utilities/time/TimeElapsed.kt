@@ -1,9 +1,9 @@
 package com.discord.misc.utilities.time
 
-import Da.l
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import xa.l
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    private final val startTime: Long
@@ -27,8 +27,8 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
 
    init {
       this.startTime = var1;
-      this.durationMillis$delegate = l.b(new a(this));
-      this.duration$delegate = l.b(new b(this));
+      this.durationMillis$delegate = l.a(new a(this));
+      this.duration$delegate = l.a(new b(this));
    }
 
    private operator fun component1(): Long {
