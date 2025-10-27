@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode() {
    public final val timestamp: Long
    public final val full: String

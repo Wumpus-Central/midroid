@@ -2,10 +2,10 @@ package com.discord.sticker_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
    public final val stickerId: String
 

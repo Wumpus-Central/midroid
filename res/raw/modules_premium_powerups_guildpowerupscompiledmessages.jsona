@@ -1,25 +1,31 @@
 {
-  "FJZeZG": "Unlock new role styles with Boosting.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Unlock new role styles with Boosting."
+  ],
+  "VpEDJc": [
     "Make certain roles ",
     [
       1,
       "magical"
     ]
   ],
-  "+/IHLi": "magical",
-  "tBhCys": "The \"Holographic\" role style doesn't require you to select any colors.",
-  "vQz+6e": "Gradient",
-  "7lwpzc": [
-    "Open Discord on Desktop to unlock ",
-    "& ",
-    "configure new Boost perks: ",
+  "+/IHLl": [
+    "magical"
+  ],
+  "tBhCyr": [
+    "The \"Holographic\" role style doesn't require you to select any colors."
+  ],
+  "vQz+6W": [
+    "Gradient"
+  ],
+  "7lwpzR": [
+    "Open Discord on Desktop to unlock & configure new Boost perks: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

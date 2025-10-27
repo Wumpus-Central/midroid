@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Dovanos fono parinktis: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Dėžutė",
-  "AJ4iio": "Tortas",
-  "P5keo6": "Skrynia",
-  "w84vER": "Kava",
-  "6dCq/v": "Puodelis",
-  "+HMF8v": "Nitrohelovynas",
-  "vd1fu7": "Šventinė dėžutė",
-  "aubYGR": "Šventinis tortas",
-  "vjxYqa": "Šventinė skrynia",
-  "bHuJLS": "Šventinė kava",
-  "M6cPwM": "Sniego rutulys",
-  "GzPel5": "Dėžutė"
+  "B9XqQk": [
+    "Dėžutė"
+  ],
+  "AJ4iir": [
+    "Tortas"
+  ],
+  "P5keo3": [
+    "Skrynia"
+  ],
+  "w84vET": [
+    "Kava"
+  ],
+  "6dCq/u": [
+    "Puodelis"
+  ],
+  "+HMF8k": [
+    "Nitrohelovynas"
+  ],
+  "vd1fu/": [
+    "Šventinė dėžutė"
+  ],
+  "aubYGR": [
+    "Šventinis tortas"
+  ],
+  "vjxYqU": [
+    "Šventinė skrynia"
+  ],
+  "bHuJLa": [
+    "Šventinė kava"
+  ],
+  "M6cPwB": [
+    "Sniego rutulys"
+  ],
+  "GzPel1": [
+    "Dėžutė"
+  ]
 }

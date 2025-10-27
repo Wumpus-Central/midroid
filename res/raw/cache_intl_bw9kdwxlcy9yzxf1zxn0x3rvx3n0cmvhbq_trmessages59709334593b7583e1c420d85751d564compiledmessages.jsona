@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Yayın Yapma İzni İste",
-  "P0wwmJ": "Zaten yayın yapıyorsun",
-  "u4QmWl": "Talebin süresi doldu",
-  "qRXatr": "Ses kanalında değil",
-  "43zohI": "Oyun çalışmıyor",
-  "fac+eH": "İzin yok",
-  "8HU1Mz": "Talep gönderildi",
-  "5+172d": "Yayın yap",
-  "nAyuPj": "Yayın Talebi",
-  "d/qbCw": [
+  "DKHhec": [
+    "Yayın Yapma İzni İste"
+  ],
+  "P0wwmM": [
+    "Zaten yayın yapıyorsun"
+  ],
+  "u4QmWl": [
+    "Talebin süresi doldu"
+  ],
+  "qRXats": [
+    "Ses kanalında değil"
+  ],
+  "43zohO": [
+    "Oyun çalışmıyor"
+  ],
+  "fac+eE": [
+    "İzin yok"
+  ],
+  "8HU1M2": [
+    "Talep gönderildi"
+  ],
+  "5+172e": [
+    "Yayın yap"
+  ],
+  "nAyuPp": [
+    "Yayın Talebi"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " yayın yapmanı istedi"
   ],
-  "8B3U5O": "Birinden yayın yapmasını istedin"
+  "8B3U5O": [
+    "Birinden yayın yapmasını istedin"
+  ]
 }

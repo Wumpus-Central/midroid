@@ -1,4 +1,4 @@
-@file:SourceDebugExtension(["SMAP\nViewMeasureExtensions.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ViewMeasureExtensions.kt\ncom/discord/misc/utilities/measure/ViewMeasureExtensionsKt\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,42:1\n1797#2,3:43\n*S KotlinDebug\n*F\n+ 1 ViewMeasureExtensions.kt\ncom/discord/misc/utilities/measure/ViewMeasureExtensionsKt\n*L\n30#1:43,3\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nViewMeasureExtensions.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ViewMeasureExtensions.kt\ncom/discord/misc/utilities/measure/ViewMeasureExtensionsKt\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,42:1\n1797#2,2:43\n1799#2:46\n297#3:45\n*S KotlinDebug\n*F\n+ 1 ViewMeasureExtensions.kt\ncom/discord/misc/utilities/measure/ViewMeasureExtensionsKt\n*L\n30#1:43,2\n30#1:46\n32#1:45\n*E\n"])
 
 package com.discord.misc.utilities.measure
 
@@ -10,11 +10,11 @@ import kotlin.jvm.internal.SourceDebugExtension
 public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, Int> {
    val var2: Int = var0.getChildCount();
    val var3: Int = 0;
-   val var4: IntRange = d.s(0, var2);
+   val var4: IntRange = e.v(0, var2);
    val var6: Pair = new Pair(var3, var3);
    val var7: java.util.Iterator = var4.iterator();
    if (var7.hasNext()) {
-      val var5: View = var0.getChildAt((var7 as I).nextInt());
+      val var5: View = var0.getChildAt((var7 as L).nextInt());
       if (var5.getVisibility() == 8) {
          return var6;
       } else {

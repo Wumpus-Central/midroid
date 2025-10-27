@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import B9.n
 import android.content.Context
 import android.graphics.PorterDuffColorFilter
 import android.graphics.PorterDuff.Mode
@@ -49,8 +48,9 @@ import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
+import xa.p
 
-@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n1872#3,3:292\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n260#1:292,3\n*E\n"])
+@SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 Uri.kt\nandroidx/core/net/UriKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n29#3:292\n1872#4,3:293\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n207#1:292\n260#1:293,3\n*E\n"])
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
    ComponentView<SelectComponent> {
    public final val binding: MessageComponentSelectViewBinding
@@ -80,8 +80,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    init {
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      this.progressDots$delegate = B9.j.b(new i(this));
-      this.postProcessor$delegate = B9.j.b(new j());
+      this.progressDots$delegate = xa.l.a(new i(this));
+      this.postProcessor$delegate = xa.l.a(new j());
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
       this.setPadding(var3, var3, var3, var3);
@@ -130,13 +130,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.J(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (G2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScaleType.e);
+      val var7: com.facebook.drawee.controller.a = (G3.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScaleType.e);
       if (var3 != null) {
-         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
@@ -207,7 +207,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                   var20 = (var33 as StringSelectItem).getEmoji();
                } else {
                   if (var33 !is SearchableSelectItem) {
-                     throw new n();
+                     throw new p();
                   }
 
                   var20 = (var33 as SearchableSelectItem).getIconEmoji();
@@ -270,30 +270,30 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var4 = true;
       }
 
-      val var17: Boolean;
+      val var8: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var17 = true;
+         var8 = true;
       } else {
-         var17 = false;
+         var8 = false;
       }
 
       val var25: SimpleDraweeView = this.binding.selectComponentChevron;
-      if (!var17) {
+      if (!var8) {
          var5 = 0;
       }
 
       var25.setVisibility(var5);
-      if (var17 != this.currentIsLoading) {
+      if (var8 != this.currentIsLoading) {
          val var26: ProgressDots = this.getProgressDots();
          var5 = 8;
-         if (var17) {
+         if (var8) {
             var5 = 0;
          }
 
          var26.setVisibility(var5);
       }
 
-      this.currentIsLoading = var17;
+      this.currentIsLoading = var8;
       val var27: View = this.binding.getRoot();
       val var3: Float;
       if (var4) {
@@ -306,15 +306,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var28: View = this.binding.getRoot();
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var28, false, new g(var2, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var8: Boolean = false;
-      if (!var17) {
-         var8 = false;
+      var var17: Boolean = false;
+      if (!var8) {
+         var17 = false;
          if (!var4) {
-            var8 = true;
+            var17 = true;
          }
       }
 
-      var14.setClickable(var8);
+      var14.setClickable(var17);
       this.binding.getRoot().setEnabled(var4 xor true);
    }
 

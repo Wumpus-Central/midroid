@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Mağara",
-  "qRFFLC": "Kızartma",
-  "lFIyMz": "Hayalet",
-  "fPU01d": "Megafon",
-  "KN+v7+": "Uzay Tavşanı",
-  "kHmvdn": "Siber Patron"
+  "Xypb3z": [
+    "Mağara"
+  ],
+  "qRFFLK": [
+    "Kızartma"
+  ],
+  "lFIyM/": [
+    "Hayalet"
+  ],
+  "fPU01d": [
+    "Megafon"
+  ],
+  "KN+v77": [
+    "Uzay Tavşanı"
+  ],
+  "kHmvdt": [
+    "Siber Patron"
+  ]
 }

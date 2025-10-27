@@ -1,6 +1,5 @@
 package com.discord.chat.bridge.row
 
-import B9.c
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -11,13 +10,14 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import pb.g
-import pb.e.i
+import mc.j
+import mc.e.i
+import xa.e
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return g.a("Message", i.a);
+         return j.b("Message", i.a);
       }
 
 
@@ -30,7 +30,7 @@ public object MessageSerializer : KSerializer {
          val var2: StringBuilder = new StringBuilder();
          var2.append("RENDERING_ERROR_");
          var2.append(var3);
-         var5 = new ErrorMessage(MessageId.constructor-impl(var2.toString()), c.b(var4), null);
+         var5 = new ErrorMessage(MessageId.constructor-impl(var2.toString()), e.b(var4), null);
       }
 
       return (MessageBase)var5;

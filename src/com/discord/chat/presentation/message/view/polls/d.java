@@ -10,9 +10,9 @@ public final class d implements OnClickListener {
    public final PollAction d;
    public final Function3 e;
    public final long i;
-   public final String m;
+   public final String s;
 
    public final void onClick(View var1) {
-      PollActionButton.d(this.d, this.e, this.i, this.m, var1);
+      PollActionButton.d(this.d, this.e, this.i, this.s, var1);
    }
 }

@@ -5,13 +5,13 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class d implements d1.f {
+public final class d implements c2.f {
    public final BillingManager a;
    public final Function1 b;
    public final Function0 c;
 
    @Override
    public final void a(BillingResult var1, String var2) {
-      BillingManager.e(this.a, this.b, this.c, var1, var2);
+      <unrepresentable>.g(this.a, this.b, this.c, var1, var2);
    }
 }

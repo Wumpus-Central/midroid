@@ -12,7 +12,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.polls.PollCheckboxView;
 import com.discord.chat.presentation.message.view.polls.PollMediaView;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import y0.a;
+import x1.a;
 
 public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
    @NonNull
@@ -61,21 +61,21 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
          PollMediaView var8 = (PollMediaView)a.a(var0, var1);
          if (var8 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.percentage_bar_background;
-               View var6 = a.a(var0, var1);
-               if (var6 != null) {
+               View var3 = a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var5 = (FrameLayout)a.a(var0, var1);
-                  if (var5 != null) {
+                  FrameLayout var6 = (FrameLayout)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var4 = (TextView)a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var3 = (TextView)a.a(var0, var1);
-                        if (var3 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var2, var8, var4, var6, var5, var7, var3);
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var2, var8, var5, var3, var6, var4, var7);
                         }
                      }
                   }

@@ -1,10 +1,10 @@
 package com.discord.fastest_list.react
 
-import B9.n
 import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
+import xa.p
 
 internal class FastestListShadowNode : LayoutShadowNode {
    private final var isDirty: Boolean
@@ -35,7 +35,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
 
    public open fun setPadding(spacingType: Int, padding: Float) {
       super.setPadding(var1, var2);
-      val var4: com.facebook.yoga.e = com.facebook.yoga.e.g(var1);
+      val var4: com.facebook.yoga.e = com.facebook.yoga.e.c(var1);
       val var3: Int;
       if (var4 == null) {
          var3 = -1;
@@ -51,7 +51,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
             throw new IllegalStateException(var7.toString().toString());
          case 0:
          default:
-            throw new n();
+            throw new p();
          case 1:
             val var6: RectF = this.padding;
             this.padding.left = var2;

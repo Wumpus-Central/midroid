@@ -1,16 +1,17 @@
 package com.discord.chat.bridge
 
-import H9.a
+import Da.a
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import nb.g
-import pb.e.i
+import mc.j
+import mc.e.i
 
-@g(with = MessageState.Serializer::class)
+@m(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
    SendFailed("SEND_FAILED"),
    Sending("SENDING"),
@@ -78,7 +79,7 @@ public enum class MessageState(key: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return pb.g.a("MessageState", i.a);
+            return j.b("MessageState", i.a);
          }
 
 

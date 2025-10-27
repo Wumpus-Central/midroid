@@ -1,16 +1,16 @@
 package com.discord.misc.utilities.keyboard
 
-import G9.b
+import Ca.b
+import ac.f
 import android.app.Activity
 import android.view.View
 import android.view.Window
 import android.widget.EditText
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.n0
+import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import db.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
@@ -57,7 +57,7 @@ public fun View.hideKeyboard(window: Window) {
          b.e();
          if (this.label == 0) {
             c.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).b(WindowInsetsCompat.n.c());
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).b(n.c());
             return Unit.a;
          } else {
             throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -98,7 +98,7 @@ public fun View.showKeyboard(window: Window) {
          b.e();
          if (this.label == 0) {
             c.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).f(WindowInsetsCompat.n.c());
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).f(n.c());
             if (this.$self is EditText) {
                var1 = this.$self as EditText;
             } else {

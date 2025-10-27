@@ -1,14 +1,14 @@
 package com.discord.audio.react.events
 
-import B9.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
    public final val device: AndroidAudioDevice
 
@@ -40,16 +40,16 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("device", this.device.toNativeMap()));
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("device", this.device.toNativeMap())});
    }
 
    public override fun toString(): String {
-      val var1: AndroidAudioDevice = this.device;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioManagerAudioDeviceChanged(device=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: AndroidAudioDevice = this.device;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioManagerAudioDeviceChanged(device=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

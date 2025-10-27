@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.embed
 
-import H9.a
+import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = EmbedFailureState.Serializer::class)
+@m(with = EmbedFailureState.Serializer::class)
 public enum class EmbedFailureState(serialNumber: Int) : IntEnum {
    AUTO_MODERATION_BLOCKED_MESSAGE(2),
    UNSPECIFIED(0),

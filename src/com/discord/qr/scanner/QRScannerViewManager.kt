@@ -1,6 +1,5 @@
 package com.discord.qr.scanner
 
-import B9.s
 import com.discord.qr.scanner.events.OnQRCodeFoundEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -8,10 +7,11 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
+import xa.v
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onQRCodeFound", OnQRCodeFoundEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("onQRCodeFound", OnQRCodeFoundEvent::class))
    private final val delegate: DCDQRScannerManagerDelegate<QRScanner, QRScannerViewManager>
 
    @JvmStatic
@@ -37,11 +37,11 @@ public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerMan
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDQRScanner";
    }
 

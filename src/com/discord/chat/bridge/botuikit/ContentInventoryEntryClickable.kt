@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class ContentInventoryEntryClickable(ariaDescription: String? = null) {
    public final val ariaDescription: String?
 

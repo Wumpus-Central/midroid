@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.activities
 
 import com.discord.activity_invites.RGBAColorModel
+import kc.b
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.a
-import nb.g
-import qb.E0
-import qb.f
+import nc.P0
+import nc.f
 
-@g
+@m
 public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = java.lang.Boolean.FALSE,
    ctaButtonText: String? = null,
    ctaButtonIsLoading: Boolean? = java.lang.Boolean.FALSE,
@@ -46,9 +46,9 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
 
    @JvmStatic
    fun {
-      val var0: f = new f(new a(RGBAColorModel::class, RGBAColorModel.$serializer.INSTANCE, new KSerializer[0]));
-      val var1: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, null, null, var0, null, null, null, null, null, null, new f(E0.a), null, new f(var1), null, null, null};
+      val var0: f = new f(new b(RGBAColorModel::class, RGBAColorModel.$serializer.INSTANCE, new KSerializer[0]));
+      val var1: P0 = P0.a;
+      $childSerializers = new KSerializer[]{null, null, null, null, var0, null, null, null, null, null, null, new f(P0.a), null, new f(var1), null, null, null};
    }
 
    fun ActivityRichPresenceInviteEmbed() {
@@ -382,60 +382,60 @@ public data class ActivityRichPresenceInviteEmbed(ctaButtonEnabled: Boolean? = j
    }
 
    public override fun toString(): String {
-      val var17: java.lang.Boolean = this.ctaButtonEnabled;
-      val var7: java.lang.String = this.ctaButtonText;
-      val var8: java.lang.Boolean = this.ctaButtonIsLoading;
-      val var2: java.lang.String = this.footerLabel;
-      val var5: java.util.List = this.gradientColors;
-      val var6: java.lang.String = this.headerText;
-      val var9: java.lang.String = this.iconSrc;
-      val var18: java.lang.Boolean = this.isActive;
-      val var13: java.lang.Boolean = this.isPlatformSupported;
-      val var14: java.lang.Boolean = this.isSpotifyParty;
-      val var10: Int = this.maxPartySize;
-      val var1: java.util.List = this.partyMemberAvatarURIs;
-      val var16: java.lang.String = this.partySizeText;
-      val var3: java.util.List = this.platformIconKeys;
-      val var11: java.lang.String = this.coverImageUrl;
-      val var4: java.lang.String = this.subtitle;
-      val var15: java.lang.String = this.title;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("ActivityRichPresenceInviteEmbed(ctaButtonEnabled=");
-      var12.append(var17);
-      var12.append(", ctaButtonText=");
-      var12.append(var7);
-      var12.append(", ctaButtonIsLoading=");
-      var12.append(var8);
-      var12.append(", footerLabel=");
-      var12.append(var2);
-      var12.append(", gradientColors=");
-      var12.append(var5);
-      var12.append(", headerText=");
-      var12.append(var6);
-      var12.append(", iconSrc=");
-      var12.append(var9);
-      var12.append(", isActive=");
-      var12.append(var18);
-      var12.append(", isPlatformSupported=");
-      var12.append(var13);
-      var12.append(", isSpotifyParty=");
-      var12.append(var14);
-      var12.append(", maxPartySize=");
-      var12.append(var10);
-      var12.append(", partyMemberAvatarURIs=");
-      var12.append(var1);
-      var12.append(", partySizeText=");
-      var12.append(var16);
-      var12.append(", platformIconKeys=");
-      var12.append(var3);
-      var12.append(", coverImageUrl=");
-      var12.append(var11);
-      var12.append(", subtitle=");
-      var12.append(var4);
-      var12.append(", title=");
-      var12.append(var15);
-      var12.append(")");
-      return var12.toString();
+      val var1: java.lang.Boolean = this.ctaButtonEnabled;
+      val var9: java.lang.String = this.ctaButtonText;
+      val var5: java.lang.Boolean = this.ctaButtonIsLoading;
+      val var16: java.lang.String = this.footerLabel;
+      val var7: java.util.List = this.gradientColors;
+      val var18: java.lang.String = this.headerText;
+      val var13: java.lang.String = this.iconSrc;
+      val var10: java.lang.Boolean = this.isActive;
+      val var3: java.lang.Boolean = this.isPlatformSupported;
+      val var15: java.lang.Boolean = this.isSpotifyParty;
+      val var12: Int = this.maxPartySize;
+      val var14: java.util.List = this.partyMemberAvatarURIs;
+      val var11: java.lang.String = this.partySizeText;
+      val var17: java.util.List = this.platformIconKeys;
+      val var8: java.lang.String = this.coverImageUrl;
+      val var6: java.lang.String = this.subtitle;
+      val var4: java.lang.String = this.title;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActivityRichPresenceInviteEmbed(ctaButtonEnabled=");
+      var2.append(var1);
+      var2.append(", ctaButtonText=");
+      var2.append(var9);
+      var2.append(", ctaButtonIsLoading=");
+      var2.append(var5);
+      var2.append(", footerLabel=");
+      var2.append(var16);
+      var2.append(", gradientColors=");
+      var2.append(var7);
+      var2.append(", headerText=");
+      var2.append(var18);
+      var2.append(", iconSrc=");
+      var2.append(var13);
+      var2.append(", isActive=");
+      var2.append(var10);
+      var2.append(", isPlatformSupported=");
+      var2.append(var3);
+      var2.append(", isSpotifyParty=");
+      var2.append(var15);
+      var2.append(", maxPartySize=");
+      var2.append(var12);
+      var2.append(", partyMemberAvatarURIs=");
+      var2.append(var14);
+      var2.append(", partySizeText=");
+      var2.append(var11);
+      var2.append(", platformIconKeys=");
+      var2.append(var17);
+      var2.append(", coverImageUrl=");
+      var2.append(var8);
+      var2.append(", subtitle=");
+      var2.append(var6);
+      var2.append(", title=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

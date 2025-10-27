@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Tu cuenta ha sido desbloqueada",
-  "d9Ykjo": "Código de confirmación",
-  "bFbsV1": "Ingresa tu correo electrónico",
-  "RRBNpq": "Siguiente",
-  "0DHxys": [
+  "/fHz9S": [
+    "Tu cuenta ha sido desbloqueada"
+  ],
+  "d9Ykjr": [
+    "Código de confirmación"
+  ],
+  "bFbsV6": [
+    "Ingresa tu correo electrónico"
+  ],
+  "RRBNpv": [
+    "Siguiente"
+  ],
+  "0DHxym": [
     "¿No eres tú? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Podemos pedirte más verificaciones durante el proceso, para asegurarnos de que no seas un robot.",
-  "Ks6opq": "Iniciar",
-  "I2Ctk5": "Completa los pasos a continuación para desbloquear tu cuenta",
-  "RRamMD": "Cuenta bloqueada",
-  "ah0EUl": "Reenviar código",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Podemos pedirte más verificaciones durante el proceso, para asegurarnos de que no seas un robot."
+  ],
+  "Ks6opt": [
+    "Iniciar"
+  ],
+  "I2Ctk1": [
+    "Completa los pasos a continuación para desbloquear tu cuenta"
+  ],
+  "RRamMH": [
+    "Cuenta bloqueada"
+  ],
+  "ah0EUu": [
+    "Reenviar código"
+  ],
+  "2+Lyn0": [
     "Reenviar código en ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " segundos"
   ],
-  "3AXMYm": "Error al reenviar el código de verificación",
-  "dSkE/P": "Verificar grupo de edad",
-  "o4D6fn": "Actualizar",
-  "VBZJJi": "Actualiza la aplicación para continuar.",
-  "yxqMCA": "Actualización requerido",
-  "wq2RDg": "Verificar",
-  "PfbG6O": "Código de verificación inválido",
-  "aveKoK": "Acabamos de enviar un código de verificación a tu dirección de correo electrónico. Puede tardar unos minutos en llegar",
-  "Qm6K/v": "Verifica tu correo electrónico"
+  "3AXMYu": [
+    "Error al reenviar el código de verificación"
+  ],
+  "dSkE/A": [
+    "Verificar grupo de edad"
+  ],
+  "o4D6fm": [
+    "Actualizar"
+  ],
+  "VBZJJg": [
+    "Actualiza la aplicación para continuar."
+  ],
+  "yxqMCD": [
+    "Actualización requerido"
+  ],
+  "wq2RDq": [
+    "Verificar"
+  ],
+  "PfbG6H": [
+    "Código de verificación inválido"
+  ],
+  "aveKoG": [
+    "Acabamos de enviar un código de verificación a tu dirección de correo electrónico. Puede tardar unos minutos en llegar"
+  ],
+  "Qm6K/s": [
+    "Verifica tu correo electrónico"
+  ]
 }

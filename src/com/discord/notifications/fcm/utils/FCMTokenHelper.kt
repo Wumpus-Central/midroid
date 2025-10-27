@@ -1,7 +1,7 @@
 package com.discord.notifications.fcm.utils
 
-import U1.a
-import U1.b
+import U2.a
+import U2.b
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging

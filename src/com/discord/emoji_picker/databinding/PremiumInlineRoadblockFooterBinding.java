@@ -8,7 +8,7 @@ import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.emoji_picker.R;
-import y0.a;
+import x1.a;
 
 public final class PremiumInlineRoadblockFooterBinding implements ViewBinding {
    @NonNull

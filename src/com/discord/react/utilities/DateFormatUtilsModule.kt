@@ -10,15 +10,15 @@ public class DateFormatUtilsModule(reactContext: ReactApplicationContext) : Nati
       this.reactContext = var1;
    }
 
-   public override fun activate(): Boolean {
+   public open fun activate(): Boolean {
       val var4: java.lang.Long = ReactContextExtensionsKt.jsiId(this.reactContext);
-      val var3: Boolean;
+      val var1: Boolean;
       if (var4 != null) {
-         var3 = JSINativeModule.INSTANCE.install(var4.longValue());
+         var1 = JSINativeModule.INSTANCE.install(var4.longValue());
       } else {
-         var3 = false;
+         var1 = false;
       }
 
-      return var3;
+      return var1;
    }
 }

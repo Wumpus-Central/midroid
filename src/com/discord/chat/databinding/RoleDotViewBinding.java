@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import y0.a;
+import x1.a;
 
 public final class RoleDotViewBinding implements ViewBinding {
    @NonNull

@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Option d'arrière-plan des cadeaux : ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Boîte",
-  "AJ4iio": "Gâteau",
-  "P5keo6": "Coffre",
-  "w84vER": "Café",
-  "6dCq/v": "Coupe",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Boîte hivernale",
-  "aubYGR": "Gâteau hivernal",
-  "vjxYqa": "Coffre hivernal",
-  "bHuJLS": "Café hivernal",
-  "M6cPwM": "Boule de neige",
-  "GzPel5": "Boîte"
+  "B9XqQk": [
+    "Boîte"
+  ],
+  "AJ4iir": [
+    "Gâteau"
+  ],
+  "P5keo3": [
+    "Coffre"
+  ],
+  "w84vET": [
+    "Café"
+  ],
+  "6dCq/u": [
+    "Coupe"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Boîte hivernale"
+  ],
+  "aubYGR": [
+    "Gâteau hivernal"
+  ],
+  "vjxYqU": [
+    "Coffre hivernal"
+  ],
+  "bHuJLa": [
+    "Café hivernal"
+  ],
+  "M6cPwB": [
+    "Boule de neige"
+  ],
+  "GzPel1": [
+    "Boîte"
+  ]
 }

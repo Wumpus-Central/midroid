@@ -14,8 +14,9 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
-@SourceDebugExtension(["SMAP\nBillingManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,159:1\n808#2,11:160\n*S KotlinDebug\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n*L\n149#1:160,11\n*E\n"])
+@SourceDebugExtension(["SMAP\nBillingManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,159:1\n808#2,11:160\n*S KotlinDebug\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n*L\n150#1:160,11\n*E\n"])
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
@@ -24,11 +25,14 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    init {
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         B9.s.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
-         B9.s.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
-         B9.s.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         new Pair[]{
+            v.a("billing-manager-connection-state-updated", BillingManagerConnectionStateUpdated::class),
+            v.a("billing-manager-purchase-updated", BillingManagerPurchaseUpdated::class),
+            v.a("billing-manager-purchase-state-updated", BillingManagerPurchaseStateUpdated::class)
+         }
       );
-      this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
+      var1 = this.getReactApplicationContext();
+      this.billingManager = new BillingManager(var1, ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
 
    @JvmStatic
@@ -75,9 +79,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var10: j = new j(var4);
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      var1.getProducts(var7, var3, var4, var10, var9);
+      var1.getProducts(var7, var3, var4, new j(var4));
    }
 
    @JvmStatic
@@ -157,15 +159,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var2: BillingManager = this.billingManager;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      var2.open(var1);
+      this.billingManager.open();
    }
 
    @ReactMethod
    public fun purchase(productId: String, userId: String, promise: Promise) {
       BillingManager.purchase$default(
-         this.billingManager, this.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
+         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
       );
    }
 
@@ -175,6 +175,6 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      this.billingManager.purchase(this.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
+      this.billingManager.purchase(this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
    }
 }

@@ -1,14 +1,38 @@
 {
-  "RPb8Zm": "Palautteesi auttaa meitä parantamaan Discordin turvallisuustoimintoja.",
-  "KZw6kp": "Mikä ei toimi hyvin?",
-  "eSP1Fx": "Muutin mieltäni tämän sisällön näkemisestä",
-  "bC0QVV": "Ohjeet olivat sekavat",
-  "8JFGXV": "Yritin toimia ohjeiden mukaisesti, mutta se ei toiminut",
-  "Dl4A+f": "Minulla ei ollut oikeita dokumentteja",
-  "ZsnNg4": "Olen huolissani henkilötietojeni jakamisesta",
-  "kkKhVF": "Tämä kestää liian pitkään",
-  "maxf2d": "En ollut varma, miksi tämä oli tarpeen",
-  "Q5cQ4+": "Kuvaile ongelmasi",
-  "zApKaW": "Haluatko kertoa tästä tarkemmin?",
-  "RqoA4u": "Miten iän vahvistus toimi mielestäsi?"
+  "RPb8Zk": [
+    "Palautteesi auttaa meitä parantamaan Discordin turvallisuustoimintoja."
+  ],
+  "KZw6kn": [
+    "Mikä ei toimi hyvin?"
+  ],
+  "eSP1F9": [
+    "Muutin mieltäni tämän sisällön näkemisestä"
+  ],
+  "bC0QVX": [
+    "Ohjeet olivat sekavat"
+  ],
+  "8JFGXc": [
+    "Yritin toimia ohjeiden mukaisesti, mutta se ei toiminut"
+  ],
+  "Dl4A+U": [
+    "Minulla ei ollut oikeita dokumentteja"
+  ],
+  "ZsnNgz": [
+    "Olen huolissani henkilötietojeni jakamisesta"
+  ],
+  "kkKhVJ": [
+    "Tämä kestää liian pitkään"
+  ],
+  "maxf2S": [
+    "En ollut varma, miksi tämä oli tarpeen"
+  ],
+  "Q5cQ46": [
+    "Kuvaile ongelmasi"
+  ],
+  "zApKaR": [
+    "Haluatko kertoa tästä tarkemmin?"
+  ],
+  "RqoA4v": [
+    "Miten iän vahvistus toimi mielestäsi?"
+  ]
 }

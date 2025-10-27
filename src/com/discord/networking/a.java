@@ -5,6 +5,7 @@ import okhttp3.OkHttpClient.Builder;
 
 // $VF: synthetic class
 public final class a implements CustomClientBuilder {
+   @Override
    public final void apply(Builder var1) {
       ReactNetworking.b(var1);
    }

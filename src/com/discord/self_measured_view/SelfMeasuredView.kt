@@ -1,6 +1,5 @@
 package com.discord.self_measured_view
 
-import B9.s
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -10,6 +9,7 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
+import xa.v
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(var1, var2, var3) {
    private final val reactContext: ReactContext
@@ -41,12 +41,12 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
                this.stateWrapper
                   .updateState(
                      NativeMapExtensionsKt.nativeMapOf(
-                        s.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), s.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
+                        v.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), v.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
                      )
                   );
             }
          } else {
-            val var8: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
+            val var8: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class);
             if (var8 != null) {
                this.reactContext.runOnNativeModulesQueueThread(new b(var8, this));
             }
@@ -65,11 +65,11 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      var2 = this.getMeasuredWidth();
-      val var3: Int = this.getMeasuredHeight();
+      val var3: Int = this.getMeasuredWidth();
+      var2 = this.getMeasuredHeight();
       val var4: Pair = ViewMeasureExtensionsKt.getMaximumSizeOfChildren(this, var1);
       this.setMeasuredDimension((var4.a() as java.lang.Number).intValue(), (var4.b() as java.lang.Number).intValue());
-      this.maybePostMeasuredEvent(var2, this.getMeasuredWidth(), var3, this.getMeasuredHeight());
+      this.maybePostMeasuredEvent(var3, this.getMeasuredWidth(), var2, this.getMeasuredHeight());
    }
 
    public open fun requestLayout() {

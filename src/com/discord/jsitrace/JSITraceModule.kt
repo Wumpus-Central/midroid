@@ -11,7 +11,7 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
    private external fun nativeInstall(jsi: Long) {
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "JSITrace";
    }
 
@@ -42,16 +42,16 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun isEnabled(): Boolean {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      return var2.isEnabled(var1);
+      val var1: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      return var1.isEnabled(var2);
    }
 
    @ReactMethod
    public fun setEnabled(enabled: Boolean) {
-      val var2: JSITraceCache = JSITraceCache.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.setEnabled(var3, var1);
+      val var3: JSITraceCache = JSITraceCache.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.setEnabled(var2, var1);
    }
 
    public companion object {

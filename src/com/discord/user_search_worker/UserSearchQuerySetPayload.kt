@@ -1,13 +1,13 @@
 package com.discord.user_search_worker
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
-import qb.E0
-import qb.U
-import qb.f
-import qb.y
+import nc.P0
+import nc.W
+import nc.f
+import nc.y
 
-@g
+@m
 internal data class UserSearchQuerySetPayload(query: String,
    filters: UserSearchQuerySetFilters? = null,
    blacklist: List<String>? = null,
@@ -26,8 +26,8 @@ internal data class UserSearchQuerySetPayload(query: String,
 
    @JvmStatic
    fun {
-      val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new f(E0.a), new f(var0), new U(var0, y.a), null, null};
+      val var0: P0 = P0.a;
+      $childSerializers = new KSerializer[]{null, null, new f(P0.a), new f(var0), new W(var0, y.a), null, null};
    }
 
    init {
@@ -132,24 +132,24 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.query;
-      val var9: UserSearchQuerySetFilters = this.filters;
-      val var4: java.util.List = this.blacklist;
-      val var6: java.util.List = this.whitelist;
-      val var7: java.util.Map = this.boosters;
+      val var6: java.lang.String = this.query;
+      val var8: UserSearchQuerySetFilters = this.filters;
+      val var9: java.util.List = this.blacklist;
+      val var7: java.util.List = this.whitelist;
+      val var4: java.util.Map = this.boosters;
       val var1: Double = this.boosterFallback;
       val var3: Int = this.limit;
       val var5: StringBuilder = new StringBuilder();
       var5.append("UserSearchQuerySetPayload(query=");
-      var5.append(var8);
-      var5.append(", filters=");
-      var5.append(var9);
-      var5.append(", blacklist=");
-      var5.append(var4);
-      var5.append(", whitelist=");
       var5.append(var6);
-      var5.append(", boosters=");
+      var5.append(", filters=");
+      var5.append(var8);
+      var5.append(", blacklist=");
+      var5.append(var9);
+      var5.append(", whitelist=");
       var5.append(var7);
+      var5.append(", boosters=");
+      var5.append(var4);
       var5.append(", boosterFallback=");
       var5.append(var1);
       var5.append(", limit=");

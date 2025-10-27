@@ -1,15 +1,15 @@
 package com.discord.metric_monitor
 
-import B9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
    public final val name: String
    public final val tags: List<String>?
@@ -60,25 +60,25 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun serialize(): WritableMap {
-      val var2: Pair = s.a("name", this.name);
+      val var2: Pair = v.a("name", this.name);
       var var1: ReadableNativeArray = null;
       if (this.tags != null) {
          var1 = NativeArrayExtensionsKt.toNativeArray$default(this.tags, null, 1, null);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(s.a("data", NativeMapExtensionsKt.nativeMapOf(var2, s.a("tags", var1))));
+      return NativeMapExtensionsKt.nativeMapOf(v.a("data", NativeMapExtensionsKt.nativeMapOf(var2, v.a("tags", var1))));
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var3: java.util.List = this.tags;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MetricEvent(name=");
-      var1.append(var2);
-      var1.append(", tags=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = this.name;
+      val var1: java.util.List = this.tags;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MetricEvent(name=");
+      var2.append(var3);
+      var2.append(", tags=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -12,11 +12,12 @@ import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.n0
+import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun WindowInsetsCompat.getDisplayCutoutInsets(ignoringVisibility: Boolean = false): Insets {
-   return getInsets(var0, WindowInsetsCompat.n.b(), var1);
+   return getInsets(var0, n.b(), var1);
 }
 
 @JvmSynthetic
@@ -29,7 +30,7 @@ fun `getDisplayCutoutInsets$default`(var0: WindowInsetsCompat, var1: Boolean, va
 }
 
 internal fun WindowInsetsCompat.getImeInsets(ignoringVisibility: Boolean = false): Insets {
-   return getInsets(var0, WindowInsetsCompat.n.c(), var1);
+   return getInsets(var0, n.c(), var1);
 }
 
 @JvmSynthetic
@@ -62,7 +63,7 @@ fun `getInsets$default`(var0: WindowInsetsCompat, var1: Int, var2: Boolean, var3
 }
 
 internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVisibility: Boolean = false): Insets {
-   val var4: Insets = getInsets(var0, WindowInsetsCompat.n.h(), var2);
+   val var4: Insets = getInsets(var0, n.h(), var2);
    if (VERSION.SDK_INT > 29) {
       return var4;
    } else if (var2) {

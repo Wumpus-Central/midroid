@@ -2,10 +2,10 @@ package com.discord.zoom_layout.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class OnZoomChangedEvent(zoomScale: Float) : ReactEvent {
    public final val zoomScale: Float
 

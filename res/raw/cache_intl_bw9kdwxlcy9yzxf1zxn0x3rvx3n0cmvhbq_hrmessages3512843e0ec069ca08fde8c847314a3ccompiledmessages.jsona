@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Zatraži dozvolu za streamanje",
-  "P0wwmJ": "Već streama",
-  "u4QmWl": "Zahtjev je istekao",
-  "qRXatr": "Nije u glasovnom kanalu",
-  "43zohI": "Nije pokrenuo igru",
-  "fac+eH": "Nema dozvole",
-  "8HU1Mz": "Zahtjev poslan",
-  "5+172d": "Stream",
-  "nAyuPj": "Zahtjev za streamanjem",
-  "d/qbCw": [
+  "DKHhec": [
+    "Zatraži dozvolu za streamanje"
+  ],
+  "P0wwmM": [
+    "Već streama"
+  ],
+  "u4QmWl": [
+    "Zahtjev je istekao"
+  ],
+  "qRXats": [
+    "Nije u glasovnom kanalu"
+  ],
+  "43zohO": [
+    "Nije pokrenuo igru"
+  ],
+  "fac+eE": [
+    "Nema dozvole"
+  ],
+  "8HU1M2": [
+    "Zahtjev poslan"
+  ],
+  "5+172e": [
+    "Stream"
+  ],
+  "nAyuPp": [
+    "Zahtjev za streamanjem"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " te zatražio/la za streamanje"
   ],
-  "8B3U5O": "Zatražio si nekoga za streamanje"
+  "8B3U5O": [
+    "Zatražio si nekoga za streamanje"
+  ]
 }

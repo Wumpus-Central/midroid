@@ -2,11 +2,12 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class TapJoinRichPresenceData(messageId: MessageId) : TapJoinRichPresenceData(var1), ReactEvent {
    public final val messageId: MessageId
 
@@ -37,8 +38,8 @@ internal data class TapJoinRichPresenceData(messageId: MessageId) : TapJoinRichP
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

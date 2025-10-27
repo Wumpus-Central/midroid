@@ -8,6 +8,7 @@ import android.net.Uri
 import com.discord.logging.Log
 import java.io.IOException
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
 internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    private final var mediaPlayer: MediaPlayer?
@@ -153,17 +154,16 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
    public fun setPan(pan: Float) {
       val var15: Float;
       val var4: Byte = (byte)(if ((var15 = var1 - 0.5F) == 0.0F) 0 else (if (var15 < 0.0F) -1 else 1));
-      val var13: Float;
+      var var13: Float;
       if (var1 >= 0.5F) {
-         var var3: Float;
          try {
-            var3 = this.volume;
+            var13 = this.volume;
          } catch (var11: Exception) {
             Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to pan.", var11);
             return;
          }
 
-         var13 = var3 * (2 - var1 * 2);
+         var13 = var13 * (2 - var1 * 2);
       } else {
          try {
             var13 = this.volume;
@@ -268,6 +268,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
       }
    }
 
+   @SourceDebugExtension(["SMAP\nSoundPlayer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SoundPlayer.kt\ncom/discord/sounds/SoundPlayer$Companion\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,181:1\n29#2:182\n*S KotlinDebug\n*F\n+ 1 SoundPlayer.kt\ncom/discord/sounds/SoundPlayer$Companion\n*L\n173#1:182\n*E\n"])
    public companion object {
       private fun createMediaPlayer(context: Context, usage: Int, soundResId: Int?, filePath: String?): MediaPlayer {
          val var5: MediaPlayer = new MediaPlayer();

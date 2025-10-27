@@ -15,7 +15,7 @@ public enum class StartupInitSection {
    fun {
       val var0: Array<StartupInitSection> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = Da.a.a(var0);
    }
 
    @JvmStatic

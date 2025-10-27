@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class TapAutoModerationFeedbackData(messageId: String, channelId: String) : ReactEvent {
    public final val messageId: String
    public final val channelId: String
@@ -47,18 +48,18 @@ public data class TapAutoModerationFeedbackData(messageId: String, channelId: St
       return this.messageId.hashCode() * 31 + this.channelId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapAutoModerationFeedbackData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

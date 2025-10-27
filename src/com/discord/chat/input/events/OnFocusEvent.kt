@@ -1,11 +1,12 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactEvent {
    public final val start: Int
    public final val end: Int
@@ -54,19 +55,19 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
       return (Integer.hashCode(this.start) * 31 + Integer.hashCode(this.end)) * 31 + Integer.hashCode(this.target);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: Int = this.start;
-      val var2: Int = this.end;
+      val var2: Int = this.start;
+      val var3: Int = this.end;
       val var1: Int = this.target;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnFocusEvent(start=");
-      var4.append(var3);
-      var4.append(", end=");
       var4.append(var2);
+      var4.append(", end=");
+      var4.append(var3);
       var4.append(", target=");
       var4.append(var1);
       var4.append(")");

@@ -1,10 +1,11 @@
 package com.discord.chat.bridge.reaction
 
-import com.discord.reactions.ReactionView
+import com.discord.reactions.ReactionView.Reaction
+import com.discord.reactions.ReactionView.Reaction.DefaultImpls
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class MessageReaction(count: Int,
       me: Boolean,
       isMeBurst: Boolean = false,
@@ -12,7 +13,7 @@ public data class MessageReaction(count: Int,
       burstCount: Int = 0,
       themedBurstColors: ThemedBurstReactionColorPalette? = null
    ) :
-   ReactionView.Reaction {
+   Reaction {
    public open val count: Int
    public final val me: Boolean
    public open val isMeBurst: Boolean
@@ -90,16 +91,16 @@ public data class MessageReaction(count: Int,
       }
    }
 
-   override fun getItemId(): java.lang.Long {
-      return ReactionView.Reaction.DefaultImpls.getItemId(this);
+   fun getItemId(): java.lang.Long {
+      return DefaultImpls.getItemId(this);
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.count);
-      val var4: Int = java.lang.Boolean.hashCode(this.me);
-      val var2: Int = java.lang.Boolean.hashCode(this.isMeBurst);
-      val var3: Int = this.emoji.hashCode();
-      val var5: Int = Integer.hashCode(this.burstCount);
+      val var2: Int = Integer.hashCode(this.count);
+      val var3: Int = java.lang.Boolean.hashCode(this.me);
+      val var4: Int = java.lang.Boolean.hashCode(this.isMeBurst);
+      val var5: Int = this.emoji.hashCode();
+      val var6: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
          var1 = 0;
@@ -107,11 +108,11 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var2) * 31 + var3) * 31 + var5) * 31 + var1;
+      return ((((var2 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1;
    }
 
-   override fun isBurstReaction(): Boolean {
-      return ReactionView.Reaction.DefaultImpls.isBurstReaction(this);
+   fun isBurstReaction(): Boolean {
+      return DefaultImpls.isBurstReaction(this);
    }
 
    public override fun toString(): String {
@@ -120,22 +121,22 @@ public data class MessageReaction(count: Int,
       val var4: Boolean = this.isMeBurst;
       val var5: MessageReactionEmoji = this.emoji;
       val var2: Int = this.burstCount;
-      val var7: ThemedBurstReactionColorPalette = this.themedBurstColors;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReaction(count=");
-      var6.append(var1);
-      var6.append(", me=");
-      var6.append(var3);
-      var6.append(", isMeBurst=");
-      var6.append(var4);
-      var6.append(", emoji=");
-      var6.append(var5);
-      var6.append(", burstCount=");
-      var6.append(var2);
-      var6.append(", themedBurstColors=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var6: ThemedBurstReactionColorPalette = this.themedBurstColors;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MessageReaction(count=");
+      var7.append(var1);
+      var7.append(", me=");
+      var7.append(var3);
+      var7.append(", isMeBurst=");
+      var7.append(var4);
+      var7.append(", emoji=");
+      var7.append(var5);
+      var7.append(", burstCount=");
+      var7.append(var2);
+      var7.append(", themedBurstColors=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

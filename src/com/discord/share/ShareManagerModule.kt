@@ -7,9 +7,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 
 public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
+   public final val reactContext: ReactApplicationContext
    private final val shareBroadcastReceiver: ShareBroadcastReceiver
 
    init {
+      this.reactContext = var1;
       this.shareBroadcastReceiver = new ShareBroadcastReceiver(var1);
    }
 
@@ -20,7 +22,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
       var3.register(var2, this.shareBroadcastReceiver);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ShareManager";
    }
 
@@ -29,12 +31,12 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
       val var1: ReactApplicationContext = this.getReactApplicationContext();
       if (var1 != null) {
          val var3: Intent = var1.getPackageManager().getLaunchIntentForPackage(var1.getPackageName());
-         var var2: Activity = this.getCurrentActivity();
+         var var2: Activity = this.reactContext.getCurrentActivity();
          if (var2 != null) {
             var2.finish();
          }
 
-         var2 = this.getCurrentActivity();
+         var2 = this.reactContext.getCurrentActivity();
          if (var2 != null) {
             var2.startActivity(var3);
          }
@@ -66,7 +68,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");
          var5.putExtra(
-            "android.intent.extra.TEXT", CollectionsKt.p0(CollectionsKt.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null)
+            "android.intent.extra.TEXT", CollectionsKt.r0(CollectionsKt.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null)
          );
          val var8: Activity = this.getReactApplicationContext().getCurrentActivity();
          if (var8 != null) {

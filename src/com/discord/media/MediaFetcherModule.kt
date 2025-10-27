@@ -1,6 +1,5 @@
 package com.discord.media
 
-import B9.s
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -13,6 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
 @SourceDebugExtension(["SMAP\nMediaFetcherModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,63:1\n1062#2:64\n*S KotlinDebug\n*F\n+ 1 MediaFetcherModule.kt\ncom/discord/media/MediaFetcherModule\n*L\n32#1:64\n*E\n"])
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -38,7 +38,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       throw new IllegalArgumentException(var3.toString());
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "CameraRollUtils";
    }
 
@@ -58,10 +58,10 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       try {
          val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var6: ReactApplicationContext = this.getReactApplicationContext();
-         var16 = CollectionsKt.M0(CollectionsKt.K0(var7.getMedia(var6, var12, var4, var5), new Comparator() {
+         var16 = CollectionsKt.P0(CollectionsKt.M0(var7.getMedia(var6, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return E9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return Aa.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();
@@ -74,9 +74,9 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       if (var3 == var4) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               s.a("start_cursor", java.lang.String.valueOf((CollectionsKt.h0(var16) as ContentResolverMedia).getUri())),
-               s.a("end_cursor", java.lang.String.valueOf((CollectionsKt.r0(var16) as ContentResolverMedia).getUri())),
-               s.a("has_next_page", java.lang.Boolean.TRUE)
+               v.a("start_cursor", java.lang.String.valueOf((CollectionsKt.j0(var16) as ContentResolverMedia).getUri())),
+               v.a("end_cursor", java.lang.String.valueOf((CollectionsKt.t0(var16) as ContentResolverMedia).getUri())),
+               v.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {
             var2.reject("E_UNABLE_TO_LOAD", var10);
@@ -84,7 +84,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          }
       } else {
          try {
-            var14 = NativeMapExtensionsKt.nativeMapOf(s.a("has_next_page", java.lang.Boolean.FALSE));
+            var14 = NativeMapExtensionsKt.nativeMapOf(v.a("has_next_page", java.lang.Boolean.FALSE));
          } catch (var9: Exception) {
             var2.reject("E_UNABLE_TO_LOAD", var9);
             return;

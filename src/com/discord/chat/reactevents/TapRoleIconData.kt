@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class TapRoleIconData(roleName: String, roleIconSource: String) : ReactEvent {
    public final val roleName: String
    public final val roleIconSource: String
@@ -47,20 +48,20 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
       return this.roleName.hashCode() * 31 + this.roleIconSource.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.roleName;
-      val var3: java.lang.String = this.roleIconSource;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapRoleIconData(roleName=");
-      var1.append(var2);
-      var1.append(", roleIconSource=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.roleIconSource;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapRoleIconData(roleName=");
+      var3.append(var1);
+      var3.append(", roleIconSource=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

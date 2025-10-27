@@ -1,6 +1,5 @@
 package com.discord.phone_verification
 
-import D.c
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -8,6 +7,7 @@ import android.os.Bundle
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
 import kotlin.jvm.internal.SourceDebugExtension
+import v0.c
 
 @SourceDebugExtension(["SMAP\nSmsAuthCodeBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n+ 2 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,77:1\n434#2:78\n507#2,5:79\n1#3:84\n*S KotlinDebug\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n*L\n31#1:78\n31#1:79,5\n*E\n"])
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
@@ -62,11 +62,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var6: Log = Log.INSTANCE;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Successfully extracted code from SMS: ");
-         var7.append(var5);
-         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
+         val var7: Log = Log.INSTANCE;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Successfully extracted code from SMS: ");
+         var6.append(var5);
+         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {
@@ -86,7 +86,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
 
          val var7: Int;
          if (var5 != null) {
-            var7 = var5.q();
+            var7 = var5.c();
          } else {
             var7 = null;
          }
@@ -100,7 +100,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             val var9: Log = Log.INSTANCE;
             var var8: Int = null;
             if (var5 != null) {
-               var8 = var5.q();
+               var8 = var5.c();
             }
 
             val var6: StringBuilder = new StringBuilder();

@@ -1,6 +1,5 @@
 package com.discord.media
 
-import B9.s
 import android.database.ContentObserver
 import android.database.Cursor
 import android.net.Uri
@@ -15,7 +14,10 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import kotlin.jvm.internal.SourceDebugExtension
+import xa.v
 
+@SourceDebugExtension(["SMAP\nPhotoLibraryHelperModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PhotoLibraryHelperModule.kt\ncom/discord/media/PhotoLibraryHelperModule\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,107:1\n29#2:108\n*S KotlinDebug\n*F\n+ 1 PhotoLibraryHelperModule.kt\ncom/discord/media/PhotoLibraryHelperModule\n*L\n90#1:108\n*E\n"])
 public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
@@ -23,7 +25,7 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("photoLibraryChanged", PhotoLibraryChangedEvent::class));
+      this.reactEvents = new ReactEvents(v.a("photoLibraryChanged", PhotoLibraryChangedEvent::class));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 
@@ -81,7 +83,7 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "PhotoLibraryHelper";
    }
 

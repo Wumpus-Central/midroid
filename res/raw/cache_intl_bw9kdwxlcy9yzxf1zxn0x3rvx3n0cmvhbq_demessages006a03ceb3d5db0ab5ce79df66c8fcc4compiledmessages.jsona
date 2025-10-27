@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Um Stream bitten",
-  "P0wwmJ": "Bereits am Streamen",
-  "u4QmWl": "Anfrage abgelaufen",
-  "qRXatr": "Nicht im Sprachkanal",
-  "43zohI": "Spiel wird nicht ausgeführt",
-  "fac+eH": "Keine Berechtigung",
-  "8HU1Mz": "Anfrage gesendet",
-  "5+172d": "Streamen",
-  "nAyuPj": "Stream-Anfrage",
-  "d/qbCw": [
+  "DKHhec": [
+    "Um Stream bitten"
+  ],
+  "P0wwmM": [
+    "Bereits am Streamen"
+  ],
+  "u4QmWl": [
+    "Anfrage abgelaufen"
+  ],
+  "qRXats": [
+    "Nicht im Sprachkanal"
+  ],
+  "43zohO": [
+    "Spiel wird nicht ausgeführt"
+  ],
+  "fac+eE": [
+    "Keine Berechtigung"
+  ],
+  "8HU1M2": [
+    "Anfrage gesendet"
+  ],
+  "5+172e": [
+    "Streamen"
+  ],
+  "nAyuPp": [
+    "Stream-Anfrage"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " hat dich gebeten, zu streamen"
   ],
-  "8B3U5O": "Du hast jemanden gebeten, zu streamen"
+  "8B3U5O": [
+    "Du hast jemanden gebeten, zu streamen"
+  ]
 }

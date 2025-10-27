@@ -2,11 +2,11 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = ComponentType.Serializer::class)
+@m(with = ComponentType.Serializer::class)
 public enum class ComponentType(serialNumber: Int) : IntEnum {
    ACTION_ROW(1),
    BUTTON(2),
@@ -36,7 +36,7 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ComponentType> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = Da.a.a(var0);
    }
 
    init {

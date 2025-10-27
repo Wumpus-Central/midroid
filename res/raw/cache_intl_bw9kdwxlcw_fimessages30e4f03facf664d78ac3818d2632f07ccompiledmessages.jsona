@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Tilisi on palautettu käyttöön",
-  "d9Ykjo": "Vahvistuskoodi",
-  "bFbsV1": "Anna sähköpostiosoitteesi",
-  "RRBNpq": "Seuraava",
-  "0DHxys": [
+  "/fHz9S": [
+    "Tilisi on palautettu käyttöön"
+  ],
+  "d9Ykjr": [
+    "Vahvistuskoodi"
+  ],
+  "bFbsV6": [
+    "Anna sähköpostiosoitteesi"
+  ],
+  "RRBNpv": [
+    "Seuraava"
+  ],
+  "0DHxym": [
     "Eikö tämä ole sinä? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Saatamme myöhemmissä vaiheissa esittää jatkokysymyksiä – esimerkiksi siitä, oletko robotti",
-  "Ks6opq": "Käynnistä",
-  "I2Ctk5": "Palauta tilisi käyttöön suorittamalla alla olevat vaiheet",
-  "RRamMD": "Tili lukittu",
-  "ah0EUl": "Lähetä koodi uudelleen",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Saatamme myöhemmissä vaiheissa esittää jatkokysymyksiä – esimerkiksi siitä, oletko robotti"
+  ],
+  "Ks6opt": [
+    "Käynnistä"
+  ],
+  "I2Ctk1": [
+    "Palauta tilisi käyttöön suorittamalla alla olevat vaiheet"
+  ],
+  "RRamMH": [
+    "Tili lukittu"
+  ],
+  "ah0EUu": [
+    "Lähetä koodi uudelleen"
+  ],
+  "2+Lyn0": [
     "Lähetä koodi uudelleen ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " sekunnin kuluttua"
   ],
-  "3AXMYm": "Vahvistuskoodin lähettäminen epäonnistui",
-  "dSkE/P": "Vahvista ikäryhmä",
-  "o4D6fn": "Päivitä",
-  "VBZJJi": "Päivitä sovellus, jos haluat jatkaa.",
-  "yxqMCA": "Päivitys tarvitaan",
-  "wq2RDg": "Vahvista",
-  "PfbG6O": "Virheellinen vahvistuskoodi",
-  "aveKoK": "Lähetimme juuri vahvistuskoodin sähköpostiosoitteeseesi. Sen saapuminen voi kestää muutaman minuutin",
-  "Qm6K/v": "Vahvista sähköpostiosoitteesi"
+  "3AXMYu": [
+    "Vahvistuskoodin lähettäminen epäonnistui"
+  ],
+  "dSkE/A": [
+    "Vahvista ikäryhmä"
+  ],
+  "o4D6fm": [
+    "Päivitä"
+  ],
+  "VBZJJg": [
+    "Päivitä sovellus, jos haluat jatkaa."
+  ],
+  "yxqMCD": [
+    "Päivitys tarvitaan"
+  ],
+  "wq2RDq": [
+    "Vahvista"
+  ],
+  "PfbG6H": [
+    "Virheellinen vahvistuskoodi"
+  ],
+  "aveKoG": [
+    "Lähetimme juuri vahvistuskoodin sähköpostiosoitteeseesi. Sen saapuminen voi kestää muutaman minuutin"
+  ],
+  "Qm6K/s": [
+    "Vahvista sähköpostiosoitteesi"
+  ]
 }

@@ -1,6 +1,5 @@
 package com.discord.foreground_service
 
-import B9.n
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -12,6 +11,7 @@ import com.discord.foreground_service.utils.Wakelocks
 import com.discord.misc.utilities.intent.IntentUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
+import com.discord.notifications.actions.intents.NotificationAction.Companion
 import com.discord.permissions.NativePermissionManagerModule
 import com.discord.permissions.NativePermissionPromise
 import com.facebook.react.bridge.NativeModule
@@ -20,6 +20,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import java.lang.ref.WeakReference
 import java.util.NoSuchElementException
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.p
 
 @SourceDebugExtension(["SMAP\nForegroundServiceManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n+ 2 NotificationAction.kt\ncom/discord/notifications/actions/intents/NotificationAction$Companion\n+ 3 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,186:1\n86#2,2:187\n89#2,2:190\n14#3:189\n1948#4,14:192\n*S KotlinDebug\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n*L\n37#1:187,2\n37#1:190,2\n37#1:189\n169#1:192,14\n*E\n"])
 public object ForegroundServiceManager {
@@ -76,7 +77,7 @@ public object ForegroundServiceManager {
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  throw new n();
+                  throw new p();
                }
 
                var7.requestForegroundServicePermissionScreenShareWithMic(var3);
@@ -145,7 +146,7 @@ public object ForegroundServiceManager {
             INSTANCE.handleCreateOrUpdateService(var1 as ForegroundServiceManager.ForegroundServiceOperation.CreateOrUpdate);
          } else {
             if (var1 !is ForegroundServiceManager.ForegroundServiceOperation.Destroy) {
-               throw new n();
+               throw new p();
             }
 
             INSTANCE.handleDestroyService(var1 as ForegroundServiceManager.ForegroundServiceOperation.Destroy);
@@ -165,7 +166,7 @@ public object ForegroundServiceManager {
    }
 
    public fun handleIntent(context: Context, intent: Intent): Unit? {
-      val var4: NotificationAction.Companion = NotificationAction.Companion;
+      val var4: Companion = NotificationAction.Companion;
       val var6: NotificationAction;
       if (IntentUtilsKt.hasExtra(var2, GenericAction::class)) {
          var6 = (androidx.core.content.c.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
@@ -471,14 +472,14 @@ public object ForegroundServiceManager {
 
          public override fun toString(): String {
             val var2: WeakReference = this.contextRef;
-            val var1: java.util.List = this.serviceConfigurations;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("CreateOrUpdate(contextRef=");
-            var3.append(var2);
-            var3.append(", serviceConfigurations=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.util.List = this.serviceConfigurations;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("CreateOrUpdate(contextRef=");
+            var1.append(var2);
+            var1.append(", serviceConfigurations=");
+            var1.append(var3);
+            var1.append(")");
+            return var1.toString();
          }
       }
 
@@ -512,12 +513,12 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Destroy(contextRef=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Destroy(contextRef=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

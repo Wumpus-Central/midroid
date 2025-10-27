@@ -21,7 +21,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.react.FontManager
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
@@ -30,7 +30,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nAutoModerationNotificationEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AutoModerationNotificationEmbedView.kt\ncom/discord/chat/presentation/message/view/AutoModerationNotificationEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,191:1\n257#2,2:192\n257#2,2:194\n257#2,2:196\n257#2,2:198\n257#2,2:200\n257#2,2:202\n257#2,2:204\n257#2,2:206\n257#2,2:208\n257#2,2:210\n257#2,2:212\n257#2,2:214\n257#2,2:216\n257#2,2:218\n257#2,2:220\n257#2,2:222\n257#2,2:224\n257#2,2:226\n257#2,2:228\n*S KotlinDebug\n*F\n+ 1 AutoModerationNotificationEmbedView.kt\ncom/discord/chat/presentation/message/view/AutoModerationNotificationEmbedView\n*L\n114#1:192,2\n115#1:194,2\n116#1:196,2\n117#1:198,2\n118#1:200,2\n119#1:202,2\n120#1:204,2\n124#1:206,2\n128#1:208,2\n132#1:210,2\n133#1:212,2\n135#1:214,2\n141#1:216,2\n145#1:218,2\n149#1:220,2\n153#1:222,2\n157#1:224,2\n160#1:226,2\n167#1:228,2\n*E\n"])
 public class AutoModerationNotificationEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2),
-   VerticalSpacingItemDecoration.SpacingProviderView {
+   SpacingProviderView {
    private final val binding: AutoModerationNotificationEmbedViewBinding
    private final var allowChildGestures: Boolean
 
@@ -188,26 +188,26 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
          }
       }
 
-      val var33: java.lang.String = var1.getActionsIconURL();
-      val var8: java.lang.String = var1.getActionsText();
-      val var12: DCDButton = this.binding.actionsButton;
-      if (var33 != null) {
-         this.binding.actionsButton.setIcon(var33, SizeUtilsKt.getDpToPx(16));
+      val var8: java.lang.String = var1.getActionsIconURL();
+      val var12: java.lang.String = var1.getActionsText();
+      val var33: DCDButton = this.binding.actionsButton;
+      if (var8 != null) {
+         this.binding.actionsButton.setIcon(var8, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var8);
-      var12.setOnClickButtonListener(var2);
-      val var10: java.lang.String = var1.getFeedbackText();
-      val var9: DCDButton = this.binding.feedbackButton;
-      this.binding.feedbackButton.setText(var10);
-      var9.setOnClickButtonListener(var3);
+      this.binding.actionsButton.setText(var12);
+      var33.setOnClickButtonListener(var2);
+      val var9: java.lang.String = var1.getFeedbackText();
+      val var10: DCDButton = this.binding.feedbackButton;
+      this.binding.feedbackButton.setText(var9);
+      var10.setOnClickButtonListener(var3);
    }
 
    public open fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
       return this.allowChildGestures xor true;
    }
 
-   public override fun spacingPxOverride(): Int {
+   public open fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

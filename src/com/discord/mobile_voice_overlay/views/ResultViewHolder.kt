@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.mobile_voice_overlay.MobileVoiceOverlaySelectorResult
@@ -17,7 +17,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 private class ResultViewHolder(parent: ViewGroup,
    onChannelSelected: (ChannelId) -> Unit,
    binding: OverlayVoiceChannelSearchResultBinding = OverlayVoiceChannelSearchResultBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false)
-) : RecyclerView.ViewHolder(var3.getRoot()) {
+) : ViewHolder(var3.getRoot()) {
    private final val onChannelSelected: (ChannelId) -> Unit
    private final val binding: OverlayVoiceChannelSearchResultBinding
 

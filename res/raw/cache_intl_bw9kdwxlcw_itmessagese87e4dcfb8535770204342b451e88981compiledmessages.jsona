@@ -1,14 +1,38 @@
 {
-  "RPb8Zm": "Il tuo feedback ci aiuta a migliorare le funzionalità di Discord Safety.",
-  "KZw6kp": "Cosa non funziona come dovrebbe?",
-  "eSP1Fx": "Ho cambiato idea sul vedere questi contenuti",
-  "bC0QVV": "Le istruzioni non erano chiare",
-  "8JFGXV": "Ho provato a seguire i passaggi, ma non ha funzionato",
-  "Dl4A+f": "Non avevo i documenti giusti con me",
-  "ZsnNg4": "Mi preoccupa condividere informazioni personali",
-  "kkKhVF": "Ci vuole troppo tempo",
-  "maxf2d": "Non ero sicuro del perché fosse necessario",
-  "Q5cQ4+": "Descrivi il tuo problema",
-  "zApKaW": "Puoi dirci di più?",
-  "RqoA4u": "Com'è stata la tua esperienza di verifica dell'età?"
+  "RPb8Zk": [
+    "Il tuo feedback ci aiuta a migliorare le funzionalità di Discord Safety."
+  ],
+  "KZw6kn": [
+    "Cosa non funziona come dovrebbe?"
+  ],
+  "eSP1F9": [
+    "Ho cambiato idea sul vedere questi contenuti"
+  ],
+  "bC0QVX": [
+    "Le istruzioni non erano chiare"
+  ],
+  "8JFGXc": [
+    "Ho provato a seguire i passaggi, ma non ha funzionato"
+  ],
+  "Dl4A+U": [
+    "Non avevo i documenti giusti con me"
+  ],
+  "ZsnNgz": [
+    "Mi preoccupa condividere informazioni personali"
+  ],
+  "kkKhVJ": [
+    "Ci vuole troppo tempo"
+  ],
+  "maxf2S": [
+    "Non ero sicuro del perché fosse necessario"
+  ],
+  "Q5cQ46": [
+    "Descrivi il tuo problema"
+  ],
+  "zApKaR": [
+    "Puoi dirci di più?"
+  ],
+  "RqoA4v": [
+    "Com'è stata la tua esperienza di verifica dell'età?"
+  ]
 }

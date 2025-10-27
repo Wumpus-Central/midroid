@@ -1,6 +1,5 @@
 package com.discord.chat.bridge
 
-import B9.j
 import com.discord.chat.bridge.activities.ActivityInstanceEmbed
 import com.discord.chat.bridge.activities.ActivityRichPresenceInviteEmbed
 import com.discord.chat.bridge.attachment.Attachment
@@ -39,11 +38,13 @@ import com.discord.primitives.MessageFlag
 import com.discord.primitives.MessageFlagKt
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
+import kc.m
 import kotlinx.serialization.KSerializer
-import n1.a
-import nb.g
+import n2.a
+import xa.c
+import xa.l
 
-@g
+@m
 public data class Message(type: MessageType,
    id: MessageId,
    nonce: MessageId? = ...,
@@ -252,7 +253,10 @@ public data class Message(type: MessageType,
    public final val shouldShowRoleDot: Boolean
    public final val shouldShowRoleOnName: Boolean
    public final val colorString: Int?
+
+   @c
    internal final val avatarURL: String?
+
    public final val avatarDecorationURL: String?
    public final val embeds: List<Embed>?
    public final val attachments: List<Attachment>?
@@ -519,7 +523,7 @@ public data class Message(type: MessageType,
       this.clanBadgeUrl = var92;
       this.gameApplicationId = var93;
       this.isAnnouncementChannel = var94;
-      this.constrainedWidth$delegate = j.b(new a(this));
+      this.constrainedWidth$delegate = l.a(new a(this));
    }
 
    @JvmStatic
@@ -1460,8 +1464,8 @@ public data class Message(type: MessageType,
          var15 = this.roleColors.hashCode();
       }
 
-      val var88: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
-      val var89: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
+      val var89: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
+      val var88: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
       val var16: Int;
       if (this.colorString == null) {
          var16 = 0;
@@ -2083,10 +2087,10 @@ public data class Message(type: MessageType,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           + var15
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 + var88
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 + var89
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        + var89
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        + var88
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   * 31
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                + var16
@@ -2322,8 +2326,8 @@ public data class Message(type: MessageType,
    }
 
    public override fun toString(): String {
-      val var10: MessageType = this.type;
-      val var9: java.lang.String = MessageId.toString-impl(this.id);
+      val var9: MessageType = this.type;
+      val var10: java.lang.String = MessageId.toString-impl(this.id);
       val var95: java.lang.String;
       if (this.nonce == null) {
          var95 = "null";
@@ -2331,282 +2335,282 @@ public data class Message(type: MessageType,
          var95 = MessageId.toString-impl(this.nonce);
       }
 
-      val var68: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var47: GuildId = this.guildId;
-      val var60: MessageState = this.state;
-      val var18: UserId = this.authorId;
+      val var53: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var77: GuildId = this.guildId;
+      val var47: MessageState = this.state;
+      val var78: UserId = this.authorId;
       val var6: Long = this.flags;
-      val var31: java.lang.String = this.edited;
-      val var49: Int = this.editedColor;
-      val var75: java.lang.Float = this._constrainedWidth;
-      val var93: Int = this.textColor;
-      val var77: Int = this.linkColor;
-      val var76: java.lang.String = this.timestamp;
-      val var53: Int = this.timestampColor;
-      val var58: java.lang.String = this.username;
-      val var81: Int = this.usernameColor;
-      val var37: Int = this.roleColor;
-      val var78: RoleColors = this.roleColors;
-      val var4: Boolean = this.shouldShowRoleDot;
+      val var61: java.lang.String = this.edited;
+      val var20: Int = this.editedColor;
+      val var36: java.lang.Float = this._constrainedWidth;
+      val var26: Int = this.textColor;
+      val var21: Int = this.linkColor;
+      val var24: java.lang.String = this.timestamp;
+      val var73: Int = this.timestampColor;
+      val var40: java.lang.String = this.username;
+      val var60: Int = this.usernameColor;
+      val var13: Int = this.roleColor;
+      val var37: RoleColors = this.roleColors;
+      val var3: Boolean = this.shouldShowRoleDot;
       val var5: Boolean = this.shouldShowRoleOnName;
-      val var66: Int = this.colorString;
-      val var32: java.lang.String = this.avatarURL;
-      val var27: java.lang.String = this.avatarDecorationURL;
-      val var22: java.util.List = this.embeds;
-      val var67: java.util.List = this.attachments;
-      val var87: java.lang.Float = this.attachmentsOpacity;
-      val var45: StructurableText = this.content;
-      val var72: java.util.List = this.reactions;
-      val var43: java.util.List = this.codedLinks;
-      val var40: ActivityInstanceEmbed = this.activityInstanceEmbed;
-      val var13: java.util.List = this.stickers;
-      val var56: RoleIcon = this.roleIcon;
-      val var55: ConnectionsRoleTag = this.connectionsRoleTag;
-      val var51: ThreadEmbed = this.threadEmbed;
-      val var3: Boolean = this.mentioned;
-      val var54: java.lang.Boolean = this.gifAutoPlay;
-      val var71: java.lang.Boolean = this.animateEmoji;
-      val var41: java.lang.Boolean = this.showLinkDecorations;
-      val var52: ReferencedMessage = this.referencedMessage;
-      val var24: ExecutedCommand = this.executedCommand;
-      val var82: java.util.List = this.components;
-      val var62: java.lang.String = this.threadStarterMessageHeader;
-      val var74: java.lang.Boolean = this.communicationDisabled;
-      val var33: java.lang.String = this.tagText;
-      val var61: java.lang.Boolean = this.tagVerified;
-      val var36: Int = this.tagTextColor;
-      val var30: Int = this.tagBackgroundColor;
-      val var42: java.lang.String = this.tagType;
-      val var69: java.lang.String = this.tagIconUrl;
-      val var89: java.lang.String = this.opTagText;
-      val var85: EphemeralIndication = this.ephemeralIndication;
-      val var70: SurveyIndication = this.surveyIndication;
-      val var14: InteractionStatus = this.interactionStatus;
-      val var17: java.lang.Boolean = this.useAttachmentGridLayout;
-      val var34: java.lang.Boolean = this.useAttachmentUploadPreview;
-      val var59: java.lang.Boolean = this.isCurrentUserMessageAuthor;
-      val var57: java.lang.String = this.obscureLearnMoreLabel;
-      val var94: java.lang.Boolean = this.usingGradientTheme;
-      val var80: java.lang.String = this.title;
-      val var19: java.lang.String = this.description;
-      val var28: java.util.List = this.avatarURLs;
-      val var86: java.lang.Boolean = this.isCallActive;
-      val var16: java.lang.Boolean = this.missed;
-      val var84: java.lang.Long = this.rawMilliseconds;
-      val var91: Sticker = this.sticker;
-      val var11: java.lang.String = this.stickerLabel;
-      val var88: java.lang.String = this.buttonLabel;
-      val var79: java.lang.Boolean = this.showInviteToSpeakButton;
-      val var64: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
-      val var2: Boolean = this.isFirstForumPostMessage;
-      val var20: ForumPostActions = this.postActions;
-      val var25: AutoModerationContext = this.autoModerationContext;
-      val var39: ReferralEmbed = this.referralTrialOfferInfo;
-      val var50: java.util.List = this.giftCodes;
-      val var26: GiftEmbed = this.referralTrialOffer;
-      val var65: Int = this.totalMonthsSubscribed;
-      val var12: java.util.List = this.postPreviewEmbeds;
-      val var29: ChannelPromptData = this.channelPromptData;
-      val var21: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
-      val var46: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
-      val var38: PollData = this.pollData;
-      val var23: SharedCustomThemeData = this.sharedClientTheme;
-      val var92: CtaButton = this.ctaButton;
-      val var83: Int = this.audioAttachmentBackgroundColor;
-      val var15: ForwardInfo = this.forwardInfo;
-      val var44: java.lang.Boolean = this.showInlineForwardButton;
-      val var48: GuildId = this.clanTagGuildId;
-      val var35: java.lang.String = this.clanTag;
-      val var90: java.lang.String = this.clanBadgeUrl;
-      val var73: java.lang.String = this.gameApplicationId;
+      val var81: Int = this.colorString;
+      val var84: java.lang.String = this.avatarURL;
+      val var48: java.lang.String = this.avatarDecorationURL;
+      val var80: java.util.List = this.embeds;
+      val var94: java.util.List = this.attachments;
+      val var67: java.lang.Float = this.attachmentsOpacity;
+      val var56: StructurableText = this.content;
+      val var34: java.util.List = this.reactions;
+      val var54: java.util.List = this.codedLinks;
+      val var29: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var23: java.util.List = this.stickers;
+      val var30: RoleIcon = this.roleIcon;
+      val var27: ConnectionsRoleTag = this.connectionsRoleTag;
+      val var92: ThreadEmbed = this.threadEmbed;
+      val var2: Boolean = this.mentioned;
+      val var62: java.lang.Boolean = this.gifAutoPlay;
+      val var89: java.lang.Boolean = this.animateEmoji;
+      val var86: java.lang.Boolean = this.showLinkDecorations;
+      val var68: ReferencedMessage = this.referencedMessage;
+      val var19: ExecutedCommand = this.executedCommand;
+      val var69: java.util.List = this.components;
+      val var85: java.lang.String = this.threadStarterMessageHeader;
+      val var38: java.lang.Boolean = this.communicationDisabled;
+      val var25: java.lang.String = this.tagText;
+      val var45: java.lang.Boolean = this.tagVerified;
+      val var35: Int = this.tagTextColor;
+      val var87: Int = this.tagBackgroundColor;
+      val var14: java.lang.String = this.tagType;
+      val var91: java.lang.String = this.tagIconUrl;
+      val var70: java.lang.String = this.opTagText;
+      val var63: EphemeralIndication = this.ephemeralIndication;
+      val var39: SurveyIndication = this.surveyIndication;
+      val var57: InteractionStatus = this.interactionStatus;
+      val var74: java.lang.Boolean = this.useAttachmentGridLayout;
+      val var44: java.lang.Boolean = this.useAttachmentUploadPreview;
+      val var64: java.lang.Boolean = this.isCurrentUserMessageAuthor;
+      val var17: java.lang.String = this.obscureLearnMoreLabel;
+      val var90: java.lang.Boolean = this.usingGradientTheme;
+      val var18: java.lang.String = this.title;
+      val var71: java.lang.String = this.description;
+      val var50: java.util.List = this.avatarURLs;
+      val var52: java.lang.Boolean = this.isCallActive;
+      val var79: java.lang.Boolean = this.missed;
+      val var15: java.lang.Long = this.rawMilliseconds;
+      val var42: Sticker = this.sticker;
+      val var59: java.lang.String = this.stickerLabel;
+      val var31: java.lang.String = this.buttonLabel;
+      val var88: java.lang.Boolean = this.showInviteToSpeakButton;
+      val var75: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
+      val var4: Boolean = this.isFirstForumPostMessage;
+      val var83: ForumPostActions = this.postActions;
+      val var12: AutoModerationContext = this.autoModerationContext;
+      val var33: ReferralEmbed = this.referralTrialOfferInfo;
+      val var55: java.util.List = this.giftCodes;
+      val var82: GiftEmbed = this.referralTrialOffer;
+      val var72: Int = this.totalMonthsSubscribed;
+      val var58: java.util.List = this.postPreviewEmbeds;
+      val var76: ChannelPromptData = this.channelPromptData;
+      val var16: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
+      val var93: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
+      val var11: PollData = this.pollData;
+      val var46: SharedCustomThemeData = this.sharedClientTheme;
+      val var43: CtaButton = this.ctaButton;
+      val var49: Int = this.audioAttachmentBackgroundColor;
+      val var32: ForwardInfo = this.forwardInfo;
+      val var51: java.lang.Boolean = this.showInlineForwardButton;
+      val var22: GuildId = this.clanTagGuildId;
+      val var65: java.lang.String = this.clanTag;
+      val var41: java.lang.String = this.clanBadgeUrl;
+      val var28: java.lang.String = this.gameApplicationId;
       val var1: Boolean = this.isAnnouncementChannel;
-      val var63: StringBuilder = new StringBuilder();
-      var63.append("Message(type=");
-      var63.append(var10);
-      var63.append(", id=");
-      var63.append(var9);
-      var63.append(", nonce=");
-      var63.append(var95);
-      var63.append(", channelId=");
-      var63.append(var68);
-      var63.append(", guildId=");
-      var63.append(var47);
-      var63.append(", state=");
-      var63.append(var60);
-      var63.append(", authorId=");
-      var63.append(var18);
-      var63.append(", flags=");
-      var63.append(var6);
-      var63.append(", edited=");
-      var63.append(var31);
-      var63.append(", editedColor=");
-      var63.append(var49);
-      var63.append(", _constrainedWidth=");
-      var63.append(var75);
-      var63.append(", textColor=");
-      var63.append(var93);
-      var63.append(", linkColor=");
-      var63.append(var77);
-      var63.append(", timestamp=");
-      var63.append(var76);
-      var63.append(", timestampColor=");
-      var63.append(var53);
-      var63.append(", username=");
-      var63.append(var58);
-      var63.append(", usernameColor=");
-      var63.append(var81);
-      var63.append(", roleColor=");
-      var63.append(var37);
-      var63.append(", roleColors=");
-      var63.append(var78);
-      var63.append(", shouldShowRoleDot=");
-      var63.append(var4);
-      var63.append(", shouldShowRoleOnName=");
-      var63.append(var5);
-      var63.append(", colorString=");
-      var63.append(var66);
-      var63.append(", avatarURL=");
-      var63.append(var32);
-      var63.append(", avatarDecorationURL=");
-      var63.append(var27);
-      var63.append(", embeds=");
-      var63.append(var22);
-      var63.append(", attachments=");
-      var63.append(var67);
-      var63.append(", attachmentsOpacity=");
-      var63.append(var87);
-      var63.append(", content=");
-      var63.append(var45);
-      var63.append(", reactions=");
-      var63.append(var72);
-      var63.append(", codedLinks=");
-      var63.append(var43);
-      var63.append(", activityInstanceEmbed=");
-      var63.append(var40);
-      var63.append(", stickers=");
-      var63.append(var13);
-      var63.append(", roleIcon=");
-      var63.append(var56);
-      var63.append(", connectionsRoleTag=");
-      var63.append(var55);
-      var63.append(", threadEmbed=");
-      var63.append(var51);
-      var63.append(", mentioned=");
-      var63.append(var3);
-      var63.append(", gifAutoPlay=");
-      var63.append(var54);
-      var63.append(", animateEmoji=");
-      var63.append(var71);
-      var63.append(", showLinkDecorations=");
-      var63.append(var41);
-      var63.append(", referencedMessage=");
-      var63.append(var52);
-      var63.append(", executedCommand=");
-      var63.append(var24);
-      var63.append(", components=");
-      var63.append(var82);
-      var63.append(", threadStarterMessageHeader=");
-      var63.append(var62);
-      var63.append(", communicationDisabled=");
-      var63.append(var74);
-      var63.append(", tagText=");
-      var63.append(var33);
-      var63.append(", tagVerified=");
-      var63.append(var61);
-      var63.append(", tagTextColor=");
-      var63.append(var36);
-      var63.append(", tagBackgroundColor=");
-      var63.append(var30);
-      var63.append(", tagType=");
-      var63.append(var42);
-      var63.append(", tagIconUrl=");
-      var63.append(var69);
-      var63.append(", opTagText=");
-      var63.append(var89);
-      var63.append(", ephemeralIndication=");
-      var63.append(var85);
-      var63.append(", surveyIndication=");
-      var63.append(var70);
-      var63.append(", interactionStatus=");
-      var63.append(var14);
-      var63.append(", useAttachmentGridLayout=");
-      var63.append(var17);
-      var63.append(", useAttachmentUploadPreview=");
-      var63.append(var34);
-      var63.append(", isCurrentUserMessageAuthor=");
-      var63.append(var59);
-      var63.append(", obscureLearnMoreLabel=");
-      var63.append(var57);
-      var63.append(", usingGradientTheme=");
-      var63.append(var94);
-      var63.append(", title=");
-      var63.append(var80);
-      var63.append(", description=");
-      var63.append(var19);
-      var63.append(", avatarURLs=");
-      var63.append(var28);
-      var63.append(", isCallActive=");
-      var63.append(var86);
-      var63.append(", missed=");
-      var63.append(var16);
-      var63.append(", rawMilliseconds=");
-      var63.append(var84);
-      var63.append(", sticker=");
-      var63.append(var91);
-      var63.append(", stickerLabel=");
-      var63.append(var11);
-      var63.append(", buttonLabel=");
-      var63.append(var88);
-      var63.append(", showInviteToSpeakButton=");
-      var63.append(var79);
-      var63.append(", activityRichPresenceInviteEmbed=");
-      var63.append(var64);
-      var63.append(", isFirstForumPostMessage=");
-      var63.append(var2);
-      var63.append(", postActions=");
-      var63.append(var20);
-      var63.append(", autoModerationContext=");
-      var63.append(var25);
-      var63.append(", referralTrialOfferInfo=");
-      var63.append(var39);
-      var63.append(", giftCodes=");
-      var63.append(var50);
-      var63.append(", referralTrialOffer=");
-      var63.append(var26);
-      var63.append(", totalMonthsSubscribed=");
-      var63.append(var65);
-      var63.append(", postPreviewEmbeds=");
-      var63.append(var12);
-      var63.append(", channelPromptData=");
-      var63.append(var29);
-      var63.append(", safetyPolicyNoticeEmbed=");
-      var63.append(var21);
-      var63.append(", safetySystemNotificationEmbed=");
-      var63.append(var46);
-      var63.append(", pollData=");
-      var63.append(var38);
-      var63.append(", sharedClientTheme=");
-      var63.append(var23);
-      var63.append(", ctaButton=");
-      var63.append(var92);
-      var63.append(", audioAttachmentBackgroundColor=");
-      var63.append(var83);
-      var63.append(", forwardInfo=");
-      var63.append(var15);
-      var63.append(", showInlineForwardButton=");
-      var63.append(var44);
-      var63.append(", clanTagGuildId=");
-      var63.append(var48);
-      var63.append(", clanTag=");
-      var63.append(var35);
-      var63.append(", clanBadgeUrl=");
-      var63.append(var90);
-      var63.append(", gameApplicationId=");
-      var63.append(var73);
-      var63.append(", isAnnouncementChannel=");
-      var63.append(var1);
-      var63.append(")");
-      return var63.toString();
+      val var66: StringBuilder = new StringBuilder();
+      var66.append("Message(type=");
+      var66.append(var9);
+      var66.append(", id=");
+      var66.append(var10);
+      var66.append(", nonce=");
+      var66.append(var95);
+      var66.append(", channelId=");
+      var66.append(var53);
+      var66.append(", guildId=");
+      var66.append(var77);
+      var66.append(", state=");
+      var66.append(var47);
+      var66.append(", authorId=");
+      var66.append(var78);
+      var66.append(", flags=");
+      var66.append(var6);
+      var66.append(", edited=");
+      var66.append(var61);
+      var66.append(", editedColor=");
+      var66.append(var20);
+      var66.append(", _constrainedWidth=");
+      var66.append(var36);
+      var66.append(", textColor=");
+      var66.append(var26);
+      var66.append(", linkColor=");
+      var66.append(var21);
+      var66.append(", timestamp=");
+      var66.append(var24);
+      var66.append(", timestampColor=");
+      var66.append(var73);
+      var66.append(", username=");
+      var66.append(var40);
+      var66.append(", usernameColor=");
+      var66.append(var60);
+      var66.append(", roleColor=");
+      var66.append(var13);
+      var66.append(", roleColors=");
+      var66.append(var37);
+      var66.append(", shouldShowRoleDot=");
+      var66.append(var3);
+      var66.append(", shouldShowRoleOnName=");
+      var66.append(var5);
+      var66.append(", colorString=");
+      var66.append(var81);
+      var66.append(", avatarURL=");
+      var66.append(var84);
+      var66.append(", avatarDecorationURL=");
+      var66.append(var48);
+      var66.append(", embeds=");
+      var66.append(var80);
+      var66.append(", attachments=");
+      var66.append(var94);
+      var66.append(", attachmentsOpacity=");
+      var66.append(var67);
+      var66.append(", content=");
+      var66.append(var56);
+      var66.append(", reactions=");
+      var66.append(var34);
+      var66.append(", codedLinks=");
+      var66.append(var54);
+      var66.append(", activityInstanceEmbed=");
+      var66.append(var29);
+      var66.append(", stickers=");
+      var66.append(var23);
+      var66.append(", roleIcon=");
+      var66.append(var30);
+      var66.append(", connectionsRoleTag=");
+      var66.append(var27);
+      var66.append(", threadEmbed=");
+      var66.append(var92);
+      var66.append(", mentioned=");
+      var66.append(var2);
+      var66.append(", gifAutoPlay=");
+      var66.append(var62);
+      var66.append(", animateEmoji=");
+      var66.append(var89);
+      var66.append(", showLinkDecorations=");
+      var66.append(var86);
+      var66.append(", referencedMessage=");
+      var66.append(var68);
+      var66.append(", executedCommand=");
+      var66.append(var19);
+      var66.append(", components=");
+      var66.append(var69);
+      var66.append(", threadStarterMessageHeader=");
+      var66.append(var85);
+      var66.append(", communicationDisabled=");
+      var66.append(var38);
+      var66.append(", tagText=");
+      var66.append(var25);
+      var66.append(", tagVerified=");
+      var66.append(var45);
+      var66.append(", tagTextColor=");
+      var66.append(var35);
+      var66.append(", tagBackgroundColor=");
+      var66.append(var87);
+      var66.append(", tagType=");
+      var66.append(var14);
+      var66.append(", tagIconUrl=");
+      var66.append(var91);
+      var66.append(", opTagText=");
+      var66.append(var70);
+      var66.append(", ephemeralIndication=");
+      var66.append(var63);
+      var66.append(", surveyIndication=");
+      var66.append(var39);
+      var66.append(", interactionStatus=");
+      var66.append(var57);
+      var66.append(", useAttachmentGridLayout=");
+      var66.append(var74);
+      var66.append(", useAttachmentUploadPreview=");
+      var66.append(var44);
+      var66.append(", isCurrentUserMessageAuthor=");
+      var66.append(var64);
+      var66.append(", obscureLearnMoreLabel=");
+      var66.append(var17);
+      var66.append(", usingGradientTheme=");
+      var66.append(var90);
+      var66.append(", title=");
+      var66.append(var18);
+      var66.append(", description=");
+      var66.append(var71);
+      var66.append(", avatarURLs=");
+      var66.append(var50);
+      var66.append(", isCallActive=");
+      var66.append(var52);
+      var66.append(", missed=");
+      var66.append(var79);
+      var66.append(", rawMilliseconds=");
+      var66.append(var15);
+      var66.append(", sticker=");
+      var66.append(var42);
+      var66.append(", stickerLabel=");
+      var66.append(var59);
+      var66.append(", buttonLabel=");
+      var66.append(var31);
+      var66.append(", showInviteToSpeakButton=");
+      var66.append(var88);
+      var66.append(", activityRichPresenceInviteEmbed=");
+      var66.append(var75);
+      var66.append(", isFirstForumPostMessage=");
+      var66.append(var4);
+      var66.append(", postActions=");
+      var66.append(var83);
+      var66.append(", autoModerationContext=");
+      var66.append(var12);
+      var66.append(", referralTrialOfferInfo=");
+      var66.append(var33);
+      var66.append(", giftCodes=");
+      var66.append(var55);
+      var66.append(", referralTrialOffer=");
+      var66.append(var82);
+      var66.append(", totalMonthsSubscribed=");
+      var66.append(var72);
+      var66.append(", postPreviewEmbeds=");
+      var66.append(var58);
+      var66.append(", channelPromptData=");
+      var66.append(var76);
+      var66.append(", safetyPolicyNoticeEmbed=");
+      var66.append(var16);
+      var66.append(", safetySystemNotificationEmbed=");
+      var66.append(var93);
+      var66.append(", pollData=");
+      var66.append(var11);
+      var66.append(", sharedClientTheme=");
+      var66.append(var46);
+      var66.append(", ctaButton=");
+      var66.append(var43);
+      var66.append(", audioAttachmentBackgroundColor=");
+      var66.append(var49);
+      var66.append(", forwardInfo=");
+      var66.append(var32);
+      var66.append(", showInlineForwardButton=");
+      var66.append(var51);
+      var66.append(", clanTagGuildId=");
+      var66.append(var22);
+      var66.append(", clanTag=");
+      var66.append(var65);
+      var66.append(", clanBadgeUrl=");
+      var66.append(var41);
+      var66.append(", gameApplicationId=");
+      var66.append(var28);
+      var66.append(", isAnnouncementChannel=");
+      var66.append(var1);
+      var66.append(")");
+      return var66.toString();
    }
 
    public companion object {

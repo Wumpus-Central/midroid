@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import x1.a;
 
 public final class ClanTagChipletViewBinding implements ViewBinding {
    @NonNull
@@ -31,15 +31,15 @@ public final class ClanTagChipletViewBinding implements ViewBinding {
    @NonNull
    public static ClanTagChipletViewBinding bind(@NonNull View var0) {
       int var1 = R.id.badge;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.container;
-         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-         if (var4 != null) {
+         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.tag;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
-               return new ClanTagChipletViewBinding(var0, var3, var4, var2);
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
+               return new ClanTagChipletViewBinding(var0, var4, var2, var3);
             }
          }
       }

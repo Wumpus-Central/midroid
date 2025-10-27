@@ -1,29 +1,29 @@
 package com.discord.file_downloader.utils
 
-import B9.s
 import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
+import xa.v
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
-   L.l(
+   O.m(
       new Pair[]{
-         s.a("avif", "image/avif"),
-         s.a("gif", "image/gif"),
-         s.a("heic", "image/heic"),
-         s.a("jpeg", "image/jpeg"),
-         s.a("jpg", "image/jpeg"),
-         s.a("mov", "video/quicktime"),
-         s.a("mp3", "audio/mpeg"),
-         s.a("mp4", "video/mp4"),
-         s.a("pdf", "application/pdf"),
-         s.a("png", "image/png"),
-         s.a("txt", "text/plain"),
-         s.a("wav", "audio/wav"),
-         s.a("webm", "video/webm"),
-         s.a("webp", "image/webp"),
-         s.a("zip", "application/zip")
+         v.a("avif", "image/avif"),
+         v.a("gif", "image/gif"),
+         v.a("heic", "image/heic"),
+         v.a("jpeg", "image/jpeg"),
+         v.a("jpg", "image/jpeg"),
+         v.a("mov", "video/quicktime"),
+         v.a("mp3", "audio/mpeg"),
+         v.a("mp4", "video/mp4"),
+         v.a("pdf", "application/pdf"),
+         v.a("png", "image/png"),
+         v.a("txt", "text/plain"),
+         v.a("wav", "audio/wav"),
+         v.a("webm", "video/webm"),
+         v.a("webp", "image/webp"),
+         v.a("zip", "application/zip")
       }
    )
 

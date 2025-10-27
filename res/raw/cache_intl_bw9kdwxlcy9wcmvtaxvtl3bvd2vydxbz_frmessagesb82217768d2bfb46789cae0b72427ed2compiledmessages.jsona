@@ -1,17 +1,27 @@
 {
-  "FJZeZG": "Déverrouille de nouveaux styles de rôles avec les Boosts.",
-  "VpEDJS": "Apporte une touche de magie à certains rôles",
-  "+/IHLi": "magie",
-  "tBhCys": "Tu n'as pas besoin de sélectionner de couleur pour le style de rôle « Holographique ».",
-  "vQz+6e": "Dégradé",
-  "7lwpzc": [
+  "FJZeZF": [
+    "Déverrouille de nouveaux styles de rôles avec les Boosts."
+  ],
+  "VpEDJc": [
+    "Apporte une touche de magie à certains rôles"
+  ],
+  "+/IHLl": [
+    "magie"
+  ],
+  "tBhCyr": [
+    "Tu n'as pas besoin de sélectionner de couleur pour le style de rôle « Holographique »."
+  ],
+  "vQz+6W": [
+    "Dégradé"
+  ],
+  "7lwpzR": [
     "Ouvre Discord avec l'application de bureau pour déverrouiller et configurer les nouveaux avantages de boost : ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

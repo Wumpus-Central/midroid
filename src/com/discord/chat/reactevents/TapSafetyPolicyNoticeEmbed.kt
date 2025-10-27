@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEvent {
    public final val classificationId: String
 
@@ -36,8 +37,8 @@ public data class TapSafetyPolicyNoticeEmbed(classificationId: String) : ReactEv
       return this.classificationId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

@@ -1,13 +1,19 @@
 package com.discord.browser_manager
 
-import B9.s
 import android.content.Context
 import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import xa.v
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec(var1) {
+   public final val reactContext: ReactApplicationContext
+
+   init {
+      this.reactContext = var1;
+   }
+
    @JvmStatic
    fun `openInAppURL$lambda$1`(var0: Promise, var1: Exception): Unit {
       var0.reject(null, var1.getMessage(), var1, null);
@@ -25,16 +31,16 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = StringsKt.toIntOrNull(var2);
          if (var3 != null) {
-            return L.m(new Pair[]{s.a("selectedBrowser", var3), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return O.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return L.m(new Pair[]{s.a("selectedBrowser", 1), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return O.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {
       val var4: BrowserManager = BrowserManager.INSTANCE;
-      var var3: Any = this.getCurrentActivity();
+      var var3: Any = this.reactContext.getCurrentActivity();
       if (var3 == null) {
          var3 = this.getReactApplicationContext();
       }

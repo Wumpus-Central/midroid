@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Se ha desbloqueado tu cuenta",
-  "d9Ykjo": "Código de confirmación",
-  "bFbsV1": "Introduce tu correo electrónico",
-  "RRBNpq": "Siguiente",
-  "0DHxys": [
+  "/fHz9S": [
+    "Se ha desbloqueado tu cuenta"
+  ],
+  "d9Ykjr": [
+    "Código de confirmación"
+  ],
+  "bFbsV6": [
+    "Introduce tu correo electrónico"
+  ],
+  "RRBNpv": [
+    "Siguiente"
+  ],
+  "0DHxym": [
     "¿No eres tú? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Podríamos pedirte más datos por el camino, como si fueras un robot",
-  "Ks6opq": "Comenzar",
-  "I2Ctk5": "Completa los pasos siguientes para desbloquear tu cuenta",
-  "RRamMD": "Cuenta bloqueada",
-  "ah0EUl": "Reenviar código",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Podríamos pedirte más datos por el camino, como si fueras un robot"
+  ],
+  "Ks6opt": [
+    "Comenzar"
+  ],
+  "I2Ctk1": [
+    "Completa los pasos siguientes para desbloquear tu cuenta"
+  ],
+  "RRamMH": [
+    "Cuenta bloqueada"
+  ],
+  "ah0EUu": [
+    "Reenviar código"
+  ],
+  "2+Lyn0": [
     "Reenviar código en ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " segundos"
   ],
-  "3AXMYm": "Error al reenviar el código de verificación",
-  "dSkE/P": "Verificar grupo de edad",
-  "o4D6fn": "Actualizar",
-  "VBZJJi": "Actualiza la aplicación para continuar.",
-  "yxqMCA": "Actualización requerida",
-  "wq2RDg": "Verificar",
-  "PfbG6O": "Código de verificación no válido",
-  "aveKoK": "Acabamos de enviar un código de verificación a tu correo. Puede que tarde unos minutos en llegar",
-  "Qm6K/v": "Verificar tu correo electrónico"
+  "3AXMYu": [
+    "Error al reenviar el código de verificación"
+  ],
+  "dSkE/A": [
+    "Verificar grupo de edad"
+  ],
+  "o4D6fm": [
+    "Actualizar"
+  ],
+  "VBZJJg": [
+    "Actualiza la aplicación para continuar."
+  ],
+  "yxqMCD": [
+    "Actualización requerida"
+  ],
+  "wq2RDq": [
+    "Verificar"
+  ],
+  "PfbG6H": [
+    "Código de verificación no válido"
+  ],
+  "aveKoG": [
+    "Acabamos de enviar un código de verificación a tu correo. Puede que tarde unos minutos en llegar"
+  ],
+  "Qm6K/s": [
+    "Verificar tu correo electrónico"
+  ]
 }

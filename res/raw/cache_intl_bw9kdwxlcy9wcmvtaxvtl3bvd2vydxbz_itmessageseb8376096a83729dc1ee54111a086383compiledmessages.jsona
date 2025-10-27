@@ -1,6 +1,8 @@
 {
-  "FJZeZG": "Sblocca nuovi stili dei ruoli con i potenziamenti.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Sblocca nuovi stili dei ruoli con i potenziamenti."
+  ],
+  "VpEDJc": [
     "Dai un tocco di ",
     [
       1,
@@ -8,17 +10,23 @@
     ],
     " a certi ruoli"
   ],
-  "+/IHLi": "magia",
-  "tBhCys": "Lo stile del ruolo \"olografico\" non richiede di selezionare alcun colore.",
-  "vQz+6e": "Gradiente",
-  "7lwpzc": [
+  "+/IHLl": [
+    "magia"
+  ],
+  "tBhCyr": [
+    "Lo stile del ruolo \"olografico\" non richiede di selezionare alcun colore."
+  ],
+  "vQz+6W": [
+    "Gradiente"
+  ],
+  "7lwpzR": [
     "Apri Discord sul desktop per sbloccare e configurare nuovi benefici da potenziamento: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

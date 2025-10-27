@@ -2,10 +2,10 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
    public final val connectionId: Int
    public final val userId: String
@@ -71,18 +71,18 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
       val var1: Int = this.connectionId;
       val var4: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var5: java.lang.String = this.streamId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("FirstFrameCallbackEvent(connectionId=");
-      var6.append(var1);
-      var6.append(", userId=");
-      var6.append(var4);
-      var6.append(", ssrc=");
-      var6.append(var2);
-      var6.append(", streamId=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.String = this.streamId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FirstFrameCallbackEvent(connectionId=");
+      var5.append(var1);
+      var5.append(", userId=");
+      var5.append(var4);
+      var5.append(", ssrc=");
+      var5.append(var2);
+      var5.append(", streamId=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

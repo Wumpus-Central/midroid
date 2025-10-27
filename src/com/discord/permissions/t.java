@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function0;
 public final class t implements Callback {
    public final Function0 a;
 
+   @Override
    public final void invoke(Object[] var1) {
       NativePermissionPromise.b(this.a, var1);
    }

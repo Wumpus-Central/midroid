@@ -2,10 +2,10 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class NoInputCallbackEvent(input: Boolean) : ReactEvent {
    public final val input: Boolean
 

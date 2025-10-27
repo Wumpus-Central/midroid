@@ -1,58 +1,170 @@
 {
-  "tq859/": "What did you have trouble with?",
-  "PL2l6O": "Microphone or audio",
-  "FVhMw8": "Connection or latency",
-  "Moa3W1": "People in the call",
-  "0ZBLiY": "Streaming",
-  "TVTIT0": "Watching a stream",
-  "0WFzPj": "Camera",
-  "kbbtws": "Other people complained about my audio",
-  "Q5Dsa2": "Other people were echoing",
-  "1DnNRE": "Other people had low-quality audio",
-  "ftSvQ0": "I couldn’t hear anyone at all",
-  "GWypHx": "People couldn’t hear me at all",
-  "2IG95O": "I couldn’t hear my game’s audio",
-  "4qlGrK": "I had trouble using speakerphone",
-  "05VSjo": "I couldn’t use the correct audio device",
-  "anHk19": "Someone else had a lot of background noise",
-  "RK9DUl": "Someone else’s voice was cutting in and out",
-  "yGe0BA": "Someone else’s voice sounded robotic",
-  "1o77Iy": "Someone else’s voice was too quiet or too loud",
-  "RGRgmJ": "Audio was delayed",
-  "gMHKDA": "I couldn’t connect",
-  "y5k8Ji": "I had high latency while in the call",
-  "y06Ays": "It took a long time for me to connect",
-  "K5vYQE": "Someone else’s voice was cutting in and out",
-  "f2914u": "Someone else’s voice sounded robotic",
-  "zk+QLy": "Audio and video were desynced",
-  "PLBRzM": "People were being toxic or inappropriate",
-  "zIC+8f": "People said my stream had low audio quality",
-  "RRZZZW": "People said my stream was a black screen",
-  "8ceyQ0": "People said my stream was blurry or pixelated",
-  "w+kiDA": "People couldn’t load my stream",
-  "JS6akJ": "People said my stream’s video and audio were desynced",
-  "3PKSkZ": "People said my stream was freezing or hitching",
-  "iMxexM": "People said my stream was lagging",
-  "HaZSCw": "People said they couldn’t hear my stream",
-  "TaIrh4": "I couldn’t hear my game’s audio",
-  "/nlKuL": "My stream stopped unexpectedly",
-  "k7bdGB": "The stream had low audio quality",
-  "aml28/": "The stream was a black screen",
-  "qdBn3N": "The stream was blurry or pixelated",
-  "jU9Zs7": "I couldn’t load the stream",
-  "JfAvQk": "The stream’s audio and video were desynced",
-  "V3EeCA": "The stream was freezing or hitching",
-  "hi1Y39": "The stream was lagging",
-  "DOOloq": "I couldn’t hear the stream",
-  "jPD99/": "The stream stopped unexpectedly",
-  "ie5nCA": "My virtual background had flickering objects or artefacts",
-  "zYumoq": "My virtual background wasn’t cropping correctly",
-  "Gg/Y1d": "My virtual background lagged when I moved",
-  "calUNj": "My virtual background was fuzzy or had a halo",
-  "Bh+02d": "My camera only showed a black screen",
-  "QbC6LS": "I couldn’t find or turn on my camera",
-  "k7Ido6": "Someone else’s camera feed was blurry or pixelated",
-  "8I/GUF": "Someone else’s camera feed was freezing or hitching",
-  "R+wqwc": "Someone else’s camera only showed a black screen",
-  "vRDE5O": "Audio and video were desynced"
+  "tq8598": [
+    "What did you have trouble with?"
+  ],
+  "PL2l6A": [
+    "Microphone or audio"
+  ],
+  "FVhMw6": [
+    "Connection or latency"
+  ],
+  "Moa3W9": [
+    "People in the call"
+  ],
+  "0ZBLiZ": [
+    "Streaming"
+  ],
+  "TVTIT1": [
+    "Watching a stream"
+  ],
+  "0WFzPh": [
+    "Camera"
+  ],
+  "kbbtwi": [
+    "Other people complained about my audio"
+  ],
+  "Q5Dsaz": [
+    "Other people were echoing"
+  ],
+  "1DnNRO": [
+    "Other people had low-quality audio"
+  ],
+  "ftSvQ0": [
+    "I couldn’t hear anyone at all"
+  ],
+  "GWypH+": [
+    "People couldn’t hear me at all"
+  ],
+  "2IG95D": [
+    "I couldn’t hear my game’s audio"
+  ],
+  "4qlGrO": [
+    "I had trouble using speakerphone"
+  ],
+  "05VSjm": [
+    "I couldn’t use the correct audio device"
+  ],
+  "anHk1/": [
+    "Someone else had a lot of background noise"
+  ],
+  "RK9DUi": [
+    "Someone else’s voice was cutting in and out"
+  ],
+  "yGe0BL": [
+    "Someone else’s voice sounded robotic"
+  ],
+  "1o77I3": [
+    "Someone else’s voice was too quiet or too loud"
+  ],
+  "RGRgmM": [
+    "Audio was delayed"
+  ],
+  "gMHKDJ": [
+    "I couldn’t connect"
+  ],
+  "y5k8Jq": [
+    "I had high latency while in the call"
+  ],
+  "y06Ayn": [
+    "It took a long time for me to connect"
+  ],
+  "K5vYQA": [
+    "Someone else’s voice was cutting in and out"
+  ],
+  "f2914v": [
+    "Someone else’s voice sounded robotic"
+  ],
+  "zk+QL1": [
+    "Audio and video were desynced"
+  ],
+  "PLBRzF": [
+    "People were being toxic or inappropriate"
+  ],
+  "zIC+8Y": [
+    "People said my stream had low audio quality"
+  ],
+  "RRZZZb": [
+    "People said my stream was a black screen"
+  ],
+  "8ceyQy": [
+    "People said my stream was blurry or pixelated"
+  ],
+  "w+kiDF": [
+    "People couldn’t load my stream"
+  ],
+  "JS6akP": [
+    "People said my stream’s video and audio were desynced"
+  ],
+  "3PKSkd": [
+    "People said my stream was freezing or hitching"
+  ],
+  "iMxexK": [
+    "People said my stream was lagging"
+  ],
+  "HaZSC3": [
+    "People said they couldn’t hear my stream"
+  ],
+  "TaIrh5": [
+    "I couldn’t hear my game’s audio"
+  ],
+  "/nlKuG": [
+    "My stream stopped unexpectedly"
+  ],
+  "k7bdGE": [
+    "The stream had low audio quality"
+  ],
+  "aml28x": [
+    "The stream was a black screen"
+  ],
+  "qdBn3L": [
+    "The stream was blurry or pixelated"
+  ],
+  "jU9Zs8": [
+    "I couldn’t load the stream"
+  ],
+  "JfAvQp": [
+    "The stream’s audio and video were desynced"
+  ],
+  "V3EeCH": [
+    "The stream was freezing or hitching"
+  ],
+  "hi1Y39": [
+    "The stream was lagging"
+  ],
+  "DOOlop": [
+    "I couldn’t hear the stream"
+  ],
+  "jPD998": [
+    "The stream stopped unexpectedly"
+  ],
+  "ie5nCG": [
+    "My virtual background had flickering objects or artefacts"
+  ],
+  "zYumoj": [
+    "My virtual background wasn’t cropping correctly"
+  ],
+  "Gg/Y1X": [
+    "My virtual background lagged when I moved"
+  ],
+  "calUNv": [
+    "My virtual background was fuzzy or had a halo"
+  ],
+  "Bh+02d": [
+    "My camera only showed a black screen"
+  ],
+  "QbC6La": [
+    "I couldn’t find or turn on my camera"
+  ],
+  "k7Idoz": [
+    "Someone else’s camera feed was blurry or pixelated"
+  ],
+  "8I/GUL": [
+    "Someone else’s camera feed was freezing or hitching"
+  ],
+  "R+wqwU": [
+    "Someone else’s camera only showed a black screen"
+  ],
+  "vRDE5O": [
+    "Audio and video were desynced"
+  ]
 }

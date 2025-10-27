@@ -6,7 +6,9 @@ import android.graphics.drawable.ColorDrawable
 import android.view.Window
 import com.discord.theme.R
 import com.discord.theme.ThemeManager
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nActivityThemeUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityThemeUtils.kt\ncom/discord/theme/utils/ActivityThemeUtils\n+ 2 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,46:1\n27#2:47\n*S KotlinDebug\n*F\n+ 1 ActivityThemeUtils.kt\ncom/discord/theme/utils/ActivityThemeUtils\n*L\n33#1:47\n*E\n"])
 internal object ActivityThemeUtils {
    internal fun Activity.updateActivityTheming() {
       UpdateSystemUiKt.updateSystemUi(var1);

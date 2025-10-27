@@ -8,16 +8,16 @@ public final class d implements Runnable {
    public final AssetStatus d;
    public final BundleUpdater e;
    public final String i;
-   public final String m;
-   public final File n;
-   public final Uri o;
-   public final AppManifest p;
-   public final String q;
-   public final BundleUpdater.Patch r;
-   public final File s;
+   public final String s;
+   public final File t;
+   public final Uri u;
+   public final AppManifest v;
+   public final String w;
+   public final BundleUpdater.Patch x;
+   public final File y;
 
    @Override
    public final void run() {
-      BundleUpdater.c(this.d, this.e, this.i, this.m, this.n, this.o, this.p, this.q, this.r, this.s);
+      BundleUpdater.c(this.d, this.e, this.i, this.s, this.t, this.u, this.v, this.w, this.x, this.y);
    }
 }

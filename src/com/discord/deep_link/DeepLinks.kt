@@ -12,7 +12,9 @@ import com.discord.crash_reporting.CrashReporting
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.TimeUnit
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nDeepLinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,119:1\n29#2:120\n*S KotlinDebug\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n*L\n37#1:120\n*E\n"])
 public object DeepLinks {
    private final var initialUrl: Pair<String, Boolean>?
 
@@ -39,12 +41,12 @@ public object DeepLinks {
          val var7: Uri = var5.build();
          var5.clearQuery();
 
-         for (java.lang.String var10 : var7.getQueryParameterNames()) {
-            if (!(var10 == "fromAppsFlyer")) {
-               val var11: java.util.Iterator = var7.getQueryParameters(var10).iterator();
+         for (java.lang.String var6 : var7.getQueryParameterNames()) {
+            if (!(var6 == "fromAppsFlyer")) {
+               val var10: java.util.Iterator = var7.getQueryParameters(var6).iterator();
 
-               while (var11.hasNext()) {
-                  var5.appendQueryParameter(var10, var11.next() as java.lang.String);
+               while (var10.hasNext()) {
+                  var5.appendQueryParameter(var6, var10.next() as java.lang.String);
                }
             }
          }

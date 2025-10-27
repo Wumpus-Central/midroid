@@ -10,9 +10,9 @@ public final class w implements OnClickListener {
    public final Function3 d;
    public final String e;
    public final String i;
-   public final DraweeSpanStringBuilder m;
+   public final DraweeSpanStringBuilder s;
 
    public final void onClick(View var1) {
-      EmbedView.c(this.d, this.e, this.i, this.m, var1);
+      EmbedView.c(this.d, this.e, this.i, this.s, var1);
    }
 }

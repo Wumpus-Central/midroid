@@ -12,7 +12,9 @@ import com.discord.codegen.NativeIntentsModuleSpec
 import com.discord.intents.packages.InstalledPackage
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nIntentsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntentsModule.kt\ncom/discord/intents/IntentsModule\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,87:1\n29#2:88\n29#2:89\n*S KotlinDebug\n*F\n+ 1 IntentsModule.kt\ncom/discord/intents/IntentsModule\n*L\n62#1:88\n66#1:89\n*E\n"])
 internal class IntentsModule(reactContext: ReactApplicationContext) : NativeIntentsModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
 

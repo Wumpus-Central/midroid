@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = RowSerializer::class)
+@m(with = RowSerializer::class)
 public sealed class Row protected constructor() {
    public abstract val changeType: ChangeType
    public abstract val index: Int

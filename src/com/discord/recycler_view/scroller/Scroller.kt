@@ -1,20 +1,21 @@
 package com.discord.recycler_view.scroller
 
-import B9.n
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function0
+import xa.p
 
 public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView
 
    private final val layoutManager: LinearLayoutManager
       private final get() {
-         val var1: RecyclerView.LayoutManager = this.recyclerView.getLayoutManager();
+         val var1: LayoutManager = this.recyclerView.getLayoutManager();
          return var1 as LinearLayoutManager;
       }
 
@@ -46,7 +47,7 @@ public class Scroller(recyclerView: RecyclerView) {
          RecyclerViewExtensionsKt.scrollToCenter(this.recyclerView, var1);
       } else {
          if (var2 !is Scroller.TargetAlignment.Top) {
-            throw new n();
+            throw new p();
          }
 
          RecyclerViewExtensionsKt.scrollToTop(this.recyclerView, var1, (var2 as Scroller.TargetAlignment.Top).getOffsetPx());

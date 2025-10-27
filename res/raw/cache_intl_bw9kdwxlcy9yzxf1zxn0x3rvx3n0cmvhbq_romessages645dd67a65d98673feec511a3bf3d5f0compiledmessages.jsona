@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Cere streaming",
-  "P0wwmJ": "Face deja streaming",
-  "u4QmWl": "Cerere expirată",
-  "qRXatr": "Nu este în canalul de voce",
-  "43zohI": "Nu este în joc",
-  "fac+eH": "Nicio permisiune",
-  "8HU1Mz": "Solicitare trimisă",
-  "5+172d": "Fă streaming",
-  "nAyuPj": "Cerere de streaming",
-  "d/qbCw": [
+  "DKHhec": [
+    "Cere streaming"
+  ],
+  "P0wwmM": [
+    "Face deja streaming"
+  ],
+  "u4QmWl": [
+    "Cerere expirată"
+  ],
+  "qRXats": [
+    "Nu este în canalul de voce"
+  ],
+  "43zohO": [
+    "Nu este în joc"
+  ],
+  "fac+eE": [
+    "Nicio permisiune"
+  ],
+  "8HU1M2": [
+    "Solicitare trimisă"
+  ],
+  "5+172e": [
+    "Fă streaming"
+  ],
+  "nAyuPp": [
+    "Cerere de streaming"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " ți-a cerut să faci streaming"
   ],
-  "8B3U5O": "I-ai cerut cuiva să facă streaming"
+  "8B3U5O": [
+    "I-ai cerut cuiva să facă streaming"
+  ]
 }

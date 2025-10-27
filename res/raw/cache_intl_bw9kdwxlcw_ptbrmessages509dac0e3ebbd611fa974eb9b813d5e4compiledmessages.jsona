@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Sua conta foi desbloqueada",
-  "d9Ykjo": "Código de confirmação",
-  "bFbsV1": "Insira seu e-mail",
-  "RRBNpq": "Avançar",
-  "0DHxys": [
+  "/fHz9S": [
+    "Sua conta foi desbloqueada"
+  ],
+  "d9Ykjr": [
+    "Código de confirmação"
+  ],
+  "bFbsV6": [
+    "Insira seu e-mail"
+  ],
+  "RRBNpv": [
+    "Avançar"
+  ],
+  "0DHxym": [
     "Não é você? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Podemos pedir algumas clarificações adicionais pelo caminho, como se você é um robô",
-  "Ks6opq": "Começar",
-  "I2Ctk5": "Complete os passos abaixo para desbloquear sua conta",
-  "RRamMD": "Conta bloqueada",
-  "ah0EUl": "Reenviar código",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Podemos pedir algumas clarificações adicionais pelo caminho, como se você é um robô"
+  ],
+  "Ks6opt": [
+    "Começar"
+  ],
+  "I2Ctk1": [
+    "Complete os passos abaixo para desbloquear sua conta"
+  ],
+  "RRamMH": [
+    "Conta bloqueada"
+  ],
+  "ah0EUu": [
+    "Reenviar código"
+  ],
+  "2+Lyn0": [
     "Reenviar código em ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " segundos"
   ],
-  "3AXMYm": "Erro ao reenviar o código de verificação",
-  "dSkE/P": "Verificando o grupo de idade",
-  "o4D6fn": "Atualizar",
-  "VBZJJi": "Atualize o app para continuar.",
-  "yxqMCA": "Atualização necessária",
-  "wq2RDg": "Verificar",
-  "PfbG6O": "Código de verificação inválido",
-  "aveKoK": "Acabamos de enviar um código de verificação para o seu endereço de e-mail. Pode levar alguns minutos para chegar",
-  "Qm6K/v": "Verifique seu e-mail"
+  "3AXMYu": [
+    "Erro ao reenviar o código de verificação"
+  ],
+  "dSkE/A": [
+    "Verificando o grupo de idade"
+  ],
+  "o4D6fm": [
+    "Atualizar"
+  ],
+  "VBZJJg": [
+    "Atualize o app para continuar."
+  ],
+  "yxqMCD": [
+    "Atualização necessária"
+  ],
+  "wq2RDq": [
+    "Verificar"
+  ],
+  "PfbG6H": [
+    "Código de verificação inválido"
+  ],
+  "aveKoG": [
+    "Acabamos de enviar um código de verificação para o seu endereço de e-mail. Pode levar alguns minutos para chegar"
+  ],
+  "Qm6K/s": [
+    "Verifique seu e-mail"
+  ]
 }

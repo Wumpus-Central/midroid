@@ -163,24 +163,24 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
-      val var4: Function1 = this.label;
-      val var1: Function1 = this.description;
-      val var2: SpoilerType = this.type;
-      val var3: java.lang.Boolean = this.verifyAge;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SpoilerAttributes(identifier=");
-      var5.append(var6);
-      var5.append(", label=");
-      var5.append(var4);
-      var5.append(", description=");
-      var5.append(var1);
-      var5.append(", type=");
-      var5.append(var2);
-      var5.append(", verifyAge=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
+      val var3: Function1 = this.label;
+      val var5: Function1 = this.description;
+      val var4: SpoilerType = this.type;
+      val var6: java.lang.Boolean = this.verifyAge;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SpoilerAttributes(identifier=");
+      var2.append(var1);
+      var2.append(", label=");
+      var2.append(var3);
+      var2.append(", description=");
+      var2.append(var5);
+      var2.append(", type=");
+      var2.append(var4);
+      var2.append(", verifyAge=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
@@ -233,19 +233,19 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
       }
 
       public fun forAttachment(attachment: Attachment, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
-         val var7: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("messageId(");
-         var5.append(var7);
-         var5.append(")");
-         val var9: java.lang.String = var5.toString();
-         val var8: java.lang.String = var1.type().getIndexLabel();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var8);
-         var6.append("(");
-         var6.append(var3);
-         var6.append(")");
-         return this.forItem(var1, var9, var6.toString(), var4);
+         var var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("messageId(");
+         var7.append(var5);
+         var7.append(")");
+         val var6: java.lang.String = var7.toString();
+         var5 = var1.type().getIndexLabel();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append(var5);
+         var8.append("(");
+         var8.append(var3);
+         var8.append(")");
+         return this.forItem(var1, var6, var8.toString(), var4);
       }
 
       public fun forEmbed(embed: Embed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
@@ -272,17 +272,17 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
       }
 
       public fun forMediaPostPreviewEmbed(embed: PostPreviewEmbed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
-         var var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
+         val var5: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
          val var6: StringBuilder = new StringBuilder();
          var6.append("messageId(");
          var6.append(var5);
          var6.append(")");
-         var5 = var6.toString();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("mediaPostPreviewEmbed(");
-         var7.append(var3);
-         var7.append(")");
-         return this.forItem(var1, var5, var7.toString(), var4);
+         val var7: java.lang.String = var6.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("mediaPostPreviewEmbed(");
+         var8.append(var3);
+         var8.append(")");
+         return this.forItem(var1, var7, var8.toString(), var4);
       }
    }
 }

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.interaction
 
-import H9.a
+import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = InteractionStatusViewState.Serializer::class)
+@m(with = InteractionStatusViewState.Serializer::class)
 public enum class InteractionStatusViewState(serialNumber: Int) : IntEnum {
    FAILED(1),
    LOADING(0),

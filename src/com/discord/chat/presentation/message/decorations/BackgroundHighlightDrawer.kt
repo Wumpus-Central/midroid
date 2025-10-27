@@ -3,9 +3,9 @@ package com.discord.chat.presentation.message.decorations
 import android.content.Context
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.presentation.list.item.ChatListItem
-import y1.a
-import y1.b
-import y1.c
+import y2.a
+import y2.b
+import y2.c
 
 public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer(var1, new a(), new b(), new c()) {
    @JvmStatic

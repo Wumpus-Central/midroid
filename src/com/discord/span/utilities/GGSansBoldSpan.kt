@@ -5,8 +5,9 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import f2.a
-import f2.b
+import com.discord.fonts.DiscordFont.Companion
+import f3.a
+import f3.b
 
 public class GGSansBoldSpan(context: Context) : StyleSpan(1) {
    private final val context: Context
@@ -16,7 +17,7 @@ public class GGSansBoldSpan(context: Context) : StyleSpan(1) {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var4: DiscordFont.Companion = DiscordFont.Companion;
+      val var4: Companion = DiscordFont.Companion;
       var var3: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
       if (var3 != null) {
          var3 = var4.findByStyle(DiscordFont.PrimaryBold.getWeight(), var3.getItalic(), var3.getMonospace());

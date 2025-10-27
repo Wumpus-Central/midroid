@@ -1,0 +1,55 @@
+{
+  "RpMIT0": [
+    "Usamos grupos de edad para determinar el acceso a ciertas experiencias. ",
+    [
+      8,
+      "$link",
+      [
+        "Más información"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "1/6wta": [
+    "Restaura el acceso a Discord al verificar tu edad con una de las opciones siguientes."
+  ],
+  "eJmat5": [
+    "Normalmente es más rápido y totalmente automático. Solo necesitas una cámara."
+  ],
+  "2yLvkS": [
+    "Haz un selfi de vídeo"
+  ],
+  "ZdmRwW": [
+    "Necesitarás un carnet de conducir, pasaporte u otro documento de identidad. A continuación, un selfi para confirmar que eres tú."
+  ],
+  "dwkwo0": [
+    "Escanea tu documento identificativo"
+  ],
+  "htWh1G": [
+    [
+      8,
+      "$link",
+      [
+        "Más información"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ],
+    " en nuestro Centro de ayuda"
+  ],
+  "cR6336": [
+    "No hay métodos de verificación de edad disponibles. Podría deberse a un error."
+  ],
+  "hDvmYP": [
+    "Volver a cargar"
+  ]
+}

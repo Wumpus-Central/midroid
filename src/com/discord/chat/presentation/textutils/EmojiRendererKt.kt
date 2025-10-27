@@ -1,4 +1,4 @@
-@file:SourceDebugExtension(["SMAP\nEmojiRenderer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiRenderer.kt\ncom/discord/chat/presentation/textutils/EmojiRendererKt\n+ 2 SpannableStringBuilderExtensions.kt\ncom/discord/span/utilities/SpannableStringBuilderExtensionsKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,73:1\n32#2,4:74\n36#2:81\n13409#3:78\n13410#3:80\n1#4:79\n*S KotlinDebug\n*F\n+ 1 EmojiRenderer.kt\ncom/discord/chat/presentation/textutils/EmojiRendererKt\n*L\n38#1:74,4\n38#1:81\n38#1:78\n38#1:80\n38#1:79\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nEmojiRenderer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiRenderer.kt\ncom/discord/chat/presentation/textutils/EmojiRendererKt\n+ 2 SpannableStringBuilderExtensions.kt\ncom/discord/span/utilities/SpannableStringBuilderExtensionsKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 5 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,73:1\n32#2,4:74\n36#2:81\n13409#3:78\n13410#3:80\n1#4:79\n27#5:82\n27#5:83\n27#5:84\n*S KotlinDebug\n*F\n+ 1 EmojiRenderer.kt\ncom/discord/chat/presentation/textutils/EmojiRendererKt\n*L\n38#1:74,4\n38#1:81\n38#1:78\n38#1:80\n38#1:79\n51#1:82\n64#1:83\n65#1:84\n*E\n"])
 
 package com.discord.chat.presentation.textutils
 
@@ -132,7 +132,7 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
       var6 = var4.customWithEmojiId(var2, var1, var5.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
-         throw new B9.n();
+         throw new xa.p();
       }
 
       var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());

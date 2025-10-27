@@ -1,15 +1,15 @@
 package com.discord.chat.reactevents
 
-import B9.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : TapCallData(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val channelId: ChannelId
@@ -51,27 +51,29 @@ internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : Ta
       return MessageId.hashCode-impl(this.messageId) * 31 + ChannelId.hashCode-impl(this.channelId);
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a(
-            "data",
-            NativeMapExtensionsKt.nativeMapOf(
-               s.a("messageId", MessageId.toString-impl(this.messageId)), s.a("channelId", ChannelId.toString-impl(this.channelId))
+         new Pair[]{
+            v.a(
+               "data",
+               NativeMapExtensionsKt.nativeMapOf(
+                  new Pair[]{v.a("messageId", MessageId.toString-impl(this.messageId)), v.a("channelId", ChannelId.toString-impl(this.channelId))}
+               )
             )
-         )
+         }
       );
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapCallData(messageId=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCallData(messageId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

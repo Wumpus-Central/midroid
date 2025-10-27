@@ -1,6 +1,8 @@
 {
-  "FJZeZG": "Schalte neue Rollenstile mit Boosts frei.",
-  "VpEDJS": [
+  "FJZeZF": [
+    "Schalte neue Rollenstile mit Boosts frei."
+  ],
+  "VpEDJc": [
     "Bestimmte Rollen ",
     [
       1,
@@ -8,19 +10,23 @@
     ],
     " machen"
   ],
-  "+/IHLi": "magisch",
-  "tBhCys": "Der Rollenstil „Holografisch“ erfordert keine Farbauswahl.",
-  "vQz+6e": "Farbverlauf",
-  "7lwpzc": [
-    "Öffne Discord auf dem Desktop, um neue Boost-Vorteile freizuschalten ",
-    "& ",
-    "einzurichten: ",
+  "+/IHLl": [
+    "magisch"
+  ],
+  "tBhCyr": [
+    "Der Rollenstil „Holografisch“ erfordert keine Farbauswahl."
+  ],
+  "vQz+6W": [
+    "Farbverlauf"
+  ],
+  "7lwpzR": [
+    "Öffne Discord auf dem Desktop, um neue Boost-Vorteile freizuschalten & einzurichten: ",
     [
       1,
       "perks"
     ]
   ],
-  "MNO3sL": [
+  "MNO3sG": [
     [
       1,
       "perk1"

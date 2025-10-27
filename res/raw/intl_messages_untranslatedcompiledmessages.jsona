@@ -1,19 +1,47 @@
 {
-  "gnLLSE": "One Up",
-  "6kp9Hx": "[attachment]",
-  "tUu8V1": "Background",
-  "W+j15e": "Get my stats!",
-  "bhdB9/": "Join on PlayStation (sp-int)",
-  "BDiXtb": "Transfer to PlayStation (sp-int)",
-  "gsG63t": "Preview",
-  "8P08Gx": "Announcement",
-  "1sgOc3": "Conversation",
-  "6pFsLS": "Event scheduled",
-  "hMFMY2": "Message",
-  "bYNuV1": "Post",
-  "ljgIOz": "Summary",
-  "qCozu7": "... Read more",
-  "3rUmPT": [
+  "gnLLSK": [
+    "One Up"
+  ],
+  "6kp9H2": [
+    "[attachment]"
+  ],
+  "tUu8V+": [
+    "Background"
+  ],
+  "W+j15W": [
+    "Get my stats!"
+  ],
+  "bhdB9+": [
+    "Join on PlayStation (sp-int)"
+  ],
+  "BDiXtV": [
+    "Transfer to PlayStation (sp-int)"
+  ],
+  "gsG63k": [
+    "Preview"
+  ],
+  "8P08G9": [
+    "Announcement"
+  ],
+  "1sgOc0": [
+    "Conversation"
+  ],
+  "6pFsLQ": [
+    "Event scheduled"
+  ],
+  "hMFMY9": [
+    "Message"
+  ],
+  "bYNuVx": [
+    "Post"
+  ],
+  "ljgIO9": [
+    "Summary"
+  ],
+  "qCozu3": [
+    "... Read more"
+  ],
+  "3rUmPQ": [
     [
       6,
       "count",
@@ -32,15 +60,31 @@
       "cardinal"
     ]
   ],
-  "wnn1DQ": "It's quiet in here.",
-  "Z+MPNz": "Work",
-  "dV9uBg": "Social",
-  "xoHQcn": "ERGs",
-  "Ao41rq": "Archives",
-  "uiHHIy": "Minimum 2 characters. Letters, numbers & underscores only.",
-  "/wK9CA": "Give your emoji a fun name!",
-  "WKEPHR": "English",
-  "st2dcn": [
+  "wnn1Dc": [
+    "It's quiet in here."
+  ],
+  "Z+MPN/": [
+    "Work"
+  ],
+  "dV9uBr": [
+    "Social"
+  ],
+  "xoHQcn": [
+    "ERGs"
+  ],
+  "Ao41ri": [
+    "Archives"
+  ],
+  "uiHHI2": [
+    "Minimum 2 characters. Letters, numbers & underscores only."
+  ],
+  "/wK9CM": [
+    "Give your emoji a fun name!"
+  ],
+  "WKEPHR": [
+    "English"
+  ],
+  "st2dcs": [
     "You are now friends with ",
     [
       1,
@@ -48,7 +92,7 @@
     ],
     "!"
   ],
-  "YQsjen": [
+  "YQsjej": [
     "AutoMod flagged ",
     [
       8,
@@ -68,7 +112,7 @@
     ],
     " for violating content in their user profile"
   ],
-  "/W5u5u": [
+  "/W5u5o": [
     "AutoMod quarantined ",
     [
       8,
@@ -104,18 +148,40 @@
       ]
     ]
   ],
-  "MVi7LS": "Suppress Highlights in this server",
-  "ktOTRU": "Recently Played",
-  "Gk1P8f": "Currently Playing",
-  "fxOLPT": "updated their status",
-  "Eorjm5": "Adjust Server/Channel Recommendations",
-  "jVshKi": "Servers",
-  "OMdbs7": "Thanks! This will take effect shortly.",
-  "AGrUbm": "Back to Home",
-  "lNJYV1": "Browse more servers",
-  "5lP6Aw": "Turning this off means no content from this channel will be shown.",
-  "0jRosr": "Channel Preferences",
-  "KzkF1t": [
+  "MVi7LQ": [
+    "Suppress Highlights in this server"
+  ],
+  "ktOTRQ": [
+    "Recently Played"
+  ],
+  "Gk1P8Z": [
+    "Currently Playing"
+  ],
+  "fxOLPR": [
+    "updated their status"
+  ],
+  "Eorjmy": [
+    "Adjust Server/Channel Recommendations"
+  ],
+  "jVshKt": [
+    "Servers"
+  ],
+  "OMdbs1": [
+    "Thanks! This will take effect shortly."
+  ],
+  "AGrUbj": [
+    "Back to Home"
+  ],
+  "lNJYV8": [
+    "Browse more servers"
+  ],
+  "5lP6Ax": [
+    "Turning this off means no content from this channel will be shown."
+  ],
+  "0jRosn": [
+    "Channel Preferences"
+  ],
+  "KzkF1j": [
     "How much content would you like to see from ",
     [
       1,
@@ -123,12 +189,22 @@
     ],
     "?"
   ],
-  "oBL7aG": "Thank you for your feedback!",
-  "zUQ1OD": "Catch up",
-  "rdt65O": "See Less",
-  "Rxe3jI": "See More!",
-  "SnrG09": "Good As Is",
-  "S5JNyc": [
+  "oBL7aH": [
+    "Thank you for your feedback!"
+  ],
+  "zUQ1OB": [
+    "Catch up"
+  ],
+  "rdt65I": [
+    "See Less"
+  ],
+  "Rxe3jF": [
+    "See More!"
+  ],
+  "SnrG00": [
+    "Good As Is"
+  ],
+  "S5JNyW": [
     "Forwarded ",
     [
       1,
@@ -136,14 +212,20 @@
     ],
     "'s status"
   ],
-  "9SjvoK": "Breeze through the best across all your servers",
-  "sAApb2": "Check back later for more new content!",
-  "xjxffn": "That's all for now!",
-  "CG4Hkp": "Something went wrong. Please try again later.",
-  "jVS/hY": [
-    "In Case You Missed It (ICYMI) is a super-duper, early-access, experimental, ",
-    "& ",
-    "pre-alpha feature. ",
+  "9SjvoK": [
+    "Breeze through the best across all your servers"
+  ],
+  "sAApb0": [
+    "Check back later for more new content!"
+  ],
+  "xjxffq": [
+    "That's all for now!"
+  ],
+  "CG4Hks": [
+    "Something went wrong. Please try again later."
+  ],
+  "jVS/hc": [
+    "In Case You Missed It (ICYMI) is a super-duper, early-access, experimental, & pre-alpha feature. ",
     [
       8,
       "feedbackHook",
@@ -152,69 +234,165 @@
       ]
     ]
   ],
-  "x4OezM": "The more servers you join, the more interesting content you’ll find.",
-  "lv1tcX": "Featured servers you might like",
-  "F6TmZG": "Content was irrelevant",
-  "sBOuOT": "Choose your main issue",
-  "Yu+52d": "Laggy or slow",
-  "voWAzs": "Not enough content",
-  "ePk/CQ": "Your feedback helps us improve your experience.",
-  "ppfH9/": "How was your experience with ICYMI?",
-  "Ay8iw8": "Too much content",
-  "3wDyfX": "Filter content from employee servers",
-  "HT2IlJ": "Forward",
-  "xIUfJS": "Forward Message",
-  "CHUAYm": "in",
-  "zAa/Ex": "Share",
-  "6+JeWV": "Shared Highlight",
-  "2ih63d": "posted an announcement.",
-  "E0MW8P": "posted an announcement that mentioned everyone.",
-  "TGrUmp": "changed their status",
-  "pYrnTU": "uploaded a file:",
-  "Q9/6BQ": "made a post.",
-  "Vu15sb": "created an event.",
-  "42OrOz": "is hosting an event.",
-  "T7MIsb": "An event was created",
-  "0ktiVV": "Highlight",
-  "gmOWAg": "sent an image.",
-  "TahE/v": "sent a message you might like.",
-  "oj5yvL": "sent a link.",
-  "H/2+cn": "sent a popular message.",
-  "DwLrLC": "started a thread.",
-  "aDAwS0": "Trending Topic",
-  "swhcPD": "sent a video.",
-  "u0KPUV": "The more servers you join, the more interesting content you’ll find.",
-  "19ldCA": "Choose 3 or more featured servers you’re interested in.",
-  "XG+2Q0": "Join in",
-  "VMWjXV": "Loading comments...",
-  "Ac2OZG": "ALPHA",
-  "zQJqxM": "Recent Conversation",
-  "mPPce3": "Replied to:",
-  "HE3oV1": "Reply",
-  "5NwaNT": "Reply to Message",
-  "ghWi8f": [
+  "x4OezN": [
+    "The more servers you join, the more interesting content you’ll find."
+  ],
+  "lv1tce": [
+    "Featured servers you might like"
+  ],
+  "F6TmZA": [
+    "Content was irrelevant"
+  ],
+  "sBOuOf": [
+    "Choose your main issue"
+  ],
+  "Yu+52W": [
+    "Laggy or slow"
+  ],
+  "voWAzi": [
+    "Not enough content"
+  ],
+  "ePk/Cf": [
+    "Your feedback helps us improve your experience."
+  ],
+  "ppfH9+": [
+    "How was your experience with ICYMI?"
+  ],
+  "Ay8iwx": [
+    "Too much content"
+  ],
+  "3wDyfQ": [
+    "Filter content from employee servers"
+  ],
+  "HT2IlL": [
+    "Forward"
+  ],
+  "xIUfJS": [
+    "Forward Message"
+  ],
+  "CHUAYk": [
+    "in"
+  ],
+  "zAa/E+": [
+    "Share"
+  ],
+  "6+JeWa": [
+    "Shared Highlight"
+  ],
+  "2ih63V": [
+    "posted an announcement."
+  ],
+  "E0MW8I": [
+    "posted an announcement that mentioned everyone."
+  ],
+  "TGrUmi": [
+    "changed their status"
+  ],
+  "pYrnTY": [
+    "uploaded a file:"
+  ],
+  "Q9/6BS": [
+    "made a post."
+  ],
+  "Vu15se": [
+    "created an event."
+  ],
+  "42OrO4": [
+    "is hosting an event."
+  ],
+  "T7MIsc": [
+    "An event was created"
+  ],
+  "0ktiVd": [
+    "Highlight"
+  ],
+  "gmOWAo": [
+    "sent an image."
+  ],
+  "TahE/i": [
+    "sent a message you might like."
+  ],
+  "oj5yvD": [
+    "sent a link."
+  ],
+  "H/2+cl": [
+    "sent a popular message."
+  ],
+  "DwLrLK": [
+    "started a thread."
+  ],
+  "aDAwS+": [
+    "Trending Topic"
+  ],
+  "swhcPM": [
+    "sent a video."
+  ],
+  "u0KPUS": [
+    "The more servers you join, the more interesting content you’ll find."
+  ],
+  "19ldCF": [
+    "Choose 3 or more featured servers you’re interested in."
+  ],
+  "XG+2Q6": [
+    "Join in"
+  ],
+  "VMWjXW": [
+    "Loading comments..."
+  ],
+  "Ac2OZA": [
+    "ALPHA"
+  ],
+  "zQJqxD": [
+    "Recent Conversation"
+  ],
+  "mPPcez": [
+    "Replied to:"
+  ],
+  "HE3oVy": [
+    "Reply"
+  ],
+  "5NwaNY": [
+    "Reply to Message"
+  ],
+  "ghWi8V": [
     "React or Reply to ",
     [
       1,
       "username"
     ]
   ],
-  "XC5YEx": "Reply to Activity",
-  "umDRYG": "Reply to Status",
-  "m3dK5e": [
+  "XC5YE5": [
+    "Reply to Activity"
+  ],
+  "umDRYM": [
+    "Reply to Status"
+  ],
+  "m3dK5W": [
     "Reply to @",
     [
       1,
       "username"
     ]
   ],
-  "W2aJRU": "Show channel content in ICYMI",
-  "oujX7+": "Show content in ICYMI",
-  "TwueCw": "Selected",
-  "vRVs09": "Turning this off means no content from this server will be shown.",
-  "Clq6kp": "Server Preferences",
-  "l52PX1": "Adjust how much content would you like to see from each channel.",
-  "0DhU2N": [
+  "W2aJRS": [
+    "Show channel content in ICYMI"
+  ],
+  "oujX73": [
+    "Show content in ICYMI"
+  ],
+  "TwueC+": [
+    "Selected"
+  ],
+  "vRVs07": [
+    "Turning this off means no content from this server will be shown."
+  ],
+  "Clq6km": [
+    "Server Preferences"
+  ],
+  "l52PX4": [
+    "Adjust how much content would you like to see from each channel."
+  ],
+  "0DhU2P": [
     "How much content would you like to see from ",
     [
       1,
@@ -222,14 +400,28 @@
     ],
     " overall?"
   ],
-  "D4clKi": "Hide ICYMI tab",
-  "59CWHB": "Share Activity",
-  "J7dBxc": "Share Conversation",
-  "7TVSLC": "Share Event",
-  "NPVaws": "Share Highlight",
-  "F2Smnp": "Share Trending Topic",
-  "SY4sdX": "ICYMI",
-  "JiNPo6": [
+  "D4clKq": [
+    "Hide ICYMI tab"
+  ],
+  "59CWHK": [
+    "Share Activity"
+  ],
+  "J7dBxa": [
+    "Share Conversation"
+  ],
+  "7TVSLK": [
+    "Share Event"
+  ],
+  "NPVawp": [
+    "Share Highlight"
+  ],
+  "F2Smni": [
+    "Share Trending Topic"
+  ],
+  "SY4sdZ": [
+    "ICYMI"
+  ],
+  "JiNPo+": [
     "and ",
     [
       6,
@@ -252,22 +444,52 @@
       "cardinal"
     ]
   ],
-  "6ojWOz": "What's on your mind?",
-  "jnXV/f": "In Case You Missed It",
-  "MGZsfn": "Select at least one topic for improved server recommendations.",
-  "Y5d99P": "What are some topics you’re interested in?",
-  "2s7kEh": "Shared Trending Topic",
-  "knxfqa": "Sourced from all your servers",
-  "BnUXZm": "Only the freshest content",
-  "itb1rq": "Know when you've caught up",
-  "ogLlv7": "Chat on the web",
-  "FUHHrq": "Illustration of floating phone surrounded by various abstract health info bubbles",
-  "uicS5u": "Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741.",
-  "NUMAsL": "Contact Crisis Text Line",
-  "EuzCER": "Add Inappropriate Tier 1 Warning (Experimental)",
-  "tBw/1t": "Add Inappropriate Tier 2 Warning (Experimental)",
-  "lkUb4e": "Send a text",
-  "Lu4h19": [
+  "6ojWO0": [
+    "What's on your mind?"
+  ],
+  "jnXV/V": [
+    "In Case You Missed It"
+  ],
+  "MGZsfv": [
+    "Select at least one topic for improved server recommendations."
+  ],
+  "Y5d99L": [
+    "What are some topics you’re interested in?"
+  ],
+  "2s7kEm": [
+    "Shared Trending Topic"
+  ],
+  "knxfqR": [
+    "Sourced from all your servers"
+  ],
+  "BnUXZi": [
+    "Only the freshest content"
+  ],
+  "itb1rh": [
+    "Know when you've caught up"
+  ],
+  "ogLlvy": [
+    "Chat on the web"
+  ],
+  "FUHHrn": [
+    "Illustration of floating phone surrounded by various abstract health info bubbles"
+  ],
+  "uicS5l": [
+    "Get 24-hour, live support from a counselor. To start, text DISCORD to 741-741."
+  ],
+  "NUMAsF": [
+    "Contact Crisis Text Line"
+  ],
+  "EuzCET": [
+    "Add Inappropriate Tier 1 Warning (Experimental)"
+  ],
+  "tBw/1i": [
+    "Add Inappropriate Tier 2 Warning (Experimental)"
+  ],
+  "lkUb4S": [
+    "Send a text"
+  ],
+  "Lu4h18": [
     [
       8,
       "$b",
@@ -280,21 +502,35 @@
     ],
     " has invited you to join a group DM"
   ],
-  "14o9ZW": "Gmail",
-  "kqgslJ": "Line",
-  "P0R3ZG": "Messenger",
-  "148qIS": "Telegram",
-  "oAiltb": "Twitter",
-  "viazhY": "WhatsApp",
-  "RHbY6O": [
+  "14o9ZT": [
+    "Gmail"
+  ],
+  "kqgslH": [
+    "Line"
+  ],
+  "P0R3ZF": [
+    "Messenger"
+  ],
+  "148qIV": [
+    "Telegram"
+  ],
+  "oAiltV": [
+    "Twitter"
+  ],
+  "viazhS": [
+    "WhatsApp"
+  ],
+  "RHbY6K": [
     "hey come check out Discord with me ",
     [
       1,
       "link"
     ]
   ],
-  "1ieAR0": "Message Failed",
-  "gLIlkZ": [
+  "1ieAR5": [
+    "Message Failed"
+  ],
+  "gLIlkb": [
     "hey join me on Discord! Invite expires in ",
     [
       6,
@@ -322,7 +558,7 @@
       "link"
     ]
   ],
-  "3d9BlJ": [
+  "3d9BlG": [
     "hey join me on Discord! Invite expires in ",
     [
       6,
@@ -350,7 +586,7 @@
       "link"
     ]
   ],
-  "N3VHk5": [
+  "N3VHkw": [
     "hey join me on Discord! Invite expires in ",
     [
       6,
@@ -378,10 +614,16 @@
       "link"
     ]
   ],
-  "4Nl0Rk": "New Content",
-  "lEO7Wl": "Mention @everyone, @here, @game, and All Roles",
-  "dNktpq": "Send your first message",
-  "zuN54+": [
+  "4Nl0Rl": [
+    "New Content"
+  ],
+  "lEO7Wr": [
+    "Mention @everyone, @here, @game, and All Roles"
+  ],
+  "dNktpr": [
+    "Send your first message"
+  ],
+  "zuN545": [
     [
       6,
       "count",
@@ -400,23 +642,55 @@
       "cardinal"
     ]
   ],
-  "gSMz//": "Highlight Notification Settings",
-  "Lu4n29": "I don't care about this channel",
-  "s+8J8f": "Topic isn't relevant to me",
-  "TF6AhI": "I don't know these people",
-  "fEUR7e": "Topic is sensitive or offensive",
-  "eP8yWV": "Disabled when notification is set to all messages",
-  "k0Q31N": "Join in!",
-  "JafL6u": "PlayStation Network",
-  "+Gyklp": "Completed!",
-  "wqHXNj": "Report User Profile",
-  "QU/Rw8": "Allows members to talk in voice and hear others in this channel's threads.",
-  "LsS8xc": "Allows members to talk in voice and hear others in this channel's threads.",
-  "d+i1nZ": "Allows members to deafen other members in this channel's threads, which means they won’t be able to speak or hear others.",
-  "wdHpIC": "Allows members to use @everyone (everyone in the server) or @here (only online members in that channel). They can also @mention games and all roles, even if the role’s “Allow anyone to mention this role” permission is disabled.",
-  "cbdQy8": "Allows members to disconnect other members from this channel's threads. They will also be able to move somebody into other channels that they have this permission in.",
-  "KYDG2N": "Allows members to mute other members in this channel's threads for everyone.",
-  "0t6uSk": [
+  "gSMz/x": [
+    "Highlight Notification Settings"
+  ],
+  "Lu4n25": [
+    "I don't care about this channel"
+  ],
+  "s+8J8f": [
+    "Topic isn't relevant to me"
+  ],
+  "TF6AhF": [
+    "I don't know these people"
+  ],
+  "fEUR7Y": [
+    "Topic is sensitive or offensive"
+  ],
+  "eP8yWU": [
+    "Disabled when notification is set to all messages"
+  ],
+  "k0Q31F": [
+    "Join in!"
+  ],
+  "JafL6p": [
+    "PlayStation Network"
+  ],
+  "+Gyklt": [
+    "Completed!"
+  ],
+  "wqHXNt": [
+    "Report User Profile"
+  ],
+  "QU/Rw8": [
+    "Allows members to talk in voice and hear others in this channel's threads."
+  ],
+  "LsS8xT": [
+    "Allows members to talk in voice and hear others in this channel's threads."
+  ],
+  "d+i1nX": [
+    "Allows members to deafen other members in this channel's threads, which means they won’t be able to speak or hear others."
+  ],
+  "wdHpIC": [
+    "Allows members to use @everyone (everyone in the server) or @here (only online members in that channel). They can also @mention games and all roles, even if the role’s “Allow anyone to mention this role” permission is disabled."
+  ],
+  "cbdQy2": [
+    "Allows members to disconnect other members from this channel's threads. They will also be able to move somebody into other channels that they have this permission in."
+  ],
+  "KYDG2K": [
+    "Allows members to mute other members in this channel's threads for everyone."
+  ],
+  "0t6uSv": [
     "Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the ",
     [
       8,
@@ -442,7 +716,7 @@
     ],
     " keybind."
   ],
-  "4nbjLy": [
+  "4nbjL0": [
     "Allows members to be more easily heard in this channel's threads. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the ",
     [
       8,
@@ -456,12 +730,22 @@
     ],
     " keybind."
   ],
-  "+VXsJC": "Allows members to talk in voice in this channel's threads. If this permission is disabled, members are default muted until somebody with the “Mute Members” permission un-mutes them.",
-  "AuEQEB": "Allows members to share their video, screen share, or stream a game in this channel's threads.",
-  "RyEwlZ": "Allows members to use Activities in this channel's threads.",
-  "qPUPio": "Allows members to use External Apps in this channel's threads.",
-  "3GJwsb": "Allows members to speak in this channel's threads by simply talking. If this permission is disabled, members are required to use Push-to-talk. Good for controlling background noise or noisy members.",
-  "dMmbGh": [
+  "+VXsJI": [
+    "Allows members to talk in voice in this channel's threads. If this permission is disabled, members are default muted until somebody with the “Mute Members” permission un-mutes them."
+  ],
+  "AuEQEC": [
+    "Allows members to share their video, screen share, or stream a game in this channel's threads."
+  ],
+  "RyEwla": [
+    "Allows members to use Activities in this channel's threads."
+  ],
+  "qPUPip": [
+    "Allows members to use External Apps in this channel's threads."
+  ],
+  "3GJwsc": [
+    "Allows members to speak in this channel's threads by simply talking. If this permission is disabled, members are required to use Push-to-talk. Good for controlling background noise or noisy members."
+  ],
+  "dMmbGk": [
     [
       8,
       "$link",
@@ -493,7 +777,7 @@
       ]
     ]
   ],
-  "FP7rUF": [
+  "FP7rUI": [
     [
       8,
       "$link",
@@ -517,10 +801,16 @@
     ],
     "."
   ],
-  "gxyKvr": "Wondering who to invite? Start by inviting anyone who can help you build the server!",
-  "Aojq+P": "Other Actions",
-  "yoWDXV": "Force new user onboarding flow",
-  "cuSp8f": [
+  "gxyKvr": [
+    "Wondering who to invite? Start by inviting anyone who can help you build the server!"
+  ],
+  "Aojq+L": [
+    "Other Actions"
+  ],
+  "yoWDXU": [
+    "Force new user onboarding flow"
+  ],
+  "cuSp8Q": [
     [
       6,
       "count",

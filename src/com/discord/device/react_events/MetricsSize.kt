@@ -1,6 +1,5 @@
 package com.discord.device.react_events
 
-import B9.s
 import android.util.DisplayMetrics
 import androidx.window.layout.WindowMetrics
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -8,6 +7,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
+import xa.v
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -52,17 +52,19 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), s.a("height", SizeUtilsKt.getPxToDp(this.heightPixels)));
+      return NativeMapExtensionsKt.nativeMapOf(
+         new Pair[]{v.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), v.a("height", SizeUtilsKt.getPxToDp(this.heightPixels))}
+      );
    }
 
    public override fun toString(): String {
-      val var1: Int = this.widthPixels;
-      val var2: Int = this.heightPixels;
+      val var2: Int = this.widthPixels;
+      val var1: Int = this.heightPixels;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MetricsSize(widthPixels=");
-      var3.append(var1);
-      var3.append(", heightPixels=");
       var3.append(var2);
+      var3.append(", heightPixels=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

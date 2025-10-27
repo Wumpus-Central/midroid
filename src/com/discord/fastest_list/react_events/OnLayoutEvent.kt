@@ -1,13 +1,13 @@
 package com.discord.fastest_list.react_events
 
-import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Float) : ReactEvent {
    public final val x: Float
    public final val y: Float
@@ -65,9 +65,14 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          + java.lang.Float.hashCode(this.height);
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("layout", NativeMapExtensionsKt.nativeMapOf(s.a("x", this.x), s.a("y", this.y), s.a("width", this.width), s.a("height", this.height)))
+         new Pair[]{
+            v.a(
+               "layout",
+               NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("x", this.x), v.a("y", this.y), v.a("width", this.width), v.a("height", this.height)})
+            )
+         }
       );
    }
 

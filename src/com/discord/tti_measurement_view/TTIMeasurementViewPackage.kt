@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class TTIMeasurementViewPackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       return CollectionsKt.e(new TTIMeasurementViewManager());
    }
 
@@ -16,7 +16,7 @@ public class TTIMeasurementViewPackage : BaseReactPackage {
       return null;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

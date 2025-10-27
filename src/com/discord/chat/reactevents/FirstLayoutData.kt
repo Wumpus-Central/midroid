@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
       firstVisibleMessagePercentVisible: Double?,
       lastVisibleMessageIndex: Int,
@@ -87,26 +88,26 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
       return ((var3 * 31 + var1) * 31 + var4) * 31 + var2;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var1: Int = this.firstVisibleMessageIndex;
-      val var5: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var3: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var2: Int = this.lastVisibleMessageIndex;
       val var4: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var1);
-      var3.append(", firstVisibleMessagePercentVisible=");
-      var3.append(var5);
-      var3.append(", lastVisibleMessageIndex=");
-      var3.append(var2);
-      var3.append(", lastVisibleMessagePercentVisible=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FirstLayoutData(firstVisibleMessageIndex=");
+      var5.append(var1);
+      var5.append(", firstVisibleMessagePercentVisible=");
+      var5.append(var3);
+      var5.append(", lastVisibleMessageIndex=");
+      var5.append(var2);
+      var5.append(", lastVisibleMessagePercentVisible=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

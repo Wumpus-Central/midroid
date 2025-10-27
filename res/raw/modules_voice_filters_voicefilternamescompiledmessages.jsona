@@ -1,26 +1,74 @@
 {
-  "EYDrR0": "Autotune (Dev)",
-  "VCZdnp": "Axel",
-  "Xypb39": "Cave",
-  "TYbrfH": "Tunetron (2-Part)",
-  "OnZ6g4": "Tunetron (Choir)",
-  "2XH8tr": "Tunetron (Dev)",
-  "qRFFLC": "Deep Fried",
-  "87aX+/": "Fan (Dev)",
-  "lFIyMz": "Ghost",
-  "KmHwvL": "Ghost (Dev)",
-  "vIrxZW": "Harper",
-  "ZVrsKC": "Justus",
-  "fPU01d": "Megaphone",
-  "biQVNz": "Quinn",
-  "anBE8f": "DR01D",
-  "XhhSOj": "DR01D (Dev)",
-  "Ur/62N": "DR01D (Synthetic)",
-  "NmbfHx": "Sébastien",
-  "tzvUKy": "Skye",
-  "ndNi1t": "Solara",
-  "KN+v7+": "Space Bunny",
-  "sem63N": "Tunetron",
-  "kHmvdn": "Cyber Boss",
-  "6PDpsb": "Vibrate (Dev)"
+  "EYDrRx": [
+    "Autotune (Dev)"
+  ],
+  "VCZdns": [
+    "Axel"
+  ],
+  "Xypb3z": [
+    "Cave"
+  ],
+  "TYbrfK": [
+    "Tunetron (2-Part)"
+  ],
+  "OnZ6g9": [
+    "Tunetron (Choir)"
+  ],
+  "2XH8tr": [
+    "Tunetron (Dev)"
+  ],
+  "qRFFLK": [
+    "Deep Fried"
+  ],
+  "87aX+2": [
+    "Fan (Dev)"
+  ],
+  "lFIyM/": [
+    "Ghost"
+  ],
+  "KmHwvD": [
+    "Ghost (Dev)"
+  ],
+  "vIrxZS": [
+    "Harper"
+  ],
+  "ZVrsKC": [
+    "Justus"
+  ],
+  "fPU01d": [
+    "Megaphone"
+  ],
+  "biQVN/": [
+    "Quinn"
+  ],
+  "anBE8T": [
+    "DR01D"
+  ],
+  "XhhSOi": [
+    "DR01D (Dev)"
+  ],
+  "Ur/62B": [
+    "DR01D (Synthetic)"
+  ],
+  "NmbfH+": [
+    "Sébastien"
+  ],
+  "tzvUK3": [
+    "Skye"
+  ],
+  "ndNi1j": [
+    "Solara"
+  ],
+  "KN+v77": [
+    "Space Bunny"
+  ],
+  "sem63B": [
+    "Tunetron"
+  ],
+  "kHmvdt": [
+    "Cyber Boss"
+  ],
+  "6PDpse": [
+    "Vibrate (Dev)"
+  ]
 }

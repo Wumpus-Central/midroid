@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Ovdje imamo ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Svime se time upravlja lokalno i ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " zamijenio globalni i18n sustav."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Koristi hookove kao što je ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " za poseban sadržaj."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Taj niz sadrži ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", a URL je zadan u nizu."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Ova poveznica koristi ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     " stavljenu na raspolaganje u vrijeme izvođenja."
   ],
-  "swfLzc": "Ova poruka potječe iz zasebne datoteke"
+  "swfLzV": [
+    "Ova poruka potječe iz zasebne datoteke"
+  ]
 }

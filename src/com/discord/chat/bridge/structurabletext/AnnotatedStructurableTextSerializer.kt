@@ -5,12 +5,12 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import pb.g
-import pb.e.i
-import qb.f
+import mc.j
+import mc.e.i
+import nc.f
 
 internal object AnnotatedStructurableTextSerializer : KSerializer {
-   public open val descriptor: SerialDescriptor = g.a("AnnotatedStructurableText", i.a)
+   public open val descriptor: SerialDescriptor = j.b("AnnotatedStructurableText", i.a)
 
    public open fun deserialize(decoder: Decoder): AnnotatedStructurableText {
       return new AnnotatedStructurableText(var1.G(new f(ContentNode.Companion.serializer())) as MutableList<ContentNode>);

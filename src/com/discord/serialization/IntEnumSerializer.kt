@@ -1,6 +1,6 @@
 package com.discord.serialization
 
-import M9.a
+import Ia.a
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
@@ -8,8 +8,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import pb.g
-import pb.e.f
+import mc.j
+import mc.e.f
 
 @SourceDebugExtension(["SMAP\nIntEnumSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntEnumSerializer.kt\ncom/discord/serialization/IntEnumSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,64:1\n11165#2:65\n11500#2,3:66\n37#3,2:69\n1#4:71\n*S KotlinDebug\n*F\n+ 1 IntEnumSerializer.kt\ncom/discord/serialization/IntEnumSerializer\n*L\n17#1:65\n17#1:66,3\n17#1:69,2\n*E\n"])
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
@@ -35,9 +35,9 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
 
       val var7: Array<Int> = var6.toArray(new Integer[0]);
       this.choicesNumbers = var7;
-      this.descriptor = g.a(this.serialName, f.a);
+      this.descriptor = j.b(this.serialName, f.a);
       if (var7.length == this.choices.length) {
-         if (h.G(var7).size() != var7.length) {
+         if (k.P(var7).size() != var7.length) {
             throw new IllegalArgumentException("There must be no duplicates of serial numbers.");
          }
       } else {
@@ -47,7 +47,7 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
 
    public fun deserialize(decoder: Decoder): Any {
       var var3: Int = var1.h();
-      val var2: Int = h.W(this.choicesNumbers, var3);
+      val var2: Int = k.f0(this.choicesNumbers, var3);
       if ((var2 == -1 || var2 < 0 || var2 >= this.choices.length) && this.default != null) {
          return this.default;
       } else if (var2 != -1) {
@@ -76,22 +76,22 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
    }
 
    public fun serialize(encoder: Encoder, value: Any) {
-      val var3: Int = h.W(this.choices, var2);
+      val var3: Int = k.f0(this.choices, var2);
       if (var3 == -1 && this.default != null) {
-         var1.B(this.default.getSerialNumber());
+         var1.A(this.default.getSerialNumber());
          return;
       } else if (var3 != -1) {
-         var1.B(this.choicesNumbers[var3]);
+         var1.A(this.choicesNumbers[var3]);
       } else {
-         val var7: java.lang.String = this.serialName;
-         val var5: Array<IntEnum> = this.choices;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var2);
-         var6.append(" is not a valid enum ");
-         var6.append(var7);
-         var6.append(", choices are ");
-         var6.append(var5);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var7: Array<IntEnum> = this.choices;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var2);
+         var5.append(" is not a valid enum ");
+         var5.append(var6);
+         var5.append(", choices are ");
+         var5.append(var7);
+         throw new IllegalStateException(var5.toString().toString());
       }
    }
 }

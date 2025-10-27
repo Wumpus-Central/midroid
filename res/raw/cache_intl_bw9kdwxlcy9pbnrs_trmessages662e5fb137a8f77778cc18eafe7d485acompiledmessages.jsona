@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Burada ",
     [
       8,
@@ -10,8 +10,10 @@
     ],
     " var."
   ],
-  "HMvECw": "Tüm bunlar yerel olarak yönetiliyor ve henüz küresel i18n sisteminin yerine geçmedi.",
-  "XOdbAw": [
+  "HMvEC5": [
+    "Tüm bunlar yerel olarak yönetiliyor ve henüz küresel i18n sisteminin yerine geçmedi."
+  ],
+  "XOdbAy": [
     "Özel içerikler için ",
     [
       8,
@@ -25,7 +27,7 @@
     ],
     " gibi kancaları kullan."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Bu satır, url'nin tanımlandığı bir ",
     [
       8,
@@ -39,7 +41,7 @@
     ],
     " içerir."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Bu bağlantı, çalışma zamanında sağlanan ",
     [
       8,
@@ -56,5 +58,7 @@
     ],
     " kullanıyor."
   ],
-  "swfLzc": "Bu mesaj ayrı bir dosyadan geliyor"
+  "swfLzV": [
+    "Bu mesaj ayrı bir dosyadan geliyor"
+  ]
 }

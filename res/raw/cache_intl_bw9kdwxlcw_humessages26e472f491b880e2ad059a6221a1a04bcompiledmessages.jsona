@@ -15,8 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "Általában a leggyorsabb és teljesen automatikus. Csak kamerára van hozzá szükség.",
-  "2yLvkZ": "Videós szelfi készítése",
-  "ZdmRwc": "Jogosítványra, útlevélre vagy egyéb személyazonosító okmányra van hozzá szükség. Majd egy fényképes szelfire, hogy megerősítsük, te vagy az.",
-  "dwkwo6": "A személyazonosító okmányod beolvasása"
+  "eJmat5": [
+    "Általában a leggyorsabb és teljesen automatikus. Csak kamerára van hozzá szükség."
+  ],
+  "2yLvkS": [
+    "Videós szelfi készítése"
+  ],
+  "ZdmRwW": [
+    "Jogosítványra, útlevélre vagy egyéb személyazonosító okmányra van hozzá szükség. Majd egy fényképes szelfire, hogy megerősítsük, te vagy az."
+  ],
+  "dwkwo0": [
+    "A személyazonosító okmányod beolvasása"
+  ],
+  "cR6336": [
+    "Nincsenek elérhető korhitelesítési módszerek. Lehetséges, hogy ez hiba."
+  ],
+  "hDvmYP": [
+    "Újratöltés"
+  ]
 }
