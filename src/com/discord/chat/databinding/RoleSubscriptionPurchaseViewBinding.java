@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
 
 public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
    @NonNull
@@ -54,24 +54,24 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
       View var2 = a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.role_subscription_purchase_badge;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.role_subscription_purchase_card_bg;
-            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-            if (var7 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.role_subscription_purchase_lanyard;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.role_subscription_purchaser_avatar;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.role_subscription_purchaser_username;
-                     TextView var6 = (TextView)a.a(var0, var1);
-                     if (var6 != null) {
+                     TextView var7 = (TextView)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var3 = (TextView)a.a(var0, var1);
-                        if (var3 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var2, var4, var7, var5, var8, var6, var3);
+                        TextView var4 = (TextView)a.a(var0, var1);
+                        if (var4 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var2, var8, var3, var6, var5, var7, var4);
                         }
                      }
                   }

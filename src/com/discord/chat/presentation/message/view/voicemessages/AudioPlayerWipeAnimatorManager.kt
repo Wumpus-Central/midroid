@@ -70,12 +70,12 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    init {
       this.brand500 = var1.getColor(color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = xa.l.a(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = xa.l.a(new E());
-      this.scaleAnimator$delegate = xa.l.a(new F(var2, this));
-      this.textColorAnimator$delegate = xa.l.a(new G(var2));
-      this.buttonIconColorAnimator$delegate = xa.l.a(new H(var2));
-      this.progressColorAnimator$delegate = xa.l.a(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = Ja.l.b(new D(var1));
+      this.buttonContainerActiveDrawable$delegate = Ja.l.b(new E());
+      this.scaleAnimator$delegate = Ja.l.b(new F(var2, this));
+      this.textColorAnimator$delegate = Ja.l.b(new G(var2));
+      this.buttonIconColorAnimator$delegate = Ja.l.b(new H(var2));
+      this.progressColorAnimator$delegate = Ja.l.b(new I(var2));
    }
 
    @JvmStatic
@@ -262,53 +262,53 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var7: Long = 0L;
+      var var8: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var7 = 0L;
+         var8 = 0L;
          if (this.animateToPlay != var1) {
-            var7 = 0L;
+            var8 = 0L;
             if (this.animatorSet != null) {
-               var var3: Long = 0L;
+               var var4: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var3 = this.animatorSet.getDuration();
+                     var4 = this.animatorSet.getDuration();
                   } else {
-                     var3 = 0L;
+                     var4 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var7 = y.a(this.animatorSet);
+                     var8 = y.a(this.animatorSet);
                   } else {
-                     var7 = 0L;
+                     var8 = 0L;
                   }
 
-                  var var15: java.lang.Long = var3 - var7;
-                  var3 = var15.longValue();
-                  if (0L > var3 || var3 >= 201L) {
+                  var var15: java.lang.Long = var4 - var8;
+                  var4 = var15.longValue();
+                  if (0L > var4 || var4 >= 201L) {
                      var15 = null;
                   }
 
-                  var3 = 0L;
+                  var4 = 0L;
                   if (var15 != null) {
-                     var3 = var15;
+                     var4 = var15;
                   }
                }
 
-               var7 = var3;
+               var8 = var4;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var7 = var3;
+                  var8 = var4;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var17: AnimatorSet = this.getAnimatorSet(var1, var7, var2);
+      val var17: AnimatorSet = this.getAnimatorSet(var1, var8, var2);
       var17.start();
       this.animatorSet = var17;
    }

@@ -1,11 +1,11 @@
 package com.discord.serialization
 
-import Oa.b
-import kc.n
+import Ac.h
+import ab.b
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
-import oc.h
+import wc.n
 
 @JvmSynthetic
 fun `access$parseProperty`(var0: KProperty1, var1: JsonElement): Boolean {

@@ -1,10 +1,10 @@
 package com.discord.on_demand_resource
 
-import W2.a
 import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import d3.a
 
 public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceModuleSpec(var1) {
    @JvmStatic

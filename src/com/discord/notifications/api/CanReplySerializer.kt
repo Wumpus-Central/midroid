@@ -5,12 +5,12 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import lc.a
+import xc.a
 
 public object CanReplySerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return a.x(BooleanCompanionObject.INSTANCE).getDescriptor();
+         return a.A(BooleanCompanionObject.INSTANCE).getDescriptor();
       }
 
 

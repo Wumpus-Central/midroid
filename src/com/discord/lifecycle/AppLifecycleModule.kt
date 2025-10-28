@@ -1,11 +1,11 @@
 package com.discord.lifecycle
 
+import Ja.v
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
-import xa.v
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext

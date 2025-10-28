@@ -2,6 +2,7 @@
 
 package com.discord.react.utilities
 
+import Ja.l
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode
@@ -11,11 +12,10 @@ import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
 import java.lang.reflect.Method
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.a(new e())
+private final val viewOperationQueueMethod: Method by l.b(new e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }

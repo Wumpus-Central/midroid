@@ -1,7 +1,5 @@
 package com.discord.react_gesture_handler.nested_touch
 
-import ac.I
-import ac.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -16,6 +14,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import mc.I
+import mc.f
 
 @SourceDebugExtension(["SMAP\nNestedScrollOnTouchTracker.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n+ 2 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n+ 3 TextViewTouchUtils.kt\ncom/discord/misc/utilities/touch/TextViewTouchUtilsKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,215:1\n8#2:216\n12#3,27:217\n13996#4,14:244\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchTracker.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchTracker\n*L\n52#1:216\n54#1:217,27\n60#1:244,14\n*E\n"])
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
@@ -252,7 +252,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
 
                      public final Object invokeSuspend(Object var1) {
                         label53: {
-                           val var7: Any = Ca.b.e();
+                           val var7: Any = Oa.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {
@@ -278,10 +278,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                               this.$view.setPressed(true);
                            }
 
-                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
-                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
+                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
+                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
                            this.label = 2;
-                           if (I.a(var12 - var5, this) === var7) {
+                           if (I.a(var5 - var12, this) === var7) {
                               return var7;
                            }
                         }
@@ -346,7 +346,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
 
                            public final Object invokeSuspend(Object var1) {
                               label37: {
-                                 val var7: Any = Ca.b.e();
+                                 val var7: Any = Oa.b.e();
                                  if (this.label != 0) {
                                     if (this.label != 1) {
                                        if (this.label != 2) {

@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
+import Ja.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
-import xa.v
+import wc.m
 
 @m
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {

@@ -83,7 +83,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var4 = "discord_android@303.6.0-2+303206";
+         var4 = "discord_android@304.0.0-2+304200";
       }
 
       CrashReporting.INSTANCE.init(var0, var4);
@@ -99,24 +99,24 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
 
    protected open fun attachBaseContext(base: Context) {
       super.attachBaseContext(var1);
-      Ba.a.b(false, false, null, "helperReactNativeLoader", 10, new c(var1, this), 7, null);
+      Na.a.b(false, false, null, "helperReactNativeLoader", 10, new c(var1, this), 7, null);
    }
 
    public open fun initialize() {
-      Ba.a.b(false, false, null, "ReactNativeLoader", 10, new d(this), 7, null);
-      val var1: TTIMetrics = TTIMetrics.INSTANCE;
+      Na.a.b(false, false, null, "ReactNativeLoader", 10, new d(this), 7, null);
+      val var2: TTIMetrics = TTIMetrics.INSTANCE;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
       ReactMarkerListener.INSTANCE.start();
       Cache.Companion.quickInitCache(this);
-      TTIMetrics.record$default(var1, "quickInitCache()", 0L, null, false, 14, null);
-      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      TTIMetrics.record$default(var2, "quickInitCache()", 0L, null, false, 14, null);
+      val var1: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.Companion.init(this);
-      TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
-      ClientInfo.INSTANCE.init(this, "303.6", 303206, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
-      TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
+      TTIMetrics.record$default(var2, "BundlerUpdater.init()", 0L, null, false, 14, null);
+      ClientInfo.INSTANCE.init(this, "304.0", 304200, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+      TTIMetrics.record$default(var2, "ClientInfo.init()", 0L, null, false, 14, null);
       CacheDataSourceFactory.Companion.init(this);
-      TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
-      Ba.a.b(false, false, null, null, 0, new e(this), 31, null);
+      TTIMetrics.record$default(var2, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
+      Na.a.b(false, false, null, null, 0, new e(this), 31, null);
       PerformanceTracing.Companion.get().start();
       ReactNetworking.INSTANCE.patchReactNetworking();
       RLottieUtils.INSTANCE.init();
@@ -125,14 +125,14 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       AppLifecycle.INSTANCE.init();
       ReactForkOverrides.INSTANCE.init();
       AudioPlayerManager.INSTANCE.init(this);
-      TTIMetrics.record$default(var1, "AudioPlayerManager.init()", 0L, null, false, 14, null);
+      TTIMetrics.record$default(var2, "AudioPlayerManager.init()", 0L, null, false, 14, null);
       PlayAssetDelivery.INSTANCE.initialize(this);
       this.initializeReactNativeLatch.await();
-      TTIMetrics.record$default(var1, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
+      TTIMetrics.record$default(var2, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
    }
 
    public open fun onCreate() {
       super.onCreate();
-      Ba.a.b(false, false, null, null, 0, new b(this), 31, null);
+      Na.a.b(false, false, null, null, 0, new b(this), 31, null);
    }
 }

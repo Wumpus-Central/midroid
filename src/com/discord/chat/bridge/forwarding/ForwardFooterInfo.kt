@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.forwarding
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
@@ -78,20 +78,20 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
 
    public override fun toString(): String {
       val var3: java.lang.String = this.timestampLabel;
-      val var1: java.lang.String = this.originLabel;
-      val var4: java.lang.String = this.accessibilityLabel;
-      val var5: java.lang.String = this.originIconUrl;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ForwardFooterInfo(timestampLabel=");
-      var2.append(var3);
-      var2.append(", originLabel=");
-      var2.append(var1);
-      var2.append(", accessibilityLabel=");
-      var2.append(var4);
-      var2.append(", originIconUrl=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.originLabel;
+      val var5: java.lang.String = this.accessibilityLabel;
+      val var1: java.lang.String = this.originIconUrl;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForwardFooterInfo(timestampLabel=");
+      var4.append(var3);
+      var4.append(", originLabel=");
+      var4.append(var2);
+      var4.append(", accessibilityLabel=");
+      var4.append(var5);
+      var4.append(", originIconUrl=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

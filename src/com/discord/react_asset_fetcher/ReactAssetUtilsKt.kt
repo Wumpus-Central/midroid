@@ -1,8 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import Ca.b
-import ac.K
-import ac.f
+import Oa.b
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -24,6 +22,8 @@ import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
+import mc.K
+import mc.f
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    val var2: java.lang.String = new ImageSource(var0, var1, 0.0, 0.0, null, false, 60, null).getUri().toString();

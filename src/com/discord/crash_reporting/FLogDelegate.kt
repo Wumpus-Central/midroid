@@ -1,11 +1,11 @@
 package com.discord.crash_reporting
 
+import Ja.e
+import Ja.v
 import com.discord.crash_reporting.CrashReporting.BreadcrumbLevel
 import com.discord.logging.Log
-import xa.e
-import xa.v
 
-public class FLogDelegate : r3.c {
+public class FLogDelegate : y3.c {
    private fun addSentryBreadcrumb(level: BreadcrumbLevel, message: String, throwable: Throwable? = null) {
       label11: {
          if (var3 != null) {
@@ -23,11 +23,11 @@ public class FLogDelegate : r3.c {
    }
 
    public open fun d(tag: String, msg: String) {
-      r3.b.a().d(var1, var2);
+      y3.b.a().d(var1, var2);
    }
 
    public open fun d(tag: String, msg: String, tr: Throwable) {
-      r3.b.a().d(var1, var2, var3);
+      y3.b.a().d(var1, var2, var3);
    }
 
    public open fun e(tag: String, msg: String) {
@@ -41,7 +41,7 @@ public class FLogDelegate : r3.c {
    }
 
    public open fun getMinimumLoggingLevel(): Int {
-      return r3.b.a().b();
+      return y3.b.a().b();
    }
 
    public open fun i(tag: String, msg: String) {
@@ -53,7 +53,7 @@ public class FLogDelegate : r3.c {
    }
 
    public open fun isLoggable(level: Int): Boolean {
-      return r3.b.a().isLoggable(var1);
+      return y3.b.a().isLoggable(var1);
    }
 
    public open fun log(priority: Int, tag: String, msg: String) {
@@ -82,15 +82,15 @@ public class FLogDelegate : r3.c {
    }
 
    public open fun setMinimumLoggingLevel(level: Int) {
-      r3.b.a().k(var1);
+      y3.b.a().k(var1);
    }
 
    public open fun v(tag: String, msg: String) {
-      r3.b.a().v(var1, var2);
+      y3.b.a().v(var1, var2);
    }
 
    public open fun v(tag: String, msg: String, tr: Throwable) {
-      r3.b.a().l(var1, var2, var3);
+      y3.b.a().l(var1, var2, var3);
    }
 
    public open fun w(tag: String, msg: String) {

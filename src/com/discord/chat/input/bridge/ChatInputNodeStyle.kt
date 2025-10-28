@@ -1,8 +1,8 @@
 package com.discord.chat.input.bridge
 
 import com.discord.span.utilities.common.BackgroundStyle
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {

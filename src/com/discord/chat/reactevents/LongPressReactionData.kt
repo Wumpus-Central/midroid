@@ -1,5 +1,6 @@
 package com.discord.chat.reactevents
 
+import Ja.v
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -7,7 +8,6 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import xa.v
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
    public final val messageId: MessageId
@@ -94,17 +94,17 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: Reaction = this.reaction;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressReactionData(messageId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", reaction=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: Reaction = this.reaction;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressReactionData(messageId=");
+      var3.append(var4);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(", reaction=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

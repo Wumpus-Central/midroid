@@ -1,5 +1,6 @@
 package com.discord.audio
 
+import Ja.v
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -8,7 +9,6 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.Intrinsics
-import xa.v
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterModuleSpec(var1) {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -23,12 +23,12 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
             val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var2: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var3.emitModuleEvent(var2, var4);
+            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var3.emitModuleEvent(var4, var2);
          }
 
          @Override

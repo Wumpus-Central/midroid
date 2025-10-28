@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.reaction
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -135,27 +135,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.reactionBackgroundColor;
-      val var4: Int = this.reactionBorderColor;
+      val var1: Int = this.reactionBackgroundColor;
+      val var3: Int = this.reactionBorderColor;
       val var5: Int = this.reactionTextColor;
       val var6: Int = this.activeReactionBackgroundColor;
-      val var3: Int = this.activeReactionBorderColor;
-      val var7: Int = this.activeReactionTextColor;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ReactionsTheme(reactionBackgroundColor=");
-      var1.append(var2);
-      var1.append(", reactionBorderColor=");
-      var1.append(var4);
-      var1.append(", reactionTextColor=");
-      var1.append(var5);
-      var1.append(", activeReactionBackgroundColor=");
-      var1.append(var6);
-      var1.append(", activeReactionBorderColor=");
-      var1.append(var3);
-      var1.append(", activeReactionTextColor=");
-      var1.append(var7);
-      var1.append(")");
-      return var1.toString();
+      val var7: Int = this.activeReactionBorderColor;
+      val var4: Int = this.activeReactionTextColor;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ReactionsTheme(reactionBackgroundColor=");
+      var2.append(var1);
+      var2.append(", reactionBorderColor=");
+      var2.append(var3);
+      var2.append(", reactionTextColor=");
+      var2.append(var5);
+      var2.append(", activeReactionBackgroundColor=");
+      var2.append(var6);
+      var2.append(", activeReactionBorderColor=");
+      var2.append(var7);
+      var2.append(", activeReactionTextColor=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

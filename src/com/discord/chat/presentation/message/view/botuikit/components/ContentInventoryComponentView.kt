@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import Ja.o
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -31,14 +32,13 @@ import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.o
 
 @SourceDebugExtension(["SMAP\nContentInventoryComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContentInventoryComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContentInventoryComponentView\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,186:1\n1#2:187\n1557#3:188\n1628#3,3:189\n*S KotlinDebug\n*F\n+ 1 ContentInventoryComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContentInventoryComponentView\n*L\n79#1:188\n79#1:189,3\n*E\n"])
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
          var1, var2, var3
       ),
    ComponentView<ContentInventoryEntryComponent> {
-   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = G3.d.g()
+   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = N3.d.g()
 
    private final val binding: MessageComponentContentInventoryViewBinding
       private final get() {
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = xa.l.b(o.i, new e(this));
+      this.binding$delegate = Ja.l.a(o.i, new e(this));
    }
 
    @JvmStatic
@@ -90,11 +90,11 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var8: IntArray = CollectionsKt.V0(var7);
-         val var25: ContentInventoryComponentView = this.getBinding().getRoot();
-         var25.setVisibility(0);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var25, var8, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         ContentInventoryComponentViewKt.access$applyClickable(var25, var3, var4, var4.getClickable(), "container");
+         val var25: IntArray = CollectionsKt.V0(var7);
+         val var8: ContentInventoryComponentView = this.getBinding().getRoot();
+         var8.setVisibility(0);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var8, var25, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         ContentInventoryComponentViewKt.access$applyClickable(var8, var3, var4, var4.getClickable(), "container");
          val var9: TextView = this.getBinding().contentInventoryComponentUsername;
          var9.setText(var4.getUserActionDescription());
          ContentInventoryComponentViewKt.access$applyClickable(var9, var3, var4, var4.getUserClickable(), "username");

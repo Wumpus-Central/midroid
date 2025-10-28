@@ -1,6 +1,7 @@
 package com.discord.foreground_service.service
 
-import Aa.a
+import Ja.v
+import Ma.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -16,7 +17,6 @@ import com.discord.notifications.renderer.R.drawable
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
 import v0.d
-import xa.v
 
 @SourceDebugExtension(["SMAP\nServiceNotification.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,105:1\n1053#2:106\n1863#2,2:107\n*S KotlinDebug\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n*L\n25#1:106\n83#1:107,2\n*E\n"])
 internal object ServiceNotification {
@@ -44,11 +44,11 @@ internal object ServiceNotification {
 
       val var5: NotificationCompat.Builder = var4.v(var6).T(drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
          var5.a(
             0,
-            var7.getTitle(),
-            DefaultImpls.toPendingIntent$default(new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null)
+            var8.getTitle(),
+            DefaultImpls.toPendingIntent$default(new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null)
          );
       }
 

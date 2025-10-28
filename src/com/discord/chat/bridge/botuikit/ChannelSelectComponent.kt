@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class ChannelSelectComponent(type: Int,
@@ -136,10 +136,10 @@ public data class ChannelSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = Integer.hashCode(this.type);
-      val var6: Int = this.id.hashCode();
-      val var5: Int = this.state.hashCode();
-      val var7: Int = this.customId.hashCode();
+      val var6: Int = Integer.hashCode(this.type);
+      val var4: Int = this.id.hashCode();
+      val var7: Int = this.state.hashCode();
+      val var5: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -155,52 +155,52 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.minValues);
+      val var11: Int = Integer.hashCode(this.minValues);
       val var9: Int = Integer.hashCode(this.maxValues);
-      val var11: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var8: Int = this.selectedOptions.hashCode();
+      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var10: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var4 * 31 + var6) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var11) * 31 + var8) * 31 + var3;
+      return (((((((((var6 * 31 + var4) * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var11) * 31 + var9) * 31 + var8) * 31 + var10) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: Int = this.type;
-      val var6: java.lang.String = this.id;
+      val var1: Int = this.type;
+      val var11: java.lang.String = this.id;
       val var8: ActionComponentState = this.state;
-      val var5: java.lang.String = this.customId;
-      val var12: java.lang.String = this.placeholder;
-      val var7: java.lang.String = this.accessibilityLabel;
-      val var1: Int = this.minValues;
-      val var3: Int = this.maxValues;
+      val var7: java.lang.String = this.customId;
+      val var9: java.lang.String = this.placeholder;
+      val var6: java.lang.String = this.accessibilityLabel;
+      val var3: Int = this.minValues;
+      val var2: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var9: java.util.List = this.selectedOptions;
-      val var11: java.util.List = this.channelTypes;
+      val var5: java.util.List = this.selectedOptions;
+      val var12: java.util.List = this.channelTypes;
       val var10: StringBuilder = new StringBuilder();
       var10.append("ChannelSelectComponent(type=");
-      var10.append(var2);
+      var10.append(var1);
       var10.append(", id=");
-      var10.append(var6);
+      var10.append(var11);
       var10.append(", state=");
       var10.append(var8);
       var10.append(", customId=");
-      var10.append(var5);
-      var10.append(", placeholder=");
-      var10.append(var12);
-      var10.append(", accessibilityLabel=");
       var10.append(var7);
+      var10.append(", placeholder=");
+      var10.append(var9);
+      var10.append(", accessibilityLabel=");
+      var10.append(var6);
       var10.append(", minValues=");
-      var10.append(var1);
-      var10.append(", maxValues=");
       var10.append(var3);
+      var10.append(", maxValues=");
+      var10.append(var2);
       var10.append(", disabled=");
       var10.append(var4);
       var10.append(", selectedOptions=");
-      var10.append(var9);
+      var10.append(var5);
       var10.append(", channelTypes=");
-      var10.append(var11);
+      var10.append(var12);
       var10.append(")");
       return var10.toString();
    }

@@ -42,15 +42,15 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
                val var4: Int = (int)var2.getDouble("width");
                val var3: Int = (int)var2.getDouble("height");
                if (this.lastUri == var10 && this.lastWidthDp != null && this.lastWidthDp == var4 && this.lastHeightDp != null && this.lastHeightDp == var3) {
-                  val var9: Log = Log.INSTANCE;
-                  val var6: StringBuilder = new StringBuilder();
-                  var6.append("\ud83d\udeab DUPLICATE PROPS - Skipping duplicate request for URI: ");
-                  var6.append(var10);
-                  var6.append(" - Size: ");
-                  var6.append(var4);
-                  var6.append("x");
-                  var6.append(var3);
-                  Log.i$default(var9, "LocalImageThumbnailViewManager", var6.toString(), null, 4, null);
+                  val var6: Log = Log.INSTANCE;
+                  val var9: StringBuilder = new StringBuilder();
+                  var9.append("\ud83d\udeab DUPLICATE PROPS - Skipping duplicate request for URI: ");
+                  var9.append(var10);
+                  var9.append(" - Size: ");
+                  var9.append(var4);
+                  var9.append("x");
+                  var9.append(var3);
+                  Log.i$default(var6, "LocalImageThumbnailViewManager", var9.toString(), null, 4, null);
                   return;
                }
 

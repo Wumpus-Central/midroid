@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
+import Ja.v
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import xa.v
 
 public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) : LongPressStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId

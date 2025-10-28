@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.google.android.flexbox.FlexboxLayout;
-import x1.a;
 
 public final class MessageComponentSectionViewBinding implements ViewBinding {
    @NonNull

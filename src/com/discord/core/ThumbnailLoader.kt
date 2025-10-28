@@ -1,5 +1,6 @@
 package com.discord.core
 
+import Ja.v
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -8,7 +9,6 @@ import android.os.Build.VERSION
 import android.provider.MediaStore.Images.Thumbnails
 import android.util.Size
 import com.discord.crash_reporting.CrashReporting
-import xa.v
 
 public object ThumbnailLoader {
    private final val serialLock: Any = new Object()
@@ -147,38 +147,38 @@ public object ThumbnailLoader {
       // 0a6: aload 7
       // 0a8: bipush 20
       // 0aa: invokestatic kotlin/text/StringsKt.f1 (Ljava/lang/String;I)Ljava/lang/String;
-      // 0ad: astore 7
+      // 0ad: astore 8
       // 0af: new java/lang/StringBuilder
-      // 0b2: astore 8
-      // 0b4: aload 8
+      // 0b2: astore 7
+      // 0b4: aload 7
       // 0b6: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0b9: aload 8
+      // 0b9: aload 7
       // 0bb: ldc "✅ LOAD END - URI: "
       // 0bd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0c0: pop
-      // 0c1: aload 8
-      // 0c3: aload 7
+      // 0c1: aload 7
+      // 0c3: aload 8
       // 0c5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0c8: pop
-      // 0c9: aload 8
+      // 0c9: aload 7
       // 0cb: ldc " - Size: "
       // 0cd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0d0: pop
-      // 0d1: aload 8
+      // 0d1: aload 7
       // 0d3: iload 4
       // 0d5: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
       // 0d8: pop
-      // 0d9: aload 8
+      // 0d9: aload 7
       // 0db: ldc " bytes - Serialized: "
       // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0e0: pop
-      // 0e1: aload 8
+      // 0e1: aload 7
       // 0e3: iload 6
       // 0e5: invokevirtual java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;
       // 0e8: pop
       // 0e9: aload 3
       // 0ea: ldc "ThumbnailLoader"
-      // 0ec: aload 8
+      // 0ec: aload 7
       // 0ee: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0f1: aconst_null
       // 0f2: bipush 4
@@ -186,7 +186,7 @@ public object ThumbnailLoader {
       // 0f4: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
       // 0f7: aload 2
       // 0f8: monitorexit
-      // 0f9: goto 19e
+      // 0f9: goto 1a4
       // 0fc: aload 2
       // 0fd: monitorexit
       // 0fe: aload 1
@@ -237,44 +237,44 @@ public object ThumbnailLoader {
       // 156: aload 7
       // 158: bipush 20
       // 15a: invokestatic kotlin/text/StringsKt.f1 (Ljava/lang/String;I)Ljava/lang/String;
-      // 15d: astore 7
-      // 15f: new java/lang/StringBuilder
-      // 162: dup
-      // 163: invokespecial java/lang/StringBuilder.<init> ()V
-      // 166: astore 3
-      // 167: aload 3
-      // 168: ldc "✅ LOAD END - URI: "
-      // 16a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 16d: pop
-      // 16e: aload 3
+      // 15d: astore 3
+      // 15e: new java/lang/StringBuilder
+      // 161: dup
+      // 162: invokespecial java/lang/StringBuilder.<init> ()V
+      // 165: astore 7
+      // 167: aload 7
+      // 169: ldc "✅ LOAD END - URI: "
+      // 16b: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 16e: pop
       // 16f: aload 7
-      // 171: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 174: pop
-      // 175: aload 3
-      // 176: ldc " - Size: "
-      // 178: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 17b: pop
-      // 17c: aload 3
-      // 17d: iload 4
-      // 17f: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-      // 182: pop
-      // 183: aload 3
-      // 184: ldc " bytes - Serialized: "
-      // 186: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 189: pop
-      // 18a: aload 3
-      // 18b: iload 6
-      // 18d: invokevirtual java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;
-      // 190: pop
-      // 191: aload 2
-      // 192: ldc "ThumbnailLoader"
-      // 194: aload 3
-      // 195: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 198: aconst_null
-      // 199: bipush 4
-      // 19a: aconst_null
-      // 19b: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
-      // 19e: aload 1
-      // 19f: areturn
+      // 171: aload 3
+      // 172: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 175: pop
+      // 176: aload 7
+      // 178: ldc " - Size: "
+      // 17a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 17d: pop
+      // 17e: aload 7
+      // 180: iload 4
+      // 182: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
+      // 185: pop
+      // 186: aload 7
+      // 188: ldc " bytes - Serialized: "
+      // 18a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 18d: pop
+      // 18e: aload 7
+      // 190: iload 6
+      // 192: invokevirtual java/lang/StringBuilder.append (Z)Ljava/lang/StringBuilder;
+      // 195: pop
+      // 196: aload 2
+      // 197: ldc "ThumbnailLoader"
+      // 199: aload 7
+      // 19b: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 19e: aconst_null
+      // 19f: bipush 4
+      // 1a0: aconst_null
+      // 1a1: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+      // 1a4: aload 1
+      // 1a5: areturn
    }
 }

@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.list.item
 
+import D2.a
+import Ja.l
+import Ja.o
 import com.discord.misc.utilities.ids.IdUtilsKt
-import w2.a
-import xa.l
-import xa.o
 
 public sealed class ChatListItem protected constructor(id: String) {
    public open val id: String
@@ -16,7 +16,7 @@ public sealed class ChatListItem protected constructor(id: String) {
 
    init {
       this.id = var1;
-      this.recyclerItemId$delegate = l.b(o.i, new a(this));
+      this.recyclerItemId$delegate = l.a(o.i, new a(this));
    }
 
    @JvmStatic

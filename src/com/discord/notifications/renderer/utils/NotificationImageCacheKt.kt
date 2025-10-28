@@ -2,7 +2,6 @@
 
 package com.discord.notifications.renderer.utils
 
-import ac.K
 import android.content.Context
 import android.net.Uri
 import java.io.File
@@ -11,6 +10,7 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
+import mc.K
 
 public final val notificationsDir: File
    public final get() {
@@ -50,7 +50,7 @@ private fun enforceNotificationsCacheTTL(directory: File) {
 }
 
 public suspend fun storeRemoteImageViaFileProvider(context: Context, imageUrl: String): Pair<Uri, String>? {
-   return ac.f.g(
+   return mc.f.g(
       K.b(),
       new Function2<CoroutineScope, Continuation, Object>(var0, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)

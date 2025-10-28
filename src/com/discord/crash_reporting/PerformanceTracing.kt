@@ -95,12 +95,12 @@ public class PerformanceTracing : MarkerListener {
          val var3: java.lang.String = this.startupRootEventsTree.get(var1.getName());
          var2 = var3;
          if (CollectionsKt.Z(this.wildcardEventNames, var3)) {
-            val var6: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
-            val var4: StringBuilder = new StringBuilder();
-            var4.append(var3);
-            var4.append(" ");
-            var4.append(var6);
-            var2 = var4.toString();
+            val var4: PerformanceTracing.MarkerEnd = var1.getMarkerEnd();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var3);
+            var6.append(" ");
+            var6.append(var4);
+            var2 = var6.toString();
          }
 
          return var2;
@@ -480,7 +480,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       @JvmStatic

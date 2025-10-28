@@ -1,8 +1,8 @@
 package com.discord.mobile_voice_overlay.utils
 
-import R2.a
-import R2.b
-import R2.c
+import Y2.a
+import Y2.b
+import Y2.c
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayData
 import com.discord.mobile_voice_overlay.views.OverlayView

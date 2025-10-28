@@ -1,8 +1,8 @@
 package com.discord.key_commands
 
+import Ja.v
 import com.discord.codegen.NativeKeyCommandsModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import xa.v
 
 public class KeyCommandsModule(reactContext: ReactApplicationContext) : NativeKeyCommandsModuleSpec(var1) {
    protected open fun getTypedExportedConstants(): MutableMap<String, Any> {

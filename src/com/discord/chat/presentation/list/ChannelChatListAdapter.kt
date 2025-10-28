@@ -65,9 +65,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
          } else if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = access$getLOGGING_TAG$cp();
-            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            val var2: Log = Log.INSTANCE;
+            val var3: java.lang.String = access$getLOGGING_TAG$cp();
+            Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
    }
@@ -132,7 +132,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
                this.notifyItemRangeInserted((var11 as ListOperation.InsertRange).getFirst(), (var11 as ListOperation.InsertRange).getCount());
             } else {
                if (var11 !is ListOperation.RemoveRange) {
-                  throw new xa.p();
+                  throw new Ja.p();
                }
 
                this.notifyItemRangeRemoved((var11 as ListOperation.RemoveRange).getFirst(), (var11 as ListOperation.RemoveRange).getCount());
@@ -188,7 +188,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new xa.p();
+               throw new Ja.p();
             }
 
             val var5: java.util.List = CollectionsKt.Z0(this.getChatListItems$chat_release());
@@ -211,7 +211,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new xa.p();
+               throw new Ja.p();
             }
 
             this.notifyItemChanged(CollectionsKt.m(this.getChatListItems$chat_release()));
@@ -238,7 +238,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processPortalViewUpdate(this, var1 as PortalViewUpdate);
          } else {
             if (var1 !is ChatListItemUpdate) {
-               throw new xa.p();
+               throw new Ja.p();
             }
 
             access$processChatListItemUpdate(this, var1 as ChatListItemUpdate);
@@ -247,7 +247,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, ac.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+         access$setProcessNextUpdateJob$p(this, mc.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -265,7 +265,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             }
 
             public final Object invokeSuspend(Object var1) {
-               Ca.b.e();
+               Oa.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -347,11 +347,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -402,7 +402,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       @JvmStatic

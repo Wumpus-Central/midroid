@@ -16,7 +16,7 @@ internal class LinkingModule(reactContext: ReactApplicationContext) : NativeLink
       this.reactContext = var1;
    }
 
-   public override fun tryOpenScheme(scheme: String): Boolean {
+   public open fun tryOpenScheme(scheme: String): Boolean {
       try {
          var4 = Uri.parse(var1);
       } catch (var3: Exception) {
@@ -34,7 +34,7 @@ internal class LinkingModule(reactContext: ReactApplicationContext) : NativeLink
       }
    }
 
-   public override fun tryOpenUrlAsUniversalLink(urlString: String): Boolean {
+   public open fun tryOpenUrlAsUniversalLink(urlString: String): Boolean {
       if (VERSION.SDK_INT < 30) {
          return false;
       } else {

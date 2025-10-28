@@ -2,6 +2,7 @@
 
 package com.discord.notifications.api
 
+import Ja.v
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -10,7 +11,6 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");

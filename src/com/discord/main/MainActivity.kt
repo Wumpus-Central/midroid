@@ -1,5 +1,6 @@
 package com.discord.main
 
+import Ja.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -14,7 +15,6 @@ import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
-import xa.c
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
@@ -32,16 +32,16 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            var var3: Context = this.getContext();
-            var2.handleIntent(var3, var1);
-            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            var3 = this.getContext();
-            var4.handleIntent(var3, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            var var2: Context = this.getContext();
+            var3.handleIntent(var2, var1);
+            val var6: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            var2 = this.getContext();
+            var6.handleIntent(var2, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             val var5: BundleUpdater = BundleUpdater.Companion.instance();
-            var3 = this.getContext();
-            var5.handleIntent(var3, var1);
+            val var7: Context = this.getContext();
+            var5.handleIntent(var7, var1);
          }
 
          @Override

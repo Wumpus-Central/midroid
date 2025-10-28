@@ -1,6 +1,7 @@
 package com.discord.chat.presentation.stickers
 
-import G2.a
+import Ja.p
+import N2.a
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -23,7 +24,6 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function2
-import xa.p
 
 public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: WelcomeStickerViewBinding

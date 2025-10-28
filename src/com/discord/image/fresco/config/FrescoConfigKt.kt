@@ -1,5 +1,10 @@
 package com.discord.image.fresco.config
 
+import E4.C
+import E4.E
+import E4.F
+import E4.o
+import E4.C.a
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
@@ -9,11 +14,6 @@ import com.facebook.imagepipeline.core.ImagePipelineConfig
 import com.facebook.imagepipeline.core.ImagePipelineConfig.Builder
 import com.facebook.react.bridge.BridgeReactContext
 import com.facebook.react.modules.fresco.FrescoModule
-import x4.C
-import x4.E
-import x4.F
-import x4.o
-import x4.C.a
 
 private final val ATTACHMENT_CDN_HOSTS: Set<String> = Y.i(new java.lang.String[]{"cdn.discordapp.com", "media.discordapp.net", "images.discordapp.net"})
 private final val SIGNED_QUERY_PARAMS: Set<String> = Y.i(new java.lang.String[]{"ex", "hm", "is"})
@@ -30,15 +30,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
-   val var2: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var1.newSmallDiskCache(var0))
+   val var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   val var6: Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var6: a = C.n();
-   val var5: F = o.a();
-   val var4: Builder = var3.X(new E(var6.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var5: a = C.n();
+   val var3: F = o.a();
+   val var4: Builder = var6.X(new E(var5.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
       protected Uri getCacheKeySourceUri(Uri var1) {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
@@ -46,12 +46,12 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             val var5: android.net.Uri.Builder = var1.buildUpon();
             var5.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var3: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var4 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
+                  val var2: java.util.Iterator = var1.getQueryParameters(var4).iterator();
 
-                  while (var3.hasNext()) {
-                     var5.appendQueryParameter(var2, var3.next() as java.lang.String);
+                  while (var2.hasNext()) {
+                     var5.appendQueryParameter(var4, var2.next() as java.lang.String);
                   }
                }
             }

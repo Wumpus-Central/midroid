@@ -30,11 +30,11 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: MessageAltRemixTagViewBinding
 
    init {
-      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
-      val var3: TextView = var5.altRemixTag;
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var5.remixIcon;
+      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var5: TextView = var3.altRemixTag;
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var3.remixIcon;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 

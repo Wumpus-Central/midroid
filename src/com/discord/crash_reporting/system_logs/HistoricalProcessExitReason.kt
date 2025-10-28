@@ -1,10 +1,10 @@
 package com.discord.crash_reporting.system_logs
 
+import Ja.v
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import xa.v
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -52,15 +52,15 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = J1.e.a((ActivityManager)var5, null, 0, 1);
-            val var4: ApplicationExitInfo = J1.f.a(CollectionsKt.firstOrNull((java.util.List)var5));
+            var5 = Q1.e.a((ActivityManager)var5, null, 0, 1);
+            val var4: ApplicationExitInfo = Q1.f.a(CollectionsKt.firstOrNull((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
-               val var3: java.lang.String = exitReasonLookup.get(J1.g.a(var4));
+               val var3: java.lang.String = exitReasonLookup.get(Q1.g.a(var4));
                var5 = var3;
                if (var3 == null) {
-                  val var2: Int = J1.g.a(var4);
+                  val var2: Int = Q1.g.a(var4);
                   var5 = new StringBuilder();
                   var5.append("Unknown ");
                   var5.append(var2);
@@ -122,15 +122,15 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.reason;
-         val var2: java.lang.String = this.description;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Reason(reason=");
-         var1.append(var3);
-         var1.append(", description=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.reason;
+         val var3: java.lang.String = this.description;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Reason(reason=");
+         var2.append(var1);
+         var2.append(", description=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

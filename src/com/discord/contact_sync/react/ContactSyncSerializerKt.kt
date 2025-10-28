@@ -2,7 +2,7 @@
 
 package com.discord.contact_sync.react
 
-import J2.a
+import Q2.a
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -15,9 +15,9 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import nc.P0
-import nc.W
-import nc.f
+import zc.P0
+import zc.W
+import zc.f
 
 @JvmSynthetic
 fun a(var0: Any): Any {

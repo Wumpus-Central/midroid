@@ -87,6 +87,7 @@
     <item type="id" name="alt_text_label" />
     <item type="id" name="ampm" />
     <item type="id" name="androidx_compose_ui_view_composition_context" />
+    <item type="id" name="androidx_credential_pendingCredentialRequest" />
     <item type="id" name="androidx_window_activity_scope" />
     <item type="id" name="answers" />
     <item type="id" name="app_icon" />
@@ -296,6 +297,10 @@
     <item type="id" name="file_attachment_icon" />
     <item type="id" name="file_attachment_name" />
     <item type="id" name="filter" />
+    <item type="id" name="fingerprint_description" />
+    <item type="id" name="fingerprint_error" />
+    <item type="id" name="fingerprint_icon" />
+    <item type="id" name="fingerprint_subtitle" />
     <item type="id" name="firstRenderPerformed" />
     <item type="id" name="flagged_message_keyword" />
     <item type="id" name="flagged_message_rule_name" />

@@ -4,7 +4,7 @@ import com.android.billingclient.api.BillingResult;
 import java.util.List;
 
 // $VF: synthetic class
-public final class f implements c2.j {
+public final class f implements j2.j {
    public final BillingManager a;
 
    @Override

@@ -1,14 +1,14 @@
 package com.discord.appreview
 
-import R7.b
-import R7.c
-import U7.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
+import d8.b
+import d8.c
+import g8.a
 import kotlin.jvm.functions.Function1
-import l2.d
-import l2.e
+import s2.d
+import s2.e
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -62,9 +62,9 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    public fun executeRequest() {
-      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.a();
-      var2.addOnCompleteListener(new l2.c(var1, this));
-      var2.b(new d(this));
+      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var1: Task = var2.a();
+      var1.addOnCompleteListener(new s2.c(var2, this));
+      var1.b(new d(this));
    }
 }

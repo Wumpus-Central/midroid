@@ -1,6 +1,6 @@
 package com.discord.intents.packages
 
-import Da.a
+import Pa.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 

@@ -1,5 +1,6 @@
 package com.discord.chat.input.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
-import x1.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
    @NonNull

@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.root
 
+import Ja.v
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -17,7 +18,6 @@ import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.flow.Flow
-import xa.v
 
 @SourceDebugExtension(["SMAP\nChatView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,154:1\n14#2,5:155\n14#2,5:160\n14#2,5:165\n*S KotlinDebug\n*F\n+ 1 ChatView.kt\ncom/discord/chat/presentation/root/ChatView\n*L\n50#1:155,5\n55#1:160,5\n65#1:165,5\n*E\n"])
 public class ChatView(context: Context) : ReactViewGroup(var1) {
@@ -169,11 +169,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
             try {
                var13.setPortalView(var0, var2);
-               val var14: CrashReporting = CrashReporting.INSTANCE;
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("PortalView portaled into ChatListView; measuredDims=");
-               var16.append(var2);
-               CrashReporting.addBreadcrumb$default(var14, var16.toString(), null, null, null, 14, null);
+               val var16: CrashReporting = CrashReporting.INSTANCE;
+               val var14: StringBuilder = new StringBuilder();
+               var14.append("PortalView portaled into ChatListView; measuredDims=");
+               var14.append(var2);
+               CrashReporting.addBreadcrumb$default(var16, var14.toString(), null, null, null, 14, null);
                return;
             } catch (var6: Exception) {
                var11 = CrashReporting.INSTANCE;
@@ -261,11 +261,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

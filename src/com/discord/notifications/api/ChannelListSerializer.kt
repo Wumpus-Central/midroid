@@ -7,7 +7,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import lc.a
+import xc.a
 
 @SourceDebugExtension(["SMAP\nNotificationDataDeserializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationDataDeserializer.kt\ncom/discord/notifications/api/ChannelListSerializer\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,61:1\n1611#2,9:62\n1863#2:71\n1864#2:74\n1620#2:75\n1#3:72\n1#3:73\n*S KotlinDebug\n*F\n+ 1 NotificationDataDeserializer.kt\ncom/discord/notifications/api/ChannelListSerializer\n*L\n16#1:62,9\n16#1:71\n16#1:74\n16#1:75\n16#1:73\n*E\n"])
 public object ChannelListSerializer : KSerializer {

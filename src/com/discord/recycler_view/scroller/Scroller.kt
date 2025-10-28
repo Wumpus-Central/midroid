@@ -1,5 +1,6 @@
 package com.discord.recycler_view.scroller
 
+import Ja.p
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function0
-import xa.p
 
 public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView

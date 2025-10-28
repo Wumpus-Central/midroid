@@ -4,8 +4,8 @@ import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 internal data class TapSeeMoreData(messageId: MessageId) : TapSeeMoreData(var1), ReactEvent {

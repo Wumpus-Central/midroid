@@ -83,15 +83,15 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
       }
    }
 
-   public override fun canOpenUrlScheme(urlScheme: String): Boolean {
-      var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
-      val var2: PackageManager = this.reactContext.getPackageManager();
-      if (var1 != null) {
+   public open fun canOpenUrlScheme(urlScheme: String): Boolean {
+      val var2: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
+      val var4: PackageManager = this.reactContext.getPackageManager();
+      if (var2 != null) {
          try {
             if (VERSION.SDK_INT >= 33) {
-               q.a(var2, var1, p.a(0L));
+               q.a(var4, var2, p.a(0L));
             } else {
-               var2.getPackageInfo(var1, 0);
+               var4.getPackageInfo(var2, 0);
             }
 
             return true;
@@ -102,19 +102,19 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
       return false;
    }
 
-   public override fun canSendMail(): Boolean {
+   public open fun canSendMail(): Boolean {
       return this.canResolveActivityForIntent(createEmailIntent$default(this, null, null, 3, null));
    }
 
-   public override fun canSendSMS(): Boolean {
+   public open fun canSendSMS(): Boolean {
       return this.canResolveActivityForIntent(createSmsIntent$default(this, null, 1, null));
    }
 
-   public override fun sendMail(subject: String, body: String, recipients: ReadableArray): Boolean {
+   public open fun sendMail(subject: String, body: String, recipients: ReadableArray): Boolean {
       return this.startActivityWithIntent(this.createEmailIntent(var1, var2));
    }
 
-   public override fun sendSMS(body: String, recipients: ReadableArray): Boolean {
+   public open fun sendSMS(body: String, recipients: ReadableArray): Boolean {
       return this.startActivityWithIntent(this.createSmsIntent(var1));
    }
 }

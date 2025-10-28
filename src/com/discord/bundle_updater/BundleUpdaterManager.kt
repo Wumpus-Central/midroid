@@ -1,8 +1,6 @@
 package com.discord.bundle_updater
 
-import ac.I
-import ac.K
-import ac.k0
+import Ja.v
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +31,9 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
-import xa.v
+import mc.I
+import mc.K
+import mc.k0
 
 @SourceDebugExtension(["SMAP\nBundleUpdaterManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,202:1\n1#2:203\n8#3:204\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n*L\n192#1:204\n*E\n"])
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -47,7 +47,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       this.reactEvents = new ReactEvents(
          new Pair[]{v.a("BundleDownloaded", BundleDownloadedEvent::class), v.a("OtaUpdateChecked", OtaCheckAttemptEvent::class)}
       );
-      this.coroutineScope = kotlinx.coroutines.g.a(K.c().X0(k0.b(null, 1, null)));
+      this.coroutineScope = kotlinx.coroutines.g.a(K.c().W0(k0.b(null, 1, null)));
    }
 
    @JvmStatic
@@ -213,7 +213,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
          var9.waitForCompletion();
       }
 
-      ac.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      mc.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final BundleUpdaterManager this$0;
 
@@ -231,7 +231,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = Ca.b.e();
+            val var3: Any = Oa.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

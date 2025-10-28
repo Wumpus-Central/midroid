@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.polls
 
+import Ja.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -21,7 +22,6 @@ import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.p
 
 @SourceDebugExtension(["SMAP\nPollActionButton.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,134:1\n257#2,2:135\n257#2,2:137\n257#2,2:139\n257#2,2:141\n257#2,2:143\n257#2,2:145\n257#2,2:147\n*S KotlinDebug\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n*L\n34#1:135,2\n41#1:137,2\n43#1:139,2\n62#1:141,2\n82#1:143,2\n99#1:145,2\n121#1:147,2\n*E\n"])
 public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
@@ -114,43 +114,43 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   var11 = var21;
                }
             } else {
-               val var22: DCDButton = this.binding.actionButton;
-               var22.setVisibility(8);
-               val var23: TextView = this.binding.actionText;
+               val var24: DCDButton = this.binding.actionButton;
+               var24.setVisibility(8);
+               val var25: TextView = this.binding.actionText;
                this.binding.actionText.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-               DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimarySemibold);
-               var23.setText(var1.getLabel());
-               var23.setClickable(true);
-               var23.setOnClickListener(new d(var1, var5, var2, var4));
+               DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimarySemibold);
+               var25.setText(var1.getLabel());
+               var25.setClickable(true);
+               var25.setOnClickListener(new d(var1, var5, var2, var4));
                var var12: PollsActionAccessibilityDelegate = null;
                if (var1.getType() != null) {
                   var12 = new PollsActionAccessibilityDelegate(var1);
                }
 
-               var23.setAccessibilityDelegate(var12);
-               var11 = var23;
+               var25.setAccessibilityDelegate(var12);
+               var11 = var25;
             }
          } else {
-            val var24: DCDButton = this.binding.actionButton;
-            var24.setVisibility(8);
-            val var25: TextView = this.binding.actionText;
-            var25.setVisibility(0);
-            var25.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-            DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimaryMedium);
-            var25.setText(var1.getFullTextLabel());
+            val var22: DCDButton = this.binding.actionButton;
+            var22.setVisibility(8);
+            val var23: TextView = this.binding.actionText;
+            var23.setVisibility(0);
+            var23.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+            DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
+            var23.setText(var1.getFullTextLabel());
             if (var1.getType() == null) {
                var8 = false;
             }
 
-            var25.setClickable(var8);
-            var25.setOnClickListener(new c(var1, var5, var2, var4));
+            var23.setClickable(var8);
+            var23.setOnClickListener(new c(var1, var5, var2, var4));
             var var13: PollsActionAccessibilityDelegate = null;
             if (var1.getType() != null) {
                var13 = new PollsActionAccessibilityDelegate(var1);
             }
 
-            var25.setAccessibilityDelegate(var13);
-            var11 = var25;
+            var23.setAccessibilityDelegate(var13);
+            var11 = var23;
          }
 
          var11.setEnabled(var1.getEnabled());

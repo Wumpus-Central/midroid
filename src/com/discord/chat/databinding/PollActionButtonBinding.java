@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import x1.a;
 
 public final class PollActionButtonBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class PollActionButtonBinding implements ViewBinding {
    @NonNull
    public static PollActionButtonBinding bind(@NonNull View var0) {
       int var1 = R.id.action_button;
-      DCDButton var2 = (DCDButton)a.a(var0, var1);
-      if (var2 != null) {
+      DCDButton var3 = (DCDButton)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.action_text;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new PollActionButtonBinding(var0, var2, var3);
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new PollActionButtonBinding(var0, var3, var2);
          }
       }
 

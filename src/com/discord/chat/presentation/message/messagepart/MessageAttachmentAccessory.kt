@@ -1,11 +1,11 @@
 package com.discord.chat.presentation.message.messagepart
 
+import G2.a
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.presentation.message.view.UploadContext
 import com.discord.chat.presentation.message.view.UploadItemProps
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function2
-import z2.a
 
 public sealed class MessageAttachmentAccessory protected constructor(messageId: MessageId,
    attachment: Attachment,
@@ -47,23 +47,23 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
          var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            val var4: java.lang.String = var1.getUploaderId();
+            val var5: java.lang.String = var1.getUploaderId();
             var3 = var1.getUploaderItemId();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var4);
-            var5.append(" ");
-            var5.append(var3);
-            var3 = var5.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var5);
+            var4.append(" ");
+            var4.append(var3);
+            var3 = var4.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }
 
-         val var6: java.lang.String = var1.type().getIndexLabel();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append(var6);
-         var8.append(" ");
-         var8.append(var3);
-         return var8.toString();
+         val var8: java.lang.String = var1.type().getIndexLabel();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var8);
+         var6.append(" ");
+         var6.append(var3);
+         return var6.toString();
       }
    }
 }

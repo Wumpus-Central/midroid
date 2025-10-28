@@ -3,7 +3,7 @@ package com.discord.app_ready
 import com.discord.codegen.NativeApplicationReadyModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import k2.a
+import r2.a
 
 public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec(var1) {
    @JvmStatic

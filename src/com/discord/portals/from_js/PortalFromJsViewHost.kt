@@ -1,5 +1,6 @@
 package com.discord.portals.from_js
 
+import Ja.v
 import android.content.Context
 import android.graphics.Canvas
 import android.view.View
@@ -12,7 +13,6 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @SourceDebugExtension(["SMAP\nPortalFromJsViewHost.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PortalFromJsViewHost.kt\ncom/discord/portals/from_js/PortalFromJsViewHost\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,281:1\n295#2,2:282\n*S KotlinDebug\n*F\n+ 1 PortalFromJsViewHost.kt\ncom/discord/portals/from_js/PortalFromJsViewHost\n*L\n216#1:282,2\n*E\n"])
 internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
@@ -85,8 +85,8 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          val var19: java.lang.String = var18.toString();
          val var14: Pair = v.a("portalId", var4);
          val var7: Pair = v.a("prevPortalId", var11);
-         val var9: Pair = v.a("child", var1.toString());
-         val var8: Pair = v.a("index", java.lang.String.valueOf(var2));
+         val var8: Pair = v.a("child", var1.toString());
+         val var9: Pair = v.a("index", java.lang.String.valueOf(var2));
          val var12: java.lang.String;
          if (this.childView == null) {
             var12 = "true";
@@ -97,7 +97,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          CrashReporting.addBreadcrumb$default(
             var17,
             var19,
-            O.m(new Pair[]{var14, var7, var9, var8, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+            O.m(new Pair[]{var14, var7, var8, var9, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
             "portal",
             null,
             8,
@@ -187,9 +187,9 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       try {
          super.dispatchDraw(var1);
       } catch (var10: NullPointerException) {
-         val var8: CrashReporting = CrashReporting.INSTANCE;
-         val var7: Pair = v.a("context", "PortalFromJsViewHost.dispatchDraw");
-         val var6: Pair = v.a("childCount", java.lang.String.valueOf(this.getChildCount()));
+         val var6: CrashReporting = CrashReporting.INSTANCE;
+         val var9: Pair = v.a("context", "PortalFromJsViewHost.dispatchDraw");
+         val var7: Pair = v.a("childCount", java.lang.String.valueOf(this.getChildCount()));
          val var2: Boolean;
          if (this.childView == null) {
             var2 = true;
@@ -197,7 +197,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             var2 = false;
          }
 
-         val var9: Pair = v.a("childViewIsNull", java.lang.String.valueOf(var2));
+         val var8: Pair = v.a("childViewIsNull", java.lang.String.valueOf(var2));
          var var11: java.lang.String = this.portalId;
          if (this.portalId == null) {
             var11 = "null";
@@ -210,7 +210,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          }
 
          CrashReporting.addBreadcrumb$default(
-            var8, "PortalFromJsViewHost.dispatchDraw NPE", O.m(new Pair[]{var7, var6, var9, var13, v.a("prevPortalId", var12)}), null, null, 12, null
+            var6, "PortalFromJsViewHost.dispatchDraw NPE", O.m(new Pair[]{var9, var7, var8, var13, v.a("prevPortalId", var12)}), null, null, 12, null
          );
          throw var10;
       }
@@ -257,28 +257,27 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          throw new IllegalArgumentException(var3);
       } else {
          if (var1 > 0) {
-            val var7: CrashReporting = CrashReporting.INSTANCE;
-            val var8: Pair = v.a("index", java.lang.String.valueOf(var1));
+            val var8: CrashReporting = CrashReporting.INSTANCE;
+            val var7: Pair = v.a("index", java.lang.String.valueOf(var1));
             var3 = this.portalId;
             if (this.portalId == null) {
                var3 = "";
             }
 
             val var15: Pair = v.a("portalId", var3);
-            var3 = this.portalIdPrev;
-            if (this.portalIdPrev == null) {
-               var3 = "";
+            if (this.portalIdPrev != null) {
+               var5 = this.portalIdPrev;
             }
 
-            val var12: Pair = v.a("prevPortalId", var3);
+            val var12: Pair = v.a("prevPortalId", var5);
             if (this.childView == null) {
                var4 = "true";
             }
 
             CrashReporting.addBreadcrumb$default(
-               var7,
+               var8,
                "getChildAt of non-zero index",
-               O.m(new Pair[]{var8, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+               O.m(new Pair[]{var7, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
                "portal",
                null,
                8,
@@ -311,10 +310,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var2: View = this.childView;
+         val var3: View = this.childView;
          if (this.childView != null) {
-            val var3: java.lang.String = this.portalId;
-            this.childViewAdded(var3, var2);
+            val var2: java.lang.String = this.portalId;
+            this.childViewAdded(var2, var3);
          }
 
          this.portalIdPrev = null;

@@ -1,9 +1,9 @@
 package com.discord.file_downloader
 
+import Ja.l
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
 import com.discord.resource_usage.DeviceResourceUsageRecorder.Companion
-import dc.e
 import java.io.File
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation
@@ -17,11 +17,11 @@ import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
 import org.jetbrains.annotations.NotNull
-import xa.l
+import pc.e
 
 @SourceDebugExtension(["SMAP\nFileDownloader.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FileDownloader.kt\ncom/discord/file_downloader/FileDownloader\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 OkHttpClient.kt\nokhttp3/OkHttpClient$Builder\n*L\n1#1,88:1\n1863#2,2:89\n563#3:91\n*S KotlinDebug\n*F\n+ 1 FileDownloader.kt\ncom/discord/file_downloader/FileDownloader\n*L\n33#1:89,2\n21#1:91\n*E\n"])
 public object FileDownloader {
-   private final val defaultClient: OkHttpClient by l.a(new a())
+   private final val defaultClient: OkHttpClient by l.b(new a())
       private final get() {
          return defaultClient$delegate.getValue() as OkHttpClient;
       }

@@ -41,14 +41,14 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    private final val reactEvents: ReactEvents =
       new ReactEvents(
          new Pair[]{
-            xa.v.a("onTapLink", TapLinkData::class),
-            xa.v.a("onLongPressLink", LongPressLinkData::class),
-            xa.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
-            xa.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
-            xa.v.a("onTapMention", TapMentionData::class),
-            xa.v.a("onTapTimestamp", TapTimestampEvent::class),
-            xa.v.a("onTapInlineCode", TapInlineCodeEvent::class),
-            xa.v.a("onTapEmoji", TapEmojiData::class)
+            Ja.v.a("onTapLink", TapLinkData::class),
+            Ja.v.a("onLongPressLink", LongPressLinkData::class),
+            Ja.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
+            Ja.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
+            Ja.v.a("onTapMention", TapMentionData::class),
+            Ja.v.a("onTapTimestamp", TapTimestampEvent::class),
+            Ja.v.a("onTapInlineCode", TapInlineCodeEvent::class),
+            Ja.v.a("onTapEmoji", TapEmojiData::class)
          }
       )
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
@@ -177,9 +177,9 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    private fun tryConfigure(view: TextDisplayComponentView) {
       val var2: PartialData = this.viewToDataMapping.get(var1);
       if (var2 != null) {
-         val var3: Data = var2.toData();
-         if (var3 != null) {
-            var1.configure(var3.getComponent(), this.createTextDisplayComponentContext(var1, var3));
+         val var4: Data = var2.toData();
+         if (var4 != null) {
+            var1.configure(var4.getComponent(), this.createTextDisplayComponentContext(var1, var4));
             ViewMeasureExtensionsKt.measureAndLayout(var1);
          }
       }
@@ -250,13 +250,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
          var3 = var16 is TextDisplayComponent;
       } catch (var9: Exception) {
          val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-         var4 = var9.getMessage();
-         val var14: StringBuilder = new StringBuilder();
-         var14.append("Error while deserializing ");
-         var14.append(var10);
-         var14.append(": ");
-         var14.append((java.lang.String)var4);
-         throw new IllegalStateException(var14.toString().toString());
+         val var14: java.lang.String = var9.getMessage();
+         var4 = new StringBuilder();
+         var4.append("Error while deserializing ");
+         var4.append(var10);
+         var4.append(": ");
+         var4.append(var14);
+         throw new IllegalStateException(var4.toString().toString());
       }
 
       if (var3) {
@@ -274,13 +274,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             throw new IllegalStateException(var4.toString().toString());
          } catch (var8: Exception) {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            val var22: java.lang.String = var8.getMessage();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Error while deserializing ");
-            var17.append(var11);
-            var17.append(": ");
-            var17.append(var22);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = var8.getMessage();
+            var4 = new StringBuilder();
+            var4.append("Error while deserializing ");
+            var4.append(var11);
+            var4.append(": ");
+            var4.append(var17);
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
    }

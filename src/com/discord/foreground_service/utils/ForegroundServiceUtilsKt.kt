@@ -1,6 +1,7 @@
 package com.discord.foreground_service.utils
 
-import K2.a
+import Ja.p
+import R2.a
 import android.annotation.SuppressLint
 import android.app.Notification
 import android.app.Service
@@ -13,25 +14,24 @@ import com.discord.foreground_service.service.ServiceNotificationConfiguration
 import com.discord.foreground_service.service.ServiceNotificationConfiguration.Type
 import com.discord.lifecycle.AppLifecycle
 import java.util.ArrayList
-import xa.p
 
 @SuppressLint(["InlinedApi"])
 private fun buildServiceTypeChain(requestedType: Type, context: Context): List<Int> {
    val var8: ArrayList = new ArrayList();
-   val var2: Int = VERSION.SDK_INT;
-   val var7: Int = 128;
-   val var6: Int = 32;
-   if (var2 < 34) {
-      val var3: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
-      if (var3 != 1) {
-         if (var3 != 2) {
-            if (var3 != 3) {
+   val var3: Int = VERSION.SDK_INT;
+   val var6: Int = 128;
+   val var7: Int = 32;
+   if (var3 < 34) {
+      val var2: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
+      if (var2 != 1) {
+         if (var2 != 2) {
+            if (var2 != 3) {
                throw new p();
             }
 
-            var8.add(var6);
-         } else if (var2 >= 30) {
             var8.add(var7);
+         } else if (var3 >= 30) {
+            var8.add(var6);
          }
       }
    } else {
@@ -55,12 +55,12 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
 
       if (var12 && var10) {
          var8.add(160);
-         var8.add(var6);
          var8.add(var7);
+         var8.add(var6);
       } else if (var12) {
-         var8.add(var6);
-      } else if (var10) {
          var8.add(var7);
+      } else if (var10) {
+         var8.add(var6);
       }
    }
 
@@ -125,11 +125,11 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
 
             try {
                val var15: Log = Log.INSTANCE;
-               val var12: java.lang.String = toForegroundServiceTypeString(var4);
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("Attempting to promote service with type: ");
-               var16.append(var12);
-               Log.i$foreground_service_release$default(var15, var16.toString(), null, 2, null);
+               val var16: java.lang.String = toForegroundServiceTypeString(var4);
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Attempting to promote service with type: ");
+               var12.append(var16);
+               Log.i$foreground_service_release$default(var15, var12.toString(), null, 2, null);
                a.a(var0, var2, var3, var4);
                return;
             } catch (var9: SecurityException) {
@@ -157,7 +157,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
 internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): ComponentName? {
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = K2.b.a(var0, var1);
+      var2 = R2.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }

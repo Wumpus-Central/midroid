@@ -31,9 +31,9 @@ public object CodeStyle {
 
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
       private final get() {
-         val var3: java.util.Map = parsers;
-         val var4: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
-         var var2: Any = var3.get(var4);
+         val var4: java.util.Map = parsers;
+         val var3: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
+         var var2: Any = var4.get(var3);
          var var1: Any = var2;
          if (var2 == null) {
             val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
@@ -41,7 +41,7 @@ public object CodeStyle {
             var2 = CodeRules.createCodeRule$default(CodeRules.INSTANCE, var5.getDefaultStyleProvider(), var2.createCodeLanguageMap(var5), null, 4, null);
             var1 = new Parser(false, 1, null);
             var1.addRule((Rule)var2);
-            var3.put(var4, var1);
+            var4.put(var3, var1);
          }
 
          return var1 as Parser<RenderContext, Node<RenderContext>, Object>;
@@ -59,7 +59,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      val var3: java.lang.String = StringsKt.Z0(var1.getLang()).toString();
+      var var3: java.lang.String = StringsKt.Z0(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -67,21 +67,21 @@ public object CodeStyle {
       var6.append("\n");
       var6.append(var2);
       var6.append("\n```");
-      val var7: java.lang.String = var6.toString();
+      var3 = var6.toString();
 
       label16:
       try {
-         val var11: kotlin.Result.a = Result.e;
-         var9 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         val var9: kotlin.Result.a = Result.e;
+         var8 = Result.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var8: kotlin.Result.a = Result.e;
-         var9 = Result.b(kotlin.c.a(var4));
+         val var7: kotlin.Result.a = Result.e;
+         var8 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
       val var12: java.util.List = CollectionsKt.e(new TextNode(var2));
-      var2 = (java.lang.String)var9;
-      if (Result.g(var9)) {
+      var2 = (java.lang.String)var8;
+      if (Result.g(var8)) {
          var2 = var12;
       }
 
@@ -141,8 +141,8 @@ public object CodeStyle {
       );
       var5 = SizeUtilsKt.getDpToPx(4);
       val var10: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var11: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var7: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var11: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
       val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
@@ -153,7 +153,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var9, var10, var11, var7, var8}[var14];
+         val var12: Any = new Object[]{var9, var10, var7, var11, var8}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

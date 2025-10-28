@@ -5,7 +5,7 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class d implements c2.f {
+public final class d implements j2.f {
    public final BillingManager a;
    public final Function1 b;
    public final Function0 c;

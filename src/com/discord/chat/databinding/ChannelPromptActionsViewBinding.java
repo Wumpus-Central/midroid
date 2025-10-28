@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import x1.a;
 
 public final class ChannelPromptActionsViewBinding implements ViewBinding {
    @NonNull
@@ -37,15 +37,15 @@ public final class ChannelPromptActionsViewBinding implements ViewBinding {
       DCDButton var4 = (DCDButton)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.emoji_button;
-         DCDButton var3 = (DCDButton)a.a(var0, var1);
-         if (var3 != null) {
+         DCDButton var2 = (DCDButton)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.gaming_stats_button;
-            DCDButton var2 = (DCDButton)a.a(var0, var1);
-            if (var2 != null) {
+            DCDButton var3 = (DCDButton)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.gif_button;
                DCDButton var5 = (DCDButton)a.a(var0, var1);
                if (var5 != null) {
-                  return new ChannelPromptActionsViewBinding(var0, var4, var3, var2, var5);
+                  return new ChannelPromptActionsViewBinding(var0, var4, var2, var3, var5);
                }
             }
          }

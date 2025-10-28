@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
 
 public final class IconButtonViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class IconButtonViewBinding implements ViewBinding {
    @NonNull
    public static IconButtonViewBinding bind(@NonNull View var0) {
       int var1 = R.id.icon_button;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.icon_container;
-         FrameLayout var2 = (FrameLayout)a.a(var0, var1);
-         if (var2 != null) {
-            return new IconButtonViewBinding(var0, var3, var2);
+         FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+         if (var3 != null) {
+            return new IconButtonViewBinding(var0, var2, var3);
          }
       }
 

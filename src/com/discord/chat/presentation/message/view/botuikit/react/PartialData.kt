@@ -67,13 +67,13 @@ public data class PartialData(component: TextDisplayComponent? = null, markdownT
    }
 
    public override fun toString(): String {
-      val var3: TextDisplayComponent = this.component;
-      val var1: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var1: TextDisplayComponent = this.component;
+      val var3: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
       val var2: StringBuilder = new StringBuilder();
       var2.append("PartialData(component=");
-      var2.append(var3);
-      var2.append(", markdownTextRenderOptions=");
       var2.append(var1);
+      var2.append(", markdownTextRenderOptions=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

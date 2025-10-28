@@ -1,12 +1,12 @@
 package com.discord.misc.utilities.time
 
-import ac.I
-import dc.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
+import mc.I
+import pc.e
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
    return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
@@ -33,7 +33,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = Ca.b.e();
+         val var6: Any = Oa.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -125,7 +125,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = Ca.b.e();
+         val var6: Any = Oa.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {

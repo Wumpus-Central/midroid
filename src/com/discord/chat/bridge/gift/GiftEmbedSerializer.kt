@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.gift
 
+import Ac.e
+import Ac.h
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import oc.e
-import oc.h
 
 public object GiftEmbedSerializer : e(GiftEmbed::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<GiftEmbed> {

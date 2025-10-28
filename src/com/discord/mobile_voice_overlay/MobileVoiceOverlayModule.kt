@@ -17,7 +17,7 @@ import kotlinx.serialization.json.Json
 
 @SourceDebugExtension(["SMAP\nMobileVoiceOverlayModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n+ 3 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 4 NativeMapExtensions.kt\ncom/discord/react/utilities/NativeMapExtensionsKt\n+ 5 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,77:1\n29#2:78\n22#3,8:79\n22#3,8:89\n22#3,8:99\n137#4:87\n137#4:97\n123#5:88\n123#5:98\n*S KotlinDebug\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n*L\n46#1:78\n54#1:79,8\n61#1:89,8\n68#1:99,8\n60#1:87\n67#1:97\n60#1:88\n67#1:98\n*E\n"])
 public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlayModuleSpec(var1) {
-   private final val mobileVoiceOverlay: MobileVoiceOverlay by xa.l.a(new r(this))
+   private final val mobileVoiceOverlay: MobileVoiceOverlay by Ja.l.b(new r(this))
       private final get() {
          return this.mobileVoiceOverlay$delegate.getValue() as MobileVoiceOverlay;
       }
@@ -61,9 +61,9 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
                   val var7: Promise = this.$promise;
-                  val var5: WindowUtils = WindowUtils.INSTANCE;
-                  val var6: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  var7.resolve(var5.canDrawOverlay(var6));
+                  val var6: WindowUtils = WindowUtils.INSTANCE;
+                  val var5: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  var7.resolve(var6.canDrawOverlay(var5));
                }
             }
 
@@ -71,11 +71,11 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
             public void onNewIntent(Intent var1) {
             }
          };
-         val var7: java.lang.String = this.getReactApplicationContext().getPackageName();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("package:");
-         var5.append(var7);
-         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var5.toString()));
+         val var5: java.lang.String = this.getReactApplicationContext().getPackageName();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("package:");
+         var7.append(var5);
+         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var7.toString()));
          this.getReactApplicationContext().addActivityEventListener(var4);
          this.getReactApplicationContext().startActivityForResult(var6, 234780, Bundle.EMPTY);
       }

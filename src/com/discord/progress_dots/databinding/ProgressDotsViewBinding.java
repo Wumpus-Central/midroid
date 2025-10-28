@@ -1,5 +1,6 @@
 package com.discord.progress_dots.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.progress_dots.ProgressDot;
 import com.discord.progress_dots.R;
-import x1.a;
 
 public final class ProgressDotsViewBinding implements ViewBinding {
    @NonNull
@@ -29,15 +29,15 @@ public final class ProgressDotsViewBinding implements ViewBinding {
    @NonNull
    public static ProgressDotsViewBinding bind(@NonNull View var0) {
       int var1 = R.id.view_progress_dots_1;
-      ProgressDot var4 = (ProgressDot)a.a(var0, var1);
-      if (var4 != null) {
+      ProgressDot var2 = (ProgressDot)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.view_progress_dots_2;
-         ProgressDot var2 = (ProgressDot)a.a(var0, var1);
-         if (var2 != null) {
+         ProgressDot var4 = (ProgressDot)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.view_progress_dots_3;
             ProgressDot var3 = (ProgressDot)a.a(var0, var1);
             if (var3 != null) {
-               return new ProgressDotsViewBinding(var0, var4, var2, var3);
+               return new ProgressDotsViewBinding(var0, var2, var4, var3);
             }
          }
       }

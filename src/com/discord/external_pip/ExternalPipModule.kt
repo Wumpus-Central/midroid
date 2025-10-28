@@ -1,5 +1,6 @@
 package com.discord.external_pip
 
+import Ja.v
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -15,7 +16,6 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @ReactModule(name = "ExternalPip")
 @SourceDebugExtension(["SMAP\nExternalPipModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ExternalPipModule.kt\ncom/discord/external_pip/ExternalPipModule\n+ 2 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n*L\n1#1,124:1\n22#2,8:125\n*S KotlinDebug\n*F\n+ 1 ExternalPipModule.kt\ncom/discord/external_pip/ExternalPipModule\n*L\n37#1:125,8\n*E\n"])
@@ -56,9 +56,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var1: ReactEvents = this.reactEvents;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
+         val var2: ReactEvents = this.reactEvents;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
       }
    }
 

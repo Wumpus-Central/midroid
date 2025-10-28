@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.message.view.botuikit.components.media_gallery
 
-import A2.k
-import A2.l
-import A2.m
-import A2.n
-import A2.o
+import H2.k
+import H2.l
+import H2.m
+import H2.n
+import H2.o
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater

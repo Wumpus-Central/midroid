@@ -1,5 +1,6 @@
 package com.discord.crash_reporting
 
+import Ja.p
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -25,7 +26,6 @@ import javax.net.ssl.SSLHandshakeException
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.p
 
 @SourceDebugExtension(["SMAP\nCrashReporting.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,209:1\n216#2,2:210\n1#3:212\n*S KotlinDebug\n*F\n+ 1 CrashReporting.kt\ncom/discord/crash_reporting/CrashReporting\n*L\n189#1:210,2\n*E\n"])
 public object CrashReporting {
@@ -80,16 +80,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var8);
-      var6.append("/sentry");
-      var5.setCacheDirPath(var6.toString());
+      val var6: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var6);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("d7a914c1-306b-4a88-8d6e-596a990bd414");
+      var5.setProguardUuid("43a53f29-5bd0-475d-b991-0ff879fd9c14");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -108,8 +108,8 @@ public object CrashReporting {
    ) {
       val var5: e = new e(var1);
 
-      for (Entry var7 : var2.entrySet()) {
-         var5.p(var7.getKey() as java.lang.String, var7.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var5.p(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var5.o(var3);
@@ -138,7 +138,7 @@ public object CrashReporting {
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", xa.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", Ja.e.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(var1.getClass()::class)) {
@@ -217,7 +217,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.BreadcrumbLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       @JvmStatic
@@ -237,7 +237,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       @JvmStatic

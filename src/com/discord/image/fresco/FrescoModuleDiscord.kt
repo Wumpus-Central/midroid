@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import G3.d
+import N3.d
 import android.content.Context
 import com.discord.image.fresco.config.FrescoConfigKt
 import com.discord.image.fresco.config.FrescoMemoryTrimmer
@@ -181,7 +181,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 28: invokespecial com/discord/image/fresco/a.<init> (Landroid/content/Context;)V
          // 2b: bipush 22
          // 2d: aconst_null
-         // 2e: invokestatic Ba/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+         // 2e: invokestatic Na/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
          // 31: pop
          // 32: return
          // 33: astore 1

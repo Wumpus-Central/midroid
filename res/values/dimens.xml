@@ -186,6 +186,7 @@
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
+    <dimen name="fingerprint_icon_size">64.0dip</dimen>
     <item type="dimen" name="highlight_alpha_material_colored">0.26</item>
     <item type="dimen" name="highlight_alpha_material_dark">0.2</item>
     <item type="dimen" name="highlight_alpha_material_light">0.12</item>

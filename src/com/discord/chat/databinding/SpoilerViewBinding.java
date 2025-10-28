@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.ObscureOverlayView;
 import com.discord.chat.presentation.message.view.SpoilerOverlayView;
-import x1.a;
 
 public final class SpoilerViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +27,12 @@ public final class SpoilerViewBinding implements ViewBinding {
    @NonNull
    public static SpoilerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.obscure;
-      ObscureOverlayView var3 = (ObscureOverlayView)a.a(var0, var1);
-      if (var3 != null) {
+      ObscureOverlayView var2 = (ObscureOverlayView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.spoiler;
-         SpoilerOverlayView var2 = (SpoilerOverlayView)a.a(var0, var1);
-         if (var2 != null) {
-            return new SpoilerViewBinding(var0, var3, var2);
+         SpoilerOverlayView var3 = (SpoilerOverlayView)a.a(var0, var1);
+         if (var3 != null) {
+            return new SpoilerViewBinding(var0, var2, var3);
          }
       }
 

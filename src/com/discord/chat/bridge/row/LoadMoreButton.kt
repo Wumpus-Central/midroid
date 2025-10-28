@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.row
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class LoadMoreButton(action: LoadingAction, text: String, backgroundColor: Int, cornerRadius: Int? = null, color: Int? = null) {
@@ -72,9 +72,9 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.action.hashCode();
-      val var4: Int = this.text.hashCode();
-      val var3: Int = Integer.hashCode(this.backgroundColor);
+      val var4: Int = this.action.hashCode();
+      val var3: Int = this.text.hashCode();
+      val var5: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -87,26 +87,26 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2;
+      return (((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var5: LoadingAction = this.action;
-      val var2: java.lang.String = this.text;
+      val var3: LoadingAction = this.action;
+      val var6: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var3: Int = this.cornerRadius;
-      val var6: Int = this.color;
+      val var2: Int = this.cornerRadius;
+      val var5: Int = this.color;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LoadMoreButton(action=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", text=");
-      var4.append(var2);
+      var4.append(var6);
       var4.append(", backgroundColor=");
       var4.append(var1);
       var4.append(", cornerRadius=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", color=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

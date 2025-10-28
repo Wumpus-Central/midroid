@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.list.delegate
 
+import Ja.p
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
@@ -9,7 +10,6 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
 import kotlin.jvm.functions.Function0
-import xa.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {

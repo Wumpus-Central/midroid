@@ -1,8 +1,6 @@
 package com.discord.portals.from_native
 
-import ac.I
-import ac.K
-import ac.f
+import Ja.v
 import android.app.Activity
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
@@ -16,13 +14,14 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import kc.m
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
-import xa.v
+import mc.I
+import mc.K
+import mc.f
+import wc.m
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec(var1) {
    @JvmStatic
@@ -134,7 +133,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = Ca.b.e();
+               val var5: Any = Oa.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -143,8 +142,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var6: CoroutineDispatcher = K.a();
-                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
+                  var1 = K.a();
+                  val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
                      int label;
 
                      {
@@ -160,7 +159,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = Ca.b.e();
+                        val var3: Any = Oa.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -179,7 +178,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var6, var1, this) === var5) {
+                  if (f.g(var1, var6, this) === var5) {
                      return var5;
                   }
                }

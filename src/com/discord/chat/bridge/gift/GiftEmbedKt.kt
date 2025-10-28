@@ -2,11 +2,11 @@
 
 package com.discord.chat.bridge.gift
 
+import Ac.h
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import oc.h
 
 @JvmSynthetic
 fun `access$hasPrimitive`(var0: JsonObject, var1: java.lang.String): Boolean {

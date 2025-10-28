@@ -1,7 +1,5 @@
 package com.discord.billing
 
-import ac.K
-import ac.U
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
 import com.android.billingclient.api.BillingClient
@@ -27,6 +25,8 @@ import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
+import mc.K
+import mc.U
 
 @SourceDebugExtension(["SMAP\nBillingManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingManager.kt\ncom/discord/billing/BillingManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,581:1\n1863#2,2:582\n1863#2,2:584\n1863#2,2:586\n1863#2,2:588\n*S KotlinDebug\n*F\n+ 1 BillingManager.kt\ncom/discord/billing/BillingManager\n*L\n216#1:582,2\n221#1:584,2\n272#1:586,2\n570#1:588,2\n*E\n"])
 internal class BillingManager(reactContext: ReactApplicationContext,
@@ -60,7 +60,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       this.prodPackageName = "com.discord";
       this.devPackageName = "com.discord.debug.billingtesting";
       this.allowedPackageNames = Y.i(new java.lang.String[]{"com.discord", "com.discord.debug.billingtesting"});
-      this.billingClientStateListener = new c2.c(this) {
+      this.billingClientStateListener = new j2.c(this) {
          final BillingManager this$0;
 
          {
@@ -201,7 +201,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
             }
 
             public final Object invokeSuspend(Object var1) {
-               Ca.b.e();
+               Oa.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -266,7 +266,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 036: aload 5
       // 038: getfield com/discord/billing/BillingManager$suspendUntilReady$1.result Ljava/lang/Object;
       // 03b: astore 8
-      // 03d: invokestatic Ca/b.e ()Ljava/lang/Object;
+      // 03d: invokestatic Oa/b.e ()Ljava/lang/Object;
       // 040: astore 7
       // 042: aload 5
       // 044: getfield com/discord/billing/BillingManager$suspendUntilReady$1.label I
@@ -279,20 +279,20 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 054: aload 5
       // 056: getfield com/discord/billing/BillingManager$suspendUntilReady$1.L$1 Ljava/lang/Object;
       // 059: checkcast kotlinx/coroutines/CompletableDeferred
-      // 05c: astore 6
+      // 05c: astore 7
       // 05e: aload 5
       // 060: getfield com/discord/billing/BillingManager$suspendUntilReady$1.L$0 Ljava/lang/Object;
       // 063: checkcast com/discord/billing/BillingManager
-      // 066: astore 7
-      // 068: aload 6
+      // 066: astore 6
+      // 068: aload 7
       // 06a: astore 5
-      // 06c: aload 7
+      // 06c: aload 6
       // 06e: astore 3
       // 06f: aload 8
       // 071: invokestatic kotlin/c.b (Ljava/lang/Object;)V
-      // 074: aload 6
+      // 074: aload 7
       // 076: astore 5
-      // 078: aload 7
+      // 078: aload 6
       // 07a: astore 3
       // 07b: aload 8
       // 07d: astore 6
@@ -322,7 +322,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 0b5: aconst_null
       // 0b6: bipush 1
       // 0b7: aconst_null
-      // 0b8: invokestatic ac/s.b (Lkotlinx/coroutines/Job;ILjava/lang/Object;)Lkotlinx/coroutines/CompletableDeferred;
+      // 0b8: invokestatic mc/s.b (Lkotlinx/coroutines/Job;ILjava/lang/Object;)Lkotlinx/coroutines/CompletableDeferred;
       // 0bb: astore 3
       // 0bc: aload 0
       // 0bd: getfield com/discord/billing/BillingManager.connectionReadyListeners Ljava/util/List;
@@ -376,7 +376,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 11b: lload 1
       // 11c: aload 6
       // 11e: aload 5
-      // 120: invokestatic ac/t0.c (JLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+      // 120: invokestatic mc/t0.c (JLkotlin/jvm/functions/Function2;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
       // 123: astore 6
       // 125: aload 6
       // 127: aload 7
@@ -435,11 +435,11 @@ internal class BillingManager(reactContext: ReactApplicationContext,
 
    private fun trackBillingMetric(metricName: String, tags: List<String> = CollectionsKt.k()) {
       try {
-         val var4: MonitoringAgent = MonitoringAgent.INSTANCE;
+         val var3: MonitoringAgent = MonitoringAgent.INSTANCE;
          val var5: StringBuilder = new StringBuilder();
          var5.append("billing_manager.");
          var5.append(var1);
-         var4.increment(new MetricEvent(var5.toString(), var2));
+         var3.increment(new MetricEvent(var5.toString(), var2));
       } catch (var6: Exception) {
       }
    }
@@ -487,7 +487,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 38: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 3d: checkcast kotlinx/coroutines/CompletableDeferred
       // 40: getstatic java/lang/Boolean.TRUE Ljava/lang/Boolean;
-      // 43: invokeinterface kotlinx/coroutines/CompletableDeferred.D0 (Ljava/lang/Object;)Z 2
+      // 43: invokeinterface kotlinx/coroutines/CompletableDeferred.A0 (Ljava/lang/Object;)Z 2
       // 48: pop
       // 49: goto 2e
       // 4c: astore 2
@@ -523,7 +523,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 88: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 8d: checkcast kotlinx/coroutines/CompletableDeferred
       // 90: getstatic java/lang/Boolean.FALSE Ljava/lang/Boolean;
-      // 93: invokeinterface kotlinx/coroutines/CompletableDeferred.D0 (Ljava/lang/Object;)Z 2
+      // 93: invokeinterface kotlinx/coroutines/CompletableDeferred.A0 (Ljava/lang/Object;)Z 2
       // 98: pop
       // 99: goto 7e
       // 9c: astore 2
@@ -547,11 +547,11 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var5 : var2) {
-            val var3: Function3 = this.onPurchaseUpdated;
-            val var6: java.lang.String = var1.i();
-            val var7: java.lang.String = var1.e();
-            var3.invoke(var6, var7, var5);
+         for (java.lang.String var3 : var2) {
+            val var7: Function3 = this.onPurchaseUpdated;
+            val var4: java.lang.String = var1.i();
+            val var6: java.lang.String = var1.e();
+            var7.invoke(var4, var6, var3);
          }
       }
    }
@@ -573,140 +573,149 @@ internal class BillingManager(reactContext: ReactApplicationContext,
    }
 
    public fun consumePurchase(purchaseToken: String, onSuccess: () -> Unit, onError: (BillingManagerException) -> Unit) {
-      ac.f.d(this.getCoroutineScope(this.reactContext), K.a(), null, new Function2<CoroutineScope, Continuation, Object>(this, var3, var1, var2, null) {
-         final Function1<BillingManagerException, Unit> $onError;
-         final Function0<Unit> $onSuccess;
-         final java.lang.String $purchaseToken;
-         int label;
-         final BillingManager this$0;
+      mc.f.d(
+         this.getCoroutineScope(this.reactContext),
+         K.a(),
+         null,
+         new Function2<CoroutineScope, Continuation, Object>(this, var3, var1, var2, null) {
+            final Function1<BillingManagerException, Unit> $onError;
+            final Function0<Unit> $onSuccess;
+            final java.lang.String $purchaseToken;
+            int label;
+            final BillingManager this$0;
 
-         {
-            super(2, var5);
-            this.this$0 = var1;
-            this.$onError = var2x;
-            this.$purchaseToken = var3;
-            this.$onSuccess = var4;
-         }
-
-         private static final void invokeSuspend$lambda$0(BillingManager var0, Function1 var1x, Function0 var2x, BillingResult var3, java.lang.String var4) {
-            if (BillingManager.access$isNotOk(var0, var3)) {
-               var1x.invoke(BillingManagerException.Companion.fromBillingResult(var3.b()));
-            } else {
-               var2x.invoke();
+            {
+               super(2, var5);
+               this.this$0 = var1;
+               this.$onError = var2x;
+               this.$purchaseToken = var3;
+               this.$onSuccess = var4;
             }
-         }
 
-         public final Continuation create(Object var1, Continuation var2) {
-            return new <anonymous constructor>(this.this$0, this.$onError, this.$purchaseToken, this.$onSuccess, var2);
-         }
-
-         public final Object invoke(CoroutineScope var1, Continuation var2x) {
-            return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-         }
-
-         // $VF: Duplicated exception handlers to handle obfuscated exceptions
-         public final Object invokeSuspend(Object var1) {
-            var var4: StringBuilder = (StringBuilder)Ca.b.e();
-            if (this.label != 0) {
-               if (this.label != 1) {
-                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            private static final void invokeSuspend$lambda$0(BillingManager var0, Function1 var1x, Function0 var2x, BillingResult var3, java.lang.String var4) {
+               if (BillingManager.access$isNotOk(var0, var3)) {
+                  var1x.invoke(BillingManagerException.Companion.fromBillingResult(var3.b()));
+               } else {
+                  var2x.invoke();
                }
+            }
 
-               try {
+            public final Continuation create(Object var1, Continuation var2) {
+               return new <anonymous constructor>(this.this$0, this.$onError, this.$purchaseToken, this.$onSuccess, var2);
+            }
+
+            public final Object invoke(CoroutineScope var1, Continuation var2x) {
+               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+            }
+
+            // $VF: Duplicated exception handlers to handle obfuscated exceptions
+            public final Object invokeSuspend(Object var1) {
+               var var4: Any = Oa.b.e();
+               if (this.label != 0) {
+                  if (this.label != 1) {
+                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                  }
+
+                  try {
+                     kotlin.c.b(var1);
+                  } catch (var16: CancellationException) {
+                     throw var16;
+                  } catch (var17: Exception) {
+                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var17, false, 2, null);
+                     this.$onError.invoke(BillingManagerException.Companion.wrap(var17, "consumePurchase"));
+                     return Unit.a;
+                  }
+               } else {
                   kotlin.c.b(var1);
-               } catch (var16: CancellationException) {
-                  throw var16;
-               } catch (var17: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var17, false, 2, null);
-                  this.$onError.invoke(BillingManagerException.Companion.wrap(var17, "consumePurchase"));
-                  return Unit.a;
-               }
-            } else {
-               kotlin.c.b(var1);
 
-               var var3: Any;
+                  var var3: Any;
+                  try {
+                     var1 = this.this$0;
+                     this.label = 1;
+                     var3 = BillingManager.suspendUntilReady$default(var1, 0L, this, 1, null);
+                  } catch (var14: CancellationException) {
+                     throw var14;
+                  } catch (var15: Exception) {
+                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var15, false, 2, null);
+                     this.$onError.invoke(BillingManagerException.Companion.wrap(var15, "consumePurchase"));
+                     return Unit.a;
+                  }
+
+                  var1 = (BillingManager)var3;
+                  if (var3 === var4) {
+                     return var4;
+                  }
+               }
+
                try {
+                  val var5: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
                   var1 = this.this$0;
-                  this.label = 1;
-                  var3 = BillingManager.suspendUntilReady$default(var1, 0L, this, 1, null);
-               } catch (var14: CancellationException) {
-                  throw var14;
-               } catch (var15: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var15, false, 2, null);
-                  this.$onError.invoke(BillingManagerException.Companion.wrap(var15, "consumePurchase"));
+                  var4 = var5.getMetricValue();
+                  val var24: StringBuilder = new StringBuilder();
+                  var24.append("client_ready:");
+                  var24.append((java.lang.String)var4);
+                  BillingManager.access$trackBillingMetric(
+                     var1, "operation", CollectionsKt.n(new java.lang.String[]{"method:consume_purchase", var24.toString()})
+                  );
+                  if (var5 === BillingManager.ClientReadyState.TIMEOUT) {
+                     this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
+                     return Unit.a;
+                  }
+               } catch (var18: CancellationException) {
+                  throw var18;
+               } catch (var19: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var19, false, 2, null);
+                  this.$onError.invoke(BillingManagerException.Companion.wrap(var19, "consumePurchase"));
                   return Unit.a;
                }
 
-               var1 = (BillingManager)var3;
-               if (var3 === var4) {
-                  return var4;
-               }
-            }
-
-            try {
-               val var24: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
-               var1 = this.this$0;
-               val var5: java.lang.String = var24.getMetricValue();
-               var4 = new StringBuilder();
-               var4.append("client_ready:");
-               var4.append(var5);
-               BillingManager.access$trackBillingMetric(var1, "operation", CollectionsKt.n(new java.lang.String[]{"method:consume_purchase", var4.toString()}));
-               if (var24 === BillingManager.ClientReadyState.TIMEOUT) {
-                  this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
-                  return Unit.a;
-               }
-            } catch (var18: CancellationException) {
-               throw var18;
-            } catch (var19: Exception) {
-               CrashReporting.captureException$default(CrashReporting.INSTANCE, var19, false, 2, null);
-               this.$onError.invoke(BillingManagerException.Companion.wrap(var19, "consumePurchase"));
-               return Unit.a;
-            }
-
-            var var25: BillingClient;
-            try {
-               var29 = c2.e.b().b(this.$purchaseToken).a();
-               var25 = BillingManager.access$getBillingClient$p(this.this$0);
-            } catch (var12: CancellationException) {
-               throw var12;
-            } catch (var13: Exception) {
-               CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
-               this.$onError.invoke(BillingManagerException.Companion.wrap(var13, "consumePurchase"));
-               return Unit.a;
-            }
-
-            var var22: BillingClient = var25;
-            if (var25 == null) {
+               var var25: BillingClient;
                try {
-                  Intrinsics.throwUninitializedPropertyAccessException("billingClient");
-               } catch (var10: CancellationException) {
-                  throw var10;
-               } catch (var11: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var11, false, 2, null);
-                  this.$onError.invoke(BillingManagerException.Companion.wrap(var11, "consumePurchase"));
+                  var4 = j2.e.b().b(this.$purchaseToken).a();
+                  var25 = BillingManager.access$getBillingClient$p(this.this$0);
+               } catch (var12: CancellationException) {
+                  throw var12;
+               } catch (var13: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
+                  this.$onError.invoke(BillingManagerException.Companion.wrap(var13, "consumePurchase"));
                   return Unit.a;
                }
 
-               var22 = null;
-            }
+               var var22: BillingClient = var25;
+               if (var25 == null) {
+                  try {
+                     Intrinsics.throwUninitializedPropertyAccessException("billingClient");
+                  } catch (var10: CancellationException) {
+                     throw var10;
+                  } catch (var11: Exception) {
+                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var11, false, 2, null);
+                     this.$onError.invoke(BillingManagerException.Companion.wrap(var11, "consumePurchase"));
+                     return Unit.a;
+                  }
 
-            try {
-               var22.b(var29, new d(this.this$0, this.$onError, this.$onSuccess));
-            } catch (var8: CancellationException) {
-               throw var8;
-            } catch (var9: Exception) {
-               CrashReporting.captureException$default(CrashReporting.INSTANCE, var9, false, 2, null);
-               this.$onError.invoke(BillingManagerException.Companion.wrap(var9, "consumePurchase"));
-            }
+                  var22 = null;
+               }
 
-            return Unit.a;
-         }
-      }, 2, null);
+               try {
+                  var22.b((j2.e)var4, new d(this.this$0, this.$onError, this.$onSuccess));
+               } catch (var8: CancellationException) {
+                  throw var8;
+               } catch (var9: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var9, false, 2, null);
+                  this.$onError.invoke(BillingManagerException.Companion.wrap(var9, "consumePurchase"));
+               }
+
+               return Unit.a;
+            }
+         },
+         2,
+         null
+      );
    }
 
    public fun getProducts(productIds: List<String>, productType: ProductType, reactPromise: Promise, onError: (BillingManagerException) -> Unit) {
       val var5: CoroutineScope = this.getCoroutineScope(this.reactContext);
-      ac.f.d(
+      mc.f.d(
          var5,
          K.a(),
          null,
@@ -719,160 +728,151 @@ internal class BillingManager(reactContext: ReactApplicationContext,
    }
 
    public fun loadPurchases(onSuccess: () -> Unit = new b(), onError: (Exception) -> Unit = new c()) {
-      ac.f.d(
-         this.getCoroutineScope(this.reactContext),
-         K.a(),
-         null,
-         new Function2<CoroutineScope, Continuation, Object>(this, var2, var1, null) {
-            final Function1<Exception, Unit> $onError;
-            final Function0<Unit> $onSuccess;
-            int label;
-            final BillingManager this$0;
+      mc.f.d(this.getCoroutineScope(this.reactContext), K.a(), null, new Function2<CoroutineScope, Continuation, Object>(this, var2, var1, null) {
+         final Function1<Exception, Unit> $onError;
+         final Function0<Unit> $onSuccess;
+         int label;
+         final BillingManager this$0;
 
-            {
-               super(2, var4);
-               this.this$0 = var1;
-               this.$onError = var2x;
-               this.$onSuccess = var3;
-            }
+         {
+            super(2, var4);
+            this.this$0 = var1;
+            this.$onError = var2x;
+            this.$onSuccess = var3;
+         }
 
-            public final Continuation create(Object var1, Continuation var2) {
-               return new <anonymous constructor>(this.this$0, this.$onError, this.$onSuccess, var2);
-            }
+         public final Continuation create(Object var1, Continuation var2) {
+            return new <anonymous constructor>(this.this$0, this.$onError, this.$onSuccess, var2);
+         }
 
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
-               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-            }
+         public final Object invoke(CoroutineScope var1, Continuation var2x) {
+            return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+         }
 
-            // $VF: Duplicated exception handlers to handle obfuscated exceptions
-            public final Object invokeSuspend(Object var1) {
-               var var4: Any = Ca.b.e();
-               if (this.label != 0) {
-                  if (this.label != 1) {
-                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                  }
+         // $VF: Duplicated exception handlers to handle obfuscated exceptions
+         public final Object invokeSuspend(Object var1) {
+            var var4: BillingManager.ClientReadyState = (BillingManager.ClientReadyState)Oa.b.e();
+            if (this.label != 0) {
+               if (this.label != 1) {
+                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+               }
 
-                  try {
-                     kotlin.c.b(var1);
-                  } catch (var18: CancellationException) {
-                     throw var18;
-                  } catch (var19: Exception) {
-                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var19, false, 2, null);
-                     this.$onError.invoke(var19);
-                     return Unit.a;
-                  }
-               } else {
+               try {
                   kotlin.c.b(var1);
-
-                  var var3: Any;
-                  try {
-                     var1 = this.this$0;
-                     this.label = 1;
-                     var3 = BillingManager.suspendUntilReady$default(var1, 0L, this, 1, null);
-                  } catch (var16: CancellationException) {
-                     throw var16;
-                  } catch (var17: Exception) {
-                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var17, false, 2, null);
-                     this.$onError.invoke(var17);
-                     return Unit.a;
-                  }
-
-                  var1 = (BillingManager)var3;
-                  if (var3 === var4) {
-                     return var4;
-                  }
+               } catch (var18: CancellationException) {
+                  throw var18;
+               } catch (var19: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var19, false, 2, null);
+                  this.$onError.invoke(var19);
+                  return Unit.a;
                }
+            } else {
+               kotlin.c.b(var1);
 
+               var var3: Any;
                try {
-                  val var5: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
-                  var4 = this.this$0;
-                  val var27: java.lang.String = var5.getMetricValue();
-                  val var23: StringBuilder = new StringBuilder();
-                  var23.append("client_ready:");
-                  var23.append(var27);
-                  BillingManager.access$trackBillingMetric(
-                     (BillingManager)var4, "operation", CollectionsKt.n(new java.lang.String[]{"method:load_purchases", var23.toString()})
-                  );
-                  if (var5 === BillingManager.ClientReadyState.TIMEOUT) {
-                     this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
-                     return Unit.a;
-                  }
-               } catch (var20: CancellationException) {
-                  throw var20;
-               } catch (var21: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var21, false, 2, null);
-                  this.$onError.invoke(var21);
+                  var1 = this.this$0;
+                  this.label = 1;
+                  var3 = BillingManager.suspendUntilReady$default(var1, 0L, this, 1, null);
+               } catch (var16: CancellationException) {
+                  throw var16;
+               } catch (var17: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var17, false, 2, null);
+                  this.$onError.invoke(var17);
                   return Unit.a;
                }
 
-               var var28: BillingClient;
-               try {
-                  var28 = BillingManager.access$getBillingClient$p(this.this$0);
-               } catch (var14: CancellationException) {
-                  throw var14;
-               } catch (var15: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var15, false, 2, null);
-                  this.$onError.invoke(var15);
+               var1 = (BillingManager)var3;
+               if (var3 === var4) {
+                  return var4;
+               }
+            }
+
+            try {
+               var4 = var1 as BillingManager.ClientReadyState;
+               var1 = this.this$0;
+               val var27: java.lang.String = var4.getMetricValue();
+               val var5: StringBuilder = new StringBuilder();
+               var5.append("client_ready:");
+               var5.append(var27);
+               BillingManager.access$trackBillingMetric(var1, "operation", CollectionsKt.n(new java.lang.String[]{"method:load_purchases", var5.toString()}));
+               if (var4 === BillingManager.ClientReadyState.TIMEOUT) {
+                  this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
                   return Unit.a;
                }
-
-               var var24: BillingClient = var28;
-               if (var28 == null) {
-                  try {
-                     Intrinsics.throwUninitializedPropertyAccessException("billingClient");
-                  } catch (var12: CancellationException) {
-                     throw var12;
-                  } catch (var13: Exception) {
-                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
-                     this.$onError.invoke(var13);
-                     return Unit.a;
-                  }
-
-                  var24 = null;
-               }
-
-               try {
-                  var24.k(c2.m.a().b("subs").a(), new f(this.this$0));
-                  var28 = BillingManager.access$getBillingClient$p(this.this$0);
-               } catch (var10: CancellationException) {
-                  throw var10;
-               } catch (var11: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var11, false, 2, null);
-                  this.$onError.invoke(var11);
-                  return Unit.a;
-               }
-
-               var var25: BillingClient = var28;
-               if (var28 == null) {
-                  try {
-                     Intrinsics.throwUninitializedPropertyAccessException("billingClient");
-                  } catch (var8: CancellationException) {
-                     throw var8;
-                  } catch (var9: Exception) {
-                     CrashReporting.captureException$default(CrashReporting.INSTANCE, var9, false, 2, null);
-                     this.$onError.invoke(var9);
-                     return Unit.a;
-                  }
-
-                  var25 = null;
-               }
-
-               try {
-                  var25.k(c2.m.a().b("inapp").a(), new f(this.this$0));
-                  this.$onSuccess.invoke();
-               } catch (var6: CancellationException) {
-                  throw var6;
-               } catch (var7: Exception) {
-                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var7, false, 2, null);
-                  this.$onError.invoke(var7);
-               }
-
+            } catch (var20: CancellationException) {
+               throw var20;
+            } catch (var21: Exception) {
+               CrashReporting.captureException$default(CrashReporting.INSTANCE, var21, false, 2, null);
+               this.$onError.invoke(var21);
                return Unit.a;
             }
-         },
-         2,
-         null
-      );
+
+            var var28: BillingClient;
+            try {
+               var28 = BillingManager.access$getBillingClient$p(this.this$0);
+            } catch (var14: CancellationException) {
+               throw var14;
+            } catch (var15: Exception) {
+               CrashReporting.captureException$default(CrashReporting.INSTANCE, var15, false, 2, null);
+               this.$onError.invoke(var15);
+               return Unit.a;
+            }
+
+            var var24: BillingClient = var28;
+            if (var28 == null) {
+               try {
+                  Intrinsics.throwUninitializedPropertyAccessException("billingClient");
+               } catch (var12: CancellationException) {
+                  throw var12;
+               } catch (var13: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
+                  this.$onError.invoke(var13);
+                  return Unit.a;
+               }
+
+               var24 = null;
+            }
+
+            try {
+               var24.k(j2.m.a().b("subs").a(), new f(this.this$0));
+               var28 = BillingManager.access$getBillingClient$p(this.this$0);
+            } catch (var10: CancellationException) {
+               throw var10;
+            } catch (var11: Exception) {
+               CrashReporting.captureException$default(CrashReporting.INSTANCE, var11, false, 2, null);
+               this.$onError.invoke(var11);
+               return Unit.a;
+            }
+
+            var var25: BillingClient = var28;
+            if (var28 == null) {
+               try {
+                  Intrinsics.throwUninitializedPropertyAccessException("billingClient");
+               } catch (var8: CancellationException) {
+                  throw var8;
+               } catch (var9: Exception) {
+                  CrashReporting.captureException$default(CrashReporting.INSTANCE, var9, false, 2, null);
+                  this.$onError.invoke(var9);
+                  return Unit.a;
+               }
+
+               var25 = null;
+            }
+
+            try {
+               var25.k(j2.m.a().b("inapp").a(), new f(this.this$0));
+               this.$onSuccess.invoke();
+            } catch (var6: CancellationException) {
+               throw var6;
+            } catch (var7: Exception) {
+               CrashReporting.captureException$default(CrashReporting.INSTANCE, var7, false, 2, null);
+               this.$onError.invoke(var7);
+            }
+
+            return Unit.a;
+         }
+      }, 2, null);
    }
 
    public fun open() {
@@ -928,7 +928,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       if (var1 == null) {
          var9.invoke(new BillingManagerException.BillingException("Current React Activity not found"));
       } else {
-         ac.f.d(
+         mc.f.d(
             this.getCoroutineScope(this.reactContext),
             K.a(),
             null,
@@ -955,7 +955,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       fun {
          val var0: Array<BillingManager.ClientReadyState> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       init {
@@ -983,7 +983,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = Pa.a.a(var0);
       }
 
       init {

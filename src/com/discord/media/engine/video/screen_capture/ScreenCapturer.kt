@@ -78,7 +78,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
          this.currentMeasuredSize.set(ScreenCapturer.MediaProjectionObserver.INSTANCE.getCurrentCaptureSize());
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
-         var3.set(C1.c.a(d.a(var4 as WindowManager)));
+         var3.set(J1.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }
@@ -194,15 +194,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 39: invokevirtual android/graphics/Point.set (II)V
       // 3c: aload 0
       // 3d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 40: astore 5
-      // 42: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 45: astore 1
-      // 46: aload 5
-      // 48: aload 1
-      // 49: aload 5
-      // 4b: getfield android/graphics/Point.x I
-      // 4e: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 51: aload 1
+      // 40: astore 1
+      // 41: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 44: astore 5
+      // 46: aload 1
+      // 47: aload 5
+      // 49: aload 1
+      // 4a: getfield android/graphics/Point.x I
+      // 4d: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 50: aload 5
       // 52: aload 0
       // 53: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 56: getfield android/graphics/Point.y I

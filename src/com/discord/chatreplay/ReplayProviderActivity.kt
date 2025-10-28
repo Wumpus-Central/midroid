@@ -13,7 +13,7 @@ import java.nio.file.Path
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import nc.f
+import zc.f
 
 @SourceDebugExtension(["SMAP\nReplayProviderActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,112:1\n113#2:113\n1#3:114\n1557#4:115\n1628#4,3:116\n*S KotlinDebug\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n*L\n31#1:113\n62#1:115\n62#1:116,3\n*E\n"])
 public class ReplayProviderActivity : Activity {
@@ -47,20 +47,20 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
 
-      for (File var12 : var9) {
-         val var10: java.lang.String = var12.getName();
-         var7.add(new Replay(var10, var12.lastModified()));
+      for (File var4 : var9) {
+         val var12: java.lang.String = var4.getName();
+         var7.add(new Replay(var12, var4.lastModified()));
       }
 
       return var7;
    }
 
    private fun grantAccessToFile(toPackage: String, file: File): Uri {
-      val var4: java.lang.String = this.getPackageName();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append(".replays");
-      val var5: Uri = FileProvider.getUriForFile(this, var3.toString(), var2);
+      val var3: java.lang.String = this.getPackageName();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append(".replays");
+      val var5: Uri = FileProvider.getUriForFile(this, var4.toString(), var2);
       this.grantUriPermission(var1, var5, 1);
       return var5;
    }
@@ -117,16 +117,16 @@ public class ReplayProviderActivity : Activity {
       }
 
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
-         val var5: Intent = new Intent();
-         var5.setAction("com.discord.REQUEST_REPLAY_ACCESS");
-         val var4: java.lang.String = var1.getPackageName();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("discord://request_replay?target=");
-         var6.append(var2);
-         var6.append("&toPackage=");
-         var6.append(var4);
-         var5.setData(Uri.parse(var6.toString()));
-         var1.startActivityForResult(var5, var3);
+         val var4: Intent = new Intent();
+         var4.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var6: java.lang.String = var1.getPackageName();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("discord://request_replay?target=");
+         var5.append(var2);
+         var5.append("&toPackage=");
+         var5.append(var6);
+         var4.setData(Uri.parse(var5.toString()));
+         var1.startActivityForResult(var4, var3);
       }
    }
 }

@@ -1,5 +1,6 @@
 package com.discord.device
 
+import Ja.v
 import android.os.PowerManager
 import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceThermalStateModuleSpec
@@ -7,7 +8,6 @@ import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @SourceDebugExtension(["SMAP\nDeviceThermalStateModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n+ 2 Context.kt\nandroidx/core/content/ContextKt\n*L\n1#1,50:1\n31#2:51\n31#2:52\n*S KotlinDebug\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n*L\n23#1:51\n43#1:52\n*E\n"])
 internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) : NativeDeviceThermalStateModuleSpec(var1) {

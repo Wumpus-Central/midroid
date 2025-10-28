@@ -45,12 +45,12 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
             var1.clipPath(this.path, Op.DIFFERENCE);
          }
 
-         val var6: Float = this.shadowElevation / 2;
+         val var9: Float = this.shadowElevation / 2;
          var1.drawRoundRect(
             -(this.shadowElevation / (float)2),
             0.0F,
-            (float)this.getWidth() + var6,
-            (float)this.getHeight() + var6,
+            (float)this.getWidth() + var9,
+            (float)this.getHeight() + var9,
             this.borderRadius,
             this.borderRadius,
             this.shadowPaint

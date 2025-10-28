@@ -1,5 +1,6 @@
 package com.discord.fast_connect
 
+import Ja.v
 import com.discord.app_database.AppDatabase
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.Cache
@@ -11,7 +12,6 @@ import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
 import java.util.concurrent.ConcurrentHashMap
 import okhttp3.WebSocket
-import xa.v
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec(var1) {
    private final val sockets: ConcurrentHashMap<Int, WebSocket> = new ConcurrentHashMap()

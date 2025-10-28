@@ -16,11 +16,11 @@ public class NativeEngine(context: Context, logLevel: Int) {
 
    init {
       this.logLevel = var2;
-      val var3: Context = var1.getApplicationContext();
+      var var3: Context = var1.getApplicationContext();
       CameraEnumeratorProvider.maybeInit(var3);
-      val var4: Context = var1.getApplicationContext();
-      val var5: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
-      this.nativeInstance = this.nativeCreateInstance(var4, var5, var2, var1.getSharedPreferences("MediaEngine", 0).getBoolean("offloadAdmControls", false));
+      var3 = var1.getApplicationContext();
+      val var4: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
+      this.nativeInstance = this.nativeCreateInstance(var3, var4, var2, var1.getSharedPreferences("MediaEngine", 0).getBoolean("offloadAdmControls", false));
    }
 
    private external fun nativeCreateInstance(context: Context, eglContext: org.webrtc.EglBase.Context, logLevel: Int, offloadAdmControls: Boolean): Long {

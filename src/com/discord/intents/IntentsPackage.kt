@@ -7,7 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 
 public class IntentsPackage : BaseReactPackage {
-   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       val var3: Any;
       if (var1 == "NativeIntentsModule") {
          var3 = new IntentsModule(var2);
@@ -20,7 +20,7 @@ public class IntentsPackage : BaseReactPackage {
       return (NativeModule)var3;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(
          CollectionsKt.n(new java.lang.String[]{"NativeIntentsModule", "NativeLinkingModule"}), false, 2, null
       );

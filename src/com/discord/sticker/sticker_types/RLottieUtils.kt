@@ -26,6 +26,6 @@ public object RLottieUtils {
    }
 
    public fun init() {
-      Ba.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
+      Na.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
    }
 }

@@ -65,12 +65,12 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
                   sBulletPath = var24;
                }
 
-               val var14: Float = var3;
+               val var15: Float = var3;
                val var16: Float = var4;
-               val var15: Float = this.mBulletRadius;
-               val var13: Float = (var5 + var7) / 2.0F;
+               val var13: Float = this.mBulletRadius;
+               val var14: Float = (var5 + var7) / 2.0F;
                var3 = var1.save();
-               var1.translate(var14 + var16 * 1.2F * var15, var13);
+               var1.translate(var15 + var16 * 1.2F * var13, var14);
 
                try {
                   val var25: Path = sBulletPath;

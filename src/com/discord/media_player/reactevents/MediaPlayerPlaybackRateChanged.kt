@@ -1,14 +1,14 @@
 package com.discord.media_player.reactevents
 
+import Dc.a
+import Ja.v
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kc.m
-import kc.w
 import kotlinx.serialization.KSerializer
-import rc.a
-import xa.v
+import wc.m
+import wc.w
 
 @m
 public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSource?, rate: Double) : ReactEvent {
@@ -62,22 +62,22 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
    public override fun serialize(): WritableMap {
       val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(v.a("rate", this.rate));
       if (this.source != null) {
-         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(w.b(MediaPlayerPlaybackSource.class), this.source)));
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(w.d(MediaPlayerPlaybackSource.class), this.source)));
       }
 
       return var1;
    }
 
    public override fun toString(): String {
-      val var3: MediaPlayerPlaybackSource = this.source;
+      val var4: MediaPlayerPlaybackSource = this.source;
       val var1: Double = this.rate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaPlayerPlaybackRateChanged(source=");
-      var4.append(var3);
-      var4.append(", rate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerPlaybackRateChanged(source=");
+      var3.append(var4);
+      var3.append(", rate=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

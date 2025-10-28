@@ -33,7 +33,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       if (var6 != 2) {
          if (var6 != 3) {
             if (var6 != 4) {
-               throw new xa.p();
+               throw new Ja.p();
             }
 
             var14 = new AudioAttachmentMessageAccessory(

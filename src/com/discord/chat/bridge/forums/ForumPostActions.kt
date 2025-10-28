@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.reaction.MessageReaction
-import kc.m
 import kotlinx.serialization.KSerializer
+import wc.m
 
 @m
 public data class ForumPostActions(numDisplayedReactions: Int,
@@ -144,31 +144,31 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var7: java.lang.String = this.followIcon;
-      val var4: java.lang.String = this.followLabel;
-      val var9: java.lang.String = this.shareIcon;
-      val var5: java.lang.String = this.shareLabel;
-      val var8: MessageReaction = this.defaultReaction;
-      val var3: PostSharePrompt = this.sharePrompt;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ForumPostActions(numDisplayedReactions=");
-      var6.append(var1);
-      var6.append(", isFollowing=");
-      var6.append(var2);
-      var6.append(", followIcon=");
-      var6.append(var7);
-      var6.append(", followLabel=");
-      var6.append(var4);
-      var6.append(", shareIcon=");
-      var6.append(var9);
-      var6.append(", shareLabel=");
-      var6.append(var5);
-      var6.append(", defaultReaction=");
-      var6.append(var8);
-      var6.append(", sharePrompt=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var8: java.lang.String = this.followIcon;
+      val var5: java.lang.String = this.followLabel;
+      val var7: java.lang.String = this.shareIcon;
+      val var9: java.lang.String = this.shareLabel;
+      val var6: MessageReaction = this.defaultReaction;
+      val var4: PostSharePrompt = this.sharePrompt;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForumPostActions(numDisplayedReactions=");
+      var3.append(var1);
+      var3.append(", isFollowing=");
+      var3.append(var2);
+      var3.append(", followIcon=");
+      var3.append(var8);
+      var3.append(", followLabel=");
+      var3.append(var5);
+      var3.append(", shareIcon=");
+      var3.append(var7);
+      var3.append(", shareLabel=");
+      var3.append(var9);
+      var3.append(", defaultReaction=");
+      var3.append(var6);
+      var3.append(", sharePrompt=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

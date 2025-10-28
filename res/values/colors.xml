@@ -106,6 +106,7 @@
     <color name="bg_mod_strong_darker">#3d6c6f7c</color>
     <color name="bg_mod_strong_light">#3d80848e</color>
     <color name="bg_mod_strong_midnight">#2e6c6f7c</color>
+    <color name="biometric_error_color">#ffff5722</color>
     <color name="black">#ff000000</color>
     <color name="black_100">#fff2f2f2</color>
     <color name="black_130">#ffe8e8e8</color>

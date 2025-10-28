@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
-import c5.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
@@ -16,6 +15,7 @@ import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.ReactRootView
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
+import j5.b
 import java.util.concurrent.Future
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
