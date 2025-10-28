@@ -234,7 +234,7 @@ public object MediaPlayerManager {
             public final Object invokeSuspend(Object var1) {
                var var15: MediaSource;
                label85: {
-                  var var5: Any = G9.b.e();
+                  var var5: MutableStateFlow = (MutableStateFlow)G9.b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -255,12 +255,12 @@ public object MediaPlayerManager {
                            return Unit.a;
                         }
 
-                        val var19: MutableStateFlow = var6.getPlaybackRateFlow$media_player_release();
+                        var5 = var6.getPlaybackRateFlow$media_player_release();
 
                         do {
-                           var5 = var19.getValue();
-                           val var26: Pair = var5 as Pair;
-                        } while (!var19.d(var5, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
+                           var26 = var5.getValue();
+                           val var19: Pair = var26 as Pair;
+                        } while (!var5.d(var26, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
 
                         return Unit.a;
                      }
@@ -272,15 +272,15 @@ public object MediaPlayerManager {
                            }
 
                            var6.getPlaybackRateFlow$media_player_release().setValue(s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0)));
-                           val var18: MutableStateFlow = var6.getPlaybackProgressFlow$media_player_release();
+                           val var11: MutableStateFlow = var6.getPlaybackProgressFlow$media_player_release();
 
                            do {
-                              var5 = var18.getValue();
+                              var15 = (MediaSource)var11.getValue();
                            } while (
-                              !var18.d(
-                                 var5,
+                              !var11.d(
+                                 var15,
                                  MediaPlayerManager.PlaybackProgress.copy$default(
-                                    (MediaPlayerManager.PlaybackProgress)var5, null, ((MediaPlayerManager.PlaybackProgress)var5).getDurationMs(), 0L, 5, null
+                                    (MediaPlayerManager.PlaybackProgress)var15, null, ((MediaPlayerManager.PlaybackProgress)var15).getDurationMs(), 0L, 5, null
                                  )
                               )
                            );
@@ -322,8 +322,8 @@ public object MediaPlayerManager {
                         break label85;
                      }
 
-                     val var7: d0 = K.c();
-                     val var16: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
+                     val var16: d0 = K.c();
+                     val var7: Function2 = new Function2<CoroutineScope, Continuation, Object>(var24, null) {
                         final MediaPlayer $prevMediaPlayer;
                         int label;
 
@@ -354,7 +354,7 @@ public object MediaPlayerManager {
                      this.L$0 = var1;
                      this.L$1 = var24;
                      this.label = 1;
-                     if (db.f.g(var7, var16, this) === var5) {
+                     if (db.f.g(var16, var7, this) === var5) {
                         return var5;
                      }
                   }
@@ -562,18 +562,18 @@ public object MediaPlayerManager {
       }
 
       public override fun toString(): String {
-         val var5: MediaSource = this.source;
+         val var6: MediaSource = this.source;
          val var1: Long = this.timeMs;
          val var3: Long = this.durationMs;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("PlaybackProgress(source=");
-         var6.append(var5);
-         var6.append(", timeMs=");
-         var6.append(var1);
-         var6.append(", durationMs=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("PlaybackProgress(source=");
+         var5.append(var6);
+         var5.append(", timeMs=");
+         var5.append(var1);
+         var5.append(", durationMs=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

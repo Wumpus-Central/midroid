@@ -77,15 +77,15 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          val var3: ReactFontManager = ReactFontManager.Companion.getInstance();
          val var6: java.lang.String = var2.getRawName();
          val var4: AssetManager = var1.getAssets();
-         val var7: Typeface = var3.getTypeface(var6, 0, var4);
-         if (!(var7 == Typeface.DEFAULT)) {
-            return var7;
+         val var5: Typeface = var3.getTypeface(var6, 0, var4);
+         if (!(var5 == Typeface.DEFAULT)) {
+            return var5;
          } else {
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Cannot find typeface ");
-            var5.append(var7);
-            var5.append(".rawName");
-            throw new IllegalStateException(var5.toString().toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Cannot find typeface ");
+            var7.append(var5);
+            var7.append(".rawName");
+            throw new IllegalStateException(var7.toString().toString());
          }
       }
 

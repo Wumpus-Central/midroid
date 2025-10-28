@@ -6,10 +6,7 @@ import android.net.Uri
 import android.os.Bundle
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
-import com.discord.react_rootview.RootViewInterface
-import com.discord.react_rootview.RootViewUtils
 import com.facebook.react.ReactRootView
-import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.Intrinsics
 
 public class ShareActivity : ReactActivity {
@@ -25,9 +22,9 @@ public class ShareActivity : ReactActivity {
 
          private final void updateShareProps(Intent var1) {
             if (var1 != null) {
-               val var3: ShareProps.Companion = ShareProps.Companion;
-               val var2: Context = this.getContext();
-               val var6: ShareProps = var3.createShareProps(var1, var2);
+               val var2: ShareProps.Companion = ShareProps.Companion;
+               val var3: Context = this.getContext();
+               val var6: ShareProps = var2.createShareProps(var1, var3);
                this.shareProps = var6;
                var var4: ShareProps = var6;
                if (var6 == null) {
@@ -70,24 +67,8 @@ public class ShareActivity : ReactActivity {
          public boolean onNewIntent(Intent var1) {
             if (var1 != null) {
                this.updateShareProps(var1);
-               val var2: ReactContext = this.getCurrentReactContext();
-               var var3: ShareProps = null;
-               val var5: RootViewInterface;
-               if (var2 != null) {
-                  var5 = RootViewUtils.INSTANCE.getRootView(var2);
-               } else {
-                  var5 = null;
-               }
-
-               if (var5 != null) {
-                  if (this.shareProps == null) {
-                     Intrinsics.throwUninitializedPropertyAccessException("shareProps");
-                  } else {
-                     var3 = this.shareProps;
-                  }
-
-                  var5.setAppProperties(var3.toBundle());
-               }
+               this.this$0.finish();
+               this.this$0.startActivity(var1);
             }
 
             return super.onNewIntent(var1);

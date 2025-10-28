@@ -78,15 +78,15 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var7 = null;
       }
 
-      val var3: Pair = s.a("messageId", this.messageId);
-      val var4: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
+      val var4: Pair = s.a("messageId", this.messageId);
+      val var3: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
       val var5: Pair = s.a("reaction", var7);
       var var8: java.lang.Boolean = null;
       if (this.reaction != null) {
          var8 = this.reaction.isBurstReaction();
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, s.a("isBurst", var8));
+      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, s.a("isBurst", var8));
    }
 
    public override fun toString(): String {

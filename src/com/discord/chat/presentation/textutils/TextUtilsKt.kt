@@ -100,6 +100,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 
+private const val FIRST_STRONG_ISOLATE: Char = '\u2068'
+private const val POP_DIRECTIONAL_ISOLATE: Char = '\u2069'
 private const val CHANNEL_PREFIX: String = "#"
 private const val COMMAND_PREFIX: String = "/"
 
@@ -149,11 +151,11 @@ fun a(var0: RenderContext, var1: ContentNode, var2: View): Unit {
 }
 
 private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>, rc: RenderContext, isOrderedList: Boolean) {
-   var var5: Int = SizeUtilsKt.getDpToPx(8);
-   val var8: Int = var2.getListNestedLevel();
-   val var15: Standard = new Standard(SizeUtilsKt.getDpToPx(var8 * 16));
+   val var7: Int = SizeUtilsKt.getDpToPx(8);
+   val var6: Int = var2.getListNestedLevel();
+   val var14: Standard = new Standard(SizeUtilsKt.getDpToPx(var6 * 16));
    val var4: Int = SizeUtilsKt.getDpToPx(2);
-   val var14: VerticalPaddingSpan = new VerticalPaddingSpan(var4);
+   val var15: VerticalPaddingSpan = new VerticalPaddingSpan(var4);
    if (var3) {
       var var13: java.lang.Long = var2.getListOrderedIndex();
       val var9: Long;
@@ -178,13 +180,13 @@ private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>
          appendToExistingBuilder(CollectionsKt.e(new TextContentNode(var23.toString())), var2, var0);
          appendToExistingBuilder(var1, var2, var0);
       } else {
-         val var24: OrderedListBulletSpan = new OrderedListBulletSpan(var9, var5, var11, var2.getPaint());
+         val var24: OrderedListBulletSpan = new OrderedListBulletSpan(var9, var7, var11, var2.getPaint());
          SpannableStringBuilderExtensionsKt.ensureNewline(var0, new AbsoluteSizeSpan(var4));
-         var5 = var0.length();
+         val var5: Int = var0.length();
          appendToExistingBuilder(var1, var2, var0);
 
          for (int var18 = 0; var18 < 3; var18++) {
-            val var16: Any = new Object[]{var15, var24, var14}[var18];
+            val var16: Any = new Object[]{var14, var24, var15}[var18];
             if (var16 != null) {
                var0.setSpan(var16, var5, var0.length(), 33);
             }
@@ -201,24 +203,24 @@ private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>
       appendToExistingBuilder(CollectionsKt.e(new TextContentNode(var25)), var2, var0);
       appendToExistingBuilder(var1, var2, var0);
    } else {
-      val var7: Int = SizeUtilsKt.getDpToPx(2);
-      val var6: Int = ColorUtilsKt.getThemeColor(var2.getContext(), R.color.primary_360, R.color.primary_400, var2.getTheme());
+      val var8: Int = SizeUtilsKt.getDpToPx(2);
+      var var20: Int = ColorUtilsKt.getThemeColor(var2.getContext(), R.color.primary_360, R.color.primary_400, var2.getTheme());
       val var26: Style;
-      if (var8 > 0) {
+      if (var6 > 0) {
          var26 = Style.STROKE;
       } else {
          var26 = Style.FILL;
       }
 
-      val var27: BulletSpan = new BulletSpan(var6, var5, false, var7, 0.0F, var26, 20, null);
+      val var27: BulletSpan = new BulletSpan(var20, var7, false, var8, 0.0F, var26, 20, null);
       SpannableStringBuilderExtensionsKt.ensureNewline(var0, new AbsoluteSizeSpan(var4));
-      var5 = var0.length();
+      var20 = var0.length();
       appendToExistingBuilder(var1, var2, var0);
 
       for (int var19 = 0; var19 < 3; var19++) {
-         val var17: Any = new Object[]{var15, var27, var14}[var19];
+         val var17: Any = new Object[]{var14, var27, var15}[var19];
          if (var17 != null) {
-            var0.setSpan(var17, var5, var0.length(), 33);
+            var0.setSpan(var17, var20, var0.length(), 33);
          }
       }
    }
@@ -238,18 +240,18 @@ public fun DraweeSpanStringBuilder.appendImage(
    var0.append('\u200b');
    val var10: com.facebook.drawee.controller.a = (G2.d.g().F(ImageRequestBuilder.x(Uri.parse(ReactAssetUtilsKt.getReactImageUrl(var1, var3))).a()) as PipelineDraweeControllerBuilder)
       .d();
-   val var13: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var1.getResources()).w(ScaleType.e);
-   val var11: com.facebook.drawee.generic.a = com.facebook.drawee.generic.a.c(var7);
-   var11.t(var8);
-   var11.w(com.facebook.drawee.generic.a.a.e);
-   var13.K(var11);
+   val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var1.getResources()).w(ScaleType.e);
+   val var13: com.facebook.drawee.generic.a = com.facebook.drawee.generic.a.c(var7);
+   var13.t(var8);
+   var13.w(com.facebook.drawee.generic.a.a.e);
+   var11.K(var13);
    if (var2.spoilerIsHidden()) {
-      var13.v(new PorterDuffColorFilter(var2.getTheme().getSpoilerHiddenBackground(), Mode.SRC_IN));
+      var11.v(new PorterDuffColorFilter(var2.getTheme().getSpoilerHiddenBackground(), Mode.SRC_IN));
    } else if (var6 != null) {
-      var13.v(new PorterDuffColorFilter(var6, Mode.SRC_IN));
+      var11.v(new PorterDuffColorFilter(var6, Mode.SRC_IN));
    }
 
-   var0.j(var1, var13.a(), var10, var9, var4, var5, false, 2);
+   var0.j(var1, var11.a(), var10, var9, var4, var5, false, 2);
 }
 
 @JvmSynthetic
@@ -297,7 +299,7 @@ fun c(var0: DraweeSpanStringBuilder, var1: ForegroundColorSpan, var2: ContentNod
 
 private fun DraweeSpanStringBuilder.changeTextSizeSp(textSizeSp: Int, renderContext: RenderContext, action: (DraweeSpanStringBuilder, RenderContext) -> Unit) {
    var1 = FontManager.INSTANCE.getScaledSpToPx(var1, var2.getContext());
-   val var4: RenderContext = RenderContext.copy$default(
+   var2 = RenderContext.copy$default(
       var2,
       null,
       null,
@@ -334,10 +336,10 @@ private fun DraweeSpanStringBuilder.changeTextSizeSp(textSizeSp: Int, renderCont
       1073741823,
       null
    );
-   val var7: AbsoluteSizeSpan = new AbsoluteSizeSpan(var1);
+   val var4: AbsoluteSizeSpan = new AbsoluteSizeSpan(var1);
    var1 = var0.length();
-   var3.invoke(var0, var4);
-   val var8: Any = new Object[]{var7}[0];
+   var3.invoke(var0, var2);
+   val var8: Any = new Object[]{var4}[0];
    if (var8 != null) {
       var0.setSpan(var8, var1, var0.length(), 33);
    }
@@ -364,12 +366,12 @@ fun g(var0: CommandMentionContentNode): Unit {
 }
 
 public fun getBaselineHeightForFontSizePx(paint: Paint, fontSizePx: Int): Float {
-   val var2: Float = var0.getTextSize();
+   val var3: Float = var0.getTextSize();
    var0.setTextSize((float)var1);
    val var4: FontMetrics = var0.getFontMetrics();
-   val var3: Float = getBaselineHeightPx(var4);
-   var0.setTextSize(var2);
-   return var3;
+   val var2: Float = getBaselineHeightPx(var4);
+   var0.setTextSize(var3);
+   return var2;
 }
 
 public fun getBaselineHeightPx(fontMetrics: FontMetrics): Float {
@@ -628,611 +630,808 @@ public fun StructurableText.toSpannable(
 }
 
 private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpanStringBuilder = new DraweeSpanStringBuilder(), isRootNode: Boolean = true): DraweeSpanStringBuilder {
-   var var21: RenderContext = var1;
-   var var22: DraweeSpanStringBuilder = var2;
-   var var6: Int = 1;
-   val var26: java.util.Iterator = var0.iterator();
-   var var7: Int = 0;
-   var var8: Int = 0;
+   var var20: RenderContext = var1;
+   var var21: DraweeSpanStringBuilder = var2;
+   var var7: Int = 1;
+   val var25: java.util.Iterator = var0.iterator();
+   var var6: Int = 0;
 
-   while (var26.hasNext()) {
-      var var23: Int = (Integer)var26.next();
+   for (int var8 = 0; var25.hasNext(); var7 = 1) {
+      var var22: Int = (Integer)var25.next();
       if (var8 < 0) {
          CollectionsKt.u();
       }
 
-      var var28: ContentNode = var23 as ContentNode;
-      var var9: Byte;
-      if (var8 == CollectionsKt.m(var0)) {
-         var9 = var6;
-      } else {
-         var9 = var7;
+      var var27: ContentNode = var22 as ContentNode;
+      if (var8 != CollectionsKt.m(var0)) {
+         var7 = var6;
       }
 
-      var var27: Context = var1.getContext();
-      val var29: BackgroundColorSpan = new BackgroundColorSpan(var1.getTheme().getBackgroundSecondary());
-      var var25: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      var var24: DiscordFontSpan = new DiscordFontSpan(var27, DiscordFont.CodeNormal);
+      var var26: Context = var1.getContext();
+      var var9: Int;
+      if (var1.spoilerIsHidden()) {
+         var9 = var1.getTheme().getSpoilerHiddenBackground();
+      } else {
+         var9 = var1.getTheme().getBackgroundSecondary();
+      }
+
+      var var28: BackgroundSpan = new BackgroundSpan(new BackgroundStyle(var9, 0, 0, 6, null), null, null, 6, null);
+      var var24: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      var var23: DiscordFontSpan = new DiscordFontSpan(var26, DiscordFont.CodeNormal);
       var var10: Int = ColorUtilsKt.getThemeColor(
-         var27, com.discord.chat.R.color.chat_mentions_background_light, com.discord.chat.R.color.chat_mentions_background_dark, var1.getTheme()
+         var26, com.discord.chat.R.color.chat_mentions_background_light, com.discord.chat.R.color.chat_mentions_background_dark, var1.getTheme()
       );
-      val var11: Int = ColorUtilsKt.getThemeColor(
-         var27, com.discord.chat.R.color.chat_mentions_foreground_light, com.discord.chat.R.color.chat_mentions_foreground_dark, var1.getTheme()
+      var9 = ColorUtilsKt.getThemeColor(
+         var26, com.discord.chat.R.color.chat_mentions_foreground_light, com.discord.chat.R.color.chat_mentions_foreground_dark, var1.getTheme()
       );
-      val var14: Int = y.c.k(ColorUtilsKt.getThemeColor(var27, R.color.green_330, R.color.green_330, var1.getTheme()), 25);
-      val var13: Int = ColorUtilsKt.getThemeColor(var27, R.color.green_330, R.color.green_330, var1.getTheme());
-      if (var28 is BlockQuoteContentNode) {
+      val var13: Int = y.c.k(ColorUtilsKt.getThemeColor(var26, R.color.green_330, R.color.green_330, var1.getTheme()), 25);
+      val var12: Int = ColorUtilsKt.getThemeColor(var26, R.color.green_330, R.color.green_330, var1.getTheme());
+      if (var27 is BlockQuoteContentNode) {
          if (var1.getSingleLine()) {
-            var22.append("> ");
-            appendToExistingBuilder((var28 as BlockQuoteContentNode).getContent(), var21, var22);
+            var21.append("> ");
+            appendToExistingBuilder((var27 as BlockQuoteContentNode).getContent(), var20, var21);
          } else {
-            var23 = new QuoteSpan(var1.getTheme().getInteractiveMuted(), SizeUtilsKt.getDpToPx(3), SizeUtilsKt.getDpToPx(8));
-            var9 = var2.length();
-            appendToExistingBuilder((var28 as BlockQuoteContentNode).getContent(), var21.updateInsets(new w((QuoteSpan)var23)), var22);
-            var23 = new Object[]{var23}[var7];
-            if (var23 != null) {
-               var22.setSpan(var23, var9, var2.length(), 13107233);
+            var22 = new QuoteSpan(var1.getTheme().getInteractiveMuted(), SizeUtilsKt.getDpToPx(3), SizeUtilsKt.getDpToPx(8));
+            var7 = var2.length();
+            appendToExistingBuilder((var27 as BlockQuoteContentNode).getContent(), var20.updateInsets(new w((QuoteSpan)var22)), var21);
+            var22 = new Object[]{var22}[var6];
+            if (var22 != null) {
+               var21.setSpan(var22, var7, var2.length(), 13107233);
             }
          }
-
-         var7 = (byte)var6;
-         var6 = (byte)var7;
       } else {
-         label754: {
-            label710: {
-               if (var28 is CodeBlockContentNode) {
-                  if (var1.getSingleLine()) {
-                     var9 = var2.length();
-                     var22.append(StringsKt.B((var28 as CodeBlockContentNode).getContent(), '\n', ' ', false, 4, null));
+         label778: {
+            if (var27 is CodeBlockContentNode) {
+               if (var1.getSingleLine()) {
+                  var7 = var2.length();
+                  var21.append(StringsKt.B((var27 as CodeBlockContentNode).getContent(), '\n', ' ', false, 4, null));
 
-                     for (int var74 = 0; var74 < 3; var74 += var6) {
-                        var23 = new Object[]{var29, var25, var24}[var74];
-                        if (var23 != null) {
-                           var22.setSpan(var23, var9, var2.length(), 33);
-                        }
+                  for (int var73 = 0; var73 < 3; var73++) {
+                     var22 = new Object[]{var28, var24, var23}[var73];
+                     if (var22 != null) {
+                        var21.setSpan(var22, var7, var2.length(), 33);
                      }
-                  } else {
-                     CodeStyle.INSTANCE.renderCodeBlock(var22, var28 as CodeBlockContentNode, var21, (boolean)var9);
                   }
                } else {
-                  if (var28 !is EmojiContentNode) {
-                     if (var28 is EmphasisContentNode) {
-                        var23 = new GGSansItalicSpan(var1.getContext());
-                        var7 = var2.length();
-                        appendToExistingBuilder((var28 as EmphasisContentNode).getContent(), var21, var22);
-                        var23 = new Object[]{var23}[0];
-                        if (var23 != null) {
-                           var22.setSpan(var23, var7, var2.length(), 33);
-                        }
+                  CodeStyle.INSTANCE.renderCodeBlock(var21, var27 as CodeBlockContentNode, var20, (boolean)var7);
+               }
+            } else if (var27 is EmojiContentNode) {
+               EmojiRendererKt.renderEmoji(var21, var27 as EmojiContentNode, var20);
+            } else {
+               if (var27 is EmphasisContentNode) {
+                  var22 = new GGSansItalicSpan(var1.getContext());
+                  var6 = var2.length();
+                  appendToExistingBuilder((var27 as EmphasisContentNode).getContent(), var20, var21);
+                  var22 = new Object[]{var22}[0];
+                  if (var22 != null) {
+                     var21.setSpan(var22, var6, var2.length(), 33);
+                  }
 
-                        var7 = (byte)var6;
-                        var6 = (byte)0;
-                        break label754;
+                  var6 = 0;
+                  break label778;
+               }
+
+               var var18: Boolean = var27 is InlineCodeContentNode;
+               var22 = null;
+               if (var18) {
+                  if (!var1.getInLink()) {
+                     var22 = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new m(var20, var27), 125, null);
+                  }
+
+                  val var261: ForegroundColorSpan = new ForegroundColorSpan(var1.getTheme().getTextNormal());
+                  var7 = var2.length();
+                  var21.append((var27 as InlineCodeContentNode).getContent());
+
+                  for (int var71 = 0; var71 < 5; var71++) {
+                     var27 = (ContentNode)new Object[]{var22, var28, var24, var23, var261}[var71];
+                     if (var27 != null) {
+                        var21.setSpan(var27, var7, var2.length(), 33);
+                     }
+                  }
+
+                  var6 = 0;
+                  break label778;
+               }
+
+               if (var27 is LineBreakContentNode || var27 is NewLineContentNode) {
+                  var6 = 0;
+                  var21.append("\n");
+                  break label778;
+               }
+
+               if (var27 is LinkContentNode) {
+                  val var283: LinkStyle = var1.getLinkStyle().invoke(var27) as LinkStyle;
+                  val var278: LinkContentNode = var27 as LinkContentNode;
+                  var22 = (var27 as LinkContentNode).getLinkColor();
+                  if (var22 != null) {
+                     var6 = var22;
+                  } else {
+                     var6 = var283.getLinkColor();
+                  }
+
+                  val var125: Boolean = var278.getShouldShowRoleDot() == java.lang.Boolean.TRUE;
+                  val var238: RoleColors = RoleColorsKt.toAndroidColors(var278.getRoleColors());
+                  val var216: RoleColors;
+                  if (var125) {
+                     var216 = null;
+                  } else {
+                     var216 = var238;
+                  }
+
+                  if (var216 != null) {
+                     var7 = var216.getPrimaryColor();
+                  } else {
+                     var7 = var6;
+                  }
+
+                  if (var216 != null) {
+                     var22 = var216.getSecondaryColor();
+                  } else {
+                     var22 = null;
+                  }
+
+                  val var217: Int;
+                  if (var216 != null) {
+                     var217 = var216.getTertiaryColor();
+                  } else {
+                     var217 = null;
+                  }
+
+                  val var199: ClickableSpan = new ClickableSpan(
+                     null, var7, var22, var217, 150.0F, var1.getShowLinkDecorations(), new n(var27, var20), new o(var20, var27), 1, null
+                  );
+                  val var218: LinkBackgroundStyle = var283.getBackgroundStyle();
+                  val var146: BackgroundSpan;
+                  if (var218 != null) {
+                     val var144: Int = var218.getColor();
+                     if (var144 != null) {
+                        var7 = var144;
+                     } else {
+                        var7 = 0;
                      }
 
-                     var var15: Boolean = var28 is InlineCodeContentNode;
-                     var23 = null;
-                     if (var15) {
-                        if (!var1.getInLink()) {
-                           var23 = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new m(var21, var28), 125, null);
-                        }
-
-                        val var271: ForegroundColorSpan = new ForegroundColorSpan(var1.getTheme().getTextNormal());
-                        var7 = var2.length();
-                        var22.append((var28 as InlineCodeContentNode).getContent());
-
-                        for (int var73 = 0; var73 < 5; var73++) {
-                           var28 = (ContentNode)new Object[]{var23, var29, var25, var24, var271}[var73];
-                           if (var28 != null) {
-                              var22.setSpan(var28, var7, var2.length(), 33);
-                           }
-                        }
-
-                        var6 = (byte)0;
-                        var7 = (byte)1;
-                        break label754;
+                     val var145: Int = var218.getBorderRadius();
+                     if (var145 != null) {
+                        var9 = var145;
+                     } else {
+                        var9 = 0;
                      }
 
-                     if (var28 !is LineBreakContentNode && var28 !is NewLineContentNode) {
-                        if (var28 is LinkContentNode) {
-                           val var288: LinkStyle = var1.getLinkStyle().invoke(var28) as LinkStyle;
-                           val var286: LinkContentNode = var28 as LinkContentNode;
-                           var23 = (var28 as LinkContentNode).getLinkColor();
-                           if (var23 != null) {
-                              var6 = var23;
+                     var146 = new BackgroundSpan(new BackgroundStyle(var7, var9, 0, 4, null), null, null, 6, null);
+                     val var219: java.lang.Boolean = var218.getSpaceAround();
+                     if (var219 != null) {
+                        var18 = var219;
+                     } else {
+                        var18 = false;
+                     }
+                  } else {
+                     var146 = null;
+                     var18 = false;
+                  }
+
+                  var23 = new DiscordFontSpan(var1.getContext(), var283.getFont());
+                  var7 = var2.length();
+                  maybeAddRoleDot(var2, var125, var1.getSingleLine(), var26, var10, var6, var238);
+                  if (var18) {
+                     var21.append(' ');
+                  }
+
+                  var6 = getIconSize(null, var1.getBaselineHeightPx());
+                  val var239: ReactAsset = var283.getIcon();
+                  if (var239 != null) {
+                     appendImage$default(var2, var26, var1, var239.getUri(var26), var6, var6, var283.getLinkColor(), 0.0F, 0.0F, 192, null);
+                     var21.append(' ');
+                  }
+
+                  var6 = var7;
+                  appendToExistingBuilder(
+                     var278.getContent(),
+                     RenderContext.copy$default(
+                        var1,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        null,
+                        false,
+                        false,
+                        false,
+                        false,
+                        false,
+                        null,
+                        null,
+                        0,
+                        null,
+                        null,
+                        true,
+                        null,
+                        null,
+                        0.0F,
+                        null,
+                        -134217729,
+                        null
+                     ),
+                     var2
+                  );
+                  if (var18) {
+                     var2.append(' ');
+                  }
+
+                  for (int var95 = 0; var95 < 3; var95++) {
+                     val var176: Any = new Object[]{var199, var23, var146}[var95];
+                     if (var176 != null) {
+                        var2.setSpan(var176, var6, var2.length(), 33);
+                     }
+                  }
+               } else {
+                  label784: {
+                     var var126: DraweeSpanStringBuilder = var21;
+                     if (var27 is MentionContentNode) {
+                        var21.append('\u2068');
+                        var23 = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
+                        val var178: MentionContentNode = var27 as MentionContentNode;
+                        if (var27 as MentionContentNode is UserOrRoleMentionContentNode) {
+                           val var227: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new p(var1, var27), 125, null);
+                           val var275: UserOrRoleMentionContentNode = var27 as UserOrRoleMentionContentNode;
+                           val var115: Int = (var27 as UserOrRoleMentionContentNode).getRoleColor();
+                           val var281: RoleColors = RoleColorsKt.toAndroidColors((var27 as UserOrRoleMentionContentNode).getRoleColors());
+                           if (var1.getShouldShowRoleDot() && var115 > 0) {
+                              var18 = true;
                            } else {
-                              var6 = var288.getLinkColor();
+                              var18 = false;
                            }
 
-                           val var126: Boolean = var286.getShouldShowRoleDot() == java.lang.Boolean.TRUE;
-                           val var250: RoleColors = RoleColorsKt.toAndroidColors(var286.getRoleColors());
-                           val var224: RoleColors;
-                           if (var126) {
-                              var224 = null;
+                           var var81: Boolean;
+                           if (var1.getShouldShowRoleOnName() && var115 > 0) {
+                              var81 = 1;
                            } else {
-                              var224 = var250;
+                              var81 = 0;
                            }
 
-                           if (var224 != null) {
-                              var7 = var224.getPrimaryColor();
+                           val var185: UserId = var275.getUserId-wUX8bhU();
+                           val var14: Long = UserId.constructor-impl(1081004946872352958L);
+                           val var19: Boolean;
+                           if (var185 == null) {
+                              var19 = false;
                            } else {
-                              var7 = var6;
+                              var19 = UserId.equals-impl0(var185.unbox-impl(), var14);
                            }
 
-                           if (var224 != null) {
-                              var23 = var224.getSecondaryColor();
-                           } else {
-                              var23 = null;
-                           }
-
-                           val var225: Int;
-                           if (var224 != null) {
-                              var225 = var224.getTertiaryColor();
-                           } else {
-                              var225 = null;
-                           }
-
-                           val var206: ClickableSpan = new ClickableSpan(
-                              null, var7, var23, var225, 150.0F, var1.getShowLinkDecorations(), new n(var28, var21), new o(var21, var28), 1, null
-                           );
-                           val var226: LinkBackgroundStyle = var288.getBackgroundStyle();
-                           val var146: BackgroundSpan;
-                           if (var226 != null) {
-                              val var144: Int = var226.getColor();
-                              if (var144 != null) {
-                                 var7 = var144;
+                           if (var19) {
+                              var6 = var13;
+                           } else if (var81) {
+                              if (var281 != null) {
+                                 var6 = var281.getPrimaryColor();
                               } else {
-                                 var7 = 0;
+                                 var6 = var115;
                               }
 
-                              val var145: Int = var226.getBorderRadius();
-                              if (var145 != null) {
-                                 var9 = var145;
-                              } else {
-                                 var9 = 0;
-                              }
-
-                              var146 = new BackgroundSpan(new BackgroundStyle(var7, var9, 0, 4, null), null, null, 6, null);
-                              val var227: java.lang.Boolean = var226.getSpaceAround();
-                              if (var227 != null) {
-                                 var15 = var227;
-                              } else {
-                                 var15 = false;
-                              }
+                              var6 = y.c.k(var6, 25);
                            } else {
-                              var146 = null;
-                              var15 = false;
+                              var6 = var10;
                            }
 
-                           var24 = new DiscordFontSpan(var1.getContext(), var288.getFont());
+                           label740: {
+                              var266 = makeMentionBackgroundSpan(var1, var6);
+                              if (var81 && !var19) {
+                                 if (var281 != null) {
+                                    var22 = var281.getSecondaryColor();
+                                 } else {
+                                    var22 = null;
+                                 }
+
+                                 if (var22 != null) {
+                                    val var188: java.util.List = CollectionsKt.q(new Integer[]{var281.getPrimaryColor(), var281.getSecondaryColor()});
+                                    if (var281.getTertiaryColor() != null) {
+                                       var188.add(var281.getTertiaryColor());
+                                    }
+
+                                    var22 = new EnhancedRoleColorsSpan(CollectionsKt.S0(var188));
+                                    break label740;
+                                 }
+                              }
+
+                              if (var19) {
+                                 var81 = var12;
+                              } else if (var81) {
+                                 var81 = y.c.k(var115, 255);
+                              } else {
+                                 var81 = var9;
+                              }
+
+                              var22 = new ForegroundColorSpan(var81);
+                           }
+
+                           var81 = var2.length();
+                           maybeAddRoleDot(var2, var18, var1.getSingleLine(), var26, var6, var115, var281);
+                           var21.append(toSpannable$default(var275.getContent(), var1, null, false, 6, null));
+
+                           for (int var44 = 0; var44 < 4; var44++) {
+                              var26 = (Context)new Object[]{var23, var227, var266, var22}[var44];
+                              if (var26 != null) {
+                                 var126.setSpan(var26, var81, var2.length(), 33);
+                              }
+                           }
+                        } else if (var178 is ChannelMentionContentNode) {
+                           val var226: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, new q(var1, var27), new r(var1, var27), 61, null);
+                           var28 = makeMentionBackgroundSpan(var1, var10);
+                           val var184: ForegroundColorSpan = new ForegroundColorSpan(var9);
                            var7 = var2.length();
-                           maybeAddRoleDot(var2, var126, var1.getSingleLine(), var27, var10, var6, var250);
-                           if (var15) {
-                              var22.append(' ');
+                           val var265: ChannelMentionContentNode = var27 as ChannelMentionContentNode;
+                           val var280: java.util.List = (var27 as ChannelMentionContentNode).getInContent();
+                           if (var280 != null) {
+                              appendToExistingBuilder(var280, var1, var21);
+                              var6 = getIconSize("_caret", var1.getBaselineHeightPx());
+                              appendImage$default(
+                                 var2, var26, var1, ReactAsset.Caret.getUri(var26), var6, var6, var184.getForegroundColor(), 0.0F, 0.0F, 192, null
+                              );
                            }
 
-                           var6 = getIconSize(null, var1.getBaselineHeightPx());
-                           val var251: ReactAsset = var288.getIcon();
-                           if (var251 != null) {
-                              appendImage$default(var2, var27, var1, var251.getUri(var27), var6, var6, var288.getLinkColor(), 0.0F, 0.0F, 192, null);
-                              var22.append(' ');
+                           val var254: java.util.List = var265.getContent();
+                           if (var254 != null) {
+                              appendToExistingBuilder(var254, var1, var21);
                            }
 
-                           var6 = var7;
-                           appendToExistingBuilder(
-                              var286.getContent(),
-                              RenderContext.copy$default(
-                                 var1,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 null,
-                                 false,
-                                 false,
-                                 false,
-                                 false,
-                                 false,
-                                 null,
-                                 null,
-                                 0,
-                                 null,
-                                 null,
-                                 true,
-                                 null,
-                                 null,
-                                 0.0F,
-                                 null,
-                                 -134217729,
-                                 null
-                              ),
-                              var2
+                           for (int var41 = 0; var41 < 4; var41++) {
+                              var26 = (Context)new Object[]{var23, var226, var28, var184}[var41];
+                              if (var26 != null) {
+                                 var126.setSpan(var26, var7, var2.length(), 33);
+                              }
+                           }
+                        } else if (var178 is AttachmentLinkContentNode) {
+                           val var183: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, new s(var1, var27), new t(var1, var27), 61, null);
+                           val var225: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
+                           val var273: ForegroundColorSpan = new ForegroundColorSpan(var9);
+                           var6 = var2.length();
+                           var9 = getIconSize(null, var1.getBaselineHeightPx());
+                           appendImage$default(
+                              var2, var26, var1, ReactAsset.Attachment.getUri(var26), var9, var9, var273.getForegroundColor(), 0.0F, 0.0F, 192, null
                            );
-                           if (var15) {
-                              var2.append(' ');
+                           var21.append(' ');
+                           val var250: java.util.List = (var27 as AttachmentLinkContentNode).getContent();
+                           if (var250 != null) {
+                              appendToExistingBuilder(var250, var1, var21);
                            }
 
-                           for (int var96 = 0; var96 < 3; var96++) {
-                              val var183: Any = new Object[]{var206, var24, var146}[var96];
-                              if (var183 != null) {
-                                 var2.setSpan(var183, var6, var2.length(), 33);
+                           for (int var79 = 0; var79 < 4; var79++) {
+                              var26 = (Context)new Object[]{var23, var183, var225, var273}[var79];
+                              if (var26 != null) {
+                                 var126.setSpan(var26, var6, var2.length(), 33);
+                              }
+                           }
+                        } else if (var178 is StaticChannelMentionContentNode) {
+                           val var182: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new u(var1, var27), 125, null);
+                           var28 = makeMentionBackgroundSpan(var1, var10);
+                           val var224: ForegroundColorSpan = new ForegroundColorSpan(var9);
+                           var6 = getIconSize(null, var1.getBaselineHeightPx());
+                           var7 = var2.length();
+                           val var264: StaticChannelMentionContentNode = var27 as StaticChannelMentionContentNode;
+                           var9 = TextUtilsKt.WhenMappings.$EnumSwitchMapping$0[(var27 as StaticChannelMentionContentNode).getId().ordinal()];
+                           if (var9 == 1 || var9 == 2) {
+                              appendImage$default(
+                                 var2, var26, var1, ReactAsset.Home.getUri(var26), var6, var6, var224.getForegroundColor(), 0.0F, 0.0F, 192, null
+                              );
+                           } else if (var9 != 3) {
+                              if (var9 != 4) {
+                                 if (var9 != 5) {
+                                    var21.append("#");
+                                 } else {
+                                    appendImage$default(
+                                       var2, var26, var1, ReactAsset.Link.getUri(var26), var6, var6, var224.getForegroundColor(), 0.0F, 0.0F, 192, null
+                                    );
+                                 }
+                              } else {
+                                 appendImage$default(
+                                    var2, var26, var1, ReactAsset.ChannelBrowse.getUri(var26), var6, var6, var224.getForegroundColor(), 0.0F, 0.0F, 192, null
+                                 );
+                              }
+                           } else {
+                              appendImage$default(
+                                 var2, var26, var1, ReactAsset.ChannelBrowse.getUri(var26), var6, var6, var224.getForegroundColor(), 0.0F, 0.0F, 192, null
+                              );
+                           }
+
+                           var21.append(toSpannable$default(var264.getContent(), var1, null, false, 6, null));
+
+                           for (int var38 = 0; var38 < 4; var38++) {
+                              var26 = (Context)new Object[]{var23, var182, var28, var224}[var38];
+                              if (var26 != null) {
+                                 var126.setSpan(var26, var7, var2.length(), 33);
+                              }
+                           }
+                        } else if (var178 !is CommandMentionContentNode) {
+                           if (var178 !is GameMentionContentNode) {
+                              throw new B9.n();
+                           }
+
+                           val var223: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
+                           val var181: ForegroundColorSpan = new ForegroundColorSpan(var9);
+                           var6 = var2.length();
+                           var7 = getIconSize(null, var1.getBaselineHeightPx());
+                           val var263: GameMentionContentNode = var27 as GameMentionContentNode;
+                           if ((var27 as GameMentionContentNode).getIcon() != null) {
+                              var21.append(' ');
+                              appendImage$default(var2, var26, var1, var263.getIcon(), var7, var7, null, 0.0F, 0.0F, 224, null);
+                              var21.append(' ');
+                           }
+
+                           val var242: java.util.List = var263.getContent();
+                           if (var242 != null) {
+                              appendToExistingBuilder(var242, var1, var21);
+                           }
+
+                           for (int var76 = 0; var76 < 3; var76++) {
+                              var26 = (Context)new Object[]{var23, var223, var181}[var76];
+                              if (var26 != null) {
+                                 var126.setSpan(var26, var6, var2.length(), 33);
                               }
                            }
                         } else {
-                           label755: {
-                              var var129: DraweeSpanStringBuilder = var22;
-                              if (var28 is MentionContentNode) {
-                                 val var188: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
-                                 val var147: MentionContentNode = var28 as MentionContentNode;
-                                 if (var28 as MentionContentNode is UserOrRoleMentionContentNode) {
-                                    val var217: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new p(var1, var28), 125, null);
-                                    val var238: UserOrRoleMentionContentNode = var28 as UserOrRoleMentionContentNode;
-                                    val var118: Int = (var28 as UserOrRoleMentionContentNode).getRoleColor();
-                                    val var274: RoleColors = RoleColorsKt.toAndroidColors((var28 as UserOrRoleMentionContentNode).getRoleColors());
-                                    if (var1.getShouldShowRoleDot() && var118 > 0) {
-                                       var15 = true;
-                                    } else {
-                                       var15 = false;
-                                    }
+                           val var209: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
+                           val var179: ForegroundColorSpan = new ForegroundColorSpan(var9);
+                           val var241: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, new H(var1, var27), new M(var1, var27), 61, null);
+                           val var222: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
+                           var9 = var2.length();
+                           var7 = var2.length();
+                           var21.append("/");
+                           var21.append(toSpannable$default((var27 as CommandMentionContentNode).getContent(), var1, null, false, 6, null));
 
-                                    val var103: Boolean;
-                                    if (var1.getShouldShowRoleOnName() && var118 > 0) {
-                                       var103 = true;
-                                    } else {
-                                       var103 = false;
-                                    }
+                           for (int var35 = 0; var35 < 3; var35++) {
+                              var27 = (ContentNode)new Object[]{var241, var209, var179}[var35];
+                              if (var27 != null) {
+                                 var126.setSpan(var27, var7, var2.length(), 33);
+                              }
+                           }
 
-                                    val var154: UserId = var238.getUserId-wUX8bhU();
-                                    val var17: Long = UserId.constructor-impl(1081004946872352958L);
-                                    val var16: Boolean;
-                                    if (var154 == null) {
-                                       var16 = false;
-                                    } else {
-                                       var16 = UserId.equals-impl0(var154.unbox-impl(), var17);
-                                    }
+                           var22 = (Integer)new Object[]{var222}[0];
+                           if (var22 != null) {
+                              var126.setSpan(var22, var9, var2.length(), 33);
+                           }
+                        }
 
-                                    if (var16) {
-                                       var6 = var14;
-                                    } else if (var103) {
-                                       if (var274 != null) {
-                                          var6 = var274.getPrimaryColor();
-                                       } else {
-                                          var6 = var118;
-                                       }
+                        ForceExhaustiveKt.forceExhaustive(var2);
+                        var126.append('\u2069');
+                     } else {
+                        label649:
+                        if (var27 !is ParagraphContentNode) {
+                           if (var27 is SpoilerContentNode) {
+                              val var195: SpoilerContentNode = var27 as SpoilerContentNode;
+                              val var173: java.lang.String = SpoilerIdentifier.Companion
+                                 .forNode-2sfwrmE(var27 as SpoilerContentNode, var1.getContainerId(), var8);
+                              var18 = SpoilerManager.INSTANCE.isRevealed-V2PEE7g(var173);
+                              val var141: RenderContext.SpoilerState;
+                              if (var18) {
+                                 var141 = RenderContext.SpoilerState.Revealed;
+                              } else {
+                                 var141 = RenderContext.SpoilerState.Hidden;
+                              }
 
-                                       var6 = y.c.k(var6, 25);
-                                    } else {
-                                       var6 = var10;
-                                    }
+                              val var174: ClickableSpan;
+                              if (!var18) {
+                                 var174 = new ClickableSpan(
+                                    NestedClickableSpan.TouchPriority.HIGH, null, null, null, 0.0F, null, null, new N(var173, var1), 126, null
+                                 );
+                              } else {
+                                 var174 = null;
+                              }
 
-                                    label727: {
-                                       var283 = makeMentionBackgroundSpan(var1, var6);
-                                       if (var103 && !var16) {
-                                          val var155: Int;
-                                          if (var274 != null) {
-                                             var155 = var274.getSecondaryColor();
-                                          } else {
-                                             var155 = null;
-                                          }
+                              if (var18) {
+                                 var6 = var1.getTheme().getSpoilerRevealedBackground();
+                              } else {
+                                 var6 = var1.getTheme().getSpoilerHiddenBackground();
+                              }
 
-                                          if (var155 != null) {
-                                             val var157: java.util.List = CollectionsKt.q(new Integer[]{var274.getPrimaryColor(), var274.getSecondaryColor()});
-                                             if (var274.getTertiaryColor() != null) {
-                                                var157.add(var274.getTertiaryColor());
-                                             }
+                              val var215: BackgroundSpan = new BackgroundSpan(new BackgroundStyle(var6, 0, 0, 6, null), null, null, 6, null);
+                              val var237: SpoilerSpan = new SpoilerSpan(var18);
+                              var6 = var2.length();
+                              appendToExistingBuilder(
+                                 var195.getContent(),
+                                 RenderContext.copy$default(
+                                    var1,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    false,
+                                    false,
+                                    false,
+                                    false,
+                                    false,
+                                    null,
+                                    var141,
+                                    0,
+                                    null,
+                                    null,
+                                    false,
+                                    null,
+                                    null,
+                                    0.0F,
+                                    null,
+                                    -8388609,
+                                    null
+                                 ),
+                                 var2
+                              );
+                              var7 = 0;
 
-                                             var156 = new EnhancedRoleColorsSpan(CollectionsKt.S0(var157));
-                                             break label727;
-                                          }
-                                       }
-
-                                       if (var16) {
-                                          var7 = var13;
-                                       } else {
-                                          var7 = var11;
-                                          if (var103) {
-                                             var7 = y.c.k(var118, 255);
-                                          }
-                                       }
-
-                                       var156 = new ForegroundColorSpan(var7);
-                                    }
-
-                                    var7 = var2.length();
-                                    maybeAddRoleDot(var2, var15, var1.getSingleLine(), var27, var6, var118, var274);
-                                    var22.append(toSpannable$default(var238.getContent(), var1, null, false, 6, null));
-
-                                    for (int var46 = 0; var46 < 4; var46++) {
-                                       var25 = (RelativeSizeSpan)new Object[]{var188, var217, var283, var156}[var46];
-                                       if (var25 != null) {
-                                          var129.setSpan(var25, var7, var2.length(), 33);
-                                       }
-                                    }
-                                 } else if (var147 is ChannelMentionContentNode) {
-                                    val var153: ClickableSpan = new ClickableSpan(
-                                       null, -1, null, null, 0.0F, null, new q(var1, var28), new r(var1, var28), 61, null
-                                    );
-                                    val var216: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
-                                    val var237: ForegroundColorSpan = new ForegroundColorSpan(var11);
-                                    var7 = var2.length();
-                                    val var273: ChannelMentionContentNode = var28 as ChannelMentionContentNode;
-                                    val var282: java.util.List = (var28 as ChannelMentionContentNode).getInContent();
-                                    if (var282 != null) {
-                                       appendToExistingBuilder(var282, var1, var22);
-                                       var6 = getIconSize("_caret", var1.getBaselineHeightPx());
-                                       appendImage$default(
-                                          var2, var27, var1, ReactAsset.Caret.getUri(var27), var6, var6, var237.getForegroundColor(), 0.0F, 0.0F, 192, null
-                                       );
-                                    }
-
-                                    val var263: java.util.List = var273.getContent();
-                                    if (var263 != null) {
-                                       appendToExistingBuilder(var263, var1, var22);
-                                    }
-
-                                    for (int var43 = 0; var43 < 4; var43++) {
-                                       var27 = (Context)new Object[]{var188, var153, var216, var237}[var43];
-                                       if (var27 != null) {
-                                          var129.setSpan(var27, var7, var2.length(), 33);
-                                       }
-                                    }
-                                 } else if (var147 is AttachmentLinkContentNode) {
-                                    val var152: ClickableSpan = new ClickableSpan(
-                                       null, -1, null, null, 0.0F, null, new s(var1, var28), new t(var1, var28), 61, null
-                                    );
-                                    val var236: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
-                                    val var215: ForegroundColorSpan = new ForegroundColorSpan(var11);
-                                    var6 = var2.length();
-                                    var9 = getIconSize(null, var1.getBaselineHeightPx());
-                                    appendImage$default(
-                                       var2, var27, var1, ReactAsset.Attachment.getUri(var27), var9, var9, var215.getForegroundColor(), 0.0F, 0.0F, 192, null
-                                    );
-                                    var22.append(' ');
-                                    val var259: java.util.List = (var28 as AttachmentLinkContentNode).getContent();
-                                    if (var259 != null) {
-                                       appendToExistingBuilder(var259, var1, var22);
-                                    }
-
-                                    for (int var80 = 0; var80 < 4; var80++) {
-                                       var27 = (Context)new Object[]{var188, var152, var236, var215}[var80];
-                                       if (var27 != null) {
-                                          var129.setSpan(var27, var6, var2.length(), 33);
-                                       }
-                                    }
-                                 } else if (var147 is StaticChannelMentionContentNode) {
-                                    val var235: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, null, new u(var1, var28), 125, null);
-                                    val var214: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
-                                    val var151: ForegroundColorSpan = new ForegroundColorSpan(var11);
-                                    var9 = getIconSize(null, var1.getBaselineHeightPx());
-                                    var7 = var2.length();
-                                    val var272: StaticChannelMentionContentNode = var28 as StaticChannelMentionContentNode;
-                                    var6 = TextUtilsKt.WhenMappings.$EnumSwitchMapping$0[(var28 as StaticChannelMentionContentNode).getId().ordinal()];
-                                    if (var6 == 1 || var6 == 2) {
-                                       appendImage$default(
-                                          var2, var27, var1, ReactAsset.Home.getUri(var27), var9, var9, var151.getForegroundColor(), 0.0F, 0.0F, 192, null
-                                       );
-                                    } else if (var6 != 3) {
-                                       if (var6 != 4) {
-                                          if (var6 != 5) {
-                                             var22.append("#");
-                                          } else {
-                                             appendImage$default(
-                                                var2,
-                                                var27,
-                                                var1,
-                                                ReactAsset.Link.getUri(var27),
-                                                var9,
-                                                var9,
-                                                var151.getForegroundColor(),
-                                                0.0F,
-                                                0.0F,
-                                                192,
-                                                null
-                                             );
-                                          }
-                                       } else {
-                                          appendImage$default(
-                                             var2,
-                                             var27,
-                                             var1,
-                                             ReactAsset.ChannelBrowse.getUri(var27),
-                                             var9,
-                                             var9,
-                                             var151.getForegroundColor(),
-                                             0.0F,
-                                             0.0F,
-                                             192,
-                                             null
-                                          );
-                                       }
-                                    } else {
-                                       appendImage$default(
-                                          var2,
-                                          var27,
-                                          var1,
-                                          ReactAsset.ChannelBrowse.getUri(var27),
-                                          var9,
-                                          var9,
-                                          var151.getForegroundColor(),
-                                          0.0F,
-                                          0.0F,
-                                          192,
-                                          null
-                                       );
-                                    }
-
-                                    var22.append(toSpannable$default(var272.getContent(), var1, null, false, 6, null));
-
-                                    for (int var40 = 0; var40 < 4; var40++) {
-                                       var27 = (Context)new Object[]{var188, var235, var214, var151}[var40];
-                                       if (var27 != null) {
-                                          var129.setSpan(var27, var7, var2.length(), 33);
-                                       }
-                                    }
-                                 } else if (var147 !is CommandMentionContentNode) {
-                                    if (var147 !is GameMentionContentNode) {
-                                       throw new B9.n();
-                                    }
-
-                                    val var150: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
-                                    val var213: ForegroundColorSpan = new ForegroundColorSpan(var11);
-                                    var7 = var2.length();
-                                    var6 = getIconSize(null, var1.getBaselineHeightPx());
-                                    val var231: GameMentionContentNode = var28 as GameMentionContentNode;
-                                    if ((var28 as GameMentionContentNode).getIcon() != null) {
-                                       var22.append(' ');
-                                       appendImage$default(var2, var27, var1, var231.getIcon(), var6, var6, null, 0.0F, 0.0F, 224, null);
-                                       var22.append(' ');
-                                    }
-
-                                    val var232: java.util.List = var231.getContent();
-                                    if (var232 != null) {
-                                       appendToExistingBuilder(var232, var1, var22);
-                                    }
-
-                                    for (int var38 = 0; var38 < 3; var38++) {
-                                       var25 = (RelativeSizeSpan)new Object[]{var188, var150, var213}[var38];
-                                       if (var25 != null) {
-                                          var129.setSpan(var25, var7, var2.length(), 33);
-                                       }
-                                    }
-                                 } else {
-                                    val var148: BackgroundSpan = makeMentionBackgroundSpan(var1, var10);
-                                    val var189: ForegroundColorSpan = new ForegroundColorSpan(var11);
-                                    val var230: ClickableSpan = new ClickableSpan(
-                                       null, -1, null, null, 0.0F, null, new H(var1, var28), new M(var1, var28), 61, null
-                                    );
-                                    val var212: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
-                                    var7 = var2.length();
-                                    var9 = var2.length();
-                                    var22.append("/");
-                                    var22.append(toSpannable$default((var28 as CommandMentionContentNode).getContent(), var1, null, false, 6, null));
-
-                                    for (int var36 = 0; var36 < 3; var36++) {
-                                       var27 = (Context)new Object[]{var230, var148, var189}[var36];
-                                       if (var27 != null) {
-                                          var129.setSpan(var27, var9, var2.length(), 33);
-                                       }
-                                    }
-
-                                    val var149: Any = new Object[]{var212}[0];
-                                    if (var149 != null) {
-                                       var129.setSpan(var149, var7, var2.length(), 33);
-                                    }
+                              while (true) {
+                                 if (var7 >= 3) {
+                                    break label784;
                                  }
 
-                                 ForceExhaustiveKt.forceExhaustive(var2);
+                                 var20 = (RenderContext)new Object[]{var174, var215, var237}[var7];
+                                 if (var20 != null) {
+                                    var2.setSpan(var20, var6, var2.length(), 33);
+                                 }
+
+                                 var7++;
+                              }
+                           }
+
+                           if (var27 is StrikethroughContentNode) {
+                              val var147: StrikethroughSpan = new StrikethroughSpan();
+                              var6 = var2.length();
+                              appendToExistingBuilder((var27 as StrikethroughContentNode).getContent(), var1, var21);
+                              val var148: Any = new Object[]{var147}[0];
+                              if (var148 != null) {
+                                 var21.setSpan(var148, var6, var2.length(), 33);
+                              }
+                           } else if (var27 is SubtextContentNode) {
+                              if (var1.getSingleLine()) {
+                                 appendToExistingBuilder((var27 as SubtextContentNode).getContent(), var1, var21);
+                                 if (var7 == 0) {
+                                    simulateInlineNewline(var2);
+                                 }
                               } else {
-                                 if (var28 !is ParagraphContentNode) {
-                                    if (var28 !is SpoilerContentNode) {
-                                       if (var28 is StrikethroughContentNode) {
-                                          val var161: StrikethroughSpan = new StrikethroughSpan();
-                                          var6 = var2.length();
-                                          appendToExistingBuilder((var28 as StrikethroughContentNode).getContent(), var1, var22);
-                                          val var162: Any = new Object[]{var161}[0];
-                                          if (var162 != null) {
-                                             var22.setSpan(var162, var6, var2.length(), 33);
-                                          }
-                                       } else if (var28 is SubtextContentNode) {
-                                          if (var1.getSingleLine()) {
-                                             appendToExistingBuilder((var28 as SubtextContentNode).getContent(), var1, var22);
-                                             if (var9 == 0) {
-                                                simulateInlineNewline(var2);
-                                             }
-                                          } else {
-                                             val var50: Byte;
-                                             if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var27)) {
-                                                var50 = 13;
-                                             } else {
-                                                var50 = 14;
-                                             }
+                                 val var46: Byte;
+                                 if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var26)) {
+                                    var46 = 13;
+                                 } else {
+                                    var46 = 14;
+                                 }
 
-                                             changeTextSizeSp(
-                                                var22, var50, var1, new O(var22, new ForegroundColorSpan(var1.getTheme().getTextMuted()), var28, (boolean)var9)
-                                             );
+                                 changeTextSizeSp(
+                                    var21, var46, var1, new O(var21, new ForegroundColorSpan(var1.getTheme().getTextMuted()), var27, (boolean)var7)
+                                 );
+                              }
+                           } else {
+                              var18 = var27 is HeadingContentNode;
+                              var var47: Int = 16;
+                              if (var18) {
+                                 val var150: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimaryExtraBold);
+                                 if (var1.getSingleLine()) {
+                                    var47 = var2.length();
+                                    appendToExistingBuilder((var27 as HeadingContentNode).getContent(), var1, var21);
+                                    simulateInlineNewline(var2);
+                                    val var151: Any = new Object[]{var150}[0];
+                                    if (var151 != null) {
+                                       var21.setSpan(var151, var47, var2.length(), 33);
+                                    }
+                                 } else {
+                                    var9 = (var27 as HeadingContentNode).getLevel();
+                                    if (var9 != 1) {
+                                       if (var9 == 2) {
+                                          var47 = 20;
+                                       }
+                                    } else {
+                                       var47 = 24;
+                                    }
+
+                                    if (var2.length() > 0) {
+                                       var9 = SizeUtilsKt.getDpToPx(8);
+                                    } else {
+                                       var9 = SizeUtilsKt.getDpToPx(4);
+                                    }
+
+                                    val var189: AbsoluteSizeSpan = new AbsoluteSizeSpan(var9);
+                                    var9 = var2.length();
+                                    var21.append("\n");
+                                    var22 = (Integer)new Object[]{var189}[0];
+                                    if (var22 != null) {
+                                       var21.setSpan(var22, var9, var2.length(), 33);
+                                    }
+
+                                    var9 = var2.length();
+                                    changeTextSizeSp(var21, var47, var1, new P(var27, var21));
+                                    var var152: Any = new Object[]{var150}[0];
+                                    if (var152 != null) {
+                                       var21.setSpan(var152, var9, var2.length(), 33);
+                                    }
+
+                                    if (var7 == 0) {
+                                       var152 = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(4));
+                                       var47 = var2.length();
+                                       var21.append("\n");
+                                       var152 = new Object[]{var152}[0];
+                                       if (var152 != null) {
+                                          var21.setSpan(var152, var47, var2.length(), 33);
+                                       }
+                                    } else {
+                                       var152 = new AbsoluteSizeSpan(0);
+                                       var47 = var2.length();
+                                       var21.append("\n\u200b");
+                                       var152 = new Object[]{var152}[0];
+                                       if (var152 != null) {
+                                          var21.setSpan(var152, var47, var2.length(), 33);
+                                       }
+                                    }
+                                 }
+                              } else {
+                                 if (var27 !is LHeadingContentNode) {
+                                    if (var27 is BulletListContentNode) {
+                                       val var193: java.lang.String = "\n\u200b";
+                                       var20 = RenderContext.copy$default(
+                                          var1,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          false,
+                                          false,
+                                          false,
+                                          false,
+                                          false,
+                                          null,
+                                          null,
+                                          0,
+                                          null,
+                                          null,
+                                          false,
+                                          null,
+                                          null,
+                                          0.0F,
+                                          null,
+                                          -1,
+                                          null
+                                       );
+                                       val var211: BulletListContentNode = var27 as BulletListContentNode;
+                                       var18 = (var27 as BulletListContentNode).getOrdered();
+                                       val var117: Long;
+                                       if (var18) {
+                                          val var159: java.lang.Long = var211.getStart();
+                                          if (var159 != null) {
+                                             var117 = var159;
+                                          } else {
+                                             var117 = 1L;
                                           }
+
+                                          var20 = RenderContext.copy$default(
+                                             var20,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             null,
+                                             false,
+                                             false,
+                                             false,
+                                             false,
+                                             false,
+                                             null,
+                                             null,
+                                             0,
+                                             null,
+                                             (long)(var211.getItems().size() - 1) + var117,
+                                             false,
+                                             null,
+                                             null,
+                                             0.0F,
+                                             null,
+                                             -67108865,
+                                             null
+                                          );
                                        } else {
-                                          var15 = var28 is HeadingContentNode;
-                                          var var51: Int = 16;
-                                          if (var15) {
-                                             val var164: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimaryExtraBold);
-                                             if (var1.getSingleLine()) {
-                                                var51 = var2.length();
-                                                appendToExistingBuilder((var28 as HeadingContentNode).getContent(), var1, var22);
-                                                simulateInlineNewline(var2);
-                                                val var165: Any = new Object[]{var164}[0];
-                                                if (var165 != null) {
-                                                   var22.setSpan(var165, var51, var2.length(), 33);
-                                                }
-                                             } else {
-                                                var7 = (var28 as HeadingContentNode).getLevel();
-                                                if (var7 != 1) {
-                                                   if (var7 == 2) {
-                                                      var51 = 20;
-                                                   }
-                                                } else {
-                                                   var51 = 24;
-                                                }
+                                          var117 = 0L;
+                                       }
 
-                                                if (var2.length() > 0) {
-                                                   var7 = SizeUtilsKt.getDpToPx(8);
-                                                } else {
-                                                   var7 = SizeUtilsKt.getDpToPx(4);
-                                                }
+                                       val var235: java.util.Iterator = var211.getItems().iterator();
 
-                                                val var192: AbsoluteSizeSpan = new AbsoluteSizeSpan(var7);
-                                                var7 = var2.length();
-                                                var22.append("\n");
-                                                var23 = (Integer)new Object[]{var192}[0];
-                                                if (var23 != null) {
-                                                   var22.setSpan(var23, var7, var2.length(), 33);
-                                                }
+                                       for (int var57 = 0; var235.hasNext(); var57++) {
+                                          var var160: java.util.List = (java.util.List)var235.next();
+                                          if (var57 < 0) {
+                                             CollectionsKt.u();
+                                          }
 
-                                                var7 = var2.length();
-                                                changeTextSizeSp(var22, var51, var1, new P(var28, var22));
-                                                var var166: Any = new Object[]{var164}[0];
-                                                if (var166 != null) {
-                                                   var22.setSpan(var166, var7, var2.length(), 33);
-                                                }
-
-                                                if (var9 == 0) {
-                                                   var166 = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(4));
-                                                   var51 = var2.length();
-                                                   var22.append("\n");
-                                                   var166 = new Object[]{var166}[0];
-                                                   if (var166 != null) {
-                                                      var22.setSpan(var166, var51, var2.length(), 33);
-                                                   }
-                                                } else {
-                                                   var166 = new AbsoluteSizeSpan(0);
-                                                   var51 = var2.length();
-                                                   var22.append("\n\u200b");
-                                                   var166 = new Object[]{var166}[0];
-                                                   if (var166 != null) {
-                                                      var22.setSpan(var166, var51, var2.length(), 33);
-                                                   }
-                                                }
-                                             }
+                                          var160 = var160;
+                                          val var260: ArrayList = new ArrayList();
+                                          val var116: Int = var160.size();
+                                          var var87: Boolean;
+                                          if (var57 == var211.getItems().size() - 1) {
+                                             var87 = 1;
                                           } else {
-                                             if (var28 !is LHeadingContentNode) {
-                                                var7 = (byte)1;
-                                                var var196: DraweeSpanStringBuilder;
-                                                if (var28 is BulletListContentNode) {
-                                                   val var195: java.lang.String = "\n\u200b";
-                                                   var21 = RenderContext.copy$default(
-                                                      var1,
+                                             var87 = 0;
+                                          }
+
+                                          val var270: java.util.Iterator = var160.iterator();
+
+                                          for (int var109 = 0; var270.hasNext(); var109++) {
+                                             var160 = (java.util.List)var270.next();
+                                             if (var109 < 0) {
+                                                CollectionsKt.u();
+                                             }
+
+                                             val var276: ContentNode = var160 as ContentNode;
+                                             val var124: Boolean = var160 as ContentNode is BulletListContentNode;
+                                             val var113: Boolean;
+                                             if (var109 == var116 - 1) {
+                                                var113 = true;
+                                             } else {
+                                                var113 = false;
+                                             }
+
+                                             if (!var124) {
+                                                var260.add(var276);
+                                             }
+
+                                             if (var124 || var113) {
+                                                var var163: RenderContext = var20;
+                                                if (var18) {
+                                                   var var16: Long;
+                                                   if (var20.getListOrderedIndex() != null) {
+                                                      val var164: java.lang.Long = var20.getListOrderedIndex();
+                                                      if (var164 != null) {
+                                                         var16 = var164;
+                                                      } else {
+                                                         var16 = 0L;
+                                                      }
+
+                                                      var16++;
+                                                   } else {
+                                                      var16 = var117;
+                                                   }
+
+                                                   var163 = RenderContext.copy$default(
+                                                      var20,
                                                       null,
                                                       null,
                                                       null,
@@ -1258,6 +1457,57 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       null,
                                                       null,
                                                       0,
+                                                      var16,
+                                                      null,
+                                                      false,
+                                                      null,
+                                                      null,
+                                                      0.0F,
+                                                      null,
+                                                      -33554433,
+                                                      null
+                                                   );
+                                                }
+
+                                                var20 = var163;
+                                                appendBulletPoint(var2, var260, var163, var18);
+                                                if (var1.getSingleLine()) {
+                                                   simulateInlineNewline(var2);
+                                                }
+
+                                                var260.clear();
+                                             }
+
+                                             if (var124) {
+                                                appendToExistingBuilder(
+                                                   CollectionsKt.e(var276),
+                                                   RenderContext.copy$default(
+                                                      var20,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      null,
+                                                      false,
+                                                      false,
+                                                      false,
+                                                      false,
+                                                      false,
+                                                      null,
+                                                      null,
+                                                      var20.getListNestedLevel() + 1,
                                                       null,
                                                       null,
                                                       false,
@@ -1265,646 +1515,336 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       null,
                                                       0.0F,
                                                       null,
-                                                      -1,
+                                                      -117440513,
                                                       null
-                                                   );
-                                                   val var220: BulletListContentNode = var28 as BulletListContentNode;
-                                                   var15 = (var28 as BulletListContentNode).getOrdered();
-                                                   val var127: Long;
-                                                   if (var15) {
-                                                      val var173: java.lang.Long = var220.getStart();
-                                                      if (var173 != null) {
-                                                         var127 = var173;
-                                                      } else {
-                                                         var127 = 1L;
-                                                      }
-
-                                                      var21 = RenderContext.copy$default(
-                                                         var21,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         null,
-                                                         false,
-                                                         false,
-                                                         false,
-                                                         false,
-                                                         false,
-                                                         null,
-                                                         null,
-                                                         0,
-                                                         null,
-                                                         (long)(var220.getItems().size() - 1) + var127,
-                                                         false,
-                                                         null,
-                                                         null,
-                                                         0.0F,
-                                                         null,
-                                                         -67108865,
-                                                         null
-                                                      );
-                                                   } else {
-                                                      var127 = 0L;
-                                                   }
-
-                                                   val var248: java.util.Iterator = var220.getItems().iterator();
-
-                                                   for (int var61 = 0; var248.hasNext(); var61++) {
-                                                      var var174: java.util.List = (java.util.List)var248.next();
-                                                      if (var61 < 0) {
-                                                         CollectionsKt.u();
-                                                      }
-
-                                                      var174 = var174;
-                                                      val var268: ArrayList = new ArrayList();
-                                                      val var119: Int = var174.size();
-                                                      var var104: Byte;
-                                                      if (var61 == var220.getItems().size() - 1) {
-                                                         var104 = var7;
-                                                      } else {
-                                                         var104 = 0;
-                                                      }
-
-                                                      val var278: java.util.Iterator = var174.iterator();
-
-                                                      for (int var114 = 0; var278.hasNext(); var114++) {
-                                                         var174 = (java.util.List)var278.next();
-                                                         if (var114 < 0) {
-                                                            CollectionsKt.u();
-                                                         }
-
-                                                         val var284: ContentNode = var174 as ContentNode;
-                                                         val var125: Boolean = var174 as ContentNode is BulletListContentNode;
-                                                         val var116: Byte;
-                                                         if (var114 == var119 - 1) {
-                                                            var116 = var7;
-                                                         } else {
-                                                            var116 = 0;
-                                                         }
-
-                                                         if (!var125) {
-                                                            var268.add(var284);
-                                                         }
-
-                                                         if (var125 || var116 != 0) {
-                                                            var var177: RenderContext = var21;
-                                                            if (var15) {
-                                                               var var19: Long;
-                                                               if (var21.getListOrderedIndex() != null) {
-                                                                  val var178: java.lang.Long = var21.getListOrderedIndex();
-                                                                  if (var178 != null) {
-                                                                     var19 = var178;
-                                                                  } else {
-                                                                     var19 = 0L;
-                                                                  }
-
-                                                                  var19++;
-                                                               } else {
-                                                                  var19 = var127;
-                                                               }
-
-                                                               var177 = RenderContext.copy$default(
-                                                                  var21,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  null,
-                                                                  null,
-                                                                  0,
-                                                                  var19,
-                                                                  null,
-                                                                  false,
-                                                                  null,
-                                                                  null,
-                                                                  0.0F,
-                                                                  null,
-                                                                  -33554433,
-                                                                  null
-                                                               );
-                                                            }
-
-                                                            var21 = var177;
-                                                            appendBulletPoint(var2, var268, var177, var15);
-                                                            if (var1.getSingleLine()) {
-                                                               simulateInlineNewline(var2);
-                                                            }
-
-                                                            var268.clear();
-                                                         }
-
-                                                         if (var125) {
-                                                            appendToExistingBuilder(
-                                                               CollectionsKt.e(var284),
-                                                               RenderContext.copy$default(
-                                                                  var21,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  null,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  false,
-                                                                  null,
-                                                                  null,
-                                                                  var21.getListNestedLevel() + 1,
-                                                                  null,
-                                                                  null,
-                                                                  false,
-                                                                  null,
-                                                                  null,
-                                                                  0.0F,
-                                                                  null,
-                                                                  -117440513,
-                                                                  null
-                                                               ),
-                                                               var2
-                                                            );
-                                                         }
-                                                      }
-
-                                                      if (var3 && var104 != 0) {
-                                                         val var180: AbsoluteSizeSpan = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(2));
-                                                         var104 = var2.length();
-                                                         var2.append(var195);
-                                                         var174 = (java.util.List)new Object[]{var180}[0];
-                                                         if (var174 != null) {
-                                                            var2.setSpan(var174, var104, var2.length(), 33);
-                                                         }
-                                                      }
-                                                   }
-
-                                                   var196 = var2;
-                                                } else {
-                                                   var22 = var22;
-                                                   if (var28 is StrongContentNode) {
-                                                      val var136: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
-                                                      var51 = var2.length();
-                                                      appendToExistingBuilder((var28 as StrongContentNode).getContent(), var1, var22);
-                                                      var21 = (RenderContext)new Object[]{var136}[0];
-                                                      var196 = var22;
-                                                      if (var21 != null) {
-                                                         var22.setSpan(var21, var51, var2.length(), 33);
-                                                         var196 = var22;
-                                                      }
-                                                   } else {
-                                                      var21 = var1;
-                                                      if (var28 is TextContentNode) {
-                                                         val var138: java.lang.String = (var28 as TextContentNode).getContent();
-                                                         var196 = var22;
-                                                         if (var138 != null) {
-                                                            var22.append(var138);
-                                                            var196 = var22;
-                                                         }
-                                                      } else if (var28 is TimestampContentNode) {
-                                                         val var140: ClickableSpan = new ClickableSpan(
-                                                            null,
-                                                            ColorUtilsKt.getThemeColor(var27, R.color.primary_600, R.color.primary_200, var1.getTheme()),
-                                                            null,
-                                                            null,
-                                                            0.0F,
-                                                            null,
-                                                            null,
-                                                            new Q(var1, var28),
-                                                            125,
-                                                            null
-                                                         );
-                                                         val var221: BackgroundColorSpan = new BackgroundColorSpan(
-                                                            ColorUtilsKt.getThemeColor(
-                                                               var27,
-                                                               R.color.background_modifier_accent_light,
-                                                               R.color.background_modifier_accent_dark,
-                                                               var1.getTheme()
-                                                            )
-                                                         );
-                                                         var9 = var2.length();
-                                                         var22.append((var28 as TimestampContentNode).getFormatted());
-                                                         var51 = 0;
-
-                                                         while (true) {
-                                                            var196 = var22;
-                                                            if (var51 >= 2) {
-                                                               break;
-                                                            }
-
-                                                            var23 = (Integer)new Object[]{var140, var221}[var51];
-                                                            if (var23 != null) {
-                                                               var22.setSpan(var23, var9, var2.length(), 33);
-                                                            }
-
-                                                            var51++;
-                                                         }
-                                                      } else if (var28 is UnderlineContentNode) {
-                                                         val var198: UnderlineSpan = new UnderlineSpan();
-                                                         var51 = var2.length();
-                                                         appendToExistingBuilder((var28 as UnderlineContentNode).getContent(), var1, var22);
-                                                         var21 = (RenderContext)new Object[]{var198}[0];
-                                                         var196 = var22;
-                                                         if (var21 != null) {
-                                                            var22.setSpan(var21, var51, var2.length(), 33);
-                                                            var196 = var22;
-                                                         }
-                                                      } else if (var28 is ChannelNameContentNode) {
-                                                         val var199: ChannelNameContentNode = var28 as ChannelNameContentNode;
-                                                         if ((var28 as ChannelNameContentNode).getIcon() != null) {
-                                                            var51 = getIconSize(var199.getIconType(), var1.getBaselineHeightPx());
-                                                            appendImage$default(
-                                                               var2,
-                                                               var27,
-                                                               var1,
-                                                               var199.getIcon(),
-                                                               var51,
-                                                               var51,
-                                                               var11,
-                                                               0.0F,
-                                                               (float)var51 * getIconPaddingMultiplier(var199.getIconType()),
-                                                               64,
-                                                               null
-                                                            );
-                                                         }
-
-                                                         appendToExistingBuilder(var199.getContent(), var1, var22);
-                                                         var196 = var22;
-                                                      } else {
-                                                         if (var28 !is GuildNameContentNode) {
-                                                            if (var28 !is SoundmojiContentNode) {
-                                                               if (var28 !is ErrorContentNode) {
-                                                                  throw new B9.n();
-                                                               }
-
-                                                               val var203: CrashReporting = CrashReporting.INSTANCE;
-                                                               val var223: java.lang.Throwable = (var28 as ErrorContentNode).getThrowable();
-                                                               var6 = (byte)0;
-                                                               CrashReporting.captureException$default(var203, var223, false, 2, null);
-                                                               var22.append("���");
-                                                               break label754;
-                                                            }
-
-                                                            val var249: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-                                                            val var285: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
-                                                            val var222: ClickableSpan = new ClickableSpan(
-                                                               null, null, null, null, 0.0F, null, null, new S(var1, var28), 127, null
-                                                            );
-                                                            val var201: ForegroundColorSpan = new ForegroundColorSpan(ThemeManagerKt.getTheme().getTextNormal());
-                                                            val var287: BackgroundSpan = new BackgroundSpan(
-                                                               new BackgroundStyle(ThemeManagerKt.getTheme().getCardPrimaryBg(), 4, 2),
-                                                               new BorderStyle(ThemeManagerKt.getTheme().getBorderStrong(), SizeUtilsKt.getDpToPx(1)),
-                                                               new ShadowStyle(Color.argb(63, 0, 0, 0), SizeUtilsKt.getDpToPx(4), new SizeF(0.0F, 4.0F))
-                                                            );
-                                                            var22.append(" ");
-                                                            val var269: T = new T(var22, var28, var27, var1);
-                                                            if (var1.spoilerExists() && !var1.spoilerIsRevealed()) {
-                                                               var51 = var2.length();
-                                                               var269.invoke(var22);
-                                                               var23 = (Integer)new Object[]{var249}[0];
-                                                               if (var23 != null) {
-                                                                  var22.setSpan(var23, var51, var2.length(), 33);
-                                                               }
-                                                            } else {
-                                                               var9 = var2.length();
-                                                               var269.invoke(var22);
-
-                                                               for (int var68 = 0; var68 < 5; var68++) {
-                                                                  var27 = (Context)new Object[]{var249, var285, var222, var201, var287}[var68];
-                                                                  if (var27 != null) {
-                                                                     var22.setSpan(var27, var9, var2.length(), 33);
-                                                                  }
-                                                               }
-                                                            }
-
-                                                            var22.append(" ");
-                                                            break label710;
-                                                         }
-
-                                                         var51 = getIconSize("_guild", var1.getBaselineHeightPx());
-                                                         val var200: GuildNameContentNode = var28 as GuildNameContentNode;
-                                                         if ((var28 as GuildNameContentNode).getIcon() != null) {
-                                                            appendImage$default(
-                                                               var2,
-                                                               var27,
-                                                               var1,
-                                                               var200.getIcon(),
-                                                               var51,
-                                                               var51,
-                                                               null,
-                                                               (float)var51 * 0.2F,
-                                                               (float)var51 * 0.1F,
-                                                               32,
-                                                               null
-                                                            );
-                                                         }
-
-                                                         var22.append(var200.getContent());
-                                                         var196 = var22;
-                                                      }
-                                                   }
-                                                }
-
-                                                var21 = var1;
-                                                var6 = (byte)0;
-                                                var22 = var196;
-                                                break label754;
-                                             }
-
-                                             val var171: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimaryExtraBold);
-                                             if (!var1.getSingleLine()) {
-                                                var51 = FontManager.INSTANCE.getScaledSpToPx(16, var1.getContext());
-                                                val var4: Float = getBaselineHeightForFontSizePx(var1.getPaint(), var51);
-                                                val var241: AbsoluteSizeSpan = new AbsoluteSizeSpan(var51);
-                                                val var266: LHeadingContentNode = var28 as LHeadingContentNode;
-                                                if (StringsKt.I((var28 as LHeadingContentNode).getClassName(), "added", false, 2, null)) {
-                                                   var51 = ThemeManagerKt.getTheme().getTextPositive();
-                                                } else if (StringsKt.I(var266.getClassName(), "fixed", false, 2, null)) {
-                                                   var51 = ThemeManagerKt.getTheme().getTextDanger();
-                                                } else if (StringsKt.I(var266.getClassName(), "progress", false, 2, null)) {
-                                                   var51 = ThemeManagerKt.getTheme().getTextWarning();
-                                                } else if (StringsKt.I(var266.getClassName(), "improved", false, 2, null)) {
-                                                   var51 = ThemeManagerKt.getTheme().getTextBrand();
-                                                } else {
-                                                   var51 = ThemeManagerKt.getTheme().getHeaderPrimary();
-                                                }
-
-                                                val var194: ForegroundColorSpan = new ForegroundColorSpan(var51);
-                                                if (var2.length() > 0) {
-                                                   var51 = SizeUtilsKt.getDpToPx(8);
-                                                } else {
-                                                   var51 = SizeUtilsKt.getDpToPx(4);
-                                                }
-
-                                                val var219: UnderlineSpan = new UnderlineSpan();
-                                                var7 = var2.length();
-                                                val var275: AbsoluteSizeSpan = new AbsoluteSizeSpan(var51);
-                                                var51 = var2.length();
-                                                var22.append("\n");
-                                                var28 = (ContentNode)new Object[]{var275}[0];
-                                                if (var28 != null) {
-                                                   var22.setSpan(var28, var51, var2.length(), 33);
-                                                }
-
-                                                var10 = var2.length();
-                                                val var277: java.util.List = var266.getContent();
-                                                var51 = var7;
-                                                val var267: RenderContext = RenderContext.copy$default(
-                                                   var1,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   null,
-                                                   false,
-                                                   false,
-                                                   false,
-                                                   false,
-                                                   false,
-                                                   null,
-                                                   null,
-                                                   0,
-                                                   null,
-                                                   null,
-                                                   false,
-                                                   null,
-                                                   null,
-                                                   var4,
-                                                   null,
-                                                   1073741823,
-                                                   null
+                                                   ),
+                                                   var2
                                                 );
-                                                var129 = var2;
-                                                appendToExistingBuilder(var277, var267, var2);
-                                                var25 = (RelativeSizeSpan)new Object[]{var241}[0];
-                                                if (var25 != null) {
-                                                   var2.setSpan(var25, var10, var2.length(), 33);
-                                                }
+                                             }
+                                          }
 
-                                                if (var9 == 0) {
-                                                   val var243: AbsoluteSizeSpan = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(4));
-                                                   var7 = var2.length();
-                                                   var2.append("\n");
-                                                   var25 = (RelativeSizeSpan)new Object[]{var243}[0];
-                                                   if (var25 != null) {
-                                                      var2.setSpan(var25, var7, var2.length(), 33);
-                                                   }
-                                                } else {
-                                                   val var245: AbsoluteSizeSpan = new AbsoluteSizeSpan(0);
-                                                   var7 = var2.length();
-                                                   var2.append("\n\u200b");
-                                                   var25 = (RelativeSizeSpan)new Object[]{var245}[0];
-                                                   if (var25 != null) {
-                                                      var2.setSpan(var25, var7, var2.length(), 33);
-                                                   }
-                                                }
-
-                                                for (int var92 = 0; var92 < 3; var92++) {
-                                                   var25 = (RelativeSizeSpan)new Object[]{var171, var194, var219}[var92];
-                                                   if (var25 != null) {
-                                                      var129.setSpan(var25, var51, var2.length(), 33);
-                                                   }
-                                                }
-                                             } else {
-                                                var51 = var2.length();
-                                                appendToExistingBuilder((var28 as LHeadingContentNode).getContent(), var1, var22);
-                                                simulateInlineNewline(var2);
-                                                val var172: Any = new Object[]{var171}[0];
-                                                if (var172 != null) {
-                                                   var22.setSpan(var172, var51, var2.length(), 33);
-                                                }
+                                          if (var3 && var87) {
+                                             val var166: AbsoluteSizeSpan = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(2));
+                                             var87 = var2.length();
+                                             var2.append(var193);
+                                             var160 = (java.util.List)new Object[]{var166}[0];
+                                             if (var160 != null) {
+                                                var2.setSpan(var160, var87, var2.length(), 33);
                                              }
                                           }
                                        }
 
-                                       var6 = (byte)0;
-                                       var7 = (byte)1;
-                                       var22 = var129;
-                                       var21 = var1;
-                                       break label754;
-                                    }
-
-                                    val var190: SpoilerContentNode = var28 as SpoilerContentNode;
-                                    val var159: java.lang.String = SpoilerIdentifier.Companion
-                                       .forNode-2sfwrmE(var28 as SpoilerContentNode, var1.getContainerId(), var8);
-                                    var15 = SpoilerManager.INSTANCE.isRevealed-V2PEE7g(var159);
-                                    val var131: RenderContext.SpoilerState;
-                                    if (var15) {
-                                       var131 = RenderContext.SpoilerState.Revealed;
+                                       var21 = var2;
                                     } else {
-                                       var131 = RenderContext.SpoilerState.Hidden;
-                                    }
+                                       val var194: DraweeSpanStringBuilder = var21;
+                                       if (var27 is StrongContentNode) {
+                                          val var130: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
+                                          var47 = var2.length();
+                                          appendToExistingBuilder((var27 as StrongContentNode).getContent(), var1, var21);
+                                          var20 = (RenderContext)new Object[]{var130}[0];
+                                          var21 = var21;
+                                          if (var20 != null) {
+                                             var194.setSpan(var20, var47, var2.length(), 33);
+                                             var21 = var194;
+                                          }
+                                       } else {
+                                          var20 = var1;
+                                          if (var27 is TextContentNode) {
+                                             val var132: java.lang.String = (var27 as TextContentNode).getContent();
+                                             var21 = var21;
+                                             if (var132 != null) {
+                                                var194.append(var132);
+                                                var21 = var194;
+                                             }
+                                          } else if (var27 is TimestampContentNode) {
+                                             val var134: ClickableSpan = new ClickableSpan(
+                                                null,
+                                                ColorUtilsKt.getThemeColor(var26, R.color.primary_600, R.color.primary_200, var1.getTheme()),
+                                                null,
+                                                null,
+                                                0.0F,
+                                                null,
+                                                null,
+                                                new Q(var1, var27),
+                                                125,
+                                                null
+                                             );
+                                             val var212: BackgroundColorSpan = new BackgroundColorSpan(
+                                                ColorUtilsKt.getThemeColor(
+                                                   var26, R.color.background_modifier_accent_light, R.color.background_modifier_accent_dark, var1.getTheme()
+                                                )
+                                             );
+                                             var7 = var2.length();
+                                             var21.append((var27 as TimestampContentNode).getFormatted());
+                                             var47 = 0;
 
-                                    val var160: ClickableSpan;
-                                    if (!var15) {
-                                       var160 = new ClickableSpan(
-                                          NestedClickableSpan.TouchPriority.HIGH, null, null, null, 0.0F, null, null, new N(var159, var1), 126, null
-                                       );
-                                    } else {
-                                       var160 = null;
-                                    }
+                                             while (true) {
+                                                var21 = var194;
+                                                if (var47 >= 2) {
+                                                   break;
+                                                }
 
-                                    if (var15) {
-                                       var6 = var1.getTheme().getSpoilerRevealedBackground();
-                                    } else {
-                                       var6 = var1.getTheme().getSpoilerHiddenBackground();
-                                    }
+                                                val var168: Any = new Object[]{var134, var212}[var47];
+                                                if (var168 != null) {
+                                                   var194.setSpan(var168, var7, var2.length(), 33);
+                                                }
 
-                                    val var218: BackgroundSpan = new BackgroundSpan(new BackgroundStyle(var6, 0, 0, 6, null), null, null, 6, null);
-                                    val var240: SpoilerSpan = new SpoilerSpan(var15);
-                                    var6 = var2.length();
-                                    appendToExistingBuilder(
-                                       var190.getContent(),
-                                       RenderContext.copy$default(
-                                          var1,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          false,
-                                          false,
-                                          false,
-                                          false,
-                                          false,
-                                          null,
-                                          var131,
-                                          0,
-                                          null,
-                                          null,
-                                          false,
-                                          null,
-                                          null,
-                                          0.0F,
-                                          null,
-                                          -8388609,
-                                          null
-                                       ),
-                                       var2
-                                    );
-                                    var7 = 0;
+                                                var47++;
+                                             }
+                                          } else if (var27 is UnderlineContentNode) {
+                                             val var169: UnderlineSpan = new UnderlineSpan();
+                                             var47 = var2.length();
+                                             appendToExistingBuilder((var27 as UnderlineContentNode).getContent(), var1, var21);
+                                             var20 = (RenderContext)new Object[]{var169}[0];
+                                             var21 = var21;
+                                             if (var20 != null) {
+                                                var194.setSpan(var20, var47, var2.length(), 33);
+                                                var21 = var194;
+                                             }
+                                          } else if (var27 is ChannelNameContentNode) {
+                                             var21.append('\u2068');
+                                             val var170: ChannelNameContentNode = var27 as ChannelNameContentNode;
+                                             if ((var27 as ChannelNameContentNode).getIcon() != null) {
+                                                var47 = getIconSize(var170.getIconType(), var1.getBaselineHeightPx());
+                                                appendImage$default(
+                                                   var2,
+                                                   var26,
+                                                   var1,
+                                                   var170.getIcon(),
+                                                   var47,
+                                                   var47,
+                                                   var9,
+                                                   0.0F,
+                                                   (float)var47 * getIconPaddingMultiplier(var170.getIconType()),
+                                                   64,
+                                                   null
+                                                );
+                                             }
 
-                                    while (true) {
-                                       if (var7 >= 3) {
-                                          break label755;
+                                             appendToExistingBuilder(var170.getContent(), var1, var21);
+                                             var21.append('\u2069');
+                                             var21 = var21;
+                                          } else {
+                                             if (var27 !is GuildNameContentNode) {
+                                                if (var27 !is SoundmojiContentNode) {
+                                                   if (var27 !is ErrorContentNode) {
+                                                      throw new B9.n();
+                                                   }
+
+                                                   val var172: CrashReporting = CrashReporting.INSTANCE;
+                                                   val var214: java.lang.Throwable = (var27 as ErrorContentNode).getThrowable();
+                                                   var6 = 0;
+                                                   CrashReporting.captureException$default(var172, var214, false, 2, null);
+                                                   var21.append("���");
+                                                   var21 = var21;
+                                                   break label778;
+                                                }
+
+                                                val var236: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+                                                var23 = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
+                                                val var277: ClickableSpan = new ClickableSpan(
+                                                   null, null, null, null, 0.0F, null, null, new S(var1, var27), 127, null
+                                                );
+                                                val var282: ForegroundColorSpan = new ForegroundColorSpan(ThemeManagerKt.getTheme().getTextNormal());
+                                                val var284: BackgroundSpan = new BackgroundSpan(
+                                                   new BackgroundStyle(ThemeManagerKt.getTheme().getCardPrimaryBg(), 4, 2),
+                                                   new BorderStyle(ThemeManagerKt.getTheme().getBorderStrong(), SizeUtilsKt.getDpToPx(1)),
+                                                   new ShadowStyle(Color.argb(63, 0, 0, 0), SizeUtilsKt.getDpToPx(4), new SizeF(0.0F, 4.0F))
+                                                );
+                                                var21.append(" ");
+                                                val var137: T = new T(var21, var27, var26, var1);
+                                                if (var1.spoilerExists() && !var1.spoilerIsRevealed()) {
+                                                   var47 = var2.length();
+                                                   var137.invoke(var21);
+                                                   var20 = (RenderContext)new Object[]{var236}[0];
+                                                   if (var20 != null) {
+                                                      var21.setSpan(var20, var47, var2.length(), 33);
+                                                   }
+                                                } else {
+                                                   var7 = var2.length();
+                                                   var137.invoke(var21);
+
+                                                   for (int var64 = 0; var64 < 5; var64++) {
+                                                      var20 = (RenderContext)new Object[]{var236, var23, var277, var282, var284}[var64];
+                                                      if (var20 != null) {
+                                                         var194.setSpan(var20, var7, var2.length(), 33);
+                                                      }
+                                                   }
+                                                }
+
+                                                var194.append(" ");
+                                                break label649;
+                                             }
+
+                                             var21.append('\u2068');
+                                             var47 = getIconSize("_guild", var1.getBaselineHeightPx());
+                                             val var171: GuildNameContentNode = var27 as GuildNameContentNode;
+                                             if ((var27 as GuildNameContentNode).getIcon() != null) {
+                                                appendImage$default(
+                                                   var2, var26, var1, var171.getIcon(), var47, var47, null, (float)var47 * 0.2F, (float)var47 * 0.1F, 32, null
+                                                );
+                                             }
+
+                                             var21.append(var171.getContent());
+                                             var21.append('\u2069');
+                                             var21 = var21;
+                                          }
                                        }
-
-                                       var21 = (RenderContext)new Object[]{var160, var218, var240}[var7];
-                                       if (var21 != null) {
-                                          var2.setSpan(var21, var6, var2.length(), 33);
-                                       }
-
-                                       var7++;
                                     }
+
+                                    var20 = var1;
+                                    var6 = 0;
+                                    break label778;
                                  }
 
-                                 appendToExistingBuilder((var28 as ParagraphContentNode).getContent(), var1, var22);
-                                 if (var9 == 0) {
-                                    var22.append("\n\n");
+                                 val var157: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimaryExtraBold);
+                                 if (!var1.getSingleLine()) {
+                                    var47 = FontManager.INSTANCE.getScaledSpToPx(16, var1.getContext());
+                                    val var4: Float = getBaselineHeightForFontSizePx(var1.getPaint(), var47);
+                                    val var228: AbsoluteSizeSpan = new AbsoluteSizeSpan(var47);
+                                    val var258: LHeadingContentNode = var27 as LHeadingContentNode;
+                                    if (StringsKt.I((var27 as LHeadingContentNode).getClassName(), "added", false, 2, null)) {
+                                       var47 = ThemeManagerKt.getTheme().getTextPositive();
+                                    } else if (StringsKt.I(var258.getClassName(), "fixed", false, 2, null)) {
+                                       var47 = ThemeManagerKt.getTheme().getTextDanger();
+                                    } else if (StringsKt.I(var258.getClassName(), "progress", false, 2, null)) {
+                                       var47 = ThemeManagerKt.getTheme().getTextWarning();
+                                    } else if (StringsKt.I(var258.getClassName(), "improved", false, 2, null)) {
+                                       var47 = ThemeManagerKt.getTheme().getTextBrand();
+                                    } else {
+                                       var47 = ThemeManagerKt.getTheme().getHeaderPrimary();
+                                    }
+
+                                    val var191: ForegroundColorSpan = new ForegroundColorSpan(var47);
+                                    if (var2.length() > 0) {
+                                       var47 = SizeUtilsKt.getDpToPx(8);
+                                    } else {
+                                       var47 = SizeUtilsKt.getDpToPx(4);
+                                    }
+
+                                    val var210: UnderlineSpan = new UnderlineSpan();
+                                    var9 = var2.length();
+                                    val var267: AbsoluteSizeSpan = new AbsoluteSizeSpan(var47);
+                                    var47 = var2.length();
+                                    var21.append("\n");
+                                    var27 = (ContentNode)new Object[]{var267}[0];
+                                    if (var27 != null) {
+                                       var21.setSpan(var27, var47, var2.length(), 33);
+                                    }
+
+                                    var10 = var2.length();
+                                    val var259: java.util.List = var258.getContent();
+                                    var47 = var9;
+                                    val var269: RenderContext = RenderContext.copy$default(
+                                       var1,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       null,
+                                       false,
+                                       false,
+                                       false,
+                                       false,
+                                       false,
+                                       null,
+                                       null,
+                                       0,
+                                       null,
+                                       null,
+                                       false,
+                                       null,
+                                       null,
+                                       var4,
+                                       null,
+                                       1073741823,
+                                       null
+                                    );
+                                    var126 = var2;
+                                    appendToExistingBuilder(var259, var269, var2);
+                                    var24 = (RelativeSizeSpan)new Object[]{var228}[0];
+                                    if (var24 != null) {
+                                       var2.setSpan(var24, var10, var2.length(), 33);
+                                    }
+
+                                    if (var7 == 0) {
+                                       val var230: AbsoluteSizeSpan = new AbsoluteSizeSpan(SizeUtilsKt.getDpToPx(4));
+                                       var7 = var2.length();
+                                       var2.append("\n");
+                                       var24 = (RelativeSizeSpan)new Object[]{var230}[0];
+                                       if (var24 != null) {
+                                          var2.setSpan(var24, var7, var2.length(), 33);
+                                       }
+                                    } else {
+                                       val var232: AbsoluteSizeSpan = new AbsoluteSizeSpan(0);
+                                       var7 = var2.length();
+                                       var2.append("\n\u200b");
+                                       var24 = (RelativeSizeSpan)new Object[]{var232}[0];
+                                       if (var24 != null) {
+                                          var2.setSpan(var24, var7, var2.length(), 33);
+                                       }
+                                    }
+
+                                    for (int var86 = 0; var86 < 3; var86++) {
+                                       var24 = (RelativeSizeSpan)new Object[]{var157, var191, var210}[var86];
+                                       if (var24 != null) {
+                                          var126.setSpan(var24, var47, var2.length(), 33);
+                                       }
+                                    }
+                                 } else {
+                                    var47 = var2.length();
+                                    appendToExistingBuilder((var27 as LHeadingContentNode).getContent(), var1, var21);
+                                    simulateInlineNewline(var2);
+                                    val var158: Any = new Object[]{var157}[0];
+                                    if (var158 != null) {
+                                       var21.setSpan(var158, var47, var2.length(), 33);
+                                    }
                                  }
                               }
+                           }
 
-                              var22 = var129;
-                              var7 = (byte)1;
-                              var21 = var1;
-                              break label710;
+                           var6 = 0;
+                           var20 = var1;
+                           var21 = var126;
+                           break label778;
+                        } else {
+                           appendToExistingBuilder((var27 as ParagraphContentNode).getContent(), var1, var21);
+                           if (var7 == 0) {
+                              var21.append("\n\n");
                            }
                         }
-
-                        var21 = var1;
-                        var22 = var2;
-                        var6 = (byte)0;
-                        var7 = (byte)1;
-                        break label754;
                      }
 
-                     var6 = (byte)0;
-                     var7 = (byte)1;
-                     var22.append("\n");
-                     break label754;
+                     var20 = var1;
+                     var6 = 0;
+                     break label778;
                   }
-
-                  EmojiRendererKt.renderEmoji(var22, var28 as EmojiContentNode, var21);
                }
 
-               var7 = (byte)var6;
+               var20 = var1;
+               var21 = var2;
             }
 
-            var6 = (byte)0;
+            var6 = 0;
          }
       }
 
       var8++;
-      var7 = var6;
-      var6 = var7;
    }
 
-   return var22;
+   return var21;
 }
 
 @JvmSynthetic
@@ -2139,7 +2079,7 @@ fun `toSpannable$lambda$71$lambda$22`(var0: RenderContext, var1: ContentNode, va
 
 fun `toSpannable$lambda$71$lambda$26`(var0: RenderContext, var1: ContentNode, var2: View): Unit {
    val var3: Function4 = var0.getOnTapMention();
-   val var4: UserOrRoleMentionContentNode = var1 as UserOrRoleMentionContentNode;
+   val var5: UserOrRoleMentionContentNode = var1 as UserOrRoleMentionContentNode;
    val var6: UserId = (var1 as UserOrRoleMentionContentNode).getUserId-wUX8bhU();
    var var10: java.lang.String = null;
    val var7: java.lang.String;
@@ -2149,8 +2089,8 @@ fun `toSpannable$lambda$71$lambda$26`(var0: RenderContext, var1: ContentNode, va
       var7 = null;
    }
 
-   val var5: java.lang.String = java.lang.String.valueOf(var4.getChannelId-qMVnFVQ());
-   val var8: java.lang.String = var4.getRoleName();
+   val var4: java.lang.String = java.lang.String.valueOf(var5.getChannelId-qMVnFVQ());
+   val var8: java.lang.String = var5.getRoleName();
    val var9: java.lang.String;
    if (var8 != null) {
       var9 = var8.toString();
@@ -2158,12 +2098,12 @@ fun `toSpannable$lambda$71$lambda$26`(var0: RenderContext, var1: ContentNode, va
       var9 = null;
    }
 
-   val var11: java.lang.String = var4.getParsedUserId();
+   val var11: java.lang.String = var5.getParsedUserId();
    if (var11 != null) {
       var10 = var11.toString();
    }
 
-   var3.invoke(var7, var5, var9, var10);
+   var3.invoke(var7, var4, var9, var10);
    return Unit.a;
 }
 

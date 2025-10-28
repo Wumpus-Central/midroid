@@ -177,6 +177,7 @@ public final class R {
       public static int error;
       public static int error_icon;
       public static int error_label;
+      public static int error_message_view;
       public static int established_text;
       public static int exception;
       public static int feed_channel_icon;
@@ -527,6 +528,7 @@ public final class R {
       public static int message_component_select_pill_view;
       public static int message_component_select_view;
       public static int message_component_separator_display_view;
+      public static int message_component_unknown_view;
       public static int message_frame_feed_header;
       public static int message_frame_jump_header;
       public static int message_start_guideline;

@@ -38,13 +38,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
-      val var4: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var12: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var4.getSplashUrl(), var1.getConstrainedWidth());
-      var12.setTitleText(var4.getTitleText());
-      var12.setHeaderText(var4.getHeaderText());
-      var12.setSubtitleText-Tu_1QLM(
-         var4.getStructurableSubtitleText(),
+      val var2: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var3: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var2.getSplashUrl(), var1.getConstrainedWidth());
+      var3.setTitleText(var2.getTitleText());
+      var3.setHeaderText(var2.getHeaderText());
+      var3.setSubtitleText-Tu_1QLM(
+         var2.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -155,7 +155,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
-         new j(),
+         new i(),
          new Function1<java.lang.String, Unit>(this.eventHandler) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
@@ -204,9 +204,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var12.setNoParticipantsText(var4.getNoParticipantsText());
-      var12.setLaunchButton(var4.getAcceptLabelText(), var4.getAcceptLabelBackgroundColor(), var4.getCtaEnabled());
-      var12.setAvatarUris(var4.getParticipantAvatarUris());
-      var12.setOnLaunchButtonClickListener(new k(this, var1));
+      var3.setNoParticipantsText(var2.getNoParticipantsText());
+      var3.setLaunchButton(var2.getAcceptLabelText(), var2.getAcceptLabelBackgroundColor(), var2.getCtaEnabled());
+      var3.setAvatarUris(var2.getParticipantAvatarUris());
+      var3.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

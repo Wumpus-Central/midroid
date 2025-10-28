@@ -119,23 +119,23 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.title;
-      val var1: java.lang.String = this.messageCountLabel;
-      val var6: java.lang.String = this.messagePreviewString;
-      val var5: java.lang.Boolean = this.archived;
-      val var7: java.lang.String = this.archivedIconUrl;
+      val var7: java.lang.String = this.title;
+      val var5: java.lang.String = this.messageCountLabel;
+      val var1: java.lang.String = this.messagePreviewString;
+      val var4: java.lang.Boolean = this.archived;
+      val var6: java.lang.String = this.archivedIconUrl;
       val var2: ThreadEmbedMessage = this.referencedMessage;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ThreadEmbed(title=");
-      var3.append(var4);
-      var3.append(", messageCountLabel=");
-      var3.append(var1);
-      var3.append(", messagePreviewString=");
-      var3.append(var6);
-      var3.append(", archived=");
-      var3.append(var5);
-      var3.append(", archivedIconUrl=");
       var3.append(var7);
+      var3.append(", messageCountLabel=");
+      var3.append(var5);
+      var3.append(", messagePreviewString=");
+      var3.append(var1);
+      var3.append(", archived=");
+      var3.append(var4);
+      var3.append(", archivedIconUrl=");
+      var3.append(var6);
       var3.append(", referencedMessage=");
       var3.append(var2);
       var3.append(")");

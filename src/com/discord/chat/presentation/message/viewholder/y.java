@@ -9,6 +9,6 @@ public final class y implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageComponentsViewHolder.b(this.d, this.e, (String)var1);
+      return MessageComponentsViewHolder.d(this.d, this.e, (String)var1);
    }
 }

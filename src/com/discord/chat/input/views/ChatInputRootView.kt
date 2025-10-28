@@ -253,9 +253,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            val var22: Uri = var9.c().getItemAt(var4).getUri();
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var8);
+               var0.listener.onImageInserted(var22);
             }
          }
 
@@ -284,9 +284,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
             for (int var20 = 0; var20 < var21; var20++) {
                val var13: Intent = var17.c().getItemAt(var20).getIntent();
-               val var18: java.lang.String = var13.getStringExtra("data");
-               if (var18 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var18);
+               val var14: java.lang.String = var13.getStringExtra("data");
+               if (var14 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var14);
                }
             }
 
@@ -361,9 +361,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var7 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var7);
+      for (ChatInputNode var17 : var4) {
+         val var7: Editable = this.editText.getEditableText();
+         EditTextUtilsKt.setChatInputNodeStyle(var7, var17);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -451,11 +451,11 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             G9.b.e();
             if (this.label == 0) {
                kotlin.c.b(var1);
-               val var2x: ChatInputRootView.CurrentTextAndSelection = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
+               var1 = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
                if (this.L$0 as ChatInputRootView.CurrentTextAndSelection != null) {
-                  var1 = this.this$0.getListener();
-                  if (var1 != null) {
-                     var1.onTextOrSelectionChanged(var2x.getSelectionStart(), var2x.getSelectionEnd(), var2x.getText(), var2x.getEditId());
+                  val var2x: ChatInputRootView.ChatInputListener = this.this$0.getListener();
+                  if (var2x != null) {
+                     var2x.onTextOrSelectionChanged(var1.getSelectionStart(), var1.getSelectionEnd(), var1.getText(), var1.getEditId());
                   }
                }
 
@@ -700,21 +700,21 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var1: Int = this.selectionStart;
-         val var2: Int = this.selectionEnd;
-         val var5: java.lang.String = this.text;
-         val var3: java.lang.String = this.editId;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("CurrentTextAndSelection(selectionStart=");
-         var4.append(var1);
-         var4.append(", selectionEnd=");
-         var4.append(var2);
-         var4.append(", text=");
-         var4.append(var5);
-         var4.append(", editId=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var2: Int = this.selectionStart;
+         val var1: Int = this.selectionEnd;
+         val var4: java.lang.String = this.text;
+         val var5: java.lang.String = this.editId;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CurrentTextAndSelection(selectionStart=");
+         var3.append(var2);
+         var3.append(", selectionEnd=");
+         var3.append(var1);
+         var3.append(", text=");
+         var3.append(var4);
+         var3.append(", editId=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

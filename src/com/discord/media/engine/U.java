@@ -8,7 +8,7 @@ import kotlin.jvm.functions.Function2;
 public final class U implements Function2 {
    public final Callback d;
    public final MediaEngineModule e;
-   public final int i;
+   public final double i;
 
    public final Object invoke(Object var1, Object var2) {
       return <unrepresentable>.a(this.d, this.e, this.i, (String)var1, (Map)var2);

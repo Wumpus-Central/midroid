@@ -1,23 +1,5 @@
 {
   "DKHheX": "Lui demander de streamer",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " te demande de streamer ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "Tu as demandé à quelqu'un de streamer ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "Déjà en train de streamer",
   "u4QmWl": "Demande expirée",
   "qRXatr": "Pas dans le salon vocal",

@@ -1,23 +1,5 @@
 {
   "DKHheX": "请求直播",
-  "s7bMT0": [
-    [
-      1,
-      "username"
-    ],
-    " 正在请求您直播 ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
-  "7pndSk": [
-    "您曾请求某人直播 ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "P0wwmJ": "已在直播",
   "u4QmWl": "请求已过期",
   "qRXatr": "不在语音频道中",

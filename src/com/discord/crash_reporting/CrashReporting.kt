@@ -89,7 +89,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("5bfed17a-55a7-4b6a-944a-208da137e12d");
+      var5.setProguardUuid("21b35fe6-99cd-4b7b-b5fc-fe59876bece2");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -183,20 +183,20 @@ public object CrashReporting {
    }
 
    public fun init(context: Context, releaseName: String) {
-      val var4: ClientInfo = ClientInfo.INSTANCE;
+      val var3: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var3: java.lang.String = Build.DEVICE;
-         if (StringsKt.N(var3, "vivo", false, 2, null)) {
+         val var4: java.lang.String = Build.DEVICE;
+         if (StringsKt.N(var4, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
+      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var4.isProdBuild()) {
+      } else if (!var3.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";

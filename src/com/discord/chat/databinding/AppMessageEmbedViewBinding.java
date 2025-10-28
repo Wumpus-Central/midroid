@@ -90,43 +90,43 @@ public final class AppMessageEmbedViewBinding implements ViewBinding {
          SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
          if (var10 != null) {
             var1 = R.id.banner;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.barrier_footer;
-               Barrier var6 = (Barrier)a.a(var0, var1);
-               if (var6 != null) {
+               Barrier var4 = (Barrier)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.header;
-                  TextView var14 = (TextView)a.a(var0, var1);
-                  if (var14 != null) {
+                  TextView var13 = (TextView)a.a(var0, var1);
+                  if (var13 != null) {
                      var1 = R.id.info;
-                     TextView var13 = (TextView)a.a(var0, var1);
-                     if (var13 != null) {
+                     TextView var8 = (TextView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.item_bottom_container;
-                        ConstraintLayout var11 = (ConstraintLayout)a.a(var0, var1);
-                        if (var11 != null) {
+                        ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
+                        if (var6 != null) {
                            var1 = R.id.link_icon;
-                           DCDButton var8 = (DCDButton)a.a(var0, var1);
-                           if (var8 != null) {
+                           DCDButton var12 = (DCDButton)a.a(var0, var1);
+                           if (var12 != null) {
                               var1 = R.id.link_icon_title;
                               DCDButton var9 = (DCDButton)a.a(var0, var1);
                               if (var9 != null) {
                                  var1 = R.id.participants;
-                                 OverlappingCirclesView var15 = (OverlappingCirclesView)a.a(var0, var1);
-                                 if (var15 != null) {
+                                 OverlappingCirclesView var7 = (OverlappingCirclesView)a.a(var0, var1);
+                                 if (var7 != null) {
                                     var1 = R.id.participants_text;
-                                    TextView var3 = (TextView)a.a(var0, var1);
-                                    if (var3 != null) {
+                                    TextView var14 = (TextView)a.a(var0, var1);
+                                    if (var14 != null) {
                                        var1 = R.id.player_icon;
-                                       SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var7 != null) {
+                                       SimpleDraweeView var15 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var15 != null) {
                                           var1 = R.id.tagline;
-                                          TextView var2 = (TextView)a.a(var0, var1);
-                                          if (var2 != null) {
+                                          TextView var3 = (TextView)a.a(var0, var1);
+                                          if (var3 != null) {
                                              var1 = R.id.title;
-                                             TextView var12 = (TextView)a.a(var0, var1);
-                                             if (var12 != null) {
+                                             TextView var11 = (TextView)a.a(var0, var1);
+                                             if (var11 != null) {
                                                 return new AppMessageEmbedViewBinding(
-                                                   var0, var5, var10, var4, var6, var14, var13, var11, var8, var9, var15, var3, var7, var2, var12
+                                                   var0, var5, var10, var2, var4, var13, var8, var6, var12, var9, var7, var14, var15, var3, var11
                                                 );
                                              }
                                           }

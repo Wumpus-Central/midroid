@@ -68,6 +68,7 @@ public object ImageQualityCalculator {
    private fun calculateSSIMFromGrayscale(original: FloatArray, compressed: FloatArray, width: Int, height: Int): Double {
       val var16: Int = I9.c.c(0, var4 - 8, 4);
       var var7: Double;
+      var var12: Int;
       if (var16 >= 0) {
          var var11: Int = 0;
          var4 = 0;
@@ -75,7 +76,6 @@ public object ImageQualityCalculator {
 
          while (true) {
             val var13: Int = I9.c.c(0, var3 - 8, 4);
-            var var12: Int;
             var var15: Int;
             if (var13 >= 0) {
                var var14: Int = 0;
@@ -113,7 +113,6 @@ public object ImageQualityCalculator {
             }
 
             if (var15 == var16) {
-               var3 = var12;
                break;
             }
 
@@ -121,52 +120,52 @@ public object ImageQualityCalculator {
             var11 = var12;
          }
       } else {
-         var3 = 0;
+         var12 = 0;
          var7 = 0.0;
       }
 
-      val var20: Double;
-      if (var3 > 0) {
-         var20 = var7 / var3;
+      val var19: Double;
+      if (var12 > 0) {
+         var19 = var7 / var12;
       } else {
-         var20 = 0.0;
+         var19 = 0.0;
       }
 
-      return var20;
+      return var19;
    }
 
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
-      var var13: Double = 0.0;
+      var var11: Double = 0.0;
       var var17: Double = 0.0;
       var var15: Double = 0.0;
-      var var11: Double = 0.0;
+      var var13: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var27 = 0; var27 < var6; var27++) {
-            val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
-            val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
-            var13 += var21;
-            var17 += var19;
-            var15 += var21 * var21;
-            var11 += var19 * var19;
-            var9 += var21 * var19;
+            val var19: Double = var1[(var5 + var25) * var3 + var4 + var27];
+            val var21: Double = var2[(var5 + var25) * var3 + var4 + var27];
+            var11 += var19;
+            var17 += var21;
+            var15 += var19 * var19;
+            var13 += var21 * var21;
+            var9 += var19 * var21;
          }
       }
 
       val var23: Double = var26;
-      val var37: Double = var13 / var26;
-      val var36: Double = var17 / var26;
-      var15 = (var15 - var13 * var37) / var23;
-      var11 = (var11 - var17 * var36) / var23;
-      var17 = (var9 - var13 * var36) / var23;
+      val var36: Double = var11 / var26;
+      val var37: Double = var17 / var26;
+      var15 = (var15 - var11 * var36) / var23;
+      var13 = (var13 - var17 * var37) / var23;
+      var11 = (var9 - var11 * var37) / var23;
       var9 = var7;
-      var13 = var8;
-      var11 = (var37 * var37 + var36 * var36 + var9) * (var15 + var11 + var8);
-      if ((var37 * var37 + var36 * var36 + var9) * (var15 + var11 + var8) > 0.0) {
-         var9 = (var37 * 2.0 * var36 + var9) * (var17 * 2.0 + var13) / var11;
+      var17 = var8;
+      var13 = (var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8);
+      if ((var36 * var36 + var37 * var37 + var9) * (var15 + var13 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var9) * (var11 * 2.0 + var17) / var13;
       } else {
          var9 = 0.0;
       }
@@ -288,23 +287,23 @@ public object ImageQualityCalculator {
                   }
 
                   var var6: Int;
-                  var var7: Int;
+                  var var8: Int;
                   try {
-                     var7 = this.$originalBitmap.getWidth();
+                     var8 = this.$originalBitmap.getWidth();
                      var6 = this.$originalBitmap.getHeight();
                   } catch (var20: Exception) {
                      return null;
                   }
 
-                  val var8: Int = var7 * var6;
+                  val var7: Int = var8 * var6;
 
                   var var13: IntArray;
                   var var15: IntArray;
                   try {
-                     var13 = new int[var8];
-                     var15 = new int[var8];
-                     this.$originalBitmap.getPixels(var13, 0, var7, 0, 0, var7, var6);
-                     this.$compressedBitmap.getPixels(var15, 0, var7, 0, 0, var7, var6);
+                     var13 = new int[var7];
+                     var15 = new int[var7];
+                     this.$originalBitmap.getPixels(var13, 0, var8, 0, 0, var8, var6);
+                     this.$compressedBitmap.getPixels(var15, 0, var8, 0, 0, var8, var6);
                   } catch (var19: Exception) {
                      return null;
                   }
@@ -333,8 +332,8 @@ public object ImageQualityCalculator {
                      val var9: Long = System.nanoTime();
                      val var27: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      var1 = new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var7, var6),
-                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var7, var6),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var8, var6),
+                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var8, var6),
                         (System.nanoTime() - var9) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );

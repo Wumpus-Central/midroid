@@ -10,7 +10,6 @@ import android.view.View.OnLongClickListener
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.activity_invites.ActivityInviteEmbedView
 import com.discord.activity_invites.ActivityRichPresenceInviteEmbedView
 import com.discord.chat.R
 import com.discord.chat.bridge.MediaType
@@ -30,7 +29,6 @@ import com.discord.chat.databinding.TimestampViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.invitetospeak.InviteToSpeakView
 import com.discord.chat.presentation.message.messagepart.ActivityInstanceEmbedMessageAccessory
-import com.discord.chat.presentation.message.messagepart.ActivityInviteEmbedMessageAccessory
 import com.discord.chat.presentation.message.messagepart.ActivityRichPresenceInviteEmbedMessageAccessory
 import com.discord.chat.presentation.message.messagepart.AppMessageEmbedAccessory
 import com.discord.chat.presentation.message.messagepart.AudioAttachmentMessageAccessory
@@ -112,7 +110,6 @@ import com.discord.chat.presentation.message.view.polls.PollImageOnlyView
 import com.discord.chat.presentation.message.view.polls.PollTextAndImageView
 import com.discord.chat.presentation.message.view.voicemessages.AudioPlayerView
 import com.discord.chat.presentation.message.viewholder.ActivityInstanceEmbedViewHolder
-import com.discord.chat.presentation.message.viewholder.ActivityInviteEmbedViewHolder
 import com.discord.chat.presentation.message.viewholder.ActivityRichPresenceInviteEmbedViewHolder
 import com.discord.chat.presentation.message.viewholder.AppMessageEmbedViewHolder
 import com.discord.chat.presentation.message.viewholder.AttachmentMediaMosaicViewHolder
@@ -196,7 +193,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    init {
       this.measureAndLayout = var1;
       this.items = CollectionsKt.k();
-      this.onTapSpoiler = new I(this);
+      this.onTapSpoiler = new H(this);
       this.setHasStableIds(true);
    }
 
@@ -230,15 +227,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$12`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
-      var0.onTapSpoiler.invoke(var1);
-      return Unit.a;
-   }
-
-   @JvmStatic
-   fun `onBindViewHolder$lambda$13`(var0: MessageAccessoriesAdapter, var1: Int, var2: MessageAccessory, var3: MessagePartViewHolder): Unit {
-      val var4: View = var3.itemView;
-      val var7: java.lang.String = var2.getMessageId-3Eiw7ao();
+   fun `onBindViewHolder$lambda$12`(var0: MessageAccessoriesAdapter, var1: Int, var2: MessageAccessory, var3: MessagePartViewHolder): Unit {
+      val var7: View = var3.itemView;
+      val var4: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var6: java.lang.Double;
       if (var2 is ImageAttachmentMessageAccessory) {
          var6 = null;
@@ -253,24 +244,24 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          var6 = (var2 as VideoAttachmentMessageAccessory).getPortal();
       }
 
-      var0.onMediaClicked-mdVZsaY(var4, var7, "attachment", ViewResizeMode.Cover, var6, var1, null, null, null);
+      var0.onMediaClicked-mdVZsaY(var7, var4, "attachment", ViewResizeMode.Cover, var6, var1, null, null, null);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$15$lambda$14`(var0: Function4, var1: Int): Unit {
+   fun `onBindViewHolder$lambda$14$lambda$13`(var0: Function4, var1: Int): Unit {
       var0.invoke(MediaType.Attachment, var1, null, null);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$16`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+   fun `onBindViewHolder$lambda$15`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
       var0.onTapSpoiler.invoke(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$17`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+   fun `onBindViewHolder$lambda$16`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -288,7 +279,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$18`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$17`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -300,7 +291,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$19`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+   fun `onBindViewHolder$lambda$18`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
       var var2: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -313,7 +304,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$20`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+   fun `onBindViewHolder$lambda$19`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
       var var2: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -327,7 +318,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$21`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
+   fun `onBindViewHolder$lambda$20`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
       var var3: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -339,7 +330,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$22`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
+   fun `onBindViewHolder$lambda$21`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
       var var3: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -351,7 +342,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$23`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$22`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -364,7 +355,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$24`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$23`(var0: MessageAccessoriesAdapter, var1: View) {
       var var6: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -378,7 +369,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$25`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$24`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -390,7 +381,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$26`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$25`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -403,7 +394,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$27`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+   fun `onBindViewHolder$lambda$26`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
       var var2: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -416,7 +407,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$28`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+   fun `onBindViewHolder$lambda$27`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
       var var2: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -430,7 +421,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$30`(var0: MessageAccessoriesAdapter, var1: View) {
+   fun `onBindViewHolder$lambda$29`(var0: MessageAccessoriesAdapter, var1: View) {
       if (var0.messageId != null) {
          var var3: ChatEventHandler = var0.eventHandler;
          if (var0.eventHandler == null) {
@@ -443,7 +434,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$31`(var0: MessageAccessoriesAdapter, var1: java.lang.String, var2: java.lang.String): Unit {
+   fun `onBindViewHolder$lambda$30`(var0: MessageAccessoriesAdapter, var1: java.lang.String, var2: java.lang.String): Unit {
       var var3: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -456,19 +447,19 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$32`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+   fun `onBindViewHolder$lambda$31`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
       var0.onTapSpoiler.invoke(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$34$lambda$33`(var0: Function4, var1: java.lang.String, var2: Int): Unit {
+   fun `onBindViewHolder$lambda$33$lambda$32`(var0: Function4, var1: java.lang.String, var2: Int): Unit {
       var0.invoke(MediaType.Component, null, var1, var2);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$35`(
+   fun `onBindViewHolder$lambda$34`(
       var0: MessageAccessory, var1: MessageAccessoriesAdapter, var2: View, var3: java.lang.String, var4: Int, var5: java.lang.Double
    ): Unit {
       var1.onMediaClicked-mdVZsaY(
@@ -478,13 +469,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$36`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+   fun `onBindViewHolder$lambda$35`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
       var0.onTapSpoiler.invoke(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$37`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+   fun `onBindViewHolder$lambda$36`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -502,8 +493,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$39$lambda$38`(var0: Function4, var1: MessageAccessory, var2: java.lang.String, var3: Int): Unit {
+   fun `onBindViewHolder$lambda$38$lambda$37`(var0: Function4, var1: MessageAccessory, var2: java.lang.String, var3: Int): Unit {
       var0.invoke(MediaType.Attachment, (var1 as AudioAttachmentMessageAccessory).getAttachmentIndex(), null, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$39`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
       return Unit.a;
    }
 
@@ -523,13 +520,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$40`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
-      var0.onTapSpoiler.invoke(var1);
-      return Unit.a;
-   }
-
-   @JvmStatic
-   fun `onBindViewHolder$lambda$41`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+   fun `onBindViewHolder$lambda$40`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
@@ -727,8 +718,6 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var4 = 13;
          } else if (var3 is WelcomeStickerAccessory) {
             var4 = 14;
-         } else if (var3 is ActivityInviteEmbedMessageAccessory) {
-            var4 = 17;
          } else if (var3 is ActivityRichPresenceInviteEmbedMessageAccessory) {
             var4 = 55;
          } else if (var3 is EphemeralIndicationMessageAccessory) {
@@ -813,12 +802,12 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          var8 = null;
       }
 
-      val var53: Function6 = var8.getOnMessageLongPressed();
-      val var54: q;
-      if (var53 != null) {
-         var54 = new q(var53, this);
+      val var66: Function6 = var8.getOnMessageLongPressed();
+      val var67: q;
+      if (var66 != null) {
+         var67 = new q(var66, this);
       } else {
-         var54 = null;
+         var67 = null;
       }
 
       val var10: MessageAccessory = this.items.get(var2);
@@ -830,23 +819,23 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var8 = null;
          }
 
-         val var12: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
+         val var13: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
          val var5: Int = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
-         var2 = var12.getRadiusPx();
-         val var13: OnLongClickListener = var12.getOnLongClick();
-         val var100: SpoilerAttributes = var12.getSpoilerAttributes();
-         val var101: SpoilerConfig;
-         if (var100 != null) {
-            var101 = var100.configure(new i(this, var1), new u(this, var10));
+         var2 = var13.getRadiusPx();
+         val var12: OnLongClickListener = var13.getOnLongClick();
+         val var111: SpoilerAttributes = var13.getSpoilerAttributes();
+         val var112: SpoilerConfig;
+         if (var111 != null) {
+            var112 = var111.configure(new i(this, var1), new u(this, var10));
          } else {
-            var101 = null;
+            var112 = null;
          }
 
-         var11.bind(var8, var12, var5, var2, new z(this, var1), var101, new A(var1, var10, this), var13, var12.getPortal());
+         var11.bind(var8, var13, var5, var2, new y(this, var1), var112, new z(var1, var10, this), var12, var13.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
-         (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new C(this, var10));
+         (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new A(this, var10));
       } else if (var10 is ReferralMessageAccessory) {
-         (var1 as ReferralViewHolder).bind(var10 as ReferralMessageAccessory, new D(this), new Function2<MessageId, LinkContentNode, Unit>(this) {
+         (var1 as ReferralViewHolder).bind(var10 as ReferralMessageAccessory, new C(this), new Function2<MessageId, LinkContentNode, Unit>(this) {
             final MessageAccessoriesAdapter this$0;
 
             {
@@ -865,15 +854,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is GiftMessageAccessory) {
-         val var57: GiftViewHolder = var1 as GiftViewHolder;
-         val var102: GiftMessageAccessory = var10 as GiftMessageAccessory;
+         val var113: GiftViewHolder = var1 as GiftViewHolder;
+         val var70: GiftMessageAccessory = var10 as GiftMessageAccessory;
          var var26: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
             var26 = null;
          }
 
-         var57.bind(var102, new Function1<java.lang.String, Unit>(var26) {
+         var113.bind(var70, new Function1<java.lang.String, Unit>(var26) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapGiftCodeEmbed", "onTapGiftCodeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -881,17 +870,17 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             public final void invoke(java.lang.String var1) {
                (super.receiver as ChatEventHandler).onTapGiftCodeEmbed(var1);
             }
-         }, new E(this, var10));
+         }, new D(this, var10));
       } else if (var10 is MessageContentAccessory) {
-         val var153: MessageContentViewHolder = var1 as MessageContentViewHolder;
-         val var137: MessageContentAccessory = var10 as MessageContentAccessory;
-         var8 = this.eventHandler;
+         val var114: MessageContentViewHolder = var1 as MessageContentViewHolder;
+         val var134: MessageContentAccessory = var10 as MessageContentAccessory;
+         var var27: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var27 = null;
          }
 
-         val var164: Function2 = new Function2<MessageId, LinkContentNode, Unit>(var8) {
+         val var149: Function2 = new Function2<MessageId, LinkContentNode, Unit>(var27) {
             {
                super(
                   2,
@@ -907,13 +896,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
             }
          };
-         var8 = this.eventHandler;
+         var var28: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var28 = null;
          }
 
-         val var171: Function1 = new Function1<LinkContentNode, Unit>(var8) {
+         val var160: Function1 = new Function1<LinkContentNode, Unit>(var28) {
             {
                super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
             }
@@ -922,13 +911,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var29: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var29 = null;
          }
 
-         val var14: Function3 = new Function3(var8) {
+         val var167: Function3 = new Function3(var29) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -937,13 +926,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          };
-         var8 = this.eventHandler;
+         var var30: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var30 = null;
          }
 
-         val var15: Function4 = new Function4(var8) {
+         val var14: Function4 = new Function4(var30) {
             {
                super(
                   4,
@@ -959,13 +948,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onLongPressChannel(var1, var2, var3, var4);
             }
          };
-         var8 = this.eventHandler;
+         var var31: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var31 = null;
          }
 
-         val var16: Function1 = new Function1<java.lang.String, Unit>(var8) {
+         val var15: Function1 = new Function1<java.lang.String, Unit>(var31) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapAttachmentLink", "onTapAttachmentLink(Ljava/lang/String;)V", 0);
             }
@@ -974,13 +963,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapAttachmentLink(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var32: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var32 = null;
          }
 
-         val var17: Function2 = new Function2<java.lang.String, java.lang.String, Unit>(var8) {
+         val var16: Function2 = new Function2<java.lang.String, java.lang.String, Unit>(var32) {
             {
                super(2, var1, ChatEventHandler::class.java, "onLongPressAttachmentLink", "onLongPressAttachmentLink(Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -989,13 +978,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onLongPressAttachmentLink(var1, var2);
             }
          };
-         var8 = this.eventHandler;
+         var var33: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var33 = null;
          }
 
-         val var18: Function4 = new Function4(var8) {
+         val var18: Function4 = new Function4(var33) {
             {
                super(
                   4,
@@ -1011,13 +1000,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
             }
          };
-         var8 = this.eventHandler;
+         val var17: Function1 = this.onTapSpoiler;
+         var var34: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var34 = null;
          }
 
-         val var19: Function1 = new Function1<CommandMentionContentNode, Unit>(var8) {
+         val var19: Function1 = new Function1<CommandMentionContentNode, Unit>(var34) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
             }
@@ -1026,13 +1016,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapCommand(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var35: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var35 = null;
          }
 
-         val var20: Function1 = new Function1<CommandMentionContentNode, Unit>(var8) {
+         val var20: Function1 = new Function1<CommandMentionContentNode, Unit>(var35) {
             {
                super(
                   1,
@@ -1048,13 +1038,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var36: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var36 = null;
          }
 
-         val var21: Function1 = new Function1<java.lang.String, Unit>(var8) {
+         val var21: Function1 = new Function1<java.lang.String, Unit>(var36) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
             }
@@ -1063,13 +1053,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapTimestamp(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var37: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var37 = null;
          }
 
-         val var22: Function1 = new Function1<InlineCodeContentNode, Unit>(var8) {
+         val var22: Function1 = new Function1<InlineCodeContentNode, Unit>(var37) {
             {
                super(
                   1, var1, ChatEventHandler::class.java, "onTapInlineCode", "onTapInlineCode(Lcom/discord/chat/bridge/contentnode/InlineCodeContentNode;)V", 0
@@ -1080,13 +1070,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapInlineCode(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var38: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var38 = null;
          }
 
-         val var23: Function1 = new Function1<EmojiContentNode, Unit>(var8) {
+         val var23: Function1 = new Function1<EmojiContentNode, Unit>(var38) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
@@ -1095,13 +1085,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapEmoji(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var39: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var39 = null;
          }
 
-         val var24: Function1 = new Function1<MessageId, Unit>(var8) {
+         val var24: Function1 = new Function1<MessageId, Unit>(var39) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapSeeMore", "onTapSeeMore-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1110,29 +1100,29 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
          };
-         var8 = this.eventHandler;
+         var var40: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var8 = null;
+            var40 = null;
          }
 
-         var153.bind(
-            var137,
-            var164,
-            var171,
+         var114.bind(
+            var134,
+            var149,
+            var160,
+            var167,
             var14,
             var15,
             var16,
-            var17,
             var18,
             var19,
             var20,
-            new F(this, var1),
+            var17,
             var21,
             var22,
             var23,
             var24,
-            new Function1<SoundmojiContentNode, Unit>(var8) {
+            new Function1<SoundmojiContentNode, Unit>(var40) {
                {
                   super(
                      1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0
@@ -1145,33 +1135,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is MediaMosaicAttachmentMessageAccessory) {
-         val var154: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
-         var var117: ChatEventHandler = this.eventHandler;
+         val var150: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
+         var var115: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var117 = null;
+            var115 = null;
          }
 
-         val var165: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
-         val var176: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
-         val var172: G = new G(this);
-         val var73: B;
-         if (var54 != null) {
-            var73 = new B(var54);
+         val var168: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
+         val var172: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
+         val var161: E = new E(this);
+         val var85: F;
+         if (var67 != null) {
+            var85 = new F(var67);
          } else {
-            var73 = null;
+            var85 = null;
          }
 
-         var154.bind(
-            var117,
-            var176,
+         var150.bind(
+            var115,
             var172,
-            var73,
-            new J(this, var1),
-            new K(this, var10),
-            var165.isForwardedContent(),
-            var165.getShouldAutoPlayGif(),
-            var165.getConstrainedWidth()
+            var161,
+            var85,
+            new B(this, var1),
+            new I(this, var10),
+            var168.isForwardedContent(),
+            var168.getShouldAutoPlayGif(),
+            var168.getConstrainedWidth()
          );
       } else if (var10 is ReactionsMessageAccessory) {
          (var1 as ReactionsViewHolder)
@@ -1181,13 +1171,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (var10 as ReactionsMessageAccessory).getAddReactionLabel(),
                (var10 as ReactionsMessageAccessory).getAddNewReactionAccessibilityLabel(),
                (var10 as ReactionsMessageAccessory).getReactionsTheme(),
+               new J(this),
+               new K(this),
                new L(this),
-               new M(this),
-               new N(this),
                (var10 as ReactionsMessageAccessory).getTheme()
             );
       } else if (var10 is StickerMessageAccessory) {
-         (var1 as StickerPartViewHolder).bind((var10 as StickerMessageAccessory).getSticker(), new O(this, var10), new P(this, var10), 160, 160);
+         (var1 as StickerPartViewHolder).bind((var10 as StickerMessageAccessory).getSticker(), new M(this, var10), new N(this, var10), 160, 160);
       } else if (var10 is GuildInviteMessageAccessory) {
          (var1 as GuildInviteViewHolder).bind(var10 as GuildInviteMessageAccessory);
       } else if (var10 is AppMessageEmbedAccessory) {
@@ -1197,29 +1187,29 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is EmbeddedActivityInviteMessageAccessory) {
          (var1 as EmbeddedActivityInviteViewHolder).bind(var10 as EmbeddedActivityInviteMessageAccessory);
       } else if (var10 is GuildProfileInviteMessageAccessory) {
-         val var118: GuildProfileInviteViewHolder = var1 as GuildProfileInviteViewHolder;
-         val var138: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
-         var var28: ChatEventHandler = this.eventHandler;
+         val var116: GuildProfileInviteViewHolder = var1 as GuildProfileInviteViewHolder;
+         val var135: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
+         var var42: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var28 = null;
+            var42 = null;
          }
 
-         var118.bind(var138, var28);
+         var116.bind(var135, var42);
       } else if (var10 is GuildInviteDisabledMessageAccessory) {
          (var1 as GuildInviteDisabledViewHolder).bind(var10 as GuildInviteDisabledMessageAccessory);
       } else if (var10 is GuildEventInviteMessageAccessory) {
          (var1 as GuildEventInviteViewHolder).bind(var10 as GuildEventInviteMessageAccessory);
       } else if (var10 is ThreadEmbedMessageAccessory) {
-         val var119: ThreadEmbedViewHolder = var1 as ThreadEmbedViewHolder;
-         val var139: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
-         var var29: ChatEventHandler = this.eventHandler;
+         val var117: ThreadEmbedViewHolder = var1 as ThreadEmbedViewHolder;
+         val var136: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
+         var var43: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var29 = null;
+            var43 = null;
          }
 
-         var119.bind(var139, new Function1<MessageId, Unit>(var29) {
+         var117.bind(var136, new Function1<MessageId, Unit>(var43) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapThreadEmbed", "onTapThreadEmbed-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1229,33 +1219,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is ForumPostActionBar) {
-         val var120: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
-         val var181: ForumPostActionBar = var10 as ForumPostActionBar;
-         val var166: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
-         val var180: g = new g(this);
-         val var140: h = new h(this);
-         val var173: j = new j(this);
-         val var178: k = new k(this);
-         val var177: l = new l(this);
-         val var179: m = new m(this);
-         val var155: n = new n(this);
-         var var30: ChatEventHandler = this.eventHandler;
+         val var118: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
+         val var176: ForumPostActionBar = var10 as ForumPostActionBar;
+         val var137: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
+         val var169: O = new O(this);
+         val var173: g = new g(this);
+         val var174: h = new h(this);
+         val var177: j = new j(this);
+         val var151: k = new k(this);
+         val var162: l = new l(this);
+         val var175: m = new m(this);
+         var var44: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var30 = null;
+            var44 = null;
          }
 
-         var120.bind(
-            var181,
-            var166,
-            var180,
-            var140,
+         var118.bind(
+            var176,
+            var137,
+            var169,
             var173,
-            var178,
+            var174,
             var177,
-            var179,
-            var155,
-            new Function2<MessageId, LinkContentNode, Unit>(var30) {
+            var151,
+            var162,
+            var175,
+            new Function2<MessageId, LinkContentNode, Unit>(var44) {
                {
                   super(
                      2,
@@ -1273,47 +1263,47 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is FileAttachmentMessageAccessory) {
-         val var78: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
-         val var121: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
-         val var141: o = new o(this);
-         val var156: SpoilerAttributes = var121.getSpoilerAttributes();
-         val var31: SpoilerConfig;
-         if (var156 != null) {
-            var31 = SpoilerAttributes.configure$default(var156, new p(this, var1), null, 2, null);
+         val var90: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
+         val var138: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
+         val var119: n = new n(this);
+         val var152: SpoilerAttributes = var138.getSpoilerAttributes();
+         val var45: SpoilerConfig;
+         if (var152 != null) {
+            var45 = SpoilerAttributes.configure$default(var152, new o(this, var1), null, 2, null);
          } else {
-            var31 = null;
+            var45 = null;
          }
 
-         var78.bind(var121, var141, var31);
+         var90.bind(var138, var119, var45);
       } else if (var10 is MessageComponentsAccessory) {
-         val var157: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
-         val var167: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
-         var var123: ChatEventHandler = this.eventHandler;
+         val var163: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
+         val var153: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
+         var var121: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var123 = null;
+            var121 = null;
          }
 
-         val var79: r;
-         if (var54 != null) {
-            var79 = new r(var54);
+         val var91: p;
+         if (var67 != null) {
+            var91 = new p(var67);
          } else {
-            var79 = null;
+            var91 = null;
          }
 
-         var157.bind(var167, this.botComponentProvider, new s(var10, this), var79, new t(this, var1), new v(this, var10), var123);
+         var163.bind(var153, this.botComponentProvider, new r(var10, this), var91, new s(this, var1), new t(this, var10), var121);
       } else if (var10 is FlaggedMessageEmbedAccessory) {
          (var1 as FlaggedMessageEmbedViewHolder).bind(var10 as FlaggedMessageEmbedAccessory);
       } else if (var10 is FlaggedMessageActionBarAccessory) {
-         val var124: FlaggedMessageActionBarViewHolder = var1 as FlaggedMessageActionBarViewHolder;
-         val var142: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
-         var var32: ChatEventHandler = this.eventHandler;
+         val var122: FlaggedMessageActionBarViewHolder = var1 as FlaggedMessageActionBarViewHolder;
+         val var139: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
+         var var46: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var32 = null;
+            var46 = null;
          }
 
-         val var158: Function2 = new Function2<MessageId, ChannelId, Unit>(var32) {
+         val var154: Function2 = new Function2<MessageId, ChannelId, Unit>(var46) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1322,13 +1312,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapAutoModerationActions-pfaIj0E(var1, var2);
             }
          };
-         var var33: ChatEventHandler = this.eventHandler;
+         var var47: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var33 = null;
+            var47 = null;
          }
 
-         var124.bind(var142, var158, new Function2<MessageId, ChannelId, Unit>(var33) {
+         var122.bind(var139, var154, new Function2<MessageId, ChannelId, Unit>(var47) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1338,15 +1328,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is AutoModerationNotificationEmbedAccessory) {
-         val var125: AutoModerationNotificationEmbedViewHolder = var1 as AutoModerationNotificationEmbedViewHolder;
-         val var143: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
-         var var34: ChatEventHandler = this.eventHandler;
+         val var123: AutoModerationNotificationEmbedViewHolder = var1 as AutoModerationNotificationEmbedViewHolder;
+         val var140: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
+         var var48: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var34 = null;
+            var48 = null;
          }
 
-         val var159: Function2 = new Function2<MessageId, ChannelId, Unit>(var34) {
+         val var155: Function2 = new Function2<MessageId, ChannelId, Unit>(var48) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1355,13 +1345,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapAutoModerationActions-pfaIj0E(var1, var2);
             }
          };
-         var var35: ChatEventHandler = this.eventHandler;
+         var var49: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var35 = null;
+            var49 = null;
          }
 
-         var125.bind(var143, var159, new Function2<MessageId, ChannelId, Unit>(var35) {
+         var123.bind(var140, var155, new Function2<MessageId, ChannelId, Unit>(var49) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1374,34 +1364,16 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          (var1 as TimestampViewHolder).bind(var10 as TimestampMessageAccessory);
       } else if (var10 is WelcomeStickerAccessory) {
          (var1 as WelcomeStickerViewHolder).bind(var10 as WelcomeStickerAccessory);
-      } else if (var10 is ActivityInviteEmbedMessageAccessory) {
-         val var126: ActivityInviteEmbedViewHolder = var1 as ActivityInviteEmbedViewHolder;
-         val var144: ActivityInviteEmbedMessageAccessory = var10 as ActivityInviteEmbedMessageAccessory;
-         var var36: ChatEventHandler = this.eventHandler;
-         if (this.eventHandler == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var36 = null;
-         }
-
-         var126.bind(var144, new Function1<MessageId, Unit>(var36) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onTapJoinActivity", "onTapJoinActivity-1xi1bu0(Ljava/lang/String;)V", 0);
-            }
-
-            public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
-               (super.receiver as ChatEventHandler).onTapJoinActivity-1xi1bu0(var1);
-            }
-         });
       } else if (var10 is ActivityRichPresenceInviteEmbedMessageAccessory) {
-         val var127: ActivityRichPresenceInviteEmbedViewHolder = var1 as ActivityRichPresenceInviteEmbedViewHolder;
-         val var145: ActivityRichPresenceInviteEmbedMessageAccessory = var10 as ActivityRichPresenceInviteEmbedMessageAccessory;
-         var var37: ChatEventHandler = this.eventHandler;
+         val var124: ActivityRichPresenceInviteEmbedViewHolder = var1 as ActivityRichPresenceInviteEmbedViewHolder;
+         val var141: ActivityRichPresenceInviteEmbedMessageAccessory = var10 as ActivityRichPresenceInviteEmbedMessageAccessory;
+         var var50: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var37 = null;
+            var50 = null;
          }
 
-         var127.bind(var145, new Function1<MessageId, Unit>(var37) {
+         var124.bind(var141, new Function1<MessageId, Unit>(var50) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapJoinRichPresence", "onTapJoinRichPresence-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1428,33 +1400,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is InviteToSpeakAccessory) {
          (var1 as InviteToSpeakViewHolder).bind(var10 as InviteToSpeakAccessory);
       } else if (var10 is AudioAttachmentMessageAccessory) {
-         val var168: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
-         val var160: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
-         var var39: ChatEventHandler = this.eventHandler;
+         val var164: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
+         val var156: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
+         var var52: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var39 = null;
+            var52 = null;
          }
 
-         val var87: w;
-         if (var54 != null) {
-            var87 = new w(var54, var10);
+         val var98: v;
+         if (var67 != null) {
+            var98 = new v(var67, var10);
          } else {
-            var87 = null;
+            var98 = null;
          }
 
-         var168.bind(var160, var39, var87);
+         var164.bind(var156, var52, var98);
       } else if (var10 is PostPreviewEmbedMessageAccessory) {
-         val var169: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
-         val var175: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
-         val var161: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
+         val var157: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
+         val var171: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
+         val var165: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
          var8 = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
             var8 = null;
          }
 
-         val var89: Function4 = new Function4(var8) {
+         val var100: Function4 = new Function4(var8) {
             {
                super(4, var1, ChatEventHandler::class.java, "onTapPostPreviewEmbed", "onTapPostPreviewEmbed-kUTrp-s(JJJLjava/lang/String;)V", 0);
             }
@@ -1463,27 +1435,27 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapPostPreviewEmbed-kUTrp-s(var1, var3, var5, var7);
             }
          };
-         val var130: SpoilerAttributes = var175.getSpoilerAttributes();
-         val var40: SpoilerConfig;
-         if (var130 != null) {
-            var40 = var130.configure(new x(this, var1), new y(this, var10));
+         val var127: SpoilerAttributes = var171.getSpoilerAttributes();
+         val var53: SpoilerConfig;
+         if (var127 != null) {
+            var53 = var127.configure(new w(this, var1), new x(this, var10));
          } else {
-            var40 = null;
+            var53 = null;
          }
 
-         var169.bind(var161, var89, var40);
+         var157.bind(var165, var100, var53);
       } else if (var10 is ChannelPromptActionsAccessory) {
-         val var131: ChannelPromptActionsViewHolder = var1 as ChannelPromptActionsViewHolder;
-         val var146: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
-         var var41: ChatEventHandler = this.eventHandler;
+         val var128: ChannelPromptActionsViewHolder = var1 as ChannelPromptActionsViewHolder;
+         val var142: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
+         var var54: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var41 = null;
+            var54 = null;
          }
 
-         var131.bind(
-            var146,
-            new Function3(var41) {
+         var128.bind(
+            var142,
+            new Function3(var54) {
                {
                   super(
                      3,
@@ -1501,15 +1473,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is SafetyPolicyNoticeMessageAccessory) {
-         val var132: SafetyPolicyNoticeViewHolder = var1 as SafetyPolicyNoticeViewHolder;
-         val var147: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
-         var var42: ChatEventHandler = this.eventHandler;
+         val var129: SafetyPolicyNoticeViewHolder = var1 as SafetyPolicyNoticeViewHolder;
+         val var143: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
+         var var55: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var42 = null;
+            var55 = null;
          }
 
-         var132.bind(var147, new Function1<java.lang.String, Unit>(var42) {
+         var129.bind(var143, new Function1<java.lang.String, Unit>(var55) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapSafetyPolicyNoticeEmbed", "onTapSafetyPolicyNoticeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -1519,17 +1491,17 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is SafetySystemNotificationMessageAccessory) {
-         val var133: SafetySystemNotificationViewHolder = var1 as SafetySystemNotificationViewHolder;
-         val var148: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
-         var var43: ChatEventHandler = this.eventHandler;
+         val var130: SafetySystemNotificationViewHolder = var1 as SafetySystemNotificationViewHolder;
+         val var144: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
+         var var56: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var43 = null;
+            var56 = null;
          }
 
-         var133.bind(
-            var148,
-            new Function2<java.lang.String, java.lang.String, Unit>(var43) {
+         var130.bind(
+            var144,
+            new Function2<java.lang.String, java.lang.String, Unit>(var56) {
                {
                   super(
                      2,
@@ -1547,15 +1519,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is PollMessageAccessory) {
-         val var162: PollViewHolder = var1 as PollViewHolder;
-         val var149: PollMessageAccessory = var10 as PollMessageAccessory;
-         var var44: ChatEventHandler = this.eventHandler;
+         val var158: PollViewHolder = var1 as PollViewHolder;
+         val var145: PollMessageAccessory = var10 as PollMessageAccessory;
+         var var57: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var44 = null;
+            var57 = null;
          }
 
-         val var170: Function3 = new Function3(var44) {
+         val var166: Function3 = new Function3(var57) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapPollAnswer", "onTapPollAnswer-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1564,13 +1536,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapPollAnswer-sekaTiM(var1, var3, var4);
             }
          };
-         var var45: ChatEventHandler = this.eventHandler;
+         var var58: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var45 = null;
+            var58 = null;
          }
 
-         val var95: Function3 = new Function3(var45) {
+         val var106: Function3 = new Function3(var58) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapPollAction", "onTapPollAction-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1579,17 +1551,17 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapPollAction-sekaTiM(var1, var3, var4);
             }
          };
-         var var46: ChatEventHandler = this.eventHandler;
+         var var59: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var46 = null;
+            var59 = null;
          }
 
-         var162.bind(
-            var149,
-            var170,
-            var95,
-            new Function8(var46) {
+         var158.bind(
+            var145,
+            var166,
+            var106,
+            new Function8(var59) {
                {
                   super(
                      8,
@@ -1609,15 +1581,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is SharedCustomThemeMessageAccessory) {
-         val var134: SharedCustomThemeViewHolder = var1 as SharedCustomThemeViewHolder;
-         val var150: SharedCustomThemeMessageAccessory = var10 as SharedCustomThemeMessageAccessory;
-         var var47: ChatEventHandler = this.eventHandler;
+         val var131: SharedCustomThemeViewHolder = var1 as SharedCustomThemeViewHolder;
+         val var146: SharedCustomThemeMessageAccessory = var10 as SharedCustomThemeMessageAccessory;
+         var var60: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var47 = null;
+            var60 = null;
          }
 
-         val var163: Function1 = new Function1<MessageId, Unit>(var47) {
+         val var159: Function1 = new Function1<MessageId, Unit>(var60) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapPreviewSharedClientTheme", "onTapPreviewSharedClientTheme-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1626,13 +1598,13 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapPreviewSharedClientTheme-1xi1bu0(var1);
             }
          };
-         var var48: ChatEventHandler = this.eventHandler;
+         var var61: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var48 = null;
+            var61 = null;
          }
 
-         var134.bind(var150, var163, new Function1<MessageId, Unit>(var48) {
+         var131.bind(var146, var159, new Function1<MessageId, Unit>(var61) {
             {
                super(1, var1, ChatEventHandler::class.java, "onSharedClientThemeViewed", "onSharedClientThemeViewed-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1642,18 +1614,18 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is CtaButtonMessageAccessory) {
-         val var98: CtaButtonViewHolder = var1 as CtaButtonViewHolder;
-         val var49: CtaButtonMessageAccessory = var10 as CtaButtonMessageAccessory;
+         val var109: CtaButtonViewHolder = var1 as CtaButtonViewHolder;
+         val var62: CtaButtonMessageAccessory = var10 as CtaButtonMessageAccessory;
          val var6: Long = (var10 as CtaButtonMessageAccessory).getChannelId-o4g7jtM();
-         val var135: java.lang.String = (var10 as CtaButtonMessageAccessory).getMessageId-3Eiw7ao();
-         val var151: CtaButton = var49.getCtaButton();
-         var var50: ChatEventHandler = this.eventHandler;
+         val var132: java.lang.String = (var10 as CtaButtonMessageAccessory).getMessageId-3Eiw7ao();
+         val var147: CtaButton = var62.getCtaButton();
+         var var63: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var50 = null;
+            var63 = null;
          }
 
-         var98.bind-JjTCmh4(var6, var135, var151, new Function3(var50) {
+         var109.bind-JjTCmh4(var6, var132, var147, new Function3(var63) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapCtaButton", "onTapCtaButton-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1677,15 +1649,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
          }
 
-         val var136: ForwardBreadcrumbViewHolder = var1 as ForwardBreadcrumbViewHolder;
-         val var152: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
-         var var51: ChatEventHandler = this.eventHandler;
+         val var133: ForwardBreadcrumbViewHolder = var1 as ForwardBreadcrumbViewHolder;
+         val var148: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
+         var var64: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-            var51 = null;
+            var64 = null;
          }
 
-         var136.bind(var152, new Function3(var51) {
+         var133.bind(var148, new Function3(var64) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapForwardFooter", "onTapForwardFooter-SHRpUJI(IJLjava/lang/String;)V", 0);
             }
@@ -1703,16 +1675,17 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       var var16: Any;
       switch (var2) {
          case 0:
-            val var75: Context = var1.getContext();
-            var16 = new MessageContentViewHolder(new MessageContentView(var75, null, 0, 6, null));
+            val var74: Context = var1.getContext();
+            var16 = new MessageContentViewHolder(new MessageContentView(var74, null, 0, 6, null));
             break;
          case 1:
-            val var74: Context = var1.getContext();
-            var16 = new EmbedViewHolder(new EmbedView(var74, null, 2, null));
+            val var73: Context = var1.getContext();
+            var16 = new EmbedViewHolder(new EmbedView(var73, null, 2, null));
             break;
          case 2:
          case 3:
          case 10:
+         case 17:
          case 30:
          case 42:
          case 45:
@@ -1721,72 +1694,72 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 48:
          case 51:
          default:
-            val var73: StringBuilder = new StringBuilder();
-            var73.append("Unknown view type: ");
-            var73.append(var2);
-            throw new IllegalArgumentException(var73.toString());
+            val var72: StringBuilder = new StringBuilder();
+            var72.append("Unknown view type: ");
+            var72.append(var2);
+            throw new IllegalArgumentException(var72.toString());
          case 4:
-            val var72: Context = var1.getContext();
-            var16 = new ReactionsViewHolder(new ShortcutsFlexbox(var72, null, 2, null));
+            val var71: Context = var1.getContext();
+            var16 = new ReactionsViewHolder(new ShortcutsFlexbox(var71, null, 2, null));
             break;
          case 5:
-            val var70: Context = var1.getContext();
-            val var86: GuildInviteView = new GuildInviteView(var70, null, 0, 6, null);
-            var var71: ChatEventHandler = this.eventHandler;
+            val var69: Context = var1.getContext();
+            val var85: GuildInviteView = new GuildInviteView(var69, null, 0, 6, null);
+            var var70: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-               var71 = null;
+               var70 = null;
             }
 
-            var16 = new GuildInviteViewHolder(var86, var71);
+            var16 = new GuildInviteViewHolder(var85, var70);
             break;
          case 6:
-            val var69: Context = var1.getContext();
-            var16 = new StickerPngViewHolder(new StickerView(var69, null, 0, 6, null));
+            val var68: Context = var1.getContext();
+            var16 = new StickerPngViewHolder(new StickerView(var68, null, 0, 6, null));
             break;
          case 7:
-            val var68: Context = var1.getContext();
-            var16 = new StickerApngViewHolder(new StickerView(var68, null, 0, 6, null));
+            val var67: Context = var1.getContext();
+            var16 = new StickerApngViewHolder(new StickerView(var67, null, 0, 6, null));
             break;
          case 8:
-            val var67: Context = var1.getContext();
-            var16 = new StickerLottieViewHolder(new StickerView(var67, null, 0, 6, null));
+            val var66: Context = var1.getContext();
+            var16 = new StickerLottieViewHolder(new StickerView(var66, null, 0, 6, null));
             break;
          case 9:
-            val var66: Context = var1.getContext();
-            var16 = new ThreadEmbedViewHolder(new ThreadEmbedView(var66, null, 0, 6, null));
+            val var65: Context = var1.getContext();
+            var16 = new ThreadEmbedViewHolder(new ThreadEmbedView(var65, null, 0, 6, null));
             break;
          case 11:
-            val var64: Context = var1.getContext();
-            val var85: FileAttachmentView = new FileAttachmentView(var64, null, 2, null);
-            var var65: ChatEventHandler = this.eventHandler;
+            val var63: Context = var1.getContext();
+            val var84: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
+            var var64: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-               var65 = null;
+               var64 = null;
             }
 
-            var16 = new FileAttachmentViewHolder(var85, var65);
+            var16 = new FileAttachmentViewHolder(var84, var64);
             break;
          case 12:
-            val var63: Context = var1.getContext();
-            var16 = new MessageComponentsViewHolder(new MessageComponentsView(var63, null, 0, 6, null));
+            val var62: Context = var1.getContext();
+            var16 = new MessageComponentsViewHolder(new MessageComponentsView(var62, null, 0, 6, null));
             break;
          case 13:
-            val var62: TextView = TimestampViewBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false).getRoot();
-            var16 = new TimestampViewHolder(var62);
+            val var61: TextView = TimestampViewBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false).getRoot();
+            var16 = new TimestampViewHolder(var61);
             break;
          case 14:
-            val var60: Context = var1.getContext();
-            val var84: WelcomeStickerView = new WelcomeStickerView(var60, null, 2, null);
-            var var61: ChatEventHandler = this.eventHandler;
+            val var59: Context = var1.getContext();
+            val var83: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
+            var var60: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-               var61 = null;
+               var60 = null;
             }
 
             var16 = new WelcomeStickerViewHolder(
-               var84,
-               new Function2<Sticker, MessageId, Unit>(var61) {
+               var83,
+               new Function2<Sticker, MessageId, Unit>(var60) {
                   {
                      super(
                         2,
@@ -1805,34 +1778,30 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             );
             break;
          case 15:
-            val var58: Context = var1.getContext();
-            val var83: GuildEventInviteView = new GuildEventInviteView(var58, null, 0, 6, null);
-            var var59: ChatEventHandler = this.eventHandler;
+            val var57: Context = var1.getContext();
+            val var82: GuildEventInviteView = new GuildEventInviteView(var57, null, 0, 6, null);
+            var var58: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
-               var59 = null;
+               var58 = null;
             }
 
-            var16 = new GuildEventInviteViewHolder(var83, var59, new H(this));
+            var16 = new GuildEventInviteViewHolder(var82, var58, new G(this));
             break;
          case 16:
-            val var57: Context = var1.getContext();
-            var16 = new GiftViewHolder(new GiftView(var57, null, 2, null));
-            break;
-         case 17:
             val var56: Context = var1.getContext();
-            var16 = new ActivityInviteEmbedViewHolder(new ActivityInviteEmbedView(var56, null, 0, 6, null));
+            var16 = new GiftViewHolder(new GiftView(var56, null, 2, null));
             break;
          case 18:
             val var54: Context = var1.getContext();
-            val var82: EphemeralIndicationView = new EphemeralIndicationView(var54, null, 0, 6, null);
+            val var86: EphemeralIndicationView = new EphemeralIndicationView(var54, null, 0, 6, null);
             var var55: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var55 = null;
             }
 
-            var16 = new EphemeralIndicationViewHolder(var82, var55);
+            var16 = new EphemeralIndicationViewHolder(var86, var55);
             break;
          case 19:
             val var53: Context = var1.getContext();
@@ -1844,14 +1813,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 21:
             val var50: Context = var1.getContext();
-            val var87: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var50, null, 2, null);
+            val var81: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var50, null, 2, null);
             var var51: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var51 = null;
             }
 
-            var16 = new FlaggedMessageEmbedViewHolder(var87, var51);
+            var16 = new FlaggedMessageEmbedViewHolder(var81, var51);
             break;
          case 22:
             val var49: Context = var1.getContext();
@@ -1863,25 +1832,25 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 24:
             val var46: Context = var1.getContext();
-            val var81: SurveyIndicationView = new SurveyIndicationView(var46, null, 0, 6, null);
+            val var80: SurveyIndicationView = new SurveyIndicationView(var46, null, 0, 6, null);
             var var47: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var47 = null;
             }
 
-            var16 = new SurveyIndicationViewHolder(var81, var47);
+            var16 = new SurveyIndicationViewHolder(var80, var47);
             break;
          case 25:
             val var44: Context = var1.getContext();
-            val var80: GuildInviteDisabledView = new GuildInviteDisabledView(var44, null, 0, 6, null);
+            val var79: GuildInviteDisabledView = new GuildInviteDisabledView(var44, null, 0, 6, null);
             var var45: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var45 = null;
             }
 
-            var16 = new GuildInviteDisabledViewHolder(var80, var45);
+            var16 = new GuildInviteDisabledViewHolder(var79, var45);
             break;
          case 26:
             val var43: Context = var1.getContext();
@@ -1893,14 +1862,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 28:
             val var40: Context = var1.getContext();
-            val var79: InviteToSpeakView = new InviteToSpeakView(var40, null, 2, null);
+            val var78: InviteToSpeakView = new InviteToSpeakView(var40, null, 2, null);
             var var41: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var41 = null;
             }
 
-            var16 = new InviteToSpeakViewHolder(var79, new Function1<MessageId, Unit>(var41) {
+            var16 = new InviteToSpeakViewHolder(var78, new Function1<MessageId, Unit>(var41) {
                {
                   super(1, var1, ChatEventHandler::class.java, "onTapInviteToSpeak", "onTapInviteToSpeak-1xi1bu0(Ljava/lang/String;)V", 0);
                }
@@ -1916,14 +1885,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 31:
             val var37: Context = var1.getContext();
-            val var78: EmbeddedActivityInviteView = new EmbeddedActivityInviteView(var37, null, 0, 6, null);
+            val var77: EmbeddedActivityInviteView = new EmbeddedActivityInviteView(var37, null, 0, 6, null);
             var var38: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var38 = null;
             }
 
-            var16 = new EmbeddedActivityInviteViewHolder(var78, var38);
+            var16 = new EmbeddedActivityInviteViewHolder(var77, var38);
             break;
          case 32:
             val var36: Context = var1.getContext();
@@ -1959,14 +1928,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 40:
             val var27: Context = var1.getContext();
-            val var77: ActivityInstanceEmbedView = new ActivityInstanceEmbedView(var27, null, 0, 6, null);
+            val var76: ActivityInstanceEmbedView = new ActivityInstanceEmbedView(var27, null, 0, 6, null);
             var var28: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var28 = null;
             }
 
-            var16 = new ActivityInstanceEmbedViewHolder(var77, var28);
+            var16 = new ActivityInstanceEmbedViewHolder(var76, var28);
             break;
          case 41:
             val var26: Context = var1.getContext();
@@ -1998,14 +1967,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             break;
          case 54:
             val var18: Context = var1.getContext();
-            val var76: AppMessageEmbedView = new AppMessageEmbedView(var18, null, 0, 6, null);
+            val var75: AppMessageEmbedView = new AppMessageEmbedView(var18, null, 0, 6, null);
             var var19: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                Intrinsics.throwUninitializedPropertyAccessException("eventHandler");
                var19 = null;
             }
 
-            var16 = new AppMessageEmbedViewHolder(var76, var19);
+            var16 = new AppMessageEmbedViewHolder(var75, var19);
             break;
          case 55:
             val var17: Context = var1.getContext();

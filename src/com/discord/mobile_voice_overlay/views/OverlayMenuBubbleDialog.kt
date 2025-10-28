@@ -194,11 +194,11 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    @JvmStatic
    fun `setData$lambda$24`(var0: OverlayMenuBubbleDialog, var1: MobileVoiceOverlayData): Unit {
-      val var3: Context = var0.getContext();
-      val var2: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
-      var2.addCategory("android.intent.category.HOME");
-      var2.addFlags(268435456);
-      var3.startActivity(var2);
+      val var2: Context = var0.getContext();
+      val var3: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
+      var3.addCategory("android.intent.category.HOME");
+      var3.addFlags(268435456);
+      var2.startActivity(var3);
       val var5: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var4: Context = var0.getContext();
       var5.startHeadlessTask(var4, "SelectChannel", D.d.a(B9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
@@ -222,28 +222,28 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
    }
 
    public override fun getClosingAnimator(): Animator {
-      val var2: AnimatorSet = new AnimatorSet();
-      var2.setStartDelay((long)this.getResources().getInteger(17694720));
-      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
-      var1.setTarget(this.binding.overlayMenu);
+      val var1: AnimatorSet = new AnimatorSet();
+      var1.setStartDelay((long)this.getResources().getInteger(17694720));
+      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
+      var2.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_up_fade_out);
       var4.setTarget(this.binding.overlayHeader);
-      var2.playTogether(new Animator[]{var1, var4});
-      return var2;
+      var1.playTogether(new Animator[]{var2, var4});
+      return var1;
    }
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
       this.binding.overlayMenu.setAlpha(0.0F);
       this.binding.overlayHeader.setAlpha(0.0F);
-      val var1: AnimatorSet = new AnimatorSet();
-      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
-      var2.setTarget(this.binding.overlayMenu);
+      val var2: AnimatorSet = new AnimatorSet();
+      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
+      var1.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_down_fade_in);
       var4.setTarget(this.binding.overlayHeader);
-      var1.playTogether(new Animator[]{var2, var4});
-      var1.setStartDelay((long)this.getResources().getInteger(17694720));
-      var1.start();
+      var2.playTogether(new Animator[]{var1, var4});
+      var2.setStartDelay((long)this.getResources().getInteger(17694720));
+      var2.start();
       this.binding.overlayMembersRecycler.setAdapter(this.adapter);
    }
 

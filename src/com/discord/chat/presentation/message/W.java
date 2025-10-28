@@ -5,6 +5,6 @@ import kotlin.jvm.functions.Function0;
 // $VF: synthetic class
 public final class W implements Function0 {
    public final Object invoke() {
-      return MessageView.d();
+      return MessageView.s();
    }
 }
