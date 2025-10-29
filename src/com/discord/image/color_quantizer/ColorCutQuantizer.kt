@@ -186,13 +186,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var3: Int = this.maxRed - this.minRed;
-            val var1: Int = this.maxGreen - this.minGreen;
-            val var2: Int = this.maxBlue - this.minBlue;
+            val var2: Int = this.maxRed - this.minRed;
+            val var3: Int = this.maxGreen - this.minGreen;
+            val var1: Int = this.maxBlue - this.minBlue;
             val var4: Byte;
-            if (var3 >= var1 && var3 >= this.maxBlue - this.minBlue) {
+            if (var2 >= var3 && var2 >= this.maxBlue - this.minBlue) {
                var4 = -3;
-            } else if (var1 >= var3 && var1 >= var2) {
+            } else if (var3 >= var2 && var3 >= var1) {
                var4 = -2;
             } else {
                var4 = -1;
@@ -223,8 +223,8 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                   var3 += Color.green(var9) * var10;
                   var4 += var10 * Color.blue(var9);
                   if (var7 == var8) {
-                     var12 = var6;
                      var6 = var12;
+                     var12 = var6;
                      break;
                   }
 
@@ -296,23 +296,23 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
          if (this.lowerIndex <= this.upperIndex) {
             while (true) {
                var var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
-               val var3: Int = Color.red(var5);
-               val var4: Int = Color.green(var5);
+               val var4: Int = Color.red(var5);
+               val var3: Int = Color.green(var5);
                var5 = Color.blue(var5);
-               if (var3 > this.maxRed) {
-                  this.maxRed = var3;
+               if (var4 > this.maxRed) {
+                  this.maxRed = var4;
                }
 
-               if (var3 < this.minRed) {
-                  this.minRed = var3;
+               if (var4 < this.minRed) {
+                  this.minRed = var4;
                }
 
-               if (var4 > this.maxGreen) {
-                  this.maxGreen = var4;
+               if (var3 > this.maxGreen) {
+                  this.maxGreen = var3;
                }
 
-               if (var4 < this.minGreen) {
-                  this.minGreen = var4;
+               if (var3 < this.minGreen) {
+                  this.minGreen = var3;
                }
 
                if (var5 > this.maxBlue) {

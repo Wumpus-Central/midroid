@@ -48,9 +48,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var3: ReactEvents = this.reactEvents;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
+      val var2: ReactEvents = this.reactEvents;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.reactContext.getCurrentActivity(), var1);
    }
 

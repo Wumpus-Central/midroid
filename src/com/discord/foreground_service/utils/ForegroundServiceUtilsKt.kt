@@ -17,10 +17,10 @@ import xa.p
 
 @SuppressLint(["InlinedApi"])
 private fun buildServiceTypeChain(requestedType: Type, context: Context): List<Int> {
-   val var8: ArrayList = new ArrayList();
+   val var6: ArrayList = new ArrayList();
    val var2: Int = VERSION.SDK_INT;
-   val var7: Int = 128;
-   val var6: Int = 32;
+   val var8: Int = 128;
+   val var7: Int = 32;
    if (var2 < 34) {
       val var3: Int = ForegroundServiceUtilsKt.WhenMappings.$EnumSwitchMapping$0[var0.ordinal()];
       if (var3 != 1) {
@@ -29,9 +29,9 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
                throw new p();
             }
 
-            var8.add(var6);
+            var6.add(var7);
          } else if (var2 >= 30) {
-            var8.add(var7);
+            var6.add(var8);
          }
       }
    } else {
@@ -54,18 +54,18 @@ private fun buildServiceTypeChain(requestedType: Type, context: Context): List<I
       }
 
       if (var12 && var10) {
-         var8.add(160);
-         var8.add(var6);
-         var8.add(var7);
+         var6.add(160);
+         var6.add(var7);
+         var6.add(var8);
       } else if (var12) {
-         var8.add(var6);
+         var6.add(var7);
       } else if (var10) {
-         var8.add(var7);
+         var6.add(var8);
       }
    }
 
-   var8.add(1);
-   return var8;
+   var6.add(1);
+   return var6;
 }
 
 private fun hasForegroundServiceMediaProjectionPermission(context: Context): Boolean {
@@ -124,12 +124,12 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
             var4 = (var14.next() as java.lang.Number).intValue();
 
             try {
-               val var15: Log = Log.INSTANCE;
-               val var12: java.lang.String = toForegroundServiceTypeString(var4);
+               val var12: Log = Log.INSTANCE;
+               val var15: java.lang.String = toForegroundServiceTypeString(var4);
                val var16: StringBuilder = new StringBuilder();
                var16.append("Attempting to promote service with type: ");
-               var16.append(var12);
-               Log.i$foreground_service_release$default(var15, var16.toString(), null, 2, null);
+               var16.append(var15);
+               Log.i$foreground_service_release$default(var12, var16.toString(), null, 2, null);
                a.a(var0, var2, var3, var4);
                return;
             } catch (var9: SecurityException) {
