@@ -1,6 +1,5 @@
 package com.discord.js_watchdog
 
-import Oa.b
 import android.content.Context
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
@@ -8,6 +7,9 @@ import com.facebook.react.bridge.Promise
 import java.io.File
 import java.util.Timer
 import java.util.TimerTask
+import jp.f
+import jp.t0
+import km.b
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.Intrinsics
@@ -15,8 +17,6 @@ import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import mc.U
-import mc.f
 
 public object JSWatchdogManager {
    private final lateinit var storage: JSWatchdogStorage
@@ -90,18 +90,17 @@ public object JSWatchdogManager {
    }
 
    public fun checkForExistingReport(): StallReport? {
-      var var1: StallReport = null;
       if (storage != null) {
-         var var3: JSWatchdogStorage = storage;
+         var var1: JSWatchdogStorage = storage;
          if (storage == null) {
             Intrinsics.throwUninitializedPropertyAccessException("storage");
-            var3 = null;
+            var1 = null;
          }
 
-         var1 = var3.getStallReportAndClear();
+         return var1.getStallReportAndClear();
+      } else {
+         return null;
       }
-
-      return var1;
    }
 
    public fun disable() {
@@ -133,7 +132,7 @@ public object JSWatchdogManager {
    public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
       this.cancelExistingJobs();
       pingCoroutineJob = f.d(
-         U.d,
+         t0.d,
          null,
          null,
          new Function2<CoroutineScope, Continuation, Object>(var1, var2, var6, var4, var5, null) {
@@ -223,8 +222,8 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var21: Timer = new Timer();
-                        val var20: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
+                        val var20: Timer = new Timer();
+                        val var21: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
                            final java.lang.String $sessionId$inlined;
@@ -242,8 +241,8 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var21.scheduleAtFixedRate(var20, 1500L, 1000L);
-                        JSWatchdogManager.access$setFreezeTimer$p(var20);
+                        var20.scheduleAtFixedRate(var21, 1500L, 1000L);
+                        JSWatchdogManager.access$setFreezeTimer$p(var21);
                      }
                   } catch (var9: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var9);

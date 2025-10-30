@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import Ja.v
+import fm.v
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
@@ -39,32 +39,32 @@ public object BundleUpdaterUtils {
 
    public fun getManifestFromFile(file: File): AppManifest {
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = Ta.j.g(var1, null, 1, null);
+      val var3: java.lang.String = pm.j.g(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
 
    public fun md5(file: File): String {
       label18: {
-         val var10: BufferedSource = gd.m.d(gd.m.k(var1));
+         val var10: BufferedSource = dr.m.d(dr.m.k(var1));
 
-         var var12: java.lang.String;
+         var var11: java.lang.String;
          try {
-            val var11: gd.j = gd.j.s.a(gd.m.b());
-            var10.M1(var11);
-            var12 = var11.a().r();
+            val var2: dr.j = dr.j.s.a(dr.m.b());
+            var10.F1(var2);
+            var11 = var2.b().r();
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
-               Ta.c.a(var10, var5);
+               pm.c.a(var10, var5);
             }
          }
 
-         Ta.c.a(var10, null);
-         return var12;
+         pm.c.a(var10, null);
+         return var11;
       }
    }
 }

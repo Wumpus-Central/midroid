@@ -75,9 +75,11 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
       if (this.blurEnabled && this.blurAmount <= 0.0F) {
          this.blurEnabled = false;
          this.setBlurEnabled(false);
-      } else if (!this.blurEnabled && this.blurAmount > 0.0F) {
-         this.blurEnabled = true;
-         this.setBlurEnabled(true);
+      } else {
+         if (!this.blurEnabled && this.blurAmount > 0.0F) {
+            this.blurEnabled = true;
+            this.setBlurEnabled(true);
+         }
       }
    }
 
@@ -141,7 +143,7 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
 
    public companion object {
       internal fun mapBlurTint(blurAmountTint: Int, blurTint: Int, blurAmount: Float): Int {
-         return q0.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
+         return q1.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
       }
 
       internal fun mapRadius(radius: Float, maxRadius: Float = ..., minRadius: Float = ...): Float {

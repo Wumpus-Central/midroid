@@ -1,6 +1,5 @@
 package com.discord.rlottie
 
-import Ja.w
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION
@@ -9,8 +8,8 @@ import android.view.Display
 import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.m
-import app.rive.runtime.kotlin.renderers.c
 import com.discord.rlottie.RLottieDrawable.PlaybackMode
+import fm.w
 import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
@@ -41,25 +40,24 @@ public open class RLottieImageView : m {
 
    @SuppressLint(["AnnotateVersionCheck"])
    private fun Context.getDisplayCompat(): Display {
-      val var2: Display;
       if (VERSION.SDK_INT >= 30) {
-         var2 = c.a(var1);
-         if (var2 == null) {
+         val var4: Display = var1.getDisplay();
+         if (var4 == null) {
             Intrinsics.throwNpe();
          }
 
-         Intrinsics.checkExpressionValueIsNotNull(var2, "display!!");
+         Intrinsics.checkExpressionValueIsNotNull(var4, "display!!");
+         return var4;
       } else {
-         val var3: Any = var1.getSystemService("window");
-         if (var3 == null) {
+         var var2: Display = (Display)var1.getSystemService("window");
+         if (var2 != null) {
+            var2 = (var2 as WindowManager).getDefaultDisplay();
+            Intrinsics.checkExpressionValueIsNotNull(var2, "(getSystemService(Contex…owManager).defaultDisplay");
+            return var2;
+         } else {
             throw new w("null cannot be cast to non-null type android.view.WindowManager");
          }
-
-         var2 = (var3 as WindowManager).getDefaultDisplay();
-         Intrinsics.checkExpressionValueIsNotNull(var2, "(getSystemService(Contex…owManager).defaultDisplay");
       }
-
-      return var2;
    }
 
    open fun `_$_clearFindViewByIdCache`() {
@@ -103,12 +101,13 @@ public open class RLottieImageView : m {
       val var1: RLottieDrawable = this.drawable;
       if (this.drawable != null) {
          this.playing = false;
-         if (this.attachedToWindow) {
-            if (var1 != null) {
-               var1.stop();
-            }
-         } else {
+         if (!this.attachedToWindow) {
             this.startOnAttach = false;
+            return;
+         }
+
+         if (var1 != null) {
+            var1.stop();
          }
       }
    }
@@ -117,12 +116,13 @@ public open class RLottieImageView : m {
       val var1: RLottieDrawable = this.drawable;
       if (this.drawable != null) {
          this.playing = true;
-         if (this.attachedToWindow) {
-            if (var1 != null) {
-               var1.start();
-            }
-         } else {
+         if (!this.attachedToWindow) {
             this.startOnAttach = true;
+            return;
+         }
+
+         if (var1 != null) {
+            var1.start();
          }
       }
    }
@@ -145,12 +145,12 @@ public open class RLottieImageView : m {
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
       Intrinsics.checkParameterIsNotNull(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      Intrinsics.checkExpressionValueIsNotNull(var6, "context");
       val var7: Context = this.getContext();
       Intrinsics.checkExpressionValueIsNotNull(var7, "context");
+      val var6: Context = this.getContext();
+      Intrinsics.checkExpressionValueIsNotNull(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;
@@ -161,10 +161,10 @@ public open class RLottieImageView : m {
          }
 
          for (Entry var16 : this.layerColors.entrySet()) {
-            val var11: java.lang.String = var16.getKey() as java.lang.String;
+            val var15: java.lang.String = var16.getKey() as java.lang.String;
             var1 = (var16.getValue() as java.lang.Number).intValue();
             if (this.drawable != null) {
-               this.drawable.setLayerColor(var11, var1);
+               this.drawable.setLayerColor(var15, var1);
             }
          }
 

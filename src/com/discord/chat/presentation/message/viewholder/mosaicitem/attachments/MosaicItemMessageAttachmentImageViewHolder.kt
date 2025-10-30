@@ -29,7 +29,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       shouldAutoPlayGif: Boolean
    ) {
       val var25: Attachment = var2.getAttachment();
-      val var24: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
+      val var22: UploadItemProps = var2.getUploadItemProps(new Function2<java.lang.String, java.lang.String, Unit>(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -38,12 +38,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var22: java.lang.String = var25.getUrl();
-      val var9: Int = var25.getWidth();
+      val var21: java.lang.String = var25.getUrl();
+      val var11: Int = var25.getWidth();
       val var10: Int = var25.getHeight();
       val var23: java.lang.String = var25.getPlaceholder();
-      val var21: Int = var25.getPlaceholderVersion();
-      val var11: Int = var2.getRadiusPx();
+      val var24: Int = var25.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -61,6 +61,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       val var31: java.lang.Boolean = var25.getObscure();
+      var var16: Boolean = false;
       val var12: Boolean;
       if (var31 != null) {
          var12 = var31;
@@ -105,22 +106,19 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       };
-      val var27: java.lang.String = var25.getRole();
-      val var29: java.lang.String = var25.getFilename();
+      val var29: java.lang.String = var25.getRole();
+      val var27: java.lang.String = var25.getFilename();
       val var36: java.lang.Boolean = var25.getSrcIsAnimated();
-      val var16: Boolean;
       if (var36 != null) {
          var16 = var36;
-      } else {
-         var16 = false;
       }
 
       super.bind(
-         var22,
-         var9,
+         var21,
+         var11,
          var10,
          var23,
-         var21,
+         var24,
          var17,
          var30,
          var12,
@@ -132,15 +130,15 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var37,
          var18,
          var28,
-         var11,
+         var9,
          var20,
          var3 xor true,
          var4,
          var5,
-         var24,
-         var27,
-         var8,
+         var22,
          var29,
+         var8,
+         var27,
          var16
       );
    }
@@ -158,12 +156,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       shouldAutoPlayGif: Boolean
    ) {
       val var17: UnfurledMediaItem = var3.getMedia();
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("MediaGalleryDisplayComponent(");
-      var15.append(var2);
-      var15.append(").item[image]");
-      val var21: SpoilerAttributes = var16.forGenericMedia(var3, var1, var15.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
+      val var15: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("MediaGalleryDisplayComponent(");
+      var16.append(var2);
+      var16.append(").item[image]");
+      val var21: SpoilerAttributes = var15.forGenericMedia(var3, var1, var16.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
       val var23: java.lang.String = var17.getProxyUrl();
       val var18: Int = var17.getWidth();
       var var12: Int = 0;

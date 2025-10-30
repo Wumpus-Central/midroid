@@ -14,12 +14,5 @@ public fun JavaScriptContextHolder.jsiId(): Long {
 
 public fun ReactContext.jsiId(): Long? {
    val var1: JavaScriptContextHolder = var0.getJavaScriptContextHolder();
-   val var2: java.lang.Long;
-   if (var1 != null) {
-      var2 = jsiId(var1);
-   } else {
-      var2 = null;
-   }
-
-   return var2;
+   return if (var1 != null) jsiId(var1) else null;
 }

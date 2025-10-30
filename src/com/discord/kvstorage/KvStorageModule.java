@@ -26,27 +26,22 @@ class KvStorageModule extends ReactContextBaseJavaModule implements LifecycleEve
    }
 
    @NonNull
-   @Override
    public String getName() {
       return "KvStorage";
    }
 
-   @Override
    public void invalidate() {
       super.invalidate();
       this.getReactApplicationContext().removeLifecycleEventListener(this);
       KvStorageBridge.instance.deactivate();
    }
 
-   @Override
    public void onHostDestroy() {
    }
 
-   @Override
    public void onHostPause() {
    }
 
-   @Override
    public void onHostResume() {
    }
 }

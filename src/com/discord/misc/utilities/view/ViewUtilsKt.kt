@@ -69,44 +69,30 @@ public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
 }
 
 public tailrec fun getWindow(context: Context?): Window? {
-   while (true) {
-      val var2: Window;
-      if (var0 == null) {
-         var2 = null;
-      } else {
-         if (var0 !is Activity) {
-            val var3: ContextWrapper;
-            if (var0 is ContextWrapper) {
-               var3 = var0 as ContextWrapper;
-            } else {
-               var3 = null;
-            }
-
-            if (var3 != null) {
-               var0 = var3.getBaseContext();
-               continue;
-            }
-
-            var0 = null;
-            continue;
-         }
-
-         var2 = (var0 as Activity).getWindow();
+   while (var0 != null) {
+      if (var0 is Activity) {
+         return (var0 as Activity).getWindow();
       }
 
-      return var2;
+      val var1: ContextWrapper;
+      if (var0 is ContextWrapper) {
+         var1 = var0 as ContextWrapper;
+      } else {
+         var1 = null;
+      }
+
+      if (var1 != null) {
+         var0 = var1.getBaseContext();
+      } else {
+         var0 = null;
+      }
    }
+
+   return null;
 }
 
 public fun View.isLtr(): Boolean {
-   val var1: Boolean;
-   if (var0.getLayoutDirection() == 0) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getLayoutDirection() == 0;
 }
 
 public fun TextView.setOptionalText(text: CharSequence?) {

@@ -1,11 +1,9 @@
 package com.discord.chrome_custom_tabs
 
-import P2.a
-import P2.b
-import P2.c
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
+import android.content.pm.PackageManager.ResolveInfoFlags
 import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
@@ -22,7 +20,7 @@ internal object CustomTabsPackages {
       var var2: Intent = this.getDefaultViewIntentHandler();
       val var5: java.util.List;
       if (VERSION.SDK_INT >= 33) {
-         var5 = b.a(var1.getPackageManager(), var2, a.a((long)0));
+         var5 = var1.getPackageManager().queryIntentActivities(var2, ResolveInfoFlags.of((long)0));
       } else {
          var5 = var1.getPackageManager().queryIntentActivities(var2, 0);
       }
@@ -33,7 +31,7 @@ internal object CustomTabsPackages {
          var2 = new Intent().setAction("android.support.customtabs.action.CustomTabsService").setPackage(var6.activityInfo.packageName);
          val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var8 = c.a(var1.getPackageManager(), var2, a.a((long)0));
+            var8 = var1.getPackageManager().resolveService(var2, ResolveInfoFlags.of((long)0));
          } else {
             var8 = var1.getPackageManager().resolveService(var2, 0);
          }
@@ -66,7 +64,7 @@ internal object CustomTabsPackages {
       val var5: java.util.List = this.getCustomTabsPackages(var1);
       var var4: java.util.Iterator = var5.iterator();
 
-      var var3: Any;
+      val var3: Any;
       do {
          val var2: Boolean = var4.hasNext();
          var3 = null;
@@ -120,11 +118,12 @@ internal object CustomTabsPackages {
                   var10 = var4.next();
                } while (!(var10 as java.lang.String == "com.google.android.apps.chrome"));
 
-               var3 = var10 as java.lang.String;
-               var7 = var10 as java.lang.String;
-               if (var3 == null) {
-                  var7 = CollectionsKt.firstOrNull(var5) as java.lang.String;
+               val var11: java.lang.String = var10 as java.lang.String;
+               if (var10 as java.lang.String == null) {
+                  return CollectionsKt.firstOrNull(var5) as java.lang.String;
                }
+
+               return var11;
             }
          }
       }

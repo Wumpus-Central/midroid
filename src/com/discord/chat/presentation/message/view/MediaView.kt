@@ -91,27 +91,13 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    private final val reactContext: ReactContext?
       private final get() {
          val var1: Context = this.getContext();
-         val var2: ReactContext;
-         if (var1 is ReactContext) {
-            var2 = var1 as ReactContext;
-         } else {
-            var2 = null;
-         }
-
-         return var2;
+         return var1 as? ReactContext;
       }
 
 
    private final val shouldShowGifIndicator: Boolean
       private final get() {
-         val var2: Boolean;
-         if (var1.isGifv() && !var1.getShouldAutoPlay()) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         return var2;
+         return var1.isGifv() && !var1.getShouldAutoPlay();
       }
 
 
@@ -130,8 +116,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       this.mediaViewDetached = true;
       this.mediaCanPlayInline = true;
       this.mediaThumbnailFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      this.mediaOnPlayCallback = new x0();
-      this.onMediaPlayFinishedAnalytics = new y0();
+      this.mediaOnPlayCallback = new w1();
+      this.onMediaPlayFinishedAnalytics = new x1();
       this.playerSettings = MediaPlayer.Factory.getDefaultSettings();
       val var6: Context;
       if (var1 !is ThemedReactContext) {
@@ -149,7 +135,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       }
 
       this.managerModule = var8;
-      val var9: ViewAttachedListener = new ViewAttachedListener(this, new z0(this), new A0(this));
+      val var9: ViewAttachedListener = new ViewAttachedListener(this, new y1(this), new z1(this));
       this.attachStateChangeListener = var9;
       this.lifecycleListener = new LifecycleEventListener(this) {
          final MediaView this$0;
@@ -180,16 +166,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       I18nUtilsKt.i18nContentDescription$default(var10, I18nMessage.PLAY_FULL_VIDEO, null, 2, null);
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
-      (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var5: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
+      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
+      (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).z(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var13: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
       val var12: GradientDrawable = new GradientDrawable();
       var12.setShape(0);
       var12.setStroke(
-         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var5.z(var12);
+      var13.y(var12);
    }
 
    @JvmStatic
@@ -251,15 +237,15 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
+            val var7: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: Context = this.getContext();
             val var11: java.lang.Double = var1.getPortal();
-            var10 = var12.acquire(var7, var11, this.playerSettings);
+            var10 = var7.acquire(var12, var11, this.playerSettings);
          }
 
-         var10.setEventListener(new p0(this));
-         var10.setVolumeListener(new u0(this));
-         var10.setAnalyticsListener(new v0(this));
+         var10.setEventListener(new o1(this));
+         var10.setVolumeListener(new t1(this));
+         var10.setAnalyticsListener(new u1(this));
          val var3: Float;
          if (var1.isGifv()) {
             var3 = 0.0F;
@@ -307,26 +293,26 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
-               val var9: MediaPlayerView = this.mediaPlayerView;
-               var7 = new Pair(var6, var9);
+               val var7: MediaPlayerView = this.mediaPlayerView;
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var10), new q0(this, var10, var5), new r0(var5, this));
+               .addPortal(var1, (var6.b() as MediaPlayerView).getView(), new a2(this), new b2(this, var5, var4), new p1(this, var4, var5), new q1(var5, this));
          }
       }
    }
@@ -521,7 +507,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      mc.f.d(
+      jp.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -543,7 +529,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = Oa.b.e();
+               val var3: Any = km.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -599,7 +585,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      mc.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      jp.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final MediaView this$0;
 
@@ -617,7 +603,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = Oa.b.e();
+            val var3: Any = km.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -770,7 +756,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
 
          var32.setVisibility(var20);
          if (!var21) {
-            (this.binding.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).x(var12);
+            (this.binding.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).w(var12);
             val var25: SimpleDraweeView = this.binding.inlineMediaImagePreview;
             val var33: java.lang.Boolean;
             if (var1 != null) {
@@ -866,9 +852,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
 
          var36.setVisibility(var54);
          val var62: ImageView = this.binding.inlineMediaPlayButton;
-         val var37: s0;
+         val var37: r1;
          if (this.mediaCanPlayInline && !var10 && var1 != null) {
-            var37 = new s0(this, var1);
+            var37 = new r1(this, var1);
          } else {
             var37 = null;
          }
@@ -910,7 +896,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
 
          I18nUtilsKt.i18nContentDescription$default(var64, var41, null, 2, null);
          val var42: SimpleDraweeView = this.binding.inlineMediaVolumeToggle;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new t0(this, var6, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new s1(this, var6, var1), 1, null);
          val var43: ImageView = this.binding.inlineMediaPlayButton;
          if (var43.getVisibility() == 0 && var14 != null && var14.length() != 0) {
             var6 = true;
@@ -956,12 +942,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          if (var1 != null && var1.getShouldAutoPlay() && !var2 && !var3) {
             if (var5 == null) {
                this.prepareMediaPlayer(var1, true);
-            } else {
-               if (var5 == var49) {
-                  return;
-               }
+               return;
+            }
 
+            if (!(var5 == var49)) {
                this.play();
+               return;
             }
          } else {
             if (!var2 && var4 && !(var24 == java.lang.Boolean.FALSE)) {
@@ -986,24 +972,33 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             if (!var59 && this.mediaShouldResume) {
                this.play();
                this.mediaShouldResume = false;
-            } else if (var59) {
+               return;
+            }
+
+            if (var59) {
                this.pause();
                if (var5 == var49 && !(var24 == java.lang.Boolean.FALSE)) {
                   this.mediaShouldResume = true;
+                  return;
                }
-            } else if (var5 == var49) {
-               this.play();
-            } else if (var5 == Paused.INSTANCE) {
-               this.pause();
+            } else {
+               if (var5 == var49) {
+                  this.play();
+                  return;
+               }
+
+               if (var5 == Paused.INSTANCE) {
+                  this.pause();
+               }
             }
          }
       }
    }
 
    public fun setOnMediaClickListeners(onClickListener: OnClickListener?, onLongClickListener: OnLongClickListener?) {
-      val var3: w0;
+      val var3: v1;
       if (var1 != null) {
-         var3 = new w0(this, var1);
+         var3 = new v1(this, var1);
       } else {
          var3 = null;
       }

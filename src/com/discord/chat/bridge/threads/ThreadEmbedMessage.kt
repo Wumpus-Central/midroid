@@ -2,7 +2,7 @@ package com.discord.chat.bridge.threads
 
 import com.discord.chat.bridge.Message
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class ThreadEmbedMessage(message: Message) {

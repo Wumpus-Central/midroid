@@ -63,7 +63,7 @@ public class ClanTagChipletView(context: Context, attrs: AttributeSet) : FrameLa
 
       this.binding.tag.setText(var1);
       val var10: TextView = this.binding.tag;
-      SetTextSizeSpKt.setTextSizeSp(var10, 12.0F * var6);
+      SetTextSizeSpKt.setTextSizeSp(var10, var6 * 12.0F);
       if (var5 != null) {
          val var11: LinearLayout = this.binding.container;
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new a(var5, var3), 1, null);

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class ContentInventoryEntryClickable(ariaDescription: String? = null) {
@@ -34,14 +34,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.ariaDescription == null) {
-         var1 = 0;
-      } else {
-         var1 = this.ariaDescription.hashCode();
-      }
-
-      return var1;
+      return if (this.ariaDescription == null) 0 else this.ariaDescription.hashCode();
    }
 
    public override fun toString(): String {

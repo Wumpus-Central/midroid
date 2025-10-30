@@ -37,11 +37,11 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       val var4: ObscureOverlayViewBinding = ObscureOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
       val var3: BlurView = var4.blurView;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new H0(), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new g2(), 1, null);
       val var5: SimpleDraweeView = var4.mediaWarningIcon;
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.MediaChannelNSFW);
       ColorUtilsKt.setTintColor(var5, ThemeManagerKt.getTheme().getWhite());
-      (var5.getHierarchy() as GenericDraweeHierarchy).x(0);
+      (var5.getHierarchy() as GenericDraweeHierarchy).w(0);
       val var6: TextView = var4.descriptionLabel;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryNormal);
       var4.opaqueBackground.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_500));
@@ -79,7 +79,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
    public fun configure(header: String, description: String, parent: ViewGroup, isOverlayVisible: Boolean, onReveal: () -> Unit, onHide: () -> Unit) {
       this.handleRevealedState(var4);
       this.binding.blurView.setupWith(var3).g(24.0F).a(Color.argb(80, 0, 0, 0)).d(var3.getBackground()).c(true);
-      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var6, this));
+      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new h2(var6, this));
       this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var5);
       this.binding.descriptionLabel.setText(var1);
       this.binding.descriptionLabel.setContentDescription(var2);

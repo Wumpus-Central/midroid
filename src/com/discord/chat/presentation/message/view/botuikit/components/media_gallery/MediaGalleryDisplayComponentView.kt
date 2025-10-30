@@ -1,10 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components.media_gallery
 
-import H2.k
-import H2.l
-import H2.m
-import H2.n
-import H2.o
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -23,6 +18,11 @@ import com.discord.chat.presentation.message.view.botuikit.MediaItemEventHandler
 import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import h6.k
+import h6.l
+import h6.m
+import h6.n
+import h6.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2

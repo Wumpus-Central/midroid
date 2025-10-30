@@ -5,6 +5,6 @@ import kotlin.jvm.functions.Function0;
 // $VF: synthetic class
 public final class z implements Function0 {
    public final Object invoke() {
-      return PortalViewUpdate.b();
+      return SharedRecycledViewPools.a();
    }
 }

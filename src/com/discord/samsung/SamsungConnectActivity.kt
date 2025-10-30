@@ -30,7 +30,7 @@ public class SamsungConnectActivity : AppCompatActivity {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.c(var2);
+            val var5: a = a.a.c(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -70,9 +70,8 @@ public class SamsungConnectActivity : AppCompatActivity {
             if (var38 == null) {
                try {
                   SamsungConnectActivity.access$finishedWithRestartRequested(this.this$0);
-                  return;
-               } catch (var8: java.lang.Throwable) {
-                  Log.INSTANCE.e("Samsung", "Unable to connect to Samsung", var8);
+               } catch (var7: java.lang.Throwable) {
+                  Log.INSTANCE.e("Samsung", "Unable to connect to Samsung", var7);
                   SamsungConnectActivity.access$finishWithResult(this.this$0, null, null);
                   return;
                }
@@ -85,8 +84,8 @@ public class SamsungConnectActivity : AppCompatActivity {
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
                   Log.i$default(var4, "Samsung", var39.toString(), null, 4, null);
-               } catch (var7: java.lang.Throwable) {
-                  Log.INSTANCE.e("Samsung", "Unable to connect to Samsung", var7);
+               } catch (var8: java.lang.Throwable) {
+                  Log.INSTANCE.e("Samsung", "Unable to connect to Samsung", var8);
                   SamsungConnectActivity.access$finishWithResult(this.this$0, null, null);
                   return;
                }
@@ -107,17 +106,19 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun createCallback(): Stub {
-      return new Stub(this) {
+      return new ISACallback.Stub(this) {
          final SamsungConnectActivity this$0;
 
          {
             this.this$0 = var1;
          }
 
+         @Override
          public void onReceiveAccessToken(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveAccessToken");
          }
 
+         @Override
          public void onReceiveAuthCode(int var1, boolean var2, Bundle var3) {
             var var7: java.lang.String = null;
             val var4: java.lang.String;
@@ -175,26 +176,32 @@ public class SamsungConnectActivity : AppCompatActivity {
             SamsungConnectActivity.access$finishWithResult(this.this$0, var4, var5);
          }
 
+         @Override
          public void onReceiveChecklistValidation(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveAccessToken");
          }
 
+         @Override
          public void onReceiveDisclaimerAgreement(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveDisclaimerAgreement");
          }
 
+         @Override
          public void onReceivePasswordConfirmation(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceivePasswordConfirmation");
          }
 
+         @Override
          public void onReceiveRLControlFMM(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveRLControlFMM");
          }
 
+         @Override
          public void onReceiveRubinRequest(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveRubinRequest");
          }
 
+         @Override
          public void onReceiveSCloudAccessToken(int var1, boolean var2, Bundle var3) {
             throw new IllegalStateException("Unexpected call to onReceiveSCloudAccessToken");
          }
@@ -371,15 +378,15 @@ public class SamsungConnectActivity : AppCompatActivity {
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.authCode;
+            val var3: java.lang.String = this.authCode;
             val var1: java.lang.String = this.serverUrl;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Success(authCode=");
-            var3.append(var2);
-            var3.append(", serverUrl=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Success(authCode=");
+            var2.append(var3);
+            var2.append(", serverUrl=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

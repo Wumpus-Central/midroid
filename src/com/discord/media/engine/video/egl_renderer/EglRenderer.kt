@@ -371,7 +371,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 00a: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.pendingFrame Lorg/webrtc/VideoFrame;
       // 00d: astore 11
       // 00f: aload 11
-      // 011: ifnull 20c
+      // 011: ifnull 20f
       // 014: aload 0
       // 015: aconst_null
       // 016: putfield com/discord/media/engine/video/egl_renderer/EglRenderer.pendingFrame Lorg/webrtc/VideoFrame;
@@ -381,11 +381,11 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 01d: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.eglBase Lorg/webrtc/EglBase;
       // 020: astore 12
       // 022: aload 12
-      // 024: ifnull 1fa
+      // 024: ifnull 1fd
       // 027: aload 12
       // 029: invokeinterface org/webrtc/EglBase.hasSurface ()Z 1
       // 02e: ifne 034
-      // 031: goto 1fa
+      // 031: goto 1fd
       // 034: invokestatic java/lang/System.nanoTime ()J
       // 037: lstore 5
       // 039: aload 0
@@ -422,7 +422,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 076: invokespecial com/discord/media/engine/video/egl_renderer/EglRenderer.logD (Ljava/lang/String;)V
       // 079: goto 09c
       // 07c: astore 11
-      // 07e: goto 1f4
+      // 07e: goto 1f7
       // 081: lload 9
       // 083: lload 7
       // 085: ladd
@@ -466,16 +466,16 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 0c6: fload 1
       // 0c7: fload 2
       // 0c8: fdiv
-      // 0c9: fstore 1
+      // 0c9: fstore 2
       // 0ca: fconst_1
-      // 0cb: fstore 2
+      // 0cb: fstore 1
       // 0cc: goto 0d5
       // 0cf: fload 2
       // 0d0: fload 1
       // 0d1: fdiv
-      // 0d2: fstore 2
+      // 0d2: fstore 1
       // 0d3: fconst_1
-      // 0d4: fstore 1
+      // 0d4: fstore 2
       // 0d5: aload 0
       // 0d6: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.drawMatrix Landroid/graphics/Matrix;
       // 0d9: invokevirtual android/graphics/Matrix.reset ()V
@@ -503,8 +503,8 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 107: pop
       // 108: aload 0
       // 109: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.drawMatrix Landroid/graphics/Matrix;
-      // 10c: fload 1
-      // 10d: fload 2
+      // 10c: fload 2
+      // 10d: fload 1
       // 10e: invokevirtual android/graphics/Matrix.preScale (FF)Z
       // 111: pop
       // 112: aload 0
@@ -514,7 +514,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 11c: invokevirtual android/graphics/Matrix.preTranslate (FF)Z
       // 11f: pop
       // 120: iload 4
-      // 122: ifeq 1db
+      // 122: ifeq 1e9
       // 125: fconst_0
       // 126: fconst_0
       // 127: fconst_0
@@ -537,11 +537,11 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 14b: invokeinterface org/webrtc/EglBase.surfaceHeight ()I 1
       // 150: invokevirtual org/webrtc/VideoFrameDrawer.drawFrame (Lorg/webrtc/VideoFrame;Lorg/webrtc/RendererCommon$GlDrawer;Landroid/graphics/Matrix;IIII)V
       // 153: invokestatic java/lang/System.nanoTime ()J
-      // 156: lstore 9
+      // 156: lstore 7
       // 158: aload 12
       // 15a: invokeinterface org/webrtc/EglBase.swapBuffers ()V 1
       // 15f: invokestatic java/lang/System.nanoTime ()J
-      // 162: lstore 7
+      // 162: lstore 9
       // 164: aload 0
       // 165: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.statisticsLock Ljava/lang/Object;
       // 168: astore 12
@@ -556,7 +556,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 177: aload 0
       // 178: aload 0
       // 179: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.renderTimeNs J
-      // 17c: lload 7
+      // 17c: lload 9
       // 17e: lload 5
       // 180: lsub
       // 181: ladd
@@ -564,8 +564,8 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 185: aload 0
       // 186: aload 0
       // 187: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.renderSwapBufferTimeNs J
-      // 18a: lload 7
-      // 18c: lload 9
+      // 18a: lload 9
+      // 18c: lload 7
       // 18e: lsub
       // 18f: ladd
       // 190: putfield com/discord/media/engine/video/egl_renderer/EglRenderer.renderSwapBufferTimeNs J
@@ -573,9 +573,9 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 196: astore 13
       // 198: aload 12
       // 19a: monitorexit
-      // 19b: goto 1db
+      // 19b: goto 1e9
       // 19e: astore 12
-      // 1a0: goto 1e3
+      // 1a0: goto 1e1
       // 1a3: astore 12
       // 1a5: goto 1b0
       // 1a8: astore 13
@@ -602,36 +602,38 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 1d8: invokevirtual org/webrtc/VideoFrameDrawer.release ()V
       // 1db: aload 11
       // 1dd: invokevirtual org/webrtc/VideoFrame.release ()V
-      // 1e0: goto 1eb
-      // 1e3: aload 11
-      // 1e5: invokevirtual org/webrtc/VideoFrame.release ()V
-      // 1e8: aload 12
-      // 1ea: athrow
-      // 1eb: return
-      // 1ec: astore 11
-      // 1ee: aload 13
-      // 1f0: monitorexit
-      // 1f1: aload 11
-      // 1f3: athrow
-      // 1f4: aload 13
-      // 1f6: monitorexit
-      // 1f7: aload 11
-      // 1f9: athrow
-      // 1fa: aload 0
-      // 1fb: ldc_w "Dropping frame - No surface"
-      // 1fe: invokespecial com/discord/media/engine/video/egl_renderer/EglRenderer.logD (Ljava/lang/String;)V
-      // 201: aload 11
-      // 203: invokevirtual org/webrtc/VideoFrame.release ()V
-      // 206: return
-      // 207: astore 11
-      // 209: goto 210
-      // 20c: aload 12
-      // 20e: monitorexit
-      // 20f: return
-      // 210: aload 12
-      // 212: monitorexit
-      // 213: aload 11
-      // 215: athrow
+      // 1e0: return
+      // 1e1: aload 11
+      // 1e3: invokevirtual org/webrtc/VideoFrame.release ()V
+      // 1e6: aload 12
+      // 1e8: athrow
+      // 1e9: aload 11
+      // 1eb: invokevirtual org/webrtc/VideoFrame.release ()V
+      // 1ee: return
+      // 1ef: astore 11
+      // 1f1: aload 13
+      // 1f3: monitorexit
+      // 1f4: aload 11
+      // 1f6: athrow
+      // 1f7: aload 13
+      // 1f9: monitorexit
+      // 1fa: aload 11
+      // 1fc: athrow
+      // 1fd: aload 0
+      // 1fe: ldc_w "Dropping frame - No surface"
+      // 201: invokespecial com/discord/media/engine/video/egl_renderer/EglRenderer.logD (Ljava/lang/String;)V
+      // 204: aload 11
+      // 206: invokevirtual org/webrtc/VideoFrame.release ()V
+      // 209: return
+      // 20a: astore 11
+      // 20c: goto 213
+      // 20f: aload 12
+      // 211: monitorexit
+      // 212: return
+      // 213: aload 12
+      // 215: monitorexit
+      // 216: aload 11
+      // 218: athrow
    }
 
    private fun resetStatistics(currentTimeNs: Long = System.nanoTime()) {
@@ -678,11 +680,11 @@ internal open class EglRenderer(name: String) : VideoSink {
          }
 
          this.logD("Initializing EglRenderer");
-         val var6: java.lang.String = this.name;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append(var6);
-         var4.append("EglRenderer");
-         val var5: HandlerThread = new HandlerThread(var4.toString());
+         val var4: java.lang.String = this.name;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var4);
+         var6.append("EglRenderer");
+         val var5: HandlerThread = new HandlerThread(var6.toString());
          var5.start();
          val var16: Looper = var5.getLooper();
          val var8: HandlerWithExceptionCallback = new HandlerWithExceptionCallback(var16, new f(this));
@@ -737,7 +739,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 3a: monitorexit
       // 3b: return
       // 3c: astore 1
-      // 3d: goto b1
+      // 3d: goto af
       // 40: aload 0
       // 41: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.frameLock Ljava/lang/Object;
       // 44: astore 5
@@ -754,7 +756,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 5a: istore 3
       // 5b: goto 64
       // 5e: astore 1
-      // 5f: goto ac
+      // 5f: goto aa
       // 62: bipush 0
       // 63: istore 3
       // 64: aload 1
@@ -779,7 +781,7 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 85: aload 4
       // 87: monitorexit
       // 88: iload 3
-      // 89: ifeq ab
+      // 89: ifeq a9
       // 8c: aload 0
       // 8d: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.statisticsLock Ljava/lang/Object;
       // 90: astore 4
@@ -793,26 +795,26 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 9c: putfield com/discord/media/engine/video/egl_renderer/EglRenderer.framesDropped I
       // 9f: aload 4
       // a1: monitorexit
-      // a2: goto ab
-      // a5: astore 1
-      // a6: aload 4
-      // a8: monitorexit
-      // a9: aload 1
-      // aa: athrow
-      // ab: return
-      // ac: aload 5
-      // ae: monitorexit
-      // af: aload 1
-      // b0: athrow
-      // b1: aload 4
-      // b3: monitorexit
-      // b4: aload 1
-      // b5: athrow
-      // b6: astore 1
-      // b7: aload 4
-      // b9: monitorexit
-      // ba: aload 1
-      // bb: athrow
+      // a2: return
+      // a3: astore 1
+      // a4: aload 4
+      // a6: monitorexit
+      // a7: aload 1
+      // a8: athrow
+      // a9: return
+      // aa: aload 5
+      // ac: monitorexit
+      // ad: aload 1
+      // ae: athrow
+      // af: aload 4
+      // b1: monitorexit
+      // b2: aload 1
+      // b3: athrow
+      // b4: astore 1
+      // b5: aload 4
+      // b7: monitorexit
+      // b8: aload 1
+      // b9: athrow
    }
 
    public fun pauseVideo() {
@@ -877,18 +879,18 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 53: pop
       // 54: aload 5
       // 56: invokevirtual android/os/Handler.getLooper ()Landroid/os/Looper;
-      // 59: astore 6
-      // 5b: aload 6
+      // 59: astore 7
+      // 5b: aload 7
       // 5d: ldc_w "getLooper(...)"
       // 60: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 63: new com/discord/media/engine/video/egl_renderer/e
-      // 66: astore 7
-      // 68: aload 7
+      // 66: astore 6
+      // 68: aload 6
       // 6a: aload 0
-      // 6b: aload 6
+      // 6b: aload 7
       // 6d: invokespecial com/discord/media/engine/video/egl_renderer/e.<init> (Lcom/discord/media/engine/video/egl_renderer/EglRenderer;Landroid/os/Looper;)V
       // 70: aload 5
-      // 72: aload 7
+      // 72: aload 6
       // 74: invokevirtual android/os/Handler.post (Ljava/lang/Runnable;)Z
       // 77: pop
       // 78: aload 0
@@ -985,38 +987,38 @@ internal open class EglRenderer(name: String) : VideoSink {
       // 15: monitorenter
       // 16: aload 0
       // 17: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.renderThreadHandler Landroid/os/Handler;
-      // 1a: astore 4
-      // 1c: aload 4
-      // 1e: ifnull 42
-      // 21: aload 4
-      // 23: aload 0
-      // 24: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.eglSurfaceCreationRunnable Lcom/discord/media/engine/video/egl_renderer/EglRenderer$EglSurfaceCreation;
-      // 27: invokevirtual android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V
-      // 2a: new com/discord/media/engine/video/egl_renderer/a
-      // 2d: astore 3
-      // 2e: aload 3
-      // 2f: aload 0
-      // 30: aload 1
-      // 31: invokespecial com/discord/media/engine/video/egl_renderer/a.<init> (Lcom/discord/media/engine/video/egl_renderer/EglRenderer;Lkotlin/jvm/functions/Function0;)V
+      // 1a: astore 3
+      // 1b: aload 3
+      // 1c: ifnull 41
+      // 1f: aload 3
+      // 20: aload 0
+      // 21: getfield com/discord/media/engine/video/egl_renderer/EglRenderer.eglSurfaceCreationRunnable Lcom/discord/media/engine/video/egl_renderer/EglRenderer$EglSurfaceCreation;
+      // 24: invokevirtual android/os/Handler.removeCallbacks (Ljava/lang/Runnable;)V
+      // 27: new com/discord/media/engine/video/egl_renderer/a
+      // 2a: astore 4
+      // 2c: aload 4
+      // 2e: aload 0
+      // 2f: aload 1
+      // 30: invokespecial com/discord/media/engine/video/egl_renderer/a.<init> (Lcom/discord/media/engine/video/egl_renderer/EglRenderer;Lkotlin/jvm/functions/Function0;)V
+      // 33: aload 3
       // 34: aload 4
-      // 36: aload 3
-      // 37: invokevirtual android/os/Handler.postAtFrontOfQueue (Ljava/lang/Runnable;)Z
-      // 3a: pop
-      // 3b: aload 2
-      // 3c: monitorexit
-      // 3d: return
-      // 3e: astore 1
-      // 3f: goto 4c
-      // 42: aload 2
-      // 43: monitorexit
-      // 44: aload 1
-      // 45: invokeinterface kotlin/jvm/functions/Function0.invoke ()Ljava/lang/Object; 1
-      // 4a: pop
-      // 4b: return
-      // 4c: aload 2
-      // 4d: monitorexit
-      // 4e: aload 1
-      // 4f: athrow
+      // 36: invokevirtual android/os/Handler.postAtFrontOfQueue (Ljava/lang/Runnable;)Z
+      // 39: pop
+      // 3a: aload 2
+      // 3b: monitorexit
+      // 3c: return
+      // 3d: astore 1
+      // 3e: goto 4b
+      // 41: aload 2
+      // 42: monitorexit
+      // 43: aload 1
+      // 44: invokeinterface kotlin/jvm/functions/Function0.invoke ()Ljava/lang/Object; 1
+      // 49: pop
+      // 4a: return
+      // 4b: aload 2
+      // 4c: monitorexit
+      // 4d: aload 1
+      // 4e: athrow
    }
 
    public fun setErrorCallback(errorCallback: ErrorCallback?) {
@@ -1167,18 +1169,15 @@ internal open class EglRenderer(name: String) : VideoSink {
       private const val USE_PRESENTATION_TIMESTAMP: Boolean
 
       private fun averageTimeAsString(sumTimeNs: Long, count: Int): String {
-         val var4: java.lang.String;
          if (var3 <= 0) {
-            var4 = "NA";
+            return "NA";
          } else {
             var1 = TimeUnit.NANOSECONDS.toMicros(var1 / (long)var3);
-            val var6: StringBuilder = new StringBuilder();
-            var6.append(var1);
-            var6.append(" us");
-            var4 = var6.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var1);
+            var4.append(" us");
+            return var4.toString();
          }
-
-         return var4;
       }
    }
 
@@ -1239,7 +1238,7 @@ internal open class EglRenderer(name: String) : VideoSink {
          // 37: invokeinterface org/webrtc/EglBase.createSurface (Landroid/view/Surface;)V 2
          // 3c: goto 54
          // 3f: astore 2
-         // 40: goto 8d
+         // 40: goto 8f
          // 43: aload 2
          // 44: instanceof android/graphics/SurfaceTexture
          // 47: ifeq 64
@@ -1256,30 +1255,30 @@ internal open class EglRenderer(name: String) : VideoSink {
          // 62: monitorexit
          // 63: return
          // 64: new java/lang/IllegalStateException
-         // 67: astore 4
-         // 69: new java/lang/StringBuilder
-         // 6c: astore 3
-         // 6d: aload 3
-         // 6e: invokespecial java/lang/StringBuilder.<init> ()V
-         // 71: aload 3
-         // 72: ldc "Invalid surface: "
-         // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-         // 77: pop
-         // 78: aload 3
-         // 79: aload 2
-         // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
-         // 7d: pop
-         // 7e: aload 4
-         // 80: aload 3
-         // 81: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-         // 84: invokevirtual java/lang/Object.toString ()Ljava/lang/String;
-         // 87: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
-         // 8a: aload 4
-         // 8c: athrow
-         // 8d: aload 0
-         // 8e: monitorexit
-         // 8f: aload 2
-         // 90: athrow
+         // 67: astore 3
+         // 68: new java/lang/StringBuilder
+         // 6b: astore 4
+         // 6d: aload 4
+         // 6f: invokespecial java/lang/StringBuilder.<init> ()V
+         // 72: aload 4
+         // 74: ldc "Invalid surface: "
+         // 76: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+         // 79: pop
+         // 7a: aload 4
+         // 7c: aload 2
+         // 7d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+         // 80: pop
+         // 81: aload 3
+         // 82: aload 4
+         // 84: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+         // 87: invokevirtual java/lang/Object.toString ()Ljava/lang/String;
+         // 8a: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/String;)V
+         // 8d: aload 3
+         // 8e: athrow
+         // 8f: aload 0
+         // 90: monitorexit
+         // 91: aload 2
+         // 92: athrow
       }
 
       public fun setSurface(surface: Any?) {

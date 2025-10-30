@@ -46,13 +46,13 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.tag;
-      val var1: java.util.Map = this.data;
+      val var1: java.lang.String = this.tag;
+      val var3: java.util.Map = this.data;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ShortcutData(tag=");
-      var2.append(var3);
-      var2.append(", data=");
       var2.append(var1);
+      var2.append(", data=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -68,10 +68,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var6: java.util.List = CollectionsKt.c();
 
          for (Entry var12 : var5.entrySet()) {
-            var4 = var12.getKey() as java.lang.String;
+            val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var6.add(var4);
+               var6.add(var9);
                var6.add(var13);
             }
          }
@@ -81,7 +81,6 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
       }
 
       public fun Intent.getShortcutIntentData(): ShortcutData? {
-         val var10: ShortcutData;
          if (var1.hasExtra("discord_shortcut")) {
             val var3: java.lang.String = var1.getStringExtra("discord_shortcut_tag");
             var var2: java.lang.String = var3;
@@ -89,7 +88,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = O.c();
+            val var10: java.util.Map = n0.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
                val var7: Sequence = k.J(var6);
@@ -98,19 +97,17 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
                         val var4: java.lang.String = var5.get(0) as java.lang.String;
-                        val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        var11.put(var4, var12);
+                        val var11: java.lang.String = var5.get(1) as java.lang.String;
+                        var10.put(var4, var11);
                      }
                   }
                }
             }
 
-            var10 = new ShortcutData(var2, O.b(var11));
+            return new ShortcutData(var2, n0.b(var10));
          } else {
-            var10 = null;
+            return null;
          }
-
-         return var10;
       }
    }
 }

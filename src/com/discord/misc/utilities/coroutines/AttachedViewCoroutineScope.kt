@@ -2,10 +2,10 @@ package com.discord.misc.utilities.coroutines
 
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
+import jp.r0
 import kotlin.coroutines.CoroutineContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.v
-import mc.S
 
 public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    public open val coroutineContext: CoroutineContext
@@ -32,6 +32,6 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    }
 
    public fun cancelAllWork(message: String, cause: Throwable? = null) {
-      v.g(this.getCoroutineContext(), S.a(var1, var2));
+      v.g(this.getCoroutineContext(), r0.a(var1, var2));
    }
 }

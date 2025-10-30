@@ -1,6 +1,5 @@
 package com.discord.core.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.core.R;
 import com.discord.progress_dots.ProgressDots;
 import com.google.android.material.button.MaterialButton;
+import e4.a;
 
 public final class DcdButtonBinding implements ViewBinding {
    @NonNull
@@ -34,12 +34,12 @@ public final class DcdButtonBinding implements ViewBinding {
       MaterialButton var4 = (MaterialButton)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.loading_dots;
-         ProgressDots var2 = (ProgressDots)a.a(var0, var1);
-         if (var2 != null) {
+         ProgressDots var3 = (ProgressDots)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.progress;
-            ProgressBar var3 = (ProgressBar)a.a(var0, var1);
-            if (var3 != null) {
-               return new DcdButtonBinding(var0, var4, var2, var3);
+            ProgressBar var2 = (ProgressBar)a.a(var0, var1);
+            if (var2 != null) {
+               return new DcdButtonBinding(var0, var4, var3, var2);
             }
          }
       }

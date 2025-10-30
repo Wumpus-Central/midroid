@@ -93,7 +93,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         mc.f.d(
+         jp.f.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,
@@ -144,7 +144,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         mc.f.d(
+         jp.f.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,

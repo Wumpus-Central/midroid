@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {

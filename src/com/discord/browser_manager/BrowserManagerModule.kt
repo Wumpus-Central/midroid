@@ -1,11 +1,11 @@
 package com.discord.browser_manager
 
-import Ja.v
 import android.content.Context
 import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import fm.v
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec(var1) {
    public final val reactContext: ReactApplicationContext
@@ -31,11 +31,11 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = StringsKt.toIntOrNull(var2);
          if (var3 != null) {
-            return O.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return n0.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return O.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return n0.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {
@@ -49,9 +49,9 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
    }
 
    public override fun openInChromeURL(url: String, promise: Promise) {
-      val var4: BrowserManager = BrowserManager.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var4.tryOpenUrlExternally(var3, var1, new d(var2));
+      val var3: BrowserManager = BrowserManager.INSTANCE;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      var3.tryOpenUrlExternally(var4, var1, new d(var2));
    }
 
    public override fun selectBrowser(browser: Double) {
@@ -62,9 +62,9 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
             var4.append("Unknown browser id provided: ");
             var4.append(var1);
             throw new IllegalArgumentException(var4.toString());
+         } else {
+            Cache.Companion.get().setItem("SELECTED_BROWSER", java.lang.String.valueOf(var1));
          }
-
-         Cache.Companion.get().setItem("SELECTED_BROWSER", java.lang.String.valueOf(var1));
       } else {
          Cache.Companion.get().setItem("SELECTED_BROWSER", "1");
       }

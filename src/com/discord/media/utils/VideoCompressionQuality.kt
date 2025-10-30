@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = Pa.a.a(var0);
+      $ENTRIES = lm.a.a(var0);
    }
 
    init {
@@ -59,13 +59,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
             break;
          }
 
-         val var6: VideoCompressionQuality = var4 as VideoCompressionQuality;
-         var var5: VideoCompressionQuality = var4 as VideoCompressionQuality;
-         if (var6 == null) {
-            var5 = VideoCompressionQuality.None;
-         }
-
-         return var5;
+         return if (var4 as VideoCompressionQuality == null) VideoCompressionQuality.None else var4 as VideoCompressionQuality;
       }
    }
 }

@@ -1,12 +1,12 @@
 package com.discord.fastest_list.android.placeholder
 
-import Ja.p
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
+import fm.p
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder() {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
@@ -64,13 +64,13 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
          }
 
          val var6: Float = var5 / var2;
-         val var8: Int = this.config.getCount();
+         val var9: Int = this.config.getCount();
 
-         for (int var9 = 0; var9 < var8; var9++) {
+         for (int var8 = 0; var8 < var9; var8++) {
             if (this.config.getCount() == 1) {
                var5 = var6;
             } else {
-               var5 = var9 * (var3 + var6);
+               var5 = var8 * (var3 + var6);
             }
 
             var var10: Int = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$1[this.config.getType().ordinal()];

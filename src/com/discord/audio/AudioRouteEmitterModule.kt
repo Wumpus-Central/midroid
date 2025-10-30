@@ -1,6 +1,6 @@
 package com.discord.audio
 
-import Ja.v
+import android.content.Context
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -8,6 +8,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import fm.v
 import kotlin.jvm.internal.Intrinsics
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterModuleSpec(var1) {
@@ -23,12 +24,12 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
             val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var3.emitModuleEvent(var4, var2);
+            val var2: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var3.emitModuleEvent(var2, var4);
          }
 
          @Override
@@ -64,13 +65,13 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       super.initialize();
       var var3: Any;
       if (VERSION.SDK_INT >= 33) {
-         var3 = DiscordAudioManager2.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var3 = var3.getInstance(var2);
+         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
+         var3 = this.getReactApplicationContext();
+         var3 = var2.getInstance((Context)var3);
       } else {
-         val var4: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         var3 = DiscordAudioManager.Companion;
          val var5: ReactApplicationContext = this.getReactApplicationContext();
-         var3 = var4.getInstance(var5);
+         var3 = var3.getInstance(var5);
       }
 
       this.audioManager = var3;
@@ -100,50 +101,36 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    public companion object {
       private fun AndroidAudioDevice.toRouteTypeString(): String {
          val var2: Int = AudioRouteEmitterModule.Companion.WhenMappings.$EnumSwitchMapping$0[var1.getSimpleDeviceType().ordinal()];
-         val var4: java.lang.String;
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  if (var2 != 4) {
-                     var4 = "Unknown";
-                  } else {
-                     var4 = "WiredHeadset";
-                  }
+                  return if (var2 != 4) "Unknown" else "WiredHeadset";
                } else {
-                  var4 = "Speaker";
+                  return "Speaker";
                }
             } else {
-               var4 = "Bluetooth";
+               return "Bluetooth";
             }
          } else {
-            var4 = "Receiver";
+            return "Receiver";
          }
-
-         return var4;
       }
 
       private fun SimpleDeviceType.toRouteTypeString(): String {
          val var2: Int = AudioRouteEmitterModule.Companion.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
-         val var3: java.lang.String;
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  if (var2 != 4) {
-                     var3 = "Unknown";
-                  } else {
-                     var3 = "WiredHeadset";
-                  }
+                  return if (var2 != 4) "Unknown" else "WiredHeadset";
                } else {
-                  var3 = "Speaker";
+                  return "Speaker";
                }
             } else {
-               var3 = "Bluetooth";
+               return "Bluetooth";
             }
          } else {
-            var3 = "Receiver";
+            return "Receiver";
          }
-
-         return var3;
       }
    }
 }

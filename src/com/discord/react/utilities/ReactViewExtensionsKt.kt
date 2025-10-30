@@ -2,7 +2,6 @@
 
 package com.discord.react.utilities
 
-import Ja.l
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode
@@ -10,6 +9,7 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
+import fm.l
 import java.lang.reflect.Method
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -37,13 +37,8 @@ private fun ReactContext.getUIImplementation(): UIImplementation {
 }
 
 private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
-   val var4: Any = getViewOperationQueueMethod().invoke(var0, null);
-   var var3: UIViewOperationQueue = null;
-   if (var4 is UIViewOperationQueue) {
-      var3 = var4 as UIViewOperationQueue;
-   }
-
-   return var3;
+   val var1: Any = getViewOperationQueueMethod().invoke(var0, null);
+   return var1 as? UIViewOperationQueue;
 }
 
 public fun ReactContext.queueManualLayout(viewId: Int) {
@@ -56,11 +51,11 @@ fun `queueManualLayout$lambda$3`(var0: ReactContext, var1: Int) {
    val var2: UIImplementation = getUIImplementation(var0);
    val var4: ReactShadowNode = var2.resolveShadowNode(var1);
    if (var4 != null) {
-      val var3: UIViewOperationQueue = getUIViewOperationQueue(var2);
-      if (var3 != null) {
-         val var5: ReactShadowNode = var4.getParent();
-         var3.enqueueUpdateLayout(
-            var5.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight(), YogaDirection.e
+      val var5: UIViewOperationQueue = getUIViewOperationQueue(var2);
+      if (var5 != null) {
+         val var3: ReactShadowNode = var4.getParent();
+         var5.enqueueUpdateLayout(
+            var3.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight(), YogaDirection.e
          );
       }
    }

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.roleicons
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
@@ -90,22 +90,22 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    public override fun toString(): String {
       val var6: java.lang.String = this.source;
       val var2: java.lang.String = this.unicodeEmoji;
-      val var5: java.lang.String = this.name;
+      val var4: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var3: java.lang.String = this.alt;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleIcon(source=");
-      var4.append(var6);
-      var4.append(", unicodeEmoji=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var5);
-      var4.append(", size=");
-      var4.append(var1);
-      var4.append(", alt=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.alt;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleIcon(source=");
+      var3.append(var6);
+      var3.append(", unicodeEmoji=");
+      var3.append(var2);
+      var3.append(", name=");
+      var3.append(var4);
+      var3.append(", size=");
+      var3.append(var1);
+      var3.append(", alt=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

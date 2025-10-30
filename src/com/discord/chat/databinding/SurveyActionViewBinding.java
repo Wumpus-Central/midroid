@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
+import e4.a;
 
 public final class SurveyActionViewBinding implements ViewBinding {
    @NonNull
@@ -37,18 +37,18 @@ public final class SurveyActionViewBinding implements ViewBinding {
    @NonNull
    public static SurveyActionViewBinding bind(@NonNull View var0) {
       int var1 = R.id.chat_list_adapter_item_text_feedback;
-      SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.chat_list_feedback_icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.survey_background;
-            LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-            if (var5 != null) {
+            LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.survey_card;
-               CardView var4 = (CardView)a.a(var0, var1);
-               if (var4 != null) {
-                  return new SurveyActionViewBinding(var0, var3, var2, var5, var4);
+               CardView var5 = (CardView)a.a(var0, var1);
+               if (var5 != null) {
+                  return new SurveyActionViewBinding(var0, var2, var3, var4, var5);
                }
             }
          }

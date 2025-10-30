@@ -19,7 +19,7 @@ public class KeyCommandsViewManager : ViewGroupManager<ReactViewGroup>, KeyComma
       return this.delegate;
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "KeyCommandsView";
    }
 

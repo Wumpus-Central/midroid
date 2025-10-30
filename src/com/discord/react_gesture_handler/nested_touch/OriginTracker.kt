@@ -12,14 +12,7 @@ internal class OriginTracker(touchSlop: Int) {
    }
 
    private fun com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin.hasOriginMoved(x: Float, y: Float): Boolean {
-      val var4: Boolean;
-      if (!(Math.abs(var2 - var1.getXOrigin()) > this.touchSlop) && !(Math.abs(var3 - var1.getYOrigin()) > this.touchSlop)) {
-         var4 = false;
-      } else {
-         var4 = true;
-      }
-
-      return var4;
+      return Math.abs(var2 - var1.getXOrigin()) > this.touchSlop || Math.abs(var3 - var1.getYOrigin()) > this.touchSlop;
    }
 
    public fun cleanUp() {
@@ -90,13 +83,13 @@ internal class OriginTracker(touchSlop: Int) {
       }
 
       public override fun toString(): String {
-         val var2: Float = this.xOrigin;
-         val var1: Float = this.yOrigin;
+         val var1: Float = this.xOrigin;
+         val var2: Float = this.yOrigin;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Origin(xOrigin=");
-         var3.append(var2);
-         var3.append(", yOrigin=");
          var3.append(var1);
+         var3.append(", yOrigin=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

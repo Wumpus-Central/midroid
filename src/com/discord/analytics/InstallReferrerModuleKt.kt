@@ -2,9 +2,9 @@
 
 package com.discord.analytics
 
-import Oa.b
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
+import km.b
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
@@ -30,7 +30,7 @@ private suspend fun InstallReferrerClient.await(): Int {
 
       @Override
       public void onInstallReferrerServiceDisconnected() {
-         if (this.$continuation.c()) {
+         if (this.$continuation.b()) {
             a.a(this.$continuation, null, 1, null);
          }
       }
@@ -40,7 +40,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.b(
+   var2.g(
       new Function1<java.lang.Throwable, Unit>(var0) {
          final InstallReferrerClient $this_await;
 
@@ -51,11 +51,11 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var2: InstallReferrerClient = this.$this_await;
+            val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var5: kotlin.Result.a = Result.e;
-               var2.endConnection();
+               val var2: kotlin.Result.a = Result.e;
+               var5.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
                val var6: kotlin.Result.a = Result.e;
@@ -68,24 +68,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var3: kotlin.Result.a = Result.e;
+      val var10: kotlin.Result.a = Result.e;
       var0.startConnection(var4);
-      var8 = Result.b(Unit.a);
+      var7 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: kotlin.Result.a = Result.e;
-      var8 = Result.b(c.a(var5));
+      val var3: kotlin.Result.a = Result.e;
+      var7 = Result.b(c.a(var5));
       break label20;
    }
 
-   val var9: java.lang.Throwable = Result.e(var8);
-   if (var9 != null) {
-      var2.resumeWith(Result.b(c.a(var9)));
+   val var8: java.lang.Throwable = Result.e(var7);
+   if (var8 != null) {
+      var2.resumeWith(Result.b(c.a(var8)));
    }
 
-   val var10: Any = var2.z();
-   if (var10 === b.e()) {
+   val var9: Any = var2.z();
+   if (var9 === b.e()) {
       g.c(var1);
    }
 
-   return var10;
+   return var9;
 }

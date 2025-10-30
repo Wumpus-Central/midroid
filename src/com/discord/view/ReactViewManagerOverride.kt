@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewManager
 import io.sentry.e
-import io.sentry.p1
+import io.sentry.o3
 
 @ReactModule(canOverrideExistingModule = true, name = "RCTView")
 public class ReactViewManagerOverride : ReactViewManager {
@@ -49,7 +49,7 @@ public class ReactViewManagerOverride : ReactViewManager {
          var14.p("isParentClipping", var7);
          var14.p("isChildClipped", var5);
          var14.p("childClassType", var15);
-         p1.e(var14);
+         o3.e(var14);
       }
 
       super.addView(var1, var2, var3);

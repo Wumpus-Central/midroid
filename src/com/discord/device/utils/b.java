@@ -1,5 +1,5 @@
 package com.discord.device.utils;
 
 // $VF: synthetic class
-public abstract class b {
+public final class b {
 }

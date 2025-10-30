@@ -1,6 +1,5 @@
 package com.discord.codegen;
 
-import O4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.common.build.ReactBuildConfig;
@@ -8,6 +7,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import ma.a;
 
 public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeClientInfoModule";
@@ -34,12 +34,12 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
                "Version"
             )
          );
-         HashSet var3 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var2 = new HashSet(var4.keySet());
-         var2.removeAll(var1);
-         var2.removeAll(var3);
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
+         HashSet var2 = new HashSet<>(Arrays.asList("UserSettings"));
+         HashSet var3 = new HashSet(var4.keySet());
+         var3.removeAll(var1);
+         var3.removeAll(var2);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
          var1.removeAll(var4.keySet());

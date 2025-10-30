@@ -39,14 +39,14 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
       }
 
       if (this.discordFont.getMonospace()) {
-         val var12: DiscordFont;
+         val var14: DiscordFont;
          if (var9) {
-            var12 = DiscordFont.CodeBold;
+            var14 = DiscordFont.CodeBold;
          } else {
-            var12 = DiscordFont.CodeNormal;
+            var14 = DiscordFont.CodeNormal;
          }
 
-         var1.setTypeface(var12.typeface(this.context));
+         var1.setTypeface(var14.typeface(this.context));
       } else {
          label47: {
             if (var1.getTextSkewX() == 0.0F && !this.discordFont.getItalic() && (var3 and 2) == 0) {
@@ -71,9 +71,9 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
             var3 = Math.max(700, var4);
          }
 
-         val var14: DiscordFont = DiscordFont.Companion.findByStyle$default(var11, var3, var6, false, 4, null);
-         if (var14 != null) {
-            var7 = var14.typeface(this.context);
+         val var12: DiscordFont = DiscordFont.Companion.findByStyle$default(var11, var3, var6, false, 4, null);
+         if (var12 != null) {
+            var7 = var12.typeface(this.context);
          } else {
             var7 = null;
          }

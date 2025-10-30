@@ -26,12 +26,8 @@ internal fun InputStream.readNBytesCompat(n: Int): ByteArray {
 }
 
 internal fun InputStream.readOffset(): Long {
-   var var1: Long = ByteBuffer.wrap(readNBytesCompat(var0, 8)).order(ByteOrder.LITTLE_ENDIAN).getLong();
-   if (0L != (java.lang.Long.MIN_VALUE and var1)) {
-      var1 = -(var1 and java.lang.Long.MAX_VALUE);
-   }
-
-   return var1;
+   val var1: Long = ByteBuffer.wrap(readNBytesCompat(var0, 8)).order(ByteOrder.LITTLE_ENDIAN).getLong();
+   return if (0L == (java.lang.Long.MIN_VALUE and var1)) var1 else -(var1 and java.lang.Long.MAX_VALUE);
 }
 
 internal fun InputStream.skipNBytesCompat(n: Long) {

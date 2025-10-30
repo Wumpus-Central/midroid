@@ -1,7 +1,7 @@
 package com.discord.react.utilities
 
-import Ja.B
+import fm.b0
 
 public fun reactColorToAndroidColor(reactColor: Int): Int {
-   return (int)B.f((long)var0);
+   return (int)b0.d((long)var0);
 }

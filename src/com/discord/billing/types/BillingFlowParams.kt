@@ -10,22 +10,19 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SourceDebugExtension(["SMAP\nBillingFlowParams.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingFlowParams.kt\ncom/discord/billing/types/BillingFlowParams\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,172:1\n1#2:173\n295#3,2:174\n295#3,2:176\n295#3,2:181\n12834#4,3:178\n*S KotlinDebug\n*F\n+ 1 BillingFlowParams.kt\ncom/discord/billing/types/BillingFlowParams\n*L\n72#1:174,2\n74#1:176,2\n131#1:181,2\n109#1:178,3\n*E\n"])
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {
-      val var3: Byte;
       if (var1 == "P1M" && var2 == "P1Y") {
-         var3 = 12;
+         return 12;
       } else if (var1 == "P1M" && var2 == "P6M") {
-         var3 = 6;
+         return 6;
       } else if (var1 == "P1M" && var2 == "P3M") {
-         var3 = 3;
+         return 3;
       } else if (var1 == "P3M" && var2 == "P1Y") {
-         var3 = 4;
-      } else if ((!(var1 == "P3M") || !(var2 == "P6M")) && (!(var1 == "P6M") || !(var2 == "P1Y"))) {
-         var3 = 1;
+         return 4;
+      } else if (var1 == "P3M" && var2 == "P6M") {
+         return 2;
       } else {
-         var3 = 2;
+         return if (var1 == "P6M" && var2 == "P1Y") 2 else 1;
       }
-
-      return var3;
    }
 
    private fun getObfuscatedUserId(userId: String): String {
@@ -36,11 +33,11 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var1);
-         var5.append(var6);
-         var1 = var5.toString();
+         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var1);
+         var6.append(var5);
+         var1 = var6.toString();
       }
 
       return var1;
@@ -104,18 +101,11 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var4: Long = this.getPriceAmountMicros(var1);
-      val var6: Long = this.getPriceAmountMicros(var2);
-      val var8: java.lang.String = this.getPricingPhase(var1).b();
-      val var9: java.lang.String = this.getPricingPhase(var2).b();
-      val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
-         var3 = 6;
-      } else {
-         var3 = 2;
-      }
-
-      return var3;
+      val var5: Long = this.getPriceAmountMicros(var1);
+      val var3: Long = this.getPriceAmountMicros(var2);
+      val var7: java.lang.String = this.getPricingPhase(var1).b();
+      val var8: java.lang.String = this.getPricingPhase(var2).b();
+      return if (var3 / this.calculateStandardizedUnits(var7, var8) <= var5) 6 else 2;
    }
 
    public fun create(productDetails: List<ProductDetails>?, productId: String, productIdOld: String?, purchaseToken: String?, userId: String): com.android.billingclient.api.BillingFlowParams? {
@@ -266,13 +256,13 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  var2 = var20.d();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Could not find offer token for productId: ");
-                  var18.append(var2);
-                  var18.append(" offerId: ");
-                  var18.append(var6);
-                  throw new AssertionError(var18.toString());
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
                var25.b(var13);

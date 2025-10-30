@@ -4,7 +4,7 @@ import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView.Emoji
 import com.discord.reactions.ReactionView.Emoji.DefaultImpls
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) : Emoji {
@@ -91,8 +91,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var1 = this.name.hashCode();
       }
 
-      val var5: Int = this.src.hashCode();
-      val var4: Int = this.displayName.hashCode();
+      val var4: Int = this.src.hashCode();
+      val var5: Int = this.displayName.hashCode();
       val var2: Int;
       if (this.id == null) {
          var2 = 0;
@@ -104,7 +104,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var3 = this.animated.hashCode();
       }
 
-      return (((var1 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var3;
+      return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
    fun renderable(): RenderableEmoji {
@@ -112,22 +112,22 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
+      val var5: java.lang.String = this.name;
       val var1: java.lang.String = this.src;
-      val var5: java.lang.String = this.displayName;
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.Boolean = this.animated;
+      val var2: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.id;
+      val var3: java.lang.Boolean = this.animated;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MessageReactionEmoji(name=");
-      var6.append(var2);
+      var6.append(var5);
       var6.append(", src=");
       var6.append(var1);
       var6.append(", displayName=");
-      var6.append(var5);
+      var6.append(var2);
       var6.append(", id=");
-      var6.append(var3);
-      var6.append(", animated=");
       var6.append(var4);
+      var6.append(", animated=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

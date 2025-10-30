@@ -1,6 +1,5 @@
 package com.discord.segmented.control.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.segmented.control.R;
+import e4.a;
 
 public final class SegmentedControlBinding implements ViewBinding {
    @NonNull

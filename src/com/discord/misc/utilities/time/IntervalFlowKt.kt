@@ -1,12 +1,12 @@
 package com.discord.misc.utilities.time
 
+import jp.i0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import mc.I
-import pc.e
+import mp.e
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
    return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
@@ -33,7 +33,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = Oa.b.e();
+         val var6: Any = km.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -51,7 +51,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
                   this.L$0 = var11;
                   this.label = 3;
                   var1 = var11;
-                  if (I.a(var3x, this) === var6) {
+                  if (i0.a(var3x, this) === var6) {
                      return var6;
                   }
                }
@@ -66,7 +66,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
             val var9: Long = this.$initialDelayMs;
             this.L$0 = var1;
             this.label = 1;
-            if (I.a(var9, this) === var6) {
+            if (i0.a(var9, this) === var6) {
                return var6;
             }
          }
@@ -77,14 +77,14 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
             this.L$0 = var1;
             this.label = 2;
             if (var1.emit(var7, this) === var6) {
-               return var6;
+               break;
             }
 
             var10 = this.$periodMs;
             this.L$0 = var1;
             this.label = 3;
             var1 = var1;
-         } while (I.a(var10, this) != var6);
+         } while (i0.a(var10, this) != var6);
 
          return var6;
       }
@@ -125,7 +125,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = Oa.b.e();
+         val var6: Any = km.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -143,7 +143,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
                   this.L$0 = var11;
                   this.label = 3;
                   var1 = var11;
-                  if (I.b(var3x, this) === var6) {
+                  if (i0.b(var3x, this) === var6) {
                      return var6;
                   }
                }
@@ -158,7 +158,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
             val var9: Long = this.$initialDelay;
             this.L$0 = var1;
             this.label = 1;
-            if (I.b(var9, this) === var6) {
+            if (i0.b(var9, this) === var6) {
                return var6;
             }
          }
@@ -169,14 +169,14 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
             this.L$0 = var1;
             this.label = 2;
             if (var1.emit(var7, this) === var6) {
-               return var6;
+               break;
             }
 
             var10 = this.$period;
             this.L$0 = var1;
             this.label = 3;
             var1 = var1;
-         } while (I.b(var10, this) != var6);
+         } while (i0.b(var10, this) != var6);
 
          return var6;
       }

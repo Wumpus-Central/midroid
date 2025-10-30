@@ -2,14 +2,14 @@ package com.discord.chat.presentation.list;
 
 import android.graphics.Canvas;
 import android.util.Pair;
-import androidx.core.view.Z;
+import androidx.core.view.h0;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 abstract class ChatListCallback extends androidx.recyclerview.widget.e {
    @Override
    final int getAbsoluteMovementFlags(RecyclerView var1, RecyclerView.ViewHolder var2) {
-      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), Z.z(var1));
+      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), h0.z(var1));
    }
 
    public Pair getEffectiveDxDy(float var1, float var2) {
@@ -17,14 +17,7 @@ abstract class ChatListCallback extends androidx.recyclerview.widget.e {
    }
 
    boolean hasDragFlag(RecyclerView var1, RecyclerView.ViewHolder var2) {
-      boolean var3;
-      if ((this.getAbsoluteMovementFlags(var1, var2) & 0xFF0000) != 0) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      return var3;
+      return (this.getAbsoluteMovementFlags(var1, var2) & 0xFF0000) != 0;
    }
 
    void onDraw(

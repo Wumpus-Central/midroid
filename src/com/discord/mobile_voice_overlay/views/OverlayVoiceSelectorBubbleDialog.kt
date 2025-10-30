@@ -87,7 +87,6 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
 
    private fun bindData(): Unit? {
       val var4: MobileVoiceOverlayData = this.data;
-      val var7: Unit;
       if (this.data != null) {
          val var3: Boolean = this.data.getChannelSelectorResults().isEmpty();
          val var5: TextView = this.binding.emptyResults;
@@ -99,23 +98,21 @@ public class OverlayVoiceSelectorBubbleDialog : OverlayDialog {
          }
 
          var5.setVisibility(var1);
-         val var8: RecyclerView = this.binding.resultsRv;
+         val var7: RecyclerView = this.binding.resultsRv;
          var1 = 8;
          if (!var3) {
             var1 = 0;
          }
 
-         var8.setVisibility(var1);
+         var7.setVisibility(var1);
          if (!var3) {
             this.adapter.setResults(var4.getChannelSelectorResults());
          }
 
-         var7 = Unit.a;
+         return Unit.a;
       } else {
-         var7 = null;
+         return null;
       }
-
-      return var7;
    }
 
    @JvmStatic

@@ -1,11 +1,13 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-// $VF: synthetic class
-public final class j implements Runnable {
-   public final boolean d;
+import com.discord.media_player.MediaPlayer.Event;
+import kotlin.jvm.functions.Function1;
 
-   @Override
-   public final void run() {
-      AudioPlayerModule.a(this.d);
+// $VF: synthetic class
+public final class j implements Function1 {
+   public final AudioPlayerView d;
+
+   public final Object invoke(Object var1) {
+      return AudioPlayerView.d(this.d, (Event)var1);
    }
 }

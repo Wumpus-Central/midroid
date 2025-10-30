@@ -1,5 +1,13 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
+import com.discord.chat.databinding.AudioPlayerViewBinding;
+import kotlin.jvm.functions.Function0;
+
 // $VF: synthetic class
-public abstract class y {
+public final class y implements Function0 {
+   public final AudioPlayerViewBinding d;
+
+   public final Object invoke() {
+      return AudioPlayerWipeAnimatorManager.d(this.d);
+   }
 }

@@ -1,15 +1,13 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-import com.discord.react_strings.RenderContext;
-import kotlin.jvm.functions.Function1;
+import android.content.Context;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class p implements Function1 {
-   public final AudioPlayerView d;
-   public final int e;
-   public final int i;
+public final class p implements Function0 {
+   public final Context d;
 
-   public final Object invoke(Object var1) {
-      return AudioPlayerView.j(this.d, this.e, this.i, (RenderContext)var1);
+   public final Object invoke() {
+      return AudioPlayerView.k(this.d);
    }
 }

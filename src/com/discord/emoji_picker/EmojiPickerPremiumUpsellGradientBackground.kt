@@ -6,7 +6,7 @@ import android.graphics.LinearGradient
 import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import android.view.View
-import androidx.core.view.f0
+import androidx.core.view.n0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -31,7 +31,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun drawGradient(c: Canvas, parent: RecyclerView) {
-      val var9: java.util.Iterator = f0.a(var2).iterator();
+      val var9: java.util.Iterator = n0.a(var2).iterator();
       var var7: Int = 0;
       var var5: Float = -1.0F;
       var var4: Float = -1.0F;
@@ -92,31 +92,16 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun ViewHolder.isInsidePremiumRoadblock(): Boolean {
-      var var4: RecyclerView.ViewHolder = var1;
+      var var2: RecyclerView.ViewHolder = var1;
       if (var1 !is EmojiPickerViewHolder) {
-         var4 = null;
+         var2 = null;
       }
 
-      val var5: EmojiPickerViewHolder = var4 as EmojiPickerViewHolder;
-      var var2: Boolean = false;
-      if (var5 != null) {
-         var2 = false;
-         if (EmojiPickerViewHolder.Companion.isNitroLocked(var5)) {
-            var2 = true;
-         }
-      }
-
-      return var2;
+      return var2 as EmojiPickerViewHolder != null && EmojiPickerViewHolder.Companion.isNitroLocked(var2 as EmojiPickerViewHolder);
    }
 
    private fun RecyclerView.isLastChildIndex(index: Int): Boolean {
-      val var3: Int = var1.getChildCount();
-      var var4: Boolean = true;
-      if (var3 - 1 != var2) {
-         var4 = false;
-      }
-
-      return var4;
+      return var1.getChildCount() - 1 == var2;
    }
 
    public override fun onDraw(c: Canvas, parent: RecyclerView, state: State) {
@@ -168,18 +153,14 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       }
 
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
-         val var4: IntArray;
-         if (var2) {
-            var4 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
-         } else {
-            var4 = new int[]{
+         return if (var2)
+            new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)}
+            else
+            new int[]{
                var1.getColor(color.premium_tier_2_purple_for_gradients),
                var1.getColor(color.premium_tier_2_purple_for_gradients_2),
                var1.getColor(color.premium_tier_2_pink_for_gradients)
             };
-         }
-
-         return var4;
       }
    }
 }

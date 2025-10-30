@@ -1,11 +1,11 @@
 package com.discord.react.utilities
 
-import Ja.p
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
+import fm.p
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.Intrinsics
@@ -13,7 +13,7 @@ import kotlin.jvm.internal.MagicApiIntrinsics
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONObject
-import wc.w
+import tp.w
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
 
@@ -23,15 +23,7 @@ fun a(var0: JsonBuilder): Unit {
 }
 
 public fun ReadableMap?.getBoolean(key: String, default: Boolean = false): Boolean {
-   var var3: Boolean = var2;
-   if (var0 != null) {
-      var3 = var2;
-      if (var0.hasKey(var1)) {
-         var3 = var0.getBoolean(var1);
-      }
-   }
-
-   return var3;
+   return if (var0 != null && var0.hasKey(var1)) var0.getBoolean(var1) else var2;
 }
 
 @JvmSynthetic
@@ -69,23 +61,11 @@ public fun ReadableMap.getNonNullString(key: String): String {
 }
 
 public fun ReadableMap.getNonNullString(key: String, default: String): String {
-   if (var0.hasKey(var1)) {
-      var2 = getNonNullString(var0, var1);
-   }
-
-   return var2;
+   return if (var0.hasKey(var1)) getNonNullString(var0, var1) else var2;
 }
 
 public fun ReadableMap?.getNullableDouble(key: String, default: Double? = null): Double? {
-   var var3: java.lang.Double = var2;
-   if (var0 != null) {
-      var3 = var2;
-      if (var0.hasKey(var1)) {
-         var3 = var0.getDouble(var1);
-      }
-   }
-
-   return var3;
+   return if (var0 != null && var0.hasKey(var1)) var0.getDouble(var1) else var2;
 }
 
 @JvmSynthetic
@@ -98,15 +78,7 @@ fun `getNullableDouble$default`(var0: ReadableMap, var1: java.lang.String, var2:
 }
 
 public fun ReadableMap?.getNullableInt(key: String, default: Int? = null): Int? {
-   var var3: Int = var2;
-   if (var0 != null) {
-      var3 = var2;
-      if (var0.hasKey(var1)) {
-         var3 = var0.getInt(var1);
-      }
-   }
-
-   return var3;
+   return if (var0 != null && var0.hasKey(var1)) var0.getInt(var1) else var2;
 }
 
 @JvmSynthetic
@@ -128,14 +100,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 }
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
-   val var3: WritableNativeMap = new WritableNativeMap();
+   val var4: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var3;
+   return var4;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -157,48 +129,46 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
       var0.putArray(var1, NativeArrayExtensionsKt.toNativeArray(var2 as IntArray));
    } else if (var2 is java.lang.Long) {
       var0.putDouble(var1, (double)(var2 as java.lang.Number).longValue());
-   } else {
-      if (var2 != null) {
-         throw new IllegalArgumentException("Failed requirement.");
-      }
-
+   } else if (var2 == null) {
       var0.putNull(var1);
+   } else {
+      throw new IllegalArgumentException("Failed requirement.");
    }
 }
 
 public fun ReadableMap.toJson(): JSONObject {
-   val var1: JSONObject = new JSONObject();
-   val var2: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var2: JSONObject = new JSONObject();
+   val var3: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var2.hasNextKey()) {
-      val var3: java.lang.String = var2.nextKey();
-      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
+   while (var3.hasNextKey()) {
+      val var1: java.lang.String = var3.nextKey();
+      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()]) {
          case 1:
-            var1.put(var3, JSONObject.NULL);
+            var2.put(var1, JSONObject.NULL);
             break;
          case 2:
-            var1.put(var3, var0.getBoolean(var3));
+            var2.put(var1, var0.getBoolean(var1));
             break;
          case 3:
-            var1.put(var3, var0.getDouble(var3));
+            var2.put(var1, var0.getDouble(var1));
             break;
          case 4:
-            var1.put(var3, var0.getString(var3));
+            var2.put(var1, var0.getString(var1));
             break;
          case 5:
-            val var6: ReadableMap = var0.getMap(var3);
-            var1.put(var3, toJson(var6));
+            val var6: ReadableMap = var0.getMap(var1);
+            var2.put(var1, toJson(var6));
             break;
          case 6:
-            val var5: ReadableArray = var0.getArray(var3);
-            var1.put(var3, NativeArrayExtensionsKt.toJson(var5));
+            val var5: ReadableArray = var0.getArray(var1);
+            var2.put(var1, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new p();
       }
    }
 
-   return var1;
+   return var2;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -209,18 +179,18 @@ public fun ReadableMap.toJsonString(): String {
 @JvmSynthetic
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    val var1: Json = getJson();
-   val var3: java.lang.String = toJsonString(var0);
-   val var2: Cc.b = var1.a();
+   val var2: java.lang.String = toJsonString(var0);
+   val var3: zp.b = var1.a();
    Intrinsics.reifiedOperationMarker(6, "T");
    MagicApiIntrinsics.voidMagicApiCall("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(w.c(var2, null), var3);
+   return (T)var1.b(w.d(var3, null), var2);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

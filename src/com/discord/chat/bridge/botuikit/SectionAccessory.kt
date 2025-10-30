@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m(with = SectionAccessory.Serializer::class)
 public sealed interface SectionAccessory<T extends Component> {
@@ -70,16 +70,14 @@ public sealed interface SectionAccessory<T extends Component> {
       }
 
       public open fun toValue(component: Component): SectionAccessory<*> {
-         val var2: Any;
          if (var1 is ButtonComponent) {
-            var2 = SectionAccessory.Button.box-impl(SectionAccessory.Button.constructor-impl(var1 as ButtonComponent));
-         } else if (var1 is ThumbnailDisplayComponent) {
-            var2 = SectionAccessory.Thumbnail.box-impl(SectionAccessory.Thumbnail.constructor-impl(var1 as ThumbnailDisplayComponent));
+            return SectionAccessory.Button.box-impl(SectionAccessory.Button.constructor-impl(var1 as ButtonComponent));
          } else {
-            var2 = new SectionAccessory.Unknown();
+            return (SectionAccessory<?>)(if (var1 is ThumbnailDisplayComponent)
+               SectionAccessory.Thumbnail.box-impl(SectionAccessory.Thumbnail.constructor-impl(var1 as ThumbnailDisplayComponent))
+               else
+               new SectionAccessory.Unknown());
          }
-
-         return (SectionAccessory<?>)var2;
       }
    }
 

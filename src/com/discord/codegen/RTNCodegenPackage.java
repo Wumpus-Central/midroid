@@ -9,10 +9,10 @@ import java.util.List;
 
 public class RTNCodegenPackage implements ReactPackage {
    public List<NativeModule> createNativeModules(ReactApplicationContext var1) {
-      return Collections.emptyList();
+      return Collections.EMPTY_LIST;
    }
 
    public List<ViewManager> createViewManagers(ReactApplicationContext var1) {
-      return Collections.emptyList();
+      return Collections.EMPTY_LIST;
    }
 }

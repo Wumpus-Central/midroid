@@ -37,22 +37,17 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    private fun getExistingProvider(context: Context): ComponentProvider? {
-      val var4: Pair = this.weakProvider;
-      var var2: ComponentProvider = null;
+      val var3: Pair = this.weakProvider;
       if (this.weakProvider != null) {
-         val var6: WeakReference = this.weakProvider.a() as WeakReference;
-         val var7: ComponentProvider = var4.b() as ComponentProvider;
-         val var5: Context = var6.get() as Context;
-         var2 = null;
-         if (var5 != null) {
-            var2 = null;
-            if (var5 === var1) {
-               var2 = var7;
-            }
+         val var2: WeakReference = this.weakProvider.a() as WeakReference;
+         val var5: ComponentProvider = var3.b() as ComponentProvider;
+         val var4: Context = var2.get() as Context;
+         if (var4 != null && var4 === var1) {
+            return var5;
          }
       }
 
-      return var2;
+      return null;
    }
 
    private fun getOrCreateComponentProvider(context: Context): ComponentProvider {
@@ -106,7 +101,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       // 36: aload 0
       // 37: aload 4
       // 39: aload 3
-      // 3a: invokestatic Ja/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+      // 3a: invokestatic fm/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
       // 3d: putfield com/discord/chat/presentation/list/ChatListViewManager.weakProvider Lkotlin/Pair;
       // 40: aload 2
       // 41: monitorexit
@@ -120,10 +115,9 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    public open fun addView(parent: ChatListView, child: View, index: Int) {
-      val var4: Boolean = var2 is TTIMeasurementView;
-      val var5: TTIMeasurementView = var2 as TTIMeasurementView;
+      val var4: TTIMeasurementView = var2 as TTIMeasurementView;
       (var2 as TTIMeasurementView).setMeasurementSent(true);
-      var1.setOnFirstDrawDoneCallback(new v(var5, var1));
+      var1.setOnFirstDrawDoneCallback(new v(var4, var1));
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatListView {

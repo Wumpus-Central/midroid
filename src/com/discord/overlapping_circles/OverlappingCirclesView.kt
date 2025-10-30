@@ -1,7 +1,5 @@
 package com.discord.overlapping_circles
 
-import Ja.l
-import Ja.o
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -18,7 +16,7 @@ import android.view.View.OnLayoutChangeListener
 import android.webkit.URLUtil
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.J
+import androidx.core.view.y
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -29,6 +27,8 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
+import fm.l
+import fm.o
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nOverlappingCirclesView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlappingCirclesView.kt\ncom/discord/overlapping_circles/OverlappingCirclesView\n+ 2 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n+ 3 Context.kt\nandroidx/core/content/ContextKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,287:1\n27#2:288\n51#3,9:289\n1872#4,3:298\n*S KotlinDebug\n*F\n+ 1 OverlappingCirclesView.kt\ncom/discord/overlapping_circles/OverlappingCirclesView\n*L\n65#1:288\n69#1:289,9\n92#1:298,3\n*E\n"])
@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var10: Context = this.getContext();
-               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var15: Context = this.getContext();
+               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
                val var9: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var10.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -131,12 +131,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
       if (var2) {
          val var18: Context = this.getContext();
-         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var11: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
          val var20: LayoutParams = new LayoutParams(-2, -1);
          var20.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var20);
+         this.addView(var11, var20);
       }
    }
 
@@ -178,7 +178,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.setPadding(var2, 0, var9, 0);
          this.setBackgroundColor(var5);
          ViewClippingUtilsKt.clipToCircle(this);
-         J.a(this, new Runnable(this, this) {
+         y.a(this, new Runnable(this, this) {
             final View $this_doOnPreDraw;
             final OverlappingCirclesView.OverflowItem this$0;
 
@@ -328,7 +328,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          // 1a: aload 1
          // 1b: aload 0
          // 1c: invokespecial com/discord/overlapping_circles/OverlappingCirclesView$PlaceholderItem.getSeparatorClipPath ()Landroid/graphics/Path;
-         // 1f: invokestatic com/discord/chat/presentation/list/x.a (Landroid/graphics/Canvas;Landroid/graphics/Path;)Z
+         // 1f: invokevirtual android/graphics/Canvas.clipOutPath (Landroid/graphics/Path;)Z
          // 22: pop
          // 23: goto 37
          // 26: astore 4

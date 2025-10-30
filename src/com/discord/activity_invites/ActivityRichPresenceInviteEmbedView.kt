@@ -1,6 +1,5 @@
 package com.discord.activity_invites
 
-import F3.f
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
@@ -27,6 +26,7 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import d8.f
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -72,8 +72,8 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          var2.setVisibility(0);
          val var7: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
 
-         for (RGBAColorModel var3 : var1) {
-            var7.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
+         for (RGBAColorModel var5 : var1) {
+            var7.add(Color.argb((int)(var5.getA() * (float)255), (int)var5.getR(), (int)var5.getG(), (int)var5.getB()));
          }
 
          val var8: IntArray = CollectionsKt.V0(var7);
@@ -115,7 +115,10 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          var4 = CollectionsKt.k();
       }
 
-      if (!var4.isEmpty()) {
+      if (var4.isEmpty()) {
+         val var8: OverlappingCirclesView = this.binding.partyAvatars;
+         var8.setVisibility(8);
+      } else {
          val var3: Int = Math.max(0, var2 - var4.size());
          val var5: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
          val var10: java.util.Iterator = var4.iterator();
@@ -133,9 +136,6 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          this.binding.partyAvatars.setItems(CollectionsKt.E0(var5, var11));
          val var7: OverlappingCirclesView = this.binding.partyAvatars;
          var7.setVisibility(0);
-      } else {
-         val var8: OverlappingCirclesView = this.binding.partyAvatars;
-         var8.setVisibility(8);
       }
    }
 

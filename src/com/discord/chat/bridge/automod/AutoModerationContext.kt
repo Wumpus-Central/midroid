@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.automod
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class AutoModerationContext(headerText: String,
@@ -141,47 +141,47 @@ public data class AutoModerationContext(headerText: String,
          var3 = this.actionsIconURL.hashCode();
       }
 
-      val var8: Int = this.actionsText.hashCode();
-      val var7: Int = this.feedbackText.hashCode();
-      val var9: Int = this.message.hashCode();
+      val var9: Int = this.actionsText.hashCode();
+      val var8: Int = this.feedbackText.hashCode();
+      val var7: Int = this.message.hashCode();
       if (this.notification != null) {
          var4 = this.notification.hashCode();
       }
 
-      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var7) * 31 + var9) * 31 + var4;
+      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var9) * 31 + var8) * 31 + var7) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.headerText;
-      val var6: java.lang.String = this.headerBadgeText;
-      val var3: java.lang.String = this.ruleDisplayText;
+      val var3: java.lang.String = this.headerText;
+      val var7: java.lang.String = this.headerBadgeText;
+      val var8: java.lang.String = this.ruleDisplayText;
       val var1: java.lang.String = this.keywordDisplayText;
-      val var5: java.lang.String = this.actionsIconURL;
-      val var10: java.lang.String = this.actionsText;
-      val var8: java.lang.String = this.feedbackText;
-      val var9: FlaggedMessageEmbed = this.message;
+      val var4: java.lang.String = this.actionsIconURL;
+      val var9: java.lang.String = this.actionsText;
+      val var10: java.lang.String = this.feedbackText;
+      val var5: FlaggedMessageEmbed = this.message;
       val var2: AutoModerationNotification = this.notification;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("AutoModerationContext(headerText=");
-      var7.append(var4);
-      var7.append(", headerBadgeText=");
-      var7.append(var6);
-      var7.append(", ruleDisplayText=");
-      var7.append(var3);
-      var7.append(", keywordDisplayText=");
-      var7.append(var1);
-      var7.append(", actionsIconURL=");
-      var7.append(var5);
-      var7.append(", actionsText=");
-      var7.append(var10);
-      var7.append(", feedbackText=");
-      var7.append(var8);
-      var7.append(", message=");
-      var7.append(var9);
-      var7.append(", notification=");
-      var7.append(var2);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("AutoModerationContext(headerText=");
+      var6.append(var3);
+      var6.append(", headerBadgeText=");
+      var6.append(var7);
+      var6.append(", ruleDisplayText=");
+      var6.append(var8);
+      var6.append(", keywordDisplayText=");
+      var6.append(var1);
+      var6.append(", actionsIconURL=");
+      var6.append(var4);
+      var6.append(", actionsText=");
+      var6.append(var9);
+      var6.append(", feedbackText=");
+      var6.append(var10);
+      var6.append(", message=");
+      var6.append(var5);
+      var6.append(", notification=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

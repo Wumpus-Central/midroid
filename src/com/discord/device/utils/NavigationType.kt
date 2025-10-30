@@ -16,7 +16,7 @@ private enum class NavigationType(value: Int) {
    fun {
       val var0: Array<NavigationType> = $values();
       $VALUES = var0;
-      $ENTRIES = Pa.a.a(var0);
+      $ENTRIES = lm.a.a(var0);
    }
 
    init {

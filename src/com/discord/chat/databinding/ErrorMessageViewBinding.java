@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
+import e4.a;
 
 public final class ErrorMessageViewBinding implements ViewBinding {
    @NonNull
@@ -32,12 +32,12 @@ public final class ErrorMessageViewBinding implements ViewBinding {
       TextView var2 = (TextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.header;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var4 = (TextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.see_more_button;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
-               return new ErrorMessageViewBinding(var0, var2, var3, var4);
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
+               return new ErrorMessageViewBinding(var0, var2, var4, var3);
             }
          }
       }

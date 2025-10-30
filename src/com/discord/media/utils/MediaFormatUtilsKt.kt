@@ -9,16 +9,16 @@ public final val mimeType: String?
    public final get() {
       label16:
       try {
-         val var1: kotlin.Result.a = Result.e;
-         var5 = Result.b(var0.getString("mime"));
+         val var5: kotlin.Result.a = Result.e;
+         var4 = Result.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: kotlin.Result.a = Result.e;
-         var5 = Result.b(kotlin.c.a(var2));
+         val var1: kotlin.Result.a = Result.e;
+         var4 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
-      var var6: Any = var5;
-      if (Result.g(var5)) {
+      var var6: Any = var4;
+      if (Result.g(var4)) {
          var6 = null;
       }
 
@@ -127,68 +127,36 @@ public final val level: Int?
 
 public final val profileName: String?
    public final get() {
-      val var3: java.lang.String = getMimeType(var0);
-      if (var3 == "video/avc") {
-         val var6: Int = getProfile(var0);
-         if (var6 != null && var6 == 1) {
+      val var1: java.lang.String = getMimeType(var0);
+      if (var1 == "video/avc") {
+         val var3: Int = getProfile(var0);
+         if (var3 != null && var3 == 1) {
             return "baseline";
+         } else if (var3 != null && var3 == 2) {
+            return "main";
+         } else if (var3 != null && var3 == 4) {
+            return "extended";
+         } else if (var3 != null && var3 == 8) {
+            return "high";
+         } else {
+            return if (var3 != null && var3 == 16) "high10" else "other";
          }
-
-         if (var6 == null || var6 != 2) {
-            if (var6 != null && var6 == 4) {
-               return "extended";
-            }
-
-            if (var6 != null && var6 == 8) {
-               return "high";
-            }
-
-            val var12: java.lang.String;
-            if (var6 == null) {
-               var12 = "other";
-            } else {
-               var12 = "other";
-               if (var6 == 16) {
-                  return "high10";
-               }
-            }
-
-            return var12;
+      } else if (var1 == "video/hevc") {
+         val var2: Int = getProfile(var0);
+         if (var2 != null && var2 == 1) {
+            return "main";
+         } else if (var2 != null && var2 == 2) {
+            return "main10";
+         } else if (var2 != null && var2 == 4) {
+            return "mainstill";
+         } else if (var2 != null && var2 == 4096) {
+            return "main10hdr";
+         } else {
+            return if (var2 != null && var2 == 8192) "main10hdrplus" else "other";
          }
       } else {
-         if (!(var3 == "video/hevc")) {
-            return null;
-         }
-
-         val var5: Int = getProfile(var0);
-         if (var5 == null || var5 != 1) {
-            if (var5 != null && var5 == 2) {
-               return "main10";
-            }
-
-            if (var5 != null && var5 == 4) {
-               return "mainstill";
-            }
-
-            if (var5 != null && var5 == 4096) {
-               return "main10hdr";
-            }
-
-            val var4: java.lang.String;
-            if (var5 == null) {
-               var4 = "other";
-            } else {
-               var4 = "other";
-               if (var5 == 8192) {
-                  return "main10hdrplus";
-               }
-            }
-
-            return var4;
-         }
+         return null;
       }
-
-      return "main";
    }
 
 

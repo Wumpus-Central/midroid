@@ -72,7 +72,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var4;
       val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = Ja.l.b(new P());
+      this.forwardBarPaint$delegate = fm.l.b(new p0());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -97,11 +97,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : kotlin.sequences.k.M(androidx.core.view.f0.a(this))) {
-         val var1: View = var3.c() as View;
+      for (Pair var3 : kotlin.sequences.k.M(androidx.core.view.n0.a(this))) {
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -170,27 +170,27 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var12: MessageAccessoriesView.Companion = Companion;
       val var11: Resources = this.getResources();
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
-      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var13: java.util.Iterator = var5.iterator();
+         val var16: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var13.hasNext()) {
+            if (!var16.hasNext()) {
                break;
             }
 
-            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var16.setShowThreadSpine(var9);
+      var13.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);
@@ -217,14 +217,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          if (var2.getContextType() === MessageContextType.SEARCH) {
             return 0;
          } else {
-            val var4: Int;
-            if (var3) {
-               var4 = var1.getDimensionPixelSize(R.dimen.message_horizontal_spacing);
-            } else {
-               var4 = var1.getDimensionPixelSize(R.dimen.message_start_guideline);
-            }
-
-            return var4;
+            return if (var3) var1.getDimensionPixelSize(R.dimen.message_horizontal_spacing) else var1.getDimensionPixelSize(R.dimen.message_start_guideline);
          }
       }
 

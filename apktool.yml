@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 304200
-  versionName: 304.0 - Alpha
+  versionCode: 304201
+  versionName: 304.1 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -111,9 +111,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/eb.b
-- META-INF/services/mc.z
-- META-INF/services/rc.t
+- META-INF/services/an.b
+- META-INF/services/jp.z
+- META-INF/services/op.t
 - META-INF/version-control-info.textproto
 - assets/com/appsflyer/internal/1ef4f10b9adfdad9a-
 - assets/com/appsflyer/internal/4c337fab34977e37d-

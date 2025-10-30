@@ -14,46 +14,34 @@ import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.TimeUnit
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nDeepLinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,119:1\n29#2:120\n*S KotlinDebug\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n*L\n37#1:120\n*E\n"])
+@SourceDebugExtension(["SMAP\nDeepLinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,130:1\n29#2:131\n*S KotlinDebug\n*F\n+ 1 DeepLinks.kt\ncom/discord/deep_link/DeepLinks\n*L\n28#1:131\n*E\n"])
 public object DeepLinks {
    private final var initialUrl: Pair<String, Boolean>?
 
-   private fun getDeepLinkDestinationWithAppsFlyerParam(deepLinkObj: DeepLink): String? {
-      val var4: java.lang.String = var1.getDeepLinkValue();
-      if (var4 == null) {
-         return null;
-      } else {
-         val var2: Boolean = var1.isDeferred() == java.lang.Boolean.TRUE;
-         val var3: java.lang.String = var1.getStringValue("host");
-         var var8: java.lang.String = var3;
-         if (var3 == null) {
-            var8 = "";
-         }
+   private fun getDeepLinkDestinationWithAppsFlyerParam(deepLinkDestination: String, fromAppsFlyer: Boolean): String {
+      val var3: Builder = Uri.parse(var1).buildUpon();
+      val var4: Uri = var3.build();
+      var3.clearQuery();
 
-         val var9: java.lang.String;
-         if (!var2 && !(var8 == "discordapp.onelink.me")) {
-            var9 = "false";
-         } else {
-            var9 = "true";
-         }
+      for (java.lang.String var6 : var4.getQueryParameterNames()) {
+         if (!(var6 == "fromAppsFlyer")) {
+            val var7: java.util.Iterator = var4.getQueryParameters(var6).iterator();
 
-         val var6: Builder = Uri.parse(var4).buildUpon();
-         val var5: Uri = var6.build();
-         var6.clearQuery();
-
-         for (java.lang.String var7 : var5.getQueryParameterNames()) {
-            if (!(var7 == "fromAppsFlyer")) {
-               val var10: java.util.Iterator = var5.getQueryParameters(var7).iterator();
-
-               while (var10.hasNext()) {
-                  var6.appendQueryParameter(var7, var10.next() as java.lang.String);
-               }
+            while (var7.hasNext()) {
+               var3.appendQueryParameter(var6, var7.next() as java.lang.String);
             }
          }
-
-         var6.appendQueryParameter("fromAppsFlyer", var9);
-         return var6.toString();
       }
+
+      if (var2) {
+         var1 = "true";
+      } else {
+         var1 = "false";
+      }
+
+      var3.appendQueryParameter("fromAppsFlyer", var1);
+      var1 = var3.toString();
+      return var1;
    }
 
    public fun getInitialUrl(): Pair<String, Boolean>? {
@@ -77,22 +65,50 @@ public object DeepLinks {
             @Override
             public void onDeepLinking(DeepLinkResult var1) {
                if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
-                  val var4: DeepLink = var1.getDeepLink();
-                  if (var4 != null) {
-                     val var2: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var4);
-                     if (var2 != null) {
+                  val var5: DeepLink = var1.getDeepLink();
+                  if (var5 != null) {
+                     var var7: java.lang.String = var5.getDeepLinkValue();
+                     var var2: Boolean;
+                     val var3: Boolean;
+                     if (var7 != null) {
+                        var3 = var5.isDeferred() == java.lang.Boolean.TRUE;
+                        var2 = true;
+                     } else {
+                        var7 = var5.getStringValue("link");
+                        if (var7 == null) {
+                           var7 = null;
+                        }
+
+                        if (var7 == null) {
+                           var7 = null;
+                        }
+
+                        var3 = false;
+                        var2 = false;
+                     }
+
+                     if (var7 != null) {
+                        val var10: java.lang.String = DeepLinks.access$getDeepLinkDestinationWithAppsFlyerParam(DeepLinks.INSTANCE, var7, var2);
                         if (DeepLinks.access$getInitialUrl$p() == null) {
-                           DeepLinks.access$setInitialUrl$p(new Pair(var2, var4.isDeferred() == java.lang.Boolean.TRUE));
+                           if (var3) {
+                              var2 = true;
+                           } else {
+                              var2 = false;
+                           }
+
+                           DeepLinks.access$setInitialUrl$p(new Pair(var10, var2));
                         }
 
                         try {
-                           val var5: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var2));
-                           val var6: Context = this.$context;
-                           var5.addFlags(268435456);
-                           var5.setPackage(var6.getPackageName());
-                           this.$context.startActivity(var5);
-                        } catch (var3: Exception) {
-                           CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
+                           val var8: Intent = new Intent("android.intent.action.VIEW", Uri.parse(var10));
+                           val var11: Context = this.$context;
+                           var8.addFlags(268435456);
+                           var8.setPackage(var11.getPackageName());
+                           this.$context.startActivity(var8);
+                           return;
+                        } catch (var6: Exception) {
+                           CrashReporting.captureException$default(CrashReporting.INSTANCE, var6, false, 2, null);
+                           return;
                         }
                      }
                   }

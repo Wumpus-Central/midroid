@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Ja.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -30,6 +29,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
+import fm.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
@@ -59,16 +59,16 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
-      this.progressDots$delegate = Ja.l.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
+      this.progressDots$delegate = fm.l.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
+      val var5: SimpleDraweeView = var6.linkIcon;
       this.configureLinkIcon(var5);
    }
 
@@ -146,25 +146,25 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          switch (ButtonComponentView.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()]) {
             case 1:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 2:
                ButtonComponentViewKt.access$setBrandColor(var1);
-               break;
+               return;
             case 3:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 4:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 5:
                ButtonComponentViewKt.access$setDangerColor(var1);
-               break;
+               return;
             case 6:
                ButtonComponentViewKt.access$setSuccessColor(var1);
-               break;
+               return;
             case 7:
                ButtonComponentViewKt.access$setBrandColor(var1);
-               break;
+               return;
             default:
                throw new p();
          }

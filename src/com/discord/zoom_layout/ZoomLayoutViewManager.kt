@@ -1,6 +1,5 @@
 package com.discord.zoom_layout
 
-import Ja.v
 import com.discord.reactevents.ReactEvents
 import com.discord.zoom_layout.reactevents.OnZoomChangedEvent
 import com.facebook.react.bridge.ReadableArray
@@ -11,6 +10,7 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
+import fm.v
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
@@ -41,11 +41,10 @@ internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoo
 
    public open fun receiveCommand(zoomLayout: ZoomLayoutFixed, commandId: String, args: ReadableArray?) {
       if (var2 == "zoomTo") {
-         if (var3 == null) {
+         if (var3 != null) {
+            this.zoomTo(var1, (float)var3.getDouble(0), (float)var3.getDouble(1));
             return;
          }
-
-         this.zoomTo(var1, (float)var3.getDouble(0), (float)var3.getDouble(1));
       } else if (var2 == "unzoom") {
          this.unzoom(var1);
       }

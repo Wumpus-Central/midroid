@@ -1,13 +1,5 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import L2.a
-import L2.b
-import L2.c
-import L2.d
-import L2.e
-import L2.f
-import L2.g
-import L2.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -23,6 +15,14 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import java.util.ArrayList
+import l6.a
+import l6.b
+import l6.c
+import l6.d
+import l6.e
+import l6.f
+import l6.g
+import l6.h
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,
@@ -108,55 +108,25 @@ public class AttachmentMediaMosaicAdapter(context: Context,
 
    public override fun getItemViewType(position: Int): Int {
       val var2: MessageAttachmentAccessory = this.items.get(var1);
-      val var3: Byte;
       if (var2 is ImageAttachmentMessageAccessory) {
-         var3 = 49;
+         return 49;
+      } else if (var2 is VideoAttachmentMessageAccessory) {
+         return 50;
       } else {
-         if (var2 !is VideoAttachmentMessageAccessory) {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("Invalid accessory type: ");
-            var4.append(var1);
-            throw new IllegalStateException(var4.toString().toString());
-         }
-
-         var3 = 50;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Invalid accessory type: ");
+         var3.append(var1);
+         throw new IllegalStateException(var3.toString().toString());
       }
-
-      return var3;
    }
 
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
       val var5: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-            var var6: Any = this.items.get(var2);
-            var6 = var6 as ImageAttachmentMessageAccessory;
-            val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-            val var3: Boolean;
-            if (this.getItemCount() == 1) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
-            val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
-            );
-         } else {
-            if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var10: Class = var1.getClass();
-               val var12: StringBuilder = new StringBuilder();
-               var12.append("Invalid view holder type ");
-               var12.append(var10);
-               throw new IllegalStateException(var12.toString().toString());
-            }
-
-            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
-            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
-            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var var14: Any = this.items.get(var2);
+            var14 = var14 as ImageAttachmentMessageAccessory;
+            val var16: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -164,27 +134,47 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
+            val var10: a = new a(this, (ImageAttachmentMessageAccessory)var14, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var14);
+            val var4: Boolean = this.shouldAutoPlayGifs;
+            var16.bindAttachment(
+               var5, (ImageAttachmentMessageAccessory)var14, var11, var10, var8, new c(this, (ImageAttachmentMessageAccessory)var14), new d(this), var4
+            );
+         } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
+            var var6: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
+            val var7: VideoAttachmentMessageAccessory = var6 as VideoAttachmentMessageAccessory;
+            var6 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var3: Boolean;
+            if (this.getItemCount() == 1) {
+               var3 = true;
+            } else {
+               var3 = false;
+            }
+
+            var6.bindAttachment(var5, var7, var3, new e(this, var7, var1), new f(this, var7), new g(this, var7), new h(this));
+         } else {
+            val var9: Class = var1.getClass();
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("Invalid view holder type ");
+            var12.append(var9);
+            throw new IllegalStateException(var12.toString().toString());
          }
       }
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessagePartViewHolder {
-      val var3: Any;
       if (var2 != 49) {
-         if (var2 != 50) {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("Invalid accessory type: ");
-            var4.append(var2);
-            throw new IllegalStateException(var4.toString().toString());
+         if (var2 == 50) {
+            return new MosaicItemMessageAttachmentVideoViewHolder(new MediaVideoView(this.context, null, 2, null));
+         } else {
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("Invalid accessory type: ");
+            var3.append(var2);
+            throw new IllegalStateException(var3.toString().toString());
          }
-
-         var3 = new MosaicItemMessageAttachmentVideoViewHolder(new MediaVideoView(this.context, null, 2, null));
       } else {
-         var3 = new MosaicItemMessageAttachmentImageViewHolder(new MediaImageView(this.context, null, 2, null));
+         return new MosaicItemMessageAttachmentImageViewHolder(new MediaImageView(this.context, null, 2, null));
       }
-
-      return (MessagePartViewHolder)var3;
    }
 
    public fun setChatEventHandler(eventHandler: ChatEventHandler) {

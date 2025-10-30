@@ -1,6 +1,5 @@
 package com.discord.tti_measurement_view
 
-import Ja.v
 import com.discord.reactevents.ReactEvents
 import com.discord.tti_measurement_view.events.OnMeasurementEvent
 import com.facebook.react.module.annotations.ReactModule
@@ -8,6 +7,7 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
+import fm.v
 import kotlin.jvm.functions.Function2
 
 @ReactModule(name = "DCDTTIMeasurementView")

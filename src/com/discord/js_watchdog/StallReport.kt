@@ -1,9 +1,10 @@
 package com.discord.js_watchdog
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {
@@ -64,8 +65,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
       return (var2 * 31 + var3) * 31 + var1;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

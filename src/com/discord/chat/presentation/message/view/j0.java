@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.view;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.discord.chat.bridge.gift.GiftEmbed;
-import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class j0 implements OnClickListener {
-   public final Function1 d;
-   public final GiftEmbed e;
+   public final FileAttachmentView d;
+   public final String e;
+   public final String i;
+   public final String s;
 
    public final void onClick(View var1) {
-      GiftView.a(this.d, this.e, var1);
+      FileAttachmentView.g(this.d, this.e, this.i, this.s, var1);
    }
 }

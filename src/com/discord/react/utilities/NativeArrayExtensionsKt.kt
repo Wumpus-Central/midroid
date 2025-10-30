@@ -1,11 +1,11 @@
 package com.discord.react.utilities
 
-import Ja.p
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
+import fm.p
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import org.json.JSONArray
@@ -22,7 +22,7 @@ public inline fun ReadableArray.forEach(action: (Int, ReadableArray) -> Unit) {
    val var2: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var2.hasNext()) {
-      var1.invoke((var2 as L).nextInt(), var0);
+      var1.invoke((var2 as l0).nextInt(), var0);
    }
 }
 
@@ -44,7 +44,7 @@ public inline fun <T> ReadableArray.map(transform: (Int, ReadableArray) -> Any):
    val var4: java.util.Iterator = var3.iterator();
 
    while (var4.hasNext()) {
-      var2.add(var1.invoke((var4 as L).nextInt(), var0));
+      var2.add(var1.invoke((var4 as l0).nextInt(), var0));
    }
 
    return var2;
@@ -64,7 +64,7 @@ public inline fun <T, C : MutableCollection<in Any>> ReadableArray.mapTo(destina
    val var3: java.util.Iterator = sizeRange(var0).iterator();
 
    while (var3.hasNext()) {
-      var1.add(var2.invoke((var3 as L).nextInt(), var0));
+      var1.add(var2.invoke((var3 as l0).nextInt(), var0));
    }
 
    return (C)var1;
@@ -96,12 +96,10 @@ public fun <V> WritableNativeArray.push(value: Any) {
       var0.pushMap(var1 as ReadableMap);
    } else if (var1 is java.lang.Long) {
       var0.pushDouble((double)(var1 as java.lang.Number).longValue());
-   } else {
-      if (var1 != null) {
-         throw new IllegalArgumentException("Failed requirement.");
-      }
-
+   } else if (var1 == null) {
       var0.pushNull();
+   } else {
+      throw new IllegalArgumentException("Failed requirement.");
    }
 }
 
@@ -115,7 +113,7 @@ public fun ReadableArray.toBooleanList(): List<Boolean> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getBoolean((var3 as L).nextInt()));
+      var1.add(var0.getBoolean((var3 as l0).nextInt()));
    }
 
    return var1;
@@ -127,7 +125,7 @@ public fun ReadableArray.toDoubleList(): List<Double> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getDouble((var3 as L).nextInt()));
+      var1.add(var0.getDouble((var3 as l0).nextInt()));
    }
 
    return var1;
@@ -139,7 +137,7 @@ public fun ReadableArray.toIntList(): List<Int> {
    val var3: java.util.Iterator = var2.iterator();
 
    while (var3.hasNext()) {
-      var1.add(var0.getInt((var3 as L).nextInt()));
+      var1.add(var0.getInt((var3 as l0).nextInt()));
    }
 
    return var1;
@@ -249,7 +247,7 @@ public fun ReadableArray.toStringList(): List<String> {
    val var4: java.util.Iterator = var2.iterator();
 
    while (var4.hasNext()) {
-      val var3: java.lang.String = var0.getString((var4 as L).nextInt());
+      val var3: java.lang.String = var0.getString((var4 as l0).nextInt());
       var1.add(var3);
    }
 

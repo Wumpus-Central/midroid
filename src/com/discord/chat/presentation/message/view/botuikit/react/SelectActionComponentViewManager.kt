@@ -23,7 +23,7 @@ import org.json.JSONObject
 @ReactModule(name = "SelectActionComponentView")
 @SourceDebugExtension(["SMAP\nSelectActionComponentViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n+ 2 ComponentDeserializer.kt\ncom/discord/chat/presentation/message/view/botuikit/react/deserialization/ComponentDeserializerKt\n*L\n1#1,70:1\n14#2,10:71\n*S KotlinDebug\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n*L\n34#1:71,10\n*E\n"])
 public class SelectActionComponentViewManager : SimpleViewManager<SelectComponentView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{Ja.v.a("onTap", OnSelectComponentTapEvent::class)})
+   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{fm.v.a("onTap", OnSelectComponentTapEvent::class)})
 
    private fun createSelectComponentContext(onTap: () -> Unit): ComponentContext {
       val var2: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
@@ -87,7 +87,7 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       }
 
       if (var3) {
-         var1.configure(var15 as SelectComponent, this.createSelectComponentContext(new A(this, var1)));
+         var1.configure(var15 as SelectComponent, this.createSelectComponentContext(new a0(this, var1)));
          ViewMeasureExtensionsKt.measureAndLayout(var1);
       } else {
          try {

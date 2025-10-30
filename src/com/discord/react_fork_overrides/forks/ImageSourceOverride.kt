@@ -16,21 +16,21 @@ internal object ImageSourceOverride {
 
    private fun resolvedOTAAssetOrDefaultToDrawable(mSource: String): String {
       val var2: Uri = Uri.parse(var1);
-      if (!var2.getPathSegments().contains("otas")) {
-         return var1;
-      } else {
+      if (var2.getPathSegments().contains("otas")) {
          val var3: java.lang.String = var2.getPath();
-         if (var3 == null) {
-            return var1;
-         } else {
+         if (var3 != null) {
             val var4: File = new File(var3);
-            return if (var4.exists()) var1 else Ta.j.q(var4);
+            if (!var4.exists()) {
+               return pm.j.q(var4);
+            }
          }
       }
+
+      return var1;
    }
 
    public fun override() {
-      ImageSource.Companion.setSourceOverride(new q());
+      ImageSource.Companion.setSourceOverride(new l());
       com.airbnb.android.react.lottie.h.r
          .a(
             new Function1<java.lang.String, java.lang.String>(this) {

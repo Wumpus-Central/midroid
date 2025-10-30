@@ -1,6 +1,5 @@
 package com.discord.ads
 
-import Ja.v
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -11,8 +10,9 @@ import com.google.android.gms.ads.identifier.AdvertisingIdClient
 import com.google.android.gms.ads.identifier.AdvertisingIdClient.Info
 import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.SettableFuture
+import com.google.common.util.concurrent.b
 import com.google.common.util.concurrent.c
-import com.google.common.util.concurrent.d
+import fm.v
 import java.util.concurrent.CancellationException
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -24,11 +24,9 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
 
    private fun cleanupCurrentOperation() {
       val var1: ListenableFuture = this.currentOperation.getAndSet(null);
-      if (var1 != null) {
-         if (!var1.isDone()) {
-            Log.i$default(Log.INSTANCE, "AdsModule", "Stopping current google advertising ID operation", null, 4, null);
-            var1.cancel(true);
-         }
+      if (var1 != null && !var1.isDone()) {
+         Log.i$default(Log.INSTANCE, "AdsModule", "Stopping current google advertising ID operation", null, 4, null);
+         var1.cancel(true);
       }
    }
 
@@ -43,10 +41,10 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var2: java.lang.String = var4.getMessage();
+         val var3: java.lang.String = var4.getMessage();
          val var5: StringBuilder = new StringBuilder();
          var5.append("Error getting google advertising ID info: ");
-         var5.append(var2);
+         var5.append(var3);
          var0.y(new Exception(var5.toString(), var4));
       }
    }
@@ -59,9 +57,9 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       this.cleanupCurrentOperation();
       val var2: ListenableFuture = this.getAdvertisingIdInfoAsync();
       this.currentOperation.set(var2);
-      d.a(
+      c.a(
          var2,
-         new c(this, var1) {
+         new b(this, var1) {
             final Promise $promise;
             final AdsModule this$0;
 
@@ -76,12 +74,12 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
                   Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
                   AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
                } else {
-                  val var4: Log = Log.INSTANCE;
-                  val var2: java.lang.String = var1.getMessage();
-                  val var3: StringBuilder = new StringBuilder();
-                  var3.append("Error getting google advertising ID: ");
-                  var3.append(var2);
-                  var4.e("AdsModule", var3.toString(), var1);
+                  val var2: Log = Log.INSTANCE;
+                  val var3: java.lang.String = var1.getMessage();
+                  val var4: StringBuilder = new StringBuilder();
+                  var4.append("Error getting google advertising ID: ");
+                  var4.append(var3);
+                  var2.e("AdsModule", var4.toString(), var1);
                   this.$promise.reject("err", "Failed to get google advertising ID", var1);
                }
             }

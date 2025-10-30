@@ -1,7 +1,7 @@
 package com.discord.notifications.api
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -34,14 +34,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.fields == null) {
-         var1 = 0;
-      } else {
-         var1 = this.fields.hashCode();
-      }
-
-      return var1;
+      return if (this.fields == null) 0 else this.fields.hashCode();
    }
 
    public override fun toString(): String {

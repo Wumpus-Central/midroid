@@ -19,7 +19,7 @@ public class ReactViewHelper {
    public fun handleDispatchDraw(view: View, superDispatchDraw: () -> Unit) {
       var2.invoke();
       if (VERSION.SDK_INT >= 29) {
-         c.a(var1, this.exclusionRects);
+         var1.setSystemGestureExclusionRects(this.exclusionRects);
       }
    }
 

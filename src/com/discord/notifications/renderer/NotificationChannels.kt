@@ -1,15 +1,16 @@
 package com.discord.notifications.renderer
 
-import Ja.v
 import android.content.Context
 import android.net.Uri
 import android.os.Build.VERSION
 import androidx.core.app.NotificationChannelCompat
+import androidx.core.app.j
 import androidx.core.app.NotificationChannelCompat.Builder
 import com.discord.crash_reporting.CrashReporting
 import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.theme.utils.ColorUtilsKt
+import fm.v
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import kotlin.enums.EnumEntries
@@ -36,12 +37,12 @@ internal object NotificationChannels {
       val var9: Builder = var3.g(var5);
       val var11: StringBuilder = new StringBuilder();
       var11.append("android.resource://");
-      val var6: java.lang.String = var1.getPackageName();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var6);
-      var7.append("/");
-      var7.append(var4);
-      var11.append(var7.toString());
+      val var7: java.lang.String = var1.getPackageName();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var7);
+      var6.append("/");
+      var6.append(var4);
+      var11.append(var6.toString());
       val var8: java.lang.String = var11.toString();
       var9.h(Uri.parse(var8), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
@@ -70,13 +71,13 @@ internal object NotificationChannels {
       var2.e(var3);
    }
 
-   private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<androidx.core.app.j> {
+   private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<j> {
       val var6: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
       val var7: ArrayList = new ArrayList(var6.length);
       val var4: Int = var6.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
-         var var10: androidx.core.app.j;
+         var var10: j;
          label20: {
             val var5: NotificationChannels.ChannelGroup = var6[var3];
             if (var2.containsKey(var6[var3].getId())) {
@@ -90,9 +91,9 @@ internal object NotificationChannels {
                }
             }
 
-            val var11: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
-            val var9: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
-            var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
+            val var9: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
+            val var11: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
+            var10 = var9.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var11.defaultLabel(var5.getId())).a();
          }
 
          var7.add(var10);
@@ -103,37 +104,32 @@ internal object NotificationChannels {
    }
 
    private fun com.discord.notifications.renderer.NotificationChannels.Category.getAndDeleteLegacyNotificationChannel(context: Context): NotificationChannelCompat? {
-      var var3: NotificationChannelCompat = null;
-
-      var var5: NotificationChannelCompat;
+      var var3: NotificationChannelCompat;
       try {
          if (var1.getLegacyId() == null) {
-            return var3;
-         }
-
-         var5 = NotificationManagerUtilsKt.getNotificationManagerCompat(var2).j(var1.getLegacyId());
-      } catch (var7: Exception) {
-         return null;
-      }
-
-      var3 = null;
-      if (var5 != null) {
-         try {
-            NotificationManagerUtilsKt.getNotificationManagerCompat(var2).f(var1.getLegacyId());
-         } catch (var6: Exception) {
             return null;
          }
 
-         var3 = var5;
+         var3 = NotificationManagerUtilsKt.getNotificationManagerCompat(var2).j(var1.getLegacyId());
+      } catch (var5: Exception) {
+         return null;
       }
 
-      return var3;
+      if (var3 != null) {
+         try {
+            NotificationManagerUtilsKt.getNotificationManagerCompat(var2).f(var1.getLegacyId());
+            return var3;
+         } catch (var4: Exception) {
+         }
+      }
+
+      return null;
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
       for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var4: java.lang.String = var2.b();
-         if (StringsKt.I(var4, "calls", false, 2, null)) {
+         val var3: java.lang.String = var2.b();
+         if (StringsKt.I(var3, "calls", false, 2, null)) {
             return var2;
          }
       }
@@ -142,11 +138,11 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannelId(context: Context): String {
-      val var3: NotificationChannelCompat = this.getCallChannel(var1);
-      if (var3 != null) {
-         val var2: java.lang.String = var3.b();
-         if (var2 != null) {
-            return var2;
+      val var2: NotificationChannelCompat = this.getCallChannel(var1);
+      if (var2 != null) {
+         val var3: java.lang.String = var2.b();
+         if (var3 != null) {
+            return var3;
          }
       }
 
@@ -154,22 +150,19 @@ internal object NotificationChannels {
    }
 
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
-      val var4: java.lang.String;
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var2: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("calls_");
-         var3.append(var2);
-         var4 = var3.toString();
-      } else {
-         val var6: java.lang.String = var1.getId();
+         val var4: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
          val var5: StringBuilder = new StringBuilder();
          var5.append("calls_");
-         var5.append(var6);
-         var4 = var5.toString();
+         var5.append(var4);
+         return var5.toString();
+      } else {
+         val var3: java.lang.String = var1.getId();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("calls_");
+         var2.append(var3);
+         return var2.toString();
       }
-
-      return var4;
    }
 
    @JvmStatic
@@ -191,7 +184,7 @@ internal object NotificationChannels {
       category: com.discord.notifications.renderer.NotificationChannels.Category,
       brandColor: Int,
       localizedCategoryNames: Map<String, String>,
-      onConfigure: (NotificationChannelCompat?, Builder) -> Unit = new i()
+      onConfigure: (NotificationChannelCompat?, Builder) -> Unit = new d()
    ): NotificationChannelCompat? {
       val var9: NotificationChannelCompat = this.getAndDeleteLegacyNotificationChannel(var2, var1);
       if (!var4.containsKey(var2.getId())) {
@@ -310,14 +303,14 @@ internal object NotificationChannels {
    }
 
    public fun init(context: Context, localizedCategoryNames: Map<String, String>, localizedGroupNames: Map<String, String>) {
-      val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
+      val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var17: java.util.List = this.createNotificationChannelGroups(var1, var3);
       val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
       val var8: ArrayList = new ArrayList();
-      val var5: Int = var9.length;
+      val var6: Int = var9.length;
 
-      for (int var4 = 0; var4 < var5; var4++) {
-         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var6, var2, new h(var9[var4], var1));
+      for (int var4 = 0; var4 < var6; var4++) {
+         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var5, var2, new c(var9[var4], var1));
          if (var20 != null) {
             var8.add(var20);
          }
@@ -326,10 +319,10 @@ internal object NotificationChannels {
       try {
          NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
       } catch (var13: Exception) {
-         val var21: CrashReporting = CrashReporting.INSTANCE;
-         val var19: LinkedHashMap = new LinkedHashMap(kotlin.ranges.e.e(O.e(CollectionsKt.v(var17, 10)), 16));
+         val var19: CrashReporting = CrashReporting.INSTANCE;
+         val var21: LinkedHashMap = new LinkedHashMap(e.e(n0.e(CollectionsKt.v(var17, 10)), 16));
 
-         for (androidx.core.app.j var12 : var17) {
+         for (j var12 : var17) {
             label32: {
                val var14: java.lang.CharSequence = var12.b();
                if (var14 != null) {
@@ -351,10 +344,10 @@ internal object NotificationChannels {
             }
 
             val var16: Pair = v.a(var15, java.lang.String.valueOf(var7));
-            var19.put(var16.c(), var16.d());
+            var21.put(var16.c(), var16.d());
          }
 
-         CrashReporting.addBreadcrumb$default(var21, "Failed to create notification group or channel", var19, null, null, 12, null);
+         CrashReporting.addBreadcrumb$default(var19, "Failed to create notification group or channel", var21, null, null, 12, null);
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
       }
    }
@@ -367,9 +360,7 @@ internal object NotificationChannels {
 
          while (true) {
             if (!var11.hasNext()) {
-               if (var6.isEmpty()) {
-                  return;
-               } else {
+               if (!var6.isEmpty()) {
                   val var21: NotificationChannelCompat = var6.get(0) as NotificationChannelCompat;
                   val var3: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
                   var var9: Builder = new Builder(this.getChannelId(var7), var21.c());
@@ -398,12 +389,13 @@ internal object NotificationChannels {
                   NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(CollectionsKt.e(var18.a()));
                   return;
                }
+               break;
             }
 
-            val var17: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
-            val var8: java.lang.String = var17.b();
-            if (StringsKt.I(var8, "calls", false, 2, null)) {
-               var6.add(var17);
+            val var8: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
+            val var17: java.lang.String = var8.b();
+            if (StringsKt.I(var17, "calls", false, 2, null)) {
+               var6.add(var8);
             }
          }
       }
@@ -425,7 +417,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.CallRingtone> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       init {
@@ -440,14 +432,7 @@ internal object NotificationChannels {
 
       public companion object {
          public fun fromName(name: String): com.discord.notifications.renderer.NotificationChannels.CallRingtone {
-            val var2: NotificationChannels.CallRingtone;
-            if (var1 == "call_ringing_halloween") {
-               var2 = NotificationChannels.CallRingtone.Halloween;
-            } else {
-               var2 = NotificationChannels.CallRingtone.Default;
-            }
-
-            return var2;
+            return if (var1 == "call_ringing_halloween") NotificationChannels.CallRingtone.Halloween else NotificationChannels.CallRingtone.Default;
          }
       }
    }
@@ -508,7 +493,7 @@ internal object NotificationChannels {
          OtherHighPriority = new NotificationChannels.Category("otherHighPriority", 4, var0, "GeneralHigh");
          val var4: Array<NotificationChannels.Category> = $values();
          $VALUES = var4;
-         $ENTRIES = Pa.a.a(var4);
+         $ENTRIES = lm.a.a(var4);
       }
 
       init {
@@ -525,58 +510,40 @@ internal object NotificationChannels {
 
       public companion object {
          public fun defaultLabel(category: com.discord.notifications.renderer.NotificationChannels.Category): String {
-            var var2: java.lang.String;
             switch (NotificationChannels.Category.Companion.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()]) {
                case 1:
-                  var2 = "Incoming calls";
-                  break;
+                  return "Incoming calls";
                case 2:
-                  var2 = "Voice connected";
-                  break;
+                  return "Voice connected";
                case 3:
-                  var2 = "Messages";
-                  break;
+                  return "Messages";
                case 4:
-                  var2 = "Direct messages";
-                  break;
+                  return "Direct messages";
                case 5:
-                  var2 = "Friend requests";
-                  break;
+                  return "Friend requests";
                case 6:
-                  var2 = "Polls";
-                  break;
+                  return "Polls";
                case 7:
-                  var2 = "Social";
-                  break;
+                  return "Social";
                case 8:
-                  var2 = "Game detection";
-                  break;
+                  return "Game detection";
                case 9:
-                  var2 = "Stage notifications";
-                  break;
+                  return "Stage notifications";
                case 10:
-                  var2 = "Discord system messages";
-                  break;
+                  return "Discord system messages";
                case 11:
-                  var2 = "Forum notifications";
-                  break;
+                  return "Forum notifications";
                case 12:
-                  var2 = "Event notifications";
-                  break;
+                  return "Event notifications";
                case 13:
-                  var2 = "Server highlights";
-                  break;
+                  return "Server highlights";
                case 14:
-                  var2 = "Other server notifications";
-                  break;
+                  return "Other server notifications";
                case 15:
-                  var2 = "Reactions";
-                  break;
+                  return "Reactions";
                default:
-                  var2 = "Other";
+                  return "Other";
             }
-
-            return var2;
          }
 
          public fun fromTrackingType(trackingType: String?): com.discord.notifications.renderer.NotificationChannels.Category {
@@ -668,7 +635,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.ChannelGroup> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       init {

@@ -1,8 +1,5 @@
 package com.discord.chat.presentation.message.view.mosaic
 
-import K2.b
-import K2.c
-import K2.d
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -22,6 +19,9 @@ import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutMa
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import k6.b
+import k6.c
+import k6.d
 
 public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    private final val binding: AttachmentMediaMosaicContainerViewBinding
@@ -41,7 +41,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       this.binding = var4;
       val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
       this.mosaicLayoutManager = var5;
-      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new K2.a(this), new b(this), new c(this), new d(this));
+      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new k6.a(this), new b(this), new c(this), new d(this));
       this.attachmentAdapter = var3;
       val var6: RecyclerView = var4.mosaic;
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
@@ -87,21 +87,16 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
    }
 
    private fun getAttachmentIndex(item: MessageAttachmentAccessory): Int {
-      val var2: Int;
       if (var1 is ImageAttachmentMessageAccessory) {
-         var2 = (var1 as ImageAttachmentMessageAccessory).getAttachmentIndex();
+         return (var1 as ImageAttachmentMessageAccessory).getAttachmentIndex();
+      } else if (var1 is VideoAttachmentMessageAccessory) {
+         return (var1 as VideoAttachmentMessageAccessory).getIndex();
       } else {
-         if (var1 !is VideoAttachmentMessageAccessory) {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Invalid accessory type: ");
-            var3.append(var1);
-            throw new IllegalStateException(var3.toString().toString());
-         }
-
-         var2 = (var1 as VideoAttachmentMessageAccessory).getIndex();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Invalid accessory type: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
-
-      return var2;
    }
 
    public fun setAttachments(

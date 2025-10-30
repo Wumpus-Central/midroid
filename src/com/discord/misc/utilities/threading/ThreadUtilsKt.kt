@@ -1,9 +1,9 @@
 package com.discord.misc.utilities.threading
 
-import Ja.l
-import Ja.o
 import android.os.Handler
 import android.os.Looper
+import fm.l
+import fm.o
 import kotlin.jvm.functions.Function0
 
 public final val uiHandler: Handler by l.a(o.e, new a())

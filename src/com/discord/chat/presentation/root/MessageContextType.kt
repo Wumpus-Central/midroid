@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.root
 
-import Ja.l
-import Ja.o
+import fm.l
+import fm.o
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public enum class MessageContextType {
@@ -22,7 +22,7 @@ public enum class MessageContextType {
    fun {
       val var0: Array<MessageContextType> = $values();
       $VALUES = var0;
-      $ENTRIES = Pa.a.a(var0);
+      $ENTRIES = lm.a.a(var0);
    }
 
    @JvmStatic

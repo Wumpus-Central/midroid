@@ -17,7 +17,7 @@ import kotlinx.serialization.json.Json
 
 @SourceDebugExtension(["SMAP\nMobileVoiceOverlayModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n+ 3 ThreadUtils.kt\ncom/discord/misc/utilities/threading/ThreadUtilsKt\n+ 4 NativeMapExtensions.kt\ncom/discord/react/utilities/NativeMapExtensionsKt\n+ 5 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,77:1\n29#2:78\n22#3,8:79\n22#3,8:89\n22#3,8:99\n137#4:87\n137#4:97\n123#5:88\n123#5:98\n*S KotlinDebug\n*F\n+ 1 MobileVoiceOverlayModule.kt\ncom/discord/mobile_voice_overlay/MobileVoiceOverlayModule\n*L\n46#1:78\n54#1:79,8\n61#1:89,8\n68#1:99,8\n60#1:87\n67#1:97\n60#1:88\n67#1:98\n*E\n"])
 public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlayModuleSpec(var1) {
-   private final val mobileVoiceOverlay: MobileVoiceOverlay by Ja.l.b(new r(this))
+   private final val mobileVoiceOverlay: MobileVoiceOverlay by fm.l.b(new s(this))
       private final get() {
          return this.mobileVoiceOverlay$delegate.getValue() as MobileVoiceOverlay;
       }
@@ -26,7 +26,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    @JvmStatic
    fun `mobileVoiceOverlay_delegate$lambda$2`(var0: MobileVoiceOverlayModule): MobileVoiceOverlay {
       val var1: ReactApplicationContext = var0.getReactApplicationContext();
-      return new MobileVoiceOverlay(var1, new s(var0), new t(var0));
+      return new MobileVoiceOverlay(var1, new t(var0), new u(var0));
    }
 
    @JvmStatic
@@ -42,9 +42,9 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    }
 
    public open fun enableOverlay(promise: Promise) {
-      val var2: WindowUtils = WindowUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      if (var2.canDrawOverlay(var3)) {
+      val var3: WindowUtils = WindowUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      if (var3.canDrawOverlay(var2)) {
          var1.resolve(java.lang.Boolean.TRUE);
       } else {
          val var4: ActivityEventListener = new ActivityEventListener(this, var1) {
@@ -61,9 +61,9 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
                   val var7: Promise = this.$promise;
-                  val var6: WindowUtils = WindowUtils.INSTANCE;
-                  val var5: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  var7.resolve(var6.canDrawOverlay(var5));
+                  val var5: WindowUtils = WindowUtils.INSTANCE;
+                  val var6: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  var7.resolve(var5.canDrawOverlay(var6));
                }
             }
 
@@ -109,22 +109,23 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
          if (var4 != null) {
             if (ThreadUtilsKt.isOnMainThread()) {
                access$getMobileVoiceOverlay(this).setData$mobile_voice_overlay_release(var4);
-            } else {
-               ThreadUtilsKt.getUiHandler().post(new Runnable(this, var4) {
-                  final MobileVoiceOverlayData $overlayData$inlined;
-                  final MobileVoiceOverlayModule this$0;
-
-                  {
-                     this.this$0 = var1;
-                     this.$overlayData$inlined = var2;
-                  }
-
-                  @Override
-                  public final void run() {
-                     MobileVoiceOverlayModule.access$getMobileVoiceOverlay(this.this$0).setData$mobile_voice_overlay_release(this.$overlayData$inlined);
-                  }
-               });
+               return;
             }
+
+            ThreadUtilsKt.getUiHandler().post(new Runnable(this, var4) {
+               final MobileVoiceOverlayData $overlayData$inlined;
+               final MobileVoiceOverlayModule this$0;
+
+               {
+                  this.this$0 = var1;
+                  this.$overlayData$inlined = var2;
+               }
+
+               @Override
+               public final void run() {
+                  MobileVoiceOverlayModule.access$getMobileVoiceOverlay(this.this$0).setData$mobile_voice_overlay_release(this.$overlayData$inlined);
+               }
+            });
          }
       }
    }
@@ -138,22 +139,23 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
          if (var4 != null) {
             if (ThreadUtilsKt.isOnMainThread()) {
                access$getMobileVoiceOverlay(this).showOverlay$mobile_voice_overlay_release(var4);
-            } else {
-               ThreadUtilsKt.getUiHandler().post(new Runnable(this, var4) {
-                  final MobileVoiceOverlayAssets $overlayAssets$inlined;
-                  final MobileVoiceOverlayModule this$0;
-
-                  {
-                     this.this$0 = var1;
-                     this.$overlayAssets$inlined = var2;
-                  }
-
-                  @Override
-                  public final void run() {
-                     MobileVoiceOverlayModule.access$getMobileVoiceOverlay(this.this$0).showOverlay$mobile_voice_overlay_release(this.$overlayAssets$inlined);
-                  }
-               });
+               return;
             }
+
+            ThreadUtilsKt.getUiHandler().post(new Runnable(this, var4) {
+               final MobileVoiceOverlayAssets $overlayAssets$inlined;
+               final MobileVoiceOverlayModule this$0;
+
+               {
+                  this.this$0 = var1;
+                  this.$overlayAssets$inlined = var2;
+               }
+
+               @Override
+               public final void run() {
+                  MobileVoiceOverlayModule.access$getMobileVoiceOverlay(this.this$0).showOverlay$mobile_voice_overlay_release(this.$overlayAssets$inlined);
+               }
+            });
          }
       }
    }

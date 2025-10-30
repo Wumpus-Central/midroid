@@ -1,6 +1,5 @@
 package com.discord.thumbhash
 
-import N3.d
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -11,6 +10,7 @@ import com.facebook.drawee.controller.a
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import kotlin.jvm.internal.SourceDebugExtension
+import l8.d
 
 @SourceDebugExtension(["SMAP\nImageWithThumbhashPlaceholderView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImageWithThumbhashPlaceholderView.kt\ncom/discord/thumbhash/ImageWithThumbhashPlaceholderView\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n+ 3 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,68:1\n29#2:69\n27#3:70\n*S KotlinDebug\n*F\n+ 1 ImageWithThumbhashPlaceholderView.kt\ncom/discord/thumbhash/ImageWithThumbhashPlaceholderView\n*L\n52#1:69\n59#1:70\n*E\n"])
 internal class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView(var1, var2) {
@@ -43,13 +43,13 @@ internal class ImageWithThumbhashPlaceholderView  public constructor(context: Co
 
    public fun update() {
       if (this.uri != null) {
-         val var3: a = ((d.g().F(ImageRequestBuilder.x(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
-               .E(
+         val var3: a = ((d.g().E(ImageRequestBuilder.x(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
+               .D(
                   new ThumbhashPlaceholderControllerListener(
                      this, new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondary()), this.placeholder, this.placeholderVersion
                   )
                ) as PipelineDraweeControllerBuilder)
-            .d();
+            .c();
          this.setController(var3);
       }
    }

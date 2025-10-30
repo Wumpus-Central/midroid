@@ -29,71 +29,71 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
          }
 
          val var14: Array<DCDNoSelectionSpan> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class) as Array<DCDNoSelectionSpan>;
-         if (var14.length != 0) {
-            if (var2 != null) {
-               var4 = var2;
-            } else if (var3 != null) {
-               var4 = var3;
-            } else {
-               var4 = 0;
-            }
+         if (var14.length == 0) {
+            return;
+         }
 
-            val var12: Int = var14.length;
-            var var7: Int = 0;
-            var var19: Boolean = false;
-            var var6: Int = var4;
+         if (var2 != null) {
+            var4 = var2;
+         } else if (var3 != null) {
+            var4 = var3;
+         } else {
+            var4 = 0;
+         }
 
-            while (var7 < var12) {
-               val var11: Int = var1.getSpanEnd(var14[var7]);
-               val var10: Int = var1.getSpanStart(var14[var7]);
-               var var8: Int = var6;
-               var var16: Int = var19;
-               if (var6 > var10) {
-                  var8 = var6;
-                  var16 = var19;
-                  if (var6 < var11) {
+         val var12: Int = var14.length;
+         var var7: Int = 0;
+         var var19: Boolean = false;
+         var var6: Int = var4;
+
+         while (var7 < var12) {
+            val var10: Int = var1.getSpanEnd(var14[var7]);
+            val var11: Int = var1.getSpanStart(var14[var7]);
+            var var8: Int = var6;
+            var var16: Int = var19;
+            if (var6 > var11) {
+               var8 = var6;
+               var16 = var19;
+               if (var6 < var10) {
+                  var16 = var10;
+                  if (var10 - var6 > var6 - var11) {
                      var16 = var11;
-                     if (var11 - var6 > var6 - var10) {
-                        var16 = var10;
-                     }
-
-                     var8 = var16;
-                     var16 = 1;
                   }
-               }
 
-               var7++;
-               var6 = var8;
-               var19 = (boolean)var16;
-            }
-
-            val var18: Boolean;
-            if (var2 != null && var2 != var6) {
-               var18 = true;
-            } else {
-               var18 = false;
-            }
-
-            var var21: Boolean = false;
-            if (var3 != null) {
-               var21 = false;
-               if (var3 != var6) {
-                  var21 = true;
+                  var8 = var16;
+                  var16 = 1;
                }
             }
 
-            if (var19 && (var21 || var18)) {
-               Selection.setSelection(var1, var6);
+            var7++;
+            var6 = var8;
+            var19 = (boolean)var16;
+         }
+
+         val var18: Boolean;
+         if (var2 != null && var2 != var6) {
+            var18 = true;
+         } else {
+            var18 = false;
+         }
+
+         var var21: Boolean = false;
+         if (var3 != null) {
+            var21 = false;
+            if (var3 != var6) {
+               var21 = true;
             }
+         }
+
+         if (var19 && (var21 || var18)) {
+            Selection.setSelection(var1, var6);
          }
       }
    }
 
    public open fun onSpanAdded(text: Spannable?, what: Any?, start: Int, end: Int) {
-      if (var1 != null) {
-         if (var2 is DCDNoSelectionSpan) {
-            this.checkSelections(var1, var1.getSpanStart(Selection.SELECTION_START), var1.getSpanEnd(Selection.SELECTION_END));
-         }
+      if (var1 != null && var2 is DCDNoSelectionSpan) {
+         this.checkSelections(var1, var1.getSpanStart(Selection.SELECTION_START), var1.getSpanEnd(Selection.SELECTION_END));
       }
    }
 
@@ -101,7 +101,10 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
       if (var1 != null) {
          if (var2 == Selection.SELECTION_START) {
             this.checkSelections(var1, var5, null);
-         } else if (var2 == Selection.SELECTION_END) {
+            return;
+         }
+
+         if (var2 == Selection.SELECTION_END) {
             this.checkSelections(var1, null, var5);
          }
       }

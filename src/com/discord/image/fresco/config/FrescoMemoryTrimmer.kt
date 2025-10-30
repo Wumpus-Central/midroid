@@ -1,12 +1,12 @@
 package com.discord.image.fresco.config
 
-import Ja.c
-import N3.d
 import android.app.ActivityManager
 import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
+import fm.c
+import l8.d
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {

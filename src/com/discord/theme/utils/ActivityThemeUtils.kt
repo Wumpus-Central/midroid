@@ -20,25 +20,25 @@ internal object ActivityThemeUtils {
       if (ThemeManager.INSTANCE.isInitialized()) {
          if (!var3.shouldShowSplashImage$theme_release()) {
             val var4: Window = var1.getWindow();
-            val var5: Context = var1.getApplicationContext();
-            val var2: Int;
-            if (var3.isThemeDark()) {
-               var2 = R.color.primary_660;
-            } else {
-               var2 = R.color.primary_160;
-            }
-
-            var4.setBackgroundDrawable(new ColorDrawable(ColorUtilsKt.getColorCompat(var5, var2)));
-         } else {
-            val var6: Window = var1.getWindow();
+            val var6: Context = var1.getApplicationContext();
             val var7: Int;
             if (var3.isThemeDark()) {
-               var7 = R.drawable.background_splash_dark;
+               var7 = R.color.primary_660;
             } else {
-               var7 = R.drawable.background_splash_light;
+               var7 = R.color.primary_160;
             }
 
-            var6.setBackgroundDrawableResource(var7);
+            var4.setBackgroundDrawable(new ColorDrawable(ColorUtilsKt.getColorCompat(var6, var7)));
+         } else {
+            val var5: Window = var1.getWindow();
+            val var2: Int;
+            if (var3.isThemeDark()) {
+               var2 = R.drawable.background_splash_dark;
+            } else {
+               var2 = R.drawable.background_splash_light;
+            }
+
+            var5.setBackgroundDrawableResource(var2);
          }
       }
    }

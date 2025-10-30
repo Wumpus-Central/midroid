@@ -1,15 +1,15 @@
 package com.discord.chat.bridge
 
-import Pa.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import wc.m
-import yc.j
-import yc.e.i
+import lm.a
+import tp.m
+import vp.j
+import vp.e.i
 
 @m(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
@@ -63,12 +63,7 @@ public enum class MessageState(key: String) {
             var2++;
          }
 
-         var var7: MessageState = var6;
-         if (var6 == null) {
-            var7 = MessageState.Unknown;
-         }
-
-         return var7;
+         return if (var6 == null) MessageState.Unknown else var6;
       }
 
       public fun serializer(): KSerializer<MessageState> {

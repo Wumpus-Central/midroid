@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.events
 
-import Ja.v
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.DoubleTapMessageEvent
@@ -88,6 +87,7 @@ import com.discord.chat.reactevents.TapWelcomeReplyData
 import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
+import fm.v
 
 internal fun createChatReactEvents(): ReactEvents {
    return new ReactEvents(

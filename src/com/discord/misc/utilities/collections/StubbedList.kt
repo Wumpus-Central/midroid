@@ -57,14 +57,7 @@ public open class StubbedList<T> : java.util.List<T>, KMappedMarker {
    }
 
    public override fun isEmpty(): Boolean {
-      val var1: Boolean;
-      if (this.size() == 0) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return this.size() == 0;
    }
 
    public override operator fun iterator(): Iterator<Any> {

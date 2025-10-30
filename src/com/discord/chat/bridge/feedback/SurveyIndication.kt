@@ -2,7 +2,7 @@ package com.discord.chat.bridge.feedback
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -47,15 +47,15 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    }
 
    public override fun toString(): String {
-      val var2: StructurableText = this.content;
+      val var1: StructurableText = this.content;
       val var3: java.lang.String = this.feedbackIconUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SurveyIndication(content=");
-      var1.append(var2);
-      var1.append(", feedbackIconUrl=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SurveyIndication(content=");
+      var2.append(var1);
+      var2.append(", feedbackIconUrl=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

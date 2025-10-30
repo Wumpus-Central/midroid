@@ -1,12 +1,16 @@
 package com.discord.chat.presentation.message.view;
 
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnLongClickListener;
+import com.discord.chat.bridge.Message;
+import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
-public final class u0 implements Function1 {
-   public final MediaView d;
+public final class u0 implements OnLongClickListener {
+   public final Message d;
+   public final ChatEventHandler e;
 
-   public final Object invoke(Object var1) {
-      return MediaView.m(this.d, (Float)var1);
+   public final boolean onLongClick(View var1) {
+      return FlaggedMessageEmbedView.i(this.d, this.e, var1);
    }
 }

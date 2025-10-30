@@ -38,25 +38,22 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun Any.isInitialProp(propName: String): Boolean {
-      val var5: java.util.Map = this.consumedInitialProps;
-      val var6: Int = var1.getId();
-      val var4: Any = var5.get(var6);
-      var var7: java.util.Set = (java.util.Set)var4;
-      if (var4 == null) {
-         var7 = new LinkedHashSet();
-         var5.put(var6, var7);
+      val var4: java.util.Map = this.consumedInitialProps;
+      val var5: Int = var1.getId();
+      val var3: Any = var4.get(var5);
+      var var6: java.util.Set = (java.util.Set)var3;
+      if (var3 == null) {
+         var6 = new LinkedHashSet();
+         var4.put(var5, var6);
       }
 
-      var7 = var7;
-      val var3: Boolean;
-      if (!var7.contains(var2)) {
-         var7.add(var2);
-         var3 = true;
+      var6 = var6;
+      if (!var6.contains(var2)) {
+         var6.add(var2);
+         return true;
       } else {
-         var3 = false;
+         return false;
       }
-
-      return var3;
    }
 
    public open fun onDropViewInstance(view: Any) {

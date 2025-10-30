@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.SpoilerView;
+import e4.a;
 
 public final class MessageComponentContainerViewBinding implements ViewBinding {
    @NonNull
@@ -30,15 +30,15 @@ public final class MessageComponentContainerViewBinding implements ViewBinding {
    @NonNull
    public static MessageComponentContainerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.accent_border;
-      View var2 = a.a(var0, var1);
-      if (var2 != null) {
+      View var4 = a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.children_views;
-         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-         if (var4 != null) {
+         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.spoiler;
             SpoilerView var3 = (SpoilerView)a.a(var0, var1);
             if (var3 != null) {
-               return new MessageComponentContainerViewBinding(var0, var2, var4, var3);
+               return new MessageComponentContainerViewBinding(var0, var4, var2, var3);
             }
          }
       }

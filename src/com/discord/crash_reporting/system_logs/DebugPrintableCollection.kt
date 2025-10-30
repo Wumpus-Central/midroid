@@ -2,6 +2,7 @@ package com.discord.crash_reporting.system_logs
 
 import android.content.Context
 import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager.ApplicationInfoFlags
 import android.os.Build.VERSION
 import java.lang.ref.WeakReference
 import java.util.ArrayList
@@ -74,22 +75,22 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 12
+      // 58: astore 13
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 13
+      // 5d: astore 14
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 14
-      // 64: aload 14
+      // 62: astore 12
+      // 64: aload 12
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 13
+      // 6a: aload 14
       // 6c: aload 2
-      // 6d: aload 14
+      // 6d: aload 12
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 12
+      // 72: aload 13
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 13
+      // 79: aload 14
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -123,9 +124,9 @@ public class DebugPrintableCollection {
    private fun removeDeadReferencesLocked() {
       val var3: ArrayList = new ArrayList();
 
-      for (Entry var5 : this.collection.entrySet()) {
-         val var1: Long = (var5.getKey() as java.lang.Number).longValue();
-         if ((var5.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+      for (Entry var4 : this.collection.entrySet()) {
+         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
+         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
             var3.add(var1);
          }
       }
@@ -232,21 +233,21 @@ public class DebugPrintableCollection {
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
-      // 0c4: astore 8
+      // 0c4: astore 7
       // 0c6: new java/lang/StringBuilder
-      // 0c9: astore 7
-      // 0cb: aload 7
+      // 0c9: astore 8
+      // 0cb: aload 8
       // 0cd: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d0: aload 7
+      // 0d0: aload 8
       // 0d2: ldc_w "Exception: "
       // 0d5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0d8: pop
-      // 0d9: aload 7
-      // 0db: aload 8
+      // 0d9: aload 8
+      // 0db: aload 7
       // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e0: pop
       // 0e1: aload 2
-      // 0e2: aload 7
+      // 0e2: aload 8
       // 0e4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0e7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ea: pop
@@ -290,7 +291,7 @@ public class DebugPrintableCollection {
       public fun libdiscordVersion(context: Context): String {
          val var2: ApplicationInfo;
          if (VERSION.SDK_INT >= 33) {
-            var2 = b.a(var1.getPackageManager(), var1.getPackageName(), a.a(128L));
+            var2 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), ApplicationInfoFlags.of(128L));
          } else {
             var2 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), 128);
          }

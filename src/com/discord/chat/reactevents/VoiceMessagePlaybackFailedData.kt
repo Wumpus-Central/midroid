@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMessage: String?) : VoiceMessagePlaybackFailedData(var1, var2), ReactEvent {
@@ -62,13 +62,13 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.errorMessage;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = this.errorMessage;
       val var2: StringBuilder = new StringBuilder();
       var2.append("VoiceMessagePlaybackFailedData(messageId=");
-      var2.append(var1);
-      var2.append(", errorMessage=");
       var2.append(var3);
+      var2.append(", errorMessage=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

@@ -1,13 +1,12 @@
 package com.discord.jank_stats
 
-import U2.a
 import android.view.Window
 import androidx.metrics.performance.FrameData
 import androidx.metrics.performance.JankStats
 import androidx.metrics.performance.JankStats.OnFrameListener
 import com.discord.crash_reporting.CrashReporting
-import com.discord.crash_reporting.CrashReporting.ErrorLevel
 import com.discord.logging.Log
+import s6.a
 
 public object JankStatsAggregator {
    private final val listener: OnFrameListener = new a()
@@ -25,7 +24,7 @@ public object JankStatsAggregator {
       } else {
          INSTANCE.disableTracking();
          Log.e$default(Log.INSTANCE, "JankStatsAggregator", "Frame count reached unexpected max int", null, 4, null);
-         CrashReporting.INSTANCE.captureMessage("JankStatsAggregator", "Frame count reached unexpected max int", ErrorLevel.WARNING);
+         CrashReporting.INSTANCE.captureMessage("JankStatsAggregator", "Frame count reached unexpected max int", CrashReporting.ErrorLevel.WARNING);
       }
    }
 
@@ -65,7 +64,7 @@ public object JankStatsAggregator {
       val var5: Int = numJankFrames;
       numFrames = 0;
       numJankFrames = 0;
-      val var7: Log = Log.INSTANCE;
+      val var6: Log = Log.INSTANCE;
       val var2: Double;
       if (var4 > 0) {
          var2 = (double)var5 / var4 * 100.0;
@@ -73,27 +72,27 @@ public object JankStatsAggregator {
          var2 = 0.0;
       }
 
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("*** Jank Report (");
-      var6.append(var1);
-      var6.append("), totalFrames = ");
-      var6.append(var4);
-      var6.append(", jankFrames = ");
-      var6.append(var5);
-      var6.append(", jank % = ");
-      var6.append(var2);
-      Log.i$default(var7, "JankStatsAggregator", var6.toString(), null, 4, null);
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("*** Jank Report (");
+      var7.append(var1);
+      var7.append("), totalFrames = ");
+      var7.append(var4);
+      var7.append(", jankFrames = ");
+      var7.append(var5);
+      var7.append(", jank % = ");
+      var7.append(var2);
+      Log.i$default(var6, "JankStatsAggregator", var7.toString(), null, 4, null);
       return new JankReport(var4, var5);
    }
 
    public fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Float) {
       val var2: JankStats = jankStats;
       var2.c(var1);
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Jank heuristic multiplier set to ");
-      var3.append(var1);
-      var3.append(".");
-      Log.i$default(var4, "JankStatsAggregator", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Jank heuristic multiplier set to ");
+      var4.append(var1);
+      var4.append(".");
+      Log.i$default(var3, "JankStatsAggregator", var4.toString(), null, 4, null);
    }
 }

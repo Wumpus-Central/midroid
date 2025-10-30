@@ -1,7 +1,5 @@
 package com.discord.image.dominant_color
 
-import T2.a
-import T2.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
@@ -16,6 +14,8 @@ import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
+import r6.a
+import r6.b
 
 @SourceDebugExtension(["SMAP\nImageManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,64:1\n1557#2:65\n1628#2,2:66\n1630#2:87\n105#3,19:68\n*S KotlinDebug\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n*L\n52#1:65\n52#1:66,2\n52#1:87\n52#1:68,19\n*E\n"])
 public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {

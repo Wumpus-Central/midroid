@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
 
-@wc.m
+@tp.m
 internal class OnSelectComponentTapEvent : ReactEvent {
    fun serialize(): WritableMap {
       return DefaultImpls.serialize(this);

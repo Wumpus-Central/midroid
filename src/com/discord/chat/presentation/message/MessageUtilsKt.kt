@@ -40,12 +40,5 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
 }
 
 public fun Context.getChatTextSizeSp(): Int {
-   val var1: Byte;
-   if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var0)) {
-      var1 = 14;
-   } else {
-      var1 = 16;
-   }
-
-   return var1;
+   return if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var0)) 14 else 16;
 }

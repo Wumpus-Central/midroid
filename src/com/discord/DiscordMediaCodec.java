@@ -12,7 +12,7 @@ public class DiscordMediaCodec {
    };
 
    private static boolean isHardwareAccelerated_API29(MediaCodecInfo var0) {
-      return a.a(var0);
+      return var0.isHardwareAccelerated();
    }
 
    public static boolean supportsHardwareEncoding(MediaCodecInfo var0) {

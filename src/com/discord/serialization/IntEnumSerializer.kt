@@ -1,6 +1,5 @@
 package com.discord.serialization
 
-import Ua.a
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
@@ -8,8 +7,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import yc.j
-import yc.e.f
+import qm.a
+import vp.j
+import vp.e.f
 
 @SourceDebugExtension(["SMAP\nIntEnumSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 IntEnumSerializer.kt\ncom/discord/serialization/IntEnumSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,64:1\n11165#2:65\n11500#2,3:66\n37#3,2:69\n1#4:71\n*S KotlinDebug\n*F\n+ 1 IntEnumSerializer.kt\ncom/discord/serialization/IntEnumSerializer\n*L\n17#1:65\n17#1:66,3\n17#1:69,2\n*E\n"])
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
@@ -66,12 +66,12 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             throw new IllegalStateException(var11.toString().toString());
          }
       } else {
-         val var4: java.lang.String = this.serialName;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var3);
-         var6.append(" is not a valid serial value of ");
-         var6.append(var4);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append(var3);
+         var4.append(" is not a valid serial value of ");
+         var4.append(var6);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -83,14 +83,14 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       } else if (var3 != -1) {
          var1.B(this.choicesNumbers[var3]);
       } else {
-         val var5: java.lang.String = this.serialName;
-         val var6: Array<IntEnum> = this.choices;
+         val var6: java.lang.String = this.serialName;
+         val var5: Array<IntEnum> = this.choices;
          val var7: StringBuilder = new StringBuilder();
          var7.append(var2);
          var7.append(" is not a valid enum ");
-         var7.append(var5);
-         var7.append(", choices are ");
          var7.append(var6);
+         var7.append(", choices are ");
+         var7.append(var5);
          throw new IllegalStateException(var7.toString().toString());
       }
    }

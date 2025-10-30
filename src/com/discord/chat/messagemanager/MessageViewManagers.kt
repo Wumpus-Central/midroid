@@ -52,14 +52,7 @@ public object MessageViewManagers {
    }
 
    private fun MessageRow.getEventHandler(context: Context): ChatEventHandler {
-      val var3: Any;
-      if (var1.getReactTag() != null) {
-         var3 = new ChatViewEventHandler(var2, reactEvents, new a(var1));
-      } else {
-         var3 = ChatEventHandler.Empty.INSTANCE;
-      }
-
-      return (ChatEventHandler)var3;
+      return (ChatEventHandler)(if (var1.getReactTag() != null) new ChatViewEventHandler(var2, reactEvents, new a(var1)) else ChatEventHandler.Empty.INSTANCE);
    }
 
    @JvmStatic
@@ -168,12 +161,12 @@ public object MessageViewManagers {
             }
 
             val var10: MessageBase = var4.getMessage();
-            val var6: Message = var10 as Message;
-            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var5: MessageFrame = var4.getMessageFrame();
-            val var11: Context = var1.getContext();
+            val var7: Message = var10 as Message;
+            val var11: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var6: MessageFrame = var4.getMessageFrame();
+            val var5: Context = var1.getContext();
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var5, MessageViewManagers.access$getEventHandler(var3, var4, var11), this.componentProvider, null, false, false, 224, null
+               var1, var7, var11, var6, MessageViewManagers.access$getEventHandler(var3, var4, var5), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }
@@ -213,9 +206,9 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             val var8: Message = var4 as Message;
-            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var6: Context = var1.getContext();
-            var1.setMessage(var8, var5, MessageViewManagers.access$getEventHandler(var3, var7, var6));
+            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var5: Context = var1.getContext();
+            var1.setMessage(var8, var6, MessageViewManagers.access$getEventHandler(var3, var7, var5));
          }
       }
 

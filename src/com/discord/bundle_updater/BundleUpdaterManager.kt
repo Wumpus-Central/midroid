@@ -1,6 +1,5 @@
 package com.discord.bundle_updater
 
-import Ja.v
 import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
@@ -24,16 +23,17 @@ import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.runtime.ReactHostImpl
 import com.facebook.react.runtime.internal.bolts.Task
 import com.jakewharton.processphoenix.ProcessPhoenix
+import fm.v
 import java.io.File
 import java.lang.reflect.Method
+import jp.i0
+import jp.j1
+import jp.k0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
-import mc.I
-import mc.K
-import mc.k0
 
 @SourceDebugExtension(["SMAP\nBundleUpdaterManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,202:1\n1#2:203\n8#3:204\n*S KotlinDebug\n*F\n+ 1 BundleUpdaterManager.kt\ncom/discord/bundle_updater/BundleUpdaterManager\n*L\n192#1:204\n*E\n"])
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -47,7 +47,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       this.reactEvents = new ReactEvents(
          new Pair[]{v.a("BundleDownloaded", BundleDownloadedEvent::class), v.a("OtaUpdateChecked", OtaCheckAttemptEvent::class)}
       );
-      this.coroutineScope = kotlinx.coroutines.g.a(K.c().W0(k0.b(null, 1, null)));
+      this.coroutineScope = kotlinx.coroutines.g.a(k0.c().U0(j1.b(null, 1, null)));
    }
 
    @JvmStatic
@@ -113,15 +113,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var1: ProgressBar = new ProgressBar(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var1.setIndeterminate(true);
-      val var2: FrameLayout = new FrameLayout(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-1, -1));
-      var2.addView(var1);
-      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var2.setClickable(true);
-      this.progressLayout = var2;
+      val var2: ProgressBar = new ProgressBar(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var2.setIndeterminate(true);
+      val var1: FrameLayout = new FrameLayout(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-1, -1));
+      var1.addView(var2);
+      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var1.setClickable(true);
+      this.progressLayout = var1;
       this.runOnActivity(new l(this));
    }
 
@@ -213,7 +213,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
          var9.waitForCompletion();
       }
 
-      mc.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      jp.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
          int label;
          final BundleUpdaterManager this$0;
 
@@ -231,7 +231,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = Oa.b.e();
+            val var3: Any = km.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -241,7 +241,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
             } else {
                kotlin.c.b(var1);
                this.label = 1;
-               if (I.a(1000L, this) === var3) {
+               if (i0.a(1000L, this) === var3) {
                   return var3;
                }
             }
@@ -256,8 +256,10 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    public fun addListener(type: String) {
       if (var1 == "BundleDownloaded") {
          BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new j(this));
-      } else if (var1 == "OtaUpdateChecked") {
-         BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
+      } else {
+         if (var1 == "OtaUpdateChecked") {
+            BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
+         }
       }
    }
 

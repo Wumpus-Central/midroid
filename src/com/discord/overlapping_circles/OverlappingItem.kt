@@ -26,22 +26,15 @@ public data class OverlappingItem(imageUri: String?) {
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.imageUri == null) {
-         var1 = 0;
-      } else {
-         var1 = this.imageUri.hashCode();
-      }
-
-      return var1;
+      return if (this.imageUri == null) 0 else this.imageUri.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.imageUri;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OverlappingItem(imageUri=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.imageUri;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OverlappingItem(imageUri=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

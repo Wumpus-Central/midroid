@@ -77,12 +77,12 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       val var6: SimpleDraweeView = this.binding.authorAvatar;
       val var7: Context = this.binding.authorAvatar.getContext();
       var6.setImageURI(MessageKt.avatarUrl(var1, var7));
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new L(var1, var2), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new V(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new l0(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new u0(var1, var2), 1, null);
       val var11: TextView = this.binding.authorName;
       this.binding.authorName.setTextColor(MessageKt.usernameColor$default(var1, 0, 1, null));
       var11.setText(var1.getUsername());
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new W(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new v0(var1, var2), 1, null);
       val var12: RoleIconView = this.binding.roleIcon;
       var var3: Boolean;
       if (var1.getRoleIcon() != null) {
@@ -217,22 +217,22 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
             MessageKt.shouldShowLinkDecorations(var1),
             var1.getShouldShowRoleDot(),
             var1.getShouldShowRoleOnName(),
-            new X(),
-            new d0(),
-            new M(),
-            new N(),
-            new O(),
-            new P(),
-            new Q(),
-            new S(),
-            new T(),
-            new U(),
-            new Y(),
-            new Z(),
-            new a0(),
+            new w0(),
+            new c1(),
+            new m0(),
+            new n0(),
+            new o0(),
+            new p0(),
+            new q0(),
+            new r0(),
+            new s0(),
+            new t0(),
+            new x0(),
+            new y0(),
+            new z0(),
             <unrepresentable>.INSTANCE,
-            new b0(),
-            new c0(),
+            new a1(),
+            new b1(),
             var8.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing),
             var2,
             false,

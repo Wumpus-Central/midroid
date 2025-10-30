@@ -78,9 +78,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
          this.messageContentView.setTextColor(var1.getMessageTextColor());
          DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
          SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
-         val var27: TextPaint = this.messageContentView.getPaint();
+         val var26: TextPaint = this.messageContentView.getPaint();
          val var32: FontManager = FontManager.INSTANCE;
-         val var26: Context = this.messageContentView.getContext();
+         val var27: Context = this.messageContentView.getContext();
          this.messageContentView
             .setMessageContent-AeCz66Y(
                var1.getMessageContent(),
@@ -89,7 +89,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
                var1.getShouldShowLinkDecorations(),
                var1.getShouldShowRoleDot(),
                var1.getShouldShowRoleOnName(),
-               new B(var2, var1),
+               new b0(var2, var1),
                var3,
                var4,
                var5,
@@ -98,13 +98,13 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
                var8,
                var9,
                var10,
-               new C(this, var11),
+               new c0(this, var11),
                var12,
                var13,
                var14,
                var15,
                var16,
-               new D(var1),
+               new d0(var1),
                var1.getBottomSpacingPx(),
                var1.getConstrainedWidth(),
                var1.isForwardedContent(),
@@ -112,7 +112,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
                var1.getEditedLabelTextColor(),
                var1.getTruncation(),
                var1.getTheme(),
-               TextUtilsKt.getBaselineHeightForFontSizePx(var27, var32.getScaledSpToPx(16, var26))
+               TextUtilsKt.getBaselineHeightForFontSizePx(var26, var32.getScaledSpToPx(16, var27))
             );
       }
    }

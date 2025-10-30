@@ -3,7 +3,7 @@ package com.discord.qr.scanner.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 internal data class OnQRCodeFoundEvent(status: String, result: String? = null) : ReactEvent {

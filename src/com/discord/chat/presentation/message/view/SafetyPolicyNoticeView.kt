@@ -52,7 +52,7 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
    }
 
    private fun setOnClickListener(classificationId: String, callback: (String) -> Unit) {
-      this.binding.getRoot().setOnClickListener(new L0(var2, var1));
+      this.binding.getRoot().setOnClickListener(new k2(var2, var1));
    }
 
    @JvmStatic

@@ -1,10 +1,8 @@
 package com.discord.safearea
 
-import Ja.v
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
-import androidx.activity.o
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsCompat.n
@@ -16,10 +14,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import k3.a
-import k3.b
-import k3.c
-import k3.d
+import fm.v
+import i7.a
+import i7.b
+import i7.c
+import i7.d
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,112:1\n1#2:113\n*E\n"])
@@ -65,7 +64,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
          if (var4 != null) {
             val var5: Window = var4.getWindow();
             if (var5 != null) {
-               o.a(var5, var1);
+               var5.setNavigationBarContrastEnforced(var1);
             }
          }
       }
@@ -94,71 +93,71 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public open fun getImeInsets(exludeSytemBars: Boolean): Double {
-      val var8: Activity = this.reactContext.getCurrentActivity();
-      var var9: Insets = null;
-      val var11: WindowInsetsCompat;
-      if (var8 != null) {
-         var11 = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var8);
+      val var6: Activity = this.reactContext.getCurrentActivity();
+      var var7: Insets = null;
+      val var9: WindowInsetsCompat;
+      if (var6 != null) {
+         var9 = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var6);
       } else {
-         var11 = null;
+         var9 = null;
       }
 
-      var var5: Int;
+      var var3: Int;
       label41: {
-         if (var11 != null) {
-            val var10: Insets = WindowInsetsCompatExtensionsKt.getImeInsets$default(var11, false, 1, null);
-            if (var10 != null) {
-               var5 = var10.d;
+         if (var9 != null) {
+            val var8: Insets = WindowInsetsCompatExtensionsKt.getImeInsets$default(var9, false, 1, null);
+            if (var8 != null) {
+               var3 = var8.d;
                break label41;
             }
          }
 
-         var5 = 0;
+         var3 = 0;
       }
 
-      if (var5 <= 0) {
+      if (var3 <= 0) {
          return 0.0;
       } else {
-         val var12: Activity = this.reactContext.getCurrentActivity();
-         var var6: Int = 0;
-         if (var12 != null) {
-            if (var11 != null) {
-               var9 = WindowInsetsCompatExtensionsKt.getSystemBarInsets$default(var11, var12, false, 2, null);
+         val var10: Activity = this.reactContext.getCurrentActivity();
+         var var4: Int = 0;
+         if (var10 != null) {
+            if (var9 != null) {
+               var7 = WindowInsetsCompatExtensionsKt.getSystemBarInsets$default(var9, var10, false, 2, null);
             }
 
-            var6 = 0;
-            if (var9 != null) {
-               var6 = var9.d;
+            var4 = 0;
+            if (var7 != null) {
+               var4 = var7.d;
             }
          }
 
-         if (var6 == var5 && VERSION.SDK_INT <= 29) {
+         if (var4 == var3 && VERSION.SDK_INT <= 29) {
             return 0.0;
          } else {
-            val var4: Float;
+            val var2: Float;
             if (var1) {
-               var4 = SizeUtilsKt.getPxToDp(var5 - var6);
+               var2 = SizeUtilsKt.getPxToDp(var3 - var4);
             } else {
-               var4 = SizeUtilsKt.getPxToDp(var5);
+               var2 = SizeUtilsKt.getPxToDp(var3);
             }
 
-            return var4;
+            return var2;
          }
       }
    }
 
    public open fun getStableSafeAreaInsets(): WritableMap? {
       val var2: c = new c();
-      val var3: Activity = this.reactContext.getCurrentActivity();
-      if (var3 == null) {
+      val var4: Activity = this.reactContext.getCurrentActivity();
+      if (var4 == null) {
          return null;
       } else {
-         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
-         if (var4 == null) {
+         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var4);
+         if (var3 == null) {
             return null;
          } else {
-            val var1: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            val var1: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var4, true);
             return var2.invoke(Math.max(var1.a, var5.a), Math.max(var1.b, var5.b), Math.max(var1.c, var5.c), Math.max(var1.d, var5.d)) as WritableMap;
          }
       }

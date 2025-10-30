@@ -1,6 +1,5 @@
 package com.discord.media
 
-import Ja.v
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -11,6 +10,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
+import fm.v
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -52,16 +52,16 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var3: Int;
       try {
-         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var6: ReactApplicationContext = this.getReactApplicationContext();
-         var16 = CollectionsKt.P0(CollectionsKt.M0(var12.getMedia(var6, var7, var4, var5), new Comparator() {
+         var16 = CollectionsKt.P0(CollectionsKt.M0(var7.getMedia(var6, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return Ma.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return im.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();

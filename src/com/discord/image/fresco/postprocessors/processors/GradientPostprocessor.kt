@@ -1,7 +1,5 @@
 package com.discord.image.fresco.postprocessors.processors
 
-import Ja.p
-import Ja.v
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.LinearGradient
@@ -9,6 +7,8 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
+import fm.p
+import fm.v
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
    private final val gradient: Gradient
@@ -53,8 +53,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var9: Float = var1.getWidth();
-      val var2: Float = var1.getHeight();
+      val var4: Float = var1.getWidth();
+      val var8: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -67,7 +67,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var9, var2, var15);
+      var18.drawRect(0.0F, 0.0F, var4, var8, var15);
    }
 
    public companion object {
@@ -112,13 +112,13 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          }
 
          public override fun toString(): String {
-            val var1: Float = this.x;
-            val var2: Float = this.y;
+            val var2: Float = this.x;
+            val var1: Float = this.y;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Point(x=");
-            var3.append(var1);
-            var3.append(", y=");
             var3.append(var2);
+            var3.append(", y=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }

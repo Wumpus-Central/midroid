@@ -61,11 +61,23 @@ internal object BrowserManager {
    }
 
    public fun tryOpenUrlExternally(context: Context, url: String, onFailure: (Exception) -> Unit) {
-      try {
-         openUrlExternally$default(this, var1, Uri.parse(var2), var3, false, 8, null);
-      } catch (var4: Exception) {
-         var3.invoke(var4);
+      label20: {
+         try {
+            var7 = Uri.parse(var2);
+         } catch (var5: Exception) {
+            var6 = var5;
+            break label20;
+         }
+
+         try {
+            openUrlExternally$default(this, var1, var7, var3, false, 8, null);
+            return;
+         } catch (var4: Exception) {
+            var6 = var4;
+         }
       }
+
+      var3.invoke(var6);
    }
 
    public fun tryOpenUrlWithCustomTabs(context: Context, url: String, onFailure: (Exception) -> Unit) {

@@ -86,19 +86,19 @@ internal data class PortalFromNativeContext(view: WeakReference<View>,
 
    public override fun toString(): String {
       val var5: WeakReference = this.view;
-      val var2: Function1 = this.removeViewFromParent;
-      val var3: Function1 = this.onViewAddedToPortal;
-      val var6: Function1 = this.onViewRemovedFromPortal;
+      val var6: Function1 = this.removeViewFromParent;
+      val var2: Function1 = this.onViewAddedToPortal;
+      val var3: Function1 = this.onViewRemovedFromPortal;
       val var4: Function1 = this.returnViewToParent;
       val var1: StringBuilder = new StringBuilder();
       var1.append("PortalFromNativeContext(view=");
       var1.append(var5);
       var1.append(", removeViewFromParent=");
-      var1.append(var2);
-      var1.append(", onViewAddedToPortal=");
-      var1.append(var3);
-      var1.append(", onViewRemovedFromPortal=");
       var1.append(var6);
+      var1.append(", onViewAddedToPortal=");
+      var1.append(var2);
+      var1.append(", onViewRemovedFromPortal=");
+      var1.append(var3);
       var1.append(", returnViewToParent=");
       var1.append(var4);
       var1.append(")");

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.ctabutton
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class CtaButton(text: String, textColor: Int? = null, backgroundColor: Int? = null, callback: String? = null) {
@@ -82,21 +82,21 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var4: Int = this.textColor;
-      val var5: Int = this.backgroundColor;
-      val var3: java.lang.String = this.callback;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CtaButton(text=");
-      var1.append(var2);
-      var1.append(", textColor=");
-      var1.append(var4);
-      var1.append(", backgroundColor=");
-      var1.append(var5);
-      var1.append(", callback=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.text;
+      val var5: Int = this.textColor;
+      val var1: Int = this.backgroundColor;
+      val var2: java.lang.String = this.callback;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CtaButton(text=");
+      var3.append(var4);
+      var3.append(", textColor=");
+      var3.append(var5);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", callback=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

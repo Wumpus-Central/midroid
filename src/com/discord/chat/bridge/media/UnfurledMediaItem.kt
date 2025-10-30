@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.media
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class UnfurledMediaItem(url: String,
@@ -175,39 +175,39 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
+      val var2: java.lang.String = this.url;
       val var3: java.lang.String = this.proxyUrl;
-      val var2: UnfurledMediaLoadingState = this.loadingState;
-      val var8: Int = this.height;
-      val var6: Int = this.width;
-      val var7: java.lang.String = this.contentType;
-      val var5: java.lang.String = this.placeholder;
-      val var10: Int = this.placeholderVersion;
-      val var11: ContentScanMetadata = this.contentScanMetadata;
+      val var6: UnfurledMediaLoadingState = this.loadingState;
+      val var4: Int = this.height;
+      val var7: Int = this.width;
+      val var8: java.lang.String = this.contentType;
+      val var11: java.lang.String = this.placeholder;
+      val var5: Int = this.placeholderVersion;
+      val var9: ContentScanMetadata = this.contentScanMetadata;
       val var1: Boolean = this.srcIsAnimated;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("UnfurledMediaItem(url=");
-      var9.append(var4);
-      var9.append(", proxyUrl=");
-      var9.append(var3);
-      var9.append(", loadingState=");
-      var9.append(var2);
-      var9.append(", height=");
-      var9.append(var8);
-      var9.append(", width=");
-      var9.append(var6);
-      var9.append(", contentType=");
-      var9.append(var7);
-      var9.append(", placeholder=");
-      var9.append(var5);
-      var9.append(", placeholderVersion=");
-      var9.append(var10);
-      var9.append(", contentScanMetadata=");
-      var9.append(var11);
-      var9.append(", srcIsAnimated=");
-      var9.append(var1);
-      var9.append(")");
-      return var9.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("UnfurledMediaItem(url=");
+      var10.append(var2);
+      var10.append(", proxyUrl=");
+      var10.append(var3);
+      var10.append(", loadingState=");
+      var10.append(var6);
+      var10.append(", height=");
+      var10.append(var4);
+      var10.append(", width=");
+      var10.append(var7);
+      var10.append(", contentType=");
+      var10.append(var8);
+      var10.append(", placeholder=");
+      var10.append(var11);
+      var10.append(", placeholderVersion=");
+      var10.append(var5);
+      var10.append(", contentScanMetadata=");
+      var10.append(var9);
+      var10.append(", srcIsAnimated=");
+      var10.append(var1);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

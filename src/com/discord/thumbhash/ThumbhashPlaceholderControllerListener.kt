@@ -1,6 +1,5 @@
 package com.discord.thumbhash
 
-import Oa.b
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -10,13 +9,14 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import jp.f
+import jp.k0
+import km.b
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import mc.K
-import mc.f
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {
@@ -33,15 +33,15 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
    }
 
    public open fun onFailure(id: String?, throwable: Throwable?) {
-      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
+      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(this.background);
    }
 
    public open fun onSubmit(id: String?, callerContext: Any?) {
-      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).A(null);
+      (this.draweeView.getHierarchy() as GenericDraweeHierarchy).z(null);
       if (!Companion.canDisplay(this.placeholder, this.placeholderVersion)) {
-         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(this.background);
+         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(this.background);
       } else {
-         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).v(null);
+         (this.draweeView.getHierarchy() as GenericDraweeHierarchy).u(null);
          f.d(
             CoroutineViewUtilsKt.getAttachedScope(this.draweeView),
             null,
@@ -67,8 +67,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                }
 
                public final Object invokeSuspend(Object var1) {
-                  var var3x: Any = b.e();
-                  var var4: Any;
+                  val var4: Any = b.e();
+                  val var3x: CoroutineScope;
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -76,11 +76,10 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
 
                      var3x = this.L$0 as CoroutineScope;
                      c.b(var1);
-                     var4 = var1;
                   } else {
                      c.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
-                     var4 = K.a();
+                     var3x = this.L$0 as CoroutineScope;
+                     var1 = k0.a();
                      val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
@@ -110,23 +109,21 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                            }
                         }
                      };
-                     this.L$0 = var1;
+                     this.L$0 = var3x;
                      this.label = 1;
-                     var4 = f.g((CoroutineContext)var4, var5, this);
-                     if (var4 === var3x) {
-                        return var3x;
+                     var1 = (CoroutineDispatcher)f.g(var1, var5, this);
+                     if (var1 === var4) {
+                        return var4;
                      }
-
-                     var3x = var1;
                   }
 
-                  val var7: Bitmap = var4 as Bitmap;
-                  if (!g.i((CoroutineScope)var3x)) {
+                  val var7: Bitmap = var1 as Bitmap;
+                  if (!g.i(var3x)) {
                      return Unit.a;
                   } else {
-                     var3x = ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getContext().getResources();
+                     val var9: Resources = ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getContext().getResources();
                      (ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getHierarchy() as GenericDraweeHierarchy)
-                        .A(new BitmapDrawable((Resources)var3x, var7));
+                        .z(new BitmapDrawable(var9, var7));
                      return Unit.a;
                   }
                }

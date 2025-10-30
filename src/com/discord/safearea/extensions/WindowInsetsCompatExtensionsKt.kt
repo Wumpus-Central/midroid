@@ -11,7 +11,7 @@ import android.view.WindowInsets
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.n0
+import androidx.core.view.v0
 import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.SourceDebugExtension
@@ -43,14 +43,7 @@ fun `getImeInsets$default`(var0: WindowInsetsCompat, var1: Boolean, var2: Int, v
 }
 
 private fun WindowInsetsCompat.getInsets(type: Int, ignoringVisibility: Boolean = false): Insets {
-   val var3: Insets;
-   if (var2) {
-      var3 = var0.g(var1);
-   } else {
-      var3 = var0.f(var1);
-   }
-
-   return var3;
+   return if (var2) var0.g(var1) else var0.f(var1);
 }
 
 @JvmSynthetic
@@ -109,7 +102,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 }
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
-   val var3: WindowInsetsControllerCompat = n0.a(var0, var0.getDecorView());
+   val var3: WindowInsetsControllerCompat = v0.a(var0, var0.getDecorView());
    var3.e(2);
    if (var2) {
       var3.f(var1);

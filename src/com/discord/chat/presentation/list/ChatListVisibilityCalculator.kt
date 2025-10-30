@@ -43,13 +43,7 @@ internal class ChatListVisibilityCalculator {
    private fun intersectIntervals(min1: Int, max1: Int, min2: Int, max2: Int): Int {
       var1 = Math.max(var1, var3);
       var2 = Math.min(var2, var4);
-      if (var1 <= var2) {
-         var1 = var2 - var1;
-      } else {
-         var1 = 0;
-      }
-
-      return var1;
+      return if (var1 <= var2) var2 - var1 else 0;
    }
 
    private fun resetVisibilityData() {

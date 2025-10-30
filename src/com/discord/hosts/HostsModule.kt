@@ -11,8 +11,8 @@ public class HostsModule(context: ReactApplicationContext) : ReactContextBaseJav
 
    @ReactMethod
    public fun setHosts(api: String, cdn: String) {
-      val var3: Hosts = Hosts.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.init(var4, var1, var2);
+      val var4: Hosts = Hosts.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.init(var3, var1, var2);
    }
 }

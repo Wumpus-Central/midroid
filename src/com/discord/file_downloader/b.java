@@ -13,6 +13,6 @@ public final class b implements Function0 {
    public final String s;
 
    public final Object invoke() {
-      return <unrepresentable>.j(this.d, this.e, this.i, this.s);
+      return <unrepresentable>.h(this.d, this.e, this.i, this.s);
    }
 }

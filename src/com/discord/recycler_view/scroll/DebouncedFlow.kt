@@ -1,6 +1,8 @@
 package com.discord.recycler_view.scroll
 
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
+import jp.f
+import jp.k0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -13,10 +15,8 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import mc.K
-import mc.f
-import pc.e
-import pc.v
+import mp.e
+import mp.v
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -25,7 +25,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    private final val events: MutableSharedFlow<Any>
 
    init {
-      val var5: CoroutineScope = g.a(K.c());
+      val var5: CoroutineScope = g.a(k0.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
       this.events = v.b(0, 1, null, 4, null);
@@ -57,7 +57,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = Oa.b.e();
+               val var5: Any = km.b.e();
                if (this.label != 0) {
                   if (this.label != 1 && this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -67,9 +67,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                } else {
                   kotlin.c.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
+                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     var1 = new FlowCollector(this.$onEvent) {
+                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -78,21 +78,14 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2x) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion0(this.$tmp0, var1, var2x);
-                           return if (var1 === Oa.b.e()) var1 else Unit.a;
+                           return if (var1 === km.b.e()) var1 else Unit.a;
                         }
 
                         @Override
                         public final boolean equals(Object var1) {
-                           val var4: Boolean = var1 is FlowCollector;
-                           var var2x: Boolean = false;
-                           if (var4) {
-                              var2x = false;
-                              if (var1 is FunctionAdapter) {
-                                 var2x = this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
-                              }
-                           }
-
-                           return var2x;
+                           return var1 is FlowCollector
+                              && var1 is FunctionAdapter
+                              && this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
                         }
 
                         public final Function getFunctionDelegate() {
@@ -112,12 +105,12 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
                         return var5;
                      }
                   } else {
-                     val var8: Flow = e.g(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
+                     val var9: Flow = e.g(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var8: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -126,21 +119,14 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion1(this.$tmp0, var1, var2);
-                           return if (var1 === Oa.b.e()) var1 else Unit.a;
+                           return if (var1 === km.b.e()) var1 else Unit.a;
                         }
 
                         @Override
                         public final boolean equals(Object var1) {
-                           val var4: Boolean = var1 is FlowCollector;
-                           var var2: Boolean = false;
-                           if (var4) {
-                              var2 = false;
-                              if (var1 is FunctionAdapter) {
-                                 var2 = this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
-                              }
-                           }
-
-                           return var2;
+                           return var1 is FlowCollector
+                              && var1 is FunctionAdapter
+                              && this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
                         }
 
                         public final Function getFunctionDelegate() {
@@ -160,7 +146,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var8.collect(var9, this) === var5) {
+                     if (var9.collect(var8, this) === var5) {
                         return var5;
                      }
                   }

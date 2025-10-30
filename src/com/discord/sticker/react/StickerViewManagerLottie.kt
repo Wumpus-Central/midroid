@@ -32,11 +32,7 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
    }
 
    public open fun receiveCommand(node: StickerView, commandId: String, args: ReadableArray?) {
-      if (var2 == "setup") {
-         if (var3 == null) {
-            return;
-         }
-
+      if (var2 == "setup" && var3 != null) {
          this.setup(var1, var3.getString(0), var3.getString(1), var3.getInt(2), var3.getInt(3), var3.getInt(4), var3.getBoolean(5), var3.getString(6));
       }
    }

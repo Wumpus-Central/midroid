@@ -105,13 +105,13 @@ final class Palette {
    public static Palette generate(Bitmap var0, int var1) {
       checkBitmapParam(var0);
       checkNumberColorsParam(var1);
-      Bitmap var3 = scaleBitmapDown(var0);
-      ColorCutQuantizer var2 = ColorCutQuantizer.fromBitmap(var3, var1);
-      if (var3 != var0) {
-         var3.recycle();
+      Bitmap var2 = scaleBitmapDown(var0);
+      ColorCutQuantizer var3 = ColorCutQuantizer.fromBitmap(var2, var1);
+      if (var2 != var0) {
+         var2.recycle();
       }
 
-      return new Palette(var2.getQuantizedColors());
+      return new Palette(var3.getQuantizedColors());
    }
 
    private void generateEmptySwatches() {
@@ -139,19 +139,12 @@ final class Palette {
    }
 
    private boolean isAlreadySelected(Swatch var1) {
-      boolean var2;
-      if (this.mVibrantSwatch != var1
-         && this.mDarkVibrantSwatch != var1
-         && this.mLightVibrantSwatch != var1
-         && this.mMutedSwatch != var1
-         && this.mDarkMutedSwatch != var1
-         && this.mLightMutedColor != var1) {
-         var2 = false;
-      } else {
-         var2 = true;
-      }
-
-      return var2;
+      return this.mVibrantSwatch == var1
+         || this.mDarkVibrantSwatch == var1
+         || this.mLightVibrantSwatch == var1
+         || this.mMutedSwatch == var1
+         || this.mDarkMutedSwatch == var1
+         || this.mLightMutedColor == var1;
    }
 
    private static Bitmap scaleBitmapDown(Bitmap var0) {

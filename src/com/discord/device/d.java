@@ -1,5 +1,12 @@
 package com.discord.device;
 
+import android.os.PowerManager.OnThermalStatusChangedListener;
+
 // $VF: synthetic class
-public abstract class d {
+public final class d implements OnThermalStatusChangedListener {
+   public final DeviceThermalStateModule a;
+
+   public final void onThermalStatusChanged(int var1) {
+      DeviceThermalStateModule.a(this.a, var1);
+   }
 }

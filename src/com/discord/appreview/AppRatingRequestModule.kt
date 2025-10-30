@@ -4,8 +4,8 @@ import android.app.Activity
 import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import s2.a
-import s2.b
+import s5.a
+import s5.b
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec(var1) {
    public final val reactContext: ReactApplicationContext

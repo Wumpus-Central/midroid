@@ -48,16 +48,14 @@ public object MarkdownRules {
 
          @NotNull
          public final CharacterStyle invoke(int var1) {
-            val var3: Any;
             if (var1 == 0) {
-               var3 = new TextAppearanceSpan(this.$context, (this.$headerStyles.get(0) as java.lang.Number).intValue());
-            } else if (1 <= var1 && this.$headerStyles.size() >= var1) {
-               var3 = new TextAppearanceSpan(this.$context, (this.$headerStyles.get(var1 - 1) as java.lang.Number).intValue());
+               return new TextAppearanceSpan(this.$context, (this.$headerStyles.get(0) as java.lang.Number).intValue());
             } else {
-               var3 = new StyleSpan(3);
+               return (CharacterStyle)(if (1 <= var1 && this.$headerStyles.size() >= var1)
+                  new TextAppearanceSpan(this.$context, (this.$headerStyles.get(var1 - 1) as java.lang.Number).intValue())
+                  else
+                  new StyleSpan(3));
             }
-
-            return (CharacterStyle)var3;
          }
       };
       return CollectionsKt.n(new MarkdownRules.HeaderRule[]{new MarkdownRules.HeaderRule(new Function1<Integer, CharacterStyle>(var2) {

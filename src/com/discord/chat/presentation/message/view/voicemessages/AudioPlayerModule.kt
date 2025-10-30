@@ -24,10 +24,10 @@ public class AudioPlayerModule(reactContext: ReactApplicationContext) : NativeAu
    }
 
    public override fun maybePlayCurrentPlayer() {
-      this.reactContext.runOnUiQueueThread(new i());
+      this.reactContext.runOnUiQueueThread(new d());
    }
 
    public override fun pauseCurrentPlayer(storePauseState: Boolean) {
-      this.reactContext.runOnUiQueueThread(new j(var1));
+      this.reactContext.runOnUiQueueThread(new e(var1));
    }
 }

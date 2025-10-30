@@ -1,13 +1,13 @@
 package com.discord.media.engine;
 
-import com.facebook.react.bridge.Callback;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class i0 implements Function1 {
-   public final Callback d;
+   public final MediaEngineModule d;
+   public final int e;
 
    public final Object invoke(Object var1) {
-      return <unrepresentable>.g(this.d, (String[])var1);
+      return <unrepresentable>.q(this.d, this.e, (String)var1);
    }
 }

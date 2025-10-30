@@ -70,12 +70,12 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    init {
       this.brand500 = var1.getColor(color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = Ja.l.b(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = Ja.l.b(new E());
-      this.scaleAnimator$delegate = Ja.l.b(new F(var2, this));
-      this.textColorAnimator$delegate = Ja.l.b(new G(var2));
-      this.buttonIconColorAnimator$delegate = Ja.l.b(new H(var2));
-      this.progressColorAnimator$delegate = Ja.l.b(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = fm.l.b(new u(var1));
+      this.buttonContainerActiveDrawable$delegate = fm.l.b(new v());
+      this.scaleAnimator$delegate = fm.l.b(new w(var2, this));
+      this.textColorAnimator$delegate = fm.l.b(new x(var2));
+      this.buttonIconColorAnimator$delegate = fm.l.b(new y(var2));
+      this.progressColorAnimator$delegate = fm.l.b(new z(var2));
    }
 
    @JvmStatic
@@ -100,7 +100,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `buttonIconColorAnimator_delegate$lambda$13`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, -16777216});
-      var1.addUpdateListener(new z(var0));
+      var1.addUpdateListener(new a0(var0));
       return var1;
    }
 
@@ -127,7 +127,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
       var7.setDuration(var5);
       if (VERSION.SDK_INT >= 26) {
-         x.a(var7, var2);
+         var7.setCurrentPlayTime(var2);
       }
 
       var7.addListener(new AnimatorListener(this) {
@@ -181,11 +181,11 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       val var2: ValueAnimator = this.getScaleAnimator();
       if (var1) {
          var2.setFloatValues(new float[]{0.0F, 1.0F});
+         return var2;
       } else {
          var2.setFloatValues(new float[]{1.0F, 0.0F});
+         return var2;
       }
-
-      return var2;
    }
 
    private fun getTextColorAnimator(shouldPlay: Boolean): ValueAnimator {
@@ -203,7 +203,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `progressColorAnimator_delegate$lambda$17`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, ThemeManagerKt.getTheme().getInteractiveActive()});
-      var1.addUpdateListener(new C(var0));
+      var1.addUpdateListener(new t(var0));
       return var1;
    }
 
@@ -217,7 +217,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `scaleAnimator_delegate$lambda$5`(var0: AudioPlayerViewBinding, var1: AudioPlayerWipeAnimatorManager): ValueAnimator {
       val var2: ValueAnimator = ValueAnimator.ofFloat(new float[]{0.0F, 1.0F});
-      var2.addUpdateListener(new B(var0, var1));
+      var2.addUpdateListener(new s(var0, var1));
       return var2;
    }
 
@@ -250,7 +250,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `textColorAnimator_delegate$lambda$9`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{ThemeManagerKt.getTheme().getInteractiveNormal(), -1});
-      var1.addUpdateListener(new A(var0));
+      var1.addUpdateListener(new b0(var0));
       return var1;
    }
 
@@ -262,53 +262,53 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var8: Long = 0L;
+      var var7: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var8 = 0L;
+         var7 = 0L;
          if (this.animateToPlay != var1) {
-            var8 = 0L;
+            var7 = 0L;
             if (this.animatorSet != null) {
-               var var4: Long = 0L;
+               var var3: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var4 = this.animatorSet.getDuration();
+                     var3 = this.animatorSet.getDuration();
                   } else {
-                     var4 = 0L;
+                     var3 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var8 = y.a(this.animatorSet);
+                     var7 = this.animatorSet.getCurrentPlayTime();
                   } else {
-                     var8 = 0L;
+                     var7 = 0L;
                   }
 
-                  var var15: java.lang.Long = var4 - var8;
-                  var4 = var15.longValue();
-                  if (0L > var4 || var4 >= 201L) {
+                  var var15: java.lang.Long = var3 - var7;
+                  var3 = var15.longValue();
+                  if (0L > var3 || var3 >= 201L) {
                      var15 = null;
                   }
 
-                  var4 = 0L;
+                  var3 = 0L;
                   if (var15 != null) {
-                     var4 = var15;
+                     var3 = var15;
                   }
                }
 
-               var8 = var4;
+               var7 = var3;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var8 = var4;
+                  var7 = var3;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var17: AnimatorSet = this.getAnimatorSet(var1, var8, var2);
+      val var17: AnimatorSet = this.getAnimatorSet(var1, var7, var2);
       var17.start();
       this.animatorSet = var17;
    }

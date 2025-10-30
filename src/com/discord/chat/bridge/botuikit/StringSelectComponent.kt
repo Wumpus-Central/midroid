@@ -3,7 +3,7 @@ package com.discord.chat.bridge.botuikit
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 @SourceDebugExtension(["SMAP\nSelectComponent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponent.kt\ncom/discord/chat/bridge/botuikit/StringSelectComponent\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,143:1\n1557#2:144\n1628#2,3:145\n*S KotlinDebug\n*F\n+ 1 SelectComponent.kt\ncom/discord/chat/bridge/botuikit/StringSelectComponent\n*L\n40#1:144\n40#1:145,3\n*E\n"])
@@ -151,10 +151,10 @@ public data class StringSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var4: Int = this.id.hashCode();
-      val var3: Int = this.state.hashCode();
-      val var5: Int = this.customId.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var6: Int = this.id.hashCode();
+      val var5: Int = this.state.hashCode();
+      val var4: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -170,7 +170,7 @@ public data class StringSelectComponent(type: Int,
       return (
                (
                         (
-                                 ((((((var6 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                                 ((((((var3 * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                                     + Integer.hashCode(this.maxValues)
                               )
                               * 31
@@ -185,41 +185,41 @@ public data class StringSelectComponent(type: Int,
 
    public override fun toString(): String {
       val var2: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var9: ActionComponentState = this.state;
-      val var6: java.lang.String = this.customId;
+      val var10: java.lang.String = this.id;
+      val var12: ActionComponentState = this.state;
+      val var7: java.lang.String = this.customId;
       val var11: java.lang.String = this.placeholder;
-      val var8: java.lang.String = this.accessibilityLabel;
-      val var3: Int = this.minValues;
-      val var1: Int = this.maxValues;
+      val var5: java.lang.String = this.accessibilityLabel;
+      val var1: Int = this.minValues;
+      val var3: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var7: java.util.List = this.options;
-      val var10: java.util.List = this.selectedOptions;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("StringSelectComponent(type=");
-      var12.append(var2);
-      var12.append(", id=");
-      var12.append(var5);
-      var12.append(", state=");
-      var12.append(var9);
-      var12.append(", customId=");
-      var12.append(var6);
-      var12.append(", placeholder=");
-      var12.append(var11);
-      var12.append(", accessibilityLabel=");
-      var12.append(var8);
-      var12.append(", minValues=");
-      var12.append(var3);
-      var12.append(", maxValues=");
-      var12.append(var1);
-      var12.append(", disabled=");
-      var12.append(var4);
-      var12.append(", options=");
-      var12.append(var7);
-      var12.append(", selectedOptions=");
-      var12.append(var10);
-      var12.append(")");
-      return var12.toString();
+      val var9: java.util.List = this.options;
+      val var6: java.util.List = this.selectedOptions;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("StringSelectComponent(type=");
+      var8.append(var2);
+      var8.append(", id=");
+      var8.append(var10);
+      var8.append(", state=");
+      var8.append(var12);
+      var8.append(", customId=");
+      var8.append(var7);
+      var8.append(", placeholder=");
+      var8.append(var11);
+      var8.append(", accessibilityLabel=");
+      var8.append(var5);
+      var8.append(", minValues=");
+      var8.append(var1);
+      var8.append(", maxValues=");
+      var8.append(var3);
+      var8.append(", disabled=");
+      var8.append(var4);
+      var8.append(", options=");
+      var8.append(var9);
+      var8.append(", selectedOptions=");
+      var8.append(var6);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

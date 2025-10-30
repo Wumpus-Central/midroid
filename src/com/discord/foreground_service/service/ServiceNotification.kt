@@ -1,7 +1,5 @@
 package com.discord.foreground_service.service
 
-import Ja.v
-import Ma.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -9,14 +7,15 @@ import android.content.Context
 import android.os.Build.VERSION
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import androidx.core.content.b
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction.DefaultImpls
 import com.discord.notifications.renderer.R.drawable
+import fm.v
+import im.a
 import java.util.Comparator
 import kotlin.jvm.internal.SourceDebugExtension
-import v0.d
+import v1.d
 
 @SourceDebugExtension(["SMAP\nServiceNotification.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,105:1\n1053#2:106\n1863#2,2:107\n*S KotlinDebug\n*F\n+ 1 ServiceNotification.kt\ncom/discord/foreground_service/service/ServiceNotification\n*L\n25#1:106\n83#1:107,2\n*E\n"])
 internal object ServiceNotification {
@@ -33,7 +32,7 @@ internal object ServiceNotification {
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      val var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      var var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var6: PendingIntent;
       if (var3 != null) {
@@ -42,17 +41,17 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      val var5: NotificationCompat.Builder = var4.v(var6).T(drawable.ic_notification_24dp).K(true).S(true);
+      var4 = var4.v(var6).T(drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
-         var5.a(
+      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
+         var4.a(
             0,
-            var8.getTitle(),
-            DefaultImpls.toPendingIntent$default(new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null)
+            var5.getTitle(),
+            DefaultImpls.toPendingIntent$default(new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null)
          );
       }
 
-      return var5.A(d.a(v.a("permissionType", var2.getType().ordinal()))).g();
+      return var4.A(d.a(v.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {
@@ -76,7 +75,7 @@ internal object ServiceNotification {
          val var8: ServiceNotificationConfiguration = CollectionsKt.l0(var3, var4) as ServiceNotificationConfiguration;
          if (var8 != null) {
             val var9: Notification = this.buildNotification(var2, var8);
-            if (VERSION.SDK_INT < 33 || b.a(var2, "android.permission.POST_NOTIFICATIONS") == 0) {
+            if (VERSION.SDK_INT < 33 || androidx.core.content.a.a(var2, "android.permission.POST_NOTIFICATIONS") == 0) {
                this.getNotificationManagerCompat(var1).o("FOREGROUND_NOTIFICATION_TAG", var4, var9);
             }
          } else {

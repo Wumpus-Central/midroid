@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
+import e4.a;
 
 public final class EphemeralActionViewBinding implements ViewBinding {
    @NonNull
@@ -35,12 +35,12 @@ public final class EphemeralActionViewBinding implements ViewBinding {
       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.chat_list_adapter_item_text_dismiss;
-         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.chat_list_adapter_item_visibility_icon;
-            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-            if (var4 != null) {
-               return new EphemeralActionViewBinding(var0, var2, var3, var4);
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
+               return new EphemeralActionViewBinding(var0, var2, var4, var3);
             }
          }
       }

@@ -8,9 +8,9 @@ import com.facebook.react.bridge.ReactMethod
 public class NotificationManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    @ReactMethod
    public fun clearNotificationsForChannel(channelId: String) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.ackReactionNotifications(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.ackReactionNotifications(var3, var1);
    }
 
    public override fun getName(): String {

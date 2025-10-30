@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
 import kotlin.jvm.internal.SourceDebugExtension
-import v0.c
+import v1.c
 
 @SourceDebugExtension(["SMAP\nSmsAuthCodeBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n+ 2 _Strings.kt\nkotlin/text/StringsKt___StringsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,77:1\n434#2:78\n507#2,5:79\n1#3:84\n*S KotlinDebug\n*F\n+ 1 SmsAuthCodeBroadcastReceiver.kt\ncom/discord/phone_verification/SmsAuthCodeBroadcastReceiver\n*L\n31#1:78\n31#1:79,5\n*E\n"])
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
@@ -21,16 +21,16 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
    private fun extractCode(message: String): String {
       val var6: Regex = new Regex("[\\d-]{6,11}");
       var var3: Int = 0;
-      val var10: MatchResult = Regex.c(var6, var1, 0, 2, null);
+      val var9: MatchResult = Regex.c(var6, var1, 0, 2, null);
       var1 = null;
-      if (var10 != null) {
-         val var11: java.lang.String = var10.getValue();
+      if (var9 != null) {
+         val var10: java.lang.String = var9.getValue();
          var1 = null;
-         if (var11 != null) {
+         if (var10 != null) {
             val var8: StringBuilder = new StringBuilder();
 
-            for (int var4 = var11.length(); var3 < var4; var3++) {
-               val var2: Char = var11.charAt(var3);
+            for (int var4 = var10.length(); var3 < var4; var3++) {
+               val var2: Char = var10.charAt(var3);
                if (Character.isDigit(var2)) {
                   var8.append(var2);
                }
@@ -40,12 +40,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
          }
       }
 
-      var var9: java.lang.String = var1;
-      if (var1 == null) {
-         var9 = "";
-      }
-
-      return var9;
+      return if (var1 == null) "" else var1;
    }
 
    private fun Bundle.extractSecurityCode() {
@@ -62,11 +57,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var6: Log = Log.INSTANCE;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Successfully extracted code from SMS: ");
-         var7.append(var5);
-         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
+         val var7: Log = Log.INSTANCE;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Successfully extracted code from SMS: ");
+         var6.append(var5);
+         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {

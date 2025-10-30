@@ -1,6 +1,5 @@
 package com.discord.main
 
-import Ja.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
@@ -15,6 +14,7 @@ import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
+import fm.c
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
@@ -22,8 +22,8 @@ public class MainActivity : ReactActivity {
       return this.getReactActivityDelegate().getCurrentReactContext();
    }
 
-   public override fun getActivityDelegate(): ActivityDelegate {
-      return new ReactActivity.ActivityDelegate(this) {
+   public open fun getActivityDelegate(): ActivityDelegate {
+      return new ActivityDelegate(this) {
          final MainActivity this$0;
 
          {
@@ -32,26 +32,24 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var3: NotificationClient = NotificationClient.Companion.getInstance();
-            var var2: Context = this.getContext();
-            var3.handleIntent(var2, var1);
-            val var6: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
-            var2 = this.getContext();
-            var6.handleIntent(var2, var1);
+            val var2: NotificationClient = NotificationClient.Companion.getInstance();
+            var var3: Context = this.getContext();
+            var2.handleIntent(var3, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            var3 = this.getContext();
+            var4.handleIntent(var3, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
-            val var5: BundleUpdater = BundleUpdater.Companion.instance();
-            val var7: Context = this.getContext();
-            var5.handleIntent(var7, var1);
+            val var7: BundleUpdater = BundleUpdater.Companion.instance();
+            val var5: Context = this.getContext();
+            var7.handleIntent(var5, var1);
          }
 
-         @Override
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
             this.parseIntent(var2);
          }
 
-         @Override
          public boolean onNewIntent(Intent var1) {
             this.parseIntent(var1);
             this.this$0.setIntent(var1);
@@ -60,11 +58,11 @@ public class MainActivity : ReactActivity {
       };
    }
 
-   public override fun getNameOfComponent(): String {
+   public open fun getNameOfComponent(): String {
       return "Discord";
    }
 
-   protected override fun onCreate(savedInstanceState: Bundle?) {
+   protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(var1);
       TTIModule.Companion.setStaticMainActivityCreationTime(System.currentTimeMillis());
    }
@@ -80,7 +78,7 @@ public class MainActivity : ReactActivity {
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public override fun onUserLeaveHint() {
+   public open fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

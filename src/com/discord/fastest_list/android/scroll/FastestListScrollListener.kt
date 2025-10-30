@@ -31,13 +31,11 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
    }
 
    private fun getIsScrollingForward(dx: Int, dy: Int): Boolean {
-      val var4: Boolean = this.layoutManager.getHorizontal();
-      var var3: Boolean = false;
-      if (if (var4) var1 > 0 else var2 > 0) {
-         var3 = true;
+      if (this.layoutManager.getHorizontal()) {
+         return var1 > 0;
+      } else {
+         return var2 > 0;
       }
-
-      return var3;
    }
 
    public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {

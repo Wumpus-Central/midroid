@@ -3,7 +3,7 @@ package com.discord.chat.bridge.activities
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -98,22 +98,22 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var2: java.lang.String = this.instanceId;
-      val var6: java.util.List = this.participantAvatarUris;
-      val var3: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var1: java.lang.String = this.participantsDescription;
+      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var5: java.lang.String = this.instanceId;
+      val var1: java.util.List = this.participantAvatarUris;
+      val var2: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var3: java.lang.String = this.participantsDescription;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ActivityInstanceEmbed(applicationId=");
-      var4.append(var5);
-      var4.append(", instanceId=");
-      var4.append(var2);
-      var4.append(", participantAvatarUris=");
       var4.append(var6);
-      var4.append(", appMessageEmbedModel=");
-      var4.append(var3);
-      var4.append(", participantsDescription=");
+      var4.append(", instanceId=");
+      var4.append(var5);
+      var4.append(", participantAvatarUris=");
       var4.append(var1);
+      var4.append(", appMessageEmbedModel=");
+      var4.append(var2);
+      var4.append(", participantsDescription=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

@@ -1,6 +1,5 @@
 package com.discord.animatable_underlay
 
-import Ja.p
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -14,6 +13,7 @@ import com.discord.react_rootview.RootViewUtils
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
+import fm.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -68,10 +68,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
             }
 
             val var15: RectF = this.pathRect;
-            val var2: Float = this.height;
-            val var4: Float = this.shapeHeight;
+            val var3: Float = this.height;
+            val var2: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var2 - (var2 - var4) / 2;
+            var15.bottom = var3 - (var3 - var2) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -92,10 +92,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
             }
 
             val var19: RectF = this.pathRect;
-            val var12: Float = this.width;
-            val var13: Float = this.shapeWidth;
+            val var9: Float = this.width;
+            val var12: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var12 - (var12 - var13) / 2;
+            var19.right = var9 - (var9 - var12) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -182,7 +182,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       @JvmStatic
@@ -229,7 +229,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       @JvmStatic

@@ -14,16 +14,12 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
       new DCDVisualEffectViewTargetManagerDelegate(this)
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ReactViewGroup {
-      val var4: java.lang.String = var2.getString("nativeID");
-      if (var4 != null) {
-         val var3: Any;
-         if (BlurViewManager.Companion.isHardwareBlurEnabled$blur_release()) {
-            var3 = new BlurViewTargetHardwareAccelerated(var1, var4);
-         } else {
-            var3 = new BlurViewTarget(var1, var4);
-         }
-
-         return (ReactViewGroup)var3;
+      val var3: java.lang.String = var2.getString("nativeID");
+      if (var3 != null) {
+         return (ReactViewGroup)(if (BlurViewManager.Companion.isHardwareBlurEnabled$blur_release())
+            new BlurViewTargetHardwareAccelerated(var1, var3)
+            else
+            new BlurViewTarget(var1, var3));
       } else {
          throw new IllegalArgumentException("Failed requirement.");
       }

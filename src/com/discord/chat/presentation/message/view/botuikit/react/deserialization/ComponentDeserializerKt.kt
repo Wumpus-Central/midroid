@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.message.view.botuikit.react.deserialization
 
-import I2.a
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.chat.bridge.botuikit.ComponentSerializer
 import com.facebook.react.bridge.ReadableMap
+import i6.a
 import kotlin.jvm.internal.Intrinsics
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder

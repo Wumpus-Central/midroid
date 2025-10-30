@@ -1,6 +1,5 @@
 package com.discord.channel_spine
 
-import Ja.p
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -15,6 +14,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
+import fm.p
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
@@ -96,14 +96,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    private fun arcPercent(): Float {
-      val var1: Float;
-      if (this.isReplySpline) {
-         var1 = 0.25F;
-      } else {
-         var1 = 0.5F;
-      }
-
-      return var1;
+      return if (this.isReplySpline) 0.25F else 0.5F;
    }
 
    @JvmStatic
@@ -114,9 +107,9 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    private fun createSpinePath(rowHeight: Float, rowIndex: Int, direction: com.discord.channel_spine.ChannelSpineView.SpineDirection): Path {
-      val var11: Path = new Path();
+      val var10: Path = new Path();
       val var6: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-      val var10: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
+      val var11: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
       val var9: Int = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       val var4: Float;
       if (var9 != 1) {
@@ -136,25 +129,25 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      var5 = this.getMeasuredWidth();
-      val var7: Float = this.horizontalPadding;
-      val var8: Float = this.arcPercent() * this.getMeasuredWidth();
-      var2 = var10[var3.ordinal()];
+      var5 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      val var7: Float = this.getMeasuredWidth();
+      val var8: Float = this.horizontalPadding;
+      var1 = this.arcPercent() * this.getMeasuredWidth();
+      var2 = var11[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
             throw new p();
          }
 
-         this.arcRect.set(var6, var1, var6 + var8, var8 + var1);
+         this.arcRect.set(var6, var5, var6 + var1, var1 + var5);
       } else {
-         this.arcRect.set(var6, var1 - var8, var8 + var6, var1);
+         this.arcRect.set(var6, var5 - var1, var1 + var6, var5);
       }
 
-      var11.moveTo(var6, var4);
-      var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var5 - var7, var1);
-      return var11;
+      var10.moveTo(var6, var4);
+      var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
+      var10.lineTo(var7 - var8, var5);
+      return var10;
    }
 
    private fun rebuildLayout() {
@@ -309,7 +302,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       init {

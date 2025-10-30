@@ -1,6 +1,5 @@
 package com.discord.theme
 
-import Ja.p
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -9,6 +8,7 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
+import fm.p
 import java.util.EnumMap
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
@@ -26,27 +26,26 @@ public object ThemeManager {
    private fun initThemeObject(themeType: DiscordTheme): DiscordThemeObject {
       val var2: Int = ThemeManager.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
       var var3: Theme = null;
-      val var8: Any;
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               if (var2 != 4) {
+               if (var2 == 4) {
+                  var var10: Resources = resources;
+                  if (resources == null) {
+                     Intrinsics.throwUninitializedPropertyAccessException("resources");
+                     var10 = null;
+                  }
+
+                  if (resourceTheme == null) {
+                     Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
+                  } else {
+                     var3 = resourceTheme;
+                  }
+
+                  return new MidnightTheme(var10, var3);
+               } else {
                   throw new p();
                }
-
-               var var7: Resources = resources;
-               if (resources == null) {
-                  Intrinsics.throwUninitializedPropertyAccessException("resources");
-                  var7 = null;
-               }
-
-               var3 = resourceTheme;
-               if (resourceTheme == null) {
-                  Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  var3 = null;
-               }
-
-               var8 = new MidnightTheme(var7, var3);
             } else {
                var var9: Resources = resources;
                if (resources == null) {
@@ -60,13 +59,13 @@ public object ThemeManager {
                   var3 = null;
                }
 
-               var8 = new DarkerTheme(var9, var3);
+               return new DarkerTheme(var9, var3);
             }
          } else {
-            var var10: Resources = resources;
+            var var8: Resources = resources;
             if (resources == null) {
                Intrinsics.throwUninitializedPropertyAccessException("resources");
-               var10 = null;
+               var8 = null;
             }
 
             var3 = resourceTheme;
@@ -75,25 +74,23 @@ public object ThemeManager {
                var3 = null;
             }
 
-            var8 = new LightTheme(var10, var3);
+            return new LightTheme(var8, var3);
          }
       } else {
-         var var11: Resources = resources;
+         var var7: Resources = resources;
          if (resources == null) {
             Intrinsics.throwUninitializedPropertyAccessException("resources");
-            var11 = null;
+            var7 = null;
          }
 
+         var3 = resourceTheme;
          if (resourceTheme == null) {
             Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-         } else {
-            var3 = resourceTheme;
+            var3 = null;
          }
 
-         var8 = new DarkTheme(var11, var3);
+         return new DarkTheme(var7, var3);
       }
-
-      return (DiscordThemeObject)var8;
    }
 
    private fun setTheme(theme: DiscordTheme) {
@@ -142,48 +139,27 @@ public object ThemeManager {
    }
 
    public fun isInitialized(): Boolean {
-      val var1: Boolean;
-      if (theme != null) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return theme != null;
    }
 
    public fun isThemeDark(): Boolean {
-      var var2: DiscordTheme = theme;
+      var var1: DiscordTheme = theme;
       if (theme == null) {
          Intrinsics.throwUninitializedPropertyAccessException("theme");
-         var2 = null;
+         var1 = null;
       }
 
-      val var1: Boolean;
-      if (var2 != DiscordTheme.LIGHT) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return var1 != DiscordTheme.LIGHT;
    }
 
    public fun isThemeLight(): Boolean {
-      var var2: DiscordTheme = theme;
+      var var1: DiscordTheme = theme;
       if (theme == null) {
          Intrinsics.throwUninitializedPropertyAccessException("theme");
-         var2 = null;
+         var1 = null;
       }
 
-      val var1: Boolean;
-      if (var2 === DiscordTheme.LIGHT) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return var1 === DiscordTheme.LIGHT;
    }
 
    public fun setDarkLegacyTheme() {

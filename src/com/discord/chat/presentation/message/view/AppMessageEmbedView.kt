@@ -83,61 +83,61 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var3: Int = var1.get("r") as Int;
-      val var2: Int = var1.get("g") as Int;
+      val var2: Int = var1.get("r") as Int;
+      val var3: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var3 == null || var2 == null || var4 == null) {
+      if (var2 == null || var3 == null || var4 == null) {
          return null;
       } else {
-         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
+         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
       }
    }
 
    public fun initView(data: AppMessageEmbedImpl, eventHandler: ChatEventHandler, constrainedWidth: Int) {
-      val var13: AppMessageEmbedViewBinding = this.view;
-      var var14: TextView = this.view.title;
+      val var14: AppMessageEmbedViewBinding = this.view;
+      var var15: TextView = this.view.title;
       this.view.title.setTextColor(this.textColor);
-      SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimaryExtraBold);
-      var14 = var13.header;
-      var13.header.setTextColor(this.textColor);
-      SetTextSizeSpKt.setTextSizeSp(var14, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimarySemibold);
-      var14 = var13.info;
-      var13.info.setTextColor(this.textColor);
-      SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimaryMedium);
-      var var15: TextView = var13.tagline;
-      var13.tagline.setTextColor(this.textColor);
       SetTextSizeSpKt.setTextSizeSp(var15, 12.0F);
-      val var51: DiscordFont = DiscordFont.PrimaryNormal;
-      DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimaryNormal);
-      var var16: DCDButton = var13.linkIcon;
-      val var56: Context = var13.linkIcon.getContext();
-      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var56, color.transparent));
-      val var57: ReactAsset = ReactAsset.Link;
-      var var17: Context = var16.getContext();
-      var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
-      var16.setTextColor(this.textColor);
-      var16 = var13.linkIconTitle;
-      var17 = var13.linkIconTitle.getContext();
-      var16.setBackgroundColor(ColorUtilsKt.getColorCompat(var17, color.transparent));
-      var17 = var16.getContext();
-      var16.setIcon(var57.getUri(var17), SizeUtilsKt.getDpToPx(16));
-      var16.setTextColor(this.textColor);
-      val var58: SimpleDraweeView = var13.playerIcon;
-      ReactAssetUtilsKt.setReactAsset(var58, ReactAsset.Members);
-      ColorUtilsKt.setTintColor(var58, this.textColor);
-      val var59: OverlappingCirclesView = var13.participants;
-      var59.setVisibility(8);
-      var15 = var13.participantsText;
-      var15.setVisibility(8);
-      val var32: TextView = var13.participantsText;
-      var13.participantsText.setTextColor(this.textColor);
-      SetTextSizeSpKt.setTextSizeSp(var32, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var32, var51);
+      DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimaryExtraBold);
+      var15 = var14.header;
+      var14.header.setTextColor(this.textColor);
+      SetTextSizeSpKt.setTextSizeSp(var15, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimarySemibold);
+      var15 = var14.info;
+      var14.info.setTextColor(this.textColor);
+      SetTextSizeSpKt.setTextSizeSp(var15, 12.0F);
+      DiscordFontUtilsKt.setDiscordFont(var15, DiscordFont.PrimaryMedium);
+      var var16: TextView = var14.tagline;
+      var14.tagline.setTextColor(this.textColor);
+      SetTextSizeSpKt.setTextSizeSp(var16, 12.0F);
+      val var53: DiscordFont = DiscordFont.PrimaryNormal;
+      DiscordFontUtilsKt.setDiscordFont(var16, DiscordFont.PrimaryNormal);
+      var var17: DCDButton = var14.linkIcon;
+      val var58: Context = var14.linkIcon.getContext();
+      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var58, color.transparent));
+      val var59: ReactAsset = ReactAsset.Link;
+      var var18: Context = var17.getContext();
+      var17.setIcon(var59.getUri(var18), SizeUtilsKt.getDpToPx(16));
+      var17.setTextColor(this.textColor);
+      var17 = var14.linkIconTitle;
+      var18 = var14.linkIconTitle.getContext();
+      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var18, color.transparent));
+      var18 = var17.getContext();
+      var17.setIcon(var59.getUri(var18), SizeUtilsKt.getDpToPx(16));
+      var17.setTextColor(this.textColor);
+      val var60: SimpleDraweeView = var14.playerIcon;
+      ReactAssetUtilsKt.setReactAsset(var60, ReactAsset.Members);
+      ColorUtilsKt.setTintColor(var60, this.textColor);
+      val var61: OverlappingCirclesView = var14.participants;
+      var61.setVisibility(8);
+      var16 = var14.participantsText;
+      var16.setVisibility(8);
+      val var34: TextView = var14.participantsText;
+      var14.participantsText.setTextColor(this.textColor);
+      SetTextSizeSpKt.setTextSizeSp(var34, 12.0F);
+      DiscordFontUtilsKt.setDiscordFont(var34, var53);
       this.view.header.setText(var1.getHeader());
-      val var33: TextView = this.view.header;
+      val var35: TextView = this.view.header;
       var var8: Boolean;
       if (var1.getHeader() != null) {
          var8 = 1;
@@ -151,59 +151,59 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          var8 = 8;
       }
 
-      var33.setVisibility(var8);
+      var35.setVisibility(var8);
       this.view.info.setText(var1.getInfo());
-      val var34: TextView = this.view.info;
-      var var24: Boolean;
+      val var36: TextView = this.view.info;
+      var var25: Boolean;
       if (var1.getInfo() != null) {
-         var24 = 1;
+         var25 = 1;
       } else {
-         var24 = 0;
+         var25 = 0;
       }
 
-      if (var24) {
-         var24 = 0;
+      if (var25) {
+         var25 = 0;
       } else {
-         var24 = 8;
+         var25 = 8;
       }
 
-      var34.setVisibility(var24);
+      var36.setVisibility(var25);
       this.view.tagline.setText(var1.getTagline());
-      val var35: TextView = this.view.tagline;
-      var var26: Boolean;
+      val var37: TextView = this.view.tagline;
+      var var27: Boolean;
       if (var1.getTagline() != null) {
-         var26 = 1;
+         var27 = 1;
       } else {
-         var26 = 0;
+         var27 = 0;
       }
 
-      if (var26) {
-         var26 = 0;
+      if (var27) {
+         var27 = 0;
       } else {
-         var26 = 8;
+         var27 = 8;
       }
 
-      var35.setVisibility(var26);
-      val var36: SimpleDraweeView = this.view.playerIcon;
-      var var28: Boolean;
+      var37.setVisibility(var27);
+      val var38: SimpleDraweeView = this.view.playerIcon;
+      var var29: Boolean;
       if (var1.getTagline() != null) {
-         var28 = 1;
+         var29 = 1;
       } else {
-         var28 = 0;
+         var29 = 0;
       }
 
-      if (var28) {
-         var28 = 0;
+      if (var29) {
+         var29 = (byte)0;
       } else {
-         var28 = 8;
+         var29 = (byte)8;
       }
 
-      var36.setVisibility(var28);
+      var38.setVisibility(var29);
       if (var1.getStaticBannerSrc() != null) {
-         val var37: SimpleDraweeView = this.view.banner;
-         var37.setVisibility(0);
+         val var39: SimpleDraweeView = this.view.banner;
+         var39.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var29 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -211,147 +211,146 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var3 / var4;
-         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var38: SimpleDraweeView = this.view.banner;
-         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var4 = var29 / var4;
+         val var40: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var54: SimpleDraweeView = this.view.banner;
+         var40.resizeLayoutParams(var54, var29, (int)var4, var29, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
-         val var39: SimpleDraweeView = this.view.banner;
-         var39.setVisibility(8);
+         val var41: SimpleDraweeView = this.view.banner;
+         var41.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var14.setText(var40);
+         var15 = this.view.title;
+         val var42: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var15.setText(var42);
       } else {
-         val var41: TextView = this.view.title;
-         var41.setVisibility(8);
+         val var43: TextView = this.view.title;
+         var43.setVisibility(8);
       }
 
       if (var1.getIconSrc() != null) {
          this.view.appIcon.setImageURI(var1.getIconSrc());
       } else {
-         val var42: SimpleDraweeView = this.view.appIcon;
-         var42.setVisibility(8);
+         val var44: SimpleDraweeView = this.view.appIcon;
+         var44.setVisibility(8);
       }
 
       this.setBackgroundGradient(this, var1);
-      val var43: DCDButton = this.view.linkIcon;
-      var43.setVisibility(8);
-      val var44: DCDButton = this.view.linkIconTitle;
-      var44.setVisibility(8);
+      val var45: DCDButton = this.view.linkIcon;
+      var45.setVisibility(8);
+      val var46: DCDButton = this.view.linkIconTitle;
+      var46.setVisibility(8);
       if (var1.getEmbedUrl() != null) {
          if (var1.getTitle() != null) {
-            val var45: DCDButton = this.view.linkIconTitle;
-            var45.setVisibility(0);
+            val var47: DCDButton = this.view.linkIconTitle;
+            var47.setVisibility(0);
             this.view.linkIconTitle.setOnClickButtonListener(new b(this, var2, var1));
          } else {
-            val var46: DCDButton = this.view.linkIcon;
-            var46.setVisibility(0);
+            val var48: DCDButton = this.view.linkIcon;
+            var48.setVisibility(0);
             this.view.linkIcon.setOnClickButtonListener(new c(this, var2, var1));
          }
       }
 
-      val var47: java.util.List = var1.getActions();
-      if (var47 != null && !var47.isEmpty()) {
+      val var49: java.util.List = var1.getActions();
+      if (var49 != null && !var49.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var48: java.util.Iterator = CollectionsKt.F0(var1.getActions()).iterator();
+         val var50: java.util.Iterator = CollectionsKt.F0(var1.getActions()).iterator();
+         var3 = 0;
 
-         for (int var21 = 0; var48.hasNext(); var21++) {
-            var14 = (TextView)var48.next();
-            if (var21 < 0) {
+         for (byte var32 = 8; var50.hasNext(); var3++) {
+            var15 = (TextView)var50.next();
+            if (var3 < 0) {
                CollectionsKt.u();
             }
 
-            val var63: AppMessageActionImpl = var14 as AppMessageActionImpl;
-            val var31: Boolean;
-            if (var21 == var1.getActions().size() - 1) {
-               var31 = true;
+            val var65: AppMessageActionImpl = var15 as AppMessageActionImpl;
+            val var33: Boolean;
+            if (var3 == var1.getActions().size() - 1) {
+               var33 = true;
             } else {
-               var31 = false;
+               var33 = false;
             }
 
-            val var61: java.lang.String = var63.getLabel();
-            val var55: java.lang.String = var63.getId();
-            val var64: java.lang.Boolean = var63.getDisabled();
-            val var12: Boolean;
-            if (var64 != null) {
-               var12 = var64;
+            val var63: java.lang.String = var65.getLabel();
+            val var57: java.lang.String = var65.getId();
+            val var66: java.lang.Boolean = var65.getDisabled();
+            val var13: Boolean;
+            if (var66 != null) {
+               var13 = var66;
             } else {
-               var12 = false;
+               var13 = false;
             }
 
-            val var65: Context = this.getContext();
-            var var10: Int = ColorUtilsKt.getColorCompat(var65, color.white_500);
-            val var66: Context = this.getContext();
-            val var11: Int = ColorUtilsKt.getColorCompat(var66, color.black_500);
-            val var9: Int;
-            if (var31) {
-               var9 = var10;
-            } else {
-               var9 = q0.c.k(var10, 30);
-            }
-
-            if (var31) {
+            val var67: Context = this.getContext();
+            var var11: Int = ColorUtilsKt.getColorCompat(var67, color.white_500);
+            val var68: Context = this.getContext();
+            val var12: Int = ColorUtilsKt.getColorCompat(var68, color.black_500);
+            val var10: Int;
+            if (var33) {
                var10 = var11;
+            } else {
+               var10 = q1.c.k(var11, 30);
             }
 
-            val var67: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(0, -2);
-            var67.weight = var6;
-            if (var21 > 0) {
-               var67.setMarginStart(SizeUtilsKt.getDpToPx(8));
+            if (var33) {
+               var11 = var12;
             }
 
-            var17 = this.getContext();
-            val var71: DCDButton = new DCDButton(var17, null, 2, null);
+            val var69: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(0, -2);
+            var69.weight = var6;
+            if (var3 > 0) {
+               var69.setMarginStart(SizeUtilsKt.getDpToPx(var32));
+            }
+
+            var18 = this.getContext();
+            val var73: DCDButton = new DCDButton(var18, null, 2, null);
             val var7: Float;
-            if (var12) {
+            if (var13) {
                var7 = 0.5F;
             } else {
                var7 = 1.0F;
             }
 
-            var71.setAlpha(var7);
-            var71.setText(var61);
-            var71.setBackgroundColor(var9);
-            var71.setTextColor(var10);
-            var71.setTextSizeSp(14.0F);
-            var71.setDiscordFont(DiscordFont.PrimaryMedium);
-            var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
-            var71.setLayoutParams(var67);
-            var71.setOnClickButtonListener(new d(this, var2, var1, var55));
-            this.view.actionsContainer.addView(var71);
+            var73.setAlpha(var7);
+            var73.setText(var63);
+            var73.setBackgroundColor(var10);
+            var73.setTextColor(var11);
+            var73.setTextSizeSp(14.0F);
+            var73.setDiscordFont(DiscordFont.PrimaryMedium);
+            var73.setCornerRadius(SizeUtilsKt.getDpToPx(var32));
+            var73.setLayoutParams(var69);
+            var73.setOnClickButtonListener(new d(this, var2, var1, var57));
+            this.view.actionsContainer.addView(var73);
          }
 
-         val var19: LinearLayout = this.view.actionsContainer;
-         var19.setVisibility(0);
+         val var20: LinearLayout = this.view.actionsContainer;
+         var20.setVisibility(0);
       } else {
-         val var18: LinearLayout = this.view.actionsContainer;
-         var18.setVisibility(8);
+         val var19: LinearLayout = this.view.actionsContainer;
+         var19.setVisibility(8);
       }
    }
 
    public fun setBackgroundGradient(view: View, data: AppMessageEmbedImpl) {
-      if (var2.getGradientColors() != null) {
-         if (var2.getGradientColors().size() == 2) {
-            val var3: Int = this.rgbToColorInt(var2.getGradientColors().get(0));
-            val var5: Int = this.rgbToColorInt(var2.getGradientColors().get(1));
-            if (var3 != null && var5 != null && var3 != 0 && var5 != 0) {
-               if (this.gradientDrawable == null) {
-                  val var4: GradientDrawable = new GradientDrawable();
-                  var4.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
-                  var4.setOrientation(Orientation.BL_TR);
-                  this.gradientDrawable = var4;
-               }
-
-               if (this.gradientDrawable != null) {
-                  this.gradientDrawable.setColors(new int[]{var3, var5});
-               }
-
-               var1.setBackground(this.gradientDrawable);
+      if (var2.getGradientColors() != null && var2.getGradientColors().size() == 2) {
+         val var3: Int = this.rgbToColorInt(var2.getGradientColors().get(0));
+         val var5: Int = this.rgbToColorInt(var2.getGradientColors().get(1));
+         if (var3 != null && var5 != null && var3 != 0 && var5 != 0) {
+            if (this.gradientDrawable == null) {
+               val var4: GradientDrawable = new GradientDrawable();
+               var4.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
+               var4.setOrientation(Orientation.BL_TR);
+               this.gradientDrawable = var4;
             }
+
+            if (this.gradientDrawable != null) {
+               this.gradientDrawable.setColors(new int[]{var3, var5});
+            }
+
+            var1.setBackground(this.gradientDrawable);
          }
       }
    }

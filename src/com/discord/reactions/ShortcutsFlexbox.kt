@@ -53,18 +53,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    private fun getOrCreateReactionView(index: Int): ReactionView {
-      val var4: ReactionView;
       if (var1 < this.getChildCount() - 1) {
          val var2: View = this.getChildAt(var1);
-         var4 = var2 as ReactionView;
-         val var3: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
-         var4.setLayoutParams(var3 as FlexboxLayout.LayoutParams);
-         var4.setVisibility(0);
+         val var3: ReactionView = var2 as ReactionView;
+         val var4: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
+         var3.setLayoutParams(var4 as FlexboxLayout.LayoutParams);
+         var3.setVisibility(0);
+         return var3;
       } else {
-         var4 = this.createAndAddReactionView(this.getChildCount() - 1);
+         return this.createAndAddReactionView(this.getChildCount() - 1);
       }
-
-      return var4;
    }
 
    private fun hideRemainingReactionsInRow(startIndex: Int) {
@@ -117,11 +115,11 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var13: ThemeManager = ThemeManager.INSTANCE;
       val var12: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var13.setThemeOverride(var9);
-      val var18: java.util.List = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
-      val var15: java.util.Iterator = var18.iterator();
+      var1 = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
+      val var18: java.util.Iterator = var1.iterator();
 
-      for (int var10 = 0; var15.hasNext(); var10++) {
-         var var21: ReactionView = (ReactionView)var15.next();
+      for (int var10 = 0; var18.hasNext(); var10++) {
+         var var21: ReactionView = (ReactionView)var18.next();
          if (var10 < 0) {
             CollectionsKt.u();
          }
@@ -133,7 +131,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var21, false, new g(var8, var14), 1, null);
       }
 
-      this.hideRemainingReactionsInRow(var18.size());
+      this.hideRemainingReactionsInRow(var1.size());
       if (var2) {
          AddReactionView.configure$default(this.addReactionView, var3, var5, false, null, 8, null);
          this.addReactionView.setContentDescription(var4);

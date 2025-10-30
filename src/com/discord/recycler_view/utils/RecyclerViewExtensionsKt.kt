@@ -10,13 +10,15 @@ import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 
 internal fun RecyclerView.scrollToCenter(position: Int) {
    val var3: LayoutManager = var0.getLayoutManager();
-   if ((var3 as LinearLayoutManager).getReverseLayout()) {
+   if (!(var3 as LinearLayoutManager).getReverseLayout()) {
+      scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2);
+   } else {
       var var2: Int;
       val var4: ViewHolder = var0.findViewHolderForAdapterPosition(var1);
-      label17:
+      label18:
       if (var4 != null && var4.itemView != null) {
          var2 = var4.itemView.getHeight();
-         break label17;
+         break label18;
       } else {
          var2 = 0;
       }
@@ -26,8 +28,6 @@ internal fun RecyclerView.scrollToCenter(position: Int) {
       } else {
          scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2 - var2 / 2);
       }
-   } else {
-      scrollToPositionWithOffset(var0, var1, var0.getHeight() / 2);
    }
 }
 
@@ -44,13 +44,15 @@ internal fun RecyclerView.scrollToPositionWithOffset(position: Int, offset: Int)
 
 internal fun RecyclerView.scrollToTop(position: Int, offset: Int) {
    val var4: LayoutManager = var0.getLayoutManager();
-   if ((var4 as LinearLayoutManager).getReverseLayout()) {
+   if (!(var4 as LinearLayoutManager).getReverseLayout()) {
+      scrollToPositionWithOffset(var0, var1, var2);
+   } else {
       var var3: Int;
       val var5: ViewHolder = var0.findViewHolderForAdapterPosition(var1);
-      label17:
+      label18:
       if (var5 != null && var5.itemView != null) {
          var3 = var5.itemView.getHeight();
-         break label17;
+         break label18;
       } else {
          var3 = 0;
       }
@@ -60,8 +62,6 @@ internal fun RecyclerView.scrollToTop(position: Int, offset: Int) {
       } else {
          scrollToPositionWithOffset(var0, var1, var0.getHeight() - var3 * 2 - var2);
       }
-   } else {
-      scrollToPositionWithOffset(var0, var1, var2);
    }
 }
 

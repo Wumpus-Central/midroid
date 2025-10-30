@@ -4,13 +4,13 @@ import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
-import h3.h
-import h3.i
-import h3.j
-import h3.k
-import h3.l
-import h3.m
-import h3.n
+import f7.h
+import f7.i
+import f7.j
+import f7.k
+import f7.l
+import f7.m
+import f7.n
 
 public open class TransitionResilientLinearLayoutManager(context: Context,
    orientation: Int = 1,

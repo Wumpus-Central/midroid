@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.polls
 
-import Ja.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -20,6 +19,7 @@ import com.discord.primitives.MessageId
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
+import fm.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -171,13 +171,6 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
    }
 
    public fun hasAccessibilityFocus(): Boolean {
-      val var1: Boolean;
-      if (!this.binding.actionButton.isAccessibilityFocused() && !this.binding.actionText.isAccessibilityFocused()) {
-         var1 = false;
-      } else {
-         var1 = true;
-      }
-
-      return var1;
+      return this.binding.actionButton.isAccessibilityFocused() || this.binding.actionText.isAccessibilityFocused();
    }
 }

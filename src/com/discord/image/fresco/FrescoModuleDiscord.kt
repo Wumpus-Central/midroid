@@ -1,12 +1,12 @@
 package com.discord.image.fresco
 
-import N3.d
 import android.content.Context
 import com.discord.image.fresco.config.FrescoConfigKt
 import com.discord.image.fresco.config.FrescoMemoryTrimmer
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.fresco.FrescoModule
 import java.util.concurrent.CountDownLatch
+import l8.d
 
 public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : FrescoModule(var1, false, null, 6) {
    init {
@@ -181,7 +181,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 28: invokespecial com/discord/image/fresco/a.<init> (Landroid/content/Context;)V
          // 2b: bipush 22
          // 2d: aconst_null
-         // 2e: invokestatic Na/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+         // 2e: invokestatic jm/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
          // 31: pop
          // 32: return
          // 33: astore 1

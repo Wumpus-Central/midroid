@@ -105,7 +105,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       reactionsTheme: ReactionsTheme?,
       onAddReactionClick: OnClickListener,
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new e0()
+      onReactionLongPress: (Reaction) -> Unit = new d1()
    ) {
       val var6: ShortcutsFlexbox = this.binding.reactionsView;
       var6.setVisibility(0);
@@ -172,7 +172,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                false,
                false,
                var16,
-               new f0(var6, var1),
+               new e1(var6, var1),
                null,
                null,
                null,
@@ -229,12 +229,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = CollectionsKt.P0(var8, --var2);
-         val var35: ShortcutsFlexbox = this.binding.reactionsView;
-         var35.setVisibility(0);
-         this.setReactions(var23, var12, var13, var14, var15);
+         val var36: java.util.List = CollectionsKt.P0(var8, --var2);
+         val var23: ShortcutsFlexbox = this.binding.reactionsView;
+         var23.setVisibility(0);
+         this.setReactions(var36, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var33: DCDButton = this.binding.otherReactionsCount;
+         val var37: DCDButton = this.binding.otherReactionsCount;
          var var25: Boolean;
          if (var22 != 0) {
             var25 = 1;
@@ -248,12 +248,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var33.setVisibility(var25);
-         if (var33.getVisibility() == 0) {
-            val var36: Context = var33.getContext();
-            var33.setText(I18nUtilsKt.i18nFormat(var36, I18nMessage.FORUM_REACTIONS_OVERFLOW, new g0(var22)));
-            RippleUtilsKt.addRipple$default(var33, true, 0, 2, null);
-            var33.setOnClickButtonListener(var18);
+         var37.setVisibility(var25);
+         if (var37.getVisibility() == 0) {
+            val var34: Context = var37.getContext();
+            var37.setText(I18nUtilsKt.i18nFormat(var34, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
+            RippleUtilsKt.addRipple$default(var37, true, 0, 2, null);
+            var37.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;
@@ -266,21 +266,21 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          }
       }
 
-      val var34: DCDButton = this.binding.followButton;
+      val var35: DCDButton = this.binding.followButton;
       if (var4 != null) {
          this.binding.followButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
       }
 
       this.binding.followButton.setText(var5);
-      var34.setContentDescription(var5);
+      var35.setContentDescription(var5);
       if (var3) {
          var2 = ThemeManagerKt.getTheme().getTextBrand();
       } else {
          var2 = ThemeManagerKt.getTheme().getInteractiveNormal();
       }
 
-      var34.setTextColor(var2);
-      var34.setOnClickButtonListener(var16);
+      var35.setTextColor(var2);
+      var35.setOnClickButtonListener(var16);
       val var29: DCDButton = this.binding.shareButton;
       if (var6 != null) {
          this.binding.shareButton.setIcon(var6, SizeUtilsKt.getDpToPx(16));
@@ -289,11 +289,9 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       this.binding.shareButton.setOnClickButtonListener(var17);
       var29.setContentDescription(var7);
       val var30: AddReactionView = this.binding.addReaction;
-      val var28: Byte;
+      var var28: Byte = 8;
       if (var10) {
          var28 = 0;
-      } else {
-         var28 = 8;
       }
 
       var30.setVisibility(var28);

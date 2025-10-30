@@ -25,14 +25,14 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
       this.listeners = new ArrayList<>();
       val var2: AudioManager = var1.getSystemService(AudioManager.class) as AudioManager;
       this.androidAudioManager = var2;
-      this.audioDevices = Y.d();
+      this.audioDevices = w0.d();
       this.audioDeviceCallback = this.setupAudioDeviceCallback();
       val var3: Array<AudioDeviceInfo> = var2.getDevices(2);
-      this.audioDevices = kotlin.collections.k.b1(var3);
+      this.audioDevices = k.b1(var3);
    }
 
    private fun emitEffectiveDevice() {
-      this.notifyListeners(new j(this.getEffectiveAudioDevice()));
+      this.notifyListeners(new d(this.getEffectiveAudioDevice()));
    }
 
    @JvmStatic
@@ -51,7 +51,7 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
    private fun setActiveAudioDevice(device: AudioDeviceInfo) {
       try {
-         d.a(this.androidAudioManager, var1);
+         this.androidAudioManager.setCommunicationDevice(var1);
       } catch (RemoteException | var2: IllegalArgumentException) {
       }
    }
@@ -77,20 +77,20 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          // $VF: Duplicated exception handlers to handle obfuscated exceptions
          public void onAudioDevicesAdded(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               var var7: DiscordAudioManager2 = this.this$0;
-               val var8: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var6: ArrayList = new ArrayList();
+               val var6: DiscordAudioManager2 = this.this$0;
+               var var7: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var8: ArrayList = new ArrayList();
                var var4: Int = var1.length;
 
                for (int var2 = 0; var2 < var4; var2++) {
                   val var5: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var6.add(var5);
+                     var8.add(var5);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var7, Y.l(var8, var6));
-               DiscordAudioManager2.access$notifyListeners(this.this$0, new k(this.this$0));
+               DiscordAudioManager2.access$setAudioDevices$p(var6, w0.l(var7, var8));
+               DiscordAudioManager2.access$notifyListeners(this.this$0, new e(this.this$0));
                if (DiscordAudioManager2.access$getPreferredAudioDevice$p(this.this$0) == null) {
                   var4 = var1.length;
                   var var11: Int = 0;
@@ -134,12 +134,12 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
                   if (var16 != null) {
                      try {
-                        d.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var16);
+                        DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0).setCommunicationDevice(var16);
                      } catch (RemoteException | var10: IllegalArgumentException) {
                      }
                   } else if (var17 != null) {
                      try {
-                        d.a(DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0), var17);
+                        DiscordAudioManager2.access$getAndroidAudioManager$p(this.this$0).setCommunicationDevice(var17);
                      } catch (RemoteException | var9: IllegalArgumentException) {
                      }
                   }
@@ -151,20 +151,20 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var6: DiscordAudioManager2 = this.this$0;
-               val var4: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var7: ArrayList = new ArrayList();
+               val var5: DiscordAudioManager2 = this.this$0;
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var4: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var5: AudioDeviceInfo = var1[var2];
+                  val var7: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var7.add(var5);
+                     var4.add(var7);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var6, Y.j(var4, CollectionsKt.b1(var7)));
-               DiscordAudioManager2.access$notifyListeners(this.this$0, new l(this.this$0));
+               DiscordAudioManager2.access$setAudioDevices$p(var5, w0.j(var6, CollectionsKt.b1(var4)));
+               DiscordAudioManager2.access$notifyListeners(this.this$0, new f(this.this$0));
                DiscordAudioManager2.access$emitEffectiveDevice(this.this$0);
             }
          }
@@ -188,15 +188,15 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
       val var7: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
 
-      for (AudioDeviceInfo var8 : var2) {
-         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var8));
+      for (AudioDeviceInfo var5 : var2) {
+         var7.add(AndroidAudioDevice.Companion.fromAudioDeviceInfo(var5));
       }
 
       return CollectionsKt.a1(var7);
    }
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
-      val var1: AudioDeviceInfo = e.a(this.androidAudioManager);
+      val var1: AudioDeviceInfo = this.androidAudioManager.getCommunicationDevice();
       return if (var1 != null) AndroidAudioDevice.Companion.fromAudioDeviceInfo(var1) else new AndroidAudioDevice();
    }
 
@@ -234,12 +234,20 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
    }
 
    public override fun setCommunicationModeOn(on: Boolean) {
-      if (var1) {
+      if (!var1) {
+         if (this.communicationDeviceChangedRegistered) {
+            this.communicationDeviceChangedRegistered = false;
+            this.androidAudioManager.removeOnCommunicationDeviceChangedListener(this);
+         }
+
+         this.androidAudioManager.unregisterAudioDeviceCallback(this.audioDeviceCallback);
+         this.androidAudioManager.setMode(0);
+      } else {
          this.androidAudioManager.setMode(3);
          val var3: Any = null;
          this.androidAudioManager.registerAudioDeviceCallback(this.audioDeviceCallback, null);
          if (!this.communicationDeviceChangedRegistered) {
-            h.a(this.androidAudioManager, f.a(this.context), g.a(this));
+            this.androidAudioManager.addOnCommunicationDeviceChangedListener(this.context.getMainExecutor(), this);
             this.communicationDeviceChangedRegistered = true;
          }
 
@@ -296,17 +304,11 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
             this.setActiveAudioDevice(var14);
          } else if (var16 != null) {
             this.setActiveAudioDevice(var16);
-         } else if (var9 != null) {
-            this.setActiveAudioDevice((AudioDeviceInfo)var9);
+         } else {
+            if (var9 != null) {
+               this.setActiveAudioDevice((AudioDeviceInfo)var9);
+            }
          }
-      } else {
-         if (this.communicationDeviceChangedRegistered) {
-            this.communicationDeviceChangedRegistered = false;
-            i.a(this.androidAudioManager, g.a(this));
-         }
-
-         this.androidAudioManager.unregisterAudioDeviceCallback(this.audioDeviceCallback);
-         this.androidAudioManager.setMode(0);
       }
    }
 

@@ -72,16 +72,11 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
    public companion object {
       public fun EmojiPickerViewHolder.isNitroLocked(): Boolean {
-         val var2: Boolean;
          if (var1 is EmojiPickerViewHolder.Emoji) {
-            var2 = (var1 as EmojiPickerViewHolder.Emoji).isInsidePremiumRoadblock();
-         } else if (var1 is EmojiPickerViewHolder.Category) {
-            var2 = (var1 as EmojiPickerViewHolder.Category).isInsidePremiumRoadblock();
+            return (var1 as EmojiPickerViewHolder.Emoji).isInsidePremiumRoadblock();
          } else {
-            var2 = false;
+            return var1 is EmojiPickerViewHolder.Category && (var1 as EmojiPickerViewHolder.Category).isInsidePremiumRoadblock();
          }
-
-         return var2;
       }
    }
 
@@ -89,7 +84,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
    public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
          new SimpleDraweeView(var1)
       ) {
-      private final val placeholder: Drawable by Ja.l.b(new B())
+      private final val placeholder: Drawable by fm.l.b(new c0())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }
@@ -105,14 +100,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
       public final val isInsidePremiumRoadblock: Boolean
          public final get() {
-            val var1: Boolean;
-            if (this.emojiItem != null) {
-               var1 = this.emojiItem.isInsidePremiumRoadBlock();
-            } else {
-               var1 = false;
-            }
-
-            return var1;
+            return this.emojiItem != null && this.emojiItem.isInsidePremiumRoadBlock();
          }
 
 
@@ -122,10 +110,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiView = var4 as SimpleDraweeView;
          this.emojiLoadListener = new EmojiPickerViewHolder.Emoji.EmojiLoadListener(false);
          RippleUtilsKt.addCircleRipple(var5, true);
-         (var5.getHierarchy() as GenericDraweeHierarchy).x(var1.getResources().getInteger(com.discord.image.fresco.R.integer.image_fade_duration) / 3);
-         (var5.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new C(this, var2), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new D(this, var3), 1, null);
+         (var5.getHierarchy() as GenericDraweeHierarchy).w(var1.getResources().getInteger(com.discord.image.fresco.R.integer.image_fade_duration) / 3);
+         (var5.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new d0(this, var2), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new e0(this, var3), 1, null);
       }
 
       @JvmStatic
@@ -161,13 +149,8 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       private fun EmojiPickerItem.Emoji.getEmojiUrl(): String {
-         val var3: java.lang.String = var1.getUnicodeUrl();
-         var var2: java.lang.String = var3;
-         if (var3 == null) {
-            var2 = IconUrlUtils.INSTANCE.getCustomEmojiUrl(var1.getId(), var1.getAnimated(), this.emojiSize);
-         }
-
-         return var2;
+         val var2: java.lang.String = var1.getUnicodeUrl();
+         return if (var2 == null) IconUrlUtils.INSTANCE.getCustomEmojiUrl(var1.getId(), var1.getAnimated(), this.emojiSize) else var2;
       }
 
       @JvmStatic
@@ -217,7 +200,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
             var10 = null;
          }
 
-         var11.z(var10);
+         var11.y(var10);
          this.updateImage(var5, var6);
       }
 
@@ -240,7 +223,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
                }
             } else if (!(this.emojiUrl == var4)) {
                this.emojiUrl = var4;
-               (this.emojiView.getHierarchy() as GenericDraweeHierarchy).A(this.getPlaceholder());
+               (this.emojiView.getHierarchy() as GenericDraweeHierarchy).z(this.getPlaceholder());
                this.emojiView.setBackground(null);
                SetOptionalImageUrlKt.setOptionalImageUrl$default(this.emojiView, this.emojiUrl, java.lang.Boolean.FALSE, null, this.emojiLoadListener, 4, null);
             }
@@ -264,7 +247,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : R3.a {
+      private class EmojiLoadListener(animating: Boolean) : p8.a {
          private final var animating: Boolean
 
          init {
@@ -279,8 +262,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
             this.animating = var1;
             if (var2 != null && var1) {
                var2.start();
-            } else if (var2 != null) {
-               var2.stop();
+            } else {
+               if (var2 != null) {
+                  var2.stop();
+               }
             }
          }
       }
@@ -381,20 +366,11 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
       public companion object {
          public fun getGradient(useTier0UpsellContent: Boolean, circle: Boolean = false): Int {
-            val var3: Int;
             if (var1) {
-               if (var2) {
-                  var3 = R.drawable.premium_tier0_gradient_circle;
-               } else {
-                  var3 = R.drawable.premium_tier0_gradient;
-               }
-            } else if (var2) {
-               var3 = R.drawable.premium_tier2_gradient_circle;
+               return if (var2) R.drawable.premium_tier0_gradient_circle else R.drawable.premium_tier0_gradient;
             } else {
-               var3 = R.drawable.premium_tier2_gradient;
+               return if (var2) R.drawable.premium_tier2_gradient_circle else R.drawable.premium_tier2_gradient;
             }
-
-            return var3;
          }
       }
    }

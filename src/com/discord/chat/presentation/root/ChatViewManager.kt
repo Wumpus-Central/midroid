@@ -26,10 +26,10 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
-      val var2: ChatView = new ChatView(var1);
-      val var3: Context = var2.getContext();
-      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new c(var2)));
-      return var2;
+      val var3: ChatView = new ChatView(var1);
+      val var2: Context = var3.getContext();
+      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new c(var3)));
+      return var3;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
@@ -48,26 +48,17 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       val var4: Int = var2.hashCode();
       if (var4 != -938100109) {
          if (var4 != -402165208) {
-            if (var4 == 1908871954 && var2.equals("scrollIntoView")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var4 == 1908871954 && var2.equals("scrollIntoView") && var3 != null) {
                this.scrollIntoView(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2));
-            }
-         } else if (var2.equals("scrollTo")) {
-            if (var3 == null) {
                return;
             }
-
+         } else if (var2.equals("scrollTo") && var3 != null) {
             this.scrollTo(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2), var3.getInt(3));
-         }
-      } else if (var2.equals("scrollToBottom")) {
-         if (var3 == null) {
             return;
          }
-
+      } else if (var2.equals("scrollToBottom") && var3 != null) {
          this.scrollToBottom(var1, var3.getBoolean(0));
+         return;
       }
    }
 

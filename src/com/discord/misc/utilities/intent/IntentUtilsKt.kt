@@ -1,23 +1,23 @@
 package com.discord.misc.utilities.intent
 
-import Ua.a
 import android.content.Intent
 import android.os.Parcelable
-import androidx.core.content.c
+import androidx.core.content.b
 import java.util.ArrayList
 import kotlin.jvm.internal.Intrinsics
 import kotlin.reflect.KClass
+import qm.a
 
 @JvmSynthetic
 public inline fun <reified T : Parcelable> Intent.getIntentParcelable(parcelableKey: String): Any {
    Intrinsics.reifiedOperationMarker(4, "T");
-   return (T)(c.b(var0, var1, Parcelable.class) as Parcelable);
+   return (T)(b.b(var0, var1, Parcelable.class) as Parcelable);
 }
 
 @JvmSynthetic
 public inline fun <reified T : Parcelable> Intent.getIntentParcelableArrayList(parcelableKey: String): ArrayList<Any> {
    Intrinsics.reifiedOperationMarker(4, "T");
-   return c.a(var0, var1, Parcelable.class);
+   return b.a(var0, var1, Parcelable.class);
 }
 
 public fun Intent.hasExtra(className: KClass<*>): Boolean {

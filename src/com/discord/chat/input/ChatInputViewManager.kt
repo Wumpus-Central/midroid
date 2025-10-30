@@ -30,7 +30,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
-import zc.f
+import wp.f
 
 @ReactModule(name = "DCDChatInput")
 @SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n+ 3 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,332:1\n404#2:333\n404#2:334\n123#3:335\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n135#1:333\n155#1:334\n330#1:335\n*E\n"])
@@ -94,11 +94,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var4: ThemedReactContext = this.$reactContext;
-            val var5: ChatInputRootView = this.$view;
+            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var3: ThemedReactContext = this.$reactContext;
+            val var4: ChatInputRootView = this.$view;
             val var2: java.lang.String = var1.toString();
-            var3.emitEvent(var4, var5, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            var5.emitEvent(var3, var4, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -164,79 +164,69 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    public open fun receiveCommand(view: ChatInputRootView, commandId: String, args: ReadableArray?) {
       switch (var2.hashCode()) {
          case -1505238496:
-            if (var2.equals("setSelectedRange")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var2.equals("setSelectedRange") && var3 != null) {
                this.setSelectedRange(var1, var3.getInt(0), var3.getInt(1));
+               return;
             }
             break;
          case -1482107872:
             if (var2.equals("openSystemKeyboard")) {
                this.openSystemKeyboard(var1);
+               return;
             }
             break;
          case -577056175:
-            if (var2.equals("flushText")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var2.equals("flushText") && var3 != null) {
                var2 = var3.getString(0);
                this.flushText(var1, var2);
+               return;
             }
             break;
          case 3027047:
             if (var2.equals("blur")) {
                this.blur(var1);
+               return;
             }
             break;
          case 73995964:
-            if (var2.equals("updateTextBlocks")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var2.equals("updateTextBlocks") && var3 != null) {
                var2 = var3.getString(0);
                this.updateTextBlocks(var1, var2, var3.getString(1));
+               return;
             }
             break;
          case 97604824:
             if (var2.equals("focus")) {
                this.focus(var1);
+               return;
             }
             break;
          case 448538345:
-            if (var2.equals("replaceRange")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var2.equals("replaceRange") && var3 != null) {
                val var4: Int = var3.getInt(0);
                val var5: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               val var6: java.lang.String = var3.getString(3);
-               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
+               val var6: java.lang.String = var3.getString(2);
+               var2 = var3.getString(3);
+               this.replaceRange(var1, var4, var5, var6, var2, var3.getBoolean(4), var3.getString(5));
+               return;
             }
             break;
          case 1353507967:
             if (var2.equals("backspace")) {
                this.backspace(var1);
+               return;
             }
             break;
          case 1520339810:
             if (var2.equals("openCustomKeyboard")) {
                this.openCustomKeyboard(var1);
+               return;
             }
             break;
          case 1984984239:
-            if (var2.equals("setText")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var2.equals("setText") && var3 != null) {
                this.setText(var1, var3.getString(0));
+               return;
             }
          default:
       }

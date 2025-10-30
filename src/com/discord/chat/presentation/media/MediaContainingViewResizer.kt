@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.media
 
-import Pa.a
 import android.view.View
 import android.view.ViewGroup.LayoutParams
 import kotlin.enums.EnumEntries
+import lm.a
 
 public object MediaContainingViewResizer {
    public fun View.resizeLayoutParams(
@@ -44,15 +44,15 @@ public object MediaContainingViewResizer {
       }
 
       val var16: LayoutParams = var1.getLayoutParams();
-      if (var16 != null) {
+      if (var16 == null) {
+         var1.setLayoutParams(new LayoutParams(var3, var2));
+      } else {
          if (var3 != var16.width || var2 != var16.height) {
             var16.width = var3;
             var16.height = var2;
          }
 
          var1.setLayoutParams(var16);
-      } else {
-         var1.setLayoutParams(new LayoutParams(var3, var2));
       }
    }
 

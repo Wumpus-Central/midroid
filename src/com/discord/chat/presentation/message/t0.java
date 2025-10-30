@@ -1,14 +1,15 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.contentnode.LinkContentNode;
-import com.discord.chat.bridge.executedcommand.ExecutedCommand;
-import kotlin.jvm.functions.Function1;
+import com.discord.chat.bridge.Message;
+import com.discord.chat.presentation.events.ChatEventHandler;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class t0 implements Function1 {
-   public final ExecutedCommand d;
+public final class t0 implements Function0 {
+   public final ChatEventHandler d;
+   public final Message e;
 
-   public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.k(this.d, (LinkContentNode)var1);
+   public final Object invoke() {
+      return MessageView.d(this.d, this.e);
    }
 }

@@ -1,6 +1,5 @@
 package com.discord.qr.scanner.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.discord.qr.scanner.R;
+import e4.a;
 
 public final class QrScannerBinding implements ViewBinding {
    @NonNull

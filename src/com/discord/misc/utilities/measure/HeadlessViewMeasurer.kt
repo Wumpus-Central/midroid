@@ -15,13 +15,7 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
    }
 
    private fun getMeasureSpecMode(size: Int): Int {
-      if (var1 == 0) {
-         var1 = 0;
-      } else {
-         var1 = 1073741824;
-      }
-
-      return var1;
+      return if (var1 == 0) 0 else 1073741824;
    }
 
    private fun <T : View> measure(view: T, measureBounds: com.discord.misc.utilities.measure.HeadlessViewMeasurer.MeasureBounds): Size {
@@ -135,15 +129,15 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
       }
 
       public override fun toString(): String {
-         val var2: Int = this.widthPx;
+         val var3: Int = this.widthPx;
          val var1: Int = this.heightPx;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("MeasureBounds(widthPx=");
-         var3.append(var2);
-         var3.append(", heightPx=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MeasureBounds(widthPx=");
+         var2.append(var3);
+         var2.append(", heightPx=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

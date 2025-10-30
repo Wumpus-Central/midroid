@@ -1,11 +1,11 @@
 package com.discord.app_icon
 
-import Ja.v
 import com.discord.codegen.NativeAppIconModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import fm.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 

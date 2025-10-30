@@ -18,14 +18,7 @@ public abstract class Rule<R, T extends Node<R>, S> {
 
    public open fun match(inspectionSource: CharSequence, lastCapture: String?, state: Any): Matcher? {
       this.matcher.reset(var1);
-      val var4: Matcher;
-      if (this.matcher.find()) {
-         var4 = this.matcher;
-      } else {
-         var4 = null;
-      }
-
-      return var4;
+      return if (this.matcher.find()) this.matcher else null;
    }
 
    public abstract fun parse(matcher: Matcher, parser: Parser<Any, in Any, Any>, state: Any): ParseSpec<Any, Any> {

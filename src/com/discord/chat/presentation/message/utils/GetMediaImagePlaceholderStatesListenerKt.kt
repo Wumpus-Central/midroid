@@ -24,12 +24,12 @@ public fun getMediaImagePlaceholderStatesListener(imageView: SimpleDraweeView, p
 
          {
             this.$imageView = var1;
-            this.imageViewInitialScaleType = (var1.getHierarchy() as GenericDraweeHierarchy).n();
+            this.imageViewInitialScaleType = (var1.getHierarchy() as GenericDraweeHierarchy).m();
          }
 
          @Override
          public void onFailure(java.lang.String var1, java.lang.Throwable var2) {
-            (this.$imageView.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
+            (this.$imageView.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
             val var4: SimpleDraweeView = this.$imageView;
             val var3: ReactAsset;
             if (ThemeManager.INSTANCE.isThemeDark()) {
@@ -43,7 +43,7 @@ public fun getMediaImagePlaceholderStatesListener(imageView: SimpleDraweeView, p
 
          @Override
          public void onSubmit(java.lang.String var1, Object var2) {
-            (this.$imageView.getHierarchy() as GenericDraweeHierarchy).u(this.imageViewInitialScaleType);
+            (this.$imageView.getHierarchy() as GenericDraweeHierarchy).t(this.imageViewInitialScaleType);
          }
       }
    );

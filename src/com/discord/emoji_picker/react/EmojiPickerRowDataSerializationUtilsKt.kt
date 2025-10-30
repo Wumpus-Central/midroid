@@ -20,7 +20,7 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    val var8: java.util.Iterator = var5.iterator();
 
    while (var8.hasNext()) {
-      val var9: ReadableMap = var6.getMap((var8 as L).nextInt());
+      val var9: ReadableMap = var6.getMap((var8 as l0).nextInt());
       val var10: EmojiPickerRow.Emoji;
       if (!StringsKt.c0(NativeMapExtensionsKt.getNonNullString(var9, "url"))) {
          var10 = new EmojiPickerRow.Emoji(

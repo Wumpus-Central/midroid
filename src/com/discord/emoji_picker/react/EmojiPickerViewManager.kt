@@ -1,6 +1,5 @@
 package com.discord.emoji_picker.react
 
-import Ja.v
 import android.view.View
 import com.discord.emoji_picker.EmojiPickerCache
 import com.discord.emoji_picker.EmojiPickerItem
@@ -26,6 +25,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerDelegate
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerInterface
+import fm.v
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
@@ -108,19 +108,19 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       val var9: ReadableMap = var2.getMap("config");
       val var4: Float = var2.getFloat("paddingTop", 0.0F);
       val var3: Float = var2.getFloat("paddingBottom", 0.0F);
-      val var6: Int = var2.getInt("emojiSize", -1);
-      val var5: Int = var2.getInt("emojiMargin", -1);
+      val var5: Int = var2.getInt("emojiSize", -1);
+      val var6: Int = var2.getInt("emojiMargin", -1);
       val var8: ReadableMap = var2.getMap("emojiData");
       if (var9 != null) {
-         if (var6 != -1) {
-            if (var5 != -1) {
+         if (var5 != -1) {
+            if (var6 != -1) {
                if (var8 != null) {
                   val var12: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.INSTANCE
                      .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var3, var4);
                   val var10: EmojiPickerView = new EmojiPickerView(
                      var1,
-                     var6,
                      var5,
+                     var6,
                      var12,
                      new c(this, var1),
                      new d(this),

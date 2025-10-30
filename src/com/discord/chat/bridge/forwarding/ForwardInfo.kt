@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.forwarding
 
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null) {

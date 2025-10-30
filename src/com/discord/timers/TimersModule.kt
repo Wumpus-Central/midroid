@@ -1,11 +1,11 @@
 package com.discord.timers
 
-import Ja.v
 import com.discord.codegen.NativeTimersModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
+import fm.v
 
 public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec(var1) {
    private final val reactEvents: ReactEvents = new ReactEvents(v.a("timer", TimerEvent::class), v.a("interval", IntervalEvent::class))

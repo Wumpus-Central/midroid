@@ -10872,6 +10872,12 @@
       ]
     ]
   ],
+  "CQLWvo": [
+    "A temporary verification code will be used for this call. You may be able to resolve this by restarting your device."
+  ],
+  "fJUioH": [
+    "Failed to load your device's saved verification key"
+  ],
   "aTuFYT": [
     "Reconnect"
   ],

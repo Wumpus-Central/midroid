@@ -15,27 +15,13 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
 
    public final val isLargeWidthRenderingMode: Boolean
       public final get() {
-         val var1: Boolean;
-         if (this.getTopLevelWidth() > SizeUtilsKt.getDpToPx(480) && this.getAvailableWidth() >= SizeUtilsKt.getDpToPx(440)) {
-            var1 = true;
-         } else {
-            var1 = false;
-         }
-
-         return var1;
+         return this.getTopLevelWidth() > SizeUtilsKt.getDpToPx(480) && this.getAvailableWidth() >= SizeUtilsKt.getDpToPx(440);
       }
 
 
    public final val shouldRestrictTopLevelWidth: Boolean
       public final get() {
-         val var1: Boolean;
-         if (this.topLevelAvailableWidth > this.topLevelMaxWidth) {
-            var1 = true;
-         } else {
-            var1 = false;
-         }
-
-         return var1;
+         return this.topLevelAvailableWidth > this.topLevelMaxWidth;
       }
 
 
@@ -93,16 +79,16 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
    }
 
    public override fun toString(): String {
-      val var2: Int = this.topLevelAvailableWidth;
-      val var3: Int = this.topLevelMaxWidth;
-      val var1: Int = this.widthReductions;
+      val var3: Int = this.topLevelAvailableWidth;
+      val var1: Int = this.topLevelMaxWidth;
+      val var2: Int = this.widthReductions;
       val var4: StringBuilder = new StringBuilder();
       var4.append("WidthInfo(topLevelAvailableWidth=");
-      var4.append(var2);
-      var4.append(", topLevelMaxWidth=");
       var4.append(var3);
-      var4.append(", widthReductions=");
+      var4.append(", topLevelMaxWidth=");
       var4.append(var1);
+      var4.append(", widthReductions=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

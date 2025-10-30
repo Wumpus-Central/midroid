@@ -49,14 +49,7 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
    }
 
    private fun ViewHolder.validateItemPosition(position: Int): Boolean {
-      val var3: Boolean;
-      if (var1.getBindingAdapterPosition() == var2 || var1.getBindingAdapterPosition() == -1 && var1.getOldPosition() == var2) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      return var3;
+      return var1.getBindingAdapterPosition() == var2 || var1.getBindingAdapterPosition() == -1 && var1.getOldPosition() == var2;
    }
 
    public open fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {

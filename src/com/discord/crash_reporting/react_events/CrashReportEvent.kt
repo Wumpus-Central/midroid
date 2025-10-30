@@ -1,6 +1,5 @@
 package com.discord.crash_reporting.react_events
 
-import Ja.v
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.crash_reporting.system_logs.SystemLogUtils
@@ -12,6 +11,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import fm.v
 import kotlin.random.c
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: SentryCrashData?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
@@ -136,20 +136,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Boolean = this.crashedLastRun;
-      val var4: SystemLogReport.SentryCrashData = this.sentryData;
-      val var5: HistoricalProcessExitReason.Reason = this.reason;
-      val var1: SystemLogUtils.Tombstone = this.tombstone;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CrashReportEvent(crashedLastRun=");
-      var3.append(var2);
-      var3.append(", sentryData=");
-      var3.append(var4);
-      var3.append(", reason=");
-      var3.append(var5);
-      var3.append(", tombstone=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.Boolean = this.crashedLastRun;
+      val var1: SystemLogReport.SentryCrashData = this.sentryData;
+      val var3: HistoricalProcessExitReason.Reason = this.reason;
+      val var4: SystemLogUtils.Tombstone = this.tombstone;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CrashReportEvent(crashedLastRun=");
+      var2.append(var5);
+      var2.append(", sentryData=");
+      var2.append(var1);
+      var2.append(", reason=");
+      var2.append(var3);
+      var2.append(", tombstone=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

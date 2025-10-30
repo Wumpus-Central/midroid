@@ -1,6 +1,5 @@
 package com.discord.mobile_voice_overlay.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
+import e4.a;
 
 public final class TrashWrapBinding implements ViewBinding {
    @NonNull

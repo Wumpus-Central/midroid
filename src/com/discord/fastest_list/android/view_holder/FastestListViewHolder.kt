@@ -85,11 +85,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
          }
 
          if (!this.viewPortalBound) {
-            if (this.item == null) {
-               return;
-            }
-
-            if (this.viewPlaceholder != null) {
+            if (this.item != null && this.viewPlaceholder != null) {
                var var5: FastestListSections.Entry = this.item;
                if (this.item == null) {
                   Intrinsics.throwUninitializedPropertyAccessException("item");
@@ -97,6 +93,7 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
                }
 
                this.viewPlaceholder.onPlaceholderShouldBind(this.view, var5);
+               return;
             }
          } else if (this.viewPlaceholder != null) {
             this.viewPlaceholder.onPlaceholderShouldUnbind(this.view);

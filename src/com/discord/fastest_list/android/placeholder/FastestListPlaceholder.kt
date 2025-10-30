@@ -1,9 +1,9 @@
 package com.discord.fastest_list.android.placeholder
 
-import Ja.p
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
+import fm.p
 
 internal sealed class FastestListPlaceholder protected constructor() {
    public abstract fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
@@ -17,20 +17,15 @@ internal sealed class FastestListPlaceholder protected constructor() {
       private final val placeholderPool: LruCache<FastestListPlaceholderType, FastestListPlaceholder>
 
       private fun FastestListPlaceholderType.create(): FastestListPlaceholder {
-         val var2: Any;
          if (var1 is FastestListPlaceholderType.FeedItem) {
-            var2 = new FastestListPlaceholderTypeFeedItem(var1 as FastestListPlaceholderType.FeedItem);
+            return new FastestListPlaceholderTypeFeedItem(var1 as FastestListPlaceholderType.FeedItem);
          } else if (var1 is FastestListPlaceholderType.Shape) {
-            var2 = new FastestListPlaceholderTypeShape(var1 as FastestListPlaceholderType.Shape);
+            return new FastestListPlaceholderTypeShape(var1 as FastestListPlaceholderType.Shape);
+         } else if (var1 is FastestListPlaceholderType.None) {
+            return FastestListPlaceholderTypeNone.INSTANCE;
          } else {
-            if (var1 !is FastestListPlaceholderType.None) {
-               throw new p();
-            }
-
-            var2 = FastestListPlaceholderTypeNone.INSTANCE;
+            throw new p();
          }
-
-         return (FastestListPlaceholder)var2;
       }
 
       public fun get(placeholderType: FastestListPlaceholderType): FastestListPlaceholder {

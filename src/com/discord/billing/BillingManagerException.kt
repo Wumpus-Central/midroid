@@ -24,61 +24,49 @@ public sealed class BillingManagerException protected constructor(reason: String
 
    public companion object {
       public fun fromBillingResult(responseCode: Int): BillingManagerException {
-         var var2: Any;
          if (var1 != -2) {
             if (var1 != -1) {
                if (var1 != 12) {
                   switch (var1) {
                      case 2:
-                        var2 = new BillingManagerException.ServiceUnavailableException(var1);
-                        break;
+                        return new BillingManagerException.ServiceUnavailableException(var1);
                      case 3:
-                        var2 = new BillingManagerException.BillingUnavailableException(var1);
-                        break;
+                        return new BillingManagerException.BillingUnavailableException(var1);
                      case 4:
-                        var2 = new BillingManagerException.ItemUnavailableException(var1);
-                        break;
+                        return new BillingManagerException.ItemUnavailableException(var1);
                      case 5:
-                        var2 = new BillingManagerException.DeveloperErrorException(var1);
-                        break;
+                        return new BillingManagerException.DeveloperErrorException(var1);
                      case 6:
-                        var2 = new BillingManagerException.GenericErrorException(var1);
-                        break;
+                        return new BillingManagerException.GenericErrorException(var1);
                      case 7:
-                        var2 = new BillingManagerException.ItemAlreadyOwnedException(var1);
-                        break;
+                        return new BillingManagerException.ItemAlreadyOwnedException(var1);
                      case 8:
-                        var2 = new BillingManagerException.ItemNotOwnedException(var1);
-                        break;
+                        return new BillingManagerException.ItemNotOwnedException(var1);
                      default:
-                        var2 = new BillingManagerException.UnknownBillingException(var1);
+                        return new BillingManagerException.UnknownBillingException(var1);
                   }
                } else {
-                  var2 = new BillingManagerException.NetworkErrorException(var1);
+                  return new BillingManagerException.NetworkErrorException(var1);
                }
             } else {
-               var2 = new BillingManagerException.ServiceDisconnectedException(var1);
+               return new BillingManagerException.ServiceDisconnectedException(var1);
             }
          } else {
-            var2 = new BillingManagerException.FeatureNotSupportedException(var1);
+            return new BillingManagerException.FeatureNotSupportedException(var1);
          }
-
-         return (BillingManagerException)var2;
       }
 
       public fun wrap(e: Exception, context: String): BillingManagerException {
          if (var1 is BillingManagerException) {
-            var1 = var1;
+            return var1 as BillingManagerException;
          } else {
-            val var5: java.lang.String = var1.getMessage();
-            val var3: StringBuilder = new StringBuilder();
-            var3.append(var2);
-            var3.append(" exception: ");
-            var3.append(var5);
-            var1 = new BillingManagerException.BillingException(var3.toString());
+            val var3: java.lang.String = var1.getMessage();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var2);
+            var4.append(" exception: ");
+            var4.append(var3);
+            return new BillingManagerException.BillingException(var4.toString());
          }
-
-         return var1;
       }
    }
 

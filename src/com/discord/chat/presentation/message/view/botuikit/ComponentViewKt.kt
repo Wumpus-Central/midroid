@@ -13,11 +13,11 @@ import kotlin.jvm.internal.SourceDebugExtension
 public fun ComponentEmoji.renderable(): RenderableEmoji {
    var var3: java.lang.String = var0.getId();
    if (var3 != null) {
-      val var7: java.lang.Long = StringsKt.o(var3);
-      if (var7 != null) {
-         val var8: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var7.longValue(), var0.getAnimated(), var0.getName());
-         if (var8 != null) {
-            return var8;
+      val var6: java.lang.Long = StringsKt.o(var3);
+      if (var6 != null) {
+         val var7: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var6.longValue(), var0.getAnimated(), var0.getName());
+         if (var7 != null) {
+            return var7;
          }
       }
    }
@@ -37,8 +37,8 @@ public fun SimpleDraweeSpanTextView.setEmojiOrHide(componentEmoji: ComponentEmoj
       var0.setVisibility(8);
    } else {
       var0.setVisibility(0);
-      val var3: RenderableEmoji = renderable(var1);
-      val var2: Context = var0.getContext();
-      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var3, var2, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
+      val var2: RenderableEmoji = renderable(var1);
+      val var3: Context = var0.getContext();
+      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var2, var3, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
    }
 }

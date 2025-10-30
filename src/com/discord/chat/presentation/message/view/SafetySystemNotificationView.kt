@@ -52,7 +52,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new M0(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new l2(var4, var2, var3));
       var5.setText(var1);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
    }
@@ -64,7 +64,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new N0(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new m2(var4, var2, var3));
       var5.setText(var1);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
    }
@@ -91,14 +91,14 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
          this.binding.footer.setBackgroundColor(ThemeManagerKt.getTheme().getStatusDanger());
          this.binding.primaryCta.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
          this.binding.secondaryCta.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-         val var2: SimpleDraweeView = this.binding.icon;
-         ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getTextDanger());
+         val var3: SimpleDraweeView = this.binding.icon;
+         ColorUtilsKt.setTintColor(var3, ThemeManagerKt.getTheme().getTextDanger());
       } else {
          this.binding.footer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
          this.binding.primaryCta.setTextColor(ThemeManagerKt.getTheme().getTextLink());
          this.binding.secondaryCta.setTextColor(ThemeManagerKt.getTheme().getTextLink());
-         val var3: SimpleDraweeView = this.binding.icon;
-         ColorUtilsKt.setTintColor(var3, ThemeManagerKt.getTheme().getTextLink());
+         val var2: SimpleDraweeView = this.binding.icon;
+         ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getTextLink());
       }
    }
 

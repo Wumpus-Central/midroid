@@ -32,41 +32,41 @@ internal class ExternalPipManager {
       }
    }
 
-   public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (Result<Unit>) -> Unit = new f()) {
+   public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (Result<Unit>) -> Unit = new c()) {
       if ((this.enabled || var2) && CAN_PIP) {
-         val var11: java.lang.Boolean;
+         val var10: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var5: ExternalPipManager.Companion = Companion;
-               e.a();
-               val var4: Builder = a.a(d.a(), this.aspectRatio);
-               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var4, false)));
-            } catch (var8: Exception) {
-               val var10: kotlin.Result.a = Result.e;
-               var3.invoke(Result.a(Result.b(kotlin.c.a(var8))));
+               val var14: ExternalPipManager.Companion = Companion;
+               b.a();
+               val var5: Builder = a.a().setAspectRatio(this.aspectRatio);
+               var10 = var1.enterPictureInPictureMode(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var14, var5, false).build());
+            } catch (var7: Exception) {
+               val var4: kotlin.Result.a = Result.e;
+               var3.invoke(Result.a(Result.b(kotlin.c.a(var7))));
                return;
             }
          } else {
-            var11 = null;
+            var10 = null;
          }
 
          try {
-            if (var11 == java.lang.Boolean.TRUE) {
-               val var16: kotlin.Result.a = Result.e;
+            if (var10 == java.lang.Boolean.TRUE) {
+               val var13: kotlin.Result.a = Result.e;
                var3.invoke(Result.a(Result.b(Unit.a)));
                return;
             }
-         } catch (var7: Exception) {
-            val var12: kotlin.Result.a = Result.e;
-            var3.invoke(Result.a(Result.b(kotlin.c.a(var7))));
+         } catch (var8: Exception) {
+            val var15: kotlin.Result.a = Result.e;
+            var3.invoke(Result.a(Result.b(kotlin.c.a(var8))));
             return;
          }
 
          try {
-            val var14: kotlin.Result.a = Result.e;
+            val var11: kotlin.Result.a = Result.e;
             var3.invoke(Result.a(Result.b(kotlin.c.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var13: kotlin.Result.a = Result.e;
+            val var16: kotlin.Result.a = Result.e;
             var3.invoke(Result.a(Result.b(kotlin.c.a(var6))));
          }
       } else {
@@ -76,13 +76,7 @@ internal class ExternalPipManager {
    }
 
    public fun getEnabled(force: Boolean = false): Boolean {
-      if ((this.enabled || var1) && CAN_PIP) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return (this.enabled || var1) && CAN_PIP;
    }
 
    public fun setEnabled(enabled: Boolean) {
@@ -103,21 +97,14 @@ internal class ExternalPipManager {
       private fun Builder.setSeamlessResizeEnabledCompat(enabled: Boolean): Builder {
          var var3: Builder = var1;
          if (this.isSupported()) {
-            var3 = g.a(var1, var2);
+            var3 = var1.setSeamlessResizeEnabled(var2);
          }
 
          return var3;
       }
 
       public fun isSupported(): Boolean {
-         val var1: Boolean;
-         if (VERSION.SDK_INT >= 31) {
-            var1 = true;
-         } else {
-            var1 = false;
-         }
-
-         return var1;
+         return VERSION.SDK_INT >= 31;
       }
    }
 }

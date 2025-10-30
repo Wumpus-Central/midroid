@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.embed
 
-import Pa.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import wc.m
+import lm.a
+import tp.m
 
 @m(with = EmbedFailureState.Serializer::class)
 public enum class EmbedFailureState(serialNumber: Int) : IntEnum {

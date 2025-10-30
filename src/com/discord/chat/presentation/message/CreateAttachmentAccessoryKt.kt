@@ -18,27 +18,30 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       var12 = SpoilerAttributes.Companion.forAttachment(var0, var1, var2, var5);
       if (var1.isCurrentUserMessageAuthor() == java.lang.Boolean.TRUE) {
          val var11: java.lang.String = var1.getNonce-N_6c4I0();
-         var15 = var11;
+         var14 = var11;
          if (var11 != null) {
             break label50;
          }
       }
 
-      var15 = var1.getId-3Eiw7ao();
+      var14 = var1.getId-3Eiw7ao();
    }
 
    val var6: Int = CreateAttachmentAccessoryKt.WhenMappings.$EnumSwitchMapping$0[var0.type().ordinal()];
-   val var14: Any;
-   if (var6 != 1) {
-      if (var6 != 2) {
-         if (var6 != 3) {
-            if (var6 != 4) {
-               throw new Ja.p();
-            }
+   var var7: Boolean = false;
+   if (var6 == 1) {
+      val var23: java.lang.Boolean = var1.getUseAttachmentGridLayout();
+      if (var23 != null) {
+         var7 = var23;
+      }
 
-            var14 = new AudioAttachmentMessageAccessory(
+      return new ImageAttachmentMessageAccessory(var14, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var7, null);
+   } else if (var6 != 2) {
+      if (var6 != 3) {
+         if (var6 == 4) {
+            return new AudioAttachmentMessageAccessory(
                var1.getChannelId-o4g7jtM(),
-               var15,
+               var14,
                var0,
                var2,
                var1.getAttachmentsOpacity(),
@@ -48,49 +51,36 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
                null
             );
          } else {
-            var14 = new FileAttachmentMessageAccessory(
-               var15, var0, var2, var1.getAttachmentsOpacity(), var12, var0.getUploaderId(), var0.getUploaderItemId(), null
-            );
+            throw new fm.p();
          }
       } else {
-         val var18: Long = var1.getChannelId-o4g7jtM();
-         var var22: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-         val var7: Boolean;
-         if (var22 != null) {
-            var7 = var22;
-         } else {
-            var7 = false;
-         }
-
-         var22 = var1.getUseAttachmentUploadPreview();
-         var var8: Boolean;
-         if (var22 != null) {
-            var8 = var22;
-         } else {
-            var8 = false;
-         }
-
-         if (var8 && var0.getProgress() != null) {
-            var8 = true;
-         } else {
-            var8 = false;
-         }
-
-         var14 = new VideoAttachmentMessageAccessory(var18, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var7, var8, null);
+         return new FileAttachmentMessageAccessory(var14, var0, var2, var1.getAttachmentsOpacity(), var12, var0.getUploaderId(), var0.getUploaderItemId(), null);
       }
    } else {
-      val var24: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-      val var16: Boolean;
-      if (var24 != null) {
-         var16 = var24;
+      val var9: Long = var1.getChannelId-o4g7jtM();
+      var var19: java.lang.Boolean = var1.getUseAttachmentGridLayout();
+      if (var19 != null) {
+         var7 = var19;
       } else {
-         var16 = false;
+         var7 = false;
       }
 
-      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var16, null);
-   }
+      var19 = var1.getUseAttachmentUploadPreview();
+      var var8: Boolean;
+      if (var19 != null) {
+         var8 = var19;
+      } else {
+         var8 = false;
+      }
 
-   return (MessageAttachmentAccessory)var14;
+      if (var8 && var0.getProgress() != null) {
+         var8 = true;
+      } else {
+         var8 = false;
+      }
+
+      return new VideoAttachmentMessageAccessory(var9, var14, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var7, var8, null);
+   }
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

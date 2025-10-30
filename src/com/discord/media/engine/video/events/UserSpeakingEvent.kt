@@ -3,7 +3,7 @@ package com.discord.media.engine.video.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
@@ -60,16 +60,16 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
+      val var1: Int = this.connectionId;
       val var3: java.lang.String = this.userId;
-      val var1: Int = this.isSpeaking;
+      val var2: Int = this.isSpeaking;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(", userId=");
       var4.append(var3);
       var4.append(", isSpeaking=");
-      var4.append(var1);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

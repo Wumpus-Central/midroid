@@ -8,6 +8,6 @@ public final class u implements Function0 {
    public final Context d;
 
    public final Object invoke() {
-      return AudioPlayerView.k(this.d);
+      return AudioPlayerWipeAnimatorManager.h(this.d);
    }
 }

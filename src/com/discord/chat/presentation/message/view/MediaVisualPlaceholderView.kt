@@ -62,30 +62,31 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       var2 = MediaVisualPlaceholderView.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
-            if (var2 != 3) {
-               throw new Ja.p();
+            if (var2 == 3) {
+               this.binding.imageInvalid.setVisibility(0);
+               (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
+               this.binding.imageInvalid.clearColorFilter();
+               val var11: SimpleDraweeView = this.binding.imageInvalid;
+               val var8: ReactAsset;
+               if (ThemeManager.INSTANCE.isThemeDark()) {
+                  var8 = ReactAsset.PoopDark;
+               } else {
+                  var8 = ReactAsset.PoopLight;
+               }
+
+               ReactAssetUtilsKt.setReactAsset(var11, var8);
+               return;
             }
 
-            this.binding.imageInvalid.setVisibility(0);
-            (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
-            this.binding.imageInvalid.clearColorFilter();
-            val var11: SimpleDraweeView = this.binding.imageInvalid;
-            val var6: ReactAsset;
-            if (ThemeManager.INSTANCE.isThemeDark()) {
-               var6 = ReactAsset.PoopDark;
-            } else {
-               var6 = ReactAsset.PoopLight;
-            }
-
-            ReactAssetUtilsKt.setReactAsset(var11, var6);
-         } else {
-            this.binding.imageInvalid.setVisibility(0);
-            (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.g);
-            val var7: SimpleDraweeView = this.binding.imageInvalid;
-            ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getBackgroundAccent());
-            val var8: SimpleDraweeView = this.binding.imageInvalid;
-            ReactAssetUtilsKt.setReactAsset(var8, ReactAsset.BrokenImage);
+            throw new fm.p();
          }
+
+         this.binding.imageInvalid.setVisibility(0);
+         (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.g);
+         val var6: SimpleDraweeView = this.binding.imageInvalid;
+         ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getBackgroundAccent());
+         val var7: SimpleDraweeView = this.binding.imageInvalid;
+         ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.BrokenImage);
       }
    }
 
@@ -150,14 +151,14 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
          var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
          var4.append(", resizeMode=");
          var4.append(var3);
          var4.append(")");

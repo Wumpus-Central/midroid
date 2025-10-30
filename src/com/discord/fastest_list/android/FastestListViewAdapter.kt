@@ -48,33 +48,30 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FastestListViewHolder {
-      val var3: Any;
       if (var2 != 0) {
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  if (var2 != 4) {
-                     val var4: StringBuilder = new StringBuilder();
-                     var4.append("Unknown view type ");
-                     var4.append(var2);
-                     throw new IllegalArgumentException(var4.toString());
+                  if (var2 == 4) {
+                     return new FastestListViewHolderListFooter(var1, this.onUnexpectedItemSize);
+                  } else {
+                     val var3: StringBuilder = new StringBuilder();
+                     var3.append("Unknown view type ");
+                     var3.append(var2);
+                     throw new IllegalArgumentException(var3.toString());
                   }
-
-                  var3 = new FastestListViewHolderListFooter(var1, this.onUnexpectedItemSize);
                } else {
-                  var3 = new FastestListViewHolderListHeader(var1, this.onUnexpectedItemSize);
+                  return new FastestListViewHolderListHeader(var1, this.onUnexpectedItemSize);
                }
             } else {
-               var3 = new FastestListViewHolderSectionFooter(var1, this.onUnexpectedItemSize);
+               return new FastestListViewHolderSectionFooter(var1, this.onUnexpectedItemSize);
             }
          } else {
-            var3 = new FastestListViewHolderSectionHeader(var1, this.onUnexpectedItemSize);
+            return new FastestListViewHolderSectionHeader(var1, this.onUnexpectedItemSize);
          }
       } else {
-         var3 = new FastestListViewHolderItem(var1, this.onUnexpectedItemSize);
+         return new FastestListViewHolderItem(var1, this.onUnexpectedItemSize);
       }
-
-      return (FastestListViewHolder)var3;
    }
 
    public open fun onViewRecycled(holder: FastestListViewHolder) {

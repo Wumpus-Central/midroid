@@ -43,7 +43,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
       var1.drawCircle(this.pxSize / var3, this.pxSize / var3, var2 - var3, this.roleColorPaint);
    }
 
-   @Ja.c
+   @fm.c
    public open fun getOpacity(): Int {
       return -1;
    }

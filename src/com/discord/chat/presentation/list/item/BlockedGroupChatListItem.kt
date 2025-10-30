@@ -109,22 +109,22 @@ public data class BlockedGroupChatListItem(text: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.text;
-      val var6: java.lang.String = this.id;
-      val var3: Int = this.textColor;
-      val var1: Int = this.backgroundColor;
+      val var6: java.lang.String = this.text;
+      val var7: java.lang.String = this.id;
+      val var1: Int = this.textColor;
+      val var3: Int = this.backgroundColor;
       val var2: Int = this.borderColor;
       val var4: Boolean = this.isRevealed;
       val var8: java.util.List = this.content;
       val var5: StringBuilder = new StringBuilder();
       var5.append("BlockedGroupChatListItem(text=");
-      var5.append(var7);
-      var5.append(", id=");
       var5.append(var6);
+      var5.append(", id=");
+      var5.append(var7);
       var5.append(", textColor=");
-      var5.append(var3);
-      var5.append(", backgroundColor=");
       var5.append(var1);
+      var5.append(", backgroundColor=");
+      var5.append(var3);
       var5.append(", borderColor=");
       var5.append(var2);
       var5.append(", isRevealed=");

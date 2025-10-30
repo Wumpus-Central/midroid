@@ -48,6 +48,7 @@ public final class R {
       public static int _node_modules_pnpm_reactnavigationelements1331_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backicon;
       public static int _node_modules_pnpm_reactnavigationelements1331_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
+      public static int design_components_icon_native_redesign_generated_images_achievementsicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
       public static int design_components_icon_native_redesign_generated_images_announcementsicon;
@@ -83,12 +84,14 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_boosttier3icon;
       public static int design_components_icon_native_redesign_generated_images_browsericon;
       public static int design_components_icon_native_redesign_generated_images_bugicon;
+      public static int design_components_icon_native_redesign_generated_images_burgericon;
       public static int design_components_icon_native_redesign_generated_images_calendaricon;
       public static int design_components_icon_native_redesign_generated_images_calendarminusicon;
       public static int design_components_icon_native_redesign_generated_images_calendarplusicon;
       public static int design_components_icon_native_redesign_generated_images_cameraicon;
       public static int design_components_icon_native_redesign_generated_images_cameraswapicon;
       public static int design_components_icon_native_redesign_generated_images_candyicon;
+      public static int design_components_icon_native_redesign_generated_images_caricon;
       public static int design_components_icon_native_redesign_generated_images_channellisticon;
       public static int design_components_icon_native_redesign_generated_images_channellistmagnifyingglassicon;
       public static int design_components_icon_native_redesign_generated_images_channelnotificationicon;
@@ -207,6 +210,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_imagetexticon;
       public static int design_components_icon_native_redesign_generated_images_imagewarningicon;
       public static int design_components_icon_native_redesign_generated_images_instagramneutralicon;
+      public static int design_components_icon_native_redesign_generated_images_inventoryicon;
       public static int design_components_icon_native_redesign_generated_images_keyboardicon;
       public static int design_components_icon_native_redesign_generated_images_keyicon;
       public static int design_components_icon_native_redesign_generated_images_languageicon;
@@ -248,6 +252,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_papericon;
       public static int design_components_icon_native_redesign_generated_images_paperplusicon;
       public static int design_components_icon_native_redesign_generated_images_pauseicon;
+      public static int design_components_icon_native_redesign_generated_images_pawprinticon;
       public static int design_components_icon_native_redesign_generated_images_pencilicon;
       public static int design_components_icon_native_redesign_generated_images_pencilsparkleicon;
       public static int design_components_icon_native_redesign_generated_images_phonecallicon;
@@ -265,6 +270,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_qrcodeicon;
       public static int design_components_icon_native_redesign_generated_images_questsicon;
       public static int design_components_icon_native_redesign_generated_images_reactionicon;
+      public static int design_components_icon_native_redesign_generated_images_recordplayericon;
       public static int design_components_icon_native_redesign_generated_images_redoicon;
       public static int design_components_icon_native_redesign_generated_images_refreshicon;
       public static int design_components_icon_native_redesign_generated_images_retryicon;
@@ -293,6 +299,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_slashicon;
       public static int design_components_icon_native_redesign_generated_images_soundboardicon;
       public static int design_components_icon_native_redesign_generated_images_soundboardslashicon;
+      public static int design_components_icon_native_redesign_generated_images_speedometericon;
       public static int design_components_icon_native_redesign_generated_images_spoilericon;
       public static int design_components_icon_native_redesign_generated_images_spotifyneutralicon;
       public static int design_components_icon_native_redesign_generated_images_staffbadgeicon;
@@ -307,6 +314,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_superreactionicon;
       public static int design_components_icon_native_redesign_generated_images_tagicon;
       public static int design_components_icon_native_redesign_generated_images_tagsicon;
+      public static int design_components_icon_native_redesign_generated_images_teacupicon;
       public static int design_components_icon_native_redesign_generated_images_textcontrollericon;
       public static int design_components_icon_native_redesign_generated_images_texticon;
       public static int design_components_icon_native_redesign_generated_images_textlockicon;
@@ -324,6 +332,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_tiktokneutralicon;
       public static int design_components_icon_native_redesign_generated_images_timericon;
       public static int design_components_icon_native_redesign_generated_images_topicsicon;
+      public static int design_components_icon_native_redesign_generated_images_trainicon;
       public static int design_components_icon_native_redesign_generated_images_transcriptoutlineicon;
       public static int design_components_icon_native_redesign_generated_images_trashicon;
       public static int design_components_icon_native_redesign_generated_images_treehouseicon;

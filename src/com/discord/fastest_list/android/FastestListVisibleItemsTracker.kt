@@ -54,64 +54,50 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
-      val var3: Boolean;
-      if (this.sectionsId == this.sections.getId() && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
-         var3 = true;
-      } else {
-         var3 = false;
-      }
-
-      return var3;
+      return this.sectionsId == this.sections.getId() && var1 == this.positionEndPrev && var2 == this.positionStartPrev;
    }
 
    public fun updateVisibleItemPositions() {
       var var1: Int = this.layoutManager.findFirstVisibleItemPosition();
       var var2: Int = this.layoutManager.findLastVisibleItemPosition();
-      if (var2 != -1 && var1 != -1) {
-         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var1 && this.sectionsId == this.sections.getId()) {
-            return;
-         }
-
+      if (var2 != -1 && var1 != -1 && (this.positionEndPrevRaw != var2 || this.positionStartPrevRaw != var1 || !(this.sectionsId == this.sections.getId()))) {
          this.positionEndPrevRaw = var2;
          this.positionStartPrevRaw = var1;
          if (this.getLastItemPosition() < 0) {
             if (!this.isUnchanged(var2, var1)) {
                this.computeVisibleItems(var2, var1);
-            }
-
-            return;
-         }
-
-         if (this.getScrollingForward()) {
-            var2 = Math.min(this.getLastItemPosition(), var2 + this.getItemBuffer());
-         } else {
-            var1 = Math.max(0, var1 - this.getItemBuffer());
-         }
-
-         if (this.isUnchanged(var2, var1)) {
-            return;
-         }
-
-         val var6: Int = this.positionEndPrev - this.positionStartPrev;
-         var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-         var var3: Int = var1;
-         var var4: Int = var2;
-         if (var5 > 0) {
-            var5 = Math.min(this.getLastItemPosition(), var2 + var5);
-            var3 = var6 - (var5 - var1);
-            var2 = var1;
-            if (var3 > 0) {
-               var2 = Math.max(0, var1 - var3);
-            }
-
-            var3 = var2;
-            var4 = var5;
-            if (this.isUnchanged(var5, var2)) {
                return;
             }
-         }
+         } else {
+            if (this.getScrollingForward()) {
+               var2 = Math.min(this.getLastItemPosition(), var2 + this.getItemBuffer());
+            } else {
+               var1 = Math.max(0, var1 - this.getItemBuffer());
+            }
 
-         this.computeVisibleItems(var4, var3);
+            if (!this.isUnchanged(var2, var1)) {
+               val var6: Int = this.positionEndPrev - this.positionStartPrev;
+               var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
+               var var4: Int = var1;
+               var var3: Int = var2;
+               if (var5 > 0) {
+                  var5 = Math.min(this.getLastItemPosition(), var2 + var5);
+                  var3 = var6 - (var5 - var1);
+                  var2 = var1;
+                  if (var3 > 0) {
+                     var2 = Math.max(0, var1 - var3);
+                  }
+
+                  var4 = var2;
+                  var3 = var5;
+                  if (this.isUnchanged(var5, var2)) {
+                     return;
+                  }
+               }
+
+               this.computeVisibleItems(var3, var4);
+            }
+         }
       }
    }
 
@@ -131,7 +117,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       fun {
          val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
          $VALUES = var0;
-         $ENTRIES = Pa.a.a(var0);
+         $ENTRIES = lm.a.a(var0);
       }
 
       init {

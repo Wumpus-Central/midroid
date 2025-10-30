@@ -1,6 +1,6 @@
 package com.discord.portals.utils
 
-import Ja.e
+import fm.e
 
 public fun getCurrentStacktraceString(): String {
    return e.b(new java.lang.Throwable());

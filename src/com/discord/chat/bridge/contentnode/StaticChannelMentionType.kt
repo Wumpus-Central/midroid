@@ -6,9 +6,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import wc.m
-import yc.j
-import yc.e.i
+import tp.m
+import vp.j
+import vp.e.i
 
 @m(with = StaticChannelMentionType.Serializer::class)
 public enum class StaticChannelMentionType(id: String) {
@@ -30,7 +30,7 @@ public enum class StaticChannelMentionType(id: String) {
    fun {
       val var0: Array<StaticChannelMentionType> = $values();
       $VALUES = var0;
-      $ENTRIES = Pa.a.a(var0);
+      $ENTRIES = lm.a.a(var0);
    }
 
    init {
@@ -64,12 +64,7 @@ public enum class StaticChannelMentionType(id: String) {
             var2++;
          }
 
-         var var7: StaticChannelMentionType = var6;
-         if (var6 == null) {
-            var7 = StaticChannelMentionType.Unknown;
-         }
-
-         return var7;
+         return if (var6 == null) StaticChannelMentionType.Unknown else var6;
       }
 
       public fun serializer(): KSerializer<StaticChannelMentionType> {

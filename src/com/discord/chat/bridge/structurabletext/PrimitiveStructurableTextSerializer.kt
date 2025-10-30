@@ -4,8 +4,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import yc.j
-import yc.e.i
+import vp.j
+import vp.e.i
 
 internal object PrimitiveStructurableTextSerializer : KSerializer {
    public open val descriptor: SerialDescriptor = j.b("PrimitiveStructurableText", i.a)

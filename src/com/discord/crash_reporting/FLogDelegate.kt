@@ -1,11 +1,11 @@
 package com.discord.crash_reporting
 
-import Ja.e
-import Ja.v
 import com.discord.crash_reporting.CrashReporting.BreadcrumbLevel
 import com.discord.logging.Log
+import fm.e
+import fm.v
 
-public class FLogDelegate : y3.c {
+public class FLogDelegate : w7.c {
    private fun addSentryBreadcrumb(level: BreadcrumbLevel, message: String, throwable: Throwable? = null) {
       label11: {
          if (var3 != null) {
@@ -19,15 +19,15 @@ public class FLogDelegate : y3.c {
          var6 = "No stacktrace";
       }
 
-      CrashReporting.INSTANCE.addBreadcrumb(var2, O.f(v.a("stacktrace", var6)), "react.native", var1);
+      CrashReporting.INSTANCE.addBreadcrumb(var2, n0.f(v.a("stacktrace", var6)), "react.native", var1);
    }
 
    public open fun d(tag: String, msg: String) {
-      y3.b.a().d(var1, var2);
+      w7.b.a().d(var1, var2);
    }
 
    public open fun d(tag: String, msg: String, tr: Throwable) {
-      y3.b.a().d(var1, var2, var3);
+      w7.b.a().d(var1, var2, var3);
    }
 
    public open fun e(tag: String, msg: String) {
@@ -41,7 +41,7 @@ public class FLogDelegate : y3.c {
    }
 
    public open fun getMinimumLoggingLevel(): Int {
-      return y3.b.a().b();
+      return w7.b.a().b();
    }
 
    public open fun i(tag: String, msg: String) {
@@ -53,44 +53,44 @@ public class FLogDelegate : y3.c {
    }
 
    public open fun isLoggable(level: Int): Boolean {
-      return y3.b.a().isLoggable(var1);
+      return w7.b.a().isLoggable(var1);
    }
 
    public open fun log(priority: Int, tag: String, msg: String) {
       switch (var1) {
          case 2:
             this.v(var2, var3);
-            break;
+            return;
          case 3:
             this.d(var2, var3);
-            break;
+            return;
          case 4:
             this.i(var2, var3);
-            break;
+            return;
          case 5:
             this.w(var2, var3);
-            break;
+            return;
          case 6:
             this.e(var2, var3);
-            break;
+            return;
          case 7:
             this.wtf(var2, var3);
-            break;
+            return;
          default:
             this.d(var2, var3);
       }
    }
 
    public open fun setMinimumLoggingLevel(level: Int) {
-      y3.b.a().k(var1);
+      w7.b.a().k(var1);
    }
 
    public open fun v(tag: String, msg: String) {
-      y3.b.a().v(var1, var2);
+      w7.b.a().v(var1, var2);
    }
 
    public open fun v(tag: String, msg: String, tr: Throwable) {
-      y3.b.a().l(var1, var2, var3);
+      w7.b.a().l(var1, var2, var3);
    }
 
    public open fun w(tag: String, msg: String) {

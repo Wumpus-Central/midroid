@@ -35,9 +35,10 @@ internal class FastestListInsetDecorator(horizontal: Boolean, insetEnd: Int, ins
       if (var5 == var4.b() - 1) {
          if (this.horizontal) {
             var1.right = this.insetEnd;
-         } else {
-            var1.bottom = this.insetEnd;
+            return;
          }
+
+         var1.bottom = this.insetEnd;
       }
    }
 }

@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class LongPressLinkData(url: String?) : ReactEvent {
@@ -34,14 +34,7 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.url == null) {
-         var1 = 0;
-      } else {
-         var1 = this.url.hashCode();
-      }
-
-      return var1;
+      return if (this.url == null) 0 else this.url.hashCode();
    }
 
    fun serialize(): WritableMap {
@@ -49,12 +42,12 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressLinkData(url=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.url;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LongPressLinkData(url=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

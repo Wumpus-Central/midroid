@@ -39,13 +39,13 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       if (var4 == var5) {
          var1.drawRoundRect((float)var6, (float)var8, (float)var7, (float)var9, var10, var10, var2);
       } else if (var4 == var3) {
-         val var16: Path = new Path();
-         var16.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{var10, var10, 0.0F, 0.0F, 0.0F, 0.0F, var10, var10}, Direction.CW);
-         var1.drawPath(var16, var2);
-      } else if (var5 == var3) {
          val var21: Path = new Path();
-         var21.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{0.0F, 0.0F, var10, var10, var10, var10, 0.0F, 0.0F}, Direction.CW);
+         var21.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{var10, var10, 0.0F, 0.0F, 0.0F, 0.0F, var10, var10}, Direction.CW);
          var1.drawPath(var21, var2);
+      } else if (var5 == var3) {
+         val var16: Path = new Path();
+         var16.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{0.0F, 0.0F, var10, var10, var10, var10, 0.0F, 0.0F}, Direction.CW);
+         var1.drawPath(var16, var2);
       } else {
          var1.drawRect((float)var6, (float)var8, (float)var7, (float)var9, var2);
       }
@@ -64,56 +64,66 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       end: Int,
       lineNumber: Int
    ) {
-      val var17: SpannedString = SpannedString.valueOf(var8);
-      val var24: Array<Any> = var17.getSpans(0, var8.length(), BackgroundSpan.class);
-      val var18: java.util.List = k.y0(var24);
-      val var25: Layout = this.provider.getLayout();
+      val var18: SpannedString = SpannedString.valueOf(var8);
+      val var26: Array<Any> = var18.getSpans(0, var8.length(), BackgroundSpan.class);
+      val var27: java.util.List = k.y0(var26);
+      val var19: Layout = this.provider.getLayout();
+      val var20: java.util.Iterator = var27.iterator();
+      var var28: Paint = var2;
 
-      for (BackgroundSpan var19 : var18) {
-         var4 = var17.getSpanStart(var19);
-         var10 = var17.getSpanEnd(var19);
-         val var20: BackgroundStyle = var19.getBackground();
-         val var13: Float = SizeUtilsKt.getDpToPx(var20.getCornerRadius());
-         var6 = var25.getLineForOffset(var4);
-         var9 = var25.getLineForOffset(var10);
-         if (var6 <= var11 && var11 <= var9) {
-            if (var6 == var11) {
-               var4 = (int)var25.getPrimaryHorizontal(var4);
-            } else {
-               var4 = var3;
+      while (var20.hasNext()) {
+         val var21: BackgroundSpan = var20.next() as BackgroundSpan;
+         var4 = var18.getSpanStart(var21);
+         var10 = var18.getSpanEnd(var21);
+         val var22: BackgroundStyle = var21.getBackground();
+         val var13: Float = SizeUtilsKt.getDpToPx(var22.getCornerRadius());
+         var6 = var19.getLineForOffset(var4);
+         var9 = var19.getLineForOffset(var10);
+         var var17: Paint = var28;
+         if (var6 <= var11) {
+            var17 = var28;
+            if (var11 <= var9) {
+               if (var6 == var11) {
+                  var4 = (int)var19.getPrimaryHorizontal(var4);
+               } else {
+                  var4 = var3;
+               }
+
+               val var12: Float;
+               if (var9 == var11) {
+                  var12 = var19.getPrimaryHorizontal(Math.min(var10, var19.getLineEnd(var11)));
+               } else {
+                  var12 = var19.getLineRight(var11);
+               }
+
+               val var15: Int = (int)var12;
+               val var14: Int = var5 + SizeUtilsKt.getDpToPx(var22.getMarginVertical());
+               var10 = var7 - SizeUtilsKt.getDpToPx(var22.getMarginVertical());
+               val var16: Int = var28.getColor();
+               var28.setColor(var22.getBackgroundColor());
+               val var33: ShadowStyle = var21.getShadow();
+               if (var33 != null) {
+                  var28.setShadowLayer(var33.getRadius(), var33.getOffset().getWidth(), var33.getOffset().getHeight(), var33.getColor());
+                  this.drawBackground(var1, var28, var11, var6, var9, var4, var15, var14, var10, var13);
+               }
+
+               var2.clearShadowLayer();
+               var17 = var2;
+               this.drawBackground(var1, var2, var11, var6, var9, var4, var15, var14, var10, var13);
+               val var29: BorderStyle = var21.getBorder();
+               if (var29 != null) {
+                  var2.setColor(var29.getColor());
+                  var2.setStyle(Style.STROKE);
+                  var2.setStrokeWidth((float)var29.getWidth());
+                  this.drawBackground(var1, var2, var11, var6, var9, var4, var15, var14, var10, var13);
+               }
+
+               var2.setStyle(Style.FILL);
+               var2.setColor(var16);
             }
-
-            val var12: Float;
-            if (var9 == var11) {
-               var12 = var25.getPrimaryHorizontal(Math.min(var10, var25.getLineEnd(var11)));
-            } else {
-               var12 = var25.getLineRight(var11);
-            }
-
-            var10 = (int)var12;
-            val var16: Int = var5 + SizeUtilsKt.getDpToPx(var20.getMarginVertical());
-            val var14: Int = var7 - SizeUtilsKt.getDpToPx(var20.getMarginVertical());
-            val var15: Int = var2.getColor();
-            var2.setColor(var20.getBackgroundColor());
-            val var31: ShadowStyle = var19.getShadow();
-            if (var31 != null) {
-               var2.setShadowLayer(var31.getRadius(), var31.getOffset().getWidth(), var31.getOffset().getHeight(), var31.getColor());
-               this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var16, var14, var13);
-            }
-
-            var2.clearShadowLayer();
-            this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var16, var14, var13);
-            val var30: BorderStyle = var19.getBorder();
-            if (var30 != null) {
-               var2.setColor(var30.getColor());
-               var2.setStyle(Style.STROKE);
-               var2.setStrokeWidth((float)var30.getWidth());
-               this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var16, var14, var13);
-            }
-
-            var2.setStyle(Style.FILL);
-            var2.setColor(var15);
          }
+
+         var28 = var17;
       }
    }
 }

@@ -1,12 +1,12 @@
 package com.discord.device
 
-import Ja.v
 import android.os.PowerManager
 import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceThermalStateModuleSpec
 import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
+import fm.v
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nDeviceThermalStateModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n+ 2 Context.kt\nandroidx/core/content/ContextKt\n*L\n1#1,50:1\n31#2:51\n31#2:52\n*S KotlinDebug\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n*L\n23#1:51\n43#1:52\n*E\n"])
@@ -24,26 +24,24 @@ internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) :
    }
 
    public override fun getThermalState(): Double? {
-      var var2: java.lang.Double = null;
       if (VERSION.SDK_INT >= 29) {
-         val var5: ReactApplicationContext = this.getReactApplicationContext();
-         val var4: PowerManager = androidx.core.content.b.i(var5, PowerManager.class) as PowerManager;
-         var2 = null;
-         if (var4 != null) {
-            var2 = (double)e.a(var4);
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         val var2: PowerManager = androidx.core.content.a.i(var1, PowerManager.class) as PowerManager;
+         if (var2 != null) {
+            return (double)var2.getCurrentThermalStatus();
          }
       }
 
-      return var2;
+      return null;
    }
 
    public open fun initialize() {
       super.initialize();
       if (VERSION.SDK_INT >= 29) {
          val var1: ReactApplicationContext = this.getReactApplicationContext();
-         val var2: PowerManager = androidx.core.content.b.i(var1, PowerManager.class) as PowerManager;
+         val var2: PowerManager = androidx.core.content.a.i(var1, PowerManager.class) as PowerManager;
          if (var2 != null) {
-            d.a(var2, new f(this));
+            var2.addThermalStatusListener(new d(this));
          }
       }
    }

@@ -2,7 +2,6 @@
 
 package com.discord.theme.utils
 
-import Wa.a
 import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.Resources
@@ -17,37 +16,38 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.text.MatchResult.b
+import sm.a
 
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")
 private final val hsv: FloatArray = new float[3]
 
 private fun applySaturationFactor(color: Int): Int {
-   var var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
-   if (var5 != 1.0F) {
+   var var4: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   if (var4 == 1.0F) {
+      return var0;
+   } else {
       val var7: FloatArray = hsv;
       Color.colorToHSV(var0, hsv);
       var var1: Float = var7[1];
       val var2: Float = var7[2];
       val var6: Float = var7[2] * var1;
       val var3: Float = 2;
-      val var4: Float = var2 - var6 / 2;
+      val var5: Float = var2 - var6 / 2;
       if (var2 - var6 / 2 != 0.0F && var2 - var6 / 2 != 1.0F) {
-         var1 = var6 / (1 - Math.abs(2.0F * var4 - 1.0F));
+         var1 = var6 / (1 - Math.abs(2.0F * var5 - 1.0F));
       }
 
-      var5 = var1 * var5 * Math.min(1.0F, 1.0F - var4) + var4;
-      if (var5 == 0.0F) {
+      var4 = var1 * var4 * Math.min(1.0F, 1.0F - var5) + var5;
+      if (var4 == 0.0F) {
          var1 = 0.0F;
       } else {
-         var1 = var3 * (1.0F - var4 / var5);
+         var1 = var3 * (1.0F - var5 / var4);
       }
 
       var7[1] = var1;
-      var7[2] = var5;
-      var0 = Color.HSVToColor(var7);
+      var7[2] = var4;
+      return Color.HSVToColor(var7);
    }
-
-   return var0;
 }
 
 public fun argbWithAdjustedAlpha(color: Int, alpha: Float): Int {
@@ -108,25 +108,22 @@ fun `interpolateColors$default`(var0: Int, var1: Int, var2: Float, var3: Float, 
 }
 
 public fun rgbaToArgb(rgbaString: String?): Int {
-   val var1: Int;
    if (var0 != null) {
-      val var5: MatchResult = rgbaPattern.f(var0);
-      if (var5 != null) {
-         val var6: b = var5.a();
-         var1 = Color.argb(
-            (int)(java.lang.Double.parseDouble(var6.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var6.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var6.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var6.a().b().get(3) as java.lang.String)
+      val var4: MatchResult = rgbaPattern.f(var0);
+      if (var4 != null) {
+         val var5: b = var4.a();
+         return Color.argb(
+            (int)(java.lang.Double.parseDouble(var5.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var5.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var5.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var5.a().b().get(3) as java.lang.String)
          );
       } else {
-         var1 = -16777216;
+         return -16777216;
       }
    } else {
-      var1 = 0;
+      return 0;
    }
-
-   return var1;
 }
 
 public fun ImageView.setTintColor(colorInt: Int?) {

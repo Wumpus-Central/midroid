@@ -1,6 +1,5 @@
 package com.discord.codegen;
 
-import O4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -9,6 +8,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import ma.a;
 
 public abstract class NativeAppDatabaseModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeAppDatabaseModule";
@@ -19,24 +19,24 @@ public abstract class NativeAppDatabaseModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var3 = this.getTypedExportedConstants();
+      Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var1 = new HashSet();
-         HashSet var4 = new HashSet<>(Arrays.asList("userId"));
-         HashSet var2 = new HashSet(var3.keySet());
+         HashSet var3 = new HashSet();
+         HashSet var1 = new HashSet<>(Arrays.asList("userId"));
+         HashSet var2 = new HashSet(var4.keySet());
+         var2.removeAll(var3);
          var2.removeAll(var1);
-         var2.removeAll(var4);
          if (!var2.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var1.removeAll(var3.keySet());
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
+         var3.removeAll(var4.keySet());
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
          }
       }
 
-      return var3;
+      return var4;
    }
 
    public String getName() {

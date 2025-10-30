@@ -2,7 +2,7 @@ package com.discord.notifications.api
 
 import com.discord.primitives.UserId
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -86,20 +86,20 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
 
    public override fun toString(): String {
       val var2: java.lang.String = UserId.toString-impl(this.id);
-      val var1: java.lang.String = this.username;
-      val var4: java.lang.String = this.discriminator;
+      val var5: java.lang.String = this.username;
+      val var1: java.lang.String = this.discriminator;
       val var3: java.lang.String = this.avatar;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("DirectReplyUser(id=");
-      var5.append(var2);
-      var5.append(", username=");
-      var5.append(var1);
-      var5.append(", discriminator=");
-      var5.append(var4);
-      var5.append(", avatar=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("DirectReplyUser(id=");
+      var4.append(var2);
+      var4.append(", username=");
+      var4.append(var5);
+      var4.append(", discriminator=");
+      var4.append(var1);
+      var4.append(", avatar=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

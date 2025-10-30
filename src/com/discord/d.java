@@ -7,6 +7,6 @@ public final class d implements Function0 {
    public final MainApplication d;
 
    public final Object invoke() {
-      return MainApplication.b(this.d);
+      return MainApplication.c(this.d);
    }
 }

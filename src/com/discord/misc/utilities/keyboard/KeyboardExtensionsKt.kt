@@ -1,19 +1,19 @@
 package com.discord.misc.utilities.keyboard
 
-import Oa.b
 import android.app.Activity
 import android.view.View
 import android.view.Window
 import android.widget.EditText
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.n0
+import androidx.core.view.v0
 import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
+import jp.f
+import km.b
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
-import mc.f
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -21,7 +21,7 @@ fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControll
 }
 
 private fun Window.getInsetsController(view: View): WindowInsetsControllerCompat {
-   val var2: WindowInsetsControllerCompat = n0.a(var0, var1);
+   val var2: WindowInsetsControllerCompat = v0.a(var0, var1);
    return var2;
 }
 

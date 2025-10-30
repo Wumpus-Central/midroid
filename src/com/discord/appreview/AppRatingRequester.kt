@@ -1,14 +1,14 @@
 package com.discord.appreview
 
 import android.app.Activity
+import ch.a
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
-import d8.b
-import d8.c
-import g8.a
 import kotlin.jvm.functions.Function1
-import s2.d
-import s2.e
+import s5.d
+import s5.e
+import zg.b
+import zg.c
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -24,30 +24,28 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    private fun createReviewManager(fake: Boolean, activity: Activity): ReviewManager {
-      val var3: Any;
       if (var1) {
-         var3 = new a(var2);
+         return new a(var2);
       } else {
-         var3 = c.a(var2);
+         val var3: ReviewManager = c.a(var2);
+         return var3;
       }
-
-      return (ReviewManager)var3;
    }
 
    @JvmStatic
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
       if (var2.o()) {
-         val var4: Task = var0.b(var1.activity, var2.k() as b);
-         var4.addOnCompleteListener(new e(var1));
+         val var5: Task = var0.b(var1.activity, var2.k() as b);
+         var5.addOnCompleteListener(new e(var1));
       } else {
          val var3: Function1 = var1.onFailure;
          val var6: Exception = var2.j();
-         var var5: Exception = var6;
+         var var4: Exception = var6;
          if (var6 == null) {
-            var5 = new Exception("Unknown error");
+            var4 = new Exception("Unknown error");
          }
 
-         var3.invoke(var5);
+         var3.invoke(var4);
       }
    }
 
@@ -64,7 +62,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    public fun executeRequest() {
       val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
       val var1: Task = var2.a();
-      var1.addOnCompleteListener(new s2.c(var2, this));
+      var1.addOnCompleteListener(new s5.c(var2, this));
       var1.b(new d(this));
    }
 }

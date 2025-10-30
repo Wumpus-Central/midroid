@@ -5,14 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 
 public class TTIModule(reactContext: ReactApplicationContext) : NativeTTIModuleSpec(var1) {
    public open fun getMainActivityCreationTime(): Double? {
-      val var2: java.lang.Double;
-      if (staticMainActivityCreationTime != null) {
-         var2 = (double)staticMainActivityCreationTime.longValue();
-      } else {
-         var2 = null;
-      }
-
-      return var2;
+      return if (staticMainActivityCreationTime != null) (double)staticMainActivityCreationTime.longValue() else null;
    }
 
    public companion object {

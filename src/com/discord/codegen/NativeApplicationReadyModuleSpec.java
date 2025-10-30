@@ -1,11 +1,11 @@
 package com.discord.codegen;
 
-import O4.a;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import ma.a;
 
 public abstract class NativeApplicationReadyModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeApplicationReadyModule";

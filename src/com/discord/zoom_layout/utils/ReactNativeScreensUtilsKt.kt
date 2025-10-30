@@ -19,7 +19,11 @@ private fun ZoomLayout.isInReactNativeScreensScreenBeingRemoved(): Boolean {
 }
 
 internal fun ZoomLayout.maybeApplyReactNativeScreensFix() {
-   if (isInReactNativeScreensScreenBeingRemoved(var0) && var0.getChildCount() != 0) {
+   if (isInReactNativeScreensScreenBeingRemoved(var0)) {
+      if (var0.getChildCount() == 0) {
+         return;
+      }
+
       var0.removeAllViews();
    }
 }

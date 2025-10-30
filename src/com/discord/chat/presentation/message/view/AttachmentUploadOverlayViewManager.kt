@@ -15,6 +15,7 @@ public class AttachmentUploadOverlayViewManager {
 
          if (this.attachmentUploadOverlayView != null) {
             this.attachmentUploadOverlayView.setUploadCancel(null);
+            return;
          }
       } else {
          if (this.attachmentUploadOverlayView == null) {

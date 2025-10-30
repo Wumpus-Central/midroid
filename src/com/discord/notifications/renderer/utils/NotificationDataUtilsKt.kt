@@ -95,17 +95,17 @@ public fun NotificationData.getAuthor(): JsonObject {
    val var3: java.lang.String = var0.getUserAvatar();
    val var4: UserId = var0.getUserId-wUX8bhU();
    val var1: Long = var4.unbox-impl();
-   val var6: java.lang.String = var0.getUserUsername();
-   val var5: Ac.x = new Ac.x();
+   val var5: java.lang.String = var0.getUserUsername();
+   val var6: xp.x = new xp.x();
    if (var3 != null) {
-      Ac.g.c(var5, "avatar", var3);
+      xp.g.c(var6, "avatar", var3);
    }
 
-   Ac.g.c(var5, "id", UserId.toString-impl(var1));
-   Ac.g.c(var5, "username", var6);
-   Ac.g.c(var5, "globalName", var0.getUserGlobalName());
-   Ac.g.a(var5, "incomplete", java.lang.Boolean.TRUE);
-   return var5.a();
+   xp.g.c(var6, "id", UserId.toString-impl(var1));
+   xp.g.c(var6, "username", var5);
+   xp.g.c(var6, "globalName", var0.getUserGlobalName());
+   xp.g.a(var6, "incomplete", java.lang.Boolean.TRUE);
+   return var6.a();
 }
 
 public fun NotificationData.getBotDMMuteAction(context: Context): Action? {
@@ -145,29 +145,29 @@ public fun NotificationData.getCallAction(context: Context, isAcceptAction: Bool
    } else {
       val var10: ChannelId = var0.getChannelId-qMVnFVQ();
       if (var10 != null) {
-         val var8: Long = var10.unbox-impl();
+         val var6: Long = var10.unbox-impl();
          val var19: UserId = var0.getUserId-wUX8bhU();
          if (var19 != null) {
-            val var6: Long = var19.unbox-impl();
+            val var8: Long = var19.unbox-impl();
             val var12: PendingIntent;
             if (var2) {
-               var3 = O.y(var3);
+               var3 = n0.y(var3);
                var3.put("type", "CALL_CONNECT");
                var12 = getPendingIntent(var1, var3, getTag(var0));
             } else {
                var12 = NotificationAction.DefaultImpls.toPendingIntent$default(
-                  new DismissCallAction(getTag(var0), var8, false, var0.getGuildId-qOKuAAo(), var6, null), var1, 0, false, 6, null
+                  new DismissCallAction(getTag(var0), var6, false, var0.getGuildId-qOKuAAo(), var8, null), var1, 0, false, 6, null
                );
             }
 
             val var13: Pair;
             if (var2) {
-               var13 = Ja.v.a(
+               var13 = fm.v.a(
                   I18nUtilsKt.i18nFormat$default(var1, I18nMessage.JOIN_CALL, null, 2, null),
                   ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.green_360)
                );
             } else {
-               var13 = Ja.v.a(
+               var13 = fm.v.a(
                   I18nUtilsKt.i18nFormat$default(var1, I18nMessage.DECLINE, null, 2, null),
                   ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.red_400)
                );
@@ -175,21 +175,21 @@ public fun NotificationData.getCallAction(context: Context, isAcceptAction: Bool
 
             val var16: java.lang.CharSequence = var13.a() as java.lang.CharSequence;
             var var5: Int = (var13.b() as java.lang.Number).intValue();
-            val var14: SpannableStringBuilder = new SpannableStringBuilder();
+            val var20: SpannableStringBuilder = new SpannableStringBuilder();
             val var11: StyleSpan = new StyleSpan(1);
-            var var4: Int = var14.length();
-            val var20: ForegroundColorSpan = new ForegroundColorSpan(var5);
-            var5 = var14.length();
-            var14.append(var16);
-            var14.setSpan(var20, var5, var14.length(), 17);
-            var14.setSpan(var11, var4, var14.length(), 17);
+            var var4: Int = var20.length();
+            val var14: ForegroundColorSpan = new ForegroundColorSpan(var5);
+            var5 = var20.length();
+            var20.append(var16);
+            var20.setSpan(var14, var5, var20.length(), 17);
+            var20.setSpan(var11, var4, var20.length(), 17);
             if (var2) {
                var4 = R.drawable.ic_call_24dp;
             } else {
                var4 = R.drawable.ic_call_disconnect_24dp;
             }
 
-            return new androidx.core.app.NotificationCompat.Action.a(var4, var14, var12).c();
+            return new androidx.core.app.NotificationCompat.Action.a(var4, var20, var12).c();
          }
       }
 
@@ -198,108 +198,118 @@ public fun NotificationData.getCallAction(context: Context, isAcceptAction: Bool
 }
 
 public fun NotificationData.getContent(context: Context, forLogs: Boolean): CharSequence? {
-   val var5: java.lang.String = var0.getType();
-   val var3: Int = var5.hashCode();
-   var var4: Any = "";
-   switch (var3) {
+   val var3: java.lang.String = var0.getType();
+   switch (var3.hashCode()) {
       case -1502317553:
-         if (var5.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
-            val var7: java.lang.String = var0.getSubtitle();
-            if (var7 != null) {
-               var4 = var7;
+         if (var3.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
+            val var5: java.lang.String = var0.getSubtitle();
+            if (var5 == null) {
+               return "";
             }
+
+            return var5;
          }
          break;
       case -1489275252:
-         if (var5.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
-            val var13: Int = var0.getGuildScheduledEventEntityType();
-            if ((var13 == null || var13 != 2) && (var13 == null || var13 != 1)) {
-               if (var13 != null && var13 == 3) {
-                  var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY, new q(var0));
+         if (var3.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
+            val var11: Int = var0.getGuildScheduledEventEntityType();
+            if ((var11 == null || var11 != 2) && (var11 == null || var11 != 1)) {
+               if (var11 != null && var11 == 3) {
+                  return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_EXTERNAL_START_BODY, new q(var0));
                }
-            } else {
-               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_BODY, new p(var0));
+
+               return "";
             }
+
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_BODY, new p(var0));
          }
          break;
       case -1327124998:
-         if (var5.equals("RELATIONSHIP_ADD")) {
-            val var6: Int = var0.getRelationshipType();
-            if (var6 != null && var6 == 1) {
-               var4 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, null, 2, null);
-            } else if (var6 != null && var6 == 3) {
-               var4 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_PENDING_FRIEND_REQUEST, null, 2, null);
+         if (var3.equals("RELATIONSHIP_ADD")) {
+            val var4: Int = var0.getRelationshipType();
+            if (var4 != null && var4 == 1) {
+               return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_ACCEPTED_FRIEND_REQUEST, null, 2, null);
             }
+
+            if (var4 != null && var4 == 3) {
+               return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_PENDING_FRIEND_REQUEST, null, 2, null);
+            }
+
+            return "";
          }
          break;
       case -1263316859:
-         if (var5.equals("STAGE_INSTANCE_CREATE")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_BODY, new n(var0));
+         if (var3.equals("STAGE_INSTANCE_CREATE")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_BODY, new n(var0));
          }
          break;
       case -1237752112:
-         if (var5.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_BODY, new m(var0));
+         if (var3.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_BODY, new m(var0));
          }
          break;
       case -437641071:
-         if (var5.equals("FORUM_THREAD_CREATED")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE, new o(var0));
+         if (var3.equals("FORUM_THREAD_CREATED")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_BODY_MOBILE, new o(var0));
          }
          break;
       case -45642698:
-         if (var5.equals("FRIEND_SUGGESTION_CREATE")) {
-            var4 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_BODY, null, 2, null);
+         if (var3.equals("FRIEND_SUGGESTION_CREATE")) {
+            return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_BODY, null, 2, null);
          }
          break;
       case 974015250:
-         if (var5.equals("ACTIVITY_START")) {
-            val var12: Int = var0.getActivityType();
-            if (var12 != null && var12 == 0) {
-               var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_BODY_START_GAME, new j(var0));
+         if (var3.equals("ACTIVITY_START")) {
+            val var10: Int = var0.getActivityType();
+            if (var10 != null && var10 == 0) {
+               return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_BODY_START_GAME, new j(var0));
             }
+
+            return "";
          }
          break;
       case 998188116:
-         if (var5.equals("MESSAGE_CREATE")) {
-            val var11: Int = var0.getChannelType();
-            if ((var11 == null || var11 != 0)
-               && (var11 == null || var11 != 2)
-               && (var11 == null || var11 != 5)
-               && (var11 == null || var11 != 10)
-               && (var11 == null || var11 != 11)
-               && (var11 == null || var11 != 12)) {
-               if (var11 != null && var11 == 3 || var11 != null && var11 == 1) {
-                  val var10: Int = var0.getMessageActivityType();
-                  if (var10 != null && var10 == 1) {
-                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN, new i(var0));
-                  } else {
-                     var4 = renderMessageContent(var0, var1, var2);
+         if (var3.equals("MESSAGE_CREATE")) {
+            val var6: Int = var0.getChannelType();
+            if ((var6 == null || var6 != 0)
+               && (var6 == null || var6 != 2)
+               && (var6 == null || var6 != 5)
+               && (var6 == null || var6 != 10)
+               && (var6 == null || var6 != 11)
+               && (var6 == null || var6 != 12)) {
+               if (var6 != null && var6 == 3 || var6 != null && var6 == 1) {
+                  val var9: Int = var0.getMessageActivityType();
+                  if (var9 != null && var9 == 1) {
+                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_DM_ACTIVITY_JOIN, new i(var0));
                   }
+
+                  return renderMessageContent(var0, var1, var2);
                }
-            } else {
-               var var8: Int = var0.getMessageType();
-               if (var8 != null && var8 == 7) {
-                  var4 = getSystemMessageUserJoin-_NT-lnE(var1, var0.getUserId-wUX8bhU(), var0.getUserUsername());
-               } else {
-                  var8 = var0.getMessageActivityType();
-                  if (var8 != null && var8 == 1) {
-                     var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, new h(var0));
-                  } else {
-                     var4 = renderMessageContent(var0, var1, var2);
-                  }
-               }
+
+               return "";
             }
+
+            val var7: Int = var0.getMessageType();
+            if (var7 != null && var7 == 7) {
+               return getSystemMessageUserJoin-_NT-lnE(var1, var0.getUserId-wUX8bhU(), var0.getUserUsername());
+            }
+
+            val var8: Int = var0.getMessageActivityType();
+            if (var8 != null && var8 == 1) {
+               return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_CREATE_GUILD_ACTIVITY_JOIN, new h(var0));
+            }
+
+            return renderMessageContent(var0, var1, var2);
          }
          break;
       case 1770025841:
-         if (var5.equals("CALL_RING")) {
-            var4 = I18nUtilsKt.i18nFormat(var1, I18nMessage.OVERLAY_FRIEND_CALLING, new k(var0));
+         if (var3.equals("CALL_RING")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.OVERLAY_FRIEND_CALLING, new k(var0));
          }
       default:
    }
 
-   return (java.lang.CharSequence)var4;
+   return "";
 }
 
 fun `getContent$lambda$15`(var0: NotificationData, var1: RenderContext): Unit {
@@ -354,48 +364,40 @@ fun `getContent$lambda$23`(var0: NotificationData, var1: RenderContext): Unit {
 }
 
 internal fun NotificationData.getContentPendingIntent(context: Context, notificationDataMap: Map<String, String>): PendingIntent {
-   val var3: java.lang.String = getTag(var0);
-   val var4: StringBuilder = new StringBuilder();
-   var4.append(var3);
-   var4.append("content");
-   return getPendingIntent(var1, var2, var4.toString());
+   val var4: java.lang.String = getTag(var0);
+   val var3: StringBuilder = new StringBuilder();
+   var3.append(var4);
+   var3.append("content");
+   return getPendingIntent(var1, var2, var3.toString());
 }
 
 internal fun NotificationData.getConversationTitle(): CharSequence? {
-   val var1: Boolean = var0.getType() == "MESSAGE_CREATE";
-   var var2: java.lang.String = null;
-   if (var1) {
-      val var4: Int = var0.getChannelType();
-      if ((var4 == null || var4 != 0)
-         && (var4 == null || var4 != 2)
-         && (var4 == null || var4 != 5)
-         && (var4 == null || var4 != 10)
-         && (var4 == null || var4 != 11)
-         && (var4 == null || var4 != 12)) {
-         if (var4 == null) {
-            var2 = null;
+   if (!(var0.getType() == "MESSAGE_CREATE")) {
+      return null;
+   } else {
+      val var1: Int = var0.getChannelType();
+      if ((var1 == null || var1 != 0)
+         && (var1 == null || var1 != 2)
+         && (var1 == null || var1 != 5)
+         && (var1 == null || var1 != 10)
+         && (var1 == null || var1 != 11)
+         && (var1 == null || var1 != 12)) {
+         if (var1 != null && var1 == 3) {
+            val var5: java.lang.String = var0.getChannelName();
+            return if (var5 == null) var0.getUserUsername() else var5;
          } else {
-            var2 = null;
-            if (var4 == 3) {
-               val var8: java.lang.String = var0.getChannelName();
-               var2 = var8;
-               if (var8 == null) {
-                  var2 = var0.getUserUsername();
-               }
-            }
+            return null;
          }
       } else {
-         var2 = var0.getGuildName();
-         val var5: java.lang.String = var0.getChannelName();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append(var2);
-         var7.append(" #");
-         var7.append(var5);
-         var2 = var7.toString();
+         val var4: java.lang.String = var0.getGuildName();
+         val var2: java.lang.String = var0.getChannelName();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var4);
+         var3.append(" #");
+         var3.append(var2);
+         return var3.toString();
       }
    }
-
-   return var2;
 }
 
 internal fun NotificationData.getDeletePendingIntent(context: Context): PendingIntent {
@@ -430,82 +432,84 @@ internal fun NotificationData.getDirectReplyAction(context: Context): Action? {
 }
 
 internal fun NotificationData.getGroupKey(): String {
-   val var1: java.lang.String = var0.getType();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append("GROUP_");
-   var2.append(var1);
-   return var2.toString();
+   val var2: java.lang.String = var0.getType();
+   val var1: StringBuilder = new StringBuilder();
+   var1.append("GROUP_");
+   var1.append(var2);
+   return var1.toString();
 }
 
 internal fun NotificationData.getIconUrl(context: Context): String {
-   val var5: java.lang.String = var0.getType();
-   switch (var5.hashCode()) {
+   var var3: java.lang.String = var0.getType();
+   switch (var3.hashCode()) {
       case -1502317553:
-         val var14: java.lang.String;
-         if (!var5.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
-            var14 = "";
-         } else {
-            var14 = var0.getIconUrl();
-            if (var14 == null) {
+         if (var3.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
+            val var7: java.lang.String = var0.getIconUrl();
+            if (var7 == null) {
                return "";
             }
+
+            return var7;
          }
 
-         return var14;
+         return "";
       case -1489275252:
-         if (!var5.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
-            return "";
+         if (var3.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
+            return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
          }
 
-         return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
+         return "";
       case -1327124998:
-         if (!var5.equals("RELATIONSHIP_ADD")) {
-            return "";
+         if (var3.equals("RELATIONSHIP_ADD")) {
+            return IconUrlUtils.getApplicationIcon-weIltyw$default(
+               IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null
+            );
          }
 
-         return IconUrlUtils.getApplicationIcon-weIltyw$default(IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null);
+         return "";
       case -1263316859:
-         if (!var5.equals("STAGE_INSTANCE_CREATE")) {
-            return "";
+         if (var3.equals("STAGE_INSTANCE_CREATE")) {
+            return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
          }
 
-         return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
+         return "";
       case -1237752112:
-         if (!var5.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
-            return "";
+         if (var3.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
+            return IconUrlUtils.getApplicationIcon-weIltyw$default(
+               IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null
+            );
          }
 
-         return IconUrlUtils.getApplicationIcon-weIltyw$default(IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null);
+         return "";
       case -437641071:
-         if (!var5.equals("FORUM_THREAD_CREATED")) {
-            return "";
+         if (var3.equals("FORUM_THREAD_CREATED")) {
+            return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
          }
 
-         return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
+         return "";
       case -45642698:
-         val var7: java.lang.String;
-         if (!var5.equals("FRIEND_SUGGESTION_CREATE")) {
-            var7 = "";
-         } else {
-            var7 = IconUrlUtils.getForUser-_fRzTXg$default(
+         if (var3.equals("FRIEND_SUGGESTION_CREATE")) {
+            return IconUrlUtils.getForUser-_fRzTXg$default(
                IconUrlUtils.INSTANCE, var1, var0.getUserId-wUX8bhU(), var0.getUserAvatar(), null, false, null, 40, null
             );
          }
 
-         return var7;
+         return "";
       case 974015250:
-         if (!var5.equals("ACTIVITY_START")) {
-            return "";
+         if (var3.equals("ACTIVITY_START")) {
+            return IconUrlUtils.getApplicationIcon-weIltyw$default(
+               IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null
+            );
          }
 
-         return IconUrlUtils.getApplicationIcon-weIltyw$default(IconUrlUtils.INSTANCE, var0.getApplicationId-UtIrSio(), var0.getApplicationIcon(), 0, 4, null);
+         return "";
       case 998188116:
-         if (!var5.equals("MESSAGE_CREATE")) {
+         if (!var3.equals("MESSAGE_CREATE")) {
             return "";
          }
          break;
       case 1770025841:
-         if (!var5.equals("CALL_RING")) {
+         if (!var3.equals("CALL_RING")) {
             return "";
          }
          break;
@@ -513,45 +517,41 @@ internal fun NotificationData.getIconUrl(context: Context): String {
          return "";
    }
 
-   val var9: Int = var0.getChannelType();
-   var var3: Boolean = true;
-   if (var9 != null && var9 == 1) {
+   val var8: Int = var0.getChannelType();
+   var var2: Boolean = true;
+   if (var8 != null && var8 == 1) {
       return IconUrlUtils.getForUser-_fRzTXg$default(
          IconUrlUtils.INSTANCE, var1, var0.getUserId-wUX8bhU(), var0.getUserAvatar(), var0.getUserDiscriminator(), false, null, 32, null
       );
-   } else if ((var9 == null || var9 != 0)
-      && (var9 == null || var9 != 2)
-      && (var9 == null || var9 != 5)
-      && (var9 == null || var9 != 10)
-      && (var9 == null || var9 != 11)
-      && (var9 == null || var9 != 12)) {
-      val var11: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var6: ChannelId = var0.getChannelId-qMVnFVQ();
-      val var10: java.lang.String = var0.getChannelIcon();
-      val var8: Int = var0.getChannelType();
-      if (var8 == null || var8 != 3) {
-         var3 = false;
+   } else if ((var8 == null || var8 != 0)
+      && (var8 == null || var8 != 2)
+      && (var8 == null || var8 != 5)
+      && (var8 == null || var8 != 10)
+      && (var8 == null || var8 != 11)
+      && (var8 == null || var8 != 12)) {
+      val var5: IconUrlUtils = IconUrlUtils.INSTANCE;
+      val var4: ChannelId = var0.getChannelId-qMVnFVQ();
+      var3 = var0.getChannelIcon();
+      val var6: Int = var0.getChannelType();
+      if (var6 == null || var6 != 3) {
+         var2 = false;
       }
 
-      return IconUrlUtils.getForChannel-JYSGpIY$default(var11, var1, var6, var10, var3, null, 16, null);
+      return IconUrlUtils.getForChannel-JYSGpIY$default(var5, var1, var4, var3, var2, null, 16, null);
    } else {
       return IconUrlUtils.getForGuild-14CJxO4$default(IconUrlUtils.INSTANCE, var0.getGuildId-qOKuAAo(), var0.getGuildIcon(), "", false, null, 24, null);
    }
 }
 
 internal fun NotificationData.getIconUrlForAvatar(context: Context): String {
-   val var4: IconUrlUtils = IconUrlUtils.INSTANCE;
-   val var3: java.lang.String = IconUrlUtils.getForGuildMember-2tNb6hE$default(
+   val var3: IconUrlUtils = IconUrlUtils.INSTANCE;
+   val var2: java.lang.String = IconUrlUtils.getForGuildMember-2tNb6hE$default(
       IconUrlUtils.INSTANCE, var0.getUserGuildAvatar(), var0.getGuildId-qOKuAAo(), var0.getUserId-wUX8bhU(), null, false, 24, null
    );
-   var var2: java.lang.String = var3;
-   if (var3.length() == 0) {
-      var2 = IconUrlUtils.getForUser-_fRzTXg$default(
-         var4, var1, var0.getUserId-wUX8bhU(), var0.getUserAvatar(), var0.getUserDiscriminator(), false, null, 32, null
-      );
-   }
-
-   return var2;
+   return if (var2.length() == 0)
+      IconUrlUtils.getForUser-_fRzTXg$default(var3, var1, var0.getUserId-wUX8bhU(), var0.getUserAvatar(), var0.getUserDiscriminator(), false, null, 32, null)
+      else
+      var2;
 }
 
 public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
@@ -568,12 +568,12 @@ public fun NotificationData.getKvMessage(rawMessage: String?): KvMessageEntry? {
          val var14: java.util.Iterator = var13.iterator();
 
          while (var14.hasNext()) {
-            val var6: java.util.Map = O.y(var14.next() as JsonObject);
-            var6.put("incomplete", Ac.h.b(java.lang.Boolean.TRUE));
+            val var6: java.util.Map = n0.y(var14.next() as JsonObject);
+            var6.put("incomplete", xp.h.b(java.lang.Boolean.TRUE));
             var12.add(new JsonObject(var6));
          }
 
-         return new KvMessageEntry(var9, var12, Ac.h.n(var11), var2, var3.unbox-impl(), null);
+         return new KvMessageEntry(var9, var12, xp.h.n(var11), var2, var3.unbox-impl(), null);
       }
 
       try {
@@ -688,11 +688,11 @@ private fun getPendingIntent(context: Context, notificationDataMap: Map<String, 
 }
 
 internal fun NotificationData.getSendTime(): Long {
-   val var3: java.lang.String = var0.getMessageId-N_6c4I0();
-   if (var3 != null) {
-      val var4: MessageIdSnowflake = MessageId.toSnowflake-wDbSO-A(var3);
-      if (var4 != null) {
-         return SnowflakeUtilsKt.toTimestamp(var4);
+   val var1: java.lang.String = var0.getMessageId-N_6c4I0();
+   if (var1 != null) {
+      val var2: MessageIdSnowflake = MessageId.toSnowflake-wDbSO-A(var1);
+      if (var2 != null) {
+         return SnowflakeUtilsKt.toTimestamp(var2);
       }
    }
 
@@ -734,14 +734,7 @@ internal fun NotificationData.getSender(icon: Bitmap?): Person {
 }
 
 internal fun NotificationData.getSenderForMessageNotification(icon: Bitmap?): Person? {
-   val var2: Person;
-   if (var0.isFromCurrentUser()) {
-      var2 = null;
-   } else {
-      var2 = getSender(var0, var1);
-   }
-
-   return var2;
+   return if (var0.isFromCurrentUser()) null else getSender(var0, var1);
 }
 
 internal fun NotificationData.getShortcutInfo(context: Context, notificationDataMap: Map<String, String>, icon: Bitmap?, avatar: Bitmap?): ShortcutInfoCompat {
@@ -760,25 +753,25 @@ internal fun NotificationData.getShortcutInfo(context: Context, notificationData
 }
 
 internal fun NotificationData.getSmallIcon(): Int {
-   val var2: java.lang.String = var0.getType();
-   switch (var2.hashCode()) {
+   val var1: java.lang.String = var0.getType();
+   switch (var1.hashCode()) {
       case -1327124998:
-         if (var2.equals("RELATIONSHIP_ADD")) {
+         if (var1.equals("RELATIONSHIP_ADD")) {
             return R.drawable.ic_notification_friends_24dp;
          }
          break;
       case -45642698:
-         if (var2.equals("FRIEND_SUGGESTION_CREATE")) {
+         if (var1.equals("FRIEND_SUGGESTION_CREATE")) {
             return R.drawable.ic_notification_friends_24dp;
          }
          break;
       case 998188116:
-         if (var2.equals("MESSAGE_CREATE")) {
+         if (var1.equals("MESSAGE_CREATE")) {
             return R.drawable.ic_notification_message_24dp;
          }
          break;
       case 1770025841:
-         if (var2.equals("CALL_RING")) {
+         if (var1.equals("CALL_RING")) {
             return R.drawable.ic_notification_call_24dp;
          }
       default:
@@ -788,24 +781,21 @@ internal fun NotificationData.getSmallIcon(): Int {
 }
 
 internal fun NotificationData.getSound(context: Context): Uri? {
-   val var6: Uri;
    if (var0.getType() == "CALL_RING") {
       val var4: StringBuilder = new StringBuilder();
       var4.append("android.resource://");
       val var3: java.lang.String = var1.getPackageName();
       val var2: Int = com.discord.sounds.R.raw.call_ringing;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var3);
-      var7.append("/");
-      var7.append(var2);
-      var4.append(var7.toString());
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var3);
+      var6.append("/");
+      var6.append(var2);
+      var4.append(var6.toString());
       val var5: java.lang.String = var4.toString();
-      var6 = Uri.parse(var5);
+      return Uri.parse(var5);
    } else {
-      var6 = null;
+      return null;
    }
-
-   return var6;
 }
 
 private fun getSystemMessageUserJoin(context: Context, userId: UserId?, userName: String?): CharSequence {
@@ -842,91 +832,91 @@ fun `getSystemMessageUserJoin__NT_lnE$lambda$25$lambda$24`(var0: java.lang.Strin
 }
 
 public fun NotificationData.getTag(): String {
-   label75: {
-      label76: {
+   label53: {
+      label52: {
          var var1: java.lang.String = var0.getType();
          switch (var1.hashCode()) {
             case -1502317553:
                if (var1.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
                   var1 = var0.getType();
-                  val var14: java.lang.String = var0.getDeeplink();
-                  val var30: StringBuilder = new StringBuilder();
-                  var30.append(var1);
-                  var30.append(var14);
-                  return var30.toString();
+                  val var29: java.lang.String = var0.getDeeplink();
+                  val var13: StringBuilder = new StringBuilder();
+                  var13.append(var1);
+                  var13.append(var29);
+                  return var13.toString();
                }
-               break label75;
+               break;
             case -1489275252:
-               if (!var1.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
-                  break label75;
+               if (var1.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
+                  break label52;
                }
                break;
             case -1327124998:
                if (var1.equals("RELATIONSHIP_ADD")) {
                   var1 = var0.getType();
-                  val var11: UserId = var0.getUserId-wUX8bhU();
-                  val var28: StringBuilder = new StringBuilder();
-                  var28.append(var1);
-                  var28.append(var11);
-                  return var28.toString();
+                  val var27: UserId = var0.getUserId-wUX8bhU();
+                  val var10: StringBuilder = new StringBuilder();
+                  var10.append(var1);
+                  var10.append(var27);
+                  return var10.toString();
                }
-               break label75;
+               break;
             case -1263316859:
-               if (!var1.equals("STAGE_INSTANCE_CREATE")) {
-                  break label75;
+               if (var1.equals("STAGE_INSTANCE_CREATE")) {
+                  break label52;
                }
                break;
             case -1237752112:
                if (var1.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
                   var1 = var0.getType();
-                  val var10: ApplicationId = var0.getApplicationId-UtIrSio();
-                  val var27: StringBuilder = new StringBuilder();
-                  var27.append(var1);
-                  var27.append(var10);
-                  return var27.toString();
-               }
-               break label75;
-            case -437641071:
-               if (!var1.equals("FORUM_THREAD_CREATED")) {
-                  break label75;
-               }
-               break;
-            case -45642698:
-               if (var1.equals("FRIEND_SUGGESTION_CREATE")) {
-                  var1 = var0.getType();
-                  val var9: UserId = var0.getUserId-wUX8bhU();
+                  val var9: ApplicationId = var0.getApplicationId-UtIrSio();
                   val var26: StringBuilder = new StringBuilder();
                   var26.append(var1);
                   var26.append(var9);
                   return var26.toString();
                }
-               break label75;
-            case 74682093:
-               if (!var1.equals("CALL_RING_END")) {
-                  break label75;
+               break;
+            case -437641071:
+               if (var1.equals("FORUM_THREAD_CREATED")) {
+                  break label52;
                }
-               break label76;
+               break;
+            case -45642698:
+               if (var1.equals("FRIEND_SUGGESTION_CREATE")) {
+                  var1 = var0.getType();
+                  val var8: UserId = var0.getUserId-wUX8bhU();
+                  val var25: StringBuilder = new StringBuilder();
+                  var25.append(var1);
+                  var25.append(var8);
+                  return var25.toString();
+               }
+               break;
+            case 74682093:
+               if (var1.equals("CALL_RING_END")) {
+                  break label53;
+               }
+               break;
             case 974015250:
                if (var1.equals("ACTIVITY_START")) {
-                  val var24: java.lang.String = var0.getType();
-                  val var16: Int = var0.getActivityType();
-                  val var31: java.lang.String = var0.getActivityName();
-                  val var7: StringBuilder = new StringBuilder();
-                  var7.append(var24);
-                  var7.append(var16);
-                  var7.append(var31);
-                  return var7.toString();
+                  val var23: java.lang.String = var0.getType();
+                  val var15: Int = var0.getActivityType();
+                  val var30: java.lang.String = var0.getActivityName();
+                  val var6: StringBuilder = new StringBuilder();
+                  var6.append(var23);
+                  var6.append(var15);
+                  var6.append(var30);
+                  return var6.toString();
                }
-               break label75;
+               break;
             case 998188116:
-               if (!var1.equals("MESSAGE_CREATE")) {
-                  break label75;
+               if (var1.equals("MESSAGE_CREATE")) {
+                  break label52;
                }
                break;
             case 1471047007:
                if (var1.equals("LOCAL_NOTIFICATION")) {
-                  val var2: java.lang.String = var0.getType();
-                  val var15: ChannelId = var0.getChannelId-qMVnFVQ();
+                  var1 = var0.getType();
+                  val var2: ChannelId = var0.getChannelId-qMVnFVQ();
                   val var4: java.lang.String = var0.getMessageId-N_6c4I0();
                   val var5: java.lang.String;
                   if (var4 == null) {
@@ -936,45 +926,43 @@ public fun NotificationData.getTag(): String {
                   }
 
                   val var3: StringBuilder = new StringBuilder();
+                  var3.append(var1);
                   var3.append(var2);
-                  var3.append(var15);
                   var3.append(var5);
                   return var3.toString();
                }
-               break label75;
+               break;
             case 1770025841:
-               if (!var1.equals("CALL_RING")) {
-                  break label75;
+               if (var1.equals("CALL_RING")) {
+                  break label53;
                }
-               break label76;
             default:
-               break label75;
          }
 
-         var1 = var0.getType();
-         val var29: ChannelId = var0.getChannelId-qMVnFVQ();
-         val var12: StringBuilder = new StringBuilder();
-         var12.append(var1);
-         var12.append(var29);
-         return var12.toString();
+         val var12: java.lang.String = var0.getType();
+         val var21: StringBuilder = new StringBuilder();
+         var21.append("Unknown notification type: ");
+         var21.append(var12);
+         var21.append(".");
+         throw new IllegalArgumentException(var21.toString());
       }
 
-      val var17: java.lang.String = var0.getType();
-      val var25: ChannelId = var0.getChannelId-qMVnFVQ();
-      val var8: java.lang.String = var0.getTimeReceived();
-      val var32: StringBuilder = new StringBuilder();
-      var32.append(var17);
-      var32.append(var25);
-      var32.append(var8);
-      return var32.toString();
+      val var20: java.lang.String = var0.getType();
+      val var11: ChannelId = var0.getChannelId-qMVnFVQ();
+      val var28: StringBuilder = new StringBuilder();
+      var28.append(var20);
+      var28.append(var11);
+      return var28.toString();
    }
 
-   val var13: java.lang.String = var0.getType();
-   val var22: StringBuilder = new StringBuilder();
-   var22.append("Unknown notification type: ");
-   var22.append(var13);
-   var22.append(".");
-   throw new IllegalArgumentException(var22.toString());
+   val var24: java.lang.String = var0.getType();
+   val var16: ChannelId = var0.getChannelId-qMVnFVQ();
+   val var31: java.lang.String = var0.getTimeReceived();
+   val var7: StringBuilder = new StringBuilder();
+   var7.append(var24);
+   var7.append(var16);
+   var7.append(var31);
+   return var7.toString();
 }
 
 public fun NotificationData.getTimedMuteAction(context: Context, numMessages: Int): Action? {
@@ -996,210 +984,172 @@ public fun NotificationData.getTimedMuteAction(context: Context, numMessages: In
 }
 
 public fun NotificationData.getTitle(context: Context): CharSequence {
-   var var3: java.lang.String = var0.getType();
-   var var7: java.lang.String;
-   switch (var3.hashCode()) {
+   var var2: java.lang.String = var0.getType();
+   switch (var2.hashCode()) {
       case -1502317553:
-         if (!var3.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
-            return "";
-         }
-
-         val var19: java.lang.String = var0.getTitle();
-         var7 = var19;
-         if (var19 == null) {
-            return "";
-         }
-         break;
-      case -1489275252:
-         if (!var3.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
-            return "";
-         } else {
-            val var25: Int = var0.getGuildScheduledEventEntityType();
-            if (var25 == null) {
-               var3 = "";
-            } else {
-               var3 = "";
-               if (var25 == 1) {
-                  return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE, new u(var0));
-               }
-            }
-
-            return var3;
-         }
-      case -1327124998:
-         if (!var3.equals("RELATIONSHIP_ADD")) {
-            return "";
-         }
-
-         val var18: java.lang.String = var0.getUserUsername();
-         var7 = var18;
-         if (var18 == null) {
-            return "";
-         }
-         break;
-      case -1263316859:
-         val var32: Any;
-         if (!var3.equals("STAGE_INSTANCE_CREATE")) {
-            var32 = "";
-         } else {
-            var32 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_TITLE, new s(var0));
-         }
-
-         return (java.lang.CharSequence)var32;
-      case -1237752112:
-         val var31: Any;
-         if (!var3.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
-            var31 = "";
-         } else {
-            var31 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_TITLE, null, 2, null);
-         }
-
-         return (java.lang.CharSequence)var31;
-      case -437641071:
-         val var30: Any;
-         if (!var3.equals("FORUM_THREAD_CREATED")) {
-            var30 = "";
-         } else {
-            var30 = I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE, new t(var0));
-         }
-
-         return (java.lang.CharSequence)var30;
-      case -45642698:
-         if (!var3.equals("FRIEND_SUGGESTION_CREATE")) {
-            return "";
-         } else {
-            val var34: java.lang.CharSequence;
-            if (StringsKt.v(var0.getPlatformUserUsername(), var0.getUserUsername(), false, 2, null)) {
-               var34 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_CONTACT_TITLE, new v(var0));
-            } else {
-               var34 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_TITLE, new w(var0));
-            }
-
-            return var34;
-         }
-      case 974015250:
-         if (!var3.equals("ACTIVITY_START")) {
-            return "";
-         } else {
-            val var9: Int = var0.getActivityType();
-            if (var9 == null) {
-               var3 = "";
-            } else {
-               var3 = "";
-               if (var9 == 0) {
-                  return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_TITLE_START_GAME, null, 2, null);
-               }
-            }
-
-            return var3;
-         }
-      case 998188116:
-         if (!var3.equals("MESSAGE_CREATE")) {
-            return "";
-         }
-
-         val var5: Int = var0.getChannelType();
-         if (var5 != null && var5 == 0
-            || var5 != null && var5 == 2
-            || var5 != null && var5 == 5
-            || var5 != null && var5 == 10
-            || var5 != null && var5 == 11
-            || var5 != null && var5 == 12) {
-            val var15: Int = var0.getMessageType();
-            if (var15 != null && var15 == 63) {
-               val var17: java.lang.String = var0.getUserUsername();
-               var7 = var17;
-               if (var17 == null) {
-                  return "";
-               }
-               break;
-            }
-
-            val var16: java.lang.String = var0.getGuildName();
-            val var8: java.lang.String = var0.getChannelName();
-            val var24: StringBuilder = new StringBuilder();
-            var24.append(var16);
-            var24.append(" #");
-            var24.append(var8);
-            return var24.toString();
-         } else {
-            if (var5 != null && var5 == 1) {
-               if (var0.getInviteGuildName() != null && var0.getUserUsername() != null) {
-                  val var23: Int = var0.getInviteTitleVariant();
-                  if (var23 != null && var23 == 1) {
-                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.INVITED_YOU_TO_GUILD, new a(var0));
-                  }
-
-                  if (var23 != null && var23 == 2) {
-                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_INVITE_FROM_EMOJI, new l(var0));
-                  }
-
-                  val var14: java.lang.String = var0.getUserUsername();
-                  var7 = var14;
-                  if (var14 == null) {
-                     return "";
-                  }
-               } else {
-                  val var13: java.lang.String = var0.getUserUsername();
-                  var7 = var13;
-                  if (var13 == null) {
-                     return "";
-                  }
-               }
-               break;
-            }
-
-            if (var5 == null) {
-               return "";
-            }
-
-            if (var5 != 3) {
-               return "";
-            }
-
-            var3 = var0.getChannelName();
-            if (var3 != null) {
-               return var3;
-            }
-
-            val var12: java.lang.String = var0.getUserUsername();
-            var7 = var12;
+         if (var2.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
+            val var12: java.lang.String = var0.getTitle();
             if (var12 == null) {
                return "";
             }
-            break;
+
+            return var12;
          }
-      case 1770025841:
-         if (!var3.equals("CALL_RING")) {
+         break;
+      case -1489275252:
+         if (var2.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
+            val var22: Int = var0.getGuildScheduledEventEntityType();
+            if (var22 != null && var22 == 1) {
+               return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE, new u(var0));
+            }
+
             return "";
          }
-
-         val var21: Int = var0.getChannelType();
-         if (var21 != null && var21 == 1) {
-            return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.INCOMING_CALL, null, 2, null);
-         }
-
-         if (var21 != null && var21 == 3) {
-            val var11: java.lang.String = var0.getChannelName();
-            var7 = var11;
+         break;
+      case -1327124998:
+         if (var2.equals("RELATIONSHIP_ADD")) {
+            val var11: java.lang.String = var0.getUserUsername();
             if (var11 == null) {
                return "";
             }
-            break;
-         }
 
-         val var10: java.lang.String = var0.getChannelName();
-         var3 = var0.getGuildName();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var10);
-         var6.append(", ");
-         var6.append(var3);
-         return var6.toString();
+            return var11;
+         }
+         break;
+      case -1263316859:
+         if (var2.equals("STAGE_INSTANCE_CREATE")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.STAGE_START_PUSH_NOTIFICATION_TITLE, new s(var0));
+         }
+         break;
+      case -1237752112:
+         if (var2.equals("APPLICATION_LIBRARY_INSTALL_COMPLETE")) {
+            return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.GAME_LIBRARY_NOTIFICATION_GAME_INSTALLED_TITLE, null, 2, null);
+         }
+         break;
+      case -437641071:
+         if (var2.equals("FORUM_THREAD_CREATED")) {
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.FORUM_CHANNEL_THREAD_CREATED_PUSH_TITLE_MOBILE, new t(var0));
+         }
+         break;
+      case -45642698:
+         if (var2.equals("FRIEND_SUGGESTION_CREATE")) {
+            if (StringsKt.v(var0.getPlatformUserUsername(), var0.getUserUsername(), false, 2, null)) {
+               return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_CONTACT_TITLE, new v(var0));
+            }
+
+            return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_FRIEND_SUGGESTION_TITLE, new w(var0));
+         }
+         break;
+      case 974015250:
+         if (var2.equals("ACTIVITY_START")) {
+            val var10: Int = var0.getActivityType();
+            if (var10 != null && var10 == 0) {
+               return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.NOTIFICATION_TITLE_START_GAME, null, 2, null);
+            }
+
+            return "";
+         }
+         break;
+      case 998188116:
+         if (var2.equals("MESSAGE_CREATE")) {
+            val var19: Int = var0.getChannelType();
+            if (var19 != null && var19 == 0
+               || var19 != null && var19 == 2
+               || var19 != null && var19 == 5
+               || var19 != null && var19 == 10
+               || var19 != null && var19 == 11
+               || var19 != null && var19 == 12) {
+               val var15: Int = var0.getMessageType();
+               if (var15 != null && var15 == 63) {
+                  val var9: java.lang.String = var0.getUserUsername();
+                  if (var9 == null) {
+                     return "";
+                  }
+
+                  return var9;
+               }
+
+               val var16: java.lang.String = var0.getGuildName();
+               var2 = var0.getChannelName();
+               val var8: StringBuilder = new StringBuilder();
+               var8.append(var16);
+               var8.append(" #");
+               var8.append(var2);
+               return var8.toString();
+            }
+
+            if (var19 != null && var19 == 1) {
+               if (var0.getInviteGuildName() != null && var0.getUserUsername() != null) {
+                  val var20: Int = var0.getInviteTitleVariant();
+                  if (var20 != null && var20 == 1) {
+                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.INVITED_YOU_TO_GUILD, new a(var0));
+                  }
+
+                  if (var20 != null && var20 == 2) {
+                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.GUILD_INVITE_FROM_EMOJI, new l(var0));
+                  }
+
+                  val var7: java.lang.String = var0.getUserUsername();
+                  if (var7 == null) {
+                     return "";
+                  }
+
+                  return var7;
+               }
+
+               val var6: java.lang.String = var0.getUserUsername();
+               if (var6 == null) {
+                  return "";
+               }
+
+               return var6;
+            }
+
+            if (var19 != null && var19 == 3) {
+               val var14: java.lang.String = var0.getChannelName();
+               if (var14 == null) {
+                  val var5: java.lang.String = var0.getUserUsername();
+                  if (var5 == null) {
+                     return "";
+                  }
+
+                  return var5;
+               }
+
+               return var14;
+            }
+
+            return "";
+         }
+         break;
+      case 1770025841:
+         if (var2.equals("CALL_RING")) {
+            val var17: Int = var0.getChannelType();
+            if (var17 != null && var17 == 1) {
+               return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.INCOMING_CALL, null, 2, null);
+            }
+
+            if (var17 != null && var17 == 3) {
+               val var4: java.lang.String = var0.getChannelName();
+               if (var4 == null) {
+                  return "";
+               }
+
+               return var4;
+            }
+
+            val var13: java.lang.String = var0.getChannelName();
+            var2 = var0.getGuildName();
+            val var3: StringBuilder = new StringBuilder();
+            var3.append(var13);
+            var3.append(", ");
+            var3.append(var2);
+            return var3.toString();
+         }
       default:
-         return "";
    }
 
-   return var7;
+   return "";
 }
 
 fun `getTitle$lambda$0`(var0: NotificationData, var1: RenderContext): Unit {
@@ -1249,20 +1199,15 @@ fun i(var0: NotificationData, var1: RenderContext): Unit {
 }
 
 internal fun NotificationData.isCall(): Boolean {
-   val var3: Int = var0.getChannelType();
-   if (var3 != null && var3 == 1) {
-      return true;
-   } else {
-      val var4: Int = var0.getChannelType();
-      val var1: Boolean;
-      if (var4 != null && var4 == 3) {
-         var1 = true;
-      } else {
-         var1 = false;
+   val var1: Int = var0.getChannelType();
+   if (var1 == null || var1 != 1) {
+      val var2: Int = var0.getChannelType();
+      if (var2 == null || var2 != 3) {
+         return false;
       }
-
-      return var1;
    }
+
+   return true;
 }
 
 internal fun NotificationData.isCallRinging(): Boolean {
@@ -1271,8 +1216,8 @@ internal fun NotificationData.isCallRinging(): Boolean {
 
 internal fun NotificationData.isGroupConversation(): Boolean {
    if (var0.getType() == "MESSAGE_CREATE") {
-      val var2: Int = var0.getChannelType();
-      if (var2 == null || var2 != 1) {
+      val var1: Int = var0.getChannelType();
+      if (var1 == null || var1 != 1) {
          return true;
       }
    }
@@ -1343,65 +1288,64 @@ internal fun NotificationData.renderMessageContent(context: Context, forLogs: Bo
    }
 
    var3 = var0.getMessage();
-   val var9: Embed;
+   val var8: Embed;
    if (var3 != null) {
-      var9 = var3.getEmbed();
+      var8 = var3.getEmbed();
    } else {
-      var9 = null;
+      var8 = null;
    }
 
-   val var7: Any;
    if (var4 != null) {
-      var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.STICKER_NOTIFICATION_BODY, new z(var4));
+      return I18nUtilsKt.i18nFormat(var1, I18nMessage.STICKER_NOTIFICATION_BODY, new z(var4));
    } else if (var0.getAttachmentTextVariant() != null) {
       val var10: Int = var0.getAttachmentTextVariant();
       if (var10 != null && var10 == 1) {
-         var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.SENT_AN_IMAGE, null, 2, null);
+         return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.SENT_AN_IMAGE, null, 2, null);
       } else if (var10 != null && var10 == 2) {
-         var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.SENT_IMAGES, new b(var0));
-      } else if (var10 != null && var10 == 3) {
-         var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.SENT_A_GIF, null, 2, null);
+         return I18nUtilsKt.i18nFormat(var1, I18nMessage.SENT_IMAGES, new b(var0));
       } else {
-         var7 = var0.getMessageContent();
+         return (java.lang.CharSequence)(if (var10 != null && var10 == 3)
+            I18nUtilsKt.i18nFormat$default(var1, I18nMessage.SENT_A_GIF, null, 2, null)
+            else
+            var0.getMessageContent());
       }
    } else {
-      val var12: Int = var0.getMessageReferenceType();
-      if (var12 != null && var12 == 1) {
-         var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MESSAGE_FORWARDED_NOTIFICATION_BODY, null, 2, null);
+      val var11: Int = var0.getMessageReferenceType();
+      if (var11 != null && var11 == 1) {
+         return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.MESSAGE_FORWARDED_NOTIFICATION_BODY, null, 2, null);
       } else if (var0.getActivityInstanceId() == null || var0.getMessageContent() != null && !(var0.getMessageContent() == "")) {
          if (MessageFlagKt.hasMessageFlag(var0.getMessageFlags(), MessageFlag.IS_VOICE_MESSAGE)) {
-            var7 = I18nUtilsKt.i18nFormat$default(var1, I18nMessage.VOICE_MESSAGES_SENT_NOTIFICATION, null, 2, null);
+            return I18nUtilsKt.i18nFormat$default(var1, I18nMessage.VOICE_MESSAGES_SENT_NOTIFICATION, null, 2, null);
          } else {
             val var6: NotificationMessage = var0.getMessage();
-            var var13: Poll = null;
+            var var12: Poll = null;
             if (var6 != null) {
-               var13 = var6.getPoll();
+               var12 = var6.getPoll();
             }
 
-            if (var13 != null) {
-               var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_SENT_NOTIFICATION, new d(var0));
+            if (var12 != null) {
+               return I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_SENT_NOTIFICATION, new d(var0));
             } else {
-               val var14: Int = var0.getMessageType();
-               if (var14 != null && var14 == 46) {
-                  var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_RESULTS_NOTIFICATION, new e(var9));
+               val var13: Int = var0.getMessageType();
+               if (var13 != null && var13 == 46) {
+                  return I18nUtilsKt.i18nFormat(var1, I18nMessage.POLL_RESULTS_NOTIFICATION, new e(var8));
                } else {
-                  val var11: Int = var0.getMessageType();
-                  if (var11 != null && var11 == 63) {
-                     var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.EMOJI_ADDED_NOTIFICATION_BODY, new f(var0));
-                  } else if (var0.getInviteGuildName() != null) {
-                     var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.JOIN_GUILD_NAME, new g(var0));
+                  val var9: Int = var0.getMessageType();
+                  if (var9 != null && var9 == 63) {
+                     return I18nUtilsKt.i18nFormat(var1, I18nMessage.EMOJI_ADDED_NOTIFICATION_BODY, new f(var0));
                   } else {
-                     var7 = renderLogAwareNotificationMessageContent(var2, var0.getMessageContent());
+                     return if (var0.getInviteGuildName() != null)
+                        I18nUtilsKt.i18nFormat(var1, I18nMessage.JOIN_GUILD_NAME, new g(var0))
+                        else
+                        renderLogAwareNotificationMessageContent(var2, var0.getMessageContent());
                   }
                }
             }
          }
       } else {
-         var7 = I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_ACTIVITY_INSTANCE, new c(var0));
+         return I18nUtilsKt.i18nFormat(var1, I18nMessage.NOTIFICATION_MESSAGE_ACTIVITY_INSTANCE, new c(var0));
       }
    }
-
-   return (java.lang.CharSequence)var7;
 }
 
 fun `renderMessageContent$lambda$10`(var0: NotificationData, var1: RenderContext): Unit {
@@ -1511,25 +1455,11 @@ fun s(var0: java.lang.String, var1: RenderContext): Unit {
 }
 
 internal fun NotificationData.shouldUseBigText(): Boolean {
-   val var1: Boolean;
-   if (var0.getType() == "GENERIC_PUSH_NOTIFICATION_SENT" && var0.getExpandSubtitle() == java.lang.Boolean.TRUE) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getType() == "GENERIC_PUSH_NOTIFICATION_SENT" && var0.getExpandSubtitle() == java.lang.Boolean.TRUE;
 }
 
 internal fun NotificationData.shouldUseMessagingStyle(): Boolean {
-   val var1: Boolean;
-   if (var0.getType() == "MESSAGE_CREATE" || var0.getType() == "GENERIC_PUSH_NOTIFICATION_SENT" && var0.getUserAvatar() != null) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getType() == "MESSAGE_CREATE" || var0.getType() == "GENERIC_PUSH_NOTIFICATION_SENT" && var0.getUserAvatar() != null;
 }
 
 @JvmSynthetic
@@ -1551,23 +1481,23 @@ public fun NotificationData.toNotificationMessage(author: JsonObject): JsonObjec
       var2 = 0L;
    }
 
-   val var8: Int = var0.getMessageType();
-   var8;
-   val var12: java.lang.String = var0.getMessageId-N_6c4I0();
+   val var12: Int = var0.getMessageType();
+   var12;
+   val var8: java.lang.String = var0.getMessageId-N_6c4I0();
    val var9: ChannelId = var0.getChannelId-qMVnFVQ();
    val var4: Long = var9.unbox-impl();
-   val var11: GuildId = var0.getGuildId-qOKuAAo();
-   val var10: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
-   val var13: Ac.x = new Ac.x();
-   Ac.g.c(var13, "content", var6);
-   Ac.g.b(var13, "flags", var2);
-   Ac.g.b(var13, "type", var8);
-   Ac.g.c(var13, "id", MessageId.toString-impl(var12));
-   Ac.g.c(var13, "channel_id", ChannelId.toString-impl(var4));
-   Ac.g.c(var13, "timestamp", var10);
+   val var10: GuildId = var0.getGuildId-qOKuAAo();
+   val var11: java.lang.String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSS", Locale.getDefault()).format(new Date());
+   val var13: xp.x = new xp.x();
+   xp.g.c(var13, "content", var6);
+   xp.g.b(var13, "flags", var2);
+   xp.g.b(var13, "type", var12);
+   xp.g.c(var13, "id", MessageId.toString-impl(var8));
+   xp.g.c(var13, "channel_id", ChannelId.toString-impl(var4));
+   xp.g.c(var13, "timestamp", var11);
    var13.b("author", var1);
-   if (var11 != null) {
-      Ac.g.c(var13, "guild_id", GuildId.toString-impl(var11.unbox-impl()));
+   if (var10 != null) {
+      xp.g.c(var13, "guild_id", GuildId.toString-impl(var10.unbox-impl()));
    }
 
    return var13.a();

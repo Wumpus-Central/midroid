@@ -2,8 +2,6 @@
 
 package com.discord.image.fresco
 
-import N3.d
-import Oa.b
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -12,12 +10,14 @@ import com.facebook.datasource.DataSource
 import com.facebook.imagepipeline.core.DefaultExecutorSupplier
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import km.b
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import l8.d
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -39,7 +39,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.d(new x4.b(var6, var3) {
+      var8.c(new v9.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -65,7 +65,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().d());
-      var6.b(new Function1<java.lang.Throwable, Unit>(var8) {
+      var6.g(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -136,7 +136,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).d(new x4.b(var3) {
+      d.a().k(var5.J(var6).a(), var0).c(new v9.b(var3) {
          final Function1<Bitmap, Unit> $onDecodedImage;
 
          {
@@ -157,41 +157,41 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
    label38: {
       try {
-         val var5: kotlin.Result.a = Result.e;
+         val var20: kotlin.Result.a = Result.e;
       } catch (var8: java.lang.Throwable) {
-         val var18: kotlin.Result.a = Result.e;
-         var19 = Result.b(c.a(var8));
+         val var5: kotlin.Result.a = Result.e;
+         var18 = Result.b(c.a(var8));
          break label38;
       }
 
-      val var21: Uri;
+      val var19: Uri;
       if (var1 != null) {
          try {
-            var21 = Uri.parse(var1);
+            var19 = Uri.parse(var1);
          } catch (var7: java.lang.Throwable) {
-            val var20: kotlin.Result.a = Result.e;
-            var19 = Result.b(c.a(var7));
+            val var21: kotlin.Result.a = Result.e;
+            var18 = Result.b(c.a(var7));
             break label38;
          }
       } else {
-         var21 = null;
+         var19 = null;
       }
 
       label26:
       try {
-         var19 = Result.b(var21);
+         var18 = Result.b(var19);
       } catch (var6: java.lang.Throwable) {
          val var22: kotlin.Result.a = Result.e;
-         var19 = Result.b(c.a(var6));
+         var18 = Result.b(c.a(var6));
          break label26;
       }
    }
 
-   if (Result.g(var19)) {
-      var19 = null;
+   if (Result.g(var18)) {
+      var18 = null;
    }
 
-   fetchDecodedImage(var0, var19 as Uri, var2, var3);
+   fetchDecodedImage(var0, var18 as Uri, var2, var3);
 }
 
 @JvmSynthetic

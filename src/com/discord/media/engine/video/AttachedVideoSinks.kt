@@ -36,19 +36,17 @@ internal object AttachedVideoSinks {
 
    @JvmStatic
    fun `removeSink$lambda$4`(var0: VideoSink, var1: MediaEngine, var2: java.lang.String, var3: java.lang.String, var4: AttachedVideoSinks.VideoOutputSinks): AttachedVideoSinks.VideoOutputSinks {
-      var var6: AttachedVideoSinks.VideoOutputSinks = null;
       if (var4 != null) {
          var4.remove(var0);
-         var var5: AttachedVideoSinks.VideoOutputSinks = var4;
          if (var4.isEmpty()) {
             var1.setVideoOutputSink$media_engine_release(var2, null);
-            var5 = null;
+            return null;
+         } else {
+            return var4;
          }
-
-         var6 = var5;
+      } else {
+         return null;
       }
-
-      return var6;
    }
 
    @JvmStatic
@@ -68,14 +66,7 @@ internal object AttachedVideoSinks {
    }
 
    public fun removeSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      val var4: Boolean;
-      if (streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null) {
-         var4 = true;
-      } else {
-         var4 = false;
-      }
-
-      return var4;
+      return streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null;
    }
 
    @SourceDebugExtension(["SMAP\nAttachedVideoSinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,77:1\n1863#2,2:78\n*S KotlinDebug\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n*L\n71#1:78,2\n*E\n"])

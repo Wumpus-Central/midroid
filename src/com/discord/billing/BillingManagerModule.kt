@@ -1,6 +1,5 @@
 package com.discord.billing
 
-import Ja.v
 import com.discord.billing.react.events.BillingManagerConnectionStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseUpdated
@@ -13,6 +12,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
+import fm.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -73,9 +73,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 
@@ -154,7 +154,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun loadPurchases(promise: Promise) {
-      this.billingManager.loadPurchases(new s(var1), new i(var1));
+      this.billingManager.loadPurchases(new t(var1), new i(var1));
    }
 
    @ReactMethod
@@ -165,7 +165,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun purchase(productId: String, userId: String, promise: Promise) {
       BillingManager.purchase$default(
-         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
+         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new s(var3), 112, null
       );
    }
 

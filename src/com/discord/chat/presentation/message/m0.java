@@ -1,14 +1,15 @@
 package com.discord.chat.presentation.message;
 
-import java.util.Comparator;
-import kotlin.jvm.functions.Function2;
+import com.discord.chat.bridge.sticker.Sticker;
+import com.discord.chat.presentation.message.messagepart.MessageAccessory;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class m0 implements Comparator {
-   public final Function2 d;
+public final class m0 implements Function1 {
+   public final MessageAccessoriesAdapter d;
+   public final MessageAccessory e;
 
-   @Override
-   public final int compare(Object var1, Object var2) {
-      return MessageView.h(this.d, var1, var2);
+   public final Object invoke(Object var1) {
+      return MessageAccessoriesAdapter.J(this.d, this.e, (Sticker)var1);
    }
 }

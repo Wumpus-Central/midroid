@@ -1,13 +1,13 @@
 package com.discord.file_downloader.utils
 
-import Ja.v
 import android.webkit.MimeTypeMap
+import fm.v
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
-   O.m(
+   n0.m(
       new Pair[]{
          v.a("avif", "image/avif"),
          v.a("gif", "image/gif"),
@@ -33,14 +33,14 @@ private fun decodeUrlSafely(filename: String): String {
 }
 
 public fun CharSequence.filenameSanitized(): String {
-   val var1: java.lang.String = var0.toString();
+   var0 = var0.toString();
 
    try {
-      var0 = processFilename(decodeUrlSafely(var1), false);
+      return processFilename(decodeUrlSafely(var0), false);
    } catch (var2: IllegalArgumentException) {
-      var0 = processFilename(var1, true);
+      var0 = processFilename(var0, true);
    } catch (var3: UnsupportedEncodingException) {
-      var0 = processFilename(var1, true);
+      var0 = processFilename(var0, true);
    }
 
    return var0;
@@ -54,14 +54,9 @@ private fun fixAtSeparatorExtensions(filename: String, useUrlEncoded: Boolean): 
       var2 = "@";
    }
 
-   val var5: FilenamePatterns = FilenamePatterns.INSTANCE;
-   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var2).replace(var0, "$1.$2");
-   var var3: java.lang.String = var4;
-   if (var4 == var0) {
-      var3 = var5.atSeparatorPattern(var2).replace(var0, "$1.$2");
-   }
-
-   return var3;
+   val var4: FilenamePatterns = FilenamePatterns.INSTANCE;
+   val var3: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var2).replace(var0, "$1.$2");
+   return if (var3 == var0) var4.atSeparatorPattern(var2).replace(var0, "$1.$2") else var3;
 }
 
 public fun String.getMimeTypeFromFilename(): String? {
@@ -81,7 +76,7 @@ public fun String.getMimeTypeFromFilename(): String? {
          try {
             var0 = EXTENSION_TO_MIME_TYPE.get(var2);
          } catch (var3: RuntimeException) {
-            var0 = EXTENSION_TO_MIME_TYPE.get(var2);
+            return EXTENSION_TO_MIME_TYPE.get(var2);
          }
       }
 

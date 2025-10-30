@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class SharedClientThemeViewedData(messageId: MessageId? = ...) : SharedClientThemeViewedData(var1), ReactEvent {
@@ -43,14 +43,7 @@ public data class SharedClientThemeViewedData(messageId: MessageId? = ...) : Sha
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.messageId == null) {
-         var1 = 0;
-      } else {
-         var1 = MessageId.hashCode-impl(this.messageId);
-      }
-
-      return var1;
+      return if (this.messageId == null) 0 else MessageId.hashCode-impl(this.messageId);
    }
 
    fun serialize(): WritableMap {

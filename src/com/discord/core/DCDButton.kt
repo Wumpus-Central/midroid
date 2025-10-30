@@ -1,6 +1,5 @@
 package com.discord.core
 
-import T7.k
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -20,6 +19,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.internal.SourceDebugExtension
+import pg.k
+import pg.k.b
 
 @SourceDebugExtension(["SMAP\nDCDButton.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DCDButton.kt\ncom/discord/core/DCDButton\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,217:1\n257#2,2:218\n257#2,2:220\n152#2,2:223\n1#3:222\n*S KotlinDebug\n*F\n+ 1 DCDButton.kt\ncom/discord/core/DCDButton\n*L\n84#1:218,2\n85#1:220,2\n164#1:223,2\n*E\n"])
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
@@ -36,33 +37,26 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    init {
       val var3: DcdButtonBinding = DcdButtonBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
-      val var4: MaterialButton = var3.button;
-      this.button = var4;
-      val var5: ProgressBar = var3.progress;
-      this.progress = var5;
+      val var5: MaterialButton = var3.button;
+      this.button = var5;
+      val var4: ProgressBar = var3.progress;
+      this.progress = var4;
       val var6: ProgressDots = var3.loadingDots;
       this.loadingDots = var6;
-      var4.setStateListAnimator(null);
-      var4.setMinimumHeight(var5.getHeight());
-      var4.setMinHeight(var5.getHeight());
-      var4.setMinimumWidth(var5.getWidth());
-      var4.setMinWidth(var5.getWidth());
-      var4.setInsetTop(0);
-      var4.setInsetBottom(0);
+      var5.setStateListAnimator(null);
+      var5.setMinimumHeight(var4.getHeight());
+      var5.setMinHeight(var4.getHeight());
+      var5.setMinimumWidth(var4.getWidth());
+      var5.setMinWidth(var4.getWidth());
+      var5.setInsetTop(0);
+      var5.setInsetBottom(0);
       this.setTextSizeSp(14.0F);
       this.setDiscordFont(DiscordFont.PrimarySemibold);
       this.setButtonPadding();
    }
 
    private fun hasPadding(): Boolean {
-      val var1: Boolean;
-      if (this.getPaddingStart() <= 0 && this.getPaddingEnd() <= 0 && this.getPaddingTop() <= 0 && this.getPaddingBottom() <= 0) {
-         var1 = false;
-      } else {
-         var1 = true;
-      }
-
-      return var1;
+      return this.getPaddingStart() > 0 || this.getPaddingEnd() > 0 || this.getPaddingTop() > 0 || this.getPaddingBottom() > 0;
    }
 
    private fun setButtonPadding() {
@@ -98,7 +92,7 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    public fun setBackgroundRectangle(color: Int, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
       this.setBackgroundColor(var1);
       val var6: MaterialButton = this.button;
-      val var5: T7.k.b = k.a();
+      val var5: b = k.a();
       var5.o((float)var2);
       var6.setShapeAppearanceModel(var5.m());
       if (var3 != null) {

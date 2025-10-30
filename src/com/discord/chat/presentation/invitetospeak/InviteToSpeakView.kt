@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.invitetospeak
 
-import C2.a
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.LinearLayout.LayoutParams
+import c6.a
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.Message
 import com.discord.chat.databinding.InviteToSpeakViewBinding

@@ -1,10 +1,10 @@
 package com.discord.image.fresco
 
-import F3.f
 import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
+import d8.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(
    imageUrl: String?,
@@ -69,7 +69,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
             var14.appendQueryParameter("animated", "true");
          }
 
-         var0.setController(var0.getControllerBuilder().B(var8).E(var4).b(var14.build()).c(var0.getController()).a());
+         var0.setController(var0.getControllerBuilder().A(var8).D(var4).a(var14.build()).b(var0.getController()).build());
          var0.setVisibility(0);
       }
    } else {

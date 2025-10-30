@@ -19,12 +19,12 @@ public object DCDModuleProvider {
       return CollectionsKt.C(var1, var2);
    }
 
-   @Ja.c
+   @fm.c
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
       return getLegacyPackageForModuleWithViewManager$default(this, var1, null, 2, null);
    }
 
-   @Ja.c
+   @fm.c
    public fun getLegacyPackageForModuleWithViewManager(
       onNativeModule: ((ReactApplicationContext) -> ReactContextBaseJavaModule)? = null,
       onViewManager: ((ReactApplicationContext) -> ViewManager<*, LayoutShadowNode>)? = null
@@ -83,14 +83,7 @@ public object DCDModuleProvider {
          }
 
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
-            val var3: NativeModule;
-            if (var1 == this.$moduleName) {
-               var3 = this.$onNativeModule.invoke(var2) as NativeModule;
-            } else {
-               var3 = null;
-            }
-
-            return var3;
+            return if (var1 == this.$moduleName) this.$onNativeModule.invoke(var2) as NativeModule else null;
          }
 
          public ReactModuleInfoProvider getReactModuleInfoProvider() {
@@ -112,15 +105,15 @@ public object DCDModuleProvider {
          }
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
-            val var5: Array<Array<Function1>> = this.$onViewManager;
-            val var4: ArrayList = new ArrayList(this.$onViewManager.length);
-            val var3: Int = var5.length;
+            val var4: Array<Array<Function1>> = this.$onViewManager;
+            val var5: ArrayList = new ArrayList(this.$onViewManager.length);
+            val var3: Int = var4.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               var4.add(var5[var2].invoke(var1) as ViewManager);
+               var5.add(var4[var2].invoke(var1) as ViewManager);
             }
 
-            return var4;
+            return var5;
          }
       };
    }

@@ -1,14 +1,14 @@
 package com.discord.emoji_picker;
 
-import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
-public final class u implements Function1 {
-   public final Function2 d;
+public final class u implements Function2 {
+   public final Function3 d;
    public final EmojiPickerView e;
 
-   public final Object invoke(Object var1) {
-      return EmojiPickerView.V(this.d, this.e, (EmojiPickerScroller.ScrollEvent)var1);
+   public final Object invoke(Object var1, Object var2) {
+      return EmojiPickerView.X(this.d, this.e, (Long)var1, (String)var2);
    }
 }

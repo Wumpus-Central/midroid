@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {

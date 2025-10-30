@@ -67,7 +67,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = Wa.a.c(var2.getOpacity() * (float)255);
+         var3 = sm.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -75,7 +75,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          if (var2 != null) {
             val var5: java.lang.String = var2.getBackgroundColor();
             if (var5 != null) {
-               var12 = q0.c.k(Color.parseColor(var5), var3);
+               var12 = q1.c.k(Color.parseColor(var5), var3);
                break label41;
             }
          }
@@ -122,59 +122,59 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
    private fun configureBackground(isMe: Boolean, reactionsTheme: com.discord.reactions.ReactionView.ReactionsTheme?) {
       if (var1) {
+         var var10: Int;
+         label32: {
+            if (var2 != null) {
+               val var12: Int = var2.getActiveReactionBackgroundColor();
+               if (var12 != null) {
+                  var10 = var12;
+                  break label32;
+               }
+            }
+
+            val var13: Context = this.getContext();
+            var10 = ColorUtilsKt.getColorCompat(var13, com.discord.theme.R.color.brand_new_500_alpha_20);
+         }
+
+         var var5: Int;
+         var var11: Int;
+         label27: {
+            var5 = CORNER_RADIUS;
+            if (var2 != null) {
+               val var8: Int = var2.getActiveReactionBorderColor();
+               if (var8 != null) {
+                  var11 = var8;
+                  break label27;
+               }
+            }
+
+            val var9: Context = this.getContext();
+            var11 = ColorUtilsKt.getColorCompat(var9, com.discord.theme.R.color.brand_560);
+         }
+
+         ViewBackgroundUtilsKt.setBackgroundRectangle(this, var10, var5, var11, STROKE_WIDTH);
+      } else {
          var var3: Int;
          label38: {
             if (var2 != null) {
-               val var6: Int = var2.getActiveReactionBackgroundColor();
+               val var6: Int = var2.getReactionBackgroundColor();
                if (var6 != null) {
                   var3 = var6;
                   break label38;
                }
             }
 
-            val var12: Context = this.getContext();
-            var3 = ColorUtilsKt.getColorCompat(var12, com.discord.theme.R.color.brand_new_500_alpha_20);
+            var3 = ThemeManagerKt.getTheme().getBackgroundSecondary();
          }
 
-         var var4: Int;
-         var var5: Int;
-         label33: {
-            var5 = CORNER_RADIUS;
-            if (var2 != null) {
-               val var7: Int = var2.getActiveReactionBorderColor();
-               if (var7 != null) {
-                  var4 = var7;
-                  break label33;
-               }
-            }
-
-            val var8: Context = this.getContext();
-            var4 = ColorUtilsKt.getColorCompat(var8, com.discord.theme.R.color.brand_560);
-         }
-
-         ViewBackgroundUtilsKt.setBackgroundRectangle(this, var3, var5, var4, STROKE_WIDTH);
-      } else {
-         var var10: Int;
-         label28: {
-            if (var2 != null) {
-               val var13: Int = var2.getReactionBackgroundColor();
-               if (var13 != null) {
-                  var10 = var13;
-                  break label28;
-               }
-            }
-
-            var10 = ThemeManagerKt.getTheme().getBackgroundSecondary();
-         }
-
-         val var9: Int;
+         val var7: Int;
          if (var2 != null) {
-            var9 = var2.getReactionBorderColor();
+            var7 = var2.getReactionBorderColor();
          } else {
-            var9 = null;
+            var7 = null;
          }
 
-         ViewBackgroundUtilsKt.setBackgroundRectangle(this, var10, CORNER_RADIUS, var9, STROKE_WIDTH);
+         ViewBackgroundUtilsKt.setBackgroundRectangle(this, var3, CORNER_RADIUS, var7, STROKE_WIDTH);
       }
    }
 
@@ -372,10 +372,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var11: RenderableEmoji = var1.getEmoji().renderable();
-         val var16: Context = this.getContext();
-         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: Context = this.getContext();
+         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }
@@ -421,37 +421,25 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       internal class DefaultImpls {
          @JvmStatic
          fun getEmojiId(var0: ReactionView.Emoji): java.lang.String {
-            val var2: java.lang.String = var0.getId();
-            var var1: java.lang.String = var2;
-            if (var2 == null) {
-               var1 = var0.getName();
-            }
-
-            return var1;
+            val var1: java.lang.String = var0.getId();
+            return if (var1 == null) var0.getName() else var1;
          }
 
          @JvmStatic
          fun getShouldAnimate(var0: ReactionView.Emoji): Boolean {
-            val var2: java.lang.Boolean = var0.getAnimated();
-            val var1: Boolean;
-            if (var2 != null) {
-               var1 = var2;
-            } else {
-               var1 = false;
-            }
-
-            return var1;
+            val var1: java.lang.Boolean = var0.getAnimated();
+            return var1 != null && var1;
          }
 
          @JvmStatic
          fun renderable(var0: ReactionView.Emoji): RenderableEmoji {
             var var3: java.lang.String = var0.getId();
             if (var3 != null) {
-               val var7: java.lang.Long = StringsKt.o(var3);
-               if (var7 != null) {
-                  val var8: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var7.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
-                  if (var8 != null) {
-                     return var8;
+               val var6: java.lang.Long = StringsKt.o(var3);
+               if (var6 != null) {
+                  val var7: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var6.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
+                  if (var7 != null) {
+                     return var7;
                   }
                }
             }
@@ -499,14 +487,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
          @JvmStatic
          fun isBurstReaction(var0: ReactionView.Reaction): Boolean {
-            val var1: Boolean;
-            if (var0.getBurstCount() > 0) {
-               var1 = true;
-            } else {
-               var1 = false;
-            }
-
-            return var1;
+            return var0.getBurstCount() > 0;
          }
       }
    }

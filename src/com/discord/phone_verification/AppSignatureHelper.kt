@@ -1,21 +1,19 @@
 package com.discord.phone_verification
 
-import Ja.l
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.pm.PackageManager
 import android.content.pm.Signature
 import android.content.pm.PackageManager.NameNotFoundException
+import android.content.pm.PackageManager.PackageInfoFlags
 import android.os.Build.VERSION
 import android.util.Base64
-import com.appsflyer.internal.p
-import com.appsflyer.internal.q
+import c7.a
+import c7.b
 import com.discord.logging.Log
-import e3.a
-import e3.b
-import e3.c
-import hd.f
+import er.f
+import fm.l
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
@@ -24,7 +22,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SuppressLint(["PackageManagerGetSignatures"])
 @SourceDebugExtension(["SMAP\nAppSignatureHelper.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppSignatureHelper.kt\ncom/discord/phone_verification/AppSignatureHelper\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,114:1\n11483#2,9:115\n13409#2:124\n13410#2:126\n11492#2:127\n1#3:125\n*S KotlinDebug\n*F\n+ 1 AppSignatureHelper.kt\ncom/discord/phone_verification/AppSignatureHelper\n*L\n74#1:115,9\n74#1:124\n74#1:126\n74#1:127\n74#1:125\n*E\n"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
-   public final val appSignatures: MutableList<String> by l.b(new c(this))
+   public final val appSignatures: MutableList<String> by l.b(new b(this))
       public final get() {
          return this.appSignatures$delegate.getValue() as MutableList<java.lang.String>;
       }
@@ -57,7 +55,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
       var var18: Array<Signature> = null;
       if (var1 >= 33) {
          try {
-            var20 = a.a(q.a(var5, var4, p.a((long)134217728)));
+            var20 = a.a(var5.getPackageInfo(var4, PackageInfoFlags.of((long)134217728)));
          } catch (var16: NameNotFoundException) {
             Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var16);
             CollectionsKt.k();
@@ -66,7 +64,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var20 != null) {
             try {
-               var18 = b.a(var20);
+               var18 = var20.getApkContentsSigners();
             } catch (var15: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var15);
                CollectionsKt.k();
@@ -84,7 +82,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var21 != null) {
             try {
-               var18 = b.a(var21);
+               var18 = var21.getApkContentsSigners();
             } catch (var13: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var13);
                CollectionsKt.k();
@@ -107,30 +105,30 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var9: java.lang.String;
+            var var23: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                val var24: java.lang.String = var7.toCharsString();
-               var9 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               var23 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
                val var8: Log = Log.INSTANCE;
-               val var23: java.lang.String = TAG;
-               val var25: StringBuilder = new StringBuilder();
-               var25.append("Hash ");
-               var25.append(var9);
-               Log.i$default(var8, var23, var25.toString(), null, 4, null);
+               val var25: java.lang.String = TAG;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var23);
+               Log.i$default(var8, var25, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                CollectionsKt.k();
-               break;
+               return var3;
             }
 
-            if (var9 != null) {
+            if (var23 != null) {
                try {
-                  var22.add(var9);
+                  var22.add(var23);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   CollectionsKt.k();
-                  break;
+                  return var3;
                }
             }
          }
@@ -147,30 +145,29 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
       private fun hash(packageName: String, signature: String): String? {
          try {
-            var var3: StringBuilder = new StringBuilder();
+            val var3: StringBuilder = new StringBuilder();
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var12: java.lang.String = var3.toString();
-            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
-            var8.update(f.a(var12));
-            val var9: ByteArray = var8.digest();
-            val var10: java.lang.String = Base64.encodeToString(k.p(var9, 0, 9), 3);
-            var2 = var10.substring(0, 11);
-            val var5: Log = Log.INSTANCE;
-            val var4: java.lang.String = this.getTAG();
-            var3 = new StringBuilder();
-            var3.append("pkg: ");
-            var3.append(var1);
-            var3.append(" -- hash: ");
-            var3.append(var2);
-            Log.i$default(var5, var4, var3.toString(), null, 4, null);
+            val var11: java.lang.String = var3.toString();
+            val var7: MessageDigest = MessageDigest.getInstance("SHA-256");
+            var7.update(f.a(var11));
+            val var8: ByteArray = var7.digest();
+            var2 = Base64.encodeToString(k.p(var8, 0, 9), 3);
+            val var5: java.lang.String = var2.substring(0, 11);
+            val var4: Log = Log.INSTANCE;
+            val var12: java.lang.String = this.getTAG();
+            val var10: StringBuilder = new StringBuilder();
+            var10.append("pkg: ");
+            var10.append(var1);
+            var10.append(" -- hash: ");
+            var10.append(var5);
+            Log.i$default(var4, var12, var10.toString(), null, 4, null);
+            return var5;
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;
          }
-
-         return var2;
       }
    }
 }

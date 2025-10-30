@@ -8,16 +8,11 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 
 public class WakelockPackage : BaseReactPackage {
    public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-      val var3: Any;
       if (var1 == "NativeScreenWakeLockModule") {
-         var3 = new ScreenWakeLockModule(var2);
-      } else if (var1 == "NativeProximitySensorManagerModule") {
-         var3 = new ProximitySensorManagerModule(var2);
+         return new ScreenWakeLockModule(var2);
       } else {
-         var3 = null;
+         return if (var1 == "NativeProximitySensorManagerModule") new ProximitySensorManagerModule(var2) else null;
       }
-
-      return (NativeModule)var3;
    }
 
    public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {

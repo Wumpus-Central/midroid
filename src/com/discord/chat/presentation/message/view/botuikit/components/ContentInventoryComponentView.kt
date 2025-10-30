@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Ja.o
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -29,6 +28,7 @@ import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
+import fm.o
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
@@ -38,7 +38,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          var1, var2, var3
       ),
    ComponentView<ContentInventoryEntryComponent> {
-   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = N3.d.g()
+   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = l8.d.g()
 
    private final val binding: MessageComponentContentInventoryViewBinding
       private final get() {
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = Ja.l.a(o.i, new e(this));
+      this.binding$delegate = fm.l.a(o.i, new e(this));
    }
 
    @JvmStatic
@@ -151,10 +151,10 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          ContentInventoryComponentViewKt.access$applyClickable(var20, var3, var4, var4.getUserClickable(), "avatar");
          val var21: SimpleDraweeView = this.getBinding().contentInventoryComponentMediaImage;
          val var27: PipelineDraweeControllerBuilder = this.draweeControllerBuilder;
-         val var28: com.facebook.drawee.controller.a = ((var27.E(ContentInventoryComponentViewKt.getContentControllerListener(var21)) as PipelineDraweeControllerBuilder)
-               .Q(var4.getImageUrl())
-               .H(var21.getController()) as PipelineDraweeControllerBuilder)
-            .d();
+         val var28: com.facebook.drawee.controller.a = ((var27.D(ContentInventoryComponentViewKt.getContentControllerListener(var21)) as PipelineDraweeControllerBuilder)
+               .P(var4.getImageUrl())
+               .G(var21.getController()) as PipelineDraweeControllerBuilder)
+            .c();
          var21.setController(var28);
          ContentInventoryComponentViewKt.access$applyClickable(var21, var3, var4, var4.getImageClickable(), "media");
          val var22: SimpleDraweeView = this.getBinding().contentInventoryComponentPlatformIcon;

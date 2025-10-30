@@ -1,8 +1,8 @@
 package com.discord.simpleast.core.parser
 
-import Ja.v
 import android.util.Log
 import com.discord.simpleast.core.node.Node
+import fm.v
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
@@ -76,19 +76,19 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
             break;
          }
 
-         val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var5: Int = var10.getStartIndex();
-         val var12: java.util.Iterator = var3.iterator();
+         val var12: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
+         val var4: Int = var10.getStartIndex();
+         val var11: java.util.Iterator = var3.iterator();
 
          while (true) {
-            if (var12.hasNext()) {
-               val var18: Rule = var12.next() as Rule;
-               val var13: Matcher = var18.match(var11, var6, var10.getState());
+            if (var11.hasNext()) {
+               val var18: Rule = var11.next() as Rule;
+               val var13: Matcher = var18.match(var12, var6, var10.getState());
                if (var13 == null) {
-                  this.logMiss(var18, var11);
+                  this.logMiss(var18, var12);
                   var2 = null;
                } else {
-                  this.logMatch(var18, var11);
+                  this.logMatch(var18, var12);
                   var2 = v.a(var18, var13);
                }
 
@@ -105,17 +105,17 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var4: Int = var20.end() + var5;
-            val var22: ParseSpec = var21.parse(var20, this, (S)var10.getState());
-            val var23: Node = var10.getRoot();
-            var23.addChild(var22.getRoot());
-            if (var4 != var10.getEndIndex()) {
-               var9.push(ParseSpec.Companion.createNonterminal(var23, var10.getState(), var4, var10.getEndIndex()));
+            val var5: Int = var20.end() + var4;
+            val var23: ParseSpec = var21.parse(var20, this, (S)var10.getState());
+            val var22: Node = var10.getRoot();
+            var22.addChild(var23.getRoot());
+            if (var5 != var10.getEndIndex()) {
+               var9.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var5, var10.getEndIndex()));
             }
 
-            if (!var22.isTerminal()) {
-               var22.applyOffset(var5);
-               var9.push(var22);
+            if (!var23.isTerminal()) {
+               var23.applyOffset(var4);
+               var9.push(var23);
             }
 
             try {
@@ -128,7 +128,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
       }
 
       val var16: java.util.Collection = var8.getChildren();
-      var var17: Any;
+      var var17: java.util.List;
       if (var16 != null) {
          var17 = CollectionsKt.Z0(var16);
       } else {
@@ -139,11 +139,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          var17 = null;
       }
 
-      if (var17 == null) {
-         var17 = new ArrayList();
-      }
-
-      return (java.util.List<T>)var17;
+      return (java.util.List<T>)(var17 ?: new ArrayList<>());
    }
 
    public companion object {

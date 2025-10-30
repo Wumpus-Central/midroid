@@ -24,13 +24,13 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
    }
 
    init {
-      val var3: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
-      val var4: TextView = var3.label;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
-      var4.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_800));
-      ViewClippingUtilsKt.clipToCircle(var4);
-      var3.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
+      val var4: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
+      val var3: TextView = var4.label;
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryBold);
+      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_800));
+      ViewClippingUtilsKt.clipToCircle(var3);
+      var4.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
    }
 
    @JvmStatic
@@ -42,7 +42,7 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
       this.binding.label.setText(var1);
       this.binding.label.setContentDescription(var2);
       val var4: FrameLayout = this.binding.overlayContainer;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new O0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new n2(var3), 1, null);
    }
 
    public override fun getOverlayView(): View {

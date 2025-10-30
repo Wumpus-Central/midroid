@@ -5,7 +5,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 @SourceDebugExtension(["SMAP\nPollStyleSet.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollStyleSet.kt\ncom/discord/chat/bridge/polls/PollStyleSet\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,58:1\n1#2:59\n*E\n"])
@@ -34,14 +34,10 @@ public data class PollStyleSet(border: Int? = null,
 
    public open val borderColor: Int
       public open get() {
-         val var1: Int;
-         if (this.border != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.border.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundTertiary();
-         }
-
-         return var1;
+         return if (this.border != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.border.intValue())
+            else
+            ThemeManagerKt.getTheme().getBackgroundTertiary();
       }
 
 
@@ -53,79 +49,55 @@ public data class PollStyleSet(border: Int? = null,
 
    public open val fillColor: Int
       public open get() {
-         val var1: Int;
-         if (this.fill != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.fill.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundSecondary();
-         }
-
-         return var1;
+         return if (this.fill != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.fill.intValue())
+            else
+            ThemeManagerKt.getTheme().getBackgroundSecondary();
       }
 
 
    public open val labelColor: Int
       public open get() {
-         val var1: Int;
-         if (this.label != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.label.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getTextPrimary();
-         }
-
-         return var1;
+         return if (this.label != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.label.intValue())
+            else
+            ThemeManagerKt.getTheme().getTextPrimary();
       }
 
 
    public open val answerBackgroundColor: Int
       public open get() {
-         val var1: Int;
-         if (this.answerBackground != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerBackground.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundSecondary();
-         }
-
-         return var1;
+         return if (this.answerBackground != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerBackground.intValue())
+            else
+            ThemeManagerKt.getTheme().getBackgroundSecondary();
       }
 
 
    public open val answerFillColor: Int
       public open get() {
-         val var1: Int;
-         if (this.answerFill != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerFill.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundTertiary();
-         }
-
-         return var1;
+         return if (this.answerFill != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerFill.intValue())
+            else
+            ThemeManagerKt.getTheme().getBackgroundTertiary();
       }
 
 
    public open val radioBackgroundColor: Int
       public open get() {
-         val var1: Int;
-         if (this.radioBackground != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.radioBackground.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getInteractiveNormal();
-         }
-
-         return var1;
+         return if (this.radioBackground != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.radioBackground.intValue())
+            else
+            ThemeManagerKt.getTheme().getInteractiveNormal();
       }
 
 
    public open val radioForegroundColor: Int
       public open get() {
-         val var1: Int;
-         if (this.radioForeground != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.radioForeground.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getWhite();
-         }
-
-         return var1;
+         return if (this.radioForeground != null)
+            ReactColorToAndroidColorKt.reactColorToAndroidColor(this.radioForeground.intValue())
+            else
+            ThemeManagerKt.getTheme().getWhite();
       }
 
 
@@ -298,39 +270,39 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var8: Int = this.border;
+      val var3: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var7: Int = this.fill;
+      val var4: Int = this.fill;
       val var10: Int = this.label;
       val var1: Float = this.opacity;
-      val var3: Int = this.answerBackground;
+      val var11: Int = this.answerBackground;
       val var5: Int = this.answerFill;
-      val var9: PollRadioStyle = this.radioStyle;
-      val var6: Int = this.radioBackground;
-      val var4: Int = this.radioForeground;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("PollStyleSet(border=");
-      var11.append(var8);
-      var11.append(", borderWidth=");
-      var11.append(var2);
-      var11.append(", fill=");
-      var11.append(var7);
-      var11.append(", label=");
-      var11.append(var10);
-      var11.append(", opacity=");
-      var11.append(var1);
-      var11.append(", answerBackground=");
-      var11.append(var3);
-      var11.append(", answerFill=");
-      var11.append(var5);
-      var11.append(", radioStyle=");
-      var11.append(var9);
-      var11.append(", radioBackground=");
-      var11.append(var6);
-      var11.append(", radioForeground=");
-      var11.append(var4);
-      var11.append(")");
-      return var11.toString();
+      val var6: PollRadioStyle = this.radioStyle;
+      val var7: Int = this.radioBackground;
+      val var8: Int = this.radioForeground;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("PollStyleSet(border=");
+      var9.append(var3);
+      var9.append(", borderWidth=");
+      var9.append(var2);
+      var9.append(", fill=");
+      var9.append(var4);
+      var9.append(", label=");
+      var9.append(var10);
+      var9.append(", opacity=");
+      var9.append(var1);
+      var9.append(", answerBackground=");
+      var9.append(var11);
+      var9.append(", answerFill=");
+      var9.append(var5);
+      var9.append(", radioStyle=");
+      var9.append(var6);
+      var9.append(", radioBackground=");
+      var9.append(var7);
+      var9.append(", radioForeground=");
+      var9.append(var8);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

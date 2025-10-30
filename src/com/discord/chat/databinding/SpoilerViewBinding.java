@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.ObscureOverlayView;
 import com.discord.chat.presentation.message.view.SpoilerOverlayView;
+import e4.a;
 
 public final class SpoilerViewBinding implements ViewBinding {
    @NonNull

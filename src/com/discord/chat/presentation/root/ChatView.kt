@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.root
 
-import Ja.v
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -15,6 +14,7 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
+import fm.v
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.flow.Flow
@@ -69,8 +69,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
             }
 
             val var28: CrashReporting = CrashReporting.INSTANCE;
-            var3 = var0.getMeasuredWidth();
-            var4 = var0.getMeasuredHeight();
+            var4 = var0.getMeasuredWidth();
+            var3 = var0.getMeasuredHeight();
             val var29: ViewParent = var0.getParent();
             if (var29 != null) {
                var13 = var29.getClass().getSimpleName();
@@ -78,9 +78,9 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
             val var30: StringBuilder = new StringBuilder();
             var30.append("PortalView will detach from ChatView and portal into ChatListView; measured=");
-            var30.append(var3);
-            var30.append("x");
             var30.append(var4);
+            var30.append("x");
+            var30.append(var3);
             var30.append(", hasDimChanged=");
             var30.append(var11);
             var30.append(", parent=");
@@ -99,54 +99,54 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       }
 
       val var27: Boolean = var17.isComputingLayout();
-      var3 = var0.getMeasuredWidth();
-      var4 = var0.getMeasuredHeight();
+      var4 = var0.getMeasuredWidth();
+      var3 = var0.getMeasuredHeight();
       val var16: StringBuilder = new StringBuilder();
       var16.append("PortalView layout change skipped; valid=");
       var16.append(var11);
       var16.append(", computingLayout=");
       var16.append(var27);
       var16.append(", measured=");
-      var16.append(var3);
-      var16.append("x");
       var16.append(var4);
+      var16.append("x");
+      var16.append(var3);
       CrashReporting.addBreadcrumb$default(var19, var16.toString(), null, null, null, 14, null);
    }
 
    // $VF: Duplicated exception handlers to handle obfuscated exceptions
    @JvmStatic
    fun `attachPortalViewToChatList$lambda$5$lambda$4`(var0: View, var1: ChatView, var2: Pair) {
-      var var3: Pair;
+      var var3: CrashReporting;
       var var5: Pair;
-      label47: {
-         label52: {
+      label46: {
+         label50: {
             try {
                if (var0.getParent() is ChatView) {
                   val var12: ViewParent = var0.getParent();
                   (var12 as ViewGroup).removeView(var0);
                }
             } catch (var9: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
-                  break label47;
+                  break label46;
                }
-               break label52;
+               break label50;
             }
 
             try {
                var15 = var1.chatList;
             } catch (var8: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
-                  break label47;
+                  break label46;
                }
-               break label52;
+               break label50;
             }
 
             var var13: ChatListView = var15;
@@ -154,14 +154,14 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
                try {
                   Intrinsics.throwUninitializedPropertyAccessException("chatList");
                } catch (var7: Exception) {
-                  var11 = CrashReporting.INSTANCE;
-                  var3 = v.a("portalView", var0.toString());
+                  var3 = CrashReporting.INSTANCE;
+                  var2 = v.a("portalView", var0.toString());
                   var5 = v.a("parent", var0.getParent().toString());
                   var10 = var1.chatList;
                   if (var1.chatList != null) {
-                     break label47;
+                     break label46;
                   }
-                  break label52;
+                  break label50;
                }
 
                var13 = null;
@@ -176,12 +176,12 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
                CrashReporting.addBreadcrumb$default(var16, var14.toString(), null, null, null, 14, null);
                return;
             } catch (var6: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
-                  break label47;
+                  break label46;
                }
             }
          }
@@ -191,9 +191,9 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var11,
+         var3,
          "ChatList exception: failed to reparent portalView to ChatListView",
-         O.m(new Pair[]{var3, var5, v.a("chatListView", var10.toString())}),
+         n0.m(new Pair[]{var2, var5, v.a("chatListView", var10.toString())}),
          null,
          null,
          12,
@@ -207,11 +207,7 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
          if (var2 == 2) {
             this.attachPortalViewToChatList(var1);
          }
-      } else {
-         if (var1 !is ChatListView) {
-            throw new IllegalArgumentException("Failed requirement.");
-         }
-
+      } else if (var1 is ChatListView) {
          RecyclerViewExtensionsKt.setReactNativeClipToPadding(var1 as RecyclerView);
          val var4: ChatListView = var1 as ChatListView;
          var var5: ChatEventHandler = this.eventHandler;
@@ -235,6 +231,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
             }
          });
          this.chatList = var4;
+      } else {
+         throw new IllegalArgumentException("Failed requirement.");
       }
    }
 
@@ -273,11 +271,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setInverted$p(this, var1);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

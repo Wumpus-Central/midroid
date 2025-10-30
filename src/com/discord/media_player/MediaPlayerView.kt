@@ -25,14 +25,7 @@ public class MediaPlayerView(context: Context) {
 
    public final var isVisible: Boolean
       public final get() {
-         val var1: Boolean;
-         if (this.view.getVisibility() == 0) {
-            var1 = true;
-         } else {
-            var1 = false;
-         }
-
-         return var1;
+         return this.view.getVisibility() == 0;
       }
 
       public final set(value) {
@@ -69,24 +62,31 @@ public class MediaPlayerView(context: Context) {
       val var2: View = this.getPlayerView().getVideoSurfaceView();
       if (var2 is SurfaceView) {
          if (var1 != null) {
-            var1.k(var2 as SurfaceView);
+            var1.j(var2 as SurfaceView);
+            return;
          }
-      } else if (var2 is TextureView) {
-         if (var1 != null) {
-            var1.z(var2 as TextureView);
-         }
-      } else if (var2 != null) {
-         val var3: java.lang.String;
-         if (var2 != null) {
-            var3 = var2.getClass().getSimpleName();
-         } else {
-            var3 = null;
+      } else {
+         if (var2 !is TextureView) {
+            if (var2 == null) {
+               return;
+            }
+
+            val var3: java.lang.String;
+            if (var2 != null) {
+               var3 = var2.getClass().getSimpleName();
+            } else {
+               var3 = null;
+            }
+
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("Unsupported surface view type: ");
+            var4.append(var3);
+            throw new IllegalStateException(var4.toString().toString());
          }
 
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Unsupported surface view type: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         if (var1 != null) {
+            var1.y(var2 as TextureView);
+         }
       }
    }
 

@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.codedlinks
 
-import Pa.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import wc.m
+import lm.a
+import tp.m
 
 @m(with = CodedLinkExtendedType.Serializer::class)
 public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {

@@ -2,7 +2,6 @@
 
 package com.discord.contact_sync.react
 
-import Q2.a
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -15,9 +14,10 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import zc.P0
-import zc.W
-import zc.f
+import p6.a
+import wp.f
+import wp.n2
+import wp.u0
 
 @JvmSynthetic
 fun a(var0: Any): Any {
@@ -25,18 +25,15 @@ fun a(var0: Any): Any {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   val var1: Byte;
+   val var1: Locale = Locale.ROOT;
+   val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
    if (var0 == var2) {
-      var1 = 1;
+      return 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      var0 == var2;
-      var1 = 0;
+      val var3: java.lang.String = "DENIED".toLowerCase(var1);
+      var0 == var3;
+      return 0;
    }
-
-   return var1;
 }
 
 internal fun ReactContext.serializeGetImageForContactIdResult(deviceContactId: String, callback: Callback) {
@@ -49,31 +46,22 @@ internal fun ReactContext.serializeGetImageForContactIdResult(deviceContactId: S
 
 internal fun ReactContext.serializeHasContactPermissionsResult(promise: Promise): Unit? {
    val var2: NativePermissionManagerModule = var0.getNativeModule(NativePermissionManagerModule.class) as NativePermissionManagerModule;
-   val var3: Unit;
    if (var2 != null) {
       var2.hasContactAuthorization(new PromiseWrapper(var1, new a(), null, 4, null));
-      var3 = Unit.a;
+      return Unit.a;
    } else {
-      var3 = null;
+      return null;
    }
-
-   return var3;
 }
 
 fun `serializeHasContactPermissionsResult$lambda$0`(var0: Any): Any {
-   val var1: Boolean = var0 is java.lang.String;
-   var var2: Int = null;
-   if (var1) {
+   if (var0 is java.lang.String) {
       var0 = var0;
    } else {
       var0 = null;
    }
 
-   if (var0 != null) {
-      var2 = mapResultToContactSyncPermission(var0);
-   }
-
-   return var2;
+   return if (var0 != null) mapResultToContactSyncPermission(var0) else null;
 }
 
 internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
@@ -84,7 +72,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new W(P0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
+      var11 = var10.c(new u0(n2.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.lang.Iterable = var3.values();
       var12 = new ArrayList(CollectionsKt.v(var4, 10));
       var6 = var4.iterator();

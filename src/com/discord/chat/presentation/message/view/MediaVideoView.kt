@@ -114,7 +114,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       portal: Double,
       playerSettings: PlayerSettings
    ) {
-      label56: {
+      label57: {
          val var31: MediaVideoView.TargetUrl = new MediaVideoView.TargetUrl(var4, var5);
          if (this.targetUrl != null) {
             var var29: MediaVideoView.TargetUrl = this.targetUrl;
@@ -124,7 +124,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             }
 
             if (var29 == var31) {
-               break label56;
+               break label57;
             }
          }
 
@@ -155,7 +155,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             false,
             var20,
             var28,
-            new o0(var14, this),
+            new n1(var14, this),
             var21,
             var22,
             var23,
@@ -166,7 +166,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          );
       }
 
-      label47: {
+      label48: {
          val var40: MediaVideoView.TargetSize = new MediaVideoView.TargetSize(var6, var7);
          if (this.targetSize != null) {
             var var33: MediaVideoView.TargetSize = this.targetSize;
@@ -176,7 +176,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             }
 
             if (var33 == var40) {
-               break label47;
+               break label48;
             }
          }
 
@@ -185,10 +185,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       val var34: MediaView = this.binding.mediaView;
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var38: SpoilerViewManager = this.spoilerViewManager;
-      val var41: ConstraintLayout = this.binding.container;
-      val var42: ConstraintLayout = this.binding.container;
-      val var35: MediaView = this.binding.mediaView;
+      val var42: SpoilerViewManager = this.spoilerViewManager;
+      val var38: ConstraintLayout = this.binding.container;
+      val var35: ConstraintLayout = this.binding.container;
+      val var41: MediaView = this.binding.mediaView;
       if (var14 && !var11) {
          var11 = true;
       } else {
@@ -201,7 +201,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var38.configureSpoiler(var13, var41, var42, var35, null, var11, var15, var12, var10, var16, var17);
+      var42.configureSpoiler(var13, var38, var35, var41, null, var11, var15, var12, var10, var16, var17);
       val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var36: ConstraintLayout = this.binding.container;
       var39.configureAttachmentOverlay(this, var36, var10, var18);
@@ -248,7 +248,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.Z.o0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.h0.n0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -332,13 +332,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
@@ -385,15 +385,15 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.sourceUrl;
-         val var3: java.lang.String = this.previewUrl;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("TargetUrl(sourceUrl=");
-         var1.append(var2);
-         var1.append(", previewUrl=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.sourceUrl;
+         val var1: java.lang.String = this.previewUrl;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TargetUrl(sourceUrl=");
+         var2.append(var3);
+         var2.append(", previewUrl=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

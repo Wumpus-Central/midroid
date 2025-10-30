@@ -1,6 +1,6 @@
 package com.discord.media.utils
 
-import gd.m
+import dr.m
 import java.io.File
 import java.io.InputStream
 import okio.BufferedSink
@@ -17,11 +17,11 @@ internal fun InputStream.writeTo(outputFile: File): File {
          try {
             throw var9;
          } catch (var3: java.lang.Throwable) {
-            Ta.c.a(var2, var4);
+            pm.c.a(var2, var4);
          }
       }
 
-      Ta.c.a(var2, null);
+      pm.c.a(var2, null);
       return var1;
    }
 }

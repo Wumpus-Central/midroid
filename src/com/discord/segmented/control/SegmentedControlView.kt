@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.LinearLayout.LayoutParams
 import androidx.cardview.widget.CardView
-import androidx.core.view.Z
+import androidx.core.view.h0
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -184,7 +184,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var var3: TextView = var4;
       if (var4 == null) {
          var3 = new TextView(this.getContext());
-         Z.o0(var3, new androidx.core.view.a(var1, this) {
+         h0.n0(var3, new androidx.core.view.a(var1, this) {
             final int $index;
             final SegmentedControlView this$0;
 
@@ -224,14 +224,14 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
          this.segmentWidth = var1;
          val var4: CardView = this.binding.selectedSegmentBg;
          val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-         if (var3 == null) {
+         if (var3 != null) {
+            var3.width = var1;
+            var4.setLayoutParams(var3);
+            ViewMeasureExtensionsKt.measureAndLayout(this);
+            updateView$default(this, false, 1, null);
+         } else {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
-
-         var3.width = var1;
-         var4.setLayoutParams(var3);
-         ViewMeasureExtensionsKt.measureAndLayout(this);
-         updateView$default(this, false, 1, null);
       }
    }
 
@@ -246,22 +246,22 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       val var3: java.util.Iterator = this.getLabels().iterator();
 
       for (int var2 = 0; var3.hasNext(); var2++) {
-         var var4: Any = var3.next();
+         var var4: TextView = (TextView)var3.next();
          if (var2 < 0) {
             CollectionsKt.u();
          }
 
-         var4 = var4 as java.lang.String;
-         val var5: TextView = this.getLabelView(var2);
-         var5.setText((java.lang.CharSequence)var4);
-         var5.setGravity(17);
-         DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-         var5.setTextSize(this.getSegmentFontSizeSp());
-         var5.setTextColor(this.getSegmentTextColor());
-         var5.setOnClickListener(new a(this, var2, (java.lang.String)var4));
+         val var5: java.lang.String = var4 as java.lang.String;
+         var4 = this.getLabelView(var2);
+         var4.setText(var5);
+         var4.setGravity(17);
+         DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+         var4.setTextSize(this.getSegmentFontSizeSp());
+         var4.setTextColor(this.getSegmentTextColor());
+         var4.setOnClickListener(new a(this, var2, var5));
          if (var2 == this.getSelectedIndex()) {
-            var5.setTextSize(this.getSelectedSegmentFontSizeSp());
-            var5.setTextColor(this.getSelectedSegmentTextColor());
+            var4.setTextSize(this.getSelectedSegmentFontSizeSp());
+            var4.setTextColor(this.getSelectedSegmentTextColor());
          }
       }
 

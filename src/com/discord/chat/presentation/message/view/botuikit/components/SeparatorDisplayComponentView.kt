@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Ja.p
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -15,6 +14,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import fm.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 

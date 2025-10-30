@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.Z
+import androidx.core.view.h0
 import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 
@@ -26,7 +26,7 @@ public object ImmersiveMode {
          var3 = var5.getChildAt(0);
       }
 
-      Z.D0(var5, new a(var5, var3));
+      h0.C0(var5, new a(var5, var3));
    }
 
    @JvmStatic
@@ -36,7 +36,7 @@ public object ImmersiveMode {
       val var4: Int = n.h();
       val var6: WindowInsetsCompat = var5.b(var4, Insets.c(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
-      Z.a0(var1, var6);
+      h0.Z(var1, var6);
       return var6;
    }
 

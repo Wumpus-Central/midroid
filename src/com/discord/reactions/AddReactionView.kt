@@ -33,19 +33,19 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       this.setOrientation(0);
       this.setGravity(16);
       val var6: ReactionView.Companion = ReactionView.Companion;
-      val var4: Int = ReactionView.Companion.getHORIZ_PADDING();
-      val var3: Int = VERTICAL_PADDING;
-      this.setPadding(var4, VERTICAL_PADDING, var6.getHORIZ_PADDING(), var3);
+      val var3: Int = ReactionView.Companion.getHORIZ_PADDING();
+      val var4: Int = VERTICAL_PADDING;
+      this.setPadding(var3, VERTICAL_PADDING, var6.getHORIZ_PADDING(), var4);
    }
 
    public fun configure(addReactionLabel: String, reactionsTheme: ReactionsTheme?, isBurst: Boolean, imageAsset: ReactAsset = ReactAsset.AddReaction) {
       var var8: ReactionView.Companion;
       var var10: TextView;
-      var var16: Int;
+      var var15: Int;
       label34: {
-         var16 = ThemeManagerKt.getTheme().getBackgroundSecondary();
+         val var7: Int = ThemeManagerKt.getTheme().getBackgroundSecondary();
          var8 = ReactionView.Companion;
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var16, ReactionView.Companion.getCORNER_RADIUS(), null, 0, 12, null);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var7, ReactionView.Companion.getCORNER_RADIUS(), null, 0, 12, null);
          var var9: TextView = this.binding.addReactionText;
          DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimarySemibold);
          var9 = this.binding.addReactionText;
@@ -53,25 +53,25 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
          this.binding.addReactionText.setPadding(var8.getHORIZ_PADDING(), 0, var8.getHORIZ_PADDING(), 0);
          var10 = this.binding.addReactionText;
          if (var2 != null) {
-            val var22: Int = var2.getReactionTextColor();
-            if (var22 != null) {
-               var16 = var22;
+            val var20: Int = var2.getReactionTextColor();
+            if (var20 != null) {
+               var15 = var20;
                break label34;
             }
          }
 
-         var16 = ThemeManagerKt.getTheme().getTextMuted();
+         var15 = ThemeManagerKt.getTheme().getTextMuted();
       }
 
-      var10.setTextColor(var16);
+      var10.setTextColor(var15);
       this.binding.addReactionText.setText(var1);
-      val var23: TextView = this.binding.addReactionText;
-      var var17: Int = 0;
+      val var21: TextView = this.binding.addReactionText;
+      var var16: Int = 0;
       if (var1.length() == 0) {
-         var17 = 8;
+         var16 = 8;
       }
 
-      var23.setVisibility(var17);
+      var21.setVisibility(var16);
       val var11: SimpleDraweeView = this.binding.addReactionImage;
       if (var3) {
          var4 = ReactAsset.AddBurstReaction;
@@ -85,12 +85,12 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
          if (var2 != null) {
             val var13: Int = var2.getReactionBackgroundColor();
             if (var13 != null) {
-               var17 = var13;
+               var16 = var13;
                break label26;
             }
          }
 
-         var17 = ThemeManagerKt.getTheme().getBackgroundSecondary();
+         var16 = ThemeManagerKt.getTheme().getBackgroundSecondary();
       }
 
       val var14: Int;
@@ -100,7 +100,7 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
          var14 = null;
       }
 
-      ViewBackgroundUtilsKt.setBackgroundRectangle(this, var17, var8.getCORNER_RADIUS(), var14, var8.getSTROKE_WIDTH());
+      ViewBackgroundUtilsKt.setBackgroundRectangle(this, var16, var8.getCORNER_RADIUS(), var14, var8.getSTROKE_WIDTH());
    }
 
    public companion object {

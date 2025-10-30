@@ -1,10 +1,10 @@
 package com.discord.on_demand_resource
 
+import b7.a
 import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import d3.a
 
 public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceModuleSpec(var1) {
    @JvmStatic
@@ -27,12 +27,11 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public open fun hasOnDemandResource(resourceName: String?): Boolean {
-      var var2: Boolean = false;
-      if (var1 != null && PlayAssetDelivery.getAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, false, null, 4, null) != null) {
-         var2 = true;
+      if (var1 == null) {
+         return false;
+      } else {
+         return PlayAssetDelivery.getAssetPackLocation$default(PlayAssetDelivery.INSTANCE, var1, false, null, 4, null) != null;
       }
-
-      return var2;
    }
 
    public open fun isOnDemandResourcingAvailable(): Boolean {

@@ -38,8 +38,8 @@ public class StickerGifViewHolder(stickerView: StickerView) : StickerPartViewHol
          }
 
          var8.asGif(var7, var4, var5, var6, var1.getAccessibilityLabel());
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new J(var2, var1), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new K(var3, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new j0(var2, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new k0(var3, var1), 1, null);
       }
    }
 }

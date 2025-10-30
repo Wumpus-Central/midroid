@@ -1,6 +1,5 @@
 package com.discord.mobile_voice_overlay
 
-import Ja.v
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.Animator.AnimatorListener
@@ -28,6 +27,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
+import fm.v
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -90,14 +90,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
    }
 
    private fun isOverlayShowing(): Boolean {
-      val var1: Boolean;
-      if (this.trashWrapProvider.isInOverlay() && this.voiceBubbleProvider.isInOverlay()) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return this.trashWrapProvider.isInOverlay() && this.voiceBubbleProvider.isInOverlay();
    }
 
    @JvmStatic
@@ -198,7 +191,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
       var2.startHeadlessTask(
          var3,
          "SelectChannel",
-         v0.d.a(new Pair[]{v.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), v.a("connectToVoice", java.lang.Boolean.TRUE)})
+         v1.d.a(new Pair[]{v.a("channelId", java.lang.String.valueOf(var1.unbox-impl())), v.a("connectToVoice", java.lang.Boolean.TRUE)})
       );
       return Unit.a;
    }
@@ -387,11 +380,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext, emitOnLayout
          access$getSelectorDialogProvider$p(this).setData(var1);
          access$getTrashWrapProvider$p(this).setData(var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

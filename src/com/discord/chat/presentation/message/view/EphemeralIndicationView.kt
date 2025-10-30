@@ -79,7 +79,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
    ) {
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
-      var6.setOnClickListener(new G(var4, var2));
+      var6.setOnClickListener(new g0(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
       val var9: StructurableText = var2.getContent();
       val var11: Context = var10.getContext();
@@ -95,7 +95,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
          false,
          false,
          var12,
-         new H(var3, var1),
+         new h0(var3, var1),
          null,
          null,
          null,

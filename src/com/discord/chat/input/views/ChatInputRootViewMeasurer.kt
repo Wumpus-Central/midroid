@@ -41,13 +41,17 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
          if (var1) {
             this.initialized = true;
             this.emitMeasuredHeight();
+            return;
          }
       } else {
          val var2: Int = this.chatInputRootView.getLineCount();
          if (var2 == null) {
             this.lineCount = 1;
             this.emitMeasuredHeight();
-         } else if (this.lineCount != var2) {
+            return;
+         }
+
+         if (this.lineCount != var2) {
             this.lineCount = var2;
             this.emitMeasuredHeight();
          }

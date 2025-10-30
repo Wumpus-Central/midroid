@@ -27,7 +27,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
 
    private fun getReferencedMessageLabel(context: Context, referencedMessage: ReferencedMessage?): CharSequence? {
       return if (var2 is LoadedReferencedMessage)
-         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new o0((var2 as LoadedReferencedMessage).getMessage().getUsername()))
+         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new n1((var2 as LoadedReferencedMessage).getMessage().getUsername()))
          else
          null;
    }

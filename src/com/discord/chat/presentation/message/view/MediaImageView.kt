@@ -44,18 +44,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var3: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
+      val var4: MediaImageViewBinding = MediaImageViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
       this.spoilerViewManager = new SpoilerViewManager();
       this.attachmentUploadOverlay = new AttachmentUploadOverlayViewManager();
       this.imageFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      (var3.image.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var4: TextView = var3.imageAltText;
-      var3.imageAltText.setImportantForAccessibility(4);
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
-      var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      var3.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
+      (var4.image.getHierarchy() as GenericDraweeHierarchy).z(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
+      val var3: TextView = var4.imageAltText;
+      var4.imageAltText.setImportantForAccessibility(4);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryNormal);
+      var3.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
+      var4.imageBlurBg.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundMobilePrimary());
    }
 
    private fun configureGifIndicator(shouldAutoPlayGif: Boolean, filename: String?, srcIsAnimated: Boolean) {
@@ -82,31 +82,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var4: Int = GIF_INDICATOR_PADDING;
-         var1 = false;
-         if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var4 * 2) {
-               var1 = false;
-            } else {
-               if (var2 == null) {
-                  return false;
-               }
-
-               if (!StringsKt.s(var2, ".gif", true) && !StringsKt.s(var2, ".gifv", true) && (!StringsKt.s(var2, ".webp", false) || !var3)) {
-                  if (!StringsKt.s(var2, ".avif", false)) {
-                     return false;
-                  }
-
-                  if (!var3) {
-                     return false;
-                  }
-               }
-
-               var1 = true;
-            }
+         val var5: Int = GIF_INDICATOR_PADDING;
+         if (this.getLayoutParams().height <= GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2
+            || this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
+            return false;
+         } else if (var2 == null) {
+            return false;
+         } else {
+            return StringsKt.s(var2, ".gif", true)
+               || StringsKt.s(var2, ".gifv", true)
+               || StringsKt.s(var2, ".webp", false) && var3
+               || StringsKt.s(var2, ".avif", false) && var3;
          }
-
-         return var1;
       }
    }
 
@@ -147,7 +134,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       filename: String?,
       srcIsAnimated: Boolean
    ) {
-      label67: {
+      label68: {
          if (this.targetUrl != null) {
             var var21: java.lang.String = this.targetUrl;
             if (this.targetUrl == null) {
@@ -156,7 +143,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
             }
 
             if (var21 == var1) {
-               break label67;
+               break label68;
             }
          }
 
@@ -169,12 +156,12 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
             var19 = this.imageFadeDuration;
          }
 
-         var37.x(var19);
-         val var39: SimpleDraweeView = this.binding.image;
-         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
+         var37.w(var19);
          val var24: SimpleDraweeView = this.binding.image;
+         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var39: SimpleDraweeView = this.binding.image;
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var39, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
+            var24, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var39, var5, var6)
          );
       }
 
@@ -185,7 +172,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var20 = false;
       }
 
-      label50: {
+      label51: {
          val var30: MediaImageView.TargetSize = new MediaImageView.TargetSize(this.getWidth(var20, var2), this.getHeight(var20, var3), var4);
          var var25: MediaImageView.TargetSize = this.targetSize;
          if (this.targetSize != null) {
@@ -195,7 +182,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
             }
 
             if (var25 == var30) {
-               break label50;
+               break label51;
             }
          }
 
@@ -209,8 +196,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
       val var28: SpoilerViewManager = this.spoilerViewManager;
-      val var33: ConstraintLayout = this.binding.container;
-      val var34: SimpleDraweeView = this.binding.image;
+      val var31: ConstraintLayout = this.binding.container;
+      val var33: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -223,10 +210,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var33, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var28.configureSpoiler(var8, this, var31, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -260,7 +247,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.Z.o0(this.binding.image, new androidx.core.view.a(var1) {
+         androidx.core.view.h0.n0(this.binding.image, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -360,16 +347,16 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       public override fun toString(): String {
          val var2: Int = this.width;
          val var1: Int = this.height;
-         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
-         var3.append(var1);
-         var3.append(", resizeMode=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TargetSize(width=");
+         var4.append(var2);
+         var4.append(", height=");
+         var4.append(var1);
+         var4.append(", resizeMode=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

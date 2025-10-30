@@ -3,7 +3,7 @@ package com.discord.chat.bridge.reaction
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.Reaction.DefaultImpls
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class MessageReaction(count: Int,
@@ -96,10 +96,10 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.count);
-      val var4: Int = java.lang.Boolean.hashCode(this.me);
+      val var4: Int = Integer.hashCode(this.count);
+      val var6: Int = java.lang.Boolean.hashCode(this.me);
       val var2: Int = java.lang.Boolean.hashCode(this.isMeBurst);
-      val var6: Int = this.emoji.hashCode();
+      val var3: Int = this.emoji.hashCode();
       val var5: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
@@ -108,7 +108,7 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var3 * 31 + var4) * 31 + var2) * 31 + var6) * 31 + var5) * 31 + var1;
+      return ((((var4 * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var5) * 31 + var1;
    }
 
    fun isBurstReaction(): Boolean {
@@ -116,27 +116,27 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.count;
+      val var2: Int = this.count;
       val var4: Boolean = this.me;
       val var3: Boolean = this.isMeBurst;
-      val var5: MessageReactionEmoji = this.emoji;
-      val var2: Int = this.burstCount;
+      val var6: MessageReactionEmoji = this.emoji;
+      val var1: Int = this.burstCount;
       val var7: ThemedBurstReactionColorPalette = this.themedBurstColors;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReaction(count=");
-      var6.append(var1);
-      var6.append(", me=");
-      var6.append(var4);
-      var6.append(", isMeBurst=");
-      var6.append(var3);
-      var6.append(", emoji=");
-      var6.append(var5);
-      var6.append(", burstCount=");
-      var6.append(var2);
-      var6.append(", themedBurstColors=");
-      var6.append(var7);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageReaction(count=");
+      var5.append(var2);
+      var5.append(", me=");
+      var5.append(var4);
+      var5.append(", isMeBurst=");
+      var5.append(var3);
+      var5.append(", emoji=");
+      var5.append(var6);
+      var5.append(", burstCount=");
+      var5.append(var1);
+      var5.append(", themedBurstColors=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

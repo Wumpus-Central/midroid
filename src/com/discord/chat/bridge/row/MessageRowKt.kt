@@ -1,6 +1,5 @@
 package com.discord.chat.bridge.row
 
-import Ja.p
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
@@ -16,6 +15,7 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
+import fm.p
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,
@@ -25,29 +25,21 @@ public fun MessageBase.toChatListMessageItem(
    reactTag: Int? = null,
    backgroundHighlight: BackgroundHighlight? = null
 ): ChatListItem {
-   val var8: Any;
    if (var0 is Message) {
       val var7: Message = var0 as Message;
       if (MessageKt.isSystemMessage(var0 as Message)) {
-         if (MessageKt.isCallMessage(var7)) {
-            var8 = new CallSystemMessageItem(var7);
-         } else {
-            var8 = new SystemMessageItem(var7, var2, var6);
-         }
-      } else if (MessageKt.isAutomodSystemMessage(var7)) {
-         var8 = new AutomodSystemMessageItem(var7, var2, var3);
+         return (ChatListItem)(if (MessageKt.isCallMessage(var7)) new CallSystemMessageItem(var7) else new SystemMessageItem(var7, var2, var6));
       } else {
-         var8 = new MessageItem(var7, var1, var2, var3, var6, var5, var4);
+         return (ChatListItem)(if (MessageKt.isAutomodSystemMessage(var7))
+            new AutomodSystemMessageItem(var7, var2, var3)
+            else
+            new MessageItem(var7, var1, var2, var3, var6, var5, var4));
       }
+   } else if (var0 is ErrorMessage) {
+      return new DeserializationErrorMessageItem(var0 as ErrorMessage, false, 2, null);
    } else {
-      if (var0 !is ErrorMessage) {
-         throw new p();
-      }
-
-      var8 = new DeserializationErrorMessageItem(var0 as ErrorMessage, false, 2, null);
+      throw new p();
    }
-
-   return (ChatListItem)var8;
 }
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {

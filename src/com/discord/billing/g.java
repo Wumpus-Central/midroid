@@ -8,7 +8,7 @@ import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.Ref.BooleanRef;
 
 // $VF: synthetic class
-public final class g implements j2.h {
+public final class g implements j5.h {
    public final BillingManager a;
    public final Function1 b;
    public final String c;
@@ -22,6 +22,6 @@ public final class g implements j2.h {
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.g(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, var1, var2);
+      <unrepresentable>.f(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, var1, var2);
    }
 }

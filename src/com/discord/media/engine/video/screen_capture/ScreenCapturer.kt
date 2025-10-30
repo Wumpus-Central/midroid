@@ -54,36 +54,35 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    }
 
    private fun createRecorder(): AudioRecord? {
-      var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var6: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
+         val var2: AudioPlaybackCaptureConfiguration = a.a(this.mediaProjection).addMatchingUsage(1).addMatchingUsage(14).addMatchingUsage(0).build();
 
          try {
-            var1 = c.a(
-                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var6
-               )
+            return new Builder()
+               .setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build())
+               .setAudioPlaybackCaptureConfig(var2)
                .build();
-         } catch (var5: SecurityException) {
-            Log.INSTANCE.e("ScreenCapturer", "Failed to record audio", var5);
-            var1 = null;
+         } catch (var4: SecurityException) {
+            Log.INSTANCE.e("ScreenCapturer", "Failed to record audio", var4);
          }
       }
 
-      return var1;
+      return null;
    }
 
    private fun getScreenSize(context: Context): Rect {
       val var3: Rect = this.currentMeasuredSize;
       if (VERSION.SDK_INT >= 34) {
          this.currentMeasuredSize.set(ScreenCapturer.MediaProjectionObserver.INSTANCE.getCurrentCaptureSize());
+         return var3;
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
-         var3.set(J1.c.a(d.a(var4 as WindowManager)));
+         var3.set((var4 as WindowManager).getMaximumWindowMetrics().getBounds());
+         return var3;
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
+         return var3;
       }
-
-      return var3;
    }
 
    private fun setFramerate(framerate: Int) {
@@ -194,15 +193,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 39: invokevirtual android/graphics/Point.set (II)V
       // 3c: aload 0
       // 3d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 40: astore 1
-      // 41: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 44: astore 5
-      // 46: aload 1
-      // 47: aload 5
-      // 49: aload 1
-      // 4a: getfield android/graphics/Point.x I
-      // 4d: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 50: aload 5
+      // 40: astore 5
+      // 42: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 45: astore 1
+      // 46: aload 5
+      // 48: aload 1
+      // 49: aload 5
+      // 4b: getfield android/graphics/Point.x I
+      // 4e: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 51: aload 1
       // 52: aload 0
       // 53: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 56: getfield android/graphics/Point.y I
@@ -434,12 +433,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       private const val MIN_REPEAT_FRAMERATE: Int
 
       private fun closestMod16(n: Int): Int {
-         val var2: Int = var1 % 16;
-         if (var1 % 16 >= 8) {
-            var1 += 16;
-         }
-
-         return var1 - var2;
+         return if (var1 % 16 < 8) var1 - var1 % 16 else var1 + 16 - var1 % 16;
       }
    }
 
@@ -459,11 +453,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var4 != null) {
-               val var3: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
+            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var3 != null) {
+               val var4: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
                      Intrinsics.throwUninitializedPropertyAccessException("nativeObserver");

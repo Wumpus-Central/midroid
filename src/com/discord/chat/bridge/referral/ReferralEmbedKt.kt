@@ -2,11 +2,11 @@
 
 package com.discord.chat.bridge.referral
 
-import Ac.h
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
+import xp.h
 
 @JvmSynthetic
 fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boolean {
@@ -14,43 +14,28 @@ fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boo
 }
 
 private fun JsonObject.hasPrimitive(key: String): Boolean {
-   val var4: JsonElement = var0.get(var1) as JsonElement;
-   var var2: Boolean = false;
-   if (var4 != null) {
-      val var5: JsonPrimitive = h.o(var4);
-      var2 = false;
-      if (var5 != null) {
-         val var6: java.lang.String = var5.c();
-         var2 = false;
-         if (var6 != null) {
-            var2 = false;
-            if (StringsKt.c0(var6) xor true) {
-               var2 = true;
-            }
+   val var2: JsonElement = var0.get(var1) as JsonElement;
+   if (var2 != null) {
+      val var3: JsonPrimitive = h.o(var2);
+      if (var3 != null) {
+         val var4: java.lang.String = var3.b();
+         if (var4 != null && StringsKt.c0(var4) xor true) {
+            return true;
          }
       }
    }
 
-   return var2;
+   return false;
 }
 
 private fun JsonObject.hasPrimitives(vararg keys: String): Boolean {
    val var3: Int = var1.length;
-   var var4: Boolean = false;
-   var var2: Int = 0;
 
-   while (true) {
-      if (var2 >= var3) {
-         var4 = true;
-         break;
-      }
-
+   for (int var2 = 0; var2 < var3; var2++) {
       if (!hasPrimitive(var0, var1[var2])) {
-         break;
+         return false;
       }
-
-      var2++;
    }
 
-   return var4;
+   return true;
 }

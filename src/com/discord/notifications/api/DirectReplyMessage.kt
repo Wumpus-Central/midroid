@@ -7,7 +7,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import wc.m
+import tp.m
 
 @m
 public data class DirectReplyMessage(id: MessageId,
@@ -161,33 +161,33 @@ public data class DirectReplyMessage(id: MessageId,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: DirectReplyUser = this.author;
-      val var8: java.lang.String = this.content;
-      val var3: Int = this.type;
-      val var9: Int = this.channelType;
-      val var4: java.lang.String = this.channelName;
-      val var7: java.lang.String = this.guildName;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("DirectReplyMessage(id=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var6);
-      var5.append(", author=");
-      var5.append(var1);
-      var5.append(", content=");
-      var5.append(var8);
-      var5.append(", type=");
-      var5.append(var3);
-      var5.append(", channelType=");
-      var5.append(var9);
-      var5.append(", channelName=");
-      var5.append(var4);
-      var5.append(", guildName=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = MessageId.toString-impl(this.id);
+      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: DirectReplyUser = this.author;
+      val var9: java.lang.String = this.content;
+      val var2: Int = this.type;
+      val var1: Int = this.channelType;
+      val var7: java.lang.String = this.channelName;
+      val var4: java.lang.String = this.guildName;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("DirectReplyMessage(id=");
+      var6.append(var5);
+      var6.append(", channelId=");
+      var6.append(var8);
+      var6.append(", author=");
+      var6.append(var3);
+      var6.append(", content=");
+      var6.append(var9);
+      var6.append(", type=");
+      var6.append(var2);
+      var6.append(", channelType=");
+      var6.append(var1);
+      var6.append(", channelName=");
+      var6.append(var7);
+      var6.append(", guildName=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    @SourceDebugExtension(["SMAP\nDirectReplyMessage.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,57:1\n123#2:58\n*S KotlinDebug\n*F\n+ 1 DirectReplyMessage.kt\ncom/discord/notifications/api/DirectReplyMessage$Companion\n*L\n26#1:58\n*E\n"])

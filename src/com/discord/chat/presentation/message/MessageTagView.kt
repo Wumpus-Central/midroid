@@ -68,7 +68,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
    ) {
       if (var1 != null) {
          this.binding.tag.setText(var1);
-         val var14: TextView = this.binding.tag;
+         val var18: TextView = this.binding.tag;
          val var12: Int;
          if (var3 != null) {
             var12 = var3;
@@ -77,50 +77,52 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             var12 = ColorUtilsKt.getColorCompat(var28, color.white);
          }
 
-         var14.setTextColor(var12);
-         val var15: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new S(var6, var7, var8, var10), 1, null);
-         val var16: SimpleDraweeView = this.binding.verifiedBotIcon;
+         var18.setTextColor(var12);
+         val var19: ConstraintLayout = this.binding.layout;
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var19, false, new r0(var6, var7, var8, var10), 1, null);
+         val var20: SimpleDraweeView = this.binding.verifiedBotIcon;
          var var29: Byte = 8;
          if (var2 == java.lang.Boolean.TRUE) {
             var29 = 0;
          }
 
-         var16.setVisibility(var29);
+         var20.setVisibility(var29);
          if (var4 != null) {
-            val var17: ConstraintLayout = this.binding.layout;
+            val var21: ConstraintLayout = this.binding.layout;
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-               var17, ReactColorToAndroidColorKt.reactColorToAndroidColor(var4), SizeUtilsKt.getDpToPx(4), null, 0, 12, null
+               var21, ReactColorToAndroidColorKt.reactColorToAndroidColor(var4), SizeUtilsKt.getDpToPx(4), null, 0, 12, null
             );
          } else {
-            val var18: ConstraintLayout = this.binding.layout;
-            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var18, R.drawable.drawable_message_author_tag_bg);
+            val var22: ConstraintLayout = this.binding.layout;
+            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var22, R.drawable.drawable_message_author_tag_bg);
          }
 
          if (var11 != null) {
-            val var19: SimpleDraweeView = this.binding.verifiedBotIcon;
-            ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var11);
+            val var23: SimpleDraweeView = this.binding.verifiedBotIcon;
+            ReactAssetUtilsKt.setOptionalReactImageUrl(var23, var11);
          } else {
-            val var20: SimpleDraweeView = this.binding.verifiedBotIcon;
-            ReactAssetUtilsKt.setReactAsset(var20, ReactAsset.Check);
+            val var24: SimpleDraweeView = this.binding.verifiedBotIcon;
+            ReactAssetUtilsKt.setReactAsset(var24, ReactAsset.Check);
          }
 
-         val var21: SimpleDraweeView = this.binding.verifiedBotIcon;
-         ColorUtilsKt.setTintColor(var21, -1);
-      } else if (var5 != null) {
-         this.binding.tag.setText(var5);
-         val var26: TextView = this.binding.tag;
-         val var22: Context = this.getContext();
-         var26.setTextColor(ColorUtilsKt.getColorCompat(var22, color.brand_560));
-         val var27: ConstraintLayout = this.binding.layout;
-         val var23: Context = this.getContext();
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-            var27, ColorUtilsKt.getThemeColor(var23, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
-         );
-         val var24: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new T(var6), 1, null);
          val var25: SimpleDraweeView = this.binding.verifiedBotIcon;
-         var25.setVisibility(8);
+         ColorUtilsKt.setTintColor(var25, -1);
+      } else {
+         if (var5 != null) {
+            this.binding.tag.setText(var5);
+            val var14: TextView = this.binding.tag;
+            val var26: Context = this.getContext();
+            var14.setTextColor(ColorUtilsKt.getColorCompat(var26, color.brand_560));
+            val var15: ConstraintLayout = this.binding.layout;
+            val var27: Context = this.getContext();
+            ViewBackgroundUtilsKt.setBackgroundRectangle$default(
+               var15, ColorUtilsKt.getThemeColor(var27, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+            );
+            val var16: ConstraintLayout = this.binding.layout;
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new s0(var6), 1, null);
+            val var17: SimpleDraweeView = this.binding.verifiedBotIcon;
+            var17.setVisibility(8);
+         }
       }
    }
 }

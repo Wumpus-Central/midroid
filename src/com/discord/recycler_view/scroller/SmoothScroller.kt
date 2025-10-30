@@ -1,12 +1,12 @@
 package com.discord.recycler_view.scroller
 
-import Ja.p
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.i
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
+import fm.p
 
 internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i(var1) {
    private final val targetAlignment: TargetAlignment
@@ -21,18 +21,14 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
 
    public open fun calculateDtToFit(viewStart: Int, viewEnd: Int, boxStart: Int, boxEnd: Int, snapPreference: Int): Int {
       if (this.targetAlignment is Scroller.TargetAlignment.Center) {
-         var1 = var3 + (var4 - var3) / 2 - (var1 + (var2 - var1) / 2);
+         return var3 + (var4 - var3) / 2 - (var1 + (var2 - var1) / 2);
       } else if (this.targetAlignment is Scroller.TargetAlignment.Top) {
-         var1 = var3 - var1 + (this.targetAlignment as Scroller.TargetAlignment.Top).getOffsetPx();
+         return var3 - var1 + (this.targetAlignment as Scroller.TargetAlignment.Top).getOffsetPx();
+      } else if (this.targetAlignment is Scroller.TargetAlignment.Anywhere) {
+         return super.calculateDtToFit(var1, var2, var3, var4, var5);
       } else {
-         if (this.targetAlignment !is Scroller.TargetAlignment.Anywhere) {
-            throw new p();
-         }
-
-         var1 = super.calculateDtToFit(var1, var2, var3, var4, var5);
+         throw new p();
       }
-
-      return var1;
    }
 
    protected open fun onChildAttachedToWindow(child: View) {

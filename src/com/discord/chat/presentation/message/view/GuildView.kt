@@ -32,11 +32,11 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
    }
 
    init {
-      val var6: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var6;
-      val var4: View = var6.getRoot();
-      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(16));
-      val var5: TextView = var6.guildText;
+      val var4: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
+      val var6: View = var4.getRoot();
+      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(16));
+      val var5: TextView = var4.guildText;
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
    }

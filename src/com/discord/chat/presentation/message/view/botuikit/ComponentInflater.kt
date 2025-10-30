@@ -40,12 +40,12 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
       this.viewCache = new LinkedHashMap<>();
       if (var2) {
          val var5: Byte = 0;
-         var var3: Int = 0;
+         var var4: Int = 0;
 
          while (true) {
-            var var4: Int = var5;
-            if (var3 >= 20) {
-               while (var4 < 10) {
+            var var3: Int = var5;
+            if (var4 >= 20) {
+               while (var3 < 10) {
                   val var13: java.util.Map = this.viewCache;
                   val var12: java.lang.String = ActionRowComponent.class.getSimpleName();
                   val var11: Any = var13.get(var12);
@@ -56,28 +56,28 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
-                  var4++;
+                  var3++;
                }
                break;
             }
 
-            val var7: java.util.Map = this.viewCache;
-            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
-            val var6: Any = var7.get(var8);
+            val var8: java.util.Map = this.viewCache;
+            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
+            val var6: Any = var8.get(var7);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var7.put(var8, var9);
+               var8.put(var7, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
-            var3++;
+            var4++;
          }
       }
    }
 
    private fun <T : Component> inflateComponent(component: T, root: ViewGroup): ComponentView<T>? {
-      var var3: Any;
+      val var3: Any;
       if (var1 is ActionRowComponent) {
          var3 = ActionRowComponentView.Companion.inflateComponent(this.context);
       } else if (var1 is ButtonComponent) {
@@ -104,11 +104,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
          var3 = UnknownComponentView.Companion.inflateComponent(this.context);
       }
 
-      if (var3 == null) {
-         var3 = null;
-      }
-
-      return (ComponentView<T>)var3;
+      return (ComponentView<T>)(var3 ?: null);
    }
 
    public fun <T : Component> getComponent(component: T, root: ViewGroup): ComponentView<T>? {
@@ -125,12 +121,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
          var4 = var6;
       }
 
-      var var7: ComponentView = var4;
-      if (var4 == null) {
-         var7 = this.inflateComponent(var1, var2);
-      }
-
-      return var7;
+      return (ComponentView<T>)(if (var4 == null) this.inflateComponent(var1, var2) else var4);
    }
 
    public fun <T : Component> recycleComponent(componentView: ComponentView<T>) {

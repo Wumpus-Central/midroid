@@ -4,13 +4,13 @@ import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
-import h3.a
-import h3.b
-import h3.c
-import h3.d
-import h3.e
-import h3.f
-import h3.g
+import f7.a
+import f7.b
+import f7.c
+import f7.d
+import f7.e
+import f7.f
+import f7.g
 
 public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new a()) : GridLayoutManager(
       var1, var2

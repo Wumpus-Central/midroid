@@ -1,11 +1,11 @@
 package com.discord.notifications.fcm.utils
 
-import b3.a
-import b3.b
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlin.jvm.functions.Function1
+import z6.a
+import z6.b
 
 internal object FCMTokenHelper {
    @JvmStatic
@@ -48,6 +48,7 @@ internal object FCMTokenHelper {
             INSTANCE.logError(var7);
          } catch (var3: Exception) {
             INSTANCE.logError(var3);
+            return;
          }
       }
    }

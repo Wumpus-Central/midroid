@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import E1.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
+import e4.a;
 
 public final class MessageFrameJumpHeaderBinding implements ViewBinding {
    @NonNull
@@ -26,12 +26,12 @@ public final class MessageFrameJumpHeaderBinding implements ViewBinding {
    @NonNull
    public static MessageFrameJumpHeaderBinding bind(@NonNull View var0) {
       int var1 = R.id.message_header_subtitle;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.message_header_title;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
-            return new MessageFrameJumpHeaderBinding(var0, var2, var3);
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
+            return new MessageFrameJumpHeaderBinding(var0, var3, var2);
          }
       }
 

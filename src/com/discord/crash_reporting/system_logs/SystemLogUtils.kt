@@ -50,7 +50,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         Na.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         jm.a.b(false, false, null, null, 0, new e(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -59,7 +59,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -94,33 +94,30 @@ internal object SystemLogUtils {
          if (StringsKt.c0(var19)) {
             return null;
          } else {
-            val var11: kotlin.text.i = kotlin.text.i.s;
-            val var17: Regex = new Regex("^Cause: (.+)$", kotlin.text.i.s);
-            val var21: Sequence = kotlin.sequences.k.C(
-               Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
-            );
-            val var13: HashSet = Y.e(
+            val var11: i = i.s;
+            val var17: Regex = new Regex("^Cause: (.+)$", i.s);
+            val var21: Sequence = k.C(Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new f(new Regex("classes\\d+.dex")));
+            val var8: HashSet = w0.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               var7 = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (var13.contains((java.lang.String)var8));
+                  var23 = var14.next();
+               } while (var8.contains((java.lang.String)var23));
 
-               var14 = var8 as java.lang.String;
+               var13 = var23 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
-            val var22: java.lang.String = kotlin.sequences.k.A(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = k.A(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -131,7 +128,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -151,7 +148,7 @@ internal object SystemLogUtils {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
       val var3: ByteArray = var1.getBytes(Charsets.UTF_8);
       val var4: ByteArray = var2.digest(var3);
-      return kotlin.collections.k.q0(var4, "", null, null, 0, null, new j(), 30, null);
+      return kotlin.collections.k.q0(var4, "", null, null, 0, null, new g(), 30, null);
    }
 
    @JvmStatic
@@ -222,7 +219,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var32 = var30.listIterator(var30.size());
+                           var31 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -236,7 +233,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var32.hasPrevious()) {
+                              if (!var31.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -251,7 +248,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var31 = var32.previous();
+                              var8 = (java.lang.String)var31.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -264,7 +261,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if ((var31 as java.lang.String).length() <= 0) {
+                              if (var8.length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -279,7 +276,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var31 as java.lang.String;
+                              var7 = var8;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -426,17 +423,17 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
             var1.exitValue();
-            return;
+            break;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
-               return;
+            if (System.nanoTime() >= var4 + var2) {
+               break;
             }
          }
       }
@@ -451,7 +448,7 @@ internal object SystemLogUtils {
    }
 
    public fun fetchLastTombstone(cb: (com.discord.crash_reporting.system_logs.SystemLogUtils.Tombstone?) -> Unit) {
-      this.fetch(regexExtractTombstone, new k(var1));
+      this.fetch(regexExtractTombstone, new h(var1));
    }
 
    @SuppressLint(["LogNotTimber"])
@@ -555,27 +552,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.text;
+         val var1: java.lang.String = this.text;
          val var2: java.lang.String = this.cause;
-         val var5: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
+         val var6: java.lang.String = this.groupBy;
+         val var7: java.lang.String = this.origin;
          val var3: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var4);
-         var7.append(", cause=");
-         var7.append(var2);
-         var7.append(", groupBy=");
-         var7.append(var5);
-         var7.append(", origin=");
-         var7.append(var1);
-         var7.append(", groupHash=");
-         var7.append(var3);
-         var7.append(", textHash=");
-         var7.append(var6);
-         var7.append(")");
-         return var7.toString();
+         val var4: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var1);
+         var5.append(", cause=");
+         var5.append(var2);
+         var5.append(", groupBy=");
+         var5.append(var6);
+         var5.append(", origin=");
+         var5.append(var7);
+         var5.append(", groupHash=");
+         var5.append(var3);
+         var5.append(", textHash=");
+         var5.append(var4);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

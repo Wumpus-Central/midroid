@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
@@ -34,14 +34,7 @@ public data class TapReferralRedeemData(referralId: String?) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.referralId == null) {
-         var1 = 0;
-      } else {
-         var1 = this.referralId.hashCode();
-      }
-
-      return var1;
+      return if (this.referralId == null) 0 else this.referralId.hashCode();
    }
 
    fun serialize(): WritableMap {

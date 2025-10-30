@@ -3,7 +3,7 @@ package com.discord.sticker_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import wc.m
+import tp.m
 
 @m
 internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
