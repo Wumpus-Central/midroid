@@ -83,7 +83,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var4 = "discord_android@303.8.0-1+303108";
+         var4 = "discord_android@303.9.0-1+303109";
       }
 
       CrashReporting.INSTANCE.init(var0, var4);
@@ -112,7 +112,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       val var2: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.Companion.init(this);
       TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
-      ClientInfo.INSTANCE.init(this, "303.8", 303108, "beta", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
+      ClientInfo.INSTANCE.init(this, "303.9", 303109, "beta", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
       TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
       CacheDataSourceFactory.Companion.init(this);
       TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
