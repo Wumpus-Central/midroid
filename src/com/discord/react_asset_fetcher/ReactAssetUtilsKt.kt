@@ -117,23 +117,23 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                   if (this.label == 0) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
-                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      val var5: MaterialButton = this.$this_setReactIcon;
-                     if (var2x.isResource()) {
-                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var3.isResource()) {
+                        val var12: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         var1 = var5.getContext();
-                        val var9: Drawable = var3.getResourceDrawable(var1, var2x.getSource());
+                        val var9: Drawable = var12.getResourceDrawable(var1, var3.getSource());
                         return var9;
-                     } else if (var2x.getUri().getScheme() == "file") {
-                        val var7: Drawable = Drawable.createFromPath(var2x.getUri().getPath());
+                     } else if (var3.getUri().getScheme() == "file") {
+                        val var7: Drawable = Drawable.createFromPath(var3.getUri().getPath());
                         return var7;
                      } else {
-                        val var10: URLConnection = new URL(var2x.getSource()).openConnection();
-                        val var11: HttpURLConnection = var10 as HttpURLConnection;
-                        (var10 as HttpURLConnection).connect();
-                        val var12: Bitmap = BitmapFactory.decodeStream(var11.getInputStream());
+                        val var2x: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var10: HttpURLConnection = var2x as HttpURLConnection;
+                        (var2x as HttpURLConnection).connect();
+                        val var11: Bitmap = BitmapFactory.decodeStream(var10.getInputStream());
                         val var6: Resources = var5.getResources();
-                        return new BitmapDrawable(var6, var12);
+                        return new BitmapDrawable(var6, var11);
                      }
                   } else {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

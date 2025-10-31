@@ -45,9 +45,9 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
             } else {
                val var6: ArrayList = new ArrayList();
 
-               for (Object var4 : var3) {
-                  if (Inet6Address.class.isInstance(var4 as InetAddress)) {
-                     var6.add(var4);
+               for (Object var8 : var3) {
+                  if (Inet6Address.class.isInstance(var8 as InetAddress)) {
+                     var6.add(var8);
                   }
                }
 

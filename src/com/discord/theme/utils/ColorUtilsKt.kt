@@ -22,8 +22,8 @@ private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(
 private final val hsv: FloatArray = new float[3]
 
 private fun applySaturationFactor(color: Int): Int {
-   var var4: Float = ThemeManager.INSTANCE.getSaturationFactor();
-   if (var4 == 1.0F) {
+   var var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   if (var5 == 1.0F) {
       return var0;
    } else {
       val var7: FloatArray = hsv;
@@ -32,20 +32,20 @@ private fun applySaturationFactor(color: Int): Int {
       val var2: Float = var7[2];
       val var6: Float = var7[2] * var1;
       val var3: Float = 2;
-      val var5: Float = var2 - var6 / 2;
+      val var4: Float = var2 - var6 / 2;
       if (var2 - var6 / 2 != 0.0F && var2 - var6 / 2 != 1.0F) {
-         var1 = var6 / (1 - Math.abs(2.0F * var5 - 1.0F));
+         var1 = var6 / (1 - Math.abs(2.0F * var4 - 1.0F));
       }
 
-      var4 = var1 * var4 * Math.min(1.0F, 1.0F - var5) + var5;
-      if (var4 == 0.0F) {
+      var5 = var1 * var5 * Math.min(1.0F, 1.0F - var4) + var4;
+      if (var5 == 0.0F) {
          var1 = 0.0F;
       } else {
-         var1 = var3 * (1.0F - var5 / var4);
+         var1 = var3 * (1.0F - var4 / var5);
       }
 
       var7[1] = var1;
-      var7[2] = var4;
+      var7[2] = var5;
       return Color.HSVToColor(var7);
    }
 }
@@ -111,12 +111,12 @@ public fun rgbaToArgb(rgbaString: String?): Int {
    if (var0 != null) {
       val var4: MatchResult = rgbaPattern.f(var0);
       if (var4 != null) {
-         val var5: b = var4.a();
+         val var2: b = var4.a();
          return Color.argb(
-            (int)(java.lang.Double.parseDouble(var5.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var5.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var5.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var5.a().b().get(3) as java.lang.String)
+            (int)(java.lang.Double.parseDouble(var2.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var2.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var2.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var2.a().b().get(3) as java.lang.String)
          );
       } else {
          return -16777216;

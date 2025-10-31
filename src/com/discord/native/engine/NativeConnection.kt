@@ -105,7 +105,7 @@ public class NativeConnection {
    public external fun setOnVideoCallback(callback: com.discord.native.engine.NativeConnection.OnVideoCallback) {
    }
 
-   public external fun setPTTActive(active: Boolean, priority: Boolean) {
+   public external fun setPTTActive(active: Boolean, priority: Boolean, muteOverride: Boolean) {
    }
 
    public external fun setPingInterval(pingInterval: Int) {

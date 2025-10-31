@@ -114,7 +114,7 @@ public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaMo
 
    @ReactMethod
    @a
-   public abstract void connectionInstanceSetPTTActive(double var1, boolean var3, boolean var4);
+   public abstract void connectionInstanceSetPTTActive(double var1, boolean var3, boolean var4, boolean var5);
 
    @ReactMethod
    @a

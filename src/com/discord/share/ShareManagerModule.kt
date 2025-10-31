@@ -77,9 +77,9 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
                var1 = "";
             }
 
-            val var10: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-            val var6: ReactApplicationContext = this.getReactApplicationContext();
-            var8.startActivity(Intent.createChooser(var5, var1, var10.getPendingIntentSender(var6, var4)));
+            val var6: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+            val var10: ReactApplicationContext = this.getReactApplicationContext();
+            var8.startActivity(Intent.createChooser(var5, var1, var6.getPendingIntentSender(var10, var4)));
          }
       } else {
          val var9: StringBuilder = new StringBuilder();

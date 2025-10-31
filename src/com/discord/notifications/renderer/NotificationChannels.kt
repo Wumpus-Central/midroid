@@ -128,8 +128,8 @@ internal object NotificationChannels {
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
       for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var3: java.lang.String = var2.b();
-         if (StringsKt.I(var3, "calls", false, 2, null)) {
+         val var4: java.lang.String = var2.b();
+         if (StringsKt.I(var4, "calls", false, 2, null)) {
             return var2;
          }
       }
@@ -303,14 +303,14 @@ internal object NotificationChannels {
    }
 
    public fun init(context: Context, localizedCategoryNames: Map<String, String>, localizedGroupNames: Map<String, String>) {
-      val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
+      val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var17: java.util.List = this.createNotificationChannelGroups(var1, var3);
       val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
       val var8: ArrayList = new ArrayList();
-      val var6: Int = var9.length;
+      val var5: Int = var9.length;
 
-      for (int var4 = 0; var4 < var6; var4++) {
-         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var5, var2, new c(var9[var4], var1));
+      for (int var4 = 0; var4 < var5; var4++) {
+         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var6, var2, new c(var9[var4], var1));
          if (var20 != null) {
             var8.add(var20);
          }
@@ -392,10 +392,10 @@ internal object NotificationChannels {
                break;
             }
 
-            val var8: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
-            val var17: java.lang.String = var8.b();
-            if (StringsKt.I(var17, "calls", false, 2, null)) {
-               var6.add(var8);
+            val var17: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
+            val var8: java.lang.String = var17.b();
+            if (StringsKt.I(var8, "calls", false, 2, null)) {
+               var6.add(var17);
             }
          }
       }

@@ -62,16 +62,16 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    }
 
    public fun parse(source: CharSequence, initialState: Any, rules: List<Rule<Any, out Any, Any>> = var0.rules): MutableList<Any> {
-      val var9: Stack = new Stack();
-      val var8: Node = new Node(null, 1, null);
+      val var8: Stack = new Stack();
+      val var9: Node = new Node(null, 1, null);
       if (var1.length() > 0) {
-         var9.add(new ParseSpec<>(var8, var2, 0, var1.length()));
+         var8.add(new ParseSpec<>(var9, var2, 0, var1.length()));
       }
 
       var var6: java.lang.String = null;
 
-      while (!var9.isEmpty()) {
-         val var10: ParseSpec = var9.pop() as ParseSpec;
+      while (!var8.isEmpty()) {
+         val var10: ParseSpec = var8.pop() as ParseSpec;
          if (var10.getStartIndex() >= var10.getEndIndex()) {
             break;
          }
@@ -110,12 +110,12 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
             val var22: Node = var10.getRoot();
             var22.addChild(var23.getRoot());
             if (var5 != var10.getEndIndex()) {
-               var9.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var5, var10.getEndIndex()));
+               var8.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var5, var10.getEndIndex()));
             }
 
             if (!var23.isTerminal()) {
                var23.applyOffset(var4);
-               var9.push(var23);
+               var8.push(var23);
             }
 
             try {
@@ -127,7 +127,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
       }
 
-      val var16: java.util.Collection = var8.getChildren();
+      val var16: java.util.Collection = var9.getChildren();
       var var17: java.util.List;
       if (var16 != null) {
          var17 = CollectionsKt.Z0(var16);

@@ -33,7 +33,7 @@ import kotlinx.coroutines.CoroutineScope
 import org.jetbrains.annotations.NotNull
 import org.webrtc.VideoFrame
 
-@SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n+ 2 Debug.kt\ncom/discord/media/engine/types/Debug\n+ 3 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,760:1\n38#2,4:761\n58#2,4:765\n44#2,7:769\n44#2,7:776\n41#3,13:783\n41#3,13:796\n41#3,13:809\n41#3,13:822\n41#3,13:835\n41#3,13:848\n59#3,7:861\n41#3,13:868\n41#3,13:881\n59#3,7:894\n41#3,13:901\n41#3,13:914\n59#3,7:927\n41#3,13:934\n41#3,13:947\n41#3,13:960\n41#3,13:973\n45#3,9:986\n41#3,13:995\n41#3,13:1008\n59#3,7:1021\n59#3,7:1028\n59#3,3:1035\n63#3,3:1041\n59#3,7:1044\n59#3,7:1051\n41#3,13:1058\n41#3,13:1072\n3829#4:1038\n4344#4,2:1039\n1#5:1071\n*S KotlinDebug\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n*L\n77#1:761,4\n91#1:765,4\n100#1:769,7\n115#1:776,7\n123#1:783,13\n128#1:796,13\n140#1:809,13\n145#1:822,13\n150#1:835,13\n155#1:848,13\n160#1:861,7\n170#1:868,13\n175#1:881,13\n180#1:894,7\n192#1:901,13\n197#1:914,13\n202#1:927,7\n214#1:934,13\n219#1:947,13\n229#1:960,13\n244#1:973,13\n261#1:986,9\n272#1:995,13\n275#1:1008,13\n280#1:1021,7\n290#1:1028,7\n300#1:1035,3\n300#1:1041,3\n332#1:1044,7\n352#1:1051,7\n366#1:1058,13\n725#1:1072,13\n308#1:1038\n308#1:1039,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n+ 2 Debug.kt\ncom/discord/media/engine/types/Debug\n+ 3 AsyncInitDispatcher.kt\ncom/discord/async_init/AsyncInitDispatcher\n+ 4 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 5 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,761:1\n38#2,4:762\n58#2,4:766\n44#2,7:770\n44#2,7:777\n41#3,13:784\n41#3,13:797\n41#3,13:810\n41#3,13:823\n41#3,13:836\n41#3,13:849\n59#3,7:862\n41#3,13:869\n41#3,13:882\n59#3,7:895\n41#3,13:902\n41#3,13:915\n59#3,7:928\n41#3,13:935\n41#3,13:948\n41#3,13:961\n41#3,13:974\n45#3,9:987\n41#3,13:996\n41#3,13:1009\n59#3,7:1022\n59#3,7:1029\n59#3,3:1036\n63#3,3:1042\n59#3,7:1045\n59#3,7:1052\n41#3,13:1059\n41#3,13:1073\n3829#4:1039\n4344#4,2:1040\n1#5:1072\n*S KotlinDebug\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine\n*L\n77#1:762,4\n91#1:766,4\n100#1:770,7\n115#1:777,7\n123#1:784,13\n128#1:797,13\n140#1:810,13\n145#1:823,13\n150#1:836,13\n155#1:849,13\n160#1:862,7\n170#1:869,13\n175#1:882,13\n180#1:895,7\n192#1:902,13\n197#1:915,13\n202#1:928,7\n214#1:935,13\n219#1:948,13\n229#1:961,13\n244#1:974,13\n261#1:987,9\n272#1:996,13\n275#1:1009,13\n280#1:1022,7\n290#1:1029,7\n300#1:1036,3\n300#1:1042,3\n332#1:1045,7\n352#1:1052,7\n366#1:1059,13\n726#1:1073,13\n308#1:1039\n308#1:1040,2\n*E\n"])
 public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = jp.k0.a()) {
    private final val context: Context
    private final val instanceCreationNs: Long
@@ -573,10 +573,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
    }
 
-   internal fun connectionInstanceSetPTTActive(connectionId: Int, active: Boolean, priority: Boolean): Unit? {
-      val var4: NativeConnection = this.getConnection(var1, "setPTTActive");
-      if (var4 != null) {
-         var4.setPTTActive(var2, var3);
+   internal fun connectionInstanceSetPTTActive(connectionId: Int, active: Boolean, priority: Boolean, muteOverride: Boolean): Unit? {
+      val var5: NativeConnection = this.getConnection(var1, "setPTTActive");
+      if (var5 != null) {
+         var5.setPTTActive(var2, var3, var4);
          return Unit.a;
       } else {
          return null;
@@ -775,10 +775,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 01e: invokespecial org/json/JSONObject.<init> ()V
       // 021: astore 7
       // 023: bipush 0
-      // 024: anewarray 367
+      // 024: anewarray 368
       // 027: astore 6
       // 029: bipush 0
-      // 02a: anewarray 367
+      // 02a: anewarray 368
       // 02d: astore 5
       // 02f: new android/media/MediaCodecList
       // 032: dup
@@ -809,7 +809,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 073: new java/util/ArrayList
       // 076: dup
       // 077: invokespecial java/util/ArrayList.<init> ()V
-      // 07a: astore 12
+      // 07a: astore 4
       // 07c: aload 11
       // 07e: arraylength
       // 07f: istore 3
@@ -821,23 +821,23 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 087: aload 11
       // 089: iload 2
       // 08a: aaload
-      // 08b: astore 4
-      // 08d: aload 4
+      // 08b: astore 12
+      // 08d: aload 12
       // 08f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 092: aload 4
+      // 092: aload 12
       // 094: ldc_w "video"
       // 097: bipush 0
       // 098: bipush 2
       // 099: aconst_null
       // 09a: invokestatic kotlin/text/StringsKt.I (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 09d: ifeq 0aa
-      // 0a0: aload 12
-      // 0a2: aload 4
+      // 0a0: aload 4
+      // 0a2: aload 12
       // 0a4: invokeinterface java/util/Collection.add (Ljava/lang/Object;)Z 2
       // 0a9: pop
       // 0aa: iinc 2 1
       // 0ad: goto 082
-      // 0b0: aload 12
+      // 0b0: aload 4
       // 0b2: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
       // 0b7: astore 11
       // 0b9: aload 11
@@ -862,7 +862,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       // 0ef: ldc_w ""
       // 0f2: astore 4
       // 0f4: bipush 3
-      // 0f5: anewarray 367
+      // 0f5: anewarray 368
       // 0f8: dup
       // 0f9: bipush 0
       // 0fa: aload 12
@@ -1576,7 +1576,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       this.getEngine().updateFieldTrial(var1, var2);
    }
 
-   @SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,760:1\n1#2:761\n*E\n"])
+   @SourceDebugExtension(["SMAP\nMediaEngine.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaEngine.kt\ncom/discord/media/engine/MediaEngine$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,761:1\n1#2:762\n*E\n"])
    public companion object {
       private const val TAG: String
       private const val THUMBNAIL_JPEG_QUALITY: Int

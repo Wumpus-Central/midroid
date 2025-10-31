@@ -62,7 +62,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@304.1.0-2+304201"
+   public const val SENTRY_RELEASE: String = "discord_android@304.2.0-2+304202"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -100,7 +100,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "bdbb6921-a47b-4364-a649-bf5088e23605"
+   public const val PROGUARD_UUID: String = "d33dde13-eaa9-44b1-82fa-07318fb86787"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {

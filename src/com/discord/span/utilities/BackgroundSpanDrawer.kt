@@ -96,30 +96,30 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
                   var12 = var19.getLineRight(var11);
                }
 
-               val var15: Int = (int)var12;
-               val var14: Int = var5 + SizeUtilsKt.getDpToPx(var22.getMarginVertical());
-               var10 = var7 - SizeUtilsKt.getDpToPx(var22.getMarginVertical());
-               val var16: Int = var28.getColor();
+               val var16: Int = (int)var12;
+               var10 = var5 + SizeUtilsKt.getDpToPx(var22.getMarginVertical());
+               val var14: Int = var7 - SizeUtilsKt.getDpToPx(var22.getMarginVertical());
+               val var15: Int = var28.getColor();
                var28.setColor(var22.getBackgroundColor());
                val var33: ShadowStyle = var21.getShadow();
                if (var33 != null) {
                   var28.setShadowLayer(var33.getRadius(), var33.getOffset().getWidth(), var33.getOffset().getHeight(), var33.getColor());
-                  this.drawBackground(var1, var28, var11, var6, var9, var4, var15, var14, var10, var13);
+                  this.drawBackground(var1, var28, var11, var6, var9, var4, var16, var10, var14, var13);
                }
 
                var2.clearShadowLayer();
                var17 = var2;
-               this.drawBackground(var1, var2, var11, var6, var9, var4, var15, var14, var10, var13);
+               this.drawBackground(var1, var2, var11, var6, var9, var4, var16, var10, var14, var13);
                val var29: BorderStyle = var21.getBorder();
                if (var29 != null) {
                   var2.setColor(var29.getColor());
                   var2.setStyle(Style.STROKE);
                   var2.setStrokeWidth((float)var29.getWidth());
-                  this.drawBackground(var1, var2, var11, var6, var9, var4, var15, var14, var10, var13);
+                  this.drawBackground(var1, var2, var11, var6, var9, var4, var16, var10, var14, var13);
                }
 
                var2.setStyle(Style.FILL);
-               var2.setColor(var16);
+               var2.setColor(var15);
             }
          }
 
