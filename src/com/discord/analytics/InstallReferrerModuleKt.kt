@@ -4,14 +4,10 @@ package com.discord.analytics
 
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
-import km.b
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CancellableContinuation
-import kotlinx.coroutines.e
-import kotlinx.coroutines.CancellableContinuation.a
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -19,9 +15,9 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 }
 
 private suspend fun InstallReferrerClient.await(): Int {
-   val var2: e = new e(b.c(var1), 1);
-   var2.C();
-   val var4: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
+   val var2: kotlinx.coroutines.e = new kotlinx.coroutines.e(ot.b.c(var1), 1);
+   var2.H();
+   val var3: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -31,7 +27,7 @@ private suspend fun InstallReferrerClient.await(): Int {
       @Override
       public void onInstallReferrerServiceDisconnected() {
          if (this.$continuation.b()) {
-            a.a(this.$continuation, null, 1, null);
+            kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
          }
       }
 
@@ -40,7 +36,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.g(
+   var2.d(
       new Function1<java.lang.Throwable, Unit>(var0) {
          final InstallReferrerClient $this_await;
 
@@ -51,15 +47,15 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var5: InstallReferrerClient = this.$this_await;
+            val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: kotlin.Result.a = Result.e;
-               var5.endConnection();
+               val var5: kotlin.Result.a = Result.e;
+               var2.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
                val var6: kotlin.Result.a = Result.e;
-               Result.b(c.a(var3));
+               Result.b(kotlin.c.a(var3));
                return;
             }
          }
@@ -68,23 +64,23 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: kotlin.Result.a = Result.e;
-      var0.startConnection(var4);
+      val var4: kotlin.Result.a = Result.e;
+      var0.startConnection(var3);
       var7 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: kotlin.Result.a = Result.e;
-      var7 = Result.b(c.a(var5));
+      val var10: kotlin.Result.a = Result.e;
+      var7 = Result.b(kotlin.c.a(var5));
       break label20;
    }
 
    val var8: java.lang.Throwable = Result.e(var7);
    if (var8 != null) {
-      var2.resumeWith(Result.b(c.a(var8)));
+      var2.resumeWith(Result.b(kotlin.c.a(var8)));
    }
 
-   val var9: Any = var2.z();
-   if (var9 === b.e()) {
-      g.c(var1);
+   val var9: Any = var2.B();
+   if (var9 === ot.b.f()) {
+      kotlin.coroutines.jvm.internal.g.c(var1);
    }
 
    return var9;

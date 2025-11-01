@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.h0
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollAnswersRecyclerAccessibilityDelegate
@@ -41,20 +42,20 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       super(var1, var2, var3);
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
-      val var4: RecyclerView = var5.answers;
-      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var7: RecyclerView = var5.answers;
+      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
 
-         public void endAnimation(RecyclerView.ViewHolder var1) {
+         public void endAnimation(ViewHolder var1) {
             super.endAnimation(var1);
             val var2: View = var1.itemView;
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var7.setSupportsChangeAnimations(false);
-      var4.setItemAnimator(var7);
+      var4.setSupportsChangeAnimations(false);
+      var7.setItemAnimator(var4);
       val var8: View = var5.getRoot();
       var3 = SizeUtilsKt.getDpToPx(16);
       var8.setPadding(var3, var3, var3, var3);
@@ -95,18 +96,18 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       onTapPollAction: (ChannelId, MessageId, String) -> Unit,
       onLongPressImage: (ChannelId, MessageId, String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    ) {
-      this.getMyAdapter().setData(var1.getAnswers(), new com.discord.chat.presentation.message.view.polls.a(var2, var1), new b(var4, var1));
+      this.getMyAdapter().setData(var1.getAnswers(), new a(var2, var1), new b(var4, var1));
       val var11: View = this.binding.getRoot();
       ViewBackgroundUtilsKt.setBackgroundRectangle(var11, var1.getFillColor(), SizeUtilsKt.getDpToPx(16), var1.getBorderColor(), var1.getBorderWidthPx());
       val var12: RecyclerView = this.binding.answers;
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      h0.z0(var12, 4);
+      h0.A0(var12, 4);
       var12.setImportantForAccessibility(1);
       h0.n0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
       var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
@@ -129,14 +130,14 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var10 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var9 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
       }
 
       val var6: Boolean;
-      if (var9 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;

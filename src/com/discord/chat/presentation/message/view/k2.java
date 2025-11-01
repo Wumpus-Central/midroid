@@ -10,6 +10,6 @@ public final class k2 implements OnClickListener {
    public final String e;
 
    public final void onClick(View var1) {
-      SafetyPolicyNoticeView.g(this.d, this.e, var1);
+      SafetyPolicyNoticeView.h(this.d, this.e, var1);
    }
 }

@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class TapPollSubmitVote(channelId: String, messageId: String) : ReactEvent {
@@ -48,8 +47,8 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
       return this.channelId.hashCode() * 31 + this.messageId.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

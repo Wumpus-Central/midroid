@@ -1,15 +1,14 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public object TapSuppressNotificationsIconData : ReactEvent {
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public fun serializer(): KSerializer<TapSuppressNotificationsIconData> {

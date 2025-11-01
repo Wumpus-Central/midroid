@@ -84,8 +84,8 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
                if (var4) {
                   this.this$0.performHapticFeedback(1);
-                  this.this$0.getSpringAnimationX().c();
-                  this.this$0.getSpringAnimationY().c();
+                  this.this$0.getSpringAnimationX().d();
+                  this.this$0.getSpringAnimationY().d();
                }
 
                this.this$0.setPressed(var4);
@@ -94,14 +94,14 @@ public abstract class OverlayBubbleWrap : OverlayView {
       };
       this.screenOffset = new int[2];
       val var4: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.u, 0.0F);
-      var4.k(50.0F);
-      var4.q().f(200.0F);
-      var4.q().d(0.75F);
+      var4.o(50.0F);
+      var4.v().f(200.0F);
+      var4.v().d(0.75F);
       this.springAnimationX = var4;
       val var5: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.v, 0.0F);
-      var5.k(50.0F);
-      var5.q().d(0.75F);
-      var5.q().f(200.0F);
+      var5.o(50.0F);
+      var5.v().d(0.75F);
+      var5.v().f(200.0F);
       this.springAnimationY = var5;
       this.actualPosition = new Point(this.windowLayoutParams.x, this.windowLayoutParams.y);
    }
@@ -135,8 +135,8 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
                if (var4) {
                   this.this$0.performHapticFeedback(1);
-                  this.this$0.getSpringAnimationX().c();
-                  this.this$0.getSpringAnimationY().c();
+                  this.this$0.getSpringAnimationX().d();
+                  this.this$0.getSpringAnimationY().d();
                }
 
                this.this$0.setPressed(var4);
@@ -145,14 +145,14 @@ public abstract class OverlayBubbleWrap : OverlayView {
       };
       this.screenOffset = new int[2];
       val var5: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.u, 0.0F);
-      var5.k(50.0F);
-      var5.q().f(200.0F);
-      var5.q().d(0.75F);
+      var5.o(50.0F);
+      var5.v().f(200.0F);
+      var5.v().d(0.75F);
       this.springAnimationX = var5;
       val var6: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.v, 0.0F);
-      var6.k(50.0F);
-      var6.q().d(0.75F);
-      var6.q().f(200.0F);
+      var6.o(50.0F);
+      var6.v().d(0.75F);
+      var6.v().f(200.0F);
       this.springAnimationY = var6;
       this.actualPosition = new Point(this.windowLayoutParams.x, this.windowLayoutParams.y);
    }
@@ -186,8 +186,8 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
                if (var4) {
                   this.this$0.performHapticFeedback(1);
-                  this.this$0.getSpringAnimationX().c();
-                  this.this$0.getSpringAnimationY().c();
+                  this.this$0.getSpringAnimationX().d();
+                  this.this$0.getSpringAnimationY().d();
                }
 
                this.this$0.setPressed(var4);
@@ -196,22 +196,22 @@ public abstract class OverlayBubbleWrap : OverlayView {
       };
       this.screenOffset = new int[2];
       val var6: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.u, 0.0F);
-      var6.k(50.0F);
-      var6.q().f(200.0F);
-      var6.q().d(0.75F);
+      var6.o(50.0F);
+      var6.v().f(200.0F);
+      var6.v().d(0.75F);
       this.springAnimationX = var6;
       val var7: SpringAnimation = new SpringAnimation(this, androidx.dynamicanimation.animation.b.v, 0.0F);
-      var7.k(50.0F);
-      var7.q().d(0.75F);
-      var7.q().f(200.0F);
+      var7.o(50.0F);
+      var7.v().d(0.75F);
+      var7.v().f(200.0F);
       this.springAnimationY = var7;
       this.actualPosition = new Point(this.windowLayoutParams.x, this.windowLayoutParams.y);
    }
 
    private fun SpringAnimation.animateTo(fromPosition: Float, toPosition: Float) {
-      var1.c();
-      var1.j(var2);
-      var1.o(var3);
+      var1.d();
+      var1.n(var2);
+      var1.t(var3);
    }
 
    private inline fun boundAllowedArea(minValue: Int, desiredValue: Int, maxValue: Int): Int {
@@ -243,8 +243,8 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public open fun anchorOff(animate: Boolean = false) {
       this.anchorPosition = null;
-      this.springAnimationX.c();
-      this.springAnimationY.c();
+      this.springAnimationX.d();
+      this.springAnimationY.d();
       if (var1) {
          animateToCoordinate$default(this, this.actualPosition.x, this.actualPosition.y, null, 4, null);
       } else {
@@ -263,11 +263,11 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
-      var var5: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
-      var1 = this.screenOffset[1];
-      var5 = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var5 - this.getHeight()));
+      var var4: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
+      val var11: Int = this.screenOffset[1];
+      var4 = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var11, var2), var4 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
@@ -283,10 +283,10 @@ public abstract class OverlayBubbleWrap : OverlayView {
                   this.actualPosition.x = (int)var1.getRawX() - this.deltaX;
                   this.actualPosition.y = (int)var1.getRawY() - this.deltaY;
                   if (this.isAttachedToWindow() && this.anchorPosition == null) {
-                     val var3: LayoutParams = this.windowLayoutParams;
-                     val var4: Point = this.actualPosition;
+                     val var4: LayoutParams = this.windowLayoutParams;
+                     val var3: Point = this.actualPosition;
                      this.windowLayoutParams.x = this.actualPosition.x;
-                     var3.y = var4.y;
+                     var4.y = var3.y;
                      this.updateViewLayout();
                   }
                }
@@ -304,13 +304,13 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    protected fun getAllowedAreaBounds(context: Context): Rect {
-      val var4: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
-      val var3: Rect = this.insetMargins;
-      var4.left = var4.left + this.insetMargins.left;
-      var4.right = var4.right - var3.right;
-      var4.top = var4.top + var3.top;
-      var4.bottom = var4.bottom - var3.bottom;
-      return var4;
+      val var3: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
+      val var4: Rect = this.insetMargins;
+      var3.left = var3.left + this.insetMargins.left;
+      var3.right = var3.right - var4.right;
+      var3.top = var3.top + var4.top;
+      var3.bottom = var3.bottom - var4.bottom;
+      return var3;
    }
 
    public override fun getInitialLayoutParams(): LayoutParams {

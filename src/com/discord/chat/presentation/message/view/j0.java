@@ -8,9 +8,9 @@ public final class j0 implements OnClickListener {
    public final FileAttachmentView d;
    public final String e;
    public final String i;
-   public final String s;
+   public final String t;
 
    public final void onClick(View var1) {
-      FileAttachmentView.g(this.d, this.e, this.i, this.s, var1);
+      FileAttachmentView.h(this.d, this.e, this.i, this.t, var1);
    }
 }

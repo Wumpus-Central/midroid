@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame() {

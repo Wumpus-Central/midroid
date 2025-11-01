@@ -10,6 +10,6 @@ public final class v2 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return SurveyIndicationView.g(this.d, this.e, (LinkContentNode)var1);
+      return SurveyIndicationView.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

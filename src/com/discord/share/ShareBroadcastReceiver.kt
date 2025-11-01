@@ -14,7 +14,7 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import fm.v
+import ht.v
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nShareBroadcastReceiver.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n+ 2 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n*L\n1#1,69:1\n14#2:70\n*S KotlinDebug\n*F\n+ 1 ShareBroadcastReceiver.kt\ncom/discord/share/ShareBroadcastReceiver\n*L\n28#1:70\n*E\n"])
@@ -41,10 +41,10 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var4: ReactEvents = this.reactEvents;
-         val var7: ReactApplicationContext = this.reactApplicationContext;
+         val var7: ReactEvents = this.reactEvents;
+         val var4: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
-         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 
@@ -64,7 +64,7 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       public fun register(context: Context, receiver: ShareBroadcastReceiver) {
-         a.k(var1, var2, new IntentFilter("share_sheet_click"), 4);
+         a.l(var1, var2, new IntentFilter("share_sheet_click"), 4);
       }
 
       public fun unregister(context: Context, receiver: ShareBroadcastReceiver) {

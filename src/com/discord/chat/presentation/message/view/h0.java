@@ -10,6 +10,6 @@ public final class h0 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return EphemeralIndicationView.g(this.d, this.e, (LinkContentNode)var1);
+      return EphemeralIndicationView.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

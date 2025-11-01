@@ -2,13 +2,13 @@ package com.discord.recycler_view.scroller
 
 import android.content.Context
 import android.view.View
-import androidx.recyclerview.widget.i
+import androidx.recyclerview.widget.l
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
-import fm.p
+import ht.p
 
-internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i(var1) {
+internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : l(var1) {
    private final val targetAlignment: TargetAlignment
    private final val onStopScroll: (() -> Unit)?
    private final var targetView: View?

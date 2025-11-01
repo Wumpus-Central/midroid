@@ -38,7 +38,7 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
       }
    }
 
-   public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+   public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
       super.onScrollStateChanged(var1, var2);
       val var3: Boolean;
       if (var2 == 0) {
@@ -52,7 +52,7 @@ internal class FastestListScrollListener(keyboardDismissOnDrag: Boolean,
       }
    }
 
-   public open fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+   public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
       if (!this.layoutManager.getHorizontal() || var2 != 0) {
          if (this.layoutManager.getHorizontal() || var3 != 0) {
             super.onScrolled(var1, var2, var3);

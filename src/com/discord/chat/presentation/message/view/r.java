@@ -10,9 +10,9 @@ public final class r implements OnClickListener {
    public final Function2 d;
    public final MediaSource e;
    public final boolean i;
-   public final EmbedView s;
+   public final EmbedView t;
 
    public final void onClick(View var1) {
-      EmbedView.d(this.d, this.e, this.i, this.s, var1);
+      EmbedView.d(this.d, this.e, this.i, this.t, var1);
    }
 }

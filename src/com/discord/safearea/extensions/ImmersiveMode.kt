@@ -26,7 +26,7 @@ public object ImmersiveMode {
          var3 = var5.getChildAt(0);
       }
 
-      h0.C0(var5, new a(var5, var3));
+      h0.D0(var5, new a(var5, var3));
    }
 
    @JvmStatic

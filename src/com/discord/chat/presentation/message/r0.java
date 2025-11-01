@@ -9,9 +9,9 @@ public final class r0 implements OnClickListener {
    public final ChatEventHandler d;
    public final String e;
    public final long i;
-   public final String s;
+   public final String t;
 
    public final void onClick(View var1) {
-      MessageTagView.b(this.d, this.e, this.i, this.s, var1);
+      MessageTagView.b(this.d, this.e, this.i, this.t, var1);
    }
 }

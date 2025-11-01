@@ -1,11 +1,11 @@
 package com.discord.app_database
 
 import android.content.Context
+import av.i2
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import wp.i2
 
 @SourceDebugExtension(["SMAP\nAppDatabase.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AppDatabase.kt\ncom/discord/app_database/AppDatabase\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,91:1\n123#2:92\n123#2:93\n123#2:94\n12574#3,2:95\n*S KotlinDebug\n*F\n+ 1 AppDatabase.kt\ncom/discord/app_database/AppDatabase\n*L\n69#1:92\n70#1:93\n71#1:94\n78#1:95,2\n*E\n"])
 public object AppDatabase {
@@ -31,13 +31,13 @@ public object AppDatabase {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !(var4 == "")) {
-         val var3: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var3);
-         val var5: Log = Log.INSTANCE;
+         val var5: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var5);
+         val var3: Log = Log.INSTANCE;
          val var2: StringBuilder = new StringBuilder();
          var2.append("speculatively opening ");
-         var2.append(var3);
-         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
+         var2.append(var5);
+         Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -115,6 +115,6 @@ public object AppDatabase {
 
    public fun initializeAppDatabase(context: Context) {
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      jm.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
+      mt.a.b(false, false, null, "AppDatabaseLoader", 0, new com.discord.app_database.a(var1), 23, null);
    }
 }

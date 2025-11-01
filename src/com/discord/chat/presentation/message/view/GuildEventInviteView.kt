@@ -10,7 +10,7 @@ import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
@@ -114,10 +114,10 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setBadge(iconUrl: String?, count: String?) {
-      val var3: GuildEventInviteViewBinding = this.binding;
-      val var4: SimpleDraweeView = this.binding.badgeIcon;
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
-      var3.badgeText.setText(var2);
+      val var4: GuildEventInviteViewBinding = this.binding;
+      val var3: SimpleDraweeView = this.binding.badgeIcon;
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var3, var1);
+      var4.badgeText.setText(var2);
    }
 
    public fun setChannel(iconUrl: String?, text: String?) {
@@ -182,7 +182,7 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
             var20,
             var21,
             null,
-            this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing),
+            this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing),
             0,
             false,
             null,

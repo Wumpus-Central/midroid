@@ -20,7 +20,6 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.uimanager.events.NativeGestureUtil
 import kotlin.jvm.functions.Function2
@@ -91,15 +90,15 @@ internal class FastestListView(context: Context,
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
-   private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.k()) {
+   private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.l()) {
       if (!var1.isEmpty()) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var3: Int = var4.component1();
-            val var2: Int = var4.component2();
-            if (var2 == 1) {
-               this.typedAdapter.notifyItemChanged(var3);
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var2: Int = var5.component1();
+            val var3: Int = var5.component2();
+            if (var3 == 1) {
+               this.typedAdapter.notifyItemChanged(var2);
             } else {
-               this.typedAdapter.notifyItemRangeChanged(var3, var2);
+               this.typedAdapter.notifyItemRangeChanged(var2, var3);
             }
          }
       } else {
@@ -146,7 +145,7 @@ internal class FastestListView(context: Context,
    }
 
    private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
-      Scroller.scrollToPosition$default(this.scroller, var1, new Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
+      Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
       ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 
@@ -167,7 +166,7 @@ internal class FastestListView(context: Context,
       this.typedLayoutManager.disableRecycling(false);
    }
 
-   public override fun fling(velocityX: Int, velocityY: Int): Boolean {
+   public open fun fling(velocityX: Int, velocityY: Int): Boolean {
       val var3: RecyclerViewScrollLimiter = RecyclerViewScrollLimiter.INSTANCE;
       return super.fling(RecyclerViewScrollLimiter.INSTANCE.getClampedVelocity(var1), var3.getClampedVelocity(var2));
    }
@@ -178,7 +177,7 @@ internal class FastestListView(context: Context,
       this.removeOnLayoutChangeListener(this.onLayoutChangeListener);
    }
 
-   public override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
+   public open fun onInterceptTouchEvent(e: MotionEvent): Boolean {
       val var2: Boolean = super.onInterceptTouchEvent(var1);
       if (var2) {
          NativeGestureUtil.notifyNativeGestureStarted(this, var1);
@@ -187,7 +186,7 @@ internal class FastestListView(context: Context,
       return var2;
    }
 
-   public override fun scrollTo(x: Int, y: Int) {
+   public open fun scrollTo(x: Int, y: Int) {
       val var3: FastestListSections = this.sections;
       if (!this.typedLayoutManager.getHorizontal()) {
          var1 = var2;

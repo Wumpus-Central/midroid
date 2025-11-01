@@ -11,13 +11,13 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Build.VERSION
 import android.view.View
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.databinding.AudioPlayerViewBinding
 import com.discord.misc.utilities.drawable.GetDrawableCompatKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -68,14 +68,14 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    private final var animatorSet: AnimatorSet?
 
    init {
-      this.brand500 = var1.getColor(color.brand_500);
+      this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = fm.l.b(new u(var1));
-      this.buttonContainerActiveDrawable$delegate = fm.l.b(new v());
-      this.scaleAnimator$delegate = fm.l.b(new w(var2, this));
-      this.textColorAnimator$delegate = fm.l.b(new x(var2));
-      this.buttonIconColorAnimator$delegate = fm.l.b(new y(var2));
-      this.progressColorAnimator$delegate = fm.l.b(new z(var2));
+      this.buttonContainerDefaultDrawable$delegate = ht.l.b(new u(var1));
+      this.buttonContainerActiveDrawable$delegate = ht.l.b(new v());
+      this.scaleAnimator$delegate = ht.l.b(new w(var2, this));
+      this.textColorAnimator$delegate = ht.l.b(new x(var2));
+      this.buttonIconColorAnimator$delegate = ht.l.b(new y(var2));
+      this.progressColorAnimator$delegate = ht.l.b(new z(var2));
    }
 
    @JvmStatic
@@ -89,9 +89,9 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    fun `buttonContainerDefaultDrawable_delegate$lambda$0`(var0: Context): Drawable {
       val var1: Int;
       if (ThemeManager.INSTANCE.isThemeLight()) {
-         var1 = R.drawable.drawable_audio_play_button_gradient_light;
+         var1 = drawable.drawable_audio_play_button_gradient_light;
       } else {
-         var1 = R.drawable.drawable_audio_play_button_gradient_dark;
+         var1 = drawable.drawable_audio_play_button_gradient_dark;
       }
 
       return GetDrawableCompatKt.getDrawableCompat(var0, var1);

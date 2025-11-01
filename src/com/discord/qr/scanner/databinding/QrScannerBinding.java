@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.discord.qr.scanner.R;
-import e4.a;
+import k5.a;
 
 public final class QrScannerBinding implements ViewBinding {
    @NonNull

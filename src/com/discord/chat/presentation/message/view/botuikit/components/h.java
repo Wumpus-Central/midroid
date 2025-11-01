@@ -8,6 +8,6 @@ public final class h implements Function0 {
    public final LayoutInflater d;
 
    public final Object invoke() {
-      return SelectComponentView.h(this.d);
+      return SelectComponentView.i(this.d);
    }
 }

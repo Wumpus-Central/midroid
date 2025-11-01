@@ -20,7 +20,7 @@ public fun createReactModuleInfoProvider(moduleName: String, needsEagerInit: Boo
    return createReactModuleInfoProvider(CollectionsKt.e(var0), var1);
 }
 
-public fun createReactModuleInfoProvider(moduleNames: List<String> = CollectionsKt.k(), needsEagerInit: Boolean = false): ReactModuleInfoProvider {
+public fun createReactModuleInfoProvider(moduleNames: List<String> = CollectionsKt.l(), needsEagerInit: Boolean = false): ReactModuleInfoProvider {
    return new d(var0, var1);
 }
 
@@ -36,7 +36,7 @@ fun `createReactModuleInfoProvider$default`(var0: java.lang.String, var1: Boolea
 @JvmSynthetic
 fun `createReactModuleInfoProvider$default`(var0: java.util.List, var1: Boolean, var2: Int, var3: Any): ReactModuleInfoProvider {
    if ((var2 and 1) != 0) {
-      var0 = CollectionsKt.k();
+      var0 = CollectionsKt.l();
    }
 
    if ((var2 and 2) != 0) {
@@ -47,11 +47,12 @@ fun `createReactModuleInfoProvider$default`(var0: java.util.List, var1: Boolean,
 }
 
 fun `createReactModuleInfoProvider$lambda$1`(var0: java.util.List, var1: Boolean): java.util.Map {
-   val var2: LinkedHashMap = new LinkedHashMap(kotlin.ranges.e.e(n0.e(CollectionsKt.v(var0, 10)), 16));
+   val var2: java.lang.Iterable = var0;
+   val var4: LinkedHashMap = new LinkedHashMap(kotlin.ranges.e.e(s0.e(CollectionsKt.w(var0, 10)), 16));
 
-   for (Object var3 : var0) {
-      var2.put(var3, createReactModuleInfo(var3 as java.lang.String, var1));
+   for (Object var3 : var2) {
+      var4.put(var3, createReactModuleInfo(var3 as java.lang.String, var1));
    }
 
-   return var2;
+   return var4;
 }

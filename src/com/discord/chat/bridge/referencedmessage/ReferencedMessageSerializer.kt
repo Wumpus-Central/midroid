@@ -3,18 +3,16 @@ package com.discord.chat.bridge.referencedmessage
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xp.e
-import xp.h
 
-public object ReferencedMessageSerializer : e(ReferencedMessage::class) {
+public object ReferencedMessageSerializer : bv.e(ReferencedMessage::class) {
    private const val STATE_LOADED: String = "0"
    private const val STATE_SYSTEM: String = "1"
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<ReferencedMessage> {
       label20: {
-         var1 = h.n(var1).get("state") as JsonElement;
+         var1 = bv.h.n(var1).get("state") as JsonElement;
          if (var1 != null) {
-            val var4: JsonPrimitive = h.o(var1);
+            val var4: JsonPrimitive = bv.h.o(var1);
             if (var4 != null) {
                var5 = var4.b();
                break label20;

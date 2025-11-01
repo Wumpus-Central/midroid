@@ -23,7 +23,7 @@ import org.json.JSONObject
 @ReactModule(name = "SelectActionComponentView")
 @SourceDebugExtension(["SMAP\nSelectActionComponentViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n+ 2 ComponentDeserializer.kt\ncom/discord/chat/presentation/message/view/botuikit/react/deserialization/ComponentDeserializerKt\n*L\n1#1,70:1\n14#2,10:71\n*S KotlinDebug\n*F\n+ 1 SelectActionComponentViewManager.kt\ncom/discord/chat/presentation/message/view/botuikit/react/SelectActionComponentViewManager\n*L\n34#1:71,10\n*E\n"])
 public class SelectActionComponentViewManager : SimpleViewManager<SelectComponentView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{fm.v.a("onTap", OnSelectComponentTapEvent::class)})
+   private final val reactEvents: ReactEvents = new ReactEvents(ht.v.a("onTap", OnSelectComponentTapEvent::class))
 
    private fun createSelectComponentContext(onTap: () -> Unit): ComponentContext {
       val var2: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
@@ -58,11 +58,11 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       return new SelectComponentView(var1, null, 0, 6, null);
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "SelectActionComponentView";
    }
 
@@ -92,13 +92,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       } else {
          try {
             val var11: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var17: java.lang.String = (var15.getClass()::class).getSimpleName();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Expected ");
-            var21.append(var11);
-            var21.append(" but got ");
-            var21.append(var17);
-            throw new IllegalStateException(var21.toString().toString());
+            val var21: java.lang.String = (var15.getClass()::class).getSimpleName();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Expected ");
+            var17.append(var11);
+            var17.append(" but got ");
+            var17.append(var21);
+            throw new IllegalStateException(var17.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (SelectComponent::class).getSimpleName();
             val var20: java.lang.String = var7.getMessage();

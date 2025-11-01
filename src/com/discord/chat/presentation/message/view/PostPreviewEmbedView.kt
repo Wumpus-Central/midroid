@@ -24,7 +24,7 @@ import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -77,7 +77,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
 
    private fun setCoverImage(url: String?, blurredThumbnailUrl: String?, backgroundImageUrl: String?) {
       var var4: Boolean;
-      if ((var1 == null || StringsKt.c0(var1)) && (var2 == null || StringsKt.c0(var2))) {
+      if ((var1 == null || StringsKt.i0(var1)) && (var2 == null || StringsKt.i0(var2))) {
          var4 = 0;
       } else {
          var4 = 1;
@@ -96,7 +96,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
          var8 = this.binding.backgroundImage;
          if (var4 && var3 != null) {
             var4 = (boolean)1;
-            if (!StringsKt.c0(var3)) {
+            if (!StringsKt.i0(var3)) {
                break label53;
             }
          }
@@ -111,17 +111,17 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       }
 
       var8.setVisibility(var4);
-      if (var1 != null && !StringsKt.c0(var1)) {
-         if (var3 != null && !StringsKt.c0(var3)) {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
+      if (var1 != null && !StringsKt.i0(var1)) {
+         if (var3 != null && !StringsKt.i0(var3)) {
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.e);
             this.binding.backgroundImage.setImageURI(var3);
          } else {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.i);
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.i);
          }
 
          this.binding.coverImage.setImageURI(var1);
       } else {
-         if (var2 != null && !StringsKt.c0(var2)) {
+         if (var2 != null && !StringsKt.i0(var2)) {
             val var9: SimpleDraweeView = this.binding.coverImage;
             ReactAssetUtilsKt.setOptionalReactImageUrl(var9, var2);
          }
@@ -131,7 +131,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    private fun setCoverImageButtonText(coverImageOverlayText: String?) {
       val var4: DCDButton = this.binding.coverImageOverlayButton;
       var var2: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
@@ -193,7 +193,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    private fun setSubtitle(subtitle: CharSequence?) {
       val var4: TextView = this.binding.subtitle;
       var var2: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;

@@ -6,8 +6,8 @@ import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
-import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.chat.bridge.contentnode.SoundmojiContentNode
+import com.discord.chat.bridge.contentnode.LinkContextData.LinkUrl
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.events.TapReactionOverflow
@@ -46,8 +46,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             java.lang.String var1, long var2, Integer var4, MediaType var5, java.lang.String var6, Integer var7
          ) {
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var11: java.lang.String = MessageId.toString-impl(var1);
-            val var10: java.lang.String = ChannelId.toString-impl(var2);
+            val var10: java.lang.String = MessageId.toString-impl(var1);
+            val var11: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -67,7 +67,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2<MessageId, ChannelId, Unit>(this) {
@@ -156,7 +156,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
    public override fun onLinkClicked(messageId: MessageId, url: String, title: String?) {
       val var4: Function1 = this.emitReactEvent;
-      val var5: LinkContextData.LinkUrl = new LinkContextData.LinkUrl(var2);
+      val var5: LinkUrl = new LinkUrl(var2);
       var2 = var3;
       if (var3 == null) {
          var2 = "";
@@ -231,9 +231,9 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var8: Boolean = var1.isAtBottom();
+      val var7: Boolean = var1.isAtBottom();
       val var6: Boolean = var1.isDragging();
-      val var7: Boolean = var1.isSettling();
+      val var8: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -243,11 +243,11 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var8,
+            var7,
             var3,
             var4,
             var6,
-            var7,
+            var8,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),
@@ -462,7 +462,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       this.emitReactEvent.invoke(new TapPollAnswer(ChannelId.toString-impl(var1), MessageId.toString-impl(var3), var4));
    }
 
-   @fm.c
+   @ht.c
    public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
       this.emitReactEvent.invoke(new TapPollSubmitVote(ChannelId.toString-impl(var1), MessageId.toString-impl(var3)));
    }

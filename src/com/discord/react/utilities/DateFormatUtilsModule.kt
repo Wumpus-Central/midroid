@@ -10,7 +10,7 @@ public class DateFormatUtilsModule(reactContext: ReactApplicationContext) : Nati
       this.reactContext = var1;
    }
 
-   public open fun activate(): Boolean {
+   public override fun activate(): Boolean {
       val var3: java.lang.Long = ReactContextExtensionsKt.jsiId(this.reactContext);
       return var3 != null && JSINativeModule.INSTANCE.install(var3.longValue());
    }

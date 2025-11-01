@@ -8,11 +8,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xp.e
-import xp.h
 
 @SourceDebugExtension(["SMAP\nMessageFrameSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,41:1\n11165#2:42\n11500#2,3:43\n*S KotlinDebug\n*F\n+ 1 MessageFrameSerializer.kt\ncom/discord/chat/bridge/messageframe/MessageFrameSerializer\n*L\n13#1:42\n13#1:43,3\n*E\n"])
-public object MessageFrameSerializer : e(MessageFrame::class) {
+public object MessageFrameSerializer : bv.e(MessageFrame::class) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
@@ -36,15 +34,18 @@ public object MessageFrameSerializer : e(MessageFrame::class) {
    }
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<MessageFrame> {
-      val var2: java.util.List = knownTypes;
-      var1 = h.n(var1).get("type") as JsonElement;
+      val var2: java.lang.Iterable = knownTypes;
+      var1 = bv.h.n(var1).get("type") as JsonElement;
       if (var1 != null) {
-         val var4: JsonPrimitive = h.o(var1);
+         val var4: JsonPrimitive = bv.h.o(var1);
          if (var4 != null) {
-            return (DeserializationStrategy)(if (CollectionsKt.Z(var2, h.k(var4))) messageFrameClassSerializer else UnknownMessageFrame.Companion.serializer());
+            return (DeserializationStrategy)(if (CollectionsKt.d0(var2, bv.h.k(var4)))
+               messageFrameClassSerializer
+               else
+               UnknownMessageFrame.Companion.serializer());
          }
       }
 
-      return (DeserializationStrategy)(if (CollectionsKt.Z(var2, null)) messageFrameClassSerializer else UnknownMessageFrame.Companion.serializer());
+      return (DeserializationStrategy)(if (CollectionsKt.d0(var2, null)) messageFrameClassSerializer else UnknownMessageFrame.Companion.serializer());
    }
 }

@@ -23,21 +23,19 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
-import fm.v
+import ht.v
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            v.a("onUnexpectedItemSize", OnUnexpectedItemSizeEvent::class),
-            v.a("onLayout", OnLayoutEvent::class),
-            v.a("onScroll", OnScrollEvent::class),
-            v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
-            v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
-            v.a("onVisibleItemsChanged", OnVisibleItemsChangedEvent::class)
-         }
+         v.a("onUnexpectedItemSize", OnUnexpectedItemSizeEvent::class),
+         v.a("onLayout", OnLayoutEvent::class),
+         v.a("onScroll", OnScrollEvent::class),
+         v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
+         v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
+         v.a("onVisibleItemsChanged", OnVisibleItemsChangedEvent::class)
       )
 
    @JvmStatic
@@ -77,7 +75,7 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       return Unit.a;
    }
 
-   public open fun createShadowNodeInstance(): LayoutShadowNode {
+   public override fun createShadowNodeInstance(): LayoutShadowNode {
       return new FastestListShadowNode();
    }
 
@@ -111,15 +109,15 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "FastestList";
    }
 
-   public open fun getShadowNodeClass(): Class<out LayoutShadowNode> {
+   public override fun getShadowNodeClass(): Class<out LayoutShadowNode> {
       return FastestListShadowNode::class.java;
    }
 

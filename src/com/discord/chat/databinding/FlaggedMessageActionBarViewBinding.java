@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import e4.a;
 
 public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
    @NonNull
@@ -30,15 +29,15 @@ public final class FlaggedMessageActionBarViewBinding implements ViewBinding {
    @NonNull
    public static FlaggedMessageActionBarViewBinding bind(@NonNull View var0) {
       int var1 = R.id.actions_button;
-      DCDButton var4 = (DCDButton)a.a(var0, var1);
-      if (var4 != null) {
+      DCDButton var2 = (DCDButton)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.feedback_button;
-         DCDButton var2 = (DCDButton)a.a(var0, var1);
-         if (var2 != null) {
+         DCDButton var3 = (DCDButton)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.separator_dot;
-            ImageView var3 = (ImageView)a.a(var0, var1);
-            if (var3 != null) {
-               return new FlaggedMessageActionBarViewBinding(var0, var4, var2, var3);
+            ImageView var4 = (ImageView)k5.a.a(var0, var1);
+            if (var4 != null) {
+               return new FlaggedMessageActionBarViewBinding(var0, var2, var3, var4);
             }
          }
       }

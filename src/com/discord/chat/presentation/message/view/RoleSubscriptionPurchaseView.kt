@@ -3,6 +3,7 @@ package com.discord.chat.presentation.message.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.ViewGroup.LayoutParams
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
@@ -55,14 +56,14 @@ public class RoleSubscriptionPurchaseView  public constructor(context: Context, 
    public fun configure(authorUsername: String?, authorAvatar: String?, widthPx: Int) {
       this.binding.roleSubscriptionPurchaserUsername.setText(var1);
       this.binding.roleSubscriptionPurchaserAvatar.setImageURI(var2);
-      val var6: android.view.ViewGroup.LayoutParams = this.binding.roleSubscriptionPurchaseCardBg.getLayoutParams();
+      val var6: LayoutParams = this.binding.roleSubscriptionPurchaseCardBg.getLayoutParams();
       var6.width = var3;
       val var4: Double = var3;
       var6.height = (int)(0.339 * var3);
-      val var7: android.view.ViewGroup.LayoutParams = this.binding.roleSubscriptionPurchaseBadge.getLayoutParams();
+      val var7: LayoutParams = this.binding.roleSubscriptionPurchaseBadge.getLayoutParams();
       var7.width = (int)(0.21 * var4);
       var7.height = (int)((int)(0.21 * var4) * 1.37);
-      val var8: android.view.ViewGroup.LayoutParams = this.binding.roleSubscriptionPurchaseLanyard.getLayoutParams();
+      val var8: LayoutParams = this.binding.roleSubscriptionPurchaseLanyard.getLayoutParams();
       var8.width = (int)(var4 * 0.18);
       var8.height = (int)((int)(var4 * 0.18) * 2.327);
    }

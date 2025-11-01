@@ -10,6 +10,6 @@ public final class a implements Function1 {
    public final PollMessageAccessory e;
 
    public final Object invoke(Object var1) {
-      return BasePollWithRecyclerView.g(this.d, this.e, (String)var1);
+      return BasePollWithRecyclerView.h(this.d, this.e, (String)var1);
    }
 }

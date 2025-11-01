@@ -28,7 +28,7 @@ internal object CustomFontFamilyOverride {
       var var6: Int = var8.length;
 
       for (int var4 = 0; var4 < var6; var4++) {
-         var8[var4] = StringsKt.Z0(var8[var4]).toString();
+         var8[var4] = StringsKt.i1(var8[var4]).toString();
       }
 
       if (var8.length > 1) {
@@ -45,10 +45,10 @@ internal object CustomFontFamilyOverride {
          if (VERSION.SDK_INT < 29) {
             var7 = var1;
             if ((var2 and 2) != 0) {
-               var7 = StringsKt.A(
-                  StringsKt.A(
-                     StringsKt.A(
-                        StringsKt.A(StringsKt.A(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
+               var7 = StringsKt.F(
+                  StringsKt.F(
+                     StringsKt.F(
+                        StringsKt.F(StringsKt.F(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
                      ),
                      "Bold",
                      "BoldItalic",
@@ -62,10 +62,10 @@ internal object CustomFontFamilyOverride {
 
             var1 = var7;
             if ((var2 and 1) != 0) {
-               var1 = StringsKt.A(StringsKt.A(StringsKt.A(var7, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+               var1 = StringsKt.F(StringsKt.F(StringsKt.F(var7, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
             }
 
-            var7 = StringsKt.A(StringsKt.A(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+            var7 = StringsKt.F(StringsKt.F(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
          }
       }
 
@@ -98,10 +98,10 @@ internal object CustomFontFamilyOverride {
          var var10: java.lang.String = var1[var4];
          var var9: java.lang.String = var1[var4];
          if ((var2 and 2) != 0) {
-            var9 = StringsKt.A(
-               StringsKt.A(
-                  StringsKt.A(
-                     StringsKt.A(StringsKt.A(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
+            var9 = StringsKt.F(
+               StringsKt.F(
+                  StringsKt.F(
+                     StringsKt.F(StringsKt.F(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
                   ),
                   "Bold",
                   "BoldItalic",
@@ -115,19 +115,19 @@ internal object CustomFontFamilyOverride {
 
          var10 = var9;
          if ((var2 and 1) != 0) {
-            var10 = StringsKt.A(StringsKt.A(StringsKt.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+            var10 = StringsKt.F(StringsKt.F(StringsKt.F(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = StringsKt.F(StringsKt.F(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var25[var5];
+            var var12: java.lang.String = var28[var5];
             val var13: StringBuilder = new StringBuilder();
             var13.append("fonts/");
-            var13.append(var10);
+            var13.append(var9);
             var13.append(var12);
             var12 = var13.toString();
 
@@ -158,7 +158,7 @@ internal object CustomFontFamilyOverride {
          val var26: Locale = Locale.ROOT;
          var29 = var29.toLowerCase(var26);
          val var20: Byte;
-         if (StringsKt.a0(var29, "italic", 0, false, 6, null) > -1) {
+         if (StringsKt.g0(var29, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
          } else {
             var20 = 0;
@@ -167,7 +167,7 @@ internal object CustomFontFamilyOverride {
          val var16: java.lang.String = var1[0];
          val var17: java.lang.String = var16.toLowerCase(var26);
          var var23: Short = 0;
-         if (StringsKt.a0(var17, "bold", 0, false, 6, null) > -1) {
+         if (StringsKt.g0(var17, "bold", 0, false, 6, null) > -1) {
             var23 = 1;
          }
 

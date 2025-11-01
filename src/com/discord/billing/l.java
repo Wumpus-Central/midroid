@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function0;
 public final class l implements Function0 {
    public final Promise d;
 
+   @Override
    public final Object invoke() {
       return BillingManagerModule.e(this.d);
    }

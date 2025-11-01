@@ -7,8 +7,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fm.p
-import fm.v
+import ht.p
+import ht.v
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
@@ -39,13 +39,11 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       return this.emoji.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               v.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), v.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
-            }
+            v.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), v.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
@@ -53,23 +51,21 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            new Pair[]{
-               v.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-               v.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-               v.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
-            }
+            v.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+            v.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+            v.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("node", var2)});
+      return NativeMapExtensionsKt.nativeMapOf(v.a("node", var2));
    }
 
    public override fun toString(): String {
-      val var2: EmojiContentNode = this.emoji;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapEmojiData(emoji=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: EmojiContentNode = this.emoji;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapEmojiData(emoji=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

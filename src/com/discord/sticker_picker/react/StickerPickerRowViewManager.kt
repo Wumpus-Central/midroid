@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
-import fm.v
+import ht.v
 
 @ReactModule(name = "StickerPickerRowView")
 internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowView>, StickerPickerRowViewManagerInterface<StickerPickerRowView> {

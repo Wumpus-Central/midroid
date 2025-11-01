@@ -3,7 +3,7 @@ package com.discord.fastest_list.android.placeholder
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
-import fm.p
+import ht.p
 
 internal sealed class FastestListPlaceholder protected constructor() {
    public abstract fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
@@ -29,12 +29,12 @@ internal sealed class FastestListPlaceholder protected constructor() {
       }
 
       public fun get(placeholderType: FastestListPlaceholderType): FastestListPlaceholder {
-         var var2: FastestListPlaceholder = FastestListPlaceholder.access$getPlaceholderPool$cp().c(var1) as FastestListPlaceholder;
+         var var2: FastestListPlaceholder = FastestListPlaceholder.access$getPlaceholderPool$cp().d(var1) as FastestListPlaceholder;
          if (var2 != null) {
             return var2;
          } else {
             var2 = this.create(var1);
-            FastestListPlaceholder.access$getPlaceholderPool$cp().d(var1, var2);
+            FastestListPlaceholder.access$getPlaceholderPool$cp().f(var1, var2);
             return var2;
          }
       }

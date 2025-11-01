@@ -16,8 +16,8 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
@@ -44,7 +44,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       (var5.getHierarchy() as GenericDraweeHierarchy).w(0);
       val var6: TextView = var4.descriptionLabel;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryNormal);
-      var4.opaqueBackground.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.primary_500));
+      var4.opaqueBackground.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_500));
    }
 
    @JvmStatic

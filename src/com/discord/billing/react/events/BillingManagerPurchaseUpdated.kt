@@ -3,9 +3,9 @@ package com.discord.billing.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fm.v
+import ht.v
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {

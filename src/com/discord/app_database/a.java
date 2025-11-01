@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function0;
 public final class a implements Function0 {
    public final Context d;
 
+   @Override
    public final Object invoke() {
       return AppDatabase.a(this.d);
    }

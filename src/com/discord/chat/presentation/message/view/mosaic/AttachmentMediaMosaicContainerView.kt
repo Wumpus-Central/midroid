@@ -5,7 +5,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.discord.chat.R
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.AttachmentMediaMosaicContainerViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.AccessoriesViewPool
@@ -19,9 +20,10 @@ import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutMa
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import k6.b
-import k6.c
-import k6.d
+import i8.a
+import i8.b
+import i8.c
+import i8.d
 
 public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    private final val binding: AttachmentMediaMosaicContainerViewBinding
@@ -39,15 +41,15 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
    init {
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var5;
-      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new k6.a(this), new b(this), new c(this), new d(this));
-      this.attachmentAdapter = var3;
+      val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var3;
+      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new a(this), new b(this), new c(this), new d(this));
+      this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
+      ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var6.setLayoutManager(var5);
-      var6.setAdapter(var3);
+      var6.setLayoutManager(var3);
+      var6.setAdapter(var5);
    }
 
    @JvmStatic
@@ -110,7 +112,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       constrainedWidth: Int,
       shouldAutoPlayGif: Boolean
    ) {
-      val var10: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
+      val var10: LayoutManager = this.binding.mosaic.getLayoutManager();
       (var10 as MosaicLayoutManager).setAvailableWidth(Math.min(MessageAccessoriesView.Companion.getWidth(var8, var7), SizeUtilsKt.getDpToPx(550)));
       this.onAttachmentClicked = var3;
       this.onAttachmentLongClicked = var4;

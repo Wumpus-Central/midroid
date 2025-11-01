@@ -4,12 +4,12 @@ import com.discord.codegen.NativeJankStatsModuleSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
-import fm.v
+import ht.v
 
 public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsModuleSpec(var1) {
    public override fun requestReport(): WritableMap {
       val var1: JankReport = JankStatsAggregator.issueJankReport$default(JankStatsAggregator.INSTANCE, null, 1, null);
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("totalFrameCount", var1.getNumFrames()), v.a("jankFrameCount", var1.getNumJankFrames())});
+      return NativeMapExtensionsKt.nativeMapOf(v.a("totalFrameCount", var1.getNumFrames()), v.a("jankFrameCount", var1.getNumJankFrames()));
    }
 
    public override fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Double) {

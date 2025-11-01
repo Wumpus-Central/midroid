@@ -26,12 +26,13 @@ import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.react_strings.RenderContext
 import com.discord.reactions.AddReactionView
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
@@ -84,7 +85,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       var5 = var6.sharePromptCopyLinkButton;
       var6.sharePromptCopyLinkButton.setCornerRadius(SizeUtilsKt.getDpToPx(20));
       var5.setTextSizeSp(14.0F);
-      var5.setBackgroundColor(var1.getColor(color.brand_500));
+      var5.setBackgroundColor(var1.getColor(R.color.brand_500));
       var5.setTextColor(ThemeManagerKt.getTheme().getWhite());
       var5.setDiscordFont(var10);
       var5.setIconPadding(8);
@@ -113,7 +114,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
    }
 
    @JvmStatic
-   fun `setReactions$lambda$12`(var0: Reaction): Unit {
+   fun `setReactions$lambda$12`(var0: ReactionView.Reaction): Unit {
       return Unit.a;
    }
 
@@ -229,12 +230,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       if (var8 != null && !var8.isEmpty()) {
-         val var36: java.util.List = CollectionsKt.P0(var8, --var2);
-         val var23: ShortcutsFlexbox = this.binding.reactionsView;
-         var23.setVisibility(0);
-         this.setReactions(var36, var12, var13, var14, var15);
+         val var39: java.util.List = CollectionsKt.a1(var8, --var2);
+         val var36: ShortcutsFlexbox = this.binding.reactionsView;
+         var36.setVisibility(0);
+         this.setReactions(var39, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var37: DCDButton = this.binding.otherReactionsCount;
+         val var34: DCDButton = this.binding.otherReactionsCount;
          var var25: Boolean;
          if (var22 != 0) {
             var25 = 1;
@@ -248,12 +249,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var37.setVisibility(var25);
-         if (var37.getVisibility() == 0) {
-            val var34: Context = var37.getContext();
-            var37.setText(I18nUtilsKt.i18nFormat(var34, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
-            RippleUtilsKt.addRipple$default(var37, true, 0, 2, null);
-            var37.setOnClickButtonListener(var18);
+         var34.setVisibility(var25);
+         if (var34.getVisibility() == 0) {
+            val var37: Context = var34.getContext();
+            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
+            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
+            var34.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;

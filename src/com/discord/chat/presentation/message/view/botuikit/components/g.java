@@ -11,6 +11,6 @@ public final class g implements OnClickListener {
    public final SelectComponent e;
 
    public final void onClick(View var1) {
-      SelectComponentView.i(this.d, this.e, var1);
+      SelectComponentView.j(this.d, this.e, var1);
    }
 }

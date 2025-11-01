@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeScreenWakeLockModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeScreenWakeLockModule";
@@ -13,6 +13,7 @@ public abstract class NativeScreenWakeLockModuleSpec extends ReactContextBaseJav
       super(var1);
    }
 
+   @Override
    public String getName() {
       return "NativeScreenWakeLockModule";
    }

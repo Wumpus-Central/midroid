@@ -14,8 +14,8 @@ import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import r6.a
-import r6.b
+import p8.a
+import p8.b
 
 @SourceDebugExtension(["SMAP\nImageManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,64:1\n1557#2:65\n1628#2,2:66\n1630#2:87\n105#3,19:68\n*S KotlinDebug\n*F\n+ 1 ImageManagerModule.kt\ncom/discord/image/dominant_color/ImageManagerModule\n*L\n52#1:65\n52#1:66,2\n52#1:87\n52#1:68,19\n*E\n"])
 public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -40,17 +40,17 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
    @JvmStatic
    fun `getDominantColors$lambda$2`(var0: Promise, var1: Bitmap): Unit {
       if (var1 != null) {
-         val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
-         if (var3 != null) {
-            val var4: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
-            val var5: java.util.Iterator = var3.iterator();
+         val var4: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
+         if (var4 != null) {
+            val var5: ArrayList = new ArrayList(CollectionsKt.w(var4, 10));
+            val var6: java.util.Iterator = var4.iterator();
 
-            while (var5.hasNext()) {
-               val var2: Int = (var5.next() as java.lang.Number).intValue();
-               var4.add(NativeArrayExtensionsKt.nativeArrayOf(new Object[]{var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255}));
+            while (var6.hasNext()) {
+               val var2: Int = (var6.next() as java.lang.Number).intValue();
+               var5.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
             }
 
-            var0.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
+            var0.resolve(NativeArrayExtensionsKt.toNativeArray$default(var5, null, 1, null));
          } else {
             var0.reject(new Exception("Unable get representative color."));
          }
@@ -77,7 +77,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
       this.getDominantColors(var1.getString("uri"), var2);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ImageManager";
    }
 }

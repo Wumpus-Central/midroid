@@ -30,7 +30,7 @@ internal object ContentResolverUtils {
 
    public fun ContentResolver.isImage(uri: Uri): Boolean {
       val var3: java.lang.String = var1.getType(var2);
-      return var3 != null && StringsKt.I(var3, "image", false, 2, null);
+      return var3 != null && StringsKt.N(var3, "image", false, 2, null);
    }
 
    public fun ContentResolver.isJpeg(uri: Uri): Boolean {
@@ -43,7 +43,7 @@ internal object ContentResolverUtils {
 
    public fun ContentResolver.isVideo(uri: Uri): Boolean {
       val var3: java.lang.String = var1.getType(var2);
-      return var3 != null && StringsKt.I(var3, "video", false, 2, null);
+      return var3 != null && StringsKt.N(var3, "video", false, 2, null);
    }
 
    public fun ContentResolver.queryCompat(
@@ -83,11 +83,11 @@ internal object ContentResolverUtils {
          var13.append(var14);
          return var1.query(var2, var3, var6, null, var13.toString(), null);
       } else {
-         val var10: Builder = var2.buildUpon();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("limit=");
-         var9.append(var4);
-         val var11: Builder = var10.encodedQuery(var9.toString());
+         val var9: Builder = var2.buildUpon();
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("limit=");
+         var10.append(var4);
+         val var11: Builder = var9.encodedQuery(var10.toString());
          if (var7 != null) {
             var11.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
          }

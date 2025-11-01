@@ -23,12 +23,12 @@ import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.runtime.ReactHostImpl
 import com.facebook.react.runtime.internal.bolts.Task
 import com.jakewharton.processphoenix.ProcessPhoenix
-import fm.v
+import gu.i0
+import gu.j1
+import gu.m0
+import ht.v
 import java.io.File
 import java.lang.reflect.Method
-import jp.i0
-import jp.j1
-import jp.k0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -47,7 +47,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       this.reactEvents = new ReactEvents(
          new Pair[]{v.a("BundleDownloaded", BundleDownloadedEvent::class), v.a("OtaUpdateChecked", OtaCheckAttemptEvent::class)}
       );
-      this.coroutineScope = kotlinx.coroutines.g.a(k0.c().U0(j1.b(null, 1, null)));
+      this.coroutineScope = kotlinx.coroutines.i.a(m0.c().Q0(j1.b(null, 1, null)));
    }
 
    @JvmStatic
@@ -65,7 +65,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @JvmStatic
    fun `checkForUpdateAndReload$lambda$1`(var0: BundleUpdaterManager): Unit {
       var0.removeSpinnerView();
-      var0.runOnActivity(new i(var0));
+      var0.runOnActivity(new com.discord.bundle_updater.i(var0));
       return Unit.a;
    }
 
@@ -76,7 +76,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun removeSpinnerView() {
-      this.runOnActivity(new f(this));
+      this.runOnActivity(new com.discord.bundle_updater.f(this));
    }
 
    @JvmStatic
@@ -92,7 +92,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    private fun runOnActivity(callback: (ViewGroup) -> Unit) {
       val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 != null) {
-         var2.runOnUiThread(new h(var2, var1));
+         var2.runOnUiThread(new com.discord.bundle_updater.h(var2, var1));
       }
    }
 
@@ -113,15 +113,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var2: ProgressBar = new ProgressBar(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var2.setIndeterminate(true);
-      val var1: FrameLayout = new FrameLayout(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-1, -1));
-      var1.addView(var2);
-      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var1.setClickable(true);
-      this.progressLayout = var1;
+      val var1: ProgressBar = new ProgressBar(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var1.setIndeterminate(true);
+      val var2: FrameLayout = new FrameLayout(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-1, -1));
+      var2.addView(var1);
+      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var2.setClickable(true);
+      this.progressLayout = var2;
       this.runOnActivity(new l(this));
    }
 
@@ -213,7 +213,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
          var9.waitForCompletion();
       }
 
-      jp.f.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
+      gu.g.d(this.coroutineScope, null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null) {
          int label;
          final BundleUpdaterManager this$0;
 
@@ -222,16 +222,18 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
             this.this$0 = var1;
          }
 
-         public final Continuation create(Object var1, Continuation var2) {
+         @Override
+         public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
             return new <anonymous constructor>(this.this$0, var2);
          }
 
-         public final Object invoke(CoroutineScope var1, Continuation var2x) {
+         public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
             return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
          }
 
+         @Override
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = km.b.e();
+            val var3: Any = ot.b.f();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -255,7 +257,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun addListener(type: String) {
       if (var1 == "BundleDownloaded") {
-         BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new j(this));
+         BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new com.discord.bundle_updater.j(this));
       } else {
          if (var1 == "OtaUpdateChecked") {
             BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
@@ -267,7 +269,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
       val var2: BundleUpdater.Companion = BundleUpdater.Companion;
-      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
+      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new com.discord.bundle_updater.g(this), 1, null);
       val var3: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.d;
       var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);

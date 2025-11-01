@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.polls
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
-public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w0.d(), emoji: PollMediaEmoji? = null, stickerId: Long? = null) {
+public data class PollMedia(text: String? = null, attachmentIds: Set<String> = b1.d(), emoji: PollMediaEmoji? = null, stickerId: Long? = null) {
    public final val text: String?
    public final val attachmentIds: Set<String>
    public final val emoji: PollMediaEmoji?
@@ -90,21 +90,21 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var5: java.util.Set = this.attachmentIds;
-      val var2: PollMediaEmoji = this.emoji;
-      val var3: java.lang.Long = this.stickerId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMedia(text=");
-      var4.append(var1);
-      var4.append(", attachmentIds=");
-      var4.append(var5);
-      var4.append(", emoji=");
-      var4.append(var2);
-      var4.append(", stickerId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.text;
+      val var1: java.util.Set = this.attachmentIds;
+      val var4: PollMediaEmoji = this.emoji;
+      val var5: java.lang.Long = this.stickerId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollMedia(text=");
+      var2.append(var3);
+      var2.append(", attachmentIds=");
+      var2.append(var1);
+      var2.append(", emoji=");
+      var2.append(var4);
+      var2.append(", stickerId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

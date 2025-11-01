@@ -16,13 +16,13 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
       this.reactContext = var1;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ForegroundServiceModule";
    }
 
    @ReactMethod
    public fun isServiceRunning(callback: Callback) {
-      var1.invoke(new Object[]{ForegroundServiceManager.INSTANCE.isRunning$foreground_service_release()});
+      var1.invoke(ForegroundServiceManager.INSTANCE.isRunning$foreground_service_release());
    }
 
    @ReactMethod

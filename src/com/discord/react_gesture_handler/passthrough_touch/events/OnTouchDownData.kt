@@ -3,7 +3,7 @@ package com.discord.react_gesture_handler.passthrough_touch.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public class OnTouchDownData : ReactEvent {

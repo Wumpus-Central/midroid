@@ -7,13 +7,13 @@ public final class a implements Runnable {
    public final Scroller d;
    public final int e;
    public final Scroller.TargetAlignment i;
-   public final Function0 s;
    public final Function0 t;
    public final Function0 u;
-   public final int v;
+   public final Function0 v;
+   public final int w;
 
    @Override
    public final void run() {
-      Scroller.c(this.d, this.e, this.i, this.s, this.t, this.u, this.v);
+      Scroller.c(this.d, this.e, this.i, this.t, this.u, this.v, this.w);
    }
 }

@@ -25,7 +25,7 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
       return this.delegate;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ClipView";
    }
 
@@ -53,7 +53,7 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
             val var6: java.util.Iterator = var3.iterator();
 
             while (var6.hasNext()) {
-               val var5: ReadableMap = var2.getMap((var6 as l0).nextInt());
+               val var5: ReadableMap = var2.getMap((var6 as q0).nextInt());
                val var4: java.lang.String = var5.getString("shape");
                if (var4 == "circle") {
                   var1.addCircleCutout(

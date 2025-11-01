@@ -15,7 +15,7 @@ import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.ReactRootView
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
-import hb.b
+import fd.b
 import java.util.concurrent.Future
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
@@ -41,7 +41,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    public override fun onConfigurationChanged(newConfig: Configuration) {
       super.onConfigurationChanged(var1);
-      b.s.a(this, var1);
+      b.t.a(this, var1);
       val var2: Context = this.getApplicationContext();
       FontScaleUtilsKt.setFontScaleDeprecated(var2);
    }

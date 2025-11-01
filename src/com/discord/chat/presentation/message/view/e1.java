@@ -10,6 +10,6 @@ public final class e1 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return ForumPostActionBarView.i(this.d, this.e, (LinkContentNode)var1);
+      return ForumPostActionBarView.j(this.d, this.e, (LinkContentNode)var1);
    }
 }

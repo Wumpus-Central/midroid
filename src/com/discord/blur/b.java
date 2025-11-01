@@ -6,6 +6,7 @@ import kotlin.jvm.functions.Function0;
 public final class b implements Function0 {
    public final BlurView d;
 
+   @Override
    public final Object invoke() {
       return BlurView.d(this.d);
    }

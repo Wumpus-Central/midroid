@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component() {
@@ -63,17 +63,17 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var3: ContentInventoryEntry = this.contentInventoryEntry;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ContentInventoryEntryComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", contentInventoryEntry=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentInventoryEntryComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", contentInventoryEntry=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -134,9 +134,9 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var8: Regex = messageRegex;
-                  val var14: java.lang.String = var21.getTag();
-                  var15 = Regex.c(var8, var14, 0, 2, null);
+                  val var14: Regex = messageRegex;
+                  val var8: java.lang.String = var21.getTag();
+                  var15 = Regex.d(var14, var8, 0, 2, null);
                   if (var15 != null) {
                      val var22: java.util.List = var15.b();
                      if (var22 != null) {
@@ -149,7 +149,7 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
                }
 
                val var23: java.lang.String = var21.getTag();
-               if (StringsKt.I(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
+               if (StringsKt.N(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
                   label38: {
                      if (var15 != null) {
                         val var16: java.util.List = var15.b();
@@ -207,13 +207,13 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
             if (var17[var3].getTag() == null) {
                var5 = false;
             } else {
-               var var8: java.lang.String = ChannelId.toString-impl(var1);
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("CALL_RING");
-               var9.append(var8);
-               var8 = var9.toString();
-               val var20: java.lang.String = var18.getTag();
-               var5 = StringsKt.I(var20, var8, false, 2, null);
+               var var9: java.lang.String = ChannelId.toString-impl(var1);
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("CALL_RING");
+               var8.append(var9);
+               val var19: java.lang.String = var8.toString();
+               var9 = var18.getTag();
+               var5 = StringsKt.N(var9, var19, false, 2, null);
             }
 
             if (var5) {

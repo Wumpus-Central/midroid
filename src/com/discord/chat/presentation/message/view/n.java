@@ -9,9 +9,9 @@ public final class n implements OnClickListener {
    public final Function3 d;
    public final long e;
    public final String i;
-   public final String s;
+   public final String t;
 
    public final void onClick(View var1) {
-      CtaButtonView.b(this.d, this.e, this.i, this.s, var1);
+      CtaButtonView.b(this.d, this.e, this.i, this.t, var1);
    }
 }

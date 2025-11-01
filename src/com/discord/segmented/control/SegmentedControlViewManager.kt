@@ -14,7 +14,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
-import fm.v
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -59,7 +59,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var6: java.util.Iterator = var4.iterator();
 
          while (var6.hasNext()) {
-            val var5: java.lang.String = var2.getString((var6 as l0).nextInt());
+            val var5: java.lang.String = var2.getString((var6 as q0).nextInt());
             if (var5 != null) {
                var3.add(var5);
             }
@@ -114,12 +114,12 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var6: java.util.Iterator = var4.iterator();
+         val var5: java.util.Iterator = var4.iterator();
 
-         while (var6.hasNext()) {
-            val var5: java.lang.String = var2.getString((var6 as l0).nextInt());
-            if (var5 != null) {
-               var3.add(var5);
+         while (var5.hasNext()) {
+            val var6: java.lang.String = var2.getString((var5 as q0).nextInt());
+            if (var6 != null) {
+               var3.add(var6);
             }
          }
 

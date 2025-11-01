@@ -2,7 +2,7 @@ package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
@@ -78,24 +78,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.title;
-      val var4: StructurableText = this.subtitle;
+      val var5: java.lang.String = this.title;
+      val var6: StructurableText = this.subtitle;
       val var2: java.lang.String = this.cta;
-      val var6: java.lang.String = this.icon;
-      val var5: java.lang.String = this.closeIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PostSharePrompt(title=");
-      var3.append(var1);
-      var3.append(", subtitle=");
-      var3.append(var4);
-      var3.append(", cta=");
-      var3.append(var2);
-      var3.append(", icon=");
-      var3.append(var6);
-      var3.append(", closeIcon=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.icon;
+      val var4: java.lang.String = this.closeIcon;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PostSharePrompt(title=");
+      var1.append(var5);
+      var1.append(", subtitle=");
+      var1.append(var6);
+      var1.append(", cta=");
+      var1.append(var2);
+      var1.append(", icon=");
+      var1.append(var3);
+      var1.append(", closeIcon=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

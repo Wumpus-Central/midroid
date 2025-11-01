@@ -6,6 +6,6 @@ import kotlin.jvm.functions.Function1;
 // $VF: synthetic class
 public final class a1 implements Function1 {
    public final Object invoke(Object var1) {
-      return FlaggedMessageEmbedView.q((SoundmojiContentNode)var1);
+      return FlaggedMessageEmbedView.r((SoundmojiContentNode)var1);
    }
 }

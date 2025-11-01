@@ -4,9 +4,9 @@ package com.discord.notifications.renderer.utils
 
 import android.content.Context
 import android.net.Uri
+import gu.m0
 import java.io.File
 import java.util.ArrayList
-import jp.k0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -28,15 +28,15 @@ fun `access$enforceNotificationsCacheTTL`(var0: File) {
 private fun enforceNotificationsCacheTTL(directory: File) {
    if (var0.exists()) {
       val var3: Long = System.currentTimeMillis();
-      val var5: Array<File> = var0.listFiles();
-      if (var5 != null) {
+      val var7: Array<File> = var0.listFiles();
+      if (var7 != null) {
          val var6: ArrayList = new ArrayList();
-         val var2: Int = var5.length;
+         val var2: Int = var7.length;
 
          for (int var1 = 0; var1 < var2; var1++) {
-            var0 = var5[var1];
-            if (var5[var1].isFile() && var3 - var5[var1].lastModified() > 864000000L) {
-               var6.add(var0);
+            val var5: File = var7[var1];
+            if (var7[var1].isFile() && var3 - var7[var1].lastModified() > 864000000L) {
+               var6.add(var5);
             }
          }
 
@@ -50,9 +50,9 @@ private fun enforceNotificationsCacheTTL(directory: File) {
 }
 
 public suspend fun storeRemoteImageViaFileProvider(context: Context, imageUrl: String): Pair<Uri, String>? {
-   return jp.f.g(
-      k0.b(),
-      new Function2<CoroutineScope, Continuation, Object>(var0, var1, null)// $VF: Couldn't be decompiled
+   return gu.g.g(
+      m0.b(),
+      new Function2<CoroutineScope, Continuation<? super Pair<? extends Uri, ? extends java.lang.String>>, Object>(var0, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    ,
       var2

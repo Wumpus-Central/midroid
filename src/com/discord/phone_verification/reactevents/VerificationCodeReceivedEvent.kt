@@ -3,7 +3,7 @@ package com.discord.phone_verification.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {

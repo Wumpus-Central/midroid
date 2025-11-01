@@ -7,6 +7,6 @@ public final class k0 implements Function0 {
    public final FileAttachmentView d;
 
    public final Object invoke() {
-      return FileAttachmentView.i(this.d);
+      return FileAttachmentView.j(this.d);
    }
 }

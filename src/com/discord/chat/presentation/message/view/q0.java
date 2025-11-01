@@ -5,6 +5,6 @@ import kotlin.jvm.functions.Function4;
 // $VF: synthetic class
 public final class q0 implements Function4 {
    public final Object invoke(Object var1, Object var2, Object var3, Object var4) {
-      return FlaggedMessageEmbedView.w((String)var1, (String)var2, (String)var3, (String)var4);
+      return FlaggedMessageEmbedView.x((String)var1, (String)var2, (String)var3, (String)var4);
    }
 }

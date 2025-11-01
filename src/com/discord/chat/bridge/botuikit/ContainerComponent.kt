@@ -3,7 +3,7 @@ package com.discord.chat.bridge.botuikit
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 @SourceDebugExtension(["SMAP\nContainerComponent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContainerComponent.kt\ncom/discord/chat/bridge/botuikit/ContainerComponent\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,24:1\n1#2:25\n*E\n"])
@@ -38,7 +38,7 @@ public data class ContainerComponent(type: Int,
       this.spoilerDescription = var7;
       this.themedBackgroundColor = var8;
       val var9: Boolean;
-      if (var7 != null && !StringsKt.c0(var7)) {
+      if (var7 != null && !StringsKt.i0(var7)) {
          var9 = false;
       } else {
          var9 = true;
@@ -124,8 +124,8 @@ public data class ContainerComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var5: Int = this.id.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var6: Int = this.id.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.errorText == null) {
@@ -154,35 +154,35 @@ public data class ContainerComponent(type: Int,
          var4 = this.themedBackgroundColor.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var7: java.lang.String = this.errorText;
-      val var6: java.util.List = this.components;
-      val var5: Int = this.accentColor;
+      val var3: java.lang.String = this.id;
+      val var5: java.lang.String = this.errorText;
+      val var7: java.util.List = this.components;
+      val var4: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
       val var9: java.lang.String = this.spoilerDescription;
-      val var3: Int = this.themedBackgroundColor;
+      val var6: Int = this.themedBackgroundColor;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ContainerComponent(type=");
       var8.append(var1);
       var8.append(", id=");
-      var8.append(var4);
+      var8.append(var3);
       var8.append(", errorText=");
-      var8.append(var7);
-      var8.append(", components=");
-      var8.append(var6);
-      var8.append(", accentColor=");
       var8.append(var5);
+      var8.append(", components=");
+      var8.append(var7);
+      var8.append(", accentColor=");
+      var8.append(var4);
       var8.append(", isSpoiler=");
       var8.append(var2);
       var8.append(", spoilerDescription=");
       var8.append(var9);
       var8.append(", themedBackgroundColor=");
-      var8.append(var3);
+      var8.append(var6);
       var8.append(")");
       return var8.toString();
    }

@@ -17,11 +17,11 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
       this.reactContext = var1;
    }
 
-   public open fun clearLogs() {
+   public override fun clearLogs() {
       PushNotificationMonitor.INSTANCE.clearPushLog(this.reactContext);
    }
 
-   public open fun getPushNotificationLogs(userId: String, promise: Promise) {
+   public override fun getPushNotificationLogs(userId: String, promise: Promise) {
       val var3: a = Json.d;
       val var4: PushNotificationLog = PushNotificationMonitor.INSTANCE.getPushLog(this.reactContext, var1);
       var3.a();

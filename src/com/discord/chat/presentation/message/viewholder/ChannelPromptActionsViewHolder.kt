@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.message.viewholder
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.discord.chat.presentation.message.messagepart.ChannelPromptActionsAccessory
 import com.discord.chat.presentation.message.view.ChannelPromptActionsView
 import com.discord.primitives.ChannelId
@@ -13,7 +13,7 @@ public class ChannelPromptActionsViewHolder(channelPromptActionsView: ChannelPro
 
    init {
       this.channelPromptActionsView = var1;
-      var1.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
+      var1.setLayoutParams(new LayoutParams(-2, -2));
    }
 
    @JvmStatic

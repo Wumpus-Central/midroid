@@ -7,10 +7,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import lm.a
-import tp.m
-import vp.j
-import vp.e.f
+import xu.m
 
 @m(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
@@ -30,7 +27,7 @@ public enum class StickerFormatType(intType: Int) {
    fun {
       val var0: Array<StickerFormatType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {
@@ -52,19 +49,19 @@ public enum class StickerFormatType(intType: Int) {
    public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return j.b("StickerFormatType", f.a);
+            return zu.j.b("StickerFormatType", zu.e.f.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
          val var3: Int = var1.h();
-         val var5: Array<StickerFormatType> = StickerFormatType.values();
-         val var4: Int = var5.length;
+         val var6: Array<StickerFormatType> = StickerFormatType.values();
+         val var4: Int = var6.length;
 
          for (int var2 = 0; var2 < var4; var2++) {
-            val var6: StickerFormatType = var5[var2];
-            if (var5[var2].getIntType() == var3) {
-               return var6;
+            val var5: StickerFormatType = var6[var2];
+            if (var6[var2].getIntType() == var3) {
+               return var5;
             }
          }
 

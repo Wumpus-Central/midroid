@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class AppMessageActionImpl(id: String, label: String, disabled: Boolean? = null) : AppMessageEmbedAction {
@@ -50,8 +50,8 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.id.hashCode();
-      val var2: Int = this.label.hashCode();
+      val var2: Int = this.id.hashCode();
+      val var3: Int = this.label.hashCode();
       val var1: Int;
       if (this.disabled == null) {
          var1 = 0;
@@ -59,22 +59,22 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          var1 = this.disabled.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.label;
-      val var4: java.lang.Boolean = this.disabled;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AppMessageActionImpl(id=");
-      var1.append(var2);
-      var1.append(", label=");
-      var1.append(var3);
-      var1.append(", disabled=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var3: java.lang.Boolean = this.disabled;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppMessageActionImpl(id=");
+      var2.append(var4);
+      var2.append(", label=");
+      var2.append(var1);
+      var2.append(", disabled=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

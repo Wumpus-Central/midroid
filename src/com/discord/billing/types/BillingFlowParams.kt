@@ -33,11 +33,11 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var1);
-         var6.append(var5);
-         var1 = var6.toString();
+         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var1);
+         var5.append(var6);
+         var1 = var5.toString();
       }
 
       return var1;
@@ -171,114 +171,109 @@ internal object BillingFlowParams {
       userId: String,
       offerId: String?
    ): com.android.billingclient.api.BillingFlowParams? {
+      val var9: java.lang.Iterable = var1;
       val var10: java.util.Iterator = var1.iterator();
 
-      while (true) {
-         if (var10.hasNext()) {
-            val var9: Any = var10.next();
-            if (!((var9 as ProductDetails).d() == var2)) {
-               continue;
-            }
-
-            var19 = var9;
+      do {
+         if (!var10.hasNext()) {
+            var12 = null;
             break;
          }
 
-         var19 = null;
-         break;
-      }
+         var12 = var10.next();
+      } while (!(((ProductDetails)var12).d() == var2));
 
-      val var20: ProductDetails = var19 as ProductDetails;
-      if (var19 as ProductDetails == null) {
+      val var20: ProductDetails = var12 as ProductDetails;
+      if (var12 as ProductDetails == null) {
          throw new AssertionError("Could not find product detail for new product");
       } else {
-         val var23: java.util.Iterator = var1.iterator();
+         val var23: java.util.Iterator = var9.iterator();
 
          do {
             if (!var23.hasNext()) {
-               var12 = null;
+               var13 = null;
                break;
             }
 
-            var12 = var23.next();
-         } while (!(((ProductDetails)var12).d() == var3));
+            var13 = var23.next();
+         } while (!(((ProductDetails)var13).d() == var3));
 
-         val var24: ProductDetails = var12 as ProductDetails;
-         if (var3 != null && var12 as ProductDetails == null) {
+         val var24: ProductDetails = var13 as ProductDetails;
+         if (var3 != null && var13 as ProductDetails == null) {
             return null;
          } else {
             val var22: ArrayList = new ArrayList();
             val var25: com.android.billingclient.api.BillingFlowParams.b.a = com.android.billingclient.api.BillingFlowParams.b.a().c(var20);
             if (var20.e() == "subs") {
-               var var13: java.lang.String;
+               var var14: java.lang.String;
                if (var6 != null) {
                   val var28: java.util.List = var20.f();
-                  var13 = null;
+                  var14 = null;
                   if (var28 != null) {
                      val var29: java.util.Iterator = var28.iterator();
 
                      do {
                         if (!var29.hasNext()) {
-                           var15 = null;
+                           var16 = null;
                            break;
                         }
 
-                        var15 = var29.next();
-                     } while (!(((ProductDetails.d)var15).b() == var6));
+                        var16 = var29.next();
+                     } while (!(((ProductDetails.d)var16).b() == var6));
 
-                     val var30: ProductDetails.d = var15 as ProductDetails.d;
-                     var13 = null;
+                     val var30: ProductDetails.d = var16 as ProductDetails.d;
+                     var14 = null;
                      if (var30 != null) {
-                        var13 = var30.d();
+                        var14 = var30.d();
                      }
                   }
                } else {
                   val var11: java.util.List = var20.f();
-                  var13 = null;
+                  var14 = null;
                   if (var11 != null) {
                      val var26: java.util.Iterator = var11.iterator();
 
                      do {
                         if (!var26.hasNext()) {
-                           var14 = null;
+                           var15 = null;
                            break;
                         }
 
-                        var14 = var26.next();
-                     } while (((ProductDetails.d)var14).b() != null);
+                        var15 = var26.next();
+                     } while (((ProductDetails.d)var15).b() != null);
 
-                     val var27: ProductDetails.d = var14 as ProductDetails.d;
-                     var13 = null;
+                     val var27: ProductDetails.d = var15 as ProductDetails.d;
+                     var14 = null;
                      if (var27 != null) {
-                        var13 = var27.d();
+                        var14 = var27.d();
                      }
                   }
                }
 
-               if (var13 == null) {
-                  val var18: java.lang.String = var20.d();
+               if (var14 == null) {
+                  val var19: java.lang.String = var20.d();
                   val var21: StringBuilder = new StringBuilder();
                   var21.append("Could not find offer token for productId: ");
-                  var21.append(var18);
+                  var21.append(var19);
                   var21.append(" offerId: ");
                   var21.append(var6);
                   throw new AssertionError(var21.toString());
                }
 
-               var25.b(var13);
+               var25.b(var14);
             }
 
-            val var16: com.android.billingclient.api.BillingFlowParams.b = var25.a();
-            var22.add(var16);
-            val var17: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
+            val var17: com.android.billingclient.api.BillingFlowParams.b = var25.a();
+            var22.add(var17);
+            val var18: com.android.billingclient.api.BillingFlowParams.a = com.android.billingclient.api.BillingFlowParams.a()
                .e(var22)
                .c(this.getObfuscatedUserId(var5))
                .b(false);
             if (var24 != null && var4 != null) {
-               var17.f(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).d(INSTANCE.getReplacementMode(var24, var20)).a());
+               var18.f(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).d(INSTANCE.getReplacementMode(var24, var20)).a());
             }
 
-            return var17.a();
+            return var18.a();
          }
       }
    }

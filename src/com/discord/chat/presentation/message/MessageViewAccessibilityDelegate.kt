@@ -38,7 +38,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
       return Unit.a;
    }
 
-   public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+   public open fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       val var3: ArrayList = new ArrayList();
       if (this.message.getUsername() != null) {
@@ -55,12 +55,12 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
          var3.add(var5);
       }
 
-      var2.a1(CollectionsKt.r0(var3, ", ", null, null, 0, null, null, 62, null));
-      var2.k0(AccessibilityNodeInfoCompat.a.i);
-      var2.L0(15);
+      var2.b1(CollectionsKt.x0(var3, ", ", null, null, 0, null, null, 62, null));
+      var2.k0(androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a.i);
+      var2.M0(15);
    }
 
-   public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {
+   public open fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {
       if (var2 != 16) {
          if (var2 == 32 && this.onLongClick != null) {
             this.onLongClick.onLongClick(var1);

@@ -11,7 +11,6 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.ClanTagChipletView;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import e4.a;
 
 public final class ThreadEmbedViewBinding implements ViewBinding {
    @NonNull
@@ -58,30 +57,30 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
    @NonNull
    public static ThreadEmbedViewBinding bind(@NonNull View var0) {
       int var1 = R.id.tag_chiplet;
-      ClanTagChipletView var7 = (ClanTagChipletView)a.a(var0, var1);
-      if (var7 != null) {
+      ClanTagChipletView var3 = (ClanTagChipletView)k5.a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.thread_embed_icon;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.thread_embed_messages_count;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var4 = (TextView)k5.a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.thread_embed_most_recent_message_avatar;
-               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-               if (var3 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.thread_embed_most_recent_message_content;
-                  SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var6 != null) {
+                  SimpleDraweeSpanTextView var9 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.thread_embed_most_recent_message_header;
-                     LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-                     if (var5 != null) {
+                     LinearLayout var2 = (LinearLayout)k5.a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.thread_embed_most_recent_message_name;
-                        TextView var9 = (TextView)a.a(var0, var1);
-                        if (var9 != null) {
+                        TextView var5 = (TextView)k5.a.a(var0, var1);
+                        if (var5 != null) {
                            var1 = R.id.thread_embed_name;
-                           TextView var8 = (TextView)a.a(var0, var1);
-                           if (var8 != null) {
-                              return new ThreadEmbedViewBinding(var0, var7, var4, var2, var3, var6, var5, var9, var8);
+                           TextView var6 = (TextView)k5.a.a(var0, var1);
+                           if (var6 != null) {
+                              return new ThreadEmbedViewBinding(var0, var3, var7, var4, var8, var9, var2, var5, var6);
                            }
                         }
                      }

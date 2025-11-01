@@ -10,6 +10,7 @@ import android.graphics.drawable.Drawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup.LayoutParams
 import android.view.animation.OvershootInterpolator
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
@@ -70,7 +71,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun setSquareLayoutParam(view: View, dimension: Int) {
-      val var3: android.view.ViewGroup.LayoutParams = var1.getLayoutParams();
+      val var3: LayoutParams = var1.getLayoutParams();
       var3.width = var2;
       var3.height = var2;
       var1.setLayoutParams(var3);
@@ -166,17 +167,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeOutAnim(): AnimatorSet {
-      val var2: AnimatorSet = new AnimatorSet();
-      var2.setDuration(this.transitionOutDuration);
-      var2.setStartDelay(this.transitionDelay);
-      val var1: ValueAnimator = new ValueAnimator();
-      var1.setFloatValues(new float[]{0.9F, 0.8F});
-      var1.addUpdateListener(new j(this));
+      val var1: AnimatorSet = new AnimatorSet();
+      var1.setDuration(this.transitionOutDuration);
+      var1.setStartDelay(this.transitionDelay);
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setFloatValues(new float[]{0.9F, 0.8F});
+      var2.addUpdateListener(new j(this));
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new k(this));
-      var2.playTogether(new Animator[]{var1, var4});
-      var2.addListener(new AnimatorListener(this) {
+      var1.playTogether(new Animator[]{var2, var4});
+      var1.addListener(new AnimatorListener(this) {
          final AttachmentUploadOverlayView this$0;
 
          {
@@ -199,7 +200,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          public void onAnimationStart(Animator var1) {
          }
       });
-      return var2;
+      return var1;
    }
 
    @JvmStatic
@@ -335,14 +336,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          val var5: AttachmentUploadOverlayView = new AttachmentUploadOverlayView(var3, null, 2, null);
          var5.setId(View.generateViewId());
          ViewClippingUtilsKt.clipToRoundedRectangle(var5, var2);
-         val var4: ConstraintLayout.LayoutParams = new ConstraintLayout.LayoutParams(-2, -2);
+         val var4: androidx.constraintlayout.widget.ConstraintLayout.LayoutParams = new androidx.constraintlayout.widget.ConstraintLayout.LayoutParams(-2, -2);
          var4.setMargins(0, SizeUtilsKt.getDpToPx(2), SizeUtilsKt.getDpToPx(2), 0);
          var5.setLayoutParams(var4);
          var1.addView(var5);
          val var6: ConstraintSet = new ConstraintSet();
          var6.f(var1);
-         var6.g(var5.getId(), 7, 0, 7, 0);
-         var6.g(var5.getId(), 3, 0, 3, 0);
+         var6.h(var5.getId(), 7, 0, 7, 0);
+         var6.h(var5.getId(), 3, 0, 3, 0);
          var6.c(var1);
          return var5;
       }
@@ -401,13 +402,13 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var3: Int = this.backgroundSize;
-         val var1: Int = this.checkmarkButtonSize;
+         val var1: Int = this.backgroundSize;
+         val var3: Int = this.checkmarkButtonSize;
          val var2: StringBuilder = new StringBuilder();
          var2.append("CompleteViewConfig(backgroundSize=");
-         var2.append(var3);
-         var2.append(", checkmarkButtonSize=");
          var2.append(var1);
+         var2.append(", checkmarkButtonSize=");
+         var2.append(var3);
          var2.append(")");
          return var2.toString();
       }
@@ -539,27 +540,27 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.backgroundSize;
+         val var4: Int = this.backgroundSize;
          val var5: Drawable = this.backgroundDrawable;
-         val var4: Int = this.cancelButtonSize;
-         val var7: Int = this.primaryColor;
+         val var6: Int = this.cancelButtonSize;
+         val var2: Int = this.primaryColor;
          val var3: Int = this.progressIndicatorSize;
-         val var6: Int = this.trackColor;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ProgressViewConfig(backgroundSize=");
-         var1.append(var2);
-         var1.append(", backgroundDrawable=");
-         var1.append(var5);
-         var1.append(", cancelButtonSize=");
-         var1.append(var4);
-         var1.append(", primaryColor=");
-         var1.append(var7);
-         var1.append(", progressIndicatorSize=");
-         var1.append(var3);
-         var1.append(", trackColor=");
-         var1.append(var6);
-         var1.append(")");
-         return var1.toString();
+         val var1: Int = this.trackColor;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("ProgressViewConfig(backgroundSize=");
+         var7.append(var4);
+         var7.append(", backgroundDrawable=");
+         var7.append(var5);
+         var7.append(", cancelButtonSize=");
+         var7.append(var6);
+         var7.append(", primaryColor=");
+         var7.append(var2);
+         var7.append(", progressIndicatorSize=");
+         var7.append(var3);
+         var7.append(", trackColor=");
+         var7.append(var1);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

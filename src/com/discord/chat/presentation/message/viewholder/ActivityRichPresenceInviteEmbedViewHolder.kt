@@ -20,9 +20,9 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
    }
 
    public fun bind(accessory: ActivityRichPresenceInviteEmbedMessageAccessory, onTapJoinRichPresence: (MessageId) -> Unit) {
-      val var9: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
-      val var8: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
-      val var10: java.lang.Boolean = var9.getCtaButtonEnabled();
+      val var8: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
+      val var9: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
+      val var10: java.lang.Boolean = var8.getCtaButtonEnabled();
       val var4: Boolean;
       if (var10 != null) {
          var4 = var10;
@@ -30,8 +30,8 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var4 = false;
       }
 
-      val var16: java.lang.String = var9.getCtaButtonText();
-      val var11: java.lang.Boolean = var9.getCtaButtonIsLoading();
+      val var16: java.lang.String = var8.getCtaButtonText();
+      val var11: java.lang.Boolean = var8.getCtaButtonIsLoading();
       val var5: Boolean;
       if (var11 != null) {
          var5 = var11;
@@ -39,12 +39,12 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var5 = false;
       }
 
-      val var17: java.lang.String = var9.getFooterLabel();
-      val var12: java.util.List = var9.getGradientColors();
-      val var13: java.lang.String = var9.getHeaderText();
+      val var12: java.lang.String = var8.getFooterLabel();
+      val var13: java.util.List = var8.getGradientColors();
+      val var17: java.lang.String = var8.getHeaderText();
       var var3: Int = 0;
-      val var14: java.lang.String = var9.getIconSrc();
-      var var15: java.lang.Boolean = var9.isActive();
+      val var14: java.lang.String = var8.getIconSrc();
+      var var15: java.lang.Boolean = var8.isActive();
       val var6: Boolean;
       if (var15 != null) {
          var6 = var15;
@@ -52,7 +52,7 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var6 = false;
       }
 
-      var15 = var9.isSpotifyParty();
+      var15 = var8.isSpotifyParty();
       val var7: Boolean;
       if (var15 != null) {
          var7 = var15;
@@ -60,29 +60,29 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var7 = false;
       }
 
-      val var19: Int = var9.getMaxPartySize();
+      val var19: Int = var8.getMaxPartySize();
       if (var19 != null) {
          var3 = var19;
       }
 
-      var8.setActivityRichPresenceInviteEmbed(
+      var9.setActivityRichPresenceInviteEmbed(
          var4,
          var16,
          var5,
-         var17,
          var12,
          var13,
+         var17,
          var14,
          var6,
          var7,
          var3,
          new a(var2, var1),
-         var9.getPartyMemberAvatarURIs(),
-         var9.getPartySizeText(),
-         var9.getPlatformIconKeys(),
-         var9.getCoverImageUrl(),
-         var9.getSubtitle(),
-         var9.getTitle()
+         var8.getPartyMemberAvatarURIs(),
+         var8.getPartySizeText(),
+         var8.getPlatformIconKeys(),
+         var8.getCoverImageUrl(),
+         var8.getSubtitle(),
+         var8.getTitle()
       );
    }
 }

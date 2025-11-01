@@ -4,7 +4,7 @@ import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
-import n7.e7
+import l9.e7
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec(var1) {
    public final val reactContext: ReactApplicationContext
@@ -21,11 +21,11 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMod
       }
    }
 
-   public open fun updateSaturation(saturationFactor: Double) {
+   public override fun updateSaturation(saturationFactor: Double) {
       ThemeManager.INSTANCE.setSaturationFactor(var1);
    }
 
-   public open fun updateTheme(theme: String?) {
+   public override fun updateTheme(theme: String?) {
       label32:
       if (var1 != null) {
          label36: {

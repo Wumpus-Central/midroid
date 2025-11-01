@@ -10,6 +10,6 @@ public final class f0 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return EmbeddedActivityInviteView.g(this.d, this.e, (LinkContentNode)var1);
+      return EmbeddedActivityInviteView.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

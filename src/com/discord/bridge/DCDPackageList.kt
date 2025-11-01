@@ -83,7 +83,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
             super(var1);
          }
 
-         @Override
          public boolean isFabric() {
             return true;
          }
@@ -165,8 +164,24 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList(var1) {
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(DCDModuleProvider.getLegacyPackageForModuleWithViewManager$default(var2, null, new a(), 1, null));
-      var1.add(var2.getViewManagers(new l(), new m(), new n(), new o(), new b(), new c(), new d(), new e(), new f(), new g(), new h(), new i(), new j()));
+      var1.add(DCDModuleProvider.getLegacyPackageForModuleWithViewManager$default(var2, null, new com.discord.bridge.a(), 1, null));
+      var1.add(
+         var2.getViewManagers(
+            new l(),
+            new m(),
+            new n(),
+            new o(),
+            new com.discord.bridge.b(),
+            new com.discord.bridge.c(),
+            new com.discord.bridge.d(),
+            new com.discord.bridge.e(),
+            new com.discord.bridge.f(),
+            new com.discord.bridge.g(),
+            new com.discord.bridge.h(),
+            new com.discord.bridge.i(),
+            new com.discord.bridge.j()
+         )
+      );
       var1.add(var2.getTurboPackageForModule("NativeAdsModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeAppDatabaseModule", <unrepresentable>.INSTANCE));
       var1.add(var2.getTurboPackageForModule("NativeAppIconModule", <unrepresentable>.INSTANCE));

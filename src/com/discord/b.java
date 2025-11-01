@@ -8,6 +8,7 @@ public final class b implements Function0 {
    public final Context d;
    public final MainApplication e;
 
+   @Override
    public final Object invoke() {
       return MainApplication.d(this.d, this.e);
    }

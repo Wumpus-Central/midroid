@@ -1,13 +1,13 @@
 package com.discord.file_downloader.utils
 
 import android.webkit.MimeTypeMap
-import fm.v
+import ht.v
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
-   n0.m(
+   s0.m(
       new Pair[]{
          v.a("avif", "image/avif"),
          v.a("gif", "image/gif"),
@@ -60,7 +60,7 @@ private fun fixAtSeparatorExtensions(filename: String, useUrlEncoded: Boolean): 
 }
 
 public fun String.getMimeTypeFromFilename(): String? {
-   val var2: java.lang.String = StringsKt.M0(var0, '.', "").toLowerCase(Locale.ROOT);
+   val var2: java.lang.String = StringsKt.V0(var0, '.', "").toLowerCase(Locale.ROOT);
    if (var2.length() == 0) {
       return null;
    } else {

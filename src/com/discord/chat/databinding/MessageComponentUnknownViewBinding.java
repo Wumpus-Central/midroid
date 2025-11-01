@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.ErrorMessageView;
-import e4.a;
 
 public final class MessageComponentUnknownViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class MessageComponentUnknownViewBinding implements ViewBinding {
    @NonNull
    public static MessageComponentUnknownViewBinding bind(@NonNull View var0) {
       int var1 = R.id.error_message_view;
-      ErrorMessageView var2 = (ErrorMessageView)a.a(var0, var1);
+      ErrorMessageView var2 = (ErrorMessageView)k5.a.a(var0, var1);
       if (var2 != null) {
          return new MessageComponentUnknownViewBinding(var0, var2);
       } else {

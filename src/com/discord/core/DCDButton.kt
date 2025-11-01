@@ -19,8 +19,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.internal.SourceDebugExtension
-import pg.k
-import pg.k.b
+import xi.k
+import xi.k.b
 
 @SourceDebugExtension(["SMAP\nDCDButton.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DCDButton.kt\ncom/discord/core/DCDButton\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,217:1\n257#2,2:218\n257#2,2:220\n152#2,2:223\n1#3:222\n*S KotlinDebug\n*F\n+ 1 DCDButton.kt\ncom/discord/core/DCDButton\n*L\n84#1:218,2\n85#1:220,2\n164#1:223,2\n*E\n"])
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {

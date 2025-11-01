@@ -5,11 +5,11 @@ import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
-import fm.p
+import ht.p
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
-import lm.a
+import pt.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -51,8 +51,8 @@ public sealed interface PostProcessor {
                throw new p();
             }
          } else {
-            val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
-            val var4: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
+            val var2: java.lang.Iterable = (var1 as PostProcessor.Composite).getPostprocessors();
+            val var4: ArrayList = new ArrayList(CollectionsKt.w(var2, 10));
 
             for (PostProcessor var3 : var2) {
                var4.add($$INSTANCE.create(var3));
@@ -70,7 +70,7 @@ public sealed interface PostProcessor {
          this.postprocessors = var1;
       }
 
-      public constructor(vararg postprocessors: PostProcessor) : this(k.O0(var1))
+      public constructor(vararg postprocessors: PostProcessor) : this(m.T0(var1))
       public operator fun component1(): List<PostProcessor> {
          return this.postprocessors;
       }
@@ -204,8 +204,8 @@ public sealed interface PostProcessor {
          val var6: PostProcessor.Gradient.Direction = this.direction;
          val var4: Int = this.startColor;
          val var3: Int = this.endColor;
-         val var1: Float = this.startPosition;
-         val var2: Float = this.endPosition;
+         val var2: Float = this.startPosition;
+         val var1: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
@@ -214,9 +214,9 @@ public sealed interface PostProcessor {
          var5.append(", endColor=");
          var5.append(var3);
          var5.append(", startPosition=");
-         var5.append(var1);
-         var5.append(", endPosition=");
          var5.append(var2);
+         var5.append(", endPosition=");
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

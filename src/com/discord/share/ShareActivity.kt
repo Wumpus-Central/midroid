@@ -32,7 +32,7 @@ public class ShareActivity : ReactActivity {
                   var4 = null;
                }
 
-               val var7: java.util.List = var4.getAttachments();
+               val var7: java.lang.Iterable = var4.getAttachments();
                val var5: ShareActivity = this.this$0;
 
                for (ShareProps.Attachment var8 : var7) {

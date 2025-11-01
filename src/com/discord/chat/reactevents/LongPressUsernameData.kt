@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class LongPressUsernameData(messageId: String, userId: String) : ReactEvent {
@@ -48,20 +47,20 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
       return this.messageId.hashCode() * 31 + this.userId.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.userId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressUsernameData(messageId=");
-      var1.append(var2);
-      var1.append(", userId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.userId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressUsernameData(messageId=");
+      var3.append(var1);
+      var3.append(", userId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -10,6 +10,6 @@ public final class j1 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return GuildEventInviteView.g(this.d, this.e, (LinkContentNode)var1);
+      return GuildEventInviteView.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

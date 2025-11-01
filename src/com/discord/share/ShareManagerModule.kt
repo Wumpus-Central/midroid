@@ -17,9 +17,9 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun addListener(type: String) {
-      val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.register(var2, this.shareBroadcastReceiver);
+      val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.register(var3, this.shareBroadcastReceiver);
    }
 
    public override fun getName(): String {
@@ -63,12 +63,12 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun share(text: String?, url: String?, chooserText: String?, location: String?) {
-      if (var1 != null && !StringsKt.c0(var1) || var2 != null && !StringsKt.c0(var2)) {
+      if (var1 != null && !StringsKt.i0(var1) || var2 != null && !StringsKt.i0(var2)) {
          val var5: Intent = new Intent("android.intent.action.SEND");
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");
          var5.putExtra(
-            "android.intent.extra.TEXT", CollectionsKt.r0(CollectionsKt.p(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null)
+            "android.intent.extra.TEXT", CollectionsKt.x0(CollectionsKt.q(new java.lang.String[]{var1, var2}), "\n", null, null, 0, null, null, 62, null)
          );
          val var8: Activity = this.getReactApplicationContext().getCurrentActivity();
          if (var8 != null) {

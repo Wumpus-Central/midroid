@@ -4,19 +4,19 @@ import android.content.Context
 import android.net.Uri
 import android.os.Build.VERSION
 import androidx.core.app.NotificationChannelCompat
-import androidx.core.app.j
+import androidx.core.app.k
 import androidx.core.app.NotificationChannelCompat.Builder
 import com.discord.crash_reporting.CrashReporting
 import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.theme.utils.ColorUtilsKt
-import fm.v
+import ht.v
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nNotificationChannels.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationChannels.kt\ncom/discord/notifications/renderer/NotificationChannels\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 5 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,399:1\n11483#2,9:400\n13409#2:409\n13410#2:411\n11492#2:412\n11165#2:419\n11500#2,3:420\n1#3:410\n1#3:423\n1187#4,2:413\n1261#4,4:415\n29#5:424\n*S KotlinDebug\n*F\n+ 1 NotificationChannels.kt\ncom/discord/notifications/renderer/NotificationChannels\n*L\n169#1:400,9\n169#1:409\n169#1:411\n169#1:412\n306#1:419\n306#1:420,3\n169#1:410\n189#1:413,2\n189#1:415,4\n380#1:424\n*E\n"])
+@SourceDebugExtension(["SMAP\nNotificationChannels.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NotificationChannels.kt\ncom/discord/notifications/renderer/NotificationChannels\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 5 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,401:1\n11483#2,9:402\n13409#2:411\n13410#2:413\n11492#2:414\n11165#2:421\n11500#2,3:422\n1#3:412\n1#3:425\n1187#4,2:415\n1261#4,4:417\n29#5:426\n*S KotlinDebug\n*F\n+ 1 NotificationChannels.kt\ncom/discord/notifications/renderer/NotificationChannels\n*L\n142#1:402,9\n142#1:411\n142#1:413\n142#1:414\n308#1:421\n308#1:422,3\n142#1:412\n162#1:415,2\n162#1:417,4\n382#1:426\n*E\n"])
 internal object NotificationChannels {
    private const val BASE_CALL_CHANNEL_ID: String = "calls"
 
@@ -37,12 +37,12 @@ internal object NotificationChannels {
       val var9: Builder = var3.g(var5);
       val var11: StringBuilder = new StringBuilder();
       var11.append("android.resource://");
-      val var7: java.lang.String = var1.getPackageName();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var7);
-      var6.append("/");
-      var6.append(var4);
-      var11.append(var6.toString());
+      val var6: java.lang.String = var1.getPackageName();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var6);
+      var7.append("/");
+      var7.append(var4);
+      var11.append(var7.toString());
       val var8: java.lang.String = var11.toString();
       var9.h(Uri.parse(var8), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
@@ -71,19 +71,19 @@ internal object NotificationChannels {
       var2.e(var3);
    }
 
-   private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<j> {
+   private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<k> {
       val var6: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
       val var7: ArrayList = new ArrayList(var6.length);
       val var4: Int = var6.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
-         var var10: j;
+         var var10: k;
          label20: {
             val var5: NotificationChannels.ChannelGroup = var6[var3];
             if (var2.containsKey(var6[var3].getId())) {
                val var8: java.lang.CharSequence = var2.get(var5.getId()) as java.lang.CharSequence;
-               if (var8 != null && !StringsKt.c0(var8)) {
-                  var10 = new androidx.core.app.j.c(var5.getGroupId())
+               if (var8 != null && !StringsKt.i0(var8)) {
+                  var10 = new androidx.core.app.k.c(var5.getGroupId())
                      .c(var2.get(var5.getId()) as java.lang.CharSequence)
                      .b(var2.get(var5.getId()) as java.lang.String)
                      .a();
@@ -91,9 +91,9 @@ internal object NotificationChannels {
                }
             }
 
-            val var9: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
-            val var11: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
-            var10 = var9.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var11.defaultLabel(var5.getId())).a();
+            val var11: androidx.core.app.k.c = new androidx.core.app.k.c(var5.getGroupId());
+            val var9: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
+            var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
          }
 
          var7.add(var10);
@@ -127,10 +127,10 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var4: java.lang.String = var2.b();
-         if (StringsKt.I(var4, "calls", false, 2, null)) {
-            return var2;
+      for (NotificationChannelCompat var3 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var4: java.lang.String = var3.b();
+         if (StringsKt.N(var4, "calls", false, 2, null)) {
+            return var3;
          }
       }
 
@@ -151,11 +151,11 @@ internal object NotificationChannels {
 
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var4: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("calls_");
-         var5.append(var4);
-         return var5.toString();
+         val var5: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("calls_");
+         var4.append(var5);
+         return var4.toString();
       } else {
          val var3: java.lang.String = var1.getId();
          val var2: StringBuilder = new StringBuilder();
@@ -193,7 +193,7 @@ internal object NotificationChannels {
       } else {
          val var10: java.lang.CharSequence = var4.get(var2.getId()) as java.lang.CharSequence;
          val var16: java.lang.String;
-         if (var10 != null && !StringsKt.c0(var10)) {
+         if (var10 != null && !StringsKt.i0(var10)) {
             var16 = var4.get(var2.getId()) as java.lang.String;
          } else {
             var16 = NotificationChannels.Category.Companion.defaultLabel(var2);
@@ -239,62 +239,54 @@ internal object NotificationChannels {
    }
 
    public fun NotificationData.getNotificationChannelId(context: Context): String {
-      if (!(var1.getType() == "CALL_RING") && !(var1.getType() == "CALL_RING_END")) {
-         val var5: java.lang.String = var1.getType();
-         switch (var5.hashCode()) {
-            case -1502317553:
-               if (var5.equals("GENERIC_PUSH_NOTIFICATION_SENT")) {
-                  return NotificationChannels.Category.Companion.fromTrackingType(var1.getTrackingType()).getId();
-               }
-               break;
-            case -1489275252:
-               if (var5.equals("GUILD_SCHEDULED_EVENT_UPDATE")) {
-                  return NotificationChannels.Category.GuildEventStart.getId();
-               }
-               break;
-            case -1327124998:
-               if (var5.equals("RELATIONSHIP_ADD")) {
-                  return NotificationChannels.Category.FriendRequests.getId();
-               }
-               break;
-            case -1263316859:
-               if (var5.equals("STAGE_INSTANCE_CREATE")) {
-                  return NotificationChannels.Category.StageStart.getId();
-               }
-               break;
-            case -437641071:
-               if (var5.equals("FORUM_THREAD_CREATED")) {
-                  return NotificationChannels.Category.ForumThreadCreated.getId();
-               }
-               break;
-            case -45642698:
-               if (var5.equals("FRIEND_SUGGESTION_CREATE")) {
-                  return NotificationChannels.Category.Social.getId();
-               }
-               break;
-            case 998188116:
-               if (var5.equals("MESSAGE_CREATE")) {
-                  val var4: Int = var1.getChannelType();
-                  val var6: NotificationChannels.Category;
-                  if (var4 != null && var4 == 3 || var4 != null && var4 == 1) {
-                     var6 = NotificationChannels.Category.MessagesDirect;
-                  } else {
-                     var6 = NotificationChannels.Category.Messages;
-                  }
-
-                  return var6.getId();
-               }
-               break;
-            case 1471047007:
-               if (var5.equals("LOCAL_NOTIFICATION")) {
-                  return NotificationChannels.Category.SystemMessages.getId();
-               }
-            default:
+      if (var1.getType() == "CALL_RING" || var1.getType() == "CALL_RING_END") {
+         return this.getCallChannelId(var2);
+      } else if (var1.getType() == "LOCAL_NOTIFICATION") {
+         return NotificationChannels.Category.SystemMessages.getId();
+      } else {
+         val var5: java.lang.String = var1.getNotifTypeId();
+         val var6: Int;
+         if (var5 != null) {
+            var6 = StringsKt.toIntOrNull(var5);
+         } else {
+            var6 = null;
          }
 
-         return NotificationChannels.Category.Other.getId();
-      } else {
-         return this.getCallChannelId(var2);
+         val var3: NotificationChannels.Category;
+         if ((var6 == null || var6 != 13) && (var6 == null || var6 != 6) && (var6 == null || var6 != 16) && (var6 == null || var6 != 4)) {
+            if (var6 != null && var6 == 15) {
+               var3 = NotificationChannels.Category.Polls;
+            } else if (var6 != null && var6 == 23) {
+               var3 = NotificationChannels.Category.Reactions;
+            } else if (var6 != null && var6 == 7) {
+               var3 = NotificationChannels.Category.StageStart;
+            } else if (var6 != null && var6 == 9) {
+               var3 = NotificationChannels.Category.ForumThreadCreated;
+            } else if (var6 != null && var6 == 3) {
+               var3 = NotificationChannels.Category.FriendRequests;
+            } else if (var6 != null && var6 == 8) {
+               var3 = NotificationChannels.Category.GuildEventStart;
+            } else if (var6 != null && var6 == 1) {
+               val var4: Int = var1.getChannelType();
+               if (var4 != null && var4 == 3 || var4 != null && var4 == 1) {
+                  var3 = NotificationChannels.Category.MessagesDirect;
+               } else {
+                  var3 = NotificationChannels.Category.Messages;
+               }
+            } else if ((var6 == null || var6 != 14) && (var6 == null || var6 != 11) && (var6 == null || var6 != 10)) {
+               if (var6 != null && var6 == 27 || var6 != null && var6 == 28) {
+                  var3 = NotificationChannels.Category.SystemMessages;
+               } else {
+                  var3 = NotificationChannels.Category.Other;
+               }
+            } else {
+               var3 = NotificationChannels.Category.OtherServerNotifications;
+            }
+         } else {
+            var3 = NotificationChannels.Category.Social;
+         }
+
+         return var3.getId();
       }
    }
 
@@ -304,36 +296,37 @@ internal object NotificationChannels {
 
    public fun init(context: Context, localizedCategoryNames: Map<String, String>, localizedGroupNames: Map<String, String>) {
       val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
-      val var17: java.util.List = this.createNotificationChannelGroups(var1, var3);
-      val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
-      val var8: ArrayList = new ArrayList();
-      val var5: Int = var9.length;
+      val var18: java.util.List = this.createNotificationChannelGroups(var1, var3);
+      val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
+      val var9: ArrayList = new ArrayList();
+      val var5: Int = var8.length;
 
       for (int var4 = 0; var4 < var5; var4++) {
-         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var6, var2, new c(var9[var4], var1));
-         if (var20 != null) {
-            var8.add(var20);
+         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var6, var2, new c(var8[var4], var1));
+         if (var21 != null) {
+            var9.add(var21);
          }
       }
 
       try {
-         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
+         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
       } catch (var13: Exception) {
-         val var19: CrashReporting = CrashReporting.INSTANCE;
-         val var21: LinkedHashMap = new LinkedHashMap(e.e(n0.e(CollectionsKt.v(var17, 10)), 16));
+         val var20: CrashReporting = CrashReporting.INSTANCE;
+         val var14: java.lang.Iterable = var18;
+         val var22: LinkedHashMap = new LinkedHashMap(e.e(s0.e(CollectionsKt.w(var18, 10)), 16));
 
-         for (j var12 : var17) {
+         for (k var12 : var14) {
             label32: {
-               val var14: java.lang.CharSequence = var12.b();
-               if (var14 != null) {
-                  val var18: java.lang.String = var14.toString();
-                  var15 = var18;
-                  if (var18 != null) {
+               val var15: java.lang.CharSequence = var12.b();
+               if (var15 != null) {
+                  val var19: java.lang.String = var15.toString();
+                  var16 = var19;
+                  if (var19 != null) {
                      break label32;
                   }
                }
 
-               var15 = "";
+               var16 = "";
             }
 
             val var7: Boolean;
@@ -343,11 +336,11 @@ internal object NotificationChannels {
                var7 = false;
             }
 
-            val var16: Pair = v.a(var15, java.lang.String.valueOf(var7));
-            var21.put(var16.c(), var16.d());
+            val var17: Pair = v.a(var16, java.lang.String.valueOf(var7));
+            var22.put(var17.c(), var17.d());
          }
 
-         CrashReporting.addBreadcrumb$default(var19, "Failed to create notification group or channel", var21, null, null, 12, null);
+         CrashReporting.addBreadcrumb$default(var20, "Failed to create notification group or channel", var22, null, null, 12, null);
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
       }
    }
@@ -378,15 +371,15 @@ internal object NotificationChannels {
                      var2 = var10.toString();
                   }
 
-                  val var18: Builder = var9.b(var2).c(NotificationChannels.Category.Calls.getGroup().getGroupId()).i(var21.g()).e(var21.f()).d(var3);
-                  val var15: NotificationChannels = INSTANCE;
-                  var15.configureCallChannel(var1, var21, var18, var7.getResource());
+                  val var15: Builder = var9.b(var2).c(NotificationChannels.Category.Calls.getGroup().getGroupId()).i(var21.g()).e(var21.f()).d(var3);
+                  val var18: NotificationChannels = INSTANCE;
+                  var18.configureCallChannel(var1, var21, var15, var7.getResource());
 
-                  for (NotificationChannelCompat var19 : var6) {
-                     NotificationManagerUtilsKt.getNotificationManagerCompat(var1).f(var19.b());
+                  for (NotificationChannelCompat var20 : var6) {
+                     NotificationManagerUtilsKt.getNotificationManagerCompat(var1).f(var20.b());
                   }
 
-                  NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(CollectionsKt.e(var18.a()));
+                  NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(CollectionsKt.e(var15.a()));
                   return;
                }
                break;
@@ -394,7 +387,7 @@ internal object NotificationChannels {
 
             val var17: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
             val var8: java.lang.String = var17.b();
-            if (StringsKt.I(var8, "calls", false, 2, null)) {
+            if (StringsKt.N(var8, "calls", false, 2, null)) {
                var6.add(var17);
             }
          }
@@ -417,7 +410,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.CallRingtone> = $values();
          $VALUES = var0;
-         $ENTRIES = lm.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       init {
@@ -493,7 +486,7 @@ internal object NotificationChannels {
          OtherHighPriority = new NotificationChannels.Category("otherHighPriority", 4, var0, "GeneralHigh");
          val var4: Array<NotificationChannels.Category> = $values();
          $VALUES = var4;
-         $ENTRIES = lm.a.a(var4);
+         $ENTRIES = pt.a.a(var4);
       }
 
       init {
@@ -545,75 +538,6 @@ internal object NotificationChannels {
                   return "Other";
             }
          }
-
-         public fun fromTrackingType(trackingType: String?): com.discord.notifications.renderer.NotificationChannels.Category {
-            if (var1 != null) {
-               switch (var1.hashCode()) {
-                  case -1760014021:
-                     if (var1.equals("generic_friend_request_reminder")) {
-                        return NotificationChannels.Category.Social;
-                     }
-                     break;
-                  case -1433897036:
-                     if (var1.equals("suspicious_session")) {
-                        return NotificationChannels.Category.SystemMessages;
-                     }
-                     break;
-                  case -1372753926:
-                     if (var1.equals("trending_content_push")) {
-                        return NotificationChannels.Category.GuildHighlights;
-                     }
-                     break;
-                  case -1305051551:
-                     if (var1.equals("new_user_session")) {
-                        return NotificationChannels.Category.SystemMessages;
-                     }
-                     break;
-                  case -198753646:
-                     if (var1.equals("nudge_new_friend_dm_push")) {
-                        return NotificationChannels.Category.Social;
-                     }
-                     break;
-                  case -171132358:
-                     if (var1.equals("poll_ended")) {
-                        return NotificationChannels.Category.Polls;
-                     }
-                     break;
-                  case 307965019:
-                     if (var1.equals("reactions_push_notification")) {
-                        return NotificationChannels.Category.Reactions;
-                     }
-                     break;
-                  case 533975599:
-                     if (var1.equals("home_lifecycle_push")) {
-                        return NotificationChannels.Category.OtherServerNotifications;
-                     }
-                     break;
-                  case 1308493743:
-                     if (var1.equals("GUILD_STREAM_START")) {
-                        return NotificationChannels.Category.Social;
-                     }
-                     break;
-                  case 1323738094:
-                     if (var1.equals("generic_home_featured_message")) {
-                        return NotificationChannels.Category.OtherServerNotifications;
-                     }
-                     break;
-                  case 1428648131:
-                     if (var1.equals("top_messages_push")) {
-                        return NotificationChannels.Category.OtherServerNotifications;
-                     }
-                     break;
-                  case 1581734347:
-                     if (var1.equals("generic_missed_message")) {
-                        return NotificationChannels.Category.OtherServerNotifications;
-                     }
-                  default:
-               }
-            }
-
-            return NotificationChannels.Category.Other;
-         }
       }
    }
 
@@ -635,7 +559,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.ChannelGroup> = $values();
          $VALUES = var0;
-         $ENTRIES = lm.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       init {

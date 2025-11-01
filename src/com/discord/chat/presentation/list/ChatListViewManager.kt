@@ -37,13 +37,13 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    private fun getExistingProvider(context: Context): ComponentProvider? {
-      val var3: Pair = this.weakProvider;
+      val var2: Pair = this.weakProvider;
       if (this.weakProvider != null) {
-         val var2: WeakReference = this.weakProvider.a() as WeakReference;
-         val var5: ComponentProvider = var3.b() as ComponentProvider;
-         val var4: Context = var2.get() as Context;
-         if (var4 != null && var4 === var1) {
-            return var5;
+         val var3: WeakReference = this.weakProvider.a() as WeakReference;
+         val var4: ComponentProvider = var2.b() as ComponentProvider;
+         val var5: Context = var3.get() as Context;
+         if (var5 != null && var5 === var1) {
+            return var4;
          }
       }
 
@@ -101,7 +101,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       // 36: aload 0
       // 37: aload 4
       // 39: aload 3
-      // 3a: invokestatic fm/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+      // 3a: invokestatic ht/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
       // 3d: putfield com/discord/chat/presentation/list/ChatListViewManager.weakProvider Lkotlin/Pair;
       // 40: aload 2
       // 41: monitorexit
@@ -128,7 +128,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       return this.mDelegate;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDChatList";
    }
 

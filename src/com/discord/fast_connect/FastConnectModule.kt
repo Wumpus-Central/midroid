@@ -3,13 +3,13 @@ package com.discord.fast_connect
 import com.discord.app_database.AppDatabase
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.Cache
+import com.discord.cache.Cache.Companion
 import com.discord.codegen.NativeFastConnectModuleSpec
 import com.discord.logging.Log
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
-import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
-import fm.v
+import ht.v
 import java.util.concurrent.ConcurrentHashMap
 import okhttp3.WebSocket
 
@@ -19,7 +19,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
    private final val webSocketModule: WebSocketModule?
       private final get() {
          val var1: ReactApplicationContext = this.getReactApplicationContextIfActiveOrWarn();
-         return if (var1 != null) var1.getNativeModule(WebSocketModule.class) as WebSocketModule else null;
+         return if (var1 != null) var1.getNativeModule(WebSocketModule.class) else null;
       }
 
 
@@ -78,8 +78,8 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
-      val var1: Cache.Companion = Cache.Companion;
-      return n0.n(
+      val var1: Companion = Cache.Companion;
+      return s0.n(
          new Pair[]{
             v.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             v.a("userId", var1.get().getItem("_userIdKey")),
@@ -88,17 +88,18 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
       );
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
       val var1: WebSocketModule = this.getWebSocketModule();
       if (var1 != null) {
-         var1.setMOnOpenHandler(new OnOpenHandler(this) {
+         var1.setMOnOpenHandler(new WebSocketModule.OnOpenHandler(this) {
             final FastConnectModule this$0;
 
             {
                this.this$0 = var1;
             }
 
+            @Override
             public void onOpen(WebSocket var1, int var2) {
                FastConnectModule.access$handleWebSocketOpen(this.this$0, var1, var2);
             }
@@ -106,7 +107,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
       }
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       val var1: WebSocketModule = this.getWebSocketModule();
       if (var1 != null) {

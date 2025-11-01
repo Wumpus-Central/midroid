@@ -1,15 +1,15 @@
 package com.discord.misc.utilities.time
 
-import jp.i0
+import gu.i0
+import ju.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import mp.e
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
-   return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
+   return g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
       final long $initialDelayMs;
       final long $periodMs;
       private Object L$0;
@@ -21,19 +21,19 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
          this.$periodMs = var3x;
       }
 
-      public final Continuation create(Object var1, Continuation var2) {
+      public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
          val var3: Function2 = new <anonymous constructor>(this.$initialDelayMs, this.$periodMs, var2);
          var3.L$0 = var1;
          return var3;
       }
 
-      public final Object invoke(FlowCollector var1, Continuation var2x) {
+      public final Object invoke(FlowCollector var1, Continuation<? super Unit> var2x) {
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = km.b.e();
+         val var6: Any = ot.b.f();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -101,7 +101,7 @@ fun `intervalFlow$default`(var0: Long, var2: Long, var4: Int, var5: Any): Flow {
 }
 
 public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Unit> {
-   return e.p(new Function2<FlowCollector, Continuation, Object>(var2, var0, null) {
+   return g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
       final long $initialDelay;
       final long $period;
       private Object L$0;
@@ -113,19 +113,19 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
          this.$period = var3x;
       }
 
-      public final Continuation create(Object var1, Continuation var2) {
+      public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
          val var3: Function2 = new <anonymous constructor>(this.$initialDelay, this.$period, var2);
          var3.L$0 = var1;
          return var3;
       }
 
-      public final Object invoke(FlowCollector var1, Continuation var2x) {
+      public final Object invoke(FlowCollector var1, Continuation<? super Unit> var2x) {
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = km.b.e();
+         val var6: Any = ot.b.f();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {

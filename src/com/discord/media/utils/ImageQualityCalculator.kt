@@ -4,7 +4,8 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Bitmap.Config
 import android.graphics.BitmapFactory.Options
-import jp.k0
+import gu.g
+import gu.m0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
@@ -57,69 +58,69 @@ public object ImageQualityCalculator {
    }
 
    private fun calculateSSIMFromGrayscale(original: FloatArray, compressed: FloatArray, width: Int, height: Int): Double {
-      val var15: Int = mm.c.c(0, var4 - 8, 4);
+      val var15: Int = qt.c.c(0, var4 - 8, 4);
       var var7: Double;
-      var var11: Int;
       if (var15 >= 0) {
-         var4 = 0;
+         var var11: Int = 0;
          var var12: Int = 0;
          var var5: Double = 0.0;
 
          while (true) {
-            val var14: Int = mm.c.c(0, var3 - 8, 4);
+            val var13: Int = qt.c.c(0, var3 - 8, 4);
             var7 = var5;
-            var11 = var4;
-            if (var14 >= 0) {
-               var var13: Int = 0;
-               var11 = var4;
+            var4 = var11;
+            if (var13 >= 0) {
+               var var14: Int = 0;
+               var4 = var11;
                var7 = var5;
 
                while (true) {
-                  val var9: Double = this.calculateWindowSSIM(var1, var2, var3, var13, var12, 8, 6.5025F, 58.5225F);
+                  val var9: Double = this.calculateWindowSSIM(var1, var2, var3, var14, var12, 8, 6.5025F, 58.5225F);
                   var5 = var7;
-                  var4 = var11;
+                  var11 = var4;
                   if (!java.lang.Double.isInfinite(var9)) {
                      var5 = var7;
-                     var4 = var11;
+                     var11 = var4;
                      if (!java.lang.Double.isNaN(var9)) {
                         var5 = var7 + var9;
-                        var4 = var11 + 1;
+                        var11 = var4 + 1;
                      }
                   }
 
                   var7 = var5;
-                  var11 = var4;
-                  if (var13 == var14) {
+                  var4 = var11;
+                  if (var14 == var13) {
                      break;
                   }
 
-                  var13 += 4;
+                  var14 += 4;
                   var7 = var5;
-                  var11 = var4;
+                  var4 = var11;
                }
             }
 
             if (var12 == var15) {
+               var3 = var4;
                break;
             }
 
             var12 += 4;
             var5 = var7;
-            var4 = var11;
+            var11 = var4;
          }
       } else {
          var7 = 0.0;
-         var11 = 0;
+         var3 = 0;
       }
 
-      return if (var11 > 0) var7 / var11 else 0.0;
+      return if (var3 > 0) var7 / var3 else 0.0;
    }
 
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       var var25: Int = 0;
       var var11: Double = 0.0;
-      var var17: Double = 0.0;
       var var15: Double = 0.0;
+      var var17: Double = 0.0;
       var var13: Double = 0.0;
 
       var var9: Double;
@@ -128,21 +129,21 @@ public object ImageQualityCalculator {
             val var21: Double = var1[(var5 + var25) * var3 + var4 + var26];
             val var19: Double = var2[(var5 + var25) * var3 + var4 + var26];
             var11 += var21;
-            var17 += var19;
-            var15 += var21 * var21;
+            var15 += var19;
+            var17 += var21 * var21;
             var13 += var19 * var19;
             var9 += var19 * var21;
          }
       }
 
-      return if ((var11 / (var6 * var6) * (var11 / (var6 * var6)) + var17 / (var6 * var6) * (var17 / (var6 * var6)) + var7)
-               * ((var15 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var17 * (var17 / (var6 * var6))) / (var6 * var6) + var8)
+      return if ((var11 / (var6 * var6) * (var11 / (var6 * var6)) + var15 / (var6 * var6) * (var15 / (var6 * var6)) + var7)
+               * ((var17 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var15 * (var15 / (var6 * var6))) / (var6 * var6) + var8)
             > 0.0)
-         (var11 / (var6 * var6) * 2.0 * (var17 / (var6 * var6)) + var7)
-            * ((var9 - var11 * (var17 / (var6 * var6))) / (var6 * var6) * 2.0 + var8)
+         (var11 / (var6 * var6) * 2.0 * (var15 / (var6 * var6)) + var7)
+            * ((var9 - var11 * (var15 / (var6 * var6))) / (var6 * var6) * 2.0 + var8)
             / (
-               (var11 / (var6 * var6) * (var11 / (var6 * var6)) + var17 / (var6 * var6) * (var17 / (var6 * var6)) + var7)
-                  * ((var15 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var17 * (var17 / (var6 * var6))) / (var6 * var6) + var8)
+               (var11 / (var6 * var6) * (var11 / (var6 * var6)) + var15 / (var6 * var6) * (var15 / (var6 * var6)) + var7)
+                  * ((var17 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var15 * (var15 / (var6 * var6))) / (var6 * var6) + var8)
             )
          else
          0.0;
@@ -205,9 +206,9 @@ public object ImageQualityCalculator {
          val var4: Int = var1[var2] shr 24 and 255;
          if ((var1[var2] shr 24 and 255) != 0) {
             if (var4 != 255) {
-               var8[var2] = kotlin.ranges.e.m((var6 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.e.m(
+               var8[var2] = kotlin.ranges.e.n((var6 and 255) * 255 / var4, 0, 255) or var4 shl 24 or kotlin.ranges.e.n(
                   (var6 shr 16 and 255) * 255 / var4, 0, 255
-               ) shl 16 or kotlin.ranges.e.m((var6 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
+               ) shl 16 or kotlin.ranges.e.n((var6 shr 8 and 255) * 255 / var4, 0, 255) shl 8;
             } else {
                var8[var2] = var6;
             }
@@ -220,9 +221,9 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalBitmap: Bitmap, compressedBitmap: Bitmap): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return jp.f.g(
-         k0.a(),
-         new Function2<CoroutineScope, Continuation, Object>(var1, var2, null) {
+      return g.g(
+         m0.a(),
+         new Function2<CoroutineScope, Continuation<? super ImageQualityCalculator.ImageQualityMetrics>, Object>(var1, var2, null) {
             final Bitmap $compressedBitmap;
             final Bitmap $originalBitmap;
             int label;
@@ -233,17 +234,17 @@ public object ImageQualityCalculator {
                this.$compressedBitmap = var2x;
             }
 
-            public final Continuation create(Object var1, Continuation var2) {
+            public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
                return new <anonymous constructor>(this.$originalBitmap, this.$compressedBitmap, var2);
             }
 
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
+            public final Object invoke(CoroutineScope var1, Continuation<? super ImageQualityCalculator.ImageQualityMetrics> var2x) {
                return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
             }
 
             // $VF: Duplicated exception handlers to handle obfuscated exceptions
             public final Object invokeSuspend(Object var1) {
-               km.b.e();
+               ot.b.f();
                if (this.label == 0) {
                   kotlin.c.b(var1);
 
@@ -256,23 +257,23 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
-                  var var4: Int;
+                  var var5: Int;
                   var var6: Int;
                   try {
-                     var4 = this.$originalBitmap.getWidth();
+                     var5 = this.$originalBitmap.getWidth();
                      var6 = this.$originalBitmap.getHeight();
                   } catch (var16: Exception) {
                      return null;
                   }
 
-                  val var5: Int = var4 * var6;
+                  val var4: Int = var5 * var6;
 
                   var var11: IntArray;
                   try {
-                     var1 = new int[var5];
-                     var11 = new int[var5];
-                     this.$originalBitmap.getPixels(var1, 0, var4, 0, 0, var4, var6);
-                     this.$compressedBitmap.getPixels(var11, 0, var4, 0, 0, var4, var6);
+                     var1 = new int[var4];
+                     var11 = new int[var4];
+                     this.$originalBitmap.getPixels(var1, 0, var5, 0, 0, var5, var6);
+                     this.$compressedBitmap.getPixels(var11, 0, var5, 0, 0, var5, var6);
                      if (this.$originalBitmap.isPremultiplied()) {
                         var1 = ImageQualityCalculator.access$unpremultiplyPixels(ImageQualityCalculator.INSTANCE, var1);
                      }
@@ -292,8 +293,8 @@ public object ImageQualityCalculator {
                      val var7: Long = System.nanoTime();
                      val var12: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      return new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var11, var4, var6),
-                        ImageQualityCalculator.access$calculateSSIM(var12, var1, var11, var4, var6),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var11, var5, var6),
+                        ImageQualityCalculator.access$calculateSSIM(var12, var1, var11, var5, var6),
                         (System.nanoTime() - var7) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );
@@ -310,7 +311,7 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalData: ByteArray, compressedData: ByteArray): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return jp.f.g(k0.a(), new Function2<CoroutineScope, Continuation, Object>(var1, var2, null) {
+      return g.g(m0.a(), new Function2<CoroutineScope, Continuation<? super ImageQualityCalculator.ImageQualityMetrics>, Object>(var1, var2, null) {
          final byte[] $compressedData;
          final byte[] $originalData;
          int label;
@@ -321,17 +322,17 @@ public object ImageQualityCalculator {
             this.$compressedData = var2x;
          }
 
-         public final Continuation create(Object var1, Continuation var2) {
+         public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
             return new <anonymous constructor>(this.$originalData, this.$compressedData, var2);
          }
 
-         public final Object invoke(CoroutineScope var1, Continuation var2x) {
+         public final Object invoke(CoroutineScope var1, Continuation<? super ImageQualityCalculator.ImageQualityMetrics> var2x) {
             return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
          }
 
          // $VF: Duplicated exception handlers to handle obfuscated exceptions
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = km.b.e();
+            val var3: Any = ot.b.f();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -345,20 +346,20 @@ public object ImageQualityCalculator {
             } else {
                kotlin.c.b(var1);
 
-               var var4: ImageQualityCalculator;
+               var var4: Bitmap;
                var var5: Bitmap;
                try {
-                  var4 = ImageQualityCalculator.INSTANCE;
-                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(var4, this.$compressedData);
+                  var1 = ImageQualityCalculator.INSTANCE;
+                  var4 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
+                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(var1, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var1 != null && var5 != null) {
+               if (var4 != null && var5 != null) {
                   try {
                      this.label = 1;
-                     var1 = var4.calculateQualityMetrics(var1, var5, this);
+                     var1 = var1.calculateQualityMetrics(var4, var5, this);
                   } catch (var6: Exception) {
                      return null;
                   }
@@ -440,15 +441,15 @@ public object ImageQualityCalculator {
       }
 
       public override fun toString(): String {
-         val var3: Double = this.psnr;
-         val var1: Double = this.ssim;
+         val var1: Double = this.psnr;
+         val var3: Double = this.ssim;
          val var5: Long = this.psnrCalculationTimeMs;
          val var7: Long = this.ssimCalculationTimeMs;
          val var9: StringBuilder = new StringBuilder();
          var9.append("ImageQualityMetrics(psnr=");
-         var9.append(var3);
-         var9.append(", ssim=");
          var9.append(var1);
+         var9.append(", ssim=");
+         var9.append(var3);
          var9.append(", psnrCalculationTimeMs=");
          var9.append(var5);
          var9.append(", ssimCalculationTimeMs=");

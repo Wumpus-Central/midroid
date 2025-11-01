@@ -18,8 +18,8 @@ import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
@@ -63,7 +63,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       var4 = var7.itemInviteHubLink;
       var7.itemInviteHubLink.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
       DiscordFontUtilsKt.setDiscordFont(var4, var10);
-      var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, color.brand));
+      var7.itemInviteJoinedButton.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.brand));
    }
 
    public fun setBackgroundRectangleColor(color: Int?) {
@@ -72,7 +72,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
          var2 = var1;
       } else {
          val var3: Context = this.getContext();
-         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(color.primary_100, color.primary_630));
+         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(R.color.primary_100, R.color.primary_630));
       }
 
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var2, SizeUtilsKt.getDpToPx(4), null, 0, 12, null);
@@ -85,7 +85,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
    public fun setButtonText(text: CharSequence?) {
       val var4: DCDButton = this.binding.itemInviteJoinedButton;
       var var2: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
@@ -179,7 +179,7 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
       var var6: View = this.binding.itemInviteOnlineDot;
       var var3: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -193,11 +193,11 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
 
       var6.setVisibility(var3);
       var6 = this.binding.itemInviteOnlineDot;
-      ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, color.green_360), 0, 2, null);
+      ViewBackgroundUtilsKt.setBackgroundOval$default(var6, ColorUtilsKt.getColorCompat(this, R.color.green_360), 0, 2, null);
       this.binding.itemInviteOnlineText.setText(var1);
       var6 = this.binding.itemInviteTotalMemberDot;
       var var8: Boolean;
-      if (var2 != null && !StringsKt.c0(var2)) {
+      if (var2 != null && !StringsKt.i0(var2)) {
          var8 = 0;
       } else {
          var8 = 1;
@@ -212,19 +212,19 @@ public class GuildInviteView  public constructor(context: Context, attrs: Attrib
       label55: {
          var6.setVisibility(var8);
          val var14: ImageView = this.binding.itemInviteTotalMemberDot;
-         ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, color.primary_500), 0, 2, null);
+         ViewBackgroundUtilsKt.setBackgroundOval$default(var14, ColorUtilsKt.getColorCompat(this, R.color.primary_500), 0, 2, null);
          this.binding.itemInviteTotalMemberText.setText(var2);
          var6 = this.binding.itemInviteMemberContainer;
          if (var1 != null) {
             var10 = true;
-            if (!StringsKt.c0(var1)) {
+            if (!StringsKt.i0(var1)) {
                break label55;
             }
          }
 
          if (var2 != null) {
             var10 = true;
-            if (!StringsKt.c0(var2)) {
+            if (!StringsKt.i0(var2)) {
                break label55;
             }
          }

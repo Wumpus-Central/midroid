@@ -14,7 +14,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.animation.PathInterpolator
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.device.utils.DeviceReducedMotion
 import com.discord.misc.utilities.drawable.GetDrawableCompatKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -63,8 +63,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       this.context = var1;
       this.onStart = var2;
       this.onEnd = var3;
-      this.replyIcon = GetDrawableCompatKt.getDrawableCompat(var1, R.drawable.ic_swipe_reply);
-      this.editIcon = GetDrawableCompatKt.getDrawableCompat(var1, R.drawable.ic_swipe_edit);
+      this.replyIcon = GetDrawableCompatKt.getDrawableCompat(var1, drawable.ic_swipe_reply);
+      this.editIcon = GetDrawableCompatKt.getDrawableCompat(var1, drawable.ic_swipe_edit);
       this.easterEggArrowScale = 1.0F;
       this.shouldPerformHapticFeedback = true;
       this.actionType = SwipeActionType.Reply;
@@ -108,7 +108,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 029: aload 19
       // 02b: invokevirtual android/view/View.getTranslationX ()F
       // 02e: invokestatic java/lang/Math.abs (F)F
-      // 031: fstore 6
+      // 031: fstore 4
       // 033: aload 0
       // 034: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
       // 037: astore 20
@@ -178,12 +178,12 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 0c9: fload 2
       // 0ca: fload 5
       // 0cc: invokespecial com/discord/chat/presentation/list/SwipeHelper.getLeftBevelRadius (FF)F
-      // 0cf: fstore 8
+      // 0cf: fstore 9
       // 0d1: getstatic com/discord/chat/presentation/list/SwipeHelper.MAX_RIGHT_BEVEL_WIDTH I
       // 0d4: i2f
       // 0d5: fload 2
       // 0d6: fmul
-      // 0d7: fstore 11
+      // 0d7: fstore 13
       // 0d9: aload 0
       // 0da: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
       // 0dd: astore 20
@@ -216,15 +216,15 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 116: fadd
       // 117: fstore 3
       // 118: fload 3
-      // 119: fload 8
+      // 119: fload 9
       // 11b: fsub
       // 11c: fstore 10
       // 11e: fload 3
-      // 11f: fload 6
+      // 11f: fload 4
       // 121: fadd
-      // 122: fstore 4
-      // 124: fload 4
-      // 126: fload 11
+      // 122: fstore 6
+      // 124: fload 6
+      // 126: fload 13
       // 128: fsub
       // 129: fstore 12
       // 12b: aload 0
@@ -248,13 +248,13 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 152: iload 16
       // 154: i2f
       // 155: fsub
-      // 156: fstore 15
-      // 158: fload 15
+      // 156: fstore 14
+      // 158: fload 14
       // 15a: iload 16
       // 15c: i2f
       // 15d: fadd
-      // 15e: fstore 7
-      // 160: fload 15
+      // 15e: fstore 8
+      // 160: fload 14
       // 162: fload 5
       // 164: fadd
       // 165: iload 16
@@ -262,42 +262,42 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 168: imul
       // 169: i2f
       // 16a: fadd
-      // 16b: fstore 14
-      // 16d: fload 14
+      // 16b: fstore 15
+      // 16d: fload 15
       // 16f: iload 16
       // 171: i2f
       // 172: fsub
-      // 173: fstore 13
+      // 173: fstore 11
       // 175: new android/graphics/Path
       // 178: dup
       // 179: invokespecial android/graphics/Path.<init> ()V
       // 17c: astore 19
       // 17e: aload 19
       // 180: fload 12
-      // 182: fload 13
+      // 182: fload 11
       // 184: invokevirtual android/graphics/Path.moveTo (FF)V
       // 187: aload 19
       // 189: fload 3
-      // 18a: fload 13
+      // 18a: fload 11
       // 18c: invokevirtual android/graphics/Path.lineTo (FF)V
       // 18f: aload 19
       // 191: fload 3
-      // 192: fload 7
-      // 194: fload 8
+      // 192: fload 8
+      // 194: fload 9
       // 196: fadd
       // 197: invokevirtual android/graphics/Path.lineTo (FF)V
       // 19a: bipush 2
       // 19b: i2f
-      // 19c: fstore 9
+      // 19c: fstore 7
       // 19e: aload 19
       // 1a0: fload 10
-      // 1a2: fload 8
+      // 1a2: fload 9
       // 1a4: fsub
-      // 1a5: fload 7
+      // 1a5: fload 8
       // 1a7: fload 3
-      // 1a8: fload 7
-      // 1aa: fload 9
-      // 1ac: fload 8
+      // 1a8: fload 8
+      // 1aa: fload 7
+      // 1ac: fload 9
       // 1ae: fmul
       // 1af: fadd
       // 1b0: fconst_0
@@ -305,43 +305,43 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 1b4: invokevirtual android/graphics/Path.addArc (FFFFFF)V
       // 1b7: aload 19
       // 1b9: fload 12
-      // 1bb: fload 7
+      // 1bb: fload 8
       // 1bd: invokevirtual android/graphics/Path.lineTo (FF)V
       // 1c0: fload 12
-      // 1c2: fload 11
+      // 1c2: fload 13
       // 1c4: ldc_w 0.55
       // 1c7: fmul
       // 1c8: fadd
-      // 1c9: fstore 11
+      // 1c9: fstore 13
       // 1cb: aload 19
-      // 1cd: fload 11
-      // 1cf: fload 7
-      // 1d1: fload 4
-      // 1d3: fload 15
+      // 1cd: fload 13
+      // 1cf: fload 8
+      // 1d1: fload 6
+      // 1d3: fload 14
       // 1d5: iload 16
       // 1d7: i2f
       // 1d8: ldc_w 0.55
       // 1db: fmul
       // 1dc: fadd
-      // 1dd: fload 4
-      // 1df: fload 15
+      // 1dd: fload 6
+      // 1df: fload 14
       // 1e1: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
       // 1e4: aload 19
-      // 1e6: fload 4
-      // 1e8: fload 14
+      // 1e6: fload 6
+      // 1e8: fload 15
       // 1ea: invokevirtual android/graphics/Path.lineTo (FF)V
       // 1ed: aload 19
-      // 1ef: fload 4
-      // 1f1: fload 14
+      // 1ef: fload 6
+      // 1f1: fload 15
       // 1f3: iload 16
       // 1f5: i2f
       // 1f6: ldc_w 0.55
       // 1f9: fmul
       // 1fa: fsub
-      // 1fb: fload 11
-      // 1fd: fload 13
+      // 1fb: fload 13
+      // 1fd: fload 11
       // 1ff: fload 12
-      // 201: fload 13
+      // 201: fload 11
       // 203: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
       // 206: aload 1
       // 207: invokevirtual android/graphics/Canvas.save ()I
@@ -352,9 +352,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 211: pop
       // 212: aload 1
       // 213: fload 10
-      // 215: fload 15
-      // 217: fload 4
-      // 219: fload 14
+      // 215: fload 14
+      // 217: fload 6
+      // 219: fload 15
       // 21b: aload 21
       // 21d: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
       // 220: aload 1
@@ -364,14 +364,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 228: pop
       // 229: aload 19
       // 22b: invokevirtual android/graphics/Path.reset ()V
-      // 22e: fload 13
-      // 230: fload 8
+      // 22e: fload 11
+      // 230: fload 9
       // 232: fsub
-      // 233: fstore 11
+      // 233: fstore 12
       // 235: aload 19
       // 237: fload 10
-      // 239: fload 11
-      // 23b: fload 8
+      // 239: fload 12
+      // 23b: fload 9
       // 23d: getstatic android/graphics/Path$Direction.CW Landroid/graphics/Path$Direction;
       // 240: invokevirtual android/graphics/Path.addCircle (FFFLandroid/graphics/Path$Direction;)V
       // 243: getstatic android/os/Build$VERSION.SDK_INT I
@@ -390,9 +390,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 25f: goto 252
       // 262: aload 1
       // 263: fload 10
-      // 265: fload 11
+      // 265: fload 12
       // 267: fload 3
-      // 268: fload 13
+      // 268: fload 11
       // 26a: aload 21
       // 26c: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
       // 26f: aload 1
@@ -400,19 +400,19 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 273: aload 0
       // 274: fload 5
       // 276: invokespecial com/discord/chat/presentation/list/SwipeHelper.getArrowContainerBaseSize (F)F
-      // 279: fload 9
+      // 279: fload 7
       // 27b: fdiv
-      // 27c: fstore 8
-      // 27e: fload 6
-      // 280: fload 9
+      // 27c: fstore 9
+      // 27e: fload 4
+      // 280: fload 7
       // 282: fdiv
-      // 283: fstore 6
-      // 285: fload 7
+      // 283: fstore 4
+      // 285: fload 8
       // 287: fload 5
-      // 289: fload 9
+      // 289: fload 7
       // 28b: fdiv
       // 28c: fadd
-      // 28d: fload 8
+      // 28d: fload 9
       // 28f: fsub
       // 290: f2i
       // 291: istore 17
@@ -425,7 +425,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 29c: iadd
       // 29d: bipush 0
       // 29e: sipush 255
-      // 2a1: invokestatic kotlin/ranges/e.m (III)I
+      // 2a1: invokestatic kotlin/ranges/e.n (III)I
       // 2a4: istore 16
       // 2a6: aload 1
       // 2a7: invokevirtual android/graphics/Canvas.save ()I
@@ -433,7 +433,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 2ab: aload 1
       // 2ac: fload 3
       // 2ad: fconst_0
-      // 2ae: fload 4
+      // 2ae: fload 6
       // 2b0: aload 1
       // 2b1: invokevirtual android/graphics/Canvas.getHeight ()I
       // 2b4: i2f
@@ -441,15 +441,15 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 2b8: pop
       // 2b9: aload 1
       // 2ba: fload 3
-      // 2bb: fload 6
+      // 2bb: fload 4
       // 2bd: fadd
-      // 2be: fload 8
+      // 2be: fload 9
       // 2c0: fsub
-      // 2c1: fload 8
+      // 2c1: fload 9
       // 2c3: fadd
       // 2c4: iload 17
       // 2c6: i2f
-      // 2c7: fload 8
+      // 2c7: fload 9
       // 2c9: fadd
       // 2ca: invokevirtual android/graphics/Canvas.translate (FF)V
       // 2cd: aload 0
@@ -503,7 +503,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 338: aload 1
       // 339: fconst_0
       // 33a: fconst_0
-      // 33b: fload 8
+      // 33b: fload 9
       // 33d: aload 21
       // 33f: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
       // 342: aload 21
@@ -551,7 +551,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 39d: aload 1
       // 39e: fconst_0
       // 39f: fconst_0
-      // 3a0: fload 8
+      // 3a0: fload 9
       // 3a2: aload 21
       // 3a4: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
       // 3a7: aload 1
@@ -595,14 +595,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 3f2: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
       // 3f5: getstatic android/graphics/PorterDuff$Mode.SRC_ATOP Landroid/graphics/PorterDuff$Mode;
       // 3f8: invokespecial android/graphics/PorterDuffColorFilter.<init> (ILandroid/graphics/PorterDuff$Mode;)V
-      // 3fb: astore 20
+      // 3fb: astore 19
       // 3fd: aload 0
       // 3fe: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
-      // 401: astore 19
-      // 403: aload 19
+      // 401: astore 20
+      // 403: aload 20
       // 405: ifnull 40f
-      // 408: aload 19
-      // 40a: aload 20
+      // 408: aload 20
+      // 40a: aload 19
       // 40c: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
       // 40f: getstatic com/discord/device/utils/DeviceReducedMotion.INSTANCE Lcom/discord/device/utils/DeviceReducedMotion;
       // 412: aload 0
@@ -651,14 +651,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 45d: iload 17
       // 45f: iload 17
       // 461: invokespecial android/graphics/Rect.<init> (IIII)V
-      // 464: astore 19
+      // 464: astore 20
       // 466: aload 0
       // 467: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
       // 46a: astore 21
       // 46c: aload 21
       // 46e: ifnull 478
       // 471: aload 21
-      // 473: aload 19
+      // 473: aload 20
       // 475: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
       // 478: aload 0
       // 479: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
@@ -692,7 +692,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 4b4: aload 21
       // 4b6: ifnull 4c8
       // 4b9: aload 21
-      // 4bb: aload 20
+      // 4bb: aload 19
       // 4bd: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
       // 4c0: goto 4c8
       // 4c3: astore 19
@@ -709,11 +709,11 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 4d5: invokevirtual android/graphics/Canvas.scale (FF)V
       // 4d8: aload 0
       // 4d9: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
-      // 4dc: astore 20
-      // 4de: aload 20
+      // 4dc: astore 19
+      // 4de: aload 19
       // 4e0: ifnull 4ea
-      // 4e3: aload 20
-      // 4e5: aload 19
+      // 4e3: aload 19
+      // 4e5: aload 20
       // 4e7: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
       // 4ea: aload 0
       // 4eb: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
@@ -753,25 +753,25 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var3 = null;
          }
 
-         var var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+         val var5: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
-         val var5: ValueAnimator = new ValueAnimator();
-         var5.setValues(new PropertyValuesHolder[]{var7});
-         var5.setDuration(300L);
-         var5.setInterpolator(new AccelerateDecelerateInterpolator());
-         var5.addUpdateListener(new b0(this, var1));
-         this.easterEggArrowAnimator = var5;
-         var5.start();
-         var7 = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         val var7: ValueAnimator = new ValueAnimator();
+         var7.setValues(new PropertyValuesHolder[]{var5});
+         var7.setDuration(300L);
+         var7.setInterpolator(new AccelerateDecelerateInterpolator());
+         var7.addUpdateListener(new b0(this, var1));
+         this.easterEggArrowAnimator = var7;
+         var7.start();
+         val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
          val var6: ValueAnimator = new ValueAnimator();
-         var6.setValues(new PropertyValuesHolder[]{var7});
+         var6.setValues(new PropertyValuesHolder[]{var8});
          var6.setDuration(800L);
          var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
          var6.addUpdateListener(new c0(this, var1));
          var6.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
-            final RecyclerView.ViewHolder $viewHolder$inlined;
+            final ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
 
             {
@@ -876,16 +876,16 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          var3 = null;
       }
 
-      val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+      val var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
          "edit-circle-scale", new float[]{this.editCircleScale, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
       );
-      val var7: ValueAnimator = new ValueAnimator();
-      var7.setValues(new PropertyValuesHolder[]{var8});
-      var7.setDuration(300L);
-      var7.setInterpolator(new AccelerateDecelerateInterpolator());
-      var7.addUpdateListener(new e0(this, var1));
-      this.editCircleScaleAnimator = var7;
-      var7.start();
+      val var8: ValueAnimator = new ValueAnimator();
+      var8.setValues(new PropertyValuesHolder[]{var7});
+      var8.setDuration(300L);
+      var8.setInterpolator(new AccelerateDecelerateInterpolator());
+      var8.addUpdateListener(new e0(this, var1));
+      this.editCircleScaleAnimator = var8;
+      var8.start();
       this.actionType = SwipeActionType.Edit;
       var var6: View = this.mView;
       if (this.mView == null) {
@@ -904,13 +904,13 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    private fun triggerEditExitTransition(recyclerView: RecyclerView) {
-      val var2: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
-      val var3: ValueAnimator = new ValueAnimator();
-      var3.setValues(new PropertyValuesHolder[]{var2});
-      var3.setDuration(200L);
-      var3.setInterpolator(new AccelerateDecelerateInterpolator());
-      var3.addUpdateListener(new d0(this, var1));
-      var3.addListener(new AnimatorListener(this) {
+      val var3: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setValues(new PropertyValuesHolder[]{var3});
+      var2.setDuration(200L);
+      var2.setInterpolator(new AccelerateDecelerateInterpolator());
+      var2.addUpdateListener(new d0(this, var1));
+      var2.addListener(new AnimatorListener(this) {
          final SwipeHelper this$0;
 
          {
@@ -930,8 +930,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.editCircleScaleAnimator = var3;
-      var3.start();
+      this.editCircleScaleAnimator = var2;
+      var2.start();
    }
 
    @JvmStatic
@@ -1041,7 +1041,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
 
       if (var9 != null) {
-         val var4: Float = this.getSwipeProgress();
+         val var2: Float = this.getSwipeProgress();
          val var3: Float = SizeUtilsKt.getDpToPx(12);
          if (this.mView == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mView");
@@ -1049,7 +1049,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var6 = this.mView;
          }
 
-         val var2: Float = this.getLeftBevelRadius(var4, (float)var6.getMeasuredHeight());
+         val var4: Float = this.getLeftBevelRadius(var2, (float)var6.getMeasuredHeight());
          val var10: java.lang.String;
          if (ThemeManager.INSTANCE.isThemeLight()) {
             var10 = "#1F000000";
@@ -1057,11 +1057,11 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var10 = "#3E000000";
          }
 
-         var9.getShadowView().setParams(var3 * var4, var2, var10);
+         var9.getShadowView().setParams(var3 * var2, var4, var10);
       }
    }
 
-   public override fun getAnimationDuration(recyclerView: RecyclerView, animationType: Int, animateDx: Float, animateDy: Float): Long {
+   public open fun getAnimationDuration(recyclerView: RecyclerView, animationType: Int, animateDx: Float, animateDy: Float): Long {
       return 300L;
    }
 
@@ -1072,7 +1072,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          new Pair((float)SWIPE_STOP_OFFSET_X - (float)Math.atan((double)(Math.abs(var1 - (float)SWIPE_STOP_OFFSET_X) / 120.0F)) * 120.0F, var2);
    }
 
-   public override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
+   public open fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
       val var4: View = var2.itemView;
       this.mView = var2.itemView;
       val var5: SwipeReplyInitiator;
@@ -1089,10 +1089,10 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          var3 = 0;
       }
 
-      return androidx.recyclerview.widget.e.makeMovementFlags(0, var3);
+      return androidx.recyclerview.widget.h.makeMovementFlags(0, var3);
    }
 
-   public override fun onChildDraw(
+   public open fun onChildDraw(
       c: Canvas,
       recyclerView: RecyclerView,
       viewHolder: ViewHolder,
@@ -1126,7 +1126,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
    }
 
-   public override fun onMove(recyclerView: RecyclerView, viewHolder: ViewHolder, target: ViewHolder): Boolean {
+   public open fun onMove(recyclerView: RecyclerView, viewHolder: ViewHolder, target: ViewHolder): Boolean {
       return false;
    }
 
@@ -1151,7 +1151,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             val var3: Int = SwipeHelper.WhenMappings.$EnumSwitchMapping$0[this.actionType.ordinal()];
             if (var3 != 1) {
                if (var3 != 2) {
-                  throw new fm.p();
+                  throw new ht.p();
                }
 
                var5.getOnInitiateEdit().invoke();
@@ -1166,7 +1166,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       this.handler.removeCallbacksAndMessages(null);
    }
 
-   public override fun onSelectedChanged(viewHolder: ViewHolder?, actionState: Int) {
+   public open fun onSelectedChanged(viewHolder: ViewHolder?, actionState: Int) {
       super.onSelectedChanged(var1, var2);
       val var3: Boolean;
       if (var1 == null && var2 == 0) {
@@ -1202,7 +1202,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       }
    }
 
-   public override fun onSwiped(viewHolder: ViewHolder, direction: Int) {
+   public open fun onSwiped(viewHolder: ViewHolder, direction: Int) {
    }
 
    public override fun shouldReturnToOriginalPosition(): Boolean {

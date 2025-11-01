@@ -3,6 +3,7 @@ package com.discord.chat.presentation.list
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 
 internal class ChatListVisibilityCalculator {
    public final var firstMessagePosition: Int = -1
@@ -22,7 +23,7 @@ internal class ChatListVisibilityCalculator {
    }
 
    private fun getItemPercentVisible(recyclerView: RecyclerView, position: Int): Double {
-      val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
+      val var7: LayoutManager = var1.getLayoutManager();
       val var10: View = (var7 as LinearLayoutManager).findViewByPosition(var2);
       var var3: Double = 0.0;
       if (var10 == null) {
@@ -55,7 +56,7 @@ internal class ChatListVisibilityCalculator {
 
    public fun updateFirstAndLastMessageVisibilityData(recyclerView: RecyclerView) {
       this.resetVisibilityData();
-      val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
+      val var7: LayoutManager = var1.getLayoutManager();
       val var5: Int = (var7 as LinearLayoutManager).findFirstVisibleItemPosition();
       val var6: Int = (var7 as LinearLayoutManager).findLastVisibleItemPosition();
       if (var5 != -1 && var6 != -1) {

@@ -59,7 +59,7 @@ public class PollCheckboxView  public constructor(context: Context, attrs: Attri
          } else {
             ReactAssetUtilsKt.setReactImageUrl(this, var1.getResources().getCheckmarkIcon());
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var1.getRadioBackgroundColor(), var3, null, 0, 12, null);
-            ColorUtilsKt.setTintColor(this, var1.getRadioForegroundColor());
+            ColorUtilsKt.setTintColor((SimpleDraweeView)this, var1.getRadioForegroundColor());
          }
       }
    }

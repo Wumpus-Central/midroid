@@ -13,8 +13,8 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
+import kotlin.jvm.internal.Ref
 import kotlin.jvm.internal.SourceDebugExtension
-import kotlin.jvm.internal.Ref.BooleanRef
 
 @SourceDebugExtension(["SMAP\nDCDChatInput.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DCDChatInput.kt\ncom/discord/chat/input/views/DCDChatInput\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,175:1\n1#2:176\n*E\n"])
 public class DCDChatInput  public constructor(context: Context, attrs: AttributeSet? = null) : AppCompatEditText(var1, var2) {
@@ -36,11 +36,11 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    private fun setupExternalKeyboardSendRequests() {
-      this.setOnKeyListener(new j(new BooleanRef(), this));
+      this.setOnKeyListener(new com.discord.chat.input.views.j(new Ref.BooleanRef(), this));
    }
 
    @JvmStatic
-   fun `setupExternalKeyboardSendRequests$lambda$2`(var0: BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
+   fun `setupExternalKeyboardSendRequests$lambda$2`(var0: Ref.BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
       if ((var4.getFlags() and 2) == 2) {
          return false;
       } else {
@@ -84,7 +84,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
       }
    }
 
-   protected open fun onDetachedFromWindow() {
+   protected override fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       this.removeCallbacks(this.measureAndLayoutRunnable);
    }

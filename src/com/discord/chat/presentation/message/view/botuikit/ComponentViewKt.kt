@@ -13,7 +13,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 public fun ComponentEmoji.renderable(): RenderableEmoji {
    var var3: java.lang.String = var0.getId();
    if (var3 != null) {
-      val var6: java.lang.Long = StringsKt.o(var3);
+      val var6: java.lang.Long = StringsKt.s(var3);
       if (var6 != null) {
          val var7: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var6.longValue(), var0.getAnimated(), var0.getName());
          if (var7 != null) {

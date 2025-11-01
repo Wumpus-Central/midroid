@@ -9,8 +9,8 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutParams
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji_picker.databinding.PremiumInlineRoadblockFooterBinding
 import com.discord.emoji_picker.databinding.PremiumInlineRoadblockHeaderBinding
@@ -26,14 +26,14 @@ import com.discord.portals.from_js.PortalFromJsContextManager
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 
-internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
+internal sealed class EmojiPickerViewHolder protected constructor(view: View) : ViewHolder(var1) {
    @SourceDebugExtension(["SMAP\nEmojiPickerViewHolder.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Category\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,326:1\n176#2,2:327\n*S KotlinDebug\n*F\n+ 1 EmojiPickerViewHolder.kt\ncom/discord/emoji_picker/EmojiPickerViewHolder$Category\n*L\n71#1:327,2\n*E\n"])
    public class Category(context: Context) : EmojiPickerViewHolder(new TextView(var1)) {
       private final val categoryTextView: TextView
@@ -53,7 +53,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
       public fun onBindViewHolder(category: EmojiPickerItem.Category) {
          this.isInsidePremiumRoadblock = var1.isInsidePremiumRoadBlock();
-         if (!StringsKt.c0(var1.getTitle())) {
+         if (!StringsKt.i0(var1.getTitle())) {
             this.categoryTextView.setPadding(0, SizeUtilsKt.getDpToPx(8), 0, 0);
             this.categoryTextView.setLayoutParams(layoutParams);
             this.categoryTextView.setText(var1.getTitle());
@@ -84,7 +84,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
    public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
          new SimpleDraweeView(var1)
       ) {
-      private final val placeholder: Drawable by fm.l.b(new c0())
+      private final val placeholder: Drawable by ht.l.b(new c0())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }
@@ -111,7 +111,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiLoadListener = new EmojiPickerViewHolder.Emoji.EmojiLoadListener(false);
          RippleUtilsKt.addCircleRipple(var5, true);
          (var5.getHierarchy() as GenericDraweeHierarchy).w(var1.getResources().getInteger(com.discord.image.fresco.R.integer.image_fade_duration) / 3);
-         (var5.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
+         (var5.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.e);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new d0(this, var2), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new e0(this, var3), 1, null);
       }
@@ -187,7 +187,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiSize = var3;
          this.emojiMargin = var4;
          val var7: SimpleDraweeView = this.emojiView;
-         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         val var8: LayoutParams = new LayoutParams(var3, var3);
          var8.setMargins(var4, var4, var4, var4);
          var7.setLayoutParams(var8);
          this.emojiView.setContentDescription(var1.getName());
@@ -247,14 +247,14 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : p8.a {
+      private class EmojiLoadListener(animating: Boolean) : na.a {
          private final var animating: Boolean
 
          init {
             this.animating = var1;
          }
 
-         public open fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
+         public override fun onFinalImageSet(id: String?, imageInfo: Any?, animatable: Animatable?) {
             this.setAnimating(this.animating, var3);
          }
 
@@ -279,7 +279,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
          val var4: View = this.itemView;
-         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         val var3: LayoutParams = new LayoutParams(var1, var1);
          var3.setMargins(var2, var2, var2, var2);
          var4.setLayoutParams(var3);
       }
@@ -287,10 +287,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
    public class FooterUpsell(context: Context) : EmojiPickerViewHolder(new FrameLayout(var1)), PortalFromJsContext {
       init {
-         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, SizeUtilsKt.getDpToPx(64)));
+         this.itemView.setLayoutParams(new LayoutParams(-1, SizeUtilsKt.getDpToPx(64)));
       }
 
-      public open fun getPortalViewIndex(portalView: View): Int {
+      public override fun getPortalViewIndex(portalView: View): Int {
          val var2: View = this.itemView;
          return (var2 as FrameLayout).indexOfChild(var1);
       }
@@ -299,12 +299,12 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          PortalFromJsContextManager.INSTANCE.addContext(var1.getId(), this);
       }
 
-      public open fun onPortalFromJsAdded(portalId: String, portalView: View) {
+      public override fun onPortalFromJsAdded(portalId: String, portalView: View) {
          val var3: View = this.itemView;
          (var3 as FrameLayout).addView(var2);
       }
 
-      public open fun onPortalFromJsRemoved(portalId: String, portalView: View) {
+      public override fun onPortalFromJsRemoved(portalId: String, portalView: View) {
          val var3: View = this.itemView;
          (var3 as FrameLayout).removeView(var2);
       }
@@ -377,7 +377,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
 
    public class Spacer(context: Context) : EmojiPickerViewHolder(new View(var1)) {
       public fun onBindViewHolder(item: EmojiPickerItem.Spacer) {
-         this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-2, var1.getHeight()));
+         this.itemView.setLayoutParams(new LayoutParams(-2, var1.getHeight()));
       }
    }
 }

@@ -26,7 +26,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = lm.a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    @JvmStatic
@@ -69,13 +69,13 @@ public enum class NativePermissionStatus {
             var2 = (var1 as ReadableNativeMap).toString();
          }
 
-         if (StringsKt.N(var2, "granted", false, 2, null)) {
+         if (StringsKt.T(var2, "granted", false, 2, null)) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
             return var1;
-         } else if (StringsKt.N(var2, "denied", false, 2, null)) {
+         } else if (StringsKt.T(var2, "denied", false, 2, null)) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
             return var1;
-         } else if (StringsKt.N(var2, "never_ask_again", false, 2, null)) {
+         } else if (StringsKt.T(var2, "never_ask_again", false, 2, null)) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
             return var1;
          } else {

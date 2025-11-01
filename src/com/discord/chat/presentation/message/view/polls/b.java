@@ -11,6 +11,6 @@ public final class b implements Function6 {
    public final PollMessageAccessory e;
 
    public final Object invoke(Object var1, Object var2, Object var3, Object var4, Object var5, Object var6) {
-      return BasePollWithRecyclerView.h(this.d, this.e, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5, (ViewResizeMode)var6);
+      return BasePollWithRecyclerView.i(this.d, this.e, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5, (ViewResizeMode)var6);
    }
 }

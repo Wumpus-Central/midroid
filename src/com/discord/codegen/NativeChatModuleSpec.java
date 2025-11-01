@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeChatModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeChatModule";
@@ -17,6 +17,7 @@ public abstract class NativeChatModuleSpec extends ReactContextBaseJavaModule im
    @a
    public abstract void clearRows(double var1, double var3);
 
+   @Override
    public String getName() {
       return "NativeChatModule";
    }

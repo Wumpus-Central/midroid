@@ -1,14 +1,9 @@
 package com.discord.appreview
 
 import android.app.Activity
-import ch.a
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
-import s5.d
-import s5.e
-import zg.b
-import zg.c
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -25,21 +20,21 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    private fun createReviewManager(fake: Boolean, activity: Activity): ReviewManager {
       if (var1) {
-         return new a(var2);
+         return new lj.a(var2);
       } else {
-         val var3: ReviewManager = c.a(var2);
+         val var3: ReviewManager = ij.c.a(var2);
          return var3;
       }
    }
 
    @JvmStatic
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
-      if (var2.o()) {
-         val var5: Task = var0.b(var1.activity, var2.k() as b);
-         var5.addOnCompleteListener(new e(var1));
+      if (var2.p()) {
+         val var5: Task = var0.a(var1.activity, var2.l() as ij.b);
+         var5.addOnCompleteListener(new q7.e(var1));
       } else {
          val var3: Function1 = var1.onFailure;
-         val var6: Exception = var2.j();
+         val var6: Exception = var2.k();
          var var4: Exception = var6;
          if (var6 == null) {
             var4 = new Exception("Unknown error");
@@ -61,8 +56,8 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    public fun executeRequest() {
       val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var1: Task = var2.a();
-      var1.addOnCompleteListener(new s5.c(var2, this));
-      var1.b(new d(this));
+      val var1: Task = var2.b();
+      var1.addOnCompleteListener(new q7.c(var2, this));
+      var1.a(new q7.d(this));
    }
 }

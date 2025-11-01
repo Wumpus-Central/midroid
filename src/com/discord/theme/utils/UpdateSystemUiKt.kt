@@ -10,8 +10,8 @@ import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManager
 
 private fun WindowInsetsControllerCompat.setLightTheme(isLightTheme: Boolean) {
+   var0.e(var1);
    var0.d(var1);
-   var0.c(var1);
 }
 
 internal fun Activity.updateSystemUi() {
@@ -33,7 +33,7 @@ internal fun View.updateSystemUi() {
       if (VERSION.SDK_INT >= 30) {
          val var3: WindowInsetsController = var0.getWindowInsetsController();
          if (var3 != null) {
-            val var4: WindowInsetsControllerCompat = WindowInsetsControllerCompat.g(var3);
+            val var4: WindowInsetsControllerCompat = WindowInsetsControllerCompat.h(var3);
             setLightTheme(var4, var1);
          }
       }

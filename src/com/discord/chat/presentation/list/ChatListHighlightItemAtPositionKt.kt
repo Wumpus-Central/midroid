@@ -8,6 +8,7 @@ import android.animation.Animator.AnimatorListener
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
@@ -84,7 +85,7 @@ fun c(var0: Int, var1: Int, var2: Long, var4: View, var5: Animator): Unit {
 }
 
 internal fun RecyclerView.chatListHighlightItemAtPosition(position: Int, delayMilliseconds: Long = 300L) {
-   val var4: RecyclerView.LayoutManager = var0.getLayoutManager();
+   val var4: LayoutManager = var0.getLayoutManager();
    if (var4 != null) {
       val var6: View = var4.findViewByPosition(var1);
       if (var6 != null) {

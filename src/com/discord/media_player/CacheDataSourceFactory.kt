@@ -7,7 +7,7 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSource.Factory
 import com.google.android.exoplayer2.upstream.cache.SimpleCache
 import java.io.File
 import kotlin.jvm.internal.Intrinsics
-import xd.s
+import wf.s
 
 public class CacheDataSourceFactory private constructor(defaultDatasourceFactory: Factory = new DefaultHttpDataSource.Factory()) : DataSource.Factory {
    private final val defaultDatasourceFactory: Factory
@@ -25,11 +25,10 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
 
       val var4: DefaultHttpDataSource = this.defaultDatasourceFactory.a();
       val var5: s = new s();
-      var var6: SimpleCache = null;
+      var var6: SimpleCache = cache;
       if (cache == null) {
          Intrinsics.throwUninitializedPropertyAccessException("cache");
-      } else {
-         var6 = cache;
+         var6 = null;
       }
 
       return new com.google.android.exoplayer2.upstream.cache.c(var1, var4, var5, new com.google.android.exoplayer2.upstream.cache.b(var6, 104857600L), 3, null);
@@ -42,7 +41,7 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
       private const val CACHE_DIR_NAME: String
 
       private fun getSimpleCache(context: Context): SimpleCache {
-         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new yd.h(104857600L), new bc.c(var1));
+         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new xf.h(104857600L), new zd.c(var1));
       }
 
       public fun getInstance(): CacheDataSourceFactory {
@@ -58,13 +57,11 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
 
       public fun init(context: Context) {
          CacheDataSourceFactory.access$setCache$cp(this.getSimpleCache(var1));
-         var var3: CacheDataSourceFactory = null;
          CacheDataSourceFactory.access$setFactory$cp(new CacheDataSourceFactory(null, 1, null));
-         val var2: CacheDataSourceFactory = CacheDataSourceFactory.access$getFactory$cp();
-         if (var2 == null) {
+         var var3: CacheDataSourceFactory = CacheDataSourceFactory.access$getFactory$cp();
+         if (var3 == null) {
             Intrinsics.throwUninitializedPropertyAccessException("factory");
-         } else {
-            var3 = var2;
+            var3 = null;
          }
 
          com.brentvatne.exoplayer.b.e(var3);

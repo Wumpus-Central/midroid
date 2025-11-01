@@ -8,7 +8,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
-import ma.a;
+import kc.a;
 
 public abstract class NativeCompressionModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeCompressionModule";
@@ -30,27 +30,29 @@ public abstract class NativeCompressionModuleSpec extends ReactContextBaseJavaMo
    public abstract void enableZstdStreamSupport(double var1);
 
    @a
+   @Override
    public final Map<String, Object> getConstants() {
-      Map var2 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var1 = new HashSet<>(Arrays.asList("supportsZstd"));
-         HashSet var4 = new HashSet();
-         HashSet var3 = new HashSet(var2.keySet());
-         var3.removeAll(var1);
-         var3.removeAll(var4);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var4 = new HashSet<>(Arrays.asList("supportsZstd"));
+         HashSet var3 = new HashSet();
+         HashSet var2 = new HashSet(var1.keySet());
+         var2.removeAll(var4);
+         var2.removeAll(var3);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var1.removeAll(var2.keySet());
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
+         var4.removeAll(var1.keySet());
+         if (!var4.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
          }
       }
 
-      return var2;
+      return var1;
    }
 
+   @Override
    public String getName() {
       return "NativeCompressionModule";
    }

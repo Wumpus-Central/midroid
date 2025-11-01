@@ -20,7 +20,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView(var1) {
    }
 
    public fun loadGifImage(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
-      this.setController((l8.d.g().P(var1).A(var4) as PipelineDraweeControllerBuilder).c());
+      this.setController((ja.d.g().P(var1).A(var4) as PipelineDraweeControllerBuilder).c());
       var var5: Int;
       if (var2 != null) {
          var5 = var2;

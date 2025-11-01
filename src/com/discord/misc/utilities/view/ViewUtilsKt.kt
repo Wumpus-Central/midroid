@@ -98,7 +98,7 @@ public fun View.isLtr(): Boolean {
 public fun TextView.setOptionalText(text: CharSequence?) {
    var0.setText(var1);
    var var2: Boolean;
-   if (var1 != null && !StringsKt.c0(var1)) {
+   if (var1 != null && !StringsKt.i0(var1)) {
       var2 = 0;
    } else {
       var2 = 1;

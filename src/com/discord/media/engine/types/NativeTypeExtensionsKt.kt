@@ -5,33 +5,33 @@ import com.discord.native.engine.AudioOutputDeviceDescription
 import com.discord.native.engine.ConnectionInfo
 import com.discord.native.engine.VideoInputDeviceDescription
 import com.discord.native.engine.VideoInputDeviceFacing
-import fm.v
+import ht.v
 import java.util.ArrayList
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
-   val var4: ArrayList = new ArrayList(var0.length);
-   val var3: Int = var0.length;
-   var var2: Int = 0;
-
-   for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(n0.m(new Pair[]{v.a("name", var0[var2].getName()), v.a("guid", var0[var2].getGuid()), v.a("index", var1)}));
-      var2++;
-   }
-
-   return var4;
-}
-
-internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    val var5: ArrayList = new ArrayList(var0.length);
    val var3: Int = var0.length;
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var5.add(n0.m(new Pair[]{v.a("name", var0[var2].getName()), v.a("guid", var0[var2].getGuid()), v.a("index", var1)}));
+      var5.add(s0.m(new Pair[]{v.a("name", var0[var2].getName()), v.a("guid", var0[var2].getGuid()), v.a("index", var1)}));
       var2++;
    }
 
    return var5;
+}
+
+internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
+   val var4: ArrayList = new ArrayList(var0.length);
+   val var3: Int = var0.length;
+   var var2: Int = 0;
+
+   for (int var1 = 0; var2 < var3; var1++) {
+      var4.add(s0.m(new Pair[]{v.a("name", var0[var2].getName()), v.a("guid", var0[var2].getGuid()), v.a("index", var1)}));
+      var2++;
+   }
+
+   return var4;
 }
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
@@ -49,21 +49,21 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
    }
 
    val var14: Pair = new Pair(var6, var5);
-   val var8: java.util.List = CollectionsKt.g0(
-      CollectionsKt.n(
+   val var8: java.lang.Iterable = CollectionsKt.l0(
+      CollectionsKt.o(
          new VideoInputDeviceDescription[]{
             (VideoInputDeviceDescription)CollectionsKt.firstOrNull(var14.a() as java.util.List),
             (VideoInputDeviceDescription)CollectionsKt.firstOrNull(var14.b() as java.util.List)
          }
       )
    );
-   val var16: ArrayList = new ArrayList(CollectionsKt.v(var8, 10));
+   val var16: ArrayList = new ArrayList(CollectionsKt.w(var8, 10));
    val var17: java.util.Iterator = var8.iterator();
 
    for (int var12 = 0; var17.hasNext(); var12++) {
       var var9: Any = var17.next();
       if (var12 < 0) {
-         CollectionsKt.u();
+         CollectionsKt.v();
       }
 
       val var18: VideoInputDeviceDescription = var9 as VideoInputDeviceDescription;
@@ -78,20 +78,20 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
          var9 = "front";
       }
 
-      var16.add(n0.m(new Pair[]{v.a("name", var18.getName()), v.a("guid", var18.getGuid()), v.a("facing", var9), v.a("index", var12)}));
+      var16.add(s0.m(new Pair[]{v.a("name", var18.getName()), v.a("guid", var18.getGuid()), v.a("facing", var9), v.a("index", var12)}));
    }
 
    return var16;
 }
 
 internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
-   return n0.m(new Pair[]{v.a("name", var0.getName()), v.a("guid", var0.getGuid())});
+   return s0.m(new Pair[]{v.a("name", var0.getName()), v.a("guid", var0.getGuid())});
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
-   val var5: Pair = v.a("protocol", var0.getProtocol());
+   val var3: Pair = v.a("protocol", var0.getProtocol());
    val var4: Pair = v.a("address", var0.getLocalAddress());
-   val var3: Pair = v.a("port", var0.getLocalPort());
+   val var5: Pair = v.a("port", var0.getLocalPort());
    val var1: Int = var0.getCreateConnectionTime();
    val var8: Pair;
    if (var1 != null) {
@@ -106,7 +106,7 @@ internal fun ConnectionInfo.toMap(): Map<String, Any> {
       var7 = v.a("connectTime", var6.intValue());
    }
 
-   return n0.u(CollectionsKt.p(new Pair[]{var5, var4, var3, var8, var7}));
+   return s0.u(CollectionsKt.q(new Pair[]{var3, var4, var5, var8, var7}));
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

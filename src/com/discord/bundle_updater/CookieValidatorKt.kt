@@ -11,13 +11,13 @@ import okhttp3.HttpUrl
 public fun CookieManager.getCookiesForUrl(url: String): List<Cookie> {
    val var4: java.lang.String = var0.getCookie(var1);
    if (var4 == null) {
-      return CollectionsKt.k();
+      return CollectionsKt.l();
    } else {
-      val var2: java.util.List = StringsKt.split$default(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
+      val var2: java.lang.Iterable = StringsKt.split$default(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var3 : var2) {
-         val var7: Cookie = Cookie.n.c(HttpUrl.l.d(var1), var3);
+         val var7: Cookie = Cookie.j.c(HttpUrl.k.d(var1), var3);
          if (var7 != null) {
             var5.add(var7);
          }

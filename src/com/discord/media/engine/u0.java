@@ -11,6 +11,6 @@ public final class u0 implements Function2 {
    public final double i;
 
    public final Object invoke(Object var1, Object var2) {
-      return <unrepresentable>.f(this.d, this.e, this.i, (String)var1, (Map)var2);
+      return <unrepresentable>.c(this.d, this.e, this.i, (String)var1, (Map)var2);
    }
 }

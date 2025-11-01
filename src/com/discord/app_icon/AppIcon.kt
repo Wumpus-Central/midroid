@@ -1,7 +1,6 @@
 package com.discord.app_icon
 
 import kotlin.enums.EnumEntries
-import lm.a
 
 public enum class AppIcon(id: String, aliasSuffix: String) {
    ANGRY("AngryIcon", "MainAngry"),
@@ -52,7 +51,7 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
    fun {
       val var0: Array<AppIcon> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

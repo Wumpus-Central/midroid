@@ -14,7 +14,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import fm.p
+import ht.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 

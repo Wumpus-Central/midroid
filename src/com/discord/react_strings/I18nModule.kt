@@ -1,11 +1,11 @@
 package com.discord.react_strings
 
+import b9.a
 import com.discord.codegen.NativeI18nModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
-import d7.a
 import java.util.HashMap
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -22,27 +22,27 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
       return var0.name();
    }
 
-   public open fun keysRequest(callback: Callback) {
+   public override fun keysRequest(callback: Callback) {
       var1.invoke(NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), new a()));
    }
 
-   public open fun valuesResult(values: ReadableArray) {
-      val var5: I18nCache = I18nCache.INSTANCE;
-      val var3: ReactApplicationContext = this.reactContext;
-      val var4: HashMap = new HashMap();
+   public override fun valuesResult(values: ReadableArray) {
+      val var4: I18nCache = I18nCache.INSTANCE;
+      val var5: ReactApplicationContext = this.reactContext;
+      val var3: HashMap = new HashMap();
       val var6: java.util.Iterator = I18nMessage.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
          var var7: Any = var6.next();
          if (var2 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          var7 = (var7 as I18nMessage).name();
          val var8: java.lang.String = var1.getString(var2);
-         var4.put(var7, var8);
+         var3.put(var7, var8);
       }
 
-      var5.set(var3, var4);
+      var4.set(var5, var3);
    }
 }

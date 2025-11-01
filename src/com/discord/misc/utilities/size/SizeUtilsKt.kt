@@ -2,7 +2,7 @@ package com.discord.misc.utilities.size
 
 import android.content.res.Resources
 import android.util.TypedValue
-import sm.a
+import xt.a
 
 public final val pxToDp: Float
    public final get() {

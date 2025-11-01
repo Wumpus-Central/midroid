@@ -49,7 +49,7 @@ public object PushNotificationMonitor {
    }
 
    public fun logPushNotification(context: Context, loggedInUserId: String, pushNotification: PushNotificationMeta) {
-      val var4: java.util.List = CollectionsKt.Z0(this.getPushLog(var1, var2).getPushNotifications());
+      val var4: java.util.List = CollectionsKt.k1(this.getPushLog(var1, var2).getPushNotifications());
       var4.add(var3);
       if (var4.size() == 100) {
          var4.remove(0);

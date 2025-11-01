@@ -4,8 +4,7 @@ import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import lm.a
-import tp.m
+import xu.m
 
 @m(with = CodedLinkExtendedType.Serializer::class)
 public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
@@ -27,7 +26,7 @@ public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<CodedLinkExtendedType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

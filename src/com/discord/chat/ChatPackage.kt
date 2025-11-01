@@ -15,7 +15,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class ChatPackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.n(
+      return CollectionsKt.o(
          new ViewManager[]{
             new ChatViewManager(),
             new ChatListViewManager(),

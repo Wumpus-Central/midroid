@@ -9,7 +9,7 @@ import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
 
 public object NotificationMessageSerializer : KSerializer {
-   private final val json: Json = b.b(null, new x6.b(), 1, null)
+   private final val json: Json = b.b(null, new v8.b(), 1, null)
 
    public open val descriptor: SerialDescriptor
       public open get() {

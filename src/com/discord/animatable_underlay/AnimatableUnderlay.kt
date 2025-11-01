@@ -13,7 +13,7 @@ import com.discord.react_rootview.RootViewUtils
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
-import fm.p
+import ht.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -154,7 +154,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new a(this));
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new com.discord.animatable_underlay.a(this));
    }
 
    protected open fun onDetachedFromWindow() {
@@ -182,7 +182,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = lm.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic
@@ -229,7 +229,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = lm.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic

@@ -1,7 +1,6 @@
 package com.discord.emoji_picker
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -21,7 +20,7 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
 
    public fun trackViewVisibilityChanged(parent: EmojiPickerView, child: View, visible: Boolean) {
       if (this.trackingEnabled) {
-         val var7: RecyclerView.ViewHolder = var1.getChildViewHolder(var2);
+         val var7: ViewHolder = var1.getChildViewHolder(var2);
          val var8: EmojiPickerVisibilityTracker.Companion = Companion;
          val var6: Boolean = var8.isNitroSectionLocked(var7);
          var var4: Int;
@@ -52,7 +51,7 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
       private const val ROWS_VISIBLE_THRESHOLD: Int
 
       public fun ViewHolder.isNitroSectionLocked(): Boolean {
-         var var2: RecyclerView.ViewHolder = var1;
+         var var2: ViewHolder = var1;
          if (var1 !is EmojiPickerViewHolder) {
             var2 = null;
          }

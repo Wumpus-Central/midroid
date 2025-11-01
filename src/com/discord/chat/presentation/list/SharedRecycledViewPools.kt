@@ -13,13 +13,13 @@ import kotlin.jvm.internal.SourceDebugExtension
 public object SharedRecycledViewPools {
    private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
 
-   public final val chatListViewPool: NoneClearingRecycledViewPool by fm.l.b(new z())
+   public final val chatListViewPool: NoneClearingRecycledViewPool by ht.l.b(new z())
       public final get() {
          return chatListViewPool$delegate.getValue() as NoneClearingRecycledViewPool;
       }
 
 
-   public final val accessoriesViewPool: AccessoriesViewPool by fm.l.b(new a0())
+   public final val accessoriesViewPool: AccessoriesViewPool by ht.l.b(new a0())
       public final get() {
          return accessoriesViewPool$delegate.getValue() as AccessoriesViewPool;
       }
@@ -27,9 +27,9 @@ public object SharedRecycledViewPools {
 
    @JvmStatic
    fun {
-      val var1: Pair = fm.v.a(RegularMessageDelegate.class, 50);
-      val var0: Int = 25;
-      recycledViewPoolSizes = n0.m(new Pair[]{var1, fm.v.a(SystemMessageDelegate.class, var0), fm.v.a(SeparatorDelegate.class, var0)});
+      val var0: Pair = ht.v.a(RegularMessageDelegate.class, 50);
+      val var1: Int = 25;
+      recycledViewPoolSizes = s0.m(new Pair[]{var0, ht.v.a(SystemMessageDelegate.class, var1), ht.v.a(SeparatorDelegate.class, var1)});
    }
 
    @JvmStatic

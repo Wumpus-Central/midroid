@@ -8,7 +8,7 @@ import android.view.View.OnClickListener
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.SeparatorSummaryViewBinding
 import com.discord.chat.presentation.list.ChatListConstraintLayout
 import com.discord.fonts.DiscordFont
@@ -21,6 +21,7 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import k8.a
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSummarySeparatorView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SummarySeparatorView.kt\ncom/discord/chat/presentation/separator/SummarySeparatorView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,113:1\n146#2,8:114\n255#2:122\n255#2:123\n*S KotlinDebug\n*F\n+ 1 SummarySeparatorView.kt\ncom/discord/chat/presentation/separator/SummarySeparatorView\n*L\n34#1:114,8\n57#1:122\n59#1:123\n*E\n"])
@@ -36,9 +37,9 @@ public class SummarySeparatorView  public constructor(context: Context, attrs: A
       this.binding = var15;
       val var5: View = var15.getRoot();
       var5.setPaddingRelative(
-         var1.getResources().getDimensionPixelSize(R.dimen.message_divider_margin_horiz),
+         var1.getResources().getDimensionPixelSize(dimen.message_divider_margin_horiz),
          var5.getPaddingTop(),
-         var1.getResources().getDimensionPixelSize(R.dimen.message_divider_margin_horiz),
+         var1.getResources().getDimensionPixelSize(dimen.message_divider_margin_horiz),
          var5.getPaddingBottom()
       );
       val var6: TextView = var15.middleText;
@@ -60,11 +61,11 @@ public class SummarySeparatorView  public constructor(context: Context, attrs: A
       val var13: SimpleDraweeView = var15.moreButton;
       ColorUtilsKt.setTintColor(var13, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var14: FrameLayout = var15.buttonWrapper;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new m6.a(var15), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new a(var15), 1, null);
    }
 
    @JvmStatic
-   fun g(var0: SeparatorSummaryViewBinding, var1: View) {
+   fun h(var0: SeparatorSummaryViewBinding, var1: View) {
       val var2: SimpleDraweeView = var0.jumpButton;
       if (var2.getVisibility() == 0) {
          var0.jumpButton.performClick();

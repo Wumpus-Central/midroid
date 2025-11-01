@@ -8,7 +8,7 @@ import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
-import lm.a
+import pt.a
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -75,15 +75,15 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          val var3: ReactFontManager = ReactFontManager.Companion.getInstance();
          val var6: java.lang.String = var2.getRawName();
          val var4: AssetManager = var1.getAssets();
-         val var5: Typeface = var3.getTypeface(var6, 0, var4);
-         if (!(var5 == Typeface.DEFAULT)) {
-            return var5;
+         val var7: Typeface = var3.getTypeface(var6, 0, var4);
+         if (!(var7 == Typeface.DEFAULT)) {
+            return var7;
          } else {
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Cannot find typeface ");
-            var7.append(var5);
-            var7.append(".rawName");
-            throw new IllegalStateException(var7.toString().toString());
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Cannot find typeface ");
+            var5.append(var7);
+            var5.append(".rawName");
+            throw new IllegalStateException(var5.toString().toString());
          }
       }
 

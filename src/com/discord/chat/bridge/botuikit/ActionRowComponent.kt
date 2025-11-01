@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent() {
@@ -57,8 +57,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -66,25 +66,25 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = this.errorText.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode();
+      return ((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var3: java.lang.String = this.errorText;
-      val var5: java.util.List = this.components;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ActionRowComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var2);
-      var4.append(", errorText=");
-      var4.append(var3);
-      var4.append(", components=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.util.List = this.components;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ActionRowComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var4);
+      var5.append(", errorText=");
+      var5.append(var3);
+      var5.append(", components=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

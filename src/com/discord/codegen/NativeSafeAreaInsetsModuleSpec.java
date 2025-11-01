@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeSafeAreaInsetsModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeSafeAreaInsetsModule";
@@ -20,6 +20,7 @@ public abstract class NativeSafeAreaInsetsModuleSpec extends ReactContextBaseJav
    @a
    public abstract double getImeInsets(boolean var1);
 
+   @Override
    public String getName() {
       return "NativeSafeAreaInsetsModule";
    }

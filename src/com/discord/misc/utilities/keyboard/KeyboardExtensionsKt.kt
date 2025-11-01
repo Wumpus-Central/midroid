@@ -9,11 +9,11 @@ import androidx.core.view.v0
 import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import jp.f
-import km.b
+import gu.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
+import ot.b
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -34,7 +34,7 @@ public fun Activity.hideKeyboard() {
 }
 
 public fun View.hideKeyboard(window: Window) {
-   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation, Object>(var1, var0, null) {
+   g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;
@@ -45,16 +45,16 @@ public fun View.hideKeyboard(window: Window) {
          this.$self = var2x;
       }
 
-      public final Continuation create(Object var1, Continuation var2) {
+      public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
          return new <anonymous constructor>(this.$window, this.$self, var2);
       }
 
-      public final Object invoke(CoroutineScope var1, Continuation var2x) {
+      public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
       public final Object invokeSuspend(Object var1) {
-         b.e();
+         b.f();
          if (this.label == 0) {
             c.b(var1);
             KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).b(n.c());
@@ -75,7 +75,7 @@ public fun Activity.showKeyboard() {
 }
 
 public fun View.showKeyboard(window: Window) {
-   f.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation, Object>(var1, var0, null) {
+   g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;
@@ -86,19 +86,19 @@ public fun View.showKeyboard(window: Window) {
          this.$self = var2x;
       }
 
-      public final Continuation create(Object var1, Continuation var2) {
+      public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
          return new <anonymous constructor>(this.$window, this.$self, var2);
       }
 
-      public final Object invoke(CoroutineScope var1, Continuation var2x) {
+      public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
       public final Object invokeSuspend(Object var1) {
-         b.e();
+         b.f();
          if (this.label == 0) {
             c.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).f(n.c());
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).g(n.c());
             if (this.$self is EditText) {
                var1 = this.$self as EditText;
             } else {

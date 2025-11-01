@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEvent {
@@ -52,13 +52,13 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnContentSizeChangeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

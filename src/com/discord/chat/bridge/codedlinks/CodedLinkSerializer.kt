@@ -3,15 +3,13 @@ package com.discord.chat.bridge.codedlinks
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xp.e
-import xp.h
 
-public object CodedLinkSerializer : e(CodedLinkEmbed::class) {
+public object CodedLinkSerializer : bv.e(CodedLinkEmbed::class) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<CodedLinkEmbed> {
       label32: {
-         var1 = h.n(var1).get("extendedType") as JsonElement;
+         var1 = bv.h.n(var1).get("extendedType") as JsonElement;
          if (var1 != null) {
-            val var3: JsonPrimitive = h.o(var1);
+            val var3: JsonPrimitive = bv.h.o(var1);
             if (var3 != null) {
                var4 = var3.b();
                break label32;

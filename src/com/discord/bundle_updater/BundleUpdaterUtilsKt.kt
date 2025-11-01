@@ -9,7 +9,7 @@ import java.io.InputStreamReader
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import pm.q
+import tt.r
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new m(), 1, null)
 
@@ -24,21 +24,21 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       val var10: BufferedReader = new BufferedReader(new InputStreamReader(var9, Charsets.UTF_8), 8192);
 
       try {
-         val var11: Json = json;
-         val var13: java.lang.String = q.f(var10);
-         var11.a();
-         var12 = var11.b(AppManifest.Companion.serializer(), var13) as AppManifest;
+         val var13: Json = json;
+         var1 = r.h(var10);
+         var13.a();
+         var12 = var13.b(AppManifest.Companion.serializer(), var1) as AppManifest;
       } catch (var4: java.lang.Throwable) {
          val var2: java.lang.Throwable = var4;
 
          try {
             throw var2;
          } catch (var3: java.lang.Throwable) {
-            pm.c.a(var10, var4);
+            tt.c.a(var10, var4);
          }
       }
 
-      pm.c.a(var10, null);
+      tt.c.a(var10, null);
       return var12;
    }
 }

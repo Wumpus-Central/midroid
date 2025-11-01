@@ -21,7 +21,7 @@ internal object ImageSourceOverride {
          if (var3 != null) {
             val var4: File = new File(var3);
             if (!var4.exists()) {
-               return pm.j.q(var4);
+               return tt.j.t(var4);
             }
          }
       }

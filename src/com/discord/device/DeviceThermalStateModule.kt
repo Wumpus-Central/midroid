@@ -6,12 +6,12 @@ import com.discord.codegen.NativeDeviceThermalStateModuleSpec
 import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
-import fm.v
+import ht.v
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nDeviceThermalStateModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n+ 2 Context.kt\nandroidx/core/content/ContextKt\n*L\n1#1,50:1\n31#2:51\n31#2:52\n*S KotlinDebug\n*F\n+ 1 DeviceThermalStateModule.kt\ncom/discord/device/DeviceThermalStateModule\n*L\n23#1:51\n43#1:52\n*E\n"])
 internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) : NativeDeviceThermalStateModuleSpec(var1) {
-   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{v.a("DeviceThermalStateDidChange", DeviceThermalStateChangedEvent::class)})
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("DeviceThermalStateDidChange", DeviceThermalStateChangedEvent::class))
 
    @JvmStatic
    fun `initialize$lambda$0`(var0: DeviceThermalStateModule, var1: Int) {
@@ -26,7 +26,7 @@ internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) :
    public override fun getThermalState(): Double? {
       if (VERSION.SDK_INT >= 29) {
          val var1: ReactApplicationContext = this.getReactApplicationContext();
-         val var2: PowerManager = androidx.core.content.a.i(var1, PowerManager.class) as PowerManager;
+         val var2: PowerManager = androidx.core.content.a.j(var1, PowerManager.class) as PowerManager;
          if (var2 != null) {
             return (double)var2.getCurrentThermalStatus();
          }
@@ -35,11 +35,11 @@ internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) :
       return null;
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
       if (VERSION.SDK_INT >= 29) {
          val var1: ReactApplicationContext = this.getReactApplicationContext();
-         val var2: PowerManager = androidx.core.content.a.i(var1, PowerManager.class) as PowerManager;
+         val var2: PowerManager = androidx.core.content.a.j(var1, PowerManager.class) as PowerManager;
          if (var2 != null) {
             var2.addThermalStatusListener(new d(this));
          }

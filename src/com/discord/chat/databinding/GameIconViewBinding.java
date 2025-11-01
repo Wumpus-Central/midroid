@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import e4.a;
 
 public final class GameIconViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class GameIconViewBinding implements ViewBinding {
    @NonNull
    public static GameIconViewBinding bind(@NonNull View var0) {
       int var1 = R.id.game_controller_icon;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
       if (var2 != null) {
          return new GameIconViewBinding(var0, var2);
       } else {

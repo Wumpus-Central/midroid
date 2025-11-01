@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function1;
 public final class b implements Function1 {
    public final Context d;
 
+   @Override
    public final Object invoke(Object var1) {
       return BrowserManager.a(this.d, (String)var1);
    }

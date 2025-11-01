@@ -2,7 +2,7 @@ package com.discord.mobile_voice_overlay
 
 import kotlinx.serialization.KSerializer
 
-@tp.m
+@xu.m
 public data class MobileVoiceOverlayAssets(useSpeaker: String,
    mute: String,
    disconnectFromVoice: String,
@@ -173,42 +173,42 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.useSpeaker;
-      val var7: java.lang.String = this.mute;
-      val var10: java.lang.String = this.disconnectFromVoice;
-      val var12: java.lang.String = this.getInvite;
-      val var8: java.lang.String = this.switchChannels;
-      val var9: java.lang.String = this.openDiscord;
-      val var5: java.lang.String = this.inviteLinkCopied;
-      val var3: java.lang.String = this.channelSelect;
-      val var4: java.lang.String = this.closeWindow;
-      val var1: java.lang.String = this.searchChannels;
-      val var2: java.lang.String = this.noResults;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("MobileVoiceOverlayAssets(useSpeaker=");
-      var11.append(var6);
-      var11.append(", mute=");
-      var11.append(var7);
-      var11.append(", disconnectFromVoice=");
-      var11.append(var10);
-      var11.append(", getInvite=");
-      var11.append(var12);
-      var11.append(", switchChannels=");
-      var11.append(var8);
-      var11.append(", openDiscord=");
-      var11.append(var9);
-      var11.append(", inviteLinkCopied=");
-      var11.append(var5);
-      var11.append(", channelSelect=");
-      var11.append(var3);
-      var11.append(", closeWindow=");
-      var11.append(var4);
-      var11.append(", searchChannels=");
-      var11.append(var1);
-      var11.append(", noResults=");
-      var11.append(var2);
-      var11.append(")");
-      return var11.toString();
+      val var8: java.lang.String = this.useSpeaker;
+      val var5: java.lang.String = this.mute;
+      val var9: java.lang.String = this.disconnectFromVoice;
+      val var2: java.lang.String = this.getInvite;
+      val var11: java.lang.String = this.switchChannels;
+      val var12: java.lang.String = this.openDiscord;
+      val var7: java.lang.String = this.inviteLinkCopied;
+      val var1: java.lang.String = this.channelSelect;
+      val var6: java.lang.String = this.closeWindow;
+      val var4: java.lang.String = this.searchChannels;
+      val var10: java.lang.String = this.noResults;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlayAssets(useSpeaker=");
+      var3.append(var8);
+      var3.append(", mute=");
+      var3.append(var5);
+      var3.append(", disconnectFromVoice=");
+      var3.append(var9);
+      var3.append(", getInvite=");
+      var3.append(var2);
+      var3.append(", switchChannels=");
+      var3.append(var11);
+      var3.append(", openDiscord=");
+      var3.append(var12);
+      var3.append(", inviteLinkCopied=");
+      var3.append(var7);
+      var3.append(", channelSelect=");
+      var3.append(var1);
+      var3.append(", closeWindow=");
+      var3.append(var6);
+      var3.append(", searchChannels=");
+      var3.append(var4);
+      var3.append(", noResults=");
+      var3.append(var10);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

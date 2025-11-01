@@ -8,6 +8,6 @@ public final class f1 implements Function1 {
    public final int d;
 
    public final Object invoke(Object var1) {
-      return ForumPostActionBarView.h(this.d, (RenderContext)var1);
+      return ForumPostActionBarView.i(this.d, (RenderContext)var1);
    }
 }

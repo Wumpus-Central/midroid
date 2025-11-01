@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import e4.a;
 
 public final class AttachmentMediaMosaicContainerViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class AttachmentMediaMosaicContainerViewBinding implements ViewBind
    @NonNull
    public static AttachmentMediaMosaicContainerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.mosaic;
-      RecyclerView var2 = (RecyclerView)a.a(var0, var1);
+      RecyclerView var2 = (RecyclerView)k5.a.a(var0, var1);
       if (var2 != null) {
          return new AttachmentMediaMosaicContainerViewBinding(var0, var2);
       } else {

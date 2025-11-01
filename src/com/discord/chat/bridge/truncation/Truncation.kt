@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.truncation
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
@@ -99,8 +99,8 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var4: java.lang.String = this.seeMoreLabel;
-      val var6: Int = this.seeMoreLabelColor;
+      val var6: java.lang.String = this.seeMoreLabel;
+      val var4: Int = this.seeMoreLabelColor;
       val var3: java.lang.Boolean = this.forceShow;
       val var5: StringBuilder = new StringBuilder();
       var5.append("Truncation(numberOfLines=");
@@ -108,9 +108,9 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       var5.append(", expandable=");
       var5.append(var2);
       var5.append(", seeMoreLabel=");
-      var5.append(var4);
-      var5.append(", seeMoreLabelColor=");
       var5.append(var6);
+      var5.append(", seeMoreLabelColor=");
+      var5.append(var4);
       var5.append(", forceShow=");
       var5.append(var3);
       var5.append(")");

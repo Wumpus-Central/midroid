@@ -4,7 +4,7 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import fm.v
+import ht.v
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -13,9 +13,9 @@ internal object HistoricalProcessExitReason {
    fun {
       val var0: java.util.Map;
       if (VERSION.SDK_INT < 30) {
-         var0 = n0.i();
+         var0 = s0.i();
       } else {
-         var0 = n0.m(
+         var0 = s0.m(
             new Pair[]{
                v.a(6, "ANR"),
                v.a(4, "CRASH"),
@@ -53,7 +53,7 @@ internal object HistoricalProcessExitReason {
             return null;
          } else {
             val var7: java.util.List = var5.getHistoricalProcessExitReasons(null, 0, 1);
-            val var4: ApplicationExitInfo = q4.e.a(CollectionsKt.firstOrNull(var7));
+            val var4: ApplicationExitInfo = w5.e.a(CollectionsKt.firstOrNull(var7));
             if (var4 == null) {
                return null;
             } else {
@@ -122,13 +122,13 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.reason;
-         val var2: java.lang.String = this.description;
+         val var2: java.lang.String = this.reason;
+         val var3: java.lang.String = this.description;
          val var1: StringBuilder = new StringBuilder();
          var1.append("Reason(reason=");
-         var1.append(var3);
-         var1.append(", description=");
          var1.append(var2);
+         var1.append(", description=");
+         var1.append(var3);
          var1.append(")");
          return var1.toString();
       }

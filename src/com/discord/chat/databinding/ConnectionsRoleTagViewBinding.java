@@ -10,7 +10,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import e4.a;
 
 public final class ConnectionsRoleTagViewBinding implements ViewBinding {
    @NonNull
@@ -40,21 +39,21 @@ public final class ConnectionsRoleTagViewBinding implements ViewBinding {
    @NonNull
    public static ConnectionsRoleTagViewBinding bind(@NonNull View var0) {
       int var1 = R.id.connections_role_tag_container;
-      CardView var5 = (CardView)a.a(var0, var1);
-      if (var5 != null) {
+      CardView var6 = (CardView)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.role_name;
-         TextView var3 = (TextView)a.a(var0, var1);
+         TextView var3 = (TextView)k5.a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.verified_check_icon;
-            ImageView var6 = (ImageView)a.a(var0, var1);
-            if (var6 != null) {
+            ImageView var5 = (ImageView)k5.a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.verified_check_icon_background;
-               ImageView var2 = (ImageView)a.a(var0, var1);
+               ImageView var2 = (ImageView)k5.a.a(var0, var1);
                if (var2 != null) {
                   var1 = R.id.verified_check_icon_container;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
+                  FrameLayout var4 = (FrameLayout)k5.a.a(var0, var1);
                   if (var4 != null) {
-                     return new ConnectionsRoleTagViewBinding(var0, var5, var3, var6, var2, var4);
+                     return new ConnectionsRoleTagViewBinding(var0, var6, var3, var5, var2, var4);
                   }
                }
             }

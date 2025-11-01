@@ -39,24 +39,22 @@ import org.json.JSONObject
 public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComponentView> {
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            fm.v.a("onTapLink", TapLinkData::class),
-            fm.v.a("onLongPressLink", LongPressLinkData::class),
-            fm.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
-            fm.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
-            fm.v.a("onTapMention", TapMentionData::class),
-            fm.v.a("onTapTimestamp", TapTimestampEvent::class),
-            fm.v.a("onTapInlineCode", TapInlineCodeEvent::class),
-            fm.v.a("onTapEmoji", TapEmojiData::class)
-         }
+         ht.v.a("onTapLink", TapLinkData::class),
+         ht.v.a("onLongPressLink", LongPressLinkData::class),
+         ht.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
+         ht.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
+         ht.v.a("onTapMention", TapMentionData::class),
+         ht.v.a("onTapTimestamp", TapTimestampEvent::class),
+         ht.v.a("onTapInlineCode", TapInlineCodeEvent::class),
+         ht.v.a("onTapEmoji", TapEmojiData::class)
       )
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
    private fun createTextDisplayComponentContext(view: TextDisplayComponentView, data: Data): ComponentContext {
-      val var4: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
-      val var3: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
+      val var3: java.lang.String = var2.getMarkdownTextRenderOptions().getContainerId();
+      val var4: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
       return new ComponentContext(
-         var4,
+         var3,
          ComponentContextDefaults.INSTANCE.getGENERAL_HANDLERS(),
          var2.getMarkdownTextRenderOptions(),
          new MarkdownTextRenderEventHandlers(
@@ -75,8 +73,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
             new i0(this, var1),
             new j0()
          ),
-         var3.getMEDIA_HANDLERS(),
-         var3.getCOMPONENT_HANDLERS(),
+         var4.getMEDIA_HANDLERS(),
+         var4.getCOMPONENT_HANDLERS(),
          new WidthInfo(0, 0, 0, 4, null),
          false,
          false,
@@ -188,11 +186,11 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       return new TextDisplayComponentView(var1);
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "TextDisplayComponentView";
    }
 
@@ -234,7 +232,7 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    public fun setModel(view: TextDisplayComponentView, model: ReadableMap) {
       val var6: java.util.Map = this.viewToDataMapping;
       var var5: Json = this.viewToDataMapping.get(var1);
-      var var4: Any = var5;
+      var var4: StringBuilder = var5;
       if (var5 == null) {
          var4 = new PartialData(null, null, 3, null);
          var6.put(var1, var4);
@@ -249,13 +247,13 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
          var3 = var16 is TextDisplayComponent;
       } catch (var9: Exception) {
          val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-         var4 = var9.getMessage();
-         val var14: StringBuilder = new StringBuilder();
-         var14.append("Error while deserializing ");
-         var14.append(var10);
-         var14.append(": ");
-         var14.append((java.lang.String)var4);
-         throw new IllegalStateException(var14.toString().toString());
+         val var14: java.lang.String = var9.getMessage();
+         var4 = new StringBuilder();
+         var4.append("Error while deserializing ");
+         var4.append(var10);
+         var4.append(": ");
+         var4.append(var14);
+         throw new IllegalStateException(var4.toString().toString());
       }
 
       if (var3) {
@@ -264,22 +262,22 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
       } else {
          try {
             val var12: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            var4 = (var16.getClass()::class).getSimpleName();
+            val var23: java.lang.String = (var16.getClass()::class).getSimpleName();
             val var18: StringBuilder = new StringBuilder();
             var18.append("Expected ");
             var18.append(var12);
             var18.append(" but got ");
-            var18.append((java.lang.String)var4);
+            var18.append(var23);
             throw new IllegalStateException(var18.toString().toString());
          } catch (var8: Exception) {
             val var11: java.lang.String = (TextDisplayComponent::class).getSimpleName();
-            var4 = var8.getMessage();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Error while deserializing ");
-            var17.append(var11);
-            var17.append(": ");
-            var17.append((java.lang.String)var4);
-            throw new IllegalStateException(var17.toString().toString());
+            val var17: java.lang.String = var8.getMessage();
+            var4 = new StringBuilder();
+            var4.append("Error while deserializing ");
+            var4.append(var11);
+            var4.append(": ");
+            var4.append(var17);
+            throw new IllegalStateException(var4.toString().toString());
          }
       }
    }

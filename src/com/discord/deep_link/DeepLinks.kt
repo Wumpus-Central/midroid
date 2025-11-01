@@ -8,6 +8,7 @@ import com.appsflyer.AppsFlyerLib
 import com.appsflyer.deeplink.DeepLink
 import com.appsflyer.deeplink.DeepLinkListener
 import com.appsflyer.deeplink.DeepLinkResult
+import com.appsflyer.deeplink.DeepLinkResult.Status
 import com.discord.crash_reporting.CrashReporting
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
@@ -25,10 +26,10 @@ public object DeepLinks {
 
       for (java.lang.String var6 : var4.getQueryParameterNames()) {
          if (!(var6 == "fromAppsFlyer")) {
-            val var7: java.util.Iterator = var4.getQueryParameters(var6).iterator();
+            val var5: java.util.Iterator = var4.getQueryParameters(var6).iterator();
 
-            while (var7.hasNext()) {
-               var3.appendQueryParameter(var6, var7.next() as java.lang.String);
+            while (var5.hasNext()) {
+               var3.appendQueryParameter(var6, var5.next() as java.lang.String);
             }
          }
       }
@@ -62,9 +63,8 @@ public object DeepLinks {
                this.$context = var1;
             }
 
-            @Override
             public void onDeepLinking(DeepLinkResult var1) {
-               if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
+               if (var1.getStatus() === Status.FOUND) {
                   val var5: DeepLink = var1.getDeepLink();
                   if (var5 != null) {
                      var var7: java.lang.String = var5.getDeepLinkValue();

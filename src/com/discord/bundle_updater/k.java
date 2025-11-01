@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function1;
 public final class k implements Function1 {
    public final BundleUpdaterManager d;
 
+   @Override
    public final Object invoke(Object var1) {
       return BundleUpdaterManager.a(this.d, (List)var1);
    }

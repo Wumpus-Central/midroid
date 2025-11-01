@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class DiscordGestureHandlerPackage : BaseReactPackage {
    public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.n(new ViewManager[]{new BlockingGestureViewManager(), new PassthroughTouchViewManager(), new DiscordGestureHandlerRootViewManager()});
+      return CollectionsKt.o(new ViewManager[]{new BlockingGestureViewManager(), new PassthroughTouchViewManager(), new DiscordGestureHandlerRootViewManager()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): Nothing? {

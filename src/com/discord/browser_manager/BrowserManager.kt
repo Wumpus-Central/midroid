@@ -24,7 +24,9 @@ internal object BrowserManager {
       if (var4) {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
-            var10.setPackage(k.v(k.s(k.D(CollectionsKt.X(var11), new a()), new b(var1))) as java.lang.String);
+            var10.setPackage(
+               k.K(k.F(k.S(CollectionsKt.b0(var11), new com.discord.browser_manager.a()), new com.discord.browser_manager.b(var1))) as java.lang.String
+            );
          } catch (var8: ActivityNotFoundException) {
             var3.invoke(var8);
             return;
@@ -82,7 +84,7 @@ internal object BrowserManager {
 
    public fun tryOpenUrlWithCustomTabs(context: Context, url: String, onFailure: (Exception) -> Unit) {
       try {
-         this.openUrlWithCustomTabs(var1, Uri.parse(var2), new c(var1, var2, var3));
+         this.openUrlWithCustomTabs(var1, Uri.parse(var2), new com.discord.browser_manager.c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

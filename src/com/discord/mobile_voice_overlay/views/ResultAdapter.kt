@@ -12,7 +12,7 @@ private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : Adapter {
 
    init {
       this.onChannelSelected = var1;
-      this.results = CollectionsKt.k();
+      this.results = CollectionsKt.l();
    }
 
    public open fun getItemCount(): Int {

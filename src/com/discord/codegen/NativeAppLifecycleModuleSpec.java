@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeAppLifecycleModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeAppLifecycleModule";
@@ -17,6 +17,7 @@ public abstract class NativeAppLifecycleModuleSpec extends ReactContextBaseJavaM
    @a
    public abstract void addListener(String var1);
 
+   @Override
    public String getName() {
       return "NativeAppLifecycleModule";
    }

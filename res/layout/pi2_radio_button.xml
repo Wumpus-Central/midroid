@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.google.android.material.radiobutton.MaterialRadioButton android:id="@id/radio_button" android:saveEnabled="false" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:gravity="center_vertical" android:id="@id/radio_button_label" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBaseline_toBaselineOf="@id/radio_button" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/radio_button" />
+    <TextView android:id="@id/radio_button_description" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/radio_button_label" app:layout_constraintTop_toBottomOf="@id/radio_button_label" />
+</androidx.constraintlayout.widget.ConstraintLayout>

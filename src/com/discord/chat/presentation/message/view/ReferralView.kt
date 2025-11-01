@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.referral.ReferralEmbed
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
@@ -81,13 +81,13 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun initTextStyling() {
-      val var2: TextView = this.binding.imageCopy;
-      SetTextSizeSpKt.setTextSizeSp(var2, 14.0F);
-      val var1: DiscordFont = DiscordFont.PrimarySemibold;
-      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
+      val var1: TextView = this.binding.imageCopy;
+      SetTextSizeSpKt.setTextSizeSp(var1, 14.0F);
+      val var2: DiscordFont = DiscordFont.PrimarySemibold;
+      DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimarySemibold);
       var var3: TextView = this.binding.title;
       SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
-      val var5: DiscordFont = DiscordFont.PrimaryMedium;
+      val var4: DiscordFont = DiscordFont.PrimaryMedium;
       DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryMedium);
       val var6: SimpleDraweeSpanTextView = this.binding.subtitle;
       SetTextSizeSpKt.setTextSizeSp(var6, 12.0F);
@@ -95,10 +95,10 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
       SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
       val var8: DCDButton = this.binding.acceptButton;
       this.binding.acceptButton.setTextSizeSp(14.0F);
-      var8.setDiscordFont(var1);
-      val var4: TextView = this.binding.footer;
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
-      DiscordFontUtilsKt.setDiscordFont(var4, var5);
+      var8.setDiscordFont(var2);
+      val var5: TextView = this.binding.footer;
+      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
+      DiscordFontUtilsKt.setDiscordFont(var5, var4);
    }
 
    public fun bind(accessory: ReferralMessageAccessory, onTapAccept: (String?) -> Unit, onTapLink: (MessageId, LinkContentNode) -> Unit) {
@@ -106,10 +106,10 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
       val var8: ConstraintLayout = this.binding.content;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, null, 1, null);
       val var9: ReferralEmbed = var1.getReferral();
-      if (var9 is ReferralEmbed.Resolving) {
+      if (var9 is com.discord.chat.bridge.referral.ReferralEmbed.Resolving) {
          this.lastState = new ReferralView.Companion.State.Resolving(var1.getItemId());
-      } else if (var9 !is ReferralEmbed.Resolved) {
-         throw new fm.p();
+      } else if (var9 !is com.discord.chat.bridge.referral.ReferralEmbed.Resolved) {
+         throw new ht.p();
       } else {
          var var7: Boolean = this.didResolve(var1.getItemId());
          var var33: LayoutTransition = this.resolvedTransition;
@@ -119,14 +119,14 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
          this.binding.content.setLayoutTransition(var33);
          val var42: SimpleDraweeView = this.binding.nitroLogoBanner;
-         val var34: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
-         ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as ReferralEmbed.Resolved).getHeaderLogoUrl());
+         val var34: com.discord.chat.bridge.referral.ReferralEmbed.Resolved = var9 as com.discord.chat.bridge.referral.ReferralEmbed.Resolved;
+         ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as com.discord.chat.bridge.referral.ReferralEmbed.Resolved).getHeaderLogoUrl());
          val var35: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var34.getHeaderText());
          var35.setTextColor(var34.getHeaderColor());
          val var43: java.lang.CharSequence = var35.getText();
          var var5: Byte;
-         if (!StringsKt.c0(var43)) {
+         if (!StringsKt.i0(var43)) {
             var5 = 0;
          } else {
             var5 = 8;
@@ -143,7 +143,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var45: java.lang.CharSequence = var37.getText();
-         if (!StringsKt.c0(var45)) {
+         if (!StringsKt.i0(var45)) {
             var5 = 0;
          } else {
             var5 = 8;
@@ -152,20 +152,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          var37.setVisibility(var5);
          val var38: SimpleDraweeSpanTextView = this.binding.subtitle;
          val var46: java.lang.String = var34.getBodyText();
-         if (var46 != null && !StringsKt.c0(var46)) {
+         if (var46 != null && !StringsKt.i0(var46)) {
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
             val var47: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var12: Context = var38.getContext();
-            val var11: java.lang.String = var1.getMessageId-3Eiw7ao();
+            val var11: Context = var38.getContext();
+            val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
                   var47,
-                  var12,
                   var11,
+                  var12,
                   false,
                   true,
                   false,
@@ -206,7 +206,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             val var23: java.lang.String = var34.getBodyText();
             if (var23 != null) {
                var29 = true;
-               if (!StringsKt.c0(var23)) {
+               if (!StringsKt.i0(var23)) {
                   break label103;
                }
             }
@@ -234,7 +234,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var40: java.lang.CharSequence = var24.getText();
-         if (!StringsKt.c0(var40)) {
+         if (!StringsKt.i0(var40)) {
             var5 = 0;
          } else {
             var5 = 8;
@@ -242,7 +242,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
          var24.setVisibility(var5);
          val var25: java.lang.String = var34.getAcceptLabelText();
-         if (var25 != null && !StringsKt.c0(var25)) {
+         if (var25 != null && !StringsKt.i0(var25)) {
             val var26: DCDButton = this.binding.acceptButton;
             val var41: java.lang.String = var34.getAcceptLabelIconUrl();
             if (var41 != null) {
@@ -253,7 +253,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var26.setTextColor(var34.getAcceptLabelColor());
             var26.setOnClickButtonListener(new j2(var2));
             val var15: Context = var26.getContext();
-            val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, R.drawable.premium_tier2_gradient);
+            val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, drawable.premium_tier2_gradient);
             val var17: GradientDrawable;
             if (var16 is GradientDrawable) {
                var17 = var16 as GradientDrawable;
@@ -290,7 +290,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var19: java.lang.String = var34.getFooterText();
-         if (var19 != null && !StringsKt.c0(var19)) {
+         if (var19 != null && !StringsKt.i0(var19)) {
             val var21: TextView = this.binding.footer;
             this.binding.footer.setText(var34.getFooterText());
             if (var34.getFooterTextColor() != null) {

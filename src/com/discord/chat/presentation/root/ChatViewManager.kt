@@ -5,8 +5,7 @@ import com.discord.chat.presentation.events.CreateChatReactEventsKt
 import com.discord.chat.presentation.list.ChatListView
 import com.discord.chat.reactevents.ChatViewEventHandler
 import com.discord.reactevents.ReactEvents
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Anywhere
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
+import com.discord.recycler_view.scroller.Scroller
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
@@ -36,11 +35,11 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDChat";
    }
 
@@ -63,15 +62,15 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean, highlight: Boolean) {
-      var1.scrollTo(var2, Anywhere.INSTANCE, var3, var4);
+      var1.scrollTo(var2, Scroller.TargetAlignment.Anywhere.INSTANCE, var3, var4);
    }
 
    public open fun scrollTo(view: ChatView, index: Int, animated: Boolean, highlight: Boolean, position: Int) {
-      var1.scrollTo(var2, new Top(ChatListView.Companion.getMESSAGE_TOP_SCROLL_OFFSET_PX()), var3, var4);
+      var1.scrollTo(var2, new Scroller.TargetAlignment.Top(ChatListView.Companion.getMESSAGE_TOP_SCROLL_OFFSET_PX()), var3, var4);
    }
 
    public open fun scrollToBottom(view: ChatView, animated: Boolean) {
-      var1.scrollTo(0, Anywhere.INSTANCE, var2, false);
+      var1.scrollTo(0, Scroller.TargetAlignment.Anywhere.INSTANCE, var2, false);
    }
 
    @ReactProp(name = "adjustContentOffsetWithBounds")

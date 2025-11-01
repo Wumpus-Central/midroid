@@ -11,6 +11,6 @@ public final class f implements OnClickListener {
    public final Message e;
 
    public final void onClick(View var1) {
-      SystemMessageView.i(this.d, this.e, var1);
+      SystemMessageView.j(this.d, this.e, var1);
    }
 }

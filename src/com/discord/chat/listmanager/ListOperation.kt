@@ -48,9 +48,9 @@ public sealed class ListOperation protected constructor() {
 
       init {
          this.range = var1;
-         this.first = var1.n();
-         this.last = var1.p();
-         this.count = var1.p() - var1.n() + 1;
+         this.first = var1.f();
+         this.last = var1.k();
+         this.count = var1.k() - var1.f() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -132,9 +132,9 @@ public sealed class ListOperation protected constructor() {
 
       init {
          this.range = var1;
-         this.first = var1.n();
-         this.last = var1.p();
-         this.count = var1.p() - var1.n() + 1;
+         this.first = var1.f();
+         this.last = var1.k();
+         this.count = var1.k() - var1.f() + 1;
       }
 
       public operator fun component1(): IntRange {
@@ -160,12 +160,12 @@ public sealed class ListOperation protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: IntRange = this.range;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("InsertRange(range=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: IntRange = this.range;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("InsertRange(range=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
@@ -216,9 +216,9 @@ public sealed class ListOperation protected constructor() {
 
       init {
          this.range = var1;
-         this.first = var1.n();
-         this.last = var1.p();
-         this.count = var1.p() - var1.n() + 1;
+         this.first = var1.f();
+         this.last = var1.k();
+         this.count = var1.k() - var1.f() + 1;
       }
 
       public operator fun component1(): IntRange {

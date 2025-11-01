@@ -47,8 +47,8 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.id.hashCode();
-      val var3: Int = this.view.hashCode();
+      val var3: Int = this.id.hashCode();
+      val var2: Int = this.view.hashCode();
       val var1: Int;
       if (this.measuredDimensions == null) {
          var1 = 0;
@@ -56,7 +56,7 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
          var1 = this.measuredDimensions.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {

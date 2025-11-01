@@ -9,6 +9,6 @@ public final class s1 implements Function1 {
    public final ExecutedCommand d;
 
    public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.k(this.d, (LinkContentNode)var1);
+      return MessageViewReplyPreview.l(this.d, (LinkContentNode)var1);
    }
 }

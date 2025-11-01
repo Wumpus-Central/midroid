@@ -11,6 +11,6 @@ public final class b implements OnClickListener {
    public final ComponentContext e;
 
    public final void onClick(View var1) {
-      ButtonComponentView.h(this.d, this.e, var1);
+      ButtonComponentView.i(this.d, this.e, var1);
    }
 }

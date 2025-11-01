@@ -9,9 +9,9 @@ public final class f implements Function1 {
    public final int d;
    public final int e;
    public final long i;
-   public final View s;
+   public final View t;
 
    public final Object invoke(Object var1) {
-      return ChatListHighlightItemAtPositionKt.c(this.d, this.e, this.i, this.s, (Animator)var1);
+      return ChatListHighlightItemAtPositionKt.c(this.d, this.e, this.i, this.t, (Animator)var1);
    }
 }

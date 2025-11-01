@@ -27,7 +27,7 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
                   0.0F,
                   150.0F,
                   0.0F,
-                  CollectionsKt.V0(CollectionsKt.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
+                  CollectionsKt.g1(CollectionsKt.q(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
                   null,
                   TileMode.MIRROR
                )

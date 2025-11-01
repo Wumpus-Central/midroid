@@ -30,7 +30,7 @@ public abstract class Rule<R, T extends Node<R>, S> {
       }
 
       public override fun match(inspectionSource: CharSequence, lastCapture: String?, state: Any): Matcher? {
-         return if (var2 != null && !StringsKt.Q(var2, '\n', false, 2, null)) null else super.match(var1, var2, (S)var3);
+         return if (var2 != null && !StringsKt.W(var2, '\n', false, 2, null)) null else super.match(var1, var2, (S)var3);
       }
    }
 }

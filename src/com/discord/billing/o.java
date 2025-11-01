@@ -6,6 +6,7 @@ import kotlin.jvm.functions.Function1;
 public final class o implements Function1 {
    public final BillingManagerModule d;
 
+   @Override
    public final Object invoke(Object var1) {
       return BillingManagerModule.h(this.d, (Integer)var1);
    }

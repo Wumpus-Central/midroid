@@ -11,12 +11,12 @@ public object NumericUtils {
 
    @JvmStatic
    fun {
-      val var1: java.util.List = StringsKt.split$default("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
+      val var1: java.lang.Iterable = StringsKt.split$default("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var0: ArrayList = new ArrayList();
 
-      for (var1 : var1) {
-         if ((var1 as java.lang.String).length() != 0) {
-            var0.add(var1);
+      for (Object var2 : var1) {
+         if ((var2 as java.lang.String).length() != 0) {
+            var0.add(var2);
          }
       }
 
@@ -44,12 +44,12 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.e.f(var1 % (long)26, 1L);
-            val var8: java.lang.String = this.toLetter(var1 / (long)26);
+            val var11: java.lang.String = this.toLetter(var1 / (long)26);
             val var9: java.lang.String = this.toLetter(var10);
-            val var11: StringBuilder = new StringBuilder();
-            var11.append(var8);
-            var11.append(var9);
-            return var11.toString();
+            val var8: StringBuilder = new StringBuilder();
+            var8.append(var11);
+            var8.append(var9);
+            return var8.toString();
          }
       } else {
          val var7: StringBuilder = new StringBuilder();
@@ -68,11 +68,11 @@ public object NumericUtils {
             val var10: Any = var8.get(var1);
             return var10 as java.lang.String;
          } else {
-            val var9: Any = var8.get(var3);
-            var6 = this.toRomanNumeral(var1 - var3);
+            var6 = var8.get(var3);
+            val var9: java.lang.String = this.toRomanNumeral(var1 - var3);
             val var7: StringBuilder = new StringBuilder();
+            var7.append(var6);
             var7.append(var9);
-            var7.append((java.lang.String)var6);
             return var7.toString();
          }
       } else {

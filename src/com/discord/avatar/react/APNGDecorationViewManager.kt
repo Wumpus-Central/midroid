@@ -2,7 +2,7 @@ package com.discord.avatar.react
 
 import com.discord.avatar.decoration.DecorationView
 import com.discord.avatar.react.events.OnImageLoadedEvent
-import com.discord.image.animated_image.apng.APNGImageView
+import com.discord.image.animated_image.apng.APNGImageView.APNGImageViewEventHandler
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.SimpleViewManager
@@ -10,7 +10,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
-import fm.v
+import ht.v
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {
@@ -19,7 +19,7 @@ internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, AP
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): DecorationView {
       val var2: DecorationView = new DecorationView(var1, null, 0, 6, null);
-      var2.setEventHandler(new APNGImageView.APNGImageViewEventHandler(this, var1, var2) {
+      var2.setEventHandler(new APNGImageViewEventHandler(this, var1, var2) {
          final DecorationView $decorationView;
          final ThemedReactContext $reactContext;
          final APNGDecorationViewManager this$0;
@@ -30,7 +30,6 @@ internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, AP
             this.$decorationView = var3;
          }
 
-         @Override
          public void onImageLoaded(java.lang.String var1) {
             this.this$0.getReactEvents$avatar_release().emitEvent(this.$reactContext, this.$decorationView, new OnImageLoadedEvent(var1));
          }

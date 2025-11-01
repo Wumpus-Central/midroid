@@ -28,8 +28,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.coroutines.Continuation
@@ -83,108 +83,115 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `setContent$lambda$1`(var0: FileAttachmentView, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String, var4: View) {
-      jp.f.d(CoroutineViewUtilsKt.getAttachedScope(var0), jp.k0.b(), null, new Function2<CoroutineScope, Continuation, Object>(var0, var1, var2, var3, null) {
-         final java.lang.String $attachmentDescription;
-         final java.lang.String $attachmentName;
-         final java.lang.String $url;
-         int label;
-         final FileAttachmentView this$0;
+      gu.g.d(
+         CoroutineViewUtilsKt.getAttachedScope(var0),
+         gu.m0.b(),
+         null,
+         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, var2, var3, null) {
+            final java.lang.String $attachmentDescription;
+            final java.lang.String $attachmentName;
+            final java.lang.String $url;
+            int label;
+            final FileAttachmentView this$0;
 
-         {
-            super(2, var5);
-            this.this$0 = var1;
-            this.$url = var2x;
-            this.$attachmentName = var3;
-            this.$attachmentDescription = var4;
-         }
-
-         public final Continuation create(Object var1, Continuation var2) {
-            return new <anonymous constructor>(this.this$0, this.$url, this.$attachmentName, this.$attachmentDescription, var2);
-         }
-
-         public final Object invoke(CoroutineScope var1, Continuation var2x) {
-            return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-         }
-
-         public final Object invokeSuspend(Object var1) {
-            val var3: Any = km.b.e();
-            if (this.label != 0) {
-               if (this.label != 1) {
-                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-               }
-
-               kotlin.c.b(var1);
-            } else {
-               kotlin.c.b(var1);
-               var1 = PublicFileDownloader.INSTANCE;
-               val var4: Context = this.this$0.getContext();
-               val var7: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
-               val var6: FlowCollector = new FlowCollector(this.this$0) {
-                  final FileAttachmentView this$0;
-
-                  {
-                     this.this$0 = var1;
-                  }
-
-                  public final Object emit(DownloadState var1, Continuation var2x) {
-                     val var3x: Any = jp.f.g(jp.k0.c(), new Function2<CoroutineScope, Continuation, Object>(var1, this.this$0, null) {
-                        final DownloadState $downloadState;
-                        int label;
-                        final FileAttachmentView this$0;
-
-                        {
-                           super(2, var3x);
-                           this.$downloadState = var1;
-                           this.this$0 = var2x;
-                        }
-
-                        public final Continuation create(Object var1, Continuation var2x) {
-                           return new <anonymous constructor>(this.$downloadState, this.this$0, var2x);
-                        }
-
-                        public final Object invoke(CoroutineScope var1, Continuation var2x) {
-                           return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-                        }
-
-                        public final Object invokeSuspend(Object var1) {
-                           km.b.e();
-                           if (this.label == 0) {
-                              kotlin.c.b(var1);
-                              val var4: Boolean = this.$downloadState is DownloadState.InProgress;
-                              var1 = FileAttachmentView.access$getBinding$p(this.this$0).fileAttachmentDownloadProgressBar;
-                              var var2x: Byte;
-                              if (var4) {
-                                 var2x = 0;
-                              } else {
-                                 var2x = 8;
-                              }
-
-                              var1.setVisibility(var2x);
-                              val var6: SimpleDraweeView = FileAttachmentView.access$getBinding$p(this.this$0).fileAttachmentDownload;
-                              var2x = 8;
-                              if (!var4) {
-                                 var2x = 0;
-                              }
-
-                              var6.setVisibility(var2x);
-                              return Unit.a;
-                           } else {
-                              throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                           }
-                        }
-                     }, var2x);
-                     return if (var3x === km.b.e()) var3x else Unit.a;
-                  }
-               };
-               this.label = 1;
-               if (var7.collect(var6, this) === var3) {
-                  return var3;
-               }
+            {
+               super(2, var5);
+               this.this$0 = var1;
+               this.$url = var2x;
+               this.$attachmentName = var3;
+               this.$attachmentDescription = var4;
             }
 
-            return Unit.a;
-         }
-      }, 2, null);
+            public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+               return new <anonymous constructor>(this.this$0, this.$url, this.$attachmentName, this.$attachmentDescription, var2);
+            }
+
+            public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+            }
+
+            public final Object invokeSuspend(Object var1) {
+               val var3: Any = ot.b.f();
+               if (this.label != 0) {
+                  if (this.label != 1) {
+                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                  }
+
+                  kotlin.c.b(var1);
+               } else {
+                  kotlin.c.b(var1);
+                  val var4: PublicFileDownloader = PublicFileDownloader.INSTANCE;
+                  var1 = this.this$0.getContext();
+                  val var7: Flow = var4.downloadFile(var1, this.$url, this.$attachmentName, this.$attachmentDescription);
+                  val var6: FlowCollector = new FlowCollector(this.this$0) {
+                     final FileAttachmentView this$0;
+
+                     {
+                        this.this$0 = var1;
+                     }
+
+                     public final Object emit(DownloadState var1, Continuation<? super Unit> var2x) {
+                        val var3x: Any = gu.g.g(gu.m0.c(), new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, this.this$0, null) {
+                           final DownloadState $downloadState;
+                           int label;
+                           final FileAttachmentView this$0;
+
+                           {
+                              super(2, var3x);
+                              this.$downloadState = var1;
+                              this.this$0 = var2x;
+                           }
+
+                           public final Continuation<Unit> create(Object var1, Continuation<?> var2x) {
+                              return new <anonymous constructor>(this.$downloadState, this.this$0, var2x);
+                           }
+
+                           public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                              return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                           }
+
+                           public final Object invokeSuspend(Object var1) {
+                              ot.b.f();
+                              if (this.label == 0) {
+                                 kotlin.c.b(var1);
+                                 val var4: Boolean = this.$downloadState is DownloadState.InProgress;
+                                 var1 = FileAttachmentView.access$getBinding$p(this.this$0).fileAttachmentDownloadProgressBar;
+                                 var var2x: Byte;
+                                 if (var4) {
+                                    var2x = 0;
+                                 } else {
+                                    var2x = 8;
+                                 }
+
+                                 var1.setVisibility(var2x);
+                                 val var6: SimpleDraweeView = FileAttachmentView.access$getBinding$p(this.this$0).fileAttachmentDownload;
+                                 var2x = 8;
+                                 if (!var4) {
+                                    var2x = 0;
+                                 }
+
+                                 var6.setVisibility(var2x);
+                                 return Unit.a;
+                              } else {
+                                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                              }
+                           }
+                        }, var2x);
+                        return if (var3x === ot.b.f()) var3x else Unit.a;
+                     }
+                  };
+                  this.label = 1;
+                  if (var7.collect(var6, this) === var3) {
+                     return var3;
+                  }
+               }
+
+               return Unit.a;
+            }
+         },
+         2,
+         null
+      );
    }
 
    @JvmStatic
@@ -213,11 +220,11 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var14: java.lang.String = this.getClass().getSimpleName();
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("Binding ");
-      var12.append(var14);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var12.toString(), null, 2, null);
+      val var12: java.lang.String = this.getClass().getSimpleName();
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("Binding ");
+      var14.append(var12);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var14.toString(), null, 2, null);
       val var28: SimpleDraweeView = this.binding.fileAttachmentDownload;
       var var11: Byte;
       if (!var10) {
@@ -241,7 +248,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
 
       val var25: View = this.binding.getRoot();
       ViewBackgroundUtilsKt.setBackgroundRectangle(
-         var25, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
+         var25, var11, SizeUtilsKt.getDpToPx(8), ColorUtilsKt.getColorCompat(this, R.color.primary_dark_700_alpha_60), SizeUtilsKt.getDpToPx(0.25F)
       );
       if (!var10) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new i0(var4, var3, var1), 1, null);
@@ -268,14 +275,14 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       var16.setAlpha(var9);
-      val var17: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var22: ShapeDrawable = new ShapeDrawable();
-      val var21: Paint = var22.getPaint();
+      val var21: ShapeDrawable = new ShapeDrawable();
+      val var17: Paint = var21.getPaint();
       val var24: Context = this.getContext();
-      var21.setColor(ColorUtilsKt.getColorCompat(var24, 17170445));
+      var17.setColor(ColorUtilsKt.getColorCompat(var24, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var17, null, var22, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var22, null, var21, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!(this.uploadContext == this.uploadContext)) {
          this.uploadContext = this.uploadContext;

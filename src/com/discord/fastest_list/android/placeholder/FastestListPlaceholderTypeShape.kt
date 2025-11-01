@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
-import fm.p
+import ht.p
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder() {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
@@ -35,7 +35,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
          this.paint = var2;
       }
 
-      public open fun draw(canvas: Canvas) {
+      public override fun draw(canvas: Canvas) {
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();

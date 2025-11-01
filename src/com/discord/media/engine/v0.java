@@ -8,6 +8,6 @@ public final class v0 implements Function2 {
    public final Callback d;
 
    public final Object invoke(Object var1, Object var2) {
-      return <unrepresentable>.f(this.d, (String)var1, (String)var2);
+      return <unrepresentable>.c(this.d, (String)var1, (String)var2);
    }
 }

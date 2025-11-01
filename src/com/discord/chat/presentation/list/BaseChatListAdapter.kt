@@ -12,7 +12,7 @@ import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
 public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
    : com.hannesdorfmann.adapterdelegates4.c,
    ChatListAdapter {
-   internal final var chatListItems: List<ChatListItem> = CollectionsKt.k()
+   internal final var chatListItems: List<ChatListItem> = CollectionsKt.l()
    public final val delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>
 
    init {
@@ -31,7 +31,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {
-      return CollectionsKt.l0(this.chatListItems, var1) as ChatListItem;
+      return CollectionsKt.q0(this.chatListItems, var1) as ChatListItem;
    }
 
    public override fun getChatListItems(): List<ChatListItem> {

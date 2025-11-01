@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fm.v
+import ht.v
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, attachmentName: String? = null) : ReactEvent {
@@ -64,22 +64,20 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
       return var1 * 31 + var2;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            v.a("data", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("attachmentUrl", this.attachmentUrl), v.a("attachmentName", this.attachmentName)}))
-         }
+         v.a("data", NativeMapExtensionsKt.nativeMapOf(v.a("attachmentUrl", this.attachmentUrl), v.a("attachmentName", this.attachmentName)))
       );
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
+      val var3: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentName;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var1.append(var2);
-      var1.append(", attachmentName=");
       var1.append(var3);
+      var1.append(", attachmentName=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

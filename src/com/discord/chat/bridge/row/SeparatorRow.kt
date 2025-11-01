@@ -3,7 +3,7 @@ package com.discord.chat.bridge.row
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.summaries.Summary
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class SeparatorRow(changeType: ChangeType,
@@ -108,11 +108,11 @@ public data class SeparatorRow(changeType: ChangeType,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = this.changeType.hashCode();
-      val var6: Int = Integer.hashCode(this.index);
-      val var4: Int = this.text.hashCode();
-      val var8: Int = this.id.hashCode();
-      val var5: Int = Integer.hashCode(this.color);
+      val var5: Int = this.changeType.hashCode();
+      val var8: Int = Integer.hashCode(this.index);
+      val var7: Int = this.text.hashCode();
+      val var6: Int = this.id.hashCode();
+      val var4: Int = Integer.hashCode(this.color);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollTo == null) {
@@ -132,37 +132,37 @@ public data class SeparatorRow(changeType: ChangeType,
          var3 = this.summary.hashCode();
       }
 
-      return ((((((var7 * 31 + var6) * 31 + var4) * 31 + var8) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var5 * 31 + var8) * 31 + var7) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: ChangeType = this.changeType;
+      val var4: ChangeType = this.changeType;
       val var2: Int = this.index;
-      val var9: java.lang.String = this.text;
-      val var5: java.lang.String = this.id;
+      val var8: java.lang.String = this.text;
+      val var3: java.lang.String = this.id;
       val var1: Int = this.color;
-      val var7: java.lang.Boolean = this.scrollTo;
-      val var4: java.lang.Boolean = this.isBeforeContent;
-      val var8: Summary = this.summary;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SeparatorRow(changeType=");
-      var6.append(var3);
-      var6.append(", index=");
-      var6.append(var2);
-      var6.append(", text=");
-      var6.append(var9);
-      var6.append(", id=");
-      var6.append(var5);
-      var6.append(", color=");
-      var6.append(var1);
-      var6.append(", scrollTo=");
-      var6.append(var7);
-      var6.append(", isBeforeContent=");
-      var6.append(var4);
-      var6.append(", summary=");
-      var6.append(var8);
-      var6.append(")");
-      return var6.toString();
+      val var9: java.lang.Boolean = this.scrollTo;
+      val var5: java.lang.Boolean = this.isBeforeContent;
+      val var6: Summary = this.summary;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("SeparatorRow(changeType=");
+      var7.append(var4);
+      var7.append(", index=");
+      var7.append(var2);
+      var7.append(", text=");
+      var7.append(var8);
+      var7.append(", id=");
+      var7.append(var3);
+      var7.append(", color=");
+      var7.append(var1);
+      var7.append(", scrollTo=");
+      var7.append(var9);
+      var7.append(", isBeforeContent=");
+      var7.append(var5);
+      var7.append(", summary=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

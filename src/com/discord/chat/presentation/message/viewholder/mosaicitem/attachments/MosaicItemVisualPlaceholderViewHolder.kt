@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.viewholder.mosaicitem.attachments
 
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.botuikit.MediaGalleryItem
 import com.discord.chat.presentation.media.MediaContainingViewResizer
 import com.discord.chat.presentation.message.view.MediaVisualPlaceholderView
@@ -21,7 +21,7 @@ public class MosaicItemVisualPlaceholderViewHolder(view: MediaVisualPlaceholderV
          var6 = VisualPlaceholderState.LOADING;
       }
 
-      var3 = this.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_grid_inner_radius);
+      var3 = this.itemView.getContext().getResources().getDimensionPixelSize(dimen.message_media_grid_inner_radius);
       val var4: MediaContainingViewResizer.ResizeMode;
       if (var2) {
          var4 = MediaContainingViewResizer.ResizeMode.Fill;

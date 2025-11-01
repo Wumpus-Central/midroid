@@ -20,7 +20,7 @@ internal class ScreenshotDetector(contentResolver: ContentResolver) {
 
 
    init {
-      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new a(this));
+      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new com.discord.bug_reporter.a(this));
    }
 
    @JvmStatic

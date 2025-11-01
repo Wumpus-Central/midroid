@@ -108,6 +108,7 @@
     <color name="bg_mod_strong_midnight">#2e6c6f7c</color>
     <color name="biometric_error_color">#ffff5722</color>
     <color name="black">#ff000000</color>
+    <color name="blackScreenStatusBarColor">#ff000000</color>
     <color name="black_100">#fff2f2f2</color>
     <color name="black_130">#ffe8e8e8</color>
     <color name="black_160">#ffdadada</color>
@@ -217,6 +218,12 @@
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="call_notification_answer_color">#ff1d873b</color>
     <color name="call_notification_decline_color">#ffd93025</color>
+    <color name="cameraHintMessageColor">#fff5b400</color>
+    <color name="cameraHintOverlayColor">#a0000000</color>
+    <color name="cameraHintTitleColor">#ffffffff</color>
+    <color name="cameraOverlayColor">#40000000</color>
+    <color name="cameraPreviewMaskColor">#ff000000</color>
+    <color name="cameraReviewMaskColor">#ff000000</color>
     <color name="camo_background">#ff7a8046</color>
     <color name="cardview_dark_background">#ff424242</color>
     <color name="cardview_light_background">#ffffffff</color>
@@ -234,6 +241,9 @@
     <color name="chat_swipe_to_reply_gradient_background_light">#66ffffff</color>
     <color name="chat_swipe_to_reply_gradient_background_midnight">#1a000000</color>
     <color name="circuit_background">#ff0d4439</color>
+    <color name="colorPrimary">#ff4700eb</color>
+    <color name="colorPrimaryVariant">#ff3000bb</color>
+    <color name="colorSecondary">#ffaa85ff</color>
     <color name="color_wave_background">#ffffffff</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1f000000</color>
@@ -301,6 +311,8 @@
     <color name="foreground_material_light">@android:color/black</color>
     <color name="github">#ff191717</color>
     <color name="gold">#ffffc819</color>
+    <color name="grayButton">#ff3c3e49</color>
+    <color name="grayButtonDark">#ff21222d</color>
     <color name="green">#ff1a6334</color>
     <color name="green_100">#ffecfef1</color>
     <color name="green_130">#ffdefee7</color>
@@ -664,6 +676,15 @@
     <color name="partner">#ff4087ed</color>
     <color name="pastel_background">#ffefbec7</color>
     <color name="paypal">#ff13216b</color>
+    <color name="pi2_camera_hint_message_color">#ff000000</color>
+    <color name="pi2_camera_hint_title_color">#ff000000</color>
+    <color name="pi2_camera_preview_mask_color">#ffffffff</color>
+    <color name="pi2_country_code_selector_color">#fff7f2fa</color>
+    <color name="pi2_country_code_selector_color_dark">#ff1d1b20</color>
+    <color name="pi2_default_background_color">#ffffffff</color>
+    <color name="pi2_hint_background_color">#80000000</color>
+    <color name="pi2_overlay_stroke_color">@android:color/white</color>
+    <color name="pi2_review_upload_background">#fff4f4f6</color>
     <color name="pink_1">#ffffd8f3</color>
     <color name="pink_10">#ffffbfee</color>
     <color name="pink_100">#ff000000</color>

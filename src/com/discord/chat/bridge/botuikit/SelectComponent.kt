@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public sealed class SelectComponent protected constructor() : BaseActionComponent() {

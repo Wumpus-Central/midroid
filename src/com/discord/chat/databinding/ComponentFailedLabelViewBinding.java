@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import e4.a;
 
 public final class ComponentFailedLabelViewBinding implements ViewBinding {
    @NonNull
@@ -28,12 +27,12 @@ public final class ComponentFailedLabelViewBinding implements ViewBinding {
    @NonNull
    public static ComponentFailedLabelViewBinding bind(@NonNull View var0) {
       int var1 = R.id.view_interaction_failed_label_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.view_interaction_failed_label_message;
-         TextView var2 = (TextView)a.a(var0, var1);
-         if (var2 != null) {
-            return new ComponentFailedLabelViewBinding((ConstraintLayout)var0, var3, var2);
+         TextView var3 = (TextView)k5.a.a(var0, var1);
+         if (var3 != null) {
+            return new ComponentFailedLabelViewBinding((ConstraintLayout)var0, var2, var3);
          }
       }
 

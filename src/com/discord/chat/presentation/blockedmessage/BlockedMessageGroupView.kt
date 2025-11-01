@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.BlockedMessageGroupViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.BaseChatListAdapter
@@ -29,6 +29,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
+import y7.a
 
 @SourceDebugExtension(["SMAP\nBlockedMessageGroupView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,91:1\n146#2,8:92\n257#2,2:100\n*S KotlinDebug\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n*L\n40#1:92,8\n75#1:100,2\n*E\n"])
 public class BlockedMessageGroupView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2) {
@@ -40,14 +41,14 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    }
 
    init {
-      val var6: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var6;
-      val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      val var4: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var4;
+      val var3: Int = var1.getResources().getDimensionPixelSize(dimen.message_horizontal_spacing);
       this.setPaddingRelative(var3, this.getPaddingTop(), var3, this.getPaddingBottom());
-      val var4: TextView = var6.blockedMessageGroupButton;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      val var7: RecyclerView = var6.blockedMessages;
-      var6.blockedMessages.setItemAnimator(null);
+      val var6: TextView = var4.blockedMessageGroupButton;
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      val var7: RecyclerView = var4.blockedMessages;
+      var4.blockedMessages.setItemAnimator(null);
       var7.addItemDecoration(new BackgroundHighlightDecoration(var1));
       var7.addItemDecoration(new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(16), 0, SizeUtilsKt.getDpToPx(16), true, 2, null));
       val var5: LinearLayoutManager = new LinearLayoutManager(var1);
@@ -62,7 +63,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
-      this.setOnClickListener(new a6.a(var2, var1));
+      this.setOnClickListener(new a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();

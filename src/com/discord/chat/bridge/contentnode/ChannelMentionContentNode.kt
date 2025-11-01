@@ -1,8 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import tp.m
-import wp.f
+import xu.m
 
 @m
 public data class ChannelMentionContentNode(channelId: String,
@@ -22,7 +21,7 @@ public data class ChannelMentionContentNode(channelId: String,
    @JvmStatic
    fun {
       val var0: ContentNodeSerializer = ContentNodeSerializer.INSTANCE;
-      $childSerializers = new KSerializer[]{null, null, null, null, new f(ContentNodeSerializer.INSTANCE), new f(var0)};
+      $childSerializers = new KSerializer[]{null, null, null, null, new av.f(ContentNodeSerializer.INSTANCE), new av.f(var0)};
    }
 
    init {
@@ -131,27 +130,27 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.channelId;
       val var5: java.lang.String = this.guildId;
-      val var6: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.originalLink;
-      val var1: java.util.List = this.inContent;
-      val var7: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ChannelMentionContentNode(channelId=");
-      var2.append(var3);
-      var2.append(", guildId=");
-      var2.append(var5);
-      var2.append(", messageId=");
-      var2.append(var6);
-      var2.append(", originalLink=");
-      var2.append(var4);
-      var2.append(", inContent=");
-      var2.append(var1);
-      var2.append(", content=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.originalLink;
+      val var7: java.util.List = this.inContent;
+      val var4: java.util.List = this.content;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChannelMentionContentNode(channelId=");
+      var6.append(var1);
+      var6.append(", guildId=");
+      var6.append(var5);
+      var6.append(", messageId=");
+      var6.append(var3);
+      var6.append(", originalLink=");
+      var6.append(var2);
+      var6.append(", inContent=");
+      var6.append(var7);
+      var6.append(", content=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.core.content.b
+import av.f
 import java.io.File
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -15,16 +16,15 @@ import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
-import wp.f
 
 @SourceDebugExtension(["SMAP\nReplayProviderActivity.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,112:1\n113#2:113\n1#3:114\n1557#4:115\n1628#4,3:116\n*S KotlinDebug\n*F\n+ 1 ReplayProviderActivity.kt\ncom/discord/chatreplay/ReplayProviderActivity\n*L\n31#1:113\n62#1:115\n62#1:116,3\n*E\n"])
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {
-      val var3: java.lang.String = this.getFilesDir().getPath();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var3);
-      var2.append("/rows");
-      return new File(Paths.get(var2.toString()).toString(), var1);
+      val var2: java.lang.String = this.getFilesDir().getPath();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var2);
+      var3.append("/rows");
+      return new File(Paths.get(var3.toString()).toString(), var1);
    }
 
    private fun getReplaysList(): List<Replay> {
@@ -39,15 +39,15 @@ public class ReplayProviderActivity : Activity {
          var6 = new File[0];
       }
 
-      val var3: IntRange = k.W(var6);
-      val var9: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
+      val var3: IntRange = m.a0(var6);
+      val var9: ArrayList = new ArrayList(CollectionsKt.w(var3, 10));
       val var11: java.util.Iterator = var3.iterator();
 
       while (var11.hasNext()) {
-         var9.add(var6[(var11 as l0).nextInt()]);
+         var9.add(var6[(var11 as q0).nextInt()]);
       }
 
-      val var7: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
+      val var7: ArrayList = new ArrayList(CollectionsKt.w(var9, 10));
 
       for (File var4 : var9) {
          val var12: java.lang.String = var4.getName();
@@ -70,11 +70,11 @@ public class ReplayProviderActivity : Activity {
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(var1);
       if (this.getIntent().getAction() == "com.discord.GET_REPLAY_LIST") {
-         val var7: java.util.List = this.getReplaysList();
+         val var11: java.util.List = this.getReplaysList();
          val var3: Intent = new Intent();
-         val var11: a = Json.d;
+         val var7: a = Json.d;
          Json.d.a();
-         var3.putExtra("INTENT_EXTRA_REPLAYS_LIST", var11.c(new f(Replay.Companion.serializer()), var7));
+         var3.putExtra("INTENT_EXTRA_REPLAYS_LIST", var7.c(new f(Replay.Companion.serializer()), var11));
          this.setResult(-1, var3);
          this.finish();
       } else {
@@ -121,16 +121,16 @@ public class ReplayProviderActivity : Activity {
       }
 
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
-         val var4: Intent = new Intent();
-         var4.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var6: Intent = new Intent();
+         var6.setAction("com.discord.REQUEST_REPLAY_ACCESS");
          val var5: java.lang.String = var1.getPackageName();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("discord://request_replay?target=");
-         var6.append(var2);
-         var6.append("&toPackage=");
-         var6.append(var5);
-         var4.setData(Uri.parse(var6.toString()));
-         var1.startActivityForResult(var4, var3);
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("discord://request_replay?target=");
+         var4.append(var2);
+         var4.append("&toPackage=");
+         var4.append(var5);
+         var6.setData(Uri.parse(var4.toString()));
+         var1.startActivityForResult(var6, var3);
       }
    }
 }

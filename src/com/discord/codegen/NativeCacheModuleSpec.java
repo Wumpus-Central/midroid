@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeCacheModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeCacheModule";
@@ -23,6 +23,7 @@ public abstract class NativeCacheModuleSpec extends ReactContextBaseJavaModule i
    @a
    public abstract void getItem(String var1, Promise var2);
 
+   @Override
    public String getName() {
       return "NativeCacheModule";
    }

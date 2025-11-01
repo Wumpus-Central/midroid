@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import e4.a;
 
 public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
    @NonNull
@@ -30,13 +29,13 @@ public final class FlaggedMessageEmbedFooterViewBinding implements ViewBinding {
    @NonNull
    public static FlaggedMessageEmbedFooterViewBinding bind(@NonNull View var0) {
       int var1 = R.id.flagged_message_keyword;
-      TextView var3 = (TextView)a.a(var0, var1);
+      TextView var3 = (TextView)k5.a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.flagged_message_rule_name;
-         TextView var4 = (TextView)a.a(var0, var1);
+         TextView var4 = (TextView)k5.a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.separator_dot;
-            ImageView var2 = (ImageView)a.a(var0, var1);
+            ImageView var2 = (ImageView)k5.a.a(var0, var1);
             if (var2 != null) {
                return new FlaggedMessageEmbedFooterViewBinding(var0, var3, var4, var2);
             }

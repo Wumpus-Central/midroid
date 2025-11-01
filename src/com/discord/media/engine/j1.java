@@ -9,6 +9,6 @@ public final class j1 implements Function1 {
    public final MediaEngineModule e;
 
    public final Object invoke(Object var1) {
-      return <unrepresentable>.f(this.d, this.e, (String)var1);
+      return <unrepresentable>.c(this.d, this.e, (String)var1);
    }
 }

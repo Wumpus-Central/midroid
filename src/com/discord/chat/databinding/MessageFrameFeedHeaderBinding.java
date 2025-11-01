@@ -9,7 +9,6 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import e4.a;
 
 public final class MessageFrameFeedHeaderBinding implements ViewBinding {
    @NonNull
@@ -44,21 +43,21 @@ public final class MessageFrameFeedHeaderBinding implements ViewBinding {
    @NonNull
    public static MessageFrameFeedHeaderBinding bind(@NonNull View var0) {
       int var1 = R.id.feed_channel_icon;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.feed_channel_text;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var6 = (TextView)k5.a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.feed_reply_count;
-            TextView var4 = (TextView)a.a(var0, var1);
+            TextView var4 = (TextView)k5.a.a(var0, var1);
             if (var4 != null) {
                var1 = R.id.feed_reply_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.feed_reply_participants;
-                  OverlappingCirclesView var6 = (OverlappingCirclesView)a.a(var0, var1);
-                  if (var6 != null) {
-                     return new MessageFrameFeedHeaderBinding(var0, var5, var3, var4, var2, var6);
+                  OverlappingCirclesView var2 = (OverlappingCirclesView)k5.a.a(var0, var1);
+                  if (var2 != null) {
+                     return new MessageFrameFeedHeaderBinding(var0, var3, var6, var4, var5, var2);
                   }
                }
             }

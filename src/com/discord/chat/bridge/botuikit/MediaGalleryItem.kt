@@ -5,7 +5,7 @@ import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.misc.utilities.ids.IdUtilsKt
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 @SourceDebugExtension(["SMAP\nMediaGalleryDisplayComponent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 MediaGalleryDisplayComponent.kt\ncom/discord/chat/bridge/botuikit/MediaGalleryItem\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,58:1\n1#2:59\n*E\n"])
@@ -71,7 +71,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       this.accessibilityRole = var15;
       this.portalIdString = var16;
       var var17: Boolean;
-      if (var5 != null && !StringsKt.c0(var5)) {
+      if (var5 != null && !StringsKt.i0(var5)) {
          var17 = false;
       } else {
          var17 = true;
@@ -84,7 +84,7 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
       this.spoilerOrNull = var5;
       var17 = true;
       if (var8 != null) {
-         if (StringsKt.c0(var8)) {
+         if (StringsKt.i0(var8)) {
             var17 = true;
          } else {
             var17 = false;
@@ -254,8 +254,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var3 = this.obscureDescription.hashCode();
       }
 
-      val var12: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
-      val var13: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
+      val var13: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var12: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var4: Int;
       if (this.verifyAge == null) {
          var4 = 0;
@@ -271,8 +271,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var5 = this.description.hashCode();
       }
 
-      val var16: Int = this.descriptionHint.hashCode();
-      val var15: Int = this.accessibilityRole.hashCode();
+      val var15: Int = this.descriptionHint.hashCode();
+      val var16: Int = this.accessibilityRole.hashCode();
       if (this.portalIdString != null) {
          var6 = this.portalIdString.hashCode();
       }
@@ -298,10 +298,10 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                                                                  + var3
                                                                            )
                                                                            * 31
-                                                                        + var12
+                                                                        + var13
                                                                   )
                                                                   * 31
-                                                               + var13
+                                                               + var12
                                                          )
                                                          * 31
                                                       + var4
@@ -313,67 +313,67 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                     + var5
                               )
                               * 31
-                           + var16
+                           + var15
                      )
                      * 31
-                  + var15
+                  + var16
             )
             * 31
          + var6;
    }
 
    public override fun toString(): String {
-      val var7: UnfurledMediaItem = this.media;
-      val var17: MediaGalleryItemType = this.mediaType;
-      val var11: java.lang.String = this.videoPreviewUrl;
+      val var11: UnfurledMediaItem = this.media;
+      val var8: MediaGalleryItemType = this.mediaType;
+      val var12: java.lang.String = this.videoPreviewUrl;
       val var6: Boolean = this.isSpoiler;
-      val var16: java.lang.String = this.spoilerDescription;
-      val var3: Boolean = this.isObscure;
-      val var1: Boolean = this.isObscureAwaitingScan;
-      val var15: java.lang.String = this.obscureDescription;
-      val var2: Boolean = this.obscureHideControls;
-      val var4: Boolean = this.obscureIsOpaque;
-      val var13: java.lang.Boolean = this.verifyAge;
-      val var5: Boolean = this.showDescription;
-      val var12: java.lang.String = this.description;
-      val var14: java.lang.String = this.descriptionHint;
-      val var8: java.lang.String = this.accessibilityRole;
-      val var10: java.lang.String = this.portalIdString;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("MediaGalleryItem(media=");
-      var9.append(var7);
-      var9.append(", mediaType=");
-      var9.append(var17);
-      var9.append(", videoPreviewUrl=");
-      var9.append(var11);
-      var9.append(", isSpoiler=");
-      var9.append(var6);
-      var9.append(", spoilerDescription=");
-      var9.append(var16);
-      var9.append(", isObscure=");
-      var9.append(var3);
-      var9.append(", isObscureAwaitingScan=");
-      var9.append(var1);
-      var9.append(", obscureDescription=");
-      var9.append(var15);
-      var9.append(", obscureHideControls=");
-      var9.append(var2);
-      var9.append(", obscureIsOpaque=");
-      var9.append(var4);
-      var9.append(", verifyAge=");
-      var9.append(var13);
-      var9.append(", showDescription=");
-      var9.append(var5);
-      var9.append(", description=");
-      var9.append(var12);
-      var9.append(", descriptionHint=");
-      var9.append(var14);
-      var9.append(", accessibilityRole=");
-      var9.append(var8);
-      var9.append(", portalIdString=");
-      var9.append(var10);
-      var9.append(")");
-      return var9.toString();
+      val var15: java.lang.String = this.spoilerDescription;
+      val var5: Boolean = this.isObscure;
+      val var4: Boolean = this.isObscureAwaitingScan;
+      val var10: java.lang.String = this.obscureDescription;
+      val var3: Boolean = this.obscureHideControls;
+      val var1: Boolean = this.obscureIsOpaque;
+      val var16: java.lang.Boolean = this.verifyAge;
+      val var2: Boolean = this.showDescription;
+      val var17: java.lang.String = this.description;
+      val var9: java.lang.String = this.descriptionHint;
+      val var13: java.lang.String = this.accessibilityRole;
+      val var7: java.lang.String = this.portalIdString;
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("MediaGalleryItem(media=");
+      var14.append(var11);
+      var14.append(", mediaType=");
+      var14.append(var8);
+      var14.append(", videoPreviewUrl=");
+      var14.append(var12);
+      var14.append(", isSpoiler=");
+      var14.append(var6);
+      var14.append(", spoilerDescription=");
+      var14.append(var15);
+      var14.append(", isObscure=");
+      var14.append(var5);
+      var14.append(", isObscureAwaitingScan=");
+      var14.append(var4);
+      var14.append(", obscureDescription=");
+      var14.append(var10);
+      var14.append(", obscureHideControls=");
+      var14.append(var3);
+      var14.append(", obscureIsOpaque=");
+      var14.append(var1);
+      var14.append(", verifyAge=");
+      var14.append(var16);
+      var14.append(", showDescription=");
+      var14.append(var2);
+      var14.append(", description=");
+      var14.append(var17);
+      var14.append(", descriptionHint=");
+      var14.append(var9);
+      var14.append(", accessibilityRole=");
+      var14.append(var13);
+      var14.append(", portalIdString=");
+      var14.append(var7);
+      var14.append(")");
+      return var14.toString();
    }
 
    public companion object {

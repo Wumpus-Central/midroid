@@ -6,6 +6,7 @@ import kotlin.jvm.functions.Function0;
 public final class a implements Function0 {
    public final ScreenshotDetector d;
 
+   @Override
    public final Object invoke() {
       return ScreenshotDetector.a(this.d);
    }

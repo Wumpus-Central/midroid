@@ -5,13 +5,14 @@ import android.graphics.Canvas
 import android.view.View
 import android.view.ViewParent
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.size.SizeUtilsKt
 
-public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
+public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : ItemDecoration {
    private final val spineDrawer: SpineDrawer
 
    public final var showThreadSpine: Boolean
@@ -22,7 +23,7 @@ public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx:
       this.showThreadSpine = true;
    }
 
-   public override fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
+   public open fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
       super.onDraw(var1, var2, var3);
       if (this.showThreadSpine) {
          val var8: ViewParent = var2.getParent();

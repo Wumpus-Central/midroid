@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.databinding.MessageTagViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.fonts.DiscordFont
@@ -20,7 +20,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
@@ -74,7 +74,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             var12 = var3;
          } else {
             val var28: Context = this.getContext();
-            var12 = ColorUtilsKt.getColorCompat(var28, color.white);
+            var12 = ColorUtilsKt.getColorCompat(var28, R.color.white);
          }
 
          var18.setTextColor(var12);
@@ -94,7 +94,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             );
          } else {
             val var22: ConstraintLayout = this.binding.layout;
-            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var22, R.drawable.drawable_message_author_tag_bg);
+            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var22, drawable.drawable_message_author_tag_bg);
          }
 
          if (var11 != null) {
@@ -112,11 +112,11 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             this.binding.tag.setText(var5);
             val var14: TextView = this.binding.tag;
             val var26: Context = this.getContext();
-            var14.setTextColor(ColorUtilsKt.getColorCompat(var26, color.brand_560));
+            var14.setTextColor(ColorUtilsKt.getColorCompat(var26, R.color.brand_560));
             val var15: ConstraintLayout = this.binding.layout;
             val var27: Context = this.getContext();
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-               var15, ColorUtilsKt.getThemeColor(var27, color.brand_200, color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+               var15, ColorUtilsKt.getThemeColor(var27, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
             );
             val var16: ConstraintLayout = this.binding.layout;
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new s0(var6), 1, null);

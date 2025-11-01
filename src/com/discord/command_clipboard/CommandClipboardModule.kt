@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 
 public class CommandClipboardModule(reactContext: ReactApplicationContext) : NativeCommandClipboardModuleSpec(var1) {
    public override fun setItem(item: String?, type: String?, text: String?) {
-      val var4: ClipboardManager = a.i(this.getReactApplicationContext().getApplicationContext(), ClipboardManager.class) as ClipboardManager;
+      val var4: ClipboardManager = a.j(this.getReactApplicationContext().getApplicationContext(), ClipboardManager.class) as ClipboardManager;
       if (var4 != null && var1 != null && var2 != null && var3 != null) {
          val var5: Intent = new Intent();
          var5.putExtra("data", var1);

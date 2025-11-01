@@ -7,7 +7,6 @@ import com.google.android.gms.tasks.Task;
 public final class b implements OnCompleteListener {
    public final String a;
 
-   @Override
    public final void onComplete(Task var1) {
       PlayAssetDelivery.b(this.a, var1);
    }

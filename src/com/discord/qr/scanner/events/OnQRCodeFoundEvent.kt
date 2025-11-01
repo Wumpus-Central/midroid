@@ -3,7 +3,7 @@ package com.discord.qr.scanner.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class OnQRCodeFoundEvent(status: String, result: String? = null) : ReactEvent {
@@ -61,14 +61,14 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
 
    public override fun toString(): String {
       val var3: java.lang.String = this.status;
-      val var2: java.lang.String = this.result;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnQRCodeFoundEvent(status=");
-      var1.append(var3);
-      var1.append(", result=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.result;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnQRCodeFoundEvent(status=");
+      var2.append(var3);
+      var2.append(", result=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

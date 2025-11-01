@@ -17,20 +17,20 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public override fun toString(): String {
          var var13: java.lang.String;
          label37: {
-            val var5: java.util.List = this.chatListItemUpdate.getListOperations();
-            if (var5 != null) {
-               val var4: java.util.Iterator = var5.iterator();
+            val var4: java.util.List = this.chatListItemUpdate.getListOperations();
+            if (var4 != null) {
+               val var5: java.util.Iterator = var4.iterator();
                var var1: Int = 0;
 
                var var2: java.lang.String;
-               for (var2 = ""; var4.hasNext(); var1++) {
-                  var13 = (java.lang.String)var4.next();
+               for (var2 = ""; var5.hasNext(); var1++) {
+                  var13 = (java.lang.String)var5.next();
                   if (var1 < 0) {
-                     CollectionsKt.u();
+                     CollectionsKt.v();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
-                  if (var1 != var5.size() - 1) {
+                  if (var1 != var4.size() - 1) {
                      var13 = "-";
                   } else {
                      var13 = "";
@@ -110,7 +110,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new fm.p();
+                  throw new ht.p();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

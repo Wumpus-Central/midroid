@@ -6,6 +6,7 @@ import kotlin.jvm.functions.Function1;
 public final class i implements Function1 {
    public final ChatInputRootViewMeasurer d;
 
+   @Override
    public final Object invoke(Object var1) {
       return ChatInputRootViewMeasurer.a(this.d, (ChatInputRootView)var1);
    }

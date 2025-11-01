@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.viewholder
 
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.chat.presentation.message.messagepart.WelcomeStickerAccessory
 import com.discord.chat.presentation.stickers.WelcomeStickerView
@@ -13,7 +13,7 @@ public class WelcomeStickerViewHolder(welcomeStickerView: WelcomeStickerView, on
    init {
       this.welcomeStickerView = var1;
       this.onWelcomeReplyClicked = var2;
-      var1.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
+      var1.setLayoutParams(new LayoutParams(-2, -2));
    }
 
    public fun bind(welcomeStickerAccessory: WelcomeStickerAccessory) {

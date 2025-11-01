@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class PortalsPackage : BaseReactPackage {
    public override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.q(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
+      return CollectionsKt.r(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
    }
 
    public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {

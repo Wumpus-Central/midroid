@@ -1,7 +1,6 @@
 package com.discord.chat.bridge.attachment
 
 import kotlin.enums.EnumEntries
-import lm.a
 
 public enum class AttachmentType(indexLabel: String) {
    Audio("audioAttachmentIndex"),
@@ -18,7 +17,7 @@ public enum class AttachmentType(indexLabel: String) {
    fun {
       val var0: Array<AttachmentType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

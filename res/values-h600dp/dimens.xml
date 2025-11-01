@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pi2_governmentid_capture_button_bottom_margin">56.0dip</dimen>
+    <dimen name="pi2_preview_horizontal_margin">0.0dip</dimen>
+    <dimen name="pi2_vertical_margin">24.0dip</dimen>
+</resources>

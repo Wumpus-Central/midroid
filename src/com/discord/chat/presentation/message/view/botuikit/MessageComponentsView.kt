@@ -41,25 +41,25 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
 
    public fun setComponents(components: List<Component>, componentProvider: ComponentProvider?, componentContext: ComponentContext) {
       this.componentContext = var3;
-      val var5: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
+      val var5: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
       val var6: java.util.Iterator = var1.iterator();
 
       for (int var4 = 0; var6.hasNext(); var4++) {
-         var var7: Any = var6.next();
+         var var8: Any = var6.next();
          if (var4 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
-         var7 = var7 as Component;
+         var8 = var8 as Component;
          if (var2 != null) {
-            var7 = var2.getConfiguredComponentView((Component)var7, var3, this, var4);
+            var8 = var2.getConfiguredComponentView((Component)var8, var3, this, var4);
          } else {
-            var7 = null;
+            var8 = null;
          }
 
-         var5.add(var7);
+         var5.add(var8);
       }
 
-      MessageComponentsViewKt.replaceViews$default(this, CollectionsKt.g0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
+      MessageComponentsViewKt.replaceViews$default(this, CollectionsKt.l0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
    }
 }

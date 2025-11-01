@@ -6,7 +6,7 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
-import fm.v
+import ht.v
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -39,13 +39,13 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
             var12.add(v.a(var24, var21 as java.lang.String));
          }
 
-         var9 = n0.u(var12);
+         var9 = s0.u(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = n0.i();
+      var9 = s0.i();
    }
 
    var var19: ChannelId;

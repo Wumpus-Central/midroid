@@ -112,7 +112,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
    public fun setAcceptButton(text: CharSequence?, backgroundColor: Int?) {
       val var5: DCDButton = this.binding.acceptButton;
       var var3: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -268,7 +268,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
       val var6: ImageView = this.binding.itemInviteOnlineDot;
       var var3: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -283,7 +283,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       var6.setVisibility(var3);
       val var16: TextView = this.binding.itemInviteOnlineText;
       var var10: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var10 = 0;
       } else {
          var10 = 1;
@@ -299,7 +299,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       this.binding.itemInviteOnlineText.setText(var1);
       val var7: ImageView = this.binding.itemInviteTotalMemberDot;
       var var12: Boolean;
-      if (var2 != null && !StringsKt.c0(var2)) {
+      if (var2 != null && !StringsKt.i0(var2)) {
          var12 = 0;
       } else {
          var12 = 1;
@@ -315,7 +315,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var8: TextView = this.binding.itemInviteTotalMemberText;
       var var14: Byte = 1;
       if (var2 != null) {
-         if (StringsKt.c0(var2)) {
+         if (StringsKt.i0(var2)) {
             var14 = 1;
          } else {
             var14 = 0;

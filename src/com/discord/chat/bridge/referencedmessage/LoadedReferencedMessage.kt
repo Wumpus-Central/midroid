@@ -3,7 +3,7 @@ package com.discord.chat.bridge.referencedmessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage() {
@@ -55,15 +55,15 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
+      val var3: Message = this.message;
       val var1: StructurableText = this.systemContent;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadedReferencedMessage(message=");
-      var3.append(var2);
-      var3.append(", systemContent=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LoadedReferencedMessage(message=");
+      var2.append(var3);
+      var2.append(", systemContent=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

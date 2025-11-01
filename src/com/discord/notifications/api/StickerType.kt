@@ -5,8 +5,8 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import lm.a
-import tp.m
+import pt.a
+import xu.m
 
 @m(with = StickerType.Serializer::class)
 public enum class StickerType(serialNumber: Int) : IntEnum {

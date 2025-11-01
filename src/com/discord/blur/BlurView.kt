@@ -29,9 +29,9 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
       this.blurEnabled = true;
       this.blurViewPropertiesDirty = true;
       this.blurTarget = new WeakReference<>(null);
-      val var6: c = new c(this);
+      val var6: com.discord.blur.c = new com.discord.blur.c(this);
       this.blurTargetChangeListener = var6;
-      Companion.updateListener$blur_release(var6, true, new d(this));
+      Companion.updateListener$blur_release(var6, true, new com.discord.blur.d(this));
    }
 
    @JvmStatic
@@ -97,12 +97,12 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new b(this));
+      Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new com.discord.blur.b(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new a(this));
+      Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new com.discord.blur.a(this));
    }
 
    public override fun setBlurAmount(rectId: Int, blurAmount: Float) {
@@ -143,7 +143,7 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
 
    public companion object {
       internal fun mapBlurTint(blurAmountTint: Int, blurTint: Int, blurAmount: Float): Int {
-         return q1.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
+         return x2.c.h(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
       }
 
       internal fun mapRadius(radius: Float, maxRadius: Float = ..., minRadius: Float = ...): Float {

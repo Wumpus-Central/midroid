@@ -1,8 +1,9 @@
 package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
+import com.discord.emoji.RenderableEmoji.CustomWithEmojiId
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -77,7 +78,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
    public fun renderable(): RenderableEmoji {
       if (this.id != null) {
-         val var7: java.lang.Long = StringsKt.o(this.id);
+         val var7: java.lang.Long = StringsKt.s(this.id);
          if (var7 != null) {
             val var2: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
@@ -85,7 +86,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
+            val var9: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -98,19 +99,19 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    public override fun toString(): String {
       val var5: java.lang.String = this.id;
       val var2: java.lang.String = this.name;
-      val var3: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMediaEmoji(id=");
-      var4.append(var5);
-      var4.append(", name=");
-      var4.append(var2);
-      var4.append(", displayName=");
-      var4.append(var3);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMediaEmoji(id=");
+      var3.append(var5);
+      var3.append(", name=");
+      var3.append(var2);
+      var3.append(", displayName=");
+      var3.append(var4);
+      var3.append(", animated=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

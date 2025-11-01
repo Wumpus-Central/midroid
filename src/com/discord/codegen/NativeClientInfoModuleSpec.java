@@ -7,7 +7,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
-import ma.a;
+import kc.a;
 
 public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeClientInfoModule";
@@ -17,10 +17,11 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
    }
 
    @a
+   @Override
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var2 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var1 = new HashSet<>(
+         HashSet var4 = new HashSet<>(
             Arrays.asList(
                "Build",
                "DeviceVendorID",
@@ -34,23 +35,24 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
                "Version"
             )
          );
-         HashSet var2 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var3 = new HashSet(var4.keySet());
-         var3.removeAll(var1);
-         var3.removeAll(var2);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet<>(Arrays.asList("UserSettings"));
+         HashSet var1 = new HashSet(var2.keySet());
+         var1.removeAll(var4);
+         var1.removeAll(var3);
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
          }
 
-         var1.removeAll(var4.keySet());
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
+         var4.removeAll(var2.keySet());
+         if (!var4.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
          }
       }
 
-      return var4;
+      return var2;
    }
 
+   @Override
    public String getName() {
       return "NativeClientInfoModule";
    }

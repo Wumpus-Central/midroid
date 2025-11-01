@@ -11,6 +11,6 @@ public final class u0 implements OnLongClickListener {
    public final ChatEventHandler e;
 
    public final boolean onLongClick(View var1) {
-      return FlaggedMessageEmbedView.i(this.d, this.e, var1);
+      return FlaggedMessageEmbedView.j(this.d, this.e, var1);
    }
 }

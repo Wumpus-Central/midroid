@@ -6,6 +6,6 @@ import android.view.View.OnClickListener;
 // $VF: synthetic class
 public final class m implements OnClickListener {
    public final void onClick(View var1) {
-      AttachmentUploadOverlayView.k(var1);
+      AttachmentUploadOverlayView.l(var1);
    }
 }

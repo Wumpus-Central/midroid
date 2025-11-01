@@ -4,8 +4,8 @@ import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlin.jvm.functions.Function1
-import z6.a
-import z6.b
+import x8.a
+import x8.b
 
 internal object FCMTokenHelper {
    @JvmStatic
@@ -18,7 +18,7 @@ internal object FCMTokenHelper {
    fun `getToken$lambda$1`(var0: Function1, var1: Task) {
       var var2: java.lang.String;
       try {
-         var2 = var1.k() as java.lang.String;
+         var2 = var1.l() as java.lang.String;
       } catch (var6: Exception) {
          INSTANCE.logError(var6);
          return;
@@ -26,7 +26,7 @@ internal object FCMTokenHelper {
 
       if (var2 != null) {
          try {
-            if (var1.o()) {
+            if (var1.p()) {
                var0.invoke(var2);
                return;
             }
@@ -37,7 +37,7 @@ internal object FCMTokenHelper {
       }
 
       try {
-         var7 = var1.j();
+         var7 = var1.k();
       } catch (var4: Exception) {
          INSTANCE.logError(var4);
          return;
@@ -54,14 +54,14 @@ internal object FCMTokenHelper {
    }
 
    private fun Throwable.logError() {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = var1.getClass().getSimpleName();
-      var2.w(var3, "Fetching FCM registration token failed", var1);
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = var1.getClass().getSimpleName();
+      var3.w(var2, "Fetching FCM registration token failed", var1);
    }
 
    public fun getToken(onToken: (String) -> Unit) {
       try {
-         FirebaseMessaging.n().q().e(new a()).addOnCompleteListener(new b(var1));
+         FirebaseMessaging.n().q().d(new a()).addOnCompleteListener(new b(var1));
       } catch (var4: Exception) {
          this.logError(var4);
       }

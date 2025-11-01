@@ -23,13 +23,14 @@ import com.discord.progress_dots.ProgressDots
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import fm.p
+import ht.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
 
@@ -61,9 +62,9 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var6;
-      this.progressDots$delegate = fm.l.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      this.progressDots$delegate = ht.l.b(new a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      val var4: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(-2, -2);
       var4.b(0.0F);
       this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
@@ -245,7 +246,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
          var20.setVisibility(var6);
          DiscordFontUtilsKt.setDiscordFont(var20, DiscordFont.PrimaryMedium);
-         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, color.white));
+         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, R.color.white));
          if (!var8) {
             val var21: MaterialButton = this.binding.button;
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new b(var1, var3), 1, null);

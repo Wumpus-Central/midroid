@@ -70,6 +70,7 @@
     <integer name="mtrl_view_gone">2</integer>
     <integer name="mtrl_view_invisible">1</integer>
     <integer name="mtrl_view_visible">0</integer>
+    <integer name="pi2_transition_animation_duration">250</integer>
     <integer name="progress_dots_animation_time">350</integer>
     <item type="integer" name="progress_dots_max_alpha">1.0</item>
     <item type="integer" name="progress_dots_max_scale">0.9</item>

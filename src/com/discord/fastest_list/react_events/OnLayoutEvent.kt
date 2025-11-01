@@ -3,9 +3,9 @@ package com.discord.fastest_list.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fm.v
+import ht.v
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Float) : ReactEvent {
@@ -65,31 +65,26 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          + java.lang.Float.hashCode(this.height);
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            v.a(
-               "layout",
-               NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("x", this.x), v.a("y", this.y), v.a("width", this.width), v.a("height", this.height)})
-            )
-         }
+         v.a("layout", NativeMapExtensionsKt.nativeMapOf(v.a("x", this.x), v.a("y", this.y), v.a("width", this.width), v.a("height", this.height)))
       );
    }
 
    public override fun toString(): String {
-      val var4: Float = this.x;
-      val var2: Float = this.y;
-      val var3: Float = this.width;
-      val var1: Float = this.height;
+      val var2: Float = this.x;
+      val var1: Float = this.y;
+      val var4: Float = this.width;
+      val var3: Float = this.height;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnLayoutEvent(x=");
-      var5.append(var4);
-      var5.append(", y=");
       var5.append(var2);
-      var5.append(", width=");
-      var5.append(var3);
-      var5.append(", height=");
+      var5.append(", y=");
       var5.append(var1);
+      var5.append(", width=");
+      var5.append(var4);
+      var5.append(", height=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }

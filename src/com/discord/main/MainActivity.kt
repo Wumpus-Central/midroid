@@ -14,7 +14,7 @@ import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
-import fm.c
+import ht.c
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
@@ -22,8 +22,8 @@ public class MainActivity : ReactActivity {
       return this.getReactActivityDelegate().getCurrentReactContext();
    }
 
-   public open fun getActivityDelegate(): ActivityDelegate {
-      return new ActivityDelegate(this) {
+   public override fun getActivityDelegate(): ActivityDelegate {
+      return new ReactActivity.ActivityDelegate(this) {
          final MainActivity this$0;
 
          {
@@ -39,17 +39,19 @@ public class MainActivity : ReactActivity {
             var3 = this.getContext();
             var4.handleIntent(var3, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
-            val var7: BundleUpdater = BundleUpdater.Companion.instance();
-            val var5: Context = this.getContext();
-            var7.handleIntent(var5, var1);
+            val var5: BundleUpdater = BundleUpdater.Companion.instance();
+            var3 = this.getContext();
+            var5.handleIntent(var3, var1);
          }
 
+         @Override
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
             this.parseIntent(var2);
          }
 
+         @Override
          public boolean onNewIntent(Intent var1) {
             this.parseIntent(var1);
             this.this$0.setIntent(var1);
@@ -58,11 +60,11 @@ public class MainActivity : ReactActivity {
       };
    }
 
-   public open fun getNameOfComponent(): String {
+   public override fun getNameOfComponent(): String {
       return "Discord";
    }
 
-   protected open fun onCreate(savedInstanceState: Bundle?) {
+   protected override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(var1);
       TTIModule.Companion.setStaticMainActivityCreationTime(System.currentTimeMillis());
    }
@@ -78,7 +80,7 @@ public class MainActivity : ReactActivity {
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public open fun onUserLeaveHint() {
+   public override fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

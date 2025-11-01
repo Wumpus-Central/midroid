@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 internal data class TapMessageData(messageId: String, channelId: String) : ReactEvent {
@@ -48,18 +47,18 @@ internal data class TapMessageData(messageId: String, channelId: String) : React
       return this.messageId.hashCode() * 31 + this.channelId.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapMessageData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

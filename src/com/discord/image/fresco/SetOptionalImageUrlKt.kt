@@ -2,9 +2,9 @@ package com.discord.image.fresco
 
 import android.net.Uri
 import android.net.Uri.Builder
+import ba.f
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
-import d8.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(
    imageUrl: String?,
@@ -12,7 +12,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
    srcIsAnimated: Boolean? = java.lang.Boolean.FALSE,
    controllerListener: ControllerListener<in Any>? = null
 ) {
-   if (var1 != null && !StringsKt.c0(var1)) {
+   if (var1 != null && !StringsKt.i0(var1)) {
       val var10: Uri = f.r(var1);
       if (var10 != null) {
          val var11: java.lang.String = var10.getLastPathSegment();
@@ -27,21 +27,21 @@ public fun SimpleDraweeView.setOptionalImageUrl(
          }
 
          val var5: Boolean;
-         if (var1 == "image/gif" || var11 != null && StringsKt.s(var11, ".gif", true)) {
+         if (var1 == "image/gif" || var11 != null && StringsKt.x(var11, ".gif", true)) {
             var5 = true;
          } else {
             var5 = false;
          }
 
          var var6: Boolean;
-         if (var1 == "image/webp" || var11 != null && StringsKt.s(var11, ".webp", true)) {
+         if (var1 == "image/webp" || var11 != null && StringsKt.x(var11, ".webp", true)) {
             var6 = true;
          } else {
             var6 = false;
          }
 
          val var7: Boolean;
-         if (var1 == "image/avif" || var11 != null && StringsKt.s(var11, ".avif", true)) {
+         if (var1 == "image/avif" || var11 != null && StringsKt.x(var11, ".avif", true)) {
             var7 = true;
          } else {
             var7 = false;
@@ -61,7 +61,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
 
          val var14: Builder = var10.buildUpon();
          val var16: java.lang.String = var10.getLastPathSegment();
-         if (var16 != null && StringsKt.s(var16, ".avif", true)) {
+         if (var16 != null && StringsKt.x(var16, ".avif", true)) {
             var14.appendQueryParameter("format", "webp");
          }
 

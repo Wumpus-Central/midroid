@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/image_overlay_view" android:background="@color/cameraOverlayColor" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/hint_overlay_view" android:background="@color/cameraHintOverlayColor" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/blinds_view" android:background="@color/cameraPreviewMaskColor" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.withpersona.sdk2.inquiry.selfie.view.Pi2ProgressArcView android:id="@id/progress_arc" android:layout_width="fill_parent" android:layout_height="fill_parent" app:pi2InnerCircleSize="0.45" app:pi2Progress="0.0" app:pi2StartAngle="90.0" app:pi2StrokeColor="?colorSecondary" app:pi2StrokeWidth="12.0dip" />
+    <com.withpersona.sdk2.inquiry.selfie.view.Pi2CircleMaskView android:id="@id/circle_mask" android:layout_width="fill_parent" android:layout_height="fill_parent" app:pi2CircleSize="0.45" app:pi2MaskColor="@color/cameraPreviewMaskColor" />
+    <ImageView android:id="@id/hint_image" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="centerInside" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.8" />
+    <com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView android:id="@id/hint_animation" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="fitCenter" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_percent="0.9" />
+</merge>

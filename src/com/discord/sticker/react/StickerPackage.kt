@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class StickerPackage : BaseReactPackage {
    public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.n(new ViewManager[]{new StickerViewManagerAPNG(), new StickerViewManagerLottie()});
+      return CollectionsKt.o(new ViewManager[]{new StickerViewManagerAPNG(), new StickerViewManagerLottie()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): Nothing? {

@@ -3,59 +3,59 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import fm.l
-import n7.a
-import n7.a0
-import n7.a1
-import n7.b
-import n7.b0
-import n7.c
-import n7.c0
-import n7.d
-import n7.d0
-import n7.e
-import n7.e0
-import n7.f
-import n7.f0
-import n7.g
-import n7.g0
-import n7.h
-import n7.h0
-import n7.i
-import n7.i0
-import n7.j
-import n7.j0
-import n7.k
-import n7.k0
-import n7.l0
-import n7.m
-import n7.m0
-import n7.n
-import n7.n0
-import n7.o
-import n7.o0
-import n7.p
-import n7.p0
-import n7.q
-import n7.q0
-import n7.r
-import n7.r0
-import n7.s
-import n7.s0
-import n7.t
-import n7.t0
-import n7.u
-import n7.u0
-import n7.v
-import n7.v0
-import n7.w
-import n7.w0
-import n7.x
-import n7.x0
-import n7.y
-import n7.y0
-import n7.z
-import n7.z0
+import ht.l
+import l9.a
+import l9.a0
+import l9.a1
+import l9.b
+import l9.b0
+import l9.c
+import l9.c0
+import l9.d
+import l9.d0
+import l9.e
+import l9.e0
+import l9.f
+import l9.f0
+import l9.g
+import l9.g0
+import l9.h
+import l9.h0
+import l9.i
+import l9.i0
+import l9.j
+import l9.j0
+import l9.k
+import l9.k0
+import l9.l0
+import l9.m
+import l9.m0
+import l9.n
+import l9.n0
+import l9.o
+import l9.o0
+import l9.p
+import l9.p0
+import l9.q
+import l9.q0
+import l9.r
+import l9.r0
+import l9.s
+import l9.s0
+import l9.t
+import l9.t0
+import l9.u
+import l9.u0
+import l9.v
+import l9.v0
+import l9.w
+import l9.w0
+import l9.x
+import l9.x0
+import l9.y
+import l9.y0
+import l9.z
+import l9.z0
 
 internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject() {
    public open val androidRipple: Int
@@ -387,7 +387,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.backgroundModifierSelected$delegate = l.b(new t0(var1, var2));
       this.backgroundPrimary$delegate = l.b(new u0(var1, var2));
       this.backgroundSecondary$delegate = l.b(new v0(var1, var2));
-      this.backgroundSecondaryAlt$delegate = l.b(new n7.l(var1, var2));
+      this.backgroundSecondaryAlt$delegate = l.b(new l9.l(var1, var2));
       this.backgroundTertiary$delegate = l.b(new w(var1, var2));
       this.bgModStrong$delegate = l.b(new h0(var1, var2));
       this.bgSurfaceOverlay$delegate = l.b(new s0(var1, var2));

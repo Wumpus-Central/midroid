@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
@@ -31,14 +31,15 @@ import com.discord.react.FontManager
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nFlaggedMessageEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 FlaggedMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,203:1\n176#2,2:204\n257#2,2:206\n257#2,2:208\n257#2,2:210\n257#2,2:212\n257#2,2:214\n*S KotlinDebug\n*F\n+ 1 FlaggedMessageEmbedView.kt\ncom/discord/chat/presentation/message/view/FlaggedMessageEmbedView\n*L\n51#1:204,2\n94#1:206,2\n134#1:208,2\n171#1:210,2\n178#1:212,2\n194#1:214,2\n*E\n"])
-public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2), SpacingProviderView {
+public class FlaggedMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2),
+   VerticalSpacingItemDecoration.SpacingProviderView {
    private final val binding: FlaggedMessageEmbedViewBinding
    private final var allowChildGestures: Boolean
 
@@ -233,7 +234,7 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
             <unrepresentable>.INSTANCE,
             new a1(),
             new b1(),
-            var8.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing),
+            var8.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing),
             var2,
             false,
             null,
@@ -352,7 +353,7 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       this.configureMessageContent(var1);
    }
 
-   public open fun spacingPxOverride(): Int {
+   public override fun spacingPxOverride(): Int {
       return SizeUtilsKt.getDpToPx(4);
    }
 }

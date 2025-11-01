@@ -2,7 +2,7 @@ package com.discord.chat.presentation.list.delegate
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.item.ChatListItem
@@ -24,7 +24,7 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: View): Unit {
-      var0.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
+      var0.setLayoutParams(new LayoutParams(-1, -2));
       return Unit.a;
    }
 
@@ -104,18 +104,18 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
       }
 
       public override fun toString(): String {
-         val var1: ChatListItemViewHolder = this.holder;
-         val var2: java.util.List = this.items;
+         val var4: ChatListItemViewHolder = this.holder;
+         val var1: java.util.List = this.items;
          val var3: java.util.List = this.payloads;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Metadata(holder=");
-         var4.append(var1);
-         var4.append(", items=");
-         var4.append(var2);
-         var4.append(", payloads=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Metadata(holder=");
+         var2.append(var4);
+         var2.append(", items=");
+         var2.append(var1);
+         var2.append(", payloads=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

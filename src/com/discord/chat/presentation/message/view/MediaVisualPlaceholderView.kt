@@ -16,7 +16,7 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.Intrinsics
@@ -64,7 +64,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
          if (var2 != 2) {
             if (var2 == 3) {
                this.binding.imageInvalid.setVisibility(0);
-               (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.e);
+               (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.e);
                this.binding.imageInvalid.clearColorFilter();
                val var11: SimpleDraweeView = this.binding.imageInvalid;
                val var8: ReactAsset;
@@ -78,11 +78,11 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
                return;
             }
 
-            throw new fm.p();
+            throw new ht.p();
          }
 
          this.binding.imageInvalid.setVisibility(0);
-         (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScaleType.g);
+         (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.g);
          val var6: SimpleDraweeView = this.binding.imageInvalid;
          ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getBackgroundAccent());
          val var7: SimpleDraweeView = this.binding.imageInvalid;
@@ -91,12 +91,12 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var3: ConstraintLayout = this.binding.container;
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -151,18 +151,18 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var1);
-         var4.append(", height=");
-         var4.append(var2);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var2: Int = this.width;
+         val var1: Int = this.height;
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

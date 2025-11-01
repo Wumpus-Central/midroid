@@ -37,7 +37,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return k.E(k.E(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
+      return m.F(m.F(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])
@@ -104,7 +104,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 077
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 1
@@ -133,7 +133,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 0af: aconst_null
       // 0b0: bipush 2
       // 0b1: aconst_null
-      // 0b2: invokestatic kotlin/text/StringsKt.W0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+      // 0b2: invokestatic kotlin/text/StringsKt.f1 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
       // 0b5: astore 6
       // 0b7: goto 08f
       // 0ba: aload 7
@@ -168,7 +168,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 108: astore 1
       // 109: aload 7
       // 10b: aconst_null
-      // 10c: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10c: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 10f: aload 1
       // 110: areturn
       // 111: aload 1
@@ -176,12 +176,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 113: astore 6
       // 115: aload 7
       // 117: aload 1
-      // 118: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 118: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11b: aload 6
       // 11d: athrow
       // 11e: aload 7
       // 120: aconst_null
-      // 121: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 121: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 124: aconst_null
       // 125: areturn
    }
@@ -193,7 +193,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    private fun process(uri: Uri) {
       val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
       if (var2 != null
-         && (this.lastProcessedPath == null || !StringsKt.v(this.lastProcessedPath, var2.getPath(), false, 2, null))
+         && (this.lastProcessedPath == null || !StringsKt.A(this.lastProcessedPath, var2.getPath(), false, 2, null))
          && ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
          && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
          this.lastProcessedPath = var2.getPath();
@@ -214,7 +214,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       if (var2 != null) {
          val var4: java.lang.String = var2.toString();
          val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         if (StringsKt.I(var4, var3, false, 2, null)) {
+         if (StringsKt.N(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
                return;
@@ -233,7 +233,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       private fun String.isScreenshotPath(): Boolean {
          val var2: Locale = Locale.getDefault();
          var1 = var1.toLowerCase(var2);
-         return StringsKt.N(var1, "screenshots/", false, 2, null);
+         return StringsKt.T(var1, "screenshots/", false, 2, null);
       }
    }
 
@@ -315,24 +315,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var1: Long = this.id;
-         val var8: java.lang.String = this.fileName;
+         val var3: Long = this.id;
+         val var7: java.lang.String = this.fileName;
          val var5: java.lang.String = this.relativePath;
-         val var6: Uri = this.uri;
-         val var3: Long = this.dateAdded;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("ScreenshotData(id=");
-         var7.append(var1);
-         var7.append(", fileName=");
-         var7.append(var8);
-         var7.append(", relativePath=");
-         var7.append(var5);
-         var7.append(", uri=");
-         var7.append(var6);
-         var7.append(", dateAdded=");
-         var7.append(var3);
-         var7.append(")");
-         return var7.toString();
+         val var8: Uri = this.uri;
+         val var1: Long = this.dateAdded;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("ScreenshotData(id=");
+         var6.append(var3);
+         var6.append(", fileName=");
+         var6.append(var7);
+         var6.append(", relativePath=");
+         var6.append(var5);
+         var6.append(", uri=");
+         var6.append(var8);
+         var6.append(", dateAdded=");
+         var6.append(var1);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

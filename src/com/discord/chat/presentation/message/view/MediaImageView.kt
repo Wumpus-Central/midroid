@@ -89,10 +89,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          } else if (var2 == null) {
             return false;
          } else {
-            return StringsKt.s(var2, ".gif", true)
-               || StringsKt.s(var2, ".gifv", true)
-               || StringsKt.s(var2, ".webp", false) && var3
-               || StringsKt.s(var2, ".avif", false) && var3;
+            return StringsKt.x(var2, ".gif", true)
+               || StringsKt.x(var2, ".gifv", true)
+               || StringsKt.x(var2, ".webp", false) && var3
+               || StringsKt.x(var2, ".avif", false) && var3;
          }
       }
    }
@@ -157,11 +157,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.w(var19);
-         val var24: SimpleDraweeView = this.binding.image;
-         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var39: SimpleDraweeView = this.binding.image;
+         val var24: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var38: SimpleDraweeView = this.binding.image;
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var24, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var39, var5, var6)
+            var39, var1, var24, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
          );
       }
 
@@ -195,9 +195,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       this.binding.imageBlurBg.setBackgroundColor(0);
       val var27: FrameLayout = this.binding.imageBlurBg;
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var28: SpoilerViewManager = this.spoilerViewManager;
-      val var31: ConstraintLayout = this.binding.container;
-      val var33: SimpleDraweeView = this.binding.image;
+      val var34: SpoilerViewManager = this.spoilerViewManager;
+      val var33: ConstraintLayout = this.binding.container;
+      val var28: SimpleDraweeView = this.binding.image;
       if (var11 && !var15) {
          var15 = true;
       } else {
@@ -210,10 +210,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var31, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var29: ConstraintLayout = this.binding.container;
-      var32.configureAttachmentOverlay(this, var29, var9, var10);
+      var34.configureSpoiler(var8, this, var33, var28, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var32: ConstraintLayout = this.binding.container;
+      var29.configureAttachmentOverlay(this, var32, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -234,12 +234,12 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var3: ConstraintLayout = this.binding.container;
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -254,10 +254,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
                this.$role = var1;
             }
 
-            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                super.onInitializeAccessibilityNodeInfo(var1, var2);
-               var2.S0(this.$role);
+               var2.T0(this.$role);
             }
          });
       }
@@ -345,14 +344,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
          var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
          var4.append(", resizeMode=");
          var4.append(var3);
          var4.append(")");

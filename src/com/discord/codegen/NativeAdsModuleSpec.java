@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeAdsModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeAdsModule";
@@ -18,6 +18,7 @@ public abstract class NativeAdsModuleSpec extends ReactContextBaseJavaModule imp
    @a
    public abstract void getGoogleAdvertisingId(Promise var1);
 
+   @Override
    public String getName() {
       return "NativeAdsModule";
    }

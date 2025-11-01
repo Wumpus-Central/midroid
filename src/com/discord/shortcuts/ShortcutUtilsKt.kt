@@ -56,7 +56,7 @@ fun `createShortcut$default`(
 
 private fun getShareCategories(): Set<String> {
    return if (VERSION.SDK_INT < 25)
-      w0.c("com.discord.intent.category.DIRECT_SHARE_TARGET")
+      b1.c("com.discord.intent.category.DIRECT_SHARE_TARGET")
       else
-      w0.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
+      b1.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
 }

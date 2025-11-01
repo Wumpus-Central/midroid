@@ -138,31 +138,31 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
 
    public override fun toString(): String {
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: Attachment = this.attachment;
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var9: java.lang.Float = this.attachmentsOpacity;
+      val var6: java.lang.Float = this.attachmentsOpacity;
       val var4: UserId = this.authorId;
-      val var5: Int = this.color;
+      val var9: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("AudioAttachmentMessageAccessory(channelId=");
-      var8.append(var3);
-      var8.append(", messageId=");
-      var8.append(var6);
-      var8.append(", attachment=");
-      var8.append(var7);
-      var8.append(", attachmentIndex=");
-      var8.append(var1);
-      var8.append(", attachmentsOpacity=");
-      var8.append(var9);
-      var8.append(", authorId=");
-      var8.append(var4);
-      var8.append(", color=");
-      var8.append(var5);
-      var8.append(", isVoiceMessage=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("AudioAttachmentMessageAccessory(channelId=");
+      var5.append(var3);
+      var5.append(", messageId=");
+      var5.append(var7);
+      var5.append(", attachment=");
+      var5.append(var8);
+      var5.append(", attachmentIndex=");
+      var5.append(var1);
+      var5.append(", attachmentsOpacity=");
+      var5.append(var6);
+      var5.append(", authorId=");
+      var5.append(var4);
+      var5.append(", color=");
+      var5.append(var9);
+      var5.append(", isVoiceMessage=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

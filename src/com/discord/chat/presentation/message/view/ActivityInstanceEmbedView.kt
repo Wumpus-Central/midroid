@@ -55,14 +55,14 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
 
       var4.setVisibility(var2);
       var4 = this.binding.participants;
-      val var5: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
-      val var6: java.util.Iterator = var1.iterator();
+      val var6: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
+      val var8: java.util.Iterator = var1.iterator();
 
-      while (var6.hasNext()) {
-         var5.add(new OverlappingItem(var6.next() as java.lang.String));
+      while (var8.hasNext()) {
+         var6.add(new OverlappingItem(var8.next() as java.lang.String));
       }
 
-      var4.setItems(var5);
+      var4.setItems(var6);
    }
 
    public fun setParticipantText(text: String) {

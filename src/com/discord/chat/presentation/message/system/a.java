@@ -11,6 +11,6 @@ public final class a implements OnClickListener {
    public final AutoModerationContext e;
 
    public final void onClick(View var1) {
-      AutomodSystemMessageView.g(this.d, this.e, var1);
+      AutomodSystemMessageView.h(this.d, this.e, var1);
    }
 }

@@ -12,6 +12,6 @@ public final class c implements OnClickListener {
    public final AppMessageEmbedImpl i;
 
    public final void onClick(View var1) {
-      AppMessageEmbedView.g(this.d, this.e, this.i, var1);
+      AppMessageEmbedView.h(this.d, this.e, this.i, var1);
    }
 }

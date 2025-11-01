@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import e4.a;
 
 public final class RoleIconViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class RoleIconViewBinding implements ViewBinding {
    @NonNull
    public static RoleIconViewBinding bind(@NonNull View var0) {
       int var1 = R.id.role_icon_view_unicode_emoji;
-      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+      SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
       if (var2 != null) {
          return new RoleIconViewBinding(var0, var2);
       } else {

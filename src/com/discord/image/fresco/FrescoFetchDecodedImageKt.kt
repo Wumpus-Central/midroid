@@ -10,14 +10,14 @@ import com.facebook.datasource.DataSource
 import com.facebook.imagepipeline.core.DefaultExecutorSupplier
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import km.b
+import ja.d
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import l8.d
+import ot.b
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -28,7 +28,7 @@ fun `access$getExecutorSupplier$p`(): DefaultExecutorSupplier {
 
 public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    val var6: e = new e(b.c(var4), 1);
-   var6.C();
+   var6.H();
    if (var1 == null) {
       var6.resumeWith(Result.b(null));
    } else {
@@ -39,7 +39,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.c(new v9.b(var6, var3) {
+      var8.d(new tb.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -48,10 +48,12 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$copyBitmap = var2;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             this.$continuation.resumeWith(Result.b(null));
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             val var2: kotlin.Result.a = Result.e;
             var var4: Bitmap = var1;
@@ -65,7 +67,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().d());
-      var6.g(new Function1<java.lang.Throwable, Unit>(var8) {
+      var6.d(new Function1<java.lang.Throwable, Unit>(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -78,8 +80,8 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       });
    }
 
-   val var9: Any = var6.z();
-   if (var9 === b.e()) {
+   val var9: Any = var6.B();
+   if (var9 === b.f()) {
       g.c(var4);
    }
 
@@ -89,41 +91,41 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label38: {
       try {
-         val var21: kotlin.Result.a = Result.e;
-      } catch (var9: java.lang.Throwable) {
          val var6: kotlin.Result.a = Result.e;
-         var19 = Result.b(c.a(var9));
+      } catch (var9: java.lang.Throwable) {
+         val var19: kotlin.Result.a = Result.e;
+         var20 = Result.b(c.a(var9));
          break label38;
       }
 
-      val var20: Uri;
+      val var22: Uri;
       if (var1 != null) {
          try {
-            var20 = Uri.parse(var1);
+            var22 = Uri.parse(var1);
          } catch (var8: java.lang.Throwable) {
-            val var22: kotlin.Result.a = Result.e;
-            var19 = Result.b(c.a(var8));
+            val var21: kotlin.Result.a = Result.e;
+            var20 = Result.b(c.a(var8));
             break label38;
          }
       } else {
-         var20 = null;
+         var22 = null;
       }
 
       label26:
       try {
-         var19 = Result.b(var20);
+         var20 = Result.b(var22);
       } catch (var7: java.lang.Throwable) {
          val var23: kotlin.Result.a = Result.e;
-         var19 = Result.b(c.a(var7));
+         var20 = Result.b(c.a(var7));
          break label26;
       }
    }
 
-   if (Result.g(var19)) {
-      var19 = null;
+   if (Result.g(var20)) {
+      var20 = null;
    }
 
-   return fetchDecodedImage(var0, var19 as Uri, var2, var3, var4);
+   return fetchDecodedImage(var0, var20 as Uri, var2, var3, var4);
 }
 
 public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
@@ -136,17 +138,19 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).c(new v9.b(var3) {
+      d.a().k(var5.J(var6).a(), var0).d(new tb.b(var3) {
          final Function1<Bitmap, Unit> $onDecodedImage;
 
          {
             this.$onDecodedImage = var1;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             this.$onDecodedImage.invoke(null);
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
@@ -157,41 +161,41 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
    label38: {
       try {
-         val var20: kotlin.Result.a = Result.e;
-      } catch (var8: java.lang.Throwable) {
          val var5: kotlin.Result.a = Result.e;
-         var18 = Result.b(c.a(var8));
+      } catch (var8: java.lang.Throwable) {
+         val var18: kotlin.Result.a = Result.e;
+         var19 = Result.b(c.a(var8));
          break label38;
       }
 
-      val var19: Uri;
+      val var21: Uri;
       if (var1 != null) {
          try {
-            var19 = Uri.parse(var1);
+            var21 = Uri.parse(var1);
          } catch (var7: java.lang.Throwable) {
-            val var21: kotlin.Result.a = Result.e;
-            var18 = Result.b(c.a(var7));
+            val var20: kotlin.Result.a = Result.e;
+            var19 = Result.b(c.a(var7));
             break label38;
          }
       } else {
-         var19 = null;
+         var21 = null;
       }
 
       label26:
       try {
-         var18 = Result.b(var19);
+         var19 = Result.b(var21);
       } catch (var6: java.lang.Throwable) {
          val var22: kotlin.Result.a = Result.e;
-         var18 = Result.b(c.a(var6));
+         var19 = Result.b(c.a(var6));
          break label26;
       }
    }
 
-   if (Result.g(var18)) {
-      var18 = null;
+   if (Result.g(var19)) {
+      var19 = null;
    }
 
-   fetchDecodedImage(var0, var18 as Uri, var2, var3);
+   fetchDecodedImage(var0, var19 as Uri, var2, var3);
 }
 
 @JvmSynthetic

@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class TapPollAction(channelId: String, messageId: String, type: String) : ReactEvent {
@@ -56,23 +55,23 @@ public data class TapPollAction(channelId: String, messageId: String, type: Stri
       return (this.channelId.hashCode() * 31 + this.messageId.hashCode()) * 31 + this.type.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapPollAction(channelId=");
-      var3.append(var1);
-      var3.append(", messageId=");
-      var3.append(var2);
-      var3.append(", type=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapPollAction(channelId=");
+      var2.append(var3);
+      var2.append(", messageId=");
+      var2.append(var4);
+      var2.append(", type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

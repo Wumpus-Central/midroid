@@ -9,11 +9,11 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, Int> {
    val var2: Int = 0;
-   val var3: IntRange = e.v(0, var0.getChildCount());
+   val var3: IntRange = e.w(0, var0.getChildCount());
    val var5: Pair = new Pair(var2, var2);
    val var6: java.util.Iterator = var3.iterator();
    if (var6.hasNext()) {
-      val var4: View = var0.getChildAt((var6 as l0).nextInt());
+      val var4: View = var0.getChildAt((var6 as q0).nextInt());
       if (var4.getVisibility() == 8) {
          return var5;
       } else {

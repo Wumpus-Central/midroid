@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.SeparatorViewBinding
 import com.discord.chat.presentation.list.ChatListConstraintLayout
 import com.discord.fonts.DiscordFont
@@ -24,7 +24,7 @@ public class SeparatorView  public constructor(context: Context, attrs: Attribut
    init {
       val var7: SeparatorViewBinding = SeparatorViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var7;
-      val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      val var3: Int = var1.getResources().getDimensionPixelSize(dimen.message_horizontal_spacing);
       val var4: View = var7.getRoot();
       var4.setPaddingRelative(var3, var4.getPaddingTop(), var3, var4.getPaddingBottom());
       val var5: TextView = var7.middleText;

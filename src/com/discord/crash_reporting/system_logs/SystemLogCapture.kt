@@ -16,16 +16,16 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var7: Array<StackTraceElement> = var1.getStackTrace();
-      val var3: Int = var7.length;
+      val var4: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var4.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var4: StackTraceElement = var7[var2];
+         val var6: StackTraceElement = var4[var2];
          val var5: CircularByteBuffer = this.buffer;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("    ");
-         var6.append(var4);
-         var5.addLine(var6.toString());
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("    ");
+         var7.append(var6);
+         var5.addLine(var7.toString());
       }
    }
 
@@ -88,12 +88,12 @@ internal class SystemLogCapture {
       // 35: invokespecial com/discord/crash_reporting/system_logs/a.<init> (Lcom/discord/crash_reporting/system_logs/SystemLogCapture;)V
       // 38: aload 2
       // 39: aload 3
-      // 3a: invokestatic pm/q.c (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
+      // 3a: invokestatic tt/r.d (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
       // 3d: getstatic kotlin/Unit.a Lkotlin/Unit;
       // 40: astore 3
       // 41: aload 2
       // 42: aconst_null
-      // 43: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 43: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 46: aload 1
       // 47: invokevirtual java/lang/Process.destroy ()V
       // 4a: return
@@ -105,7 +105,7 @@ internal class SystemLogCapture {
       // 52: astore 4
       // 54: aload 2
       // 55: aload 3
-      // 56: invokestatic pm/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 56: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 59: aload 4
       // 5b: athrow
       // 5c: aload 1
@@ -148,7 +148,7 @@ internal class SystemLogCapture {
          var0.buffer.addLine(var1);
       }
 
-      if (SystemLogUtils.INSTANCE.getRegexExtractTombstone$crash_reporting_release().g(var1)) {
+      if (SystemLogUtils.INSTANCE.getRegexExtractTombstone$crash_reporting_release().i(var1)) {
          var0.tombstoneBuffer.addLine(var1);
       }
 
@@ -168,13 +168,13 @@ internal class SystemLogCapture {
                      this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
                   }
                } catch (var4: Exception) {
-                  val var1: CircularByteBuffer = this.buffer;
-                  val var2: StringBuilder = new StringBuilder();
-                  var2.append("Exception getting system logs, will restart logcat. '");
+                  val var2: CircularByteBuffer = this.buffer;
+                  val var1: StringBuilder = new StringBuilder();
+                  var1.append("Exception getting system logs, will restart logcat. '");
                   val var3: Any;
-                  var2.append(var3);
-                  var2.append("'");
-                  var1.addLine(var2.toString());
+                  var1.append(var3);
+                  var1.append("'");
+                  var2.addLine(var1.toString());
                   this.addExceptionToBuffer((Exception)var3);
                }
             } catch (var5: java.lang.Throwable) {
@@ -199,17 +199,17 @@ internal class SystemLogCapture {
 
    public fun startThread(context: Context) {
       this.activityManager = var1.getSystemService(ActivityManager.class) as ActivityManager;
-      jm.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new b(this), 20, null);
+      mt.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new b(this), 20, null);
    }
 
    public companion object {
       private const val THREAD_SLEEP_MS: Long
 
       internal fun shouldIncludeLogLine(line: String): Boolean {
-         if (StringsKt.N(var1, "chatty  : uid=", false, 2, null)) {
+         if (StringsKt.T(var1, "chatty  : uid=", false, 2, null)) {
             return false;
-         } else if (StringsKt.N(var1, "OpenSLESRecorder", false, 2, null)) {
-            return StringsKt.N(var1, " E ", false, 2, null);
+         } else if (StringsKt.T(var1, "OpenSLESRecorder", false, 2, null)) {
+            return StringsKt.T(var1, " E ", false, 2, null);
          } else {
             return true;
          }

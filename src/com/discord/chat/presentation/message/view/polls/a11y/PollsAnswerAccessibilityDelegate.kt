@@ -2,19 +2,20 @@ package com.discord.chat.presentation.message.view.polls.a11y
 
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
+import androidx.core.view.a
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.bridge.polls.PollChatAnswerInteractionType
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
-import fm.p
+import ht.p
 
-public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : androidx.core.view.a {
+public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : a {
    private final val accessory: PollAnswerAccessory
 
    init {
       this.accessory = var1;
    }
 
-   public override fun onInitializeAccessibilityEvent(host: View, event: AccessibilityEvent) {
+   public open fun onInitializeAccessibilityEvent(host: View, event: AccessibilityEvent) {
       super.onInitializeAccessibilityEvent(var1, var2);
       val var4: Boolean = this.accessory.getAnswer().isSelected() == java.lang.Boolean.TRUE;
       val var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getInteractionType().ordinal()];
@@ -27,7 +28,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       }
    }
 
-   public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+   public open fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       var var4: Boolean;
       if (this.accessory.getInteractionType() === PollChatAnswerInteractionType.CHECKBOXES) {
@@ -49,7 +50,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
 
             var2.r0(var4);
          } else {
-            var2.V0(var4);
+            var2.W0(var4);
          }
       }
 
@@ -71,7 +72,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
 
       var2.s0(var7);
       if (this.accessory.getTapAccessibilityLabel() != null) {
-         var2.b(new AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
+         var2.b(new androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
       }
    }
 }

@@ -10,6 +10,6 @@ public final class a implements OnClickListener {
    public final ContentAction e;
 
    public final void onClick(View var1) {
-      <unrepresentable>.f(this.d, this.e, var1);
+      <unrepresentable>.c(this.d, this.e, var1);
    }
 }

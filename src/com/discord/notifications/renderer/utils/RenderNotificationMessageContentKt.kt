@@ -15,15 +15,15 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFsSR]))?>");
-   var var13: java.lang.String = var4.h(var3.h(var0, new a0()), new b0());
+   var var13: java.lang.String = var3.j(var4.j(var0, new a0()), new b0());
    var var14: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.c(var5, var13, 0, 2, null);
+      val var6: MatchResult = Regex.d(var5, var13, 0, 2, null);
       if (var6 == null) {
          return var14;
       }
@@ -90,19 +90,19 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.c().n();
-      val var2: Int = var6.c().p();
-      var14 = StringsKt.v0(var14, var12, var2 + 1, var10).toString();
-      var13 = StringsKt.v0(var13, var6.c().n(), var6.c().p() + 1, var10).toString();
+      val var12: Int = var6.c().f();
+      val var2: Int = var6.c().k();
+      var14 = StringsKt.E0(var14, var12, var2 + 1, var10).toString();
+      var13 = StringsKt.E0(var13, var6.c().f(), var6.c().k() + 1, var10).toString();
    }
 }
 
 fun `renderNotificationMessageContent$lambda$0`(var0: MatchResult): java.lang.CharSequence {
    val var1: MatchGroup = var0.d().get(1);
-   return StringsKt.y("X", var1.a().length());
+   return StringsKt.D("X", var1.a().length());
 }
 
 fun `renderNotificationMessageContent$lambda$1`(var0: MatchResult): java.lang.CharSequence {
    val var1: MatchGroup = var0.d().get(1);
-   return StringsKt.y("X", var1.a().length());
+   return StringsKt.D("X", var1.a().length());
 }

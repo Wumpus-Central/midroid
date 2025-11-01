@@ -10,7 +10,6 @@ import android.widget.TextView
 import com.discord.SetTextSizeSpKt
 import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
-import com.discord.emoji.RenderableEmoji.CustomWithEmojiId
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.ids.IdUtilsKt
@@ -67,7 +66,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = sm.a.c(var2.getOpacity() * (float)255);
+         var3 = xt.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -75,7 +74,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          if (var2 != null) {
             val var5: java.lang.String = var2.getBackgroundColor();
             if (var5 != null) {
-               var12 = q1.c.k(Color.parseColor(var5), var3);
+               var12 = x2.c.l(Color.parseColor(var5), var3);
                break label41;
             }
          }
@@ -179,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean, showingFullLabel: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var6: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var3) {
          this.binding.reactionCountSwitcher.setVisibility(8);
       } else {
@@ -191,16 +190,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             if (var1 > var4) {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_up);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_up);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_up);
             } else {
-               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_down);
-               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_down);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_down);
             }
 
-            var5.setText(java.lang.String.valueOf(var1));
+            var6.setText(java.lang.String.valueOf(var1));
          } else {
-            var5.setCurrentText(java.lang.String.valueOf(var1));
+            var6.setCurrentText(java.lang.String.valueOf(var1));
          }
 
          this.currentCount = var1;
@@ -216,14 +215,14 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          val var5: java.util.List = StringsKt.split$default(
             I18nUtilsKt.i18nFormat(var2, I18nMessage.REACT_PILL_FULL_LABEL, new a()).toString(), new java.lang.String[]{"{emojiPreview}"}, false, 0, 6, null
          );
-         var var4: java.lang.String = CollectionsKt.l0(var5, 0) as java.lang.String;
+         var var4: java.lang.String = CollectionsKt.q0(var5, 0) as java.lang.String;
          var var3: java.lang.String = "";
          var var6: java.lang.String = var4;
          if (var4 == null) {
             var6 = "";
          }
 
-         var4 = CollectionsKt.l0(var5, 1) as java.lang.String;
+         var4 = CollectionsKt.q0(var5, 1) as java.lang.String;
          if (var4 != null) {
             var3 = var4;
          }
@@ -372,10 +371,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var11: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var9: RenderableEmoji = var1.getEmoji().renderable();
-         val var11: Context = this.getContext();
-         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var16: Context = this.getContext();
+         var11.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }
@@ -435,16 +434,17 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          fun renderable(var0: ReactionView.Emoji): RenderableEmoji {
             var var3: java.lang.String = var0.getId();
             if (var3 != null) {
-               val var6: java.lang.Long = StringsKt.o(var3);
+               val var6: java.lang.Long = StringsKt.s(var3);
                if (var6 != null) {
-                  val var7: CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var6.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
+                  val var7: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion
+                     .customWithEmojiId(var6.longValue(), var0.getShouldAnimate(), var0.getDisplayName());
                   if (var7 != null) {
                      return var7;
                   }
                }
             }
 
-            val var4: com.discord.emoji.RenderableEmoji.Companion = RenderableEmoji.Companion;
+            val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
             var3 = var0.getName();
             var var5: java.lang.String = var3;
             if (var3 == null) {

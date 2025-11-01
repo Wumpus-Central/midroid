@@ -1,6 +1,8 @@
 package com.discord.user_search_worker
 
-import fm.v
+import bv.f
+import bv.h
+import ht.v
 import java.util.ArrayList
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
@@ -11,11 +13,9 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import tp.m
-import vp.j
-import vp.e.i
-import xp.f
-import xp.h
+import xu.m
+import zu.j
+import zu.e.i
 
 @m(with = UserSearchTransformedUser.Serializer::class)
 internal data class UserSearchTransformedUser(id: String,
@@ -142,28 +142,28 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.id;
-      val var3: java.lang.String = this.username;
-      val var6: java.lang.Boolean = this.isBot;
-      val var7: java.lang.Boolean = this.isFriend;
-      val var5: java.lang.String = this.friendNickname;
-      val var1: java.lang.String = this.globalName;
-      val var2: java.util.Map = this.nicknames;
+      val var3: java.lang.String = this.id;
+      val var5: java.lang.String = this.username;
+      val var2: java.lang.Boolean = this.isBot;
+      val var1: java.lang.Boolean = this.isFriend;
+      val var7: java.lang.String = this.friendNickname;
+      val var6: java.lang.String = this.globalName;
+      val var8: java.util.Map = this.nicknames;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSearchTransformedUser(id=");
-      var4.append(var8);
-      var4.append(", username=");
       var4.append(var3);
-      var4.append(", isBot=");
-      var4.append(var6);
-      var4.append(", isFriend=");
-      var4.append(var7);
-      var4.append(", friendNickname=");
+      var4.append(", username=");
       var4.append(var5);
-      var4.append(", globalName=");
-      var4.append(var1);
-      var4.append(", nicknames=");
+      var4.append(", isBot=");
       var4.append(var2);
+      var4.append(", isFriend=");
+      var4.append(var1);
+      var4.append(", friendNickname=");
+      var4.append(var7);
+      var4.append(", globalName=");
+      var4.append(var6);
+      var4.append(", nicknames=");
+      var4.append(var8);
       var4.append(")");
       return var4.toString();
    }
@@ -192,7 +192,7 @@ internal data class UserSearchTransformedUser(id: String,
             if (var11 != null) {
                val var16: java.util.Map;
                if (var11 !is JsonObject) {
-                  var16 = n0.i();
+                  var16 = s0.i();
                } else {
                   val var12: java.util.Map = var11 as java.util.Map;
                   val var2: ArrayList = new ArrayList((var11 as java.util.Map).size());
@@ -201,7 +201,7 @@ internal data class UserSearchTransformedUser(id: String,
                      val var4: java.lang.String = var13.getKey() as java.lang.String;
                      val var14: JsonElement = var13.getValue() as JsonElement;
                      val var15: java.lang.String;
-                     if (h.o(var14).g()) {
+                     if (h.o(var14).d()) {
                         var15 = h.o(var14).b();
                      } else {
                         var15 = null;
@@ -210,7 +210,7 @@ internal data class UserSearchTransformedUser(id: String,
                      var2.add(v.a(var4, var15));
                   }
 
-                  var16 = n0.u(var2);
+                  var16 = s0.u(var2);
                }
 
                var26 = var16;
@@ -219,7 +219,7 @@ internal data class UserSearchTransformedUser(id: String,
                }
             }
 
-            var26 = n0.i();
+            var26 = s0.i();
          }
 
          var var7: java.lang.String;
@@ -261,7 +261,7 @@ internal data class UserSearchTransformedUser(id: String,
             if (var23 != null) {
                val var24: JsonPrimitive = h.o(var23);
                if (var24 != null) {
-                  if (var24.g()) {
+                  if (var24.d()) {
                      var25 = var24.b();
                   } else {
                      var25 = null;
@@ -280,7 +280,7 @@ internal data class UserSearchTransformedUser(id: String,
             var29 = null;
             if (var30 != null) {
                var29 = null;
-               if (var30.g()) {
+               if (var30.d()) {
                   var29 = var30.b();
                }
             }

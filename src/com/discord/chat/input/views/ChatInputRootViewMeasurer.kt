@@ -25,7 +25,7 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
    private fun ChatInputRootView.measureHeight(): Int {
       val var2: Context = var1.getContext();
       return HeadlessViewMeasurerExtensionsKt.measureHeadlessView(
-            var2, ChatInputRootView.class, new i(this), new MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)
+            var2, ChatInputRootView.class, new com.discord.chat.input.views.i(this), new MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)
          )
          .getHeight();
    }

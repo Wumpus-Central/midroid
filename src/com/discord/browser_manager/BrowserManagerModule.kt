@@ -5,7 +5,7 @@ import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import fm.v
+import ht.v
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec(var1) {
    public final val reactContext: ReactApplicationContext
@@ -26,35 +26,35 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       return Unit.a;
    }
 
-   protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
+   protected open fun getTypedExportedConstants(): MutableMap<String, Any> {
       val var2: java.lang.String = Cache.Companion.get().getItem("SELECTED_BROWSER");
       if (var2 != null) {
          val var3: Int = StringsKt.toIntOrNull(var2);
          if (var3 != null) {
-            return n0.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return s0.n(new Pair[]{v.a("selectedBrowser", var3), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return n0.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return s0.n(new Pair[]{v.a("selectedBrowser", 1), v.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
-   public override fun openInAppURL(url: String, promise: Promise) {
+   public open fun openInAppURL(url: String, promise: Promise) {
       val var4: BrowserManager = BrowserManager.INSTANCE;
       var var3: Any = this.reactContext.getCurrentActivity();
       if (var3 == null) {
          var3 = this.getReactApplicationContext();
       }
 
-      var4.tryOpenUrlWithCustomTabs((Context)var3, var1, new e(var2));
+      var4.tryOpenUrlWithCustomTabs((Context)var3, var1, new com.discord.browser_manager.e(var2));
    }
 
-   public override fun openInChromeURL(url: String, promise: Promise) {
-      val var3: BrowserManager = BrowserManager.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      var3.tryOpenUrlExternally(var4, var1, new d(var2));
+   public open fun openInChromeURL(url: String, promise: Promise) {
+      val var4: BrowserManager = BrowserManager.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var4.tryOpenUrlExternally(var3, var1, new com.discord.browser_manager.d(var2));
    }
 
-   public override fun selectBrowser(browser: Double) {
+   public open fun selectBrowser(browser: Double) {
       val var3: Int = (int)var1;
       if ((int)var1 != 0) {
          if (var3 != 1 && var3 != 2) {

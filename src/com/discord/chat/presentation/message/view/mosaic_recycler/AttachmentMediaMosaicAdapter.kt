@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory
 import com.discord.chat.presentation.message.messagepart.MessageAttachmentAccessory
@@ -14,15 +14,15 @@ import com.discord.chat.presentation.message.view.MediaVideoView
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
+import j8.a
+import j8.b
+import j8.c
+import j8.d
+import j8.e
+import j8.f
+import j8.g
+import j8.h
 import java.util.ArrayList
-import l6.a
-import l6.b
-import l6.c
-import l6.d
-import l6.e
-import l6.f
-import l6.g
-import l6.h
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,
@@ -30,7 +30,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       onItemSpoilerClicked: (MessageAttachmentAccessory) -> Unit,
       onItemObscureToggle: (Boolean) -> Unit
    )
-   : RecyclerView.Adapter {
+   : Adapter {
    private final val context: Context
    private final val onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit
    private final val onItemLongClicked: ((MessageAttachmentAccessory) -> Unit)?
@@ -102,11 +102,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       return Unit.a;
    }
 
-   public override fun getItemCount(): Int {
+   public open fun getItemCount(): Int {
       return this.items.size();
    }
 
-   public override fun getItemViewType(position: Int): Int {
+   public open fun getItemViewType(position: Int): Int {
       val var2: MessageAttachmentAccessory = this.items.get(var1);
       if (var2 is ImageAttachmentMessageAccessory) {
          return 49;
@@ -141,9 +141,9 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var5, (ImageAttachmentMessageAccessory)var14, var11, var10, var8, new c(this, (ImageAttachmentMessageAccessory)var14), new d(this), var4
             );
          } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-            var var6: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
-            val var7: VideoAttachmentMessageAccessory = var6 as VideoAttachmentMessageAccessory;
-            var6 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var var6: Any = this.items.get(var2);
+            var6 = var6 as VideoAttachmentMessageAccessory;
+            val var7: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var3: Boolean;
             if (this.getItemCount() == 1) {
                var3 = true;
@@ -151,13 +151,21 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            var6.bindAttachment(var5, var7, var3, new e(this, var7, var1), new f(this, var7), new g(this, var7), new h(this));
+            var7.bindAttachment(
+               var5,
+               (VideoAttachmentMessageAccessory)var6,
+               var3,
+               new e(this, (VideoAttachmentMessageAccessory)var6, var1),
+               new f(this, (VideoAttachmentMessageAccessory)var6),
+               new g(this, (VideoAttachmentMessageAccessory)var6),
+               new h(this)
+            );
          } else {
-            val var9: Class = var1.getClass();
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("Invalid view holder type ");
-            var12.append(var9);
-            throw new IllegalStateException(var12.toString().toString());
+            val var12: Class = var1.getClass();
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Invalid view holder type ");
+            var9.append(var12);
+            throw new IllegalStateException(var9.toString().toString());
          }
       }
    }

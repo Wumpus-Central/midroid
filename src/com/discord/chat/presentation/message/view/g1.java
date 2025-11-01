@@ -10,9 +10,9 @@ public final class g1 implements OnClickListener {
    public final Function3 d;
    public final ForwardInfo e;
    public final long i;
-   public final String s;
+   public final String t;
 
    public final void onClick(View var1) {
-      ForwardBreadcrumbView.g(this.d, this.e, this.i, this.s, var1);
+      ForwardBreadcrumbView.h(this.d, this.e, this.i, this.t, var1);
    }
 }

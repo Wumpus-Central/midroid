@@ -60,7 +60,7 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
    }
 
    private fun stop() {
-      val var2: java.util.Iterator = CollectionsKt.n(
+      val var2: java.util.Iterator = CollectionsKt.o(
             new ProgressDot[]{this.binding.viewProgressDots1, this.binding.viewProgressDots2, this.binding.viewProgressDots3}
          )
          .iterator();

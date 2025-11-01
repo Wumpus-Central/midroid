@@ -3,7 +3,7 @@ package com.discord.primitives
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public inline class RoleId : SnowflakePrimitive {

@@ -2,10 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class TapSelectActionComponent(messageId: MessageId, componentId: String) : TapSelectActionComponent(var1, var2), ReactEvent {
@@ -49,18 +48,18 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
       return MessageId.hashCode-impl(this.messageId) * 31 + this.componentId.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.componentId;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.componentId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapSelectActionComponent(messageId=");
-      var1.append(var2);
-      var1.append(", componentId=");
       var1.append(var3);
+      var1.append(", componentId=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

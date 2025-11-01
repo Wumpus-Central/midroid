@@ -39,7 +39,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setDescription(description: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.description.setVisibility(8);
       } else {
          val var2: TextView = this.binding.description;
@@ -75,7 +75,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setSubtitle(subtitle: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.subtitleText.setVisibility(8);
       } else {
          val var2: TextView = this.binding.subtitleText;
@@ -103,7 +103,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setTitle(titleText: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.titleContainer.setVisibility(8);
       } else {
          val var2: TextView = this.binding.title;
@@ -139,11 +139,11 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
       this.setDescription(var4);
       this.setTheme(var11);
       this.setPrimaryCta(var5, var7, var6, var12);
-      if (!StringsKt.c0(var8) && !StringsKt.c0(var10)) {
+      if (!StringsKt.i0(var8) && !StringsKt.i0(var10)) {
          this.setSecondaryCta(var8, var9, var10, var12);
       }
 
-      if (!StringsKt.c0(var5) && !StringsKt.c0(var8)) {
+      if (!StringsKt.i0(var5) && !StringsKt.i0(var8)) {
          this.binding.separator.setVisibility(0);
       }
    }

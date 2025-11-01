@@ -29,11 +29,11 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       val var4: GuildInviteEmbedImpl = var1.getInvite();
       val var3: GuildInviteView = this.guildInviteView;
       var var2: java.lang.String = var4.getSubtitle();
-      if (var2 != null && !StringsKt.c0(var2)) {
+      if (var2 != null && !StringsKt.i0(var2)) {
          var2 = var4.getSubtitle();
       } else {
          var2 = var4.getChannelIcon();
-         if (var2 != null && !StringsKt.c0(var2)) {
+         if (var2 != null && !StringsKt.i0(var2)) {
             var2 = var4.getChannelName();
          } else {
             var2 = null;

@@ -103,9 +103,9 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
    val var3: WindowInsetsControllerCompat = v0.a(var0, var0.getDecorView());
-   var3.e(2);
+   var3.f(2);
    if (var2) {
-      var3.f(var1);
+      var3.g(var1);
    } else {
       var3.b(var1);
    }

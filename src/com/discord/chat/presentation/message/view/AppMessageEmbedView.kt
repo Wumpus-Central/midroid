@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.LinearLayout.LayoutParams
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.codedlinks.AppMessageActionImpl
@@ -25,8 +26,8 @@ import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.Locale
@@ -51,7 +52,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    init {
       val var4: AppMessageEmbedViewBinding = AppMessageEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       this.view = var4;
-      this.textColor = ColorUtilsKt.getColorCompat(var1, color.primary_230);
+      this.textColor = ColorUtilsKt.getColorCompat(var1, R.color.primary_230);
       this.setDefaultBackground(this);
    }
 
@@ -83,13 +84,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var2: Int = var1.get("r") as Int;
-      val var3: Int = var1.get("g") as Int;
+      val var3: Int = var1.get("r") as Int;
+      val var2: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var2 == null || var3 == null || var4 == null) {
+      if (var3 == null || var2 == null || var4 == null) {
          return null;
       } else {
-         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
+         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
       }
    }
 
@@ -114,14 +115,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       DiscordFontUtilsKt.setDiscordFont(var16, DiscordFont.PrimaryNormal);
       var var17: DCDButton = var14.linkIcon;
       val var58: Context = var14.linkIcon.getContext();
-      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var58, color.transparent));
+      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var58, R.color.transparent));
       val var59: ReactAsset = ReactAsset.Link;
       var var18: Context = var17.getContext();
       var17.setIcon(var59.getUri(var18), SizeUtilsKt.getDpToPx(16));
       var17.setTextColor(this.textColor);
       var17 = var14.linkIconTitle;
       var18 = var14.linkIconTitle.getContext();
-      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var18, color.transparent));
+      var17.setBackgroundColor(ColorUtilsKt.getColorCompat(var18, R.color.transparent));
       var18 = var17.getContext();
       var17.setIcon(var59.getUri(var18), SizeUtilsKt.getDpToPx(16));
       var17.setTextColor(this.textColor);
@@ -221,9 +222,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var1.getTitle() != null) {
-         var15 = this.view.title;
-         val var42: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var15.setText(var42);
+         val var42: TextView = this.view.title;
+         val var55: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var42.setText(var55);
       } else {
          val var43: TextView = this.view.title;
          var43.setVisibility(8);
@@ -253,17 +254,17 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
       }
 
-      val var49: java.util.List = var1.getActions();
+      val var49: java.util.Collection = var1.getActions();
       if (var49 != null && !var49.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var50: java.util.Iterator = CollectionsKt.F0(var1.getActions()).iterator();
+         val var50: java.util.Iterator = CollectionsKt.O0(var1.getActions()).iterator();
          var3 = 0;
 
          for (byte var32 = 8; var50.hasNext(); var3++) {
             var15 = (TextView)var50.next();
             if (var3 < 0) {
-               CollectionsKt.u();
+               CollectionsKt.v();
             }
 
             val var65: AppMessageActionImpl = var15 as AppMessageActionImpl;
@@ -274,8 +275,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
                var33 = false;
             }
 
-            val var63: java.lang.String = var65.getLabel();
-            val var57: java.lang.String = var65.getId();
+            val var57: java.lang.String = var65.getLabel();
+            val var63: java.lang.String = var65.getId();
             val var66: java.lang.Boolean = var65.getDisabled();
             val var13: Boolean;
             if (var66 != null) {
@@ -285,24 +286,24 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             val var67: Context = this.getContext();
-            var var11: Int = ColorUtilsKt.getColorCompat(var67, color.white_500);
+            var var11: Int = ColorUtilsKt.getColorCompat(var67, R.color.white_500);
             val var68: Context = this.getContext();
-            val var12: Int = ColorUtilsKt.getColorCompat(var68, color.black_500);
+            val var12: Int = ColorUtilsKt.getColorCompat(var68, R.color.black_500);
             val var10: Int;
             if (var33) {
                var10 = var11;
             } else {
-               var10 = q1.c.k(var11, 30);
+               var10 = x2.c.l(var11, 30);
             }
 
             if (var33) {
                var11 = var12;
             }
 
-            val var69: android.widget.LinearLayout.LayoutParams = new android.widget.LinearLayout.LayoutParams(0, -2);
+            val var69: LayoutParams = new LayoutParams(0, -2);
             var69.weight = var6;
             if (var3 > 0) {
-               var69.setMarginStart(SizeUtilsKt.getDpToPx(var32));
+               var69.setMarginStart(SizeUtilsKt.getDpToPx((int)var32));
             }
 
             var18 = this.getContext();
@@ -315,14 +316,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var73.setAlpha(var7);
-            var73.setText(var63);
+            var73.setText(var57);
             var73.setBackgroundColor(var10);
             var73.setTextColor(var11);
             var73.setTextSizeSp(14.0F);
             var73.setDiscordFont(DiscordFont.PrimaryMedium);
-            var73.setCornerRadius(SizeUtilsKt.getDpToPx(var32));
+            var73.setCornerRadius(SizeUtilsKt.getDpToPx((int)var32));
             var73.setLayoutParams(var69);
-            var73.setOnClickButtonListener(new d(this, var2, var1, var57));
+            var73.setOnClickButtonListener(new d(this, var2, var1, var63));
             this.view.actionsContainer.addView(var73);
          }
 
@@ -336,8 +337,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
 
    public fun setBackgroundGradient(view: View, data: AppMessageEmbedImpl) {
       if (var2.getGradientColors() != null && var2.getGradientColors().size() == 2) {
-         val var3: Int = this.rgbToColorInt(var2.getGradientColors().get(0));
-         val var5: Int = this.rgbToColorInt(var2.getGradientColors().get(1));
+         val var3: Int = this.rgbToColorInt(var2.getGradientColors().get(0) as MutableMap<java.lang.String, Int>);
+         val var5: Int = this.rgbToColorInt(var2.getGradientColors().get(1) as MutableMap<java.lang.String, Int>);
          if (var3 != null && var5 != null && var3 != 0 && var5 != 0) {
             if (this.gradientDrawable == null) {
                val var4: GradientDrawable = new GradientDrawable();
@@ -359,7 +360,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       val var2: Context = this.getContext();
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          var1,
-         ColorUtilsKt.getColorCompat(var2, ThemeManagerKt.getTheme().getColorRes(color.primary_130, color.primary_630)),
+         ColorUtilsKt.getColorCompat(var2, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
          SizeUtilsKt.getDpToPx(12),
          null,
          0,

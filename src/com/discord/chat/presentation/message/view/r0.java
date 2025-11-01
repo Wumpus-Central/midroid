@@ -6,6 +6,6 @@ import kotlin.jvm.functions.Function1;
 // $VF: synthetic class
 public final class r0 implements Function1 {
    public final Object invoke(Object var1) {
-      return FlaggedMessageEmbedView.u((CommandMentionContentNode)var1);
+      return FlaggedMessageEmbedView.v((CommandMentionContentNode)var1);
    }
 }

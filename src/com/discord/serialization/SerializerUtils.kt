@@ -1,6 +1,7 @@
 package com.discord.serialization
 
-import j7.a
+import au.c
+import h9.a
 import java.util.LinkedHashMap
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
@@ -8,7 +9,6 @@ import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.b
-import vm.c
 
 public object SerializerUtils {
    @JvmStatic
@@ -70,12 +70,12 @@ public object SerializerUtils {
          }
 
          public override fun toString(): String {
-            val var2: java.util.Map = this.data;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Data(data=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.util.Map = this.data;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Data(data=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
 

@@ -6,7 +6,6 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import xp.h
 
 @JvmSynthetic
 fun `access$hasPrimitive`(var0: JsonObject, var1: java.lang.String): Boolean {
@@ -21,10 +20,10 @@ fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boo
 private fun JsonObject.hasPrimitive(key: String): Boolean {
    val var2: JsonElement = var0.get(var1) as JsonElement;
    if (var2 != null) {
-      val var3: JsonPrimitive = h.o(var2);
+      val var3: JsonPrimitive = bv.h.o(var2);
       if (var3 != null) {
          val var4: java.lang.String = var3.b();
-         if (var4 != null && StringsKt.c0(var4) xor true) {
+         if (var4 != null && StringsKt.i0(var4) xor true) {
             return true;
          }
       }

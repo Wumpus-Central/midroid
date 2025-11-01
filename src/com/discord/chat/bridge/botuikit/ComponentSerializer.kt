@@ -8,25 +8,23 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xp.e
-import xp.h
 
 @SourceDebugExtension(["SMAP\nComponentSerializer.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentSerializer.kt\ncom/discord/chat/bridge/botuikit/ComponentSerializer\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,134:1\n11165#2:135\n11500#2,3:136\n*S KotlinDebug\n*F\n+ 1 ComponentSerializer.kt\ncom/discord/chat/bridge/botuikit/ComponentSerializer\n*L\n21#1:135\n21#1:136,3\n*E\n"])
-public object ComponentSerializer : e(Component::class) {
+public object ComponentSerializer : bv.e(Component::class) {
    private final val knownTypes: List<Int>
    private final val componentClassSerializer: SealedClassSerializer<Component>
 
    @JvmStatic
    fun {
-      val var3: Array<ComponentType> = ComponentType.values();
-      val var2: ArrayList = new ArrayList(var3.length);
-      val var1: Int = var3.length;
+      val var2: Array<ComponentType> = ComponentType.values();
+      val var3: ArrayList = new ArrayList(var2.length);
+      val var1: Int = var2.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var2.add(var3[var0].getSerialNumber());
+         var3.add(var2[var0].getSerialNumber());
       }
 
-      knownTypes = var2;
+      knownTypes = var3;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
          Component::class,
@@ -70,15 +68,15 @@ public object ComponentSerializer : e(Component::class) {
    }
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Component> {
-      val var2: java.util.List = knownTypes;
-      var1 = h.n(var1).get("type") as JsonElement;
+      val var2: java.lang.Iterable = knownTypes;
+      var1 = bv.h.n(var1).get("type") as JsonElement;
       if (var1 != null) {
-         val var4: JsonPrimitive = h.o(var1);
+         val var4: JsonPrimitive = bv.h.o(var1);
          if (var4 != null) {
-            return (DeserializationStrategy)(if (CollectionsKt.Z(var2, h.k(var4))) componentClassSerializer else UnknownComponent.Companion.serializer());
+            return (DeserializationStrategy)(if (CollectionsKt.d0(var2, bv.h.k(var4))) componentClassSerializer else UnknownComponent.Companion.serializer());
          }
       }
 
-      return (DeserializationStrategy)(if (CollectionsKt.Z(var2, null)) componentClassSerializer else UnknownComponent.Companion.serializer());
+      return (DeserializationStrategy)(if (CollectionsKt.d0(var2, null)) componentClassSerializer else UnknownComponent.Companion.serializer());
    }
 }

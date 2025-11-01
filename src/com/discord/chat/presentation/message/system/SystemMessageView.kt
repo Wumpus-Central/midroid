@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.core.view.h0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.MessageType
@@ -42,11 +42,11 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import fm.v
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function6
@@ -76,10 +76,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    init {
-      this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
-      this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
-      this.warnIconColor = ColorUtilsKt.getColorCompat(this, color.yellow_300);
-      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, color.guild_boosting_pink);
+      this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
+      this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
+      this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
+      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
       this.mutedIconColor = ThemeManagerKt.getTheme().getTextMuted();
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
@@ -97,26 +97,26 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      var var20: Boolean;
+      var var4: Boolean;
       if (var1.getTimestamp() != null && var1.getType() != MessageType.IN_GAME_MESSAGE_NUX) {
-         var20 = 1;
+         var4 = 1;
       } else {
-         var20 = 0;
+         var4 = 0;
       }
 
-      var var14: StructurableText = var1.getContent();
-      if (var14 != null) {
+      val var15: StructurableText = var1.getContent();
+      if (var15 != null) {
          val var29: ArrayList = this.accessories;
-         val var15: java.lang.String = var1.getId-3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var12: Boolean = var1.getShouldShowRoleDot();
-         val var11: Boolean = var1.getShouldShowRoleOnName();
+         val var14: java.lang.String = var1.getId-3Eiw7ao();
+         val var12: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var9: Boolean = var1.getShouldShowRoleDot();
+         val var10: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
-         if (var20) {
+         if (var4) {
             var5 = 0;
          } else {
-            var5 = this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
+            var5 = this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing);
          }
 
          var var16: Int = var1.getLinkColor();
@@ -137,12 +137,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var29.add(
             new MessageContentAccessory(
-               var15,
                var14,
-               var10,
-               var9,
+               var15,
                var12,
                var11,
+               var9,
+               var10,
                var5,
                var6,
                var7,
@@ -161,7 +161,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          );
       }
 
-      if (var20) {
+      if (var4) {
          val var30: java.lang.String = var1.getTimestamp();
          if (var30 != null) {
             this.accessories
@@ -171,11 +171,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var13 = var1.getTotalMonthsSubscribed();
       if (var13 != null && var13.intValue() <= 1) {
-         val var32: ArrayList = this.accessories;
-         val var37: java.lang.String = var1.getId-3Eiw7ao();
-         val var40: java.lang.String = var1.getUsername();
-         val var44: Context = this.binding.getRoot().getContext();
-         var32.add(new RoleSubscriptionPurchaseAccessory(var37, var40, MessageKt.avatarUrl(var1, var44), var3, false, null));
+         val var44: ArrayList = this.accessories;
+         val var40: java.lang.String = var1.getId-3Eiw7ao();
+         val var32: java.lang.String = var1.getUsername();
+         val var37: Context = this.binding.getRoot().getContext();
+         var44.add(new RoleSubscriptionPurchaseAccessory(var40, var32, MessageKt.avatarUrl(var1, var37), var3, false, null));
       }
 
       val var33: Sticker = var1.getSticker();
@@ -187,28 +187,29 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          this.accessories.add(new InviteToSpeakAccessory(var1));
       }
 
+      var var21: Boolean;
       if (var1.getType() != MessageType.GUILD_DEADCHAT_REVIVE_PROMPT && var1.getType() != MessageType.GUILD_GAMING_STATS_PROMPT) {
-         var20 = (boolean)1;
+         var21 = true;
       } else {
          val var34: java.util.List = var1.getEmbeds();
-         var20 = (boolean)1;
+         var4 = (boolean)1;
          if (var34 != null) {
             val var35: java.util.Iterator = var34.iterator();
-            var20 = 0;
+            var4 = 0;
             val var25: Int = var3;
-            val var23: Boolean = true;
+            var21 = true;
 
             while (true) {
-               val var27: Int = var20;
-               var20 = var23;
+               val var27: Int = var4;
+               var4 = var21;
                if (!var35.hasNext()) {
                   break;
                }
 
-               var14 = (StructurableText)var35.next();
-               var20 += 1;
+               val var38: Any = var35.next();
+               var4 += 1;
                if (var27 < 0) {
-                  CollectionsKt.u();
+                  CollectionsKt.v();
                }
 
                this.accessories
@@ -219,7 +220,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var25,
                         16,
-                        var14 as Embed,
+                        var38 as Embed,
                         false,
                         false,
                         false,
@@ -234,11 +235,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             }
          }
 
+         var21 = var4;
          this.accessories.add(new ChannelPromptActionsAccessory(var1));
       }
 
       val var36: java.util.List = var1.getReactions();
-      if (var36 != null && (var36.isEmpty() xor true) == var20) {
+      if (var36 != null && (var36.isEmpty() xor true) == var21) {
          this.accessories
             .add(
                new ReactionsMessageAccessory(

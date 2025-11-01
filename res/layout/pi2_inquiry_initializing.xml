@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.airbnb.lottie.LottieAnimationView android:id="@id/animationview_inquiry_initializingspinner" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_marginStart="@dimen/startEndMargin" android:layout_marginEnd="@dimen/startEndMargin" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" app:layout_constraintWidth_percent="?personaInquiryLoadingLottieWidthPercent" app:lottie_autoPlay="true" app:lottie_enableMergePathsForKitKatAndAbove="true" app:lottie_loop="true" app:lottie_rawRes="@raw/pi2_id_scan_loading" />
+</androidx.constraintlayout.widget.ConstraintLayout>

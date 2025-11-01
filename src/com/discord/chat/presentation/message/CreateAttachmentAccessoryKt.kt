@@ -51,7 +51,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
                null
             );
          } else {
-            throw new fm.p();
+            throw new ht.p();
          }
       } else {
          return new FileAttachmentMessageAccessory(var14, var0, var2, var1.getAttachmentsOpacity(), var12, var0.getUploaderId(), var0.getUploaderItemId(), null);

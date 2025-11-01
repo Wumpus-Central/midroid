@@ -7,6 +7,6 @@ public final class e implements Function0 {
    public final ContentInventoryComponentView d;
 
    public final Object invoke() {
-      return ContentInventoryComponentView.g(this.d);
+      return ContentInventoryComponentView.h(this.d);
    }
 }

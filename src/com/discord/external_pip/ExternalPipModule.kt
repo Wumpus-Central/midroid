@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import fm.v
+import ht.v
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -27,9 +27,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    init {
       this.reactContext = var1;
       this.manager = new ExternalPipManager();
-      this.reactEvents = new ReactEvents(
-         new Pair[]{v.a("onPipModeChanged", OnPipModeChangedEvent::class), v.a("onPipModeWillChange", OnPipModeWillChangeEvent::class)}
-      );
+      this.reactEvents = new ReactEvents(v.a("onPipModeChanged", OnPipModeChangedEvent::class), v.a("onPipModeWillChange", OnPipModeWillChangeEvent::class));
    }
 
    private fun enterPipMode(force: Boolean, onResult: (Result<Unit>) -> Unit) {
@@ -48,9 +46,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.reactContext.getCurrentActivity(), var1);
    }
 
@@ -62,11 +60,11 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       }
    }
 
-   public open fun getConstants(): MutableMap<String, Boolean> {
-      return n0.n(new Pair[]{v.a("isSupported", ExternalPipManager.Companion.isSupported())});
+   public override fun getConstants(): MutableMap<String, Boolean> {
+      return s0.n(new Pair[]{v.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ExternalPip";
    }
 
@@ -150,7 +148,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       internal const val NAME: String
 
       private fun ReactContext.getModule(): ExternalPipModule? {
-         return var1.getNativeModule(ExternalPipModule.class) as ExternalPipModule;
+         return var1.getNativeModule(ExternalPipModule.class);
       }
 
       @JvmStatic

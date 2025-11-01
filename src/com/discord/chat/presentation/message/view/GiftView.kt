@@ -15,6 +15,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.gift.GiftEmbed
+import com.discord.chat.bridge.gift.GiftEmbed.Resolved.Invalid
 import com.discord.chat.bridge.gift.GiftEmbed.Resolved.Valid
 import com.discord.chat.databinding.GiftViewBinding
 import com.discord.chat.presentation.message.messagepart.GiftMessageAccessory
@@ -60,12 +61,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
 
    @JvmStatic
    fun `bind$lambda$14`(var0: Function1, var1: GiftEmbed, var2: View) {
-      var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
+      var0.invoke((var1 as Valid).getGiftCode());
    }
 
    @JvmStatic
    fun `bind$lambda$17$lambda$16`(var0: Function1, var1: GiftEmbed, var2: View) {
-      var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
+      var0.invoke((var1 as Valid).getGiftCode());
    }
 
    private fun bindSplash(gift: Valid, didResolve: Boolean) {
@@ -77,12 +78,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       }
 
       (this.binding.splash.getHierarchy() as GenericDraweeHierarchy).w(var3);
-      var3 = q1.c.k(var1.getBackgroundColor(), sm.a.c(var1.getSplashOpacity() * (float)255));
+      var3 = x2.c.l(var1.getBackgroundColor(), xt.a.c(var1.getSplashOpacity() * (float)255));
       val var4: SimpleDraweeView = this.binding.splash;
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var12: PipelineDraweeControllerBuilder = l8.d.g()
+         val var12: PipelineDraweeControllerBuilder = ja.d.g()
             .E(
                ImageRequestBuilder.b(var6)
                   .J(
@@ -147,8 +148,8 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       var var8: ConstraintLayout = this.binding.content;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, null, 1, null);
       val var9: GiftEmbed = var1.getGift();
-      if (var9 !is GiftEmbed.Resolving) {
-         if (var9 is GiftEmbed.Resolved) {
+      if (var9 !is com.discord.chat.bridge.gift.GiftEmbed.Resolving) {
+         if (var9 is com.discord.chat.bridge.gift.GiftEmbed.Resolved) {
             val var7: Boolean = this.didResolve(var1.getItemId());
             var var24: LayoutTransition = this.resolvedTransition;
             if (!var7) {
@@ -162,60 +163,59 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             this.binding.header.setText(var9.getHeaderText());
             var26.setTextColor(var9.getHeaderColor());
             val var31: SimpleDraweeView = this.binding.thumbnail;
-            val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
-            ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
+            val var27: com.discord.chat.bridge.gift.GiftEmbed.Resolved = var9 as com.discord.chat.bridge.gift.GiftEmbed.Resolved;
+            ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as com.discord.chat.bridge.gift.GiftEmbed.Resolved).getThumbnailUrl());
             (var31.getHierarchy() as GenericDraweeHierarchy).D(com.facebook.drawee.generic.a.c((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-            val var11: TextView = this.binding.title;
+            val var32: TextView = this.binding.title;
             this.binding.title.setText(var27.getTitleText());
-            var11.setTextColor(var27.getTitleColor());
-            val var32: java.lang.CharSequence = var11.getText();
+            var32.setTextColor(var27.getTitleColor());
+            val var11: java.lang.CharSequence = var32.getText();
             var var20: Byte;
-            if (!StringsKt.c0(var32)) {
+            if (!StringsKt.i0(var11)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var11.setVisibility(var20);
-            val var33: TextView = this.binding.subtitle;
+            var32.setVisibility(var20);
+            val var35: TextView = this.binding.subtitle;
             this.binding.subtitle.setText(var27.getSubtitle());
-            var33.setTextColor(var27.getSubtitleColor());
-            val var35: java.lang.CharSequence = var33.getText();
-            if (!StringsKt.c0(var35)) {
+            var35.setTextColor(var27.getSubtitleColor());
+            val var33: java.lang.CharSequence = var35.getText();
+            if (!StringsKt.i0(var33)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var33.setVisibility(var20);
-            if (var27 is GiftEmbed.Resolved.Invalid) {
-               (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
-                  .u(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));
+            var35.setVisibility(var20);
+            if (var27 is Invalid) {
+               (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).u(new ColorDrawable((var9 as Invalid).getThumbnailBackgroundColor()));
                val var15: TextView = this.binding.body;
                var15.setVisibility(8);
                val var16: DCDButton = this.binding.acceptButton;
                var16.setVisibility(8);
             } else {
-               if (var27 !is GiftEmbed.Resolved.Valid) {
-                  throw new fm.p();
+               if (var27 !is Valid) {
+                  throw new ht.p();
                }
 
                var8 = this.binding.content;
                NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new h1(var2, var9), 1, null);
-               val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
-               this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
+               val var17: Valid = var9 as Valid;
+               this.bindSplash(var9 as Valid, var7);
                (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).u(null);
-               val var29: TextView = this.binding.body;
+               val var34: TextView = this.binding.body;
                this.binding.body.setText(var17.getBodyText());
-               var29.setTextColor(var17.getBodyTextColor());
-               val var34: java.lang.CharSequence = var29.getText();
-               if (!StringsKt.c0(var34)) {
+               var34.setTextColor(var17.getBodyTextColor());
+               val var29: java.lang.CharSequence = var34.getText();
+               if (!StringsKt.i0(var29)) {
                   var20 = 0;
                } else {
                   var20 = 8;
                }
 
-               var29.setVisibility(var20);
+               var34.setVisibility(var20);
                val var30: DCDButton = this.binding.acceptButton;
                this.binding.acceptButton.setText(var17.getAcceptLabelText());
                var30.setTextColor(var17.getAcceptLabelColor());
@@ -226,7 +226,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
 
             this.lastState = new GiftView.Companion.State.Resolved(var1.getItemId());
          } else {
-            throw new fm.p();
+            throw new ht.p();
          }
       } else {
          val var12: Orientation;
@@ -236,15 +236,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var19: GradientDrawable = new GradientDrawable(
-            var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
+         val var13: GradientDrawable = new GradientDrawable(
+            var12,
+            new int[]{
+               (var9 as com.discord.chat.bridge.gift.GiftEmbed.Resolving).getResolvingGradientStart(),
+               (var9 as com.discord.chat.bridge.gift.GiftEmbed.Resolving).getResolvingGradientEnd()
+            }
          );
-         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var13: IntArray = this.binding.gradients.getReferencedIds();
-         val var23: Int = var13.length;
+         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var19: IntArray = this.binding.gradients.getReferencedIds();
+         val var23: Int = var19.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
+            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
          }
 
          val var14: Group = this.binding.gradients;

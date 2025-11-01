@@ -1,6 +1,6 @@
 package com.discord.recycler_view.utils
 
-import androidx.recyclerview.widget.c.b
+import androidx.recyclerview.widget.e.b
 
 public class ItemDiffer(oldItems: List<ItemDiffableType>, newItems: List<ItemDiffableType>) : b {
    private final val oldItems: List<ItemDiffableType>

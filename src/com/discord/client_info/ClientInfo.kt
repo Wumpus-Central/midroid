@@ -1,7 +1,7 @@
 package com.discord.client_info
 
 import android.content.Context
-import fm.l
+import ht.l
 import java.util.Locale
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
@@ -62,7 +62,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@304.2.0-2+304202"
+   public const val SENTRY_RELEASE: String = "discord_android@304.3.0-2+304203"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -100,7 +100,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "d33dde13-eaa9-44b1-82fa-07318fb86787"
+   public const val PROGUARD_UUID: String = "ed662939-94bd-443c-8485-f7f94467967e"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
@@ -111,14 +111,14 @@ public object ClientInfo {
             var0 = null;
          }
 
-         if (!StringsKt.N(var0, "beta", false, 2, null)) {
+         if (!StringsKt.T(var0, "beta", false, 2, null)) {
             var0 = flavor;
             if (flavor == null) {
                Intrinsics.throwUninitializedPropertyAccessException("flavor");
                var0 = null;
             }
 
-            if (!StringsKt.N(var0, "canary", false, 2, null)) {
+            if (!StringsKt.T(var0, "canary", false, 2, null)) {
                return true;
             }
          }
@@ -135,11 +135,11 @@ public object ClientInfo {
       flavor = var4;
       buildType = var5;
       this.setPackageName(var1.getPackageName());
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("Discord-Android/");
-      var8.append(var3);
-      var8.append(";RNA");
-      var9.init(var1, var8.toString());
+      val var8: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var8.init(var1, var9.toString());
    }
 }

@@ -29,20 +29,18 @@ import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import kotlinx.serialization.json.b
-import wp.f
 
 @ReactModule(name = "DCDChatInput")
 @SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n+ 3 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,332:1\n404#2:333\n404#2:334\n123#3:335\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n135#1:333\n155#1:334\n330#1:335\n*E\n"])
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
-   private final val json: Json = b.b(null, new a(), 1, null)
+   private final val json: Json = kotlinx.serialization.json.b.b(null, new com.discord.chat.input.a(), 1, null)
    private final val delegate: DCDChatInputManagerDelegate<ChatInputRootView, ChatInputViewManager>
    internal final val reactEvents: ReactEvents
 
    private fun decodeStyleBlocks(blocks: String): List<ChatInputNode> {
       val var2: Json = this.json;
       this.json.a();
-      return var2.b(new f(ChatInputNode.Companion.serializer()), var1) as MutableList<ChatInputNode>;
+      return var2.b(new av.f(ChatInputNode.Companion.serializer()), var1) as MutableList<ChatInputNode>;
    }
 
    @JvmStatic
@@ -94,11 +92,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var3: ThemedReactContext = this.$reactContext;
-            val var4: ChatInputRootView = this.$view;
+            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var5: ThemedReactContext = this.$reactContext;
+            val var3: ChatInputRootView = this.$view;
             val var2: java.lang.String = var1.toString();
-            var5.emitEvent(var3, var4, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            var4.emitEvent(var5, var3, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -203,11 +201,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
             break;
          case 448538345:
             if (var2.equals("replaceRange") && var3 != null) {
-               val var4: Int = var3.getInt(0);
-               val var5: Int = var3.getInt(1);
-               val var6: java.lang.String = var3.getString(2);
-               var2 = var3.getString(3);
-               this.replaceRange(var1, var4, var5, var6, var2, var3.getBoolean(4), var3.getString(5));
+               val var5: Int = var3.getInt(0);
+               val var4: Int = var3.getInt(1);
+               var2 = var3.getString(2);
+               val var6: java.lang.String = var3.getString(3);
+               this.replaceRange(var1, var5, var4, var2, var6, var3.getBoolean(4), var3.getString(5));
                return;
             }
             break;

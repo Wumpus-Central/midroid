@@ -14,11 +14,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fm.v
-import i7.a
-import i7.b
-import i7.c
-import i7.d
+import g9.a
+import g9.b
+import g9.c
+import g9.d
+import ht.v
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nSafeAreaInsetsModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SafeAreaInsetsModule.kt\ncom/discord/safearea/SafeAreaInsetsModule\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,112:1\n1#2:113\n*E\n"])
@@ -92,7 +92,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun getImeInsets(exludeSytemBars: Boolean): Double {
+   public override fun getImeInsets(exludeSytemBars: Boolean): Double {
       val var6: Activity = this.reactContext.getCurrentActivity();
       var var7: Insets = null;
       val var9: WindowInsetsCompat;
@@ -146,7 +146,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun getStableSafeAreaInsets(): WritableMap? {
+   public override fun getStableSafeAreaInsets(): WritableMap? {
       val var2: c = new c();
       val var4: Activity = this.reactContext.getCurrentActivity();
       if (var4 == null) {
@@ -163,15 +163,15 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun setNavigationBarContrastEnforced(enforced: Boolean) {
+   public override fun setNavigationBarContrastEnforced(enforced: Boolean) {
       UiThreadUtil.runOnUiThread(new a(this, var1));
    }
 
-   public open fun setNavigationBarVisible(visible: Boolean) {
+   public override fun setNavigationBarVisible(visible: Boolean) {
       UiThreadUtil.runOnUiThread(new d(this, var1));
    }
 
-   public open fun setStatusBarVisible(visible: Boolean) {
+   public override fun setStatusBarVisible(visible: Boolean) {
       UiThreadUtil.runOnUiThread(new b(this, var1));
    }
 }

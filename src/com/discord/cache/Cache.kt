@@ -6,13 +6,10 @@ import android.content.SharedPreferences.Editor
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
-import fm.l
+import ht.l
 import java.util.HashSet
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
-import t5.a
-import t5.b
-import t5.c
 
 @SourceDebugExtension(["SMAP\nCache.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Cache.kt\ncom/discord/cache/Cache\n+ 2 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n+ 3 SharedPreferences.kt\nandroidx/core/content/SharedPreferencesKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,140:1\n216#2,2:141\n41#3,6:143\n47#3,6:151\n41#3,12:157\n41#3,12:169\n41#3,12:181\n41#3,12:193\n41#3,12:205\n41#3,12:217\n1863#4,2:149\n*S KotlinDebug\n*F\n+ 1 Cache.kt\ncom/discord/cache/Cache\n*L\n56#1:141,2\n71#1:143,6\n71#1:151,6\n88#1:157,12\n93#1:169,12\n100#1:181,12\n105#1:193,12\n112#1:205,12\n115#1:217,12\n73#1:149,2\n*E\n"])
 public class Cache(reactContext: Context) {
@@ -31,9 +28,9 @@ public class Cache(reactContext: Context) {
 
 
    init {
-      this.sharedPrefs$delegate = l.b(new a(var1));
-      this.fastCacheSharedPrefs$delegate = l.b(new b(var1));
-      jm.a.b(false, false, null, null, 0, new c(this), 31, null);
+      this.sharedPrefs$delegate = l.b(new r7.a(var1));
+      this.fastCacheSharedPrefs$delegate = l.b(new r7.b(var1));
+      mt.a.b(false, false, null, null, 0, new r7.c(this), 31, null);
    }
 
    @JvmStatic
@@ -71,11 +68,11 @@ public class Cache(reactContext: Context) {
       val var3: HashSet = FAST_CACHE_KEYS;
       if (!FAST_CACHE_KEYS.contains(var1)) {
          if (!this.sharedPrefsLoaded) {
-            val var8: TTIMetrics = TTIMetrics.INSTANCE;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("WARNING: Cache accessed before parsed ");
-            var6.append(var1);
-            TTIMetrics.record$default(var8, var6.toString(), 0L, null, false, 14, null);
+            val var6: TTIMetrics = TTIMetrics.INSTANCE;
+            val var8: StringBuilder = new StringBuilder();
+            var8.append("WARNING: Cache accessed before parsed ");
+            var8.append(var1);
+            TTIMetrics.record$default(var6, var8.toString(), 0L, null, false, 14, null);
          }
 
          return this.getSharedPrefs().getString(var1, null);
@@ -99,7 +96,7 @@ public class Cache(reactContext: Context) {
    public fun getToken(sanitized: Boolean = true): String? {
       if (var1) {
          val var2: java.lang.String = this.getItem("token");
-         return if (var2 != null) StringsKt.t0(var2, "\"") else null;
+         return if (var2 != null) StringsKt.C0(var2, "\"") else null;
       } else {
          return this.getItem("token");
       }
@@ -136,7 +133,7 @@ public class Cache(reactContext: Context) {
       // 1b: invokespecial com/facebook/react/bridge/WritableNativeMap.<init> ()V
       // 1e: aload 1
       // 1f: invokeinterface com/facebook/react/bridge/ReadableArray.toArrayList ()Ljava/util/ArrayList; 1
-      // 24: invokestatic kotlin/collections/CollectionsKt.b1 (Ljava/lang/Iterable;)Ljava/util/Set;
+      // 24: invokestatic kotlin/collections/CollectionsKt.m1 (Ljava/lang/Iterable;)Ljava/util/Set;
       // 27: astore 1
       // 28: aload 0
       // 29: invokespecial com/discord/cache/Cache.getSharedPrefs ()Landroid/content/SharedPreferences;
@@ -148,58 +145,58 @@ public class Cache(reactContext: Context) {
       // 39: aload 3
       // 3a: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 3f: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 44: astore 4
-      // 46: aload 4
-      // 48: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 4d: ifeq 97
-      // 50: aload 4
-      // 52: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 57: checkcast java/util/Map$Entry
-      // 5a: astore 5
-      // 5c: aload 5
-      // 5e: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 63: checkcast java/lang/String
-      // 66: astore 3
-      // 67: aload 5
-      // 69: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
-      // 6e: astore 5
-      // 70: aload 1
-      // 71: aload 3
-      // 72: invokeinterface java/util/Set.contains (Ljava/lang/Object;)Z 2
-      // 77: ifne 46
-      // 7a: aload 3
+      // 44: astore 3
+      // 45: aload 3
+      // 46: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 4b: ifeq 98
+      // 4e: aload 3
+      // 4f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 54: checkcast java/util/Map$Entry
+      // 57: astore 5
+      // 59: aload 5
+      // 5b: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
+      // 60: checkcast java/lang/String
+      // 63: astore 4
+      // 65: aload 5
+      // 67: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
+      // 6c: astore 5
+      // 6e: aload 1
+      // 6f: aload 4
+      // 71: invokeinterface java/util/Set.contains (Ljava/lang/Object;)Z 2
+      // 76: ifne 45
+      // 79: aload 4
       // 7b: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
       // 7e: aload 5
       // 80: ldc_w "null cannot be cast to non-null type kotlin.String"
       // 83: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V
       // 86: aload 2
-      // 87: aload 3
-      // 88: aload 5
-      // 8a: checkcast java/lang/String
-      // 8d: invokevirtual com/facebook/react/bridge/WritableNativeMap.putString (Ljava/lang/String;Ljava/lang/String;)V
-      // 90: goto 46
-      // 93: astore 1
-      // 94: goto a8
-      // 97: getstatic com/discord/tti_manager/TTIMetrics.INSTANCE Lcom/discord/tti_manager/TTIMetrics;
-      // 9a: ldc_w "Storage.refresh() End"
-      // 9d: lconst_0
-      // 9e: aconst_null
-      // 9f: bipush 0
-      // a0: bipush 14
-      // a2: aconst_null
-      // a3: invokestatic com/discord/tti_manager/TTIMetrics.record$default (Lcom/discord/tti_manager/TTIMetrics;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Object;)V
-      // a6: aload 2
-      // a7: areturn
-      // a8: getstatic com/discord/tti_manager/TTIMetrics.INSTANCE Lcom/discord/tti_manager/TTIMetrics;
-      // ab: ldc_w "Storage.refresh() End"
-      // ae: lconst_0
-      // af: aconst_null
-      // b0: bipush 0
-      // b1: bipush 14
-      // b3: aconst_null
-      // b4: invokestatic com/discord/tti_manager/TTIMetrics.record$default (Lcom/discord/tti_manager/TTIMetrics;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Object;)V
-      // b7: aload 1
-      // b8: athrow
+      // 87: aload 4
+      // 89: aload 5
+      // 8b: checkcast java/lang/String
+      // 8e: invokevirtual com/facebook/react/bridge/WritableNativeMap.putString (Ljava/lang/String;Ljava/lang/String;)V
+      // 91: goto 45
+      // 94: astore 1
+      // 95: goto a9
+      // 98: getstatic com/discord/tti_manager/TTIMetrics.INSTANCE Lcom/discord/tti_manager/TTIMetrics;
+      // 9b: ldc_w "Storage.refresh() End"
+      // 9e: lconst_0
+      // 9f: aconst_null
+      // a0: bipush 0
+      // a1: bipush 14
+      // a3: aconst_null
+      // a4: invokestatic com/discord/tti_manager/TTIMetrics.record$default (Lcom/discord/tti_manager/TTIMetrics;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Object;)V
+      // a7: aload 2
+      // a8: areturn
+      // a9: getstatic com/discord/tti_manager/TTIMetrics.INSTANCE Lcom/discord/tti_manager/TTIMetrics;
+      // ac: ldc_w "Storage.refresh() End"
+      // af: lconst_0
+      // b0: aconst_null
+      // b1: bipush 0
+      // b2: bipush 14
+      // b4: aconst_null
+      // b5: invokestatic com/discord/tti_manager/TTIMetrics.record$default (Lcom/discord/tti_manager/TTIMetrics;Ljava/lang/String;JLjava/lang/String;ZILjava/lang/Object;)V
+      // b8: aload 1
+      // b9: athrow
    }
 
    public fun removeItem(key: String) {

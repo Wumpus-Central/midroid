@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.botuikit.ThumbnailDisplayComponent
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
@@ -14,7 +14,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.chat.presentation.message.viewholder.MediaImageViewHolder
-import com.google.android.flexbox.FlexboxLayout.LayoutParams
+import com.google.android.flexbox.FlexboxLayout
 import kotlin.jvm.functions.Function2
 import kotlin.reflect.KClass
 
@@ -42,16 +42,16 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
    }
 
    public open fun configure(component: ThumbnailDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var12: java.lang.String = var3.getContainerId();
-      val var11: java.lang.String = var1.getId();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ThumbnailDisplayComponent(");
-      var13.append(var11);
-      var13.append(")");
-      val var21: SpoilerAttributes = var16.forGenericMedia(var1, var12, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
-      val var19: UnfurledMediaItem = var1.getMedia();
-      val var20: MediaImageViewHolder = this.imageViewHolder;
+      val var13: com.discord.chat.bridge.spoiler.SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var16: java.lang.String = var3.getContainerId();
+      val var12: java.lang.String = var1.getId();
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("ThumbnailDisplayComponent(");
+      var11.append(var12);
+      var11.append(")");
+      val var21: SpoilerAttributes = var13.forGenericMedia(var1, var16, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var20: UnfurledMediaItem = var1.getMedia();
+      val var19: MediaImageViewHolder = this.imageViewHolder;
       val var9: Boolean = var1.isSpoiler();
       var var17: SpoilerConfig = null;
       if (var21 != null) {
@@ -62,8 +62,8 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       val var7: Boolean = var1.isObscureAwaitingScan();
       val var6: Boolean = var1.getObscureHideControls();
       val var10: Boolean = var1.getObscureIsOpaque();
-      val var22: java.lang.String = var19.getProxyUrl();
-      var var14: Int = var19.getWidth();
+      val var22: java.lang.String = var20.getProxyUrl();
+      var var14: Int = var20.getWidth();
       var var5: Int = 0;
       var var4: Int;
       if (var14 != null) {
@@ -72,17 +72,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var4 = 0;
       }
 
-      var14 = var19.getHeight();
+      var14 = var20.getHeight();
       if (var14 != null) {
          var5 = var14;
       }
 
-      var20.bind(
+      var19.bind(
          var22,
          var4,
          var5,
-         var19.getPlaceholder(),
-         var19.getPlaceholderVersion(),
+         var20.getPlaceholder(),
+         var20.getPlaceholderVersion(),
          var9,
          var17,
          var8,
@@ -94,7 +94,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var1.getDescriptionHint(),
          false,
          null,
-         this.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_non_mosaic_radius),
+         this.getContext().getResources().getDimensionPixelSize(dimen.message_media_non_mosaic_radius),
          MediaContainingViewResizer.ResizeMode.Cover,
          false,
          new k(var3, this, var1),
@@ -111,7 +111,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var4 = ThumbnailDisplayComponentViewKt.getTHUMBNAIL_NORMAL_SIZE();
       }
 
-      val var15: LayoutParams = new LayoutParams(var4, var4);
+      val var15: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(var4, var4);
       var15.b(0.0F);
       this.getBinding().getRoot().setLayoutParams(var15);
    }

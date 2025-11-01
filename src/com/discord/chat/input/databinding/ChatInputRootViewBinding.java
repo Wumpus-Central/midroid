@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
-import e4.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class ChatInputRootViewBinding implements ViewBinding {
    @NonNull
    public static ChatInputRootViewBinding bind(@NonNull View var0) {
       int var1 = R.id.chat_input_edit_text;
-      DCDChatInput var2 = (DCDChatInput)a.a(var0, var1);
+      DCDChatInput var2 = (DCDChatInput)k5.a.a(var0, var1);
       if (var2 != null) {
          return new ChatInputRootViewBinding(var0, var2);
       } else {

@@ -9,7 +9,7 @@ import timber.log.a.c
 @SourceDebugExtension(["SMAP\nLoggingLineNumberTree.kt\nKotlin\n*S Kotlin\n*F\n+ 1 LoggingLineNumberTree.kt\ncom/discord/logging/LoggingLineNumberTree\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n*L\n1#1,32:1\n1137#2,2:33\n*S KotlinDebug\n*F\n+ 1 LoggingLineNumberTree.kt\ncom/discord/logging/LoggingLineNumberTree\n*L\n30#1:33,2\n*E\n"])
 internal class LoggingLineNumberTree : c {
    private final val ignoreClasses: List<String> =
-      CollectionsKt.n(
+      CollectionsKt.o(
          new java.lang.String[]{
             a.class.getName(), b.class.getName(), c.class.getName(), timber.log.a.a.class.getName(), LoggingLineNumberTree.class.getName(), Log.class.getName()
          }

@@ -9,6 +9,7 @@ public final class c implements Function1 {
    public final String e;
    public final Function1 i;
 
+   @Override
    public final Object invoke(Object var1) {
       return BrowserManager.c(this.d, this.e, this.i, (Exception)var1);
    }

@@ -4,7 +4,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeTimersModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeTimersModule";
@@ -25,6 +25,7 @@ public abstract class NativeTimersModuleSpec extends ReactContextBaseJavaModule 
    @a
    public abstract void clearTimeout(double var1);
 
+   @Override
    public String getName() {
       return "NativeTimersModule";
    }

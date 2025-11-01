@@ -5,8 +5,8 @@ import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
-import fm.c
-import l8.d
+import ht.c
+import ja.d
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {

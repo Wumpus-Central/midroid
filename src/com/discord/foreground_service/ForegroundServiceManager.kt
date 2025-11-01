@@ -11,13 +11,12 @@ import com.discord.foreground_service.utils.Wakelocks
 import com.discord.misc.utilities.intent.IntentUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
-import com.discord.notifications.actions.intents.NotificationAction.Companion
 import com.discord.permissions.NativePermissionManagerModule
 import com.discord.permissions.NativePermissionPromise
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.PromiseImpl
 import com.facebook.react.bridge.ReactApplicationContext
-import fm.p
+import ht.p
 import java.lang.ref.WeakReference
 import java.util.NoSuchElementException
 import kotlin.jvm.internal.SourceDebugExtension
@@ -45,20 +44,20 @@ public object ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var2: Int = var3;
-               if (var3 < var4) {
+               var var3: Int = var2;
+               if (var2 < var4) {
                   var8 = var6;
-                  var2 = var4;
+                  var3 = var4;
                }
 
                var5 = var8;
-               var3 = var2;
+               var2 = var3;
             } while (var7.hasNext());
          }
 
@@ -69,23 +68,23 @@ public object ForegroundServiceManager {
    private fun handleCreateOrUpdateService(op: com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.CreateOrUpdate) {
       val var4: ReactApplicationContext = var1.getContextRef().get();
       if (var4 != null) {
-         val var3: ServiceNotificationConfiguration.Type = this.getTypeFromServiceConfigurationList(var1.getServiceConfigurations());
-         val var5: PromiseImpl = NativePermissionPromise.INSTANCE.generate(new b(var3, var4), new c());
+         val var5: ServiceNotificationConfiguration.Type = this.getTypeFromServiceConfigurationList(var1.getServiceConfigurations());
+         val var3: PromiseImpl = NativePermissionPromise.INSTANCE.generate(new b(var5, var4), new c());
          val var6: NativeModule = var4.getNativeModule(NativePermissionManagerModule.class);
          val var7: NativePermissionManagerModule = var6 as NativePermissionManagerModule;
-         val var2: Int = ForegroundServiceManager.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
+         val var2: Int = ForegroundServiceManager.WhenMappings.$EnumSwitchMapping$0[var5.ordinal()];
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 == 3) {
-                  var7.requestForegroundServicePermissionScreenShareWithMic(var5);
+                  var7.requestForegroundServicePermissionScreenShareWithMic(var3);
                } else {
                   throw new p();
                }
             } else {
-               var7.requestForegroundServicePermissionVoiceCall(var5);
+               var7.requestForegroundServicePermissionVoiceCall(var3);
             }
          } else {
-            var7.requestForegroundServicePermissionFileUpload(var5);
+            var7.requestForegroundServicePermissionFileUpload(var3);
          }
       }
    }
@@ -164,7 +163,7 @@ public object ForegroundServiceManager {
    }
 
    public fun handleIntent(context: Context, intent: Intent): Unit? {
-      val var3: Companion = NotificationAction.Companion;
+      val var3: NotificationAction.Companion = NotificationAction.Companion;
       val var4: NotificationAction;
       if (IntentUtilsKt.hasExtra(var2, GenericAction::class)) {
          var4 = (androidx.core.content.b.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
@@ -468,15 +467,15 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var2: WeakReference = this.contextRef;
-            val var1: java.util.List = this.serviceConfigurations;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("CreateOrUpdate(contextRef=");
-            var3.append(var2);
-            var3.append(", serviceConfigurations=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var3: WeakReference = this.contextRef;
+            val var2: java.util.List = this.serviceConfigurations;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("CreateOrUpdate(contextRef=");
+            var1.append(var3);
+            var1.append(", serviceConfigurations=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
 

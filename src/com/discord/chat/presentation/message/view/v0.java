@@ -11,6 +11,6 @@ public final class v0 implements OnClickListener {
    public final ChatEventHandler e;
 
    public final void onClick(View var1) {
-      FlaggedMessageEmbedView.l(this.d, this.e, var1);
+      FlaggedMessageEmbedView.m(this.d, this.e, var1);
    }
 }

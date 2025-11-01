@@ -121,14 +121,14 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
       if (var0 is UnicodeEmojiContentNode) {
          return RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());
       } else {
-         throw new fm.p();
+         throw new ht.p();
       }
    } else {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
       val var2: Long = (var0 as CustomEmojiContentNode).getId();
       val var1: Boolean;
-      if (!StringsKt.c0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
+      if (!StringsKt.i0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
          var1 = true;
       } else {
          var1 = false;

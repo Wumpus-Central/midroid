@@ -25,7 +25,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerDelegate
 import com.facebook.react.viewmanagers.EmojiPickerViewManagerInterface
-import fm.v
+import ht.v
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
@@ -37,15 +37,13 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    private final val emojiPickerCaches: MutableMap<EmojiPickerView, EmojiPickerCache> = new LinkedHashMap()
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         new Pair[]{
-            v.a("onPressEmoji", OnPressEmojiEvent::class),
-            v.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
-            v.a("onScroll", OnScrollEvent::class),
-            v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
-            v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
-            v.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
-            v.a("onShowNitroUpsell", OnShowNitroUpsell::class)
-         }
+         v.a("onPressEmoji", OnPressEmojiEvent::class),
+         v.a("onLongPressEmoji", OnLongPressEmojiEvent::class),
+         v.a("onScroll", OnScrollEvent::class),
+         v.a("onScrollBeginDrag", OnScrollBeginDragEvent::class),
+         v.a("onScrollEndDrag", OnScrollEndDragEvent::class),
+         v.a("onStickyHeaderRender", OnStickyHeaderRenderEvent::class),
+         v.a("onShowNitroUpsell", OnShowNitroUpsell::class)
       )
 
    @JvmStatic
@@ -152,15 +150,15 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "EmojiPickerView";
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       val var1: java.util.Iterator = this.emojiPickerCaches.entrySet().iterator();
 
@@ -205,15 +203,15 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
    @ReactProp(name = "emojiData")
    public open fun setEmojiData(view: EmojiPickerView, value: ReadableMap?) {
       if (!this.isInitialProp(var1, "emojiData") && var2 != null) {
-         val var3: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
+         val var4: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.deserialize$default(
             EmojiPickerItemDataCoreDataDeserializer.INSTANCE, EmojiPickerItemData.CoreData.Companion, var2, 0.0F, 0.0F, 6, null
          );
-         val var4: EmojiPickerCache = this.emojiPickerCaches.get(var1);
-         if (var4 != null) {
-            var4.refreshEmojis(var3);
+         val var3: EmojiPickerCache = this.emojiPickerCaches.get(var1);
+         if (var3 != null) {
+            var3.refreshEmojis(var4);
          }
 
-         var1.setCoreData(var3);
+         var1.setCoreData(var4);
       }
    }
 
@@ -242,7 +240,7 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
       var1.setUseTier0UpsellContent(var2);
    }
 
-   protected open fun setupViewRecycling() {
+   protected override fun setupViewRecycling() {
    }
 
    public companion object {

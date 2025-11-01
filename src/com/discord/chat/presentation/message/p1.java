@@ -10,6 +10,6 @@ public final class p1 implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.g(this.d, this.e, (LinkContentNode)var1);
+      return MessageViewReplyPreview.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

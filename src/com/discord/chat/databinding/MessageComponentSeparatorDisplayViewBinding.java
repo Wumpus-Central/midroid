@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import e4.a;
 
 public final class MessageComponentSeparatorDisplayViewBinding implements ViewBinding {
    @NonNull
@@ -22,7 +21,7 @@ public final class MessageComponentSeparatorDisplayViewBinding implements ViewBi
    @NonNull
    public static MessageComponentSeparatorDisplayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.divider;
-      View var2 = a.a(var0, var1);
+      View var2 = k5.a.a(var0, var1);
       if (var2 != null) {
          return new MessageComponentSeparatorDisplayViewBinding(var0, var2);
       } else {

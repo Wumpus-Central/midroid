@@ -24,11 +24,11 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import fm.o
+import ht.o
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
@@ -38,7 +38,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          var1, var2, var3
       ),
    ComponentView<ContentInventoryEntryComponent> {
-   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = l8.d.g()
+   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = ja.d.g()
 
    private final val binding: MessageComponentContentInventoryViewBinding
       private final get() {
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = fm.l.a(o.i, new e(this));
+      this.binding$delegate = ht.l.a(o.i, new e(this));
    }
 
    @JvmStatic
@@ -65,15 +65,15 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       val var1: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
       SetTextSizeSpKt.setTextSizeSp(var2, 14.0F);
-      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, color.primary_160));
+      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, R.color.primary_160));
       var2 = var3.contentInventoryComponentTitle;
       DiscordFontUtilsKt.setDiscordFont(var2, var1);
       SetTextSizeSpKt.setTextSizeSp(var2, 16.0F);
-      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, color.primary_160));
+      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, R.color.primary_160));
       val var4: TextView = var3.contentInventoryComponentSubtitle;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
-      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, color.primary_200));
+      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.primary_200));
       return var3;
    }
 
@@ -82,19 +82,19 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       if (var4 == null) {
          this.getBinding().getRoot().setVisibility(8);
       } else {
-         val var23: java.util.List = var4.getGradientColors();
-         val var7: ArrayList = new ArrayList(CollectionsKt.v(var23, 10));
+         val var23: java.lang.Iterable = var4.getGradientColors();
+         val var7: ArrayList = new ArrayList(CollectionsKt.w(var23, 10));
          val var24: java.util.Iterator = var23.iterator();
 
          while (var24.hasNext()) {
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var25: IntArray = CollectionsKt.V0(var7);
-         val var8: ContentInventoryComponentView = this.getBinding().getRoot();
-         var8.setVisibility(0);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var8, var25, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         ContentInventoryComponentViewKt.access$applyClickable(var8, var3, var4, var4.getClickable(), "container");
+         val var8: IntArray = CollectionsKt.g1(var7);
+         val var25: ContentInventoryComponentView = this.getBinding().getRoot();
+         var25.setVisibility(0);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var25, var8, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         ContentInventoryComponentViewKt.access$applyClickable(var25, var3, var4, var4.getClickable(), "container");
          val var9: TextView = this.getBinding().contentInventoryComponentUsername;
          var9.setText(var4.getUserActionDescription());
          ContentInventoryComponentViewKt.access$applyClickable(var9, var3, var4, var4.getUserClickable(), "username");

@@ -14,7 +14,7 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
-import fm.v
+import ht.v
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.flow.Flow
@@ -69,8 +69,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
             }
 
             val var28: CrashReporting = CrashReporting.INSTANCE;
-            var4 = var0.getMeasuredWidth();
-            var3 = var0.getMeasuredHeight();
+            var3 = var0.getMeasuredWidth();
+            var4 = var0.getMeasuredHeight();
             val var29: ViewParent = var0.getParent();
             if (var29 != null) {
                var13 = var29.getClass().getSimpleName();
@@ -78,9 +78,9 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
             val var30: StringBuilder = new StringBuilder();
             var30.append("PortalView will detach from ChatView and portal into ChatListView; measured=");
-            var30.append(var4);
-            var30.append("x");
             var30.append(var3);
+            var30.append("x");
+            var30.append(var4);
             var30.append(", hasDimChanged=");
             var30.append(var11);
             var30.append(", parent=");
@@ -99,17 +99,17 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       }
 
       val var27: Boolean = var17.isComputingLayout();
-      var4 = var0.getMeasuredWidth();
-      var3 = var0.getMeasuredHeight();
+      var3 = var0.getMeasuredWidth();
+      var4 = var0.getMeasuredHeight();
       val var16: StringBuilder = new StringBuilder();
       var16.append("PortalView layout change skipped; valid=");
       var16.append(var11);
       var16.append(", computingLayout=");
       var16.append(var27);
       var16.append(", measured=");
-      var16.append(var4);
-      var16.append("x");
       var16.append(var3);
+      var16.append("x");
+      var16.append(var4);
       CrashReporting.addBreadcrumb$default(var19, var16.toString(), null, null, null, 14, null);
    }
 
@@ -169,11 +169,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
             try {
                var13.setPortalView(var0, var2);
-               val var16: CrashReporting = CrashReporting.INSTANCE;
-               val var14: StringBuilder = new StringBuilder();
-               var14.append("PortalView portaled into ChatListView; measuredDims=");
-               var14.append(var2);
-               CrashReporting.addBreadcrumb$default(var16, var14.toString(), null, null, null, 14, null);
+               var3 = CrashReporting.INSTANCE;
+               val var16: StringBuilder = new StringBuilder();
+               var16.append("PortalView portaled into ChatListView; measuredDims=");
+               var16.append(var2);
+               CrashReporting.addBreadcrumb$default(var3, var16.toString(), null, null, null, 14, null);
                return;
             } catch (var6: Exception) {
                var3 = CrashReporting.INSTANCE;
@@ -193,7 +193,7 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       CrashReporting.addBreadcrumb$default(
          var3,
          "ChatList exception: failed to reparent portalView to ChatListView",
-         n0.m(new Pair[]{var2, var5, v.a("chatListView", var10.toString())}),
+         s0.m(new Pair[]{var2, var5, v.a("chatListView", var10.toString())}),
          null,
          null,
          12,
@@ -247,11 +247,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
@@ -271,11 +271,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setInverted$p(this, var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

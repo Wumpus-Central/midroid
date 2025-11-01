@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.MessageView;
-import e4.a;
 
 public final class DecoratedMessageViewBinding implements ViewBinding {
    @NonNull
@@ -23,7 +22,7 @@ public final class DecoratedMessageViewBinding implements ViewBinding {
    @NonNull
    public static DecoratedMessageViewBinding bind(@NonNull View var0) {
       int var1 = R.id.message_view;
-      MessageView var2 = (MessageView)a.a(var0, var1);
+      MessageView var2 = (MessageView)k5.a.a(var0, var1);
       if (var2 != null) {
          return new DecoratedMessageViewBinding(var0, var2);
       } else {

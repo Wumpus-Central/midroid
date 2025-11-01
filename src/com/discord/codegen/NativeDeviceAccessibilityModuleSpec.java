@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
-import ma.a;
+import kc.a;
 
 public abstract class NativeDeviceAccessibilityModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeDeviceAccessibilityModule";
@@ -23,6 +23,7 @@ public abstract class NativeDeviceAccessibilityModuleSpec extends ReactContextBa
    @a
    public abstract void enableFocusLock(ReadableArray var1, boolean var2);
 
+   @Override
    public String getName() {
       return "NativeDeviceAccessibilityModule";
    }

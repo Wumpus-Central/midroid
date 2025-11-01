@@ -8,7 +8,7 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
-import fm.p
+import ht.p
 import java.util.EnumMap
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
@@ -36,10 +36,10 @@ public object ThemeManager {
                      var10 = null;
                   }
 
+                  var3 = resourceTheme;
                   if (resourceTheme == null) {
                      Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  } else {
-                     var3 = resourceTheme;
+                     var3 = null;
                   }
 
                   return new MidnightTheme(var10, var3);
@@ -53,10 +53,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   Intrinsics.throwUninitializedPropertyAccessException("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                return new DarkerTheme(var9, var3);

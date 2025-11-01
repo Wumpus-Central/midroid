@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import e4.a;
 
 public final class ThreadStarterMessageHeaderViewBinding implements ViewBinding {
    @NonNull
@@ -27,10 +26,10 @@ public final class ThreadStarterMessageHeaderViewBinding implements ViewBinding 
    @NonNull
    public static ThreadStarterMessageHeaderViewBinding bind(@NonNull View var0) {
       int var1 = R.id.thread_starter_header_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.thread_starter_header_text;
-         TextView var2 = (TextView)a.a(var0, var1);
+         TextView var2 = (TextView)k5.a.a(var0, var1);
          if (var2 != null) {
             return new ThreadStarterMessageHeaderViewBinding(var0, var3, var2);
          }

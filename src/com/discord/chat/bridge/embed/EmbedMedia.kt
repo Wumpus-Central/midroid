@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.embed
 
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class EmbedMedia(url: String,
@@ -148,33 +148,33 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var7: java.lang.String = this.proxyURL;
+      val var8: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
       val var1: Int = this.width;
       val var2: Int = this.height;
-      val var5: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
+      val var6: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var4: java.lang.String = this.contentType;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("EmbedMedia(url=");
-      var6.append(var9);
-      var6.append(", proxyURL=");
-      var6.append(var7);
-      var6.append(", width=");
-      var6.append(var1);
-      var6.append(", height=");
-      var6.append(var2);
-      var6.append(", placeholder=");
-      var6.append(var5);
-      var6.append(", placeholderVersion=");
-      var6.append(var8);
-      var6.append(", srcIsAnimated=");
-      var6.append(var3);
-      var6.append(", contentType=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.contentType;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("EmbedMedia(url=");
+      var7.append(var8);
+      var7.append(", proxyURL=");
+      var7.append(var4);
+      var7.append(", width=");
+      var7.append(var1);
+      var7.append(", height=");
+      var7.append(var2);
+      var7.append(", placeholder=");
+      var7.append(var6);
+      var7.append(", placeholderVersion=");
+      var7.append(var9);
+      var7.append(", srcIsAnimated=");
+      var7.append(var3);
+      var7.append(", contentType=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

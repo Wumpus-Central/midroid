@@ -6,6 +6,7 @@ import kotlin.jvm.functions.Function1;
 public final class a implements Function1 {
    public final AndroidAudioDevice d;
 
+   @Override
    public final Object invoke(Object var1) {
       return DiscordAudioManager.a(this.d, (DiscordAudioManagerListener)var1);
    }

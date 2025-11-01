@@ -4,7 +4,7 @@ import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
-import fm.p
+import ht.p
 
 internal class FastestListShadowNode : LayoutShadowNode {
    private final var isDirty: Boolean
@@ -25,7 +25,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
       }
    }
 
-   public open fun setDefaultPadding(spacingType: Int, padding: Float) {
+   public override fun setDefaultPadding(spacingType: Int, padding: Float) {
       val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
       val var3: StringBuilder = new StringBuilder();
       var3.append(var4);
@@ -33,9 +33,9 @@ internal class FastestListShadowNode : LayoutShadowNode {
       throw new IllegalStateException(var3.toString().toString());
    }
 
-   public open fun setPadding(spacingType: Int, padding: Float) {
+   public override fun setPadding(spacingType: Int, padding: Float) {
       super.setPadding(var1, var2);
-      val var4: com.facebook.yoga.e = com.facebook.yoga.e.d(var1);
+      val var4: com.facebook.yoga.e = com.facebook.yoga.e.c(var1);
       val var3: Int;
       if (var4 == null) {
          var3 = -1;
@@ -98,7 +98,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
       throw new IllegalStateException(var3.toString().toString());
    }
 
-   public open fun setReactTag(reactTag: Int) {
+   public override fun setReactTag(reactTag: Int) {
       super.setReactTag(var1);
       activeShadowNodes.put(var1, this);
    }

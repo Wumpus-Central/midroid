@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 304202
-  versionName: 304.2 - Alpha
+  versionCode: 304203
+  versionName: 304.3 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -33,6 +33,11 @@ doNotCompress:
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.biometric_biometric.version
 - META-INF/androidx.browser_browser.version
+- META-INF/androidx.camera_camera-camera2.version
+- META-INF/androidx.camera_camera-core.version
+- META-INF/androidx.camera_camera-lifecycle.version
+- META-INF/androidx.camera_camera-video.version
+- META-INF/androidx.camera_camera-view.version
 - META-INF/androidx.cardview_cardview.version
 - META-INF/androidx.compose.runtime_runtime-saveable.version
 - META-INF/androidx.compose.runtime_runtime.version
@@ -42,6 +47,7 @@ doNotCompress:
 - META-INF/androidx.compose.ui_ui-unit.version
 - META-INF/androidx.compose.ui_ui-util.version
 - META-INF/androidx.compose.ui_ui.version
+- META-INF/androidx.constraintlayout_constraintlayout.version
 - META-INF/androidx.coordinatorlayout_coordinatorlayout.version
 - META-INF/androidx.core_core-ktx.version
 - META-INF/androidx.core_core-performance-play-services.version
@@ -95,6 +101,7 @@ doNotCompress:
 - META-INF/androidx.sqlite_sqlite.version
 - META-INF/androidx.startup_startup-runtime.version
 - META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
+- META-INF/androidx.tracing_tracing-ktx.version
 - META-INF/androidx.tracing_tracing.version
 - META-INF/androidx.transition_transition.version
 - META-INF/androidx.vectordrawable_vectordrawable-animated.version
@@ -107,13 +114,13 @@ doNotCompress:
 - META-INF/androidx.window_window.version
 - META-INF/androidx.work_work-runtime.version
 - META-INF/com.google.android.material_material.version
+- META-INF/com.google.dagger_dagger.version
 - META-INF/kotlinx_coroutines_android.version
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/an.b
-- META-INF/services/jp.z
-- META-INF/services/op.t
+- META-INF/services/gu.z
+- META-INF/services/lu.r
 - META-INF/version-control-info.textproto
 - assets/com/appsflyer/internal/1ef4f10b9adfdad9a-
 - assets/com/appsflyer/internal/4c337fab34977e37d-

@@ -41,7 +41,7 @@ public object ReactNetworking {
    }
 
    public fun createReactOkHttpNetworkFetcher(): NetworkFetcher<*> {
-      val var3: OkHttpClient = OkHttpClientProvider.createClient().F().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      var var2: OkHttpClient = OkHttpClientProvider.createClient().E().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -56,11 +56,11 @@ public object ReactNetworking {
 
       try {
          val var1: Int = ReactOkHttpNetworkFetcher.a;
-         val var2: Constructor = ReactOkHttpNetworkFetcher.class.getDeclaredConstructor(OkHttpClient.class);
-         var2.setAccessible(true);
-         val var5: Any = var2.newInstance(var3);
-         if (var5 is NetworkFetcher) {
-            return var5 as NetworkFetcher;
+         val var3: Constructor = ReactOkHttpNetworkFetcher.class.getDeclaredConstructor(OkHttpClient.class);
+         var3.setAccessible(true);
+         var2 = (OkHttpClient)var3.newInstance(var2);
+         if (var2 is NetworkFetcher) {
+            return var2 as NetworkFetcher;
          } else {
             val var7: StringBuilder = new StringBuilder();
             var7.append("Field ");

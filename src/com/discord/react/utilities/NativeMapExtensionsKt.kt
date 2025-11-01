@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
-import fm.p
+import ht.p
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.Intrinsics
@@ -13,7 +13,7 @@ import kotlin.jvm.internal.MagicApiIntrinsics
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONObject
-import tp.w
+import xu.w
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
 
@@ -100,14 +100,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 }
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
-   val var4: WritableNativeMap = new WritableNativeMap();
+   val var3: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var4;
+   return var3;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -137,38 +137,38 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 }
 
 public fun ReadableMap.toJson(): JSONObject {
-   val var2: JSONObject = new JSONObject();
-   val var1: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var1: JSONObject = new JSONObject();
+   val var3: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var1.hasNextKey()) {
-      val var3: java.lang.String = var1.nextKey();
-      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
+   while (var3.hasNextKey()) {
+      val var2: java.lang.String = var3.nextKey();
+      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var2).ordinal()]) {
          case 1:
-            var2.put(var3, JSONObject.NULL);
+            var1.put(var2, JSONObject.NULL);
             break;
          case 2:
-            var2.put(var3, var0.getBoolean(var3));
+            var1.put(var2, var0.getBoolean(var2));
             break;
          case 3:
-            var2.put(var3, var0.getDouble(var3));
+            var1.put(var2, var0.getDouble(var2));
             break;
          case 4:
-            var2.put(var3, var0.getString(var3));
+            var1.put(var2, var0.getString(var2));
             break;
          case 5:
-            val var6: ReadableMap = var0.getMap(var3);
-            var2.put(var3, toJson(var6));
+            val var6: ReadableMap = var0.getMap(var2);
+            var1.put(var2, toJson(var6));
             break;
          case 6:
-            val var5: ReadableArray = var0.getArray(var3);
-            var2.put(var3, NativeArrayExtensionsKt.toJson(var5));
+            val var5: ReadableArray = var0.getArray(var2);
+            var1.put(var2, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new p();
       }
    }
 
-   return var2;
+   return var1;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -179,18 +179,18 @@ public fun ReadableMap.toJsonString(): String {
 @JvmSynthetic
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    val var1: Json = getJson();
-   val var2: java.lang.String = toJsonString(var0);
-   val var3: zp.b = var1.a();
+   val var3: java.lang.String = toJsonString(var0);
+   val var2: dv.b = var1.a();
    Intrinsics.reifiedOperationMarker(6, "T");
    MagicApiIntrinsics.voidMagicApiCall("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(w.d(var3, null), var2);
+   return (T)var1.b(w.c(var2, null), var3);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

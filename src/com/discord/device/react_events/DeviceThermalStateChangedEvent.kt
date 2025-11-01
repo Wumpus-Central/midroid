@@ -3,7 +3,7 @@ package com.discord.device.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fm.v
+import ht.v
 
 internal class DeviceThermalStateChangedEvent(state: Int) : ReactEvent {
    private final val state: Int
@@ -13,6 +13,6 @@ internal class DeviceThermalStateChangedEvent(state: Int) : ReactEvent {
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("state", this.state)});
+      return NativeMapExtensionsKt.nativeMapOf(v.a("state", this.state));
    }
 }

@@ -6,11 +6,11 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fm.v
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 @SourceDebugExtension(["SMAP\nOtaCheckAttemptEvent.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OtaCheckAttemptEvent.kt\ncom/discord/bundle_updater/react/events/OtaCheckAttemptEvent\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,29:1\n1557#2:30\n1628#2,3:31\n*S KotlinDebug\n*F\n+ 1 OtaCheckAttemptEvent.kt\ncom/discord/bundle_updater/react/events/OtaCheckAttemptEvent\n*L\n26#1:30\n26#1:31,3\n*E\n"])
@@ -45,8 +45,8 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public open fun serialize(): WritableNativeMap {
-      val var2: java.util.List = this.metrics;
-      val var1: ArrayList = new ArrayList(CollectionsKt.v(this.metrics, 10));
+      val var2: java.lang.Iterable = this.metrics;
+      val var1: ArrayList = new ArrayList(CollectionsKt.w(this.metrics, 10));
       val var3: java.util.Iterator = var2.iterator();
 
       while (var3.hasNext()) {

@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fm.v
+import ht.v
 import kotlinx.serialization.KSerializer
-import tp.m
+import xu.m
 
 @m
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {
@@ -38,17 +38,17 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
       return this.timestamp.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("node", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("full", this.timestamp)}))});
+   public override fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(v.a("node", NativeMapExtensionsKt.nativeMapOf(v.a("full", this.timestamp))));
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.timestamp;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapTimestampEvent(timestamp=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.timestamp;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapTimestampEvent(timestamp=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
