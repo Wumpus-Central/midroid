@@ -16,15 +16,15 @@ import kotlin.jvm.functions.Function1
 
 public object DCDModuleProvider {
    public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: BaseReactPackage): Boolean {
-      return CollectionsKt.C(var1, var2);
+      return CollectionsKt.D(var1, var2);
    }
 
-   @xa.c
+   @ht.c
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
       return getLegacyPackageForModuleWithViewManager$default(this, var1, null, 2, null);
    }
 
-   @xa.c
+   @ht.c
    public fun getLegacyPackageForModuleWithViewManager(
       onNativeModule: ((ReactApplicationContext) -> ReactContextBaseJavaModule)? = null,
       onViewManager: ((ReactApplicationContext) -> ViewManager<*, LayoutShadowNode>)? = null
@@ -55,7 +55,7 @@ public object DCDModuleProvider {
                var4.append("\n                        ");
                throw new IllegalArgumentException(var4.toString().toString());
             } else {
-               return CollectionsKt.o(var3);
+               return CollectionsKt.p(var3);
             }
          }
 
@@ -67,7 +67,7 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return CollectionsKt.o(var3);
+            return CollectionsKt.p(var3);
          }
       };
    }
@@ -83,14 +83,7 @@ public object DCDModuleProvider {
          }
 
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
-            val var3: NativeModule;
-            if (var1 == this.$moduleName) {
-               var3 = this.$onNativeModule.invoke(var2) as NativeModule;
-            } else {
-               var3 = null;
-            }
-
-            return var3;
+            return if (var1 == this.$moduleName) this.$onNativeModule.invoke(var2) as NativeModule else null;
          }
 
          public ReactModuleInfoProvider getReactModuleInfoProvider() {
@@ -112,15 +105,15 @@ public object DCDModuleProvider {
          }
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
-            val var4: Array<Array<Function1>> = this.$onViewManager;
-            val var5: ArrayList = new ArrayList(this.$onViewManager.length);
-            val var3: Int = var4.length;
+            val var5: Array<Array<Function1>> = this.$onViewManager;
+            val var4: ArrayList = new ArrayList(this.$onViewManager.length);
+            val var3: Int = var5.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               var5.add(var4[var2].invoke(var1) as ViewManager);
+               var4.add(var5[var2].invoke(var1) as ViewManager);
             }
 
-            return var5;
+            return var4;
          }
       };
    }

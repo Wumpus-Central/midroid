@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class TapRoleIconData(roleName: String, roleIconSource: String) : ReactEvent {
@@ -48,8 +47,8 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
       return this.roleName.hashCode() * 31 + this.roleIconSource.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

@@ -1,17 +1,13 @@
 package com.discord.chat.presentation.message.view.botuikit.components.media_gallery
 
-import A2.k
-import A2.l
-import A2.m
-import A2.n
-import A2.o
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.discord.chat.R
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.botuikit.MediaGalleryDisplayComponent
 import com.discord.chat.bridge.botuikit.MediaGalleryItem
 import com.discord.chat.databinding.MessageComponentMediaGalleryDisplayViewBinding
@@ -23,6 +19,11 @@ import com.discord.chat.presentation.message.view.botuikit.MediaItemEventHandler
 import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import f8.k
+import f8.l
+import f8.m
+import f8.n
+import f8.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -56,7 +57,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
       );
       this.mediaGalleryAdapter = var4;
       val var7: RecyclerView = var5.mosaic;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var7, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
+      ViewClippingUtilsKt.clipToRoundedRectangle(var7, var1.getResources().getDimensionPixelSize(dimen.message_media_radius));
       var7.setLayoutManager(var6);
       var7.setAdapter(var4);
       var7.setRecycledViewPool(new AccessoriesViewPool());
@@ -125,7 +126,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    public open fun configure(component: MediaGalleryDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       this.eventHandler = var3.getMediaItemEventHandlers();
-      val var4: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
+      val var4: LayoutManager = this.binding.mosaic.getLayoutManager();
       (var4 as MosaicLayoutManager).setAvailableWidth(var3.getWidthInfo().getAvailableWidth());
       this.mediaGalleryAdapter.setMediaItems(var3.getContainerId(), var1, var3);
    }

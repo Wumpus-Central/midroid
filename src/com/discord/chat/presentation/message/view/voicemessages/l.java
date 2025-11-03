@@ -1,13 +1,14 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-import android.view.View;
-import android.view.View.OnLayoutChangeListener;
+import com.discord.react_strings.RenderContext;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class l implements OnLayoutChangeListener {
+public final class l implements Function1 {
    public final AudioPlayerView d;
+   public final int e;
 
-   public final void onLayoutChange(View var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
-      AudioPlayerView.f(this.d, var1, var2, var3, var4, var5, var6, var7, var8, var9);
+   public final Object invoke(Object var1) {
+      return AudioPlayerView.l(this.d, this.e, (RenderContext)var1);
    }
 }

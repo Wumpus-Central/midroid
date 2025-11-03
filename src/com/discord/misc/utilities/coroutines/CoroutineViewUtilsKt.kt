@@ -1,15 +1,15 @@
 package com.discord.misc.utilities.coroutines
 
-import Ca.b
 import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.y
+import androidx.lifecycle.z
 import androidx.lifecycle.Lifecycle.State
 import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
 import kotlinx.coroutines.CoroutineScope
+import ot.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {
@@ -42,8 +42,8 @@ public fun View.attachedScope(verifyAttached: Boolean): AttachedViewCoroutineSco
 }
 
 public suspend fun View.repeatOnLifecycleOwner(state: State, block: (CoroutineScope, Continuation<Unit>) -> Any?) {
-   val var4: Any = y.b(requireLifecycleOwner(var0), var1, var2, var3);
-   return if (var4 === b.e()) var4 else Unit.a;
+   val var4: Any = z.b(requireLifecycleOwner(var0), var1, var2, var3);
+   return if (var4 === b.f()) var4 else Unit.a;
 }
 
 public fun View.requireLifecycleOwner(): LifecycleOwner {

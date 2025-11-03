@@ -13,7 +13,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.referral.ReferralEmbed
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
@@ -70,22 +70,14 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun didResolve(accessoryId: Long): Boolean {
-      val var6: ReferralView.Companion.State.Resolving;
+      val var4: ReferralView.Companion.State.Resolving;
       if (this.lastState is ReferralView.Companion.State.Resolving) {
-         var6 = this.lastState as ReferralView.Companion.State.Resolving;
+         var4 = this.lastState as ReferralView.Companion.State.Resolving;
       } else {
-         var6 = null;
+         var4 = null;
       }
 
-      var var3: Boolean = false;
-      if (var6 != null) {
-         var3 = false;
-         if (var6.getAccessoryId() == var1) {
-            var3 = true;
-         }
-      }
-
-      return var3;
+      return var4 != null && var4.getAccessoryId() == var1;
    }
 
    private fun initTextStyling() {
@@ -114,13 +106,11 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
       val var8: ConstraintLayout = this.binding.content;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, null, 1, null);
       val var9: ReferralEmbed = var1.getReferral();
-      if (var9 is ReferralEmbed.Resolving) {
+      if (var9 is com.discord.chat.bridge.referral.ReferralEmbed.Resolving) {
          this.lastState = new ReferralView.Companion.State.Resolving(var1.getItemId());
+      } else if (var9 !is com.discord.chat.bridge.referral.ReferralEmbed.Resolved) {
+         throw new ht.p();
       } else {
-         if (var9 !is ReferralEmbed.Resolved) {
-            throw new xa.p();
-         }
-
          var var7: Boolean = this.didResolve(var1.getItemId());
          var var33: LayoutTransition = this.resolvedTransition;
          if (!var7) {
@@ -129,20 +119,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
          this.binding.content.setLayoutTransition(var33);
          val var42: SimpleDraweeView = this.binding.nitroLogoBanner;
-         val var34: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
-         ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as ReferralEmbed.Resolved).getHeaderLogoUrl());
-         val var43: TextView = this.binding.imageCopy;
+         val var34: com.discord.chat.bridge.referral.ReferralEmbed.Resolved = var9 as com.discord.chat.bridge.referral.ReferralEmbed.Resolved;
+         ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as com.discord.chat.bridge.referral.ReferralEmbed.Resolved).getHeaderLogoUrl());
+         val var35: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var34.getHeaderText());
-         var43.setTextColor(var34.getHeaderColor());
-         val var35: java.lang.CharSequence = var43.getText();
+         var35.setTextColor(var34.getHeaderColor());
+         val var43: java.lang.CharSequence = var35.getText();
          var var5: Byte;
-         if (!StringsKt.c0(var35)) {
+         if (!StringsKt.i0(var43)) {
             var5 = 0;
          } else {
             var5 = 8;
          }
 
-         var43.setVisibility(var5);
+         var35.setVisibility(var5);
          val var36: SimpleDraweeView = this.binding.nitroTicket;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var36, var34.getThumbnailUrl());
          val var37: TextView = this.binding.title;
@@ -153,7 +143,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var45: java.lang.CharSequence = var37.getText();
-         if (!StringsKt.c0(var45)) {
+         if (!StringsKt.i0(var45)) {
             var5 = 0;
          } else {
             var5 = 8;
@@ -162,26 +152,26 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          var37.setVisibility(var5);
          val var38: SimpleDraweeSpanTextView = this.binding.subtitle;
          val var46: java.lang.String = var34.getBodyText();
-         if (var46 != null && !StringsKt.c0(var46)) {
+         if (var46 != null && !StringsKt.i0(var46)) {
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
-            val var11: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var47: Context = var38.getContext();
+            val var47: AnnotatedStructurableText = var34.getStructuredBodyText();
+            val var11: Context = var38.getContext();
             val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
-                  var11,
                   var47,
+                  var11,
                   var12,
                   false,
                   true,
                   false,
                   false,
                   var48,
-                  new J0(var3, var1),
+                  new i2(var3, var1),
                   null,
                   null,
                   null,
@@ -212,12 +202,12 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setTextColor(var22.intValue());
          }
 
-         label104: {
+         label103: {
             val var23: java.lang.String = var34.getBodyText();
             if (var23 != null) {
                var29 = true;
-               if (!StringsKt.c0(var23)) {
-                  break label104;
+               if (!StringsKt.i0(var23)) {
+                  break label103;
                }
             }
 
@@ -244,7 +234,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var40: java.lang.CharSequence = var24.getText();
-         if (!StringsKt.c0(var40)) {
+         if (!StringsKt.i0(var40)) {
             var5 = 0;
          } else {
             var5 = 8;
@@ -252,7 +242,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
          var24.setVisibility(var5);
          val var25: java.lang.String = var34.getAcceptLabelText();
-         if (var25 != null && !StringsKt.c0(var25)) {
+         if (var25 != null && !StringsKt.i0(var25)) {
             val var26: DCDButton = this.binding.acceptButton;
             val var41: java.lang.String = var34.getAcceptLabelIconUrl();
             if (var41 != null) {
@@ -261,9 +251,9 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
             var26.setText(var34.getAcceptLabelText());
             var26.setTextColor(var34.getAcceptLabelColor());
-            var26.setOnClickButtonListener(new K0(var2));
+            var26.setOnClickButtonListener(new j2(var2));
             val var15: Context = var26.getContext();
-            val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, R.drawable.premium_tier2_gradient);
+            val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, drawable.premium_tier2_gradient);
             val var17: GradientDrawable;
             if (var16 is GradientDrawable) {
                var17 = var16 as GradientDrawable;
@@ -300,7 +290,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          val var19: java.lang.String = var34.getFooterText();
-         if (var19 != null && !StringsKt.c0(var19)) {
+         if (var19 != null && !StringsKt.i0(var19)) {
             val var21: TextView = this.binding.footer;
             this.binding.footer.setText(var34.getFooterText());
             if (var34.getFooterTextColor() != null) {

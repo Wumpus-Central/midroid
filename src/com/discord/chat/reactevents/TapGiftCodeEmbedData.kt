@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
@@ -37,17 +36,17 @@ public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
       return this.giftCode.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.giftCode;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapGiftCodeEmbedData(giftCode=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.giftCode;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapGiftCodeEmbedData(giftCode=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1,11 +1,10 @@
 package com.discord.chat.bridge.messageframe
 
-import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m(with = MessageFrameType.Serializer::class)
 public enum class MessageFrameType(serialNumber: Int) : IntEnum {
@@ -24,7 +23,7 @@ public enum class MessageFrameType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<MessageFrameType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

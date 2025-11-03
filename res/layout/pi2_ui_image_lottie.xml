@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView android:id="@id/lottie_view" android:layout_width="0.0dip" android:layout_height="wrap_content" android:adjustViewBounds="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

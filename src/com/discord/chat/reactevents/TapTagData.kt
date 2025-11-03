@@ -3,10 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType: String?) : TapTagData(var1, var2, var4), ReactEvent {
@@ -67,23 +66,23 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
       return (var2 * 31 + var3) * 31 + var1;
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.tagType;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapTagData(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", tagType=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.tagType;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapTagData(messageId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var4);
+      var3.append(", tagType=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

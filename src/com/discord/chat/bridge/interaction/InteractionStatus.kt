@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -47,25 +47,11 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public fun isFailed(): Boolean {
-      val var1: Boolean;
-      if (this.state === InteractionStatusViewState.FAILED) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return this.state === InteractionStatusViewState.FAILED;
    }
 
    public fun isLoading(): Boolean {
-      val var1: Boolean;
-      if (this.state === InteractionStatusViewState.LOADING) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return this.state === InteractionStatusViewState.LOADING;
    }
 
    public override fun toString(): String {

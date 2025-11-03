@@ -1,12 +1,12 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import kc.a;
 
 public abstract class NativeJSWatchdogModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeJSWatchdogModule";
@@ -25,6 +25,7 @@ public abstract class NativeJSWatchdogModuleSpec extends ReactContextBaseJavaMod
    @a
    public abstract void disable();
 
+   @Override
    public String getName() {
       return "NativeJSWatchdogModule";
    }

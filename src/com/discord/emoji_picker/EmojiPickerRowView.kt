@@ -14,7 +14,7 @@ import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
@@ -43,7 +43,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
       for (int var3 = 0; var6.hasNext(); var3++) {
          var var10: Any = var6.next();
          if (var3 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          val var7: EmojiPickerRow.Emoji = var10 as EmojiPickerRow.Emoji;
@@ -79,7 +79,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
                var10 = GetDrawableCompatKt.getDrawableCompat((Context)var10, R.drawable.lock_overlay);
             }
 
-            var14.z((Drawable)var10);
+            var14.y((Drawable)var10);
          }
       }
    }
@@ -106,7 +106,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
       for (int var10 = 0; var9.hasNext(); var10++) {
          var var7: View = (View)var9.next();
          if (var10 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          var7 = var7 as EmojiPickerRow.Emoji;
@@ -119,8 +119,8 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
 
          var7 = new SimpleDraweeView(this.getContext());
          RippleUtilsKt.addCircleRipple$default(var7, false, 1, null);
-         (var7.getHierarchy() as GenericDraweeHierarchy).A(placeholder);
-         (var7.getHierarchy() as GenericDraweeHierarchy).u(ScaleType.e);
+         (var7.getHierarchy() as GenericDraweeHierarchy).z(placeholder);
+         (var7.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.e);
          val var8: LayoutParams = new LayoutParams(var5, var5);
          var8.setMargins(var3, var6, 0, var6);
          var7.setLayoutParams(var8);

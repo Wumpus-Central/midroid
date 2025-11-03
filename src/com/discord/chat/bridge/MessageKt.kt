@@ -21,25 +21,11 @@ public fun Message.isCallMessage(): Boolean {
 }
 
 public fun Message.isEphemeral(): Boolean {
-   val var1: Boolean;
-   if (var0.getEphemeralIndication() != null) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getEphemeralIndication() != null;
 }
 
 public fun Message.isSurvey(): Boolean {
-   val var1: Boolean;
-   if (var0.getSurveyIndication() != null) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getSurveyIndication() != null;
 }
 
 public fun Message.isSystemMessage(): Boolean {
@@ -48,11 +34,7 @@ public fun Message.isSystemMessage(): Boolean {
 
 public fun Message.roleDotColor(defaultColor: Int = ThemeManagerKt.getTheme().getInteractiveActive()): Int {
    val var2: Int = var0.getRoleColor();
-   if (var2 != null) {
-      var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue());
-   }
-
-   return var1;
+   return if (var2 != null) ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue()) else var1;
 }
 
 @JvmSynthetic
@@ -65,48 +47,23 @@ fun `roleDotColor$default`(var0: Message, var1: Int, var2: Int, var3: Any): Int 
 }
 
 public fun Message.shouldAnimateEmoji(): Boolean {
-   val var2: java.lang.Boolean = var0.getAnimateEmoji();
-   val var1: Boolean;
-   if (var2 != null) {
-      var1 = var2;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   val var1: java.lang.Boolean = var0.getAnimateEmoji();
+   return var1 != null && var1;
 }
 
 public fun Message.shouldAutoPlayGifs(): Boolean {
-   val var2: java.lang.Boolean = var0.getGifAutoPlay();
-   val var1: Boolean;
-   if (var2 != null) {
-      var1 = var2;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   val var1: java.lang.Boolean = var0.getGifAutoPlay();
+   return var1 != null && var1;
 }
 
 public fun Message.shouldShowLinkDecorations(): Boolean {
-   val var2: java.lang.Boolean = var0.getShowLinkDecorations();
-   val var1: Boolean;
-   if (var2 != null) {
-      var1 = var2;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   val var1: java.lang.Boolean = var0.getShowLinkDecorations();
+   return var1 != null && var1;
 }
 
 public fun Message.usernameColor(defaultColor: Int = ThemeManagerKt.getTheme().getTextNormal()): Int {
    val var2: Int = var0.getUsernameColor();
-   if (var2 != null) {
-      var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue());
-   }
-
-   return var1;
+   return if (var2 != null) ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue()) else var1;
 }
 
 @JvmSynthetic

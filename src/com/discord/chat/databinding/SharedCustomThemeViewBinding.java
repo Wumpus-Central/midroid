@@ -10,7 +10,6 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.customthemes.ThemePreviewView;
 import com.discord.core.DCDButton;
 import com.google.android.flexbox.FlexboxLayout;
-import x1.a;
 
 public final class SharedCustomThemeViewBinding implements ViewBinding {
    @NonNull
@@ -49,24 +48,24 @@ public final class SharedCustomThemeViewBinding implements ViewBinding {
    @NonNull
    public static SharedCustomThemeViewBinding bind(@NonNull View var0) {
       int var1 = R.id.createdBy;
-      TextView var5 = (TextView)a.a(var0, var1);
-      if (var5 != null) {
+      TextView var2 = (TextView)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.createdByContainer;
-         FlexboxLayout var7 = (FlexboxLayout)a.a(var0, var1);
-         if (var7 != null) {
+         FlexboxLayout var6 = (FlexboxLayout)k5.a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.heading;
-            FlexboxLayout var4 = (FlexboxLayout)a.a(var0, var1);
-            if (var4 != null) {
+            FlexboxLayout var3 = (FlexboxLayout)k5.a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.previewBtn;
-               DCDButton var2 = (DCDButton)a.a(var0, var1);
-               if (var2 != null) {
+               DCDButton var4 = (DCDButton)k5.a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.previewHeading;
-                  TextView var6 = (TextView)a.a(var0, var1);
-                  if (var6 != null) {
+                  TextView var5 = (TextView)k5.a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.themePreview;
-                     ThemePreviewView var3 = (ThemePreviewView)a.a(var0, var1);
-                     if (var3 != null) {
-                        return new SharedCustomThemeViewBinding(var0, var5, var7, var4, var2, var6, var3);
+                     ThemePreviewView var7 = (ThemePreviewView)k5.a.a(var0, var1);
+                     if (var7 != null) {
+                        return new SharedCustomThemeViewBinding(var0, var2, var6, var3, var4, var5, var7);
                      }
                   }
                }

@@ -4,7 +4,7 @@ package com.discord.misc.utilities.view
 
 import android.content.res.ColorStateList
 import android.widget.Button
-import androidx.core.view.Z
+import androidx.core.view.h0
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -18,7 +18,7 @@ public fun Button.setBackgroundColors(color: Int, disabledColor: Int? = null) {
 
    var4.add(new int[0]);
    var3.add(var1);
-   Z.t0(var0, new ColorStateList(var4.toArray(new int[0][]), CollectionsKt.V0(var3)));
+   h0.s0(var0, new ColorStateList(var4.toArray(new int[0][]), CollectionsKt.g1(var3)));
 }
 
 @JvmSynthetic

@@ -74,8 +74,8 @@ public data class ChatListUpdate(items: List<ChatListItem>,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.items.hashCode();
-      val var4: Int = this.action.hashCode();
+      val var4: Int = this.items.hashCode();
+      val var3: Int = this.action.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.listOperations == null) {
@@ -89,27 +89,27 @@ public data class ChatListUpdate(items: List<ChatListItem>,
          var2 = this.forceReload.hashCode();
       }
 
-      return (((var3 * 31 + var4) * 31 + var1) * 31 + var5) * 31 + var2;
+      return (((var4 * 31 + var3) * 31 + var1) * 31 + var5) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var6: java.util.List = this.items;
+      val var5: java.util.List = this.items;
       val var3: ChatListAction = this.action;
-      val var2: java.util.List = this.listOperations;
+      val var4: java.util.List = this.listOperations;
       val var1: Int = this.changesetUpdateId;
-      val var4: java.lang.Boolean = this.forceReload;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ChatListUpdate(items=");
-      var5.append(var6);
-      var5.append(", action=");
-      var5.append(var3);
-      var5.append(", listOperations=");
-      var5.append(var2);
-      var5.append(", changesetUpdateId=");
-      var5.append(var1);
-      var5.append(", forceReload=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.Boolean = this.forceReload;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChatListUpdate(items=");
+      var2.append(var5);
+      var2.append(", action=");
+      var2.append(var3);
+      var2.append(", listOperations=");
+      var2.append(var4);
+      var2.append(", changesetUpdateId=");
+      var2.append(var1);
+      var2.append(", forceReload=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 }

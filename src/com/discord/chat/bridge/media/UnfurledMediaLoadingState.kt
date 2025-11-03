@@ -1,11 +1,10 @@
 package com.discord.chat.bridge.media
 
-import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m(with = UnfurledMediaLoadingState.Serializer::class)
 public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
@@ -25,7 +24,7 @@ public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<UnfurledMediaLoadingState> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

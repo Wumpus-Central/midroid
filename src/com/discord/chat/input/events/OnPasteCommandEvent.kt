@@ -3,8 +3,8 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class OnPasteCommandEvent(data: String) : ReactEvent {
@@ -42,12 +42,12 @@ public data class OnPasteCommandEvent(data: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnPasteCommandEvent(data=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPasteCommandEvent(data=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

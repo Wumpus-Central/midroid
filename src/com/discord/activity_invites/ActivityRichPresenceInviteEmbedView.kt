@@ -28,7 +28,6 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import y3.f
 
 @SourceDebugExtension(["SMAP\nActivityRichPresenceInviteEmbedView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,261:1\n257#2,2:262\n257#2,2:264\n257#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n257#2,2:288\n257#2,2:290\n257#2,2:292\n257#2,2:294\n257#2,2:296\n257#2,2:298\n257#2,2:300\n257#2,2:302\n257#2,2:304\n257#2,2:310\n257#2,2:312\n257#2,2:314\n257#2,2:316\n257#2,2:322\n1557#3:306\n1628#3,3:307\n1557#3:318\n1628#3,3:319\n*S KotlinDebug\n*F\n+ 1 ActivityRichPresenceInviteEmbedView.kt\ncom/discord/activity_invites/ActivityRichPresenceInviteEmbedView\n*L\n105#1:262,2\n110#1:264,2\n112#1:266,2\n129#1:268,2\n132#1:270,2\n140#1:272,2\n142#1:274,2\n145#1:276,2\n149#1:278,2\n163#1:280,2\n167#1:282,2\n173#1:284,2\n175#1:286,2\n181#1:288,2\n183#1:290,2\n189#1:292,2\n191#1:294,2\n194#1:296,2\n195#1:298,2\n196#1:300,2\n197#1:302,2\n198#1:304,2\n219#1:310,2\n221#1:312,2\n227#1:314,2\n231#1:316,2\n254#1:322,2\n216#1:306\n216#1:307,3\n234#1:318\n234#1:319,3\n*E\n"])
 public class ActivityRichPresenceInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
@@ -70,15 +69,16 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
       if (var1 != null && !var1.isEmpty()) {
          val var2: View = this.binding.gradientBackground;
          var2.setVisibility(0);
-         val var7: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
+         val var7: java.lang.Iterable = var1;
+         val var5: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
 
-         for (RGBAColorModel var3 : var1) {
-            var7.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
+         for (RGBAColorModel var8 : var7) {
+            var5.add(Color.argb((int)(var8.getA() * (float)255), (int)var8.getR(), (int)var8.getG(), (int)var8.getB()));
          }
 
-         val var8: IntArray = CollectionsKt.V0(var7);
+         val var9: IntArray = CollectionsKt.g1(var5);
          val var6: GradientDrawable = new GradientDrawable();
-         var6.setColors(var8);
+         var6.setColors(var9);
          var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
          var6.setOrientation(Orientation.BL_TR);
          this.binding.gradientBackground.setBackground(var6);
@@ -105,37 +105,37 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
 
       var4.setVisibility(var2);
       if (var1 != null) {
-         this.binding.coverImage.setImageURI(f.r(var1));
+         this.binding.coverImage.setImageURI(ba.f.r(var1));
       }
    }
 
    private fun setPartyAvatars(avatarURIs: List<String>?, maxPartySize: Int) {
       var var4: java.util.List = var1;
       if (var1 == null) {
-         var4 = CollectionsKt.k();
+         var4 = CollectionsKt.l();
       }
 
-      if (!var4.isEmpty()) {
-         val var3: Int = Math.max(0, var2 - var4.size());
-         val var5: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
-         val var10: java.util.Iterator = var4.iterator();
-
-         while (var10.hasNext()) {
-            var5.add(new OverlappingItem(var10.next() as java.lang.String));
-         }
-
-         val var11: Array<OverlappingItem> = new OverlappingItem[var3];
-
-         for (int var9 = 0; var9 < var3; var9++) {
-            var11[var9] = new OverlappingItem(null);
-         }
-
-         this.binding.partyAvatars.setItems(CollectionsKt.E0(var5, var11));
-         val var7: OverlappingCirclesView = this.binding.partyAvatars;
-         var7.setVisibility(0);
-      } else {
+      if (var4.isEmpty()) {
          val var8: OverlappingCirclesView = this.binding.partyAvatars;
          var8.setVisibility(8);
+      } else {
+         val var3: Int = Math.max(0, var2 - var4.size());
+         val var5: ArrayList = new ArrayList(CollectionsKt.w(var4, 10));
+         val var11: java.util.Iterator = var4.iterator();
+
+         while (var11.hasNext()) {
+            var5.add(new OverlappingItem(var11.next() as java.lang.String));
+         }
+
+         val var12: Array<OverlappingItem> = new OverlappingItem[var3];
+
+         for (int var9 = 0; var9 < var3; var9++) {
+            var12[var9] = new OverlappingItem(null);
+         }
+
+         this.binding.partyAvatars.setItems(CollectionsKt.N0(var5, var12));
+         val var7: OverlappingCirclesView = this.binding.partyAvatars;
+         var7.setVisibility(0);
       }
    }
 
@@ -174,7 +174,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          val var59: SimpleDraweeView = this.binding.activityIcon;
          var59.setVisibility(0);
       } else if (var7 != null) {
-         this.binding.activityIcon.setImageURI(f.r(var7));
+         this.binding.activityIcon.setImageURI(ba.f.r(var7));
          val var56: SimpleDraweeView = this.binding.activityIcon;
          var56.setVisibility(0);
       } else {

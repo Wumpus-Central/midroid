@@ -12,9 +12,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @SourceDebugExtension(["SMAP\nBillingManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,159:1\n808#2,11:160\n*S KotlinDebug\n*F\n+ 1 BillingManagerModule.kt\ncom/discord/billing/BillingManagerModule\n*L\n150#1:160,11\n*E\n"])
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
@@ -73,13 +73,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 
-      var1.getProducts(var7, var3, var4, new j(var4));
+      var1.getProducts(var7, var3, var4, new com.discord.billing.j(var4));
    }
 
    @JvmStatic
@@ -154,7 +154,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun loadPurchases(promise: Promise) {
-      this.billingManager.loadPurchases(new s(var1), new i(var1));
+      this.billingManager.loadPurchases(new t(var1), new com.discord.billing.i(var1));
    }
 
    @ReactMethod
@@ -165,7 +165,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun purchase(productId: String, userId: String, promise: Promise) {
       BillingManager.purchase$default(
-         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
+         this.billingManager, this.reactContext.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new s(var3), 112, null
       );
    }
 
@@ -175,6 +175,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      this.billingManager.purchase(this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
+      this.billingManager
+         .purchase(
+            this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new com.discord.billing.h(var6), new k(var6)
+         );
    }
 }

@@ -7,7 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
-import com.discord.chat.R
+import c8.a
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.row.LoadMoreButton
 import com.discord.chat.databinding.ChatLoadingViewBinding
 import com.discord.chat.presentation.list.ChatListConstraintLayout
@@ -29,7 +30,7 @@ public class ChatLoadingView  public constructor(context: Context, attrs: Attrib
    init {
       val var4: ChatLoadingViewBinding = ChatLoadingViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      val var3: Int = var1.getResources().getDimensionPixelSize(dimen.message_horizontal_spacing);
       this.setPaddingRelative(var3, this.getPaddingTop(), var3, this.getPaddingBottom());
       var4.progressSpinner.setIndeterminateTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getTextMuted()));
    }
@@ -60,7 +61,7 @@ public class ChatLoadingView  public constructor(context: Context, attrs: Attrib
 
       var9.setTextColor(var3);
       val var6: Button = this.binding.button;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new x2.a(var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new a(var2), 1, null);
    }
 
    public fun showProgress() {

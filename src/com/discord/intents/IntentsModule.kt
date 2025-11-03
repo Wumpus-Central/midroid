@@ -4,10 +4,9 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.pm.PackageManager.NameNotFoundException
+import android.content.pm.PackageManager.PackageInfoFlags
 import android.net.Uri
 import android.os.Build.VERSION
-import com.appsflyer.internal.p
-import com.appsflyer.internal.q
 import com.discord.codegen.NativeIntentsModuleSpec
 import com.discord.intents.packages.InstalledPackage
 import com.facebook.react.bridge.ReactApplicationContext
@@ -23,16 +22,8 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    private fun canResolveActivityForIntent(intent: Intent): Boolean {
-      val var4: PackageManager = this.reactContext.getPackageManager();
-      var var2: Boolean = false;
-      if (var4 != null) {
-         var2 = false;
-         if (var1.resolveActivity(var4) != null) {
-            var2 = true;
-         }
-      }
-
-      return var2;
+      val var2: PackageManager = this.reactContext.getPackageManager();
+      return var2 != null && var1.resolveActivity(var2) != null;
    }
 
    private fun createEmailIntent(subject: String? = null, body: String? = null): Intent {
@@ -68,30 +59,28 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    private fun startActivityWithIntent(intent: Intent): Boolean {
-      val var3: Boolean = this.canResolveActivityForIntent(var1);
-      var var2: Boolean = false;
-      if (!var3) {
+      if (!this.canResolveActivityForIntent(var1)) {
          return false;
       } else {
-         val var4: Activity = this.reactContext.getCurrentActivity();
-         if (var4 != null) {
-            var4.startActivity(var1);
-            var2 = true;
+         val var2: Activity = this.reactContext.getCurrentActivity();
+         if (var2 != null) {
+            var2.startActivity(var1);
+            return true;
+         } else {
+            return false;
          }
-
-         return var2;
       }
    }
 
    public override fun canOpenUrlScheme(urlScheme: String): Boolean {
-      var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
-      val var2: PackageManager = this.reactContext.getPackageManager();
-      if (var1 != null) {
+      val var2: java.lang.String = InstalledPackage.Companion.parse(var1).getAppPackage();
+      val var4: PackageManager = this.reactContext.getPackageManager();
+      if (var2 != null) {
          try {
             if (VERSION.SDK_INT >= 33) {
-               q.a(var2, var1, p.a(0L));
+               var4.getPackageInfo(var2, PackageInfoFlags.of(0L));
             } else {
-               var2.getPackageInfo(var1, 0);
+               var4.getPackageInfo(var2, 0);
             }
 
             return true;

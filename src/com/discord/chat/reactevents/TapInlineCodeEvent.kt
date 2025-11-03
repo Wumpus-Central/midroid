@@ -4,9 +4,9 @@ import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kc.m
+import ht.v
 import kotlinx.serialization.KSerializer
-import xa.v
+import xu.m
 
 @m
 public data class TapInlineCodeEvent(content: String) : ReactEvent {
@@ -40,17 +40,17 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
       return this.content.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("node", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("content", this.content)}))});
+   public override fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(v.a("node", NativeMapExtensionsKt.nativeMapOf(v.a("content", this.content))));
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapInlineCodeEvent(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInlineCodeEvent(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

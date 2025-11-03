@@ -30,52 +30,51 @@ public object ContactSyncProvider {
       // 05: ldc "r"
       // 07: invokevirtual android/content/ContentResolver.openAssetFileDescriptor (Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
       // 0a: astore 2
-      // 0b: aconst_null
-      // 0c: astore 1
-      // 0d: aload 2
-      // 0e: ifnull 5c
-      // 11: aload 2
-      // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
-      // 15: astore 1
-      // 16: aload 1
-      // 17: ifnull 46
-      // 1a: aload 1
-      // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 1
-      // 1f: new java/io/ByteArrayOutputStream
-      // 22: astore 4
-      // 24: aload 4
-      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 29: aload 1
-      // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
-      // 2d: iload 3
-      // 2e: aload 4
-      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 33: pop
-      // 34: aload 4
-      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 39: bipush 0
-      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 0b: aload 2
+      // 0c: ifnull 56
+      // 0f: aload 2
+      // 10: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
+      // 13: astore 1
+      // 14: aload 1
+      // 15: ifnull 41
+      // 18: aload 1
+      // 19: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
+      // 1c: astore 4
+      // 1e: new java/io/ByteArrayOutputStream
+      // 21: astore 1
+      // 22: aload 1
+      // 23: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 26: aload 4
+      // 28: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
+      // 2b: iload 3
+      // 2c: aload 1
+      // 2d: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 30: pop
+      // 31: aload 1
+      // 32: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 35: bipush 0
+      // 36: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 39: astore 1
+      // 3a: goto 43
       // 3d: astore 1
-      // 3e: goto 48
-      // 41: astore 4
-      // 43: goto 50
-      // 46: aconst_null
-      // 47: astore 1
-      // 48: aload 2
-      // 49: aconst_null
-      // 4a: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4d: goto 5c
-      // 50: aload 4
-      // 52: athrow
-      // 53: astore 1
-      // 54: aload 2
-      // 55: aload 4
-      // 57: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 5a: aload 1
-      // 5b: athrow
-      // 5c: aload 1
-      // 5d: areturn
+      // 3e: goto 4a
+      // 41: aconst_null
+      // 42: astore 1
+      // 43: aload 2
+      // 44: aconst_null
+      // 45: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 48: aload 1
+      // 49: areturn
+      // 4a: aload 1
+      // 4b: athrow
+      // 4c: astore 4
+      // 4e: aload 2
+      // 4f: aload 1
+      // 50: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 53: aload 4
+      // 55: athrow
+      // 56: aconst_null
+      // 57: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -143,36 +142,36 @@ public object ContactSyncProvider {
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      val var7: LinkedHashMap = new LinkedHashMap();
-      val var8: Cursor = var1.getContentResolver()
+      val var8: LinkedHashMap = new LinkedHashMap();
+      val var7: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
-      if (var8 == null) {
-         return var7;
+      if (var7 == null) {
+         return var8;
       } else {
-         while (var8.moveToNext()) {
-            val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var9: java.lang.String = this.getColumnString(var8, "data4");
-            val var10: java.lang.String = this.getColumnString(var8, "_id");
-            var var3: java.lang.String = this.getColumnString(var8, "contact_id");
-            if (var10 != null && var3 != null) {
+         while (var7.moveToNext()) {
+            var var5: java.lang.String = this.getColumnString(var7, "display_name");
+            val var10: java.lang.String = this.getColumnString(var7, "data4");
+            val var9: java.lang.String = this.getColumnString(var7, "_id");
+            var var3: java.lang.String = this.getColumnString(var7, "contact_id");
+            if (var9 != null && var3 != null) {
                var var4: ContactNameEntry;
-               label46: {
+               label45: {
                   var4 = this.getContactName(var1, var3);
                   if (var4 != null) {
                      var3 = var4.getGivenName();
                      if (var3 != null) {
-                        break label46;
+                        break label45;
                      }
                   }
 
                   var3 = "";
                }
 
-               label41: {
+               label40: {
                   if (var4 != null) {
                      var13 = var4.getFamilyName();
                      if (var13 != null) {
-                        break label41;
+                        break label40;
                      }
                   }
 
@@ -180,25 +179,24 @@ public object ContactSyncProvider {
                }
 
                val var2: Boolean;
-               if (this.getColumnString(var8, "photo_file_id") != null) {
+               if (this.getColumnString(var7, "photo_file_id") != null) {
                   var2 = true;
                } else {
                   var2 = false;
                }
 
-               if (var9 != null) {
-                  var var5: java.lang.String = var6;
-                  if (var6 == null) {
+               if (var10 != null) {
+                  if (var5 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
                }
             }
          }
 
-         var8.close();
-         return var7;
+         var7.close();
+         return var8;
       }
    }
 
@@ -244,59 +242,56 @@ public object ContactSyncProvider {
       // 2a: aastore
       // 2b: aconst_null
       // 2c: invokevirtual android/content/ContentResolver.query (Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-      // 2f: astore 3
-      // 30: aconst_null
-      // 31: astore 2
-      // 32: aload 3
-      // 33: ifnull 8c
-      // 36: aload 3
-      // 37: invokeinterface android/database/Cursor.getCount ()I 1
-      // 3c: ifle 76
-      // 3f: aload 3
-      // 40: invokeinterface android/database/Cursor.moveToFirst ()Z 1
-      // 45: pop
-      // 46: getstatic com/discord/contact_sync/ContactSyncProvider.INSTANCE Lcom/discord/contact_sync/ContactSyncProvider;
-      // 49: astore 2
-      // 4a: aload 2
-      // 4b: aload 3
-      // 4c: ldc "photo_thumb_uri"
-      // 4e: invokespecial com/discord/contact_sync/ContactSyncProvider.getColumnString (Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
-      // 51: astore 4
-      // 53: aload 4
-      // 55: ifnull 76
-      // 58: aload 4
-      // 5a: invokestatic android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;
-      // 5d: astore 4
-      // 5f: aload 4
-      // 61: ifnull 76
-      // 64: aload 2
-      // 65: aload 4
-      // 67: aload 1
-      // 68: bipush 0
-      // 69: bipush 2
-      // 6a: aconst_null
-      // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
-      // 6e: astore 1
-      // 6f: goto 78
-      // 72: astore 1
-      // 73: goto 82
-      // 76: aconst_null
-      // 77: astore 1
-      // 78: aload 3
-      // 79: aconst_null
-      // 7a: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 7d: aload 1
-      // 7e: astore 2
-      // 7f: goto 8c
-      // 82: aload 1
-      // 83: athrow
-      // 84: astore 2
-      // 85: aload 3
-      // 86: aload 1
-      // 87: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 2
-      // 8b: athrow
-      // 8c: aload 2
-      // 8d: areturn
+      // 2f: astore 2
+      // 30: aload 2
+      // 31: ifnull 87
+      // 34: aload 2
+      // 35: invokeinterface android/database/Cursor.getCount ()I 1
+      // 3a: ifle 74
+      // 3d: aload 2
+      // 3e: invokeinterface android/database/Cursor.moveToFirst ()Z 1
+      // 43: pop
+      // 44: getstatic com/discord/contact_sync/ContactSyncProvider.INSTANCE Lcom/discord/contact_sync/ContactSyncProvider;
+      // 47: astore 3
+      // 48: aload 3
+      // 49: aload 2
+      // 4a: ldc "photo_thumb_uri"
+      // 4c: invokespecial com/discord/contact_sync/ContactSyncProvider.getColumnString (Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+      // 4f: astore 4
+      // 51: aload 4
+      // 53: ifnull 74
+      // 56: aload 4
+      // 58: invokestatic android/net/Uri.parse (Ljava/lang/String;)Landroid/net/Uri;
+      // 5b: astore 4
+      // 5d: aload 4
+      // 5f: ifnull 74
+      // 62: aload 3
+      // 63: aload 4
+      // 65: aload 1
+      // 66: bipush 0
+      // 67: bipush 2
+      // 68: aconst_null
+      // 69: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
+      // 6c: astore 1
+      // 6d: goto 76
+      // 70: astore 3
+      // 71: goto 7d
+      // 74: aconst_null
+      // 75: astore 1
+      // 76: aload 2
+      // 77: aconst_null
+      // 78: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7b: aload 1
+      // 7c: areturn
+      // 7d: aload 3
+      // 7e: athrow
+      // 7f: astore 1
+      // 80: aload 2
+      // 81: aload 3
+      // 82: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 85: aload 1
+      // 86: athrow
+      // 87: aconst_null
+      // 88: areturn
    }
 }

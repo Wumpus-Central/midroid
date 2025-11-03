@@ -16,27 +16,13 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
 
    public final val currentMsgId: MessageId
       public final get() {
-         val var1: java.lang.String;
-         if (this.isBeforeContent) {
-            var1 = this.summary.getStartId-3Eiw7ao();
-         } else {
-            var1 = this.summary.getEndId-3Eiw7ao();
-         }
-
-         return var1;
+         return if (this.isBeforeContent) this.summary.getStartId-3Eiw7ao() else this.summary.getEndId-3Eiw7ao();
       }
 
 
    public final val jumpToMsgId: MessageId
       public final get() {
-         val var1: java.lang.String;
-         if (this.isBeforeContent) {
-            var1 = this.summary.getEndId-3Eiw7ao();
-         } else {
-            var1 = this.summary.getStartId-3Eiw7ao();
-         }
-
-         return var1;
+         return if (this.isBeforeContent) this.summary.getEndId-3Eiw7ao() else this.summary.getStartId-3Eiw7ao();
       }
 
 

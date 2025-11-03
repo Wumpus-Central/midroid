@@ -7,8 +7,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import ht.v
 import kotlin.jvm.internal.Intrinsics
-import xa.v
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterModuleSpec(var1) {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -41,7 +41,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    public fun addListener(type: String) {
    }
 
-   public override fun getCurrentRoute(promise: Promise?) {
+   public open fun getCurrentRoute(promise: Promise?) {
       if (var1 != null) {
          var var2: DiscordAudioManagerInterface = this.audioManager;
          if (this.audioManager == null) {
@@ -100,50 +100,36 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
    public companion object {
       private fun AndroidAudioDevice.toRouteTypeString(): String {
          val var2: Int = AudioRouteEmitterModule.Companion.WhenMappings.$EnumSwitchMapping$0[var1.getSimpleDeviceType().ordinal()];
-         val var4: java.lang.String;
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  if (var2 != 4) {
-                     var4 = "Unknown";
-                  } else {
-                     var4 = "WiredHeadset";
-                  }
+                  return if (var2 != 4) "Unknown" else "WiredHeadset";
                } else {
-                  var4 = "Speaker";
+                  return "Speaker";
                }
             } else {
-               var4 = "Bluetooth";
+               return "Bluetooth";
             }
          } else {
-            var4 = "Receiver";
+            return "Receiver";
          }
-
-         return var4;
       }
 
       private fun SimpleDeviceType.toRouteTypeString(): String {
          val var2: Int = AudioRouteEmitterModule.Companion.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
-         val var3: java.lang.String;
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
-                  if (var2 != 4) {
-                     var3 = "Unknown";
-                  } else {
-                     var3 = "WiredHeadset";
-                  }
+                  return if (var2 != 4) "Unknown" else "WiredHeadset";
                } else {
-                  var3 = "Speaker";
+                  return "Speaker";
                }
             } else {
-               var3 = "Bluetooth";
+               return "Bluetooth";
             }
          } else {
-            var3 = "Receiver";
+            return "Receiver";
          }
-
-         return var3;
       }
    }
 }

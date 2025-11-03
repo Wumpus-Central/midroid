@@ -1,16 +1,16 @@
 package com.discord.recycler_view.utils
 
-import a3.h
-import a3.i
-import a3.j
-import a3.k
-import a3.l
-import a3.m
-import a3.n
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
+import d9.h
+import d9.i
+import d9.j
+import d9.k
+import d9.l
+import d9.m
+import d9.n
 
 public open class TransitionResilientLinearLayoutManager(context: Context,
    orientation: Int = 1,

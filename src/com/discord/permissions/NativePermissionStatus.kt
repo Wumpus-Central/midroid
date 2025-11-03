@@ -26,7 +26,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = Da.a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    @JvmStatic
@@ -42,18 +42,16 @@ public enum class NativePermissionStatus {
       public fun fromAndroidAuthorizationStatus(value: Any?): String {
          if (var1 == java.lang.Boolean.TRUE) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
-         } else {
-            if (!(var1 == java.lang.Boolean.FALSE)) {
-               val var2: StringBuilder = new StringBuilder();
-               var2.append("Unknown authorization result: ");
-               var2.append((Object)var1);
-               throw new IllegalStateException(var2.toString().toString());
-            }
-
+            return var1;
+         } else if (var1 == java.lang.Boolean.FALSE) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
+            return var1;
+         } else {
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Unknown authorization result: ");
+            var2.append((Object)var1);
+            throw new IllegalStateException(var2.toString().toString());
          }
-
-         return var1;
       }
 
       public fun fromAndroidPermissionStatus(value: Any?): String {
@@ -62,31 +60,30 @@ public enum class NativePermissionStatus {
             var2 = var1;
          } else {
             if (var1 !is ReadableNativeMap) {
-               val var5: StringBuilder = new StringBuilder();
-               var5.append("Unknown authorization result: ");
-               var5.append((Object)var1);
-               throw new IllegalStateException(var5.toString().toString());
+               val var7: StringBuilder = new StringBuilder();
+               var7.append("Unknown authorization result: ");
+               var7.append((Object)var1);
+               throw new IllegalStateException(var7.toString().toString());
             }
 
             var2 = (var1 as ReadableNativeMap).toString();
          }
 
-         if (StringsKt.N(var2, "granted", false, 2, null)) {
+         if (StringsKt.T(var2, "granted", false, 2, null)) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
-         } else if (StringsKt.N(var2, "denied", false, 2, null)) {
+            return var1;
+         } else if (StringsKt.T(var2, "denied", false, 2, null)) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
+            return var1;
+         } else if (StringsKt.T(var2, "never_ask_again", false, 2, null)) {
+            var1 = "DENIED".toLowerCase(Locale.ROOT);
+            return var1;
          } else {
-            if (!StringsKt.N(var2, "never_ask_again", false, 2, null)) {
-               val var4: StringBuilder = new StringBuilder();
-               var4.append("Unknown authorization result: ");
-               var4.append((Object)var1);
-               throw new IllegalStateException(var4.toString().toString());
-            }
-
-            var1 = "DENIED".toLowerCase(Locale.ROOT);
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unknown authorization result: ");
+            var6.append((Object)var1);
+            throw new IllegalStateException(var6.toString().toString());
          }
-
-         return var1;
       }
    }
 }

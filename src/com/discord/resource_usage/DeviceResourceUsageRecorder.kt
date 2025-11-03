@@ -1,19 +1,18 @@
 package com.discord.resource_usage
 
-import Lc.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
 import android.telephony.TelephonyManager
-import b3.b
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
+import ht.v
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import xa.v
+import yv.e
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic
@@ -44,13 +43,13 @@ public class DeviceResourceUsageRecorder {
       private final val initialAppSendBytes: Long
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
-         val var4: Response = var1.a(var1.q());
-         val var3: ResponseBody = var4.a();
+         val var4: Response = var1.a(var1.b());
+         val var3: ResponseBody = var4.b();
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.n(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.j().W1());
+            var5.o(java.lang.Long.MAX_VALUE);
+            var2.setBytesReceived(var2.getBytesReceived() + var5.c().size());
          }
 
          return var4;
@@ -84,7 +83,7 @@ public class DeviceResourceUsageRecorder {
                         break label48;
                      }
 
-                     var11 = b.a(var4);
+                     var11 = var4.getSignalStrength();
                   } catch (var8: Exception) {
                      var9 = new Pair(null, null);
                      break label47;

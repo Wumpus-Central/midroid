@@ -8,13 +8,6 @@ import com.facebook.react.jstasks.HeadlessJsTaskConfig
 public class HeadlessTasksService : HeadlessJsTaskService {
    protected override fun getTaskConfig(intent: Intent?): HeadlessJsTaskConfig? {
       val var2: HeadlessTasks = HeadlessTasks.Companion.fromIntent(var1);
-      val var3: HeadlessJsTaskConfig;
-      if (var2 != null) {
-         var3 = var2.getTaskConfig();
-      } else {
-         var3 = null;
-      }
-
-      return var3;
+      return if (var2 != null) var2.getTaskConfig() else null;
    }
 }

@@ -1,6 +1,5 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -12,6 +11,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import kc.a;
 
 public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeMediaEngineModule";
@@ -114,7 +114,7 @@ public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaMo
 
    @ReactMethod
    @a
-   public abstract void connectionInstanceSetPTTActive(double var1, boolean var3, boolean var4);
+   public abstract void connectionInstanceSetPTTActive(double var1, boolean var3, boolean var4, boolean var5);
 
    @ReactMethod
    @a
@@ -173,25 +173,26 @@ public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaMo
    public abstract void getCodecSurvey(Callback var1);
 
    @a
+   @Override
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var2 = new HashSet<>(Arrays.asList("AVAudioSessionMode", "DegradationPreference", "SupportedSecureFramesProtocolVersion", "supportedFeatures"));
-         HashSet var1 = new HashSet();
-         HashSet var3 = new HashSet(var4.keySet());
-         var3.removeAll(var2);
-         var3.removeAll(var1);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet<>(Arrays.asList("AVAudioSessionMode", "DegradationPreference", "SupportedSecureFramesProtocolVersion", "supportedFeatures"));
+         HashSet var4 = new HashSet();
+         HashSet var2 = new HashSet(var1.keySet());
+         var2.removeAll(var3);
+         var2.removeAll(var4);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var2.removeAll(var4.keySet());
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
+         var3.removeAll(var1.keySet());
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
          }
       }
 
-      return var4;
+      return var1;
    }
 
    @ReactMethod
@@ -202,6 +203,7 @@ public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaMo
    @a
    public abstract void getMLSSigningKeyB64(String var1, double var2, Callback var4);
 
+   @Override
    public String getName() {
       return "NativeMediaEngineModule";
    }

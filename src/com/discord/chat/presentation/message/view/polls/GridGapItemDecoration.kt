@@ -3,9 +3,10 @@ package com.discord.chat.presentation.message.view.polls
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 
-public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.ItemDecoration {
+public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : ItemDecoration {
    private final val spanCount: Int
    private final val gapPx: Int
 
@@ -14,15 +15,15 @@ public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.It
       this.gapPx = var2;
    }
 
-   public override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      val var6: Int = var3.getChildAdapterPosition(var2);
-      val var5: Int = this.spanCount;
-      val var8: Int = var6 % this.spanCount;
-      val var7: Int = this.gapPx;
-      var1.left = var8 * this.gapPx / this.spanCount;
-      var1.right = var7 - (var8 + 1) * var7 / var5;
-      if (var6 >= var5) {
-         var1.top = var7;
+   public open fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
+      val var8: Int = var3.getChildAdapterPosition(var2);
+      val var6: Int = this.spanCount;
+      val var7: Int = var8 % this.spanCount;
+      val var5: Int = this.gapPx;
+      var1.left = var7 * this.gapPx / this.spanCount;
+      var1.right = var5 - (var7 + 1) * var5 / var6;
+      if (var8 >= var6) {
+         var1.top = var5;
       }
    }
 }

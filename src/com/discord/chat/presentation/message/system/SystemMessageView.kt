@@ -4,9 +4,9 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import androidx.core.view.Z
+import androidx.core.view.h0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.MessageType
@@ -42,15 +42,15 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @SourceDebugExtension(["SMAP\nSystemMessageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,354:1\n257#2,2:355\n1872#3,3:357\n*S KotlinDebug\n*F\n+ 1 SystemMessageView.kt\ncom/discord/chat/presentation/message/system/SystemMessageView\n*L\n121#1:355,2\n223#1:357,3\n*E\n"])
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2), SpineParentMessage {
@@ -76,10 +76,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    init {
-      this.greenIconColor = ColorUtilsKt.getColorCompat(this, color.green_360);
-      this.redIconColor = ColorUtilsKt.getColorCompat(this, color.red_400);
-      this.warnIconColor = ColorUtilsKt.getColorCompat(this, color.yellow_300);
-      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, color.guild_boosting_pink);
+      this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
+      this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
+      this.warnIconColor = ColorUtilsKt.getColorCompat(this, R.color.yellow_300);
+      this.pinkIconColor = ColorUtilsKt.getColorCompat(this, R.color.guild_boosting_pink);
       this.mutedIconColor = ThemeManagerKt.getTheme().getTextMuted();
       val var3: SystemMessageViewBinding = SystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
@@ -89,60 +89,60 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
    private fun generateMessageAccessories(message: Message, context: MessageContext): List<MessageAccessory> {
       this.accessories.clear();
-      var var12: Int = var1.getConstrainedWidth();
+      var var13: Int = var1.getConstrainedWidth();
       val var3: Int;
-      if (var12 != null) {
-         var3 = var12;
+      if (var13 != null) {
+         var3 = var13;
       } else {
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      val var4: Boolean;
+      var var4: Boolean;
       if (var1.getTimestamp() != null && var1.getType() != MessageType.IN_GAME_MESSAGE_NUX) {
-         var4 = true;
+         var4 = 1;
       } else {
-         var4 = false;
+         var4 = 0;
       }
 
-      val var20: StructurableText = var1.getContent();
-      if (var20 != null) {
-         val var13: ArrayList = this.accessories;
+      val var15: StructurableText = var1.getContent();
+      if (var15 != null) {
+         val var29: ArrayList = this.accessories;
          val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var8: Boolean = var1.getShouldShowRoleDot();
-         val var11: Boolean = var1.getShouldShowRoleOnName();
+         val var12: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var9: Boolean = var1.getShouldShowRoleDot();
+         val var10: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
          } else {
-            var5 = this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
+            var5 = this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing);
          }
 
-         var var15: Int = var1.getLinkColor();
+         var var16: Int = var1.getLinkColor();
          val var6: Int;
-         if (var15 != null) {
-            var6 = var15;
+         if (var16 != null) {
+            var6 = var16;
          } else {
             var6 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var15 = var1.getTextColor();
+         var16 = var1.getTextColor();
          val var7: Int;
-         if (var15 != null) {
-            var7 = var15;
+         if (var16 != null) {
+            var7 = var16;
          } else {
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var13.add(
+         var29.add(
             new MessageContentAccessory(
                var14,
-               var20,
+               var15,
+               var12,
+               var11,
                var9,
                var10,
-               var8,
-               var11,
                var5,
                var6,
                var7,
@@ -162,51 +162,65 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       if (var4) {
-         val var21: java.lang.String = var1.getTimestamp();
-         if (var21 != null) {
+         val var30: java.lang.String = var1.getTimestamp();
+         if (var30 != null) {
             this.accessories
-               .add(new TimestampMessageAccessory(var1.getId-3Eiw7ao(), var21, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
+               .add(new TimestampMessageAccessory(var1.getId-3Eiw7ao(), var30, ThemeManagerKt.getTheme().getTextMuted(), DiscordFont.PrimaryMedium, null));
          }
       }
 
-      var12 = var1.getTotalMonthsSubscribed();
-      if (var12 != null && var12.intValue() <= 1) {
-         val var33: ArrayList = this.accessories;
-         val var28: java.lang.String = var1.getId-3Eiw7ao();
-         val var23: java.lang.String = var1.getUsername();
-         val var31: Context = this.binding.getRoot().getContext();
-         var33.add(new RoleSubscriptionPurchaseAccessory(var28, var23, MessageKt.avatarUrl(var1, var31), var3, false, null));
+      var13 = var1.getTotalMonthsSubscribed();
+      if (var13 != null && var13.intValue() <= 1) {
+         val var44: ArrayList = this.accessories;
+         val var40: java.lang.String = var1.getId-3Eiw7ao();
+         val var32: java.lang.String = var1.getUsername();
+         val var37: Context = this.binding.getRoot().getContext();
+         var44.add(new RoleSubscriptionPurchaseAccessory(var40, var32, MessageKt.avatarUrl(var1, var37), var3, false, null));
       }
 
-      val var24: Sticker = var1.getSticker();
-      if (var24 != null) {
-         this.accessories.add(new WelcomeStickerAccessory(var1, var24));
+      val var33: Sticker = var1.getSticker();
+      if (var33 != null) {
+         this.accessories.add(new WelcomeStickerAccessory(var1, var33));
       }
 
       if (var1.getType() === MessageType.STAGE_RAISE_HAND && var1.getShowInviteToSpeakButton() == java.lang.Boolean.TRUE) {
          this.accessories.add(new InviteToSpeakAccessory(var1));
       }
 
-      if (var1.getType() === MessageType.GUILD_DEADCHAT_REVIVE_PROMPT || var1.getType() === MessageType.GUILD_GAMING_STATS_PROMPT) {
-         val var25: java.util.List = var1.getEmbeds();
-         if (var25 != null) {
-            val var26: java.util.Iterator = var25.iterator();
+      var var21: Boolean;
+      if (var1.getType() != MessageType.GUILD_DEADCHAT_REVIVE_PROMPT && var1.getType() != MessageType.GUILD_GAMING_STATS_PROMPT) {
+         var21 = true;
+      } else {
+         val var34: java.util.List = var1.getEmbeds();
+         var4 = (boolean)1;
+         if (var34 != null) {
+            val var35: java.util.Iterator = var34.iterator();
+            var4 = 0;
+            val var25: Int = var3;
+            var21 = true;
 
-            for (int var19 = 0; var26.hasNext(); var19++) {
-               val var29: Any = var26.next();
-               if (var19 < 0) {
-                  CollectionsKt.u();
+            while (true) {
+               val var27: Int = var4;
+               var4 = var21;
+               if (!var35.hasNext()) {
+                  break;
+               }
+
+               val var38: Any = var35.next();
+               var4 += 1;
+               if (var27 < 0) {
+                  CollectionsKt.v();
                }
 
                this.accessories
                   .add(
                      new EmbedMessageAccessory(
                         var1.getId-3Eiw7ao(),
-                        var19,
+                        var27,
                         var1.getChannelId-o4g7jtM(),
-                        var3,
+                        var25,
                         16,
-                        var29 as Embed,
+                        var38 as Embed,
                         false,
                         false,
                         false,
@@ -221,11 +235,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             }
          }
 
+         var21 = var4;
          this.accessories.add(new ChannelPromptActionsAccessory(var1));
       }
 
-      val var27: java.util.List = var1.getReactions();
-      if (var27 != null && var27.isEmpty() xor true) {
+      val var36: java.util.List = var1.getReactions();
+      if (var36 != null && (var36.isEmpty() xor true) == var21) {
          this.accessories
             .add(
                new ReactionsMessageAccessory(
@@ -244,26 +259,25 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             );
       }
 
-      val var16: ThreadEmbed = var1.getThreadEmbed();
-      if (var16 != null) {
-         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var16, null));
-      }
-
-      val var17: EphemeralIndication = var1.getEphemeralIndication();
+      val var17: ThreadEmbed = var1.getThreadEmbed();
       if (var17 != null) {
-         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId-3Eiw7ao(), var17, null));
+         this.accessories.add(new ThreadEmbedMessageAccessory(var1.getId-3Eiw7ao(), var17, null));
       }
 
-      val var18: SafetyPolicyNoticeEmbed = var1.getSafetyPolicyNoticeEmbed();
+      val var18: EphemeralIndication = var1.getEphemeralIndication();
       if (var18 != null) {
-         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId-3Eiw7ao(), var18, null));
+         this.accessories.add(new EphemeralIndicationMessageAccessory(var1.getId-3Eiw7ao(), var18, null));
+      }
+
+      val var19: SafetyPolicyNoticeEmbed = var1.getSafetyPolicyNoticeEmbed();
+      if (var19 != null) {
+         this.accessories.add(new SafetyPolicyNoticeMessageAccessory(var1.getId-3Eiw7ao(), var19, null));
       }
 
       return this.accessories;
    }
 
    private fun getIconAndColor(messageType: MessageType): Pair<ReactAsset, Int> {
-      var var3: Pair;
       switch (SystemMessageView.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()]) {
          case 1:
          case 2:
@@ -273,112 +287,83 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          case 6:
          case 7:
          case 8:
-            var3 = v.a(ReactAsset.ArrowForward, this.greenIconColor);
-            break;
+            return v.a(ReactAsset.ArrowForward, this.greenIconColor);
          case 9:
          case 10:
-            var3 = v.a(ReactAsset.ArrowBack, this.redIconColor);
-            break;
+            return v.a(ReactAsset.ArrowBack, this.redIconColor);
          case 11:
          case 12:
          case 13:
          case 14:
-            var3 = v.a(ReactAsset.Pencil, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.Pencil, this.normalIconColor);
          case 15:
-            var3 = v.a(ReactAsset.AddReaction, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.AddReaction, this.normalIconColor);
          case 16:
-            var3 = v.a(ReactAsset.Pin, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.Pin, this.normalIconColor);
          case 17:
-            var3 = v.a(ReactAsset.Ticket, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.Ticket, this.normalIconColor);
          case 18:
          case 19:
          case 20:
          case 21:
-            var3 = v.a(ReactAsset.MemberListBadge, this.pinkIconColor);
-            break;
+            return v.a(ReactAsset.MemberListBadge, this.pinkIconColor);
          case 22:
-            var3 = v.a(ReactAsset.AnnouncementThread, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.AnnouncementThread, this.normalIconColor);
          case 23:
-            var3 = v.a(ReactAsset.Close, this.redIconColor);
-            break;
+            return v.a(ReactAsset.Close, this.redIconColor);
          case 24:
-            var3 = v.a(ReactAsset.Check, this.greenIconColor);
-            break;
+            return v.a(ReactAsset.Check, this.greenIconColor);
          case 25:
          case 26:
-            var3 = v.a(ReactAsset.Alert, this.warnIconColor);
-            break;
+            return v.a(ReactAsset.Alert, this.warnIconColor);
          case 27:
          case 28:
-            var3 = v.a(ReactAsset.Thread, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.Thread, this.normalIconColor);
          case 29:
-            var3 = v.a(ReactAsset.StageChannel, this.greenIconColor);
-            break;
+            return v.a(ReactAsset.StageChannel, this.greenIconColor);
          case 30:
          case 31:
-            var3 = v.a(ReactAsset.StageChannel, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.StageChannel, this.normalIconColor);
          case 32:
-            var3 = v.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
          case 33:
-            var3 = v.a(ReactAsset.RaisedHand, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.RaisedHand, this.normalIconColor);
          case 34:
-            var3 = v.a(ReactAsset.LockClosed, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.LockClosed, this.normalIconColor);
          case 35:
-            var3 = v.a(ReactAsset.LockOpen, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.LockOpen, this.normalIconColor);
          case 36:
-            var3 = v.a(ReactAsset.PollsIcon, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.PollsIcon, this.normalIconColor);
          case 37:
-            var3 = v.a(ReactAsset.Refresh, this.greenIconColor);
-            break;
+            return v.a(ReactAsset.Refresh, this.greenIconColor);
          case 38:
-            var3 = v.a(ReactAsset.GameController, this.mutedIconColor);
-            break;
+            return v.a(ReactAsset.GameController, this.mutedIconColor);
          case 39:
-            var3 = v.a(ReactAsset.Check, this.greenIconColor);
-            break;
+            return v.a(ReactAsset.Check, this.greenIconColor);
          case 40:
-            var3 = v.a(ReactAsset.Close, this.redIconColor);
-            break;
+            return v.a(ReactAsset.Close, this.redIconColor);
          case 41:
-            var3 = v.a(ReactAsset.ArrowBack, this.normalIconColor);
-            break;
+            return v.a(ReactAsset.ArrowBack, this.normalIconColor);
          default:
             val var2: StringBuilder = new StringBuilder();
             var2.append("Unhandled message type: ");
             var2.append(var1);
             throw new IllegalArgumentException(var2.toString());
       }
-
-      return var3;
    }
 
    @JvmStatic
    fun `setMessage$lambda$0`(var0: Message, var1: ChatEventHandler, var2: View): Boolean {
-      val var3: Boolean;
       if (MessageKt.isEphemeral(var0)) {
-         var3 = false;
+         return false;
       } else {
-         val var4: Function6 = var1.getOnMessageLongPressed();
-         if (var4 != null) {
-            var4.invoke(MessageId.box-impl(var0.getId-3Eiw7ao()), ChannelId.box-impl(var0.getChannelId-o4g7jtM()), null, null, null, null);
+         val var3: Function6 = var1.getOnMessageLongPressed();
+         if (var3 != null) {
+            var3.invoke(MessageId.box-impl(var0.getId-3Eiw7ao()), ChannelId.box-impl(var0.getChannelId-o4g7jtM()), null, null, null, null);
          }
 
-         var3 = true;
+         return true;
       }
-
-      return var3;
    }
 
    @JvmStatic
@@ -428,6 +413,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       var9.setVisibility(var10);
-      Z.o0(this, new MessageViewAccessibilityDelegate(var1, new g(), var7));
+      h0.n0(this, new MessageViewAccessibilityDelegate(var1, new g(), var7));
    }
 }

@@ -1,12 +1,14 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-// $VF: synthetic class
-public final class w implements Runnable {
-   public final <unrepresentable> d;
-   public final AudioPlayerView e;
+import com.discord.chat.databinding.AudioPlayerViewBinding;
+import kotlin.jvm.functions.Function0;
 
-   @Override
-   public final void run() {
-      <unrepresentable>.a(this.d, this.e);
+// $VF: synthetic class
+public final class w implements Function0 {
+   public final AudioPlayerViewBinding d;
+   public final AudioPlayerWipeAnimatorManager e;
+
+   public final Object invoke() {
+      return AudioPlayerWipeAnimatorManager.a(this.d, this.e);
    }
 }

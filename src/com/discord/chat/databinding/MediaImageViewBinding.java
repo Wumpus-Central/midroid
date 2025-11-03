@@ -11,7 +11,6 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.AltTextButtonView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
 
 public final class MediaImageViewBinding implements ViewBinding {
    @NonNull
@@ -50,24 +49,24 @@ public final class MediaImageViewBinding implements ViewBinding {
    @NonNull
    public static MediaImageViewBinding bind(@NonNull View var0) {
       int var1 = R.id.container;
-      ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
-      if (var5 != null) {
+      ConstraintLayout var7 = (ConstraintLayout)k5.a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.gif_indicator;
-         SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.image;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.image_alt_text;
-               TextView var4 = (TextView)a.a(var0, var1);
-               if (var4 != null) {
+               TextView var5 = (TextView)k5.a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.image_blur_bg;
-                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-                  if (var3 != null) {
+                  FrameLayout var4 = (FrameLayout)k5.a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.media_view_alt_text_button;
-                     AltTextButtonView var7 = (AltTextButtonView)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new MediaImageViewBinding(var0, var5, var6, var2, var4, var3, var7);
+                     AltTextButtonView var6 = (AltTextButtonView)k5.a.a(var0, var1);
+                     if (var6 != null) {
+                        return new MediaImageViewBinding(var0, var7, var2, var3, var5, var4, var6);
                      }
                   }
                }

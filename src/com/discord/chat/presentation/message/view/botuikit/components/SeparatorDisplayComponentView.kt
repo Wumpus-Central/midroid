@@ -14,9 +14,9 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import ht.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.p
 
 @SourceDebugExtension(["SMAP\nSeparatorDisplayComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SeparatorDisplayComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SeparatorDisplayComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,56:1\n327#2,4:57\n*S KotlinDebug\n*F\n+ 1 SeparatorDisplayComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SeparatorDisplayComponentView\n*L\n45#1:57,4\n*E\n"])
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout(

@@ -15,14 +15,14 @@ import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
-   val var5: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
+   val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
    val var4: java.lang.String = var1.getString("content");
-   var var2: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-   val var6: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
-   val var9: ReadableMap = var1.getMap("contentAction");
+   var0 = ServiceNotificationConfiguration.Companion;
+   val var5: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
+   var var2: ReadableMap = var1.getMap("contentAction");
    val var10: ServiceNotificationConfiguration.Action;
-   if (var9 != null) {
-      var10 = parseAction(var2, var9);
+   if (var2 != null) {
+      var10 = parseAction(var0, var2);
    } else {
       var10 = null;
    }
@@ -30,7 +30,7 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
    val var7: ReadableArray = var1.getArray("auxiliaryActions");
    if (var7 != null) {
       val var11: IntRange = NativeArrayExtensionsKt.sizeRange(var7);
-      val var3: ArrayList = new ArrayList(CollectionsKt.v(var11, 10));
+      val var3: ArrayList = new ArrayList(CollectionsKt.w(var11, 10));
       val var8: java.util.Iterator = var11.iterator();
 
       while (true) {
@@ -39,88 +39,82 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
             break;
          }
 
-         val var13: ReadableMap = var7.getMap((var8 as L).nextInt());
-         var3.add(parseAction(ServiceNotificationConfiguration.Companion, var13));
+         var2 = var7.getMap((var8 as q0).nextInt());
+         var3.add(parseAction(ServiceNotificationConfiguration.Companion, var2));
       }
    } else {
-      var2 = CollectionsKt.k();
+      var2 = CollectionsKt.l();
    }
 
-   return new ServiceNotificationConfiguration(var5, var4, var6, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
+   return new ServiceNotificationConfiguration(var6, var4, var5, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
-   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
-   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
-   val var2: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
+   val var2: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
+   val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
+   val var4: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
    val var5: ReadableMap = var1.getMap("data");
    if (var5 != null) {
       val var7: java.util.Map = NativeMapExtensionsKt.toStringMap(var5);
       if (var7 != null) {
-         return new ServiceNotificationConfiguration.Action(var3, var4, var2, var7);
+         return new ServiceNotificationConfiguration.Action(var2, var3, var4, var7);
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var3, var4, var2, O.i());
+   return new ServiceNotificationConfiguration.Action(var2, var3, var4, s0.i());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-   val var6: ArrayList = new ArrayList(CollectionsKt.v(var3, 10));
+   val var6: ArrayList = new ArrayList(CollectionsKt.w(var3, 10));
    val var7: java.util.Iterator = var3.iterator();
 
    while (var7.hasNext()) {
-      val var2: Int = (var7 as L).nextInt();
-      val var4: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var5: ReadableMap = var1.getMap(var2);
-      var6.add(parse(var4, var5));
+      val var2: Int = (var7 as q0).nextInt();
+      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var4: ReadableMap = var1.getMap(var2);
+      var6.add(parse(var5, var4));
    }
 
    return var6;
 }
 
 private fun Companion.parsePriority(value: Int): Priority {
-   val var2: ServiceNotificationConfiguration.Priority;
    if (var1 != 0) {
       if (var1 != 1) {
-         if (var1 != 2) {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Unknown priority: ");
-            var3.append(var1);
-            var3.append(".");
-            throw new IllegalArgumentException(var3.toString());
+         if (var1 == 2) {
+            return ServiceNotificationConfiguration.Priority.LOW;
+         } else {
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Unknown priority: ");
+            var2.append(var1);
+            var2.append(".");
+            throw new IllegalArgumentException(var2.toString());
          }
-
-         var2 = ServiceNotificationConfiguration.Priority.LOW;
       } else {
-         var2 = ServiceNotificationConfiguration.Priority.MEDIUM;
+         return ServiceNotificationConfiguration.Priority.MEDIUM;
       }
    } else {
-      var2 = ServiceNotificationConfiguration.Priority.HIGH;
+      return ServiceNotificationConfiguration.Priority.HIGH;
    }
-
-   return var2;
 }
 
 private fun Companion.parseType(value: Int): Type {
-   val var2: ServiceNotificationConfiguration.Type;
    if (var1 != 0) {
       if (var1 != 1) {
-         if (var1 != 2) {
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Unknown type: ");
-            var3.append(var1);
-            var3.append(".");
-            throw new IllegalArgumentException(var3.toString());
+         if (var1 == 2) {
+            return ServiceNotificationConfiguration.Type.SCREEN_SHARE;
+         } else {
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Unknown type: ");
+            var2.append(var1);
+            var2.append(".");
+            throw new IllegalArgumentException(var2.toString());
          }
-
-         var2 = ServiceNotificationConfiguration.Type.SCREEN_SHARE;
       } else {
-         var2 = ServiceNotificationConfiguration.Type.VOICE_CALL;
+         return ServiceNotificationConfiguration.Type.VOICE_CALL;
       }
    } else {
-      var2 = ServiceNotificationConfiguration.Type.FILE_UPLOAD;
+      return ServiceNotificationConfiguration.Type.FILE_UPLOAD;
    }
-
-   return var2;
 }

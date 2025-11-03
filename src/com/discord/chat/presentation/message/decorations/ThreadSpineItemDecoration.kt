@@ -5,13 +5,14 @@ import android.graphics.Canvas
 import android.view.View
 import android.view.ViewParent
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.size.SizeUtilsKt
 
-public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
+public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : ItemDecoration {
    private final val spineDrawer: SpineDrawer
 
    public final var showThreadSpine: Boolean
@@ -22,7 +23,7 @@ public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx:
       this.showThreadSpine = true;
    }
 
-   public override fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
+   public open fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
       super.onDraw(var1, var2, var3);
       if (this.showThreadSpine) {
          val var8: ViewParent = var2.getParent();
@@ -36,25 +37,25 @@ public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx:
          if (var9 != null) {
             val var10: View = var9.getSpineOriginView();
             if (var10 != null) {
-               val var6: Int = var10.getLeft() + var10.getMeasuredWidth() / 2;
+               val var4: Int = var10.getLeft() + var10.getMeasuredWidth() / 2;
                val var7: Int = var2.getChildCount();
 
-               for (int var4 = 0; var4 < var7; var4++) {
-                  val var11: View = var2.getChildAt(var4);
+               for (int var5 = 0; var5 < var7; var5++) {
+                  val var11: View = var2.getChildAt(var5);
                   if (var11 != null) {
                      if (var11 is ThreadEmbedView) {
-                        this.spineDrawer.drawSpineCurve(var1, var2, var11, var11, var6);
+                        this.spineDrawer.drawSpineCurve(var1, var2, var11, var11, var4);
                      } else if (var11 is MessageContentView) {
-                        val var5: Int;
-                        if (var4 == 0) {
-                           var5 = (var11 as MessageContentView).getLineHeight() + SizeUtilsKt.getDpToPx(2);
+                        val var6: Int;
+                        if (var5 == 0) {
+                           var6 = (var11 as MessageContentView).getLineHeight() + SizeUtilsKt.getDpToPx(2);
                         } else {
-                           var5 = 0;
+                           var6 = 0;
                         }
 
-                        this.spineDrawer.drawSpinePiece(var1, var2, var11, var6, var5);
+                        this.spineDrawer.drawSpinePiece(var1, var2, var11, var4, var6);
                      } else {
-                        SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var11, var6, 0, 16, null);
+                        SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var11, var4, 0, 16, null);
                      }
                   }
                }

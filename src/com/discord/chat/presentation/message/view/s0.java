@@ -1,15 +1,11 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.media_player.MediaSource;
+import com.discord.chat.bridge.contentnode.CommandMentionContentNode;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class s0 implements OnClickListener {
-   public final MediaView d;
-   public final MediaSource e;
-
-   public final void onClick(View var1) {
-      MediaView.a(this.d, this.e, var1);
+public final class s0 implements Function1 {
+   public final Object invoke(Object var1) {
+      return FlaggedMessageEmbedView.i((CommandMentionContentNode)var1);
    }
 }

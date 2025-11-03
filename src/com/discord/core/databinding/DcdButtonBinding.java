@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.core.R;
 import com.discord.progress_dots.ProgressDots;
 import com.google.android.material.button.MaterialButton;
-import x1.a;
+import k5.a;
 
 public final class DcdButtonBinding implements ViewBinding {
    @NonNull
@@ -58,7 +58,6 @@ public final class DcdButtonBinding implements ViewBinding {
    }
 
    @NonNull
-   @Override
    public View getRoot() {
       return this.rootView;
    }

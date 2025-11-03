@@ -7,6 +7,7 @@ import kotlin.jvm.functions.Function1;
 public final class f implements Function1 {
    public final String d;
 
+   @Override
    public final Object invoke(Object var1) {
       return SpoilerAttributes.Companion.d(this.d, (Context)var1);
    }

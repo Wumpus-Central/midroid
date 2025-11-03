@@ -1,12 +1,12 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import kc.a;
 
 public abstract class NativeI18nModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeI18nModule";
@@ -15,6 +15,7 @@ public abstract class NativeI18nModuleSpec extends ReactContextBaseJavaModule im
       super(var1);
    }
 
+   @Override
    public String getName() {
       return "NativeI18nModule";
    }

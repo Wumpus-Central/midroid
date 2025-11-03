@@ -7,6 +7,6 @@ public final class c implements Function0 {
    public final ProgressDots d;
 
    public final Object invoke() {
-      return ProgressDots.g(this.d);
+      return ProgressDots.h(this.d);
    }
 }

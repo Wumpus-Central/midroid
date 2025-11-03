@@ -4,105 +4,71 @@ public final var audioDeviceTypeToSimpleMapping: MutableMap<Int, SimpleDeviceTyp
    internal set
 
 public fun audioDeviceInfoToString(type: Int): String {
-   var var1: java.lang.String;
    switch (var0) {
       case 0:
-         var1 = "TYPE_UNKNOWN";
-         break;
+         return "TYPE_UNKNOWN";
       case 1:
-         var1 = "TYPE_BUILTIN_EARPIECE";
-         break;
+         return "TYPE_BUILTIN_EARPIECE";
       case 2:
-         var1 = "TYPE_BUILTIN_SPEAKER";
-         break;
+         return "TYPE_BUILTIN_SPEAKER";
       case 3:
-         var1 = "TYPE_WIRED_HEADSET";
-         break;
+         return "TYPE_WIRED_HEADSET";
       case 4:
-         var1 = "TYPE_WIRED_HEADPHONES";
-         break;
+         return "TYPE_WIRED_HEADPHONES";
       case 5:
-         var1 = "TYPE_LINE_ANALOG";
-         break;
+         return "TYPE_LINE_ANALOG";
       case 6:
-         var1 = "TYPE_LINE_DIGITAL";
-         break;
+         return "TYPE_LINE_DIGITAL";
       case 7:
-         var1 = "TYPE_BLUETOOTH_SCO";
-         break;
+         return "TYPE_BLUETOOTH_SCO";
       case 8:
-         var1 = "TYPE_BLUETOOTH_A2DP";
-         break;
+         return "TYPE_BLUETOOTH_A2DP";
       case 9:
-         var1 = "TYPE_HDMI";
-         break;
+         return "TYPE_HDMI";
       case 10:
-         var1 = "TYPE_HDMI_ARC";
-         break;
+         return "TYPE_HDMI_ARC";
       case 11:
-         var1 = "TYPE_USB_DEVICE";
-         break;
+         return "TYPE_USB_DEVICE";
       case 12:
-         var1 = "TYPE_USB_ACCESSORY";
-         break;
+         return "TYPE_USB_ACCESSORY";
       case 13:
-         var1 = "TYPE_DOCK";
-         break;
+         return "TYPE_DOCK";
       case 14:
-         var1 = "TYPE_FM";
-         break;
+         return "TYPE_FM";
       case 15:
-         var1 = "TYPE_BUILTIN_MIC";
-         break;
+         return "TYPE_BUILTIN_MIC";
       case 16:
-         var1 = "TYPE_FM_TUNER";
-         break;
+         return "TYPE_FM_TUNER";
       case 17:
-         var1 = "TYPE_TV_TUNER";
-         break;
+         return "TYPE_TV_TUNER";
       case 18:
-         var1 = "TYPE_TELEPHONY";
-         break;
+         return "TYPE_TELEPHONY";
       case 19:
-         var1 = "TYPE_AUX_LINE";
-         break;
+         return "TYPE_AUX_LINE";
       case 20:
-         var1 = "TYPE_IP";
-         break;
+         return "TYPE_IP";
       case 21:
-         var1 = "TYPE_BUS";
-         break;
+         return "TYPE_BUS";
       case 22:
-         var1 = "TYPE_USB_HEADSET";
-         break;
+         return "TYPE_USB_HEADSET";
       case 23:
-         var1 = "TYPE_HEARING_AID";
-         break;
+         return "TYPE_HEARING_AID";
       case 24:
-         var1 = "TYPE_BUILTIN_SPEAKER_SAFE";
-         break;
+         return "TYPE_BUILTIN_SPEAKER_SAFE";
       case 25:
-         var1 = "TYPE_REMOTE_SUBMIX";
-         break;
+         return "TYPE_REMOTE_SUBMIX";
       case 26:
-         var1 = "TYPE_BLE_HEADSET";
-         break;
+         return "TYPE_BLE_HEADSET";
       case 27:
-         var1 = "TYPE_BLE_SPEAKER";
-         break;
+         return "TYPE_BLE_SPEAKER";
       case 28:
       default:
-         var1 = "";
-         break;
+         return "";
       case 29:
-         var1 = "TYPE_HDMI_EARC";
-         break;
+         return "TYPE_HDMI_EARC";
       case 30:
-         var1 = "TYPE_BLE_BROADCAST";
-         break;
+         return "TYPE_BLE_BROADCAST";
       case 31:
-         var1 = "TYPE_DOCK_ANALOG";
+         return "TYPE_DOCK_ANALOG";
    }
-
-   return var1;
 }

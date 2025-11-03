@@ -6,11 +6,11 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
+import ht.v
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
@@ -39,13 +39,13 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
             var12.add(v.a(var24, var21 as java.lang.String));
          }
 
-         var9 = O.u(var12);
+         var9 = s0.u(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = O.i();
+      var9 = s0.i();
    }
 
    var var19: ChannelId;

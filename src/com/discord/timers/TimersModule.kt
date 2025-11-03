@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
-import xa.v
+import ht.v
 
 public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec(var1) {
    private final val reactEvents: ReactEvents = new ReactEvents(v.a("timer", TimerEvent::class), v.a("interval", IntervalEvent::class))
@@ -31,25 +31,25 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersM
       return Unit.a;
    }
 
-   public open fun addListener(type: String) {
+   public override fun addListener(type: String) {
    }
 
-   public open fun clearInterval(id: Double) {
+   public override fun clearInterval(id: Double) {
       this.timersManager.clearInterval((int)var1);
    }
 
-   public open fun clearTimeout(id: Double) {
+   public override fun clearTimeout(id: Double) {
       this.timersManager.clearTimeout((int)var1);
    }
 
-   public open fun removeListeners(count: Double) {
+   public override fun removeListeners(count: Double) {
    }
 
-   public open fun setInterval(id: Double, timeout: Double) {
+   public override fun setInterval(id: Double, timeout: Double) {
       this.timersManager.setInterval((int)var1, var3, new b(this, var1));
    }
 
-   public open fun setTimeout(id: Double, timeout: Double) {
+   public override fun setTimeout(id: Double, timeout: Double) {
       this.timersManager.setTimeout((int)var1, var3, new c(this, var1));
    }
 }

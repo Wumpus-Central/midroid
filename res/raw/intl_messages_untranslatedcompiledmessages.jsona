@@ -46,7 +46,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -89,6 +89,23 @@
     [
       1,
       "username"
+    ],
+    "!"
+  ],
+  "2tBYtA": [
+    [
+      1,
+      "sender"
+    ],
+    " has gifted you ",
+    [
+      1,
+      "skuName"
+    ],
+    " from ",
+    [
+      1,
+      "applicationName"
     ],
     "!"
   ],
@@ -628,7 +645,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "month"
         ],
         "other": [
@@ -745,6 +762,54 @@
   "3GJwsc": [
     "Allows members to speak in this channel's threads by simply talking. If this permission is disabled, members are required to use Push-to-talk. Good for controlling background noise or noisy members."
   ],
+  "VDAhr+": [
+    "Link account"
+  ],
+  "Bn1J+a": [
+    "Redeem your gift"
+  ],
+  "3T0cpx": [
+    "Unable to link your accounts. Please ",
+    [
+      8,
+      "$link",
+      [
+        "contact support."
+      ],
+      [
+        "https://support.discord.com/hc/en-us"
+      ]
+    ]
+  ],
+  "EgCl+Q": [
+    "Connect your ",
+    [
+      1,
+      "applicationName"
+    ],
+    " and Discord accounts to apply ",
+    [
+      1,
+      "skuName"
+    ],
+    " to your in-game account."
+  ],
+  "W2znvX": [
+    "Your ",
+    [
+      1,
+      "skuName"
+    ],
+    " has been sent to your ",
+    [
+      1,
+      "applicationName"
+    ],
+    " account. Open the game to view your new items."
+  ],
+  "5glWta": [
+    "You’re all set!"
+  ],
   "dMmbGk": [
     [
       8,
@@ -815,7 +880,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "year"
         ],
         "other": [

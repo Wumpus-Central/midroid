@@ -6,9 +6,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDevice>) : ReactEvent {
    public final val devices: List<AndroidAudioDevice>
@@ -57,14 +57,14 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
    @SourceDebugExtension(["SMAP\nAudioManagerAudioDevicesUpdated.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AudioManagerAudioDevicesUpdated.kt\ncom/discord/audio/react/events/AudioManagerAudioDevicesUpdated$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,23:1\n1557#2:24\n1628#2,3:25\n*S KotlinDebug\n*F\n+ 1 AudioManagerAudioDevicesUpdated.kt\ncom/discord/audio/react/events/AudioManagerAudioDevicesUpdated$Companion\n*L\n19#1:24\n19#1:25,3\n*E\n"])
    public companion object {
       private fun convertDevices(devices: List<AndroidAudioDevice>): ReadableNativeArray {
-         val var2: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
-         val var3: java.util.Iterator = var1.iterator();
+         val var3: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
+         val var4: java.util.Iterator = var1.iterator();
 
-         while (var3.hasNext()) {
-            var2.add((var3.next() as AndroidAudioDevice).toNativeMap());
+         while (var4.hasNext()) {
+            var3.add((var4.next() as AndroidAudioDevice).toNativeMap());
          }
 
-         return NativeArrayExtensionsKt.toNativeArray$default(var2, null, 1, null);
+         return NativeArrayExtensionsKt.toNativeArray$default(var3, null, 1, null);
       }
    }
 }

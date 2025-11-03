@@ -1,10 +1,10 @@
 package com.discord.metric_monitor
 
-import P2.a
 import com.discord.codegen.NativeMetricMonitorModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
-import xa.v
+import ht.v
+import s8.a
 
 public class MetricMonitorModule(reactContext: ReactApplicationContext) : NativeMetricMonitorModuleSpec(var1) {
    private final val reactEvents: ReactEvents = new ReactEvents(v.a("logMetric", MetricEvent::class))
@@ -19,10 +19,10 @@ public class MetricMonitorModule(reactContext: ReactApplicationContext) : Native
       return Unit.a;
    }
 
-   public open fun addListener(eventType: String) {
+   public override fun addListener(eventType: String) {
    }
 
-   public open fun removeListeners(count: Double) {
+   public override fun removeListeners(count: Double) {
    }
 
    public companion object {

@@ -5,7 +5,7 @@ import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
-import xa.v
+import ht.v
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec(var1) {
    private final val reactContext: ReactApplicationContext
@@ -26,9 +26,9 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
          @Override
          public void onHostDestroy() {
             if (AppLifecycleModule.access$getReactListenerCount$p(this.this$0) != 0) {
-               val var2: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
-               val var1: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
-               var2.emitModuleEvent(var1, new OnHostDestroyEvent());
+               val var1: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
+               val var2: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
+               var1.emitModuleEvent(var2, new OnHostDestroyEvent());
             }
          }
 
@@ -42,21 +42,21 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
       };
    }
 
-   public open fun addListener(type: String) {
+   public override fun addListener(type: String) {
       this.reactListenerCount++;
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
       this.reactContext.addLifecycleEventListener(this.reactLifecycleEventListener);
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       this.reactContext.removeLifecycleEventListener(this.reactLifecycleEventListener);
    }
 
-   public open fun removeListeners(count: Double) {
+   public override fun removeListeners(count: Double) {
       this.reactListenerCount -= (int)var1;
    }
 }

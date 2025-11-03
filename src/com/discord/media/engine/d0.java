@@ -1,12 +1,13 @@
 package com.discord.media.engine;
 
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class d0 implements Function1 {
+public final class d0 implements Function2 {
    public final MediaEngineModule d;
+   public final int e;
 
-   public final Object invoke(Object var1) {
-      return <unrepresentable>.j(this.d, (Boolean)var1);
+   public final Object invoke(Object var1, Object var2) {
+      return <unrepresentable>.l(this.d, this.e, (String)var1, (Integer)var2);
    }
 }

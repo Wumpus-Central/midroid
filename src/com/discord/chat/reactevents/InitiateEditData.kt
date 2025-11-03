@@ -3,10 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId) : InitiateEditData(var1, var2), ReactEvent {
@@ -50,20 +49,20 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
       return MessageId.hashCode-impl(this.messageId) * 31 + ChannelId.hashCode-impl(this.channelId);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateEditData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InitiateEditData(messageId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

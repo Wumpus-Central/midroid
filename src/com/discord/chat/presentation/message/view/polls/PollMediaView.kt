@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
-import com.discord.chat.R
+import com.discord.chat.R.styleable
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.polls.PollAnswer
 import com.discord.chat.bridge.polls.PollMedia
@@ -53,14 +53,14 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
    }
 
    init {
-      this.hierarchyBuilder = N3.a.d(var1, var2);
+      this.hierarchyBuilder = qa.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
-      val var3: IntArray = R.styleable.PollMediaView;
+      val var3: IntArray = styleable.PollMediaView;
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
-      this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
+      this.emojiSize = var4.getDimensionPixelSize(styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = xa.l.a(new k(var1, this));
-      this.textView$delegate = xa.l.a(new l(var1, this));
+      this.draweeView$delegate = ht.l.b(new k(var1, this));
+      this.textView$delegate = ht.l.b(new l(var1, this));
    }
 
    @JvmStatic

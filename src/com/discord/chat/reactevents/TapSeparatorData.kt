@@ -4,7 +4,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import xa.v
+import ht.v
 
 public data class TapSeparatorData(type: String, context: String? = null) : ReactEvent {
    public final val type: String
@@ -54,13 +54,13 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
       return var2 * 31 + var1;
    }
 
-   public open fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("type", this.type)});
+   public override fun serialize(): WritableMap {
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(v.a("type", this.type));
       if (this.context != null) {
-         var2.putString("context", this.context);
+         var1.putString("context", this.context);
       }
 
-      return var2;
+      return var1;
    }
 
    public override fun toString(): String {

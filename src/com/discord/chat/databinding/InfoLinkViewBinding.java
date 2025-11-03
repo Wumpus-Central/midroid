@@ -9,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
 
 public final class InfoLinkViewBinding implements ViewBinding {
    @NonNull
@@ -31,15 +30,15 @@ public final class InfoLinkViewBinding implements ViewBinding {
    @NonNull
    public static InfoLinkViewBinding bind(@NonNull View var0) {
       int var1 = R.id.description;
-      TextView var2 = (TextView)a.a(var0, var1);
+      TextView var2 = (TextView)k5.a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.icon;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.info_link_container;
-            ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-            if (var4 != null) {
-               return new InfoLinkViewBinding(var0, var2, var3, var4);
+            ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
+            if (var3 != null) {
+               return new InfoLinkViewBinding(var0, var2, var4, var3);
             }
          }
       }

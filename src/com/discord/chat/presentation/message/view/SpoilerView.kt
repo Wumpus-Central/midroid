@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
+import androidx.constraintlayout.widget.ConstraintLayout.LayoutParams
 import androidx.transition.Transition
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
 import com.discord.chat.bridge.spoiler.SpoilerConfig
@@ -32,8 +33,8 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    init {
       val var3: SpoilerViewBinding = SpoilerViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var3;
-      this.onReveal = new U0();
-      this.onHide = new V0();
+      this.onReveal = new t2();
+      this.onHide = new u2();
    }
 
    private fun configureObscureOverlay(config: SpoilerConfig, parent: ViewGroup) {
@@ -49,12 +50,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var9: ObscureOverlayView = this.binding.obscure;
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var5: Function1 = var3.getLabel();
-      var var6: Context = this.getContext();
-      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
-      val var8: Function1 = var3.getDescription();
-      var6 = this.getContext();
-      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      var var6: Function1 = var3.getLabel();
+      val var5: Context = this.getContext();
+      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
+      var6 = var3.getDescription();
+      val var8: Context = this.getContext();
+      var10.configure(var11, var6.invoke(var8) as java.lang.String, var2, this.isOverlayVisible, new p2(var7), new q2(var7));
    }
 
    @JvmStatic
@@ -79,7 +80,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
       val var9: Function1 = var1.getAttributes().getDescription();
       val var6: Context = this.getContext();
-      var3.configure(var8, var9.invoke(var6) as java.lang.String, new P0(this, var2));
+      var3.configure(var8, var9.invoke(var6) as java.lang.String, new o2(this, var2));
    }
 
    @JvmStatic
@@ -94,7 +95,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun onObscureToggleVisibilityClick(overlayView: View, onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new T0(this, var1, var2);
+      return new s2(this, var1, var2);
    }
 
    @JvmStatic
@@ -105,7 +106,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun onObscureVerifyAgeClick(onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new S0(var1);
+      return new r2(var1);
    }
 
    @JvmStatic
@@ -144,9 +145,9 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var3 = 1;
       }
 
-      val var5: androidx.transition.c = new androidx.transition.c(var3);
-      var5.e0(150L);
-      var5.b(new androidx.transition.p(var1, this) {
+      val var5: androidx.transition.e = new androidx.transition.e(var3);
+      var5.o0(150L);
+      var5.d(new androidx.transition.w(var1, this) {
          final boolean $showImage;
          final SpoilerView this$0;
 
@@ -155,7 +156,6 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             this.this$0 = var2;
          }
 
-         @Override
          public void onTransitionEnd(Transition var1) {
             if (this.$showImage) {
                SpoilerView.access$getOnReveal$p(this.this$0).invoke();
@@ -166,7 +166,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
          }
       });
-      androidx.transition.q.a((ViewGroup)var4, var5);
+      androidx.transition.x.a((ViewGroup)var4, var5);
       if (!var1) {
          var3 = 0;
       } else {
@@ -241,14 +241,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          val var4: SpoilerView = new SpoilerView(var3, null, 2, null);
          var4.setId(View.generateViewId());
          ViewClippingUtilsKt.clipToRoundedRectangle(var4, var2);
-         var4.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
+         var4.setLayoutParams(new LayoutParams(0, 0));
          var1.addView(var4);
          val var5: ConstraintSet = new ConstraintSet();
          var5.f(var1);
-         var5.g(var4.getId(), 6, 0, 6, 0);
-         var5.g(var4.getId(), 7, 0, 7, 0);
-         var5.g(var4.getId(), 3, 0, 3, 0);
-         var5.g(var4.getId(), 4, 0, 4, 0);
+         var5.h(var4.getId(), 6, 0, 6, 0);
+         var5.h(var4.getId(), 7, 0, 7, 0);
+         var5.h(var4.getId(), 3, 0, 3, 0);
+         var5.h(var4.getId(), 4, 0, 4, 0);
          var5.c(var1);
          return var4;
       }

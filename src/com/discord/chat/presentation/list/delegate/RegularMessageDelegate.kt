@@ -3,7 +3,7 @@ package com.discord.chat.presentation.list.delegate
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.presentation.events.ChatEventHandler
@@ -39,34 +39,29 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
    }
 
    private fun getChainPart(item: MessageItem, metadata: Metadata<MessageView>): ChainPart {
-      val var5: RecyclerView.Adapter = var2.getHolder().getBindingAdapter();
-      val var9: ChatListAdapter = var5 as ChatListAdapter;
+      val var5: Adapter = var2.getHolder().getBindingAdapter();
+      val var8: ChatListAdapter = var5 as ChatListAdapter;
       val var3: Int = var2.getHolder().getBindingAdapterPosition();
       var var4: Boolean = true;
-      val var7: ChatListItem = CollectionsKt.l0(var9.getChatListItems(), var3 - 1) as ChatListItem;
-      val var8: Boolean;
+      val var6: ChatListItem = CollectionsKt.q0(var8.getChatListItems(), var3 - 1) as ChatListItem;
+      val var7: Boolean;
       if (var1.getMessage().getTimestamp() == null) {
-         var8 = true;
+         var7 = true;
       } else {
-         var8 = false;
+         var7 = false;
       }
 
-      if (var7 !is MessageItem || (var7 as MessageItem).getMessage().getTimestamp() != null) {
+      if (var6 !is MessageItem || (var6 as MessageItem).getMessage().getTimestamp() != null) {
          var4 = false;
       }
 
-      val var6: MessageView.ChainPart;
-      if (var4 && !var8) {
-         var6 = MessageView.ChainPart.START;
-      } else if (var4 && var8) {
-         var6 = MessageView.ChainPart.MIDDLE;
-      } else if (!var4 && var8) {
-         var6 = MessageView.ChainPart.END;
+      if (var4 && !var7) {
+         return MessageView.ChainPart.START;
+      } else if (var4 && var7) {
+         return MessageView.ChainPart.MIDDLE;
       } else {
-         var6 = MessageView.ChainPart.ONLY;
+         return if (!var4 && var7) MessageView.ChainPart.END else MessageView.ChainPart.ONLY;
       }
-
-      return var6;
    }
 
    public open fun bindView(view: MessageView, item: MessageItem, metadata: Metadata<MessageView>) {

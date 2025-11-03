@@ -16,16 +16,16 @@ internal class SystemLogCapture {
    private final lateinit var activityManager: ActivityManager
 
    private fun addExceptionToBuffer(e: Exception) {
-      val var7: Array<StackTraceElement> = var1.getStackTrace();
-      val var3: Int = var7.length;
+      val var4: Array<StackTraceElement> = var1.getStackTrace();
+      val var3: Int = var4.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var4: StackTraceElement = var7[var2];
-         val var6: CircularByteBuffer = this.buffer;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("    ");
-         var5.append(var4);
-         var6.addLine(var5.toString());
+         val var6: StackTraceElement = var4[var2];
+         val var5: CircularByteBuffer = this.buffer;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("    ");
+         var7.append(var6);
+         var5.addLine(var7.toString());
       }
    }
 
@@ -81,65 +81,65 @@ internal class SystemLogCapture {
       // 2a: aload 2
       // 2b: aload 3
       // 2c: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;)V
-      // 2f: new com/discord/crash_reporting/system_logs/d
+      // 2f: new com/discord/crash_reporting/system_logs/a
       // 32: astore 3
       // 33: aload 3
       // 34: aload 0
-      // 35: invokespecial com/discord/crash_reporting/system_logs/d.<init> (Lcom/discord/crash_reporting/system_logs/SystemLogCapture;)V
+      // 35: invokespecial com/discord/crash_reporting/system_logs/a.<init> (Lcom/discord/crash_reporting/system_logs/SystemLogCapture;)V
       // 38: aload 2
       // 39: aload 3
-      // 3a: invokestatic Ha/q.c (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
+      // 3a: invokestatic tt/r.d (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
       // 3d: getstatic kotlin/Unit.a Lkotlin/Unit;
       // 40: astore 3
       // 41: aload 2
       // 42: aconst_null
-      // 43: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 43: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 46: aload 1
       // 47: invokevirtual java/lang/Process.destroy ()V
       // 4a: return
       // 4b: astore 2
-      // 4c: goto 5d
-      // 4f: astore 4
-      // 51: aload 4
-      // 53: athrow
-      // 54: astore 3
-      // 55: aload 2
-      // 56: aload 4
-      // 58: invokestatic Ha/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 5b: aload 3
-      // 5c: athrow
-      // 5d: aload 1
-      // 5e: invokevirtual java/lang/Process.destroy ()V
-      // 61: aload 2
-      // 62: athrow
-      // 63: astore 3
-      // 64: aload 0
-      // 65: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
-      // 68: astore 1
-      // 69: new java/lang/StringBuilder
-      // 6c: dup
-      // 6d: invokespecial java/lang/StringBuilder.<init> ()V
-      // 70: astore 2
-      // 71: aload 2
-      // 72: ldc "Exception starting logcat process '"
-      // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 77: pop
-      // 78: aload 2
-      // 79: aload 3
-      // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      // 7d: pop
-      // 7e: aload 2
-      // 7f: ldc "'"
-      // 81: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 84: pop
-      // 85: aload 1
-      // 86: aload 2
-      // 87: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 8a: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
-      // 8d: aload 0
-      // 8e: aload 3
-      // 8f: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
-      // 92: return
+      // 4c: goto 5c
+      // 4f: astore 3
+      // 50: aload 3
+      // 51: athrow
+      // 52: astore 4
+      // 54: aload 2
+      // 55: aload 3
+      // 56: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 59: aload 4
+      // 5b: athrow
+      // 5c: aload 1
+      // 5d: invokevirtual java/lang/Process.destroy ()V
+      // 60: aload 2
+      // 61: athrow
+      // 62: astore 3
+      // 63: aload 0
+      // 64: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
+      // 67: astore 1
+      // 68: new java/lang/StringBuilder
+      // 6b: dup
+      // 6c: invokespecial java/lang/StringBuilder.<init> ()V
+      // 6f: astore 2
+      // 70: aload 2
+      // 71: ldc "Exception starting logcat process '"
+      // 73: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 76: pop
+      // 77: aload 2
+      // 78: aload 3
+      // 79: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      // 7c: pop
+      // 7d: aload 2
+      // 7e: ldc "'"
+      // 80: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 83: pop
+      // 84: aload 1
+      // 85: aload 2
+      // 86: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 89: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
+      // 8c: aload 0
+      // 8d: aload 3
+      // 8e: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
+      // 91: return
    }
 
    @JvmStatic
@@ -148,7 +148,7 @@ internal class SystemLogCapture {
          var0.buffer.addLine(var1);
       }
 
-      if (SystemLogUtils.INSTANCE.getRegexExtractTombstone$crash_reporting_release().g(var1)) {
+      if (SystemLogUtils.INSTANCE.getRegexExtractTombstone$crash_reporting_release().i(var1)) {
          var0.tombstoneBuffer.addLine(var1);
       }
 
@@ -168,14 +168,14 @@ internal class SystemLogCapture {
                      this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
                   }
                } catch (var4: Exception) {
-                  val var1: CircularByteBuffer = this.buffer;
-                  val var3: StringBuilder = new StringBuilder();
-                  var3.append("Exception getting system logs, will restart logcat. '");
-                  val var2: Any;
-                  var3.append(var2);
-                  var3.append("'");
-                  var1.addLine(var3.toString());
-                  this.addExceptionToBuffer((Exception)var2);
+                  val var2: CircularByteBuffer = this.buffer;
+                  val var1: StringBuilder = new StringBuilder();
+                  var1.append("Exception getting system logs, will restart logcat. '");
+                  val var3: Any;
+                  var1.append(var3);
+                  var1.append("'");
+                  var2.addLine(var1.toString());
+                  this.addExceptionToBuffer((Exception)var3);
                }
             } catch (var5: java.lang.Throwable) {
                Thread.sleep(2000L);
@@ -199,17 +199,17 @@ internal class SystemLogCapture {
 
    public fun startThread(context: Context) {
       this.activityManager = var1.getSystemService(ActivityManager.class) as ActivityManager;
-      Ba.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new e(this), 20, null);
+      mt.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new b(this), 20, null);
    }
 
    public companion object {
       private const val THREAD_SLEEP_MS: Long
 
       internal fun shouldIncludeLogLine(line: String): Boolean {
-         if (StringsKt.N(var1, "chatty  : uid=", false, 2, null)) {
+         if (StringsKt.T(var1, "chatty  : uid=", false, 2, null)) {
             return false;
-         } else if (StringsKt.N(var1, "OpenSLESRecorder", false, 2, null)) {
-            return StringsKt.N(var1, " E ", false, 2, null);
+         } else if (StringsKt.T(var1, "OpenSLESRecorder", false, 2, null)) {
+            return StringsKt.T(var1, " E ", false, 2, null);
          } else {
             return true;
          }

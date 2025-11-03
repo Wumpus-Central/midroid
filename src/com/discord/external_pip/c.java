@@ -1,5 +1,11 @@
 package com.discord.external_pip;
 
+import kotlin.Result;
+import kotlin.jvm.functions.Function1;
+
 // $VF: synthetic class
-public abstract class c {
+public final class c implements Function1 {
+   public final Object invoke(Object var1) {
+      return ExternalPipManager.a((Result)var1);
+   }
 }

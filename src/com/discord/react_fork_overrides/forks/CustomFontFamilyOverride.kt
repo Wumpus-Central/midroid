@@ -23,14 +23,14 @@ internal object CustomFontFamilyOverride {
          var7 = "";
       }
 
+      var1 = var7;
       val var8: Array<java.lang.String> = StringsKt.split$default(var7, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
       var var6: Int = var8.length;
 
       for (int var4 = 0; var4 < var6; var4++) {
-         var8[var4] = StringsKt.Z0(var8[var4]).toString();
+         var8[var4] = StringsKt.i1(var8[var4]).toString();
       }
 
-      var1 = var7;
       if (var8.length > 1) {
          if (VERSION.SDK_INT >= 29) {
             return this.createAssetTypefaceWithFallbacks(var8, var2, var3);
@@ -45,10 +45,10 @@ internal object CustomFontFamilyOverride {
          if (VERSION.SDK_INT < 29) {
             var7 = var1;
             if ((var2 and 2) != 0) {
-               var7 = StringsKt.A(
-                  StringsKt.A(
-                     StringsKt.A(
-                        StringsKt.A(StringsKt.A(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
+               var7 = StringsKt.F(
+                  StringsKt.F(
+                     StringsKt.F(
+                        StringsKt.F(StringsKt.F(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
                      ),
                      "Bold",
                      "BoldItalic",
@@ -62,18 +62,18 @@ internal object CustomFontFamilyOverride {
 
             var1 = var7;
             if ((var2 and 1) != 0) {
-               var1 = StringsKt.A(StringsKt.A(StringsKt.A(var7, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+               var1 = StringsKt.F(StringsKt.F(StringsKt.F(var7, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
             }
 
-            var7 = StringsKt.A(StringsKt.A(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+            var7 = StringsKt.F(StringsKt.F(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
          }
       }
 
-      val var14: Array<java.lang.String> = FILE_EXTENSIONS;
+      val var13: Array<java.lang.String> = FILE_EXTENSIONS;
       var6 = FILE_EXTENSIONS.length;
 
-      for (int var16 = 0; var16 < var6; var16++) {
-         val var20: java.lang.String = var14[var16];
+      for (int var15 = 0; var15 < var6; var15++) {
+         val var20: java.lang.String = var13[var15];
          val var9: StringBuilder = new StringBuilder();
          var9.append("fonts/");
          var9.append(var7);
@@ -86,8 +86,8 @@ internal object CustomFontFamilyOverride {
          }
       }
 
-      val var15: Typeface = Typeface.create(var7, var2);
-      return var15;
+      val var14: Typeface = Typeface.create(var7, var2);
+      return var14;
    }
 
    private fun createAssetTypefaceWithFallbacks(fontFamilyNames: Array<String>, style: Int, assetManager: AssetManager): Typeface {
@@ -98,10 +98,10 @@ internal object CustomFontFamilyOverride {
          var var10: java.lang.String = var1[var4];
          var var9: java.lang.String = var1[var4];
          if ((var2 and 2) != 0) {
-            var9 = StringsKt.A(
-               StringsKt.A(
-                  StringsKt.A(
-                     StringsKt.A(StringsKt.A(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
+            var9 = StringsKt.F(
+               StringsKt.F(
+                  StringsKt.F(
+                     StringsKt.F(StringsKt.F(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
                   ),
                   "Bold",
                   "BoldItalic",
@@ -115,27 +115,27 @@ internal object CustomFontFamilyOverride {
 
          var10 = var9;
          if ((var2 and 1) != 0) {
-            var10 = StringsKt.A(StringsKt.A(StringsKt.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+            var10 = StringsKt.F(StringsKt.F(StringsKt.F(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = StringsKt.A(StringsKt.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = StringsKt.F(StringsKt.F(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var25[var5];
+            var var12: java.lang.String = var28[var5];
             val var13: StringBuilder = new StringBuilder();
             var13.append("fonts/");
-            var13.append(var10);
+            var13.append(var9);
             var13.append(var12);
             var12 = var13.toString();
 
             try {
-               b.a();
-               val var32: Font = a.a(k.a(var3, var12));
-               c.a();
-               val var33: FontFamily = f.a(l.a(var32));
+               e.a();
+               val var32: Font = a.a(var3, var12).build();
+               f.a();
+               val var33: FontFamily = b.a(var32).build();
                var11.add(var33);
             } catch (var14: java.lang.Throwable) {
                continue;
@@ -146,19 +146,19 @@ internal object CustomFontFamilyOverride {
       if (var11.size() == 0) {
          return this.createAssetTypeface(var1[0], var2, var3);
       } else {
-         d.a();
-         val var21: CustomFallbackBuilder = m.a(g.a(var11.get(0)));
+         g.a();
+         val var21: CustomFallbackBuilder = c.a(i.a(var11.get(0)));
          val var22: Int = var11.size();
 
          for (int var19 = 1; var19 < var22; var19++) {
-            h.a(var21, g.a(var11.get(var19)));
+            var21.addCustomFallback(i.a(var11.get(var19)));
          }
 
          var var29: java.lang.String = var1[0];
          val var26: Locale = Locale.ROOT;
          var29 = var29.toLowerCase(var26);
          val var20: Byte;
-         if (StringsKt.a0(var29, "italic", 0, false, 6, null) > -1) {
+         if (StringsKt.g0(var29, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
          } else {
             var20 = 0;
@@ -167,19 +167,19 @@ internal object CustomFontFamilyOverride {
          val var16: java.lang.String = var1[0];
          val var17: java.lang.String = var16.toLowerCase(var26);
          var var23: Short = 0;
-         if (StringsKt.a0(var17, "bold", 0, false, 6, null) > -1) {
+         if (StringsKt.g0(var17, "bold", 0, false, 6, null) > -1) {
             var23 = 1;
          }
 
-         e.a();
+         h.a();
          if (var23) {
             var23 = 700;
          } else {
             var23 = 400;
          }
 
-         i.a(var21, n.a(var23, var20));
-         val var18: Typeface = j.a(var21);
+         var21.setStyle(d.a(var23, var20));
+         val var18: Typeface = var21.build();
          return var18;
       }
    }
@@ -190,6 +190,6 @@ internal object CustomFontFamilyOverride {
    }
 
    public fun override() {
-      ReactFontManager.Companion.setCreateAssetTypefaceOverride(new o());
+      ReactFontManager.Companion.setCreateAssetTypefaceOverride(new j());
    }
 }

@@ -22,17 +22,20 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final var reactResources: MutableMap<String, String> = new LinkedHashMap()
 
    public fun get(context: Context, reactResource: Any): String {
-      val var4: java.lang.String = this.reactResources.get(var2.name());
-      var var3: java.lang.String = var4;
-      if (var4 == null) {
-         var var5: java.lang.String = this.getCache(var1).getString(var2.name(), null);
-         if (var5 != null) {
-            this.reactResources.put(var2.name(), var5);
-         } else {
-            var5 = null;
+      var var3: java.lang.String = this.reactResources.get(var2.name());
+      if (var3 == null) {
+         val var8: SharedPreferences = this.getCache(var1);
+         val var4: java.lang.String = var2.name();
+         var var5: java.lang.String = null;
+         var3 = var8.getString(var4, null);
+         if (var3 != null) {
+            this.reactResources.put(var2.name(), var3);
+            var5 = var3;
          }
 
-         if (var5 == null) {
+         if (var5 != null) {
+            return var5;
+         } else {
             val var7: java.lang.String = var2.name();
             val var6: StringBuilder = new StringBuilder();
             var6.append("Unable to access ");
@@ -40,22 +43,20 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
             var6.append(" as it has not yet been provided.");
             throw new IllegalAccessException(var6.toString());
          }
-
-         var3 = var5;
+      } else {
+         return var3;
       }
-
-      return var3;
    }
 
    public fun set(context: Context, newReactResources: Map<String, String>) {
-      val var3: Editor = this.getCache(var1).edit();
-      var3.clear();
+      val var5: Editor = this.getCache(var1).edit();
+      var5.clear();
 
-      for (Entry var4 : var2.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var3 : var2.entrySet()) {
+         var5.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);
-      var3.apply();
+      var5.apply();
    }
 }

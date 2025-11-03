@@ -28,7 +28,11 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
    }
 
    private fun rebuildShader() {
-      if (this.getWidth() != 0 && this.getHeight() != 0 && this.colors.length != 0) {
+      if (this.getWidth() != 0 && this.getHeight() != 0) {
+         if (this.colors.length == 0) {
+            return;
+         }
+
          var var9: Int = this.colors.length;
          var var8: Int = 0;
          if (var9 == 1) {
@@ -39,12 +43,12 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
 
          val var1: Double = Math.toRadians((double)this.angleDegrees - (double)90);
          var var7: Float = (float)Math.cos(var1);
-         var var5: Float = (float)Math.sin(var1);
-         val var4: Float = this.getWidth() / 2.0F;
-         val var3: Float = this.getHeight() / 2.0F;
-         val var6: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
-         var7 = var7 * var6;
-         var5 = var5 * var6;
+         val var6: Float = (float)Math.sin(var1);
+         val var3: Float = this.getWidth() / 2.0F;
+         val var4: Float = this.getHeight() / 2.0F;
+         var var5: Float = (float)Math.hypot((double)((float)this.getWidth()), (double)((float)this.getHeight())) * 0.5F;
+         var7 = var7 * var5;
+         var5 = var6 * var5;
          var9 = this.colors.length;
 
          val var14: FloatArray;
@@ -52,7 +56,7 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
             var14[var8] = (float)var8 / (this.colors.length - 1);
          }
 
-         val var15: LinearGradient = new LinearGradient(var4 - var7, var3 - var5, var4 + var7, var3 + var5, this.colors, var14, TileMode.CLAMP);
+         val var15: LinearGradient = new LinearGradient(var3 - var7, var4 - var5, var3 + var7, var4 + var5, this.colors, var14, TileMode.CLAMP);
          this.shader = var15;
          this.paint.setShader(var15);
       }
@@ -85,14 +89,14 @@ public class ThemePreviewView  public constructor(context: Context, attrs: Attri
    }
 
    public fun setHexColors(hexColors: List<String>) {
-      val var2: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
-      val var3: java.util.Iterator = var1.iterator();
+      val var3: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
+      val var4: java.util.Iterator = var1.iterator();
 
-      while (var3.hasNext()) {
-         var2.add(Color.parseColor(var3.next() as java.lang.String));
+      while (var4.hasNext()) {
+         var3.add(Color.parseColor(var4.next() as java.lang.String));
       }
 
-      this.colors = CollectionsKt.V0(var2);
+      this.colors = CollectionsKt.g1(var3);
       this.rebuildShader();
       this.invalidate();
    }

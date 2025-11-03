@@ -2,10 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : TapDismissMediaPostSharePromptData(var1), ReactEvent {
@@ -38,8 +37,8 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
       return MessageId.hashCode-impl(this.messageId);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

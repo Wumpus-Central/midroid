@@ -1,6 +1,5 @@
 package com.discord.chat.bridge
 
-import Da.a
 import kotlin.enums.EnumEntries
 
 public enum class MediaType(type: String) {
@@ -17,7 +16,7 @@ public enum class MediaType(type: String) {
    fun {
       val var0: Array<MediaType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

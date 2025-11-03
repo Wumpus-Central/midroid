@@ -1,18 +1,15 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.forwarding.ForwardInfo;
-import kotlin.jvm.functions.Function3;
+import com.discord.chat.bridge.contentnode.LinkContentNode;
+import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class h0 implements OnClickListener {
-   public final Function3 d;
-   public final ForwardInfo e;
-   public final long i;
-   public final String s;
+public final class h0 implements Function1 {
+   public final Function2 d;
+   public final String e;
 
-   public final void onClick(View var1) {
-      ForwardBreadcrumbView.g(this.d, this.e, this.i, this.s, var1);
+   public final Object invoke(Object var1) {
+      return EphemeralIndicationView.h(this.d, this.e, (LinkContentNode)var1);
    }
 }

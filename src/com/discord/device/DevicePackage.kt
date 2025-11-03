@@ -9,11 +9,11 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class DevicePackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.k();
+   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+      return CollectionsKt.l();
    }
 
-   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       switch (var1.hashCode()) {
          case -2084303303:
             if (var1.equals("NativeDeviceModule")) {
@@ -45,9 +45,9 @@ public class DevicePackage : BaseReactPackage {
       return null;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(
-         CollectionsKt.n(
+         CollectionsKt.o(
             new java.lang.String[]{
                "NativeDeviceAccessibilityModule",
                "NativeDeviceLocaleModule",

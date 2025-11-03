@@ -9,7 +9,7 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.ThreadStarterMessageHeaderViewBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -61,7 +61,7 @@ public class ThreadStarterMessageHeaderView  public constructor(context: Context
 
       var6.setVisibility(var4);
       this.binding.threadStarterHeaderText.setText(var1);
-      val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
+      val var3: Float = this.getResources().getDimension(dimen.message_start_guideline);
       val var7: View = this.binding.getRoot();
       val var10: LayoutParams = var7.getLayoutParams();
       if (var10 != null) {

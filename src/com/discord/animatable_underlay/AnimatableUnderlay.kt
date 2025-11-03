@@ -13,9 +13,9 @@ import com.discord.react_rootview.RootViewUtils
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
+import ht.p
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.p
 
 @SourceDebugExtension(["SMAP\nAnimatableUnderlay.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AnimatableUnderlay.kt\ncom/discord/animatable_underlay/AnimatableUnderlay\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,182:1\n404#2:183\n*S KotlinDebug\n*F\n+ 1 AnimatableUnderlay.kt\ncom/discord/animatable_underlay/AnimatableUnderlay\n*L\n48#1:183\n*E\n"])
 public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
@@ -68,10 +68,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
             }
 
             val var15: RectF = this.pathRect;
-            val var4: Float = this.height;
+            val var3: Float = this.height;
             val var2: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var4 - (var4 - var2) / 2;
+            var15.bottom = var3 - (var3 - var2) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -93,9 +93,9 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
             val var19: RectF = this.pathRect;
             val var9: Float = this.width;
-            val var13: Float = this.shapeWidth;
+            val var12: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var9 - (var9 - var13) / 2;
+            var19.right = var9 - (var9 - var12) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -154,7 +154,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new a(this));
+      RootViewUtils.INSTANCE.setOnInterceptTouchEvent(this, new com.discord.animatable_underlay.a(this));
    }
 
    protected open fun onDetachedFromWindow() {
@@ -182,7 +182,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic
@@ -229,7 +229,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup(var1) {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic

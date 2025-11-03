@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 
 private class VoiceUserAdapter : Adapter {
-   private final var data: List<MobileVoiceOverlayDataUser> = CollectionsKt.k()
+   private final var data: List<MobileVoiceOverlayDataUser> = CollectionsKt.l()
 
    public open fun getItemCount(): Int {
       return this.data.size();

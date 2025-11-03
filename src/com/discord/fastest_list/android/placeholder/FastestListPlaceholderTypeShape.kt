@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
-import xa.p
+import ht.p
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder() {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
@@ -35,7 +35,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
          this.paint = var2;
       }
 
-      public open fun draw(canvas: Canvas) {
+      public override fun draw(canvas: Canvas) {
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();
@@ -56,21 +56,21 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
          var var5: Float;
          if (this.config.getCount() > 1) {
-            var2 = var2 - this.config.getCount() * var3;
-            var5 = this.config.getCount() - 1;
+            var5 = var2 - this.config.getCount() * var3;
+            var2 = this.config.getCount() - 1;
          } else {
-            var2 = var2 - var3;
-            var5 = 2;
+            var5 = var2 - var3;
+            var2 = 2;
          }
 
-         val var6: Float = var2 / var5;
-         val var8: Int = this.config.getCount();
+         val var6: Float = var5 / var2;
+         val var9: Int = this.config.getCount();
 
-         for (int var9 = 0; var9 < var8; var9++) {
+         for (int var8 = 0; var8 < var9; var8++) {
             if (this.config.getCount() == 1) {
                var5 = var6;
             } else {
-               var5 = var9 * (var3 + var6);
+               var5 = var8 * (var3 + var6);
             }
 
             var var10: Int = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$1[this.config.getType().ordinal()];

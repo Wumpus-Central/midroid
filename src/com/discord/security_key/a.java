@@ -9,6 +9,6 @@ public final class a implements Function1 {
    public final Activity d;
 
    public final Object invoke(Object var1) {
-      return WebAuthn.d(this.d, (PendingIntent)var1);
+      return WebAuthn.a(this.d, (PendingIntent)var1);
    }
 }

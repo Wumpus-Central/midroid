@@ -6,7 +6,7 @@ import android.net.wifi.WifiManager.WifiLock
 import android.os.PowerManager
 import android.os.Build.VERSION
 import android.os.PowerManager.WakeLock
-import androidx.core.content.b
+import androidx.core.content.a
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nWakelocks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Wakelocks.kt\ncom/discord/foreground_service/utils/Wakelocks\n+ 2 Context.kt\nandroidx/core/content/ContextKt\n*L\n1#1,46:1\n31#2:47\n31#2:48\n*S KotlinDebug\n*F\n+ 1 Wakelocks.kt\ncom/discord/foreground_service/utils/Wakelocks\n*L\n16#1:47\n27#1:48\n*E\n"])
@@ -22,7 +22,7 @@ internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
    }
 
    public fun acquire(context: Context) {
-      val var2: WifiManager = b.i(var1, WifiManager.class) as WifiManager;
+      val var2: WifiManager = a.j(var1, WifiManager.class) as WifiManager;
       if (var2 != null) {
          if (VERSION.SDK_INT >= 34) {
             this.wakeLockWifi = var2.createWifiLock(4, this.tag);
@@ -31,7 +31,7 @@ internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
          }
       }
 
-      val var3: PowerManager = b.i(var1, PowerManager.class) as PowerManager;
+      val var3: PowerManager = a.j(var1, PowerManager.class) as PowerManager;
       if (var3 != null && var3.isWakeLockLevelSupported(1)) {
          val var4: WakeLock = var3.newWakeLock(1, this.tag);
          this.wakeLockPartial = var4;

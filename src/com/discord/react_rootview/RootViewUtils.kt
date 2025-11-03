@@ -15,21 +15,15 @@ public object RootViewUtils {
    private final val EMPTY_EXCLUSION_RECTS: List<Rect> = CollectionsKt.e(new Rect(0, 0, 0, 0))
 
    private fun getRootView(view: View): RootViewInterface? {
-      val var4: Context = var1.getContext();
-      val var2: Boolean = var4 is ReactContext;
-      var var3: RootViewInterface = null;
-      val var5: ReactContext;
-      if (var2) {
-         var5 = var4 as ReactContext;
+      val var2: Context = var1.getContext();
+      val var3: ReactContext;
+      if (var2 is ReactContext) {
+         var3 = var2 as ReactContext;
       } else {
-         var5 = null;
+         var3 = null;
       }
 
-      if (var5 != null) {
-         var3 = INSTANCE.getRootView(var5);
-      }
-
-      return var3;
+      return if (var3 != null) INSTANCE.getRootView(var3) else null;
    }
 
    public fun getRootView(context: ReactContext): RootViewInterface? {

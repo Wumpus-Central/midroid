@@ -1,13 +1,10 @@
 package com.discord.chat.presentation.message.view;
 
-import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class o0 implements Function0 {
-   public final boolean d;
-   public final MediaVideoView e;
-
-   public final Object invoke() {
-      return MediaVideoView.a(this.d, this.e);
+public final class o0 implements Function1 {
+   public final Object invoke(Object var1) {
+      return FlaggedMessageEmbedView.s((String)var1);
    }
 }

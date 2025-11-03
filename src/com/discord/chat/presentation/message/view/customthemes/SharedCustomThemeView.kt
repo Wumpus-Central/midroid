@@ -7,9 +7,10 @@ import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup.LayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.core.view.g0
+import androidx.core.view.o0
 import com.discord.chat.bridge.customthemes.SharedCustomThemeData
 import com.discord.chat.databinding.SharedCustomThemeViewBinding
 import com.discord.fonts.DiscordFont
@@ -21,7 +22,6 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
-import com.google.android.flexbox.FlexboxLayout.LayoutParams
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
@@ -71,18 +71,18 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       this.binding.previewBtn.setText(var2.getPreviewLabel());
       this.binding.previewBtn.setCornerRadius(this.binding.previewBtn.getHeight() / 2);
       this.binding.previewBtn.setOnClickButtonListener(new a(var4, var1));
-      val var8: ThemePreviewView = this.binding.themePreview;
-      val var16: java.util.List = var2.getColors();
-      val var12: ArrayList = new ArrayList(CollectionsKt.v(var16, 10));
+      val var12: ThemePreviewView = this.binding.themePreview;
+      val var16: java.lang.Iterable = var2.getColors();
+      val var8: ArrayList = new ArrayList(CollectionsKt.w(var16, 10));
 
-      for (java.lang.String var7 : var16) {
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("#");
-         var6.append(var7);
-         var12.add(var6.toString());
+      for (java.lang.String var17 : var16) {
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("#");
+         var7.append(var17);
+         var8.add(var7.toString());
       }
 
-      var8.setHexColors(var12);
+      var12.setHexColors(var8);
       this.binding.themePreview.setGradientAngle(var2.getGradientAngle());
       this.binding.previewHeading.setText(var2.getPreviewHeading());
       this.binding.previewHeading.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
@@ -91,9 +91,9 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimarySemibold);
       this.binding.previewHeading.setPadding(0, 0, 0, SizeUtilsKt.getDpToPx(6.0F));
       val var10: FlexboxLayout = this.binding.heading;
-      if (!k.o(g0.a(var10), this.nitroWheelIcon)) {
+      if (!k.B(o0.a(var10), this.nitroWheelIcon)) {
          val var11: SimpleDraweeView = this.nitroWheelIcon;
-         val var13: LayoutParams = new LayoutParams(SizeUtilsKt.getDpToPx(18.0F), SizeUtilsKt.getDpToPx(13.0F));
+         val var13: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(SizeUtilsKt.getDpToPx(18.0F), SizeUtilsKt.getDpToPx(13.0F));
          var13.setMarginStart(SizeUtilsKt.getDpToPx(4.0F));
          var11.setLayoutParams(var13);
          val var14: GenericDraweeHierarchy = new GenericDraweeHierarchyBuilder(var11.getResources())
@@ -109,20 +109,20 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
 
    public fun formatUsername(sharedCustomThemeData: SharedCustomThemeData, author: String?) {
       this.binding.createdByContainer.removeAllViews();
-      val var4: java.util.List = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
-      val var3: ArrayList = new ArrayList(CollectionsKt.v(var4, 10));
+      val var4: java.lang.Iterable = StringsKt.split$default(var1.getCreatedByLabel(), new java.lang.String[]{"__USERNAME__"}, false, 0, 6, null);
+      val var3: ArrayList = new ArrayList(CollectionsKt.w(var4, 10));
 
-      for (java.lang.String var6 : var4) {
-         val var8: TextView = new TextView(this.getContext());
-         var8.setText(var6);
-         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var8.setTextSize(14.0F);
-         var3.add(var8);
+      for (java.lang.String var8 : var4) {
+         val var5: TextView = new TextView(this.getContext());
+         var5.setText(var8);
+         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var5.setTextSize(14.0F);
+         var3.add(var5);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);
       val var9: SimpleDraweeView = new SimpleDraweeView(this.getContext());
-      var9.setLayoutParams(new android.view.ViewGroup.LayoutParams(SizeUtilsKt.getDpToPx(20.0F), SizeUtilsKt.getDpToPx(20.0F)));
+      var9.setLayoutParams(new LayoutParams(SizeUtilsKt.getDpToPx(20.0F), SizeUtilsKt.getDpToPx(20.0F)));
       val var10: com.facebook.drawee.generic.a = com.facebook.drawee.generic.a.a();
       val var11: GenericDraweeHierarchy = new GenericDraweeHierarchyBuilder(var9.getResources()).K(var10).a();
       var9.setHierarchy(var11);
@@ -138,14 +138,12 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      if (!this.hasViewed) {
-         if (this.messageId != null) {
-            if (this.onViewed != null) {
-               this.onViewed.invoke(MessageId.box-impl(this.messageId));
-            }
-
-            this.hasViewed = true;
+      if (!this.hasViewed && this.messageId != null) {
+         if (this.onViewed != null) {
+            this.onViewed.invoke(MessageId.box-impl(this.messageId));
          }
+
+         this.hasViewed = true;
       }
    }
 }

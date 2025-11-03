@@ -47,6 +47,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var2 = false;
    }
 
+   var var4: Boolean = true;
    val var13: Truncation = var0.getTruncation();
    val var3: Boolean;
    if (var0.getMessage() is Message && (var0.getMessage() as Message).getUseAttachmentGridLayout() == var11) {
@@ -55,10 +56,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var3 = false;
    }
 
-   val var4: Boolean;
-   if (var0.getMessage() is Message && (var0.getMessage() as Message).getUseAttachmentUploadPreview() == var11) {
-      var4 = true;
-   } else {
+   if (var0.getMessage() !is Message || !((var0.getMessage() as Message).getUseAttachmentUploadPreview() == var11)) {
       var4 = false;
    }
 
@@ -69,10 +67,8 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var5 = true;
    }
 
-   val var6: Boolean;
-   if (var0.getSwipeActions() === SwipeActionsType.REPLY_EDIT) {
-      var6 = true;
-   } else {
+   var var6: Boolean = true;
+   if (var0.getSwipeActions() != SwipeActionsType.REPLY_EDIT) {
       var6 = false;
    }
 

@@ -6,7 +6,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import xa.v
+import ht.v
 
 internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    private final val entry: Entry
@@ -17,7 +17,7 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
       this.size = var2;
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       val var3: Pair = v.a("section", this.entry.getSection-sZRFyWU());
       val var1: Int;
       if (this.entry is FastestListSections.Entry.SectionItem) {
@@ -27,14 +27,12 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            var3,
-            v.a("item", var1),
-            v.a("isSectionHeader", this.entry is FastestListSections.Entry.SectionHeader),
-            v.a("isSectionFooter", this.entry is FastestListSections.Entry.SectionFooter),
-            v.a("size", SizeUtilsKt.getPxToDp(this.size)),
-            v.a("sizeExpected", SizeUtilsKt.getPxToDp(this.entry.getSize()))
-         }
+         var3,
+         v.a("item", var1),
+         v.a("isSectionHeader", this.entry is FastestListSections.Entry.SectionHeader),
+         v.a("isSectionFooter", this.entry is FastestListSections.Entry.SectionFooter),
+         v.a("size", SizeUtilsKt.getPxToDp(this.size)),
+         v.a("sizeExpected", SizeUtilsKt.getPxToDp(this.entry.getSize()))
       );
    }
 }

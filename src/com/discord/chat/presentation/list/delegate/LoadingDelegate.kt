@@ -8,8 +8,8 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
+import ht.p
 import kotlin.jvm.functions.Function0
-import xa.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {

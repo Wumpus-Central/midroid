@@ -3,7 +3,6 @@ package com.discord.chat.presentation.list.delegate
 import android.content.Context
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
-import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.bridge.Message
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
@@ -18,8 +17,8 @@ public class CallSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHand
    private fun bindViewInternal(view: CallSystemMessageView, item: CallSystemMessageItem) {
       val var3: LayoutParams = var1.getLayoutParams();
       if (var3 != null) {
-         val var4: RecyclerView.LayoutParams = var3 as RecyclerView.LayoutParams;
-         (var3 as RecyclerView.LayoutParams).leftMargin = SizeUtilsKt.getDpToPx(12);
+         val var4: androidx.recyclerview.widget.RecyclerView.LayoutParams = var3 as androidx.recyclerview.widget.RecyclerView.LayoutParams;
+         (var3 as androidx.recyclerview.widget.RecyclerView.LayoutParams).leftMargin = SizeUtilsKt.getDpToPx(12);
          var4.rightMargin = SizeUtilsKt.getDpToPx(12);
          var1.setLayoutParams(var4);
          var1.setMessage(var2.getMessage(), this.getEventHandler());

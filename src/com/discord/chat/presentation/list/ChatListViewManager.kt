@@ -37,22 +37,17 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    private fun getExistingProvider(context: Context): ComponentProvider? {
-      val var4: Pair = this.weakProvider;
-      var var2: ComponentProvider = null;
+      val var2: Pair = this.weakProvider;
       if (this.weakProvider != null) {
-         val var6: WeakReference = this.weakProvider.a() as WeakReference;
-         val var7: ComponentProvider = var4.b() as ComponentProvider;
-         val var5: Context = var6.get() as Context;
-         var2 = null;
-         if (var5 != null) {
-            var2 = null;
-            if (var5 === var1) {
-               var2 = var7;
-            }
+         val var3: WeakReference = this.weakProvider.a() as WeakReference;
+         val var4: ComponentProvider = var2.b() as ComponentProvider;
+         val var5: Context = var3.get() as Context;
+         if (var5 != null && var5 === var1) {
+            return var4;
          }
       }
 
-      return var2;
+      return null;
    }
 
    private fun getOrCreateComponentProvider(context: Context): ComponentProvider {
@@ -93,37 +88,36 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       // 1f: aload 3
       // 20: areturn
       // 21: new com/discord/chat/presentation/message/view/botuikit/ComponentProvider
-      // 24: astore 4
-      // 26: aload 4
-      // 28: aload 1
-      // 29: bipush 1
-      // 2a: invokespecial com/discord/chat/presentation/message/view/botuikit/ComponentProvider.<init> (Landroid/content/Context;Z)V
-      // 2d: new java/lang/ref/WeakReference
-      // 30: astore 3
-      // 31: aload 3
+      // 24: astore 3
+      // 25: aload 3
+      // 26: aload 1
+      // 27: bipush 1
+      // 28: invokespecial com/discord/chat/presentation/message/view/botuikit/ComponentProvider.<init> (Landroid/content/Context;Z)V
+      // 2b: new java/lang/ref/WeakReference
+      // 2e: astore 4
+      // 30: aload 4
       // 32: aload 1
       // 33: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
       // 36: aload 0
-      // 37: aload 3
-      // 38: aload 4
-      // 3a: invokestatic xa/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
+      // 37: aload 4
+      // 39: aload 3
+      // 3a: invokestatic ht/v.a (Ljava/lang/Object;Ljava/lang/Object;)Lkotlin/Pair;
       // 3d: putfield com/discord/chat/presentation/list/ChatListViewManager.weakProvider Lkotlin/Pair;
       // 40: aload 2
       // 41: monitorexit
-      // 42: aload 4
-      // 44: areturn
-      // 45: astore 1
-      // 46: aload 2
-      // 47: monitorexit
-      // 48: aload 1
-      // 49: athrow
+      // 42: aload 3
+      // 43: areturn
+      // 44: astore 1
+      // 45: aload 2
+      // 46: monitorexit
+      // 47: aload 1
+      // 48: athrow
    }
 
    public open fun addView(parent: ChatListView, child: View, index: Int) {
-      val var4: Boolean = var2 is TTIMeasurementView;
-      val var5: TTIMeasurementView = var2 as TTIMeasurementView;
+      val var4: TTIMeasurementView = var2 as TTIMeasurementView;
       (var2 as TTIMeasurementView).setMeasurementSent(true);
-      var1.setOnFirstDrawDoneCallback(new v(var5, var1));
+      var1.setOnFirstDrawDoneCallback(new v(var4, var1));
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatListView {
@@ -134,7 +128,7 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
       return this.mDelegate;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDChatList";
    }
 

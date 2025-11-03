@@ -3,6 +3,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -44,22 +45,22 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
    }
 
    public open fun configure(component: ActionRowComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      val var7: java.util.List = var1.getComponents();
-      val var6: ArrayList = new ArrayList(CollectionsKt.v(var7, 10));
+      val var7: java.lang.Iterable = var1.getComponents();
+      val var6: ArrayList = new ArrayList(CollectionsKt.w(var7, 10));
       val var20: java.util.Iterator = var7.iterator();
 
       for (int var4 = 0; var20.hasNext(); var4++) {
          var var8: Any = var20.next();
          if (var4 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
-         var8 = var8 as Component;
-         val var9: FlexboxLayout = this.binding.actionRowComponentViewGroup;
-         var6.add(var2.getConfiguredComponentView((Component)var8, var3, var9, var4));
+         val var9: Component = var8 as Component;
+         var8 = this.binding.actionRowComponentViewGroup;
+         var6.add(var2.getConfiguredComponentView(var9, var3, (ViewGroup)var8, var4));
       }
 
-      val var15: java.util.List = CollectionsKt.g0(var6);
+      val var15: java.util.List = CollectionsKt.l0(var6);
       val var19: FlexboxLayout = this.binding.actionRowComponentViewGroup;
       MessageComponentsViewKt.replaceViews$default(var19, var15, var2, 0, 0, 12, null);
       val var11: FlexboxLayout = this.binding.actionRowComponentViewGroup;

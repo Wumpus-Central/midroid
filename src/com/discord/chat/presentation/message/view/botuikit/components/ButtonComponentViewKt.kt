@@ -38,25 +38,11 @@ fun `access$setSuccessColor`(var0: Button) {
 }
 
 private fun ButtonComponent.hasEmoji(): Boolean {
-   val var1: Boolean;
-   if (var0.getEmoji() != null) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getEmoji() != null;
 }
 
 private fun ButtonComponent.hasIcon(): Boolean {
-   val var1: Boolean;
-   if (var0.getStyle() === ButtonStyle.LINK) {
-      var1 = true;
-   } else {
-      var1 = false;
-   }
-
-   return var1;
+   return var0.getStyle() === ButtonStyle.LINK;
 }
 
 private fun Button.setBrandColor() {

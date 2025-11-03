@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.message.viewholder
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.ripple.RippleUtilsKt
@@ -11,7 +11,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 public abstract class StickerPartViewHolder : MessagePartViewHolder {
    open fun StickerPartViewHolder(var1: View) {
       super(var1, null);
-      var1.setLayoutParams(new RecyclerView.LayoutParams(SizeUtilsKt.getDpToPx(160), SizeUtilsKt.getDpToPx(160)));
+      var1.setLayoutParams(new LayoutParams(SizeUtilsKt.getDpToPx(160), SizeUtilsKt.getDpToPx(160)));
       var1.setPadding(DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX);
       RippleUtilsKt.addRipple$default(var1, false, 0, 3, null);
    }

@@ -11,13 +11,13 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.os.Build.VERSION
 import android.view.View
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.databinding.AudioPlayerViewBinding
 import com.discord.misc.utilities.drawable.GetDrawableCompatKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -68,14 +68,14 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    private final var animatorSet: AnimatorSet?
 
    init {
-      this.brand500 = var1.getColor(color.brand_500);
+      this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = xa.l.a(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = xa.l.a(new E());
-      this.scaleAnimator$delegate = xa.l.a(new F(var2, this));
-      this.textColorAnimator$delegate = xa.l.a(new G(var2));
-      this.buttonIconColorAnimator$delegate = xa.l.a(new H(var2));
-      this.progressColorAnimator$delegate = xa.l.a(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = ht.l.b(new u(var1));
+      this.buttonContainerActiveDrawable$delegate = ht.l.b(new v());
+      this.scaleAnimator$delegate = ht.l.b(new w(var2, this));
+      this.textColorAnimator$delegate = ht.l.b(new x(var2));
+      this.buttonIconColorAnimator$delegate = ht.l.b(new y(var2));
+      this.progressColorAnimator$delegate = ht.l.b(new z(var2));
    }
 
    @JvmStatic
@@ -89,9 +89,9 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    fun `buttonContainerDefaultDrawable_delegate$lambda$0`(var0: Context): Drawable {
       val var1: Int;
       if (ThemeManager.INSTANCE.isThemeLight()) {
-         var1 = R.drawable.drawable_audio_play_button_gradient_light;
+         var1 = drawable.drawable_audio_play_button_gradient_light;
       } else {
-         var1 = R.drawable.drawable_audio_play_button_gradient_dark;
+         var1 = drawable.drawable_audio_play_button_gradient_dark;
       }
 
       return GetDrawableCompatKt.getDrawableCompat(var0, var1);
@@ -100,7 +100,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `buttonIconColorAnimator_delegate$lambda$13`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, -16777216});
-      var1.addUpdateListener(new z(var0));
+      var1.addUpdateListener(new a0(var0));
       return var1;
    }
 
@@ -127,7 +127,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
       var7.setDuration(var5);
       if (VERSION.SDK_INT >= 26) {
-         x.a(var7, var2);
+         var7.setCurrentPlayTime(var2);
       }
 
       var7.addListener(new AnimatorListener(this) {
@@ -181,11 +181,11 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       val var2: ValueAnimator = this.getScaleAnimator();
       if (var1) {
          var2.setFloatValues(new float[]{0.0F, 1.0F});
+         return var2;
       } else {
          var2.setFloatValues(new float[]{1.0F, 0.0F});
+         return var2;
       }
-
-      return var2;
    }
 
    private fun getTextColorAnimator(shouldPlay: Boolean): ValueAnimator {
@@ -203,7 +203,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `progressColorAnimator_delegate$lambda$17`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{-1, ThemeManagerKt.getTheme().getInteractiveActive()});
-      var1.addUpdateListener(new C(var0));
+      var1.addUpdateListener(new t(var0));
       return var1;
    }
 
@@ -217,7 +217,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `scaleAnimator_delegate$lambda$5`(var0: AudioPlayerViewBinding, var1: AudioPlayerWipeAnimatorManager): ValueAnimator {
       val var2: ValueAnimator = ValueAnimator.ofFloat(new float[]{0.0F, 1.0F});
-      var2.addUpdateListener(new B(var0, var1));
+      var2.addUpdateListener(new s(var0, var1));
       return var2;
    }
 
@@ -250,7 +250,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    @JvmStatic
    fun `textColorAnimator_delegate$lambda$9`(var0: AudioPlayerViewBinding): ValueAnimator {
       val var1: ValueAnimator = ValueAnimator.ofArgb(new int[]{ThemeManagerKt.getTheme().getInteractiveNormal(), -1});
-      var1.addUpdateListener(new A(var0));
+      var1.addUpdateListener(new b0(var0));
       return var1;
    }
 
@@ -281,7 +281,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
                   }
 
                   if (this.animatorSet != null) {
-                     var7 = y.a(this.animatorSet);
+                     var7 = this.animatorSet.getCurrentPlayTime();
                   } else {
                      var7 = 0L;
                   }

@@ -42,6 +42,6 @@ public class InfoLinkView(context: Context, attrs: AttributeSet? = null) : Frame
       val var6: SimpleDraweeView = this.binding.icon;
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var7: ConstraintLayout = this.binding.infoLinkContainer;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new n0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new m1(var3), 1, null);
    }
 }

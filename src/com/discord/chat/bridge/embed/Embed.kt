@@ -2,9 +2,9 @@ package com.discord.chat.bridge.embed
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kc.m
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 @SourceDebugExtension(["SMAP\nEmbed.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Embed.kt\ncom/discord/chat/bridge/embed/Embed\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,46:1\n1#2:47\n*E\n"])
@@ -78,8 +78,6 @@ public data class Embed(type: EmbedType,
    public open val obscureOrNull: String?
 
    init {
-      var var33: java.lang.String = var20;
-      super();
       this.type = var1;
       this.id = var2;
       this.author = var3;
@@ -112,20 +110,20 @@ public data class Embed(type: EmbedType,
       this.headerTextColor = var30;
       this.bodyTextColor = var31;
       this.backgroundColor = var32;
-      if (var20 == null || StringsKt.c0(var20)) {
-         var33 = null;
+      if (var20 == null || StringsKt.i0(var20)) {
+         var20 = null;
       }
 
-      this.spoilerOrNull = var33;
-      var var34: java.lang.String = null;
+      this.spoilerOrNull = var20;
+      var var33: java.lang.String = null;
       if (var21 != null) {
-         var34 = null;
-         if (!StringsKt.c0(var21)) {
-            var34 = var21;
+         var33 = null;
+         if (!StringsKt.i0(var21)) {
+            var33 = var21;
          }
       }
 
-      this.obscureOrNull = var34;
+      this.obscureOrNull = var33;
    }
 
    public operator fun component1(): EmbedType {
@@ -738,105 +736,105 @@ public data class Embed(type: EmbedType,
    }
 
    public override fun toString(): String {
-      val var16: EmbedType = this.type;
-      val var28: java.lang.String = this.id;
-      val var25: EmbedAuthor = this.author;
-      val var29: EmbedProvider = this.provider;
-      val var22: java.lang.String = this.rawTitle;
-      val var23: StructurableText = this.title;
-      val var14: java.util.List = this.fields;
-      val var17: java.lang.String = this.url;
-      val var7: java.lang.String = this.rawDescription;
-      val var9: StructurableText = this.description;
-      val var13: EmbedMedia = this.image;
-      val var24: java.util.List = this.images;
-      val var8: EmbedMedia = this.video;
-      val var30: EmbedThumbnail = this.thumbnail;
-      val var3: java.lang.String = this.numAttachments;
-      val var11: java.lang.String = this.attachmentsSize;
-      val var19: java.lang.String = this.messageSendError;
-      val var21: java.lang.Boolean = this.disableBackgroundColor;
-      val var20: EmbedFooter = this.footer;
-      val var4: java.lang.String = this.spoiler;
-      val var18: java.lang.String = this.obscure;
-      val var10: java.lang.String = this.obscureAwaitingScan;
-      val var31: java.lang.Boolean = this.obscureHideControls;
-      val var32: java.lang.Boolean = this.obscureIsOpaque;
-      val var2: java.lang.Boolean = this.verifyAge;
-      val var33: java.lang.String = this.iconURL;
-      val var6: EmbedFailureState = this.failureState;
-      val var26: Int = this.providerColor;
-      val var27: Int = this.borderLeftColor;
-      val var5: Int = this.headerTextColor;
+      val var20: EmbedType = this.type;
+      val var3: java.lang.String = this.id;
+      val var26: EmbedAuthor = this.author;
+      val var17: EmbedProvider = this.provider;
+      val var23: java.lang.String = this.rawTitle;
+      val var6: StructurableText = this.title;
+      val var9: java.util.List = this.fields;
+      val var33: java.lang.String = this.url;
+      val var18: java.lang.String = this.rawDescription;
+      val var5: StructurableText = this.description;
+      val var29: EmbedMedia = this.image;
+      val var4: java.util.List = this.images;
+      val var21: EmbedMedia = this.video;
+      val var28: EmbedThumbnail = this.thumbnail;
+      val var8: java.lang.String = this.numAttachments;
+      val var2: java.lang.String = this.attachmentsSize;
+      val var14: java.lang.String = this.messageSendError;
+      val var15: java.lang.Boolean = this.disableBackgroundColor;
+      val var24: EmbedFooter = this.footer;
+      val var30: java.lang.String = this.spoiler;
+      val var32: java.lang.String = this.obscure;
+      val var22: java.lang.String = this.obscureAwaitingScan;
+      val var11: java.lang.Boolean = this.obscureHideControls;
+      val var27: java.lang.Boolean = this.obscureIsOpaque;
+      val var13: java.lang.Boolean = this.verifyAge;
+      val var10: java.lang.String = this.iconURL;
+      val var16: EmbedFailureState = this.failureState;
+      val var12: Int = this.providerColor;
+      val var7: Int = this.borderLeftColor;
+      val var19: Int = this.headerTextColor;
       val var1: Int = this.bodyTextColor;
-      val var15: Int = this.backgroundColor;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("Embed(type=");
-      var12.append(var16);
-      var12.append(", id=");
-      var12.append(var28);
-      var12.append(", author=");
-      var12.append(var25);
-      var12.append(", provider=");
-      var12.append(var29);
-      var12.append(", rawTitle=");
-      var12.append(var22);
-      var12.append(", title=");
-      var12.append(var23);
-      var12.append(", fields=");
-      var12.append(var14);
-      var12.append(", url=");
-      var12.append(var17);
-      var12.append(", rawDescription=");
-      var12.append(var7);
-      var12.append(", description=");
-      var12.append(var9);
-      var12.append(", image=");
-      var12.append(var13);
-      var12.append(", images=");
-      var12.append(var24);
-      var12.append(", video=");
-      var12.append(var8);
-      var12.append(", thumbnail=");
-      var12.append(var30);
-      var12.append(", numAttachments=");
-      var12.append(var3);
-      var12.append(", attachmentsSize=");
-      var12.append(var11);
-      var12.append(", messageSendError=");
-      var12.append(var19);
-      var12.append(", disableBackgroundColor=");
-      var12.append(var21);
-      var12.append(", footer=");
-      var12.append(var20);
-      var12.append(", spoiler=");
-      var12.append(var4);
-      var12.append(", obscure=");
-      var12.append(var18);
-      var12.append(", obscureAwaitingScan=");
-      var12.append(var10);
-      var12.append(", obscureHideControls=");
-      var12.append(var31);
-      var12.append(", obscureIsOpaque=");
-      var12.append(var32);
-      var12.append(", verifyAge=");
-      var12.append(var2);
-      var12.append(", iconURL=");
-      var12.append(var33);
-      var12.append(", failureState=");
-      var12.append(var6);
-      var12.append(", providerColor=");
-      var12.append(var26);
-      var12.append(", borderLeftColor=");
-      var12.append(var27);
-      var12.append(", headerTextColor=");
-      var12.append(var5);
-      var12.append(", bodyTextColor=");
-      var12.append(var1);
-      var12.append(", backgroundColor=");
-      var12.append(var15);
-      var12.append(")");
-      return var12.toString();
+      val var25: Int = this.backgroundColor;
+      val var31: StringBuilder = new StringBuilder();
+      var31.append("Embed(type=");
+      var31.append(var20);
+      var31.append(", id=");
+      var31.append(var3);
+      var31.append(", author=");
+      var31.append(var26);
+      var31.append(", provider=");
+      var31.append(var17);
+      var31.append(", rawTitle=");
+      var31.append(var23);
+      var31.append(", title=");
+      var31.append(var6);
+      var31.append(", fields=");
+      var31.append(var9);
+      var31.append(", url=");
+      var31.append(var33);
+      var31.append(", rawDescription=");
+      var31.append(var18);
+      var31.append(", description=");
+      var31.append(var5);
+      var31.append(", image=");
+      var31.append(var29);
+      var31.append(", images=");
+      var31.append(var4);
+      var31.append(", video=");
+      var31.append(var21);
+      var31.append(", thumbnail=");
+      var31.append(var28);
+      var31.append(", numAttachments=");
+      var31.append(var8);
+      var31.append(", attachmentsSize=");
+      var31.append(var2);
+      var31.append(", messageSendError=");
+      var31.append(var14);
+      var31.append(", disableBackgroundColor=");
+      var31.append(var15);
+      var31.append(", footer=");
+      var31.append(var24);
+      var31.append(", spoiler=");
+      var31.append(var30);
+      var31.append(", obscure=");
+      var31.append(var32);
+      var31.append(", obscureAwaitingScan=");
+      var31.append(var22);
+      var31.append(", obscureHideControls=");
+      var31.append(var11);
+      var31.append(", obscureIsOpaque=");
+      var31.append(var27);
+      var31.append(", verifyAge=");
+      var31.append(var13);
+      var31.append(", iconURL=");
+      var31.append(var10);
+      var31.append(", failureState=");
+      var31.append(var16);
+      var31.append(", providerColor=");
+      var31.append(var12);
+      var31.append(", borderLeftColor=");
+      var31.append(var7);
+      var31.append(", headerTextColor=");
+      var31.append(var19);
+      var31.append(", bodyTextColor=");
+      var31.append(var1);
+      var31.append(", backgroundColor=");
+      var31.append(var25);
+      var31.append(")");
+      return var31.toString();
    }
 
    public companion object {

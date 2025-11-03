@@ -11,6 +11,9 @@ import com.discord.chat.bridge.botuikit.Component
 import com.discord.chat.bridge.botuikit.SectionAccessory
 import com.discord.chat.bridge.botuikit.SectionChildComponent
 import com.discord.chat.bridge.botuikit.SectionComponent
+import com.discord.chat.bridge.botuikit.SectionAccessory.Button
+import com.discord.chat.bridge.botuikit.SectionAccessory.Thumbnail
+import com.discord.chat.bridge.botuikit.SectionChildComponent.Unknown
 import com.discord.chat.databinding.MessageComponentSectionViewBinding
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
@@ -45,34 +48,27 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    init {
       val var6: MessageComponentSectionViewBinding = MessageComponentSectionViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var6;
-      val var4: LinearLayout = new LinearLayout(var1);
-      this.textComponentViews = var4;
+      val var5: LinearLayout = new LinearLayout(var1);
+      this.textComponentViews = var5;
       this.setOrientation(1);
       this.setLayoutParams(new LayoutParams(-1, -2));
-      var4.setOrientation(1);
-      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var5.a(1.0F);
-      var4.setLayoutParams(var5);
-      var6.sectionLayoutBox.addView(var4);
+      var5.setOrientation(1);
+      val var4: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(-2, -2);
+      var4.a(1.0F);
+      var5.setLayoutParams(var4);
+      var6.sectionLayoutBox.addView(var5);
    }
 
    private fun getCurrentAccessoryView(): View? {
-      val var1: View;
-      if (this.binding.sectionLayoutBox.getChildCount() > 1) {
-         var1 = this.binding.sectionLayoutBox.getChildAt(1);
-      } else {
-         var1 = null;
-      }
-
-      return var1;
+      return if (this.binding.sectionLayoutBox.getChildCount() > 1) this.binding.sectionLayoutBox.getChildAt(1) else null;
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var2: View = this.getCurrentAccessoryView();
-      if (var2 != null) {
-         this.binding.sectionLayoutBox.removeView(var2);
+      val var1: View = this.getCurrentAccessoryView();
+      if (var1 != null) {
+         this.binding.sectionLayoutBox.removeView(var1);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
          }
       }
    }
@@ -87,49 +83,50 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    public open fun configure(component: SectionComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       label75: {
          this.componentProvider = var2;
-         var var8: java.util.List = var1.getComponents();
+         val var8: java.lang.Iterable = var1.getComponents();
+         var var7: Boolean = var8 is java.util.Collection;
          var var5: Byte = 8;
-         if (var8 == null || !var8.isEmpty()) {
-            val var19: java.util.Iterator = var8.iterator();
+         if (!var7 || !(var8 as java.util.Collection).isEmpty()) {
+            val var20: java.util.Iterator = var8.iterator();
 
-            while (var19.hasNext()) {
-               if (var19.next() as SectionChildComponent is SectionChildComponent.Unknown) {
+            while (var20.hasNext()) {
+               if (var20.next() as SectionChildComponent is Unknown) {
                   break label75;
                }
             }
          }
 
-         if (var1.getAccessory() !is SectionAccessory.Unknown) {
+         if (var1.getAccessory() !is com.discord.chat.bridge.botuikit.SectionAccessory.Unknown) {
             this.setVisibility(0);
-            val var9: java.util.List = var1.getComponents();
-            val var20: ArrayList = new ArrayList(CollectionsKt.v(var9, 10));
-            val var22: java.util.Iterator = var9.iterator();
+            val var9: java.lang.Iterable = var1.getComponents();
+            val var21: ArrayList = new ArrayList(CollectionsKt.w(var9, 10));
+            val var23: java.util.Iterator = var9.iterator();
 
-            for (int var4 = 0; var22.hasNext(); var4++) {
-               var var10: Any = var22.next();
+            for (int var4 = 0; var23.hasNext(); var4++) {
+               var var10: Any = var23.next();
                if (var4 < 0) {
-                  CollectionsKt.u();
+                  CollectionsKt.v();
                }
 
                var10 = (var10 as SectionChildComponent).getComponent();
-               var20.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
+               var21.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
             }
 
-            var8 = CollectionsKt.g0(var20);
-            val var23: Component = var1.getAccessory().getComponent();
-            val var26: FlexboxLayout = this.binding.sectionLayoutBox;
-            val var24: ComponentView = var2.getConfiguredComponentView(var23, var3, var26, 1);
-            if (!var8.isEmpty() && var24 != null) {
-               MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
-               this.setAccessoryView(var24 as View);
+            val var22: java.util.List = CollectionsKt.l0(var21);
+            val var27: Component = var1.getAccessory().getComponent();
+            val var24: FlexboxLayout = this.binding.sectionLayoutBox;
+            val var25: ComponentView = var2.getConfiguredComponentView(var27, var3, var24, 1);
+            if (!var22.isEmpty() && var25 != null) {
+               MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var22, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
+               this.setAccessoryView(var25 as View);
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
                   val var16: FlexboxLayout = this.binding.sectionLayoutBox;
                   val var12: SectionAccessory = var1.getAccessory();
-                  val var7: Boolean = var12 is SectionAccessory.Button;
+                  var7 = var12 is Button;
                   var var17: Byte = 2;
-                  if (!var7 && var12 is SectionAccessory.Thumbnail) {
+                  if (!var7 && var12 is Thumbnail) {
                      var17 = 0;
                   }
 

@@ -1,15 +1,15 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.discord.react_strings.RenderContext;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class k implements OnClickListener {
+public final class k implements Function1 {
    public final AudioPlayerView d;
-   public final AudioPlayerViewState e;
-   public final boolean i;
+   public final int e;
+   public final int i;
 
-   public final void onClick(View var1) {
-      AudioPlayerView.h(this.d, this.e, this.i, var1);
+   public final Object invoke(Object var1) {
+      return AudioPlayerView.j(this.d, this.e, this.i, (RenderContext)var1);
    }
 }

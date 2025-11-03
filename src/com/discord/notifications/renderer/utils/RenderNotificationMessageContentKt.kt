@@ -15,17 +15,17 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 }
 
 public fun renderNotificationMessageContent(content: String): String {
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
-   val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var14: java.lang.String = var4.h(var3.h(var0, new A()), new B());
-   var var13: java.lang.String = var0;
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFsSR]))?>");
+   var var13: java.lang.String = var3.j(var4.j(var0, new a0()), new b0());
+   var var14: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.c(var5, var14, 0, 2, null);
+      val var6: MatchResult = Regex.d(var5, var13, 0, 2, null);
       if (var6 == null) {
-         return var13;
+         return var14;
       }
 
       val var7: MatchGroup = var6.d().get(1);
@@ -40,37 +40,47 @@ public fun renderNotificationMessageContent(content: String): String {
       if (var0 == "R") {
          var10 = DateUtils.getRelativeTimeSpanString(var16.getTime());
       } else {
-         label58: {
+         label70: {
             if (var0 != null) {
                val var1: Int = var0.hashCode();
                if (var1 != 68) {
                   if (var1 != 70) {
-                     if (var1 != 84) {
-                        if (var1 != 100) {
-                           if (var1 != 102) {
-                              if (var1 == 116 && var0.equals("t")) {
-                                 var10 = DateFormat.getTimeInstance(3);
-                                 break label58;
+                     if (var1 != 100) {
+                        if (var1 != 102) {
+                           if (var1 != 83) {
+                              if (var1 != 84) {
+                                 if (var1 != 115) {
+                                    if (var1 == 116 && var0.equals("t")) {
+                                       var10 = DateFormat.getTimeInstance(3);
+                                       break label70;
+                                    }
+                                 } else if (var0.equals("s")) {
+                                    var10 = DateFormat.getDateTimeInstance(3, 3);
+                                    break label70;
+                                 }
+                              } else if (var0.equals("T")) {
+                                 var10 = DateFormat.getTimeInstance(2);
+                                 break label70;
                               }
-                           } else if (var0.equals("f")) {
-                              var10 = DateFormat.getDateTimeInstance(1, 3);
-                              break label58;
+                           } else if (var0.equals("S")) {
+                              var10 = DateFormat.getDateTimeInstance(3, 2);
+                              break label70;
                            }
-                        } else if (var0.equals("d")) {
-                           var10 = DateFormat.getDateInstance(3);
-                           break label58;
+                        } else if (var0.equals("f")) {
+                           var10 = DateFormat.getDateTimeInstance(1, 3);
+                           break label70;
                         }
-                     } else if (var0.equals("T")) {
-                        var10 = DateFormat.getTimeInstance(2);
-                        break label58;
+                     } else if (var0.equals("d")) {
+                        var10 = DateFormat.getDateInstance(3);
+                        break label70;
                      }
                   } else if (var0.equals("F")) {
                      var10 = DateFormat.getDateTimeInstance(0, 3);
-                     break label58;
+                     break label70;
                   }
                } else if (var0.equals("D")) {
                   var10 = DateFormat.getDateInstance(1);
-                  break label58;
+                  break label70;
                }
             }
 
@@ -80,19 +90,19 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.c().q();
-      val var12: Int = var6.c().t();
-      var13 = StringsKt.v0(var13, var2, var12 + 1, var10).toString();
-      var14 = StringsKt.v0(var14, var6.c().q(), var6.c().t() + 1, var10).toString();
+      val var12: Int = var6.c().f();
+      val var2: Int = var6.c().k();
+      var14 = StringsKt.E0(var14, var12, var2 + 1, var10).toString();
+      var13 = StringsKt.E0(var13, var6.c().f(), var6.c().k() + 1, var10).toString();
    }
 }
 
 fun `renderNotificationMessageContent$lambda$0`(var0: MatchResult): java.lang.CharSequence {
    val var1: MatchGroup = var0.d().get(1);
-   return StringsKt.y("X", var1.a().length());
+   return StringsKt.D("X", var1.a().length());
 }
 
 fun `renderNotificationMessageContent$lambda$1`(var0: MatchResult): java.lang.CharSequence {
    val var1: MatchGroup = var0.d().get(1);
-   return StringsKt.y("X", var1.a().length());
+   return StringsKt.D("X", var1.a().length());
 }

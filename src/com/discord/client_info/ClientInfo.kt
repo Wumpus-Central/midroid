@@ -1,10 +1,10 @@
 package com.discord.client_info
 
 import android.content.Context
+import ht.l
 import java.util.Locale
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.l
 
 @SourceDebugExtension(["SMAP\nClientInfo.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ClientInfo.kt\ncom/discord/client_info/ClientInfo\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,64:1\n1#2:65\n*E\n"])
 public object ClientInfo {
@@ -62,7 +62,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@303.9.0-1+303109"
+   public const val SENTRY_RELEASE: String = "discord_android@304.4.0-1+304104"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -88,7 +88,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by l.a(new a())
+   public final val isProdBuild: Boolean by l.b(new a())
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -96,46 +96,35 @@ public object ClientInfo {
 
    public final val isPreProdRelease: Boolean
       public final get() {
-         val var1: Boolean;
-         if (!(this.getReleaseChannel() == "canaryRelease") && !(this.getReleaseChannel() == "betaRelease")) {
-            var1 = false;
-         } else {
-            var1 = true;
-         }
-
-         return var1;
+         return this.getReleaseChannel() == "canaryRelease" || this.getReleaseChannel() == "betaRelease";
       }
 
 
-   public const val PROGUARD_UUID: String = "964dca24-b95c-4655-af56-b70d433c2554"
+   public const val PROGUARD_UUID: String = "2f99e642-752c-4ee1-aa17-a524bffe4d07"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
-      val var2: Boolean = INSTANCE.isDebugBuild();
-      var var0: Boolean = false;
-      if (!var2) {
-         var var3: java.lang.String = flavor;
+      if (!INSTANCE.isDebugBuild()) {
+         var var0: java.lang.String = flavor;
          if (flavor == null) {
             Intrinsics.throwUninitializedPropertyAccessException("flavor");
-            var3 = null;
+            var0 = null;
          }
 
-         var0 = false;
-         if (!StringsKt.N(var3, "beta", false, 2, null)) {
-            var3 = flavor;
+         if (!StringsKt.T(var0, "beta", false, 2, null)) {
+            var0 = flavor;
             if (flavor == null) {
                Intrinsics.throwUninitializedPropertyAccessException("flavor");
-               var3 = null;
+               var0 = null;
             }
 
-            var0 = false;
-            if (!StringsKt.N(var3, "canary", false, 2, null)) {
-               var0 = true;
+            if (!StringsKt.T(var0, "canary", false, 2, null)) {
+               return true;
             }
          }
       }
 
-      return var0;
+      return false;
    }
 
    public fun init(context: Context, versionName: String, versionCode: Int, flavor: String, buildType: String, otaManifest: String, otaVersion: String) {

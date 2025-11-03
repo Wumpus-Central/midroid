@@ -1,9 +1,9 @@
 package com.discord.emoji
 
-import ac.K
-import ac.f
 import android.content.Context
-import kc.m
+import gu.g
+import gu.m0
+import ht.v
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -12,12 +12,13 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import xa.v
+import pu.f
+import xu.m
 
 @SourceDebugExtension(["SMAP\nUnicodeEmojis.kt\nKotlin\n*S Kotlin\n*F\n+ 1 UnicodeEmojis.kt\ncom/discord/emoji/UnicodeEmojis\n+ 2 Mutex.kt\nkotlinx/coroutines/sync/MutexKt\n*L\n1#1,68:1\n120#2,10:69\n*S KotlinDebug\n*F\n+ 1 UnicodeEmojis.kt\ncom/discord/emoji/UnicodeEmojis\n*L\n22#1:69,10\n*E\n"])
 public object UnicodeEmojis {
    private final val emojiJsonParser: Json = kotlinx.serialization.json.b.b(null, new d(), 1, null)
-   private final val emojiLoadingMutex: Mutex = jc.b.b(false, 1, null)
+   private final val emojiLoadingMutex: Mutex = f.b(false, 1, null)
    private final lateinit var emojis: Map<String, List<com.discord.emoji.UnicodeEmojis.Emoji>>
 
    @JvmStatic
@@ -27,10 +28,28 @@ public object UnicodeEmojis {
    }
 
    private suspend fun loadData(context: Context): com.discord.emoji.UnicodeEmojis.EmojiCategories {
-      return f.g(
-         K.b(),
-         new Function2<CoroutineScope, Continuation, Object>(var1, null)// $VF: Couldn't be decompiled
+      return g.g(
+         m0.b(),
+         new Function2<CoroutineScope, Continuation<? super UnicodeEmojis.EmojiCategories>, Object>(var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.ExitExprent.toJava(ExitExprent.java:86)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
          var2
       );
@@ -80,7 +99,7 @@ public object UnicodeEmojis {
       // 033: aload 2
       // 034: getfield com/discord/emoji/UnicodeEmojis$load$1.result Ljava/lang/Object;
       // 037: astore 4
-      // 039: invokestatic Ca/b.e ()Ljava/lang/Object;
+      // 039: invokestatic ot/b.f ()Ljava/lang/Object;
       // 03c: astore 6
       // 03e: aload 2
       // 03f: getfield com/discord/emoji/UnicodeEmojis$load$1.label I
@@ -142,11 +161,10 @@ public object UnicodeEmojis {
       // 0ae: aload 5
       // 0b0: aconst_null
       // 0b1: aload 2
-      // 0b2: invokeinterface kotlinx/coroutines/sync/Mutex.a (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; 3
+      // 0b2: invokeinterface kotlinx/coroutines/sync/Mutex.b (Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object; 3
       // 0b7: aload 6
       // 0b9: if_acmpne 0bf
-      // 0bc: aload 6
-      // 0be: areturn
+      // 0bc: goto 0ea
       // 0bf: getstatic com/discord/emoji/UnicodeEmojis.emojis Ljava/util/Map;
       // 0c2: ifnonnull 103
       // 0c5: getstatic com/discord/emoji/UnicodeEmojis.INSTANCE Lcom/discord/emoji/UnicodeEmojis;
@@ -199,12 +217,12 @@ public object UnicodeEmojis {
       // 11c: astore 1
       // 11d: aload 2
       // 11e: aconst_null
-      // 11f: invokeinterface kotlinx/coroutines/sync/Mutex.b (Ljava/lang/Object;)V 2
+      // 11f: invokeinterface kotlinx/coroutines/sync/Mutex.c (Ljava/lang/Object;)V 2
       // 124: aload 1
       // 125: areturn
       // 126: aload 1
       // 127: aconst_null
-      // 128: invokeinterface kotlinx/coroutines/sync/Mutex.b (Ljava/lang/Object;)V 2
+      // 128: invokeinterface kotlinx/coroutines/sync/Mutex.c (Ljava/lang/Object;)V 2
       // 12d: aload 2
       // 12e: athrow
    }
@@ -293,14 +311,14 @@ public object UnicodeEmojis {
       fun {
          val var0: UnicodeEmojis.Emoji.$serializer = UnicodeEmojis.Emoji.$serializer.INSTANCE;
          $childSerializers = new KSerializer[]{
-            new nc.f(UnicodeEmojis.Emoji.$serializer.INSTANCE),
-            new nc.f(var0),
-            new nc.f(var0),
-            new nc.f(var0),
-            new nc.f(var0),
-            new nc.f(var0),
-            new nc.f(var0),
-            new nc.f(var0)
+            new av.f(UnicodeEmojis.Emoji.$serializer.INSTANCE),
+            new av.f(var0),
+            new av.f(var0),
+            new av.f(var0),
+            new av.f(var0),
+            new av.f(var0),
+            new av.f(var0),
+            new av.f(var0)
          };
       }
 
@@ -406,7 +424,7 @@ public object UnicodeEmojis {
       }
 
       public fun toMap(): Map<String, List<com.discord.emoji.UnicodeEmojis.Emoji>> {
-         return O.m(
+         return s0.m(
             new Pair[]{
                v.a("people", this.people),
                v.a("nature", this.nature),
@@ -421,33 +439,33 @@ public object UnicodeEmojis {
       }
 
       public override fun toString(): String {
-         val var7: java.util.List = this.people;
-         val var3: java.util.List = this.nature;
-         val var1: java.util.List = this.food;
-         val var8: java.util.List = this.activity;
-         val var4: java.util.List = this.travel;
-         val var5: java.util.List = this.objects;
-         val var6: java.util.List = this.symbols;
-         val var2: java.util.List = this.flags;
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("EmojiCategories(people=");
-         var9.append(var7);
-         var9.append(", nature=");
-         var9.append(var3);
-         var9.append(", food=");
-         var9.append(var1);
-         var9.append(", activity=");
-         var9.append(var8);
-         var9.append(", travel=");
-         var9.append(var4);
-         var9.append(", objects=");
-         var9.append(var5);
-         var9.append(", symbols=");
-         var9.append(var6);
-         var9.append(", flags=");
-         var9.append(var2);
-         var9.append(")");
-         return var9.toString();
+         val var5: java.util.List = this.people;
+         val var7: java.util.List = this.nature;
+         val var8: java.util.List = this.food;
+         val var1: java.util.List = this.activity;
+         val var2: java.util.List = this.travel;
+         val var9: java.util.List = this.objects;
+         val var4: java.util.List = this.symbols;
+         val var3: java.util.List = this.flags;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("EmojiCategories(people=");
+         var6.append(var5);
+         var6.append(", nature=");
+         var6.append(var7);
+         var6.append(", food=");
+         var6.append(var8);
+         var6.append(", activity=");
+         var6.append(var1);
+         var6.append(", travel=");
+         var6.append(var2);
+         var6.append(", objects=");
+         var6.append(var9);
+         var6.append(", symbols=");
+         var6.append(var4);
+         var6.append(", flags=");
+         var6.append(var3);
+         var6.append(")");
+         return var6.toString();
       }
 
       public companion object {

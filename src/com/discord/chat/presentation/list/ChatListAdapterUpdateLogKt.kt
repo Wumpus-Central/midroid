@@ -2,6 +2,16 @@ package com.discord.chat.presentation.list
 
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
+import com.discord.chat.listmanager.ChatListAction.Clear
+import com.discord.chat.listmanager.ChatListAction.Noop
+import com.discord.chat.listmanager.ChatListAction.ScrollTo
+import com.discord.chat.listmanager.ChatListAction.StickToBottomIfAtBottom
+import com.discord.chat.listmanager.ListOperation.Change
+import com.discord.chat.listmanager.ListOperation.ChangeRange
+import com.discord.chat.listmanager.ListOperation.Insert
+import com.discord.chat.listmanager.ListOperation.InsertRange
+import com.discord.chat.listmanager.ListOperation.Remove
+import com.discord.chat.listmanager.ListOperation.RemoveRange
 
 @JvmSynthetic
 fun `access$label`(var0: ChatListAction): java.lang.String {
@@ -14,82 +24,72 @@ fun `access$label`(var0: ListOperation): java.lang.String {
 }
 
 private fun ChatListAction.label(): String {
-   val var1: java.lang.String;
-   if (var0 is ChatListAction.Clear) {
-      var1 = "Clear";
-   } else if (var0 is ChatListAction.Noop) {
-      var1 = "Noop";
-   } else if (var0 is ChatListAction.ScrollTo) {
-      var1 = "ScrollTo";
+   if (var0 is Clear) {
+      return "Clear";
+   } else if (var0 is Noop) {
+      return "Noop";
+   } else if (var0 is ScrollTo) {
+      return "ScrollTo";
+   } else if (var0 is StickToBottomIfAtBottom) {
+      return "StickToBottomIfAtBottom";
    } else {
-      if (var0 !is ChatListAction.StickToBottomIfAtBottom) {
-         throw new xa.p();
-      }
-
-      var1 = "StickToBottomIfAtBottom";
+      throw new ht.p();
    }
-
-   return var1;
 }
 
 private fun ListOperation.label(): String {
-   val var4: java.lang.String;
-   if (var0 is ListOperation.Insert) {
-      val var1: Int = (var0 as ListOperation.Insert).getIndex();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("INS(");
-      var3.append(var1);
-      var3.append(")");
-      var4 = var3.toString();
-   } else if (var0 is ListOperation.InsertRange) {
-      val var2: Int = (var0 as ListOperation.InsertRange).getFirst();
-      val var13: Int = (var0 as ListOperation.InsertRange).getLast();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("IRNG(");
-      var6.append(var2);
-      var6.append("-");
-      var6.append(var13);
-      var6.append(")");
-      var4 = var6.toString();
-   } else if (var0 is ListOperation.Remove) {
-      val var14: Int = (var0 as ListOperation.Remove).getIndex();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("REM(");
-      var7.append(var14);
-      var7.append(")");
-      var4 = var7.toString();
-   } else if (var0 is ListOperation.RemoveRange) {
-      val var15: Int = (var0 as ListOperation.RemoveRange).getFirst();
-      val var18: Int = (var0 as ListOperation.RemoveRange).getLast();
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("RRNG(");
-      var9.append(var15);
-      var9.append("-");
-      var9.append(var18);
-      var9.append(")");
-      var4 = var9.toString();
-   } else if (var0 is ListOperation.Change) {
-      val var16: Int = (var0 as ListOperation.Change).getIndex();
+   if (var0 is Insert) {
+      val var16: Int = (var0 as Insert).getIndex();
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("INS(");
+      var11.append(var16);
+      var11.append(")");
+      return var11.toString();
+   } else if (var0 is InsertRange) {
+      val var18: Int = (var0 as InsertRange).getFirst();
+      val var15: Int = (var0 as InsertRange).getLast();
       val var10: StringBuilder = new StringBuilder();
-      var10.append("CHA(");
-      var10.append(var16);
+      var10.append("IRNG(");
+      var10.append(var18);
+      var10.append("-");
+      var10.append(var15);
       var10.append(")");
-      var4 = var10.toString();
+      return var10.toString();
+   } else if (var0 is Remove) {
+      val var14: Int = (var0 as Remove).getIndex();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("REM(");
+      var8.append(var14);
+      var8.append(")");
+      return var8.toString();
+   } else if (var0 is RemoveRange) {
+      val var13: Int = (var0 as RemoveRange).getFirst();
+      val var17: Int = (var0 as RemoveRange).getLast();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("RRNG(");
+      var7.append(var13);
+      var7.append("-");
+      var7.append(var17);
+      var7.append(")");
+      return var7.toString();
+   } else if (var0 is Change) {
+      val var12: Int = (var0 as Change).getIndex();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CHA(");
+      var5.append(var12);
+      var5.append(")");
+      return var5.toString();
+   } else if (var0 is ChangeRange) {
+      val var2: Int = (var0 as ChangeRange).getFirst();
+      val var1: Int = (var0 as ChangeRange).getLast();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CRNG(");
+      var4.append(var2);
+      var4.append("-");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    } else {
-      if (var0 !is ListOperation.ChangeRange) {
-         throw new xa.p();
-      }
-
-      val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();
-      val var19: Int = (var0 as ListOperation.ChangeRange).getLast();
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("CRNG(");
-      var12.append(var17);
-      var12.append("-");
-      var12.append(var19);
-      var12.append(")");
-      var4 = var12.toString();
+      throw new ht.p();
    }
-
-   return var4;
 }

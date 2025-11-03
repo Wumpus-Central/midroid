@@ -22,14 +22,7 @@ public class FirstDrawDoneListener implements OnDrawListener {
    }
 
    private static boolean isAliveAndAttached(View var0) {
-      boolean var1;
-      if (var0.getViewTreeObserver().isAlive() && var0.isAttachedToWindow()) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
+      return var0.getViewTreeObserver().isAlive() && var0.isAttachedToWindow();
    }
 
    public static void registerForNextDraw(View var0, Runnable var1) {

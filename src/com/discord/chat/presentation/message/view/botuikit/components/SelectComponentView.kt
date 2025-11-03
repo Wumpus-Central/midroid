@@ -8,6 +8,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
+import android.widget.FrameLayout.LayoutParams
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.chat.bridge.botuikit.ActionComponentState
 import com.discord.chat.bridge.botuikit.ComponentEmoji
@@ -35,20 +36,20 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
-import com.facebook.drawee.drawable.ScalingUtils.ScaleType
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.BasePostprocessor
+import com.facebook.imagepipeline.request.ImageRequest
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
+import ht.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.p
 
 @SourceDebugExtension(["SMAP\nSelectComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 Uri.kt\nandroidx/core/net/UriKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,265:1\n176#2,2:266\n257#2,2:268\n257#2,2:270\n257#2,2:272\n257#2,2:274\n257#2,2:276\n257#2,2:278\n257#2,2:280\n257#2,2:282\n257#2,2:284\n257#2,2:286\n278#2,2:288\n257#2,2:290\n29#3:292\n1872#4,3:293\n*S KotlinDebug\n*F\n+ 1 SelectComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/SelectComponentView\n*L\n67#1:266,2\n103#1:268,2\n104#1:270,2\n125#1:272,2\n127#1:274,2\n134#1:276,2\n135#1:278,2\n136#1:280,2\n141#1:282,2\n142#1:284,2\n143#1:286,2\n151#1:288,2\n154#1:290,2\n207#1:292\n260#1:293,3\n*E\n"])
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
@@ -80,8 +81,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    init {
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      this.progressDots$delegate = xa.l.a(new i(this));
-      this.postProcessor$delegate = xa.l.a(new j());
+      this.progressDots$delegate = ht.l.b(new i(this));
+      this.postProcessor$delegate = ht.l.b(new j());
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
       this.setPadding(var3, var3, var3, var3);
@@ -96,7 +97,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       if (var1.isInModal() || !var1.getWidthInfo().isLargeWidthRenderingMode()) {
          this.setMaxWidth(Integer.MAX_VALUE);
          this.setMinWidth(0);
-         this.setLayoutParams(new android.widget.FrameLayout.LayoutParams(-1, -2));
+         this.setLayoutParams(new LayoutParams(-1, -2));
       } else if (var1.isInContainerComponent()) {
          this.setMaxWidth(Integer.MAX_VALUE);
          this.setMinWidth(SizeUtilsKt.getDpToPx(400));
@@ -125,13 +126,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var6: DraweeSpanStringBuilder = new DraweeSpanStringBuilder();
       val var5: Int = SizeUtilsKt.getDpToPx(20);
       var6.append('\u200b');
-      val var8: ImageRequestBuilder = ImageRequestBuilder.x(Uri.parse(var2)).N(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).I(RequestLevel.e);
+      val var8: ImageRequestBuilder = ImageRequestBuilder.x(Uri.parse(var2))
+         .N(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null))
+         .I(ImageRequest.RequestLevel.e);
       if (var4) {
          var8.J(this.getPostProcessor());
       }
 
-      val var7: com.facebook.drawee.controller.a = (G3.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScaleType.e);
+      val var7: com.facebook.drawee.controller.a = (ja.d.g().E(var8.a()) as PipelineDraweeControllerBuilder).c();
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
       if (var3 != null) {
          var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
@@ -147,7 +150,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       for (int var3 = 0; var9.hasNext(); var3++) {
          var var6: TextView = (TextView)var9.next();
          if (var3 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          val var5: SelectItem = var6 as SelectItem;
@@ -221,8 +224,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                      if (var33 is SearchableSelectItem) {
                         val var21: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
-                           val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           val var13: java.lang.String = var21.getIconSrc();
+                           val var13: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var12: java.lang.String = var21.getIconSrc();
                            val var35: Int = var21.getIconColor();
                            val var16: Boolean;
                            if (var21.getType() === SelectOptionType.USER) {
@@ -231,7 +234,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                               var16 = false;
                            }
 
-                           this.setImage(var12, var13, var35, var16);
+                           this.setImage(var13, var12, var35, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;

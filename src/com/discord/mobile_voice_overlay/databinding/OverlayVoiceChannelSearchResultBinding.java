@@ -8,7 +8,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
-import x1.a;
+import k5.a;
 
 public final class OverlayVoiceChannelSearchResultBinding implements ViewBinding {
    @NonNull

@@ -15,7 +15,7 @@ import com.facebook.react.uimanager.ViewManager
 
 public class ChatPackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.n(
+      return CollectionsKt.o(
          new ViewManager[]{
             new ChatViewManager(),
             new ChatListViewManager(),
@@ -29,14 +29,7 @@ public class ChatPackage : BaseReactPackage {
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-      val var3: ChatModule;
-      if (var1 == "NativeChatModule") {
-         var3 = new ChatModule(var2);
-      } else {
-         var3 = null;
-      }
-
-      return var3;
+      return if (var1 == "NativeChatModule") new ChatModule(var2) else null;
    }
 
    public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {

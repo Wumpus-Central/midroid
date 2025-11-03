@@ -1,15 +1,15 @@
 package com.discord.image.fresco.postprocessors
 
-import Da.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
+import ht.p
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.p
+import pt.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -40,29 +40,26 @@ public sealed interface PostProcessor {
    @SourceDebugExtension(["SMAP\nPostProcessor.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PostProcessor.kt\ncom/discord/image/fresco/postprocessors/PostProcessor$Companion\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,48:1\n1557#2:49\n1628#2,3:50\n*S KotlinDebug\n*F\n+ 1 PostProcessor.kt\ncom/discord/image/fresco/postprocessors/PostProcessor$Companion\n*L\n41#1:49\n41#1:50,3\n*E\n"])
    public companion object {
       public fun create(processor: PostProcessor): BasePostprocessor {
-         val var5: Any;
-         if (var1 is PostProcessor.Composite) {
-            val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
-            val var4: ArrayList = new ArrayList(CollectionsKt.v(var2, 10));
-
-            for (PostProcessor var6 : var2) {
-               var4.add($$INSTANCE.create(var6));
-            }
-
-            var5 = new CompositePostprocessor(var4);
-         } else if (var1 is PostProcessor.Circle) {
-            var5 = new SafeRoundAsCirclePostprocessor();
-         } else if (var1 is PostProcessor.Grayscale) {
-            var5 = GrayscalePostprocessor.INSTANCE;
-         } else {
-            if (var1 !is PostProcessor.Gradient) {
+         if (var1 !is PostProcessor.Composite) {
+            if (var1 is PostProcessor.Circle) {
+               return new SafeRoundAsCirclePostprocessor();
+            } else if (var1 is PostProcessor.Grayscale) {
+               return GrayscalePostprocessor.INSTANCE;
+            } else if (var1 is PostProcessor.Gradient) {
+               return new GradientPostprocessor(var1 as PostProcessor.Gradient);
+            } else {
                throw new p();
             }
+         } else {
+            val var2: java.lang.Iterable = (var1 as PostProcessor.Composite).getPostprocessors();
+            val var4: ArrayList = new ArrayList(CollectionsKt.w(var2, 10));
 
-            var5 = new GradientPostprocessor(var1 as PostProcessor.Gradient);
+            for (PostProcessor var3 : var2) {
+               var4.add($$INSTANCE.create(var3));
+            }
+
+            return new CompositePostprocessor(var4);
          }
-
-         return (BasePostprocessor)var5;
       }
    }
 
@@ -73,7 +70,7 @@ public sealed interface PostProcessor {
          this.postprocessors = var1;
       }
 
-      public constructor(vararg postprocessors: PostProcessor) : this(k.O0(var1))
+      public constructor(vararg postprocessors: PostProcessor) : this(m.T0(var1))
       public operator fun component1(): List<PostProcessor> {
          return this.postprocessors;
       }
@@ -101,12 +98,12 @@ public sealed interface PostProcessor {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.postprocessors;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Composite(postprocessors=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.util.List = this.postprocessors;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Composite(postprocessors=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

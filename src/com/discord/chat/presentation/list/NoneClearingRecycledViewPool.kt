@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.list
 
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 
-public open class NoneClearingRecycledViewPool : RecyclerView.RecycledViewPool {
-   public override fun clear() {
+public open class NoneClearingRecycledViewPool : RecycledViewPool {
+   public open fun clear() {
    }
 
    public fun forceClear() {

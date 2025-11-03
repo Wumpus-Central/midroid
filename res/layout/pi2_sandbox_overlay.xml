@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.squareup.workflow1.ui.WorkflowViewStub android:id="@id/child_stub" android:layout_width="fill_parent" android:layout_height="fill_parent" app:inflatedId="@id/child" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="start|bottom|center" android:id="@id/floating_action_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:contentDescription="sandbox toggle" app:backgroundTint="#ffff69b4" app:srcCompat="@drawable/pi2_sandbox_fab" app:tint="@android:color/white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

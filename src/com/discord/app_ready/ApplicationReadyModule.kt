@@ -3,7 +3,6 @@ package com.discord.app_ready
 import com.discord.codegen.NativeApplicationReadyModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import k2.a
 
 public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec(var1) {
    @JvmStatic
@@ -13,7 +12,7 @@ public class ApplicationReadyModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public override fun applicationReady(promise: Promise?) {
-      this.getReactApplicationContext().runOnNativeModulesQueueThread(new a(var1));
+   public open fun applicationReady(promise: Promise?) {
+      this.getReactApplicationContext().runOnNativeModulesQueueThread(new p7.a(var1));
    }
 }

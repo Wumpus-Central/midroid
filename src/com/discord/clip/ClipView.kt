@@ -75,7 +75,7 @@ public class ClipView(context: Context) : ReactViewGroup(var1) {
       super.onDraw(var1);
    }
 
-   protected open fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+   protected override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
       super.onSizeChanged(var1, var2, var3, var4);
       handleClipTo$default(this, (float)var1, (float)var2, false, 4, null);
    }
@@ -87,7 +87,7 @@ public class ClipView(context: Context) : ReactViewGroup(var1) {
       }
    }
 
-   public open fun setBackgroundColor(color: Int) {
+   public override fun setBackgroundColor(color: Int) {
       this.clipPathBackgroundColorPaint.setColor(var1);
    }
 }

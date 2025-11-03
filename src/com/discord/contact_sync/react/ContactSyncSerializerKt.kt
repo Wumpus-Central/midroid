@@ -2,7 +2,9 @@
 
 package com.discord.contact_sync.react
 
-import J2.a
+import av.f
+import av.n2
+import av.u0
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -15,9 +17,7 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
-import nc.P0
-import nc.W
-import nc.f
+import n8.a
 
 @JvmSynthetic
 fun a(var0: Any): Any {
@@ -25,55 +25,43 @@ fun a(var0: Any): Any {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   val var1: Byte;
-   if (var0 == var2) {
-      var1 = 1;
+   val var2: Locale = Locale.ROOT;
+   var var1: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   if (var0 == var1) {
+      return 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      var0 == var2;
-      var1 = 0;
+      var1 = "DENIED".toLowerCase(var2);
+      var0 == var1;
+      return 0;
    }
-
-   return var1;
 }
 
 internal fun ReactContext.serializeGetImageForContactIdResult(deviceContactId: String, callback: Callback) {
    try {
-      var2.invoke(new Object[]{null, ContactSyncProvider.INSTANCE.getImageForContactId(var0, var1)});
+      var2.invoke(null, ContactSyncProvider.INSTANCE.getImageForContactId(var0, var1));
    } catch (var3: SecurityException) {
-      var2.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null});
+      var2.invoke(mapResultToContactSyncPermission("DENIED"), null);
    }
 }
 
 internal fun ReactContext.serializeHasContactPermissionsResult(promise: Promise): Unit? {
-   val var2: NativePermissionManagerModule = var0.getNativeModule(NativePermissionManagerModule.class) as NativePermissionManagerModule;
-   val var3: Unit;
+   val var2: NativePermissionManagerModule = var0.getNativeModule(NativePermissionManagerModule.class);
    if (var2 != null) {
       var2.hasContactAuthorization(new PromiseWrapper(var1, new a(), null, 4, null));
-      var3 = Unit.a;
+      return Unit.a;
    } else {
-      var3 = null;
+      return null;
    }
-
-   return var3;
 }
 
 fun `serializeHasContactPermissionsResult$lambda$0`(var0: Any): Any {
-   val var1: Boolean = var0 is java.lang.String;
-   var var2: Int = null;
-   if (var1) {
+   if (var0 is java.lang.String) {
       var0 = var0;
    } else {
       var0 = null;
    }
 
-   if (var0 != null) {
-      var2 = mapResultToContactSyncPermission(var0);
-   }
-
-   return var2;
+   return if (var0 != null) mapResultToContactSyncPermission(var0) else null;
 }
 
 internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
@@ -84,12 +72,12 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       val var3: java.util.Map = ContactSyncProvider.INSTANCE.getContactsMap(var0);
       var10 = Json.d;
       Json.d.a();
-      var11 = var10.c(new W(P0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
+      var11 = var10.c(new u0(n2.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.lang.Iterable = var3.values();
-      var12 = new ArrayList(CollectionsKt.v(var4, 10));
+      var12 = new ArrayList(CollectionsKt.w(var4, 10));
       var6 = var4.iterator();
    } catch (var8: SecurityException) {
-      var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
+      var1.invoke(mapResultToContactSyncPermission("DENIED"), null, null);
       return;
    }
 
@@ -101,15 +89,15 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
          var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
-         var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
+         var1.invoke(mapResultToContactSyncPermission("DENIED"), null, null);
          return;
       }
    }
 
    try {
       var10.a();
-      var1.invoke(new Object[]{null, var11, var10.c(new f(ContactSyncPayloadEntry.Companion.serializer()), var12)});
+      var1.invoke(null, var11, var10.c(new f(ContactSyncPayloadEntry.Companion.serializer()), var12));
    } catch (var7: SecurityException) {
-      var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
+      var1.invoke(mapResultToContactSyncPermission("DENIED"), null, null);
    }
 }

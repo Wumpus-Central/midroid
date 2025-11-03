@@ -5,9 +5,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import kc.m
+import ht.v
 import kotlinx.serialization.KSerializer
-import xa.v
+import xu.m
 
 @m
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {

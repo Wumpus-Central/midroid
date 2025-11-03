@@ -18,6 +18,6 @@ public class KvStoragePackage implements ReactPackage {
    @NonNull
    @Override
    public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext var1) {
-      return Collections.emptyList();
+      return Collections.EMPTY_LIST;
    }
 }

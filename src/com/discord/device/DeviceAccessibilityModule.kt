@@ -37,7 +37,7 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
-         val var2: Int = (var8 as L).nextInt();
+         val var2: Int = (var8 as q0).nextInt();
          val var6: ReactApplicationContext = var1.getReactApplicationContext();
          val var7: java.lang.String = var0.getString(var2);
          val var9: View = ReactContextFindViewKt.findView(var6, var7);

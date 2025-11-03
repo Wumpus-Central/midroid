@@ -79,23 +79,23 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
    ) {
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
-      var6.setOnClickListener(new G(var4, var2));
+      var6.setOnClickListener(new g0(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
-      val var9: StructurableText = var2.getContent();
-      val var11: Context = var10.getContext();
+      val var11: StructurableText = var2.getContent();
+      val var9: Context = var10.getContext();
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
       val var5: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var12: TextPaint = var10.getPaint();
       val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var9,
          var11,
+         var9,
          var1,
          false,
          false,
          false,
          false,
          var12,
-         new H(var3, var1),
+         new h0(var3, var1),
          null,
          null,
          null,

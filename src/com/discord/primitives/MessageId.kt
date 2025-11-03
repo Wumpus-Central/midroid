@@ -3,8 +3,8 @@ package com.discord.primitives
 import android.os.Parcel
 import android.os.Parcelable
 import com.discord.snowflake.SnowflakeUtils
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public inline class MessageId : Parcelable {
@@ -42,14 +42,7 @@ public inline class MessageId : Parcelable {
    @JvmStatic
    public fun toSnowflake(): MessageIdSnowflake? {
       val var1: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var0);
-      val var2: MessageIdSnowflake;
-      if (var1 != null) {
-         var2 = MessageIdSnowflake.box-impl(MessageIdSnowflake.constructor-impl(var1.longValue()));
-      } else {
-         var2 = null;
-      }
-
-      return var2;
+      return if (var1 != null) MessageIdSnowflake.box-impl(MessageIdSnowflake.constructor-impl(var1.longValue())) else null;
    }
 
    @JvmStatic

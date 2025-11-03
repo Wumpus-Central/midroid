@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.databinding.BlockedMessageGroupViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.BaseChatListAdapter
@@ -29,6 +29,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
+import y7.a
 
 @SourceDebugExtension(["SMAP\nBlockedMessageGroupView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,91:1\n146#2,8:92\n257#2,2:100\n*S KotlinDebug\n*F\n+ 1 BlockedMessageGroupView.kt\ncom/discord/chat/presentation/blockedmessage/BlockedMessageGroupView\n*L\n40#1:92,8\n75#1:100,2\n*E\n"])
 public class BlockedMessageGroupView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout(var1, var2) {
@@ -42,7 +43,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    init {
       val var4: BlockedMessageGroupViewBinding = BlockedMessageGroupViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      val var3: Int = var1.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      val var3: Int = var1.getResources().getDimensionPixelSize(dimen.message_horizontal_spacing);
       this.setPaddingRelative(var3, this.getPaddingTop(), var3, this.getPaddingBottom());
       val var6: TextView = var4.blockedMessageGroupButton;
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
@@ -62,7 +63,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
-      this.setOnClickListener(new t2.a(var2, var1));
+      this.setOnClickListener(new a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();

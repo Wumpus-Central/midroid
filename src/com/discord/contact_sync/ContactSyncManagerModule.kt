@@ -14,7 +14,7 @@ public class ContactSyncManagerModule(reactContext: ReactApplicationContext) : R
       ContactSyncSerializerKt.serializeGetImageForContactIdResult(var3, var1, var2);
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDContactSyncManager";
    }
 

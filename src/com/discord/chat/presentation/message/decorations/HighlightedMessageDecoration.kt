@@ -2,18 +2,19 @@ package com.discord.chat.presentation.message.decorations
 
 import android.graphics.Canvas
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import androidx.recyclerview.widget.RecyclerView.State
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nHighlightedMessageDecoration.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HighlightedMessageDecoration.kt\ncom/discord/chat/presentation/message/decorations/HighlightedMessageDecoration\n+ 2 Canvas.kt\nandroidx/core/graphics/CanvasKt\n*L\n1#1,39:1\n27#2,7:40\n*S KotlinDebug\n*F\n+ 1 HighlightedMessageDecoration.kt\ncom/discord/chat/presentation/message/decorations/HighlightedMessageDecoration\n*L\n15#1:40,7\n*E\n"])
-public abstract class HighlightedMessageDecoration : RecyclerView.ItemDecoration {
+public abstract class HighlightedMessageDecoration : ItemDecoration {
    private final val drawer: HighlightedMessageDrawer
 
    open fun HighlightedMessageDecoration(var1: HighlightedMessageDrawer) {
       this.drawer = var1;
    }
 
-   public override fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
+   public open fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
@@ -88,25 +89,25 @@ public abstract class HighlightedMessageDecoration : RecyclerView.ItemDecoration
       // 07b: aload 1
       // 07c: invokevirtual java/lang/Object.getClass ()Ljava/lang/Class;
       // 07f: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
-      // 082: astore 3
-      // 083: aload 3
+      // 082: astore 2
+      // 083: aload 2
       // 084: ldc "getSimpleName(...)"
       // 086: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // 089: new java/lang/StringBuilder
-      // 08c: astore 2
-      // 08d: aload 2
+      // 08c: astore 3
+      // 08d: aload 3
       // 08e: invokespecial java/lang/StringBuilder.<init> ()V
-      // 091: aload 2
+      // 091: aload 3
       // 092: ldc "Missing item in position "
       // 094: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 097: pop
-      // 098: aload 2
+      // 098: aload 3
       // 099: iload 7
       // 09b: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
       // 09e: pop
       // 09f: aload 8
-      // 0a1: aload 3
-      // 0a2: aload 2
+      // 0a1: aload 2
+      // 0a2: aload 3
       // 0a3: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0a6: aconst_null
       // 0a7: bipush 4

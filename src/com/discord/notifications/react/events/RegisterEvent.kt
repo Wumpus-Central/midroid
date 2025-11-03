@@ -2,8 +2,8 @@ package com.discord.notifications.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 internal data class RegisterEvent(token: String) : ReactEvent {

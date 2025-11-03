@@ -10,7 +10,6 @@ import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
-import x1.a;
 
 public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
    @NonNull
@@ -53,27 +52,27 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
    @NonNull
    public static AttachmentUploadOverlayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.upload_cancel;
-      SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.upload_complete;
-         SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-         if (var7 != null) {
+         SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.upload_complete_background;
-            MaterialCardView var5 = (MaterialCardView)a.a(var0, var1);
-            if (var5 != null) {
+            MaterialCardView var7 = (MaterialCardView)k5.a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.upload_complete_layout;
-               ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+               ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.upload_progress;
-                  CircularProgressIndicator var2 = (CircularProgressIndicator)a.a(var0, var1);
-                  if (var2 != null) {
+                  CircularProgressIndicator var6 = (CircularProgressIndicator)k5.a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.upload_progress_background;
-                     View var6 = a.a(var0, var1);
-                     if (var6 != null) {
+                     View var4 = k5.a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.upload_progress_layout;
-                        ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var8, var7, var5, var3, var2, var6, var4);
+                        ConstraintLayout var2 = (ConstraintLayout)k5.a.a(var0, var1);
+                        if (var2 != null) {
+                           return new AttachmentUploadOverlayViewBinding(var0, var5, var8, var7, var3, var6, var4, var2);
                         }
                      }
                   }

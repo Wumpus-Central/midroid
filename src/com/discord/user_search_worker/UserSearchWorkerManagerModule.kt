@@ -5,7 +5,7 @@ import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import xa.v
+import ht.v
 
 public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactEvents: ReactEvents = new ReactEvents(v.a("ReturnResults", ReturnResultsEvent::class))

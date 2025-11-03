@@ -1,8 +1,5 @@
 package com.discord.portals.from_native
 
-import ac.I
-import ac.K
-import ac.f
 import android.app.Activity
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
@@ -16,13 +13,16 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import kc.m
+import gu.g
+import gu.i0
+import gu.m0
+import ht.v
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
-import xa.v
+import xu.m
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec(var1) {
    @JvmStatic
@@ -30,7 +30,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
       PortalFromNativeContextManager.INSTANCE.unregisterView(var0);
    }
 
-   public open fun unregisterView(portal: Double) {
+   public override fun unregisterView(portal: Double) {
       val var3: Activity = this.getReactApplicationContext().getCurrentActivity();
       if (var3 != null) {
          var3.runOnUiThread(new c(var1));
@@ -107,87 +107,94 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
 
       @ReactProp(name = "portal")
       public open fun setPortal(portalView: PortalHolderViewGroup, portal: Double) {
-         f.d(CoroutineViewUtilsKt.getAttachedScope(var1), null, null, new Function2<CoroutineScope, Continuation, Object>(var2, var1, this, null) {
-            final double $portal;
-            final PortalHolderViewGroup $portalView;
-            int label;
-            final PortalFromNativeModule.ViewManager this$0;
+         g.d(
+            CoroutineViewUtilsKt.getAttachedScope(var1),
+            null,
+            null,
+            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var2, var1, this, null) {
+               final double $portal;
+               final PortalHolderViewGroup $portalView;
+               int label;
+               final PortalFromNativeModule.ViewManager this$0;
 
-            {
-               super(2, var5);
-               this.$portal = var1;
-               this.$portalView = var3;
-               this.this$0 = var4;
-            }
-
-            private static final Unit invokeSuspend$lambda$0(PortalFromNativeModule.ViewManager var0, PortalHolderViewGroup var1x, double var2x) {
-               PortalFromNativeModule.ViewManager.access$getReactEvents$p(var0).emitEvent(var1x, new PortalFromNativeModule.OnPortalViewLoadedEvent(var2x));
-               return Unit.a;
-            }
-
-            public final Continuation create(Object var1, Continuation var2) {
-               return new <anonymous constructor>(this.$portal, this.$portalView, this.this$0, var2);
-            }
-
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
-               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-            }
-
-            public final Object invokeSuspend(Object var1) {
-               val var5: Any = Ca.b.e();
-               if (this.label != 0) {
-                  if (this.label != 1) {
-                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                  }
-
-                  kotlin.c.b(var1);
-               } else {
-                  kotlin.c.b(var1);
-                  val var6: CoroutineDispatcher = K.a();
-                  var1 = new Function2<CoroutineScope, Continuation, Object>(null) {
-                     int label;
-
-                     {
-                        super(2, var1);
-                     }
-
-                     public final Continuation create(Object var1, Continuation var2) {
-                        return new <anonymous constructor>(var2);
-                     }
-
-                     public final Object invoke(CoroutineScope var1, Continuation var2x) {
-                        return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-                     }
-
-                     public final Object invokeSuspend(Object var1) {
-                        val var3: Any = Ca.b.e();
-                        if (this.label != 0) {
-                           if (this.label != 1) {
-                              throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                           }
-
-                           kotlin.c.b(var1);
-                        } else {
-                           kotlin.c.b(var1);
-                           this.label = 1;
-                           if (I.a(50L, this) === var3) {
-                              return var3;
-                           }
-                        }
-
-                        return Unit.a;
-                     }
-                  };
-                  this.label = 1;
-                  if (f.g(var6, var1, this) === var5) {
-                     return var5;
-                  }
+               {
+                  super(2, var5);
+                  this.$portal = var1;
+                  this.$portalView = var3;
+                  this.this$0 = var4;
                }
 
-               PortalFromNativeContextManager.INSTANCE.registerView(this.$portal, this.$portalView, new d(this.this$0, this.$portalView, this.$portal));
-               return Unit.a;
-            }
-         }, 3, null);
+               private static final Unit invokeSuspend$lambda$0(PortalFromNativeModule.ViewManager var0, PortalHolderViewGroup var1x, double var2x) {
+                  PortalFromNativeModule.ViewManager.access$getReactEvents$p(var0).emitEvent(var1x, new PortalFromNativeModule.OnPortalViewLoadedEvent(var2x));
+                  return Unit.a;
+               }
+
+               public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+                  return new <anonymous constructor>(this.$portal, this.$portalView, this.this$0, var2);
+               }
+
+               public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                  return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+               }
+
+               public final Object invokeSuspend(Object var1) {
+                  val var5: Any = ot.b.f();
+                  if (this.label != 0) {
+                     if (this.label != 1) {
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                     }
+
+                     kotlin.c.b(var1);
+                  } else {
+                     kotlin.c.b(var1);
+                     val var6: CoroutineDispatcher = m0.a();
+                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
+                        int label;
+
+                        {
+                           super(2, var1);
+                        }
+
+                        public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+                           return new <anonymous constructor>(var2);
+                        }
+
+                        public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                           return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                        }
+
+                        public final Object invokeSuspend(Object var1) {
+                           val var3: Any = ot.b.f();
+                           if (this.label != 0) {
+                              if (this.label != 1) {
+                                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                              }
+
+                              kotlin.c.b(var1);
+                           } else {
+                              kotlin.c.b(var1);
+                              this.label = 1;
+                              if (i0.a(50L, this) === var3) {
+                                 return var3;
+                              }
+                           }
+
+                           return Unit.a;
+                        }
+                     };
+                     this.label = 1;
+                     if (g.g(var6, var1, this) === var5) {
+                        return var5;
+                     }
+                  }
+
+                  PortalFromNativeContextManager.INSTANCE.registerView(this.$portal, this.$portalView, new d(this.this$0, this.$portalView, this.$portal));
+                  return Unit.a;
+               }
+            },
+            3,
+            null
+         );
       }
 
       public companion object {

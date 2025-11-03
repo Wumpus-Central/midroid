@@ -2,8 +2,8 @@ package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.Reaction.DefaultImpls
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class MessageReaction(count: Int,
@@ -97,10 +97,10 @@ public data class MessageReaction(count: Int,
 
    public override fun hashCode(): Int {
       val var2: Int = Integer.hashCode(this.count);
-      val var3: Int = java.lang.Boolean.hashCode(this.me);
-      val var4: Int = java.lang.Boolean.hashCode(this.isMeBurst);
-      val var5: Int = this.emoji.hashCode();
-      val var6: Int = Integer.hashCode(this.burstCount);
+      val var6: Int = java.lang.Boolean.hashCode(this.me);
+      val var5: Int = java.lang.Boolean.hashCode(this.isMeBurst);
+      val var3: Int = this.emoji.hashCode();
+      val var4: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
          var1 = 0;
@@ -108,7 +108,7 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var2 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1;
+      return ((((var2 * 31 + var6) * 31 + var5) * 31 + var3) * 31 + var4) * 31 + var1;
    }
 
    fun isBurstReaction(): Boolean {
@@ -117,8 +117,8 @@ public data class MessageReaction(count: Int,
 
    public override fun toString(): String {
       val var1: Int = this.count;
-      val var3: Boolean = this.me;
-      val var4: Boolean = this.isMeBurst;
+      val var4: Boolean = this.me;
+      val var3: Boolean = this.isMeBurst;
       val var5: MessageReactionEmoji = this.emoji;
       val var2: Int = this.burstCount;
       val var6: ThemedBurstReactionColorPalette = this.themedBurstColors;
@@ -126,9 +126,9 @@ public data class MessageReaction(count: Int,
       var7.append("MessageReaction(count=");
       var7.append(var1);
       var7.append(", me=");
-      var7.append(var3);
-      var7.append(", isMeBurst=");
       var7.append(var4);
+      var7.append(", isMeBurst=");
+      var7.append(var3);
       var7.append(", emoji=");
       var7.append(var5);
       var7.append(", burstCount=");

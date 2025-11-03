@@ -3,8 +3,8 @@ package com.discord.billing.react.events
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 internal data class BillingManagerConnectionStateUpdated(connectionState: Int) : ReactEvent {

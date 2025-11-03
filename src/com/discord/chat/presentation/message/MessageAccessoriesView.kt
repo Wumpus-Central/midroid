@@ -11,7 +11,7 @@ import android.view.MotionEvent
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
@@ -72,18 +72,18 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var3;
       val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var4;
-      this.forwardBarPaint$delegate = xa.l.a(new P());
+      this.forwardBarPaint$delegate = ht.l.b(new p0());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
-      leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
-      rightMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
-      embedContentMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_embed_margin);
+      leftMarginPx = this.getResources().getDimensionPixelSize(dimen.message_start_guideline);
+      rightMarginPx = this.getResources().getDimensionPixelSize(dimen.message_horizontal_spacing);
+      embedContentMarginPx = this.getResources().getDimensionPixelSize(dimen.message_embed_margin);
       this.threadSpineDecoration = new ThreadSpineItemDecoration(var1, leftMarginPx);
       this.messageAccessoriesDecoration = new MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx, rightMarginPx, false);
       this.addItemDecoration(this.threadSpineDecoration);
       this.addItemDecoration(this.messageAccessoriesDecoration);
       this.addItemDecoration(
-         new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
+         new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
       this.setLayoutManager(var4);
       this.setAdapter(var3);
@@ -97,11 +97,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : kotlin.sequences.k.M(androidx.core.view.f0.a(this))) {
-         val var2: View = var3.c() as View;
+      for (Pair var3 : kotlin.sequences.k.c0(androidx.core.view.n0.a(this))) {
+         val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var2.getBottom();
+            return var1.getBottom();
          }
       }
 
@@ -132,21 +132,21 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.transitionResilientLinearLayoutManager.disableRecycling(false);
    }
 
-   public override fun onDraw(c: Canvas) {
+   public open fun onDraw(c: Canvas) {
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
-   public override fun onTouchEvent(e: MotionEvent?): Boolean {
+   public open fun onTouchEvent(e: MotionEvent?): Boolean {
       super.onTouchEvent(var1);
       return false;
    }
@@ -171,19 +171,21 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var11: Resources = this.getResources();
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var17: java.lang.Iterable = var5;
+      var9 = var5 is java.util.Collection;
       var10 = false;
-      if (var5 != null && var5.isEmpty()) {
+      if (var9 && (var17 as java.util.Collection).isEmpty()) {
          var9 = false;
       } else {
-         val var16: java.util.Iterator = var5.iterator();
+         val var18: java.util.Iterator = var17.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var16.hasNext()) {
+            if (!var18.hasNext()) {
                break;
             }
 
-            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var18.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
@@ -196,7 +198,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);
    }
 
-   public override fun setRecycledViewPool(pool: RecycledViewPool?) {
+   public open fun setRecycledViewPool(pool: RecycledViewPool?) {
       super.setRecycledViewPool(var1);
       this.accessoriesAdapter.setNestedAccessoriesRecycledViewPool(var1);
    }
@@ -217,14 +219,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          if (var2.getContextType() === MessageContextType.SEARCH) {
             return 0;
          } else {
-            val var4: Int;
-            if (var3) {
-               var4 = var1.getDimensionPixelSize(R.dimen.message_horizontal_spacing);
-            } else {
-               var4 = var1.getDimensionPixelSize(R.dimen.message_start_guideline);
-            }
-
-            return var4;
+            return if (var3) var1.getDimensionPixelSize(dimen.message_horizontal_spacing) else var1.getDimensionPixelSize(dimen.message_start_guideline);
          }
       }
 

@@ -7,7 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.google.android.flexbox.FlexboxLayout;
-import x1.a;
 
 public final class MessageComponentSectionViewBinding implements ViewBinding {
    @NonNull
@@ -26,11 +25,11 @@ public final class MessageComponentSectionViewBinding implements ViewBinding {
    @NonNull
    public static MessageComponentSectionViewBinding bind(@NonNull View var0) {
       int var1 = R.id.section_component_view_group_error_row;
-      View var2 = a.a(var0, var1);
+      View var2 = k5.a.a(var0, var1);
       if (var2 != null) {
          ComponentFailedLabelViewBinding var4 = ComponentFailedLabelViewBinding.bind(var2);
          var1 = R.id.section_layout_box;
-         FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
+         FlexboxLayout var3 = (FlexboxLayout)k5.a.a(var0, var1);
          if (var3 != null) {
             return new MessageComponentSectionViewBinding(var0, var4, var3);
          }

@@ -14,7 +14,7 @@ import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
 import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
-import xa.c
+import ht.c
 
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])

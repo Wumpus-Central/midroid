@@ -1,25 +1,22 @@
 package com.discord.portals.from_js
 
 import android.content.Context
-import android.graphics.Canvas
 import android.view.View
 import android.view.ViewGroup.LayoutParams
 import android.view.accessibility.AccessibilityEvent
 import com.discord.crash_reporting.CrashReporting
+import com.discord.misc.utilities.logThrottle.LogThrottleSingleton
 import com.discord.portals.utils.StacktraceUtilsKt
 import com.facebook.react.views.view.ReactViewGroup
+import ht.v
 import java.util.ArrayList
-import java.util.LinkedHashMap
-import java.util.Map.Entry
-import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
+import kotlin.jvm.internal.TypeIntrinsics
 
-@SourceDebugExtension(["SMAP\nPortalFromJsViewHost.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PortalFromJsViewHost.kt\ncom/discord/portals/from_js/PortalFromJsViewHost\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,281:1\n295#2,2:282\n*S KotlinDebug\n*F\n+ 1 PortalFromJsViewHost.kt\ncom/discord/portals/from_js/PortalFromJsViewHost\n*L\n216#1:282,2\n*E\n"])
 internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    private final var portalId: String?
    private final var portalIdPrev: String?
    private final var childView: View?
-   private final var otherViews: MutableMap<Int, View> = new LinkedHashMap()
+   private final var otherViews: ArrayList<View> = new ArrayList()
 
    private fun addChildView(child: View) {
       this.childView = var1;
@@ -36,31 +33,32 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
    }
 
    private fun childViewValid(): Boolean {
-      val var3: View = this.childView;
-      var var1: Boolean = false;
-      if (this.childView != null) {
-         var1 = false;
-         if (this.childView.isAttachedToWindow()) {
-            var1 = false;
-            if (var3.getLayoutParams() != null) {
-               var1 = true;
-            }
-         }
-      }
-
-      return var1;
+      val var1: View = this.childView;
+      return this.childView != null && this.childView.isAttachedToWindow() && var1.getLayoutParams() != null;
    }
 
    private fun removeChildView(): Unit? {
-      var var1: Unit = null;
       if (this.childView != null) {
-         val var3: java.lang.String = this.portalId;
-         this.childViewRemoved(var3);
+         val var1: java.lang.String = this.portalId;
+         this.childViewRemoved(var1);
          this.childView = null;
-         var1 = Unit.a;
+         return Unit.a;
+      } else {
+         return null;
+      }
+   }
+
+   private fun replaceChildViewWithNextAvailableChild() {
+      if (this.childView != null) {
+         if (this.portalId == null) {
+            return;
+         }
+
+         this.childViewRemoved(this.portalId);
       }
 
-      return var1;
+      this.addChildView(CollectionsKt.o0(this.otherViews) as View);
+      this.otherViews.remove(0);
    }
 
    public open fun addChildrenForAccessibility(outChildren: ArrayList<View>) {
@@ -97,19 +95,19 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          CrashReporting.addBreadcrumb$default(
             var17,
             var19,
-            O.m(new Pair[]{var14, var7, var9, var8, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+            s0.m(new Pair[]{var14, var7, var9, var8, v.a("childViewIsNull", var12), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
             "portal",
             null,
             8,
             null
          );
-         this.otherViews.put(var2, var1);
+         this.otherViews.add(var1);
       } else {
          if (this.childView == var1) {
             CrashReporting.addBreadcrumb$default(
                CrashReporting.INSTANCE,
                "Same child added again",
-               O.m(
+               s0.m(
                   new Pair[]{
                      v.a("portalId", var4),
                      v.a("prevPortalId", var11),
@@ -132,7 +130,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             CrashReporting.addBreadcrumb$default(
                var6,
                var16.toString(),
-               O.m(
+               s0.m(
                   new Pair[]{
                      v.a("portalId", var4),
                      v.a("prevPortalId", var11),
@@ -152,7 +150,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             CrashReporting.addBreadcrumb$default(
                CrashReporting.INSTANCE,
                "Attempting to add different child when one already exists",
-               O.m(
+               s0.m(
                   new Pair[]{
                      v.a("portalId", var4),
                      v.a("prevPortalId", var11),
@@ -183,39 +181,6 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       }
    }
 
-   protected override fun dispatchDraw(canvas: Canvas) {
-      try {
-         super.dispatchDraw(var1);
-      } catch (var10: NullPointerException) {
-         val var8: CrashReporting = CrashReporting.INSTANCE;
-         val var7: Pair = v.a("context", "PortalFromJsViewHost.dispatchDraw");
-         val var6: Pair = v.a("childCount", java.lang.String.valueOf(this.getChildCount()));
-         val var2: Boolean;
-         if (this.childView == null) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         val var9: Pair = v.a("childViewIsNull", java.lang.String.valueOf(var2));
-         var var11: java.lang.String = this.portalId;
-         if (this.portalId == null) {
-            var11 = "null";
-         }
-
-         val var13: Pair = v.a("portalId", var11);
-         var var12: java.lang.String = this.portalIdPrev;
-         if (this.portalIdPrev == null) {
-            var12 = "null";
-         }
-
-         CrashReporting.addBreadcrumb$default(
-            var8, "PortalFromJsViewHost.dispatchDraw NPE", O.m(new Pair[]{var7, var6, var9, var13, v.a("prevPortalId", var12)}), null, null, 12, null
-         );
-         throw var10;
-      }
-   }
-
    public open fun dispatchPopulateAccessibilityEvent(event: AccessibilityEvent?): Boolean {
       return false;
    }
@@ -231,11 +196,11 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          var3 = "";
       }
 
-      val var2: Boolean = StringsKt.c0(var3);
+      val var2: Boolean = StringsKt.i0(var3);
       var var4: java.lang.String = "false";
       if (!var2) {
-         val var9: CrashReporting = CrashReporting.INSTANCE;
-         val var20: Pair = v.a("index", java.lang.String.valueOf(var1));
+         val var20: CrashReporting = CrashReporting.INSTANCE;
+         val var9: Pair = v.a("index", java.lang.String.valueOf(var1));
          var var16: java.lang.String = this.portalId;
          if (this.portalId == null) {
             var16 = "";
@@ -252,7 +217,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          }
 
          CrashReporting.addBreadcrumb$default(
-            var9, "About to crash from getChildAt", O.m(new Pair[]{var20, var19, var14, v.a("childViewIsNull", var4)}), "portal", null, 8, null
+            var20, "About to crash from getChildAt", s0.m(new Pair[]{var9, var19, var14, v.a("childViewIsNull", var4)}), "portal", null, 8, null
          );
          throw new IllegalArgumentException(var3);
       } else {
@@ -278,7 +243,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
             CrashReporting.addBreadcrumb$default(
                var7,
                "getChildAt of non-zero index",
-               O.m(new Pair[]{var8, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
+               s0.m(new Pair[]{var8, var15, var12, v.a("childViewIsNull", var4), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
                "portal",
                null,
                8,
@@ -290,7 +255,7 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
          if (var1 == 0) {
             var13 = this.childView;
          } else {
-            var13 = this.otherViews.get(var1);
+            var13 = this.otherViews.get(var1 - 1);
          }
 
          return var13;
@@ -347,112 +312,94 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup(var1) {
       if (var1 == this.childView) {
          this.removeChildView();
       } else {
-         val var3: java.util.Iterator = this.otherViews.entrySet().iterator();
-
-         while (true) {
-            if (!var3.hasNext()) {
-               var4 = null;
-               break;
-            }
-
-            val var2: Any = var3.next();
-            if ((var2 as Entry).getValue() == var1) {
-               var4 = var2;
-               break;
-            }
-         }
-
-         val var5: Entry = var4 as Entry;
-         if (var4 as Entry != null) {
-            var1 = this.otherViews.remove(var5.getKey());
-         }
+         TypeIntrinsics.asMutableCollection(this.otherViews).remove(var1);
       }
    }
 
    public open fun removeViewAt(index: Int) {
+      var var2: java.lang.String = "";
       if (var1 > 0) {
-         val var6: CrashReporting = CrashReporting.INSTANCE;
-         val var5: Pair = v.a("index", java.lang.String.valueOf(var1));
-         var var2: java.lang.String = this.portalId;
+         val var17: CrashReporting = CrashReporting.INSTANCE;
+         val var16: Pair = v.a("index", java.lang.String.valueOf(var1));
+         var var11: java.lang.String = this.portalId;
          if (this.portalId == null) {
-            var2 = "";
+            var11 = "";
          }
 
-         val var7: Pair = v.a("portalId", var2);
-         var2 = this.portalIdPrev;
-         if (this.portalIdPrev == null) {
-            var2 = "";
-         }
-
-         val var16: Pair = v.a("prevPortalId", var2);
-         if (this.childView == null) {
-            var2 = "true";
-         } else {
-            var2 = "false";
+         val var15: Pair = v.a("portalId", var11);
+         if (this.portalIdPrev != null) {
+            var2 = this.portalIdPrev;
          }
 
          CrashReporting.addBreadcrumb$default(
-            var6,
-            "removeViewAt of non-zero index",
-            O.m(new Pair[]{var5, var7, var16, v.a("childViewIsNull", var2), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
-            "portal",
+            var17, "removeViewAt of non-zero index", s0.m(new Pair[]{var16, var15, v.a("prevPortalId", var2)}), null, null, 12, null
+         );
+         this.otherViews.remove(var1 - 1);
+      } else if (var1 == 0 && !this.otherViews.isEmpty()) {
+         val var5: CrashReporting = CrashReporting.INSTANCE;
+         var var3: java.lang.String = this.portalId;
+         if (this.portalId == null) {
+            var3 = "";
+         }
+
+         val var13: Pair = v.a("portalId", var3);
+         if (this.portalIdPrev != null) {
+            var2 = this.portalIdPrev;
+         }
+
+         var var6: Pair;
+         label36: {
+            var6 = v.a("prevPortalId", var2);
+            if (this.childView != null) {
+               var3 = this.childView.toString();
+               var2 = var3;
+               if (var3 != null) {
+                  break label36;
+               }
+            }
+
+            var2 = "null";
+         }
+
+         CrashReporting.addBreadcrumb$default(
+            var5,
+            "removeViewAt of index 0 even though children with index > 0 exist. Switching to next available child (index 1).",
+            s0.m(
+               new Pair[]{
+                  var13,
+                  var6,
+                  v.a("childView", var2),
+                  v.a("otherViewsSize", java.lang.String.valueOf(this.otherViews.size())),
+                  v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())
+               }
+            ),
+            "portal_error",
             null,
             8,
             null
          );
-      }
-
-      if (var1 == 0) {
-         if (!this.otherViews.isEmpty()) {
-            val var19: CrashReporting = CrashReporting.INSTANCE;
-            var var10: java.lang.String = this.portalId;
-            if (this.portalId == null) {
-               var10 = "";
-            }
-
-            val var18: Pair = v.a("portalId", var10);
-            var10 = this.portalIdPrev;
-            if (this.portalIdPrev == null) {
-               var10 = "";
-            }
-
-            var var20: Pair;
-            label39: {
-               var20 = v.a("prevPortalId", var10);
-               if (this.childView != null) {
-                  val var14: java.lang.String = this.childView.toString();
-                  var10 = var14;
-                  if (var14 != null) {
-                     break label39;
-                  }
-               }
-
-               var10 = "null";
-            }
-
-            CrashReporting.addBreadcrumb$default(
-               var19,
-               "removeViewAt of index 0 even though children with index > 0 exist",
-               O.m(new Pair[]{var18, var20, v.a("childView", var10), v.a("stacktrace", StacktraceUtilsKt.getCurrentStacktraceString())}),
-               "portal",
-               null,
-               8,
-               null
+         if (!LogThrottleSingleton.INSTANCE.shouldThrottle("PortalFromJsViewHost.removeViewAt", 60000L)) {
+            var5.captureMessage(
+               "PortalFromJsViewHost",
+               "removeViewAt of index 0 even though children with index > 0 exist. Switching to next available child (index 1).",
+               CrashReporting.ErrorLevel.WARNING
             );
          }
 
-         this.removeChildView();
+         this.replaceChildViewWithNextAvailableChild();
       } else {
-         this.otherViews.remove(var1);
+         this.removeChildView();
       }
    }
 
    public fun setPortalId(portalId: String) {
       if (this.portalId == null) {
          this.portalId = var1;
-      } else if (!(this.portalId == var1)) {
-         this.portalIdPrev = this.portalId;
-         this.portalId = var1;
+      } else {
+         if (!(this.portalId == var1)) {
+            this.portalIdPrev = this.portalId;
+            this.portalId = var1;
+         }
       }
    }
 }

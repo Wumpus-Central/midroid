@@ -8,15 +8,15 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class EmojiPickerPackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
-      return CollectionsKt.n(new ViewManager[]{new EmojiPickerViewManager(), new EmojiPickerRowViewManager()});
+   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+      return CollectionsKt.o(new ViewManager[]{new EmojiPickerViewManager(), new EmojiPickerRowViewManager()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): Nothing? {
       return null;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

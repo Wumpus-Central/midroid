@@ -1,7 +1,7 @@
 package com.discord.theme
 
-import Da.a
 import kotlin.enums.EnumEntries
+import pt.a
 
 public enum class DiscordTheme {
    DARK,

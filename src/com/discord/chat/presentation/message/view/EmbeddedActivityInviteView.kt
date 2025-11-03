@@ -84,7 +84,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
    public fun setAvatarUris(avatarUris: List<String>) {
       val var4: Boolean = var1.isEmpty();
-      val var5: OverlappingCirclesView = this.binding.participants;
+      var var5: OverlappingCirclesView = this.binding.participants;
       var var2: Byte;
       if (!var4) {
          var2 = 0;
@@ -93,15 +93,15 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       }
 
       var5.setVisibility(var2);
-      val var6: OverlappingCirclesView = this.binding.participants;
-      val var10: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
-      val var7: java.util.Iterator = var1.iterator();
+      var5 = this.binding.participants;
+      val var7: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
+      val var11: java.util.Iterator = var1.iterator();
 
-      while (var7.hasNext()) {
-         var10.add(new OverlappingItem(var7.next() as java.lang.String));
+      while (var11.hasNext()) {
+         var7.add(new OverlappingItem(var11.next() as java.lang.String));
       }
 
-      var6.setItems(var10);
+      var5.setItems(var7);
       val var8: TextView = this.binding.noParticipantsText;
       var2 = 8;
       if (var4) {
@@ -168,7 +168,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    }
 
    public fun setSplash(splashUrl: String?, constrainedWidth: Int) {
-      val var4: SimpleDraweeView = this.binding.itemHero;
+      var var4: SimpleDraweeView = this.binding.itemHero;
       var var3: Boolean;
       if (var1 != null) {
          var3 = 1;
@@ -184,11 +184,11 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
-      var3 = var2 * 9 / 16;
-      val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-      val var5: SimpleDraweeView = this.binding.itemHero;
-      var9.resizeLayoutParams(var5, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var2 = var3 * 9 / 16;
+      val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+      var4 = this.binding.itemHero;
+      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(
@@ -249,7 +249,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
             false,
             false,
             false,
-            new F(var3, var2),
+            new f0(var3, var2),
             var4,
             var5,
             var6,

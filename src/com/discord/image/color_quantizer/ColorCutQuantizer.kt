@@ -68,14 +68,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
    private fun shouldIgnoreColor(color: Int): Boolean {
       val var2: Int = Color.alpha(var1);
       ColorUtils.RGBtoHSL(Color.red(var1), Color.green(var1), Color.blue(var1), this.mTempHsl);
-      val var3: Boolean;
-      if (var2 >= 250 && !ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, this.mTempHsl)) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      return var3;
+      return var2 < 250 || ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, this.mTempHsl);
    }
 
    private fun splitBoxes(queue: PriorityQueue<com.discord.image.color_quantizer.ColorCutQuantizer.Vbox>, maxSize: Int) {
@@ -99,41 +92,15 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       private final val VBOX_COMPARATOR_VOLUME: Comparator<com.discord.image.color_quantizer.ColorCutQuantizer.Vbox>
 
       private fun isBlack(hslColor: FloatArray): Boolean {
-         val var2: Boolean;
-         if (var1[2] <= 0.05F) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         return var2;
+         return var1[2] <= 0.05F;
       }
 
       private fun isNearRedILine(hslColor: FloatArray): Boolean {
-         val var2: Float = var1[0];
-         var var3: Boolean = false;
-         if (10.0F <= var2) {
-            var3 = false;
-            if (var2 <= 37.0F) {
-               var3 = false;
-               if (var1[1] <= 0.82F) {
-                  var3 = true;
-               }
-            }
-         }
-
-         return var3;
+         return 10.0F <= var1[0] && var1[0] <= 37.0F && var1[1] <= 0.82F;
       }
 
       private fun isWhite(hslColor: FloatArray): Boolean {
-         val var2: Boolean;
-         if (var1[2] >= 0.95F) {
-            var2 = true;
-         } else {
-            var2 = false;
-         }
-
-         return var2;
+         return var1[2] >= 0.95F;
       }
 
       private fun shouldIgnoreColor(color: Swatch): Boolean {
@@ -142,21 +109,14 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       private fun shouldIgnoreColor(hslColor: FloatArray): Boolean {
-         val var2: Boolean;
-         if (!this.isWhite(var1) && !this.isBlack(var1) && !this.isNearRedILine(var1)) {
-            var2 = false;
-         } else {
-            var2 = true;
-         }
-
-         return var2;
+         return this.isWhite(var1) || this.isBlack(var1) || this.isNearRedILine(var1);
       }
 
       public fun fromBitmap(bitmap: Bitmap, maxColors: Int): ColorCutQuantizer {
-         val var3: Int = var1.getWidth();
-         val var4: Int = var1.getHeight();
-         val var5: IntArray = new int[var3 * var4];
-         var1.getPixels(var5, 0, var3, 0, 0, var3, var4);
+         val var4: Int = var1.getWidth();
+         val var3: Int = var1.getHeight();
+         val var5: IntArray = new int[var4 * var3];
+         var1.getPixels(var5, 0, var4, 0, 0, var4, var3);
          return new ColorCutQuantizer(new ColorHistogram(var5), var2, null);
       }
    }
@@ -186,19 +146,14 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var2: Int = this.maxRed - this.minRed;
+            val var1: Int = this.maxRed - this.minRed;
             val var3: Int = this.maxGreen - this.minGreen;
-            val var1: Int = this.maxBlue - this.minBlue;
-            val var4: Byte;
-            if (var2 >= var3 && var2 >= this.maxBlue - this.minBlue) {
-               var4 = -3;
-            } else if (var3 >= var2 && var3 >= var1) {
-               var4 = -2;
+            val var2: Int = this.maxBlue - this.minBlue;
+            if (var1 >= var3 && var1 >= this.maxBlue - this.minBlue) {
+               return -3;
             } else {
-               var4 = -1;
+               return if (var3 >= var1 && var3 >= var2) -2 else -1;
             }
-
-            return var4;
          }
 
 
@@ -249,13 +204,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       }
 
       public fun canSplit(): Boolean {
-         val var1: Int = this.getColorCount();
-         var var2: Boolean = true;
-         if (var1 <= 1) {
-            var2 = false;
-         }
-
-         return var2;
+         return this.getColorCount() > 1;
       }
 
       public fun findSplitPoint(): Int {
@@ -268,15 +217,7 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
          for (int var3 = this.upperIndex; var1 < var3; var1++) {
             val var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
-            if (var2 != -3) {
-               if (var2 != -2) {
-                  if (var2 == -1 && Color.blue(var5) > var4) {
-                     return var1;
-                  }
-               } else if (Color.green(var5) >= var4) {
-                  return var1;
-               }
-            } else if (Color.red(var5) >= var4) {
+            if (if (var2 != -3) (if (var2 != -2) var2 == -1 && Color.blue(var5) > var4 else Color.green(var5) >= var4) else Color.red(var5) >= var4) {
                return var1;
             }
          }
@@ -335,19 +276,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
       public fun midPoint(dimension: Int): Int {
          if (var1 != -3) {
             if (var1 != -2) {
-               if (var1 != -1) {
-                  var1 = (this.minRed + this.maxRed) / 2;
-               } else {
-                  var1 = (this.minBlue + this.maxBlue) / 2;
-               }
+               return if (var1 != -1) (this.minRed + this.maxRed) / 2 else (this.minBlue + this.maxBlue) / 2;
             } else {
-               var1 = (this.minGreen + this.maxGreen) / 2;
+               return (this.minGreen + this.maxGreen) / 2;
             }
          } else {
-            var1 = (this.minRed + this.maxRed) / 2;
+            return (this.minRed + this.maxRed) / 2;
          }
-
-         return var1;
       }
 
       public fun splitBox(): com.discord.image.color_quantizer.ColorCutQuantizer.Vbox {

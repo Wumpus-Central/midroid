@@ -1,10 +1,9 @@
 package com.discord.recycler_view.scroll
 
-import ac.K
-import ac.f
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
-import dc.e
-import dc.v
+import gu.g
+import gu.m0
+import ju.c0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -13,7 +12,7 @@ import kotlin.jvm.internal.FunctionReferenceImpl
 import kotlin.jvm.internal.Intrinsics.Kotlin
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.g
+import kotlinx.coroutines.i
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -25,15 +24,15 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    private final val events: MutableSharedFlow<Any>
 
    init {
-      val var5: CoroutineScope = g.a(K.c());
+      val var5: CoroutineScope = i.a(m0.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
-      this.events = v.b(0, 1, null, 4, null);
-      this.eventDetectorJob = f.d(
+      this.events = c0.b(0, 1, null, 4, null);
+      this.eventDetectorJob = g.d(
          var5,
          null,
          null,
-         new Function2<CoroutineScope, Continuation, Object>(var4, this, var1, var3, null) {
+         new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var4, this, var1, var3, null) {
             final boolean $collectWithLeadingDebounce;
             final Function1<T, Unit> $onEvent;
             final long $timeoutMillis;
@@ -48,16 +47,16 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                this.$onEvent = var5;
             }
 
-            public final Continuation create(Object var1, Continuation var2) {
+            public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
                return new <anonymous constructor>(this.$collectWithLeadingDebounce, this.this$0, this.$timeoutMillis, this.$onEvent, var2);
             }
 
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
+            public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
                return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = Ca.b.e();
+               val var5: Any = ot.b.f();
                if (this.label != 0) {
                   if (this.label != 1 && this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -76,23 +75,16 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            this.$tmp0 = var1;
                         }
 
-                        public final Object emit(T var1, Continuation var2x) {
+                        public final Object emit(T var1, Continuation<? super Unit> var2x) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion0(this.$tmp0, var1, var2x);
-                           return if (var1 === Ca.b.e()) var1 else Unit.a;
+                           return if (var1 === ot.b.f()) var1 else Unit.a;
                         }
 
                         @Override
                         public final boolean equals(Object var1) {
-                           val var4: Boolean = var1 is FlowCollector;
-                           var var2x: Boolean = false;
-                           if (var4) {
-                              var2x = false;
-                              if (var1 is FunctionAdapter) {
-                                 var2x = this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
-                              }
-                           }
-
-                           return var2x;
+                           return var1 is FlowCollector
+                              && var1 is FunctionAdapter
+                              && this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
                         }
 
                         public final Function getFunctionDelegate() {
@@ -116,7 +108,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         return var5;
                      }
                   } else {
-                     val var8: Flow = e.g(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var8: Flow = ju.g.k(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
                      val var9: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
@@ -124,23 +116,16 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            this.$tmp0 = var1;
                         }
 
-                        public final Object emit(T var1, Continuation var2) {
+                        public final Object emit(T var1, Continuation<? super Unit> var2) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion1(this.$tmp0, var1, var2);
-                           return if (var1 === Ca.b.e()) var1 else Unit.a;
+                           return if (var1 === ot.b.f()) var1 else Unit.a;
                         }
 
                         @Override
                         public final boolean equals(Object var1) {
-                           val var4: Boolean = var1 is FlowCollector;
-                           var var2: Boolean = false;
-                           if (var4) {
-                              var2 = false;
-                              if (var1 is FunctionAdapter) {
-                                 var2 = this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
-                              }
-                           }
-
-                           return var2;
+                           return var1 is FlowCollector
+                              && var1 is FunctionAdapter
+                              && this.getFunctionDelegate() == (var1 as FunctionAdapter).getFunctionDelegate();
                         }
 
                         public final Function getFunctionDelegate() {

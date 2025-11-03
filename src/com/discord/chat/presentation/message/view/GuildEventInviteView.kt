@@ -10,7 +10,7 @@ import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
@@ -166,7 +166,7 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
             var4,
             var5,
             var6,
-            new k0(var7, var2),
+            new j1(var7, var2),
             var8,
             var9,
             var10,
@@ -182,7 +182,7 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
             var20,
             var21,
             null,
-            this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing),
+            this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing),
             0,
             false,
             null,
@@ -236,11 +236,11 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    }
 
    public fun setHeader(iconUrl: String?, text: String, color: Int) {
-      val var5: GuildEventInviteViewBinding = this.binding;
-      val var4: SimpleDraweeView = this.binding.headerIcon;
-      ReactAssetUtilsKt.setOptionalReactImageUrl(var4, var1);
-      var5.headerText.setText(var2);
-      var5.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
+      val var4: GuildEventInviteViewBinding = this.binding;
+      val var5: SimpleDraweeView = this.binding.headerIcon;
+      ReactAssetUtilsKt.setOptionalReactImageUrl(var5, var1);
+      var4.headerText.setText(var2);
+      var4.headerIcon.setColorFilter(new PorterDuffColorFilter(var3, Mode.SRC_ATOP));
    }
 
    public fun setSecondaryButton(iconUrl: String?, listener: OnClickListener?) {
@@ -252,14 +252,11 @@ public class GuildEventInviteView  public constructor(context: Context, attrs: A
    public fun setTitle(text: String?, color: Int?): Unit? {
       val var4: TextView = this.binding.titleText;
       ViewUtilsKt.setOptionalText(var4, var1);
-      val var5: Unit;
       if (var2 != null) {
          this.binding.titleText.setTextColor(var2.intValue());
-         var5 = Unit.a;
+         return Unit.a;
       } else {
-         var5 = null;
+         return null;
       }
-
-      return var5;
    }
 }

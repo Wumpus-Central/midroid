@@ -43,16 +43,17 @@ public class SpoilerViewManager {
                var12.setOpaqueBackgroundVisible(var11);
                var4.setImportantForAccessibility(4);
                var4.clearFocus();
-            } else {
-               if (var5 != null) {
-                  var5.setVisibility(8);
-               }
+               return;
+            }
 
-               var4.setImportantForAccessibility(0);
-               if (var8) {
-                  var12.clearFocus();
-                  var4.requestFocus();
-               }
+            if (var5 != null) {
+               var5.setVisibility(8);
+            }
+
+            var4.setImportantForAccessibility(0);
+            if (var8) {
+               var12.clearFocus();
+               var4.requestFocus();
             }
          }
       }

@@ -89,9 +89,9 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var9: FrameLayout = var6.avatarContainer;
       var6.avatarContainer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(var9, SizeUtilsKt.getDpToPx(16));
-      val var10: View = var6.overlayGradient;
+      val var16: View = var6.overlayGradient;
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-         var10,
+         var16,
          new int[]{ColorUtilsKt.argbWithAdjustedAlpha(ThemeManagerKt.getTheme().getBackgroundSecondary(), 0.9F), 0},
          Orientation.BOTTOM_TOP,
          0.0F,
@@ -112,7 +112,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
    public fun setAcceptButton(text: CharSequence?, backgroundColor: Int?) {
       val var5: DCDButton = this.binding.acceptButton;
       var var3: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -148,7 +148,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       }
 
       val var6: SimpleDraweeView = this.binding.itemInviteSplash;
-      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b(var5, var5, 0.0F, 0.0F));
+      (this.binding.itemInviteSplash.getHierarchy() as GenericDraweeHierarchy).D(com.facebook.drawee.generic.a.b(var5, var5, 0.0F, 0.0F));
       var6.setImageURI(var1);
       if (var1 == null) {
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(var6, new int[]{var2, var3}, Orientation.TL_BR, var5, var5, 0.0F, 0.0F, null, 0, 240, null);
@@ -268,7 +268,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
    public fun setPresence(onlineText: CharSequence?, memberText: CharSequence?) {
       val var6: ImageView = this.binding.itemInviteOnlineDot;
       var var3: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -283,7 +283,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       var6.setVisibility(var3);
       val var16: TextView = this.binding.itemInviteOnlineText;
       var var10: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var10 = 0;
       } else {
          var10 = 1;
@@ -299,7 +299,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       this.binding.itemInviteOnlineText.setText(var1);
       val var7: ImageView = this.binding.itemInviteTotalMemberDot;
       var var12: Boolean;
-      if (var2 != null && !StringsKt.c0(var2)) {
+      if (var2 != null && !StringsKt.i0(var2)) {
          var12 = 0;
       } else {
          var12 = 1;
@@ -315,7 +315,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var8: TextView = this.binding.itemInviteTotalMemberText;
       var var14: Byte = 1;
       if (var2 != null) {
-         if (StringsKt.c0(var2)) {
+         if (StringsKt.i0(var2)) {
             var14 = 1;
          } else {
             var14 = 0;

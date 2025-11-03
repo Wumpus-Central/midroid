@@ -32,6 +32,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
             this.isDragging = false;
             if (this.onDragStateChanged != null) {
                this.onDragStateChanged.invoke(java.lang.Boolean.FALSE);
+               return;
             }
          }
       } else if (!this.isDragging) {
@@ -181,15 +182,15 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
 
       public override fun toString(): String {
          val var4: RecyclerView = this.recyclerView;
-         val var2: Int = this.dx;
-         val var1: Int = this.dy;
+         val var1: Int = this.dx;
+         val var2: Int = this.dy;
          val var3: StringBuilder = new StringBuilder();
          var3.append("ScrollEvent(recyclerView=");
          var3.append(var4);
          var3.append(", dx=");
-         var3.append(var2);
-         var3.append(", dy=");
          var3.append(var1);
+         var3.append(", dy=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

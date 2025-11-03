@@ -4,18 +4,18 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.f0
+import androidx.core.view.n0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
-import h3.a
-import h3.b
-import h3.c
-import h3.d
+import ht.p
+import k9.a
+import k9.b
+import k9.c
+import k9.d
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.p
 
 @SourceDebugExtension(["SMAP\nStickerPickerRowView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 StickerPickerRowView.kt\ncom/discord/sticker_picker/StickerPickerRowView\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,138:1\n1317#2,2:139\n1872#3,2:141\n1874#3:147\n1872#3,3:148\n278#4,2:143\n257#4,2:145\n*S KotlinDebug\n*F\n+ 1 StickerPickerRowView.kt\ncom/discord/sticker_picker/StickerPickerRowView\n*L\n28#1:139,2\n47#1:141,2\n47#1:147\n120#1:148,3\n50#1:143,2\n55#1:145,2\n*E\n"])
 internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
@@ -34,7 +34,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
       for (int var3 = 0; var5.hasNext(); var3++) {
          var var6: Any = var5.next();
          if (var3 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          var6 = var6 as StickerPickerRow.Sticker;
@@ -122,7 +122,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
       for (int var10 = 0; var9.hasNext(); var10++) {
          var var7: View = (View)var9.next();
          if (var10 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          var7 = var7 as StickerPickerRow.Sticker;
@@ -154,8 +154,8 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
    }
 
    public fun clean() {
-      for (View var2 : f0.a(this)) {
-         (var2 as StickerView).recycle();
+      for (View var1 : n0.a(this)) {
+         (var1 as StickerView).recycle();
       }
    }
 

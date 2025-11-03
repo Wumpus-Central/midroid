@@ -7,7 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import x1.a;
 
 public final class SeparatorViewBinding implements ViewBinding {
    @NonNull
@@ -29,15 +28,15 @@ public final class SeparatorViewBinding implements ViewBinding {
    @NonNull
    public static SeparatorViewBinding bind(@NonNull View var0) {
       int var1 = R.id.left_bar;
-      View var2 = a.a(var0, var1);
-      if (var2 != null) {
+      View var4 = k5.a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.middle_text;
-         TextView var3 = (TextView)a.a(var0, var1);
+         TextView var3 = (TextView)k5.a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.right_bar;
-            View var4 = a.a(var0, var1);
-            if (var4 != null) {
-               return new SeparatorViewBinding(var0, var2, var3, var4);
+            View var2 = k5.a.a(var0, var1);
+            if (var2 != null) {
+               return new SeparatorViewBinding(var0, var4, var3, var2);
             }
          }
       }

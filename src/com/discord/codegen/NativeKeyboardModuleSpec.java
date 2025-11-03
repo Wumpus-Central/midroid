@@ -1,10 +1,10 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import kc.a;
 
 public abstract class NativeKeyboardModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeKeyboardModule";
@@ -21,6 +21,7 @@ public abstract class NativeKeyboardModuleSpec extends ReactContextBaseJavaModul
    @a
    public abstract void dismissGlobalKeyboard();
 
+   @Override
    public String getName() {
       return "NativeKeyboardModule";
    }

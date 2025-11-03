@@ -11,14 +11,9 @@ fun `access$getBackgroundHighlight`(var0: ChatListItem): BackgroundHighlight {
 }
 
 private fun ChatListItem.getBackgroundHighlight(): BackgroundHighlight? {
-   val var1: BackgroundHighlight;
    if (var0 is MessageItem) {
-      var1 = (var0 as MessageItem).getBackgroundHighlight();
-   } else if (var0 is SystemMessageItem) {
-      var1 = (var0 as SystemMessageItem).getBackgroundHighlight();
+      return (var0 as MessageItem).getBackgroundHighlight();
    } else {
-      var1 = null;
+      return if (var0 is SystemMessageItem) (var0 as SystemMessageItem).getBackgroundHighlight() else null;
    }
-
-   return var1;
 }

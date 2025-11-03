@@ -20,7 +20,7 @@ public open class ChatListConstraintLayout  public constructor(context: Context,
       ChatListChildView.DefaultImpls.bindKey(this, var1);
    }
 
-   protected override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+   protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
       this.onMeasureConsiderFrozen(var1, var2);
    }
 

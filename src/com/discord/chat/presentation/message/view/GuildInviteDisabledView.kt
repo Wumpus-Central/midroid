@@ -15,8 +15,8 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -66,7 +66,7 @@ public class GuildInviteDisabledView  public constructor(context: Context, attrs
          var2 = var1;
       } else {
          val var3: Context = this.getContext();
-         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(color.primary_100, color.primary_630));
+         var2 = ColorUtilsKt.getColorCompat(var3, ThemeManagerKt.getTheme().getColorRes(R.color.primary_100, R.color.primary_630));
       }
 
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var2, SizeUtilsKt.getDpToPx(4), null, 0, 12, null);
@@ -97,7 +97,7 @@ public class GuildInviteDisabledView  public constructor(context: Context, attrs
    public fun setHelpIcon(label: String, helpArticleLink: String, onHelpArticleClicked: (String) -> Unit) {
       val var4: SimpleDraweeView = this.binding.itemInviteHelpIcon;
       this.binding.itemInviteHelpIcon.setContentDescription(var1);
-      var4.setOnClickListener(new l0(var3, var2));
+      var4.setOnClickListener(new k1(var3, var2));
    }
 
    public fun setSubtitle(subtitle: String, guildName: String) {

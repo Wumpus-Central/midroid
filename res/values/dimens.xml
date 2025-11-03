@@ -83,9 +83,11 @@
     <dimen name="abc_text_size_title_material_toolbar">20.0dip</dimen>
     <dimen name="appcompat_dialog_background_inset">16.0dip</dimen>
     <dimen name="autofill_inline_suggestion_icon_size">20.0dip</dimen>
+    <dimen name="bottomMargin">48.0dip</dimen>
     <dimen name="browser_actions_context_menu_max_width">500.0dip</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20.0dip</dimen>
     <dimen name="bubble_size_default">64.0dip</dimen>
+    <dimen name="buttonRadius">4.0dip</dimen>
     <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
     <dimen name="cardview_default_elevation">2.0dip</dimen>
     <dimen name="cardview_default_radius">2.0dip</dimen>
@@ -97,6 +99,7 @@
     <dimen name="compat_control_corner_material">2.0dip</dimen>
     <dimen name="compat_notification_large_icon_max_height">320.0dip</dimen>
     <dimen name="compat_notification_large_icon_max_width">320.0dip</dimen>
+    <dimen name="constraintWidthMax">500.0dip</dimen>
     <dimen name="def_drawer_elevation">10.0dip</dimen>
     <dimen name="design_appbar_elevation">4.0dip</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168.0dip</dimen>
@@ -186,6 +189,7 @@
     <dimen name="fastscroll_default_thickness">8.0dip</dimen>
     <dimen name="fastscroll_margin">0.0dip</dimen>
     <dimen name="fastscroll_minimum_range">50.0dip</dimen>
+    <dimen name="fingerprint_icon_size">64.0dip</dimen>
     <item type="dimen" name="highlight_alpha_material_colored">0.26</item>
     <item type="dimen" name="highlight_alpha_material_dark">0.2</item>
     <item type="dimen" name="highlight_alpha_material_light">0.12</item>
@@ -853,6 +857,19 @@
     <dimen name="notification_top_pad">10.0dip</dimen>
     <dimen name="notification_top_pad_large_text">5.0dip</dimen>
     <dimen name="overlay_safe_margin">16.0dip</dimen>
+    <dimen name="pi2_default_local_image_height">200.0dip</dimen>
+    <dimen name="pi2_governmentid_buttons_min_margin">16.0dip</dimen>
+    <dimen name="pi2_governmentid_capture_button_bottom_margin">24.0dip</dimen>
+    <dimen name="pi2_navigation_bar_icon_size">48.0dip</dimen>
+    <dimen name="pi2_navigation_bar_padding">12.0dip</dimen>
+    <dimen name="pi2_overlay_corner_radius">8.0dip</dimen>
+    <dimen name="pi2_overlay_stroke_width">3.0dip</dimen>
+    <dimen name="pi2_passport_nfc_image_preview_height">160.0dip</dimen>
+    <dimen name="pi2_preview_horizontal_margin">36.0dip</dimen>
+    <dimen name="pi2_review_captures_min_column_width">160.0dip</dimen>
+    <dimen name="pi2_small_default_local_image_height">140.0dip</dimen>
+    <dimen name="pi2_small_default_option_local_image_height">32.0dip</dimen>
+    <dimen name="pi2_vertical_margin">16.0dip</dimen>
     <dimen name="premium_emoji_lock_size">16.0dip</dimen>
     <dimen name="premium_inline_roadblock_height">28.0dip</dimen>
     <dimen name="premium_inline_roadblock_height_half">14.0dip</dimen>
@@ -871,6 +888,8 @@
     <dimen name="spacing_80">80.0dip</dimen>
     <dimen name="spacing_96">96.0dip</dimen>
     <dimen name="spine_width">2.0dip</dimen>
+    <dimen name="spinnerBorder">1.0dip</dimen>
+    <dimen name="startEndMargin">24.0dip</dimen>
     <dimen name="thread_spine_end_padding">4.0dip</dimen>
     <dimen name="tooltip_corner_radius">2.0dip</dimen>
     <dimen name="tooltip_horizontal_padding">16.0dip</dimen>
@@ -903,5 +922,6 @@
     <dimen name="ucrop_text_size_widget_text">13.0sp</dimen>
     <dimen name="ucrop_width_horizontal_wheel_progress_line">2.0dip</dimen>
     <dimen name="ucrop_width_middle_wheel_progress_line">4.0dip</dimen>
+    <dimen name="ui_spinner_dropdown_item_padding">24.0dip</dimen>
     <dimen name="vertical_safe_margin">32.0dip</dimen>
 </resources>

@@ -8,14 +8,7 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 
 public class SafeAreaPackage : BaseReactPackage {
    public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-      val var3: SafeAreaInsetsModule;
-      if (var1 == "NativeSafeAreaInsetsModule") {
-         var3 = new SafeAreaInsetsModule(var2);
-      } else {
-         var3 = null;
-      }
-
-      return var3;
+      return if (var1 == "NativeSafeAreaInsetsModule") new SafeAreaInsetsModule(var2) else null;
    }
 
    public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {

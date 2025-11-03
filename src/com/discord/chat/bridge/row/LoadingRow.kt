@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row() {

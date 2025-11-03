@@ -2,9 +2,12 @@ package com.discord.chat.presentation.list
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import kotlin.enums.EnumEntries
 
-public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) : RecyclerView.OnScrollListener {
+public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) : OnScrollListener {
    private final val scrollStateUpdated: (ScrollState) -> Unit
    private final var isWatching: Boolean
    private final var scrollStateInt: Int
@@ -24,7 +27,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
    ) {
       if (this.isWatching) {
          this.scrollStateInt = var2;
-         val var18: RecyclerView.LayoutManager = var1.getLayoutManager();
+         val var18: LayoutManager = var1.getLayoutManager();
          val var28: LinearLayoutManager = var18 as LinearLayoutManager;
          val var17: Boolean = (var18 as LinearLayoutManager).getReverseLayout();
          this.chatListVisibilityCalculator.updateFirstAndLastMessageVisibilityData(var1);
@@ -32,6 +35,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          val var19: java.lang.Double = this.chatListVisibilityCalculator.getFirstMessagePercentVisible();
          val var6: Int = this.chatListVisibilityCalculator.getLastMessagePosition();
          val var20: java.lang.Double = this.chatListVisibilityCalculator.getLastMessagePercentVisible();
+         var var14: Boolean = false;
          var var10: Boolean;
          if (var7 == 0) {
             var10 = true;
@@ -75,11 +79,8 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
             var13 = false;
          }
 
-         val var14: Boolean;
          if (this.scrollStateInt == 1) {
             var14 = true;
-         } else {
-            var14 = false;
          }
 
          val var15: Boolean;
@@ -98,7 +99,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
             var29 = null;
          }
 
-         val var21: RecyclerView.Adapter = var1.getAdapter();
+         val var21: Adapter = var1.getAdapter();
          var23 = (var21 as ChannelChatListAdapter).getFirstMessageItemPosition();
          val var16: Boolean;
          if (var7 <= var23 && var23 <= var8) {
@@ -118,6 +119,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          this.scrollState = var22;
          if (var4 === ChatScrollStateObserver.EmitMode.YES || var4 === ChatScrollStateObserver.EmitMode.IF_CHANGED && !var10) {
             this.scrollStateUpdated.invoke(var22);
+            return;
          }
       }
    }
@@ -126,11 +128,11 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       return this.scrollState;
    }
 
-   public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+   public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
       this.computeScrollState(var1, var2, 0, ChatScrollStateObserver.EmitMode.IF_CHANGED);
    }
 
-   public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+   public open fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
       this.computeScrollState(var1, this.scrollStateInt, var3, ChatScrollStateObserver.EmitMode.IF_CHANGED);
    }
 
@@ -155,7 +157,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic

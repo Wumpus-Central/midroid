@@ -1,11 +1,10 @@
 package com.discord.chat.bridge.scroll
 
-import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m(with = ChatScrollType.Serializer::class)
 public enum class ChatScrollType(serialNumber: Int) : IntEnum {
@@ -23,7 +22,7 @@ public enum class ChatScrollType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ChatScrollType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

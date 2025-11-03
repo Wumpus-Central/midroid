@@ -7,6 +7,6 @@ public final class a implements Function0 {
    public final ButtonComponentView d;
 
    public final Object invoke() {
-      return ButtonComponentView.i(this.d);
+      return ButtonComponentView.j(this.d);
    }
 }

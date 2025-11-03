@@ -11,6 +11,6 @@ public class LibDiscorePackage : ReactPackage {
    }
 
    public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-      return CollectionsKt.k();
+      return CollectionsKt.l();
    }
 }

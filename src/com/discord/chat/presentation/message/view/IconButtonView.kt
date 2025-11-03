@@ -29,7 +29,7 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
       this.binding = var4;
       val var3: FrameLayout = var4.iconContainer;
       ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).x(0);
+      (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
    }
 
    @JvmStatic
@@ -42,6 +42,6 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
       ReactAssetUtilsKt.setReactAsset(var4, var1);
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new m0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new l1(var3), 1, null);
    }
 }

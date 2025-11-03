@@ -77,9 +77,24 @@
     <item type="id" name="actions_container" />
     <item type="id" name="activity_chooser_view_content" />
     <item type="id" name="activity_icon" />
+    <item type="id" name="add_button" />
     <item type="id" name="add_reaction" />
     <item type="id" name="add_reaction_image" />
     <item type="id" name="add_reaction_text" />
+    <item type="id" name="add_signature_label" />
+    <item type="id" name="address_city" />
+    <item type="id" name="address_expand_components_button" />
+    <item type="id" name="address_field_collapsed" />
+    <item type="id" name="address_field_collapsed_text_view" />
+    <item type="id" name="address_field_expanded" />
+    <item type="id" name="address_field_expanded_text_view" />
+    <item type="id" name="address_fields" />
+    <item type="id" name="address_fields_collapsed" />
+    <item type="id" name="address_fields_expanded" />
+    <item type="id" name="address_label" />
+    <item type="id" name="address_postal_code" />
+    <item type="id" name="address_subdivision" />
+    <item type="id" name="address_suite" />
     <item type="id" name="alertTitle" />
     <item type="id" name="alert_title" />
     <item type="id" name="alt_remix_tag" />
@@ -87,7 +102,11 @@
     <item type="id" name="alt_text_label" />
     <item type="id" name="ampm" />
     <item type="id" name="androidx_compose_ui_view_composition_context" />
+    <item type="id" name="androidx_credential_pendingCredentialRequest" />
     <item type="id" name="androidx_window_activity_scope" />
+    <item type="id" name="animation_container" />
+    <item type="id" name="animations_played" />
+    <item type="id" name="animationview_inquiry_initializingspinner" />
     <item type="id" name="answers" />
     <item type="id" name="app_icon" />
     <item type="id" name="arrow" />
@@ -100,6 +119,8 @@
     <item type="id" name="author_avatar_decoration" />
     <item type="id" name="author_container" />
     <item type="id" name="author_name" />
+    <item type="id" name="auto_capture_disclaimer" />
+    <item type="id" name="auto_capture_progress_bar" />
     <item type="id" name="autofill_inline_suggestion_end_icon" />
     <item type="id" name="autofill_inline_suggestion_start_icon" />
     <item type="id" name="autofill_inline_suggestion_subtitle" />
@@ -109,6 +130,7 @@
     <item type="id" name="avatar" />
     <item type="id" name="avatar_container" />
     <item type="id" name="avatar_placeholder" />
+    <item type="id" name="back_stack_body" />
     <item type="id" name="background_image" />
     <item type="id" name="badge" />
     <item type="id" name="badge_container" />
@@ -118,6 +140,7 @@
     <item type="id" name="barrier_button" />
     <item type="id" name="barrier_footer" />
     <item type="id" name="barrier_header" />
+    <item type="id" name="blinds_view" />
     <item type="id" name="blocked_message_group_button" />
     <item type="id" name="blocked_messages" />
     <item type="id" name="blur_view" />
@@ -125,6 +148,10 @@
     <item type="id" name="body_text" />
     <item type="id" name="border" />
     <item type="id" name="bottom_guideline" />
+    <item type="id" name="bottom_inset" />
+    <item type="id" name="bottom_sheet" />
+    <item type="id" name="bottom_sheet_content" />
+    <item type="id" name="bottom_spacer" />
     <item type="id" name="browser_actions_header_text" />
     <item type="id" name="browser_actions_menu_item_icon" />
     <item type="id" name="browser_actions_menu_item_text" />
@@ -137,9 +164,19 @@
     <item type="id" name="button_container" />
     <item type="id" name="button_text" />
     <item type="id" name="button_wrapper" />
+    <item type="id" name="camera2_preview" />
     <item type="id" name="camera_button" />
+    <item type="id" name="camera_cover" />
+    <item type="id" name="camera_initializing_progress_bar" />
+    <item type="id" name="camera_screen_content" />
+    <item type="id" name="camera_view" />
     <item type="id" name="cancel_action" />
     <item type="id" name="cancel_button" />
+    <item type="id" name="capture_button" />
+    <item type="id" name="capture_button_spacer" />
+    <item type="id" name="capture_success" />
+    <item type="id" name="capture_tips" />
+    <item type="id" name="card_view" />
     <item type="id" name="catalyst_redbox_title" />
     <item type="id" name="category_name" />
     <item type="id" name="cause_header" />
@@ -157,12 +194,27 @@
     <item type="id" name="chat_list_adapter_item_visibility_icon" />
     <item type="id" name="chat_list_feedback_icon" />
     <item type="id" name="checkbox" />
+    <item type="id" name="checkbox_description" />
+    <item type="id" name="checkbox_error" />
+    <item type="id" name="checkbox_group_container" />
+    <item type="id" name="checkbox_group_error" />
+    <item type="id" name="checkbox_group_label" />
+    <item type="id" name="checkbox_label" />
+    <item type="id" name="chevron" />
+    <item type="id" name="child" />
+    <item type="id" name="child_stub" />
     <item type="id" name="children_views" />
+    <item type="id" name="choose_new_photo_button" />
     <item type="id" name="chronometer" />
     <item type="id" name="circle_center" />
+    <item type="id" name="circle_mask" />
     <item type="id" name="clan_tag_chiplet" />
+    <item type="id" name="clear_button" />
     <item type="id" name="close" />
+    <item type="id" name="close_button" />
     <item type="id" name="close_icon" />
+    <item type="id" name="close_signature_sheet_button" />
+    <item type="id" name="coil_request_manager" />
     <item type="id" name="compose_view_saveable_id_tag" />
     <item type="id" name="confirm_button" />
     <item type="id" name="connections_role_tag" />
@@ -180,11 +232,17 @@
     <item type="id" name="content_inventory_component_subtitle" />
     <item type="id" name="content_inventory_component_title" />
     <item type="id" name="content_inventory_component_username" />
+    <item type="id" name="content_scroll_view" />
     <item type="id" name="content_view" />
+    <item type="id" name="continue_button" />
     <item type="id" name="controls_shadow" />
     <item type="id" name="controls_wrapper" />
     <item type="id" name="coordinator" />
     <item type="id" name="copy_button" />
+    <item type="id" name="countdown" />
+    <item type="id" name="country_selector" />
+    <item type="id" name="country_selector_text" />
+    <item type="id" name="cover" />
     <item type="id" name="cover_image" />
     <item type="id" name="cover_image_overlay_button" />
     <item type="id" name="createdBy" />
@@ -194,8 +252,10 @@
     <item type="id" name="ctaButton" />
     <item type="id" name="customPanel" />
     <item type="id" name="date" />
+    <item type="id" name="date_label" />
     <item type="id" name="date_picker_actions" />
     <item type="id" name="day" />
+    <item type="id" name="day_edit_text" />
     <item type="id" name="declineButton" />
     <item type="id" name="declineCallContainer" />
     <item type="id" name="declineCallText" />
@@ -212,10 +272,20 @@
     <item type="id" name="desktop_icon" />
     <item type="id" name="dialog_button" />
     <item type="id" name="dialog_card" />
+    <item type="id" name="disclaimer" />
+    <item type="id" name="disclaimer_icon" />
+    <item type="id" name="disclaimer_layout" />
+    <item type="id" name="disclaimer_view" />
     <item type="id" name="disconnect_btn" />
     <item type="id" name="divider" />
     <item type="id" name="edit_query" />
+    <item type="id" name="edit_signature_icon" />
+    <item type="id" name="edit_text" />
+    <item type="id" name="edit_text_city" />
     <item type="id" name="edit_text_id" />
+    <item type="id" name="edit_text_postal_code" />
+    <item type="id" name="edit_text_subdivision" />
+    <item type="id" name="edit_text_suite" />
     <item type="id" name="emoji" />
     <item type="id" name="emoji_button" />
     <item type="id" name="empty_results" />
@@ -277,6 +347,7 @@
     <item type="id" name="exo_track_selection_view" />
     <item type="id" name="exo_vr" />
     <item type="id" name="expand_activities_button" />
+    <item type="id" name="expand_search_bar" />
     <item type="id" name="expanded_menu" />
     <item type="id" name="feed_channel_icon" />
     <item type="id" name="feed_channel_text" />
@@ -295,22 +366,46 @@
     <item type="id" name="file_attachment_download_progress_bar" />
     <item type="id" name="file_attachment_icon" />
     <item type="id" name="file_attachment_name" />
+    <item type="id" name="file_icon" />
+    <item type="id" name="file_name_textview" />
+    <item type="id" name="filename_view" />
     <item type="id" name="filter" />
+    <item type="id" name="finalizing_cover" />
+    <item type="id" name="fingerprint_description" />
+    <item type="id" name="fingerprint_error" />
+    <item type="id" name="fingerprint_icon" />
+    <item type="id" name="fingerprint_subtitle" />
+    <item type="id" name="first" />
     <item type="id" name="firstRenderPerformed" />
+    <item type="id" name="first_edit_text" />
     <item type="id" name="flagged_message_keyword" />
     <item type="id" name="flagged_message_rule_name" />
+    <item type="id" name="flash_screen" />
+    <item type="id" name="flashlight_toggle" />
+    <item type="id" name="floating_action_button" />
+    <item type="id" name="flow_layout" />
     <item type="id" name="follow_button" />
     <item type="id" name="footer" />
     <item type="id" name="footer_avatar" />
     <item type="id" name="footer_barrier" />
+    <item type="id" name="footer_begin_margin" />
     <item type="id" name="footer_container" />
+    <item type="id" name="footer_container_inner" />
     <item type="id" name="footer_content" />
     <item type="id" name="footer_divider" />
+    <item type="id" name="footer_end_margin" />
     <item type="id" name="footer_label" />
+    <item type="id" name="footer_sheet" />
+    <item type="id" name="footer_sheet_coordinator_layout" />
+    <item type="id" name="footer_sheet_grabber" />
+    <item type="id" name="footer_sheet_rectangle" />
+    <item type="id" name="footer_sheet_scroll_view" />
     <item type="id" name="footer_text" />
     <item type="id" name="forum_post_action_bar_wrap" />
+    <item type="id" name="fourth" />
     <item type="id" name="fps_text" />
     <item type="id" name="fragment_container_view_tag" />
+    <item type="id" name="fragment_content" />
     <item type="id" name="fullWidthImage" />
     <item type="id" name="fullscreen_header" />
     <item type="id" name="game_controller_icon" />
@@ -320,6 +415,9 @@
     <item type="id" name="ghost_view_holder" />
     <item type="id" name="gif_button" />
     <item type="id" name="gif_indicator" />
+    <item type="id" name="gov_id_nfc_switch" />
+    <item type="id" name="governmentid_header_bottom_barrier" />
+    <item type="id" name="governmentid_header_image_container" />
     <item type="id" name="gradient" />
     <item type="id" name="gradient_background" />
     <item type="id" name="gradient_divider" />
@@ -333,6 +431,7 @@
     <item type="id" name="guild_name" />
     <item type="id" name="guild_text" />
     <item type="id" name="guilds_item_avatar_wrap" />
+    <item type="id" name="hairline" />
     <item type="id" name="header" />
     <item type="id" name="headerGradient" />
     <item type="id" name="header_barrier" />
@@ -345,23 +444,53 @@
     <item type="id" name="hide_button" />
     <item type="id" name="hide_ime_id" />
     <item type="id" name="hide_in_inspector_tag" />
+    <item type="id" name="hint" />
+    <item type="id" name="hintMessage" />
+    <item type="id" name="hintTitle" />
+    <item type="id" name="hint_animation" />
+    <item type="id" name="hint_image" />
+    <item type="id" name="hint_message" />
+    <item type="id" name="hint_message_body" />
+    <item type="id" name="hint_message_title" />
+    <item type="id" name="hint_overlay_view" />
     <item type="id" name="home" />
     <item type="id" name="hour" />
     <item type="id" name="icon" />
     <item type="id" name="icon_button" />
     <item type="id" name="icon_container" />
     <item type="id" name="icon_group" />
+    <item type="id" name="id_class_selector" />
+    <item type="id" name="id_class_selector_text" />
+    <item type="id" name="id_image" />
+    <item type="id" name="id_image_container" />
+    <item type="id" name="idb_container" />
+    <item type="id" name="idb_country_input" />
+    <item type="id" name="idb_country_text_view" />
+    <item type="id" name="idb_description" />
+    <item type="id" name="idb_id_type_input" />
+    <item type="id" name="idb_id_type_text_view" />
+    <item type="id" name="idb_label" />
+    <item type="id" name="idb_value_input" />
+    <item type="id" name="idb_value_text_view" />
+    <item type="id" name="illustration" />
+    <item type="id" name="illustration_container" />
     <item type="id" name="image" />
     <item type="id" name="imageCopy" />
     <item type="id" name="imageView" />
     <item type="id" name="image_alt_text" />
     <item type="id" name="image_blur_bg" />
     <item type="id" name="image_invalid" />
+    <item type="id" name="image_overlay_view" />
+    <item type="id" name="image_view" />
+    <item type="id" name="image_view_container" />
     <item type="id" name="image_view_crop" />
     <item type="id" name="image_view_logo" />
     <item type="id" name="image_view_state_aspect_ratio" />
     <item type="id" name="image_view_state_rotate" />
     <item type="id" name="image_view_state_scale" />
+    <item type="id" name="imageview_close_input_select_sheet" />
+    <item type="id" name="imageview_governmentid_header_image" />
+    <item type="id" name="imageview_selfie_header_image" />
     <item type="id" name="incoming_call_screen" />
     <item type="id" name="indicator_bottom" />
     <item type="id" name="indicator_end_barrier" />
@@ -369,6 +498,7 @@
     <item type="id" name="info" />
     <item type="id" name="info_bar" />
     <item type="id" name="info_link_container" />
+    <item type="id" name="initializing_progress_bar" />
     <item type="id" name="inline_media_container" />
     <item type="id" name="inline_media_gif_indicator" />
     <item type="id" name="inline_media_image_preview" />
@@ -379,7 +509,12 @@
     <item type="id" name="inline_media_view3" />
     <item type="id" name="inline_media_view4" />
     <item type="id" name="inline_media_volume_toggle" />
+    <item type="id" name="inner_content_view" />
+    <item type="id" name="inputLayout" />
+    <item type="id" name="input_layout" />
+    <item type="id" name="input_select_shadow" />
     <item type="id" name="inspection_slot_table_set" />
+    <item type="id" name="instruction_animation" />
     <item type="id" name="invalidate_transform" />
     <item type="id" name="invite_to_speak_button" />
     <item type="id" name="invite_to_speak_text" />
@@ -420,14 +555,24 @@
     <item type="id" name="layout_scale_wheel" />
     <item type="id" name="learn_more" />
     <item type="id" name="left_bar" />
+    <item type="id" name="left_guideline" />
     <item type="id" name="line1" />
     <item type="id" name="line3" />
     <item type="id" name="link_icon" />
     <item type="id" name="link_icon_title" />
+    <item type="id" name="list_content" />
+    <item type="id" name="list_content_separator" />
+    <item type="id" name="list_divider" />
     <item type="id" name="list_item" />
+    <item type="id" name="list_selector" />
+    <item type="id" name="loading_animation" />
     <item type="id" name="loading_dots" />
+    <item type="id" name="local_image" />
     <item type="id" name="lottie_layer_name" />
+    <item type="id" name="lottie_view" />
     <item type="id" name="m3_side_sheet" />
+    <item type="id" name="markwon_drawables_scheduler" />
+    <item type="id" name="markwon_drawables_scheduler_last_text_hashcode" />
     <item type="id" name="masked" />
     <item type="id" name="material_clock_display" />
     <item type="id" name="material_clock_display_and_toggle" />
@@ -480,6 +625,7 @@
     <item type="id" name="minutes" />
     <item type="id" name="mix_blend_mode" />
     <item type="id" name="month" />
+    <item type="id" name="month_edit_text" />
     <item type="id" name="month_grid" />
     <item type="id" name="month_navigation_bar" />
     <item type="id" name="month_navigation_fragment_toggle" />
@@ -515,6 +661,9 @@
     <item type="id" name="mtrl_view_tag_bottom_padding" />
     <item type="id" name="mute_toggle" />
     <item type="id" name="name" />
+    <item type="id" name="nav_bar_back_button" />
+    <item type="id" name="nav_bar_cancel_button" />
+    <item type="id" name="navigation_bar" />
     <item type="id" name="navigation_bar_item_active_indicator_view" />
     <item type="id" name="navigation_bar_item_icon_container" />
     <item type="id" name="navigation_bar_item_icon_view" />
@@ -522,6 +671,10 @@
     <item type="id" name="navigation_bar_item_large_label_view" />
     <item type="id" name="navigation_bar_item_small_label_view" />
     <item type="id" name="navigation_header_container" />
+    <item type="id" name="negative_button" />
+    <item type="id" name="nestedScroll" />
+    <item type="id" name="nested_ui_container" />
+    <item type="id" name="next_camera" />
     <item type="id" name="nitroLogoBanner" />
     <item type="id" name="nitroTicket" />
     <item type="id" name="no_participants_text" />
@@ -547,14 +700,19 @@
     <item type="id" name="open_search_view_toolbar" />
     <item type="id" name="open_search_view_toolbar_container" />
     <item type="id" name="other_reactions_count" />
+    <item type="id" name="overlay" />
     <item type="id" name="overlay_bubble_iv" />
     <item type="id" name="overlay_centered_container" />
     <item type="id" name="overlay_channel_name" />
     <item type="id" name="overlay_channel_search" />
     <item type="id" name="overlay_container" />
     <item type="id" name="overlay_gradient" />
+    <item type="id" name="overlay_guide" />
     <item type="id" name="overlay_guild_name" />
     <item type="id" name="overlay_header" />
+    <item type="id" name="overlay_hint" />
+    <item type="id" name="overlay_icon" />
+    <item type="id" name="overlay_icon_container" />
     <item type="id" name="overlay_image" />
     <item type="id" name="overlay_invite_link" />
     <item type="id" name="overlay_layout" />
@@ -568,6 +726,7 @@
     <item type="id" name="overlay_tag" />
     <item type="id" name="overlay_tag_icon" />
     <item type="id" name="overlay_tag_text" />
+    <item type="id" name="overlay_text" />
     <item type="id" name="parentPanel" />
     <item type="id" name="parent_matrix" />
     <item type="id" name="participants" />
@@ -576,28 +735,64 @@
     <item type="id" name="party_avatars" />
     <item type="id" name="party_container" />
     <item type="id" name="party_size_text" />
+    <item type="id" name="pending_animation" />
     <item type="id" name="percentage_bar_background" />
     <item type="id" name="percentage_bar_container" />
+    <item type="id" name="pi2_back_press_handler" />
+    <item type="id" name="pi2_back_stack_screen_runner" />
+    <item type="id" name="pi2_background_color_hint" />
+    <item type="id" name="pi2_current_state" />
+    <item type="id" name="pi2_disableable_container" />
+    <item type="id" name="pi2_dummy_package_resource" />
+    <item type="id" name="pi2_government_id_nfc_scan_can_access_code" />
+    <item type="id" name="pi2_government_id_nfc_scan_date_of_birth" />
+    <item type="id" name="pi2_government_id_nfc_scan_document_number" />
+    <item type="id" name="pi2_government_id_nfc_scan_error_label" />
+    <item type="id" name="pi2_government_id_nfc_scan_expiration_date" />
+    <item type="id" name="pi2_government_id_nfc_scan_launch_button" />
+    <item type="id" name="pi2_last_image_path" />
+    <item type="id" name="pi2_mask_text_watcher" />
+    <item type="id" name="pi2_modal_container" />
+    <item type="id" name="pi2_remote_image_view" />
     <item type="id" name="pickerWrapper" />
     <item type="id" name="player_container" />
     <item type="id" name="player_icon" />
     <item type="id" name="playstation_icon" />
     <item type="id" name="pointer_events" />
     <item type="id" name="pooling_container_listener_holder_tag" />
+    <item type="id" name="positive_button" />
     <item type="id" name="pressed" />
     <item type="id" name="previewBtn" />
     <item type="id" name="previewHeading" />
+    <item type="id" name="preview_bottom" />
+    <item type="id" name="preview_bottom_barrier" />
+    <item type="id" name="preview_container" />
+    <item type="id" name="preview_dim" />
+    <item type="id" name="preview_top" />
+    <item type="id" name="preview_view" />
+    <item type="id" name="previewview_selfie_camera" />
     <item type="id" name="primary_action" />
     <item type="id" name="primary_cta" />
+    <item type="id" name="processing" />
     <item type="id" name="progress" />
+    <item type="id" name="progress_arc" />
+    <item type="id" name="progress_bar" />
     <item type="id" name="progress_circular" />
     <item type="id" name="progress_horizontal" />
+    <item type="id" name="progress_indicator" />
     <item type="id" name="progress_spinner" />
+    <item type="id" name="prompt" />
     <item type="id" name="prompt_text" />
     <item type="id" name="provider" />
     <item type="id" name="qr_scanner" />
     <item type="id" name="question_text" />
     <item type="id" name="radio" />
+    <item type="id" name="radio_button" />
+    <item type="id" name="radio_button_container" />
+    <item type="id" name="radio_button_description" />
+    <item type="id" name="radio_button_label" />
+    <item type="id" name="radio_group_error" />
+    <item type="id" name="radio_group_label" />
     <item type="id" name="react_test_id" />
     <item type="id" name="reaction_count_1" />
     <item type="id" name="reaction_count_2" />
@@ -606,7 +801,12 @@
     <item type="id" name="reaction_label_left" />
     <item type="id" name="reaction_label_right" />
     <item type="id" name="reactions_view" />
+    <item type="id" name="real_time_hint" />
+    <item type="id" name="recycler_view" />
+    <item type="id" name="recyclerview_governmentid_idlist" />
+    <item type="id" name="recyclerview_inquiry_select_list" />
     <item type="id" name="remix_icon" />
+    <item type="id" name="remove_button" />
     <item type="id" name="reply_author_avatar" />
     <item type="id" name="reply_author_name" />
     <item type="id" name="reply_icon" />
@@ -621,8 +821,13 @@
     <item type="id" name="reply_trailing_icon" />
     <item type="id" name="report_drawn" />
     <item type="id" name="results_rv" />
+    <item type="id" name="retake_button" />
+    <item type="id" name="retry_button" />
     <item type="id" name="reveal_button" />
+    <item type="id" name="review_image" />
+    <item type="id" name="review_item_list" />
     <item type="id" name="right_bar" />
+    <item type="id" name="right_guideline" />
     <item type="id" name="right_icon" />
     <item type="id" name="right_side" />
     <item type="id" name="rn_frame_file" />
@@ -649,16 +854,23 @@
     <item type="id" name="role_subscription_purchaser_username" />
     <item type="id" name="role_subscription_welcome" />
     <item type="id" name="rootCardView" />
+    <item type="id" name="root_layout" />
+    <item type="id" name="root_view" />
     <item type="id" name="rotate_scroll_wheel" />
     <item type="id" name="row_index_key" />
+    <item type="id" name="save_button" />
     <item type="id" name="save_non_transition_alpha" />
     <item type="id" name="save_overlay_view" />
     <item type="id" name="scale_scroll_wheel" />
+    <item type="id" name="scanning_animation" />
+    <item type="id" name="scanning_view" />
     <item type="id" name="scrollIndicatorDown" />
     <item type="id" name="scrollIndicatorUp" />
     <item type="id" name="scrollView" />
     <item type="id" name="search_badge" />
     <item type="id" name="search_bar" />
+    <item type="id" name="search_bar_edit_text" />
+    <item type="id" name="search_bar_text_input" />
     <item type="id" name="search_button" />
     <item type="id" name="search_close_btn" />
     <item type="id" name="search_edit_frame" />
@@ -667,11 +879,14 @@
     <item type="id" name="search_plate" />
     <item type="id" name="search_src_text" />
     <item type="id" name="search_voice_btn" />
+    <item type="id" name="second" />
+    <item type="id" name="second_edit_text" />
     <item type="id" name="secondary_action_button" />
     <item type="id" name="secondary_button" />
     <item type="id" name="secondary_cta" />
     <item type="id" name="section_component_view_group_error_row" />
     <item type="id" name="section_layout_box" />
+    <item type="id" name="secureInputLayout" />
     <item type="id" name="see_more_button" />
     <item type="id" name="segmentContainer" />
     <item type="id" name="select_component_chevron" />
@@ -682,10 +897,14 @@
     <item type="id" name="selectedSegmentBg" />
     <item type="id" name="selected_icon" />
     <item type="id" name="selection_type" />
+    <item type="id" name="selfie_flash" />
+    <item type="id" name="selfie_overlay" />
+    <item type="id" name="selfie_window" />
     <item type="id" name="sentry_privacy" />
     <item type="id" name="separator" />
     <item type="id" name="separator_dot" />
     <item type="id" name="server_name_barrier" />
+    <item type="id" name="shadow" />
     <item type="id" name="shadow_view" />
     <item type="id" name="share_button" />
     <item type="id" name="share_prompt_close_button" />
@@ -695,6 +914,12 @@
     <item type="id" name="share_prompt_subtitle" />
     <item type="id" name="share_prompt_title" />
     <item type="id" name="shortcut" />
+    <item type="id" name="signature_canvas" />
+    <item type="id" name="signature_container" />
+    <item type="id" name="signature_description" />
+    <item type="id" name="signature_label" />
+    <item type="id" name="signature_preview" />
+    <item type="id" name="signature_sheet" />
     <item type="id" name="snackbar_action" />
     <item type="id" name="snackbar_text" />
     <item type="id" name="spacer" />
@@ -702,6 +927,9 @@
     <item type="id" name="splash" />
     <item type="id" name="split_action_bar" />
     <item type="id" name="spoiler" />
+    <item type="id" name="spotlight_view" />
+    <item type="id" name="spotlight_view2" />
+    <item type="id" name="start_button" />
     <item type="id" name="start_spacer" />
     <item type="id" name="state_aspect_ratio" />
     <item type="id" name="state_rotate" />
@@ -710,6 +938,7 @@
     <item type="id" name="sticker_view" />
     <item type="id" name="submenuarrow" />
     <item type="id" name="submit_area" />
+    <item type="id" name="submit_button" />
     <item type="id" name="subtitle" />
     <item type="id" name="subtitleGradient" />
     <item type="id" name="subtitle_container" />
@@ -752,10 +981,13 @@
     <item type="id" name="textSpacerNoButtons" />
     <item type="id" name="textSpacerNoTitle" />
     <item type="id" name="textView" />
+    <item type="id" name="text_changed_listener" />
     <item type="id" name="text_content_wrapper" />
+    <item type="id" name="text_controller_rendering" />
     <item type="id" name="text_input_end_icon" />
     <item type="id" name="text_input_error_icon" />
     <item type="id" name="text_input_start_icon" />
+    <item type="id" name="text_view" />
     <item type="id" name="text_view_crop" />
     <item type="id" name="text_view_rotate" />
     <item type="id" name="text_view_scale" />
@@ -765,7 +997,17 @@
     <item type="id" name="textinput_placeholder" />
     <item type="id" name="textinput_prefix_text" />
     <item type="id" name="textinput_suffix_text" />
+    <item type="id" name="textview_governmentid_instructions_body" />
+    <item type="id" name="textview_governmentid_instructions_disclaimer" />
+    <item type="id" name="textview_governmentid_instructions_title" />
+    <item type="id" name="textview_governmentid_instructionslistheader" />
+    <item type="id" name="textview_input_select" />
+    <item type="id" name="textview_input_select_sheet_title" />
+    <item type="id" name="textview_selfie_disclosure" />
+    <item type="id" name="textview_selfie_start_body" />
+    <item type="id" name="textview_selfie_start_title" />
     <item type="id" name="themePreview" />
+    <item type="id" name="third" />
     <item type="id" name="thread_embed_container" />
     <item type="id" name="thread_embed_icon" />
     <item type="id" name="thread_embed_messages_count" />
@@ -782,16 +1024,23 @@
     <item type="id" name="thumbnailGradient" />
     <item type="id" name="time" />
     <item type="id" name="timestamp" />
+    <item type="id" name="tint_screen" />
+    <item type="id" name="tips" />
     <item type="id" name="title" />
     <item type="id" name="titleDividerNoCustom" />
     <item type="id" name="titleGradient" />
     <item type="id" name="title_container" />
     <item type="id" name="title_template" />
     <item type="id" name="title_text" />
+    <item type="id" name="title_top_space" />
+    <item type="id" name="toggle_flash" />
     <item type="id" name="toolbar" />
     <item type="id" name="toolbar_title" />
     <item type="id" name="topPanel" />
+    <item type="id" name="top_app_bar" />
+    <item type="id" name="top_barrier" />
     <item type="id" name="top_guideline" />
+    <item type="id" name="top_spacer" />
     <item type="id" name="touch_outside" />
     <item type="id" name="transform" />
     <item type="id" name="transform_origin" />
@@ -811,7 +1060,10 @@
     <item type="id" name="ucrop" />
     <item type="id" name="ucrop_frame" />
     <item type="id" name="ucrop_photobox" />
+    <item type="id" name="ui_spinner_item_selected_listener" />
+    <item type="id" name="ui_step_container" />
     <item type="id" name="up" />
+    <item type="id" name="upload_button" />
     <item type="id" name="upload_cancel" />
     <item type="id" name="upload_complete" />
     <item type="id" name="upload_complete_background" />
@@ -822,13 +1074,18 @@
     <item type="id" name="upload_progress_background" />
     <item type="id" name="upload_progress_layout" />
     <item type="id" name="use_hardware_layer" />
+    <item type="id" name="use_photo_button" />
+    <item type="id" name="use_photos_button" />
     <item type="id" name="userName" />
     <item type="id" name="value" />
     <item type="id" name="verified_bot_icon" />
     <item type="id" name="verified_check_icon" />
     <item type="id" name="verified_check_icon_background" />
     <item type="id" name="verified_check_icon_container" />
+    <item type="id" name="view_attached_coroutine_scope" />
+    <item type="id" name="view_back_handler" />
     <item type="id" name="view_clipped" />
+    <item type="id" name="view_container" />
     <item type="id" name="view_coroutine_scope" />
     <item type="id" name="view_interaction_failed_label_icon" />
     <item type="id" name="view_interaction_failed_label_message" />
@@ -842,8 +1099,11 @@
     <item type="id" name="view_progress_dots_1" />
     <item type="id" name="view_progress_dots_2" />
     <item type="id" name="view_progress_dots_3" />
+    <item type="id" name="view_stack" />
     <item type="id" name="view_tag_instance_handle" />
     <item type="id" name="view_tag_native_id" />
+    <item type="id" name="view_text_changed_listener" />
+    <item type="id" name="view_transition" />
     <item type="id" name="view_tree_disjoint_parent" />
     <item type="id" name="view_tree_lifecycle_owner" />
     <item type="id" name="view_tree_on_back_pressed_dispatcher_owner" />
@@ -857,6 +1117,11 @@
     <item type="id" name="welcome_reply_text" />
     <item type="id" name="wipe" />
     <item type="id" name="with_icon" />
+    <item type="id" name="workflow_alert_container" />
+    <item type="id" name="workflow_back_stack_container" />
+    <item type="id" name="workflow_back_stack_key" />
+    <item type="id" name="workflow_layout" />
+    <item type="id" name="workflow_ui_view_state" />
     <item type="id" name="wrapped_composition_tag" />
     <item type="id" name="wrapper_controls" />
     <item type="id" name="wrapper_reset_rotate" />
@@ -864,4 +1129,5 @@
     <item type="id" name="wrapper_states" />
     <item type="id" name="xbox_icon" />
     <item type="id" name="year" />
+    <item type="id" name="year_edit_text" />
 </resources>

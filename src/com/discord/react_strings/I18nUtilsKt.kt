@@ -2,14 +2,14 @@
 
 package com.discord.react_strings
 
-import Y2.b
-import Y2.c
-import Y2.d
-import Y2.e
-import Y2.f
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
+import b9.b
+import b9.c
+import b9.d
+import b9.e
+import b9.f
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -95,11 +95,7 @@ fun `i18nFormat$lambda$3`(var0: RenderContext): Unit {
 
 fun `i18nFormat$lambda$5`(var0: RenderContext, var1: java.lang.String, var2: java.lang.String, var3: Boolean): java.lang.CharSequence {
    val var4: java.lang.String = var0.getArgs().get(var1);
-   if (var4 != null) {
-      var1 = var4;
-   }
-
-   return var1;
+   return var4 ?: var1;
 }
 
 public fun TextView.i18nSetText(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new f()) {

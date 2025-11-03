@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kc.m
+import ht.v
 import kotlinx.serialization.KSerializer
-import xa.v
+import xu.m
 
 @m
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -38,18 +38,11 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.attachmentUrl == null) {
-         var1 = 0;
-      } else {
-         var1 = this.attachmentUrl.hashCode();
-      }
-
-      return var1;
+      return if (this.attachmentUrl == null) 0 else this.attachmentUrl.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
-      return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("data", NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("attachmentUrl", this.attachmentUrl)}))});
+   public override fun serialize(): WritableMap {
+      return NativeMapExtensionsKt.nativeMapOf(v.a("data", NativeMapExtensionsKt.nativeMapOf(v.a("attachmentUrl", this.attachmentUrl))));
    }
 
    public override fun toString(): String {

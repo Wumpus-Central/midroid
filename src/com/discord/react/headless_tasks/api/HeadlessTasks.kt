@@ -46,12 +46,12 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public override fun toString(): String {
-      val var2: HeadlessJsTaskConfig = this.taskConfig;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("HeadlessTasks(taskConfig=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: HeadlessJsTaskConfig = this.taskConfig;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HeadlessTasks(taskConfig=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    @SourceDebugExtension(["SMAP\nHeadlessTasks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 HeadlessTasks.kt\ncom/discord/react/headless_tasks/api/HeadlessTasks$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,86:1\n1#2:87\n*E\n"])
@@ -81,37 +81,30 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
       }
 
       public fun fromIntent(intent: Intent?): HeadlessTasks? {
-         val var7: HeadlessTasks;
          if (var1 != null && var1.hasExtra("intent.discord.headless_tasks_key") && var1.hasExtra("intent.discord.headless_tasks_name")) {
-            var var5: java.lang.String = var1.getStringExtra("intent.discord.headless_tasks_name");
+            val var5: java.lang.String = var1.getStringExtra("intent.discord.headless_tasks_name");
             var var4: java.lang.String = var5;
             if (var5 == null) {
                var4 = "";
             }
 
-            var var2: Long;
-            label21: {
-               var2 = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
-               val var8: Bundle = var1.getBundleExtra("intent.discord.headless_tasks_params");
-               if (var8 != null) {
-                  val var6: WritableMap = Arguments.fromBundle(var8);
-                  var5 = var6;
-                  if (var6 != null) {
-                     break label21;
-                  }
+            val var2: Long = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
+            val var7: Bundle = var1.getBundleExtra("intent.discord.headless_tasks_params");
+            if (var7 != null) {
+               val var6: WritableMap = Arguments.fromBundle(var7);
+               if (var6 != null) {
+                  return new HeadlessTasks(
+                     new HeadlessJsTaskConfig(var4, var6, var2, var1.getBooleanExtra("intent.discord.headless_tasks_aif", false), null, 16, null)
+                  );
                }
-
-               var5 = new WritableNativeMap();
             }
 
-            var7 = new HeadlessTasks(
-               new HeadlessJsTaskConfig(var4, var5, var2, var1.getBooleanExtra("intent.discord.headless_tasks_aif", false), null, 16, null)
+            return new HeadlessTasks(
+               new HeadlessJsTaskConfig(var4, new WritableNativeMap(), var2, var1.getBooleanExtra("intent.discord.headless_tasks_aif", false), null, 16, null)
             );
          } else {
-            var7 = null;
+            return null;
          }
-
-         return var7;
       }
 
       public fun startHeadlessTask(

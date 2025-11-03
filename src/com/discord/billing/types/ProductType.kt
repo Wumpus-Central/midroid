@@ -1,6 +1,5 @@
 package com.discord.billing.types
 
-import Da.a
 import kotlin.enums.EnumEntries
 
 internal enum class ProductType(rawProductType: String) {
@@ -16,7 +15,7 @@ internal enum class ProductType(rawProductType: String) {
    fun {
       val var0: Array<ProductType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

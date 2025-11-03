@@ -1,8 +1,5 @@
 package com.discord.react_asset_fetcher
 
-import Ca.b
-import ac.K
-import ac.f
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -17,6 +14,8 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
+import gu.g
+import gu.m0
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
@@ -24,6 +23,7 @@ import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
+import ot.b
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    val var2: java.lang.String = new ImageSource(var0, var1, 0.0, 0.0, null, false, 60, null).getUri().toString();
@@ -32,16 +32,14 @@ public fun Context.getReactImageUrl(assetUrl: String): String {
 
 public fun Context.inflateUrl(url: String?): String? {
    if (var1 == null) {
-      var1 = null;
-   } else if (!URLUtil.isNetworkUrl(var1)) {
-      var1 = getReactImageUrl(var0, var1);
+      return null;
+   } else {
+      return if (URLUtil.isNetworkUrl(var1)) var1 else getReactImageUrl(var0, var1);
    }
-
-   return var1;
 }
 
 public fun SimpleDraweeView.setOptionalReactImageUrl(url: String?) {
-   if (var1 != null && !StringsKt.c0(var1)) {
+   if (var1 != null && !StringsKt.i0(var1)) {
       var0.setVisibility(0);
       setReactImageUrl(var0, var1);
    } else {
@@ -60,7 +58,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
    val var3: ShapeDrawable = new ShapeDrawable(new RectShape());
    var3.getPaint().setColor(0);
    var0.setIcon(var3);
-   f.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2<CoroutineScope, Continuation, Object>(var0, var1, null) {
+   g.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, null) {
       final java.lang.String $assetUrl;
       final MaterialButton $this_setReactIcon;
       Object L$0;
@@ -72,30 +70,30 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          this.$assetUrl = var2x;
       }
 
-      public final Continuation create(Object var1, Continuation var2) {
+      public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
          return new <anonymous constructor>(this.$this_setReactIcon, this.$assetUrl, var2);
       }
 
-      public final Object invoke(CoroutineScope var1, Continuation var2x) {
+      public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
       public final Object invokeSuspend(Object var1) {
-         var var4: MaterialButton = (MaterialButton)b.e();
-         var var3: Any;
+         var var3: MaterialButton = (MaterialButton)b.f();
+         var var4: Any;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var4 = this.L$0 as MaterialButton;
+            var3 = this.L$0 as MaterialButton;
             c.b(var1);
-            var3 = var1;
+            var4 = var1;
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            var3 = K.b();
-            val var5: Function2 = new Function2<CoroutineScope, Continuation, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
+            var4 = m0.b();
+            val var5: Function2 = new Function2<CoroutineScope, Continuation<? super Drawable>, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -106,37 +104,37 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                   this.$assetUrl = var2x;
                }
 
-               public final Continuation create(Object var1, Continuation var2) {
+               public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
                   return new <anonymous constructor>(this.$this_setReactIcon, this.$assetUrl, var2);
                }
 
-               public final Object invoke(CoroutineScope var1, Continuation var2x) {
+               public final Object invoke(CoroutineScope var1, Continuation<? super Drawable> var2x) {
                   return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
                }
 
                public final Object invokeSuspend(Object var1) {
-                  b.e();
+                  b.f();
                   if (this.label == 0) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
-                     var1 = this.$this_setReactIcon;
-                     if (var3.isResource()) {
-                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
-                        val var6: Context = var1.getContext();
-                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
-                     } else if (var3.getUri().getScheme() == "file") {
-                        var1 = Drawable.createFromPath(var3.getUri().getPath());
+                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var5: MaterialButton = this.$this_setReactIcon;
+                     if (var2x.isResource()) {
+                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                        var1 = var5.getContext();
+                        val var9: Drawable = var3.getResourceDrawable(var1, var2x.getSource());
+                        return var9;
+                     } else if (var2x.getUri().getScheme() == "file") {
+                        val var7: Drawable = Drawable.createFromPath(var2x.getUri().getPath());
+                        return var7;
                      } else {
-                        val var9: URLConnection = new URL(var3.getSource()).openConnection();
-                        val var10: HttpURLConnection = var9 as HttpURLConnection;
-                        (var9 as HttpURLConnection).connect();
-                        val var11: Bitmap = BitmapFactory.decodeStream(var10.getInputStream());
-                        val var8: Resources = var1.getResources();
-                        var1 = new BitmapDrawable(var8, var11);
+                        val var10: URLConnection = new URL(var2x.getSource()).openConnection();
+                        val var11: HttpURLConnection = var10 as HttpURLConnection;
+                        (var10 as HttpURLConnection).connect();
+                        val var12: Bitmap = BitmapFactory.decodeStream(var11.getInputStream());
+                        val var6: Resources = var5.getResources();
+                        return new BitmapDrawable(var6, var12);
                      }
-
-                     return var1;
                   } else {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
@@ -144,15 +142,15 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var3 = f.g((CoroutineContext)var3, var5, this);
-            if (var3 === var4) {
-               return var4;
+            var4 = g.g((CoroutineContext)var4, var5, this);
+            if (var4 === var3) {
+               return var3;
             }
 
-            var4 = var1;
+            var3 = var1;
          }
 
-         var4.setIcon(var3 as Drawable);
+         var3.setIcon(var4 as Drawable);
          return Unit.a;
       }
    }, 3, null);

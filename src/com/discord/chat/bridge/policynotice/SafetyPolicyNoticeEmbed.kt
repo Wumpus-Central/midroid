@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.policynotice
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -97,27 +97,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.classificationId;
-      val var4: java.lang.String = this.titleText;
-      val var2: java.lang.String = this.titleIcon;
-      val var7: java.lang.String = this.subtitleText;
-      val var6: java.lang.String = this.descriptionText;
-      val var1: java.lang.String = this.ctaText;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var3.append(var5);
-      var3.append(", titleText=");
-      var3.append(var4);
-      var3.append(", titleIcon=");
-      var3.append(var2);
-      var3.append(", subtitleText=");
-      var3.append(var7);
-      var3.append(", descriptionText=");
-      var3.append(var6);
-      var3.append(", ctaText=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.classificationId;
+      val var5: java.lang.String = this.titleText;
+      val var1: java.lang.String = this.titleIcon;
+      val var6: java.lang.String = this.subtitleText;
+      val var7: java.lang.String = this.descriptionText;
+      val var3: java.lang.String = this.ctaText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var4.append(var2);
+      var4.append(", titleText=");
+      var4.append(var5);
+      var4.append(", titleIcon=");
+      var4.append(var1);
+      var4.append(", subtitleText=");
+      var4.append(var6);
+      var4.append(", descriptionText=");
+      var4.append(var7);
+      var4.append(", ctaText=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

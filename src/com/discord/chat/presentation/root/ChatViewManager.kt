@@ -5,8 +5,7 @@ import com.discord.chat.presentation.events.CreateChatReactEventsKt
 import com.discord.chat.presentation.list.ChatListView
 import com.discord.chat.reactevents.ChatViewEventHandler
 import com.discord.reactevents.ReactEvents
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Anywhere
-import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
+import com.discord.recycler_view.scroller.Scroller
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
@@ -26,21 +25,21 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
-      val var2: ChatView = new ChatView(var1);
-      val var3: Context = var2.getContext();
-      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new c(var2)));
-      return var2;
+      val var3: ChatView = new ChatView(var1);
+      val var2: Context = var3.getContext();
+      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new c(var3)));
+      return var3;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
       return this.delegate;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDChat";
    }
 
@@ -48,39 +47,30 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       val var4: Int = var2.hashCode();
       if (var4 != -938100109) {
          if (var4 != -402165208) {
-            if (var4 == 1908871954 && var2.equals("scrollIntoView")) {
-               if (var3 == null) {
-                  return;
-               }
-
+            if (var4 == 1908871954 && var2.equals("scrollIntoView") && var3 != null) {
                this.scrollIntoView(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2));
-            }
-         } else if (var2.equals("scrollTo")) {
-            if (var3 == null) {
                return;
             }
-
+         } else if (var2.equals("scrollTo") && var3 != null) {
             this.scrollTo(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2), var3.getInt(3));
-         }
-      } else if (var2.equals("scrollToBottom")) {
-         if (var3 == null) {
             return;
          }
-
+      } else if (var2.equals("scrollToBottom") && var3 != null) {
          this.scrollToBottom(var1, var3.getBoolean(0));
+         return;
       }
    }
 
    public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean, highlight: Boolean) {
-      var1.scrollTo(var2, Anywhere.INSTANCE, var3, var4);
+      var1.scrollTo(var2, Scroller.TargetAlignment.Anywhere.INSTANCE, var3, var4);
    }
 
    public open fun scrollTo(view: ChatView, index: Int, animated: Boolean, highlight: Boolean, position: Int) {
-      var1.scrollTo(var2, new Top(ChatListView.Companion.getMESSAGE_TOP_SCROLL_OFFSET_PX()), var3, var4);
+      var1.scrollTo(var2, new Scroller.TargetAlignment.Top(ChatListView.Companion.getMESSAGE_TOP_SCROLL_OFFSET_PX()), var3, var4);
    }
 
    public open fun scrollToBottom(view: ChatView, animated: Boolean) {
-      var1.scrollTo(0, Anywhere.INSTANCE, var2, false);
+      var1.scrollTo(0, Scroller.TargetAlignment.Anywhere.INSTANCE, var2, false);
    }
 
    @ReactProp(name = "adjustContentOffsetWithBounds")

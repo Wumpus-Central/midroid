@@ -116,28 +116,17 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
    }
 
    internal fun setCurrentProgress(progress: Float, durationMs: Long): Unit? {
-      val var5: Unit;
       if (this.audioSource != null) {
          AudioPlayerManager.INSTANCE.setCurrentProgress(this.audioSource, var1, var2);
-         var5 = Unit.a;
+         return Unit.a;
       } else {
-         var5 = null;
+         return null;
       }
-
-      return var5;
    }
 
    internal fun shouldEmitDuration(): Boolean {
-      val var3: MediaPlayer = this.getPlayer$chat_release();
-      var var1: Boolean = false;
-      if (var3 != null) {
-         var1 = false;
-         if (var3.shouldPlay()) {
-            var1 = true;
-         }
-      }
-
-      return var1;
+      val var1: MediaPlayer = this.getPlayer$chat_release();
+      return var1 != null && var1.shouldPlay();
    }
 
    internal fun storeDuration() {

@@ -130,7 +130,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -534,17 +534,15 @@
       6,
       "extras",
       {
-        "=1": [
+        "one": [
           [
-            2,
-            "extras"
+            7
           ],
           " other"
         ],
         "other": [
           [
-            2,
-            "extras"
+            7
           ],
           " others"
         ]
@@ -821,13 +819,15 @@
       6,
       "age",
       {
-        "=1": [
-          "1 year old"
+        "one": [
+          [
+            7
+          ],
+          " year old"
         ],
         "other": [
           [
-            1,
-            "age"
+            7
           ],
           " years old"
         ]
@@ -954,13 +954,15 @@
           6,
           "days",
           {
-            "=1": [
-              "1 day"
+            "one": [
+              [
+                7
+              ],
+              " day"
             ],
             "other": [
               [
-                1,
-                "days"
+                7
               ],
               " days"
             ]
@@ -1065,12 +1067,14 @@
       "retryAfterMinutes",
       {
         "one": [
-          "1 minute"
+          [
+            7
+          ],
+          " minute"
         ],
         "other": [
           [
-            1,
-            "retryAfterMinutes"
+            7
           ],
           " minutes"
         ]
@@ -1641,7 +1645,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -1670,7 +1674,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -2283,6 +2287,24 @@
     ],
     "'s stream in"
   ],
+  "FIEwfG": [
+    "Go back to the login page"
+  ],
+  "9vN0pz": [
+    "Go to Login"
+  ],
+  "4fnE/J": [
+    "We could not validate your login link. Please try again."
+  ],
+  "L6htwI": [
+    "Invalid login link"
+  ],
+  "W9uNdG": [
+    "Logging in..."
+  ],
+  "ZXe5/Y": [
+    "Want to login another way?"
+  ],
   "2fmTpT": [
     "Medium"
   ],
@@ -2813,7 +2835,7 @@
       6,
       "num",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -2836,7 +2858,7 @@
       6,
       "num",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -2859,7 +2881,7 @@
       6,
       "num",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -3082,15 +3104,13 @@
         ],
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " blocked message"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " blocked messages"
         ]
@@ -3421,8 +3441,7 @@
         ],
         "other": [
           [
-            1,
-            "number"
+            7
           ],
           " minutes"
         ]
@@ -4191,13 +4210,15 @@
       6,
       "seconds",
       {
-        "=1": [
-          "1 second"
+        "one": [
+          [
+            7
+          ],
+          " second"
         ],
         "other": [
           [
-            1,
-            "seconds"
+            7
           ],
           " seconds"
         ]
@@ -4219,16 +4240,21 @@
       6,
       "remainingCharacters",
       {
-        "=0": [
-          "0 characters"
+        "zero": [
+          [
+            7
+          ],
+          " characters"
         ],
         "one": [
-          "1 character"
+          [
+            7
+          ],
+          " character"
         ],
         "other": [
           [
-            1,
-            "remainingCharacters"
+            7
           ],
           " characters"
         ]
@@ -4300,17 +4326,15 @@
       6,
       "incomingRequestCount",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " friend request"
         ],
         "other": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " friend requests"
         ]
@@ -4323,13 +4347,12 @@
       6,
       "incomingRequestCount",
       {
-        "=1": [
+        "one": [
           "user"
         ],
         "other": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " users"
         ]
@@ -5957,7 +5980,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -5980,7 +6003,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6002,7 +6025,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6031,7 +6054,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6053,7 +6076,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6108,7 +6131,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6131,7 +6154,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6154,7 +6177,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6177,7 +6200,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6199,7 +6222,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6221,7 +6244,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6246,7 +6269,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6268,7 +6291,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -6296,7 +6319,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             8,
             "$b",
@@ -7799,7 +7822,7 @@
       6,
       "nth",
       {
-        "=1": [
+        "one": [
           "first"
         ],
         "=2": [
@@ -7928,15 +7951,13 @@
       {
         "one": [
           [
-            1,
-            "num"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "num"
+            7
           ],
           " hours"
         ]
@@ -8212,12 +8233,14 @@
       "n",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " others"
         ]
@@ -8310,12 +8333,14 @@
             "extraCount",
             {
               "one": [
-                "1 other channel"
+                [
+                  7
+                ],
+                " other channel"
               ],
               "other": [
                 [
-                  1,
-                  "extraCount"
+                  7
                 ],
                 " other channels"
               ]
@@ -8403,12 +8428,14 @@
             "extraChannelCount",
             {
               "one": [
-                "1 other channel"
+                [
+                  7
+                ],
+                " other channel"
               ],
               "other": [
                 [
-                  1,
-                  "extraChannelCount"
+                  7
                 ],
                 " other channels"
               ]
@@ -8493,12 +8520,14 @@
             "extraRoleCount",
             {
               "one": [
-                "1 other role"
+                [
+                  7
+                ],
+                " other role"
               ],
               "other": [
                 [
-                  1,
-                  "extraRoleCount"
+                  7
                 ],
                 " other roles"
               ]
@@ -8586,12 +8615,14 @@
             "extraCount",
             {
               "one": [
-                "1 other role"
+                [
+                  7
+                ],
+                " other role"
               ],
               "other": [
                 [
-                  1,
-                  "extraCount"
+                  7
                 ],
                 " other roles"
               ]
@@ -8706,7 +8737,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -8729,7 +8760,7 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -8786,7 +8817,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -8808,7 +8839,7 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -10008,13 +10039,15 @@
       6,
       "days",
       {
-        "=1": [
-          "1 day"
+        "one": [
+          [
+            7
+          ],
+          " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -10033,7 +10066,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -10050,13 +10083,15 @@
       6,
       "days",
       {
-        "=1": [
-          "1 Day"
+        "one": [
+          [
+            7
+          ],
+          " Day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " Days"
         ]
@@ -10070,13 +10105,15 @@
       6,
       "days",
       {
-        "=1": [
-          "1d"
+        "one": [
+          [
+            7
+          ],
+          "d"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           "d"
         ]
@@ -10093,13 +10130,15 @@
       6,
       "hours",
       {
-        "=1": [
-          "1 hour"
+        "one": [
+          [
+            7
+          ],
+          " hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " hours"
         ]
@@ -10118,7 +10157,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           "hour"
         ],
         "other": [
@@ -10135,13 +10174,15 @@
       6,
       "hours",
       {
-        "=1": [
-          "1 Hour"
+        "one": [
+          [
+            7
+          ],
+          " Hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " Hours"
         ]
@@ -10155,13 +10196,15 @@
       6,
       "hours",
       {
-        "=1": [
-          "1h"
+        "one": [
+          [
+            7
+          ],
+          "h"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           "h"
         ]
@@ -10175,13 +10218,15 @@
       6,
       "mins",
       {
-        "=1": [
-          "1 min"
+        "one": [
+          [
+            7
+          ],
+          " min"
         ],
         "other": [
           [
-            1,
-            "mins"
+            7
           ],
           " mins"
         ]
@@ -10195,13 +10240,15 @@
       6,
       "minutes",
       {
-        "=1": [
-          "1 minute"
+        "one": [
+          [
+            7
+          ],
+          " minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minutes"
         ]
@@ -10220,7 +10267,7 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           "minute"
         ],
         "other": [
@@ -10237,13 +10284,15 @@
       6,
       "minutes",
       {
-        "=1": [
-          "1 Minute"
+        "one": [
+          [
+            7
+          ],
+          " Minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " Minutes"
         ]
@@ -10257,13 +10306,15 @@
       6,
       "minutes",
       {
-        "=1": [
-          "1m"
+        "one": [
+          [
+            7
+          ],
+          "m"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           "m"
         ]
@@ -10277,13 +10328,15 @@
       6,
       "months",
       {
-        "=1": [
-          "1 month"
+        "one": [
+          [
+            7
+          ],
+          " month"
         ],
         "other": [
           [
-            1,
-            "months"
+            7
           ],
           " months"
         ]
@@ -10302,7 +10355,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           "month"
         ],
         "other": [
@@ -10319,13 +10372,15 @@
       6,
       "months",
       {
-        "=1": [
-          "1 Month"
+        "one": [
+          [
+            7
+          ],
+          " Month"
         ],
         "other": [
           [
-            1,
-            "months"
+            7
           ],
           " Months"
         ]
@@ -10339,13 +10394,15 @@
       6,
       "months",
       {
-        "=1": [
-          "1mo"
+        "one": [
+          [
+            7
+          ],
+          "mo"
         ],
         "other": [
           [
-            1,
-            "months"
+            7
           ],
           "mo"
         ]
@@ -10359,13 +10416,15 @@
       6,
       "seconds",
       {
-        "=1": [
-          "1 second"
+        "one": [
+          [
+            7
+          ],
+          " second"
         ],
         "other": [
           [
-            1,
-            "seconds"
+            7
           ],
           " seconds"
         ]
@@ -10379,13 +10438,15 @@
       6,
       "seconds",
       {
-        "=1": [
-          "1s"
+        "one": [
+          [
+            7
+          ],
+          "s"
         ],
         "other": [
           [
-            1,
-            "seconds"
+            7
           ],
           "s"
         ]
@@ -10399,13 +10460,15 @@
       6,
       "secs",
       {
-        "=1": [
-          "1 sec"
+        "one": [
+          [
+            7
+          ],
+          " sec"
         ],
         "other": [
           [
-            1,
-            "secs"
+            7
           ],
           " secs"
         ]
@@ -10419,13 +10482,15 @@
       6,
       "weeks",
       {
-        "=1": [
-          "1 week"
+        "one": [
+          [
+            7
+          ],
+          " week"
         ],
         "other": [
           [
-            1,
-            "weeks"
+            7
           ],
           " weeks"
         ]
@@ -10439,13 +10504,15 @@
       6,
       "weeks",
       {
-        "=1": [
-          "1 Week"
+        "one": [
+          [
+            7
+          ],
+          " Week"
         ],
         "other": [
           [
-            1,
-            "weeks"
+            7
           ],
           " Weeks"
         ]
@@ -10459,13 +10526,15 @@
       6,
       "years",
       {
-        "=1": [
-          "1 year"
+        "one": [
+          [
+            7
+          ],
+          " year"
         ],
         "other": [
           [
-            1,
-            "years"
+            7
           ],
           " years"
         ]
@@ -10484,7 +10553,7 @@
       6,
       "years",
       {
-        "=1": [
+        "one": [
           "year"
         ],
         "other": [
@@ -10501,13 +10570,15 @@
       6,
       "years",
       {
-        "=1": [
-          "1 Year"
+        "one": [
+          [
+            7
+          ],
+          " Year"
         ],
         "other": [
           [
-            1,
-            "years"
+            7
           ],
           " Years"
         ]
@@ -10521,13 +10592,15 @@
       6,
       "years",
       {
-        "=1": [
-          "1y"
+        "one": [
+          [
+            7
+          ],
+          "y"
         ],
         "other": [
           [
-            1,
-            "years"
+            7
           ],
           "y"
         ]
@@ -10623,7 +10696,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "device"
         ],
         "other": [
@@ -10799,6 +10872,12 @@
       ]
     ]
   ],
+  "CQLWvo": [
+    "A temporary verification code will be used for this call. You may be able to resolve this by restarting your device."
+  ],
+  "fJUioH": [
+    "Failed to load your device's saved verification key"
+  ],
   "aTuFYT": [
     "Reconnect"
   ],
@@ -10892,7 +10971,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "device"
         ],
         "other": [
@@ -10932,7 +11011,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -10955,7 +11034,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "hour"
         ],
         "other": [
@@ -10978,7 +11057,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "minute"
         ],
         "other": [
@@ -11001,7 +11080,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "month"
         ],
         "other": [
@@ -11024,7 +11103,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "second"
         ],
         "other": [
@@ -11047,7 +11126,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "week"
         ],
         "other": [
@@ -11070,7 +11149,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "year"
         ],
         "other": [
@@ -11112,20 +11191,21 @@
       6,
       "count",
       {
-        "=0": [
-          "0 users"
-        ],
-        "=1": [
+        "zero": [
           [
-            1,
-            "count"
+            7
+          ],
+          " users"
+        ],
+        "one": [
+          [
+            7
           ],
           " user"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " users"
         ]
@@ -11515,7 +11595,10 @@
       "n",
       {
         "one": [
-          "1 person is"
+          [
+            7
+          ],
+          " person is"
         ],
         "other": [
           [
@@ -11598,7 +11681,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -11906,15 +11989,13 @@
         ],
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " slot"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " slots"
         ]
@@ -12210,15 +12291,13 @@
       {
         "one": [
           [
-            1,
-            "numDays"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "numDays"
+            7
           ],
           " days"
         ]
@@ -12235,15 +12314,13 @@
       {
         "one": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hours"
         ]
@@ -12262,12 +12339,14 @@
       "numMinutes",
       {
         "one": [
-          "1 minute"
+          [
+            7
+          ],
+          " minute"
         ],
         "other": [
           [
-            1,
-            "numMinutes"
+            7
           ],
           " minutes"
         ]
@@ -12467,7 +12546,10 @@
       "maxValues",
       {
         "one": [
-          "1 file"
+          [
+            7
+          ],
+          " file"
         ],
         "other": [
           [
@@ -12815,16 +12897,21 @@
             "=-1": [
               "[calculating...] members"
             ],
-            "=0": [
-              "0 members"
+            "zero": [
+              [
+                7
+              ],
+              " members"
             ],
             "one": [
-              "1 member"
+              [
+                7
+              ],
+              " member"
             ],
             "other": [
               [
-                1,
-                "members"
+                7
               ],
               " members"
             ]
@@ -12844,12 +12931,14 @@
           "days",
           {
             "one": [
-              "1 day"
+              [
+                7
+              ],
+              " day"
             ],
             "other": [
               [
-                1,
-                "days"
+                7
               ],
               " days"
             ]
@@ -13831,7 +13920,7 @@
       6,
       "numTags",
       {
-        "=1": [
+        "one": [
           "this tag"
         ],
         "other": [
@@ -13848,7 +13937,7 @@
       6,
       "numTags",
       {
-        "=1": [
+        "one": [
           "this tag"
         ],
         "other": [
@@ -13913,13 +14002,15 @@
       6,
       "count",
       {
-        "=1": [
-          "1 Comment"
+        "one": [
+          [
+            7
+          ],
+          " Comment"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Comments"
         ]
@@ -13984,17 +14075,15 @@
       6,
       "numPosts",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numPosts"
+            7
           ],
           " post"
         ],
         "other": [
           [
-            1,
-            "numPosts"
+            7
           ],
           " posts"
         ]
@@ -14208,17 +14297,15 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "days"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -14233,17 +14320,15 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "hours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " hours"
         ]
@@ -14258,17 +14343,15 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minutes"
         ]
@@ -14282,17 +14365,15 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "days"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -14307,17 +14388,15 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "days"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -14332,17 +14411,15 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "hours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " hours"
         ]
@@ -14357,17 +14434,15 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minutes"
         ]
@@ -14381,17 +14456,15 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "hours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " hours"
         ]
@@ -14405,17 +14478,15 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "days"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -14437,17 +14508,15 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "hours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "hours"
+            7
           ],
           " hours"
         ]
@@ -14469,17 +14538,15 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minutes"
         ]
@@ -14506,17 +14573,15 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minute"
         ],
         "other": [
           [
-            1,
-            "minutes"
+            7
           ],
           " minutes"
         ]
@@ -14700,13 +14765,15 @@
       6,
       "count",
       {
-        "=1": [
-          "1 mutual friend"
+        "one": [
+          [
+            7
+          ],
+          " mutual friend"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " mutual friends"
         ]
@@ -15154,7 +15221,7 @@
           6,
           "intervalCount",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -15189,7 +15256,7 @@
           6,
           "intervalCount",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -15225,7 +15292,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15249,7 +15316,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15361,7 +15428,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15413,7 +15480,7 @@
       6,
       "copies",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15436,7 +15503,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15486,7 +15553,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15514,7 +15581,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -15920,8 +15987,7 @@
         "other": [
           "You can add ",
           [
-            1,
-            "number"
+            7
           ],
           " more friends."
         ]
@@ -15984,7 +16050,7 @@
             6,
             "extras",
             {
-              "=1": [
+              "one": [
                 [
                   7
                 ],
@@ -16969,12 +17035,14 @@
       "count",
       {
         "one": [
-          "1 Event"
+          [
+            7
+          ],
+          " Event"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Events"
         ]
@@ -16988,7 +17056,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -17078,7 +17146,7 @@
       6,
       "userRemainCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -17144,7 +17212,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -17318,7 +17386,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -18034,7 +18102,7 @@
       6,
       "numChannels",
       {
-        "=1": [
+        "one": [
           "channel"
         ],
         "other": [
@@ -18064,7 +18132,7 @@
       6,
       "numIntangibles",
       {
-        "=1": [
+        "one": [
           "benefit"
         ],
         "other": [
@@ -18379,7 +18447,7 @@
       6,
       "numChannels",
       {
-        "=1": [
+        "one": [
           "Channel"
         ],
         "other": [
@@ -18398,7 +18466,7 @@
       6,
       "numBenefits",
       {
-        "=1": [
+        "one": [
           "benefit"
         ],
         "other": [
@@ -18556,12 +18624,14 @@
       "minimumSize",
       {
         "one": [
-          "1 member"
+          [
+            7
+          ],
+          " member"
         ],
         "other": [
           [
-            1,
-            "minimumSize"
+            7
           ],
           " members"
         ]
@@ -18802,14 +18872,13 @@
       6,
       "numberOfEmojiSlatedForDeletion",
       {
-        "=1": [
+        "one": [
           "This is the last tier using this emoji. Removing this emoji will delete it from your server."
         ],
         "other": [
           "This is the last tier using these ",
           [
-            1,
-            "numberOfEmojiSlatedForDeletion"
+            7
           ],
           " emoji. Removing these emoji will delete them from your server."
         ]
@@ -18994,13 +19063,12 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "Exclusive Channel"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Exclusive Channels"
         ]
@@ -19014,7 +19082,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "Additional Benefit"
         ],
         "other": [
@@ -20157,7 +20225,7 @@
         "=0": [
           "Removed default hide duration"
         ],
-        "=1": [
+        "one": [
           "Changed default hide duration to ",
           [
             8,
@@ -20196,7 +20264,7 @@
         "=0": [
           "Removed default hide duration"
         ],
-        "=1": [
+        "one": [
           "Set default hide duration to ",
           [
             8,
@@ -20442,7 +20510,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "a permission"
         ],
         "other": [
@@ -20477,7 +20545,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "a permission"
         ],
         "other": [
@@ -20512,7 +20580,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "a permission"
         ],
         "other": [
@@ -20579,7 +20647,7 @@
         "=0": [
           "Disabled slowmode"
         ],
-        "=1": [
+        "one": [
           "Set slowmode to ",
           [
             8,
@@ -20619,7 +20687,7 @@
         "=0": [
           "Set slowmode disabled"
         ],
-        "=1": [
+        "one": [
           "Set slowmode to ",
           [
             8,
@@ -22266,7 +22334,7 @@
           6,
           "newValue",
           {
-            "=1": [
+            "one": [
               "a day"
             ],
             "other": [
@@ -22659,8 +22727,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ],
               " users"
             ]
@@ -22744,8 +22811,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ],
               " users"
             ]
@@ -22887,8 +22953,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ],
               " members"
             ]
@@ -22909,13 +22974,12 @@
           6,
           "newValue",
           {
-            "=1": [
+            "one": [
               "a day"
             ],
             "other": [
               [
-                1,
-                "newValue"
+                7
               ],
               " days"
             ]
@@ -22940,7 +23004,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "a role"
         ],
         "other": [
@@ -22964,7 +23028,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "a role"
         ],
         "other": [
@@ -23101,8 +23165,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ],
               " messages"
             ]
@@ -23167,8 +23230,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ],
               " messages"
             ]
@@ -23398,13 +23460,15 @@
       6,
       "count",
       {
-        "=1": [
-          "1 default channel"
+        "one": [
+          [
+            7
+          ],
+          " default channel"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " default channels"
         ]
@@ -23657,7 +23721,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "permission"
         ],
         "other": [
@@ -23681,7 +23745,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "permission"
         ],
         "other": [
@@ -24575,7 +24639,7 @@
         "=0": [
           "Removed auto hide duration"
         ],
-        "=1": [
+        "one": [
           "Changed auto hide duration to ",
           [
             8,
@@ -24614,7 +24678,7 @@
         "=0": [
           "Removed auto hide duration"
         ],
-        "=1": [
+        "one": [
           "Set auto hide duration to ",
           [
             8,
@@ -25515,7 +25579,7 @@
       6,
       "required",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -25553,7 +25617,7 @@
       6,
       "numFreeGuildSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -25586,7 +25650,7 @@
       6,
       "numFreeGuildSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -25685,7 +25749,7 @@
       6,
       "maxTiers",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -25999,7 +26063,10 @@
       "userCount",
       {
         "one": [
-          "1 user"
+          [
+            7
+          ],
+          " user"
         ],
         "other": [
           [
@@ -26082,7 +26149,10 @@
       "userCount",
       {
         "one": [
-          "1 user"
+          [
+            7
+          ],
+          " user"
         ],
         "other": [
           [
@@ -26111,17 +26181,15 @@
       6,
       "numTotal",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numTotal"
+            7
           ],
           " slot"
         ],
         "other": [
           [
-            1,
-            "numTotal"
+            7
           ],
           " slots"
         ]
@@ -26187,7 +26255,7 @@
           6,
           "guildSubscriptionQuantity",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -26420,12 +26488,14 @@
           "Be the first to use this!"
         ],
         "one": [
-          "1 person used this template"
+          [
+            7
+          ],
+          " person used this template"
         ],
         "other": [
           [
-            1,
-            "usageCount"
+            7
           ],
           " people used this template"
         ]
@@ -26440,7 +26510,7 @@
       "mentions",
       {
         "=0": [],
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -26578,16 +26648,13 @@
   "F/5kFJ": [
     "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?"
   ],
-  "UPFiIi": [
-    "Gift Nitro if you dare..."
-  ],
   "gI6Yvv": [
     "You've gifted ",
     [
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -26611,7 +26678,7 @@
       6,
       "intervalCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -26651,7 +26718,7 @@
       6,
       "rewardCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -26951,17 +27018,15 @@
       "count",
       {
         "=0": [],
-        "=1": [
+        "one": [
           [
-            1,
-            "count"
+            7
           ],
           " other friend"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " other friends"
         ]
@@ -27422,15 +27487,13 @@
         ],
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " ignored message"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " ignored messages"
         ]
@@ -27821,12 +27884,14 @@
       "count",
       {
         "one": [
-          "1 Member"
+          [
+            7
+          ],
+          " Member"
         ],
         "other": [
           [
-            2,
-            "count"
+            7
           ],
           " Members"
         ]
@@ -28489,17 +28554,15 @@
       6,
       "numDays",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numDays"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "numDays"
+            7
           ],
           " days"
         ]
@@ -28512,17 +28575,15 @@
       6,
       "numUses",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numUses"
+            7
           ],
           " use"
         ],
         "other": [
           [
-            1,
-            "numUses"
+            7
           ],
           " uses"
         ]
@@ -28538,17 +28599,15 @@
       6,
       "numDays",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numDays"
+            7
           ],
           " day"
         ],
         "other": [
           [
-            1,
-            "numDays"
+            7
           ],
           " days"
         ]
@@ -28564,17 +28623,15 @@
       6,
       "numHours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hours"
         ]
@@ -28590,17 +28647,15 @@
       6,
       "numHours",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hour"
         ],
         "other": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hours"
         ]
@@ -28613,17 +28668,15 @@
       6,
       "numUses",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numUses"
+            7
           ],
           " use"
         ],
         "other": [
           [
-            1,
-            "numUses"
+            7
           ],
           " uses"
         ]
@@ -28642,17 +28695,15 @@
       6,
       "numUses",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numUses"
+            7
           ],
           " use"
         ],
         "other": [
           [
-            1,
-            "numUses"
+            7
           ],
           " uses"
         ]
@@ -28671,17 +28722,15 @@
       6,
       "numUses",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "numUses"
+            7
           ],
           " use"
         ],
         "other": [
           [
-            1,
-            "numUses"
+            7
           ],
           " uses"
         ]
@@ -29157,12 +29206,14 @@
       "days",
       {
         "one": [
-          "1 day"
+          [
+            7
+          ],
+          " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -29562,13 +29613,15 @@
       6,
       "count",
       {
-        "=0": [
-          "0 in audience"
+        "zero": [
+          [
+            7
+          ],
+          " in audience"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " in audience"
         ]
@@ -29636,12 +29689,14 @@
       "count",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " others"
         ]
@@ -29908,12 +29963,14 @@
           "unlimited uses"
         ],
         "one": [
-          "1 use"
+          [
+            7
+          ],
+          " use"
         ],
         "other": [
           [
-            1,
-            "maxUses"
+            7
           ],
           " uses"
         ]
@@ -30095,7 +30152,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -30120,7 +30177,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "month"
         ],
         "other": [
@@ -30142,7 +30199,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "year"
         ],
         "other": [
@@ -30164,7 +30221,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -30186,7 +30243,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "hr"
         ],
         "other": [
@@ -30208,7 +30265,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "min"
         ],
         "other": [
@@ -30230,7 +30287,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "month"
         ],
         "other": [
@@ -30252,7 +30309,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "year"
         ],
         "other": [
@@ -30326,13 +30383,15 @@
       {
         "=-1": [],
         "=0": [],
-        "=1": [
-          "1 month"
+        "one": [
+          [
+            7
+          ],
+          " month"
         ],
         "other": [
           [
-            1,
-            "months"
+            7
           ],
           " months"
         ]
@@ -30346,13 +30405,15 @@
       {
         "=-1": [],
         "=0": [],
-        "=1": [
-          "1 week"
+        "one": [
+          [
+            7
+          ],
+          " week"
         ],
         "other": [
           [
-            1,
-            "weeks"
+            7
           ],
           " weeks"
         ]
@@ -30366,13 +30427,15 @@
       {
         "=-1": [],
         "=0": [],
-        "=1": [
-          "1 day"
+        "one": [
+          [
+            7
+          ],
+          " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -30388,54 +30451,12 @@
     ],
     "x Streak"
   ],
-  "l5PP/2": [
-    [
-      6,
-      "hours",
-      {
-        "=-1": [],
-        "=0": [],
-        "other": [
-          [
-            1,
-            "hours"
-          ],
-          ":"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    [
-      6,
-      "minutes",
-      {
-        "=-1": [],
-        "=0": [
-          "0"
-        ],
-        "other": [
-          [
-            1,
-            "minutes"
-          ]
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ":",
-    [
-      1,
-      "seconds"
-    ]
-  ],
   "KkvKhi": [
     [
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30458,7 +30479,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30488,7 +30509,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30511,7 +30532,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30541,7 +30562,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30564,7 +30585,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30587,7 +30608,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30610,7 +30631,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30633,7 +30654,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30656,7 +30677,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30679,7 +30700,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -30702,7 +30723,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -32113,12 +32134,14 @@
       "count",
       {
         "one": [
-          "1 new message"
+          [
+            7
+          ],
+          " new message"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " new messages"
         ]
@@ -32154,12 +32177,14 @@
       "count",
       {
         "one": [
-          "1 new message"
+          [
+            7
+          ],
+          " new message"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " new messages"
         ]
@@ -32371,7 +32396,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -32395,7 +32420,7 @@
       6,
       "hours",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -32419,7 +32444,7 @@
       6,
       "minutes",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -33214,12 +33239,14 @@
       "count",
       {
         "one": [
-          "1 file"
+          [
+            7
+          ],
+          " file"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " files"
         ]
@@ -33234,12 +33261,14 @@
       "count",
       {
         "one": [
-          "1 audio file"
+          [
+            7
+          ],
+          " audio file"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " audio files"
         ]
@@ -33276,12 +33305,14 @@
       "count",
       {
         "one": [
-          "1 image"
+          [
+            7
+          ],
+          " image"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " images"
         ]
@@ -33296,12 +33327,14 @@
       "image_count",
       {
         "one": [
-          "1 image"
+          [
+            7
+          ],
+          " image"
         ],
         "other": [
           [
-            1,
-            "image_count"
+            7
           ],
           " images"
         ]
@@ -33315,12 +33348,14 @@
       "video_count",
       {
         "one": [
-          "1 video"
+          [
+            7
+          ],
+          " video"
         ],
         "other": [
           [
-            1,
-            "video_count"
+            7
           ],
           " videos"
         ]
@@ -33335,12 +33370,14 @@
       "count",
       {
         "one": [
-          "1 link"
+          [
+            7
+          ],
+          " link"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " links"
         ]
@@ -33380,8 +33417,7 @@
             "$b",
             [
               [
-                1,
-                "subscribers"
+                7
               ]
             ]
           ],
@@ -33430,8 +33466,7 @@
             "$b",
             [
               [
-                1,
-                "subscribers"
+                7
               ]
             ]
           ],
@@ -33448,7 +33483,10 @@
       "num",
       {
         "one": [
-          "1 user"
+          [
+            7
+          ],
+          " user"
         ],
         "other": [
           [
@@ -33467,12 +33505,14 @@
       "count",
       {
         "one": [
-          "1 video"
+          [
+            7
+          ],
+          " video"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " videos"
         ]
@@ -33499,12 +33539,14 @@
       "days",
       {
         "one": [
-          "1 day"
+          [
+            7
+          ],
+          " day"
         ],
         "other": [
           [
-            1,
-            "days"
+            7
           ],
           " days"
         ]
@@ -34128,12 +34170,14 @@
             "extraCount",
             {
               "one": [
-                "1 other"
+                [
+                  7
+                ],
+                " other"
               ],
               "other": [
                 [
-                  1,
-                  "extraCount"
+                  7
                 ],
                 " others"
               ]
@@ -34219,12 +34263,14 @@
             "extraCount",
             {
               "one": [
-                "1 other role"
+                [
+                  7
+                ],
+                " other role"
               ],
               "other": [
                 [
-                  1,
-                  "extraCount"
+                  7
                 ],
                 " other roles"
               ]
@@ -34310,12 +34356,14 @@
             "extraCount",
             {
               "one": [
-                "1 other role"
+                [
+                  7
+                ],
+                " other role"
               ],
               "other": [
                 [
-                  1,
-                  "extraCount"
+                  7
                 ],
                 " other roles"
               ]
@@ -34357,7 +34405,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "New Option"
         ],
         "other": [
@@ -34644,8 +34692,7 @@
             "$b",
             [
               [
-                1,
-                "count"
+                7
               ]
             ]
           ],
@@ -34662,12 +34709,14 @@
       "count",
       {
         "one": [
-          "1 server is unavailable due to a temporary outage."
+          [
+            7
+          ],
+          " server is unavailable due to a temporary outage."
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " servers are unavailable due to a temporary outage."
         ]
@@ -35061,20 +35110,21 @@
       6,
       "numVotes",
       {
-        "=0": [
-          "0 votes"
-        ],
-        "=1": [
+        "zero": [
           [
-            1,
-            "numVotes"
+            7
+          ],
+          " votes"
+        ],
+        "one": [
+          [
+            7
           ],
           " vote"
         ],
         "other": [
           [
-            1,
-            "numVotes"
+            7
           ],
           " votes"
         ]
@@ -35107,15 +35157,13 @@
       {
         "one": [
           [
-            2,
-            "days"
+            7
           ],
           "d"
         ],
         "other": [
           [
-            2,
-            "days"
+            7
           ],
           "d"
         ]
@@ -35132,15 +35180,13 @@
       {
         "one": [
           [
-            2,
-            "hours"
+            7
           ],
           "h"
         ],
         "other": [
           [
-            2,
-            "hours"
+            7
           ],
           "h"
         ]
@@ -35160,15 +35206,13 @@
         ],
         "one": [
           [
-            2,
-            "minutes"
+            7
           ],
           "m"
         ],
         "other": [
           [
-            2,
-            "minutes"
+            7
           ],
           "m"
         ]
@@ -35278,15 +35322,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " vote"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " votes"
         ]
@@ -35302,15 +35344,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " Vote"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Votes"
         ]
@@ -35336,12 +35376,14 @@
       "n",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " others"
         ]
@@ -35377,12 +35419,14 @@
       "n",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " others"
         ]
@@ -35428,12 +35472,14 @@
       "n",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " others"
         ]
@@ -35448,12 +35494,14 @@
       "n",
       {
         "one": [
-          "1 person"
+          [
+            7
+          ],
+          " person"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " people"
         ]
@@ -35957,7 +36005,7 @@
       6,
       "num",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -35986,7 +36034,7 @@
         "=0": [
           "No Boosts"
         ],
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36009,7 +36057,7 @@
       6,
       "numSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36052,7 +36100,7 @@
       6,
       "canceledCount",
       {
-        "=1": [
+        "one": [
           "This Boost is"
         ],
         "other": [
@@ -36078,7 +36126,7 @@
       6,
       "slotCount",
       {
-        "=1": [
+        "one": [
           "Boost"
         ],
         "other": [
@@ -36099,7 +36147,7 @@
       6,
       "slotCount",
       {
-        "=1": [
+        "one": [
           "this Boost"
         ],
         "other": [
@@ -36114,7 +36162,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36138,7 +36186,7 @@
       6,
       "slotCount",
       {
-        "=1": [
+        "one": [
           "this Server Boost"
         ],
         "other": [
@@ -36153,7 +36201,7 @@
       6,
       "guildCount",
       {
-        "=1": [
+        "one": [
           "The current server"
         ],
         "other": [
@@ -36171,7 +36219,7 @@
       6,
       "guildCount",
       {
-        "=1": [
+        "one": [
           "server"
         ],
         "other": [
@@ -36191,7 +36239,7 @@
       6,
       "slotCount",
       {
-        "=1": [
+        "one": [
           "boost"
         ],
         "other": [
@@ -36215,7 +36263,7 @@
       6,
       "slotCount",
       {
-        "=1": [
+        "one": [
           "Boost"
         ],
         "other": [
@@ -36252,7 +36300,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36291,7 +36339,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36331,7 +36379,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36360,7 +36408,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36400,7 +36448,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36428,7 +36476,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36468,7 +36516,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36497,7 +36545,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36537,7 +36585,7 @@
       6,
       "quantity",
       {
-        "=1": [
+        "one": [
           "Server Boost"
         ],
         "other": [
@@ -36568,7 +36616,7 @@
       6,
       "numSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36603,7 +36651,7 @@
           6,
           "days",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -36624,7 +36672,7 @@
           6,
           "hours",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -36654,7 +36702,7 @@
           6,
           "hours",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -36675,7 +36723,7 @@
           6,
           "minutes",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -36705,7 +36753,7 @@
           6,
           "minutes",
           {
-            "=1": [
+            "one": [
               [
                 7
               ],
@@ -36731,7 +36779,7 @@
       6,
       "numSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36780,7 +36828,7 @@
       6,
       "numSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -36817,7 +36865,7 @@
       6,
       "subscriberCount",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -37041,7 +37089,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -37726,7 +37774,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38492,12 +38540,14 @@
       "numMonths",
       {
         "one": [
-          "1 month"
+          [
+            7
+          ],
+          " month"
         ],
         "other": [
           [
-            1,
-            "numMonths"
+            7
           ],
           " months"
         ]
@@ -38524,12 +38574,14 @@
       "numMonths",
       {
         "one": [
-          "1 month"
+          [
+            7
+          ],
+          " month"
         ],
         "other": [
           [
-            1,
-            "numMonths"
+            7
           ],
           " months"
         ]
@@ -38591,7 +38643,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38613,7 +38665,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38635,7 +38687,7 @@
       6,
       "weeks",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38657,7 +38709,7 @@
       6,
       "years",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38679,7 +38731,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38702,7 +38754,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38725,7 +38777,7 @@
       6,
       "weeks",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38748,7 +38800,7 @@
       6,
       "years",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -38774,7 +38826,7 @@
       6,
       "days",
       {
-        "=1": [
+        "one": [
           "Try ",
           [
             7
@@ -38803,7 +38855,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           "Try ",
           [
             7
@@ -38832,7 +38884,7 @@
       6,
       "weeks",
       {
-        "=1": [
+        "one": [
           "Try ",
           [
             7
@@ -38861,7 +38913,7 @@
       6,
       "years",
       {
-        "=1": [
+        "one": [
           "Try ",
           [
             7
@@ -39338,15 +39390,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " Member"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Members"
         ]
@@ -39369,15 +39419,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " Role"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Roles"
         ]
@@ -39740,15 +39788,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " member"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " members"
         ]
@@ -39789,15 +39835,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " role"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " roles"
         ]
@@ -40095,12 +40139,14 @@
       "retryAfter",
       {
         "one": [
-          "1 minute"
+          [
+            7
+          ],
+          " minute"
         ],
         "other": [
           [
-            1,
-            "retryAfter"
+            7
           ],
           " minutes"
         ]
@@ -40548,18 +40594,6 @@
   ],
   "xQSdPv": [
     "Location"
-  ],
-  "tOWwxN": [
-    [
-      1,
-      "gamePublisher"
-    ],
-    " is promoting ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " on Discord by partnering with us to offer this Quest. This Quest is available for all users in Discovery > Quests."
   ],
   "5bQWNG": [
     [
@@ -41109,14 +41143,13 @@
       6,
       "minutesLeft",
       {
-        "=1": [
+        "one": [
           [
             8,
             "minutesHook",
             [
               [
-                1,
-                "minutesLeft"
+                7
               ],
               " more minute"
             ]
@@ -41128,8 +41161,7 @@
             "minutesHook",
             [
               [
-                1,
-                "minutesLeft"
+                7
               ],
               " more minutes"
             ]
@@ -42024,13 +42056,15 @@
       6,
       "count",
       {
-        "=1": [
-          "1 reaction"
+        "one": [
+          [
+            7
+          ],
+          " reaction"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " reactions"
         ]
@@ -42045,13 +42079,15 @@
       6,
       "count",
       {
-        "=1": [
-          "1 reaction"
+        "one": [
+          [
+            7
+          ],
+          " reaction"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " reactions"
         ]
@@ -42102,7 +42138,7 @@
       6,
       "reactions",
       {
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -42131,7 +42167,7 @@
       6,
       "reactions",
       {
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -42224,17 +42260,15 @@
       6,
       "incomingRequestCount",
       {
-        "=1": [
+        "one": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " incoming friend request"
         ],
         "other": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " incoming friend requests"
         ]
@@ -42247,13 +42281,12 @@
       6,
       "incomingRequestCount",
       {
-        "=1": [
+        "one": [
           "user"
         ],
         "other": [
           [
-            1,
-            "incomingRequestCount"
+            7
           ],
           " users"
         ]
@@ -42368,8 +42401,7 @@
         "other": [
           "up to ",
           [
-            1,
-            "numReferrals"
+            7
           ],
           " friends"
         ]
@@ -43577,15 +43609,13 @@
       {
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " Member"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Members"
         ]
@@ -45079,7 +45109,7 @@
         "=0": [
           "Today"
         ],
-        "=1": [
+        "one": [
           "Yesterday"
         ],
         "other": [
@@ -45760,15 +45790,13 @@
         ],
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " result"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " results"
         ]
@@ -45786,6 +45814,9 @@
   ],
   "Ofpgwh": [
     "View all"
+  ],
+  "MzahXU": [
+    "Offer ends soon!"
   ],
   "TiZFqX": [
     "Open Gift"
@@ -46008,7 +46039,7 @@
       "count",
       {
         "=0": [],
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -46754,13 +46785,15 @@
       6,
       "count",
       {
-        "=0": [
-          "0 is speaking"
+        "zero": [
+          [
+            7
+          ],
+          " is speaking"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " speaking"
         ]
@@ -46811,7 +46844,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -46841,7 +46874,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           "Account"
         ],
         "other": [
@@ -46897,7 +46930,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "is"
         ],
         "other": [
@@ -46951,7 +46984,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -46975,7 +47008,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           "Account"
         ],
         "other": [
@@ -47020,7 +47053,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -47049,7 +47082,7 @@
       6,
       "number",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -47411,7 +47444,7 @@
       6,
       "numStickers",
       {
-        "=0": [
+        "zero": [
           [
             7
           ],
@@ -47533,7 +47566,7 @@
       6,
       "numFreeGuildSubscriptions",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -47889,88 +47922,6 @@
   "o8Bypv": [
     "Highlight Notifications"
   ],
-  "GnL3Gv": [
-    "You've gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " month"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " months"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We know they’ll enjoy your summer treat!"
-  ],
-  "xFKdb9": [
-    "You've gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " year"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " years"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We know they’ll enjoy your summer treat!"
-  ],
-  "PWaKU0": [
-    "Gift Nitro. Get a Sweet Treat."
-  ],
-  "EWn7ka": [
-    "Send a Nitro gift and claim this free Avatar Decoration that’s yours to keep! Offer ends June 20."
-  ],
-  "Q0VMqM": [
-    "Snag this Avatar Decoration to juice up your profile. Yours to keep with a gift purchase."
-  ],
-  "VBnNJY": [
-    "Keep this free decoration with your gift purchase."
-  ],
-  "iI74hj": [
-    "Send more than just good vibes this summer. Gift Nitro and get an exclusive Avatar Decoration that’s yours to keep."
-  ],
-  "ydPofJ": [
-    "Gift Nitro. Get a Sweet Reward."
-  ],
-  "ymgFZX": [
-    "Get this sweet, free decoration. Yours to keep with a gift purchase!"
-  ],
-  "Q158Xe": [
-    "Keep this free decoration with a gift purchase!"
-  ],
   "2Yp7dF": [
     "You sent your first Super Reaction on mobile. Keep the hype coming, friend!"
   ],
@@ -48007,7 +47958,7 @@
       6,
       "reactions",
       {
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -48036,7 +47987,7 @@
       6,
       "reactions",
       {
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -49779,7 +49730,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -49847,7 +49798,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -49997,7 +49948,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -50065,7 +50016,7 @@
       6,
       "months",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -50391,7 +50342,7 @@
       "count",
       {
         "=0": [],
-        "=1": [
+        "one": [
           ", ",
           [
             7
@@ -50793,12 +50744,14 @@
       "count",
       {
         "one": [
-          "1 Message ›"
+          [
+            7
+          ],
+          " Message ›"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Messages ›"
         ]
@@ -51315,15 +51268,13 @@
         ],
         "one": [
           [
-            1,
-            "count"
+            7
           ],
           " Result"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Results"
         ]
@@ -51976,12 +51927,14 @@
       "count",
       {
         "one": [
-          "1 File Uploading Failed"
+          [
+            7
+          ],
+          " File Uploading Failed"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Files Uploading Failed"
         ]
@@ -52136,7 +52089,7 @@
       6,
       "partySize",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -52168,7 +52121,7 @@
       6,
       "partySize",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -52207,7 +52160,7 @@
       6,
       "partySize",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -52239,7 +52192,7 @@
       6,
       "partySize",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -52545,16 +52498,21 @@
       6,
       "count",
       {
-        "=0": [
-          "0 Mutual Friends"
+        "zero": [
+          [
+            7
+          ],
+          " Mutual Friends"
         ],
         "one": [
-          "1 Mutual Friend"
+          [
+            7
+          ],
+          " Mutual Friend"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Mutual Friends"
         ]
@@ -52574,16 +52532,21 @@
       6,
       "count",
       {
-        "=0": [
-          "0 Mutual Servers"
+        "zero": [
+          [
+            7
+          ],
+          " Mutual Servers"
         ],
         "one": [
-          "1 Mutual Server"
+          [
+            7
+          ],
+          " Mutual Server"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " Mutual Servers"
         ]
@@ -52825,7 +52788,10 @@
       "numberOfBlockedUsers",
       {
         "one": [
-          "1 blocked account"
+          [
+            7
+          ],
+          " blocked account"
         ],
         "other": [
           [
@@ -52844,7 +52810,10 @@
       "numberOfBlockedUsers",
       {
         "one": [
-          "1 account"
+          [
+            7
+          ],
+          " account"
         ],
         "other": [
           [
@@ -52997,7 +52966,10 @@
       "numberOfIgnoredUsers",
       {
         "one": [
-          "1 ignored account"
+          [
+            7
+          ],
+          " ignored account"
         ],
         "other": [
           [
@@ -53016,7 +52988,10 @@
       "numberOfIgnoredUsers",
       {
         "one": [
-          "1 account"
+          [
+            7
+          ],
+          " account"
         ],
         "other": [
           [
@@ -53326,12 +53301,14 @@
       "count",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " others"
         ]
@@ -53362,12 +53339,14 @@
       "count",
       {
         "one": [
-          "1 other"
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " others"
         ]
@@ -53825,7 +53804,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -53985,12 +53964,14 @@
       "n",
       {
         "one": [
-          "1 Person"
+          [
+            7
+          ],
+          " Person"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " People"
         ]
@@ -54047,12 +54028,14 @@
       "n",
       {
         "one": [
-          "1 Person"
+          [
+            7
+          ],
+          " Person"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " People"
         ]
@@ -54094,7 +54077,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           [
             7
           ],
@@ -54139,12 +54122,14 @@
       "n",
       {
         "one": [
-          "1 Other Person"
+          [
+            7
+          ],
+          " Other Person"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " Other People"
         ]
@@ -54180,13 +54165,15 @@
       6,
       "numPeople",
       {
-        "=1": [
-          "1 other"
+        "one": [
+          [
+            7
+          ],
+          " other"
         ],
         "other": [
           [
-            1,
-            "numPeople"
+            7
           ],
           " others"
         ]
@@ -54201,12 +54188,14 @@
       "n",
       {
         "one": [
-          "1 Person"
+          [
+            7
+          ],
+          " Person"
         ],
         "other": [
           [
-            1,
-            "n"
+            7
           ],
           " People"
         ]

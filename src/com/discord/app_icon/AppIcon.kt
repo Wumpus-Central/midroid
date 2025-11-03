@@ -1,6 +1,5 @@
 package com.discord.app_icon
 
-import Da.a
 import kotlin.enums.EnumEntries
 
 public enum class AppIcon(id: String, aliasSuffix: String) {
@@ -36,11 +35,11 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
 
    public final val alias: String
       public final get() {
-         val var1: java.lang.String = this.aliasSuffix;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("com.discord.main.");
-         var2.append(var1);
-         return var2.toString();
+         val var2: java.lang.String = this.aliasSuffix;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("com.discord.main.");
+         var1.append(var2);
+         return var1.toString();
       }
 
    @JvmStatic
@@ -52,7 +51,7 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
    fun {
       val var0: Array<AppIcon> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = pt.a.a(var0);
    }
 
    init {

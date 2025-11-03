@@ -17,7 +17,7 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    public fun registerNotificationCategories(localizedCategoryNames: ReadableMap) {
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), O.i());
+      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), s0.i());
    }
 
    @ReactMethod

@@ -31,9 +31,9 @@ internal class MediaEngineNativeConnections {
       if (var2 != null) {
          System.nanoTime();
          var2.dispose();
-         val var3: Debug = Debug.INSTANCE;
-      } else {
          val var4: Debug = Debug.INSTANCE;
+      } else {
+         val var3: Debug = Debug.INSTANCE;
       }
    }
 

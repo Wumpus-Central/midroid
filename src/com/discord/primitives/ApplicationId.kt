@@ -2,8 +2,8 @@ package com.discord.primitives
 
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public inline class ApplicationId : SnowflakePrimitive {
@@ -30,14 +30,7 @@ public inline class ApplicationId : SnowflakePrimitive {
 
    @JvmStatic
    fun `equals-impl0`(var0: Long, var2: Long): Boolean {
-      val var4: Boolean;
-      if (var0 == var2) {
-         var4 = true;
-      } else {
-         var4 = false;
-      }
-
-      return var4;
+      return var0 == var2;
    }
 
    @JvmStatic
@@ -47,14 +40,7 @@ public inline class ApplicationId : SnowflakePrimitive {
 
    @JvmStatic
    public open fun isValid(): Boolean {
-      val var2: Boolean;
-      if (var0 > 0L) {
-         var2 = true;
-      } else {
-         var2 = false;
-      }
-
-      return var2;
+      return var0 > 0L;
    }
 
    @JvmStatic

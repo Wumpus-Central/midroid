@@ -6,8 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.Z
+import androidx.core.view.h0
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollAnswersRecyclerAccessibilityDelegate
@@ -47,7 +48,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
             super(null, null, 3, null);
          }
 
-         public void endAnimation(RecyclerView.ViewHolder var1) {
+         public void endAnimation(ViewHolder var1) {
             super.endAnimation(var1);
             val var2: View = var1.itemView;
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
@@ -95,19 +96,19 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       onTapPollAction: (ChannelId, MessageId, String) -> Unit,
       onLongPressImage: (ChannelId, MessageId, String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    ) {
-      this.getMyAdapter().setData(var1.getAnswers(), new com.discord.chat.presentation.message.view.polls.a(var2, var1), new b(var4, var1));
+      this.getMyAdapter().setData(var1.getAnswers(), new a(var2, var1), new b(var4, var1));
       val var11: View = this.binding.getRoot();
       ViewBackgroundUtilsKt.setBackgroundRectangle(var11, var1.getFillColor(), SizeUtilsKt.getDpToPx(16), var1.getBorderColor(), var1.getBorderWidthPx());
       val var12: RecyclerView = this.binding.answers;
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      Z.A0(var12, 4);
+      h0.A0(var12, 4);
       var12.setImportantForAccessibility(1);
-      Z.o0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
+      h0.n0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
       val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       var var5: Boolean;
@@ -136,13 +137,13 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       }
 
       val var6: Boolean;
-      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

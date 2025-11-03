@@ -3,10 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -74,26 +73,26 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
       return ((this.channelId.hashCode() * 31 + this.commandId.hashCode()) * 31 + this.commandName.hashCode()) * 31 + this.commandKey.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.commandId;
-      val var3: java.lang.String = this.commandName;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.commandId;
+      val var1: java.lang.String = this.commandName;
       val var5: java.lang.String = this.commandKey;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapCommandData(channelId=");
-      var2.append(var4);
-      var2.append(", commandId=");
-      var2.append(var1);
-      var2.append(", commandName=");
-      var2.append(var3);
-      var2.append(", commandKey=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapCommandData(channelId=");
+      var4.append(var2);
+      var4.append(", commandId=");
+      var4.append(var3);
+      var4.append(", commandName=");
+      var4.append(var1);
+      var4.append(", commandKey=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

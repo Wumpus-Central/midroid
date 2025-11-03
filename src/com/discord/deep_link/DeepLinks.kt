@@ -8,6 +8,7 @@ import com.appsflyer.AppsFlyerLib
 import com.appsflyer.deeplink.DeepLink
 import com.appsflyer.deeplink.DeepLinkListener
 import com.appsflyer.deeplink.DeepLinkResult
+import com.appsflyer.deeplink.DeepLinkResult.Status
 import com.discord.crash_reporting.CrashReporting
 import java.util.concurrent.Executors
 import java.util.concurrent.ScheduledExecutorService
@@ -20,12 +21,12 @@ public object DeepLinks {
 
    private fun getDeepLinkDestinationWithAppsFlyerParam(deepLinkDestination: String, fromAppsFlyer: Boolean): String {
       val var3: Builder = Uri.parse(var1).buildUpon();
-      val var7: Uri = var3.build();
+      val var4: Uri = var3.build();
       var3.clearQuery();
 
-      for (java.lang.String var6 : var7.getQueryParameterNames()) {
+      for (java.lang.String var6 : var4.getQueryParameterNames()) {
          if (!(var6 == "fromAppsFlyer")) {
-            val var5: java.util.Iterator = var7.getQueryParameters(var6).iterator();
+            val var5: java.util.Iterator = var4.getQueryParameters(var6).iterator();
 
             while (var5.hasNext()) {
                var3.appendQueryParameter(var6, var5.next() as java.lang.String);
@@ -62,9 +63,8 @@ public object DeepLinks {
                this.$context = var1;
             }
 
-            @Override
             public void onDeepLinking(DeepLinkResult var1) {
-               if (var1.getStatus() === DeepLinkResult.Status.FOUND) {
+               if (var1.getStatus() === Status.FOUND) {
                   val var5: DeepLink = var1.getDeepLink();
                   if (var5 != null) {
                      var var7: java.lang.String = var5.getDeepLinkValue();
@@ -105,8 +105,10 @@ public object DeepLinks {
                            var8.addFlags(268435456);
                            var8.setPackage(var11.getPackageName());
                            this.$context.startActivity(var8);
+                           return;
                         } catch (var6: Exception) {
                            CrashReporting.captureException$default(CrashReporting.INSTANCE, var6, false, 2, null);
+                           return;
                         }
                      }
                   }

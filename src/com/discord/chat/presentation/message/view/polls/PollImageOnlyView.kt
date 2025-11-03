@@ -5,6 +5,7 @@ import android.content.res.ColorStateList
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams
 import android.widget.TextView
 import androidx.constraintlayout.helper.widget.Flow
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -77,12 +78,12 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
          val var21: PollMediaView = (this.getBinding() as PollImageOnlyAnswerViewBinding).image;
          var21.setContentDescription(var8.getPollMedia().getText());
          var21.setAlpha(var1.getStyleSet().getOpacity());
-         val var9: android.view.ViewGroup.LayoutParams = var21.getLayoutParams();
+         val var9: LayoutParams = var21.getLayoutParams();
          if (var9 == null) {
             throw new NullPointerException("null cannot be cast to non-null type androidx.constraintlayout.widget.ConstraintLayout.LayoutParams");
          } else {
-            val var24: ConstraintLayout.LayoutParams = var9 as ConstraintLayout.LayoutParams;
-            (var9 as ConstraintLayout.LayoutParams).setMargins(var5, var5, var5, var5);
+            val var24: androidx.constraintlayout.widget.ConstraintLayout.LayoutParams = var9 as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams;
+            (var9 as androidx.constraintlayout.widget.ConstraintLayout.LayoutParams).setMargins(var5, var5, var5, var5);
             var21.setLayoutParams(var24);
             var21.setMedia(var1, var2, var3);
             val var6: Boolean = var8.getDidSelfVote();
@@ -119,14 +120,14 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
 
             ReactAssetUtilsKt.setOptionalReactImageUrl(var25, var14);
             if (var1.getCanShowVoteCounts()) {
-               val var18: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
-               var18.setVisibility(0);
+               val var15: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
+               var15.setVisibility(0);
                var4 = var8.getVotesPercentage();
-               val var15: StringBuilder = new StringBuilder();
-               var15.append(var4);
-               var15.append("%");
-               var18.setText(var15.toString());
-               var18.setTextColor(var1.getLabelColor());
+               val var18: StringBuilder = new StringBuilder();
+               var18.append(var4);
+               var18.append("%");
+               var15.setText(var18.toString());
+               var15.setTextColor(var1.getLabelColor());
                val var16: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).voteCounts;
                var16.setVisibility(0);
                var16.setText(var8.getVotes());

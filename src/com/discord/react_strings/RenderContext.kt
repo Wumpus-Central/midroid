@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import Y2.g
+import b9.g
 import java.util.HashMap
 import kotlin.jvm.functions.Function3
 
@@ -18,14 +18,7 @@ public class RenderContext {
       private const val GROUP_HOOK: Int = 7
 
       private fun MatchResult.contains(group: Int): Boolean {
-         val var3: Boolean;
-         if (this.get(var1, var2).length() > 0) {
-            var3 = true;
-         } else {
-            var3 = false;
-         }
-
-         return var3;
+         return this.get(var1, var2).length() > 0;
       }
 
       private fun MatchResult.get(group: Int): String {
@@ -54,7 +47,7 @@ public class RenderContext {
       }
 
       public fun replace(input: CharSequence, onMatch: (String, String?, Boolean) -> CharSequence): String {
-         return argumentRegex.h(var1, new g(var2));
+         return argumentRegex.j(var1, new g(var2));
       }
    }
 }

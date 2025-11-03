@@ -10,12 +10,12 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
-import xa.v
+import ht.v
 
 @ReactModule(name = "EmojiPickerRowView")
 internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>, EmojiPickerRowViewManagerInterface<EmojiPickerRowView> {
    private final val reactEvents: ReactEvents =
-      new ReactEvents(new Pair[]{v.a("onPressEmoji", OnPressEmojiEvent::class), v.a("onLongPressEmoji", OnLongPressEmojiEvent::class)})
+      new ReactEvents(v.a("onPressEmoji", OnPressEmojiEvent::class), v.a("onLongPressEmoji", OnLongPressEmojiEvent::class))
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$0`(var0: EmojiPickerRowViewManager, var1: ThemedReactContext, var2: EmojiPickerRowView, var3: java.lang.String): Unit {
@@ -36,11 +36,11 @@ internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>
       return var2;
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "EmojiPickerRowView";
    }
 

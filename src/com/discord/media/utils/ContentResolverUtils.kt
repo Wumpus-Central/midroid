@@ -25,38 +25,16 @@ internal object ContentResolverUtils {
    }
 
    public fun ContentResolver.isHeif(uri: Uri): Boolean {
-      val var3: Boolean;
-      if (!(var1.getType(var2) == "image/heif") && !(var1.getType(var2) == "image/heic")) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      return var3;
+      return var1.getType(var2) == "image/heif" || var1.getType(var2) == "image/heic";
    }
 
    public fun ContentResolver.isImage(uri: Uri): Boolean {
-      val var5: java.lang.String = var1.getType(var2);
-      var var3: Boolean = false;
-      if (var5 != null) {
-         var3 = false;
-         if (StringsKt.I(var5, "image", false, 2, null)) {
-            var3 = true;
-         }
-      }
-
-      return var3;
+      val var3: java.lang.String = var1.getType(var2);
+      return var3 != null && StringsKt.N(var3, "image", false, 2, null);
    }
 
    public fun ContentResolver.isJpeg(uri: Uri): Boolean {
-      val var3: Boolean;
-      if (!(var1.getType(var2) == "image/jpeg") && !(var1.getType(var2) == "image/jpg")) {
-         var3 = false;
-      } else {
-         var3 = true;
-      }
-
-      return var3;
+      return var1.getType(var2) == "image/jpeg" || var1.getType(var2) == "image/jpg";
    }
 
    public fun ContentResolver.isPng(uri: Uri): Boolean {
@@ -64,16 +42,8 @@ internal object ContentResolverUtils {
    }
 
    public fun ContentResolver.isVideo(uri: Uri): Boolean {
-      val var5: java.lang.String = var1.getType(var2);
-      var var3: Boolean = false;
-      if (var5 != null) {
-         var3 = false;
-         if (StringsKt.I(var5, "video", false, 2, null)) {
-            var3 = true;
-         }
-      }
-
-      return var3;
+      val var3: java.lang.String = var1.getType(var2);
+      return var3 != null && StringsKt.N(var3, "video", false, 2, null);
    }
 
    public fun ContentResolver.queryCompat(
@@ -84,48 +54,45 @@ internal object ContentResolverUtils {
       querySelection: String? = null,
       queryOffset: Int? = null
    ): Cursor? {
-      val var10: Cursor;
       if (VERSION.SDK_INT > 29) {
-         val var9: Bundle = new Bundle();
-         var9.putInt("android:query-arg-limit", var4);
-         var9.putString("android:query-arg-sql-sort-order", var5);
+         val var15: Bundle = new Bundle();
+         var15.putInt("android:query-arg-limit", var4);
+         var15.putString("android:query-arg-sql-sort-order", var5);
          if (var6 != null) {
-            var9.putString("android:query-arg-sql-selection", var6);
+            var15.putString("android:query-arg-sql-selection", var6);
          }
 
          if (var7 != null) {
-            var9.putInt("android:query-arg-offset", var7.intValue());
+            var15.putInt("android:query-arg-offset", var7.intValue());
          }
 
-         var10 = c.a(var1, var2, var3, var9, null);
+         return var1.query(var2, var3, var15, null);
       } else if (VERSION.SDK_INT >= 26) {
-         val var15: Int;
+         val var14: Int;
          if (var7 != null) {
-            var15 = var7;
+            var14 = var7;
          } else {
-            var15 = 0;
+            var14 = 0;
          }
 
-         val var14: StringBuilder = new StringBuilder();
-         var14.append(var5);
-         var14.append(" LIMIT ");
-         var14.append(var4);
-         var14.append(" OFFSET ");
-         var14.append(var15);
-         var10 = var1.query(var2, var3, var6, null, var14.toString(), null);
+         val var13: StringBuilder = new StringBuilder();
+         var13.append(var5);
+         var13.append(" LIMIT ");
+         var13.append(var4);
+         var13.append(" OFFSET ");
+         var13.append(var14);
+         return var1.query(var2, var3, var6, null, var13.toString(), null);
       } else {
-         val var16: Builder = var2.buildUpon();
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("limit=");
-         var11.append(var4);
-         val var12: Builder = var16.encodedQuery(var11.toString());
+         val var9: Builder = var2.buildUpon();
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("limit=");
+         var10.append(var4);
+         val var11: Builder = var9.encodedQuery(var10.toString());
          if (var7 != null) {
-            var12.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
+            var11.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
          }
 
-         var10 = var1.query(var12.build(), var3, var6, null, var5);
+         return var1.query(var11.build(), var3, var6, null, var5);
       }
-
-      return var10;
    }
 }

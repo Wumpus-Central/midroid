@@ -16,12 +16,8 @@ public object SnowflakeUtils {
    }
 
    public fun String.toSnowflake(): Long? {
-      var var2: java.lang.Long = StringsKt.o(var1);
-      if (var2 == null || var2.longValue() <= 1420070400000L) {
-         var2 = null;
-      }
-
-      return var2;
+      val var2: java.lang.Long = StringsKt.s(var1);
+      return if (var2 != null && var2.longValue() > 1420070400000L) var2 else null;
    }
 
    public fun toTimestamp(snowflake: SnowflakePrimitive): Long {

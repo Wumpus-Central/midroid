@@ -26,12 +26,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var1: java.lang.String = Regex.e.c("libdiscord_version");
-      val var0: StringBuilder = new StringBuilder();
-      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var0.append(var1);
-      var0.append("\\].+))");
-      regexExtractTombstone = new Regex(var0.toString());
+      val var0: java.lang.String = Regex.e.c("libdiscord_version");
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var1.append(var0);
+      var1.append("\\].+))");
+      regexExtractTombstone = new Regex(var1.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -50,7 +50,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         Ba.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         mt.a.b(false, false, null, null, 0, new e(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -59,17 +59,17 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
          while (var7.hasNext()) {
             val var5: java.lang.String = var7.next() as java.lang.String;
-            if (StringsKt.N(var5, "libdiscord_version", false, 2, null)) {
+            if (StringsKt.T(var5, "libdiscord_version", false, 2, null)) {
                var3 = var5;
             } else {
-               if (StringsKt.N(var5, "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***", false, 2, null)) {
-                  StringsKt.i(var6);
+               if (StringsKt.T(var5, "*** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***", false, 2, null)) {
+                  StringsKt.m(var6);
                   var10 = var3;
                }
 
@@ -78,7 +78,7 @@ internal object SystemLogUtils {
             }
          }
 
-         if (!StringsKt.c0(var6)) {
+         if (!StringsKt.i0(var6)) {
             var6.append('\n');
             var6.append("Tombstone's libdiscord_version: ");
             var3 = var10;
@@ -91,37 +91,34 @@ internal object SystemLogUtils {
          }
 
          val var19: java.lang.String = var6.toString();
-         if (StringsKt.c0(var19)) {
+         if (StringsKt.i0(var19)) {
             return null;
          } else {
-            val var11: kotlin.text.i = kotlin.text.i.s;
-            val var17: Regex = new Regex("^Cause: (.+)$", kotlin.text.i.s);
-            val var21: Sequence = kotlin.sequences.k.C(
-               Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
-            );
-            val var13: HashSet = Y.e(
+            val var11: m = m.t;
+            val var17: Regex = new Regex("^Cause: (.+)$", m.t);
+            val var21: Sequence = k.R(Regex.f(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new f(new Regex("classes\\d+.dex")));
+            val var8: HashSet = b1.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               var7 = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (var13.contains((java.lang.String)var8));
+                  var23 = var14.next();
+               } while (var8.contains((java.lang.String)var23));
 
-               var14 = var8 as java.lang.String;
+               var13 = var23 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
-            val var22: java.lang.String = kotlin.sequences.k.A(var21, "\n", null, null, 0, null, null, 62, null);
-            val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
+            val var22: java.lang.String = k.P(var21, "\n", null, null, 0, null, null, 62, null);
+            val var24: MatchResult = Regex.d(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
                val var25: java.util.List = var24.b();
@@ -131,7 +128,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -151,7 +148,7 @@ internal object SystemLogUtils {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
       val var3: ByteArray = var1.getBytes(Charsets.UTF_8);
       val var4: ByteArray = var2.digest(var3);
-      return kotlin.collections.k.q0(var4, "", null, null, 0, null, new j(), 30, null);
+      return kotlin.collections.m.v0(var4, "", null, null, 0, null, new g(), 30, null);
    }
 
    @JvmStatic
@@ -192,7 +189,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var29 = Regex.c(var3, var8, 0, 2, null);
+                           var29 = Regex.d(var3, var8, 0, 2, null);
                         } catch (var21: Exception) {
                            var25 = var21;
                            var4 = var4;
@@ -295,7 +292,7 @@ internal object SystemLogUtils {
                      var5 = var4;
 
                      try {
-                        if (StringsKt.c0(var7)) {
+                        if (StringsKt.i0(var7)) {
                            continue;
                         }
                      } catch (var16: Exception) {
@@ -310,7 +307,7 @@ internal object SystemLogUtils {
                      var5 = var4;
 
                      try {
-                        if (StringsKt.N(var7, "Accessing hidden method", false, 2, null)) {
+                        if (StringsKt.T(var7, "Accessing hidden method", false, 2, null)) {
                            continue;
                         }
                      } catch (var15: Exception) {
@@ -432,11 +429,11 @@ internal object SystemLogUtils {
       while (true) {
          try {
             var1.exitValue();
-            return;
+            break;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
             if (System.nanoTime() >= var2 + var4) {
-               return;
+               break;
             }
          }
       }
@@ -451,7 +448,7 @@ internal object SystemLogUtils {
    }
 
    public fun fetchLastTombstone(cb: (com.discord.crash_reporting.system_logs.SystemLogUtils.Tombstone?) -> Unit) {
-      this.fetch(regexExtractTombstone, new k(var1));
+      this.fetch(regexExtractTombstone, new h(var1));
    }
 
    @SuppressLint(["LogNotTimber"])
@@ -555,27 +552,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.text;
-         val var7: java.lang.String = this.cause;
-         val var1: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
-         val var4: java.lang.String = this.groupHash;
-         val var2: java.lang.String = this.textHash;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Tombstone(text=");
-         var3.append(var6);
-         var3.append(", cause=");
-         var3.append(var7);
-         var3.append(", groupBy=");
-         var3.append(var1);
-         var3.append(", origin=");
-         var3.append(var5);
-         var3.append(", groupHash=");
-         var3.append(var4);
-         var3.append(", textHash=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var4: java.lang.String = this.text;
+         val var1: java.lang.String = this.cause;
+         val var6: java.lang.String = this.groupBy;
+         val var2: java.lang.String = this.origin;
+         val var3: java.lang.String = this.groupHash;
+         val var5: java.lang.String = this.textHash;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Tombstone(text=");
+         var7.append(var4);
+         var7.append(", cause=");
+         var7.append(var1);
+         var7.append(", groupBy=");
+         var7.append(var6);
+         var7.append(", origin=");
+         var7.append(var2);
+         var7.append(", groupHash=");
+         var7.append(var3);
+         var7.append(", textHash=");
+         var7.append(var5);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

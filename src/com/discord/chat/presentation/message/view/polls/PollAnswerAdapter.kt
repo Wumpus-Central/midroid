@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.view.polls
 
 import android.annotation.SuppressLint
 import android.view.View
-import androidx.core.view.Z
-import androidx.recyclerview.widget.RecyclerView
+import androidx.core.view.h0
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollsAnswerAccessibilityDelegate
 import com.discord.chat.reactevents.ViewResizeMode
 import com.discord.recycler_view.utils.ItemDiffer
 
-public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>> : RecyclerView.Adapter {
-   private final var items: List<PollAnswerAccessory> = CollectionsKt.k()
+public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>> : Adapter {
+   private final var items: List<PollAnswerAccessory> = CollectionsKt.l()
    public final var onTapAnswer: (String) -> Unit = new i()
    private final var onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    public final var myAvatarUrl: String?
@@ -41,22 +41,22 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       return Unit.a;
    }
 
-   public override fun getItemCount(): Int {
+   public open fun getItemCount(): Int {
       return this.items.size();
    }
 
-   public override fun getItemId(position: Int): Long {
+   public open fun getItemId(position: Int): Long {
       return this.items.get(var1).getItemId();
    }
 
    public open fun onBindViewHolder(holder: Any, position: Int) {
-      val var3: PollAnswerAccessory = this.items.get(var2);
-      val var4: View = var1.getBinding().getRoot();
-      var4.setEnabled(var3.getCanTapAnswers());
-      var4.setOnClickListener(new g(this, var3));
-      var4.setImportantForAccessibility(1);
-      Z.o0(var4, new PollsAnswerAccessibilityDelegate(var3));
-      var1.bind(var3, new h(this, var3), this.onLongPressImage);
+      val var4: PollAnswerAccessory = this.items.get(var2);
+      val var3: View = var1.getBinding().getRoot();
+      var3.setEnabled(var4.getCanTapAnswers());
+      var3.setOnClickListener(new g(this, var4));
+      var3.setImportantForAccessibility(1);
+      h0.n0(var3, new PollsAnswerAccessibilityDelegate(var4));
+      var1.bind(var4, new h(this, var4), this.onLongPressImage);
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
@@ -65,7 +65,7 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       this.items = var1;
       this.onTapAnswer = var2;
       this.onLongPressImage = var3;
-      val var5: androidx.recyclerview.widget.c.e = androidx.recyclerview.widget.c.b(new ItemDiffer(var4, var1), false);
+      val var5: androidx.recyclerview.widget.e.e = androidx.recyclerview.widget.e.c(new ItemDiffer(var4, var1), false);
       var5.c(this);
    }
 }

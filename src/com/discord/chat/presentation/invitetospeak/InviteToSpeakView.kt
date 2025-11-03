@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.invitetospeak
 
+import a8.a
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -19,12 +20,11 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function1
-import v2.a
 
 public class InviteToSpeakView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
    private final val binding: InviteToSpeakViewBinding
@@ -41,7 +41,7 @@ public class InviteToSpeakView  public constructor(context: Context, attrs: Attr
       this.setLayoutParams(new LayoutParams(-2, -2));
       this.setPadding(SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8), SizeUtilsKt.getDpToPx(12), SizeUtilsKt.getDpToPx(8));
       val var4: TextView = var3.inviteToSpeakText;
-      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, color.white));
+      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.white));
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundAccent(), SizeUtilsKt.getDpToPx(4), null, 0, 12, null);

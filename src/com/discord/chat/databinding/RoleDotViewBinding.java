@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import x1.a;
 
 public final class RoleDotViewBinding implements ViewBinding {
    @NonNull
@@ -27,12 +26,12 @@ public final class RoleDotViewBinding implements ViewBinding {
    @NonNull
    public static RoleDotViewBinding bind(@NonNull View var0) {
       int var1 = R.id.role_dot_view_background;
-      FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-      if (var3 != null) {
+      FrameLayout var2 = (FrameLayout)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.role_dot_view_dot;
-         ImageView var2 = (ImageView)a.a(var0, var1);
-         if (var2 != null) {
-            return new RoleDotViewBinding(var0, var3, var2);
+         ImageView var3 = (ImageView)k5.a.a(var0, var1);
+         if (var3 != null) {
+            return new RoleDotViewBinding(var0, var2, var3);
          }
       }
 

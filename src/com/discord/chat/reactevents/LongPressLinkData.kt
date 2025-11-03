@@ -1,10 +1,9 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class LongPressLinkData(url: String?) : ReactEvent {
@@ -34,18 +33,11 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
    }
 
    public override fun hashCode(): Int {
-      val var1: Int;
-      if (this.url == null) {
-         var1 = 0;
-      } else {
-         var1 = this.url.hashCode();
-      }
-
-      return var1;
+      return if (this.url == null) 0 else this.url.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

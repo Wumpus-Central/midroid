@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.structurabletext
 
 import com.discord.chat.bridge.contentnode.ContentNode
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m(with = AnnotatedStructurableTextSerializer::class)
 public data class AnnotatedStructurableText(content: List<ContentNode>) : StructurableText() {

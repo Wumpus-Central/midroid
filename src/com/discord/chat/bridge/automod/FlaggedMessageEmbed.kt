@@ -5,8 +5,8 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class FlaggedMessageEmbed(id: MessageId,
@@ -229,45 +229,45 @@ public data class FlaggedMessageEmbed(id: MessageId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = MessageId.toString-impl(this.id);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: GuildId = this.guildId;
-      val var11: UserId = this.userId;
-      val var12: StructurableText = this.content;
-      val var5: java.lang.String = this.channelName;
-      val var10: java.lang.String = this.username;
+      val var8: java.lang.String = MessageId.toString-impl(this.id);
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var11: GuildId = this.guildId;
+      val var12: UserId = this.userId;
+      val var6: StructurableText = this.content;
+      val var3: java.lang.String = this.channelName;
+      val var7: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var7: Int = this.roleColor;
+      val var5: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
       val var13: java.lang.String = this.avatarURL;
-      val var8: java.lang.Boolean = this.communicationDisabled;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("FlaggedMessageEmbed(id=");
-      var9.append(var6);
-      var9.append(", channelId=");
-      var9.append(var4);
-      var9.append(", guildId=");
-      var9.append(var3);
-      var9.append(", userId=");
-      var9.append(var11);
-      var9.append(", content=");
-      var9.append(var12);
-      var9.append(", channelName=");
-      var9.append(var5);
-      var9.append(", username=");
-      var9.append(var10);
-      var9.append(", usernameColor=");
-      var9.append(var1);
-      var9.append(", roleColor=");
-      var9.append(var7);
-      var9.append(", shouldShowRoleDot=");
-      var9.append(var2);
-      var9.append(", avatarURL=");
-      var9.append(var13);
-      var9.append(", communicationDisabled=");
-      var9.append(var8);
-      var9.append(")");
-      return var9.toString();
+      val var9: java.lang.Boolean = this.communicationDisabled;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FlaggedMessageEmbed(id=");
+      var4.append(var8);
+      var4.append(", channelId=");
+      var4.append(var10);
+      var4.append(", guildId=");
+      var4.append(var11);
+      var4.append(", userId=");
+      var4.append(var12);
+      var4.append(", content=");
+      var4.append(var6);
+      var4.append(", channelName=");
+      var4.append(var3);
+      var4.append(", username=");
+      var4.append(var7);
+      var4.append(", usernameColor=");
+      var4.append(var1);
+      var4.append(", roleColor=");
+      var4.append(var5);
+      var4.append(", shouldShowRoleDot=");
+      var4.append(var2);
+      var4.append(", avatarURL=");
+      var4.append(var13);
+      var4.append(", communicationDisabled=");
+      var4.append(var9);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

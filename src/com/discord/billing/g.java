@@ -5,10 +5,10 @@ import com.android.billingclient.api.BillingResult;
 import java.util.List;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.Ref.BooleanRef;
+import kotlin.jvm.internal.Ref;
 
 // $VF: synthetic class
-public final class g implements c2.h {
+public final class g implements g7.h {
    public final BillingManager a;
    public final Function1 b;
    public final String c;
@@ -18,10 +18,10 @@ public final class g implements c2.h {
    public final String g;
    public final Activity h;
    public final Function0 i;
-   public final BooleanRef j;
+   public final Ref.BooleanRef j;
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.g(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, var1, var2);
+      <unrepresentable>.c(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, var1, var2);
    }
 }

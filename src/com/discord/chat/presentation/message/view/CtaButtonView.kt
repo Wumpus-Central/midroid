@@ -10,7 +10,7 @@ import com.discord.core.DCDButton
 import com.discord.fonts.DiscordFont
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import com.discord.theme.R.color
+import com.discord.theme.R
 import kotlin.jvm.functions.Function3
 
 public class CtaButtonView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout(var1, var2) {
@@ -27,7 +27,7 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
    }
 
    private fun setButtonCallback(channelId: ChannelId, messageId: MessageId, callback: String?, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
-      if (var4 != null && !StringsKt.c0(var4)) {
+      if (var4 != null && !StringsKt.i0(var4)) {
          this.binding.ctaButton.setOnClickButtonListener(new n(var5, var1, var3, var4));
          this.binding.ctaButton.setEnabled(true);
          this.binding.ctaButton.setAlpha(1.0F);
@@ -69,7 +69,7 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
       if (var6 != null) {
          var9 = var6;
       } else {
-         var9 = this.getContext().getColor(color.brand_500);
+         var9 = this.getContext().getColor(R.color.brand_500);
       }
 
       var11.setBackgroundColor(var9);

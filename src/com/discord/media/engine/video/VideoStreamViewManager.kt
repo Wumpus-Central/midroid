@@ -103,26 +103,26 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // 5c: aload 1
       // 5d: checkcast com/facebook/react/bridge/ReactContext
       // 60: invokevirtual com/facebook/react/bridge/ReactContext.getCurrentActivity ()Landroid/app/Activity;
-      // 63: astore 1
-      // 64: aload 1
+      // 63: astore 2
+      // 64: aload 2
       // 65: ifnull 93
       // 68: getstatic com/discord/media/engine/video/AttachedVideoSinks.INSTANCE Lcom/discord/media/engine/video/AttachedVideoSinks;
-      // 6b: astore 2
-      // 6c: aload 2
+      // 6b: astore 1
+      // 6c: aload 1
       // 6d: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 70: ifeq 83
       // 73: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 76: aload 1
+      // 76: aload 2
       // 77: ldc "DCDVideoRenderer"
       // 79: invokevirtual com/discord/wakelock/ScreenWakeLock.requestLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 7c: goto 93
       // 7f: astore 1
       // 80: goto 9a
-      // 83: aload 2
+      // 83: aload 1
       // 84: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
       // 87: ifne 93
       // 8a: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 8d: aload 1
+      // 8d: aload 2
       // 8e: ldc "DCDVideoRenderer"
       // 90: invokevirtual com/discord/wakelock/ScreenWakeLock.releaseLock (Landroid/app/Activity;Ljava/lang/String;)V
       // 93: getstatic kotlin/Unit.a Lkotlin/Unit;

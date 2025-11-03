@@ -6,7 +6,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.FrameLayout
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.databinding.DecoratedMessageViewBinding
@@ -55,7 +55,7 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
       if (MessageKt.isCallMessage(var1)) {
          var6 = new CallSystemMessageDelegate(var5).createAndBindStandaloneView(this, var1);
       } else {
-         var6 = new SystemMessageDelegate(var5, new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2);
+         var6 = new SystemMessageDelegate(var5, new RecycledViewPool()).createAndBindStandaloneView(this, var1, var2);
       }
 
       this.addView((View)var6, -1, -2);

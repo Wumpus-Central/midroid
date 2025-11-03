@@ -114,7 +114,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       portal: Double,
       playerSettings: PlayerSettings
    ) {
-      label56: {
+      label57: {
          val var31: MediaVideoView.TargetUrl = new MediaVideoView.TargetUrl(var4, var5);
          if (this.targetUrl != null) {
             var var29: MediaVideoView.TargetUrl = this.targetUrl;
@@ -124,7 +124,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             }
 
             if (var29 == var31) {
-               break label56;
+               break label57;
             }
          }
 
@@ -155,7 +155,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             false,
             var20,
             var28,
-            new o0(var14, this),
+            new n1(var14, this),
             var21,
             var22,
             var23,
@@ -166,7 +166,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          );
       }
 
-      label47: {
+      label48: {
          val var40: MediaVideoView.TargetSize = new MediaVideoView.TargetSize(var6, var7);
          if (this.targetSize != null) {
             var var33: MediaVideoView.TargetSize = this.targetSize;
@@ -176,7 +176,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             }
 
             if (var33 == var40) {
-               break label47;
+               break label48;
             }
          }
 
@@ -185,10 +185,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       val var34: MediaView = this.binding.mediaView;
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var41: SpoilerViewManager = this.spoilerViewManager;
+      val var35: SpoilerViewManager = this.spoilerViewManager;
       val var42: ConstraintLayout = this.binding.container;
-      val var38: ConstraintLayout = this.binding.container;
-      val var35: MediaView = this.binding.mediaView;
+      val var41: ConstraintLayout = this.binding.container;
+      val var38: MediaView = this.binding.mediaView;
       if (var14 && !var11) {
          var11 = true;
       } else {
@@ -201,10 +201,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var41.configureSpoiler(var13, var42, var38, var35, null, var11, var15, var12, var10, var16, var17);
-      val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var36: ConstraintLayout = this.binding.container;
-      var39.configureAttachmentOverlay(this, var36, var10, var18);
+      var35.configureSpoiler(var13, var42, var41, var38, null, var11, var15, var12, var10, var16, var17);
+      val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var39: ConstraintLayout = this.binding.container;
+      var36.configureAttachmentOverlay(this, var39, var10, var18);
    }
 
    public fun setDescription(description: String?, hint: String?) {
@@ -231,12 +231,12 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var3: ConstraintLayout = this.binding.container;
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -248,17 +248,16 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.Z.o0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.h0.n0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
                this.$role = var1;
             }
 
-            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                super.onInitializeAccessibilityNodeInfo(var1, var2);
-               var2.S0(this.$role);
+               var2.T0(this.$role);
             }
          });
       }

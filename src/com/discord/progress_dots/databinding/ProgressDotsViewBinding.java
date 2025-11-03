@@ -7,7 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.progress_dots.ProgressDot;
 import com.discord.progress_dots.R;
-import x1.a;
+import k5.a;
 
 public final class ProgressDotsViewBinding implements ViewBinding {
    @NonNull

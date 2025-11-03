@@ -11,7 +11,6 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textview.MaterialTextView;
-import x1.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
    @NonNull
@@ -46,21 +45,21 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
    @NonNull
    public static MessageComponentSelectViewBinding bind(@NonNull View var0) {
       int var1 = R.id.loading_dots;
-      ViewStub var5 = (ViewStub)a.a(var0, var1);
-      if (var5 != null) {
+      ViewStub var6 = (ViewStub)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.select_component_chevron;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.select_component_selection_icon;
-            SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.select_component_selection_text;
-               MaterialTextView var6 = (MaterialTextView)a.a(var0, var1);
-               if (var6 != null) {
+               MaterialTextView var5 = (MaterialTextView)k5.a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageComponentSelectViewBinding(var0, var5, var4, var2, var6, var3);
+                  FlexboxLayout var2 = (FlexboxLayout)k5.a.a(var0, var1);
+                  if (var2 != null) {
+                     return new MessageComponentSelectViewBinding(var0, var6, var4, var3, var5, var2);
                   }
                }
             }

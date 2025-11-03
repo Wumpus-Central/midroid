@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.swmansion.rnscreens.Screen
 import com.swmansion.rnscreens.ScreenStackHeaderConfig
 import io.sentry.e
-import io.sentry.p1
+import io.sentry.o3
 import java.util.ArrayList
 
 @SuppressLint(["ViewConstructor"])
@@ -51,14 +51,14 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
       if (this.isBeingRemoved()) {
          this.setBeingRemoved(false);
 
-         for (Pair var2 : CollectionsKt.R(this.inTransitionViews)) {
+         for (Pair var2 : CollectionsKt.T(this.inTransitionViews)) {
             (var2.a() as ViewGroup).endViewTransition(var2.b() as View);
          }
 
          this.inTransitionViews.clear();
          val var3: e = e.n("ScreenOverride: endRemovalTransition called (w/ patch)");
          var3.o("react.viewmanager");
-         p1.e(var3);
+         o3.e(var3);
       }
    }
 
@@ -70,7 +70,7 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
          this.setBeingRemoved(true);
          val var2: e = e.n("ScreenOverride: calling startRemovalTransition (w/ patch)");
          var2.o("react.viewmanager");
-         p1.e(var2);
+         o3.e(var2);
          this.startTransitionRecursive(this);
       }
    }

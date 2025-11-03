@@ -1,10 +1,9 @@
 package com.discord.chat.presentation.message.view.botuikit.events
 
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 internal data class OnBotComponentTestTapEvent(dummy: Boolean = true) : ReactEvent {
@@ -40,8 +39,8 @@ internal data class OnBotComponentTestTapEvent(dummy: Boolean = true) : ReactEve
       return java.lang.Boolean.hashCode(this.dummy);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

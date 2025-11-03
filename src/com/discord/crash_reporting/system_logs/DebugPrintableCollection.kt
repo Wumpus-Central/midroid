@@ -2,6 +2,7 @@ package com.discord.crash_reporting.system_logs
 
 import android.content.Context
 import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager.ApplicationInfoFlags
 import android.os.Build.VERSION
 import java.lang.ref.WeakReference
 import java.util.ArrayList
@@ -123,9 +124,9 @@ public class DebugPrintableCollection {
    private fun removeDeadReferencesLocked() {
       val var3: ArrayList = new ArrayList();
 
-      for (Entry var5 : this.collection.entrySet()) {
-         val var1: Long = (var5.getKey() as java.lang.Number).longValue();
-         if ((var5.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+      for (Entry var4 : this.collection.entrySet()) {
+         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
+         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
             var3.add(var1);
          }
       }
@@ -290,7 +291,7 @@ public class DebugPrintableCollection {
       public fun libdiscordVersion(context: Context): String {
          val var2: ApplicationInfo;
          if (VERSION.SDK_INT >= 33) {
-            var2 = b.a(var1.getPackageManager(), var1.getPackageName(), a.a(128L));
+            var2 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), ApplicationInfoFlags.of(128L));
          } else {
             var2 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), 128);
          }
@@ -354,13 +355,13 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.tag;
-         val var2: WeakReference = this.reference;
+         val var2: java.lang.String = this.tag;
+         val var1: WeakReference = this.reference;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DebugPrintableRef(tag=");
-         var3.append(var1);
-         var3.append(", reference=");
          var3.append(var2);
+         var3.append(", reference=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

@@ -27,7 +27,7 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
                   0.0F,
                   150.0F,
                   0.0F,
-                  CollectionsKt.V0(CollectionsKt.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
+                  CollectionsKt.g1(CollectionsKt.q(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
                   null,
                   TileMode.MIRROR
                )
@@ -40,12 +40,5 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
 }
 
 public fun Context.getChatTextSizeSp(): Int {
-   val var1: Byte;
-   if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var0)) {
-      var1 = 14;
-   } else {
-      var1 = 16;
-   }
-
-   return var1;
+   return if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var0)) 14 else 16;
 }

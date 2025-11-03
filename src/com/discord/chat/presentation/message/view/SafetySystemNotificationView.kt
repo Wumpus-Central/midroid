@@ -39,7 +39,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setDescription(description: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.description.setVisibility(8);
       } else {
          val var2: TextView = this.binding.description;
@@ -52,7 +52,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new M0(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new l2(var4, var2, var3));
       var5.setText(var1);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
    }
@@ -64,7 +64,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new N0(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new m2(var4, var2, var3));
       var5.setText(var1);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
    }
@@ -75,7 +75,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setSubtitle(subtitle: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.subtitleText.setVisibility(8);
       } else {
          val var2: TextView = this.binding.subtitleText;
@@ -91,19 +91,19 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
          this.binding.footer.setBackgroundColor(ThemeManagerKt.getTheme().getStatusDanger());
          this.binding.primaryCta.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
          this.binding.secondaryCta.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-         val var2: SimpleDraweeView = this.binding.icon;
-         ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getTextDanger());
+         val var3: SimpleDraweeView = this.binding.icon;
+         ColorUtilsKt.setTintColor(var3, ThemeManagerKt.getTheme().getTextDanger());
       } else {
          this.binding.footer.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
          this.binding.primaryCta.setTextColor(ThemeManagerKt.getTheme().getTextLink());
          this.binding.secondaryCta.setTextColor(ThemeManagerKt.getTheme().getTextLink());
-         val var3: SimpleDraweeView = this.binding.icon;
-         ColorUtilsKt.setTintColor(var3, ThemeManagerKt.getTheme().getTextLink());
+         val var2: SimpleDraweeView = this.binding.icon;
+         ColorUtilsKt.setTintColor(var2, ThemeManagerKt.getTheme().getTextLink());
       }
    }
 
    private fun setTitle(titleText: String) {
-      if (StringsKt.c0(var1)) {
+      if (StringsKt.i0(var1)) {
          this.binding.titleContainer.setVisibility(8);
       } else {
          val var2: TextView = this.binding.title;
@@ -139,11 +139,11 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
       this.setDescription(var4);
       this.setTheme(var11);
       this.setPrimaryCta(var5, var7, var6, var12);
-      if (!StringsKt.c0(var8) && !StringsKt.c0(var10)) {
+      if (!StringsKt.i0(var8) && !StringsKt.i0(var10)) {
          this.setSecondaryCta(var8, var9, var10, var12);
       }
 
-      if (!StringsKt.c0(var5) && !StringsKt.c0(var8)) {
+      if (!StringsKt.i0(var5) && !StringsKt.i0(var8)) {
          this.binding.separator.setVisibility(0);
       }
    }

@@ -64,7 +64,7 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
    public fun configure(channelId: ChannelId, messageId: MessageId, info: ForwardInfo, onTapForwardFooter: (Int, ChannelId, MessageId) -> Unit) {
       val var8: ForwardFooterInfo = var4.getFooterInfo();
       if (var8 != null) {
-         val var9: h0 = new h0(var5, var4, var1, var3);
+         val var9: g1 = new g1(var5, var4, var1, var3);
          var var6: Byte = 1;
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var9, 1, null);
          val var10: SimpleDraweeView = this.binding.icon;

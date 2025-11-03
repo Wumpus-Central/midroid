@@ -1,6 +1,5 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -10,6 +9,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import kc.a;
 
 public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeDeviceModule";
@@ -19,10 +19,11 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
    }
 
    @a
+   @Override
    public final Map<String, Object> getConstants() {
-      Map var3 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var4 = new HashSet<>(
+         HashSet var2 = new HashSet<>(
             Arrays.asList(
                "device",
                "deviceBrand",
@@ -38,21 +39,21 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
                "timeZone"
             )
          );
-         HashSet var2 = new HashSet();
-         HashSet var1 = new HashSet(var3.keySet());
-         var1.removeAll(var4);
-         var1.removeAll(var2);
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
+         HashSet var4 = new HashSet();
+         HashSet var3 = new HashSet(var1.keySet());
+         var3.removeAll(var2);
+         var3.removeAll(var4);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var4.removeAll(var3.keySet());
-         if (!var4.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
+         var2.removeAll(var1.keySet());
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
          }
       }
 
-      return var3;
+      return var1;
    }
 
    @ReactMethod(
@@ -61,6 +62,7 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
    @a
    public abstract double getMediaPerformanceClass();
 
+   @Override
    public String getName() {
       return "NativeDeviceModule";
    }

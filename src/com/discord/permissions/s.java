@@ -1,15 +1,16 @@
 package com.discord.permissions;
 
-import com.facebook.react.bridge.Callback;
-import kotlin.jvm.functions.Function0;
+import com.facebook.react.bridge.Promise;
+import com.facebook.react.bridge.WritableMap;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class s implements Callback {
-   public final Function0 a;
-   public final Function0 b;
+public final class s implements Function1 {
+   public final String d;
+   public final Throwable e;
+   public final WritableMap i;
 
-   @Override
-   public final void invoke(Object[] var1) {
-      NativePermissionPromise.a(this.a, this.b, var1);
+   public final Object invoke(Object var1) {
+      return <unrepresentable>.g(this.d, this.e, this.i, (Promise)var1);
    }
 }

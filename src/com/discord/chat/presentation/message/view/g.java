@@ -8,6 +8,6 @@ public final class g implements AnimatorUpdateListener {
    public final AttachmentUploadOverlayView a;
 
    public final void onAnimationUpdate(ValueAnimator var1) {
-      AttachmentUploadOverlayView.o(this.a, var1);
+      AttachmentUploadOverlayView.p(this.a, var1);
    }
 }

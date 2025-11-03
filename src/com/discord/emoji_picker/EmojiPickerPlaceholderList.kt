@@ -29,9 +29,9 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
       }
 
       this.listSize = var4;
-      val var6: java.util.List = this.nativeSection;
+      val var6: java.lang.Iterable = this.nativeSection;
       var var9: Int = 0;
-      var4 = CollectionsKt.v(var6, 9);
+      var4 = CollectionsKt.w(var6, 9);
       val var10: Any;
       if (var4 == 0) {
          var10 = CollectionsKt.e(var9);
@@ -47,7 +47,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
          var10 = var5;
       }
 
-      this.listHeaderIndices = CollectionsKt.c0((java.util.List)var10, 1);
+      this.listHeaderIndices = CollectionsKt.g0((java.util.List)var10, 1);
    }
 
    public open operator fun get(index: Int): EmojiPickerItem {
@@ -59,7 +59,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle();
          } else {
             if (var3 !is EmojiPickerItemData.CoreData.NativeSection.Guild) {
-               throw new xa.p();
+               throw new ht.p();
             }
 
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Guild).getGuildName();

@@ -14,7 +14,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SourceDebugExtension(["SMAP\nPlayAssetDelivery.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PlayAssetDelivery.kt\ncom/discord/play_delivery/PlayAssetDelivery\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 3 com.google.android.play:asset-delivery-ktx@@2.3.0\ncom/google/android/play/core/ktx/AssetPackManagerKtxKt\n*L\n1#1,151:1\n381#2,7:152\n44#3:159\n*S KotlinDebug\n*F\n+ 1 PlayAssetDelivery.kt\ncom/discord/play_delivery/PlayAssetDelivery\n*L\n112#1:152,7\n28#1:159\n*E\n"])
 public object PlayAssetDelivery {
    private const val TAG: String = "PlayAssetDelivery"
-   private final lateinit var assetPackManagerWeakRef: WeakReference<K7.a>
+   private final lateinit var assetPackManagerWeakRef: WeakReference<bj.a>
    private final var assetDeliveryAvailable: Boolean = true
    private final val pendingCallbacks: MutableMap<String, MutableList<(Boolean) -> Unit>> = new LinkedHashMap()
    private final val assetPackLocations: MutableMap<String, AssetPackLocation> = new LinkedHashMap()
@@ -28,44 +28,44 @@ public object PlayAssetDelivery {
          var1 = null;
       }
 
-      val var7: K7.a = var1.get() as K7.a;
+      val var7: bj.a = var1.get() as bj.a;
       if (var7 != null) {
          val var11: java.lang.String = var0.h();
-         var var9: java.lang.Boolean;
+         var var8: java.lang.Boolean;
          if (var0.i() == 4) {
-            val var4: AssetPackLocation = var7.c(var11);
-            if (var4 != null) {
-               assetPackLocations.put(var11, var4);
+            val var5: AssetPackLocation = var7.c(var11);
+            if (var5 != null) {
+               assetPackLocations.put(var11, var5);
             }
 
-            val var8: Log = Log.INSTANCE;
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Download of ");
-            var5.append(var11);
-            var5.append(" Asset complete");
-            Log.i$default(var8, "PlayAssetDelivery", var5.toString(), null, 4, null);
-            var9 = java.lang.Boolean.TRUE;
+            val var6: Log = Log.INSTANCE;
+            val var10: StringBuilder = new StringBuilder();
+            var10.append("Download of ");
+            var10.append(var11);
+            var10.append(" Asset complete");
+            Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
+            var8 = java.lang.Boolean.TRUE;
          } else {
-            label26: {
+            label34: {
                if (var0.i() != 5) {
-                  var9 = null;
+                  var8 = null;
                   if (var0.i() != 6) {
-                     break label26;
+                     break label34;
                   }
                }
 
-               val var10: Log = Log.INSTANCE;
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Download of ");
-               var6.append(var11);
-               var6.append(" Asset failed");
-               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
-               var9 = java.lang.Boolean.FALSE;
+               val var4: Log = Log.INSTANCE;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Download of ");
+               var9.append(var11);
+               var9.append(" Asset failed");
+               Log.i$default(var4, "PlayAssetDelivery", var9.toString(), null, 4, null);
+               var8 = java.lang.Boolean.FALSE;
             }
          }
 
-         if (var9 != null) {
-            INSTANCE.flushAssetCallbacksWithResult(var11, var9);
+         if (var8 != null) {
+            INSTANCE.flushAssetCallbacksWithResult(var11, var8);
          }
       }
    }
@@ -85,177 +85,169 @@ public object PlayAssetDelivery {
       //
       // Bytecode:
       // 000: getstatic com/discord/play_delivery/PlayAssetDelivery.assetPackManagerWeakRef Ljava/lang/ref/WeakReference;
-      // 003: astore 5
-      // 005: aconst_null
-      // 006: astore 4
-      // 008: aload 5
-      // 00a: astore 3
-      // 00b: aload 5
-      // 00d: ifnonnull 017
-      // 010: ldc "assetPackManagerWeakRef"
-      // 012: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
-      // 015: aconst_null
-      // 016: astore 3
-      // 017: aload 3
-      // 018: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
-      // 01b: checkcast K7/a
-      // 01e: astore 6
-      // 020: aload 6
-      // 022: ifnull 031
-      // 025: aload 6
-      // 027: aload 1
-      // 028: invokeinterface K7/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
-      // 02d: astore 3
-      // 02e: goto 033
-      // 031: aconst_null
-      // 032: astore 3
-      // 033: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 036: astore 5
-      // 038: new java/lang/StringBuilder
-      // 03b: dup
-      // 03c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 03f: astore 7
-      // 041: aload 7
-      // 043: ldc "Fetching "
-      // 045: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 048: pop
-      // 049: aload 7
-      // 04b: aload 1
-      // 04c: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 04f: pop
-      // 050: aload 7
-      // 052: ldc " Asset"
-      // 054: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 057: pop
-      // 058: aload 5
-      // 05a: ldc "PlayAssetDelivery"
-      // 05c: aload 7
-      // 05e: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 061: aconst_null
-      // 062: bipush 4
-      // 063: aconst_null
-      // 064: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
-      // 067: aload 6
-      // 069: ifnonnull 083
-      // 06c: aload 4
-      // 06e: astore 1
-      // 06f: aload 2
-      // 070: ifnull 14f
-      // 073: aload 2
-      // 074: getstatic java/lang/Boolean.FALSE Ljava/lang/Boolean;
-      // 077: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 07c: pop
-      // 07d: aload 4
-      // 07f: astore 1
-      // 080: goto 14f
-      // 083: aload 3
-      // 084: ifnonnull 134
-      // 087: getstatic com/discord/lifecycle/AppLifecycle.INSTANCE Lcom/discord/lifecycle/AppLifecycle;
-      // 08a: invokevirtual com/discord/lifecycle/AppLifecycle.isForegrounded ()Z
-      // 08d: ifne 0ca
-      // 090: new java/lang/StringBuilder
-      // 093: dup
-      // 094: invokespecial java/lang/StringBuilder.<init> ()V
-      // 097: astore 3
-      // 098: aload 3
-      // 099: ldc "Skipping fetch for "
-      // 09b: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 09e: pop
-      // 09f: aload 3
-      // 0a0: aload 1
-      // 0a1: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 0a4: pop
-      // 0a5: aload 3
-      // 0a6: ldc ": app not in foreground"
-      // 0a8: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 0ab: pop
-      // 0ac: aload 5
-      // 0ae: ldc "PlayAssetDelivery"
-      // 0b0: aload 3
-      // 0b1: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 0b4: aconst_null
-      // 0b5: bipush 4
-      // 0b6: aconst_null
-      // 0b7: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
-      // 0ba: aload 2
-      // 0bb: ifnull 0c8
-      // 0be: aload 2
-      // 0bf: getstatic java/lang/Boolean.FALSE Ljava/lang/Boolean;
-      // 0c2: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 0c7: pop
-      // 0c8: aconst_null
-      // 0c9: areturn
-      // 0ca: aload 2
-      // 0cb: ifnull 117
-      // 0ce: getstatic com/discord/play_delivery/PlayAssetDelivery.pendingCallbacks Ljava/util/Map;
-      // 0d1: astore 7
-      // 0d3: aload 7
-      // 0d5: monitorenter
-      // 0d6: aload 7
-      // 0d8: aload 1
-      // 0d9: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 0de: astore 5
-      // 0e0: aload 5
-      // 0e2: astore 3
-      // 0e3: aload 5
-      // 0e5: ifnonnull 101
-      // 0e8: new java/util/ArrayList
-      // 0eb: astore 3
-      // 0ec: aload 3
-      // 0ed: invokespecial java/util/ArrayList.<init> ()V
-      // 0f0: aload 7
-      // 0f2: aload 1
-      // 0f3: aload 3
-      // 0f4: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 0f9: pop
-      // 0fa: goto 101
-      // 0fd: astore 1
-      // 0fe: goto 112
-      // 101: aload 3
-      // 102: checkcast java/util/List
-      // 105: aload 2
-      // 106: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
-      // 10b: pop
-      // 10c: aload 7
-      // 10e: monitorexit
-      // 10f: goto 117
-      // 112: aload 7
-      // 114: monitorexit
-      // 115: aload 1
-      // 116: athrow
-      // 117: aload 6
-      // 119: aload 1
-      // 11a: invokestatic kotlin/collections/CollectionsKt.e (Ljava/lang/Object;)Ljava/util/List;
-      // 11d: invokeinterface K7/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
-      // 122: new com/discord/play_delivery/b
-      // 125: dup
-      // 126: aload 1
-      // 127: invokespecial com/discord/play_delivery/b.<init> (Ljava/lang/String;)V
-      // 12a: invokevirtual com/google/android/gms/tasks/Task.addOnCompleteListener (Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
-      // 12d: pop
-      // 12e: aload 4
-      // 130: astore 1
-      // 131: goto 14f
-      // 134: aload 2
-      // 135: ifnull 142
-      // 138: aload 2
-      // 139: getstatic java/lang/Boolean.TRUE Ljava/lang/Boolean;
-      // 13c: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 141: pop
-      // 142: getstatic com/discord/play_delivery/PlayAssetDelivery.assetPackLocations Ljava/util/Map;
-      // 145: aload 1
-      // 146: aload 3
-      // 147: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 14c: pop
-      // 14d: aload 3
-      // 14e: astore 1
-      // 14f: aload 1
-      // 150: areturn
+      // 003: astore 4
+      // 005: aload 4
+      // 007: astore 3
+      // 008: aload 4
+      // 00a: ifnonnull 014
+      // 00d: ldc "assetPackManagerWeakRef"
+      // 00f: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
+      // 012: aconst_null
+      // 013: astore 3
+      // 014: aload 3
+      // 015: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
+      // 018: checkcast bj/a
+      // 01b: astore 5
+      // 01d: aload 5
+      // 01f: ifnull 02e
+      // 022: aload 5
+      // 024: aload 1
+      // 025: invokeinterface bj/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
+      // 02a: astore 3
+      // 02b: goto 030
+      // 02e: aconst_null
+      // 02f: astore 3
+      // 030: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
+      // 033: astore 4
+      // 035: new java/lang/StringBuilder
+      // 038: dup
+      // 039: invokespecial java/lang/StringBuilder.<init> ()V
+      // 03c: astore 6
+      // 03e: aload 6
+      // 040: ldc "Fetching "
+      // 042: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 045: pop
+      // 046: aload 6
+      // 048: aload 1
+      // 049: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 04c: pop
+      // 04d: aload 6
+      // 04f: ldc " Asset"
+      // 051: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 054: pop
+      // 055: aload 4
+      // 057: ldc "PlayAssetDelivery"
+      // 059: aload 6
+      // 05b: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 05e: aconst_null
+      // 05f: bipush 4
+      // 060: aconst_null
+      // 061: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+      // 064: aload 5
+      // 066: ifnonnull 079
+      // 069: aload 2
+      // 06a: ifnull 077
+      // 06d: aload 2
+      // 06e: getstatic java/lang/Boolean.FALSE Ljava/lang/Boolean;
+      // 071: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 076: pop
+      // 077: aconst_null
+      // 078: areturn
+      // 079: aload 3
+      // 07a: ifnonnull 126
+      // 07d: getstatic com/discord/lifecycle/AppLifecycle.INSTANCE Lcom/discord/lifecycle/AppLifecycle;
+      // 080: invokevirtual com/discord/lifecycle/AppLifecycle.isForegrounded ()Z
+      // 083: ifne 0c0
+      // 086: new java/lang/StringBuilder
+      // 089: dup
+      // 08a: invokespecial java/lang/StringBuilder.<init> ()V
+      // 08d: astore 3
+      // 08e: aload 3
+      // 08f: ldc "Skipping fetch for "
+      // 091: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 094: pop
+      // 095: aload 3
+      // 096: aload 1
+      // 097: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 09a: pop
+      // 09b: aload 3
+      // 09c: ldc ": app not in foreground"
+      // 09e: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 0a1: pop
+      // 0a2: aload 4
+      // 0a4: ldc "PlayAssetDelivery"
+      // 0a6: aload 3
+      // 0a7: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 0aa: aconst_null
+      // 0ab: bipush 4
+      // 0ac: aconst_null
+      // 0ad: invokestatic com/discord/logging/Log.i$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+      // 0b0: aload 2
+      // 0b1: ifnull 0be
+      // 0b4: aload 2
+      // 0b5: getstatic java/lang/Boolean.FALSE Ljava/lang/Boolean;
+      // 0b8: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 0bd: pop
+      // 0be: aconst_null
+      // 0bf: areturn
+      // 0c0: aload 2
+      // 0c1: ifnull 10d
+      // 0c4: getstatic com/discord/play_delivery/PlayAssetDelivery.pendingCallbacks Ljava/util/Map;
+      // 0c7: astore 6
+      // 0c9: aload 6
+      // 0cb: monitorenter
+      // 0cc: aload 6
+      // 0ce: aload 1
+      // 0cf: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 0d4: astore 4
+      // 0d6: aload 4
+      // 0d8: astore 3
+      // 0d9: aload 4
+      // 0db: ifnonnull 0f7
+      // 0de: new java/util/ArrayList
+      // 0e1: astore 3
+      // 0e2: aload 3
+      // 0e3: invokespecial java/util/ArrayList.<init> ()V
+      // 0e6: aload 6
+      // 0e8: aload 1
+      // 0e9: aload 3
+      // 0ea: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 0ef: pop
+      // 0f0: goto 0f7
+      // 0f3: astore 1
+      // 0f4: goto 108
+      // 0f7: aload 3
+      // 0f8: checkcast java/util/List
+      // 0fb: aload 2
+      // 0fc: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
+      // 101: pop
+      // 102: aload 6
+      // 104: monitorexit
+      // 105: goto 10d
+      // 108: aload 6
+      // 10a: monitorexit
+      // 10b: aload 1
+      // 10c: athrow
+      // 10d: aload 5
+      // 10f: aload 1
+      // 110: invokestatic kotlin/collections/CollectionsKt.e (Ljava/lang/Object;)Ljava/util/List;
+      // 113: invokeinterface bj/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
+      // 118: new com/discord/play_delivery/b
+      // 11b: dup
+      // 11c: aload 1
+      // 11d: invokespecial com/discord/play_delivery/b.<init> (Ljava/lang/String;)V
+      // 120: invokevirtual com/google/android/gms/tasks/Task.addOnCompleteListener (Lcom/google/android/gms/tasks/OnCompleteListener;)Lcom/google/android/gms/tasks/Task;
+      // 123: pop
+      // 124: aconst_null
+      // 125: areturn
+      // 126: aload 2
+      // 127: ifnull 134
+      // 12a: aload 2
+      // 12b: getstatic java/lang/Boolean.TRUE Ljava/lang/Boolean;
+      // 12e: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 133: pop
+      // 134: getstatic com/discord/play_delivery/PlayAssetDelivery.assetPackLocations Ljava/util/Map;
+      // 137: aload 1
+      // 138: aload 3
+      // 139: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 13e: pop
+      // 13f: aload 3
+      // 140: areturn
    }
 
    @JvmStatic
    fun `fetchAssetPackLocation$lambda$3`(var0: java.lang.String, var1: Task) {
-      if (var1.j() != null) {
+      if (var1.k() != null) {
          assetDeliveryAvailable = false;
          INSTANCE.flushAssetCallbacksWithResult(var0, false);
       }
@@ -316,9 +308,9 @@ public object PlayAssetDelivery {
    }
 
    public fun getAssetPackLocation(assetPackName: String, tryToFetch: Boolean, successCallback: ((Boolean) -> Unit)? = null): String? {
-      val var6: AssetPackLocation = assetPackLocations.get(var1);
-      var var4: AssetPackLocation = var6;
-      if (var6 == null) {
+      val var5: AssetPackLocation = assetPackLocations.get(var1);
+      var var4: AssetPackLocation = var5;
+      if (var5 == null) {
          if (var2) {
             var4 = this.fetchAssetPackLocation(var1, var3);
          } else {
@@ -326,33 +318,29 @@ public object PlayAssetDelivery {
          }
       }
 
-      var var7: java.lang.String;
       if (var4 == null) {
-         var7 = null;
+         return null;
       } else if (var4.c() == 1) {
-         var7 = null;
-      } else {
-         var7 = null;
-         if (var4.c() == 0) {
-            if (var4.b() == null) {
-               val var8: Log = Log.INSTANCE;
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Asset ");
-               var9.append(var1);
-               var9.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
-               Log.w$default(var8, "PlayAssetDelivery", var9.toString(), null, 4, null);
-               var7 = null;
-            } else {
-               var7 = var4.b();
-            }
+         return null;
+      } else if (var4.c() == 0) {
+         if (var4.b() == null) {
+            val var6: Log = Log.INSTANCE;
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Asset ");
+            var7.append(var1);
+            var7.append(" has been fetched and is in storage,but doesn't have a valid storage path.");
+            Log.w$default(var6, "PlayAssetDelivery", var7.toString(), null, 4, null);
+            return null;
+         } else {
+            return var4.b();
          }
+      } else {
+         return null;
       }
-
-      return var7;
    }
 
    public fun initialize(applicationContext: Context) {
-      val var2: K7.a = com.google.android.play.core.assetpacks.b.a(var1);
+      val var2: bj.a = com.google.android.play.core.assetpacks.b.a(var1);
       var2.a(assetPackStateUpdateListener);
       assetPackManagerWeakRef = new WeakReference<>(var2);
    }

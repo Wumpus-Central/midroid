@@ -2,6 +2,20 @@ package com.discord.chat.reactevents
 
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
+import com.discord.chat.bridge.contentnode.LinkContextData.BindDismissMessage
+import com.discord.chat.bridge.contentnode.LinkContextData.BindGuildMenu
+import com.discord.chat.bridge.contentnode.LinkContextData.BindInsertText
+import com.discord.chat.bridge.contentnode.LinkContextData.BindJumpToMessage
+import com.discord.chat.bridge.contentnode.LinkContextData.BindOpenGdmCustomizeActionSheet
+import com.discord.chat.bridge.contentnode.LinkContextData.BindOpenPins
+import com.discord.chat.bridge.contentnode.LinkContextData.BindOpenRoleSubscriptionOverview
+import com.discord.chat.bridge.contentnode.LinkContextData.BindOpenThreadChannel
+import com.discord.chat.bridge.contentnode.LinkContextData.BindOpenUrl
+import com.discord.chat.bridge.contentnode.LinkContextData.BindTapCommandName
+import com.discord.chat.bridge.contentnode.LinkContextData.BindUserMenu
+import com.discord.chat.bridge.contentnode.LinkContextData.BindUserSurvey
+import com.discord.chat.bridge.contentnode.LinkContextData.LinkUrl
+import com.discord.chat.bridge.contentnode.LinkContextData.BindGuildMenu.MessageReference
 import com.discord.logging.Log
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
@@ -11,8 +25,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import ht.v
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @SourceDebugExtension(["SMAP\nTapLinkData.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TapLinkData.kt\ncom/discord/chat/reactevents/TapLinkData\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,136:1\n1#2:137\n*E\n"])
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
@@ -43,118 +57,139 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    private fun LinkContextData.toMap(): WritableNativeMap {
-      val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
-      val var4: LinkContextData = this.target;
-      if (this.target is LinkContextData.LinkUrl) {
-         NativeMapExtensionsKt.put(var5, "url", (this.target as LinkContextData.LinkUrl).getUrl());
-      } else if (this.target is LinkContextData.BindOpenThreadChannel) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindOpenThreadChannel).getAction());
-         NativeMapExtensionsKt.put(var5, "threadId", ChannelId.toString-impl((this.target as LinkContextData.BindOpenThreadChannel).getThreadId-o4g7jtM()));
-      } else if (this.target is LinkContextData.BindUserMenu) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindUserMenu).getAction());
-         NativeMapExtensionsKt.put(var5, "userId", UserId.toString-impl((this.target as LinkContextData.BindUserMenu).getUserId-re6GcUE()));
-         val var2: ChannelId = (this.target as LinkContextData.BindUserMenu).getMessageChannelId-qMVnFVQ();
-         if (var2 != null) {
-            NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl(var2.unbox-impl()));
-         }
-      } else if (this.target is LinkContextData.BindTapCommandName) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindTapCommandName).getAction());
-         NativeMapExtensionsKt.put(var5, "userId", UserId.toString-impl((this.target as LinkContextData.BindTapCommandName).getUserId-re6GcUE()));
-         NativeMapExtensionsKt.put(var5, "messageType", (this.target as LinkContextData.BindTapCommandName).getMessageType().getSerialNumber());
-         NativeMapExtensionsKt.put(var5, "messageId", MessageId.toString-impl((this.target as LinkContextData.BindTapCommandName).getMessageId-3Eiw7ao()));
-         NativeMapExtensionsKt.put(
-            var5, "applicationUserId", UserId.toString-impl((this.target as LinkContextData.BindTapCommandName).getApplicationUserId-re6GcUE())
-         );
-         NativeMapExtensionsKt.put(
-            var5, "messageChannelId", ChannelId.toString-impl((this.target as LinkContextData.BindTapCommandName).getMessageChannelId-o4g7jtM())
-         );
-      } else if (this.target is LinkContextData.BindOpenPins) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindOpenPins).getAction());
-         NativeMapExtensionsKt.put(
-            var5, "messageChannelId", ChannelId.toString-impl((this.target as LinkContextData.BindOpenPins).getMessageChannelId-o4g7jtM())
-         );
-      } else if (this.target is LinkContextData.BindGuildMenu) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindGuildMenu).getAction());
-         val var3: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
-         if (var3 != null) {
-            val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
-            NativeMapExtensionsKt.put(var6, "channel_id", ChannelId.toString-impl(var3.getChannelId-o4g7jtM()));
-            val var9: GuildId = var3.getGuildId-qOKuAAo();
-            if (var9 != null) {
-               var9.unbox-impl();
-               NativeMapExtensionsKt.put(var6, "guild_id", (this.target as LinkContextData.BindGuildMenu).toString());
+      val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
+      val var2: LinkContextData = this.target;
+      if (this.target is LinkUrl) {
+         NativeMapExtensionsKt.put(var5, "url", (this.target as LinkUrl).getUrl());
+         return var5;
+      } else if (this.target is BindOpenThreadChannel) {
+         NativeMapExtensionsKt.put(var5, "action", (this.target as BindOpenThreadChannel).getAction());
+         NativeMapExtensionsKt.put(var5, "threadId", ChannelId.toString-impl((this.target as BindOpenThreadChannel).getThreadId-o4g7jtM()));
+         return var5;
+      } else {
+         if (this.target is BindUserMenu) {
+            NativeMapExtensionsKt.put(var5, "action", (this.target as BindUserMenu).getAction());
+            NativeMapExtensionsKt.put(var5, "userId", UserId.toString-impl((this.target as BindUserMenu).getUserId-re6GcUE()));
+            val var6: ChannelId = (this.target as BindUserMenu).getMessageChannelId-qMVnFVQ();
+            if (var6 != null) {
+               NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl(var6.unbox-impl()));
+               return var5;
+            }
+         } else {
+            if (this.target is BindTapCommandName) {
+               NativeMapExtensionsKt.put(var5, "action", (this.target as BindTapCommandName).getAction());
+               NativeMapExtensionsKt.put(var5, "userId", UserId.toString-impl((this.target as BindTapCommandName).getUserId-re6GcUE()));
+               NativeMapExtensionsKt.put(var5, "messageType", (this.target as BindTapCommandName).getMessageType().getSerialNumber());
+               NativeMapExtensionsKt.put(var5, "messageId", MessageId.toString-impl((this.target as BindTapCommandName).getMessageId-3Eiw7ao()));
+               NativeMapExtensionsKt.put(var5, "applicationUserId", UserId.toString-impl((this.target as BindTapCommandName).getApplicationUserId-re6GcUE()));
+               NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl((this.target as BindTapCommandName).getMessageChannelId-o4g7jtM()));
+               return var5;
             }
 
-            NativeMapExtensionsKt.put(var5, "messageReference", var6);
-         }
-      } else if (this.target is LinkContextData.BindDismissMessage) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindDismissMessage).getAction());
-         NativeMapExtensionsKt.put(
-            var5,
-            "message",
-            NativeMapExtensionsKt.nativeMapOf(
-               new Pair[]{
-                  v.a("id", (this.target as LinkContextData.BindDismissMessage).getMessage().getId-3Eiw7ao()),
-                  v.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindDismissMessage).getMessage().getChannelId-o4g7jtM())),
-                  v.a("loggingName", (this.target as LinkContextData.BindDismissMessage).getMessage().getLoggingName()),
-                  v.a(
-                     "author",
-                     NativeMapExtensionsKt.nativeMapOf(
-                        new Pair[]{v.a("username", (this.target as LinkContextData.BindDismissMessage).getMessage().getAuthor().getUsername())}
-                     )
-                  )
-               }
-            )
-         );
-      } else if (this.target is LinkContextData.BindOpenRoleSubscriptionOverview) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindOpenRoleSubscriptionOverview).getAction());
-         NativeMapExtensionsKt.put(var5, "guildId", (this.target as LinkContextData.BindOpenRoleSubscriptionOverview).getGuildId());
-         NativeMapExtensionsKt.put(var5, "channelId", (this.target as LinkContextData.BindOpenRoleSubscriptionOverview).getChannelId());
-         NativeMapExtensionsKt.put(var5, "messageId", (this.target as LinkContextData.BindOpenRoleSubscriptionOverview).getMessageId());
-         NativeMapExtensionsKt.put(
-            var5, "roleSubscriptionListingId", (this.target as LinkContextData.BindOpenRoleSubscriptionOverview).getRoleSubscriptionListingId()
-         );
-      } else if (this.target is LinkContextData.BindUserSurvey) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindUserSurvey).getAction());
-         NativeMapExtensionsKt.put(
-            var5,
-            "message",
-            NativeMapExtensionsKt.nativeMapOf(
-               new Pair[]{
-                  v.a("id", (this.target as LinkContextData.BindUserSurvey).getMessage().getId-3Eiw7ao()),
-                  v.a("channel_id", ChannelId.toString-impl((this.target as LinkContextData.BindUserSurvey).getMessage().getChannelId-o4g7jtM())),
-                  v.a("loggingName", (this.target as LinkContextData.BindUserSurvey).getMessage().getLoggingName())
-               }
-            )
-         );
-         NativeMapExtensionsKt.put(var5, "notificationType", (this.target as LinkContextData.BindUserSurvey).getNotificationType());
-      } else if (this.target is LinkContextData.BindJumpToMessage) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindJumpToMessage).getAction());
-         NativeMapExtensionsKt.put(var5, "targetChannelId", (this.target as LinkContextData.BindJumpToMessage).getTargetChannelId());
-         NativeMapExtensionsKt.put(var5, "targetMessageId", (this.target as LinkContextData.BindJumpToMessage).getTargetMessageId());
-      } else if (this.target is LinkContextData.BindOpenUrl) {
-         NativeMapExtensionsKt.put(var5, "url", (this.target as LinkContextData.BindOpenUrl).getUrl());
-         NativeMapExtensionsKt.put(var5, "linkColor", (this.target as LinkContextData.BindOpenUrl).getLinkColor());
-      } else if (this.target is LinkContextData.BindOpenGdmCustomizeActionSheet) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getAction());
-         NativeMapExtensionsKt.put(var5, "messageChannelId", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getMessageChannelId());
-         NativeMapExtensionsKt.put(var5, "linkColor", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getLinkColor());
-      } else if (this.target is LinkContextData.BindInsertText) {
-         NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindInsertText).getAction());
-         NativeMapExtensionsKt.put(var5, "text", (this.target as LinkContextData.BindInsertText).getText());
-         val var7: java.lang.Boolean = (this.target as LinkContextData.BindInsertText).getAddSpace();
-         if (var7 != null) {
-            NativeMapExtensionsKt.put(var5, "addSpace", var7);
-         }
-      } else {
-         val var8: Log = Log.INSTANCE;
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("Missing target type data: ");
-         var11.append(var4);
-         Log.e$default(var8, "TapLink", var11.toString(), null, 4, null);
-      }
+            if (this.target is BindOpenPins) {
+               NativeMapExtensionsKt.put(var5, "action", (this.target as BindOpenPins).getAction());
+               NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl((this.target as BindOpenPins).getMessageChannelId-o4g7jtM()));
+               return var5;
+            }
 
-      return var5;
+            if (this.target is BindGuildMenu) {
+               NativeMapExtensionsKt.put(var5, "action", (this.target as BindGuildMenu).getAction());
+               val var3: MessageReference = (this.target as BindGuildMenu).getMessageReference();
+               if (var3 != null) {
+                  val var7: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
+                  NativeMapExtensionsKt.put(var7, "channel_id", ChannelId.toString-impl(var3.getChannelId-o4g7jtM()));
+                  val var9: GuildId = var3.getGuildId-qOKuAAo();
+                  if (var9 != null) {
+                     var9.unbox-impl();
+                     NativeMapExtensionsKt.put(var7, "guild_id", (this.target as BindGuildMenu).toString());
+                  }
+
+                  NativeMapExtensionsKt.put(var5, "messageReference", var7);
+                  return var5;
+               }
+            } else {
+               if (this.target is BindDismissMessage) {
+                  NativeMapExtensionsKt.put(var5, "action", (this.target as BindDismissMessage).getAction());
+                  NativeMapExtensionsKt.put(
+                     var5,
+                     "message",
+                     NativeMapExtensionsKt.nativeMapOf(
+                        v.a("id", (this.target as BindDismissMessage).getMessage().getId-3Eiw7ao()),
+                        v.a("channel_id", ChannelId.toString-impl((this.target as BindDismissMessage).getMessage().getChannelId-o4g7jtM())),
+                        v.a("loggingName", (this.target as BindDismissMessage).getMessage().getLoggingName()),
+                        v.a(
+                           "author",
+                           NativeMapExtensionsKt.nativeMapOf(v.a("username", (this.target as BindDismissMessage).getMessage().getAuthor().getUsername()))
+                        )
+                     )
+                  );
+                  return var5;
+               }
+
+               if (this.target is BindOpenRoleSubscriptionOverview) {
+                  NativeMapExtensionsKt.put(var5, "action", (this.target as BindOpenRoleSubscriptionOverview).getAction());
+                  NativeMapExtensionsKt.put(var5, "guildId", (this.target as BindOpenRoleSubscriptionOverview).getGuildId());
+                  NativeMapExtensionsKt.put(var5, "channelId", (this.target as BindOpenRoleSubscriptionOverview).getChannelId());
+                  NativeMapExtensionsKt.put(var5, "messageId", (this.target as BindOpenRoleSubscriptionOverview).getMessageId());
+                  NativeMapExtensionsKt.put(var5, "roleSubscriptionListingId", (this.target as BindOpenRoleSubscriptionOverview).getRoleSubscriptionListingId());
+                  return var5;
+               }
+
+               if (this.target is BindUserSurvey) {
+                  NativeMapExtensionsKt.put(var5, "action", (this.target as BindUserSurvey).getAction());
+                  NativeMapExtensionsKt.put(
+                     var5,
+                     "message",
+                     NativeMapExtensionsKt.nativeMapOf(
+                        v.a("id", (this.target as BindUserSurvey).getMessage().getId-3Eiw7ao()),
+                        v.a("channel_id", ChannelId.toString-impl((this.target as BindUserSurvey).getMessage().getChannelId-o4g7jtM())),
+                        v.a("loggingName", (this.target as BindUserSurvey).getMessage().getLoggingName())
+                     )
+                  );
+                  NativeMapExtensionsKt.put(var5, "notificationType", (this.target as BindUserSurvey).getNotificationType());
+                  return var5;
+               }
+
+               if (this.target is BindJumpToMessage) {
+                  NativeMapExtensionsKt.put(var5, "action", (this.target as BindJumpToMessage).getAction());
+                  NativeMapExtensionsKt.put(var5, "targetChannelId", (this.target as BindJumpToMessage).getTargetChannelId());
+                  NativeMapExtensionsKt.put(var5, "targetMessageId", (this.target as BindJumpToMessage).getTargetMessageId());
+                  return var5;
+               }
+
+               if (this.target is BindOpenUrl) {
+                  NativeMapExtensionsKt.put(var5, "url", (this.target as BindOpenUrl).getUrl());
+                  NativeMapExtensionsKt.put(var5, "linkColor", (this.target as BindOpenUrl).getLinkColor());
+                  return var5;
+               }
+
+               if (this.target is BindOpenGdmCustomizeActionSheet) {
+                  NativeMapExtensionsKt.put(var5, "action", (this.target as BindOpenGdmCustomizeActionSheet).getAction());
+                  NativeMapExtensionsKt.put(var5, "messageChannelId", (this.target as BindOpenGdmCustomizeActionSheet).getMessageChannelId());
+                  NativeMapExtensionsKt.put(var5, "linkColor", (this.target as BindOpenGdmCustomizeActionSheet).getLinkColor());
+                  return var5;
+               }
+
+               if (this.target !is BindInsertText) {
+                  val var11: Log = Log.INSTANCE;
+                  val var4: StringBuilder = new StringBuilder();
+                  var4.append("Missing target type data: ");
+                  var4.append(var2);
+                  Log.e$default(var11, "TapLink", var4.toString(), null, 4, null);
+                  return var5;
+               }
+
+               NativeMapExtensionsKt.put(var5, "action", (this.target as BindInsertText).getAction());
+               NativeMapExtensionsKt.put(var5, "text", (this.target as BindInsertText).getText());
+               val var8: java.lang.Boolean = (this.target as BindInsertText).getAddSpace();
+               if (var8 != null) {
+                  NativeMapExtensionsKt.put(var5, "addSpace", var8);
+               }
+            }
+         }
+
+         return var5;
+      }
    }
 
    public operator fun component1(): MessageId? {
@@ -184,16 +219,15 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
-         var var3: TapLinkData;
          label37: {
-            var3 = var1 as TapLinkData;
+            var1 = var1;
             if (this.messageId == null) {
-               if (var3.messageId == null) {
+               if (var1.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var3.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+            } else if (var1.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
                break label37;
             }
 
@@ -202,12 +236,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!(this.title == var3.title)) {
+         } else if (!(this.title == var1.title)) {
             return false;
-         } else if (!(this.target == var3.target)) {
+         } else if (!(this.target == var1.target)) {
             return false;
          } else {
-            return this.content == var3.content;
+            return this.content == var1.content;
          }
       }
    }
@@ -235,11 +269,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       return ((var1 * 31 + var2) * 31 + var3) * 31 + this.content.hashCode();
    }
 
-   public open fun serialize(): WritableMap {
+   public override fun serialize(): WritableMap {
       if (this.target != null) {
          val var2: WritableNativeMap = this.toMap(this.target);
          if (var2 != null) {
-            return NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("data", var2)});
+            return NativeMapExtensionsKt.nativeMapOf(v.a("data", var2));
          }
       }
 
@@ -251,21 +285,14 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{
-            v.a(
-               "data",
-               NativeMapExtensionsKt.nativeMapOf(
-                  new Pair[]{
-                     v.a("messageId", var5),
-                     v.a("url", this.target),
-                     v.a(
-                        "node",
-                        NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("title", this.title), v.a("target", this.target), v.a("content", this.content)})
-                     )
-                  }
-               )
+         v.a(
+            "data",
+            NativeMapExtensionsKt.nativeMapOf(
+               v.a("messageId", var5),
+               v.a("url", this.target),
+               v.a("node", NativeMapExtensionsKt.nativeMapOf(v.a("title", this.title), v.a("target", this.target), v.a("content", this.content)))
             )
-         }
+         )
       );
    }
 
@@ -277,18 +304,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
+      val var3: java.lang.String = this.title;
+      val var4: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapLinkData(messageId=");
       var2.append(var6);
       var2.append(", title=");
-      var2.append(var4);
-      var2.append(", target=");
-      var2.append(var5);
-      var2.append(", content=");
       var2.append(var3);
+      var2.append(", target=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

@@ -3,10 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class LongPressCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -74,8 +73,8 @@ public data class LongPressCommandData(channelId: String, commandId: String, com
       return ((this.channelId.hashCode() * 31 + this.commandId.hashCode()) * 31 + this.commandName.hashCode()) * 31 + this.commandKey.hashCode();
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {

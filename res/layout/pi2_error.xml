@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/content_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.withpersona.sdk2.inquiry.shared.ui.Pi2NavigationBar android:id="@id/navigation_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" />
+        <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/startEndMargin">
+                <TextView android:id="@id/title" android:layout_width="0.0dip" android:layout_height="wrap_content" app:layout_constraintBottom_toTopOf="@id/illustration" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_chainStyle="packed" style="?textAppearanceHeadline6" />
+                <com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView android:id="@id/illustration" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/title" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/startEndMargin">
+            <Button android:id="@id/continue_button" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

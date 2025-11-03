@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.viewholder
 
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import com.discord.chat.presentation.invitetospeak.InviteToSpeakView
 import com.discord.chat.presentation.message.messagepart.InviteToSpeakAccessory
 import com.discord.primitives.MessageId
@@ -12,7 +12,7 @@ public class InviteToSpeakViewHolder(inviteToSpeakView: InviteToSpeakView, onInv
    init {
       this.inviteToSpeakView = var1;
       this.onInviteToSpeakClicked = var2;
-      var1.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
+      var1.setLayoutParams(new LayoutParams(-2, -2));
    }
 
    public fun bind(inviteToSpeakAccessory: InviteToSpeakAccessory) {

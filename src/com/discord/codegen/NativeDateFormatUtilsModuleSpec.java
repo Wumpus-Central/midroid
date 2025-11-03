@@ -1,10 +1,10 @@
 package com.discord.codegen;
 
-import H4.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import kc.a;
 
 public abstract class NativeDateFormatUtilsModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeDateFormatUtilsModule";
@@ -19,6 +19,7 @@ public abstract class NativeDateFormatUtilsModuleSpec extends ReactContextBaseJa
    @a
    public abstract boolean activate();
 
+   @Override
    public String getName() {
       return "NativeDateFormatUtilsModule";
    }

@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 
 import android.graphics.drawable.Animatable
 import android.view.View
-import androidx.core.view.Z
+import androidx.core.view.h0
 import com.discord.chat.bridge.botuikit.ContentInventoryEntry
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryClickable
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
@@ -42,7 +42,7 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   Z.G0(var0, var5);
+   h0.G0(var0, var5);
    var0.setClickable(var5);
 }
 
@@ -58,6 +58,7 @@ public fun getContentControllerListener(imageView: SimpleDraweeView): Controller
          this.$imageView = var1;
       }
 
+      @Override
       public void onFailure(java.lang.String var1, java.lang.Throwable var2) {
       }
 
@@ -69,15 +70,18 @@ public fun getContentControllerListener(imageView: SimpleDraweeView): Controller
          }
       }
 
+      @Override
       public void onIntermediateImageFailed(java.lang.String var1, java.lang.Throwable var2) {
       }
 
       public void onIntermediateImageSet(java.lang.String var1, ImageInfo var2) {
       }
 
+      @Override
       public void onRelease(java.lang.String var1) {
       }
 
+      @Override
       public void onSubmit(java.lang.String var1, Object var2) {
       }
    };

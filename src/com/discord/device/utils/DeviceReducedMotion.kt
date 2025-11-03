@@ -3,8 +3,8 @@ package com.discord.device.utils
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
+import ht.p
 import kotlin.enums.EnumEntries
-import xa.p
 
 public object DeviceReducedMotion {
    private final var motionPreference: com.discord.device.utils.DeviceReducedMotion.MotionPreference = DeviceReducedMotion.MotionPreference.AUTO
@@ -30,38 +30,31 @@ public object DeviceReducedMotion {
    }
 
    private fun Context.isSystemReducedMotionEnabled(): Boolean {
-      var var3: Boolean = false;
-
       var var2: Float;
       try {
          var2 = Global.getFloat(var1.getContentResolver(), "animator_duration_scale");
-      } catch (var4: SettingNotFoundException) {
+      } catch (var3: SettingNotFoundException) {
          return false;
       }
 
-      if (var2 == 0.0F) {
-         var3 = true;
-      }
-
-      return var3;
+      return var2 == 0.0F;
    }
 
    public fun Context.isReducedMotionEnabled(): Boolean {
       val var2: Int = DeviceReducedMotion.WhenMappings.$EnumSwitchMapping$0[motionPreference.ordinal()];
-      var var3: Boolean = true;
       if (var2 != 1) {
          if (var2 != 2) {
-            if (var2 != 3) {
+            if (var2 == 3) {
+               return this.isSystemReducedMotionEnabled(var1);
+            } else {
                throw new p();
             }
-
-            var3 = this.isSystemReducedMotionEnabled(var1);
          } else {
-            var3 = false;
+            return false;
          }
+      } else {
+         return true;
       }
-
-      return var3;
    }
 
    internal fun setMotionPreference(motionPreference: String) {
@@ -80,7 +73,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic

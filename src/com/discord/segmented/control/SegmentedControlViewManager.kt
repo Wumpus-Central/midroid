@@ -14,9 +14,9 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
+import ht.v
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.v
 
 @ReactModule(name = "DCDSegmentedControl")
 @SourceDebugExtension(["SMAP\nSegmentedControlViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SegmentedControlViewManager.kt\ncom/discord/segmented/control/SegmentedControlViewManager\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,108:1\n1611#2,9:109\n1863#2:118\n1864#2:120\n1620#2:121\n1611#2,9:122\n1863#2:131\n1864#2:133\n1620#2:134\n1#3:119\n1#3:132\n404#4:135\n404#4:136\n*S KotlinDebug\n*F\n+ 1 SegmentedControlViewManager.kt\ncom/discord/segmented/control/SegmentedControlViewManager\n*L\n50#1:109,9\n50#1:118\n50#1:120\n50#1:121\n57#1:122,9\n57#1:131\n57#1:133\n57#1:134\n50#1:119\n57#1:132\n69#1:135\n76#1:136\n*E\n"])
@@ -59,7 +59,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var6: java.util.Iterator = var4.iterator();
 
          while (var6.hasNext()) {
-            val var5: java.lang.String = var2.getString((var6 as L).nextInt());
+            val var5: java.lang.String = var2.getString((var6 as q0).nextInt());
             if (var5 != null) {
                var3.add(var5);
             }
@@ -117,7 +117,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
          val var5: java.util.Iterator = var4.iterator();
 
          while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as L).nextInt());
+            val var6: java.lang.String = var2.getString((var5 as q0).nextInt());
             if (var6 != null) {
                var3.add(var6);
             }

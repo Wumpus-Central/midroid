@@ -10,30 +10,25 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import mc.j
-import mc.e.i
-import xa.e
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return j.b("Message", i.a);
+         return zu.j.b("Message", zu.e.i.a);
       }
 
 
    public open fun deserialize(decoder: Decoder): MessageBase {
       try {
-         var5 = var1.G(Message.Companion.serializer()) as MessageBase;
+         return var1.G(Message.Companion.serializer()) as MessageBase;
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
-         val var3: UUID = UUID.randomUUID();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("RENDERING_ERROR_");
-         var2.append(var3);
-         var5 = new ErrorMessage(MessageId.constructor-impl(var2.toString()), e.b(var4), null);
+         val var2: UUID = UUID.randomUUID();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("RENDERING_ERROR_");
+         var3.append(var2);
+         return new ErrorMessage(MessageId.constructor-impl(var3.toString()), ht.e.b(var4), null);
       }
-
-      return (MessageBase)var5;
    }
 
    public open fun serialize(encoder: Encoder, value: MessageBase) {

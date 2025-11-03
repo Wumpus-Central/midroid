@@ -7,10 +7,8 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import oc.e
-import oc.h
 
-public object RowSerializer : e(Row::class) {
+public object RowSerializer : bv.e(Row::class) {
    private const val CHANGE_TYPE_DELETE: String = "3"
    private final val rowSealedClassSerializer: SealedClassSerializer<Row> =
       new SealedClassSerializer(
@@ -23,34 +21,31 @@ public object RowSerializer : e(Row::class) {
       )
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Row> {
-      val var2: JsonObject = h.n(var1);
-      val var3: Any;
+      val var2: JsonObject = bv.h.n(var1);
       if (var2.containsKey("type")) {
-         var3 = rowSealedClassSerializer;
+         return rowSealedClassSerializer;
       } else {
          label19: {
-            val var4: JsonElement = var2.get("changeType") as JsonElement;
-            if (var4 != null) {
-               val var5: JsonPrimitive = h.o(var4);
-               if (var5 != null) {
-                  var6 = var5.c();
+            val var3: JsonElement = var2.get("changeType") as JsonElement;
+            if (var3 != null) {
+               val var4: JsonPrimitive = bv.h.o(var3);
+               if (var4 != null) {
+                  var5 = var4.b();
                   break label19;
                }
             }
 
-            var6 = null;
+            var5 = null;
          }
 
-         if (!(var6 == "3")) {
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("unsupported row json: ");
-            var7.append(var1);
-            throw new IllegalArgumentException(var7.toString());
+         if (var5 == "3") {
+            return DeleteRow.Companion.serializer();
+         } else {
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("unsupported row json: ");
+            var6.append(var1);
+            throw new IllegalArgumentException(var6.toString());
          }
-
-         var3 = DeleteRow.Companion.serializer();
       }
-
-      return (DeserializationStrategy)var3;
    }
 }

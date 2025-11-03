@@ -31,7 +31,7 @@ public fun ViewGroup.replaceViews(
    for (int var5 = 0; var8.hasNext(); var5++) {
       var var6: Any = var8.next();
       if (var5 < 0) {
-         CollectionsKt.u();
+         CollectionsKt.v();
       }
 
       val var10: ComponentView = var6 as ComponentView;

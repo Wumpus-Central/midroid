@@ -23,15 +23,16 @@ import com.discord.progress_dots.ProgressDots
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
+import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
+import ht.p
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.p
 
 @SourceDebugExtension(["SMAP\nButtonComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ButtonComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ButtonComponentView\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,218:1\n257#2,2:219\n278#2,2:221\n257#2,2:223\n278#2,2:225\n*S KotlinDebug\n*F\n+ 1 ButtonComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ButtonComponentView\n*L\n94#1:219,2\n98#1:221,2\n119#1:223,2\n160#1:225,2\n*E\n"])
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(var1, var2, var3),
@@ -61,9 +62,9 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var6;
-      this.progressDots$delegate = xa.l.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      this.progressDots$delegate = ht.l.b(new a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      val var4: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(-2, -2);
       var4.b(0.0F);
       this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
@@ -146,25 +147,25 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          switch (ButtonComponentView.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()]) {
             case 1:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 2:
                ButtonComponentViewKt.access$setBrandColor(var1);
-               break;
+               return;
             case 3:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 4:
                ButtonComponentViewKt.access$setSecondaryColor(var1);
-               break;
+               return;
             case 5:
                ButtonComponentViewKt.access$setDangerColor(var1);
-               break;
+               return;
             case 6:
                ButtonComponentViewKt.access$setSuccessColor(var1);
-               break;
+               return;
             case 7:
                ButtonComponentViewKt.access$setBrandColor(var1);
-               break;
+               return;
             default:
                throw new p();
          }
@@ -245,7 +246,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
          var20.setVisibility(var6);
          DiscordFontUtilsKt.setDiscordFont(var20, DiscordFont.PrimaryMedium);
-         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, color.white));
+         var20.setTextColor(ColorUtilsKt.getColorCompat(var20, R.color.white));
          if (!var8) {
             val var21: MaterialButton = this.binding.button;
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new b(var1, var3), 1, null);

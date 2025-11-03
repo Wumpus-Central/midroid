@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/shadow" android:background="#aa000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0" android:importantForAccessibility="no" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/bottom_sheet" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="1.0dip" app:behavior_hideable="true" app:behavior_peekHeight="0.0dip" app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+            <LinearLayout android:orientation="vertical" android:id="@id/list_content" android:background="@drawable/pi2_bottom_sheet" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="no">
+                <com.google.android.material.appbar.MaterialToolbar android:id="@id/top_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="?actionBarSize" app:buttonGravity="center_vertical" app:contentInsetStartWithNavigation="0.0dip" app:menu="@menu/pi2_input_select_menu" app:navigationIcon="@drawable/pi2_shared_close_icon" app:navigationIconTint="?colorControlNormal">
+                    <TextView android:id="@id/textview_input_select_sheet_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" android:importantForAccessibility="yes" style="?textAppearanceHeadline6" />
+                    <com.google.android.material.textfield.TextInputLayout android:id="@id/search_bar_text_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:boxStrokeWidth="0.0dip" app:boxStrokeWidthFocused="0.0dip" app:endIconMode="clear_text" app:expandedHintEnabled="false" app:hintEnabled="false">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@id/search_bar_edit_text" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/pi2_search_bar" android:importantForAccessibility="yes" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
+                <View android:id="@id/list_content_separator" android:background="@android:color/darker_gray" android:layout_width="fill_parent" android:layout_height="1.0dip" android:importantForAccessibility="no" app:layout_constraintBottom_toTopOf="@id/recyclerview_inquiry_select_list" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview_inquiry_select_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:importantForAccessibility="yes" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintWidth_max="500.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

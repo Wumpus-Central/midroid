@@ -1,8 +1,8 @@
 package com.discord.intents.packages
 
-import Da.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.SourceDebugExtension
+import pt.a
 
 internal enum class InstalledPackage(appName: String, appPackage: String?) {
    GMAIL("googlegmail", null),

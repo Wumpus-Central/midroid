@@ -19,17 +19,17 @@ public class ReactViewHelper {
    public fun handleDispatchDraw(view: View, superDispatchDraw: () -> Unit) {
       var2.invoke();
       if (VERSION.SDK_INT >= 29) {
-         c.a(var1, this.exclusionRects);
+         var1.setSystemGestureExclusionRects(this.exclusionRects);
       }
    }
 
    public fun handleInterceptTouchEvent(e: MotionEvent) {
-      val var2: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
+      val var3: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
 
-      while (var2.hasNext()) {
-         val var3: Function1 = (var2.next() as Entry).getValue() as Function1;
-         if (var3 != null) {
-            var3.invoke(var1);
+      while (var3.hasNext()) {
+         val var2: Function1 = (var3.next() as Entry).getValue() as Function1;
+         if (var2 != null) {
+            var2.invoke(var1);
          }
       }
    }

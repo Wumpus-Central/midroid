@@ -10,9 +10,9 @@ public final class b implements Function0 {
    public final LongRef d;
    public final ProducerScope e;
    public final DownloadManager i;
-   public final String s;
+   public final String t;
 
    public final Object invoke() {
-      return <unrepresentable>.j(this.d, this.e, this.i, this.s);
+      return <unrepresentable>.j(this.d, this.e, this.i, this.t);
    }
 }

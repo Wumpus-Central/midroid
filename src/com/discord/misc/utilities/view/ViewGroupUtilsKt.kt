@@ -12,7 +12,10 @@ public fun ViewGroup.setUpLayoutForList(listSize: Int, inflater: () -> View) {
       var var3: Int = 0;
       if (var4 > var1) {
          var0.removeViews(0, var0.getChildCount() - var1);
-      } else if (var0.getChildCount() < var1) {
+         return;
+      }
+
+      if (var0.getChildCount() < var1) {
          for (int var5 = var0.getChildCount(); var3 < var1 - var5; var3++) {
             var0.addView(var2.invoke() as View);
          }

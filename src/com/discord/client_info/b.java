@@ -9,6 +9,7 @@ public final class b implements OkHttpClientFactory {
    public final Context a;
    public final String b;
 
+   @Override
    public final OkHttpClient createNewNetworkModuleClient() {
       return ClientUserAgent.a(this.a, this.b);
    }

@@ -26,12 +26,13 @@ import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.react_strings.RenderContext
 import com.discord.reactions.AddReactionView
+import com.discord.reactions.ReactionView
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.reactions.ReactionView.ReactionsTheme
 import com.discord.ripple.RippleUtilsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
@@ -84,7 +85,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       var5 = var6.sharePromptCopyLinkButton;
       var6.sharePromptCopyLinkButton.setCornerRadius(SizeUtilsKt.getDpToPx(20));
       var5.setTextSizeSp(14.0F);
-      var5.setBackgroundColor(var1.getColor(color.brand_500));
+      var5.setBackgroundColor(var1.getColor(R.color.brand_500));
       var5.setTextColor(ThemeManagerKt.getTheme().getWhite());
       var5.setDiscordFont(var10);
       var5.setIconPadding(8);
@@ -105,7 +106,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       reactionsTheme: ReactionsTheme?,
       onAddReactionClick: OnClickListener,
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new e0()
+      onReactionLongPress: (Reaction) -> Unit = new d1()
    ) {
       val var6: ShortcutsFlexbox = this.binding.reactionsView;
       var6.setVisibility(0);
@@ -113,7 +114,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
    }
 
    @JvmStatic
-   fun `setReactions$lambda$12`(var0: Reaction): Unit {
+   fun `setReactions$lambda$12`(var0: ReactionView.Reaction): Unit {
       return Unit.a;
    }
 
@@ -172,7 +173,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
                false,
                false,
                var16,
-               new f0(var6, var1),
+               new e1(var6, var1),
                null,
                null,
                null,
@@ -229,12 +230,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = CollectionsKt.P0(var8, --var2);
-         val var23: ShortcutsFlexbox = this.binding.reactionsView;
-         var23.setVisibility(0);
-         this.setReactions(var35, var12, var13, var14, var15);
+         val var39: java.util.List = CollectionsKt.a1(var8, --var2);
+         val var36: ShortcutsFlexbox = this.binding.reactionsView;
+         var36.setVisibility(0);
+         this.setReactions(var39, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var36: DCDButton = this.binding.otherReactionsCount;
+         val var34: DCDButton = this.binding.otherReactionsCount;
          var var25: Boolean;
          if (var22 != 0) {
             var25 = 1;
@@ -248,12 +249,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var36.setVisibility(var25);
-         if (var36.getVisibility() == 0) {
-            val var33: Context = var36.getContext();
-            var36.setText(I18nUtilsKt.i18nFormat(var33, I18nMessage.FORUM_REACTIONS_OVERFLOW, new g0(var22)));
-            RippleUtilsKt.addRipple$default(var36, true, 0, 2, null);
-            var36.setOnClickButtonListener(var18);
+         var34.setVisibility(var25);
+         if (var34.getVisibility() == 0) {
+            val var37: Context = var34.getContext();
+            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
+            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
+            var34.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;
@@ -266,21 +267,21 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          }
       }
 
-      val var34: DCDButton = this.binding.followButton;
+      val var35: DCDButton = this.binding.followButton;
       if (var4 != null) {
          this.binding.followButton.setIcon(var4, SizeUtilsKt.getDpToPx(16));
       }
 
       this.binding.followButton.setText(var5);
-      var34.setContentDescription(var5);
+      var35.setContentDescription(var5);
       if (var3) {
          var2 = ThemeManagerKt.getTheme().getTextBrand();
       } else {
          var2 = ThemeManagerKt.getTheme().getInteractiveNormal();
       }
 
-      var34.setTextColor(var2);
-      var34.setOnClickButtonListener(var16);
+      var35.setTextColor(var2);
+      var35.setOnClickButtonListener(var16);
       val var29: DCDButton = this.binding.shareButton;
       if (var6 != null) {
          this.binding.shareButton.setIcon(var6, SizeUtilsKt.getDpToPx(16));
@@ -289,11 +290,9 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       this.binding.shareButton.setOnClickButtonListener(var17);
       var29.setContentDescription(var7);
       val var30: AddReactionView = this.binding.addReaction;
-      val var28: Byte;
+      var var28: Byte = 8;
       if (var10) {
          var28 = 0;
-      } else {
-         var28 = 8;
       }
 
       var30.setVisibility(var28);

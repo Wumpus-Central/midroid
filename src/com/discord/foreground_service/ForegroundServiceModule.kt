@@ -16,29 +16,29 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
       this.reactContext = var1;
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "ForegroundServiceModule";
    }
 
    @ReactMethod
    public fun isServiceRunning(callback: Callback) {
-      var1.invoke(new Object[]{ForegroundServiceManager.INSTANCE.isRunning$foreground_service_release()});
+      var1.invoke(ForegroundServiceManager.INSTANCE.isRunning$foreground_service_release());
    }
 
    @ReactMethod
    public fun startService(parameters: ReadableArray) {
-      val var4: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
-      val var5: Log = Log.INSTANCE;
-      val var2: Int = var4.size();
+      val var5: java.util.List = ForegroudServiceConfigurationParserKt.parseList(ServiceNotificationConfiguration.Companion, var1);
+      val var4: Log = Log.INSTANCE;
+      val var2: Int = var5.size();
       val var3: StringBuilder = new StringBuilder();
       var3.append("startService: ForegroundService with ");
       var3.append(var2);
       var3.append(" configurations");
-      Log.i$foreground_service_release$default(var5, var3.toString(), null, 2, null);
-      if (var4.isEmpty()) {
-         Log.i$foreground_service_release$default(var5, "Couldn't start ForegroundService, no service configurations provided.", null, 2, null);
+      Log.i$foreground_service_release$default(var4, var3.toString(), null, 2, null);
+      if (var5.isEmpty()) {
+         Log.i$foreground_service_release$default(var4, "Couldn't start ForegroundService, no service configurations provided.", null, 2, null);
       } else {
-         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var4);
+         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var5);
       }
    }
 

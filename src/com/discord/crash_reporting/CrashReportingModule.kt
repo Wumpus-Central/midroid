@@ -13,10 +13,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReactSoftExceptionLogger
 import com.facebook.react.bridge.ReadableMap
-import com.facebook.react.bridge.ReactSoftExceptionLogger.ReactSoftExceptionListener
+import ht.e
+import ht.v
 import io.sentry.react.RNSentryModule
-import xa.e
-import xa.v
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    public final val reactContext: ReactApplicationContext
@@ -33,8 +32,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
 
    init {
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(new Pair[]{v.a("onCrashReportsReceived", CrashReportEvent::class)});
-      this.reactSoftExceptionListener = new ReactSoftExceptionListener() {
+      this.reactEvents = new ReactEvents(v.a("onCrashReportsReceived", CrashReportEvent::class));
+      this.reactSoftExceptionListener = new ReactSoftExceptionLogger.ReactSoftExceptionListener() {
+         @Override
          public void logSoftException(java.lang.String var1, java.lang.Throwable var2) {
             val var5: CrashReporting = CrashReporting.INSTANCE;
             val var3: StringBuilder = new StringBuilder();
@@ -48,7 +48,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             var5.addBreadcrumb(
-               var6, O.m(new Pair[]{v.a("message", var7), v.a("stacktrace", e.b(var2))}), "react.softexception", CrashReporting.BreadcrumbLevel.ERROR
+               var6, s0.m(new Pair[]{v.a("message", var7), v.a("stacktrace", e.b(var2))}), "react.softexception", CrashReporting.BreadcrumbLevel.ERROR
             );
             Log.INSTANCE.e(var1, "Unhandled SoftException", var2);
          }
@@ -68,9 +68,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun addListener(type: String) {
       if (CrashReporting.INSTANCE.isCrashedLastRun() == java.lang.Boolean.TRUE) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var3.reportLastCrash$crash_reporting_release(var2, new d(this));
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         var2.reportLastCrash$crash_reporting_release(var3, new d(this));
       }
    }
 
@@ -83,7 +83,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun getDidCrashDuringPreviousExecution(callback: Callback) {
       val var2: java.lang.Boolean = CrashReporting.INSTANCE.isCrashedLastRun();
       if (var2 != null) {
-         var1.invoke(new Object[]{var2});
+         var1.invoke(var2);
       }
    }
 
@@ -91,30 +91,30 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
       val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
+      var1.invoke(var3.getInstance(var2).isStaff());
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "CrashReportingManager";
    }
 
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var1.invoke(var2.fetch(var3));
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      var2.initSystemLogCapture(var1);
+      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      var1.initSystemLogCapture(var2);
       ReactSoftExceptionLogger.addListener(this.reactSoftExceptionListener);
-      r3.a.x(new FLogDelegate());
+      u9.a.x(new FLogDelegate());
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       ReactSoftExceptionLogger.removeListener(this.reactSoftExceptionListener);
    }

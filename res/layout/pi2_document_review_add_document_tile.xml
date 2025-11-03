@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView android:id="@id/card_view" android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_margin="4.0dip" app:cardCornerRadius="4.0dip" app:cardElevation="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintDimensionRatio="h,1:1" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:strokeColor="#ffd8d9df" app:strokeWidth="1.0dip">
+        <com.withpersona.sdk2.inquiry.shared.ui.ThemeableLottieAnimationView android:id="@id/add_button" android:layout_width="fill_parent" android:layout_height="fill_parent" android:contentDescription="@string/pi2_document_add_image" app:backgroundTint="@null" app:layout_constraintDimensionRatio="h,1:1" />
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

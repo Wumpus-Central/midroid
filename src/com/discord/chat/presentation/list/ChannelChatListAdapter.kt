@@ -5,6 +5,12 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
+import com.discord.chat.listmanager.ListOperation.Change
+import com.discord.chat.listmanager.ListOperation.ChangeRange
+import com.discord.chat.listmanager.ListOperation.Insert
+import com.discord.chat.listmanager.ListOperation.InsertRange
+import com.discord.chat.listmanager.ListOperation.Remove
+import com.discord.chat.listmanager.ListOperation.RemoveRange
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
@@ -54,21 +60,23 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
    }
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
-      if (!ThreadUtilsKt.isOnMainThread()) {
-         val var5: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var5);
-         throw new IllegalStateException(var4.toString().toString());
-      } else {
+      if (ThreadUtilsKt.isOnMainThread()) {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
-         } else if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
-            val var3: Log = Log.INSTANCE;
-            val var2: java.lang.String = access$getLOGGING_TAG$cp();
-            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+         } else {
+            if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
+               val var4: Log = Log.INSTANCE;
+               val var5: java.lang.String = access$getLOGGING_TAG$cp();
+               Log.w$default(var4, var5, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            }
          }
+      } else {
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -81,15 +89,15 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
    private fun processChatListItemUpdate(update: ChatListItemUpdate) {
       var var2: Boolean;
       var var6: java.util.List;
-      label64: {
+      label62: {
          var6 = var1.getItems();
          var var5: Any = this.items;
          if (this.items != null) {
             if (!(var5 as java.util.Collection).isEmpty()) {
                var5 = this.items;
-               if (CollectionsKt.t0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
+               if (CollectionsKt.z0(var5 as java.util.List) is PortalViewChatListItem && this.portalChatListItem != null) {
                   var2 = true;
-                  break label64;
+                  break label62;
                }
             }
          }
@@ -100,15 +108,16 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       var var3: Boolean = false;
       if (var2) {
          var3 = false;
-         if (CollectionsKt.v0(var6) !is LoadingChatListItem) {
+         if (CollectionsKt.B0(var6) !is LoadingChatListItem) {
             var3 = true;
          }
       }
 
       var var9: java.util.List = var6;
       if (var3) {
-         val var10: PortalViewChatListItem = this.portalChatListItem;
-         var9 = CollectionsKt.D0(var6, var10);
+         val var10: java.util.Collection = var6;
+         val var15: PortalViewChatListItem = this.portalChatListItem;
+         var9 = CollectionsKt.M0(var10, var15);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -120,22 +129,22 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          ChatListAdapterUpdateLog.INSTANCE.addChatListItemUpdate(var1);
 
          for (ListOperation var11 : var1.getListOperations()) {
-            if (var11 is ListOperation.Change) {
-               this.notifyItemChanged((var11 as ListOperation.Change).getIndex());
-            } else if (var11 is ListOperation.Insert) {
-               this.notifyItemInserted((var11 as ListOperation.Insert).getIndex());
-            } else if (var11 is ListOperation.Remove) {
-               this.notifyItemRemoved((var11 as ListOperation.Remove).getIndex());
-            } else if (var11 is ListOperation.ChangeRange) {
-               this.notifyItemRangeChanged((var11 as ListOperation.ChangeRange).getFirst(), (var11 as ListOperation.ChangeRange).getCount());
-            } else if (var11 is ListOperation.InsertRange) {
-               this.notifyItemRangeInserted((var11 as ListOperation.InsertRange).getFirst(), (var11 as ListOperation.InsertRange).getCount());
+            if (var11 is Change) {
+               this.notifyItemChanged((var11 as Change).getIndex());
+            } else if (var11 is Insert) {
+               this.notifyItemInserted((var11 as Insert).getIndex());
+            } else if (var11 is Remove) {
+               this.notifyItemRemoved((var11 as Remove).getIndex());
+            } else if (var11 is ChangeRange) {
+               this.notifyItemRangeChanged((var11 as ChangeRange).getFirst(), (var11 as ChangeRange).getCount());
+            } else if (var11 is InsertRange) {
+               this.notifyItemRangeInserted((var11 as InsertRange).getFirst(), (var11 as InsertRange).getCount());
             } else {
-               if (var11 !is ListOperation.RemoveRange) {
-                  throw new xa.p();
+               if (var11 !is RemoveRange) {
+                  throw new ht.p();
                }
 
-               this.notifyItemRangeRemoved((var11 as ListOperation.RemoveRange).getFirst(), (var11 as ListOperation.RemoveRange).getCount());
+               this.notifyItemRangeRemoved((var11 as RemoveRange).getFirst(), (var11 as RemoveRange).getCount());
             }
          }
       } else {
@@ -160,7 +169,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
    }
 
    private fun processPortalViewUpdate(update: PortalViewUpdate) {
-      val var3: Boolean = CollectionsKt.v0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
+      val var3: Boolean = CollectionsKt.B0(this.getChatListItems$chat_release()) is PortalViewChatListItem;
       var var2: Boolean;
       if (var1.getPortalChatListItem() != null) {
          var2 = 1;
@@ -188,38 +197,34 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new xa.p();
+               throw new ht.p();
             }
 
-            val var5: java.util.List = CollectionsKt.Z0(this.getChatListItems$chat_release());
-            var2 = CollectionsKt.m(this.getChatListItems$chat_release());
+            val var5: java.util.List = CollectionsKt.k1(this.getChatListItems$chat_release());
+            var2 = CollectionsKt.n(this.getChatListItems$chat_release());
             val var7: PortalViewChatListItem = var1.getPortalChatListItem();
             var5.set(var2, var7);
             var8 = var5;
          } else {
-            var8 = CollectionsKt.c0(this.getChatListItems$chat_release(), 1);
+            var8 = CollectionsKt.g0(this.getChatListItems$chat_release(), 1);
          }
       } else {
-         val var13: java.util.List = this.getChatListItems$chat_release();
+         val var13: java.util.Collection = this.getChatListItems$chat_release();
          val var9: PortalViewChatListItem = var1.getPortalChatListItem();
-         var8 = CollectionsKt.D0(var13, var9);
+         var8 = CollectionsKt.M0(var13, var9);
       }
 
       this.setChatListItems$chat_release(var8);
       super.setItems(this.getChatListItems$chat_release());
       var2 = var6[var4.ordinal()];
-      if (var2 != 1) {
-         if (var2 != 2) {
-            if (var2 != 3) {
-               throw new xa.p();
-            }
-
-            this.notifyItemChanged(CollectionsKt.m(this.getChatListItems$chat_release()));
-         } else {
-            this.notifyItemRemoved(CollectionsKt.m(this.getChatListItems$chat_release()) + 1);
-         }
+      if (var2 == 1) {
+         this.notifyItemInserted(CollectionsKt.n(this.getChatListItems$chat_release()));
+      } else if (var2 == 2) {
+         this.notifyItemRemoved(CollectionsKt.n(this.getChatListItems$chat_release()) + 1);
+      } else if (var2 == 3) {
+         this.notifyItemChanged(CollectionsKt.n(this.getChatListItems$chat_release()));
       } else {
-         this.notifyItemInserted(CollectionsKt.m(this.getChatListItems$chat_release()));
+         throw new ht.p();
       }
    }
 
@@ -238,7 +243,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processPortalViewUpdate(this, var1 as PortalViewUpdate);
          } else {
             if (var1 !is ChatListItemUpdate) {
-               throw new xa.p();
+               throw new ht.p();
             }
 
             access$processChatListItemUpdate(this, var1 as ChatListItemUpdate);
@@ -247,35 +252,37 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, ac.f.d(kotlinx.coroutines.g.b(), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
-            int label;
-            final ChannelChatListAdapter this$0;
+         access$setProcessNextUpdateJob$p(
+            this, gu.g.d(kotlinx.coroutines.i.b(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null) {
+               int label;
+               final ChannelChatListAdapter this$0;
 
-            {
-               super(2, var2x);
-               this.this$0 = var1;
-            }
-
-            public final Continuation create(Object var1, Continuation var2) {
-               return new <anonymous constructor>(this.this$0, var2);
-            }
-
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
-               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-            }
-
-            public final Object invokeSuspend(Object var1) {
-               Ca.b.e();
-               if (this.label == 0) {
-                  kotlin.c.b(var1);
-                  ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
-                  ChannelChatListAdapter.access$processNextUpdate(this.this$0);
-                  return Unit.a;
-               } else {
-                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+               {
+                  super(2, var2x);
+                  this.this$0 = var1;
                }
-            }
-         }, 3, null));
+
+               public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+                  return new <anonymous constructor>(this.this$0, var2);
+               }
+
+               public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                  return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+               }
+
+               public final Object invokeSuspend(Object var1) {
+                  ot.b.f();
+                  if (this.label == 0) {
+                     kotlin.c.b(var1);
+                     ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
+                     ChannelChatListAdapter.access$processNextUpdate(this.this$0);
+                     return Unit.a;
+                  } else {
+                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                  }
+               }
+            }, 3, null)
+         );
       } else {
          val var3: Thread = Thread.currentThread();
          val var4: StringBuilder = new StringBuilder();
@@ -347,11 +354,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -402,7 +409,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = Da.a.a(var0);
+         $ENTRIES = pt.a.a(var0);
       }
 
       @JvmStatic

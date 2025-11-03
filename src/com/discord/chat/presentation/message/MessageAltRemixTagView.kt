@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.discord.chat.R
+import com.discord.chat.R.drawable
 import com.discord.chat.databinding.MessageAltRemixTagViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.fonts.DiscordFont
@@ -20,7 +20,7 @@ import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.SourceDebugExtension
@@ -54,37 +54,37 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
    ) {
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var10: TextView = this.binding.altRemixTag;
+         val var11: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var11: Context = this.getContext();
-            var9 = ColorUtilsKt.getColorCompat(var11, color.white);
+            val var10: Context = this.getContext();
+            var9 = ColorUtilsKt.getColorCompat(var10, R.color.white);
          }
 
-         var10.setTextColor(var9);
+         var11.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          if (var2 != null) {
             var9 = var2;
          } else {
             val var17: Context = this.getContext();
-            var9 = ColorUtilsKt.getColorCompat(var17, color.white);
+            var9 = ColorUtilsKt.getColorCompat(var17, R.color.white);
          }
 
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new Q(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new q0(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          var14.setVisibility(0);
          if (var3 != null) {
-            val var15: ConstraintLayout = this.binding.layout;
+            val var16: ConstraintLayout = this.binding.layout;
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-               var15, ReactColorToAndroidColorKt.reactColorToAndroidColor(var3), SizeUtilsKt.getDpToPx(3), null, 0, 12, null
+               var16, ReactColorToAndroidColorKt.reactColorToAndroidColor(var3), SizeUtilsKt.getDpToPx(3), null, 0, 12, null
             );
          } else {
-            val var16: ConstraintLayout = this.binding.layout;
-            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var16, R.drawable.drawable_message_author_tag_bg);
+            val var15: ConstraintLayout = this.binding.layout;
+            ViewBackgroundUtilsKt.setBackgroundDrawableRes(var15, drawable.drawable_message_author_tag_bg);
          }
       }
    }

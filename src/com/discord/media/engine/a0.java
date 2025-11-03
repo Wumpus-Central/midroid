@@ -1,14 +1,15 @@
 package com.discord.media.engine;
 
-import com.facebook.react.bridge.Callback;
-import java.util.List;
+import com.discord.native.engine.NativeEngine;
+import com.discord.native.engine.VideoInputDeviceDescription;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class a0 implements Function1 {
-   public final Callback d;
+public final class a0 implements NativeEngine.GetVideoInputDevicesCallback {
+   public final Function1 a;
 
-   public final Object invoke(Object var1) {
-      return <unrepresentable>.g(this.d, (List)var1);
+   @Override
+   public final void onDevices(VideoInputDeviceDescription[] var1) {
+      MediaEngine.j(this.a, var1);
    }
 }

@@ -28,9 +28,9 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
       this.blurViewWidth = -1;
       this.blurViewHeight = -1;
       this.blurViewLocation = new int[2];
-      val var6: e = new e(this);
+      val var6: com.discord.blur.e = new com.discord.blur.e(this);
       this.blurTargetChangeListener = var6;
-      BlurView.Companion.updateListener$blur_release(var6, true, new f(this));
+      BlurView.Companion.updateListener$blur_release(var6, true, new com.discord.blur.f(this));
    }
 
    @JvmStatic
@@ -76,12 +76,12 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new h(this));
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new com.discord.blur.h(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new g(this));
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new com.discord.blur.g(this));
       val var1: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
       if (var1 != null) {
          var1.removeBlurRect(this.getId());
@@ -97,10 +97,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var7 = true;
       }
 
-      var3 = this.blurViewLocation[0];
-      var4 = this.blurViewLocation[1];
+      var4 = this.blurViewLocation[0];
+      var3 = this.blurViewLocation[1];
       this.getLocationInWindow(this.blurViewLocation);
-      if (this.blurViewLocation[0] != var3 || this.blurViewLocation[1] != var4 || var7) {
+      if (this.blurViewLocation[0] != var4 || this.blurViewLocation[1] != var3 || var7) {
          this.blurViewWidth = this.getWidth();
          this.blurViewHeight = this.getHeight();
          this.blurViewPropertiesDirty = true;

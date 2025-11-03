@@ -11,14 +11,10 @@ public class AudioWaveAnimationManager {
 
 
    private fun animateAdditionalHeight(progress: Float): Float {
-      val var4: Float = 1.5F * (1.0F - var1) * (1.0F - var1);
-      if (var1 <= 0.5F) {
-         var1 = 4 * (var1 * 2.0F) * (var4 + 1.0F);
-      } else {
-         var1 = 4 + -4 * ((var1 - 0.5F) * 2.0F) * (var4 + 1.0F);
-      }
-
-      return var1;
+      return if (var1 <= 0.5F)
+         4 * (var1 * 2.0F) * (1.5F * (1.0F - var1) * (1.0F - var1) + 1.0F)
+         else
+         4 + -4 * ((var1 - 0.5F) * 2.0F) * (1.5F * (1.0F - var1) * (1.0F - var1) + 1.0F);
    }
 
    private fun getCurrentValue(index: Int, percentage: Float): Float {
@@ -37,13 +33,7 @@ public class AudioWaveAnimationManager {
    }
 
    public fun getAnimationValues(index: Int, percentage: Float, originalHeight: Float): Float {
-      if (var2 < 0.0F) {
-         var2 = 0.0F;
-      } else {
-         var2 = var3 + this.animateAdditionalHeight(this.getCurrentValue(var1, var2));
-      }
-
-      return var2;
+      return if (var2 < 0.0F) 0.0F else var3 + this.animateAdditionalHeight(this.getCurrentValue(var1, var2));
    }
 
    public fun reset() {

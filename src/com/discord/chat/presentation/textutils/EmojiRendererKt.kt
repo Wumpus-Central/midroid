@@ -117,26 +117,23 @@ fun `renderEmoji$lambda$2$lambda$1`(var0: RenderContext, var1: GenericDraweeHier
 }
 
 public fun EmojiContentNode.renderable(): RenderableEmoji {
-   val var6: Any;
-   if (var0 is CustomEmojiContentNode) {
+   if (var0 !is CustomEmojiContentNode) {
+      if (var0 is UnicodeEmojiContentNode) {
+         return RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());
+      } else {
+         throw new ht.p();
+      }
+   } else {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
       val var2: Long = (var0 as CustomEmojiContentNode).getId();
       val var1: Boolean;
-      if (!StringsKt.c0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
+      if (!StringsKt.i0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
          var1 = true;
       } else {
          var1 = false;
       }
 
-      var6 = var4.customWithEmojiId(var2, var1, var5.getAlt());
-   } else {
-      if (var0 !is UnicodeEmojiContentNode) {
-         throw new xa.p();
-      }
-
-      var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());
+      return var4.customWithEmojiId(var2, var1, var5.getAlt());
    }
-
-   return (RenderableEmoji)var6;
 }

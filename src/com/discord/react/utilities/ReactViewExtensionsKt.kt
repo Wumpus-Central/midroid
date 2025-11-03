@@ -9,13 +9,13 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
+import ht.l
 import java.lang.reflect.Method
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.a(new e())
+private final val viewOperationQueueMethod: Method by l.b(new e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -37,13 +37,8 @@ private fun ReactContext.getUIImplementation(): UIImplementation {
 }
 
 private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
-   val var4: Any = getViewOperationQueueMethod().invoke(var0, null);
-   var var3: UIViewOperationQueue = null;
-   if (var4 is UIViewOperationQueue) {
-      var3 = var4 as UIViewOperationQueue;
-   }
-
-   return var3;
+   val var1: Any = getViewOperationQueueMethod().invoke(var0, null);
+   return var1 as? UIViewOperationQueue;
 }
 
 public fun ReactContext.queueManualLayout(viewId: Int) {

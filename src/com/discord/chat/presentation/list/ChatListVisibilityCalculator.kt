@@ -3,6 +3,7 @@ package com.discord.chat.presentation.list
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.LayoutManager
 
 internal class ChatListVisibilityCalculator {
    public final var firstMessagePosition: Int = -1
@@ -22,16 +23,16 @@ internal class ChatListVisibilityCalculator {
    }
 
    private fun getItemPercentVisible(recyclerView: RecyclerView, position: Int): Double {
-      val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
+      val var7: LayoutManager = var1.getLayoutManager();
       val var10: View = (var7 as LinearLayoutManager).findViewByPosition(var2);
       var var3: Double = 0.0;
       if (var10 == null) {
          return 0.0;
       } else {
-         var var5: Int = Math.min(var10.getTop(), var10.getBottom());
-         val var6: Int = Math.max(var10.getTop(), var10.getBottom());
-         var2 = var6 - var5;
-         var5 = this.intersectIntervals(0, var1.getHeight(), var5, var6);
+         val var6: Int = Math.min(var10.getTop(), var10.getBottom());
+         var var5: Int = Math.max(var10.getTop(), var10.getBottom());
+         var2 = var5 - var6;
+         var5 = this.intersectIntervals(0, var1.getHeight(), var6, var5);
          if (var2 > 0) {
             var3 = (double)var5 / var2;
          }
@@ -43,13 +44,7 @@ internal class ChatListVisibilityCalculator {
    private fun intersectIntervals(min1: Int, max1: Int, min2: Int, max2: Int): Int {
       var1 = Math.max(var1, var3);
       var2 = Math.min(var2, var4);
-      if (var1 <= var2) {
-         var1 = var2 - var1;
-      } else {
-         var1 = 0;
-      }
-
-      return var1;
+      return if (var1 <= var2) var2 - var1 else 0;
    }
 
    private fun resetVisibilityData() {
@@ -61,7 +56,7 @@ internal class ChatListVisibilityCalculator {
 
    public fun updateFirstAndLastMessageVisibilityData(recyclerView: RecyclerView) {
       this.resetVisibilityData();
-      val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
+      val var7: LayoutManager = var1.getLayoutManager();
       val var5: Int = (var7 as LinearLayoutManager).findFirstVisibleItemPosition();
       val var6: Int = (var7 as LinearLayoutManager).findLastVisibleItemPosition();
       if (var5 != -1 && var6 != -1) {

@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import x1.a;
 
 public final class InviteToSpeakViewBinding implements ViewBinding {
    @NonNull
@@ -27,10 +26,10 @@ public final class InviteToSpeakViewBinding implements ViewBinding {
    @NonNull
    public static InviteToSpeakViewBinding bind(@NonNull View var0) {
       int var1 = R.id.invite_to_speak_text;
-      TextView var3 = (TextView)a.a(var0, var1);
+      TextView var3 = (TextView)k5.a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.move_to_speaker_icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
          if (var2 != null) {
             return new InviteToSpeakViewBinding(var0, var3, var2);
          }

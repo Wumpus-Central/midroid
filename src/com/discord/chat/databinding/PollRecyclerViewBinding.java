@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.polls.PollActionButton;
-import x1.a;
 
 public final class PollRecyclerViewBinding implements ViewBinding {
    @NonNull
@@ -48,24 +47,24 @@ public final class PollRecyclerViewBinding implements ViewBinding {
    @NonNull
    public static PollRecyclerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.answers;
-      RecyclerView var4 = (RecyclerView)a.a(var0, var1);
-      if (var4 != null) {
+      RecyclerView var6 = (RecyclerView)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.primary_action;
-         PollActionButton var6 = (PollActionButton)a.a(var0, var1);
-         if (var6 != null) {
+         PollActionButton var3 = (PollActionButton)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.prompt_text;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var2 = (TextView)k5.a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.question_text;
-               TextView var2 = (TextView)a.a(var0, var1);
-               if (var2 != null) {
+               TextView var7 = (TextView)k5.a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.secondary_action_button;
-                  PollActionButton var7 = (PollActionButton)a.a(var0, var1);
-                  if (var7 != null) {
+                  PollActionButton var4 = (PollActionButton)k5.a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.tertiary_action_button;
-                     PollActionButton var3 = (PollActionButton)a.a(var0, var1);
-                     if (var3 != null) {
-                        return new PollRecyclerViewBinding(var0, var4, var6, var5, var2, var7, var3);
+                     PollActionButton var5 = (PollActionButton)k5.a.a(var0, var1);
+                     if (var5 != null) {
+                        return new PollRecyclerViewBinding(var0, var6, var3, var2, var7, var4, var5);
                      }
                   }
                }

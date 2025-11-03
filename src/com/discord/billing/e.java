@@ -5,11 +5,11 @@ import java.util.List;
 import kotlinx.coroutines.CompletableDeferred;
 
 // $VF: synthetic class
-public final class e implements c2.h {
+public final class e implements g7.h {
    public final CompletableDeferred a;
 
    @Override
    public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.g(this.a, var1, var2);
+      <unrepresentable>.c(this.a, var1, var2);
    }
 }

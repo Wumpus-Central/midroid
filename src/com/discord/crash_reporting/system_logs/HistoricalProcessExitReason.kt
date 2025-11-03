@@ -4,7 +4,7 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import xa.v
+import ht.v
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -13,9 +13,9 @@ internal object HistoricalProcessExitReason {
    fun {
       val var0: java.util.Map;
       if (VERSION.SDK_INT < 30) {
-         var0 = O.i();
+         var0 = s0.i();
       } else {
-         var0 = O.m(
+         var0 = s0.m(
             new Pair[]{
                v.a(6, "ANR"),
                v.a(4, "CRASH"),
@@ -42,9 +42,9 @@ internal object HistoricalProcessExitReason {
       if (VERSION.SDK_INT < 30) {
          return null;
       } else {
-         var var5: StringBuilder = (StringBuilder)var1.getSystemService("activity");
+         var var5: ActivityManager = (ActivityManager)var1.getSystemService("activity");
          if (var5 is ActivityManager) {
-            var5 = var5 as ActivityManager;
+            var5 = var5;
          } else {
             var5 = null;
          }
@@ -52,22 +52,22 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = J1.e.a((ActivityManager)var5, null, 0, 1);
-            val var4: ApplicationExitInfo = J1.f.a(CollectionsKt.firstOrNull((java.util.List)var5));
+            val var7: java.util.List = var5.getHistoricalProcessExitReasons(null, 0, 1);
+            val var4: ApplicationExitInfo = w5.e.a(CollectionsKt.firstOrNull(var7));
             if (var4 == null) {
                return null;
             } else {
-               val var3: java.lang.String = exitReasonLookup.get(J1.g.a(var4));
-               var5 = var3;
+               val var3: java.lang.String = exitReasonLookup.get(var4.getReason());
+               var var8: java.lang.String = var3;
                if (var3 == null) {
-                  val var2: Int = J1.g.a(var4);
-                  var5 = new StringBuilder();
-                  var5.append("Unknown ");
-                  var5.append(var2);
-                  var5 = var5.toString();
+                  val var2: Int = var4.getReason();
+                  val var9: StringBuilder = new StringBuilder();
+                  var9.append("Unknown ");
+                  var9.append(var2);
+                  var8 = var9.toString();
                }
 
-               return new HistoricalProcessExitReason.Reason((java.lang.String)var5, c.a(var4));
+               return new HistoricalProcessExitReason.Reason(var8, var4.getDescription());
             }
          }
       }
@@ -122,13 +122,13 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.reason;
-         val var2: java.lang.String = this.description;
+         val var2: java.lang.String = this.reason;
+         val var3: java.lang.String = this.description;
          val var1: StringBuilder = new StringBuilder();
          var1.append("Reason(reason=");
-         var1.append(var3);
-         var1.append(", description=");
          var1.append(var2);
+         var1.append(", description=");
+         var1.append(var3);
          var1.append(")");
          return var1.toString();
       }

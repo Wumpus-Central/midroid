@@ -1,7 +1,7 @@
 package com.discord.notifications.api
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class PollMedia(text: String) {

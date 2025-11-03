@@ -7,7 +7,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
-import xa.v
+import ht.v
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -52,9 +52,7 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(
-         new Pair[]{v.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), v.a("height", SizeUtilsKt.getPxToDp(this.heightPixels))}
-      );
+      return NativeMapExtensionsKt.nativeMapOf(v.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), v.a("height", SizeUtilsKt.getPxToDp(this.heightPixels)));
    }
 
    public override fun toString(): String {

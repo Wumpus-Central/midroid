@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.MeasureSpec
 import android.view.View.OnLayoutChangeListener
+import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -18,12 +19,14 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.SetTextSizeSpKt
 import com.discord.channel_spine.ChannelSpineView
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
+import com.discord.chat.bridge.contentnode.LinkContextData.BindTapCommandName
+import com.discord.chat.bridge.contentnode.LinkContextData.BindUserMenu
 import com.discord.chat.bridge.executedcommand.ExecutedCommand
 import com.discord.chat.bridge.executedcommand.ExecutedCommandBackgroundStyles
 import com.discord.chat.bridge.referencedmessage.LoadedReferencedMessage
@@ -73,11 +76,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             var1 = null;
          }
 
-         if (var1 == null) {
+         if (var1 != null) {
+            return var1;
+         } else {
             var1 = this.binding.replyIcon;
+            return var1;
          }
-
-         return var1;
       }
 
 
@@ -110,12 +114,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       DiscordFontUtilsKt.setDiscordFont(var14, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var14, 12.0F);
       var14.setTextColor(ThemeManagerKt.getTheme().getInteractiveNormal());
-      val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
+      val var3: Float = this.getResources().getDimension(dimen.message_start_guideline);
       val var17: Float = var3 / 2 - this.getResources().getDimension(com.discord.channel_spine.R.dimen.spine_width) / 2;
-      val var5: Float = this.getResources().getDimension(R.dimen.message_reply_leading_views_margin_start);
+      val var5: Float = this.getResources().getDimension(dimen.message_reply_leading_views_margin_start);
       var6.replySpline.configureAsReplySpline();
       val var7: ChannelSpineView = var6.replySpline;
-      val var15: android.view.ViewGroup.LayoutParams = var7.getLayoutParams();
+      val var15: LayoutParams = var7.getLayoutParams();
       if (var15 != null) {
          val var16: MarginLayoutParams = var15 as MarginLayoutParams;
          (var15 as MarginLayoutParams).width = (int)(var3 - var5 - var17);
@@ -163,19 +167,18 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    @JvmStatic
    fun `configureExecutedCommand_dB0_bEw$lambda$14`(var0: ExecutedCommand, var1: LinkContentNode): LinkStyle {
       val var3: LinkContextData = var1.getTarget();
-      val var7: LinkStyle;
-      if (var3 is LinkContextData.BindUserMenu) {
-         val var6: Int = var1.getLinkColor();
+      if (var3 is BindUserMenu) {
+         val var8: Int = var1.getLinkColor();
          val var2: Int;
-         if (var6 != null) {
-            var2 = var6;
+         if (var8 != null) {
+            var2 = var8;
          } else {
             var2 = ThemeManagerKt.getTheme().getTextLink();
          }
 
-         var7 = new LinkStyle(DiscordFont.PrimarySemibold, var2, null, null, 12, null);
-      } else if (var3 is LinkContextData.BindTapCommandName) {
-         val var5: DiscordFont = DiscordFont.PrimarySemibold;
+         return new LinkStyle(DiscordFont.PrimarySemibold, var2, null, null, 12, null);
+      } else if (var3 is BindTapCommandName) {
+         val var6: DiscordFont = DiscordFont.PrimarySemibold;
          val var9: ExecutedCommandBackgroundStyles = var0.getCommandNameBackgroundStyles();
          val var10: Int;
          if (var9 != null) {
@@ -200,26 +203,22 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             var15 = null;
          }
 
-         val var11: LinkBackgroundStyle = new LinkBackgroundStyle(var10, var13, var15);
-         val var16: java.lang.Boolean = var0.getShowAppsIcon();
-         val var14: java.lang.Boolean = java.lang.Boolean.TRUE;
-         val var8: ReactAsset;
-         if (var16 == java.lang.Boolean.TRUE) {
-            if (var0.getShowControllerIcon() == var14) {
-               var8 = ReactAsset.GameController;
+         val var14: LinkBackgroundStyle = new LinkBackgroundStyle(var10, var13, var15);
+         val var7: java.lang.Boolean = var0.getShowAppsIcon();
+         val var16: java.lang.Boolean = java.lang.Boolean.TRUE;
+         var var11: ReactAsset = null;
+         if (var7 == java.lang.Boolean.TRUE) {
+            if (var0.getShowControllerIcon() == var16) {
+               var11 = ReactAsset.GameController;
             } else {
-               var8 = ReactAsset.AppsIcon;
+               var11 = ReactAsset.AppsIcon;
             }
-         } else {
-            var8 = null;
          }
 
-         var7 = new LinkStyle(var5, 0, var11, var8, 2, null);
+         return new LinkStyle(var6, 0, var14, var11, 2, null);
       } else {
-         var7 = new LinkStyle(DiscordFont.PrimarySemibold, 0, null, null, 14, null);
+         return new LinkStyle(DiscordFont.PrimarySemibold, 0, null, null, 14, null);
       }
-
-      return var7;
    }
 
    private fun configureLeadingIcon(message: Message) {
@@ -308,7 +307,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          val var2: Int = this.replyTextLineBounds.bottom;
          val var1: Int = this.replyTextLineBounds.top;
          val var6: LinearLayout = this.binding.replyLeadingViews;
-         val var4: android.view.ViewGroup.LayoutParams = var6.getLayoutParams();
+         val var4: LayoutParams = var6.getLayoutParams();
          if (var4 != null) {
             var4.height = var2 - var1;
             var6.setLayoutParams(var4);
@@ -351,7 +350,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       val var21: TextView = this.binding.replyAuthorName;
       var21.setVisibility(8);
       val var22: SimpleDraweeView = this.binding.replyAuthorAvatar;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var22, false, new p0(var7, var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var22, false, new o1(var7, var1, var2), 1, null);
       val var23: SimpleDraweeView = this.binding.replyIcon;
       var23.setVisibility(8);
       val var24: SimpleDraweeView = this.binding.replyTrailingIcon;
@@ -374,19 +373,19 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          var5,
          var6,
          var28,
-         new q0(var7, var1),
+         new p1(var7, var1),
          null,
          null,
          null,
          null,
          null,
          null,
-         new r0(var7),
-         new s0(var7),
+         new q1(var7),
+         new r1(var7),
          null,
          null,
          null,
-         new t0(var2),
+         new s1(var2),
          null,
          null,
          false,
@@ -405,7 +404,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    public fun configureReply(reply: ReferencedMessage, showSpine: Boolean = true, onClick: () -> Unit) {
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new u0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, new t1(var3), 1, null);
       if (var1 is LoadedReferencedMessage) {
          val var12: LoadedReferencedMessage = var1 as LoadedReferencedMessage;
          val var11: Message = (var1 as LoadedReferencedMessage).getMessage();
@@ -473,24 +472,24 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          if (var12.getSystemContent() != null) {
             val var28: MessageContentView = this.binding.replyText;
             val var44: LinearLayout = this.binding.replyLeadingViews;
-            val var69: StructurableText = var12.getSystemContent();
-            val var14: Context = this.getContext();
-            val var63: java.lang.String = var11.getId-3Eiw7ao();
+            val var14: StructurableText = var12.getSystemContent();
+            val var63: Context = this.getContext();
+            val var69: java.lang.String = var11.getId-3Eiw7ao();
             val var7: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var8: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
-            val var9: Boolean = var11.getShouldShowRoleOnName();
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var9: Boolean = var11.getShouldShowRoleDot();
+            val var8: Boolean = var11.getShouldShowRoleOnName();
             val var55: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var55);
             val var56: TextPaint = this.binding.replyText.getPaint();
             val var57: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var69,
                var14,
                var63,
+               var69,
                var7,
-               var8,
                var2,
                var9,
+               var8,
                var56,
                null,
                null,
@@ -521,22 +520,22 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var29: MessageContentView = this.binding.replyText;
             val var46: LinearLayout = this.binding.replyLeadingViews;
             val var66: StructurableText = var11.getContent();
-            val var71: Context = this.getContext();
-            val var70: java.lang.String = var11.getId-3Eiw7ao();
-            var2 = MessageKt.shouldAnimateEmoji(var11);
-            val var37: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var38: Boolean = var11.getShouldShowRoleDot();
+            val var70: Context = this.getContext();
+            val var71: java.lang.String = var11.getId-3Eiw7ao();
+            val var38: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var37: Boolean = var11.getShouldShowRoleDot();
             val var39: Boolean = var11.getShouldShowRoleOnName();
             val var58: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             val var34: Float = TextUtilsKt.getBaselineHeightPx(var58);
             val var59: TextPaint = this.binding.replyText.getPaint();
             val var60: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
                var66,
-               var71,
                var70,
+               var71,
+               var38,
                var2,
                var37,
-               var38,
                var39,
                var59,
                null,
@@ -569,7 +568,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
          }
       } else {
          if (var1 !is SystemReferencedMessage) {
-            throw new xa.p();
+            throw new ht.p();
          }
 
          val var47: ChannelSpineView = this.binding.replySpline;
@@ -623,7 +622,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       }
 
       this.setImportantForAccessibility(1);
-      androidx.core.view.Z.o0(
+      androidx.core.view.h0.n0(
          this,
          new androidx.core.view.a(this, var3) {
             final Function0<Unit> $onClick;
@@ -634,7 +633,6 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                this.$onClick = var2;
             }
 
-            @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                val var3: Context = this.this$0.getContext();
@@ -648,13 +646,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
                var2.w0(var4);
                val var5: Context = this.this$0.getContext();
                var2.b(
-                  new AccessibilityNodeInfoCompat.a(
+                  new androidx.core.view.accessibility.AccessibilityNodeInfoCompat.a(
                      16, I18nUtilsKt.i18nFormat$default(var5, I18nMessage.MOBILE_SCROLL_TO_MESSAGE_ACTION_A11Y_LABEL, null, 2, null)
                   )
                );
             }
 
-            @Override
             public boolean performAccessibilityAction(View var1, int var2, Bundle var3) {
                if (var2 == 16) {
                   this.$onClick.invoke();

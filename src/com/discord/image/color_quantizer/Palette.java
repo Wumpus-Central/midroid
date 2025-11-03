@@ -139,19 +139,12 @@ final class Palette {
    }
 
    private boolean isAlreadySelected(Swatch var1) {
-      boolean var2;
-      if (this.mVibrantSwatch != var1
-         && this.mDarkVibrantSwatch != var1
-         && this.mLightVibrantSwatch != var1
-         && this.mMutedSwatch != var1
-         && this.mDarkMutedSwatch != var1
-         && this.mLightMutedColor != var1) {
-         var2 = false;
-      } else {
-         var2 = true;
-      }
-
-      return var2;
+      return this.mVibrantSwatch == var1
+         || this.mDarkVibrantSwatch == var1
+         || this.mLightVibrantSwatch == var1
+         || this.mMutedSwatch == var1
+         || this.mDarkMutedSwatch == var1
+         || this.mLightMutedColor == var1;
    }
 
    private static Bitmap scaleBitmapDown(Bitmap var0) {

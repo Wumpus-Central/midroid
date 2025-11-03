@@ -1,7 +1,5 @@
 package com.discord.chat.input.views
 
-import ac.I
-import ac.K
 import android.content.Context
 import android.content.Intent
 import android.content.ClipData.Item
@@ -17,7 +15,7 @@ import android.view.View
 import android.view.Window
 import android.widget.RelativeLayout
 import androidx.core.view.ContentInfoCompat
-import androidx.core.view.Z
+import androidx.core.view.h0
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.databinding.ChatInputRootViewBinding
@@ -33,13 +31,15 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
-import dc.F
+import gu.i0
 import java.util.ArrayList
 import java.util.LinkedHashSet
 import java.util.UUID
+import ju.m0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -60,14 +60,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public final val lineCount: Int?
       public final get() {
          val var1: Layout = this.editText.getLayout();
-         val var2: Int;
-         if (var1 != null) {
-            var2 = var1.getLineCount();
-         } else {
-            var2 = null;
-         }
-
-         return var2;
+         return if (var1 != null) var1.getLineCount() else null;
       }
 
 
@@ -94,14 +87,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public final var hint: String?
       public final get() {
          val var1: java.lang.CharSequence = this.editText.getHint();
-         val var2: java.lang.String;
-         if (var1 != null) {
-            var2 = var1.toString();
-         } else {
-            var2 = null;
-         }
-
-         return var2;
+         return if (var1 != null) var1.toString() else null;
       }
 
       public final set(value) {
@@ -158,7 +144,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    init {
       val var6: ChatInputRootViewBinding = ChatInputRootViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var6;
-      this.lineHeightMeasurer = new ChatInputRootViewMeasurer(this, new a(this));
+      this.lineHeightMeasurer = new ChatInputRootViewMeasurer(this, new com.discord.chat.input.views.a(this));
       val var7: DCDChatInput = var6.chatInputEditText;
       this.editText = var7;
       this.insertedPayloads = new LinkedHashSet<>();
@@ -166,14 +152,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       this.editTextMaxLines = var7.getMaxLines();
       val var4: java.lang.String = UUID.randomUUID().toString();
       this.lastEditId = var4;
-      this.currentTextFlow = F.a(null);
-      this.currentLayoutFlow = F.a(0);
+      this.currentTextFlow = m0.a(null);
+      this.currentLayoutFlow = m0.a(0);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var7, 16.0F);
-      var7.setOnRequestSend(new b(this));
-      var7.setOnSelectionChanged(new c(this));
-      var7.setOnFocusChangeListener(new d(this));
-      Z.E0(var7, new java.lang.String[]{"image/*"}, new e(this, var1));
+      var7.setOnRequestSend(new com.discord.chat.input.views.b(this));
+      var7.setOnSelectionChanged(new com.discord.chat.input.views.c(this));
+      var7.setOnFocusChangeListener(new com.discord.chat.input.views.d(this));
+      h0.E0(var7, new java.lang.String[]{"image/*"}, new com.discord.chat.input.views.e(this, var1));
       var7.addTextChangedListener(
          new TextWatcher(this) {
             final ChatInputRootView this$0;
@@ -206,7 +192,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          }
       );
       var7.addTextChangedListener(new DeleteNodeOnBackspaceTextWatcher());
-      this.addOnLayoutChangeListener(new f(this));
+      this.addOnLayoutChangeListener(new com.discord.chat.input.views.f(this));
    }
 
    @JvmStatic
@@ -235,6 +221,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       if (var2) {
          if (var0.listener != null) {
             var0.listener.onFocus(var0.editText.getSelectionStart(), var0.editText.getSelectionStart());
+            return;
          }
       } else if (var0.listener != null) {
          var0.listener.onEndBlur(java.lang.String.valueOf(var0.editText.getText()));
@@ -243,58 +230,75 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    @JvmStatic
    fun `_init_$lambda$8`(var0: ChatInputRootView, var1: Context, var2: View, var3: ContentInfoCompat): ContentInfoCompat {
-      val var15: Pair = var3.i(new g(var1));
-      val var9: ContentInfoCompat = var15.first as ContentInfoCompat;
-      val var16: ContentInfoCompat = var15.second as ContentInfoCompat;
-      val var19: Boolean;
+      val var16: Pair = var3.i(new com.discord.chat.input.views.g(var1));
+      val var9: ContentInfoCompat = var16.first as ContentInfoCompat;
+      val var17: ContentInfoCompat = var16.second as ContentInfoCompat;
+      val var20: Boolean;
       if (var9 != null) {
          val var7: java.util.Set = var0.insertedPayloads;
          var7.add(var3);
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var22: Uri = var9.c().getItemAt(var4).getUri();
+            val var23: Uri = var9.c().getItemAt(var4).getUri();
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var22);
+               var0.listener.onImageInserted(var23);
             }
          }
 
-         var19 = true;
+         var20 = true;
       } else {
-         var19 = false;
+         var20 = false;
       }
 
-      var var10: ContentInfoCompat = var16;
-      if (var16 != null) {
-         val var23: Editable = var0.editText.getText();
-         if (var23 != null && !StringsKt.c0(var23)) {
-            return var16;
+      var var10: ContentInfoCompat = var17;
+      if (var17 != null) {
+         val var11: Editable = var0.editText.getText();
+         if (var11 != null && !StringsKt.i0(var11)) {
+            return var17;
          }
 
-         val var11: Pair = var16.i(new h());
-         val var17: ContentInfoCompat = var11.first as ContentInfoCompat;
-         var10 = var11.second as ContentInfoCompat;
-         if (var17 != null) {
-            if (!var19) {
-               val var12: java.util.Set = var0.insertedPayloads;
-               var12.add(var3);
+         val var12: Pair = var17.i(new com.discord.chat.input.views.h());
+         val var18: ContentInfoCompat = var12.first as ContentInfoCompat;
+         var10 = var12.second as ContentInfoCompat;
+         if (var18 != null) {
+            if (!var20) {
+               val var13: java.util.Set = var0.insertedPayloads;
+               var13.add(var3);
             }
 
-            val var21: Int = var17.c().getItemCount();
+            val var22: Int = var18.c().getItemCount();
 
-            for (int var20 = 0; var20 < var21; var20++) {
-               val var13: Intent = var17.c().getItemAt(var20).getIntent();
-               val var18: java.lang.String = var13.getStringExtra("data");
-               if (var18 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var18);
+            for (int var21 = 0; var21 < var22; var21++) {
+               val var14: Intent = var18.c().getItemAt(var21).getIntent();
+               val var15: java.lang.String = var14.getStringExtra("data");
+               if (var15 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var15);
                }
             }
 
-            var10 = null;
+            return null;
          }
       }
 
       return var10;
+   }
+
+   @JvmStatic
+   fun c(var0: Item): Boolean {
+      return var0.getIntent() != null && var0.getIntent().getType() == "application/x-discord-interaction-data" && var0.getIntent().hasExtra("data");
+   }
+
+   @JvmStatic
+   fun f(var0: Context, var1: Item): Boolean {
+      if (var1.getUri() != null) {
+         val var2: java.lang.String = var0.getContentResolver().getType(var1.getUri());
+         if (var2 != null && StringsKt.N(var2, "image/", false, 2, null)) {
+            return true;
+         }
+      }
+
+      return false;
    }
 
    private inline fun ContentInfoCompat.forEachIntent(action: (Intent) -> Unit) {
@@ -316,36 +320,6 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    }
 
    @JvmStatic
-   fun `lambda$8$lambda$4`(var0: Context, var1: Item): Boolean {
-      val var4: Uri = var1.getUri();
-      var var2: Boolean = false;
-      if (var4 != null) {
-         val var5: java.lang.String = var0.getContentResolver().getType(var1.getUri());
-         var2 = false;
-         if (var5 != null) {
-            var2 = false;
-            if (StringsKt.I(var5, "image/", false, 2, null)) {
-               var2 = true;
-            }
-         }
-      }
-
-      return var2;
-   }
-
-   @JvmStatic
-   fun `lambda$8$lambda$6`(var0: Item): Boolean {
-      val var1: Boolean;
-      if (var0.getIntent() != null && var0.getIntent().getType() == "application/x-discord-interaction-data" && var0.getIntent().hasExtra("data")) {
-         var1 = true;
-      } else {
-         var1 = false;
-      }
-
-      return var1;
-   }
-
-   @JvmStatic
    fun `lineHeightMeasurer$lambda$0`(var0: ChatInputRootView, var1: Int): Unit {
       if (var0.listener != null) {
          var0.listener.onContentSizeChange((int)SizeUtilsKt.getPxToDp(var0.getWidth()), (int)SizeUtilsKt.getPxToDp(var1));
@@ -355,15 +329,16 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    }
 
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
-      val var4: ArrayList = new ArrayList(CollectionsKt.v(var1, 10));
+      val var4: java.lang.Iterable = var1;
+      val var6: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
 
-      for (ChatInputNode var5 : var1) {
-         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var4) {
+         var6.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var17 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var17);
+      for (ChatInputNode var7 : var6) {
+         val var19: Editable = this.editText.getEditableText();
+         EditTextUtilsKt.setChatInputNodeStyle(var19, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -427,45 +402,49 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      dc.e.s(dc.e.u(dc.e.g(this.currentTextFlow, 100L), new Function2<ChatInputRootView.CurrentTextAndSelection, Continuation, Object>(this, null) {
-         Object L$0;
-         int label;
-         final ChatInputRootView this$0;
+      ju.g.y(
+         ju.g.C(ju.g.k(this.currentTextFlow, 100L), new Function2<ChatInputRootView.CurrentTextAndSelection, Continuation<? super Unit>, Object>(this, null) {
+            Object L$0;
+            int label;
+            final ChatInputRootView this$0;
 
-         {
-            super(2, var2x);
-            this.this$0 = var1;
-         }
-
-         public final Continuation create(Object var1, Continuation var2) {
-            val var3: Function2 = new <anonymous constructor>(this.this$0, var2);
-            var3.L$0 = var1;
-            return var3;
-         }
-
-         public final Object invoke(ChatInputRootView.CurrentTextAndSelection var1, Continuation var2x) {
-            return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-         }
-
-         public final Object invokeSuspend(Object var1) {
-            Ca.b.e();
-            if (this.label == 0) {
-               kotlin.c.b(var1);
-               var1 = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
-               if (this.L$0 as ChatInputRootView.CurrentTextAndSelection != null) {
-                  val var2x: ChatInputRootView.ChatInputListener = this.this$0.getListener();
-                  if (var2x != null) {
-                     var2x.onTextOrSelectionChanged(var1.getSelectionStart(), var1.getSelectionEnd(), var1.getText(), var1.getEditId());
-                  }
-               }
-
-               return Unit.a;
-            } else {
-               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            {
+               super(2, var2x);
+               this.this$0 = var1;
             }
-         }
-      }), CoroutineViewUtilsKt.getAttachedScope(this));
-      dc.e.s(dc.e.u(dc.e.g(this.currentLayoutFlow, 32L), new Function2<Integer, Continuation, Object>(this, null) {
+
+            @Override
+            public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+               val var3: Function2 = new <anonymous constructor>(this.this$0, var2);
+               var3.L$0 = var1;
+               return var3;
+            }
+
+            public final Object invoke(ChatInputRootView.CurrentTextAndSelection var1, Continuation<? super Unit> var2x) {
+               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+            }
+
+            @Override
+            public final Object invokeSuspend(Object var1) {
+               ot.b.f();
+               if (this.label == 0) {
+                  kotlin.c.b(var1);
+                  val var2x: ChatInputRootView.CurrentTextAndSelection = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
+                  if (this.L$0 as ChatInputRootView.CurrentTextAndSelection != null) {
+                     var1 = this.this$0.getListener();
+                     if (var1 != null) {
+                        var1.onTextOrSelectionChanged(var2x.getSelectionStart(), var2x.getSelectionEnd(), var2x.getText(), var2x.getEditId());
+                     }
+                  }
+
+                  return Unit.a;
+               } else {
+                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+               }
+            }
+         }), CoroutineViewUtilsKt.getAttachedScope(this)
+      );
+      ju.g.y(ju.g.C(ju.g.k(this.currentLayoutFlow, 32L), new Function2<Integer, Continuation<? super Unit>, Object>(this, null) {
          int label;
          final ChatInputRootView this$0;
 
@@ -474,16 +453,18 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             this.this$0 = var1;
          }
 
-         public final Continuation create(Object var1, Continuation var2) {
+         @Override
+         public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
             return new <anonymous constructor>(this.this$0, var2);
          }
 
-         public final Object invoke(int var1, Continuation var2x) {
+         public final Object invoke(int var1, Continuation<? super Unit> var2x) {
             return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
          }
 
+         @Override
          public final Object invokeSuspend(Object var1) {
-            Ca.b.e();
+            ot.b.f();
             if (this.label == 0) {
                kotlin.c.b(var1);
                ChatInputRootView.access$getLineHeightMeasurer$p(this.this$0).measure(true);
@@ -501,86 +482,92 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       if (!var1) {
-         this.blurJob = ac.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2<CoroutineScope, Continuation, Object>(this, null) {
-            int label;
-            final ChatInputRootView this$0;
+         this.blurJob = gu.g.d(
+            CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this, null) {
+               int label;
+               final ChatInputRootView this$0;
 
-            {
-               super(2, var2x);
-               this.this$0 = var1;
-            }
+               {
+                  super(2, var2x);
+                  this.this$0 = var1;
+               }
 
-            public final Continuation create(Object var1, Continuation var2) {
-               return new <anonymous constructor>(this.this$0, var2);
-            }
+               @Override
+               public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+                  return new <anonymous constructor>(this.this$0, var2);
+               }
 
-            public final Object invoke(CoroutineScope var1, Continuation var2x) {
-               return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-            }
+               public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                  return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+               }
 
-            public final Object invokeSuspend(Object var1) {
-               val var3: Any = Ca.b.e();
-               if (this.label != 0) {
-                  if (this.label != 1) {
-                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                  }
-
-                  kotlin.c.b(var1);
-               } else {
-                  kotlin.c.b(var1);
-                  var1 = K.a();
-                  val var4: Function2 = new Function2<CoroutineScope, Continuation, Object>(null) {
-                     int label;
-
-                     {
-                        super(2, var1);
+               @Override
+               public final Object invokeSuspend(Object var1) {
+                  val var3: Any = ot.b.f();
+                  if (this.label != 0) {
+                     if (this.label != 1) {
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                      }
 
-                     public final Continuation create(Object var1, Continuation var2) {
-                        return new <anonymous constructor>(var2);
-                     }
+                     kotlin.c.b(var1);
+                  } else {
+                     kotlin.c.b(var1);
+                     val var4: CoroutineDispatcher = gu.m0.a();
+                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
+                        int label;
 
-                     public final Object invoke(CoroutineScope var1, Continuation var2x) {
-                        return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-                     }
-
-                     public final Object invokeSuspend(Object var1) {
-                        val var3: Any = Ca.b.e();
-                        if (this.label != 0) {
-                           if (this.label != 1) {
-                              throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
-                           }
-
-                           kotlin.c.b(var1);
-                        } else {
-                           kotlin.c.b(var1);
-                           this.label = 1;
-                           if (I.a(100L, this) === var3) {
-                              return var3;
-                           }
+                        {
+                           super(2, var1);
                         }
 
-                        return Unit.a;
+                        @Override
+                        public final Continuation<Unit> create(Object var1, Continuation<?> var2) {
+                           return new <anonymous constructor>(var2);
+                        }
+
+                        public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                           return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                        }
+
+                        @Override
+                        public final Object invokeSuspend(Object var1) {
+                           val var3: Any = ot.b.f();
+                           if (this.label != 0) {
+                              if (this.label != 1) {
+                                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                              }
+
+                              kotlin.c.b(var1);
+                           } else {
+                              kotlin.c.b(var1);
+                              this.label = 1;
+                              if (i0.a(100L, this) === var3) {
+                                 return var3;
+                              }
+                           }
+
+                           return Unit.a;
+                        }
+                     };
+                     this.label = 1;
+                     if (gu.g.g(var4, var1, this) === var3) {
+                        return var3;
                      }
-                  };
-                  this.label = 1;
-                  if (ac.f.g(var1, var4, this) === var3) {
-                     return var3;
                   }
-               }
 
-               val var6: Context = this.this$0.getContext();
-               if (!ChatInputRootViewKt.isScreenReaderOn(var6)) {
-                  ChatInputRootView.access$getEditText$p(this.this$0).clearFocus();
-                  val var7: ChatInputRootView.ChatInputListener = this.this$0.getListener();
-                  if (var7 != null) {
-                     var7.onEndBlur(java.lang.String.valueOf(ChatInputRootView.access$getEditText$p(this.this$0).getText()));
+                  val var6: Context = this.this$0.getContext();
+                  if (!ChatInputRootViewKt.isScreenReaderOn(var6)) {
+                     ChatInputRootView.access$getEditText$p(this.this$0).clearFocus();
+                     val var7: ChatInputRootView.ChatInputListener = this.this$0.getListener();
+                     if (var7 != null) {
+                        var7.onEndBlur(java.lang.String.valueOf(ChatInputRootView.access$getEditText$p(this.this$0).getText()));
+                     }
                   }
-               }
 
-               return Unit.a;
-            }
-         }, 3, null);
+                  return Unit.a;
+               }
+            }, 3, null
+         );
       }
    }
 
@@ -700,21 +687,21 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var2: Int = this.selectionStart;
-         val var1: Int = this.selectionEnd;
-         val var5: java.lang.String = this.text;
-         val var4: java.lang.String = this.editId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("CurrentTextAndSelection(selectionStart=");
-         var3.append(var2);
-         var3.append(", selectionEnd=");
-         var3.append(var1);
-         var3.append(", text=");
-         var3.append(var5);
-         var3.append(", editId=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var1: Int = this.selectionStart;
+         val var2: Int = this.selectionEnd;
+         val var3: java.lang.String = this.text;
+         val var5: java.lang.String = this.editId;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CurrentTextAndSelection(selectionStart=");
+         var4.append(var1);
+         var4.append(", selectionEnd=");
+         var4.append(var2);
+         var4.append(", text=");
+         var4.append(var3);
+         var4.append(", editId=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

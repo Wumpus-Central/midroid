@@ -21,7 +21,7 @@ public object MarkdownRules {
    public final val PATTERN_HEADER_ITEM: Pattern
    public final val PATTERN_HEADER_ITEM_ALT: Pattern
    public final val PATTERN_HEADER_ITEM_ALT_CLASSED: Pattern =
-      new Regex("^\\s*(?:(?:(.+)(?: +\\{([\\w ]*)\\}))|(.*))[ \\t]*\\n *([=\\-]){3,}[ \\t]*(?=\\n|$)").j()
+      new Regex("^\\s*(?:(?:(.+)(?: +\\{([\\w ]*)\\}))|(.*))[ \\t]*\\n *([=\\-]){3,}[ \\t]*(?=\\n|$)").l()
       public final val PATTERN_LIST_ITEM: Pattern
 
    @JvmStatic
@@ -48,19 +48,17 @@ public object MarkdownRules {
 
          @NotNull
          public final CharacterStyle invoke(int var1) {
-            val var3: Any;
             if (var1 == 0) {
-               var3 = new TextAppearanceSpan(this.$context, (this.$headerStyles.get(0) as java.lang.Number).intValue());
-            } else if (1 <= var1 && this.$headerStyles.size() >= var1) {
-               var3 = new TextAppearanceSpan(this.$context, (this.$headerStyles.get(var1 - 1) as java.lang.Number).intValue());
+               return new TextAppearanceSpan(this.$context, (this.$headerStyles.get(0) as java.lang.Number).intValue());
             } else {
-               var3 = new StyleSpan(3);
+               return (CharacterStyle)(if (1 <= var1 && this.$headerStyles.size() >= var1)
+                  new TextAppearanceSpan(this.$context, (this.$headerStyles.get(var1 - 1) as java.lang.Number).intValue())
+                  else
+                  new StyleSpan(3));
             }
-
-            return (CharacterStyle)var3;
          }
       };
-      return CollectionsKt.n(new MarkdownRules.HeaderRule[]{new MarkdownRules.HeaderRule(new Function1<Integer, CharacterStyle>(var2) {
+      return CollectionsKt.o(new MarkdownRules.HeaderRule[]{new MarkdownRules.HeaderRule(new Function1<Integer, CharacterStyle>(var2) {
          final <unrepresentable> $spanProvider$1;
 
          {
@@ -89,7 +87,7 @@ public object MarkdownRules {
 
    @JvmStatic
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
-      return CollectionsKt.D0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
+      return CollectionsKt.M0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
    public open class HeaderLineClassedRule<RC, T, S>(styleSpanProvider: (Int) -> CharacterStyle,
@@ -102,7 +100,7 @@ public object MarkdownRules {
       public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : this(
             var1,
             var2,
-            CollectionsKt.D0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule())
+            CollectionsKt.M0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule())
          )
       init {
          this.classSpanProvider = var2;
@@ -116,20 +114,20 @@ public object MarkdownRules {
          if (var4 == null) {
             var4 = var1.group(3);
          }
-         for (var4 : var2.parse(var4, var3, this.innerRules)) {
-            if (var4 == null) {
+         for (Object var13 : var2.parse(var4, var3, this.innerRules)) {
+            if (var13 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var4 as Node);
+            var5.addChild(var13 as Node);
          }
 
          label42: {
             val var6: java.lang.String = var1.group(2);
             if (var6 != null) {
-               val var7: java.lang.String = StringsKt.Z0(var6).toString();
+               val var7: java.lang.String = StringsKt.i1(var6).toString();
                if (var7 != null) {
-                  var8 = StringsKt.A0(var7, new char[]{' '}, false, 0, 6, null);
+                  var8 = StringsKt.J0(var7, new char[]{' '}, false, 0, 6, null);
                   break label42;
                }
             }
@@ -137,33 +135,34 @@ public object MarkdownRules {
             var8 = null;
          }
 
-         var var9: Any;
+         var var10: Any;
          if (var8 != null) {
-            val var13: ArrayList = new ArrayList();
-            val var17: java.util.Iterator = var8.iterator();
+            var10 = var8;
+            val var14: ArrayList = new ArrayList();
+            val var18: java.util.Iterator = var10.iterator();
 
             while (true) {
-               var9 = var13;
-               if (!var17.hasNext()) {
+               var10 = var14;
+               if (!var18.hasNext()) {
                   break;
                }
 
-               var9 = this.classSpanProvider.invoke(var17.next() as java.lang.String);
-               if (var9 != null) {
-                  var13.add(var9);
+               var10 = (java.lang.Iterable)this.classSpanProvider.invoke(var18.next() as java.lang.String);
+               if (var10 != null) {
+                  var14.add(var10);
                }
             }
          } else {
-            var9 = CollectionsKt.k();
+            var10 = CollectionsKt.l();
          }
 
-         var var14: StyleNode = var5;
-         if (!var9.isEmpty()) {
-            var14 = new StyleNode((java.util.List<? extends T>)var9);
-            var14.addChild(var5);
+         var var15: StyleNode = var5;
+         if (!(var10 as java.util.Collection).isEmpty()) {
+            var15 = new StyleNode(var10);
+            var15.addChild(var5);
          }
 
-         return ParseSpec.Companion.createTerminal(var14, (S)var3);
+         return ParseSpec.Companion.createTerminal(var15, (S)var3);
       }
    }
 
@@ -182,9 +181,9 @@ public object MarkdownRules {
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(2);
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(1), var1.end(1));
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(2);
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(1), var1.end(1));
       }
    }
 

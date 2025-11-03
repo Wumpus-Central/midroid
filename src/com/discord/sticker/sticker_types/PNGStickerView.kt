@@ -20,7 +20,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView(var1) {
    }
 
    public fun loadGifImage(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
-      this.setController((G3.d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
+      this.setController((ja.d.g().P(var1).A(var4) as PipelineDraweeControllerBuilder).c());
       var var5: Int;
       if (var2 != null) {
          var5 = var2;
@@ -39,8 +39,8 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView(var1) {
 
    public fun loadImage(url: String, widthDp: Int?, heightDp: Int?) {
       this.setImageURI(var1);
-      (this.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
-      (this.getHierarchy() as GenericDraweeHierarchy).A(this.placeholder);
+      (this.getHierarchy() as GenericDraweeHierarchy).t(ScalingUtils$ScaleType.e);
+      (this.getHierarchy() as GenericDraweeHierarchy).z(this.placeholder);
       var var4: Int;
       if (var2 != null) {
          var4 = var2;

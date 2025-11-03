@@ -44,7 +44,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -67,7 +67,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "hour"
         ],
         "other": [
@@ -90,7 +90,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "minute"
         ],
         "other": [
@@ -384,7 +384,10 @@
       "messageCount",
       {
         "one": [
-          "1 message"
+          [
+            7
+          ],
+          " message"
         ],
         "other": [
           [
@@ -402,7 +405,10 @@
       "callCount",
       {
         "one": [
-          "1 call"
+          [
+            7
+          ],
+          " call"
         ],
         "other": [
           [
@@ -421,7 +427,10 @@
       "callCount",
       {
         "one": [
-          "1 call"
+          [
+            7
+          ],
+          " call"
         ],
         "other": [
           [
@@ -440,7 +449,10 @@
       "messageCount",
       {
         "one": [
-          "1 message"
+          [
+            7
+          ],
+          " message"
         ],
         "other": [
           [
@@ -1033,7 +1045,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "day"
         ],
         "other": [
@@ -1056,7 +1068,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "hour"
         ],
         "other": [
@@ -1079,7 +1091,7 @@
       6,
       "count",
       {
-        "=1": [
+        "one": [
           "minute"
         ],
         "other": [

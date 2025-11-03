@@ -50,6 +50,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
          } catch (var3: IOException) {
             this.mediaPlayer = null;
             var1.invoke(0);
+            return;
          }
       }
    }
@@ -205,6 +206,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
             var5.setVolume(var13, var1);
          } catch (var6: Exception) {
             Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to pan.", var6);
+            return;
          }
       }
    }
@@ -264,6 +266,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
             var1.seekTo(0);
          } catch (var2: Exception) {
             Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to stop.", var2);
+            return;
          }
       }
    }
@@ -281,6 +284,7 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
          if (var4 != null) {
             try {
                var5.setDataSource(var1, Uri.parse(var4));
+               return var5;
             } catch (var6: Exception) {
                Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to set sound.", var6);
             }

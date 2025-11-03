@@ -5,7 +5,7 @@ import android.graphics.Canvas
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.bridge.Message
 import com.discord.chat.databinding.DecoratedMessageViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
@@ -56,9 +56,7 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
       val var4: Context = this.getContext();
       val var7: ComponentProvider = new ComponentProvider(var4, true);
       this.removeAllViews();
-      this.addView(
-         new AutomodSystemMessageDelegate(var6, new c(var7), new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2), -1, -2
-      );
+      this.addView(new AutomodSystemMessageDelegate(var6, new c(var7), new RecycledViewPool()).createAndBindStandaloneView(this, var1, var2), -1, -2);
       this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, null, var2, false, null, null, false, 122, null)) as java.lang.Boolean;
    }
 }

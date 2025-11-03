@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.core.view.f0
+import androidx.core.view.n0
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nAPNGImageView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 APNGImageView.kt\ncom/discord/image/animated_image/apng/APNGImageView\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,61:1\n1317#2:62\n1318#2:65\n257#3,2:63\n*S KotlinDebug\n*F\n+ 1 APNGImageView.kt\ncom/discord/image/animated_image/apng/APNGImageView\n*L\n42#1:62\n42#1:65\n47#1:63,2\n*E\n"])
@@ -78,10 +78,10 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
-      for (View var5 : f0.a(this)) {
-         val var4: Boolean = var5 == var1;
+      for (View var6 : n0.a(this)) {
+         val var4: Boolean = var6 == var1;
          if (!var4) {
-            this.recycleChild(var5, var2);
+            this.recycleChild(var6, var2);
          }
 
          val var3: Byte;
@@ -91,7 +91,7 @@ public abstract class APNGImageView : FrameLayout {
             var3 = 8;
          }
 
-         var5.setVisibility(var3);
+         var6.setVisibility(var3);
       }
    }
 

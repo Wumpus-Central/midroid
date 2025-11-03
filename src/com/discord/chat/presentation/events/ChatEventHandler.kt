@@ -15,7 +15,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactions.ReactionView.Reaction
-import xa.c
+import ht.c
 
 public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?

@@ -11,6 +11,7 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import gu.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -42,9 +43,9 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var2: androidx.credentials.CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      this.credentialManager = var2.a(var1);
+      val var3: androidx.credentials.CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -93,11 +94,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         ac.f.d(
+         g.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,
-            new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -164,11 +165,11 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         ac.f.d(
+         g.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,
-            new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
+            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)

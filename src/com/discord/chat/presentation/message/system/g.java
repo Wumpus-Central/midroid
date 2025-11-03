@@ -6,6 +6,6 @@ import android.view.View.OnClickListener;
 // $VF: synthetic class
 public final class g implements OnClickListener {
    public final void onClick(View var1) {
-      SystemMessageView.g(var1);
+      SystemMessageView.h(var1);
    }
 }

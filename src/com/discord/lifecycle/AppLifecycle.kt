@@ -21,6 +21,6 @@ public object AppLifecycle {
    }
 
    public fun init() {
-      ProcessLifecycleOwner.x.a().getLifecycle().a(appLifecycleObserver);
+      ProcessLifecycleOwner.y.a().getLifecycle().a(appLifecycleObserver);
    }
 }

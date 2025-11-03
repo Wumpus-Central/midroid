@@ -5,7 +5,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
-import androidx.core.content.b
 import com.discord.react.headless_tasks.api.HeadlessTasks
 
 internal class TTIBroadcastReceiver : BroadcastReceiver {
@@ -30,7 +29,7 @@ internal class TTIBroadcastReceiver : BroadcastReceiver {
       private const val RUN_TTI_TEST_ACTION: String
 
       public fun register(context: Context, receiver: TTIBroadcastReceiver) {
-         b.k(var1, var2, new IntentFilter("com.discord.intent.action.RUN_TTI_TEST_ACTION"), 2);
+         androidx.core.content.a.l(var1, var2, new IntentFilter("com.discord.intent.action.RUN_TTI_TEST_ACTION"), 2);
       }
 
       public fun unregister(context: Context, receiver: TTIBroadcastReceiver) {

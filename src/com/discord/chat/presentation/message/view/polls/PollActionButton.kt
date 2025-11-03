@@ -16,12 +16,12 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
+import ht.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.SourceDebugExtension
-import xa.p
 
 @SourceDebugExtension(["SMAP\nPollActionButton.kt\nKotlin\n*S Kotlin\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,134:1\n257#2,2:135\n257#2,2:137\n257#2,2:139\n257#2,2:141\n257#2,2:143\n257#2,2:145\n257#2,2:147\n*S KotlinDebug\n*F\n+ 1 PollActionButton.kt\ncom/discord/chat/presentation/message/view/polls/PollActionButton\n*L\n34#1:135,2\n41#1:137,2\n43#1:139,2\n62#1:141,2\n82#1:143,2\n99#1:145,2\n121#1:147,2\n*E\n"])
 public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout(var1, var2) {
@@ -108,7 +108,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   DCDButton.setBackgroundRectangle$default(
                      this.binding.actionButton, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, color.white));
+                  var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new e(var1, var5, var2, var4));
                   var11 = var21;
@@ -171,13 +171,6 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
    }
 
    public fun hasAccessibilityFocus(): Boolean {
-      val var1: Boolean;
-      if (!this.binding.actionButton.isAccessibilityFocused() && !this.binding.actionText.isAccessibilityFocused()) {
-         var1 = false;
-      } else {
-         var1 = true;
-      }
-
-      return var1;
+      return this.binding.actionButton.isAccessibilityFocused() || this.binding.actionText.isAccessibilityFocused();
    }
 }

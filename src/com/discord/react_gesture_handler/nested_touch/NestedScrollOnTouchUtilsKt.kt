@@ -1,7 +1,8 @@
-@file:SourceDebugExtension(["SMAP\nNestedScrollOnTouchUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n+ 2 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,87:1\n33#2,2:88\n21#2,19:90\n1863#3,2:109\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n*L\n72#1:88,2\n72#1:90,19\n72#1:109,2\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nNestedScrollOnTouchUtils.kt\nKotlin\n*S Kotlin\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n+ 2 ViewUtils.kt\ncom/discord/misc/utilities/view/ViewUtilsKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,89:1\n33#2,2:90\n21#2,19:92\n1863#3,2:111\n*S KotlinDebug\n*F\n+ 1 NestedScrollOnTouchUtils.kt\ncom/discord/react_gesture_handler/nested_touch/NestedScrollOnTouchUtilsKt\n*L\n74#1:90,2\n74#1:92,19\n74#1:111,2\n*E\n"])
 
 package com.discord.react_gesture_handler.nested_touch
 
+import android.annotation.SuppressLint
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewParent
@@ -22,6 +23,7 @@ fun a(var0: OnLongClickListener, var1: View): Boolean {
    return updateWithOngoingGestureCancelling$lambda$1(var0, var1);
 }
 
+@SuppressLint(["ClickableViewAccessibility"])
 public fun TextView.enableNestedSpanClickListener(viewManagesAccessibility: Boolean = false) {
    var0.setOnTouchListener(new NestedScrollOnTouchListener(var0, var1));
 }
@@ -36,36 +38,18 @@ fun `enableNestedSpanClickListener$default`(var0: TextView, var1: Boolean, var2:
 }
 
 internal fun View.getNestedClickListener(): OnClickListener? {
-   var var1: OnClickListener = (OnClickListener)var0.getTag(-111001);
-   if (var1 is OnClickListener) {
-      var1 = var1;
-   } else {
-      var1 = null;
-   }
-
-   return var1;
+   val var1: Any = var0.getTag(-111001);
+   return var1 as? OnClickListener;
 }
 
 internal fun View.getNestedDoubleClickListener(): OnClickListener? {
-   var var1: OnClickListener = (OnClickListener)var0.getTag(-111003);
-   if (var1 is OnClickListener) {
-      var1 = var1;
-   } else {
-      var1 = null;
-   }
-
-   return var1;
+   val var1: Any = var0.getTag(-111003);
+   return var1 as? OnClickListener;
 }
 
 internal fun View.getNestedLongClickListener(): OnLongClickListener? {
-   var var1: OnLongClickListener = (OnLongClickListener)var0.getTag(-111002);
-   if (var1 is OnLongClickListener) {
-      var1 = var1;
-   } else {
-      var1 = null;
-   }
-
-   return var1;
+   val var1: Any = var0.getTag(-111002);
+   return var1 as? OnLongClickListener;
 }
 
 public fun View.setOnClickListenerNested(viewManagesAccessibility: Boolean = false, onClickListener: OnClickListener?) {

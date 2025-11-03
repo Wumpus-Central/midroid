@@ -15,11 +15,9 @@ public object PortalFromJsContextManager {
          val var5: PortalFromJsContext = var3.get() as PortalFromJsContext;
          if (var5 != null) {
             val var4: View = var1.get(var2) as View;
-            if (var4 == null) {
-               return;
+            if (var4 != null) {
+               var5.onPortalFromJsAdded(var2, var4);
             }
-
-            var5.onPortalFromJsAdded(var2, var4);
          }
       }
    }

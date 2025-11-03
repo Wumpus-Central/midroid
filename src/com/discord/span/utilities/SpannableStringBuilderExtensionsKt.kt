@@ -6,7 +6,7 @@ import android.content.Context
 import android.text.SpannableStringBuilder
 import android.text.style.StrikethroughSpan
 import android.text.style.UnderlineSpan
-import f3.e
+import i9.e
 import kotlin.jvm.internal.SourceDebugExtension
 
 @JvmSynthetic
@@ -28,7 +28,7 @@ public inline fun SpannableStringBuilder.bold(context: Context, action: (Spannab
 
 public fun SpannableStringBuilder.debugSpans(): String {
    val var1: Array<Any> = var0.getSpans(0, var0.length(), Object.class);
-   return k.t0(var1, null, null, null, 0, null, new e(), 31, null);
+   return m.y0(var1, null, null, null, 0, null, new e(), 31, null);
 }
 
 fun `debugSpans$lambda$7`(var0: Any): java.lang.CharSequence {
@@ -38,7 +38,7 @@ fun `debugSpans$lambda$7`(var0: Any): java.lang.CharSequence {
 
 public fun SpannableStringBuilder.ensureNewline(span: Any? = null) {
    if (var0.length() > 0) {
-      val var3: Character = StringsKt.c1(var0);
+      val var3: Character = StringsKt.s1(var0);
       if (var3 == null || var3 != '\n') {
          if (var1 != null) {
             val var2: Int = var0.length();
@@ -46,6 +46,8 @@ public fun SpannableStringBuilder.ensureNewline(span: Any? = null) {
             if (var1 != null) {
                var0.setSpan(var1, var2, var0.length(), 33);
             }
+
+            return;
          }
       }
    }
@@ -97,14 +99,14 @@ public inline fun SpannableStringBuilder.underline(action: (SpannableStringBuild
 }
 
 public inline fun SpannableStringBuilder.wrapIn(vararg spans: Any?, priority: Int, action: (SpannableStringBuilder) -> Unit): SpannableStringBuilder {
-   val var6: Int = var0.length();
+   val var5: Int = var0.length();
    var3.invoke(var0);
-   val var5: Int = var1.length;
+   val var6: Int = var1.length;
 
-   for (int var4 = 0; var4 < var5; var4++) {
+   for (int var4 = 0; var4 < var6; var4++) {
       val var7: Any = var1[var4];
       if (var1[var4] != null) {
-         var0.setSpan(var7, var6, var0.length(), var2 shl 16 or 33);
+         var0.setSpan(var7, var5, var0.length(), var2 shl 16 or 33);
       }
    }
 

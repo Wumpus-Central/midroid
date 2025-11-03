@@ -18,10 +18,10 @@ import kotlin.jvm.internal.SourceDebugExtension
 public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeAudioManagerModuleSpec(var1) {
    private final lateinit var audioManager: DiscordAudioManagerInterface
 
-   public override fun addListener(eventType: String) {
+   public open fun addListener(eventType: String) {
    }
 
-   public override fun getActiveAudioDevice(promise: Promise) {
+   public open fun getActiveAudioDevice(promise: Promise) {
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");
@@ -31,7 +31,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       var1.resolve(var2.getEffectiveAudioDevice().toNativeMap());
    }
 
-   public override fun getAudioDevices(promise: Promise) {
+   public open fun getAudioDevices(promise: Promise) {
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");
@@ -39,7 +39,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       }
 
       val var5: java.lang.Iterable = var2.getAudioDevices();
-      val var4: ArrayList = new ArrayList(CollectionsKt.v(var5, 10));
+      val var4: ArrayList = new ArrayList(CollectionsKt.w(var5, 10));
       val var6: java.util.Iterator = var5.iterator();
 
       while (var6.hasNext()) {
@@ -49,10 +49,10 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       var1.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
    }
 
-   public override fun removeListeners(count: Double) {
+   public open fun removeListeners(count: Double) {
    }
 
-   public override fun setActiveAudioDevice(deviceMap: ReadableMap) {
+   public open fun setActiveAudioDevice(deviceMap: ReadableMap) {
       val var3: AndroidAudioDevice = AndroidAudioDevice.Companion.fromReadableMap(var1);
       var var4: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
@@ -63,7 +63,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       var4.setActiveAudioDevice(var3);
    }
 
-   public override fun setCommunicationModeOn(on: Boolean) {
+   public open fun setCommunicationModeOn(on: Boolean) {
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");
@@ -73,7 +73,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       var2.setCommunicationModeOn(var1);
    }
 
-   public override fun setSCORetryCount(count: Double) {
+   public open fun setSCORetryCount(count: Double) {
       var var3: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");

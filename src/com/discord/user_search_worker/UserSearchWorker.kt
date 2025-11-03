@@ -1,5 +1,6 @@
 package com.discord.user_search_worker
 
+import ht.p
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -11,7 +12,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import xa.p
 
 @SourceDebugExtension(["SMAP\nUserSearchWorker.kt\nKotlin\n*S Kotlin\n*F\n+ 1 UserSearchWorker.kt\ncom/discord/user_search_worker/UserSearchWorker\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 _Maps.kt\nkotlin/collections/MapsKt___MapsKt\n*L\n1#1,283:1\n123#2:284\n1863#3,2:285\n216#4,2:287\n*S KotlinDebug\n*F\n+ 1 UserSearchWorker.kt\ncom/discord/user_search_worker/UserSearchWorker\n*L\n26#1:284\n47#1:285,2\n70#1:287,2\n*E\n"])
 internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String, String) -> Unit) {
@@ -160,7 +160,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                var5 = var10.getGlobalName();
             }
 
-            var14 = var10.copy(var12, var13, var15, var3, var21, var5, O.q(var10.getNicknames(), var6.getNicknames()));
+            var14 = var10.copy(var12, var13, var15, var3, var21, var5, s0.q(var10.getNicknames(), var6.getNicknames()));
             if (var14 == null) {
                var14 = var6;
             }
@@ -197,130 +197,158 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var20: java.lang.String = var23.getKey() as java.lang.String;
-         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var24: UserSearchQuerySetFilters = var28.getFilters();
-         if (var24 == null || var24.getFriends() == var2 || var24.getGuild() != null && var8.contains(var24.getGuild())) {
-            this.searchUsers(var20, var28);
+         val var16: java.lang.String = var23.getKey() as java.lang.String;
+         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var28: UserSearchQuerySetFilters = var24.getFilters();
+         if (var28 == null || var28.getFriends() == var2 || var28.getGuild() != null && var8.contains(var28.getGuild())) {
+            this.searchUsers(var16, var24);
          }
       }
    }
 
    private fun searchUsers(uuid: String, payload: UserSearchQuerySetPayload) {
-      var var7: Boolean;
-      var var12: java.lang.String;
-      label88: {
-         var12 = var2.getQuery();
-         val var8: UserSearchQuerySetFilters = var2.getFilters();
-         if (var8 != null) {
-            val var21: java.lang.Boolean = var8.getStrict();
-            if (var21 != null) {
-               var7 = var21;
-               break label88;
+      var var7: Byte;
+      var var9: Boolean;
+      var var14: java.lang.String;
+      label92: {
+         var14 = var2.getQuery();
+         val var11: UserSearchQuerySetFilters = var2.getFilters();
+         var7 = 0;
+         if (var11 != null) {
+            val var23: java.lang.Boolean = var11.getStrict();
+            if (var23 != null) {
+               var9 = var23;
+               break label92;
             }
          }
 
-         var7 = false;
+         var9 = false;
       }
 
-      val var13: ArrayList = new ArrayList();
-      if (var12.length() == 0) {
-         this.onResults.invoke(var13, var12, var1);
+      val var15: ArrayList = new ArrayList();
+      if (var14.length() == 0) {
+         this.onResults.invoke(var15, var14, var1);
       } else {
-         val var22: java.lang.String = Regex.e.c(var12);
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("^");
-         var9.append(var22);
-         var var10: java.lang.String = var9.toString();
-         val var24: i = i.i;
-         val var14: Regex = new Regex(var10, i.i);
-         val var23: Regex = new Regex(var22, var24);
+         var var24: java.lang.String = Regex.e.c(var14);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("^");
+         var12.append(var24);
+         val var13: java.lang.String = var12.toString();
+         val var35: m = m.i;
+         val var16: Regex = new Regex(var13, m.i);
+         val var18: Regex = new Regex(var24, var35);
 
          for (Entry var25 : this.users.entrySet()) {
-            val var16: java.lang.String = var25.getKey() as java.lang.String;
+            val var19: java.lang.String = var25.getKey() as java.lang.String;
             val var26: UserSearchTransformedUser = var25.getValue() as UserSearchTransformedUser;
-            val var17: java.lang.String = var26.getUsername();
-            if (this.isValid(var16, var26, var2)) {
-               val var31: java.lang.Double = var2.getBoosters().get(var16);
+            val var20: java.lang.String = var26.getUsername();
+            if (this.isValid(var19, var26, var2)) {
+               val var36: java.lang.Double = var2.getBoosters().get(var19);
                val var3: Double;
-               if (var31 != null) {
-                  var3 = var31;
+               if (var36 != null) {
+                  var3 = var36;
                } else {
                   var3 = 0.0;
                }
 
                val var5: Double = var2.getBoosterFallback();
-               var var30: UserSearchWorkerResult;
-               if (var16 == var12) {
-                  var30 = new UserSearchWorkerResult(var16, var17, var16, this.calculateScore(10.0, var3, var5));
+               val var8: Byte;
+               val var10: Boolean;
+               val var30: UserSearchWorkerResult;
+               if (var19 == var14) {
+                  var30 = new UserSearchWorkerResult(var19, var20, var19, this.calculateScore(10.0, var3, var5));
+                  var10 = var9;
+                  var8 = var7;
                } else {
                   val var29: java.util.List;
-                  if (var7) {
-                     var10 = var26.getUsername();
-                     val var18: java.lang.String = var26.getGlobalName();
-                     val var11: java.lang.String = var26.getFriendNickname();
-                     val var19: java.util.Map = var26.getNicknames();
+                  if (var9) {
+                     val var37: Array<java.lang.String> = new java.lang.String[4];
+                     var37[var7] = var26.getUsername();
+                     var37[1] = var26.getGlobalName();
+                     var37[2] = var26.getFriendNickname();
+                     val var40: java.util.Map = var26.getNicknames();
                      val var27: UserSearchQuerySetFilters = var2.getFilters();
-                     val var28: java.lang.String;
                      if (var27 != null) {
-                        var28 = var27.getGuild();
+                        var24 = var27.getGuild();
                      } else {
-                        var28 = null;
+                        var24 = null;
                      }
 
-                     var29 = CollectionsKt.n(new java.lang.String[]{var10, var18, var11, (java.lang.String)var19.get(var28)});
+                     var37[3] = (java.lang.String)var40.get(var24);
+                     var29 = CollectionsKt.o(var37);
                   } else {
-                     if (var7) {
+                     if (var9) {
                         throw new p();
                      }
 
-                     var29 = CollectionsKt.C0(
-                        CollectionsKt.n(new java.lang.String[]{var26.getUsername(), var26.getGlobalName(), var26.getFriendNickname()}),
+                     var29 = CollectionsKt.L0(
+                        CollectionsKt.o(new java.lang.String[]{var26.getUsername(), var26.getGlobalName(), var26.getFriendNickname()}),
                         var26.getNicknames().values()
                      );
                   }
 
-                  val var36: java.util.Iterator = CollectionsKt.g0(var29).iterator();
-                  var30 = null;
+                  val var21: java.util.Iterator = CollectionsKt.l0(var29).iterator();
+                  var var38: UserSearchWorkerResult = null;
 
-                  while (var36.hasNext()) {
-                     var10 = var36.next() as java.lang.String;
-                     val var34: UserSearchWorker.Companion.LocalResult;
-                     if (var14.a(var10)) {
-                        var34 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(10.0, var3, var5));
-                     } else if (var23.a(var10)) {
-                        var34 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(5.0, var3, var5));
-                     } else if (this.fuzzySearch(var12, UserSearchWorker.Companion.access$strippedOfDiacritics(Companion, var10))) {
-                        var34 = new UserSearchWorker.Companion.LocalResult(var10, this.calculateScore(1.0, var3, var5));
-                     } else {
-                        var34 = null;
+                  while (true) {
+                     var8 = var7;
+                     var10 = var9;
+                     var30 = var38;
+                     if (!var21.hasNext()) {
+                        break;
                      }
 
-                     var var35: UserSearchWorkerResult;
-                     var35 = var30;
-                     label77:
-                     if (var34 != null) {
-                        if (var30 != null) {
-                           var35 = var30;
-                           if (!(var30.getScore() < var34.getScore())) {
-                              break label77;
+                     label81: {
+                        var24 = var21.next() as java.lang.String;
+                        val var32: UserSearchWorker.Companion.LocalResult;
+                        if (var16.b(var24)) {
+                           var32 = new UserSearchWorker.Companion.LocalResult(var24, this.calculateScore(10.0, var3, var5));
+                        } else if (var18.b(var24)) {
+                           var32 = new UserSearchWorker.Companion.LocalResult(var24, this.calculateScore(5.0, var3, var5));
+                        } else {
+                           if (!this.fuzzySearch(var14, UserSearchWorker.Companion.access$strippedOfDiacritics(Companion, var24))) {
+                              var41 = null;
+                              break label81;
+                           }
+
+                           var32 = new UserSearchWorker.Companion.LocalResult(var24, this.calculateScore(1.0, var3, var5));
+                        }
+
+                        var41 = var32;
+                     }
+
+                     var33 = var38;
+                     label74:
+                     if (var41 != null) {
+                        if (var38 != null) {
+                           var33 = var38;
+                           if (!(var38.getScore() < var41.getScore())) {
+                              break label74;
                            }
                         }
 
-                        var35 = new UserSearchWorkerResult(var16, var17, var34.getComparator(), var34.getScore());
+                        var33 = new UserSearchWorkerResult(var19, var20, var41.getComparator(), var41.getScore());
                      }
 
-                     var30 = var35;
+                     var38 = var33;
                   }
                }
 
                if (var30 != null) {
-                  var13.add(var30);
+                  var15.add(var30);
                }
+
+               var7 = var8;
+               var9 = var10;
             }
          }
 
-         this.onResults.invoke(CollectionsKt.P0(CollectionsKt.M0(var13, Aa.a.b(new Function1[]{new b(), new c()})), var2.getLimit()), var12, var1);
+         val var34: b = new b();
+         val var42: c = new c();
+         val var39: Array<Array<Function1>> = new Function1[2];
+         var39[var7] = var34;
+         var39[1] = var42;
+         this.onResults.invoke(CollectionsKt.a1(CollectionsKt.W0(var15, lt.a.b(var39)), var2.getLimit()), var14, var1);
       }
    }
 
@@ -347,12 +375,10 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          this.mergeUsers(var3 as UserSearchUpdateUsersData);
       } else if (var3 is UserSearchQuerySetData) {
          this.setNewQuery(var3 as UserSearchQuerySetData);
-      } else {
-         if (var3 !is UserSearchQueryClearData) {
-            throw new p();
-         }
-
+      } else if (var3 is UserSearchQueryClearData) {
          this.clearQuery(var3 as UserSearchQueryClearData);
+      } else {
+         throw new p();
       }
    }
 

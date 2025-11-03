@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.BaseChatListAdapter
 import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata
@@ -20,18 +20,18 @@ import kotlin.jvm.internal.SourceDebugExtension
 public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate(var1, null, 2) {
    @JvmStatic
    fun `bindView$lambda$1`(var0: BaseChatListItemDelegate.Metadata, var1: DeserializationErrorMessageItem, var2: Boolean): Unit {
-      val var5: RecyclerView.Adapter = var0.getHolder().getBindingAdapter();
+      val var5: Adapter = var0.getHolder().getBindingAdapter();
       val var13: BaseChatListAdapter = var5 as BaseChatListAdapter;
       val var4: Int = var0.getHolder().getBindingAdapterPosition();
       var1 = new DeserializationErrorMessageItem(var1.getMessage(), var2);
       var var8: Any = var13.getItems();
-      val var6: ArrayList = new ArrayList(CollectionsKt.v(var8 as java.lang.Iterable, 10));
+      val var6: ArrayList = new ArrayList(CollectionsKt.w(var8 as java.lang.Iterable, 10));
       val var7: java.util.Iterator = (var8 as java.lang.Iterable).iterator();
 
       for (int var3 = 0; var7.hasNext(); var3++) {
          var8 = var7.next();
          if (var3 < 0) {
-            CollectionsKt.u();
+            CollectionsKt.v();
          }
 
          var8 = var8 as ChatListItem;

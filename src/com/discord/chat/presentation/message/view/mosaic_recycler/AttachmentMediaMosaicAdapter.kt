@@ -1,18 +1,10 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import E2.a
-import E2.b
-import E2.c
-import E2.d
-import E2.e
-import E2.f
-import E2.g
-import E2.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory
 import com.discord.chat.presentation.message.messagepart.MessageAttachmentAccessory
@@ -22,6 +14,14 @@ import com.discord.chat.presentation.message.view.MediaVideoView
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
+import j8.a
+import j8.b
+import j8.c
+import j8.d
+import j8.e
+import j8.f
+import j8.g
+import j8.h
 import java.util.ArrayList
 
 public class AttachmentMediaMosaicAdapter(context: Context,
@@ -30,7 +30,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       onItemSpoilerClicked: (MessageAttachmentAccessory) -> Unit,
       onItemObscureToggle: (Boolean) -> Unit
    )
-   : RecyclerView.Adapter {
+   : Adapter {
    private final val context: Context
    private final val onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit
    private final val onItemLongClicked: ((MessageAttachmentAccessory) -> Unit)?
@@ -102,61 +102,31 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       return Unit.a;
    }
 
-   public override fun getItemCount(): Int {
+   public open fun getItemCount(): Int {
       return this.items.size();
    }
 
-   public override fun getItemViewType(position: Int): Int {
+   public open fun getItemViewType(position: Int): Int {
       val var2: MessageAttachmentAccessory = this.items.get(var1);
-      val var3: Byte;
       if (var2 is ImageAttachmentMessageAccessory) {
-         var3 = 49;
+         return 49;
+      } else if (var2 is VideoAttachmentMessageAccessory) {
+         return 50;
       } else {
-         if (var2 !is VideoAttachmentMessageAccessory) {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("Invalid accessory type: ");
-            var4.append(var1);
-            throw new IllegalStateException(var4.toString().toString());
-         }
-
-         var3 = 50;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Invalid accessory type: ");
+         var3.append(var1);
+         throw new IllegalStateException(var3.toString().toString());
       }
-
-      return var3;
    }
 
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
       val var5: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-            var var6: Any = this.items.get(var2);
-            var6 = var6 as ImageAttachmentMessageAccessory;
-            val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-            val var3: Boolean;
-            if (this.getItemCount() == 1) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
-            val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
-            );
-         } else {
-            if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
-            }
-
             var var14: Any = this.items.get(var2);
-            var14 = var14 as VideoAttachmentMessageAccessory;
-            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var14 = var14 as ImageAttachmentMessageAccessory;
+            val var16: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -164,35 +134,55 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
+            val var10: a = new a(this, (ImageAttachmentMessageAccessory)var14, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var14);
+            val var4: Boolean = this.shouldAutoPlayGifs;
             var16.bindAttachment(
+               var5, (ImageAttachmentMessageAccessory)var14, var11, var10, var8, new c(this, (ImageAttachmentMessageAccessory)var14), new d(this), var4
+            );
+         } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
+            var var6: Any = this.items.get(var2);
+            var6 = var6 as VideoAttachmentMessageAccessory;
+            val var7: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var3: Boolean;
+            if (this.getItemCount() == 1) {
+               var3 = true;
+            } else {
+               var3 = false;
+            }
+
+            var7.bindAttachment(
                var5,
-               (VideoAttachmentMessageAccessory)var14,
-               var11,
-               new e(this, (VideoAttachmentMessageAccessory)var14, var1),
-               new f(this, (VideoAttachmentMessageAccessory)var14),
-               new g(this, (VideoAttachmentMessageAccessory)var14),
+               (VideoAttachmentMessageAccessory)var6,
+               var3,
+               new e(this, (VideoAttachmentMessageAccessory)var6, var1),
+               new f(this, (VideoAttachmentMessageAccessory)var6),
+               new g(this, (VideoAttachmentMessageAccessory)var6),
                new h(this)
             );
+         } else {
+            val var12: Class = var1.getClass();
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Invalid view holder type ");
+            var9.append(var12);
+            throw new IllegalStateException(var9.toString().toString());
          }
       }
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessagePartViewHolder {
-      val var3: Any;
       if (var2 != 49) {
-         if (var2 != 50) {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("Invalid accessory type: ");
-            var4.append(var2);
-            throw new IllegalStateException(var4.toString().toString());
+         if (var2 == 50) {
+            return new MosaicItemMessageAttachmentVideoViewHolder(new MediaVideoView(this.context, null, 2, null));
+         } else {
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("Invalid accessory type: ");
+            var3.append(var2);
+            throw new IllegalStateException(var3.toString().toString());
          }
-
-         var3 = new MosaicItemMessageAttachmentVideoViewHolder(new MediaVideoView(this.context, null, 2, null));
       } else {
-         var3 = new MosaicItemMessageAttachmentImageViewHolder(new MediaImageView(this.context, null, 2, null));
+         return new MosaicItemMessageAttachmentImageViewHolder(new MediaImageView(this.context, null, 2, null));
       }
-
-      return (MessagePartViewHolder)var3;
    }
 
    public fun setChatEventHandler(eventHandler: ChatEventHandler) {

@@ -6,7 +6,8 @@ import kotlin.jvm.functions.Function0;
 public final class d implements Function0 {
    public final MainApplication d;
 
+   @Override
    public final Object invoke() {
-      return MainApplication.b(this.d);
+      return MainApplication.c(this.d);
    }
 }

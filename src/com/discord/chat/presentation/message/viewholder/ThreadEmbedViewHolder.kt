@@ -39,8 +39,9 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
       val var9: java.lang.Boolean = var12.getArchived();
       val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
       var15.setArchived(var9 == java.lang.Boolean.TRUE, var12.getArchivedIconUrl());
-      val var16: P = new P(var2, var1);
+      val var16: p0 = new p0(var2, var1);
       var var4: Boolean = false;
+      var var14: GuildId = null;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, var16, 1, null);
       val var17: ThreadEmbedMessage = var12.getReferencedMessage();
       val var22: Message;
@@ -59,24 +60,24 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
          var18 = new DraweeSpanStringBuilder((java.lang.CharSequence)var18);
       } else if (var22.getContent() != null) {
-         var18 = var22.getContent();
+         val var24: StructurableText = var22.getContent();
          val var10: Context = var15.getContext();
-         val var24: java.lang.String = var22.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var22);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var22);
+         var18 = var22.getId-3Eiw7ao();
+         val var6: Boolean = MessageKt.shouldAnimateEmoji(var22);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var22);
          val var5: Boolean = var22.getShouldShowRoleDot();
-         val var6: Boolean = var22.getShouldShowRoleOnName();
+         val var8: Boolean = var22.getShouldShowRoleOnName();
          val var11: FontMetrics = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
          val var30: TextPaint = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint();
          var18 = TextUtilsKt.toSpannable$default(
-            (StructurableText)var18,
-            var10,
             var24,
-            var7,
-            var8,
-            var5,
+            var10,
+            (java.lang.String)var18,
             var6,
+            var7,
+            var5,
+            var8,
             var30,
             null,
             null,
@@ -150,11 +151,8 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          var33 = null;
       }
 
-      val var14: GuildId;
       if (var22 != null) {
          var14 = var22.getClanTagGuildId-qOKuAAo();
-      } else {
-         var14 = null;
       }
 
       var15.setMessage-CKTq3AQ(var28, var29, var31, (DraweeSpanStringBuilder)var18, var4, var32, var33, var14);

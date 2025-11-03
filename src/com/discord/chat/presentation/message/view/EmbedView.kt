@@ -14,7 +14,7 @@ import android.widget.Space
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.SetTextSizeSpKt
-import com.discord.chat.R
+import com.discord.chat.R.dimen
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
@@ -48,8 +48,8 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
+import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
-import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -72,7 +72,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    init {
       val var8: EmbedViewBinding = EmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var8;
-      this.maxThumbnailSize = var1.getResources().getDimensionPixelSize(R.dimen.message_embed_max_thumbnail_size);
+      this.maxThumbnailSize = var1.getResources().getDimensionPixelSize(dimen.message_embed_max_thumbnail_size);
       var8.getRoot().setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       val var3: SimpleDraweeSpanTextView = var8.provider;
       SetTextSizeSpKt.setTextSizeSp(var3, 10.0F);
@@ -151,13 +151,13 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    }
 
    private fun clearInlineMedia() {
-      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView;
+      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView;
       val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
-      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
+      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
       val var7: EmbedViewResizingMediaView = this.binding.inlineMediaView4;
 
       for (int var1 = 0; var1 < 4; var1++) {
-         val var6: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var3, var4, var2, var7}[var1];
+         val var6: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var2, var4, var3, var7}[var1];
          MediaView.setMediaData$default(
             var6, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262142, null
          );
@@ -224,7 +224,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    private fun setAuthor(authorUrl: String?, authorName: String?, shouldAutoPlayGifs: Boolean) {
       val var6: LinearLayout = this.binding.authorContainer;
       var var4: Boolean;
-      if ((var1 == null || StringsKt.c0(var1)) && (var2 == null || StringsKt.c0(var2))) {
+      if ((var1 == null || StringsKt.i0(var1)) && (var2 == null || StringsKt.i0(var2))) {
          var4 = 0;
       } else {
          var4 = 1;
@@ -246,7 +246,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    private fun setAuthorOnClickListener(listener: OnClickListener?, onTapCopyText: (CharSequence) -> Unit) {
       val var3: TextView = this.binding.authorName;
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, var1, 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var3, false, new B(var2, this), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var3, false, new b0(var2, this), 1, null);
    }
 
    @JvmStatic
@@ -401,7 +401,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
       ReactAssetUtilsKt.setOptionalReactImageUrl(var10, var3);
       val var9: SimpleDraweeView = this.binding.errorIcon;
       var var7: Boolean;
-      if (var1 != null && !StringsKt.c0(var1)) {
+      if (var1 != null && !StringsKt.i0(var1)) {
          var7 = 0;
       } else {
          var7 = 1;
@@ -431,8 +431,8 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
       onTapChannel: (String, String?, String?) -> Unit,
       onTapMention: (String?, String, String?, String?) -> Unit
    ) {
-      var var17: u = new u(var7, var2);
-      val var25: LinearLayout = this.binding.fieldsContainer;
+      val var22: u = new u(var7, var2);
+      val var30: LinearLayout = this.binding.fieldsContainer;
       val var14: Byte;
       if (!var1.isEmpty()) {
          var14 = 0;
@@ -440,40 +440,41 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
          var14 = 8;
       }
 
-      var25.setVisibility(var14);
-      ViewGroupUtilsKt.setUpLayoutForList(var25, var1.size(), new v(var25));
-      val var19: java.util.Iterator = var1.iterator();
-      val var24: u = var17;
+      var30.setVisibility(var14);
+      ViewGroupUtilsKt.setUpLayoutForList(var30, var1.size(), new v(var30));
+      val var23: java.util.Iterator = var1.iterator();
 
-      for (int var26 = 0; var19.hasNext(); var26++) {
-         var17 = (u)var19.next();
-         if (var26 < 0) {
-            CollectionsKt.u();
+      for (int var31 = 0; var23.hasNext(); var31++) {
+         var var26: Any = var23.next();
+         if (var31 < 0) {
+            CollectionsKt.v();
          }
 
-         val var21: EmbedField = var17 as EmbedField;
-         val var28: View = var25.getChildAt(var26);
-         val var20: EmbedFieldView = var28 as EmbedFieldView;
-         var var29: java.lang.String = var21.getRawName();
-         if (var29 == null) {
-            var29 = "";
+         val var24: EmbedField = var26 as EmbedField;
+         var26 = var30.getChildAt(var31);
+         val var17: EmbedFieldView = var26 as EmbedFieldView;
+         var var18: java.lang.String = var24.getRawName();
+         var26 = var18;
+         if (var18 == null) {
+            var26 = "";
          }
 
-         val var22: StructurableText = var21.getName();
-         var var31: DraweeSpanStringBuilder;
-         if (var22 != null) {
-            val var23: Context = var20.getContext();
-            val var18: TextPaint = var20.getBinding().name.getPaint();
-            var31 = TextUtilsKt.toSpannable$default(
-               var22,
-               var23,
+         val var25: StructurableText = var24.getName();
+         val var33: DraweeSpanStringBuilder;
+         val var35: java.lang.String;
+         if (var25 != null) {
+            val var19: Context = var17.getContext();
+            val var32: TextPaint = var17.getBinding().name.getPaint();
+            var33 = TextUtilsKt.toSpannable$default(
+               var25,
+               var19,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var18,
-               var24,
+               var32,
+               var22,
                var8,
                var12,
                null,
@@ -495,31 +496,33 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                65788928,
                null
             );
+            var35 = (java.lang.String)var26;
          } else {
-            var31 = null;
+            var33 = null;
+            var35 = (java.lang.String)var26;
          }
 
-         var20.setName(var29, var31, var9);
-         var var30: java.lang.String = var21.getRawValue();
-         if (var30 == null) {
-            var30 = "";
+         var17.setName(var35, var33, var9);
+         var18 = var24.getRawValue();
+         if (var18 == null) {
+            var18 = "";
          }
 
-         val var32: StructurableText = var21.getValue();
-         if (var32 != null) {
-            val var35: Context = var20.getContext();
-            val var34: TextPaint = var20.getBinding().value.getPaint();
-            val var36: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
-            var31 = TextUtilsKt.toSpannable$default(
-               var32,
-               var35,
+         val var36: StructurableText = var24.getValue();
+         if (var36 != null) {
+            val var38: Context = var17.getContext();
+            val var39: TextPaint = var17.getBinding().value.getPaint();
+            val var40: FontMetrics = var17.getBinding().value.getPaint().getFontMetrics();
+            var26 = TextUtilsKt.toSpannable$default(
+               var36,
+               var38,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var34,
-               var24,
+               var39,
+               var22,
                var8,
                var12,
                null,
@@ -536,16 +539,16 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var36),
+               TextUtilsKt.getBaselineHeightPx(var40),
                null,
                49011712,
                null
             );
          } else {
-            var31 = null;
+            var26 = null;
          }
 
-         var20.setValue(var30, var31, var9);
+         var17.setValue(var18, (DraweeSpanStringBuilder)var26, var9);
       }
    }
 
@@ -564,7 +567,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    private fun setFooter(imageUrl: String?, text: String?, onTapCopyText: (CharSequence) -> Unit, shouldAutoPlayGifs: Boolean) {
       val var6: LinearLayout = this.binding.footerContainer;
       var var5: Boolean;
-      if ((var1 == null || StringsKt.c0(var1)) && (var2 == null || StringsKt.c0(var2))) {
+      if ((var1 == null || StringsKt.i0(var1)) && (var2 == null || StringsKt.i0(var2))) {
          var5 = 0;
       } else {
          var5 = 1;
@@ -581,9 +584,9 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
       SetOptionalImageUrlKt.setOptionalImageUrl$default(var9, var1, var4, null, null, 12, null);
       val var10: TextView = this.binding.footerText;
       ViewUtilsKt.setOptionalText(var10, var2);
-      val var7: C;
+      val var7: c0;
       if (var2 != null) {
-         var7 = new C(var3, var2);
+         var7 = new c0(var3, var2);
       } else {
          var7 = null;
       }
@@ -598,6 +601,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    }
 
    private fun setMediaEmbed(mediaView: EmbedViewResizingMediaView, embed: Embed, mediaSource: MediaSource, maxHeightPx: Int, maxWidthPx: Int) {
+      var var8: Boolean = false;
       if (var4 > 0 && var5 > 0) {
          val var10: Pair = EmbedUtilsKt.getTargetDimensions(var2);
          val var9: Int = var10.a() as Int;
@@ -621,11 +625,8 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
 
       var1.setVisibility(0);
       val var11: EmbedThumbnail = var2.getThumbnail();
-      val var8: Boolean;
       if (var11 != null) {
          var8 = var11.getShowPlayButton() == java.lang.Boolean.TRUE;
-      } else {
-         var8 = false;
       }
 
       MediaView.setMediaData$default(
@@ -650,9 +651,9 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
       }
 
       var5.setTextColor(var4);
-      val var6: E;
+      val var6: e0;
       if (var1 != null) {
-         var6 = new E(var3, var1);
+         var6 = new e0(var3, var1);
       } else {
          var6 = null;
       }
@@ -732,9 +733,9 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
 
       var7.setTextColor(var6);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, var4, 1, null);
-      val var8: D;
+      val var8: d0;
       if (var2 != null) {
-         var8 = new D(var5, var1);
+         var8 = new d0(var5, var1);
       } else {
          var8 = null;
       }
@@ -786,39 +787,39 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
 
       val var33: View = this.binding.getRoot();
       ViewClippingUtilsKt.clipToRoundedRectangle(var33, var7);
-      val var75: ConstraintLayout = this.binding.inlineMediaContainer;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var75, var7);
-      val var76: EmbedViewResizingMediaView = this.binding.mediaView;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var76, var7);
-      val var77: SimpleDraweeView = this.binding.thumbnail;
+      val var77: ConstraintLayout = this.binding.inlineMediaContainer;
       ViewClippingUtilsKt.clipToRoundedRectangle(var77, var7);
+      val var78: EmbedViewResizingMediaView = this.binding.mediaView;
+      ViewClippingUtilsKt.clipToRoundedRectangle(var78, var7);
+      val var79: SimpleDraweeView = this.binding.thumbnail;
+      ViewClippingUtilsKt.clipToRoundedRectangle(var79, var7);
       if (EmbedUtilsKt.isInlineMedia(var1)) {
-         val var38: MediaSource = EmbedUtilsKt.toMediaSource-UBIQNlQ(var1, var2, var4, var8, var26);
-         if (var38 != null) {
-            val var47: Space = this.binding.spacer;
-            var47.setVisibility(8);
-            if (var38.getPreviewUrl() != null) {
-               val var48: EmbedViewResizingMediaView = this.binding.mediaView;
-               this.setMediaEmbed(var48, var1, var38, var6, MessageAccessoriesView.Companion.getWidth(var5, var31));
-               this.binding.mediaView.setOnMediaClickListeners(new r(var15, var38, var28, this), var16);
+         val var39: MediaSource = EmbedUtilsKt.toMediaSource-UBIQNlQ(var1, var2, var4, var8, var26);
+         if (var39 != null) {
+            val var48: Space = this.binding.spacer;
+            var48.setVisibility(8);
+            if (var39.getPreviewUrl() != null) {
+               val var49: EmbedViewResizingMediaView = this.binding.mediaView;
+               this.setMediaEmbed(var49, var1, var39, var6, MessageAccessoriesView.Companion.getWidth(var5, var31));
+               this.binding.mediaView.setOnMediaClickListeners(new r(var15, var39, var28, this), var16);
                setBackgroundColorEnabled$default(this, false, null, 2, null);
             }
          }
       } else {
-         val var78: StructurableText = var1.getTitle();
-         val var79: DraweeSpanStringBuilder;
-         if (var78 != null) {
-            val var34: Context = this.getContext();
-            val var35: TextPaint = this.binding.title.getPaint();
-            var79 = TextUtilsKt.toSpannable$default(
-               var78,
-               var34,
+         val var80: StructurableText = var1.getTitle();
+         val var81: DraweeSpanStringBuilder;
+         if (var80 != null) {
+            val var35: Context = this.getContext();
+            val var34: TextPaint = this.binding.title.getPaint();
+            var81 = TextUtilsKt.toSpannable$default(
+               var80,
+               var35,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var35,
+               var34,
                null,
                null,
                var22,
@@ -842,46 +843,45 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null
             );
          } else {
-            var79 = null;
+            var81 = null;
          }
 
-         val var84: java.lang.String = var1.getRawTitle();
-         var var82: java.lang.String = var84;
-         if (var84 == null) {
-            var82 = "";
+         val var85: java.lang.String = var1.getRawTitle();
+         var var83: java.lang.String = var85;
+         if (var85 == null) {
+            var83 = "";
          }
 
-         val var85: Int;
+         val var86: Int;
          if (var1.getUrl() != null) {
-            var85 = ThemeManagerKt.getTheme().getTextLink();
+            var86 = ThemeManagerKt.getTheme().getTextLink();
          } else {
-            var85 = var1.getHeaderTextColor();
+            var86 = var1.getHeaderTextColor();
          }
 
-         val var36: java.lang.String = var1.getUrl();
-         val var49: w;
-         if (var36 != null) {
-            var49 = new w(var13, var4, var36, var79);
+         val var37: java.lang.String = var1.getUrl();
+         val var50: w;
+         if (var37 != null) {
+            var50 = new w(var13, var4, var37, var81);
          } else {
-            var49 = null;
+            var50 = null;
          }
 
-         this.setTitle(var82, var79, var85, var49, var19);
-         val var80: java.lang.String = var1.getRawDescription();
-         var var50: java.lang.String = var80;
-         if (var80 == null) {
-            var50 = "";
+         this.setTitle(var83, var81, var86, var50, var19);
+         var var51: java.lang.String = var1.getRawDescription();
+         if (var51 == null) {
+            var51 = "";
          }
 
-         val var81: StructurableText = var1.getDescription();
-         val var72: DraweeSpanStringBuilder;
-         if (var81 != null) {
-            val var83: Context = this.getContext();
+         val var88: StructurableText = var1.getDescription();
+         val var74: DraweeSpanStringBuilder;
+         if (var88 != null) {
+            val var84: Context = this.getContext();
             val var87: TextPaint = this.binding.description.getPaint();
-            val var86: FontMetrics = this.binding.description.getPaint().getFontMetrics();
-            var72 = TextUtilsKt.toSpannable$default(
-               var81,
-               var83,
+            val var82: FontMetrics = this.binding.description.getPaint().getFontMetrics();
+            var74 = TextUtilsKt.toSpannable$default(
+               var88,
+               var84,
                var4,
                var9,
                var10,
@@ -905,134 +905,134 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var86),
+               TextUtilsKt.getBaselineHeightPx(var82),
                null,
                48995328,
                null
             );
          } else {
-            var72 = null;
-         }
-
-         this.setDescription(var50, var72, var1.getBodyTextColor(), var19);
-         val var51: EmbedProvider = var1.getProvider();
-         val var52: java.lang.String;
-         if (var51 != null) {
-            var52 = var51.getName();
-         } else {
-            var52 = null;
-         }
-
-         this.setProvider(var52, var1.getProviderColor(), var19);
-         this.setBackgroundColorEnabled(var1.getDisableBackgroundColor() == java.lang.Boolean.TRUE xor true, var1.getBackgroundColor());
-         this.setBorder(var1.getBorderLeftColor());
-         val var53: EmbedAuthor = var1.getAuthor();
-         val var54: java.lang.String;
-         if (var53 != null) {
-            var54 = var53.getImageUrl();
-         } else {
-            var54 = null;
-         }
-
-         val var73: EmbedAuthor = var1.getAuthor();
-         val var74: java.lang.String;
-         if (var73 != null) {
-            var74 = var73.getName();
-         } else {
             var74 = null;
          }
 
-         this.setAuthor(var54, var74, var8);
-         val var55: EmbedAuthor = var1.getAuthor();
-         val var56: y;
-         if (var55 != null && var55.getUrl() != null) {
-            var56 = new y(var14, var4, var1);
+         this.setDescription(var51, var74, var1.getBodyTextColor(), var19);
+         val var52: EmbedProvider = var1.getProvider();
+         val var53: java.lang.String;
+         if (var52 != null) {
+            var53 = var52.getName();
          } else {
-            var56 = null;
+            var53 = null;
          }
 
-         this.setAuthorOnClickListener(var56, var19);
-         val var65: java.util.List = var1.getFields();
-         var var57: java.util.List = var65;
-         if (var65 == null) {
-            var57 = CollectionsKt.k();
-         }
-
-         this.setFields-SAQFhFE(var57, var4, var9, var10, var11, var12, var17, var18, var19, var20, var21, var22, var23);
-         val var58: EmbedFooter = var1.getFooter();
-         val var59: java.lang.String;
-         if (var58 != null) {
-            var59 = var58.getImageUrl();
+         this.setProvider(var53, var1.getProviderColor(), var19);
+         this.setBackgroundColorEnabled(var1.getDisableBackgroundColor() == java.lang.Boolean.TRUE xor true, var1.getBackgroundColor());
+         this.setBorder(var1.getBorderLeftColor());
+         val var54: EmbedAuthor = var1.getAuthor();
+         val var55: java.lang.String;
+         if (var54 != null) {
+            var55 = var54.getImageUrl();
          } else {
-            var59 = null;
+            var55 = null;
          }
 
-         val var66: EmbedFooter = var1.getFooter();
-         val var67: java.lang.String;
-         if (var66 != null) {
-            var67 = var66.getContent();
+         val var75: EmbedAuthor = var1.getAuthor();
+         val var76: java.lang.String;
+         if (var75 != null) {
+            var76 = var75.getName();
          } else {
-            var67 = null;
+            var76 = null;
          }
 
-         this.setFooter(var59, var67, var19, var8);
+         this.setAuthor(var55, var76, var8);
+         val var56: EmbedAuthor = var1.getAuthor();
+         val var57: y;
+         if (var56 != null && var56.getUrl() != null) {
+            var57 = new y(var14, var4, var1);
+         } else {
+            var57 = null;
+         }
+
+         this.setAuthorOnClickListener(var57, var19);
+         val var67: java.util.List = var1.getFields();
+         var var58: java.util.List = var67;
+         if (var67 == null) {
+            var58 = CollectionsKt.l();
+         }
+
+         this.setFields-SAQFhFE(var58, var4, var9, var10, var11, var12, var17, var18, var19, var20, var21, var22, var23);
+         val var59: EmbedFooter = var1.getFooter();
+         val var60: java.lang.String;
+         if (var59 != null) {
+            var60 = var59.getImageUrl();
+         } else {
+            var60 = null;
+         }
+
+         val var68: EmbedFooter = var1.getFooter();
+         val var69: java.lang.String;
+         if (var68 != null) {
+            var69 = var68.getContent();
+         } else {
+            var69 = null;
+         }
+
+         this.setFooter(var60, var69, var19, var8);
          if (var1.getFailureState() === EmbedFailureState.AUTO_MODERATION_BLOCKED_MESSAGE) {
             this.setError(
-               var1.getMessageSendError(), ThemeManagerKt.getTheme().getTextMuted(), var1.getIconURL(), ColorUtilsKt.getColorCompat(this, color.red_345)
+               var1.getMessageSendError(), ThemeManagerKt.getTheme().getTextMuted(), var1.getIconURL(), ColorUtilsKt.getColorCompat(this, R.color.red_345)
             );
          } else {
             this.setError(var1.getMessageSendError(), var1.getBodyTextColor(), var1.getIconURL(), null);
          }
 
-         val var60: java.util.List = EmbedUtilsKt.toImageMediaSources-SHRpUJI(var1, var2, var4);
-         if (var60 != null) {
+         val var61: java.util.List = EmbedUtilsKt.toImageMediaSources-SHRpUJI(var1, var2, var4);
+         if (var61 != null) {
             var6 = (int)(var6 * 0.75);
             var5 = MessageAccessoriesView.Companion.getWidthForEmbedContent(var5, var31);
-            val var68: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-            val var39: ConstraintLayout = this.binding.inlineMediaContainer;
-            MediaContainingViewResizer.resizeLayoutParams$default(var68, var39, var5, var6, var5, var6, null, 16, null);
-            val var41: java.util.Iterator = CollectionsKt.f1(
-                  var60,
+            val var40: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+            val var70: ConstraintLayout = this.binding.inlineMediaContainer;
+            MediaContainingViewResizer.resizeLayoutParams$default(var40, var70, var5, var6, var5, var6, null, 16, null);
+            val var42: java.util.Iterator = CollectionsKt.r1(
+                  var61,
                   new EmbedViewResizingMediaView[]{
                      this.binding.inlineMediaView, this.binding.inlineMediaView2, this.binding.inlineMediaView3, this.binding.inlineMediaView4
                   }
                )
                .iterator();
 
-            for (int var44 = 0; var41.hasNext(); var44++) {
-               val var61: Any = var41.next();
-               if (var44 < 0) {
-                  CollectionsKt.u();
+            for (int var45 = 0; var42.hasNext(); var45++) {
+               val var63: Any = var42.next();
+               if (var45 < 0) {
+                  CollectionsKt.v();
                }
 
-               val var62: MediaSource = (var61 as Pair).a() as MediaSource;
-               val var70: Any = (var61 as Pair).b();
-               val var71: EmbedViewResizingMediaView = var70 as EmbedViewResizingMediaView;
-               this.setMediaEmbed(var70 as EmbedViewResizingMediaView, var1, var62, 0, 0);
-               var71.setOnMediaClickListeners(new z(var15, var62, var44), var16);
+               val var64: MediaSource = (var63 as Pair).a() as MediaSource;
+               val var72: Any = (var63 as Pair).b();
+               val var73: EmbedViewResizingMediaView = var72 as EmbedViewResizingMediaView;
+               this.setMediaEmbed(var72 as EmbedViewResizingMediaView, var1, var64, 0, 0);
+               var73.setOnMediaClickListeners(new z(var15, var64, var45), var16);
             }
          } else {
-            val var42: MediaSource = EmbedUtilsKt.toMediaSource-UBIQNlQ(var1, var2, var4, var8, var26);
-            if (var42 != null) {
-               val var63: EmbedViewResizingMediaView = this.binding.inlineMediaView;
-               this.setMediaEmbed(var63, var1, var42, var6, MessageAccessoriesView.Companion.getWidthForEmbedContent(var5, var31));
-               this.binding.inlineMediaView.setOnMediaClickListeners(new A(var15, var42, var28, this), var16);
+            val var43: MediaSource = EmbedUtilsKt.toMediaSource-UBIQNlQ(var1, var2, var4, var8, var26);
+            if (var43 != null) {
+               val var65: EmbedViewResizingMediaView = this.binding.inlineMediaView;
+               this.setMediaEmbed(var65, var1, var43, var6, MessageAccessoriesView.Companion.getWidthForEmbedContent(var5, var31));
+               this.binding.inlineMediaView.setOnMediaClickListeners(new a0(var15, var43, var28, this), var16);
             }
 
-            if (if (EmbedView.WhenMappings.$EnumSwitchMapping$0[var1.getType().ordinal()] == 1) var1.getVideo() == null else var42 == null) {
+            if (if (EmbedView.WhenMappings.$EnumSwitchMapping$0[var1.getType().ordinal()] == 1) var1.getVideo() == null else var43 == null) {
                this.setThumbnail(var1.getThumbnail(), var8);
             }
          }
       }
 
-      val var37: java.lang.String = var1.getObscureAwaitingScan();
-      val var45: Boolean;
-      if (var37 != null && !StringsKt.c0(var37)) {
-         var45 = false;
+      val var38: java.lang.String = var1.getObscureAwaitingScan();
+      val var46: Boolean;
+      if (var38 != null && !StringsKt.i0(var38)) {
+         var46 = false;
       } else {
-         var45 = true;
+         var46 = true;
       }
 
-      this.configureSpoiler(var25, var45 xor true, var29, var30);
+      this.configureSpoiler(var25, var46 xor true, var29, var30);
    }
 }

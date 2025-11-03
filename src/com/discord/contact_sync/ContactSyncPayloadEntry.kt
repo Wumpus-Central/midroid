@@ -1,7 +1,7 @@
 package com.discord.contact_sync
 
-import kc.m
 import kotlinx.serialization.KSerializer
+import xu.m
 
 @m
 public data class ContactSyncPayloadEntry(friendId: String) {
@@ -35,12 +35,12 @@ public data class ContactSyncPayloadEntry(friendId: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.friendId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ContactSyncPayloadEntry(friendId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.friendId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContactSyncPayloadEntry(friendId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -64,18 +64,21 @@ public object ReactMarkerListener : ReactMarker.MarkerListener {
          case -351240678:
             if (var6.equals("CONTENT_APPEARED")) {
                this.stop();
+               return;
             }
 
             return;
          case 241900896:
             if (var6.equals("RUN_JS_BUNDLE_END")) {
                this.setBundleParsedTimestamp(var4);
+               return;
             }
 
             return;
          case 551634855:
             if (var6.equals("RUN_JS_BUNDLE_START")) {
                this.setBundleLoadedTimestamp(var4);
+               return;
             }
 
             return;

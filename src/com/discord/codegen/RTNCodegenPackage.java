@@ -8,11 +8,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class RTNCodegenPackage implements ReactPackage {
+   @Override
    public List<NativeModule> createNativeModules(ReactApplicationContext var1) {
-      return Collections.emptyList();
+      return Collections.EMPTY_LIST;
    }
 
+   @Override
    public List<ViewManager> createViewManagers(ReactApplicationContext var1) {
-      return Collections.emptyList();
+      return Collections.EMPTY_LIST;
    }
 }

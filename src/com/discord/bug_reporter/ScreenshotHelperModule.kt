@@ -7,7 +7,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import xa.v
+import ht.v
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
    private final val reactContext: ReactApplicationContext
@@ -53,7 +53,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun addListener(type: String) {
       if (this.screenshotDetector != null) {
-         this.screenshotDetector.setScreenshotListener(new b(this));
+         this.screenshotDetector.setScreenshotListener(new com.discord.bug_reporter.b(this));
       }
    }
 

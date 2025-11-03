@@ -24,21 +24,21 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
-import com.discord.theme.R.color
+import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
+import ht.o
 import java.util.ArrayList
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.reflect.KClass
-import xa.o
 
 @SourceDebugExtension(["SMAP\nContentInventoryComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ContentInventoryComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContentInventoryComponentView\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,186:1\n1#2:187\n1557#3:188\n1628#3,3:189\n*S KotlinDebug\n*F\n+ 1 ContentInventoryComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/components/ContentInventoryComponentView\n*L\n79#1:188\n79#1:189,3\n*E\n"])
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout(
          var1, var2, var3
       ),
    ComponentView<ContentInventoryEntryComponent> {
-   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = G3.d.g()
+   private final val draweeControllerBuilder: PipelineDraweeControllerBuilder = ja.d.g()
 
    private final val binding: MessageComponentContentInventoryViewBinding
       private final get() {
@@ -55,7 +55,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    init {
-      this.binding$delegate = xa.l.b(o.i, new e(this));
+      this.binding$delegate = ht.l.a(o.i, new e(this));
    }
 
    @JvmStatic
@@ -65,15 +65,15 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       val var1: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
       SetTextSizeSpKt.setTextSizeSp(var2, 14.0F);
-      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, color.primary_160));
+      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, R.color.primary_160));
       var2 = var3.contentInventoryComponentTitle;
       DiscordFontUtilsKt.setDiscordFont(var2, var1);
       SetTextSizeSpKt.setTextSizeSp(var2, 16.0F);
-      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, color.primary_160));
+      var2.setTextColor(ColorUtilsKt.getColorCompat(var2, R.color.primary_160));
       val var4: TextView = var3.contentInventoryComponentSubtitle;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
-      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, color.primary_200));
+      var4.setTextColor(ColorUtilsKt.getColorCompat(var4, R.color.primary_200));
       return var3;
    }
 
@@ -82,15 +82,15 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       if (var4 == null) {
          this.getBinding().getRoot().setVisibility(8);
       } else {
-         val var23: java.util.List = var4.getGradientColors();
-         val var7: ArrayList = new ArrayList(CollectionsKt.v(var23, 10));
+         val var23: java.lang.Iterable = var4.getGradientColors();
+         val var7: ArrayList = new ArrayList(CollectionsKt.w(var23, 10));
          val var24: java.util.Iterator = var23.iterator();
 
          while (var24.hasNext()) {
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var8: IntArray = CollectionsKt.V0(var7);
+         val var8: IntArray = CollectionsKt.g1(var7);
          val var25: ContentInventoryComponentView = this.getBinding().getRoot();
          var25.setVisibility(0);
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(var25, var8, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
@@ -151,10 +151,10 @@ public class ContentInventoryComponentView  public constructor(context: Context,
          ContentInventoryComponentViewKt.access$applyClickable(var20, var3, var4, var4.getUserClickable(), "avatar");
          val var21: SimpleDraweeView = this.getBinding().contentInventoryComponentMediaImage;
          val var27: PipelineDraweeControllerBuilder = this.draweeControllerBuilder;
-         val var28: com.facebook.drawee.controller.a = ((var27.E(ContentInventoryComponentViewKt.getContentControllerListener(var21)) as PipelineDraweeControllerBuilder)
-               .Q(var4.getImageUrl())
-               .H(var21.getController()) as PipelineDraweeControllerBuilder)
-            .d();
+         val var28: com.facebook.drawee.controller.a = ((var27.D(ContentInventoryComponentViewKt.getContentControllerListener(var21)) as PipelineDraweeControllerBuilder)
+               .P(var4.getImageUrl())
+               .G(var21.getController()) as PipelineDraweeControllerBuilder)
+            .c();
          var21.setController(var28);
          ContentInventoryComponentViewKt.access$applyClickable(var21, var3, var4, var4.getImageClickable(), "media");
          val var22: SimpleDraweeView = this.getBinding().contentInventoryComponentPlatformIcon;

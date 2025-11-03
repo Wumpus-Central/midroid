@@ -20,23 +20,20 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
       if (!this.isEnabled()) {
          return false;
       } else {
-         val var5: ReactApplicationContext = this.getReactApplicationContext();
-         val var8: java.lang.Long = ReactContextExtensionsKt.jsiId(var5);
-         var var7: Boolean = false;
-         if (var8 != null) {
-            val var3: Long = var8;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         val var5: java.lang.Long = ReactContextExtensionsKt.jsiId(var3);
+         if (var5 != null) {
+            val var1: Long = var5;
 
             try {
                System.loadLibrary("jsitrace");
-               this.nativeInstall(var3);
-            } catch (var6: Exception) {
-               return false;
+               this.nativeInstall(var1);
+               return true;
+            } catch (var4: Exception) {
             }
-
-            var7 = true;
          }
 
-         return var7;
+         return false;
       }
    }
 
@@ -49,9 +46,9 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
 
    @ReactMethod
    public fun setEnabled(enabled: Boolean) {
-      val var3: JSITraceCache = JSITraceCache.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      var3.setEnabled(var2, var1);
+      val var2: JSITraceCache = JSITraceCache.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      var2.setEnabled(var3, var1);
    }
 
    public companion object {
