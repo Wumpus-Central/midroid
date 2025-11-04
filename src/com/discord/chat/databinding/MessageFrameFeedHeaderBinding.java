@@ -43,21 +43,21 @@ public final class MessageFrameFeedHeaderBinding implements ViewBinding {
    @NonNull
    public static MessageFrameFeedHeaderBinding bind(@NonNull View var0) {
       int var1 = R.id.feed_channel_icon;
-      SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.feed_channel_text;
-         TextView var6 = (TextView)k5.a.a(var0, var1);
-         if (var6 != null) {
+         TextView var4 = (TextView)k5.a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.feed_reply_count;
-            TextView var4 = (TextView)k5.a.a(var0, var1);
-            if (var4 != null) {
+            TextView var2 = (TextView)k5.a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.feed_reply_icon;
                SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
                if (var5 != null) {
                   var1 = R.id.feed_reply_participants;
-                  OverlappingCirclesView var2 = (OverlappingCirclesView)k5.a.a(var0, var1);
-                  if (var2 != null) {
-                     return new MessageFrameFeedHeaderBinding(var0, var3, var6, var4, var5, var2);
+                  OverlappingCirclesView var3 = (OverlappingCirclesView)k5.a.a(var0, var1);
+                  if (var3 != null) {
+                     return new MessageFrameFeedHeaderBinding(var0, var6, var4, var2, var5, var3);
                   }
                }
             }

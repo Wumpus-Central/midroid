@@ -1,7 +1,5 @@
 package com.discord.user_search_worker
 
-import bv.e
-import bv.h
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
@@ -16,13 +14,13 @@ internal sealed class UserSearchData protected constructor() {
       }
    }
 
-   internal object Serializer : e(UserSearchData::class) {
+   internal object Serializer : bv.e(UserSearchData::class) {
       protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<UserSearchData> {
          var var5: java.lang.String;
          label30: {
-            val var3: JsonElement = h.n(var1).get("type") as JsonElement;
+            val var3: JsonElement = bv.h.n(var1).get("type") as JsonElement;
             if (var3 != null) {
-               val var4: JsonPrimitive = h.o(var3);
+               val var4: JsonPrimitive = bv.h.o(var3);
                if (var4 != null) {
                   var5 = var4.b();
                   break label30;

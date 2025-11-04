@@ -10,6 +10,6 @@ public final class w implements Function1 {
    public final String e;
 
    public final Object invoke(Object var1) {
-      return MessageComponentsViewHolder.e(this.d, this.e, (LinkContentNode)var1);
+      return MessageComponentsViewHolder.f(this.d, this.e, (LinkContentNode)var1);
    }
 }

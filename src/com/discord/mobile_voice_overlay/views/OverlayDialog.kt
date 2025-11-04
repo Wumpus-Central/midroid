@@ -27,7 +27,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    open fun OverlayDialog(var1: Context) {
       super(var1);
-      this.setOnClickListener(new c(this));
+      this.setOnClickListener(new com.discord.mobile_voice_overlay.views.c(this));
       val var2: LayoutParams = this.getWindowLayoutParams();
       var2.width = -1;
       var2.height = -1;
@@ -40,7 +40,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet) {
       super(var1, var2);
-      this.setOnClickListener(new c(this));
+      this.setOnClickListener(new com.discord.mobile_voice_overlay.views.c(this));
       val var3: LayoutParams = this.getWindowLayoutParams();
       var3.width = -1;
       var3.height = -1;
@@ -53,7 +53,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet, var3: Int) {
       super(var1, var2, var3);
-      this.setOnClickListener(new c(this));
+      this.setOnClickListener(new com.discord.mobile_voice_overlay.views.c(this));
       val var4: LayoutParams = this.getWindowLayoutParams();
       var4.width = -1;
       var4.height = -1;

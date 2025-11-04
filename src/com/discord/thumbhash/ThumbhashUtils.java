@@ -50,8 +50,8 @@ final class ThumbhashUtils {
       int var12 = var0[0] & 255 | (var0[1] & 255) << 8 | (var0[2] & 255) << 16;
       int var17 = var0[3] & 255 | (var0[4] & 255) << 8;
       float var9 = (var12 & 63) / 63.0F;
-      float var11 = (var12 >> 6 & 63) / 31.5F;
-      float var10 = (var12 >> 12 & 63) / 31.5F;
+      float var10 = (var12 >> 6 & 63) / 31.5F;
+      float var11 = (var12 >> 12 & 63) / 31.5F;
       float var6 = (var12 >> 18 & 31) / 31.0F;
       boolean var18;
       if (var12 >> 23 != 0) {
@@ -197,8 +197,8 @@ final class ThumbhashUtils {
                }
             }
 
-            var7 = var11 - 1.0F;
-            var6 = var10 - 1.0F;
+            var7 = var10 - 1.0F;
+            var6 = var11 - 1.0F;
             var17 = 0;
 
             for (int var69 = 0; var17 < 3; var17++) {

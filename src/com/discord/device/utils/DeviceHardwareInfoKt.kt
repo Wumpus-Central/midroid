@@ -73,7 +73,7 @@ internal fun getSocFromProcCpuInfo(): String {
    // 50: invokestatic kotlin/text/StringsKt.N (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
    // 53: ifeq 37
    // 56: goto 5f
-   // 59: astore 2
+   // 59: astore 0
    // 5a: goto 97
    // 5d: aconst_null
    // 5e: astore 0
@@ -108,13 +108,13 @@ internal fun getSocFromProcCpuInfo(): String {
    // 92: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 95: aload 0
    // 96: areturn
-   // 97: aload 2
+   // 97: aload 0
    // 98: athrow
-   // 99: astore 0
+   // 99: astore 2
    // 9a: aload 1
-   // 9b: aload 2
+   // 9b: aload 0
    // 9c: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-   // 9f: aload 0
+   // 9f: aload 2
    // a0: athrow
    // a1: astore 0
    // a2: ldc ""
@@ -236,7 +236,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 14
+   // 0d8: astore 13
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -260,17 +260,17 @@ internal fun maxCpuFreq(): String {
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 14
+   // 10a: aload 13
    // 10c: athrow
-   // 10d: astore 13
+   // 10d: astore 14
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 14
+   // 115: aload 13
    // 117: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 13
+   // 11e: aload 14
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -313,11 +313,11 @@ internal fun maxCpuFreq(): String {
 }
 
 internal fun ramSize(context: Context): String {
-   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
-   val var3: ActivityManager = var4 as ActivityManager;
-   var4 = new MemoryInfo();
-   var3.getMemoryInfo(var4);
-   val var1: Double = var4.totalMem / 1.0737418E9F;
+   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
+   var4 = var4;
+   val var3: MemoryInfo = new MemoryInfo();
+   var4.getMemoryInfo(var3);
+   val var1: Double = var3.totalMem / 1.0737418E9F;
    val var6: StringCompanionObject = StringCompanionObject.INSTANCE;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    return var7;
@@ -333,12 +333,12 @@ internal fun socName(): String {
          }
       }
 
-      val var3: java.lang.String = a.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var0);
-      var2.append("_");
-      var2.append(var3);
-      return var2.toString();
+      val var2: java.lang.String = a.a();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var0);
+      var3.append("_");
+      var3.append(var2);
+      return var3.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

@@ -6,11 +6,6 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import d9.a
 import d9.b
-import d9.c
-import d9.d
-import d9.e
-import d9.f
-import d9.g
 
 public open class TransitionResilientGridLayoutManager(context: Context, rowSize: Int, onModifyCapturedException: (Exception) -> Exception = new a()) : GridLayoutManager(
       var1, var2
@@ -67,14 +62,14 @@ public open class TransitionResilientGridLayoutManager(context: Context, rowSize
    }
 
    public open fun removeAndRecycleAllViews(recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new f(this), new g(this));
+      this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new d9.f(this), new d9.g(this));
    }
 
    public open fun removeAndRecycleView(child: View, recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new b(this), new c(this));
+      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new b(this), new d9.c(this));
    }
 
    public open fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleViewAt(var1, var2, new d(this), new e(this));
+      this.recyclingDelegate.safeRemoveAndRecycleViewAt(var1, var2, new d9.d(this), new d9.e(this));
    }
 }

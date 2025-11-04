@@ -84,7 +84,7 @@ internal object BrowserManager {
 
    public fun tryOpenUrlWithCustomTabs(context: Context, url: String, onFailure: (Exception) -> Unit) {
       try {
-         this.openUrlWithCustomTabs(var1, Uri.parse(var2), new com.discord.browser_manager.c(var1, var2, var3));
+         this.openUrlWithCustomTabs(var1, Uri.parse(var2), new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

@@ -24,7 +24,7 @@ internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoo
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ZoomLayoutFixed {
-      return new ZoomLayoutFixed(var1, new c(this));
+      return new ZoomLayoutFixed(var1, new com.discord.zoom_layout.c(this));
    }
 
    protected override fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed> {

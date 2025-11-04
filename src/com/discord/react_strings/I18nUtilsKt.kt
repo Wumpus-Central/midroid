@@ -6,10 +6,6 @@ import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
 import b9.b
-import b9.c
-import b9.d
-import b9.e
-import b9.f
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -38,12 +34,12 @@ fun e(var0: RenderContext, var1: java.lang.String, var2: java.lang.String, var3:
    return i18nFormat$lambda$5(var0, var1, var2, var3);
 }
 
-public fun ImageView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new c()) {
+public fun ImageView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new b9.c()) {
    val var3: Context = var0.getContext();
    var0.setContentDescription(i18nFormat(var3, var1, var2));
 }
 
-public fun TextView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new d()) {
+public fun TextView.i18nContentDescription(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new b9.d()) {
    val var3: Context = var0.getContext();
    var0.setContentDescription(i18nFormat(var3, var1, var2));
 }
@@ -51,7 +47,7 @@ public fun TextView.i18nContentDescription(i18nMessage: I18nMessage, initializer
 @JvmSynthetic
 fun `i18nContentDescription$default`(var0: ImageView, var1: I18nMessage, var2: Function1, var3: Int, var4: Any) {
    if ((var3 and 2) != 0) {
-      var2 = new c();
+      var2 = new b9.c();
    }
 
    i18nContentDescription(var0, var1, (Function1<? super RenderContext, Unit>)var2);
@@ -60,7 +56,7 @@ fun `i18nContentDescription$default`(var0: ImageView, var1: I18nMessage, var2: F
 @JvmSynthetic
 fun `i18nContentDescription$default`(var0: TextView, var1: I18nMessage, var2: Function1, var3: Int, var4: Any) {
    if ((var3 and 2) != 0) {
-      var2 = new d();
+      var2 = new b9.d();
    }
 
    i18nContentDescription(var0, var1, (Function1<? super RenderContext, Unit>)var2);
@@ -77,7 +73,7 @@ fun `i18nContentDescription$lambda$2`(var0: RenderContext): Unit {
 public fun Context.i18nFormat(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new b()): CharSequence {
    val var3: RenderContext = new RenderContext();
    var2.invoke(var3);
-   return RenderContext.Argument.INSTANCE.replace(var1.format$react_strings_release(var0), new e(var3));
+   return RenderContext.Argument.INSTANCE.replace(var1.format$react_strings_release(var0), new b9.e(var3));
 }
 
 @JvmSynthetic
@@ -98,7 +94,7 @@ fun `i18nFormat$lambda$5`(var0: RenderContext, var1: java.lang.String, var2: jav
    return var4 ?: var1;
 }
 
-public fun TextView.i18nSetText(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new f()) {
+public fun TextView.i18nSetText(i18nMessage: I18nMessage, initializer: (RenderContext) -> Unit = new b9.f()) {
    val var3: Context = var0.getContext();
    var0.setText(i18nFormat(var3, var1, var2));
 }
@@ -106,7 +102,7 @@ public fun TextView.i18nSetText(i18nMessage: I18nMessage, initializer: (RenderCo
 @JvmSynthetic
 fun `i18nSetText$default`(var0: TextView, var1: I18nMessage, var2: Function1, var3: Int, var4: Any) {
    if ((var3 and 2) != 0) {
-      var2 = new f();
+      var2 = new b9.f();
    }
 
    i18nSetText(var0, var1, (Function1<? super RenderContext, Unit>)var2);

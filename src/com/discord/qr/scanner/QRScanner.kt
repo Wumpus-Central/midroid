@@ -7,7 +7,6 @@ import android.webkit.URLUtil
 import android.widget.FrameLayout
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.CodeScannerView
-import com.budiyev.android.codescanner.h
 import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.qr.scanner.databinding.QrScannerBinding
@@ -18,7 +17,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SourceDebugExtension(["SMAP\nQRScanner.kt\nKotlin\n*S Kotlin\n*F\n+ 1 QRScanner.kt\ncom/discord/qr/scanner/QRScanner\n+ 2 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,79:1\n257#2,2:80\n*S KotlinDebug\n*F\n+ 1 QRScanner.kt\ncom/discord/qr/scanner/QRScanner\n*L\n38#1:80,2\n*E\n"])
 public class QRScanner  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout(var1, var2, var3),
    com.budiyev.android.codescanner.d,
-   h {
+   com.budiyev.android.codescanner.h {
    private final val binding: QrScannerBinding
    private final val codeScanner: CodeScanner
    private final val runnable: Runnable
@@ -36,19 +35,19 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    init {
       val var4: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      val var5: CodeScanner = new CodeScanner(var1, var4.qrScanner);
-      this.codeScanner = var5;
+      val var6: CodeScanner = new CodeScanner(var1, var4.qrScanner);
+      this.codeScanner = var6;
       this.runnable = new a(this);
       this.onCodeFound = new b();
-      this.onCodeNotFound = new c();
+      this.onCodeNotFound = new com.discord.qr.scanner.c();
       var4.getRoot().setBackgroundColor(-16777216);
-      val var6: CodeScannerView = var4.qrScanner;
-      var6.setVisibility(0);
+      val var5: CodeScannerView = var4.qrScanner;
+      var5.setVisibility(0);
       var4.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
-      var5.a0(-1);
-      var5.f0(CodeScanner.K);
-      var5.b0(this);
-      var5.c0(this);
+      var6.a0(-1);
+      var6.f0(CodeScanner.K);
+      var6.b0(this);
+      var6.c0(this);
    }
 
    @JvmStatic

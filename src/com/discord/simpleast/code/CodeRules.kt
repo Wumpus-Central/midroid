@@ -82,11 +82,11 @@ public object CodeRules {
          var1, var3, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
       );
       val var15: Pattern = this.createSingleLineCommentPattern("//");
-      val var16: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
-      val var20: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
+      val var20: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
+      val var16: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       var3 = this.createGenericCodeRules(
          var1,
-         CollectionsKt.o(new Rule[]{var16, toMatchGroupRule$default(this, var20, 0, var1.getLiteralStyleProvider(), 1, null)}),
+         CollectionsKt.o(new Rule[]{var20, toMatchGroupRule$default(this, var16, 0, var1.getLiteralStyleProvider(), 1, null)}),
          new java.lang.String[]{"message|enum|extend|service"},
          new java.lang.String[]{"true|false", "string|bool|double|float|bytes", "int32|uint32|sint32|int64|unit64|sint64", "map"},
          "required|repeated|optional|option|oneof|default|reserved",
@@ -98,11 +98,11 @@ public object CodeRules {
       var var5: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       val var24: Rule = toMatchGroupRule$default(this, var5, 0, var1.getLiteralStyleProvider(), 1, null);
       var var6: Pattern = Pattern.compile("^'[\\s\\S]*?(?<!\\\\)'(?=\\W|\\s|$)");
-      val var28: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
-      var var7: Pattern = Pattern.compile("^@(\\w+)");
+      var var7: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
+      var6 = Pattern.compile("^@(\\w+)");
       val var23: java.util.List = this.createGenericCodeRules(
          var1,
-         CollectionsKt.o(new Rule[]{var22, var24, var28, toMatchGroupRule$default(this, var7, 0, var1.getGenericsStyleProvider(), 1, null)}),
+         CollectionsKt.o(new Rule[]{var22, var24, var7, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
          new java.lang.String[]{"class", "def", "lambda"},
          new java.lang.String[]{"True|False|None"},
          "from|import|global|nonlocal",
@@ -115,11 +115,11 @@ public object CodeRules {
       var5 = this.createSingleLineCommentPattern("//");
       val var26: Rule = toMatchGroupRule$default(this, var5, 0, var1.getCommentStyleProvider(), 1, null);
       var6 = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
-      val var30: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
-      var7 = Pattern.compile("^#!?\\[.*?\\]\\n");
+      var7 = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
+      var6 = Pattern.compile("^#!?\\[.*?\\]\\n");
       val var27: java.util.List = this.createGenericCodeRules(
          var1,
-         CollectionsKt.o(new Rule[]{var26, var30, toMatchGroupRule$default(this, var7, 0, var1.getGenericsStyleProvider(), 1, null)}),
+         CollectionsKt.o(new Rule[]{var26, var7, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
          new java.lang.String[]{"struct", "trait", "mod"},
          new java.lang.String[]{
             "Self|Result|Ok|Err|Option|None|Some",
@@ -136,7 +136,7 @@ public object CodeRules {
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
       var var9: Rule = var34.createTagRule(var1);
-      var7 = PATTERN_LEADING_WS_CONSUMER;
+      val var35: Pattern = PATTERN_LEADING_WS_CONSUMER;
       var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
       val var8: Pattern = PATTERN_TEXT;
       val var32: java.util.List = CollectionsKt.o(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
@@ -159,7 +159,7 @@ public object CodeRules {
             var50,
             toMatchGroupRule$default(this, var54, 0, var1.getKeywordStyleProvider(), 1, null),
             toMatchGroupRule$default(this, PATTERN_NUMBERS, 0, var1.getLiteralStyleProvider(), 1, null),
-            toMatchGroupRule$default(this, var7, 0, null, 3, null),
+            toMatchGroupRule$default(this, var35, 0, null, 3, null),
             toMatchGroupRule$default(this, var8, 0, null, 3, null)
          }
       );

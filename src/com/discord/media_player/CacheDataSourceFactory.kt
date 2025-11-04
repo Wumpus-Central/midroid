@@ -23,15 +23,16 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
          var1 = null;
       }
 
-      val var4: DefaultHttpDataSource = this.defaultDatasourceFactory.a();
-      val var5: s = new s();
-      var var6: SimpleCache = cache;
+      val var5: DefaultHttpDataSource = this.defaultDatasourceFactory.a();
+      val var4: s = new s();
+      var var6: SimpleCache = null;
       if (cache == null) {
          Intrinsics.throwUninitializedPropertyAccessException("cache");
-         var6 = null;
+      } else {
+         var6 = cache;
       }
 
-      return new com.google.android.exoplayer2.upstream.cache.c(var1, var4, var5, new com.google.android.exoplayer2.upstream.cache.b(var6, 104857600L), 3, null);
+      return new com.google.android.exoplayer2.upstream.cache.c(var1, var5, var4, new com.google.android.exoplayer2.upstream.cache.b(var6, 104857600L), 3, null);
    }
 
    public companion object {

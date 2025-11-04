@@ -52,7 +52,7 @@ public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> Cha
       val var4: LayoutParams = var1.getLayoutParams();
       (var4 as MarginLayoutParams).setMargins(SizeUtilsKt.getDpToPx(16), 0, SizeUtilsKt.getDpToPx(16), 0);
       var1.setErrorMessage(var2.getMessage());
-      var1.setExpandInfo(var2.isExpanded(), new c(var3, var2));
+      var1.setExpandInfo(var2.isExpanded(), new com.discord.chat.presentation.list.delegate.c(var3, var2));
    }
 
    public open fun createView(parent: ViewGroup): ErrorMessageView {

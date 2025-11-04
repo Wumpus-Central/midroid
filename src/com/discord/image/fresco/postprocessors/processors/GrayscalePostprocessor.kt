@@ -7,7 +7,6 @@ import android.graphics.ColorMatrixColorFilter
 import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
-import n9.h
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public override fun getName(): String {
@@ -16,7 +15,7 @@ internal object GrayscalePostprocessor : BasePostprocessor {
    }
 
    public override fun getPostprocessorCacheKey(): CacheKey {
-      return new h(this.getName());
+      return new n9.h(this.getName());
    }
 
    public override fun process(destBitmap: Bitmap, sourceBitmap: Bitmap) {

@@ -36,48 +36,48 @@ internal class DeviceResourceUsageManager(context: Context) {
          var0 = Result.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
          val var1: a = Result.e;
-         var0 = Result.b(c.a(var4));
+         var0 = Result.b(kotlin.c.a(var4));
          break label42;
       }
 
-      var var19: Any = var0;
+      var var18: Any = var0;
       if (Result.g(var0)) {
-         var19 = 100L;
+         var18 = 100L;
       }
 
-      SC_CLK_TCK = (var19 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
 
       label36:
       try {
          var0 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
          var0 = Result.e;
-         var0 = Result.b(c.a(var3));
+         var0 = Result.b(kotlin.c.a(var3));
          break label36;
       }
 
-      var19 = var0;
+      var18 = var0;
       if (Result.g(var0)) {
-         var19 = 4096L;
+         var18 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var19 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
 
       label30:
       try {
          var0 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var0 = Result.e;
-         var0 = Result.b(c.a(var2));
+         var18 = Result.e;
+         var0 = Result.b(kotlin.c.a(var2));
          break label30;
       }
 
-      var19 = var0;
+      var18 = var0;
       if (Result.g(var0)) {
-         var19 = 1;
+         var18 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var19 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
    }
 
    init {
@@ -107,9 +107,9 @@ internal class DeviceResourceUsageManager(context: Context) {
       //
       // Bytecode:
       // 00: aconst_null
-      // 01: astore 5
+      // 01: astore 6
       // 03: aconst_null
-      // 04: astore 6
+      // 04: astore 5
       // 06: aload 0
       // 07: getfield com/discord/resource_usage/DeviceResourceUsageManager.threadSync Ljava/lang/Object;
       // 0a: astore 7
@@ -151,14 +151,14 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 5a: astore 7
       // 5c: invokestatic java/lang/System.currentTimeMillis ()J
       // 5f: lstore 3
-      // 60: aload 5
+      // 60: aload 6
       // 62: ifnull b4
-      // 65: aload 6
+      // 65: aload 5
       // 67: ifnull b4
       // 6a: aload 7
       // 6c: ifnull b4
       // 6f: lload 3
-      // 70: aload 6
+      // 70: aload 5
       // 72: invokevirtual java/lang/Long.longValue ()J
       // 75: lsub
       // 76: l2d
@@ -168,7 +168,7 @@ internal class DeviceResourceUsageManager(context: Context) {
       // 7c: aload 0
       // 7d: aload 7
       // 7f: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
-      // 82: aload 5
+      // 82: aload 6
       // 84: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
       // 87: lsub
       // 88: bipush 100
@@ -199,11 +199,11 @@ internal class DeviceResourceUsageManager(context: Context) {
       // b1: putfield com/discord/resource_usage/DeviceResourceUsageManager.memoryRssKB I
       // b4: lload 3
       // b5: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // b8: astore 6
+      // b8: astore 5
       // ba: ldc2_w 1000
       // bd: invokestatic java/lang/Thread.sleep (J)V
       // c0: aload 7
-      // c2: astore 5
+      // c2: astore 6
       // c4: goto 06
       // c7: astore 5
       // c9: aload 7

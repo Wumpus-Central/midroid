@@ -21,10 +21,10 @@ fun a(var0: JsonBuilder): Unit {
 internal inline fun <reified T : Component> deserializeComponentModel(model: ReadableMap): T {
    var var12: Component;
    try {
-      val var16: Json = getJson();
-      val var11: ComponentSerializer = ComponentSerializer.INSTANCE;
+      val var11: Json = getJson();
+      val var16: ComponentSerializer = ComponentSerializer.INSTANCE;
       val var7: java.lang.String = new JSONObject(var0.toHashMap()).toString();
-      var12 = var16.b(var11, var7) as Component;
+      var12 = var11.b(var16, var7) as Component;
       Intrinsics.reifiedOperationMarker(3, "T");
    } catch (var5: Exception) {
       Intrinsics.reifiedOperationMarker(4, "T");

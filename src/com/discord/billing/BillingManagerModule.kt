@@ -79,7 +79,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      var1.getProducts(var7, var3, var4, new com.discord.billing.j(var4));
+      var1.getProducts(var7, var3, var4, new j(var4));
    }
 
    @JvmStatic
@@ -154,7 +154,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun loadPurchases(promise: Promise) {
-      this.billingManager.loadPurchases(new t(var1), new com.discord.billing.i(var1));
+      this.billingManager.loadPurchases(new t(var1), new i(var1));
    }
 
    @ReactMethod
@@ -175,9 +175,6 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      this.billingManager
-         .purchase(
-            this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new com.discord.billing.h(var6), new k(var6)
-         );
+      this.billingManager.purchase(this.reactContext.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
    }
 }

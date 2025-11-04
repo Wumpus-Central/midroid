@@ -47,13 +47,13 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
    }
 
    private fun bindSticker(sticker: Sticker) {
-      val var4: Int = 32;
+      val var3: Int = 32;
       val var2: Int = WelcomeStickerView.WhenMappings.$EnumSwitchMapping$0[var1.getFormatType().ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 == 4) {
-                  this.binding.stickerView.asGif(var1.getUrl(), var4, var4, true, var1.getAccessibilityLabel());
+                  this.binding.stickerView.asGif(var1.getUrl(), var3, var3, true, var1.getAccessibilityLabel());
                } else {
                   throw new p();
                }
@@ -61,7 +61,7 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
                this.binding.stickerView.asLottie(var1.getUrl(), 32, 32, true, var1.getAsset(), var1.getRenderMode(), var1.getAccessibilityLabel());
             }
          } else {
-            this.binding.stickerView.asApng(var1.getUrl(), var4, var4, true, var1.getAccessibilityLabel());
+            this.binding.stickerView.asApng(var1.getUrl(), var3, var3, true, var1.getAccessibilityLabel());
          }
       } else {
          this.binding.stickerView.asPng(var1.getUrl(), var1.getWidth(), var1.getHeight(), var1.getAccessibilityLabel());

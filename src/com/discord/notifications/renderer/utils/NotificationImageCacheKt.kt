@@ -28,19 +28,19 @@ fun `access$enforceNotificationsCacheTTL`(var0: File) {
 private fun enforceNotificationsCacheTTL(directory: File) {
    if (var0.exists()) {
       val var3: Long = System.currentTimeMillis();
-      val var7: Array<File> = var0.listFiles();
-      if (var7 != null) {
-         val var6: ArrayList = new ArrayList();
-         val var2: Int = var7.length;
+      val var6: Array<File> = var0.listFiles();
+      if (var6 != null) {
+         val var7: ArrayList = new ArrayList();
+         val var2: Int = var6.length;
 
          for (int var1 = 0; var1 < var2; var1++) {
-            val var5: File = var7[var1];
-            if (var7[var1].isFile() && var3 - var7[var1].lastModified() > 864000000L) {
-               var6.add(var5);
+            val var5: File = var6[var1];
+            if (var6[var1].isFile() && var3 - var6[var1].lastModified() > 864000000L) {
+               var7.add(var5);
             }
          }
 
-         val var8: java.util.Iterator = var6.iterator();
+         val var8: java.util.Iterator = var7.iterator();
 
          while (var8.hasNext()) {
             (var8.next() as File).delete();
@@ -54,6 +54,24 @@ public suspend fun storeRemoteImageViaFileProvider(context: Context, imageUrl: S
       m0.b(),
       new Function2<CoroutineScope, Continuation<? super Pair<? extends Uri, ? extends java.lang.String>>, Object>(var0, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.ExitExprent.toJava(ExitExprent.java:86)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
       var2
    );

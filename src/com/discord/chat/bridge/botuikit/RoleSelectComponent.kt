@@ -126,9 +126,9 @@ public data class RoleSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
-      val var4: Int = this.state.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var4: Int = this.id.hashCode();
+      val var6: Int = this.state.hashCode();
       val var5: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
@@ -144,7 +144,7 @@ public data class RoleSelectComponent(type: Int,
 
       return (
                (
-                        ((((((var6 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                        ((((((var3 * 31 + var4) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                            + Integer.hashCode(this.maxValues)
                      )
                      * 31
@@ -156,28 +156,28 @@ public data class RoleSelectComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var10: java.lang.String = this.id;
-      val var9: ActionComponentState = this.state;
+      val var8: java.lang.String = this.id;
+      val var11: ActionComponentState = this.state;
       val var6: java.lang.String = this.customId;
-      val var11: java.lang.String = this.placeholder;
-      val var5: java.lang.String = this.accessibilityLabel;
+      val var5: java.lang.String = this.placeholder;
+      val var10: java.lang.String = this.accessibilityLabel;
       val var3: Int = this.minValues;
       val var2: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var8: java.util.List = this.selectedOptions;
+      val var9: java.util.List = this.selectedOptions;
       val var7: StringBuilder = new StringBuilder();
       var7.append("RoleSelectComponent(type=");
       var7.append(var1);
       var7.append(", id=");
-      var7.append(var10);
+      var7.append(var8);
       var7.append(", state=");
-      var7.append(var9);
+      var7.append(var11);
       var7.append(", customId=");
       var7.append(var6);
       var7.append(", placeholder=");
-      var7.append(var11);
-      var7.append(", accessibilityLabel=");
       var7.append(var5);
+      var7.append(", accessibilityLabel=");
+      var7.append(var10);
       var7.append(", minValues=");
       var7.append(var3);
       var7.append(", maxValues=");
@@ -185,7 +185,7 @@ public data class RoleSelectComponent(type: Int,
       var7.append(", disabled=");
       var7.append(var4);
       var7.append(", selectedOptions=");
-      var7.append(var8);
+      var7.append(var9);
       var7.append(")");
       return var7.toString();
    }

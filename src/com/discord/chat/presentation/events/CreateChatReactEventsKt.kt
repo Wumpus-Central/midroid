@@ -30,6 +30,7 @@ import com.discord.chat.reactevents.TapCallData
 import com.discord.chat.reactevents.TapCancelUploadItemData
 import com.discord.chat.reactevents.TapChannelData
 import com.discord.chat.reactevents.TapChannelPromptButtonData
+import com.discord.chat.reactevents.TapCheckpointCardData
 import com.discord.chat.reactevents.TapClanTagChipletData
 import com.discord.chat.reactevents.TapCommandData
 import com.discord.chat.reactevents.TapConnectionsRoleTagData
@@ -175,6 +176,7 @@ internal fun createChatReactEvents(): ReactEvents {
       v.a("onTapInlineForward", TapInlineForwardData::class),
       v.a("onTapClanTagChiplet", TapClanTagChipletData::class),
       v.a("onTapContentInventoryEntryEmbed", TapContentInventoryEntryEmbedData::class),
+      v.a("onTapCheckpointCard", TapCheckpointCardData::class),
       v.a("onTapSoundmoji", TapSoundmojiData::class),
       v.a("onTapPreviewSharedClientTheme", TapPreviewSharedClientThemeData::class),
       v.a("onSharedClientThemeViewed", SharedClientThemeViewedData::class)

@@ -1,7 +1,6 @@
 package com.discord.misc.utilities.time
 
 import gu.i0
-import ju.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
@@ -9,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
-   return g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
+   return ju.g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
       final long $initialDelayMs;
       final long $periodMs;
       private Object L$0;
@@ -42,11 +41,11 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
                   }
 
                   val var5: FlowCollector = this.L$0 as FlowCollector;
-                  c.b(var1);
+                  kotlin.c.b(var1);
                   var1 = var5;
                } else {
                   val var11: FlowCollector = this.L$0 as FlowCollector;
-                  c.b(var1);
+                  kotlin.c.b(var1);
                   val var3x: Long = this.$periodMs;
                   this.L$0 = var11;
                   this.label = 3;
@@ -57,11 +56,11 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
                }
             } else {
                val var12: FlowCollector = this.L$0 as FlowCollector;
-               c.b(var1);
+               kotlin.c.b(var1);
                var1 = var12;
             }
          } else {
-            c.b(var1);
+            kotlin.c.b(var1);
             var1 = this.L$0 as FlowCollector;
             val var9: Long = this.$initialDelayMs;
             this.L$0 = var1;
@@ -101,7 +100,7 @@ fun `intervalFlow$default`(var0: Long, var2: Long, var4: Int, var5: Any): Flow {
 }
 
 public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Unit> {
-   return g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
+   return ju.g.v(new Function2<FlowCollector, Continuation<? super Unit>, Object>(var2, var0, null) {
       final long $initialDelay;
       final long $period;
       private Object L$0;
@@ -134,11 +133,11 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
                   }
 
                   val var5: FlowCollector = this.L$0 as FlowCollector;
-                  c.b(var1);
+                  kotlin.c.b(var1);
                   var1 = var5;
                } else {
                   val var11: FlowCollector = this.L$0 as FlowCollector;
-                  c.b(var1);
+                  kotlin.c.b(var1);
                   val var3x: Long = this.$period;
                   this.L$0 = var11;
                   this.label = 3;
@@ -149,11 +148,11 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
                }
             } else {
                val var12: FlowCollector = this.L$0 as FlowCollector;
-               c.b(var1);
+               kotlin.c.b(var1);
                var1 = var12;
             }
          } else {
-            c.b(var1);
+            kotlin.c.b(var1);
             var1 = this.L$0 as FlowCollector;
             val var9: Long = this.$initialDelay;
             this.L$0 = var1;

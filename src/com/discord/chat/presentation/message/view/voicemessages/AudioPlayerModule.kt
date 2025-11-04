@@ -24,10 +24,10 @@ public class AudioPlayerModule(reactContext: ReactApplicationContext) : NativeAu
    }
 
    public override fun maybePlayCurrentPlayer() {
-      this.reactContext.runOnUiQueueThread(new d());
+      this.reactContext.runOnUiQueueThread(new com.discord.chat.presentation.message.view.voicemessages.d());
    }
 
    public override fun pauseCurrentPlayer(storePauseState: Boolean) {
-      this.reactContext.runOnUiQueueThread(new e(var1));
+      this.reactContext.runOnUiQueueThread(new com.discord.chat.presentation.message.view.voicemessages.e(var1));
    }
 }

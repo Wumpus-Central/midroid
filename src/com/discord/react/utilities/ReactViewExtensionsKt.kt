@@ -15,7 +15,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.b(new e())
+private final val viewOperationQueueMethod: Method by l.b(new com.discord.react.utilities.e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -43,7 +43,7 @@ private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
 
 public fun ReactContext.queueManualLayout(viewId: Int) {
    if (!viewLayoutQueued.contains(var1)) {
-      var0.runOnNativeModulesQueueThread(new f(var0, var1));
+      var0.runOnNativeModulesQueueThread(new com.discord.react.utilities.f(var0, var1));
    }
 }
 

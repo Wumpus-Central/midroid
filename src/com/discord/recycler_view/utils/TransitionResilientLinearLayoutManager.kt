@@ -4,9 +4,6 @@ import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
-import d9.h
-import d9.i
-import d9.j
 import d9.k
 import d9.l
 import d9.m
@@ -69,11 +66,11 @@ public open class TransitionResilientLinearLayoutManager(context: Context,
    }
 
    public open fun removeAndRecycleAllViews(recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new j(this), new k(this));
+      this.recyclingDelegate.safeRemoveAndRecycleAllViews(var1, new d9.j(this), new k(this));
    }
 
    public open fun removeAndRecycleView(child: View, recycler: Recycler) {
-      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new h(this), new i(this));
+      this.recyclingDelegate.safeRemoveAndRecycleView(var1, var2, new d9.h(this), new d9.i(this));
    }
 
    public open fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {

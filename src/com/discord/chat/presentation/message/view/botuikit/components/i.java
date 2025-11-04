@@ -1,12 +1,16 @@
 package com.discord.chat.presentation.message.view.botuikit.components;
 
-import kotlin.jvm.functions.Function0;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.bridge.botuikit.SelectComponent;
+import com.discord.chat.presentation.message.view.botuikit.ComponentContext;
 
 // $VF: synthetic class
-public final class i implements Function0 {
-   public final SelectComponentView d;
+public final class i implements OnClickListener {
+   public final ComponentContext d;
+   public final SelectComponent e;
 
-   public final Object invoke() {
-      return SelectComponentView.h(this.d);
+   public final void onClick(View var1) {
+      SelectComponentView.j(this.d, this.e, var1);
    }
 }

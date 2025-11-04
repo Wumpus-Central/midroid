@@ -122,9 +122,9 @@ public class Scroller(recyclerView: RecyclerView) {
       position: Int,
       targetAlignment: com.discord.recycler_view.scroller.Scroller.TargetAlignment,
       animate: Boolean,
-      onStart: () -> Unit = new c(),
-      onComplete: () -> Unit = new d(),
-      onScrollProgress: () -> Unit = new e()
+      onStart: () -> Unit = new com.discord.recycler_view.scroller.c(),
+      onComplete: () -> Unit = new com.discord.recycler_view.scroller.d(),
+      onScrollProgress: () -> Unit = new com.discord.recycler_view.scroller.e()
    ) {
       this.cancel();
       var4.invoke();

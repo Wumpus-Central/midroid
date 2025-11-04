@@ -66,7 +66,7 @@ internal object AttachedVideoSinks {
    }
 
    public fun removeSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      return streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null;
+      return streamOutputMap.compute(var3, new com.discord.media.engine.video.d(new com.discord.media.engine.video.c(var2, var1, var3))) != null;
    }
 
    @SourceDebugExtension(["SMAP\nAttachedVideoSinks.kt\nKotlin\n*S Kotlin\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,77:1\n1863#2,2:78\n*S KotlinDebug\n*F\n+ 1 AttachedVideoSinks.kt\ncom/discord/media/engine/video/AttachedVideoSinks$VideoOutputSinks\n*L\n71#1:78,2\n*E\n"])

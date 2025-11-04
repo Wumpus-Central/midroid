@@ -8,6 +8,7 @@ import com.discord.file_downloader.FileDownloader
 import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateManager
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.linecorp.apng.ApngDrawable
+import gu.c1
 import gu.m0
 import java.io.File
 import java.security.MessageDigest
@@ -23,7 +24,14 @@ import kotlinx.coroutines.flow.FlowCollector
 public class APNGView(context: Context) : m(var1) {
    public final var onImageLoaded: ((String) -> Unit)?
    private final val apngStateManager: AnimatedImageStateManager<com.discord.image.animated_image.apng.APNGView.Config> =
-      new AnimatedImageStateManager(new b(this), new c(this), new d(this), new e(this), new f(this), new g(this))
+      new AnimatedImageStateManager(
+         new b(this),
+         new com.discord.image.animated_image.apng.c(this),
+         new com.discord.image.animated_image.apng.d(this),
+         new com.discord.image.animated_image.apng.e(this),
+         new com.discord.image.animated_image.apng.f(this),
+         new com.discord.image.animated_image.apng.g(this)
+      )
 
    @JvmStatic
    fun `apngStateManager$lambda$0`(var0: APNGView): Unit {
@@ -94,11 +102,11 @@ public class APNGView(context: Context) : m(var1) {
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: FileDownloader = FileDownloader.INSTANCE;
-                  var1 = this.this$0.getContext();
-                  val var6: Flow = FileDownloader.downloadFile$default(
-                     var4,
+                  var1 = FileDownloader.INSTANCE;
+                  val var4: Context = this.this$0.getContext();
+                  val var7: Flow = FileDownloader.downloadFile$default(
                      var1,
+                     var4,
                      this.$config.getUrl(),
                      APNGView.Companion.access$getFilename(APNGView.Companion, this.$config.getUrl()),
                      new File(this.this$0.getContext().getCacheDir(), this.$config.getCacheDirectory()),
@@ -106,7 +114,7 @@ public class APNGView(context: Context) : m(var1) {
                      16,
                      null
                   );
-                  val var7: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+                  val var6: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                      final APNGView.Config $config;
                      final APNGView this$0;
 
@@ -218,12 +226,10 @@ public class APNGView(context: Context) : m(var1) {
                               }
 
                               try {
-                                 val var11: ApngDrawable = com.linecorp.apng.ApngDrawable.b.c(
-                                    ApngDrawable.I, (var1 as DownloadState.Completed).getFile(), null, null, 6, null
-                                 );
-                                 var5 = m0.c();
+                                 var5 = com.linecorp.apng.ApngDrawable.b.c(ApngDrawable.I, (var1 as DownloadState.Completed).getFile(), null, null, 6, null);
+                                 val var11: c1 = m0.c();
                                  val var6x: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(
-                                    this.this$0, var11, this.$config, null
+                                    this.this$0, (ApngDrawable)var5, this.$config, null
                                  ) {
                                     final APNGView.Config $config;
                                     final ApngDrawable $drawable;
@@ -267,7 +273,7 @@ public class APNGView(context: Context) : m(var1) {
                                  };
                                  ((<unrepresentable>)var14).L$0 = this;
                                  ((<unrepresentable>)var14).label = 1;
-                                 var12 = gu.g.g((CoroutineContext)var5, var6x, (Continuation)var14);
+                                 var12 = gu.g.g(var11, var6x, (Continuation)var14);
                               } catch (var8: Exception) {
                                  var9 = this;
                                  break label87;
@@ -317,7 +323,7 @@ public class APNGView(context: Context) : m(var1) {
                      }
                   };
                   this.label = 1;
-                  if (var6.collect(var7, this) === var3) {
+                  if (var7.collect(var6, this) === var3) {
                      return var3;
                   }
                }
@@ -437,11 +443,11 @@ public class APNGView(context: Context) : m(var1) {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var1);
-            var5.append(var6);
-            var1 = var5.toString();
+            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var1);
+            var6.append(var5);
+            var1 = var6.toString();
          }
 
          return var1;
@@ -547,25 +553,25 @@ public class APNGView(context: Context) : m(var1) {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var1: Boolean = this.animate;
          val var2: Boolean = this.showLoading;
-         val var3: Int = this.widthDp;
-         val var7: Int = this.heightDp;
-         val var5: java.lang.String = this.cacheDirectory;
+         val var7: Int = this.widthDp;
+         val var3: Int = this.heightDp;
+         val var6: java.lang.String = this.cacheDirectory;
          val var4: StringBuilder = new StringBuilder();
          var4.append("Config(url=");
-         var4.append(var6);
+         var4.append(var5);
          var4.append(", animate=");
          var4.append(var1);
          var4.append(", showLoading=");
          var4.append(var2);
          var4.append(", widthDp=");
-         var4.append(var3);
-         var4.append(", heightDp=");
          var4.append(var7);
+         var4.append(", heightDp=");
+         var4.append(var3);
          var4.append(", cacheDirectory=");
-         var4.append(var5);
+         var4.append(var6);
          var4.append(")");
          return var4.toString();
       }

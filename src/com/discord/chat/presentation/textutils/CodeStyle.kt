@@ -26,7 +26,18 @@ import kotlin.jvm.internal.SourceDebugExtension
 @SourceDebugExtension(["SMAP\nCodeStyle.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CodeStyle.kt\ncom/discord/chat/presentation/textutils/CodeStyle\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 4 SpannableStringBuilderExtensions.kt\ncom/discord/span/utilities/SpannableStringBuilderExtensionsKt\n+ 5 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 6 Color.kt\nandroidx/core/graphics/ColorKt\n*L\n1#1,94:1\n381#2,3:95\n384#2,4:99\n1#3:98\n1#3:108\n32#4,4:103\n36#4:110\n13409#5:107\n13410#5:109\n404#6:111\n404#6:112\n404#6:113\n404#6:114\n404#6:115\n404#6:116\n*S KotlinDebug\n*F\n+ 1 CodeStyle.kt\ncom/discord/chat/presentation/textutils/CodeStyle\n*L\n38#1:95,3\n38#1:99,4\n79#1:108\n79#1:103,4\n79#1:110\n79#1:107\n79#1:109\n28#1:111\n29#1:112\n30#1:113\n31#1:114\n32#1:115\n33#1:116\n*E\n"])
 public object CodeStyle {
    private final val staticCodeStyles: CodeStyleProviders<RenderContext> =
-      new CodeStyleProviders(null, null, new c(), new d(), new e(), new f(), new g(), new h(), 3, null)
+      new CodeStyleProviders(
+         null,
+         null,
+         new com.discord.chat.presentation.textutils.c(),
+         new com.discord.chat.presentation.textutils.d(),
+         new com.discord.chat.presentation.textutils.e(),
+         new com.discord.chat.presentation.textutils.f(),
+         new com.discord.chat.presentation.textutils.g(),
+         new com.discord.chat.presentation.textutils.h(),
+         3,
+         null
+      )
       private final val parsers: MutableMap<String, Parser<RenderContext, Node<RenderContext>, Any>> = new LinkedHashMap()
 
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
@@ -36,10 +47,10 @@ public object CodeStyle {
          var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
-            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
-            var2 = CodeRules.INSTANCE;
+            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            val var5: CodeRules = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
+               CodeRules.INSTANCE, ((CodeStyleProviders)var2).getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
@@ -132,7 +143,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var9: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -142,10 +153,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var5 = SizeUtilsKt.getDpToPx(4);
-      val var10: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var8: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var10: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var11: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var7: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var9: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
@@ -155,7 +166,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var9, var10, var8, var11, var7}[var14];
+         val var12: Any = new Object[]{var8, var7, var10, var11, var9}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

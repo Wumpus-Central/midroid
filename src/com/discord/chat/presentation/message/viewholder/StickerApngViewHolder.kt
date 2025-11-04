@@ -35,7 +35,7 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
       }
 
       var8.asApng(var7, var4, var5, var6, var1.getAccessibilityLabel());
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new h0(var2, var1), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new i0(var3, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new i0(var2, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new j0(var3, var1), 1, null);
    }
 }

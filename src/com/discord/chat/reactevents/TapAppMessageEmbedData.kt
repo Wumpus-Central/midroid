@@ -68,19 +68,19 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.actionId;
-      val var3: java.lang.String = this.appId;
-      val var4: java.lang.String = this.embedUrl;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.actionId;
+      val var4: java.lang.String = this.appId;
+      val var5: java.lang.String = this.embedUrl;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapAppMessageEmbedData(messageId=");
-      var1.append(var5);
-      var1.append(", actionId=");
       var1.append(var2);
-      var1.append(", appId=");
+      var1.append(", actionId=");
       var1.append(var3);
-      var1.append(", embedUrl=");
+      var1.append(", appId=");
       var1.append(var4);
+      var1.append(", embedUrl=");
+      var1.append(var5);
       var1.append(")");
       return var1.toString();
    }

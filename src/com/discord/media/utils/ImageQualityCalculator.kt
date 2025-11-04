@@ -4,7 +4,6 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Bitmap.Config
 import android.graphics.BitmapFactory.Options
-import gu.g
 import gu.m0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
@@ -61,52 +60,52 @@ public object ImageQualityCalculator {
       val var15: Int = qt.c.c(0, var4 - 8, 4);
       var var7: Double;
       if (var15 >= 0) {
-         var var11: Int = 0;
+         var4 = 0;
          var var12: Int = 0;
          var var5: Double = 0.0;
 
          while (true) {
-            val var13: Int = qt.c.c(0, var3 - 8, 4);
+            val var14: Int = qt.c.c(0, var3 - 8, 4);
             var7 = var5;
-            var4 = var11;
-            if (var13 >= 0) {
-               var var14: Int = 0;
-               var4 = var11;
+            var var11: Int = var4;
+            if (var14 >= 0) {
+               var var13: Int = 0;
+               var11 = var4;
                var7 = var5;
 
                while (true) {
-                  val var9: Double = this.calculateWindowSSIM(var1, var2, var3, var14, var12, 8, 6.5025F, 58.5225F);
+                  val var9: Double = this.calculateWindowSSIM(var1, var2, var3, var13, var12, 8, 6.5025F, 58.5225F);
                   var5 = var7;
-                  var11 = var4;
+                  var4 = var11;
                   if (!java.lang.Double.isInfinite(var9)) {
                      var5 = var7;
-                     var11 = var4;
+                     var4 = var11;
                      if (!java.lang.Double.isNaN(var9)) {
                         var5 = var7 + var9;
-                        var11 = var4 + 1;
+                        var4 = var11 + 1;
                      }
                   }
 
                   var7 = var5;
-                  var4 = var11;
-                  if (var14 == var13) {
+                  var11 = var4;
+                  if (var13 == var14) {
                      break;
                   }
 
-                  var14 += 4;
+                  var13 += 4;
                   var7 = var5;
-                  var4 = var11;
+                  var11 = var4;
                }
             }
 
             if (var12 == var15) {
-               var3 = var4;
+               var3 = var11;
                break;
             }
 
             var12 += 4;
             var5 = var7;
-            var11 = var4;
+            var4 = var11;
          }
       } else {
          var7 = 0.0;
@@ -118,32 +117,32 @@ public object ImageQualityCalculator {
 
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       var var25: Int = 0;
-      var var11: Double = 0.0;
-      var var15: Double = 0.0;
-      var var17: Double = 0.0;
       var var13: Double = 0.0;
+      var var17: Double = 0.0;
+      var var15: Double = 0.0;
+      var var11: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var26 = 0; var26 < var6; var26++) {
-            val var21: Double = var1[(var5 + var25) * var3 + var4 + var26];
-            val var19: Double = var2[(var5 + var25) * var3 + var4 + var26];
-            var11 += var21;
-            var15 += var19;
-            var17 += var21 * var21;
-            var13 += var19 * var19;
-            var9 += var19 * var21;
+            val var19: Double = var1[(var5 + var25) * var3 + var4 + var26];
+            val var21: Double = var2[(var5 + var25) * var3 + var4 + var26];
+            var13 += var19;
+            var17 += var21;
+            var15 += var19 * var19;
+            var11 += var21 * var21;
+            var9 += var21 * var19;
          }
       }
 
-      return if ((var11 / (var6 * var6) * (var11 / (var6 * var6)) + var15 / (var6 * var6) * (var15 / (var6 * var6)) + var7)
-               * ((var17 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var15 * (var15 / (var6 * var6))) / (var6 * var6) + var8)
+      return if ((var13 / (var6 * var6) * (var13 / (var6 * var6)) + var17 / (var6 * var6) * (var17 / (var6 * var6)) + var7)
+               * ((var15 - var13 * (var13 / (var6 * var6))) / (var6 * var6) + (var11 - var17 * (var17 / (var6 * var6))) / (var6 * var6) + var8)
             > 0.0)
-         (var11 / (var6 * var6) * 2.0 * (var15 / (var6 * var6)) + var7)
-            * ((var9 - var11 * (var15 / (var6 * var6))) / (var6 * var6) * 2.0 + var8)
+         (var13 / (var6 * var6) * 2.0 * (var17 / (var6 * var6)) + var7)
+            * ((var9 - var13 * (var17 / (var6 * var6))) / (var6 * var6) * 2.0 + var8)
             / (
-               (var11 / (var6 * var6) * (var11 / (var6 * var6)) + var15 / (var6 * var6) * (var15 / (var6 * var6)) + var7)
-                  * ((var17 - var11 * (var11 / (var6 * var6))) / (var6 * var6) + (var13 - var15 * (var15 / (var6 * var6))) / (var6 * var6) + var8)
+               (var13 / (var6 * var6) * (var13 / (var6 * var6)) + var17 / (var6 * var6) * (var17 / (var6 * var6)) + var7)
+                  * ((var15 - var13 * (var13 / (var6 * var6))) / (var6 * var6) + (var11 - var17 * (var17 / (var6 * var6))) / (var6 * var6) + var8)
             )
          else
          0.0;
@@ -161,28 +160,28 @@ public object ImageQualityCalculator {
    }
 
    private fun decodeByteArraySafely(data: ByteArray): Bitmap? {
-      var var2: Int;
+      var var3: Int;
       var var4: Options;
       try {
          var4 = new Options();
          var4.inJustDecodeBounds = true;
          BitmapFactory.decodeByteArray(var1, 0, var1.length, var4);
-         var2 = var4.outWidth;
+         var3 = var4.outWidth;
       } catch (var7: Exception) {
          return null;
       }
 
-      if (var2 > 0) {
-         var var3: Int;
+      if (var3 > 0) {
+         var var2: Int;
          try {
-            var3 = var4.outHeight;
+            var2 = var4.outHeight;
          } catch (var6: Exception) {
             return null;
          }
 
-         if (var3 > 0) {
+         if (var2 > 0) {
             try {
-               var2 = this.calculateInSampleSize(var2, var3, 4096);
+               var2 = this.calculateInSampleSize(var3, var2, 4096);
                var4 = new Options();
                var4.inSampleSize = var2;
                var4.inPreferredConfig = Config.ARGB_8888;
@@ -221,7 +220,7 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalBitmap: Bitmap, compressedBitmap: Bitmap): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return g.g(
+      return gu.g.g(
          m0.a(),
          new Function2<CoroutineScope, Continuation<? super ImageQualityCalculator.ImageQualityMetrics>, Object>(var1, var2, null) {
             final Bitmap $compressedBitmap;
@@ -257,23 +256,23 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
+                  var var4: Int;
                   var var5: Int;
-                  var var6: Int;
                   try {
                      var5 = this.$originalBitmap.getWidth();
-                     var6 = this.$originalBitmap.getHeight();
+                     var4 = this.$originalBitmap.getHeight();
                   } catch (var16: Exception) {
                      return null;
                   }
 
-                  val var4: Int = var5 * var6;
+                  val var6: Int = var5 * var4;
 
                   var var11: IntArray;
                   try {
-                     var1 = new int[var4];
-                     var11 = new int[var4];
-                     this.$originalBitmap.getPixels(var1, 0, var5, 0, 0, var5, var6);
-                     this.$compressedBitmap.getPixels(var11, 0, var5, 0, 0, var5, var6);
+                     var1 = new int[var6];
+                     var11 = new int[var6];
+                     this.$originalBitmap.getPixels(var1, 0, var5, 0, 0, var5, var4);
+                     this.$compressedBitmap.getPixels(var11, 0, var5, 0, 0, var5, var4);
                      if (this.$originalBitmap.isPremultiplied()) {
                         var1 = ImageQualityCalculator.access$unpremultiplyPixels(ImageQualityCalculator.INSTANCE, var1);
                      }
@@ -293,8 +292,8 @@ public object ImageQualityCalculator {
                      val var7: Long = System.nanoTime();
                      val var12: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      return new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var11, var5, var6),
-                        ImageQualityCalculator.access$calculateSSIM(var12, var1, var11, var5, var6),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var11, var5, var4),
+                        ImageQualityCalculator.access$calculateSSIM(var12, var1, var11, var5, var4),
                         (System.nanoTime() - var7) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );
@@ -311,7 +310,7 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalData: ByteArray, compressedData: ByteArray): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return g.g(m0.a(), new Function2<CoroutineScope, Continuation<? super ImageQualityCalculator.ImageQualityMetrics>, Object>(var1, var2, null) {
+      return gu.g.g(m0.a(), new Function2<CoroutineScope, Continuation<? super ImageQualityCalculator.ImageQualityMetrics>, Object>(var1, var2, null) {
          final byte[] $compressedData;
          final byte[] $originalData;
          int label;
@@ -346,20 +345,20 @@ public object ImageQualityCalculator {
             } else {
                kotlin.c.b(var1);
 
-               var var4: Bitmap;
+               var var4: ImageQualityCalculator;
                var var5: Bitmap;
                try {
-                  var1 = ImageQualityCalculator.INSTANCE;
-                  var4 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(var1, this.$compressedData);
+                  var4 = ImageQualityCalculator.INSTANCE;
+                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
+                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(var4, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var4 != null && var5 != null) {
+               if (var5 != null && var1 != null) {
                   try {
                      this.label = 1;
-                     var1 = var1.calculateQualityMetrics(var4, var5, this);
+                     var1 = var4.calculateQualityMetrics(var5, var1, this);
                   } catch (var6: Exception) {
                      return null;
                   }

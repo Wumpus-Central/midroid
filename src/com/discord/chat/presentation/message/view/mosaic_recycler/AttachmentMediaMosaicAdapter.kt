@@ -16,12 +16,6 @@ import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.M
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import j8.a
 import j8.b
-import j8.c
-import j8.d
-import j8.e
-import j8.f
-import j8.g
-import j8.h
 import java.util.ArrayList
 
 public class AttachmentMediaMosaicAdapter(context: Context,
@@ -134,16 +128,16 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            val var10: a = new a(this, (ImageAttachmentMessageAccessory)var14, var1);
-            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var14);
+            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var14, var1);
+            val var10: b = new b(this, (ImageAttachmentMessageAccessory)var14);
             val var4: Boolean = this.shouldAutoPlayGifs;
             var16.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var14, var11, var10, var8, new c(this, (ImageAttachmentMessageAccessory)var14), new d(this), var4
+               var5, (ImageAttachmentMessageAccessory)var14, var11, var8, var10, new j8.c(this, (ImageAttachmentMessageAccessory)var14), new j8.d(this), var4
             );
          } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-            var var6: Any = this.items.get(var2);
-            var6 = var6 as VideoAttachmentMessageAccessory;
-            val var7: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var var6: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
+            val var7: VideoAttachmentMessageAccessory = var6 as VideoAttachmentMessageAccessory;
+            var6 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var3: Boolean;
             if (this.getItemCount() == 1) {
                var3 = true;
@@ -151,21 +145,13 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            var7.bindAttachment(
-               var5,
-               (VideoAttachmentMessageAccessory)var6,
-               var3,
-               new e(this, (VideoAttachmentMessageAccessory)var6, var1),
-               new f(this, (VideoAttachmentMessageAccessory)var6),
-               new g(this, (VideoAttachmentMessageAccessory)var6),
-               new h(this)
-            );
+            var6.bindAttachment(var5, var7, var3, new j8.e(this, var7, var1), new j8.f(this, var7), new j8.g(this, var7), new j8.h(this));
          } else {
-            val var12: Class = var1.getClass();
-            val var9: StringBuilder = new StringBuilder();
-            var9.append("Invalid view holder type ");
-            var9.append(var12);
-            throw new IllegalStateException(var9.toString().toString());
+            val var9: Class = var1.getClass();
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("Invalid view holder type ");
+            var12.append(var9);
+            throw new IllegalStateException(var12.toString().toString());
          }
       }
    }

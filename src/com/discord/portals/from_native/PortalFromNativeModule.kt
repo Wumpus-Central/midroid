@@ -13,13 +13,11 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import gu.g
 import gu.i0
 import gu.m0
 import ht.v
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.KSerializer
 import xu.m
@@ -33,7 +31,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
    public override fun unregisterView(portal: Double) {
       val var3: Activity = this.getReactApplicationContext().getCurrentActivity();
       if (var3 != null) {
-         var3.runOnUiThread(new c(var1));
+         var3.runOnUiThread(new com.discord.portals.from_native.c(var1));
       }
    }
 
@@ -107,7 +105,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
 
       @ReactProp(name = "portal")
       public open fun setPortal(portalView: PortalHolderViewGroup, portal: Double) {
-         g.d(
+         gu.g.d(
             CoroutineViewUtilsKt.getAttachedScope(var1),
             null,
             null,
@@ -147,8 +145,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     val var6: CoroutineDispatcher = m0.a();
-                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
+                     var1 = m0.a();
+                     val var6: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(null) {
                         int label;
 
                         {
@@ -183,12 +181,13 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                         }
                      };
                      this.label = 1;
-                     if (g.g(var6, var1, this) === var5) {
+                     if (gu.g.g(var1, var6, this) === var5) {
                         return var5;
                      }
                   }
 
-                  PortalFromNativeContextManager.INSTANCE.registerView(this.$portal, this.$portalView, new d(this.this$0, this.$portalView, this.$portal));
+                  PortalFromNativeContextManager.INSTANCE
+                     .registerView(this.$portal, this.$portalView, new com.discord.portals.from_native.d(this.this$0, this.$portalView, this.$portal));
                   return Unit.a;
                }
             },

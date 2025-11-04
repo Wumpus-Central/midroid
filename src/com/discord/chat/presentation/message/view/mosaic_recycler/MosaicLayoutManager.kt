@@ -23,8 +23,8 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
    }
 
    private fun fill(recycler: Recycler?) {
-      val var18: Int = 3;
-      val var17: Int = 2;
+      val var17: Int = 3;
+      val var18: Int = 2;
       if (var1 != null) {
          if (this.getChildCount() > 0) {
             try {
@@ -33,11 +33,11 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                val var21: java.lang.String = var20.getMessage();
                if (var21 != null && StringsKt.T(var21, "Scrapped or attached views may not be recycled", false, 2, null)) {
                   val var22: Log = Log.INSTANCE;
-                  val var44: java.lang.String = var20.getMessage();
-                  val var16: StringBuilder = new StringBuilder();
-                  var16.append("Skipping layout due to nested RecyclerView timing conflict: ");
-                  var16.append(var44);
-                  Log.e$default(var22, "MosaicLayoutManager", var16.toString(), null, 4, null);
+                  val var16: java.lang.String = var20.getMessage();
+                  val var45: StringBuilder = new StringBuilder();
+                  var45.append("Skipping layout due to nested RecyclerView timing conflict: ");
+                  var45.append(var16);
+                  Log.e$default(var22, "MosaicLayoutManager", var45.toString(), null, 4, null);
                   return;
                }
 
@@ -53,17 +53,17 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
          var var10: Int = 0;
 
          while (var9 < var13) {
-            var var41: Pair;
+            var var42: Pair;
             var var3: Int = this.getItemCount();
             label125:
             if (var3 != 1) {
                if (var3 != 2) {
                   if (var3 == 3) {
-                     var41 = new Pair;
+                     var42 = new Pair;
                      if (var9 == 0) {
-                        var41./* $VF: Unable to resugar constructor */<init>(var17, 4);
+                        var42./* $VF: Unable to resugar constructor */<init>(var18, 4);
                      } else {
-                        var41./* $VF: Unable to resugar constructor */<init>(var17, var17);
+                        var42./* $VF: Unable to resugar constructor */<init>(var18, var18);
                      }
                      break label125;
                   }
@@ -71,33 +71,33 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                   if (var3 != 4) {
                      var3 = this.getItemCount() % 3;
                      if (var9 < var3) {
-                        var41 = new Pair(var3, 6 / var3);
+                        var42 = new Pair(var3, 6 / var3);
                      } else {
-                        var41 = new Pair(var18, var17);
+                        var42 = new Pair(var17, var18);
                      }
                      break label125;
                   }
                }
 
-               var41 = new Pair(var17, var18);
+               var42 = new Pair(var18, var17);
             } else {
-               var41 = new Pair(1, 6);
+               var42 = new Pair(1, 6);
             }
 
-            val var12: Int = (var41.a() as java.lang.Number).intValue();
-            val var14: Int = (var41.b() as java.lang.Number).intValue();
+            val var12: Int = (var42.a() as java.lang.Number).intValue();
+            val var14: Int = (var42.b() as java.lang.Number).intValue();
             val var19: View = var1.o(var9);
             val var15: Boolean = var19 is MosaicView;
-            val var42: MosaicView;
+            val var43: MosaicView;
             if (var19 is MosaicView) {
-               var42 = var19 as MosaicView;
+               var43 = var19 as MosaicView;
             } else {
-               var42 = null;
+               var43 = null;
             }
 
             val var2: Float;
-            if (var42 != null) {
-               var2 = var42.getSingleAspectRatio();
+            if (var43 != null) {
+               var2 = var43.getSingleAspectRatio();
             } else {
                var2 = 1.0F;
             }
@@ -105,12 +105,10 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
             var var28: Int;
             if (this.getItemCount() == 1) {
                var var7: Int = this.availableWidth;
-               var3 = (int)(this.availableWidth / var2);
-               var28 = this.mediaMaxHeight;
-               if (var3 > this.mediaMaxHeight) {
+               var28 = (int)(this.availableWidth / var2);
+               if ((int)(this.availableWidth / var2) > this.mediaMaxHeight) {
                   var7 = (int)(this.mediaMaxHeight * var2);
-               } else {
-                  var28 = var3;
+                  var28 = this.mediaMaxHeight;
                }
 
                var3 = var5;
@@ -142,10 +140,10 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                if (this.getItemCount() == 3 && var9 == 2) {
                   var5 = var5 + 4;
                   var6 = var3;
-                  val var37: Int = this.spacingPx * 2;
+                  val var38: Int = this.spacingPx * 2;
                   var3 = var5;
                   var5 = var28;
-                  var28 = var37;
+                  var28 = var38;
                } else {
                   var28 = var6;
                   var5 = var28;
@@ -156,24 +154,24 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
 
             this.addView(var19);
             this.measureChildWithMargins(var19, 0, 0);
-            var var38: Int;
+            var var39: Int;
             if (this.getItemCount() == 3) {
-               var38 = var12;
+               var39 = var12;
             } else {
-               var38 = var12 - 1;
+               var39 = var12 - 1;
             }
 
-            var38 = a.c((float)Math.ceil((double)((float)(this.availableWidth - var38 * this.spacingPx) / 6.0F * (float)var3 + (float)var28)));
-            this.layoutDecoratedWithMargins(var19, var38, var10, var38 + var6, var10 + var5);
-            val var43: MosaicView;
+            var39 = a.c((float)Math.ceil((double)((float)(this.availableWidth - var39 * this.spacingPx) / 6.0F * (float)var3 + (float)var28)));
+            this.layoutDecoratedWithMargins(var19, var39, var10, var39 + var6, var10 + var5);
+            val var44: MosaicView;
             if (var15) {
-               var43 = var19 as MosaicView;
+               var44 = var19 as MosaicView;
             } else {
-               var43 = null;
+               var44 = null;
             }
 
-            if (var43 != null) {
-               var43.setMosaicSize(var6, var5);
+            if (var44 != null) {
+               var44.setMosaicSize(var6, var5);
             }
 
             if (this.getItemCount() > 1) {

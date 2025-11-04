@@ -93,7 +93,7 @@ private fun renderEmojiInto(
    sizePx: Int,
    allowAnimation: Boolean,
    verticalAlignment: Int = 2,
-   additionalBuilderActions: (GenericDraweeHierarchyBuilder) -> Unit = new c()
+   additionalBuilderActions: (GenericDraweeHierarchyBuilder) -> Unit = new com.discord.emoji.c()
 ) {
    val var8: Int = var0.length();
    var0.append('\u200b');
@@ -139,7 +139,7 @@ fun `renderEmojiInto$default`(
    }
 
    if ((var8 and 128) != 0) {
-      var7 = new c();
+      var7 = new com.discord.emoji.c();
    }
 
    renderEmojiInto(var0, var1, var2, var3, var4, var5, var6, (Function1<? super GenericDraweeHierarchyBuilder, Unit>)var7);

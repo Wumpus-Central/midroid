@@ -41,7 +41,7 @@ internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) :
          val var1: ReactApplicationContext = this.getReactApplicationContext();
          val var2: PowerManager = androidx.core.content.a.j(var1, PowerManager.class) as PowerManager;
          if (var2 != null) {
-            var2.addThermalStatusListener(new d(this));
+            var2.addThermalStatusListener(new com.discord.device.d(this));
          }
       }
    }

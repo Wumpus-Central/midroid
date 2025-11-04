@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.message.view.botuikit.react;
 
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class s implements Function1 {
-   public final Object invoke(Object var1) {
-      return ComponentContextDefaults.u((String)var1);
+public final class s implements Function0 {
+   public final Object invoke() {
+      return ComponentContextDefaults.r();
    }
 }

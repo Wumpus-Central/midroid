@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.row
 
+import bv.e
+import bv.h
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -8,7 +10,7 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 
-public object RowSerializer : bv.e(Row::class) {
+public object RowSerializer : e(Row::class) {
    private const val CHANGE_TYPE_DELETE: String = "3"
    private final val rowSealedClassSerializer: SealedClassSerializer<Row> =
       new SealedClassSerializer(
@@ -21,14 +23,14 @@ public object RowSerializer : bv.e(Row::class) {
       )
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Row> {
-      val var2: JsonObject = bv.h.n(var1);
+      val var2: JsonObject = h.n(var1);
       if (var2.containsKey("type")) {
          return rowSealedClassSerializer;
       } else {
          label19: {
             val var3: JsonElement = var2.get("changeType") as JsonElement;
             if (var3 != null) {
-               val var4: JsonPrimitive = bv.h.o(var3);
+               val var4: JsonPrimitive = h.o(var3);
                if (var4 != null) {
                   var5 = var4.b();
                   break label19;

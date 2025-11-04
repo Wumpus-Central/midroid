@@ -22,8 +22,6 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import i8.a
 import i8.b
-import i8.c
-import i8.d
 
 public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout(var1, var2) {
    private final val binding: AttachmentMediaMosaicContainerViewBinding
@@ -41,15 +39,15 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
    init {
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var4;
-      val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var3;
-      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new a(this), new b(this), new c(this), new d(this));
-      this.attachmentAdapter = var5;
+      val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var5;
+      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new a(this), new b(this), new i8.c(this), new i8.d(this));
+      this.attachmentAdapter = var3;
       val var6: RecyclerView = var4.mosaic;
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var6.setLayoutManager(var3);
-      var6.setAdapter(var5);
+      var6.setLayoutManager(var5);
+      var6.setAdapter(var3);
    }
 
    @JvmStatic

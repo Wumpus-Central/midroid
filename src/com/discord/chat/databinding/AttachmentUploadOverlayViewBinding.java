@@ -52,27 +52,27 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
    @NonNull
    public static AttachmentUploadOverlayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.upload_cancel;
-      SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.upload_complete;
-         SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var8 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.upload_complete_background;
             MaterialCardView var7 = (MaterialCardView)k5.a.a(var0, var1);
             if (var7 != null) {
                var1 = R.id.upload_complete_layout;
-               ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
-               if (var3 != null) {
+               ConstraintLayout var6 = (ConstraintLayout)k5.a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.upload_progress;
-                  CircularProgressIndicator var6 = (CircularProgressIndicator)k5.a.a(var0, var1);
-                  if (var6 != null) {
+                  CircularProgressIndicator var2 = (CircularProgressIndicator)k5.a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.upload_progress_background;
-                     View var4 = k5.a.a(var0, var1);
-                     if (var4 != null) {
+                     View var5 = k5.a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.upload_progress_layout;
-                        ConstraintLayout var2 = (ConstraintLayout)k5.a.a(var0, var1);
-                        if (var2 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var5, var8, var7, var3, var6, var4, var2);
+                        ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
+                        if (var3 != null) {
+                           return new AttachmentUploadOverlayViewBinding(var0, var8, var4, var7, var6, var2, var5, var3);
                         }
                      }
                   }

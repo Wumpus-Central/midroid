@@ -9,21 +9,13 @@ import l9.a0
 import l9.a1
 import l9.b
 import l9.b0
-import l9.c
 import l9.c0
-import l9.d
 import l9.d0
-import l9.e
 import l9.e0
-import l9.f
 import l9.f0
-import l9.g
 import l9.g0
-import l9.h
 import l9.h0
-import l9.i
 import l9.i0
-import l9.j
 import l9.j0
 import l9.k
 import l9.k0
@@ -378,7 +370,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
 
    init {
       this.androidRipple$delegate = l.b(new a(var1, var2));
-      this.backgroundAccent$delegate = l.b(new c(var1, var2));
+      this.backgroundAccent$delegate = l.b(new l9.c(var1, var2));
       this.backgroundFloating$delegate = l.b(new o(var1, var2));
       this.backgroundMessageHighlight$delegate = l.b(new a0(var1, var2));
       this.backgroundMobilePrimary$delegate = l.b(new m0(var1, var2));
@@ -397,13 +389,13 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.cardPrimaryBg$delegate = l.b(new z0(var1, var2));
       this.chatSwipeToReplyBackground$delegate = l.b(new a1(var1, var2));
       this.chatSwipeToReplyGradientBackground$delegate = l.b(new b(var1, var2));
-      this.embedBackground$delegate = l.b(new d(var1, var2));
-      this.headerPrimary$delegate = l.b(new e(var1, var2));
-      this.headerSecondary$delegate = l.b(new f(var1, var2));
-      this.infoDangerForeground$delegate = l.b(new g(var1, var2));
-      this.interactiveActive$delegate = l.b(new h(var1, var2));
-      this.interactiveMuted$delegate = l.b(new i(var1, var2));
-      this.interactiveNormal$delegate = l.b(new j(var1, var2));
+      this.embedBackground$delegate = l.b(new l9.d(var1, var2));
+      this.headerPrimary$delegate = l.b(new l9.e(var1, var2));
+      this.headerSecondary$delegate = l.b(new l9.f(var1, var2));
+      this.infoDangerForeground$delegate = l.b(new l9.g(var1, var2));
+      this.interactiveActive$delegate = l.b(new l9.h(var1, var2));
+      this.interactiveMuted$delegate = l.b(new l9.i(var1, var2));
+      this.interactiveNormal$delegate = l.b(new l9.j(var1, var2));
       this.redesignButtonActiveBackground$delegate = l.b(new k(var1, var2));
       this.redesignButtonDangerBackground$delegate = l.b(new m(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = l.b(new n(var1, var2));

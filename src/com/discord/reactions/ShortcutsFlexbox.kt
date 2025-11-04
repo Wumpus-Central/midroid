@@ -107,9 +107,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       addReactionLabel: String,
       addNewReactionAccessibilityLabel: String,
       reactionsTheme: ReactionsTheme?,
-      onAddReactionClick: OnClickListener = new d(),
+      onAddReactionClick: OnClickListener = new com.discord.reactions.d(),
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new e(),
+      onReactionLongPress: (Reaction) -> Unit = new com.discord.reactions.e(),
       theme: DiscordTheme? = null
    ) {
       val var13: ThemeManager = ThemeManager.INSTANCE;
@@ -119,16 +119,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var18: java.util.Iterator = var1.iterator();
 
       for (int var10 = 0; var18.hasNext(); var10++) {
-         var var21: ReactionView = (ReactionView)var18.next();
+         var var21: Any = var18.next();
          if (var10 < 0) {
             CollectionsKt.v();
          }
 
-         val var14: ReactionView.Reaction = var21 as ReactionView.Reaction;
-         var21 = this.getOrCreateReactionView(var10);
-         var21.setReaction(var14, var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new f(var7, var14), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var21, false, new g(var8, var14), 1, null);
+         var21 = var21 as ReactionView.Reaction;
+         val var14: ReactionView = this.getOrCreateReactionView(var10);
+         var14.setReaction((ReactionView.Reaction)var21, var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new com.discord.reactions.f(var7, (ReactionView.Reaction)var21), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var14, false, new com.discord.reactions.g(var8, (ReactionView.Reaction)var21), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var1.size());

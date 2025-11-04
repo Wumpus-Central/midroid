@@ -10,7 +10,6 @@ import android.os.Environment
 import com.discord.file_downloader.utils.FilenameSanitizedKt
 import iu.s
 import java.util.LinkedHashMap
-import ju.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
@@ -86,16 +85,16 @@ public object PublicFileDownloader {
       // 4d: new com/discord/file_downloader/DownloadState$Failure
       // 50: astore 5
       // 52: new java/lang/IllegalStateException
-      // 55: astore 8
+      // 55: astore 7
       // 57: new java/io/FileNotFoundException
-      // 5a: astore 7
-      // 5c: aload 7
+      // 5a: astore 8
+      // 5c: aload 8
       // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 8
-      // 63: aload 7
+      // 61: aload 7
+      // 63: aload 8
       // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
       // 68: aload 5
-      // 6a: aload 8
+      // 6a: aload 7
       // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6f: aload 1
       // 70: aload 5
@@ -123,7 +122,7 @@ public object PublicFileDownloader {
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
-      return g.d(
+      return ju.g.d(
          new Function2<ProducerScope, Continuation<? super Unit>, Object>(var1, var2, var3, var4, null) {
             final Context $context;
             final java.lang.String $description;
@@ -216,13 +215,13 @@ public object PublicFileDownloader {
                            }
 
                            val var22: Any = this.$context.getSystemService("download");
-                           val var31: DownloadManager = var22 as DownloadManager;
+                           val var10: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.element = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var31.enqueue(
+                              var3x = var10.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.element = var3x;
@@ -236,7 +235,7 @@ public object PublicFileDownloader {
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.f(var23.element), new b(var23, var1, var31, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.f(var23.element), new b(var23, var1, var10, this.$fileName));
                                  break label82;
                               } catch (var12: Exception) {
                                  var6 = var1;
@@ -265,8 +264,8 @@ public object PublicFileDownloader {
                               return var9;
                            }
 
-                           var20 = var1;
                            var1 = var23;
+                           var20 = var1;
                         }
 
                         var7 = var1;
@@ -286,11 +285,11 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var23 = var1;
                   var1 = var20;
+                  var23 = var1;
                }
 
-               val var24: c = new c(var23);
+               val var24: com.discord.file_downloader.c = new com.discord.file_downloader.c(var23);
                this.L$0 = null;
                this.L$1 = null;
                this.label = 3;

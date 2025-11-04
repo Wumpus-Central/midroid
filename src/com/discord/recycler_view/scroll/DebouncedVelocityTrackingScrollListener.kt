@@ -19,7 +19,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
 
    init {
       this.scrollVelocityChanged = var4;
-      this.velocityEvents = new DebouncedFlow<>(var5, new c(this), false, 4, null);
+      this.velocityEvents = new DebouncedFlow<>(var5, new com.discord.recycler_view.scroll.c(this), false, 4, null);
       this.velocityTracker = new VelocityTrackingScrollListener(
          var1,
          var2,

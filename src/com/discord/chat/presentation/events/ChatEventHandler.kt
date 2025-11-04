@@ -15,7 +15,6 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactions.ReactionView.Reaction
-import ht.c
 
 public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
@@ -147,6 +146,9 @@ public interface ChatEventHandler {
    public abstract fun onTapChannelPromptButton(messageId: MessageId, channelId: ChannelId, buttonType: String) {
    }
 
+   public abstract fun onTapCheckpointCard(messageId: MessageId, authorId: UserId) {
+   }
+
    public abstract fun onTapClanTagChiplet(guildId: GuildId) {
    }
 
@@ -257,7 +259,7 @@ public interface ChatEventHandler {
    public abstract fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
    }
 
-   @c
+   @ht.c
    public abstract fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
    }
 
@@ -466,6 +468,9 @@ public interface ChatEventHandler {
       public override fun onTapChannelPromptButton(messageId: MessageId, channelId: ChannelId, buttonType: String) {
       }
 
+      public override fun onTapCheckpointCard(messageId: MessageId, authorId: UserId) {
+      }
+
       public override fun onTapClanTagChiplet(guildId: GuildId) {
       }
 
@@ -576,7 +581,7 @@ public interface ChatEventHandler {
       public override fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
       }
 
-      @c
+      @ht.c
       public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
       }
 

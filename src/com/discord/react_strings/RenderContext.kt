@@ -1,6 +1,5 @@
 package com.discord.react_strings
 
-import b9.g
 import java.util.HashMap
 import kotlin.jvm.functions.Function3
 
@@ -47,7 +46,7 @@ public class RenderContext {
       }
 
       public fun replace(input: CharSequence, onMatch: (String, String?, Boolean) -> CharSequence): String {
-         return argumentRegex.j(var1, new g(var2));
+         return argumentRegex.j(var1, new b9.g(var2));
       }
    }
 }

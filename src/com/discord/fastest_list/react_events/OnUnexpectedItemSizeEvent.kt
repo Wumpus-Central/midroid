@@ -18,7 +18,7 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    }
 
    public override fun serialize(): WritableMap {
-      val var3: Pair = v.a("section", this.entry.getSection-sZRFyWU());
+      val var2: Pair = v.a("section", this.entry.getSection-sZRFyWU());
       val var1: Int;
       if (this.entry is FastestListSections.Entry.SectionItem) {
          var1 = (this.entry as FastestListSections.Entry.SectionItem).getItem-JXkbwXs();
@@ -27,7 +27,7 @@ internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
       }
 
       return NativeMapExtensionsKt.nativeMapOf(
-         var3,
+         var2,
          v.a("item", var1),
          v.a("isSectionHeader", this.entry is FastestListSections.Entry.SectionHeader),
          v.a("isSectionFooter", this.entry is FastestListSections.Entry.SectionFooter),

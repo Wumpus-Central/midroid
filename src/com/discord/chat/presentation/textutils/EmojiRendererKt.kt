@@ -94,9 +94,9 @@ public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode
 
    val var9: RenderableEmoji = renderable(var1);
    val var13: EmojiAccessibilitySpan = new EmojiAccessibilitySpan(var9.getContentDescription());
-   val var10: ClickableSpan = new ClickableSpan(null, null, null, null, 0.0F, null, null, new i(var2, var1), 127, null);
+   val var10: ClickableSpan = new ClickableSpan(null, null, null, null, 0.0F, null, null, new com.discord.chat.presentation.textutils.i(var2, var1), 127, null);
    val var6: Int = var0.length();
-   RenderableEmojiKt.renderEmojiInto(var0, var9, var2.getContext(), var4, var2.getAnimateEmoji(), var5, new j(var2));
+   RenderableEmojiKt.renderEmojiInto(var0, var9, var2.getContext(), var4, var2.getAnimateEmoji(), var5, new com.discord.chat.presentation.textutils.j(var2));
 
    for (int var12 = 0; var12 < 2; var12++) {
       val var11: Any = new Object[]{var13, var10}[var12];
@@ -126,14 +126,14 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
    } else {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var2: Long = (var0 as CustomEmojiContentNode).getId();
-      val var1: Boolean;
+      val var1: Long = (var0 as CustomEmojiContentNode).getId();
+      val var3: Boolean;
       if (!StringsKt.i0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
-         var1 = true;
+         var3 = true;
       } else {
-         var1 = false;
+         var3 = false;
       }
 
-      return var4.customWithEmojiId(var2, var1, var5.getAlt());
+      return var4.customWithEmojiId(var1, var3, var5.getAlt());
    }
 }

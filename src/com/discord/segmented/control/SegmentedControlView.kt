@@ -19,7 +19,6 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlin.properties.ReadWriteProperty
-import kotlin.properties.c
 import kotlin.reflect.KProperty
 
 @SourceDebugExtension(["SMAP\nSegmentedControlView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SegmentedControlView.kt\ncom/discord/segmented/control/SegmentedControlView\n+ 2 Delegates.kt\nkotlin/properties/Delegates\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,160:1\n33#2,3:161\n1872#3,3:164\n311#4:167\n327#4,4:168\n312#4:172\n*S KotlinDebug\n*F\n+ 1 SegmentedControlView.kt\ncom/discord/segmented/control/SegmentedControlView\n*L\n32#1:161,3\n88#1:164,3\n150#1:167\n150#1:168,4\n150#1:172\n*E\n"])
@@ -246,22 +245,22 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       val var3: java.util.Iterator = this.getLabels().iterator();
 
       for (int var2 = 0; var3.hasNext(); var2++) {
-         var var4: Any = var3.next();
+         var var4: TextView = (TextView)var3.next();
          if (var2 < 0) {
             CollectionsKt.v();
          }
 
-         var4 = var4 as java.lang.String;
-         val var5: TextView = this.getLabelView(var2);
-         var5.setText((java.lang.CharSequence)var4);
-         var5.setGravity(17);
-         DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-         var5.setTextSize(this.getSegmentFontSizeSp());
-         var5.setTextColor(this.getSegmentTextColor());
-         var5.setOnClickListener(new a(this, var2, (java.lang.String)var4));
+         val var5: java.lang.String = var4 as java.lang.String;
+         var4 = this.getLabelView(var2);
+         var4.setText(var5);
+         var4.setGravity(17);
+         DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
+         var4.setTextSize(this.getSegmentFontSizeSp());
+         var4.setTextColor(this.getSegmentTextColor());
+         var4.setOnClickListener(new a(this, var2, var5));
          if (var2 == this.getSelectedIndex()) {
-            var5.setTextSize(this.getSelectedSegmentFontSizeSp());
-            var5.setTextColor(this.getSelectedSegmentTextColor());
+            var4.setTextSize(this.getSelectedSegmentFontSizeSp());
+            var4.setTextColor(this.getSelectedSegmentTextColor());
          }
       }
 
@@ -278,7 +277,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    private fun <T> updateViewOnChange(initialValue: Any, labelsChanged: Boolean = false): ReadWriteProperty<Any?, Any> {
       val var3: kotlin.properties.a = kotlin.properties.a.a;
-      return new c(var1, this, var2) {
+      return new kotlin.properties.c(var1, this, var2) {
          final boolean $labelsChanged$inlined;
          final SegmentedControlView this$0;
 

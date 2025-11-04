@@ -33,7 +33,7 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
          var2.getMARKDOWN_OPTIONS(),
          var2.getMARKDOWN_HANDLERS(),
          var2.getMEDIA_HANDLERS(),
-         ComponentActionEventHandlers.copy$default(var2.getCOMPONENT_HANDLERS(), null, null, new z(var1), null, 11, null),
+         ComponentActionEventHandlers.copy$default(var2.getCOMPONENT_HANDLERS(), null, null, new a0(var1), null, null, 27, null),
          new WidthInfo(0, 0, 0, 4, null),
          false,
          false,
@@ -70,24 +70,24 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
    public fun setModel(view: SelectComponentView, model: ReadableMap) {
       var var3: Boolean;
       try {
-         val var19: Json = ComponentDeserializerKt.getJson();
-         val var5: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var5: Json = ComponentDeserializerKt.getJson();
+         val var19: ComponentSerializer = ComponentSerializer.INSTANCE;
          val var14: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var15 = var19.b(var5, var14) as Component;
+         var15 = var5.b(var19, var14) as Component;
          var3 = var15 is SelectComponent;
       } catch (var8: Exception) {
          val var9: java.lang.String = (SelectComponent::class).getSimpleName();
-         val var4: java.lang.String = var8.getMessage();
-         val var13: StringBuilder = new StringBuilder();
-         var13.append("Error while deserializing ");
-         var13.append(var9);
-         var13.append(": ");
-         var13.append(var4);
-         throw new IllegalStateException(var13.toString().toString());
+         val var13: java.lang.String = var8.getMessage();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Error while deserializing ");
+         var4.append(var9);
+         var4.append(": ");
+         var4.append(var13);
+         throw new IllegalStateException(var4.toString().toString());
       }
 
       if (var3) {
-         var1.configure(var15 as SelectComponent, this.createSelectComponentContext(new a0(this, var1)));
+         var1.configure(var15 as SelectComponent, this.createSelectComponentContext(new b0(this, var1)));
          ViewMeasureExtensionsKt.measureAndLayout(var1);
       } else {
          try {
@@ -101,13 +101,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
             throw new IllegalStateException(var17.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = (SelectComponent::class).getSimpleName();
-            val var20: java.lang.String = var7.getMessage();
-            val var16: StringBuilder = new StringBuilder();
-            var16.append("Error while deserializing ");
-            var16.append(var10);
-            var16.append(": ");
-            var16.append(var20);
-            throw new IllegalStateException(var16.toString().toString());
+            val var16: java.lang.String = var7.getMessage();
+            val var20: StringBuilder = new StringBuilder();
+            var20.append("Error while deserializing ");
+            var20.append(var10);
+            var20.append(": ");
+            var20.append(var16);
+            throw new IllegalStateException(var20.toString().toString());
          }
       }
    }

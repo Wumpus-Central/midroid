@@ -10,6 +10,7 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
+import ba.f
 import com.discord.SetTextSizeSpKt
 import com.discord.activity_invites.databinding.ActivityRichPresenceInviteEmbedViewBinding
 import com.discord.core.DCDButton
@@ -72,16 +73,16 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          val var7: java.lang.Iterable = var1;
          val var5: ArrayList = new ArrayList(CollectionsKt.w(var1, 10));
 
-         for (RGBAColorModel var8 : var7) {
-            var5.add(Color.argb((int)(var8.getA() * (float)255), (int)var8.getR(), (int)var8.getG(), (int)var8.getB()));
+         for (RGBAColorModel var3 : var7) {
+            var5.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
          }
 
-         val var9: IntArray = CollectionsKt.g1(var5);
-         val var6: GradientDrawable = new GradientDrawable();
-         var6.setColors(var9);
-         var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
-         var6.setOrientation(Orientation.BL_TR);
-         this.binding.gradientBackground.setBackground(var6);
+         val var6: IntArray = CollectionsKt.g1(var5);
+         val var9: GradientDrawable = new GradientDrawable();
+         var9.setColors(var6);
+         var9.setCornerRadius((float)SizeUtilsKt.getDpToPx(12));
+         var9.setOrientation(Orientation.BL_TR);
+         this.binding.gradientBackground.setBackground(var9);
       } else {
          val var4: View = this.binding.gradientBackground;
          var4.setVisibility(8);
@@ -105,7 +106,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
 
       var4.setVisibility(var2);
       if (var1 != null) {
-         this.binding.coverImage.setImageURI(ba.f.r(var1));
+         this.binding.coverImage.setImageURI(f.r(var1));
       }
    }
 
@@ -174,7 +175,7 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          val var59: SimpleDraweeView = this.binding.activityIcon;
          var59.setVisibility(0);
       } else if (var7 != null) {
-         this.binding.activityIcon.setImageURI(ba.f.r(var7));
+         this.binding.activityIcon.setImageURI(f.r(var7));
          val var56: SimpleDraweeView = this.binding.activityIcon;
          var56.setVisibility(0);
       } else {

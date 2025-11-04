@@ -75,12 +75,12 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var var3: SpoilerOverlayView = this.binding.spoiler;
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
-      val var4: Function1 = var1.getAttributes().getLabel();
-      val var5: Context = this.getContext();
-      val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
-      val var9: Function1 = var1.getAttributes().getDescription();
-      val var6: Context = this.getContext();
-      var3.configure(var8, var9.invoke(var6) as java.lang.String, new o2(this, var2));
+      val var5: Function1 = var1.getAttributes().getLabel();
+      val var4: Context = this.getContext();
+      val var8: java.lang.String = var5.invoke(var4) as java.lang.String;
+      val var6: Function1 = var1.getAttributes().getDescription();
+      val var9: Context = this.getContext();
+      var3.configure(var8, var6.invoke(var9) as java.lang.String, new o2(this, var2));
    }
 
    @JvmStatic
@@ -137,7 +137,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var4 = this;
       }
 
-      var4 = var4 as ViewGroup;
+      val var5: ViewGroup = var4 as ViewGroup;
       var var3: Byte;
       if (var1) {
          var3 = 2;
@@ -145,9 +145,9 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var3 = 1;
       }
 
-      val var5: androidx.transition.e = new androidx.transition.e(var3);
-      var5.o0(150L);
-      var5.d(new androidx.transition.w(var1, this) {
+      var4 = new androidx.transition.e(var3);
+      var4.o0(150L);
+      var4.d(new androidx.transition.w(var1, this) {
          final boolean $showImage;
          final SpoilerView this$0;
 
@@ -166,7 +166,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
          }
       });
-      androidx.transition.x.a((ViewGroup)var4, var5);
+      androidx.transition.x.a(var5, var4);
       if (!var1) {
          var3 = 0;
       } else {

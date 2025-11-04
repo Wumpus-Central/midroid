@@ -5,7 +5,6 @@ import com.discord.resource_usage.DeviceResourceUsageRecorder
 import ht.l
 import java.io.File
 import java.util.Map.Entry
-import ju.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
@@ -55,7 +54,7 @@ public object FileDownloader {
    public fun downloadFile(context: Context, fileUrl: String, fileName: String, downloadDirectory: File = var1.getCacheDir(), logErrors: Boolean = false): Flow<
          DownloadState
       > {
-      return g.v(
+      return ju.g.v(
          new Function2<FlowCollector, Continuation<? super Unit>, Object>(var4, var3, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null

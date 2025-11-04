@@ -127,10 +127,10 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var3 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var4: java.lang.String = var3.b();
-         if (StringsKt.N(var4, "calls", false, 2, null)) {
-            return var3;
+      for (NotificationChannelCompat var4 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var3: java.lang.String = var4.b();
+         if (StringsKt.N(var3, "calls", false, 2, null)) {
+            return var4;
          }
       }
 
@@ -151,17 +151,17 @@ internal object NotificationChannels {
 
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var5: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("calls_");
-         var4.append(var5);
-         return var4.toString();
+         val var4: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("calls_");
+         var5.append(var4);
+         return var5.toString();
       } else {
-         val var3: java.lang.String = var1.getId();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("calls_");
-         var2.append(var3);
-         return var2.toString();
+         val var2: java.lang.String = var1.getId();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("calls_");
+         var3.append(var2);
+         return var3.toString();
       }
    }
 
@@ -184,7 +184,7 @@ internal object NotificationChannels {
       category: com.discord.notifications.renderer.NotificationChannels.Category,
       brandColor: Int,
       localizedCategoryNames: Map<String, String>,
-      onConfigure: (NotificationChannelCompat?, Builder) -> Unit = new d()
+      onConfigure: (NotificationChannelCompat?, Builder) -> Unit = new com.discord.notifications.renderer.d()
    ): NotificationChannelCompat? {
       val var9: NotificationChannelCompat = this.getAndDeleteLegacyNotificationChannel(var2, var1);
       if (!var4.containsKey(var2.getId())) {
@@ -295,25 +295,27 @@ internal object NotificationChannels {
    }
 
    public fun init(context: Context, localizedCategoryNames: Map<String, String>, localizedGroupNames: Map<String, String>) {
-      val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
+      val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var18: java.util.List = this.createNotificationChannelGroups(var1, var3);
-      val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
-      val var9: ArrayList = new ArrayList();
-      val var5: Int = var8.length;
+      val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
+      val var8: ArrayList = new ArrayList();
+      val var6: Int = var9.length;
 
-      for (int var4 = 0; var4 < var5; var4++) {
-         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var6, var2, new c(var8[var4], var1));
+      for (int var4 = 0; var4 < var6; var4++) {
+         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(
+            var1, var9[var4], var5, var2, new com.discord.notifications.renderer.c(var9[var4], var1)
+         );
          if (var21 != null) {
-            var9.add(var21);
+            var8.add(var21);
          }
       }
 
       try {
-         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
+         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
       } catch (var13: Exception) {
          val var20: CrashReporting = CrashReporting.INSTANCE;
          val var14: java.lang.Iterable = var18;
-         val var22: LinkedHashMap = new LinkedHashMap(e.e(s0.e(CollectionsKt.w(var18, 10)), 16));
+         val var22: LinkedHashMap = new LinkedHashMap(kotlin.ranges.e.e(s0.e(CollectionsKt.w(var18, 10)), 16));
 
          for (k var12 : var14) {
             label32: {

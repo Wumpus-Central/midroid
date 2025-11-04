@@ -56,21 +56,31 @@ public final class R {
    }
 
    public static final class drawable {
+      public static int checkpoint_power_end;
+      public static int checkpoint_power_mid;
+      public static int checkpoint_power_start;
       public static int drawable_audio_play_button_gradient_dark;
       public static int drawable_audio_play_button_gradient_light;
       public static int drawable_bot_component_divider;
       public static int drawable_bot_component_section_column_gap;
       public static int drawable_bot_component_section_row_gap;
+      public static int drawable_checkpoint_background;
       public static int drawable_circle;
       public static int drawable_circle_primary_900;
       public static int drawable_circle_white;
       public static int drawable_message_author_tag_bg;
       public static int drawable_poll_image_info_card;
       public static int drawable_voice_message_view;
+      public static int ic_arrow_left_10dp;
+      public static int ic_chat_icon_16dp;
+      public static int ic_guild_icon_16dp;
       public static int ic_link_icon_24dp;
+      public static int ic_microphone_icon_16dp;
       public static int ic_play_arrow;
+      public static int ic_reaction_icon_16dp;
       public static int ic_swipe_edit;
       public static int ic_swipe_reply;
+      public static int ic_unknown_game_icon_16dp;
       public static int premium_tier2_gradient;
 
       private drawable() {
@@ -96,6 +106,8 @@ public final class R {
       public static int alt_text_label;
       public static int answers;
       public static int app_icon;
+      public static int application_image;
+      public static int application_name;
       public static int arrow;
       public static int audio_details_view;
       public static int audio_file_name;
@@ -144,6 +156,7 @@ public final class R {
       public static int chat_list_adapter_item_visibility_icon;
       public static int chat_list_feedback_icon;
       public static int checkbox;
+      public static int checkpoint;
       public static int children_views;
       public static int clan_tag_chiplet;
       public static int close_icon;
@@ -174,6 +187,9 @@ public final class R {
       public static int divider;
       public static int emoji;
       public static int emoji_button;
+      public static int emoji_count;
+      public static int emoji_image;
+      public static int emoji_name;
       public static int error;
       public static int error_icon;
       public static int error_label;
@@ -218,6 +234,7 @@ public final class R {
       public static int guild_badge;
       public static int guild_communication_disabled_icon;
       public static int guild_icon;
+      public static int guild_image;
       public static int guild_name;
       public static int guild_text;
       public static int guilds_item_avatar_wrap;
@@ -238,6 +255,7 @@ public final class R {
       public static int image_alt_text;
       public static int image_blur_bg;
       public static int image_invalid;
+      public static int image_resource;
       public static int indicator_bottom;
       public static int indicator_end_barrier;
       public static int indicator_top;
@@ -291,12 +309,14 @@ public final class R {
       public static int link_icon;
       public static int link_icon_title;
       public static int loading_dots;
+      public static int logo;
       public static int media_view;
       public static int media_view_alt_text;
       public static int media_view_alt_text_button;
       public static int media_warning_icon;
       public static int message;
       public static int message_alt_remix_tag_view;
+      public static int message_count;
       public static int message_end_guideline;
       public static int message_frame_feed_header;
       public static int message_frame_header;
@@ -333,6 +353,10 @@ public final class R {
       public static int percentage_bar_container;
       public static int player_container;
       public static int player_icon;
+      public static int power_bar;
+      public static int power_container;
+      public static int power_level_lvl;
+      public static int power_level_number;
       public static int previewBtn;
       public static int previewHeading;
       public static int primary_action;
@@ -397,6 +421,7 @@ public final class R {
       public static int splash;
       public static int spoiler;
       public static int start_spacer;
+      public static int stats;
       public static int sticker_view;
       public static int subtitle;
       public static int subtitleGradient;
@@ -442,6 +467,7 @@ public final class R {
       public static int top_guideline;
       public static int trialInfo;
       public static int trial_info_top;
+      public static int unicode_emoji_image;
       public static int upload_cancel;
       public static int upload_complete;
       public static int upload_complete_background;
@@ -462,6 +488,7 @@ public final class R {
       public static int view_interaction_status_label_icon;
       public static int view_interaction_status_label_message;
       public static int view_interaction_status_loading_dots;
+      public static int voice_minutes;
       public static int vote_counts;
       public static int vote_percentage;
       public static int wave;
@@ -521,6 +548,7 @@ public final class R {
       public static int message_alt_remix_tag_view;
       public static int message_component_action_row_view;
       public static int message_component_button_view;
+      public static int message_component_checkpoint_card_view;
       public static int message_component_container_view;
       public static int message_component_content_inventory_view;
       public static int message_component_media_gallery_display_view;

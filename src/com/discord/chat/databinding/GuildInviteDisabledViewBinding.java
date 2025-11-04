@@ -62,33 +62,33 @@ public final class GuildInviteDisabledViewBinding implements ViewBinding {
    @NonNull
    public static GuildInviteDisabledViewBinding bind(@NonNull View var0) {
       int var1 = R.id.barrier_button;
-      Barrier var2 = (Barrier)k5.a.a(var0, var1);
-      if (var2 != null) {
+      Barrier var6 = (Barrier)k5.a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.barrier_header;
-         Barrier var7 = (Barrier)k5.a.a(var0, var1);
-         if (var7 != null) {
+         Barrier var10 = (Barrier)k5.a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var10 = (ConstraintLayout)k5.a.a(var0, var1);
-            if (var10 != null) {
+            ConstraintLayout var8 = (ConstraintLayout)k5.a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.item_invite_disabled_icon;
-               SimpleDraweeView var9 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var9 != null) {
+               SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.item_invite_header;
-                  TextView var8 = (TextView)k5.a.a(var0, var1);
-                  if (var8 != null) {
+                  TextView var9 = (TextView)k5.a.a(var0, var1);
+                  if (var9 != null) {
                      var1 = R.id.item_invite_help_icon;
-                     SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
-                     if (var4 != null) {
+                     SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.item_invite_image;
                         GuildView var3 = (GuildView)k5.a.a(var0, var1);
                         if (var3 != null) {
                            var1 = R.id.item_invite_subtitle;
-                           SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
-                           if (var6 != null) {
+                           SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+                           if (var2 != null) {
                               var1 = R.id.item_invite_title;
                               TextView var5 = (TextView)k5.a.a(var0, var1);
                               if (var5 != null) {
-                                 return new GuildInviteDisabledViewBinding(var0, var2, var7, var10, var9, var8, var4, var3, var6, var5);
+                                 return new GuildInviteDisabledViewBinding(var0, var6, var10, var8, var4, var9, var7, var3, var2, var5);
                               }
                            }
                         }

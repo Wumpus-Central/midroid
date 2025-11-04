@@ -26,12 +26,12 @@ public final class SpoilerViewBinding implements ViewBinding {
    @NonNull
    public static SpoilerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.obscure;
-      ObscureOverlayView var3 = (ObscureOverlayView)k5.a.a(var0, var1);
-      if (var3 != null) {
+      ObscureOverlayView var2 = (ObscureOverlayView)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.spoiler;
-         SpoilerOverlayView var2 = (SpoilerOverlayView)k5.a.a(var0, var1);
-         if (var2 != null) {
-            return new SpoilerViewBinding(var0, var3, var2);
+         SpoilerOverlayView var3 = (SpoilerOverlayView)k5.a.a(var0, var1);
+         if (var3 != null) {
+            return new SpoilerViewBinding(var0, var2, var3);
          }
       }
 

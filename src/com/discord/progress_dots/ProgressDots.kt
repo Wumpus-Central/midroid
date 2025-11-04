@@ -31,7 +31,7 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
       this.dotsAnimationTimeMs = var3;
       this.dotsAnimationStaggerTimeMs = (long)(var3 / 1.5);
       this.setupColors();
-      var4.viewProgressDots3.setOnScaleDownCompleteListener(new c(this));
+      var4.viewProgressDots3.setOnScaleDownCompleteListener(new com.discord.progress_dots.c(this));
    }
 
    @JvmStatic

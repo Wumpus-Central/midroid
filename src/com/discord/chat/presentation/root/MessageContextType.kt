@@ -14,7 +14,7 @@ public enum class MessageContextType {
    @JvmStatic
    private MessageContextType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.e, new d());
+   private Lazy $cachedSerializer$delegate = l.a(o.e, new com.discord.chat.presentation.root.d());
    @JvmStatic
    public MessageContextType.Companion Companion = new MessageContextType.Companion(null);
 

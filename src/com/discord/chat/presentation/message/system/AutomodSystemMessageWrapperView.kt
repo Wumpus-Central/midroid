@@ -56,7 +56,12 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
       val var4: Context = this.getContext();
       val var7: ComponentProvider = new ComponentProvider(var4, true);
       this.removeAllViews();
-      this.addView(new AutomodSystemMessageDelegate(var6, new c(var7), new RecycledViewPool()).createAndBindStandaloneView(this, var1, var2), -1, -2);
+      this.addView(
+         new AutomodSystemMessageDelegate(var6, new com.discord.chat.presentation.message.system.c(var7), new RecycledViewPool())
+            .createAndBindStandaloneView(this, var1, var2),
+         -1,
+         -2
+      );
       this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, null, var2, false, null, null, false, 122, null)) as java.lang.Boolean;
    }
 }

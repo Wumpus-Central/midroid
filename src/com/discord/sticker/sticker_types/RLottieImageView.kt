@@ -11,7 +11,7 @@ import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.rlottie.RLottieDrawable
 import com.discord.theme.ThemeManagerKt
-import gu.g
+import gu.c1
 import gu.m0
 import java.io.File
 import kotlin.coroutines.Continuation
@@ -29,11 +29,20 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       var2.setShape(new OvalShape());
       var2.getPaint().setColor(ThemeManagerKt.getTheme().getBackgroundAccent());
       this.placeholder = var2;
-      this.rLottieStateManager = new AnimatedImageStateManager<>(new a(this), new b(this), null, new c(this), new d(this), new e(this), 4, null);
+      this.rLottieStateManager = new AnimatedImageStateManager<>(
+         new a(this),
+         new b(this),
+         null,
+         new com.discord.sticker.sticker_types.c(this),
+         new com.discord.sticker.sticker_types.d(this),
+         new com.discord.sticker.sticker_types.e(this),
+         4,
+         null
+      );
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      g.d(
+      gu.g.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
          m0.b(),
          null,
@@ -71,8 +80,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = m0.c();
-                  val var4: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.this$0, null) {
+                  val var4: c1 = m0.c();
+                  var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.this$0, null) {
                      int label;
                      final RLottieImageView this$0;
 
@@ -101,7 +110,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (g.g(var1, var4, this) === var3) {
+                  if (gu.g.g(var4, var1, this) === var3) {
                      return var3;
                   }
                }
@@ -127,60 +136,62 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
 
                   public final Object emit(DownloadState var1, Continuation<? super Unit> var2x) {
                      if (var1 is DownloadState.Completed) {
-                        val var4x: Any = g.g(m0.c(), new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.this$0, var1, this.$config, null) {
-                           final RLottieImageView.Config $config;
-                           final DownloadState $downloadState;
-                           int label;
-                           final RLottieImageView this$0;
+                        val var4x: Any = gu.g.g(
+                           m0.c(), new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.this$0, var1, this.$config, null) {
+                              final RLottieImageView.Config $config;
+                              final DownloadState $downloadState;
+                              int label;
+                              final RLottieImageView this$0;
 
-                           {
-                              super(2, var4x);
-                              this.this$0 = var1;
-                              this.$downloadState = var2x;
-                              this.$config = var3x;
-                           }
-
-                           public final Continuation<Unit> create(Object var1, Continuation<?> var2x) {
-                              return new <anonymous constructor>(this.this$0, this.$downloadState, this.$config, var2x);
-                           }
-
-                           public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
-                              return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
-                           }
-
-                           public final Object invokeSuspend(Object var1) {
-                              ot.b.f();
-                              if (this.label == 0) {
-                                 kotlin.c.b(var1);
-                                 this.this$0.setImageDrawable(null);
-                                 val var7: RLottieImageView = this.this$0;
-                                 val var5: Context = this.this$0.getContext();
-                                 val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
-                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
-                                 val var4x: Int = this.$config.getRenderMode();
-                                 if (var4x != 0) {
-                                    if (var4x != 1) {
-                                       var1 = RLottieDrawable.PlaybackMode.ONCE;
-                                    } else {
-                                       var1 = RLottieDrawable.PlaybackMode.FREEZE;
-                                    }
-                                 } else {
-                                    var1 = RLottieDrawable.PlaybackMode.LOOP;
-                                 }
-
-                                 var7.setAnimation(var5, var6, var2x, var3, var1);
-                                 this.this$0.setBackground(null);
-                                 RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
-                                 return Unit.a;
-                              } else {
-                                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                              {
+                                 super(2, var4x);
+                                 this.this$0 = var1;
+                                 this.$downloadState = var2x;
+                                 this.$config = var3x;
                               }
-                           }
-                        }, var2x);
+
+                              public final Continuation<Unit> create(Object var1, Continuation<?> var2x) {
+                                 return new <anonymous constructor>(this.this$0, this.$downloadState, this.$config, var2x);
+                              }
+
+                              public final Object invoke(CoroutineScope var1, Continuation<? super Unit> var2x) {
+                                 return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                              }
+
+                              public final Object invokeSuspend(Object var1) {
+                                 ot.b.f();
+                                 if (this.label == 0) {
+                                    kotlin.c.b(var1);
+                                    this.this$0.setImageDrawable(null);
+                                    val var7: RLottieImageView = this.this$0;
+                                    val var5: Context = this.this$0.getContext();
+                                    val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                    val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                    val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
+                                    val var3: Int = this.$config.getRenderMode();
+                                    if (var3 != 0) {
+                                       if (var3 != 1) {
+                                          var1 = RLottieDrawable.PlaybackMode.ONCE;
+                                       } else {
+                                          var1 = RLottieDrawable.PlaybackMode.FREEZE;
+                                       }
+                                    } else {
+                                       var1 = RLottieDrawable.PlaybackMode.LOOP;
+                                    }
+
+                                    var7.setAnimation(var5, var6, var4x, var2x, var1);
+                                    this.this$0.setBackground(null);
+                                    RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
+                                    return Unit.a;
+                                 } else {
+                                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                                 }
+                              }
+                           }, var2x
+                        );
                         return if (var4x === ot.b.f()) var4x else Unit.a;
                      } else if (var1 is DownloadState.Failure) {
-                        val var3x: Any = g.g(
+                        val var3x: Any = gu.g.g(
                            m0.c(),
                            new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.this$0, null) {
                               int label;
@@ -379,25 +390,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       public override fun toString(): String {
          val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var1: Int = this.heightDp;
-         val var7: java.lang.String = this.asset;
+         val var1: Int = this.widthDp;
+         val var2: Int = this.heightDp;
+         val var5: java.lang.String = this.asset;
          val var3: Int = this.renderMode;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Config(url=");
-         var5.append(var6);
-         var5.append(", animate=");
-         var5.append(var4);
-         var5.append(", widthDp=");
-         var5.append(var2);
-         var5.append(", heightDp=");
-         var5.append(var1);
-         var5.append(", asset=");
-         var5.append(var7);
-         var5.append(", renderMode=");
-         var5.append(var3);
-         var5.append(")");
-         return var5.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Config(url=");
+         var7.append(var6);
+         var7.append(", animate=");
+         var7.append(var4);
+         var7.append(", widthDp=");
+         var7.append(var1);
+         var7.append(", heightDp=");
+         var7.append(var2);
+         var7.append(", asset=");
+         var7.append(var5);
+         var7.append(", renderMode=");
+         var7.append(var3);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

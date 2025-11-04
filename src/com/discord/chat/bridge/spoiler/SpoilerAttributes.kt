@@ -144,10 +144,10 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
-      val var3: Int = this.label.hashCode();
-      val var5: Int = this.description.hashCode();
-      val var4: Int = this.type.hashCode();
+      val var4: Int = SpoilerIdentifier.hashCode-impl(this.identifier);
+      val var2: Int = this.label.hashCode();
+      val var3: Int = this.description.hashCode();
+      val var5: Int = this.type.hashCode();
       val var1: Int;
       if (this.verifyAge == null) {
          var1 = 0;
@@ -155,28 +155,28 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var1 = this.verifyAge.hashCode();
       }
 
-      return (((var2 * 31 + var3) * 31 + var5) * 31 + var4) * 31 + var1;
+      return (((var4 * 31 + var2) * 31 + var3) * 31 + var5) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
-      val var5: Function1 = this.label;
-      val var1: Function1 = this.description;
-      val var4: SpoilerType = this.type;
+      val var6: java.lang.String = SpoilerIdentifier.toString-impl(this.identifier);
+      val var1: Function1 = this.label;
+      val var5: Function1 = this.description;
+      val var3: SpoilerType = this.type;
       val var2: java.lang.Boolean = this.verifyAge;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SpoilerAttributes(identifier=");
-      var6.append(var3);
-      var6.append(", label=");
-      var6.append(var5);
-      var6.append(", description=");
-      var6.append(var1);
-      var6.append(", type=");
-      var6.append(var4);
-      var6.append(", verifyAge=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SpoilerAttributes(identifier=");
+      var4.append(var6);
+      var4.append(", label=");
+      var4.append(var1);
+      var4.append(", description=");
+      var4.append(var5);
+      var4.append(", type=");
+      var4.append(var3);
+      var4.append(", verifyAge=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {
@@ -188,14 +188,7 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
             var7.append(var2);
             var7.append("):");
             var7.append(var3);
-            return new SpoilerAttributes(
-               SpoilerIdentifier.constructor-impl(var7.toString()),
-               new com.discord.chat.bridge.spoiler.c(var5),
-               new com.discord.chat.bridge.spoiler.d(var5),
-               SpoilerType.OBSCURE,
-               var4,
-               null
-            );
+            return new SpoilerAttributes(SpoilerIdentifier.constructor-impl(var7.toString()), new c(var5), new d(var5), SpoilerType.OBSCURE, var4, null);
          } else {
             val var6: java.lang.String = var1.getSpoilerOrNull();
             if (var6 != null) {
@@ -204,14 +197,7 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
                var8.append(var2);
                var8.append("):");
                var8.append(var3);
-               return new SpoilerAttributes(
-                  SpoilerIdentifier.constructor-impl(var8.toString()),
-                  new com.discord.chat.bridge.spoiler.e(),
-                  new com.discord.chat.bridge.spoiler.f(var6),
-                  SpoilerType.SPOILER,
-                  var4,
-                  null
-               );
+               return new SpoilerAttributes(SpoilerIdentifier.constructor-impl(var8.toString()), new e(), new f(var6), SpoilerType.SPOILER, var4, null);
             } else {
                return null;
             }
@@ -245,28 +231,28 @@ public data class SpoilerAttributes(identifier: SpoilerIdentifier,
          var5.append("messageId(");
          var5.append(var7);
          var5.append(")");
-         val var8: java.lang.String = var5.toString();
-         val var6: java.lang.String = var1.type().getIndexLabel();
+         val var6: java.lang.String = var5.toString();
+         val var8: java.lang.String = var1.type().getIndexLabel();
          var5 = new StringBuilder();
-         var5.append(var6);
+         var5.append(var8);
          var5.append("(");
          var5.append(var3);
          var5.append(")");
-         return this.forItem(var1, var8, var5.toString(), var4);
+         return this.forItem(var1, var6, var5.toString(), var4);
       }
 
       public fun forEmbed(embed: Embed, message: Message, index: Int, verifyAge: Boolean?): SpoilerAttributes? {
          val var6: java.lang.String = MessageId.toString-impl(var2.getId-3Eiw7ao());
-         var var5: StringBuilder = new StringBuilder();
+         val var5: StringBuilder = new StringBuilder();
          var5.append("messageId(");
          var5.append(var6);
          var5.append(")");
-         val var7: java.lang.String = var5.toString();
-         var5 = new StringBuilder();
-         var5.append("embedIndex(");
-         var5.append(var3);
-         var5.append(")");
-         return this.forItem(var1, var7, var5.toString(), var4);
+         val var8: java.lang.String = var5.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("embedIndex(");
+         var7.append(var3);
+         var7.append(")");
+         return this.forItem(var1, var8, var7.toString(), var4);
       }
 
       public fun forGenericMedia(spoilerableData: SpoilerableData, containerId: String, itemType: String, itemKey: String, verifyAge: Boolean?): SpoilerAttributes? {

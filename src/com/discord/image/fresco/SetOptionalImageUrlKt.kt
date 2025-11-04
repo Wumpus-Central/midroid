@@ -2,7 +2,6 @@ package com.discord.image.fresco
 
 import android.net.Uri
 import android.net.Uri.Builder
-import ba.f
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 
@@ -13,7 +12,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
    controllerListener: ControllerListener<in Any>? = null
 ) {
    if (var1 != null && !StringsKt.i0(var1)) {
-      val var10: Uri = f.r(var1);
+      val var10: Uri = ba.f.r(var1);
       if (var10 != null) {
          val var11: java.lang.String = var10.getLastPathSegment();
          var var8: Boolean = var10.getScheme() == "content";

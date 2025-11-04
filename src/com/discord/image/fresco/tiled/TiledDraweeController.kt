@@ -8,7 +8,6 @@ import com.facebook.common.references.CloseableReference
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
-import gu.g
 import gu.j1
 import gu.m0
 import kotlin.coroutines.Continuation
@@ -16,9 +15,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.i
 import kotlinx.coroutines.z
-import xb.e
 
 @SourceDebugExtension(["SMAP\nTiledDraweeController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TiledDraweeController.kt\ncom/discord/image/fresco/tiled/TiledDraweeController\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,107:1\n1#2:108\n*E\n"])
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
@@ -27,7 +24,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
    private final val tileMode: TileMode
    private final val job: CompletableJob
    private final val scope: CoroutineScope
-   private final var myImageReference: CloseableReference<e>?
+   private final var myImageReference: CloseableReference<xb.e>?
    private final var hierarchy: GenericDraweeHierarchy?
    private final var contentDescription: String?
 
@@ -37,11 +34,11 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = j1.b(null, 1, null);
       this.job = var4;
-      this.scope = i.a(var4.Q0(m0.c().a2()));
+      this.scope = kotlinx.coroutines.i.a(var4.Q0(m0.c().a2()));
    }
 
    private fun load() {
-      g.d(
+      gu.g.d(
          this.scope,
          null,
          null,

@@ -7,7 +7,6 @@ import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 import u8.a
 import u8.b
-import u8.c
 
 @SourceDebugExtension(["SMAP\nOverlayViewProvider.kt\nKotlin\n*S Kotlin\n*F\n+ 1 OverlayViewProvider.kt\ncom/discord/mobile_voice_overlay/utils/OverlayViewProvider\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,71:1\n1#2:72\n*E\n"])
 internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayViewProvider<Any>) -> Any) {
@@ -77,7 +76,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
       this.assets = var1;
-      this.withViewOptional(new c(var1));
+      this.withViewOptional(new u8.c(var1));
    }
 
    public fun setData(data: MobileVoiceOverlayData) {

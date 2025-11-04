@@ -5,8 +5,6 @@ import android.app.ActivityManager.MemoryInfo
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
-import ht.c
-import ja.d
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {
@@ -20,7 +18,7 @@ internal object FrescoMemoryTrimmer {
          }
 
          private final void clearMemoryCaches() {
-            d.a().e();
+            ja.d.a().e();
          }
 
          private final boolean getMemoryIsLow() {
@@ -31,7 +29,7 @@ internal object FrescoMemoryTrimmer {
          public void onConfigurationChanged(Configuration var1) {
          }
 
-         @c
+         @ht.c
          public void onLowMemory() {
             this.clearMemoryCaches();
          }

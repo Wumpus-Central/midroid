@@ -32,7 +32,7 @@ private fun View.applyClickable(
       var0.setOnClickListener(null);
    } else {
       var0.setContentDescription(var3.getAriaDescription());
-      var0.setOnClickListener(new f(var1, var2, var4));
+      var0.setOnClickListener(new com.discord.chat.presentation.message.view.botuikit.components.h(var1, var2, var4));
    }
 
    val var5: Boolean;

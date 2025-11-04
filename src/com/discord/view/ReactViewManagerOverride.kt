@@ -7,7 +7,6 @@ import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewManager
-import io.sentry.e
 import io.sentry.o3
 
 @ReactModule(canOverrideExistingModule = true, name = "RCTView")
@@ -42,7 +41,7 @@ public class ReactViewManagerOverride : ReactViewManager {
          }
 
          val var15: java.lang.String = var2.getClass().getName();
-         val var14: e = e.n("ReactViewManagerOverride: Child view already has a parent!");
+         val var14: io.sentry.e = io.sentry.e.n("ReactViewManagerOverride: Child view already has a parent!");
          var14.o("react.viewmanager");
          var14.p("isTransitioning", var11);
          var14.p("wantsToAddToSameParent", var6);

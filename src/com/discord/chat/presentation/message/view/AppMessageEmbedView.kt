@@ -57,15 +57,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var5: java.lang.String = var2.getMessageId();
-      val var6: java.lang.String = var2.getAppId();
+      val var6: java.lang.String = var2.getMessageId();
+      val var5: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
+      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
    }
 
    @JvmStatic
@@ -84,13 +84,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var3: Int = var1.get("r") as Int;
-      val var2: Int = var1.get("g") as Int;
+      val var2: Int = var1.get("r") as Int;
+      val var3: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var3 == null || var2 == null || var4 == null) {
+      if (var2 == null || var3 == null || var4 == null) {
          return null;
       } else {
-         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
+         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
       }
    }
 
@@ -194,9 +194,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var29) {
-         var29 = (byte)0;
+         var29 = 0;
       } else {
-         var29 = (byte)8;
+         var29 = 8;
       }
 
       var38.setVisibility(var29);
@@ -204,7 +204,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          val var39: SimpleDraweeView = this.view.banner;
          var39.setVisibility(0);
          this.view.banner.setImageURI(var1.getStaticBannerSrc());
-         var29 = MessageAccessoriesView.Companion.getWidth(var3, false);
+         var3 = MessageAccessoriesView.Companion.getWidth(var3, false);
          var var4: Double;
          if (var1.getBannerRatio() == "activity") {
             var4 = 1.7777777777777777;
@@ -212,19 +212,19 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var4 = 2.8333333333333335;
          }
 
-         var4 = var29 / var4;
-         val var40: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var54: SimpleDraweeView = this.view.banner;
-         var40.resizeLayoutParams(var54, var29, (int)var4, var29, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var4 = var3 / var4;
+         val var54: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var40: SimpleDraweeView = this.view.banner;
+         var54.resizeLayoutParams(var40, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var41: SimpleDraweeView = this.view.banner;
          var41.setVisibility(8);
       }
 
       if (var1.getTitle() != null) {
-         val var42: TextView = this.view.title;
-         val var55: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         var42.setText(var55);
+         var15 = this.view.title;
+         val var42: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         var15.setText(var42);
       } else {
          val var43: TextView = this.view.title;
          var43.setVisibility(8);
@@ -250,7 +250,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          } else {
             val var48: DCDButton = this.view.linkIcon;
             var48.setVisibility(0);
-            this.view.linkIcon.setOnClickButtonListener(new c(this, var2, var1));
+            this.view.linkIcon.setOnClickButtonListener(new com.discord.chat.presentation.message.view.c(this, var2, var1));
          }
       }
 
@@ -323,7 +323,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             var73.setDiscordFont(DiscordFont.PrimaryMedium);
             var73.setCornerRadius(SizeUtilsKt.getDpToPx((int)var32));
             var73.setLayoutParams(var69);
-            var73.setOnClickButtonListener(new d(this, var2, var1, var63));
+            var73.setOnClickButtonListener(new com.discord.chat.presentation.message.view.d(this, var2, var1, var63));
             this.view.actionsContainer.addView(var73);
          }
 

@@ -41,10 +41,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       });
       val var21: java.lang.String = var25.getUrl();
       val var11: Int = var25.getWidth();
-      val var9: Int = var25.getHeight();
+      val var10: Int = var25.getHeight();
       val var22: java.lang.String = var25.getPlaceholder();
       val var23: Int = var25.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var9: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -98,7 +98,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       val var35: java.lang.String = var25.getDescription();
       val var37: java.lang.String = var25.getHint();
       val var18: Boolean = var2.getUseNewAltTextButton();
-      val var29: Function1 = new Function1<java.lang.String, Unit>(var1) {
+      val var27: Function1 = new Function1<java.lang.String, Unit>(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -107,8 +107,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       };
-      val var28: java.lang.String = var25.getRole();
-      val var27: java.lang.String = var25.getFilename();
+      val var29: java.lang.String = var25.getRole();
+      val var28: java.lang.String = var25.getFilename();
       val var36: java.lang.Boolean = var25.getSrcIsAnimated();
       if (var36 != null) {
          var16 = var36;
@@ -117,7 +117,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       super.bind(
          var21,
          var11,
-         var9,
+         var10,
          var22,
          var23,
          var17,
@@ -130,16 +130,16 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var35,
          var37,
          var18,
-         var29,
-         var10,
+         var27,
+         var9,
          var20,
          var3 xor true,
          var4,
          var5,
          var24,
-         var28,
+         var29,
          var8,
-         var27,
+         var28,
          var16
       );
    }

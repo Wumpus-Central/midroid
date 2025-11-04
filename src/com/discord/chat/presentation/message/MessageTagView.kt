@@ -113,10 +113,10 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
             val var14: TextView = this.binding.tag;
             val var26: Context = this.getContext();
             var14.setTextColor(ColorUtilsKt.getColorCompat(var26, R.color.brand_560));
-            val var15: ConstraintLayout = this.binding.layout;
-            val var27: Context = this.getContext();
+            val var27: ConstraintLayout = this.binding.layout;
+            val var15: Context = this.getContext();
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-               var15, ColorUtilsKt.getThemeColor(var27, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+               var27, ColorUtilsKt.getThemeColor(var15, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
             );
             val var16: ConstraintLayout = this.binding.layout;
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new s0(var6), 1, null);

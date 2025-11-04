@@ -67,13 +67,15 @@ internal class FastestListView(context: Context,
       this.typedLayoutManager = var20;
       val var24: FastestListVisibleItemsTracker = new FastestListVisibleItemsTracker(var20, var25, new b(var13, this));
       this.typedVisibleItemsTracker = var24;
-      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new c(var12, this));
+      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new com.discord.fastest_list.android.c(var12, this));
       this.typedAdapter = var23;
       this.scroller = new Scroller(this);
       this.scrollOffset = new FastestListScrollOffset(var20, var25);
-      val var22: FastestListScrollListener = new FastestListScrollListener(var5, var7, new d(this, var9), new e(this, var10, var11), var20, var24);
+      val var22: FastestListScrollListener = new FastestListScrollListener(
+         var5, var7, new com.discord.fastest_list.android.d(this, var9), new com.discord.fastest_list.android.e(this, var10, var11), var20, var24
+      );
       this.onScrollListener = var22;
-      val var21: f = new f(this, var6);
+      val var21: com.discord.fastest_list.android.f = new com.discord.fastest_list.android.f(this, var6);
       this.onLayoutChangeListener = var21;
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -93,12 +95,12 @@ internal class FastestListView(context: Context,
    private fun onItemDataChanged(positions: List<DataChanged> = CollectionsKt.l()) {
       if (!var1.isEmpty()) {
          for (FastestListViewAdapter.DataChanged var5 : var1) {
-            val var2: Int = var5.component1();
-            val var3: Int = var5.component2();
-            if (var3 == 1) {
-               this.typedAdapter.notifyItemChanged(var2);
+            val var3: Int = var5.component1();
+            val var2: Int = var5.component2();
+            if (var2 == 1) {
+               this.typedAdapter.notifyItemChanged(var3);
             } else {
-               this.typedAdapter.notifyItemRangeChanged(var2, var3);
+               this.typedAdapter.notifyItemRangeChanged(var3, var2);
             }
          }
       } else {

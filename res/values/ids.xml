@@ -109,6 +109,8 @@
     <item type="id" name="animationview_inquiry_initializingspinner" />
     <item type="id" name="answers" />
     <item type="id" name="app_icon" />
+    <item type="id" name="application_image" />
+    <item type="id" name="application_name" />
     <item type="id" name="arrow" />
     <item type="id" name="audio_details_view" />
     <item type="id" name="audio_file_name" />
@@ -200,6 +202,7 @@
     <item type="id" name="checkbox_group_error" />
     <item type="id" name="checkbox_group_label" />
     <item type="id" name="checkbox_label" />
+    <item type="id" name="checkpoint" />
     <item type="id" name="chevron" />
     <item type="id" name="child" />
     <item type="id" name="child_stub" />
@@ -288,6 +291,9 @@
     <item type="id" name="edit_text_suite" />
     <item type="id" name="emoji" />
     <item type="id" name="emoji_button" />
+    <item type="id" name="emoji_count" />
+    <item type="id" name="emoji_image" />
+    <item type="id" name="emoji_name" />
     <item type="id" name="empty_results" />
     <item type="id" name="end_padder" />
     <item type="id" name="error" />
@@ -428,6 +434,7 @@
     <item type="id" name="guild_badge" />
     <item type="id" name="guild_communication_disabled_icon" />
     <item type="id" name="guild_icon" />
+    <item type="id" name="guild_image" />
     <item type="id" name="guild_name" />
     <item type="id" name="guild_text" />
     <item type="id" name="guilds_item_avatar_wrap" />
@@ -481,6 +488,7 @@
     <item type="id" name="image_blur_bg" />
     <item type="id" name="image_invalid" />
     <item type="id" name="image_overlay_view" />
+    <item type="id" name="image_resource" />
     <item type="id" name="image_view" />
     <item type="id" name="image_view_container" />
     <item type="id" name="image_view_crop" />
@@ -568,6 +576,7 @@
     <item type="id" name="loading_animation" />
     <item type="id" name="loading_dots" />
     <item type="id" name="local_image" />
+    <item type="id" name="logo" />
     <item type="id" name="lottie_layer_name" />
     <item type="id" name="lottie_view" />
     <item type="id" name="m3_side_sheet" />
@@ -608,6 +617,7 @@
     <item type="id" name="menu_top_status_container" />
     <item type="id" name="message" />
     <item type="id" name="message_alt_remix_tag_view" />
+    <item type="id" name="message_count" />
     <item type="id" name="message_end_guideline" />
     <item type="id" name="message_frame_feed_header" />
     <item type="id" name="message_frame_header" />
@@ -761,6 +771,10 @@
     <item type="id" name="pointer_events" />
     <item type="id" name="pooling_container_listener_holder_tag" />
     <item type="id" name="positive_button" />
+    <item type="id" name="power_bar" />
+    <item type="id" name="power_container" />
+    <item type="id" name="power_level_lvl" />
+    <item type="id" name="power_level_number" />
     <item type="id" name="pressed" />
     <item type="id" name="previewBtn" />
     <item type="id" name="previewHeading" />
@@ -934,6 +948,7 @@
     <item type="id" name="state_aspect_ratio" />
     <item type="id" name="state_rotate" />
     <item type="id" name="state_scale" />
+    <item type="id" name="stats" />
     <item type="id" name="status_bar_latest_event_content" />
     <item type="id" name="sticker_view" />
     <item type="id" name="submenuarrow" />
@@ -1062,6 +1077,7 @@
     <item type="id" name="ucrop_photobox" />
     <item type="id" name="ui_spinner_item_selected_listener" />
     <item type="id" name="ui_step_container" />
+    <item type="id" name="unicode_emoji_image" />
     <item type="id" name="up" />
     <item type="id" name="upload_button" />
     <item type="id" name="upload_cancel" />
@@ -1110,6 +1126,7 @@
     <item type="id" name="view_tree_saved_state_registry_owner" />
     <item type="id" name="view_tree_view_model_store_owner" />
     <item type="id" name="visible_removing_fragment_view_tag" />
+    <item type="id" name="voice_minutes" />
     <item type="id" name="vote_counts" />
     <item type="id" name="vote_percentage" />
     <item type="id" name="wave" />

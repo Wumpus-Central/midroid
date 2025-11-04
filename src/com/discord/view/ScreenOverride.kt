@@ -10,7 +10,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.facebook.react.uimanager.ThemedReactContext
 import com.swmansion.rnscreens.Screen
 import com.swmansion.rnscreens.ScreenStackHeaderConfig
-import io.sentry.e
 import io.sentry.o3
 import java.util.ArrayList
 
@@ -56,7 +55,7 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
          }
 
          this.inTransitionViews.clear();
-         val var3: e = e.n("ScreenOverride: endRemovalTransition called (w/ patch)");
+         val var3: io.sentry.e = io.sentry.e.n("ScreenOverride: endRemovalTransition called (w/ patch)");
          var3.o("react.viewmanager");
          o3.e(var3);
       }
@@ -68,7 +67,7 @@ public class ScreenOverride(reactContext: ThemedReactContext) : Screen(var1) {
          new Handler(var1).post(new a(this));
       } else if (!this.isBeingRemoved()) {
          this.setBeingRemoved(true);
-         val var2: e = e.n("ScreenOverride: calling startRemovalTransition (w/ patch)");
+         val var2: io.sentry.e = io.sentry.e.n("ScreenOverride: calling startRemovalTransition (w/ patch)");
          var2.o("react.viewmanager");
          o3.e(var2);
          this.startTransitionRecursive(this);

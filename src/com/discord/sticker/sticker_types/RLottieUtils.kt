@@ -26,6 +26,6 @@ public object RLottieUtils {
    }
 
    public fun init() {
-      mt.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
+      mt.a.b(false, false, null, "RLottieLoader", 0, new com.discord.sticker.sticker_types.f(), 23, null);
    }
 }

@@ -8,7 +8,6 @@ import android.graphics.Bitmap
 import android.os.Build.VERSION
 import androidx.core.app.Person
 import androidx.core.app.NotificationCompat.Builder
-import androidx.core.content.c
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.b
 import androidx.core.graphics.drawable.IconCompat
@@ -16,13 +15,16 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompat): Builder {
    var0.Q(var2.g());
-   var0.I(new c(var2.g()));
+   var0.I(new androidx.core.content.c(var2.g()));
    b.g(var1, var2);
    return var0;
 }
 
 public fun Context.createShortcut(id: String, label: CharSequence, longLabel: CharSequence, icon: Bitmap?, persons: List<Person>, intent: Intent, rank: Int = 0): ShortcutInfoCompat {
-   val var10: androidx.core.content.pm.ShortcutInfoCompat.b = new androidx.core.content.pm.ShortcutInfoCompat.b(var0, var1).h(new c(var1)).m(var2).i(var3);
+   val var10: androidx.core.content.pm.ShortcutInfoCompat.b = new androidx.core.content.pm.ShortcutInfoCompat.b(var0, var1)
+      .h(new androidx.core.content.c(var1))
+      .m(var2)
+      .i(var3);
    val var8: IconCompat;
    if (var4 != null) {
       var8 = IconCompat.h(var4);

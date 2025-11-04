@@ -13,6 +13,7 @@ import pt.a
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
    CodeNormal("ggmono-Normal, SourceCodePro-Normal", 400, false, true),
+   DisplayExtraBold("ABCGintoNord-ExtraBold, ggsans-ExtraBold, NotoSans-ExtraBold", 800, false, false, 8, null),
    PrimaryBold("ggsans-Bold, NotoSans-Bold", 700, false, false, 8, null),
    PrimaryBoldItalic("ggsans-BoldItalic, NotoSans-BoldItalic", 700, true, false, 8, null),
    PrimaryExtraBold("ggsans-ExtraBold, NotoSans-ExtraBold", 800, false, false, 8, null),
@@ -67,7 +68,7 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       }
    }
 
-   @SourceDebugExtension(["SMAP\nDiscordFont.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DiscordFont.kt\ncom/discord/fonts/DiscordFont$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,115:1\n1#2:116\n*E\n"])
+   @SourceDebugExtension(["SMAP\nDiscordFont.kt\nKotlin\n*S Kotlin\n*F\n+ 1 DiscordFont.kt\ncom/discord/fonts/DiscordFont$Companion\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,120:1\n1#2:121\n*E\n"])
    public companion object {
       private final val typefaces: ConcurrentHashMap<DiscordFont, Typeface>
 

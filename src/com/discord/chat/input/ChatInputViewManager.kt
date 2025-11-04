@@ -5,6 +5,7 @@ import android.content.Context
 import android.graphics.Color
 import android.net.Uri
 import android.view.Window
+import av.f
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.events.OnContentSizeChangeEvent
 import com.discord.chat.input.events.OnEndBlurEvent
@@ -40,7 +41,7 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
    private fun decodeStyleBlocks(blocks: String): List<ChatInputNode> {
       val var2: Json = this.json;
       this.json.a();
-      return var2.b(new av.f(ChatInputNode.Companion.serializer()), var1) as MutableList<ChatInputNode>;
+      return var2.b(new f(ChatInputNode.Companion.serializer()), var1) as MutableList<ChatInputNode>;
    }
 
    @JvmStatic
@@ -92,11 +93,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var5: ThemedReactContext = this.$reactContext;
-            val var3: ChatInputRootView = this.$view;
+            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var4: ThemedReactContext = this.$reactContext;
+            val var5: ChatInputRootView = this.$view;
             val var2: java.lang.String = var1.toString();
-            var4.emitEvent(var5, var3, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            var3.emitEvent(var4, var5, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -201,11 +202,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
             break;
          case 448538345:
             if (var2.equals("replaceRange") && var3 != null) {
-               val var5: Int = var3.getInt(0);
-               val var4: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               val var6: java.lang.String = var3.getString(3);
-               this.replaceRange(var1, var5, var4, var2, var6, var3.getBoolean(4), var3.getString(5));
+               val var4: Int = var3.getInt(0);
+               val var5: Int = var3.getInt(1);
+               val var6: java.lang.String = var3.getString(2);
+               var2 = var3.getString(3);
+               this.replaceRange(var1, var4, var5, var6, var2, var3.getBoolean(4), var3.getString(5));
                return;
             }
             break;

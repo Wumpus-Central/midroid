@@ -49,7 +49,7 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
 
    public fun setMessage(message: Message, messageContext: MessageContext, eventHandler: ChatEventHandler) {
       MessageView.setMessage$default(this.binding.messageView, var1, var2, null, var3, null, null, false, false, 244, null);
-      val var5: h = new h(var3);
+      val var5: com.discord.chat.presentation.message.system.h = new com.discord.chat.presentation.message.system.h(var3);
       this.removeAllViews();
       val var6: Any;
       if (MessageKt.isCallMessage(var1)) {

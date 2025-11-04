@@ -5,7 +5,6 @@ import android.content.Context
 import android.net.Uri
 import androidx.browser.customtabs.a
 import androidx.browser.customtabs.b
-import androidx.browser.customtabs.b.d
 
 public object CustomTabs {
    public fun openUrlWithCustomTabs(
@@ -21,7 +20,7 @@ public object CustomTabs {
    ) {
       if (CustomTabsPackages.INSTANCE.getCustomTabsDefaultPackage(var1) != null) {
          val var10: a = new androidx.browser.customtabs.a.a().b(var4).d(var4).c(var4).a();
-         val var13: d = new d().c(var10).g(var3);
+         val var13: androidx.browser.customtabs.b.d = new androidx.browser.customtabs.b.d().c(var10).g(var3);
          if (var5 != null && var6 != null) {
             var13.h(var1, var5, var6);
          }

@@ -1,7 +1,6 @@
 package com.discord.recycler_view.scroll
 
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
-import gu.g
 import gu.m0
 import ju.c0
 import kotlin.coroutines.Continuation
@@ -12,7 +11,6 @@ import kotlin.jvm.internal.FunctionReferenceImpl
 import kotlin.jvm.internal.Intrinsics.Kotlin
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.i
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -24,11 +22,11 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    private final val events: MutableSharedFlow<Any>
 
    init {
-      val var5: CoroutineScope = i.a(m0.c());
+      val var5: CoroutineScope = kotlinx.coroutines.i.a(m0.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
       this.events = c0.b(0, 1, null, 4, null);
-      this.eventDetectorJob = g.d(
+      this.eventDetectorJob = gu.g.d(
          var5,
          null,
          null,
@@ -66,9 +64,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                } else {
                   kotlin.c.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
+                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
+                     var1 = new FlowCollector(this.$onEvent) {
                         final Function1<T, Unit> $tmp0;
 
                         {
@@ -104,7 +102,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
                         return var5;
                      }
                   } else {

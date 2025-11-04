@@ -1,11 +1,11 @@
 package com.discord.chat.presentation.message.view.botuikit.react;
 
-import android.view.View;
-import kotlin.jvm.functions.Function4;
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class w implements Function4 {
-   public final Object invoke(Object var1, Object var2, Object var3, Object var4) {
-      return ComponentContextDefaults.w((View)var1, (String)var2, (Integer)var3, (Double)var4);
+public final class w implements Function1 {
+   public final Object invoke(Object var1) {
+      return ComponentContextDefaults.z((SoundmojiContentNode)var1);
    }
 }

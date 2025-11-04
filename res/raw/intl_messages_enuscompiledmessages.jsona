@@ -7822,7 +7822,7 @@
       6,
       "nth",
       {
-        "one": [
+        "=1": [
           "first"
         ],
         "=2": [
@@ -9492,6 +9492,9 @@
   ],
   "Z2ygQt": [
     "Social & Study"
+  ],
+  "f8ngzj": [
+    "Explore Servers"
   ],
   "vYyEnv": [
     "Try another search"
@@ -32965,8 +32968,14 @@
   "lxsmBd": [
     "No Emoji"
   ],
+  "5eYZiW": [
+    "No Games"
+  ],
   "+0U77d": [
     "No games Connected"
+  ],
+  "52UOf9": [
+    "No Servers"
   ],
   "Y7Ml/I": [
     "Ready for a next-level group chat?"

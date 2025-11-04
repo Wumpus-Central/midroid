@@ -50,6 +50,6 @@ public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersM
    }
 
    public override fun setTimeout(id: Double, timeout: Double) {
-      this.timersManager.setTimeout((int)var1, var3, new c(this, var1));
+      this.timersManager.setTimeout((int)var1, var3, new com.discord.timers.c(this, var1));
    }
 }

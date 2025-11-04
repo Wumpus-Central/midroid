@@ -7,18 +7,21 @@ import kotlin.jvm.functions.Function3
 public data class ComponentActionEventHandlers(onTapButtonActionComponent: (String) -> Unit,
    onTapButtonLinkComponent: (String) -> Unit,
    onTapSelectActionComponent: (String) -> Unit,
-   onTapContentInventoryEntry: (UserId, String, String) -> Unit
+   onTapContentInventoryEntry: (UserId, String, String) -> Unit,
+   onTapCheckpointCard: (UserId) -> Unit
 ) {
    public final val onTapButtonActionComponent: (String) -> Unit
    public final val onTapButtonLinkComponent: (String) -> Unit
    public final val onTapSelectActionComponent: (String) -> Unit
    public final val onTapContentInventoryEntry: (UserId, String, String) -> Unit
+   public final val onTapCheckpointCard: (UserId) -> Unit
 
    init {
       this.onTapButtonActionComponent = var1;
       this.onTapButtonLinkComponent = var2;
       this.onTapSelectActionComponent = var3;
       this.onTapContentInventoryEntry = var4;
+      this.onTapCheckpointCard = var5;
    }
 
    public operator fun component1(): (String) -> Unit {
@@ -37,13 +40,18 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
       return this.onTapContentInventoryEntry;
    }
 
+   public operator fun component5(): (UserId) -> Unit {
+      return this.onTapCheckpointCard;
+   }
+
    public fun copy(
       onTapButtonActionComponent: (String) -> Unit = var0.onTapButtonActionComponent,
       onTapButtonLinkComponent: (String) -> Unit = var0.onTapButtonLinkComponent,
       onTapSelectActionComponent: (String) -> Unit = var0.onTapSelectActionComponent,
-      onTapContentInventoryEntry: (UserId, String, String) -> Unit = var0.onTapContentInventoryEntry
+      onTapContentInventoryEntry: (UserId, String, String) -> Unit = var0.onTapContentInventoryEntry,
+      onTapCheckpointCard: (UserId) -> Unit = var0.onTapCheckpointCard
    ): ComponentActionEventHandlers {
-      return new ComponentActionEventHandlers(var1, var2, var3, var4);
+      return new ComponentActionEventHandlers(var1, var2, var3, var4, var5);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -59,32 +67,41 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
             return false;
          } else if (!(this.onTapSelectActionComponent == var1.onTapSelectActionComponent)) {
             return false;
+         } else if (!(this.onTapContentInventoryEntry == var1.onTapContentInventoryEntry)) {
+            return false;
          } else {
-            return this.onTapContentInventoryEntry == var1.onTapContentInventoryEntry;
+            return this.onTapCheckpointCard == var1.onTapCheckpointCard;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return ((this.onTapButtonActionComponent.hashCode() * 31 + this.onTapButtonLinkComponent.hashCode()) * 31 + this.onTapSelectActionComponent.hashCode())
+      return (
+               ((this.onTapButtonActionComponent.hashCode() * 31 + this.onTapButtonLinkComponent.hashCode()) * 31 + this.onTapSelectActionComponent.hashCode())
+                     * 31
+                  + this.onTapContentInventoryEntry.hashCode()
+            )
             * 31
-         + this.onTapContentInventoryEntry.hashCode();
+         + this.onTapCheckpointCard.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Function1 = this.onTapButtonActionComponent;
-      val var4: Function1 = this.onTapButtonLinkComponent;
+      val var3: Function1 = this.onTapButtonLinkComponent;
       val var5: Function1 = this.onTapSelectActionComponent;
-      val var3: Function3 = this.onTapContentInventoryEntry;
+      val var4: Function3 = this.onTapContentInventoryEntry;
+      val var6: Function1 = this.onTapCheckpointCard;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ComponentActionEventHandlers(onTapButtonActionComponent=");
       var2.append(var1);
       var2.append(", onTapButtonLinkComponent=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(", onTapSelectActionComponent=");
       var2.append(var5);
       var2.append(", onTapContentInventoryEntry=");
-      var2.append(var3);
+      var2.append(var4);
+      var2.append(", onTapCheckpointCard=");
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }

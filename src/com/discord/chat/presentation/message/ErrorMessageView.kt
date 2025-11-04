@@ -80,6 +80,6 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
       }
 
       val var3: TextView = this.binding.seeMoreButton;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new d(var2, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new com.discord.chat.presentation.message.d(var2, var1), 1, null);
    }
 }

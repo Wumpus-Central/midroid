@@ -90,9 +90,9 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.c().f();
-      val var2: Int = var6.c().k();
-      var14 = StringsKt.E0(var14, var12, var2 + 1, var10).toString();
+      val var2: Int = var6.c().f();
+      val var12: Int = var6.c().k();
+      var14 = StringsKt.E0(var14, var2, var12 + 1, var10).toString();
       var13 = StringsKt.E0(var13, var6.c().f(), var6.c().k() + 1, var10).toString();
    }
 }

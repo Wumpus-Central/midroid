@@ -1,10 +1,9 @@
 package com.discord.security_key;
 
-import gi.g;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class e implements g {
+public final class e implements gi.g {
    public final Function1 a;
 
    public final void onSuccess(Object var1) {

@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.react;
 
-import com.discord.chat.bridge.contentnode.EmojiContentNode;
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode;
 import com.discord.chat.presentation.message.view.botuikit.components.TextDisplayComponentView;
 import kotlin.jvm.functions.Function1;
 
@@ -10,6 +10,6 @@ public final class i0 implements Function1 {
    public final TextDisplayComponentView e;
 
    public final Object invoke(Object var1) {
-      return TextDisplayComponentViewManager.g(this.d, this.e, (EmojiContentNode)var1);
+      return TextDisplayComponentViewManager.b(this.d, this.e, (InlineCodeContentNode)var1);
    }
 }

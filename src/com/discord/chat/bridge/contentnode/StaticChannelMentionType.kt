@@ -7,6 +7,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import xu.m
+import zu.j
+import zu.e.i
 
 @m(with = StaticChannelMentionType.Serializer::class)
 public enum class StaticChannelMentionType(id: String) {
@@ -73,7 +75,7 @@ public enum class StaticChannelMentionType(id: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return zu.j.b("StaticChannelMentionType", zu.e.i.a);
+            return j.b("StaticChannelMentionType", i.a);
          }
 
 

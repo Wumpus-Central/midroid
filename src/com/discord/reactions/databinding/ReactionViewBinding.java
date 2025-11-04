@@ -48,14 +48,14 @@ public final class ReactionViewBinding implements ViewBinding {
    @NonNull
    public static ReactionViewBinding bind(@NonNull View var0) {
       int var1 = R.id.reaction_count_1;
-      TextView var7 = (TextView)a.a(var0, var1);
-      if (var7 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.reaction_count_2;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.reaction_count_switcher;
-            TextSwitcher var4 = (TextSwitcher)a.a(var0, var1);
-            if (var4 != null) {
+            TextSwitcher var7 = (TextSwitcher)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.reaction_emoji;
                SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
                if (var6 != null) {
@@ -63,9 +63,9 @@ public final class ReactionViewBinding implements ViewBinding {
                   TextView var5 = (TextView)a.a(var0, var1);
                   if (var5 != null) {
                      var1 = R.id.reaction_label_right;
-                     TextView var2 = (TextView)a.a(var0, var1);
-                     if (var2 != null) {
-                        return new ReactionViewBinding(var0, var7, var3, var4, var6, var5, var2);
+                     TextView var4 = (TextView)a.a(var0, var1);
+                     if (var4 != null) {
+                        return new ReactionViewBinding(var0, var3, var2, var7, var6, var5, var4);
                      }
                   }
                }

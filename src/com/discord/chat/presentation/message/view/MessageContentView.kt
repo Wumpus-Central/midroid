@@ -67,13 +67,13 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
-      val var7: QuoteSpan = kotlin.collections.m.Y(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.m.Y(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -83,8 +83,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 52: aload 5
          // 54: aload 7
          // 56: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // 59: istore 4
-         // 5b: aload 5
-         // 5d: aload 7
-         // 5f: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // 62: istore 3
+         // 59: istore 3
+         // 5a: aload 5
+         // 5c: aload 7
+         // 5e: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // 61: istore 4
          // 63: aload 1
          // 64: invokevirtual android/view/View.getContext ()Landroid/content/Context;
          // 67: astore 7
@@ -376,8 +376,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 6b: ldc "getContext(...)"
          // 6d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
          // 70: aload 5
-         // 72: iload 4
-         // 74: iload 3
+         // 72: iload 3
+         // 73: iload 4
          // 75: aload 7
          // 77: getstatic com/discord/react_strings/I18nMessage.SPOILER_HIDDEN_A11Y_LABEL Lcom/discord/react_strings/I18nMessage;
          // 7a: aconst_null
@@ -394,30 +394,30 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 8f: ldc com/discord/span/utilities/spannable/EmojiAccessibilitySpan
          // 91: invokevirtual android/text/SpannableStringBuilder.getSpans (IILjava/lang/Class;)[Ljava/lang/Object;
          // 94: invokestatic kotlin/jvm/internal/ArrayIteratorKt.iterator ([Ljava/lang/Object;)Ljava/util/Iterator;
-         // 97: astore 6
-         // 99: aload 6
-         // 9b: invokeinterface java/util/Iterator.hasNext ()Z 1
-         // a0: ifeq c7
-         // a3: aload 6
-         // a5: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-         // aa: checkcast com/discord/span/utilities/spannable/EmojiAccessibilitySpan
-         // ad: astore 1
+         // 97: astore 1
+         // 98: aload 1
+         // 99: invokeinterface java/util/Iterator.hasNext ()Z 1
+         // 9e: ifeq c8
+         // a1: aload 1
+         // a2: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+         // a7: checkcast com/discord/span/utilities/spannable/EmojiAccessibilitySpan
+         // aa: astore 6
+         // ac: aload 5
          // ae: aload 5
-         // b0: aload 5
-         // b2: aload 1
-         // b3: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // b6: aload 5
-         // b8: aload 1
+         // b0: aload 6
+         // b2: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
+         // b5: aload 5
+         // b7: aload 6
          // b9: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // bc: aload 1
-         // bd: invokevirtual com/discord/span/utilities/spannable/EmojiAccessibilitySpan.getName ()Ljava/lang/String;
-         // c0: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
-         // c3: pop
-         // c4: goto 99
-         // c7: aload 2
-         // c8: aload 5
-         // ca: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.b1 (Ljava/lang/CharSequence;)V
-         // cd: return
+         // bc: aload 6
+         // be: invokevirtual com/discord/span/utilities/spannable/EmojiAccessibilitySpan.getName ()Ljava/lang/String;
+         // c1: invokevirtual android/text/SpannableStringBuilder.replace (IILjava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
+         // c4: pop
+         // c5: goto 98
+         // c8: aload 2
+         // c9: aload 5
+         // cb: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.b1 (Ljava/lang/CharSequence;)V
+         // ce: return
       }
    }
 }

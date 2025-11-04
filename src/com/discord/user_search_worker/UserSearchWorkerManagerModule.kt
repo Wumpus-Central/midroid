@@ -12,7 +12,7 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
    private final var worker: UserSearchWorker
 
    init {
-      this.worker = new UserSearchWorker(new d(this, var1));
+      this.worker = new UserSearchWorker(new com.discord.user_search_worker.d(this, var1));
    }
 
    @JvmStatic

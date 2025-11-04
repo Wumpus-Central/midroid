@@ -39,15 +39,15 @@ public final class VideoAttachmentViewBinding implements ViewBinding {
       ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.media_view;
-         MediaView var4 = (MediaView)k5.a.a(var0, var1);
-         if (var4 != null) {
+         MediaView var2 = (MediaView)k5.a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.media_view_alt_text;
-            TextView var2 = (TextView)k5.a.a(var0, var1);
-            if (var2 != null) {
+            TextView var4 = (TextView)k5.a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.media_view_alt_text_button;
                AltTextButtonView var5 = (AltTextButtonView)k5.a.a(var0, var1);
                if (var5 != null) {
-                  return new VideoAttachmentViewBinding(var0, var3, var4, var2, var5);
+                  return new VideoAttachmentViewBinding(var0, var3, var2, var4, var5);
                }
             }
          }

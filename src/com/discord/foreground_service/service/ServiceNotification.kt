@@ -7,7 +7,6 @@ import android.content.Context
 import android.os.Build.VERSION
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.NotificationCompat.Builder
-import c3.c
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
@@ -32,7 +31,7 @@ internal object ServiceNotification {
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      val var4: Builder = new Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      var var4: Builder = new Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var6: PendingIntent;
       if (var3 != null) {
@@ -43,19 +42,19 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      val var7: Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      var4 = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
-         var7.a(
+      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
+         var4.a(
             0,
-            var8.getTitle(),
+            var7.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
+               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      return var7.A(c.a(new Pair[]{v.a("permissionType", var2.getType().ordinal())})).g();
+      return var4.A(c3.c.a(new Pair[]{v.a("permissionType", var2.getType().ordinal())})).g();
    }
 
    public fun Context.clearNotifications() {

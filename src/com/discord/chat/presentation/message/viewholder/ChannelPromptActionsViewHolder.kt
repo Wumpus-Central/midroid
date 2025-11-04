@@ -37,6 +37,13 @@ public class ChannelPromptActionsViewHolder(channelPromptActionsView: ChannelPro
    }
 
    public fun bind(accessory: ChannelPromptActionsAccessory, onTapChannelPromptButton: (MessageId, ChannelId, String) -> Unit) {
-      this.channelPromptActionsView.configure(var1.getMessage(), new e(var2, var1), new f(var2, var1), new g(var2, var1), new h(var2, var1));
+      this.channelPromptActionsView
+         .configure(
+            var1.getMessage(),
+            new com.discord.chat.presentation.message.viewholder.e(var2, var1),
+            new com.discord.chat.presentation.message.viewholder.f(var2, var1),
+            new com.discord.chat.presentation.message.viewholder.g(var2, var1),
+            new com.discord.chat.presentation.message.viewholder.h(var2, var1)
+         );
    }
 }

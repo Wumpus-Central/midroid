@@ -36,7 +36,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    private fun setupExternalKeyboardSendRequests() {
-      this.setOnKeyListener(new com.discord.chat.input.views.j(new Ref.BooleanRef(), this));
+      this.setOnKeyListener(new j(new Ref.BooleanRef(), this));
    }
 
    @JvmStatic

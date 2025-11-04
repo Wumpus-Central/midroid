@@ -7,6 +7,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import xu.m
+import zu.j
+import zu.e.i
 
 @m(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
@@ -71,7 +73,7 @@ public enum class MessageState(key: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return zu.j.b("MessageState", zu.e.i.a);
+            return j.b("MessageState", i.a);
          }
 
 

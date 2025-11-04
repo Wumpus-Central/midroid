@@ -2,14 +2,13 @@ package com.discord.crash_reporting
 
 import com.discord.crash_reporting.CrashReporting.BreadcrumbLevel
 import com.discord.logging.Log
-import ht.e
 import ht.v
 
 public class FLogDelegate : u9.c {
    private fun addSentryBreadcrumb(level: BreadcrumbLevel, message: String, throwable: Throwable? = null) {
       label11: {
          if (var3 != null) {
-            val var4: java.lang.String = e.b(var3);
+            val var4: java.lang.String = ht.e.b(var3);
             var6 = var4;
             if (var4 != null) {
                break label11;

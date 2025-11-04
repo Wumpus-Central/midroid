@@ -11,8 +11,6 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.discord.channel_spine.ChannelSpineView
 import com.discord.chat.R.dimen
 import com.discord.theme.ThemeManagerKt
-import d8.d
-import d8.e
 import ht.l
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -39,8 +37,8 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : ItemDe
    init {
       this.context = var1;
       this.contentStartPositionPx = var2;
-      this.lineDrawable$delegate = l.b(new d(this));
-      this.splineView$delegate = l.b(new e(this));
+      this.lineDrawable$delegate = l.b(new d8.d(this));
+      this.splineView$delegate = l.b(new d8.e(this));
       this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing);
       this.spineRect = new Rect();
    }
@@ -63,26 +61,26 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : ItemDe
 
    public fun drawSpineCurve(canvas: Canvas, parent: RecyclerView, child: View, viewToCenterSpine: View, middle: Int) {
       label13: {
-         val var7: Int = var1.save();
+         val var9: Int = var1.save();
 
          try {
             var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
             val var6: Int = var3.getTop();
             val var8: Int = var3.getTop();
             val var10: Int = (var4.getBottom() - var4.getTop()) / 2;
-            val var9: Int = this.itemPaddingOffset;
-            val var14: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var6, this.contentStartPositionPx, var8 + var10 + var9);
-            val var13: ChannelSpineView = this.getSplineView();
-            var13.setRowHeight((float)(var14.height() / 2));
-            var13.measure(MeasureSpec.makeMeasureSpec(var14.width(), 1073741824), MeasureSpec.makeMeasureSpec(var14.height(), 1073741824));
-            var13.layout(0, 0, var14.width(), var14.height());
-            var1.translate((float)var14.left, (float)var14.top);
-            var13.draw(var1);
+            val var7: Int = this.itemPaddingOffset;
+            val var13: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var6, this.contentStartPositionPx, var8 + var10 + var7);
+            val var14: ChannelSpineView = this.getSplineView();
+            var14.setRowHeight((float)(var13.height() / 2));
+            var14.measure(MeasureSpec.makeMeasureSpec(var13.width(), 1073741824), MeasureSpec.makeMeasureSpec(var13.height(), 1073741824));
+            var14.layout(0, 0, var13.width(), var13.height());
+            var1.translate((float)var13.left, (float)var13.top);
+            var14.draw(var1);
          } catch (var11: java.lang.Throwable) {
-            var1.restoreToCount(var7);
+            var1.restoreToCount(var9);
          }
 
-         var1.restoreToCount(var7);
+         var1.restoreToCount(var9);
       }
    }
 

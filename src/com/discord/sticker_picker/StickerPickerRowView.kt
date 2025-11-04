@@ -13,18 +13,16 @@ import com.discord.sticker.StickerView
 import ht.p
 import k9.a
 import k9.b
-import k9.c
-import k9.d
 import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nStickerPickerRowView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 StickerPickerRowView.kt\ncom/discord/sticker_picker/StickerPickerRowView\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 4 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,138:1\n1317#2,2:139\n1872#3,2:141\n1874#3:147\n1872#3,3:148\n278#4,2:143\n257#4,2:145\n*S KotlinDebug\n*F\n+ 1 StickerPickerRowView.kt\ncom/discord/sticker_picker/StickerPickerRowView\n*L\n28#1:139,2\n47#1:141,2\n47#1:147\n120#1:148,3\n50#1:143,2\n55#1:145,2\n*E\n"])
 internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
    private final var firstRenderPass: Boolean
-   public final var onPressSticker: (String) -> Unit = new c()
+   public final var onPressSticker: (String) -> Unit = new k9.c()
    public final var onLongPressSticker: (String) -> Unit
 
    init {
-      this.onLongPressSticker = new d();
+      this.onLongPressSticker = new k9.d();
       this.setOrientation(0);
    }
 
@@ -154,8 +152,8 @@ internal class StickerPickerRowView(context: Context) : LinearLayout(var1) {
    }
 
    public fun clean() {
-      for (View var1 : n0.a(this)) {
-         (var1 as StickerView).recycle();
+      for (View var2 : n0.a(this)) {
+         (var2 as StickerView).recycle();
       }
    }
 

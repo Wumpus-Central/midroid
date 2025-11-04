@@ -14,14 +14,36 @@ import com.discord.chat.presentation.message.view.botuikit.MediaItemEventHandler
 import com.discord.primitives.UserId
 
 public object ComponentContextDefaults {
-   public final val GENERAL_HANDLERS: GeneralEventHandlers = new GeneralEventHandlers(new a(), new c())
-   public final val MARKDOWN_OPTIONS: MarkdownTextRenderOptions = new MarkdownTextRenderOptions("", false, false, false, false)
+   public final val GENERAL_HANDLERS: GeneralEventHandlers =
+      new GeneralEventHandlers(new a(), new com.discord.chat.presentation.message.view.botuikit.react.c())
+      public final val MARKDOWN_OPTIONS: MarkdownTextRenderOptions = new MarkdownTextRenderOptions("", false, false, false, false)
    public final val MARKDOWN_HANDLERS: MarkdownTextRenderEventHandlers =
       new MarkdownTextRenderEventHandlers(
-         new i(), new j(), new k(), new m(), new n(), new o(), new p(), new q(), new l(), new r(), new s(), new t(), new u(), new v()
+         new com.discord.chat.presentation.message.view.botuikit.react.j(),
+         new k(),
+         new m(),
+         new n(),
+         new o(),
+         new p(),
+         new q(),
+         new r(),
+         new l(),
+         new s(),
+         new t(),
+         new u(),
+         new v(),
+         new w()
       )
-      public final val MEDIA_HANDLERS: MediaItemEventHandlers = new MediaItemEventHandlers(new w(), new x(), new y(), new b(), new d())
-   public final val COMPONENT_HANDLERS: ComponentActionEventHandlers = new ComponentActionEventHandlers(new e(), new f(), new g(), new h())
+      public final val MEDIA_HANDLERS: MediaItemEventHandlers =
+      new MediaItemEventHandlers(new x(), new y(), new z(), new b(), new com.discord.chat.presentation.message.view.botuikit.react.d())
+      public final val COMPONENT_HANDLERS: ComponentActionEventHandlers =
+      new ComponentActionEventHandlers(
+         new com.discord.chat.presentation.message.view.botuikit.react.e(),
+         new com.discord.chat.presentation.message.view.botuikit.react.f(),
+         new com.discord.chat.presentation.message.view.botuikit.react.g(),
+         new com.discord.chat.presentation.message.view.botuikit.react.h(),
+         new com.discord.chat.presentation.message.view.botuikit.react.i()
+      )
 
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$21`(var0: java.lang.String): Unit {
@@ -41,6 +63,11 @@ public object ComponentContextDefaults {
    @JvmStatic
    fun `COMPONENT_HANDLERS$lambda$24`(var0: UserId, var1: java.lang.String, var2: java.lang.String): Unit {
       throw new ht.q("onTapContentInventoryEntry not implemented");
+   }
+
+   @JvmStatic
+   fun `COMPONENT_HANDLERS$lambda$25`(var0: UserId): Unit {
+      throw new ht.q("onTapCheckpointCard not implemented");
    }
 
    @JvmStatic

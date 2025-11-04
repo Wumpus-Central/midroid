@@ -1,6 +1,5 @@
 package com.discord.phone_verification
 
-import a9.c
 import com.discord.phone_verification.reactevents.VerificationCodeReceivedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
@@ -13,7 +12,7 @@ public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : R
    private final val smsAutofillManager: SmsAutofillManager
 
    init {
-      this.smsAutofillManager = new SmsAutofillManager(var1, new c(this, var1));
+      this.smsAutofillManager = new SmsAutofillManager(var1, new a9.c(this, var1));
    }
 
    @JvmStatic

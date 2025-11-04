@@ -18,11 +18,11 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout(v
    private final val binding: GameIconViewBinding
 
    init {
-      val var3: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
-      val var5: SimpleDraweeView = var3.gameControllerIcon;
-      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.GameController);
-      val var4: SimpleDraweeView = var3.gameControllerIcon;
+      val var5: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var5;
+      val var3: SimpleDraweeView = var5.gameControllerIcon;
+      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.GameController);
+      val var4: SimpleDraweeView = var5.gameControllerIcon;
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
    }
 
@@ -33,6 +33,6 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout(v
 
    public fun configureGameIcon(gameApplicationId: String, timestamp: String, eventHandler: ChatEventHandler) {
       val var4: SimpleDraweeView = this.binding.gameControllerIcon;
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new e(var3, var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new com.discord.chat.presentation.message.e(var3, var1, var2), 1, null);
    }
 }

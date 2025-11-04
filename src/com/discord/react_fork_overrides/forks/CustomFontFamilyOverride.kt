@@ -73,12 +73,12 @@ internal object CustomFontFamilyOverride {
       var6 = FILE_EXTENSIONS.length;
 
       for (int var15 = 0; var15 < var6; var15++) {
-         val var20: java.lang.String = var13[var15];
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("fonts/");
-         var9.append(var7);
-         var9.append(var20);
-         val var21: java.lang.String = var9.toString();
+         val var9: java.lang.String = var13[var15];
+         val var20: StringBuilder = new StringBuilder();
+         var20.append("fonts/");
+         var20.append(var7);
+         var20.append(var9);
+         val var21: java.lang.String = var20.toString();
 
          try {
             return Typeface.createFromAsset(var3, var21);
@@ -132,9 +132,9 @@ internal object CustomFontFamilyOverride {
             var12 = var13.toString();
 
             try {
-               e.a();
+               com.discord.react_fork_overrides.forks.e.a();
                val var32: Font = a.a(var3, var12).build();
-               f.a();
+               com.discord.react_fork_overrides.forks.f.a();
                val var33: FontFamily = b.a(var32).build();
                var11.add(var33);
             } catch (var14: java.lang.Throwable) {
@@ -146,12 +146,12 @@ internal object CustomFontFamilyOverride {
       if (var11.size() == 0) {
          return this.createAssetTypeface(var1[0], var2, var3);
       } else {
-         g.a();
-         val var21: CustomFallbackBuilder = c.a(i.a(var11.get(0)));
+         com.discord.react_fork_overrides.forks.g.a();
+         val var21: CustomFallbackBuilder = com.discord.react_fork_overrides.forks.c.a(com.discord.react_fork_overrides.forks.i.a(var11.get(0)));
          val var22: Int = var11.size();
 
          for (int var19 = 1; var19 < var22; var19++) {
-            var21.addCustomFallback(i.a(var11.get(var19)));
+            var21.addCustomFallback(com.discord.react_fork_overrides.forks.i.a(var11.get(var19)));
          }
 
          var var29: java.lang.String = var1[0];
@@ -171,14 +171,14 @@ internal object CustomFontFamilyOverride {
             var23 = 1;
          }
 
-         h.a();
+         com.discord.react_fork_overrides.forks.h.a();
          if (var23) {
             var23 = 700;
          } else {
             var23 = 400;
          }
 
-         var21.setStyle(d.a(var23, var20));
+         var21.setStyle(com.discord.react_fork_overrides.forks.d.a(var23, var20));
          val var18: Typeface = var21.build();
          return var18;
       }
@@ -190,6 +190,6 @@ internal object CustomFontFamilyOverride {
    }
 
    public fun override() {
-      ReactFontManager.Companion.setCreateAssetTypefaceOverride(new j());
+      ReactFontManager.Companion.setCreateAssetTypefaceOverride(new com.discord.react_fork_overrides.forks.j());
    }
 }

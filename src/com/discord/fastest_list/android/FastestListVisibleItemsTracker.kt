@@ -78,8 +78,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
             if (!this.isUnchanged(var2, var1)) {
                val var6: Int = this.positionEndPrev - this.positionStartPrev;
                var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-               var var4: Int = var1;
-               var var3: Int = var2;
+               var var3: Int = var1;
+               var var4: Int = var2;
                if (var5 > 0) {
                   var5 = Math.min(this.getLastItemPosition(), var2 + var5);
                   var3 = var6 - (var5 - var1);
@@ -88,14 +88,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
                      var2 = Math.max(0, var1 - var3);
                   }
 
-                  var4 = var2;
-                  var3 = var5;
+                  var3 = var2;
+                  var4 = var5;
                   if (this.isUnchanged(var5, var2)) {
                      return;
                   }
                }
 
-               this.computeVisibleItems(var3, var4);
+               this.computeVisibleItems(var4, var3);
             }
          }
       }

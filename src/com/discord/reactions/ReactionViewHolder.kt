@@ -29,6 +29,6 @@ internal class ReactionViewHolder(reactionView: ReactionView) : ViewHolder(var1)
       val var5: ReactionView = this.reactionView;
       this.reactionView.setReaction(var1, var4);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new b(var2, var1), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new c(var3, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new com.discord.reactions.c(var3, var1), 1, null);
    }
 }

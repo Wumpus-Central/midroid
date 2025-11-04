@@ -21,7 +21,7 @@ public fun createReactModuleInfoProvider(moduleName: String, needsEagerInit: Boo
 }
 
 public fun createReactModuleInfoProvider(moduleNames: List<String> = CollectionsKt.l(), needsEagerInit: Boolean = false): ReactModuleInfoProvider {
-   return new d(var0, var1);
+   return new com.discord.react.utilities.d(var0, var1);
 }
 
 @JvmSynthetic

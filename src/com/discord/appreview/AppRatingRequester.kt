@@ -3,7 +3,10 @@ package com.discord.appreview
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
+import ij.c
 import kotlin.jvm.functions.Function1
+import q7.d
+import q7.e
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -22,7 +25,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
       if (var1) {
          return new lj.a(var2);
       } else {
-         val var3: ReviewManager = ij.c.a(var2);
+         val var3: ReviewManager = c.a(var2);
          return var3;
       }
    }
@@ -31,7 +34,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
       if (var2.p()) {
          val var5: Task = var0.a(var1.activity, var2.l() as ij.b);
-         var5.addOnCompleteListener(new q7.e(var1));
+         var5.addOnCompleteListener(new e(var1));
       } else {
          val var3: Function1 = var1.onFailure;
          val var6: Exception = var2.k();
@@ -58,6 +61,6 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
       val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
       val var1: Task = var2.b();
       var1.addOnCompleteListener(new q7.c(var2, this));
-      var1.a(new q7.d(this));
+      var1.a(new d(this));
    }
 }

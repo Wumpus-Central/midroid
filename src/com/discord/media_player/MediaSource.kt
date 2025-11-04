@@ -295,11 +295,11 @@ public data class MediaSource(sourceUrl: String? = ...,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.sourceUrl;
-      val var5: java.lang.String = this.previewUrl;
-      val var4: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
-      val var3: java.lang.String = this.featureTag;
+      val var3: java.lang.String = this.sourceUrl;
+      val var8: java.lang.String = this.previewUrl;
+      val var5: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
+      val var6: java.lang.String = this.featureTag;
       val var7: MediaType = this.type;
       val var1: Boolean = this.shouldAutoPlay;
       val var9: ChannelId = this.channelId;
@@ -310,20 +310,20 @@ public data class MediaSource(sourceUrl: String? = ...,
          var14 = MessageId.toString-impl(this.messageId);
       }
 
-      val var11: Int = this.index;
-      val var12: java.lang.Double = this.portal;
-      val var13: java.lang.Boolean = this.srcIsAnimated;
+      val var13: Int = this.index;
+      val var11: java.lang.Double = this.portal;
+      val var12: java.lang.Boolean = this.srcIsAnimated;
       val var10: StringBuilder = new StringBuilder();
       var10.append("MediaSource(sourceUrl=");
-      var10.append(var6);
-      var10.append(", previewUrl=");
-      var10.append(var5);
-      var10.append(", placeholder=");
-      var10.append(var4);
-      var10.append(", placeholderVersion=");
-      var10.append(var8);
-      var10.append(", featureTag=");
       var10.append(var3);
+      var10.append(", previewUrl=");
+      var10.append(var8);
+      var10.append(", placeholder=");
+      var10.append(var5);
+      var10.append(", placeholderVersion=");
+      var10.append(var4);
+      var10.append(", featureTag=");
+      var10.append(var6);
       var10.append(", type=");
       var10.append(var7);
       var10.append(", shouldAutoPlay=");
@@ -333,11 +333,11 @@ public data class MediaSource(sourceUrl: String? = ...,
       var10.append(", messageId=");
       var10.append(var14);
       var10.append(", index=");
-      var10.append(var11);
-      var10.append(", portal=");
-      var10.append(var12);
-      var10.append(", srcIsAnimated=");
       var10.append(var13);
+      var10.append(", portal=");
+      var10.append(var11);
+      var10.append(", srcIsAnimated=");
+      var10.append(var12);
       var10.append(")");
       return var10.toString();
    }

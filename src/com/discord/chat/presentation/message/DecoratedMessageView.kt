@@ -51,7 +51,7 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
       messageFrame: MessageFrame? = null,
       eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE,
       componentProvider: ComponentProvider? = null,
-      onChainPart: () -> ChainPart = new c(),
+      onChainPart: () -> ChainPart = new com.discord.chat.presentation.message.c(),
       allowChildGestures: Boolean = true,
       renderContentOnly: Boolean = false
    ) {

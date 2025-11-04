@@ -6,8 +6,6 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import i9.c
-import i9.d
 
 public class GGSansItalicSpan(context: Context) : StyleSpan(2) {
    private final val context: Context
@@ -48,10 +46,10 @@ public class GGSansItalicSpan(context: Context) : StyleSpan(2) {
    }
 
    public open fun updateDrawState(ds: TextPaint) {
-      this.apply(var1, new d(this, var1));
+      this.apply(var1, new i9.d(this, var1));
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      this.apply(var1, new c(this, var1));
+      this.apply(var1, new i9.c(this, var1));
    }
 }

@@ -16,8 +16,6 @@ import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import g9.a
 import g9.b
-import g9.c
-import g9.d
 import ht.v
 import kotlin.jvm.internal.SourceDebugExtension
 
@@ -147,18 +145,18 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun getStableSafeAreaInsets(): WritableMap? {
-      val var2: c = new c();
-      val var4: Activity = this.reactContext.getCurrentActivity();
-      if (var4 == null) {
+      val var1: g9.c = new g9.c();
+      val var3: Activity = this.reactContext.getCurrentActivity();
+      if (var3 == null) {
          return null;
       } else {
-         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var4);
-         if (var3 == null) {
+         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var4 == null) {
             return null;
          } else {
-            val var1: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var4, true);
-            return var2.invoke(Math.max(var1.a, var5.a), Math.max(var1.b, var5.b), Math.max(var1.c, var5.c), Math.max(var1.d, var5.d)) as WritableMap;
+            val var2: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            return var1.invoke(Math.max(var2.a, var5.a), Math.max(var2.b, var5.b), Math.max(var2.c, var5.c), Math.max(var2.d, var5.d)) as WritableMap;
          }
       }
    }
@@ -168,7 +166,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun setNavigationBarVisible(visible: Boolean) {
-      UiThreadUtil.runOnUiThread(new d(this, var1));
+      UiThreadUtil.runOnUiThread(new g9.d(this, var1));
    }
 
    public override fun setStatusBarVisible(visible: Boolean) {

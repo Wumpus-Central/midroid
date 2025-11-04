@@ -9,7 +9,6 @@ import androidx.core.view.v0
 import androidx.core.view.WindowInsetsCompat.n
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import gu.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
@@ -34,7 +33,7 @@ public fun Activity.hideKeyboard() {
 }
 
 public fun View.hideKeyboard(window: Window) {
-   g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
+   gu.g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;
@@ -56,7 +55,7 @@ public fun View.hideKeyboard(window: Window) {
       public final Object invokeSuspend(Object var1) {
          b.f();
          if (this.label == 0) {
-            c.b(var1);
+            kotlin.c.b(var1);
             KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).b(n.c());
             return Unit.a;
          } else {
@@ -75,7 +74,7 @@ public fun Activity.showKeyboard() {
 }
 
 public fun View.showKeyboard(window: Window) {
-   g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
+   gu.g.d(MainImmediateScopeKt.MainImmediateScope(), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var1, var0, null) {
       final View $self;
       final Window $window;
       int label;
@@ -97,7 +96,7 @@ public fun View.showKeyboard(window: Window) {
       public final Object invokeSuspend(Object var1) {
          b.f();
          if (this.label == 0) {
-            c.b(var1);
+            kotlin.c.b(var1);
             KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).g(n.c());
             if (this.$self is EditText) {
                var1 = this.$self as EditText;

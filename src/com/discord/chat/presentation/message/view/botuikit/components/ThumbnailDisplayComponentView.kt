@@ -43,25 +43,25 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
 
    public open fun configure(component: ThumbnailDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       val var13: com.discord.chat.bridge.spoiler.SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var16: java.lang.String = var3.getContainerId();
-      val var12: java.lang.String = var1.getId();
+      val var12: java.lang.String = var3.getContainerId();
+      val var16: java.lang.String = var1.getId();
       val var11: StringBuilder = new StringBuilder();
       var11.append("ThumbnailDisplayComponent(");
-      var11.append(var12);
+      var11.append(var16);
       var11.append(")");
-      val var21: SpoilerAttributes = var13.forGenericMedia(var1, var16, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var21: SpoilerAttributes = var13.forGenericMedia(var1, var12, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var20: UnfurledMediaItem = var1.getMedia();
       val var19: MediaImageViewHolder = this.imageViewHolder;
-      val var9: Boolean = var1.isSpoiler();
+      val var7: Boolean = var1.isSpoiler();
       var var17: SpoilerConfig = null;
       if (var21 != null) {
          var17 = SpoilerAttributes.configure$default(var21, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
       }
 
-      val var8: Boolean = var1.isObscure();
-      val var7: Boolean = var1.isObscureAwaitingScan();
-      val var6: Boolean = var1.getObscureHideControls();
-      val var10: Boolean = var1.getObscureIsOpaque();
+      val var6: Boolean = var1.isObscure();
+      val var10: Boolean = var1.isObscureAwaitingScan();
+      val var8: Boolean = var1.getObscureHideControls();
+      val var9: Boolean = var1.getObscureIsOpaque();
       val var22: java.lang.String = var20.getProxyUrl();
       var var14: Int = var20.getWidth();
       var var5: Int = 0;
@@ -83,12 +83,12 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var5,
          var20.getPlaceholder(),
          var20.getPlaceholderVersion(),
-         var9,
-         var17,
-         var8,
          var7,
+         var17,
          var6,
          var10,
+         var8,
+         var9,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),
@@ -97,8 +97,8 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          this.getContext().getResources().getDimensionPixelSize(dimen.message_media_non_mosaic_radius),
          MediaContainingViewResizer.ResizeMode.Cover,
          false,
-         new k(var3, this, var1),
-         new l(var3, var1),
+         new m(var3, this, var1),
+         new n(var3, var1),
          null,
          var1.getAccessibilityRole(),
          var3.getShouldAutoPlayGif(),

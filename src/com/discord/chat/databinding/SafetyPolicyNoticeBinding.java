@@ -47,24 +47,24 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
    @NonNull
    public static SafetyPolicyNoticeBinding bind(@NonNull View var0) {
       int var1 = R.id.description;
-      TextView var4 = (TextView)k5.a.a(var0, var1);
-      if (var4 != null) {
+      TextView var2 = (TextView)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.footer;
          LinearLayout var5 = (LinearLayout)k5.a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.learn_more;
-               TextView var3 = (TextView)k5.a.a(var0, var1);
-               if (var3 != null) {
+               TextView var4 = (TextView)k5.a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var6 = (TextView)k5.a.a(var0, var1);
-                  if (var6 != null) {
+                  TextView var7 = (TextView)k5.a.a(var0, var1);
+                  if (var7 != null) {
                      var1 = R.id.title;
-                     TextView var7 = (TextView)k5.a.a(var0, var1);
-                     if (var7 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var4, var5, var2, var3, var6, var7);
+                     TextView var6 = (TextView)k5.a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SafetyPolicyNoticeBinding(var0, var2, var5, var3, var4, var7, var6);
                      }
                   }
                }

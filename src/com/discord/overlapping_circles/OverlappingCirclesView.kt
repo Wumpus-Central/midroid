@@ -57,7 +57,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       this.imageLoadingColorDrawable = new ColorDrawable(this.imageLoadingColor);
       val var3: IntArray = R.styleable.OverlappingCirclesView;
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
-      this.maxItems = e.e(var4.getInt(R.styleable.OverlappingCirclesView_oc_maxItems, this.maxItems), 0);
+      this.maxItems = kotlin.ranges.e.e(var4.getInt(R.styleable.OverlappingCirclesView_oc_maxItems, this.maxItems), 0);
       this.overlapPx = var4.getDimensionPixelSize(R.styleable.OverlappingCirclesView_oc_overlap, this.overlapPx);
       this.separatorSizePx = var4.getDimensionPixelSize(R.styleable.OverlappingCirclesView_oc_separation, this.separatorSizePx);
       this.imageLoadingColor = var4.getColor(R.styleable.OverlappingCirclesView_oc_circleBgColor, this.imageLoadingColor);
@@ -106,10 +106,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
                val var10: Context = this.getContext();
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var9.getUri(var10));
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
             }
 
             val var21: Context = this.getContext();
@@ -131,12 +131,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
       if (var2) {
          val var18: Context = this.getContext();
-         val var11: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var19: LayoutParams = new LayoutParams(-2, -1);
-         var19.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var11, var19);
+         val var20: LayoutParams = new LayoutParams(-2, -1);
+         var20.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var19, var20);
       }
    }
 
@@ -189,13 +189,13 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
             @Override
             public final void run() {
-               val var2: View = this.$this_doOnPreDraw;
-               val var1: OverlappingCirclesView.OverflowItem = this.this$0;
+               val var1: View = this.$this_doOnPreDraw;
+               val var2: OverlappingCirclesView.OverflowItem = this.this$0;
                val var3: android.view.ViewGroup.LayoutParams = this.this$0.getLayoutParams();
                if (var3 != null) {
                   val var4: LayoutParams = var3 as LayoutParams;
-                  (var3 as LayoutParams).width = e.e(var2.getWidth(), var2.getHeight());
-                  var1.setLayoutParams(var4);
+                  (var3 as LayoutParams).width = kotlin.ranges.e.e(var1.getWidth(), var1.getHeight());
+                  var2.setLayoutParams(var4);
                } else {
                   throw new NullPointerException("null cannot be cast to non-null type android.widget.LinearLayout.LayoutParams");
                }

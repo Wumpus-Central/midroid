@@ -1,4 +1,4 @@
-@file:SourceDebugExtension(["SMAP\nComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,171:1\n257#2,2:172\n257#2,2:174\n1#3:176\n*S KotlinDebug\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n*L\n151#1:172,2\n154#1:174,2\n*E\n"])
+@file:SourceDebugExtension(["SMAP\nComponentView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n+ 2 View.kt\nandroidx/core/view/ViewKt\n+ 3 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,174:1\n257#2,2:175\n257#2,2:177\n1#3:179\n*S KotlinDebug\n*F\n+ 1 ComponentView.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentViewKt\n*L\n154#1:175,2\n157#1:177,2\n*E\n"])
 
 package com.discord.chat.presentation.message.view.botuikit
 
@@ -37,8 +37,8 @@ public fun SimpleDraweeSpanTextView.setEmojiOrHide(componentEmoji: ComponentEmoj
       var0.setVisibility(8);
    } else {
       var0.setVisibility(0);
-      val var2: RenderableEmoji = renderable(var1);
-      val var3: Context = var0.getContext();
-      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var2, var3, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
+      val var3: RenderableEmoji = renderable(var1);
+      val var2: Context = var0.getContext();
+      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var3, var2, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
    }
 }

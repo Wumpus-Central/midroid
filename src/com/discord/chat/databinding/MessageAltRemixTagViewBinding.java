@@ -33,12 +33,12 @@ public final class MessageAltRemixTagViewBinding implements ViewBinding {
       TextView var2 = (TextView)k5.a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.layout;
-         ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
-         if (var3 != null) {
+         ConstraintLayout var4 = (ConstraintLayout)k5.a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.remix_icon;
-            SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var4 != null) {
-               return new MessageAltRemixTagViewBinding(var0, var2, var3, var4);
+            SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var3 != null) {
+               return new MessageAltRemixTagViewBinding(var0, var2, var4, var3);
             }
          }
       }

@@ -24,8 +24,8 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
       var1.setDividerColor(var2.getColor());
       var1.setText(var2.getText());
       var1.setIsBeforeContent(var2.isBeforeContent());
-      var1.setMoreActionsHandler(new f(this, var2));
-      var1.setJumpToBottomHandler(new g(this, var2));
+      var1.setMoreActionsHandler(new com.discord.chat.presentation.list.delegate.f(this, var2));
+      var1.setJumpToBottomHandler(new com.discord.chat.presentation.list.delegate.g(this, var2));
    }
 
    public open fun createView(parent: ViewGroup): SummarySeparatorView {

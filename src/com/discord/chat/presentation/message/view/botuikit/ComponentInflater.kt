@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.botuikit.ActionRowComponent
 import com.discord.chat.bridge.botuikit.ButtonComponent
+import com.discord.chat.bridge.botuikit.CheckpointCardComponent
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.chat.bridge.botuikit.ContainerComponent
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryComponent
@@ -16,6 +17,7 @@ import com.discord.chat.bridge.botuikit.TextDisplayComponent
 import com.discord.chat.bridge.botuikit.ThumbnailDisplayComponent
 import com.discord.chat.presentation.message.view.botuikit.components.ActionRowComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ButtonComponentView
+import com.discord.chat.presentation.message.view.botuikit.components.CheckpointCardComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ContainerComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.ContentInventoryComponentView
 import com.discord.chat.presentation.message.view.botuikit.components.FileDisplayComponentView
@@ -30,7 +32,7 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nComponentInflater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,94:1\n381#2,7:95\n381#2,7:102\n381#2,7:109\n*S KotlinDebug\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n*L\n46#1:95,7\n55#1:102,7\n71#1:109,7\n*E\n"])
+@SourceDebugExtension(["SMAP\nComponentInflater.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n+ 2 Maps.kt\nkotlin/collections/MapsKt__MapsKt\n*L\n1#1,97:1\n381#2,7:98\n381#2,7:105\n381#2,7:112\n*S KotlinDebug\n*F\n+ 1 ComponentInflater.kt\ncom/discord/chat/presentation/message/view/botuikit/ComponentInflater\n*L\n48#1:98,7\n57#1:105,7\n73#1:112,7\n*E\n"])
 public class ComponentInflater(context: Context, preInflateRecycledViews: Boolean) {
    public final val context: Context
    private final val viewCache: MutableMap<String, MutableList<ComponentView<out Component>>>
@@ -61,13 +63,13 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                break;
             }
 
-            val var7: java.util.Map = this.viewCache;
-            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
-            val var6: Any = var7.get(var8);
+            val var8: java.util.Map = this.viewCache;
+            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
+            val var6: Any = var8.get(var7);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var7.put(var8, var9);
+               var8.put(var7, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
@@ -100,6 +102,8 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
          var3 = ContentInventoryComponentView.Companion.inflateComponent(this.context, var2);
       } else if (var1 is ContainerComponent) {
          var3 = ContainerComponentView.Companion.inflateComponent(this.context);
+      } else if (var1 is CheckpointCardComponent) {
+         var3 = CheckpointCardComponentView.Companion.inflateComponent(this.context, var2);
       } else {
          var3 = UnknownComponentView.Companion.inflateComponent(this.context);
       }

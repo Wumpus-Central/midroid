@@ -71,7 +71,7 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
          var2.getMessageFrame(),
          this.getEventHandler(),
          this.getComponentProvider(),
-         new e(this, var2, var3),
+         new com.discord.chat.presentation.list.delegate.e(this, var2, var3),
          var2.getAllowChildGestures(),
          var2.getRenderContentOnly()
       );

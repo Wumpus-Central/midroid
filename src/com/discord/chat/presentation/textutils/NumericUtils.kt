@@ -44,11 +44,11 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.e.f(var1 % (long)26, 1L);
-            val var11: java.lang.String = this.toLetter(var1 / (long)26);
-            val var9: java.lang.String = this.toLetter(var10);
+            val var9: java.lang.String = this.toLetter(var1 / (long)26);
+            val var11: java.lang.String = this.toLetter(var10);
             val var8: StringBuilder = new StringBuilder();
-            var8.append(var11);
             var8.append(var9);
+            var8.append(var11);
             return var8.toString();
          }
       } else {
@@ -61,18 +61,18 @@ public object NumericUtils {
 
    public fun toRomanNumeral(number: Long): String {
       if (var1 >= 1L) {
-         val var8: TreeMap = romanNumeralMap;
-         var var6: Any = romanNumeralMap.floorKey(var1);
-         val var3: Long = (var6 as java.lang.Number).longValue();
+         val var6: TreeMap = romanNumeralMap;
+         var var8: Any = romanNumeralMap.floorKey(var1);
+         val var3: Long = (var8 as java.lang.Number).longValue();
          if (var1 == var3) {
-            val var10: Any = var8.get(var1);
-            return var10 as java.lang.String;
+            var8 = var6.get(var1);
+            return var8 as java.lang.String;
          } else {
-            var6 = var8.get(var3);
-            val var9: java.lang.String = this.toRomanNumeral(var1 - var3);
+            var8 = var6.get(var3);
+            val var11: java.lang.String = this.toRomanNumeral(var1 - var3);
             val var7: StringBuilder = new StringBuilder();
-            var7.append(var6);
-            var7.append(var9);
+            var7.append(var8);
+            var7.append(var11);
             return var7.toString();
          }
       } else {

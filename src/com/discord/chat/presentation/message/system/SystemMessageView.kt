@@ -97,23 +97,23 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var3 = this.getResources().getDisplayMetrics().widthPixels;
       }
 
-      var var4: Boolean;
+      var var20: Boolean;
       if (var1.getTimestamp() != null && var1.getType() != MessageType.IN_GAME_MESSAGE_NUX) {
-         var4 = 1;
+         var20 = 1;
       } else {
-         var4 = 0;
+         var20 = 0;
       }
 
-      val var15: StructurableText = var1.getContent();
-      if (var15 != null) {
-         val var29: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
+      val var29: StructurableText = var1.getContent();
+      if (var29 != null) {
+         val var14: ArrayList = this.accessories;
+         val var15: java.lang.String = var1.getId-3Eiw7ao();
          val var12: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var9: Boolean = var1.getShouldShowRoleDot();
-         val var10: Boolean = var1.getShouldShowRoleOnName();
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var11: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
-         if (var4) {
+         if (var20) {
             var5 = 0;
          } else {
             var5 = this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing);
@@ -135,14 +135,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var29.add(
+         var14.add(
             new MessageContentAccessory(
-               var14,
                var15,
+               var29,
                var12,
+               var10,
                var11,
                var9,
-               var10,
                var5,
                var6,
                var7,
@@ -161,7 +161,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          );
       }
 
-      if (var4) {
+      if (var20) {
          val var30: java.lang.String = var1.getTimestamp();
          if (var30 != null) {
             this.accessories
@@ -171,11 +171,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var13 = var1.getTotalMonthsSubscribed();
       if (var13 != null && var13.intValue() <= 1) {
-         val var44: ArrayList = this.accessories;
-         val var40: java.lang.String = var1.getId-3Eiw7ao();
-         val var32: java.lang.String = var1.getUsername();
-         val var37: Context = this.binding.getRoot().getContext();
-         var44.add(new RoleSubscriptionPurchaseAccessory(var40, var32, MessageKt.avatarUrl(var1, var37), var3, false, null));
+         val var32: ArrayList = this.accessories;
+         val var44: java.lang.String = var1.getId-3Eiw7ao();
+         val var37: java.lang.String = var1.getUsername();
+         val var40: Context = this.binding.getRoot().getContext();
+         var32.add(new RoleSubscriptionPurchaseAccessory(var44, var37, MessageKt.avatarUrl(var1, var40), var3, false, null));
       }
 
       val var33: Sticker = var1.getSticker();
@@ -187,27 +187,26 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          this.accessories.add(new InviteToSpeakAccessory(var1));
       }
 
-      var var21: Boolean;
       if (var1.getType() != MessageType.GUILD_DEADCHAT_REVIVE_PROMPT && var1.getType() != MessageType.GUILD_GAMING_STATS_PROMPT) {
-         var21 = true;
+         var20 = (boolean)1;
       } else {
          val var34: java.util.List = var1.getEmbeds();
-         var4 = (boolean)1;
+         var20 = (boolean)1;
          if (var34 != null) {
             val var35: java.util.Iterator = var34.iterator();
-            var4 = 0;
+            var20 = 0;
             val var25: Int = var3;
-            var21 = true;
+            val var23: Boolean = true;
 
             while (true) {
-               val var27: Int = var4;
-               var4 = var21;
+               val var27: Int = var20;
+               var20 = var23;
                if (!var35.hasNext()) {
                   break;
                }
 
                val var38: Any = var35.next();
-               var4 += 1;
+               var20 += 1;
                if (var27 < 0) {
                   CollectionsKt.v();
                }
@@ -235,12 +234,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             }
          }
 
-         var21 = var4;
          this.accessories.add(new ChannelPromptActionsAccessory(var1));
       }
 
       val var36: java.util.List = var1.getReactions();
-      if (var36 != null && (var36.isEmpty() xor true) == var21) {
+      if (var36 != null && (var36.isEmpty() xor true) == var20) {
          this.accessories
             .add(
                new ReactionsMessageAccessory(
@@ -380,14 +378,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    public fun setMessage(message: Message, context: MessageContext, eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE) {
-      val var7: e = new e(var1, var3);
+      val var7: com.discord.chat.presentation.message.system.e = new com.discord.chat.presentation.message.system.e(var1, var3);
       val var8: Function2 = var3.getOnMessageDoubleTapped();
-      var var5: f = null;
+      var var5: com.discord.chat.presentation.message.system.f = null;
       if (var8 != null) {
          if (MessageKt.isEphemeral(var1)) {
             var5 = null;
          } else {
-            var5 = new f(var8, var1);
+            var5 = new com.discord.chat.presentation.message.system.f(var8, var1);
          }
       }
 
@@ -413,6 +411,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       var9.setVisibility(var10);
-      h0.n0(this, new MessageViewAccessibilityDelegate(var1, new g(), var7));
+      h0.n0(this, new MessageViewAccessibilityDelegate(var1, new com.discord.chat.presentation.message.system.g(), var7));
    }
 }

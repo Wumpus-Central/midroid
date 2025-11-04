@@ -1,7 +1,6 @@
 package com.discord.serialization
 
 import bu.b
-import bv.h
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
@@ -16,17 +15,17 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
    try {
       val var3: KClass = b.b(var0.getReturnType());
       if (var3 == java.lang.String::class) {
-         h.o(var1).b();
+         bv.h.o(var1).b();
       } else if (var3 == Int::class) {
-         h.k(h.o(var1));
+         bv.h.k(bv.h.o(var1));
       } else if (var3 == java.lang.Double::class) {
-         h.i(h.o(var1));
+         bv.h.i(bv.h.o(var1));
       } else if (var3 == java.lang.Boolean::class) {
-         h.f(h.o(var1));
+         bv.h.f(bv.h.o(var1));
       } else if (var3 == java.lang.Long::class) {
-         h.q(h.o(var1));
+         bv.h.q(bv.h.o(var1));
       } else if (var3 == java.lang.Float::class) {
-         h.j(h.o(var1));
+         bv.h.j(bv.h.o(var1));
       }
 
       return true;

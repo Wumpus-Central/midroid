@@ -11,6 +11,7 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
    ACTION_ROW(1),
    BUTTON(2),
    CHANNEL_SELECT(8),
+   CHECKPOINT_CARD(20),
    CONTAINER(17),
    CONTENT_INVENTORY_ENTRY(16),
    FILE(13),

@@ -28,130 +28,130 @@ public abstract class HighlightedMessageDecoration : ItemDecoration {
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:99)
       //
       // Bytecode:
-      // 000: aload 1
-      // 001: ldc "canvas"
-      // 003: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
-      // 006: aload 2
-      // 007: ldc "parent"
-      // 009: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
-      // 00c: aload 3
-      // 00d: ldc "state"
-      // 00f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
-      // 012: aload 0
-      // 013: aload 1
-      // 014: aload 2
-      // 015: aload 3
-      // 016: invokespecial androidx/recyclerview/widget/RecyclerView$ItemDecoration.onDraw (Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
-      // 019: aload 1
-      // 01a: invokevirtual android/graphics/Canvas.save ()I
-      // 01d: istore 5
-      // 01f: aload 2
-      // 020: invokevirtual androidx/recyclerview/widget/RecyclerView.getAdapter ()Landroidx/recyclerview/widget/RecyclerView$Adapter;
-      // 023: astore 3
-      // 024: aload 3
-      // 025: ldc "null cannot be cast to non-null type com.discord.chat.presentation.list.ChatListAdapter"
-      // 027: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V
-      // 02a: aload 3
-      // 02b: checkcast com/discord/chat/presentation/list/ChatListAdapter
-      // 02e: astore 3
-      // 02f: aload 2
-      // 030: invokevirtual android/view/ViewGroup.getChildCount ()I
-      // 033: istore 6
-      // 035: bipush 0
-      // 036: istore 4
-      // 038: iload 4
-      // 03a: iload 6
-      // 03c: if_icmpge 0f2
-      // 03f: aload 2
-      // 040: iload 4
-      // 042: invokevirtual android/view/ViewGroup.getChildAt (I)Landroid/view/View;
-      // 045: astore 8
-      // 047: aload 2
-      // 048: aload 8
-      // 04a: invokevirtual androidx/recyclerview/widget/RecyclerView.getChildAdapterPosition (Landroid/view/View;)I
-      // 04d: istore 7
-      // 04f: iload 7
-      // 051: iflt 0ec
-      // 054: iload 7
-      // 056: aload 3
-      // 057: invokeinterface com/discord/chat/presentation/list/ChatListAdapter.getChatListItems ()Ljava/util/List; 1
-      // 05c: invokeinterface java/util/List.size ()I 1
-      // 061: if_icmplt 067
-      // 064: goto 0ec
-      // 067: aload 3
-      // 068: iload 7
-      // 06a: invokeinterface com/discord/chat/presentation/list/ChatListAdapter.getChatListItem (I)Lcom/discord/chat/presentation/list/item/ChatListItem; 2
-      // 06f: astore 9
-      // 071: aload 9
-      // 073: ifnonnull 0b7
-      // 076: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 079: astore 8
-      // 07b: aload 1
-      // 07c: invokevirtual java/lang/Object.getClass ()Ljava/lang/Class;
-      // 07f: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
-      // 082: astore 2
-      // 083: aload 2
-      // 084: ldc "getSimpleName(...)"
-      // 086: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
-      // 089: new java/lang/StringBuilder
-      // 08c: astore 3
-      // 08d: aload 3
-      // 08e: invokespecial java/lang/StringBuilder.<init> ()V
-      // 091: aload 3
-      // 092: ldc "Missing item in position "
-      // 094: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 097: pop
-      // 098: aload 3
-      // 099: iload 7
-      // 09b: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
-      // 09e: pop
-      // 09f: aload 8
-      // 0a1: aload 2
-      // 0a2: aload 3
-      // 0a3: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 0a6: aconst_null
-      // 0a7: bipush 4
-      // 0a8: aconst_null
-      // 0a9: invokestatic com/discord/logging/Log.e$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
-      // 0ac: aload 1
-      // 0ad: iload 5
-      // 0af: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 0b2: return
-      // 0b3: astore 2
-      // 0b4: goto 0f9
-      // 0b7: aload 0
-      // 0b8: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
-      // 0bb: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.getShouldRenderHighlight ()Lkotlin/jvm/functions/Function1;
-      // 0be: aload 9
-      // 0c0: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 0c5: checkcast java/lang/Boolean
-      // 0c8: invokevirtual java/lang/Boolean.booleanValue ()Z
-      // 0cb: ifeq 0ec
-      // 0ce: aload 0
-      // 0cf: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
-      // 0d2: aload 9
-      // 0d4: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.setPaintStyles (Lcom/discord/chat/presentation/list/item/ChatListItem;)V
-      // 0d7: aload 0
-      // 0d8: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
-      // 0db: astore 9
-      // 0dd: aload 8
-      // 0df: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
-      // 0e2: aload 9
-      // 0e4: aload 1
-      // 0e5: aload 8
-      // 0e7: bipush 0
-      // 0e8: bipush 0
-      // 0e9: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.drawHighlight (Landroid/graphics/Canvas;Landroid/view/View;II)V
-      // 0ec: iinc 4 1
-      // 0ef: goto 038
-      // 0f2: aload 1
-      // 0f3: iload 5
-      // 0f5: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 0f8: return
-      // 0f9: aload 1
-      // 0fa: iload 5
-      // 0fc: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 0ff: aload 2
-      // 100: athrow
+      // 00: aload 1
+      // 01: ldc "canvas"
+      // 03: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+      // 06: aload 2
+      // 07: ldc "parent"
+      // 09: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0c: aload 3
+      // 0d: ldc "state"
+      // 0f: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+      // 12: aload 0
+      // 13: aload 1
+      // 14: aload 2
+      // 15: aload 3
+      // 16: invokespecial androidx/recyclerview/widget/RecyclerView$ItemDecoration.onDraw (Landroid/graphics/Canvas;Landroidx/recyclerview/widget/RecyclerView;Landroidx/recyclerview/widget/RecyclerView$State;)V
+      // 19: aload 1
+      // 1a: invokevirtual android/graphics/Canvas.save ()I
+      // 1d: istore 5
+      // 1f: aload 2
+      // 20: invokevirtual androidx/recyclerview/widget/RecyclerView.getAdapter ()Landroidx/recyclerview/widget/RecyclerView$Adapter;
+      // 23: astore 3
+      // 24: aload 3
+      // 25: ldc "null cannot be cast to non-null type com.discord.chat.presentation.list.ChatListAdapter"
+      // 27: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;Ljava/lang/String;)V
+      // 2a: aload 3
+      // 2b: checkcast com/discord/chat/presentation/list/ChatListAdapter
+      // 2e: astore 8
+      // 30: aload 2
+      // 31: invokevirtual android/view/ViewGroup.getChildCount ()I
+      // 34: istore 6
+      // 36: bipush 0
+      // 37: istore 4
+      // 39: iload 4
+      // 3b: iload 6
+      // 3d: if_icmpge f1
+      // 40: aload 2
+      // 41: iload 4
+      // 43: invokevirtual android/view/ViewGroup.getChildAt (I)Landroid/view/View;
+      // 46: astore 3
+      // 47: aload 2
+      // 48: aload 3
+      // 49: invokevirtual androidx/recyclerview/widget/RecyclerView.getChildAdapterPosition (Landroid/view/View;)I
+      // 4c: istore 7
+      // 4e: iload 7
+      // 50: iflt eb
+      // 53: iload 7
+      // 55: aload 8
+      // 57: invokeinterface com/discord/chat/presentation/list/ChatListAdapter.getChatListItems ()Ljava/util/List; 1
+      // 5c: invokeinterface java/util/List.size ()I 1
+      // 61: if_icmplt 67
+      // 64: goto eb
+      // 67: aload 8
+      // 69: iload 7
+      // 6b: invokeinterface com/discord/chat/presentation/list/ChatListAdapter.getChatListItem (I)Lcom/discord/chat/presentation/list/item/ChatListItem; 2
+      // 70: astore 9
+      // 72: aload 9
+      // 74: ifnonnull b8
+      // 77: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
+      // 7a: astore 8
+      // 7c: aload 1
+      // 7d: invokevirtual java/lang/Object.getClass ()Ljava/lang/Class;
+      // 80: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
+      // 83: astore 3
+      // 84: aload 3
+      // 85: ldc "getSimpleName(...)"
+      // 87: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
+      // 8a: new java/lang/StringBuilder
+      // 8d: astore 2
+      // 8e: aload 2
+      // 8f: invokespecial java/lang/StringBuilder.<init> ()V
+      // 92: aload 2
+      // 93: ldc "Missing item in position "
+      // 95: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 98: pop
+      // 99: aload 2
+      // 9a: iload 7
+      // 9c: invokevirtual java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
+      // 9f: pop
+      // a0: aload 8
+      // a2: aload 3
+      // a3: aload 2
+      // a4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // a7: aconst_null
+      // a8: bipush 4
+      // a9: aconst_null
+      // aa: invokestatic com/discord/logging/Log.e$default (Lcom/discord/logging/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;ILjava/lang/Object;)V
+      // ad: aload 1
+      // ae: iload 5
+      // b0: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // b3: return
+      // b4: astore 2
+      // b5: goto f8
+      // b8: aload 0
+      // b9: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
+      // bc: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.getShouldRenderHighlight ()Lkotlin/jvm/functions/Function1;
+      // bf: aload 9
+      // c1: invokeinterface kotlin/jvm/functions/Function1.invoke (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // c6: checkcast java/lang/Boolean
+      // c9: invokevirtual java/lang/Boolean.booleanValue ()Z
+      // cc: ifeq eb
+      // cf: aload 0
+      // d0: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
+      // d3: aload 9
+      // d5: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.setPaintStyles (Lcom/discord/chat/presentation/list/item/ChatListItem;)V
+      // d8: aload 0
+      // d9: getfield com/discord/chat/presentation/message/decorations/HighlightedMessageDecoration.drawer Lcom/discord/chat/presentation/message/decorations/HighlightedMessageDrawer;
+      // dc: astore 9
+      // de: aload 3
+      // df: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNull (Ljava/lang/Object;)V
+      // e2: aload 9
+      // e4: aload 1
+      // e5: aload 3
+      // e6: bipush 0
+      // e7: bipush 0
+      // e8: invokevirtual com/discord/chat/presentation/message/decorations/HighlightedMessageDrawer.drawHighlight (Landroid/graphics/Canvas;Landroid/view/View;II)V
+      // eb: iinc 4 1
+      // ee: goto 39
+      // f1: aload 1
+      // f2: iload 5
+      // f4: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // f7: return
+      // f8: aload 1
+      // f9: iload 5
+      // fb: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // fe: aload 2
+      // ff: athrow
    }
 }

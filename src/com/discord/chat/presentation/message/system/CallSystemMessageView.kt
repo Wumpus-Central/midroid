@@ -57,14 +57,14 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
    init {
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
+      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var3: TextView = var5.message;
-      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var5.info;
+      val var5: TextView = var3.message;
+      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var3.info;
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -99,12 +99,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var20: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var9);
-      AttachedViewCoroutineScope.cancelAllWork$default(var20, var13.toString(), null, 2, null);
+      val var20: StringBuilder = new StringBuilder();
+      var20.append("Binding ");
+      var20.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var20.toString(), null, 2, null);
       if (var1.isCallActive() == var7) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          gu.g.d(
@@ -142,9 +142,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     var1 = this.this$0;
+                     val var5: CallSystemMessageView = this.this$0;
                      val var4: State = State.t;
-                     val var5: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.$start, this.this$0, this.$message, null) {
+                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -271,26 +271,26 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
 
                                  public final Object emit_VtjQ1oo/* $VF was: emit-VtjQ1oo*/(long var1, Continuation<? super Unit> var3x) {
-                                    val var9: CallSystemMessageView = this.this$0;
-                                    val var8: Message = this.$message;
+                                    val var8: CallSystemMessageView = this.this$0;
+                                    val var9: Message = this.$message;
                                     val var6x: Long = Duration.s(var1);
                                     val var4x: Int = Duration.w(var1);
                                     val var5: Int = Duration.y(var1);
                                     Duration.x(var1);
-                                    val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
-                                    val var11: java.lang.String = java.lang.String.format(
+                                    val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
+                                    val var10: java.lang.String = java.lang.String.format(
                                        "%02d:%02d:%02d%s",
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.f(var6x),
                                              kotlin.coroutines.jvm.internal.b.e(var4x),
                                              kotlin.coroutines.jvm.internal.b.e(var5),
-                                             var8.getDescription()
+                                             var9.getDescription()
                                           },
                                           4
                                        )
                                     );
-                                    var10.setText(var11);
+                                    var11.setText(var10);
                                     return Unit.a;
                                  }
                               };
@@ -304,7 +304,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var4, var5, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var5, var4, var1, this) === var3) {
                         return var3;
                      }
                   }
@@ -334,7 +334,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       }
 
       var21.setItems(var16);
-      val var10: d = new d(var2, var1);
+      val var10: com.discord.chat.presentation.message.system.d = new com.discord.chat.presentation.message.system.d(var2, var1);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(this, true, var10);
       h0.n0(this, new androidx.core.view.a(this, var10) {
          final OnClickListener $onClickListener;

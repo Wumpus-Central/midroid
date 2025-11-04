@@ -11,8 +11,6 @@ import com.google.android.gms.fido.fido2.api.common.PublicKeyCredentialRequestOp
 import com.google.android.gms.fido.fido2.api.common.PublicKeyCredentialRequestOptions.Builder
 import com.google.android.gms.tasks.Task
 import gh.a0
-import gh.h
-import gh.i
 import gh.q
 import gh.r
 import gh.s
@@ -58,12 +56,12 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
       var1.beginObject();
 
       while (var1.hasNext()) {
-         val var5: java.lang.String = var1.nextName();
-         if (var5 != null) {
-            val var2: Int = var5.hashCode();
+         val var6: java.lang.String = var1.nextName();
+         if (var6 != null) {
+            val var2: Int = var6.hashCode();
             if (var2 != 116204) {
                if (var2 != 93029116) {
-                  if (var2 == 757680504 && var5.equals("largeBlob")) {
+                  if (var2 == 757680504 && var6.equals("largeBlob")) {
                      Log.w$default(
                         Log.INSTANCE,
                         "DCDSecurityKeyManager.WebAuthn",
@@ -75,34 +73,34 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
                      var1.skipValue();
                      continue;
                   }
-               } else if (var5.equals("appid")) {
-                  val var4: java.lang.String = var1.nextString();
-                  val var6: Log = Log.INSTANCE;
-                  val var10: StringBuilder = new StringBuilder();
-                  var10.append("parseAuthenticationExtensions: ... appid extension: `");
-                  var10.append(var4);
-                  var10.append("`");
-                  Log.i$default(var6, "DCDSecurityKeyManager.WebAuthn", var10.toString(), null, 4, null);
+               } else if (var6.equals("appid")) {
+                  val var5: java.lang.String = var1.nextString();
+                  val var4: Log = Log.INSTANCE;
+                  val var12: StringBuilder = new StringBuilder();
+                  var12.append("parseAuthenticationExtensions: ... appid extension: `");
+                  var12.append(var5);
+                  var12.append("`");
+                  Log.i$default(var4, "DCDSecurityKeyManager.WebAuthn", var12.toString(), null, 4, null);
                   continue;
                }
-            } else if (var5.equals("uvm")) {
-               val var9: a0 = new a0(var1.nextBoolean());
-               val var11: Log = Log.INSTANCE;
+            } else if (var6.equals("uvm")) {
+               val var11: a0 = new a0(var1.nextBoolean());
+               val var9: Log = Log.INSTANCE;
                val var13: StringBuilder = new StringBuilder();
                var13.append("parseAuthenticationExtensions: ... uvm extension: `");
-               var13.append(var9);
+               var13.append(var11);
                var13.append("`");
-               Log.i$default(var11, "DCDSecurityKeyManager.WebAuthn", var13.toString(), null, 4, null);
+               Log.i$default(var9, "DCDSecurityKeyManager.WebAuthn", var13.toString(), null, 4, null);
                continue;
             }
          }
 
-         val var12: Log = Log.INSTANCE;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("parseAuthenticationExtensions: Found unrecognized extension: `");
-         var8.append(var5);
-         var8.append("`");
-         Log.w$default(var12, "DCDSecurityKeyManager.WebAuthn", var8.toString(), null, 4, null);
+         val var8: Log = Log.INSTANCE;
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("parseAuthenticationExtensions: Found unrecognized extension: `");
+         var10.append(var6);
+         var10.append("`");
+         Log.w$default(var8, "DCDSecurityKeyManager.WebAuthn", var10.toString(), null, 4, null);
          var1.skipValue();
       }
 
@@ -122,30 +120,30 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
          var var3: ByteArray = null;
 
          while (var1.hasNext()) {
-            val var5: java.lang.String = var1.nextName();
-            if (var5 != null) {
-               val var2: Int = var5.hashCode();
+            val var6: java.lang.String = var1.nextName();
+            if (var6 != null) {
+               val var2: Int = var6.hashCode();
                if (var2 != -1717834134) {
                   if (var2 != 3355) {
-                     if (var2 == 3575610 && var5.equals("type")) {
+                     if (var2 == 3575610 && var6.equals("type")) {
                         Log.w$default(
                            Log.INSTANCE, "DCDSecurityKeyManager.WebAuthn", "parseCredentialDescriptors: ... skipping unsupported field `type`", null, 4, null
                         );
                         var1.skipValue();
                         continue;
                      }
-                  } else if (var5.equals("id")) {
-                     val var6: java.lang.String = var1.nextString();
-                     val var12: Log = Log.INSTANCE;
-                     val var10: StringBuilder = new StringBuilder();
-                     var10.append("parseCredentialDescriptors: ... id: `");
-                     var10.append(var6);
-                     var10.append("`");
-                     Log.i$default(var12, "DCDSecurityKeyManager.WebAuthn", var10.toString(), null, 4, null);
-                     var3 = this.decodeBase64(var6);
+                  } else if (var6.equals("id")) {
+                     val var5: java.lang.String = var1.nextString();
+                     val var10: Log = Log.INSTANCE;
+                     val var14: StringBuilder = new StringBuilder();
+                     var14.append("parseCredentialDescriptors: ... id: `");
+                     var14.append(var5);
+                     var14.append("`");
+                     Log.i$default(var10, "DCDSecurityKeyManager.WebAuthn", var14.toString(), null, 4, null);
+                     var3 = this.decodeBase64(var5);
                      continue;
                   }
-               } else if (var5.equals("transports")) {
+               } else if (var6.equals("transports")) {
                   Log.w$default(
                      Log.INSTANCE, "DCDSecurityKeyManager.WebAuthn", "parseCredentialDescriptors: ... skipping unsupported field `transports`", null, 4, null
                   );
@@ -155,11 +153,11 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
             }
 
             val var7: Log = Log.INSTANCE;
-            val var14: StringBuilder = new StringBuilder();
-            var14.append("parseCredentialDescriptors: ... skipping unrecognized field `");
-            var14.append(var5);
-            var14.append("`");
-            Log.w$default(var7, "DCDSecurityKeyManager.WebAuthn", var14.toString(), null, 4, null);
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("parseCredentialDescriptors: ... skipping unrecognized field `");
+            var12.append(var6);
+            var12.append("`");
+            Log.w$default(var7, "DCDSecurityKeyManager.WebAuthn", var12.toString(), null, 4, null);
             var1.skipValue();
          }
 
@@ -169,13 +167,13 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
       }
 
       var1.endArray();
-      val var8: Log = Log.INSTANCE;
+      val var11: Log = Log.INSTANCE;
       val var9: Int = var4.size();
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("parseCredentialDescriptors: Processed ");
-      var11.append(var9);
-      var11.append(" descriptors");
-      Log.i$default(var8, "DCDSecurityKeyManager.WebAuthn", var11.toString(), null, 4, null);
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("parseCredentialDescriptors: Processed ");
+      var8.append(var9);
+      var8.append(" descriptors");
+      Log.i$default(var11, "DCDSecurityKeyManager.WebAuthn", var8.toString(), null, 4, null);
       return var4;
    }
 
@@ -244,29 +242,29 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
       // 5b: aload 2
       // 5c: invokespecial com/discord/security_key/WebAuthn.parseRequestOptions (Landroid/util/JsonReader;Lcom/google/android/gms/fido/fido2/api/common/PublicKeyCredentialRequestOptions$Builder;)V
       // 5f: goto 43
-      // 62: astore 2
+      // 62: astore 3
       // 63: goto bf
       // 66: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 69: astore 5
+      // 69: astore 4
       // 6b: new java/lang/StringBuilder
-      // 6e: astore 4
-      // 70: aload 4
+      // 6e: astore 5
+      // 70: aload 5
       // 72: invokespecial java/lang/StringBuilder.<init> ()V
-      // 75: aload 4
+      // 75: aload 5
       // 77: ldc_w "parsePublicKeyCredentialRequestOptions: Found unexpected key in request options: `"
       // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 7d: pop
-      // 7e: aload 4
+      // 7e: aload 5
       // 80: aload 3
       // 81: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 84: pop
-      // 85: aload 4
+      // 85: aload 5
       // 87: ldc_w "`, skipping"
       // 8a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 8d: pop
-      // 8e: aload 5
+      // 8e: aload 4
       // 90: ldc "DCDSecurityKeyManager.WebAuthn"
-      // 92: aload 4
+      // 92: aload 5
       // 94: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 97: aconst_null
       // 98: bipush 4
@@ -290,13 +288,13 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
       // ba: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
       // bd: aload 1
       // be: areturn
-      // bf: aload 2
+      // bf: aload 3
       // c0: athrow
-      // c1: astore 3
+      // c1: astore 2
       // c2: aload 1
-      // c3: aload 2
+      // c3: aload 3
       // c4: invokestatic tt/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // c7: aload 3
+      // c7: aload 2
       // c8: athrow
    }
 
@@ -305,76 +303,76 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
       Log.i$default(Log.INSTANCE, "DCDSecurityKeyManager.WebAuthn", "Processing request options...", null, 4, null);
 
       while (var1.hasNext()) {
-         val var5: java.lang.String = var1.nextName();
-         if (var5 != null) {
-            switch (var5.hashCode()) {
+         val var7: java.lang.String = var1.nextName();
+         if (var7 != null) {
+            switch (var7.hashCode()) {
                case -1809421292:
-                  if (var5.equals("extensions")) {
+                  if (var7.equals("extensions")) {
                      continue;
                   }
                   break;
                case -1313911455:
-                  if (var5.equals("timeout")) {
+                  if (var7.equals("timeout")) {
                      val var3: Double = var1.nextDouble();
-                     val var16: Log = Log.INSTANCE;
-                     val var12: StringBuilder = new StringBuilder();
-                     var12.append("parseRequestOptions: timeout: `");
-                     var12.append(var3);
-                     var12.append("`");
-                     Log.i$default(var16, "DCDSecurityKeyManager.WebAuthn", var12.toString(), null, 4, null);
+                     val var11: Log = Log.INSTANCE;
+                     val var16: StringBuilder = new StringBuilder();
+                     var16.append("parseRequestOptions: timeout: `");
+                     var16.append(var3);
+                     var16.append("`");
+                     Log.i$default(var11, "DCDSecurityKeyManager.WebAuthn", var16.toString(), null, 4, null);
                      continue;
                   }
                   break;
                case 3506169:
-                  if (var5.equals("rpId")) {
-                     val var15: java.lang.String = var1.nextString();
-                     val var19: Log = Log.INSTANCE;
-                     val var11: StringBuilder = new StringBuilder();
-                     var11.append("parseRequestOptions: rpId: `");
-                     var11.append(var15);
-                     var11.append("`");
-                     Log.i$default(var19, "DCDSecurityKeyManager.WebAuthn", var11.toString(), null, 4, null);
+                  if (var7.equals("rpId")) {
+                     val var10: java.lang.String = var1.nextString();
+                     val var15: Log = Log.INSTANCE;
+                     val var20: StringBuilder = new StringBuilder();
+                     var20.append("parseRequestOptions: rpId: `");
+                     var20.append(var10);
+                     var20.append("`");
+                     Log.i$default(var15, "DCDSecurityKeyManager.WebAuthn", var20.toString(), null, 4, null);
                      continue;
                   }
                   break;
                case 493711347:
-                  if (var5.equals("allowCredentials")) {
+                  if (var7.equals("allowCredentials")) {
                      continue;
                   }
                   break;
                case 1402633315:
-                  if (var5.equals("challenge")) {
+                  if (var7.equals("challenge")) {
                      val var14: java.lang.String = var1.nextString();
-                     val var10: Log = Log.INSTANCE;
-                     val var18: StringBuilder = new StringBuilder();
-                     var18.append("parseRequestOptions: challenge: `");
-                     var18.append(var14);
-                     var18.append("`");
-                     Log.i$default(var10, "DCDSecurityKeyManager.WebAuthn", var18.toString(), null, 4, null);
+                     val var9: Log = Log.INSTANCE;
+                     val var19: StringBuilder = new StringBuilder();
+                     var19.append("parseRequestOptions: challenge: `");
+                     var19.append(var14);
+                     var19.append("`");
+                     Log.i$default(var9, "DCDSecurityKeyManager.WebAuthn", var19.toString(), null, 4, null);
                      continue;
                   }
                   break;
                case 2036710790:
-                  if (var5.equals("userVerification")) {
+                  if (var7.equals("userVerification")) {
                      val var6: java.lang.String = var1.nextString();
-                     val var8: Log = Log.INSTANCE;
-                     val var7: StringBuilder = new StringBuilder();
-                     var7.append("parseRequestOptions: userVerification: `");
-                     var7.append(var6);
-                     var7.append("`, skipping");
-                     Log.w$default(var8, "DCDSecurityKeyManager.WebAuthn", var7.toString(), null, 4, null);
+                     val var18: Log = Log.INSTANCE;
+                     val var5: StringBuilder = new StringBuilder();
+                     var5.append("parseRequestOptions: userVerification: `");
+                     var5.append(var6);
+                     var5.append("`, skipping");
+                     Log.w$default(var18, "DCDSecurityKeyManager.WebAuthn", var5.toString(), null, 4, null);
                      continue;
                   }
                default:
             }
          }
 
-         val var20: Log = Log.INSTANCE;
+         val var12: Log = Log.INSTANCE;
          val var17: StringBuilder = new StringBuilder();
          var17.append("parseRequestOptions: Found unrecognized option: `");
-         var17.append(var5);
+         var17.append(var7);
          var17.append("`, skipping");
-         Log.w$default(var20, "DCDSecurityKeyManager.WebAuthn", var17.toString(), null, 4, null);
+         Log.w$default(var12, "DCDSecurityKeyManager.WebAuthn", var17.toString(), null, 4, null);
          var1.skipValue();
       }
 
@@ -404,7 +402,7 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
          val var3: fh.a = eh.a.a(var2);
          val var4: Task = var3.D(this.parsePublicKeyCredentialRequestOptions(var1));
          var4.f(new b(new a(var2)));
-         var4.d(new c(this));
+         var4.d(new com.discord.security_key.c(this));
       }
    }
 
@@ -428,10 +426,10 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
          }
 
          val var7: q = q.b(var6);
-         if (var7.h() is h) {
+         if (var7.h() is gh.h) {
             val var5: Function1 = this.reject;
-            val var10: i = var7.h();
-            val var13: java.lang.String = (var10 as h).d();
+            val var10: gh.i = var7.h();
+            val var13: java.lang.String = (var10 as gh.h).d();
             var var11: java.lang.String = var13;
             if (var13 == null) {
                var11 = "Unknown error";
@@ -464,8 +462,8 @@ public class WebAuthn(resolve: (String) -> Unit, reject: (String) -> Unit) {
          val var3: fh.a = eh.a.a(var2);
          var1 = new JSONObject(new JSONTokener(var1)).getJSONObject("publicKey").toString();
          val var5: Task = var3.C(new r(var1));
-         var5.f(new e(new d(var2)));
-         var5.d(new f(this));
+         var5.f(new com.discord.security_key.e(new com.discord.security_key.d(var2)));
+         var5.d(new com.discord.security_key.f(this));
       }
    }
 

@@ -4,6 +4,7 @@ import ht.l
 import ht.o
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
+import u7.e
 import xu.m
 
 @m
@@ -27,7 +28,7 @@ public enum class EmbedType {
    @JvmStatic
    private EmbedType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.e, new u7.e());
+   private Lazy $cachedSerializer$delegate = l.a(o.e, new e());
    @JvmStatic
    public EmbedType.Companion Companion = new EmbedType.Companion(null);
 

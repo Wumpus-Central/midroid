@@ -11,7 +11,6 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import gu.g
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -94,7 +93,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         g.d(
+         gu.g.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,
@@ -145,7 +144,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.reactContext.getCurrentActivity();
-         g.d(
+         gu.g.d(
             p.a(var3 as LifecycleOwner),
             null,
             null,

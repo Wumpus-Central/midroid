@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_3335e2pmywxugkdgipgpket4lm_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_faecxjjpkuhxrkggrwkgwyiv2a_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_faecxjjpkuhxrkggrwkgwyiv2a_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_faecxjjpkuhxrkggrwkgwyiv2a_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_faecxjjpkuhxrkggrwkgwyiv2a_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_achievementsicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
@@ -377,7 +377,6 @@ public final class R {
       public static int design_components_illustration_native_redesign_generated_images_guild_subscription_no_guilds_darker;
       public static int design_components_illustration_native_redesign_generated_images_guild_subscription_removal_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_app_crash_darker;
-      public static int design_components_illustration_native_redesign_generated_images_img_baddies_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_bans_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_invite_empty_darker;
       public static int design_components_illustration_native_redesign_generated_images_img_no_results_alt_darker;
@@ -830,7 +829,6 @@ public final class R {
       public static int images_native_img_vanity_urls;
       public static int images_native_img_verify_email_sent;
       public static int images_native_img_wump_trash_dark;
-      public static int images_native_in_app_report_success100px;
       public static int images_native_invitebg;
       public static int images_native_krisp_header;
       public static int images_native_krisp_logo_dark;
@@ -1032,8 +1030,6 @@ public final class R {
       public static int images_native_stream_feedback_lightthemedesaturated_feedbackmodalsaddesaturated;
       public static int images_native_uikit_ic_settings_grey_24px;
       public static int images_native_uikit_ic_settings_white_24px;
-      public static int images_native_verification_img_baddies_dark_theme;
-      public static int images_native_verification_img_baddies_light_theme;
       public static int images_native_verification_img_verify_phone_dark_theme;
       public static int images_native_verification_img_verify_phone_light_theme;
       public static int images_native_welcomebg;

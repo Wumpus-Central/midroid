@@ -2,7 +2,6 @@
 
 package com.discord.contact_sync.react
 
-import av.f
 import av.n2
 import av.u0
 import com.discord.contact_sync.ContactSyncBlobEntry
@@ -96,7 +95,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    try {
       var10.a();
-      var1.invoke(null, var11, var10.c(new f(ContactSyncPayloadEntry.Companion.serializer()), var12));
+      var1.invoke(null, var11, var10.c(new av.f(ContactSyncPayloadEntry.Companion.serializer()), var12));
    } catch (var7: SecurityException) {
       var1.invoke(mapResultToContactSyncPermission("DENIED"), null, null);
    }

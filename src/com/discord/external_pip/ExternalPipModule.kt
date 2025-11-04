@@ -54,9 +54,9 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var2: ReactEvents = this.reactEvents;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
+         val var1: ReactEvents = this.reactEvents;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
@@ -186,7 +186,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
          if (var1 != null) {
             val var3: ExternalPipModule = this.getModule(var1);
             if (var3 != null) {
-               ExternalPipModule.access$enterPipMode(var3, false, new d(var1));
+               ExternalPipModule.access$enterPipMode(var3, false, new com.discord.external_pip.d(var1));
             }
          }
       }

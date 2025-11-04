@@ -65,7 +65,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @JvmStatic
    fun `checkForUpdateAndReload$lambda$1`(var0: BundleUpdaterManager): Unit {
       var0.removeSpinnerView();
-      var0.runOnActivity(new com.discord.bundle_updater.i(var0));
+      var0.runOnActivity(new i(var0));
       return Unit.a;
    }
 
@@ -76,7 +76,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun removeSpinnerView() {
-      this.runOnActivity(new com.discord.bundle_updater.f(this));
+      this.runOnActivity(new f(this));
    }
 
    @JvmStatic
@@ -92,7 +92,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    private fun runOnActivity(callback: (ViewGroup) -> Unit) {
       val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 != null) {
-         var2.runOnUiThread(new com.discord.bundle_updater.h(var2, var1));
+         var2.runOnUiThread(new h(var2, var1));
       }
    }
 
@@ -113,15 +113,15 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun showSpinnerView() {
-      val var1: ProgressBar = new ProgressBar(this.reactContext);
-      var1.setLayoutParams(new LayoutParams(-2, -2, 17));
-      var1.setIndeterminate(true);
-      val var2: FrameLayout = new FrameLayout(this.reactContext);
-      var2.setLayoutParams(new LayoutParams(-1, -1));
-      var2.addView(var1);
-      var2.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
-      var2.setClickable(true);
-      this.progressLayout = var2;
+      val var2: ProgressBar = new ProgressBar(this.reactContext);
+      var2.setLayoutParams(new LayoutParams(-2, -2, 17));
+      var2.setIndeterminate(true);
+      val var1: FrameLayout = new FrameLayout(this.reactContext);
+      var1.setLayoutParams(new LayoutParams(-1, -1));
+      var1.addView(var2);
+      var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
+      var1.setClickable(true);
+      this.progressLayout = var1;
       this.runOnActivity(new l(this));
    }
 
@@ -257,7 +257,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun addListener(type: String) {
       if (var1 == "BundleDownloaded") {
-         BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new com.discord.bundle_updater.j(this));
+         BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new j(this));
       } else {
          if (var1 == "OtaUpdateChecked") {
             BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
@@ -269,7 +269,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
       val var2: BundleUpdater.Companion = BundleUpdater.Companion;
-      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new com.discord.bundle_updater.g(this), 1, null);
+      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
       val var3: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.d;
       var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);

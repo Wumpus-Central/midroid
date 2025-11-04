@@ -28,8 +28,8 @@ public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerMan
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): QRScanner {
       val var2: QRScanner = new QRScanner(var1, null, 0, 6, null);
-      var2.setOnCodeFound(new d(this, var2));
-      var2.setOnCodeNotFound(new e(this, var2));
+      var2.setOnCodeFound(new com.discord.qr.scanner.d(this, var2));
+      var2.setOnCodeNotFound(new com.discord.qr.scanner.e(this, var2));
       return var2;
    }
 

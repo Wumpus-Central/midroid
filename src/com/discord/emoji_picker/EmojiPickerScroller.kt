@@ -43,8 +43,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
       this.scrollFastVelocity = var4;
       this.scrollEvent = new EmojiPickerScroller.ScrollEvent(0, 0, 0, 0, 0, 0, 63, null);
       this.scroller = new Scroller(var1);
-      this.scrollListenerVelocityTracker = new DebouncedVelocityTrackingScrollListener(var1, false, 0, new h(this, var6), 600L, 6, null);
-      this.scrollListenerDebounced = new DebouncedScrollListener(new i(var5, this, var8), new j(var7, this)) {
+      this.scrollListenerVelocityTracker = new DebouncedVelocityTrackingScrollListener(
+         var1, false, 0, new com.discord.emoji_picker.h(this, var6), 600L, 6, null
+      );
+      this.scrollListenerDebounced = new DebouncedScrollListener(new com.discord.emoji_picker.i(var5, this, var8), new com.discord.emoji_picker.j(var7, this)) {
          {
             super(300L, var1, null, var2, 4, null);
          }
@@ -123,7 +125,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
    @JvmStatic
    fun `scrollListenerDebounced$lambda$2`(var0: Function1, var1: EmojiPickerScroller, var2: Function2, var3: RecyclerView, var4: Int, var5: Int): Unit {
       var0.invoke(var1.computeScrollEvent(var1.recyclerView));
-      var1.findFirstHeaderIndex(new g(var2, var1));
+      var1.findFirstHeaderIndex(new com.discord.emoji_picker.g(var2, var1));
       return Unit.a;
    }
 
@@ -202,10 +204,10 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    public fun unbind() {
       this.recyclerView.removeOnLayoutChangeListener(this.scrollViewLayoutChanged);
-      val var1: RecyclerView = this.recyclerView;
-      val var2: <unrepresentable> = this.scrollListenerDebounced;
+      val var2: RecyclerView = this.recyclerView;
+      val var1: <unrepresentable> = this.scrollListenerDebounced;
       this.scrollListenerDebounced.cancel();
-      var1.removeOnScrollListener(var2);
+      var2.removeOnScrollListener(var1);
       this.recyclerView.removeOnScrollListener(this.scrollListenerVelocityTracker);
       this.recyclerView.setOnFlingListener(null);
    }
@@ -318,8 +320,8 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          val var1: Int = this.x;
          val var2: Int = this.y;
          val var6: Int = this.width;
-         val var5: Int = this.height;
-         val var3: Int = this.contentWidth;
+         val var3: Int = this.height;
+         val var5: Int = this.contentWidth;
          val var4: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
@@ -329,9 +331,9 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          var7.append(", width=");
          var7.append(var6);
          var7.append(", height=");
-         var7.append(var5);
-         var7.append(", contentWidth=");
          var7.append(var3);
+         var7.append(", contentWidth=");
+         var7.append(var5);
          var7.append(", contentHeight=");
          var7.append(var4);
          var7.append(")");

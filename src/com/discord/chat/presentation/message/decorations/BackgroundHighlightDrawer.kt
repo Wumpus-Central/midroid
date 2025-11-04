@@ -5,9 +5,8 @@ import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.presentation.list.item.ChatListItem
 import d8.a
 import d8.b
-import d8.c
 
-public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer(var1, new a(), new b(), new c()) {
+public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer(var1, new a(), new b(), new d8.c()) {
    @JvmStatic
    fun `_init_$lambda$0`(var0: ChatListItem): Int {
       val var1: BackgroundHighlight = BackgroundHighlightDecorationKt.access$getBackgroundHighlight(var0);

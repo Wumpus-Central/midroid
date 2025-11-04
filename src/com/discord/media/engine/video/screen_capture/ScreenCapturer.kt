@@ -55,12 +55,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
    private fun createRecorder(): AudioRecord? {
       if (this.mediaProjection != null) {
-         val var3: AudioPlaybackCaptureConfiguration = a.a(this.mediaProjection).addMatchingUsage(1).addMatchingUsage(14).addMatchingUsage(0).build();
+         val var5: AudioPlaybackCaptureConfiguration = a.a(this.mediaProjection).addMatchingUsage(1).addMatchingUsage(14).addMatchingUsage(0).build();
 
          try {
             return new Builder()
                .setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build())
-               .setAudioPlaybackCaptureConfig(var3)
+               .setAudioPlaybackCaptureConfig(var5)
                .build();
          } catch (var4: SecurityException) {
             Log.INSTANCE.e("ScreenCapturer", "Failed to record audio", var4);
@@ -193,15 +193,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 39: invokevirtual android/graphics/Point.set (II)V
       // 3c: aload 0
       // 3d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 40: astore 1
-      // 41: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 44: astore 5
-      // 46: aload 1
-      // 47: aload 5
-      // 49: aload 1
-      // 4a: getfield android/graphics/Point.x I
-      // 4d: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 50: aload 5
+      // 40: astore 5
+      // 42: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 45: astore 1
+      // 46: aload 5
+      // 48: aload 1
+      // 49: aload 5
+      // 4b: getfield android/graphics/Point.x I
+      // 4e: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 51: aload 1
       // 52: aload 0
       // 53: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 56: getfield android/graphics/Point.y I

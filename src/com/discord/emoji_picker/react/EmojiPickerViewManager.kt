@@ -104,8 +104,8 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): EmojiPickerView {
       val var9: ReadableMap = var2.getMap("config");
-      val var4: Float = var2.getFloat("paddingTop", 0.0F);
-      val var3: Float = var2.getFloat("paddingBottom", 0.0F);
+      val var3: Float = var2.getFloat("paddingTop", 0.0F);
+      val var4: Float = var2.getFloat("paddingBottom", 0.0F);
       val var5: Int = var2.getInt("emojiSize", -1);
       val var6: Int = var2.getInt("emojiMargin", -1);
       val var8: ReadableMap = var2.getMap("emojiData");
@@ -114,19 +114,19 @@ internal class EmojiPickerViewManager : InitialPropsViewGroupManager<EmojiPicker
             if (var6 != -1) {
                if (var8 != null) {
                   val var12: EmojiPickerItemData.CoreData = EmojiPickerItemDataCoreDataDeserializer.INSTANCE
-                     .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var3, var4);
+                     .deserialize(EmojiPickerItemData.CoreData.Companion, var8, var4, var3);
                   val var10: EmojiPickerView = new EmojiPickerView(
                      var1,
                      var5,
                      var6,
                      var12,
-                     new c(this, var1),
-                     new d(this),
-                     new e(this),
-                     new f(this),
-                     new g(this, var1),
-                     new h(this, var1),
-                     new i(this, var1),
+                     new com.discord.emoji_picker.react.c(this, var1),
+                     new com.discord.emoji_picker.react.d(this),
+                     new com.discord.emoji_picker.react.e(this),
+                     new com.discord.emoji_picker.react.f(this),
+                     new com.discord.emoji_picker.react.g(this, var1),
+                     new com.discord.emoji_picker.react.h(this, var1),
+                     new com.discord.emoji_picker.react.i(this, var1),
                      ReactStylesDiffMapExtensionsKt.getBoolean(var2, "useTier0UpsellContent"),
                      EmojiPickerViewConfigDeserializer.INSTANCE.deserialize(EmojiPickerView.Config.Companion, var9)
                   );

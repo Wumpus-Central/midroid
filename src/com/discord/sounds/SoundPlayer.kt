@@ -28,11 +28,11 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
 
    private fun initializeMediaPlayer(soundResIdPrepared: (Int) -> Unit) {
       if (this.mediaPlayer != null) {
-         this.mediaPlayer.setOnCompletionListener(new c(this));
+         this.mediaPlayer.setOnCompletionListener(new com.discord.sounds.c(this));
       }
 
       if (this.mediaPlayer != null) {
-         this.mediaPlayer.setOnPreparedListener(new d(var1));
+         this.mediaPlayer.setOnPreparedListener(new com.discord.sounds.d(var1));
       }
 
       var var6: MediaPlayer;

@@ -107,7 +107,7 @@ private fun View.updateClickability() {
 }
 
 private fun OnLongClickListener.updateWithOngoingGestureCancelling(): OnLongClickListener {
-   return new d(var0);
+   return new com.discord.react_gesture_handler.nested_touch.d(var0);
 }
 
 // $VF: Irreducible bytecode was duplicated to produce valid code

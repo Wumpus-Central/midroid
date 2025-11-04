@@ -91,8 +91,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var1 = this.name.hashCode();
       }
 
-      val var5: Int = this.src.hashCode();
-      val var4: Int = this.displayName.hashCode();
+      val var4: Int = this.src.hashCode();
+      val var5: Int = this.displayName.hashCode();
       val var2: Int;
       if (this.id == null) {
          var2 = 0;
@@ -104,7 +104,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var3 = this.animated.hashCode();
       }
 
-      return (((var1 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var3;
+      return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
    fun renderable(): RenderableEmoji {
@@ -112,24 +112,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var3: java.lang.String = this.src;
-      val var6: java.lang.String = this.displayName;
-      val var1: java.lang.String = this.id;
-      val var4: java.lang.Boolean = this.animated;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MessageReactionEmoji(name=");
-      var5.append(var2);
-      var5.append(", src=");
-      var5.append(var3);
-      var5.append(", displayName=");
-      var5.append(var6);
-      var5.append(", id=");
-      var5.append(var1);
-      var5.append(", animated=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.name;
+      val var6: java.lang.String = this.src;
+      val var1: java.lang.String = this.displayName;
+      val var2: java.lang.String = this.id;
+      val var5: java.lang.Boolean = this.animated;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MessageReactionEmoji(name=");
+      var3.append(var4);
+      var3.append(", src=");
+      var3.append(var6);
+      var3.append(", displayName=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(", animated=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

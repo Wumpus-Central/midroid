@@ -128,10 +128,10 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = MessageId.hashCode-impl(this.messageId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       val var8: Int = this.reactions.hashCode();
-      val var7: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var6: Int = this.addReactionLabel.hashCode();
+      val var9: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var7: Int = this.addReactionLabel.hashCode();
       val var5: Int = this.addNewReactionAccessibilityLabel.hashCode();
       var var4: Int = 0;
       val var1: Int;
@@ -159,36 +159,36 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
          var4 = this.embedIndex.hashCode();
       }
 
-      return (((((((var9 * 31 + var8) * 31 + var7) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return (((((((var6 * 31 + var8) * 31 + var9) * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var8: java.util.List = this.reactions;
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var7: java.lang.String = this.addReactionLabel;
-      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var10: ReactionsTheme = this.reactionsTheme;
+      val var6: java.lang.String = this.addReactionLabel;
+      val var7: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var5: ReactionsTheme = this.reactionsTheme;
       val var2: DiscordTheme = this.theme;
-      val var6: java.lang.String = this.targetKind;
+      val var10: java.lang.String = this.targetKind;
       val var3: Int = this.embedIndex;
       val var9: StringBuilder = new StringBuilder();
       var9.append("ReactionsMessageAccessory(messageId=");
-      var9.append(var4);
-      var9.append(", reactions=");
       var9.append(var8);
+      var9.append(", reactions=");
+      var9.append(var4);
       var9.append(", canAddNewReactions=");
       var9.append(var1);
       var9.append(", addReactionLabel=");
-      var9.append(var7);
+      var9.append(var6);
       var9.append(", addNewReactionAccessibilityLabel=");
-      var9.append(var5);
+      var9.append(var7);
       var9.append(", reactionsTheme=");
-      var9.append(var10);
+      var9.append(var5);
       var9.append(", theme=");
       var9.append(var2);
       var9.append(", targetKind=");
-      var9.append(var6);
+      var9.append(var10);
       var9.append(", embedIndex=");
       var9.append(var3);
       var9.append(")");

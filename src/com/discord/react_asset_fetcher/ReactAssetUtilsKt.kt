@@ -14,14 +14,13 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
-import gu.g
 import gu.m0
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import ot.b
 
@@ -58,7 +57,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
    val var3: ShapeDrawable = new ShapeDrawable(new RectShape());
    var3.getPaint().setColor(0);
    var0.setIcon(var3);
-   g.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, null) {
+   gu.g.d(CoroutineViewUtilsKt.getAttachedScope(var0), null, null, new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var0, var1, null) {
       final java.lang.String $assetUrl;
       final MaterialButton $this_setReactIcon;
       Object L$0;
@@ -87,13 +86,13 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             }
 
             var3 = this.L$0 as MaterialButton;
-            c.b(var1);
+            kotlin.c.b(var1);
             var4 = var1;
          } else {
-            c.b(var1);
+            kotlin.c.b(var1);
             var1 = this.$this_setReactIcon;
-            var4 = m0.b();
-            val var5: Function2 = new Function2<CoroutineScope, Continuation<? super Drawable>, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
+            val var5: CoroutineDispatcher = m0.b();
+            var4 = new Function2<CoroutineScope, Continuation<? super Drawable>, Object>(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -115,7 +114,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                public final Object invokeSuspend(Object var1) {
                   b.f();
                   if (this.label == 0) {
-                     c.b(var1);
+                     kotlin.c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      val var5: MaterialButton = this.$this_setReactIcon;
@@ -142,7 +141,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = g.g((CoroutineContext)var4, var5, this);
+            var4 = gu.g.g(var5, (Function2)var4, this);
             if (var4 === var3) {
                return var3;
             }

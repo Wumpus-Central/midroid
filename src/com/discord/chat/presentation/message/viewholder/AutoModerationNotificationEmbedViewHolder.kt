@@ -31,6 +31,11 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
    ) {
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var6: java.lang.String = var1.getMessage().getId-3Eiw7ao();
-      this.notificationEmbedView.configure(var1.getModerationContext(), new c(var2, var6, var4), new d(var3, var6, var4));
+      this.notificationEmbedView
+         .configure(
+            var1.getModerationContext(),
+            new com.discord.chat.presentation.message.viewholder.c(var2, var6, var4),
+            new com.discord.chat.presentation.message.viewholder.d(var3, var6, var4)
+         );
    }
 }

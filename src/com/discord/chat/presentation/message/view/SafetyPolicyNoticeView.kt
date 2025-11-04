@@ -26,12 +26,12 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
    }
 
    init {
-      val var3: SafetyPolicyNoticeBinding = SafetyPolicyNoticeBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var3;
-      val var5: View = var3.getRoot();
-      var5.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
-      val var4: SimpleDraweeView = var3.icon;
+      val var5: SafetyPolicyNoticeBinding = SafetyPolicyNoticeBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var5;
+      val var3: View = var5.getRoot();
+      var3.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
+      val var4: SimpleDraweeView = var5.icon;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.WarningTriangle);
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getStatusDanger());
    }

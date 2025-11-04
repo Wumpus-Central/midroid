@@ -88,11 +88,11 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
          ReactStylesDiffMapExtensionsKt.getBoolean(var2, "keyboardDismissOnDrag"),
          new b(this),
          ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "scrollEventThrottle"),
-         new c(this),
-         new d(this),
-         new e(this),
-         new f(this),
-         new g(this),
+         new com.discord.fastest_list.react.c(this),
+         new com.discord.fastest_list.react.d(this),
+         new com.discord.fastest_list.react.e(this),
+         new com.discord.fastest_list.react.f(this),
+         new com.discord.fastest_list.react.g(this),
          FastestListDeserializerPlaceholderConfigKt.invoke(
             FastestListPlaceholderConfig.Companion, ReactStylesDiffMapExtensionsKt.getNonNullMap(var2, "placeholderConfig")
          ),

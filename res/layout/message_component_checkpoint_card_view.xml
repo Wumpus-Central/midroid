@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.discord.chat.presentation.message.view.botuikit.components.CheckpointCardComponentView android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="start" android:id="@id/image" android:paddingLeft="@dimen/spacing_16" android:paddingTop="@dimen/spacing_40" android:paddingRight="@dimen/spacing_16" android:paddingBottom="@dimen/spacing_24" android:layout_width="116.0dip" android:layout_height="0.0dip" android:layout_margin="@dimen/spacing_8" android:paddingHorizontal="@dimen/spacing_16" app:layout_constraintBottom_toTopOf="@id/footer" app:layout_constraintEnd_toStartOf="@id/stats" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <com.facebook.drawee.view.SimpleDraweeView android:id="@id/image_resource" android:layout_width="84.0dip" android:layout_height="84.0dip" android:importantForAccessibility="no" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/stats" android:paddingTop="@dimen/spacing_8" android:paddingRight="@dimen/spacing_8" android:paddingBottom="@dimen/spacing_8" android:layout_width="0.0dip" android:layout_height="wrap_content" android:paddingVertical="@dimen/spacing_8" app:layout_constraintBottom_toTopOf="@id/footer" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/image" app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_8">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/message_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="6.0dip" app:drawableLeftCompat="@drawable/ic_chat_icon_16dp" app:drawableTint="@color/black" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_8">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/voice_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="8.0dip" android:layout_marginStart="1.0dip" app:drawableLeftCompat="@drawable/ic_microphone_icon_16dp" app:drawableTint="@color/black" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_8">
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/emoji_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:drawablePadding="6.0dip" app:drawableLeftCompat="@drawable/ic_reaction_icon_16dp" app:drawableTint="@color/black" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_8">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/emoji_image" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_unknown_game_icon_16dp" android:importantForAccessibility="no" android:layout_marginEnd="6.0dip" app:tint="@color/black" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/white" android:id="@id/unicode_emoji_image" android:visibility="gone" android:layout_width="16.0dip" android:layout_height="16.0dip" android:textAlignment="gravity" android:layout_marginEnd="6.0dip" android:backgroundTint="@color/black" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/emoji_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="center" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/spacing_8">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/application_image" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_unknown_game_icon_16dp" android:importantForAccessibility="no" android:layout_marginEnd="6.0dip" app:tint="@color/black" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/application_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView android:id="@id/guild_image" android:layout_width="16.0dip" android:layout_height="16.0dip" android:src="@drawable/ic_unknown_game_icon_16dp" android:importantForAccessibility="no" android:layout_marginEnd="6.0dip" app:tint="@color/black" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/black" android:ellipsize="end" android:id="@id/guild_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/footer" android:padding="@dimen/spacing_8" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/stats">
+        <LinearLayout android:gravity="center_horizontal" android:id="@id/checkpoint" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent">
+            <ImageView android:id="@id/logo" android:layout_width="12.0dip" android:layout_height="12.0dip" android:src="@mipmap/img_logo_dark" android:importantForAccessibility="no" android:layout_marginEnd="@dimen/spacing_4" app:tint="@color/black" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/black" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView android:textSize="10.0sp" android:textColor="@color/black" android:id="@id/cta" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="@dimen/spacing_4" app:drawableRightCompat="@drawable/ic_arrow_left_10dp" app:drawableTint="@color/black" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/power_container" android:background="@drawable/drawable_checkpoint_background" android:paddingTop="@dimen/spacing_8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/spacing_8">
+        <LinearLayout android:orientation="horizontal" android:id="@id/power_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip">
+            <TextView android:textSize="10.0sp" android:textColor="@color/black" android:id="@id/power_level_lvl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/black" android:id="@id/power_level_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+</com.discord.chat.presentation.message.view.botuikit.components.CheckpointCardComponentView>

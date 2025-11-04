@@ -29,9 +29,9 @@ internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: 
       this.blurEnabled = true;
       this.blurViewPropertiesDirty = true;
       this.blurTarget = new WeakReference<>(null);
-      val var6: com.discord.blur.c = new com.discord.blur.c(this);
+      val var6: c = new c(this);
       this.blurTargetChangeListener = var6;
-      Companion.updateListener$blur_release(var6, true, new com.discord.blur.d(this));
+      Companion.updateListener$blur_release(var6, true, new d(this));
    }
 
    @JvmStatic

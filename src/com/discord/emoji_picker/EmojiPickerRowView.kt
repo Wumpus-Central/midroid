@@ -21,7 +21,7 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nEmojiPickerRowView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerRowView.kt\ncom/discord/emoji_picker/EmojiPickerRowView\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n*L\n1#1,113:1\n1872#2,2:114\n1874#2:120\n1872#2,3:121\n278#3,2:116\n278#3,2:118\n*S KotlinDebug\n*F\n+ 1 EmojiPickerRowView.kt\ncom/discord/emoji_picker/EmojiPickerRowView\n*L\n43#1:114,2\n43#1:120\n86#1:121,3\n47#1:116,2\n53#1:118,2\n*E\n"])
 internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
-   public final var onPressEmoji: (String) -> Unit = new c()
+   public final var onPressEmoji: (String) -> Unit = new com.discord.emoji_picker.c()
    public final var onLongPressEmoji: (String) -> Unit
 
    @JvmStatic
@@ -33,7 +33,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
    }
 
    init {
-      this.onLongPressEmoji = new d();
+      this.onLongPressEmoji = new com.discord.emoji_picker.d();
       this.setOrientation(0);
    }
 
@@ -48,19 +48,19 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
 
          val var7: EmojiPickerRow.Emoji = var10 as EmojiPickerRow.Emoji;
          var10 = this.getChildAt(var3);
-         val var8: SimpleDraweeView = var10 as SimpleDraweeView;
+         val var9: SimpleDraweeView = var10 as SimpleDraweeView;
          var10 = null;
          if (var7 == null) {
-            var8.setImageURI(null);
-            var8.setVisibility(4);
+            var9.setImageURI(null);
+            var9.setVisibility(4);
          } else {
-            SetOptionalImageUrlKt.setOptionalImageUrl$default(var8, var7.getUrl(), var7.getAnimated(), null, null, 12, null);
-            var8.setVisibility(0);
-            var8.setContentDescription(var7.getName());
-            val var9: e = new e(this, var7);
+            SetOptionalImageUrlKt.setOptionalImageUrl$default(var9, var7.getUrl(), var7.getAnimated(), null, null, 12, null);
+            var9.setVisibility(0);
+            var9.setContentDescription(var7.getName());
+            val var8: com.discord.emoji_picker.e = new com.discord.emoji_picker.e(this, var7);
             var var4: Boolean = true;
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, var9, 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, new f(this, var7), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var9, false, var8, 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var9, false, new com.discord.emoji_picker.f(this, var7), 1, null);
             if (!var7.getDisabled() || var2) {
                var4 = false;
             }
@@ -72,8 +72,8 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout(var1) {
                var5 = 0;
             }
 
-            ViewClippingUtilsKt.clipToRoundedRectangle(var8, var5);
-            val var14: GenericDraweeHierarchy = var8.getHierarchy() as GenericDraweeHierarchy;
+            ViewClippingUtilsKt.clipToRoundedRectangle(var9, var5);
+            val var14: GenericDraweeHierarchy = var9.getHierarchy() as GenericDraweeHierarchy;
             if (var4) {
                var10 = this.getContext();
                var10 = GetDrawableCompatKt.getDrawableCompat((Context)var10, R.drawable.lock_overlay);
