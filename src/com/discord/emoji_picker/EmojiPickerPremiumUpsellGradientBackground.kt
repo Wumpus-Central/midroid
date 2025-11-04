@@ -10,9 +10,10 @@ import androidx.core.view.f0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.discord.theme.R.color
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nEmojiPickerPremiumUpsellGradientBackground.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n+ 2 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 3 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,128:1\n1328#2,3:129\n8#3:132\n*S KotlinDebug\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n*L\n68#1:129,3\n99#1:132\n*E\n"])
+@SourceDebugExtension(["SMAP\nEmojiPickerPremiumUpsellGradientBackground.kt\nKotlin\n*S Kotlin\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n+ 2 ViewGroup.kt\nandroidx/core/view/ViewGroupKt\n+ 3 _Sequences.kt\nkotlin/sequences/SequencesKt___SequencesKt\n+ 4 CastUtils.kt\ncom/discord/misc/utilities/kotlin/CastUtilsKt\n*L\n1#1,129:1\n48#2:130\n1328#3,3:131\n8#4:134\n*S KotlinDebug\n*F\n+ 1 EmojiPickerPremiumUpsellGradientBackground.kt\ncom/discord/emoji_picker/EmojiPickerPremiumUpsellGradientBackground\n*L\n58#1:130\n69#1:131,3\n100#1:134\n*E\n"])
 public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTier0UpsellContent: Boolean) : RecyclerView.ItemDecoration {
    private final var useTier0UpsellContent: Boolean
    private final var linearGradientColors: IntArray
@@ -36,21 +37,21 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       var var4: Float = -1.0F;
 
       while (var9.hasNext()) {
-         var var10: Any = var9.next();
+         val var10: Any = var9.next();
          if (var7 < 0) {
             CollectionsKt.u();
          }
 
-         val var11: View = var10 as View;
-         var10 = var2.getChildViewHolder(var10 as View);
+         val var12: View = var10 as View;
+         val var11: RecyclerView.ViewHolder = var2.getChildViewHolder(var10 as View);
          var var3: Float;
          var var6: Float;
          if (var5 == -1.0F) {
             var3 = var5;
             var6 = var4;
-            if (this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
-               if (var11.getTop() >= 0) {
-                  var3 = var11.getTop();
+            if (this.isInsidePremiumRoadblock(var11)) {
+               if (var12.getTop() >= 0) {
+                  var3 = var12.getTop();
                   var6 = var4;
                } else {
                   var3 = 0.0F;
@@ -63,8 +64,8 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
             label38:
             if (var4 == -1.0F) {
                val var8: Int;
-               if (!this.isInsidePremiumRoadblock((RecyclerView.ViewHolder)var10)) {
-                  var8 = var11.getTop();
+               if (!this.isInsidePremiumRoadblock(var11)) {
+                  var8 = var12.getTop();
                } else {
                   var3 = var5;
                   var6 = var4;
@@ -72,7 +73,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
                      break label38;
                   }
 
-                  var8 = var11.getTop() + var11.getHeight();
+                  var8 = var12.getTop() + var12.getHeight();
                }
 
                var6 = var8;
@@ -169,15 +170,12 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
       private fun Context.getColors(useTier0UpsellContent: Boolean): IntArray {
          val var4: IntArray;
          if (var2) {
-            var4 = new int[]{
-               var1.getColor(com.discord.theme.R.color.premium_tier_0_purple_for_gradients),
-               var1.getColor(com.discord.theme.R.color.premium_tier_0_blue_for_gradients)
-            };
+            var4 = new int[]{var1.getColor(color.premium_tier_0_purple_for_gradients), var1.getColor(color.premium_tier_0_blue_for_gradients)};
          } else {
             var4 = new int[]{
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients),
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_purple_for_gradients_2),
-               var1.getColor(com.discord.theme.R.color.premium_tier_2_pink_for_gradients)
+               var1.getColor(color.premium_tier_2_purple_for_gradients),
+               var1.getColor(color.premium_tier_2_purple_for_gradients_2),
+               var1.getColor(color.premium_tier_2_pink_for_gradients)
             };
          }
 

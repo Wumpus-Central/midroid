@@ -97,7 +97,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
       if (var12 != null) {
-         val var8: java.util.List = CollectionsKt.M0(var12, 3);
+         val var8: java.util.List = CollectionsKt.P0(var12, 3);
          var9 = null;
          if (var8 != null) {
             val var13: ArrayList = new ArrayList(CollectionsKt.v(var8, 10));
@@ -119,7 +119,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var14 = CollectionsKt.k();
       }
 
-      var24.setItems((java.util.List<OverlappingItem>)var14);
+      var24.setItems((java.util.List)var14);
       var var17: Boolean;
       if (var3 > 0) {
          var17 = 1;
@@ -136,7 +136,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @nb.g
+   @kc.m
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -234,18 +234,18 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
       public override fun toString(): String {
          val var1: java.lang.String = this.channelIconURL;
-         val var4: java.lang.String = this.chatIconURL;
+         val var2: java.lang.String = this.chatIconURL;
          val var5: ArrayList = this.avatarURLs;
-         val var2: java.lang.String = this.channelName;
+         val var4: java.lang.String = this.channelName;
          val var3: StringBuilder = new StringBuilder();
          var3.append("MessageBundleHeader(channelIconURL=");
          var3.append(var1);
          var3.append(", chatIconURL=");
-         var3.append(var4);
+         var3.append(var2);
          var3.append(", avatarURLs=");
          var3.append(var5);
          var3.append(", channelName=");
-         var3.append(var2);
+         var3.append(var4);
          var3.append(")");
          return var3.toString();
       }

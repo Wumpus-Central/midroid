@@ -22,9 +22,9 @@ public class ShareActivity : ReactActivity {
 
          private final void updateShareProps(Intent var1) {
             if (var1 != null) {
-               val var2: ShareProps.Companion = ShareProps.Companion;
-               val var3: Context = this.getContext();
-               val var6: ShareProps = var2.createShareProps(var1, var3);
+               val var3: ShareProps.Companion = ShareProps.Companion;
+               val var2: Context = this.getContext();
+               val var6: ShareProps = var3.createShareProps(var1, var2);
                this.shareProps = var6;
                var var4: ShareProps = var6;
                if (var6 == null) {
@@ -49,6 +49,7 @@ public class ShareActivity : ReactActivity {
             return var2;
          }
 
+         @Override
          protected Bundle getLaunchOptions() {
             var var1: ShareProps = this.shareProps;
             if (this.shareProps == null) {
@@ -59,11 +60,13 @@ public class ShareActivity : ReactActivity {
             return var1.toBundle();
          }
 
+         @Override
          public void onCreate(Bundle var1) {
             this.updateShareProps(this.this$0.getIntent());
             super.onCreate(var1);
          }
 
+         @Override
          public boolean onNewIntent(Intent var1) {
             if (var1 != null) {
                this.updateShareProps(var1);

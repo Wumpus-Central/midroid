@@ -10,78 +10,42 @@ import com.facebook.react.views.text.CreateTypefaceObject
 import com.facebook.react.views.text.ReactFontManager
 import java.util.ArrayList
 import java.util.Locale
-import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nCustomFontFamilyOverride.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CustomFontFamilyOverride.kt\ncom/discord/react_fork_overrides/forks/CustomFontFamilyOverride\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n+ 3 Strings.kt\nkotlin/text/StringsKt__StringsKt\n*L\n1#1,157:1\n37#2,2:158\n108#3:160\n80#3,22:161\n*S KotlinDebug\n*F\n+ 1 CustomFontFamilyOverride.kt\ncom/discord/react_fork_overrides/forks/CustomFontFamilyOverride\n*L\n36#1:158,2\n38#1:160\n38#1:161,22\n*E\n"])
+@SourceDebugExtension(["SMAP\nCustomFontFamilyOverride.kt\nKotlin\n*S Kotlin\n*F\n+ 1 CustomFontFamilyOverride.kt\ncom/discord/react_fork_overrides/forks/CustomFontFamilyOverride\n+ 2 ArraysJVM.kt\nkotlin/collections/ArraysKt__ArraysJVMKt\n*L\n1#1,157:1\n37#2,2:158\n*S KotlinDebug\n*F\n+ 1 CustomFontFamilyOverride.kt\ncom/discord/react_fork_overrides/forks/CustomFontFamilyOverride\n*L\n36#1:158,2\n*E\n"])
 internal object CustomFontFamilyOverride {
    private final val FILE_EXTENSIONS: Array<String>
    private const val FONTS_ASSET_PATH: String = "fonts/"
 
    private fun createAssetTypeface(fontFamilyName: String?, style: Int, assetManager: AssetManager): Typeface {
-      var var11: java.lang.String = var1;
+      var var7: java.lang.String = var1;
       if (var1 == null) {
-         var11 = "";
+         var7 = "";
       }
 
-      val var12: Array<java.lang.String> = StringsKt.split$default(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
-      val var10: Int = var12.length;
+      val var8: Array<java.lang.String> = StringsKt.split$default(var7, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
+      var var6: Int = var8.length;
 
-      for (int var6 = 0; var6 < var10; var6++) {
-         var1 = var12[var6];
-         var var5: Int = var12[var6].length() - 1;
-         var var4: Int = 0;
-         var var7: Boolean = false;
-
-         while (var4 <= var5) {
-            val var8: Int;
-            if (!var7) {
-               var8 = var4;
-            } else {
-               var8 = var5;
-            }
-
-            val var23: Boolean;
-            if (Intrinsics.compare(var1.charAt(var8), 32) <= 0) {
-               var23 = true;
-            } else {
-               var23 = false;
-            }
-
-            if (!var7) {
-               if (!var23) {
-                  var7 = true;
-               } else {
-                  var4++;
-               }
-            } else {
-               if (!var23) {
-                  break;
-               }
-
-               var5--;
-            }
-         }
-
-         var12[var6] = var1.subSequence(var4, var5 + 1).toString();
+      for (int var4 = 0; var4 < var6; var4++) {
+         var8[var4] = StringsKt.Z0(var8[var4]).toString();
       }
 
-      var1 = var11;
-      if (var12.length > 1) {
+      var1 = var7;
+      if (var8.length > 1) {
          if (VERSION.SDK_INT >= 29) {
-            return this.createAssetTypefaceWithFallbacks(var12, var2, var3);
+            return this.createAssetTypefaceWithFallbacks(var8, var2, var3);
          }
 
-         var1 = var12[0];
+         var1 = var8[0];
       }
 
-      var11 = var1;
-      if (var12.length > 1) {
-         var11 = var1;
+      var7 = var1;
+      if (var8.length > 1) {
+         var7 = var1;
          if (VERSION.SDK_INT < 29) {
-            var11 = var1;
+            var7 = var1;
             if ((var2 and 2) != 0) {
-               var11 = StringsKt.A(
+               var7 = StringsKt.A(
                   StringsKt.A(
                      StringsKt.A(
                         StringsKt.A(StringsKt.A(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true), "Semibold", "SemiboldItalic", true
@@ -96,34 +60,34 @@ internal object CustomFontFamilyOverride {
                );
             }
 
-            var1 = var11;
+            var1 = var7;
             if ((var2 and 1) != 0) {
-               var1 = StringsKt.A(StringsKt.A(StringsKt.A(var11, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+               var1 = StringsKt.A(StringsKt.A(StringsKt.A(var7, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
             }
 
-            var11 = StringsKt.A(StringsKt.A(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+            var7 = StringsKt.A(StringsKt.A(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
          }
       }
 
-      val var19: Array<java.lang.String> = FILE_EXTENSIONS;
-      val var22: Int = FILE_EXTENSIONS.length;
+      val var14: Array<java.lang.String> = FILE_EXTENSIONS;
+      var6 = FILE_EXTENSIONS.length;
 
-      for (int var21 = 0; var21 < var22; var21++) {
-         val var26: java.lang.String = var19[var21];
-         val var13: StringBuilder = new StringBuilder();
-         var13.append("fonts/");
-         var13.append(var11);
-         var13.append(var26);
-         val var27: java.lang.String = var13.toString();
+      for (int var16 = 0; var16 < var6; var16++) {
+         val var20: java.lang.String = var14[var16];
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("fonts/");
+         var9.append(var7);
+         var9.append(var20);
+         val var21: java.lang.String = var9.toString();
 
          try {
-            return Typeface.createFromAsset(var3, var27);
-         } catch (var14: RuntimeException) {
+            return Typeface.createFromAsset(var3, var21);
+         } catch (var10: RuntimeException) {
          }
       }
 
-      val var20: Typeface = Typeface.create(var11, var2);
-      return var20;
+      val var15: Typeface = Typeface.create(var7, var2);
+      return var15;
    }
 
    private fun createAssetTypefaceWithFallbacks(fontFamilyNames: Array<String>, style: Int, assetManager: AssetManager): Typeface {
@@ -160,16 +124,16 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var25[var5];
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("fonts/");
-            var12.append(var10);
-            var12.append(var13);
-            val var31: java.lang.String = var12.toString();
+            var var12: java.lang.String = var25[var5];
+            val var13: StringBuilder = new StringBuilder();
+            var13.append("fonts/");
+            var13.append(var10);
+            var13.append(var12);
+            var12 = var13.toString();
 
             try {
                b.a();
-               val var32: Font = a.a(k.a(var3, var31));
+               val var32: Font = a.a(k.a(var3, var12));
                c.a();
                val var33: FontFamily = f.a(l.a(var32));
                var11.add(var33);

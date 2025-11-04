@@ -89,7 +89,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
    public class Emoji(context: Context, onPressEmoji: (Long?, String) -> Unit, onLongPressEmoji: (Long?, String) -> Unit) : EmojiPickerViewHolder(
          new SimpleDraweeView(var1)
       ) {
-      private final val placeholder: Drawable by B9.j.b(new B())
+      private final val placeholder: Drawable by xa.l.a(new B())
          private final get() {
             return this.placeholder$delegate.getValue() as Drawable;
          }
@@ -264,7 +264,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : K2.a {
+      private class EmojiLoadListener(animating: Boolean) : K3.a {
          private final var animating: Boolean
 
          init {
@@ -305,7 +305,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-1, SizeUtilsKt.getDpToPx(64)));
       }
 
-      public override fun getPortalViewIndex(portalView: View): Int {
+      public open fun getPortalViewIndex(portalView: View): Int {
          val var2: View = this.itemView;
          return (var2 as FrameLayout).indexOfChild(var1);
       }
@@ -314,12 +314,12 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          PortalFromJsContextManager.INSTANCE.addContext(var1.getId(), this);
       }
 
-      public override fun onPortalFromJsAdded(portalId: String, portalView: View) {
+      public open fun onPortalFromJsAdded(portalId: String, portalView: View) {
          val var3: View = this.itemView;
          (var3 as FrameLayout).addView(var2);
       }
 
-      public override fun onPortalFromJsRemoved(portalId: String, portalView: View) {
+      public open fun onPortalFromJsRemoved(portalId: String, portalView: View) {
          val var3: View = this.itemView;
          (var3 as FrameLayout).removeView(var2);
       }

@@ -3,6 +3,7 @@ package com.discord.bundle_updater
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
+import kc.n
 import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -16,47 +17,47 @@ public object CookieValidator {
       if (var1 == null) {
          return null;
       } else {
-         val var8: java.lang.String = CollectionsKt.j0(StringsKt.split$default(var1.i(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
+         val var8: java.lang.String = CollectionsKt.l0(StringsKt.split$default(var1.i(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
          if (var8 == null) {
             return null;
          } else {
             val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var2: okio.ByteString.a = ByteString.n;
+            val var2: okio.ByteString.a = ByteString.t;
             val var10: ByteString = var2.b(var9);
             if (var10 != null) {
-               val var13: java.lang.String = var10.G();
+               val var13: java.lang.String = var10.H();
                if (var13 != null) {
                   try {
                      var11 = Json.d;
                      var14 = Json.d.g(var13);
-                  } catch (var7: nb.h) {
+                  } catch (var7: n) {
                      return null;
                   }
 
-                  var var3: JsonElement = rb.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = oc.h.n(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = rb.g.o(var14);
+                  val var15: JsonObject = oc.h.n(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
-                  for (Entry var4 : var15.entrySet()) {
-                     if (!(var4.getKey() as java.lang.String == "$meta")) {
-                        var18.put(var4.getKey(), var4.getValue());
+                  for (Entry var16 : var15.entrySet()) {
+                     if (!(var16.getKey() as java.lang.String == "$meta")) {
+                        var18.put(var16.getKey(), var16.getValue());
                      }
                   }
 
-                  val var17: LinkedHashMap = new LinkedHashMap(L.d(var18.size()));
+                  val var17: LinkedHashMap = new LinkedHashMap(O.e(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     var3 = (JsonElement)var5.getKey();
+                     val var20: Any = var5.getKey();
                      val var6: JsonElement = var5.getValue() as JsonElement;
                      val var21: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var3, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
+                     var17.put(var20, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

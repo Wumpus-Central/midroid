@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public class TapForwardFooterData(snapshotIndex: Int, channelId: String, messageId: String) : ReactEvent {
    public final val snapshotIndex: Int
    public final val channelId: String
@@ -18,8 +19,8 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
       this.messageId = var3;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public companion object {

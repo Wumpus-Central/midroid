@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Ditt konto har blivit upplåst",
-  "d9Ykjo": "Bekräftelsekod",
-  "bFbsV1": "Ange din e-postadress",
-  "RRBNpq": "Nästa",
-  "0DHxys": [
+  "/fHz9S": [
+    "Ditt konto har blivit upplåst"
+  ],
+  "d9Ykjr": [
+    "Bekräftelsekod"
+  ],
+  "bFbsV6": [
+    "Ange din e-postadress"
+  ],
+  "RRBNpv": [
+    "Nästa"
+  ],
+  "0DHxym": [
     "Inte du? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Vi kan be om fler uppföljningar längs vägen, som om du är en robot",
-  "Ks6opq": "Starta",
-  "I2Ctk5": "Slutför stegen nedan för att låsa upp ditt konto",
-  "RRamMD": "Konto låst",
-  "ah0EUl": "Skicka koden igen",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Vi kan be om fler uppföljningar längs vägen, som om du är en robot"
+  ],
+  "Ks6opt": [
+    "Starta"
+  ],
+  "I2Ctk1": [
+    "Slutför stegen nedan för att låsa upp ditt konto"
+  ],
+  "RRamMH": [
+    "Konto låst"
+  ],
+  "ah0EUu": [
+    "Skicka koden igen"
+  ],
+  "2+Lyn0": [
     "Skicka koden igen om ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " sekunder"
   ],
-  "3AXMYm": "Kunde inte skicka verifieringskoden igen",
-  "dSkE/P": "Verifiera åldersgrupp",
-  "o4D6fn": "Uppdatera",
-  "VBZJJi": "Uppdatera appen för att fortsätta.",
-  "yxqMCA": "Uppdatering krävs",
-  "wq2RDg": "Verifiera",
-  "PfbG6O": "Ogiltig verifieringskod",
-  "aveKoK": "Vi har just skickat en verifieringskod till din mejladress. Det kan ta några minuter innan den kommer fram",
-  "Qm6K/v": "Verifiera din e-post"
+  "3AXMYu": [
+    "Kunde inte skicka verifieringskoden igen"
+  ],
+  "dSkE/A": [
+    "Verifiera åldersgrupp"
+  ],
+  "o4D6fm": [
+    "Uppdatera"
+  ],
+  "VBZJJg": [
+    "Uppdatera appen för att fortsätta."
+  ],
+  "yxqMCD": [
+    "Uppdatering krävs"
+  ],
+  "wq2RDq": [
+    "Verifiera"
+  ],
+  "PfbG6H": [
+    "Ogiltig verifieringskod"
+  ],
+  "aveKoG": [
+    "Vi har just skickat en verifieringskod till din mejladress. Det kan ta några minuter innan den kommer fram"
+  ],
+  "Qm6K/s": [
+    "Verifiera din e-post"
+  ]
 }

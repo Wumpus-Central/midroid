@@ -1,6 +1,5 @@
 package com.discord.emoji_picker.react
 
-import B9.s
 import com.discord.emoji_picker.EmojiPickerRowView
 import com.discord.emoji_picker.react_events.OnLongPressEmojiEvent
 import com.discord.emoji_picker.react_events.OnPressEmojiEvent
@@ -11,11 +10,12 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
+import xa.v
 
 @ReactModule(name = "EmojiPickerRowView")
 internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>, EmojiPickerRowViewManagerInterface<EmojiPickerRowView> {
    private final val reactEvents: ReactEvents =
-      new ReactEvents(s.a("onPressEmoji", OnPressEmojiEvent::class), s.a("onLongPressEmoji", OnLongPressEmojiEvent::class))
+      new ReactEvents(new Pair[]{v.a("onPressEmoji", OnPressEmojiEvent::class), v.a("onLongPressEmoji", OnLongPressEmojiEvent::class)})
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$0`(var0: EmojiPickerRowViewManager, var1: ThemedReactContext, var2: EmojiPickerRowView, var3: java.lang.String): Unit {

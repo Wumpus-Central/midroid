@@ -1,6 +1,8 @@
 {
-  "C4ScLC": "No family members connected yet.",
-  "pu6/U1": [
+  "C4ScLD": [
+    "No family members connected yet."
+  ],
+  "pu6/U0": [
     "CONNECTED TEENS — ",
     [
       2,
@@ -12,7 +14,7 @@
       "max"
     ]
   ],
-  "+tnO39": [
+  "+tnO34": [
     "CONNECTED PARENTS — ",
     [
       2,
@@ -24,14 +26,14 @@
       "max"
     ]
   ],
-  "Y3ZYtL": [
+  "Y3ZYtM": [
     "Connected on ",
     [
       1,
       "date"
     ]
   ],
-  "WRtyS0": [
+  "WRtySz": [
     "Connected ",
     [
       2,
@@ -77,7 +79,7 @@
     ],
     " ago"
   ],
-  "kX3wJi": [
+  "kX3wJg": [
     "Connected ",
     [
       2,
@@ -100,9 +102,13 @@
     ],
     " ago"
   ],
-  "BqsamZ": "Connected < 1 minute ago",
-  "Ln9zMj": "Connected yesterday",
-  "snlFqa": [
+  "Bqsamd": [
+    "Connected < 1 minute ago"
+  ],
+  "Ln9zMn": [
+    "Connected yesterday"
+  ],
+  "snlFqR": [
     "By accepting this request, I agree to connect my account with ",
     [
       1,
@@ -110,49 +116,63 @@
     ],
     " in Family Center. I understand that I can withdraw my consent at any time by disconnecting from this user."
   ],
-  "rlNJwc": "Confirm parent connection with:",
-  "wI/jo6": "Accept Request",
-  "jc1Ip6": [
+  "rlNJwZ": [
+    "Confirm parent connection with:"
+  ],
+  "wI/jo3": [
+    "Accept Request"
+  ],
+  "jc1Ip7": [
     "Accept request from ",
     [
       1,
       "name"
     ]
   ],
-  "oUpA6e": [
+  "oUpA6X": [
     "Cancel request with ",
     [
       1,
       "name"
     ]
   ],
-  "4GtllJ": [
+  "4GtllP": [
     "Decline request from ",
     [
       1,
       "name"
     ]
   ],
-  "T7DUoa": [
+  "T7DUoU": [
     "Disconnect from ",
     [
       1,
       "name"
     ]
   ],
-  "kIcKAg": "New friends",
-  "TEvo+P": [
+  "kIcKAj": [
+    "New friends"
+  ],
+  "TEvo+H": [
     "New Friends — ",
     [
       2,
       "count"
     ]
   ],
-  "HvsFJS": "New friends that your teen added in the last week.",
-  "BkVb1d": "New friends that your teen added or accepted",
-  "1/QpPz": "New friends that you added in the last week.",
-  "mpHHfX": "New friends that you added or accepted",
-  "EMCf6u": [
+  "HvsFJf": [
+    "New friends that your teen added in the last week."
+  ],
+  "BkVb1X": [
+    "New friends that your teen added or accepted"
+  ],
+  "1/QpPy": [
+    "New friends that you added in the last week."
+  ],
+  "mpHHfa": [
+    "New friends that you added or accepted"
+  ],
+  "EMCf6j": [
     "We built Family Center to provide you with more context on how your teen uses Discord so you can work together on building positive online behaviors. ",
     [
       8,
@@ -168,7 +188,7 @@
       ]
     ]
   ],
-  "MXjDSk": [
+  "MXjDSv": [
     "Connected family members will not see your message contents, and you can always see what they can see by coming to this Family Center dashboard. ",
     [
       8,
@@ -184,45 +204,79 @@
       ]
     ]
   ],
-  "goKE2d": "Stay informed about how your teen is using Discord.",
-  "T7GyW1": "Keep your parents informed, while maintaining your privacy.",
-  "obi47u": "Avatar Decoration",
-  "VS1fKi": "Bundle",
-  "nNGEHh": "Nameplate",
-  "RX8BMT": "Profile Effect",
-  "CcrbCw": "Active servers",
-  "rcPInZ": [
+  "goKE2b": [
+    "Stay informed about how your teen is using Discord."
+  ],
+  "T7GyW+": [
+    "Keep your parents informed, while maintaining your privacy."
+  ],
+  "obi47v": [
+    "Avatar Decoration"
+  ],
+  "VS1fKo": [
+    "Bundle"
+  ],
+  "nNGEHk": [
+    "Nameplate"
+  ],
+  "RX8BMR": [
+    "Profile Effect"
+  ],
+  "CcrbCw": [
+    "Active servers"
+  ],
+  "rcPInc": [
     "Active Servers — ",
     [
       2,
       "count"
     ]
   ],
-  "BLgIrq": "Servers where your teen joined a voice or video call or sent a message.",
-  "c0NgBQ": "Servers that your teen has been active in (sent messages or joined voice chat) within the last week.",
-  "sSJaub": "Servers where you joined a voice or video call or sent a message. Guardians only see names of your active servers, but can't click or join them from here.",
-  "DLVyFx": "Servers that you have been active in (sent messages or joined voice chat) within the last week. These are not invite links, your parents will not be able to click on them.",
-  "NulX9/": "Servers joined",
-  "uav9Bg": "New servers",
-  "7feG7e": [
+  "BLgIrk": [
+    "Servers where your teen joined a voice or video call or sent a message."
+  ],
+  "c0NgBX": [
+    "Servers that your teen has been active in (sent messages or joined voice chat) within the last week."
+  ],
+  "sSJauZ": [
+    "Servers where you joined a voice or video call or sent a message. Guardians only see names of your active servers, but can't click or join them from here."
+  ],
+  "DLVyFw": [
+    "Servers that you have been active in (sent messages or joined voice chat) within the last week. These are not invite links, your parents will not be able to click on them."
+  ],
+  "NulX9+": [
+    "Servers joined"
+  ],
+  "uav9Bh": [
+    "New servers"
+  ],
+  "7feG7T": [
     "New Servers — ",
     [
       2,
       "count"
     ]
   ],
-  "Lmz9Vl": "New servers that your teen joined in the last week.",
-  "LVNgTE": "New servers your teen joined or created.",
-  "MTFxYW": "New servers that you joined in the last week. These are not invite links, your parents will not be able to click on them.",
-  "TA8GFh": "New servers you joined or created. Guardians only see names of servers, but can't click or join them from here.",
-  "5JmNgo": [
+  "Lmz9Vh": [
+    "New servers that your teen joined in the last week."
+  ],
+  "LVNgTD": [
+    "New servers your teen joined or created."
+  ],
+  "MTFxYc": [
+    "New servers that you joined in the last week. These are not invite links, your parents will not be able to click on them."
+  ],
+  "TA8GFt": [
+    "New servers you joined or created. Guardians only see names of servers, but can't click or join them from here."
+  ],
+  "5JmNgg": [
     [
       2,
       "members"
     ],
     " members"
   ],
-  "7dMmJS": [
+  "7dMmJY": [
     "See ",
     [
       2,
@@ -230,7 +284,7 @@
     ],
     " more"
   ],
-  "n8n5BQ": [
+  "n8n5Ba": [
     "Activity in the last ",
     [
       1,
@@ -238,9 +292,13 @@
     ],
     " days"
   ],
-  "2AtcIi": "Activity today",
-  "stOECg": "Activity since yesterday",
-  "f1UJiI": [
+  "2AtcIs": [
+    "Activity today"
+  ],
+  "stOECr": [
+    "Activity since yesterday"
+  ],
+  "f1UJiC": [
     "Your activity in the last ",
     [
       1,
@@ -248,10 +306,16 @@
     ],
     " days"
   ],
-  "g1ZX6u": "Your activity today",
-  "s3qSVl": "Your activity since yesterday",
-  "KrLnkJ": "Activity Summary",
-  "7hqFl5": [
+  "g1ZX6m": [
+    "Your activity today"
+  ],
+  "s3qSVt": [
+    "Your activity since yesterday"
+  ],
+  "KrLnkE": [
+    "Activity Summary"
+  ],
+  "7hqFl9": [
     "VISIBLE TO ",
     [
       2,
@@ -273,7 +337,7 @@
       "cardinal"
     ]
   ],
-  "tazvHR": [
+  "tazvHQ": [
     "Visible to ",
     [
       2,
@@ -295,39 +359,107 @@
       "cardinal"
     ]
   ],
-  "NMYKsr": "Total purchases",
-  "FPViWF": [
+  "NMYKsh": [
+    "Total purchases"
+  ],
+  "FPViWL": [
     "Total Purchases — ",
     [
       1,
       "amount"
     ]
   ],
-  "cqIdqa": "All purchases your teen made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
-  "85PtWl": "All purchases you made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account.",
-  "bdBmq6": "Activity",
-  "pzKKoK": [
-    [
-      2,
-      "messageCount"
-    ],
-    " messages"
+  "cqIdqZ": [
+    "All purchases your teen made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account."
   ],
-  "Lq9Sen": "Top Servers",
-  "BxbvS0": "Top Users",
-  "Fjwpen": [
-    [
-      2,
-      "dmsSent"
-    ],
-    " messages  •  ",
-    [
-      2,
-      "callCount"
-    ],
-    " calls"
+  "85PtWu": [
+    "All purchases you made in the last week including Shop and subscriptions. Nitro subscriptions are shown in the week when they are billed to your account."
   ],
-  "fwQgEx": [
+  "bdBmqy": [
+    "Activity"
+  ],
+  "IYqGMG": [
+    [
+      6,
+      "messageCount",
+      {
+        "one": [
+          "1 message"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " messages"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " • ",
+    [
+      6,
+      "callCount",
+      {
+        "one": [
+          "1 call"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " calls"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "L/Cj7S": [
+    [
+      6,
+      "callCount",
+      {
+        "one": [
+          "1 call"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " calls"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "6X1F0i": [
+    [
+      6,
+      "messageCount",
+      {
+        "one": [
+          "1 message"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " messages"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "Lq9Set": [
+    "Top Servers"
+  ],
+  "BxbvS7": [
+    "Top Users"
+  ],
+  "fwQgE/": [
     "Added ",
     [
       2,
@@ -335,17 +467,23 @@
     ],
     " days ago"
   ],
-  "JUHIYW": "Added today",
-  "GiswUV": "Added yesterday",
-  "D7Sng4": "Users called",
-  "0GE4Nj": [
+  "JUHIYZ": [
+    "Added today"
+  ],
+  "GiswUW": [
+    "Added yesterday"
+  ],
+  "D7Sngz": [
+    "Users called"
+  ],
+  "0GE4Ni": [
     "Users Called — ",
     [
       2,
       "count"
     ]
   ],
-  "oCk8c3": [
+  "oCk8c4": [
     "Last called ",
     [
       2,
@@ -353,25 +491,47 @@
     ],
     " days ago"
   ],
-  "IHd5cX": "Last called today",
-  "wOsfxs": "Last called yesterday",
-  "w7j/Li": "Users that your teen had calls with in 1:1 DMs and group chats in the last week.",
-  "aiAhnZ": "Users that your teen had a voice or video call with one-on-one or in a group chat. Does not include servers.",
-  "SCIaWF": "Calls you had in 1:1 DMs and group chats in the last week.",
-  "4ufgd3": "Users that you had a voice or video call with one-on-one or in a group chat. Does not include servers.",
-  "kvTgWF": "Users messaged",
-  "4T3zWV": [
+  "IHd5cZ": [
+    "Last called today"
+  ],
+  "wOsfxv": [
+    "Last called yesterday"
+  ],
+  "w7j/Lt": [
+    "Users that your teen had calls with in 1:1 DMs and group chats in the last week."
+  ],
+  "aiAhnQ": [
+    "Users that your teen had a voice or video call with one-on-one or in a group chat. Does not include servers."
+  ],
+  "SCIaWK": [
+    "Calls you had in 1:1 DMs and group chats in the last week."
+  ],
+  "4ufgdz": [
+    "Users that you had a voice or video call with one-on-one or in a group chat. Does not include servers."
+  ],
+  "kvTgWP": [
+    "Users messaged"
+  ],
+  "4T3zWT": [
     "Users Messaged — ",
     [
       2,
       "count"
     ]
   ],
-  "cY19ub": "Users that your teen messaged in 1:1 DMs and group chats in the last week.",
-  "w4wmnZ": "Users that your teen messaged one-on-one or in a group chat. Does not include servers.",
-  "K5r+sL": "Users that you messaged in 1:1 DMs and group chats in the last week.",
-  "foTzbW": "Users that you messaged one-on-one or in a group chat. Does not include servers.",
-  "qvKjp6": [
+  "cY19uR": [
+    "Users that your teen messaged in 1:1 DMs and group chats in the last week."
+  ],
+  "w4wmnb": [
+    "Users that your teen messaged one-on-one or in a group chat. Does not include servers."
+  ],
+  "K5r+sN": [
+    "Users that you messaged in 1:1 DMs and group chats in the last week."
+  ],
+  "foTzbd": [
+    "Users that you messaged one-on-one or in a group chat. Does not include servers."
+  ],
+  "qvKjp8": [
     "Last messaged ",
     [
       2,
@@ -379,20 +539,34 @@
     ],
     " days ago"
   ],
-  "fLBUx8": "Last messaged today",
-  "cHHgxM": "Last messaged yesterday",
-  "eo4Fxs": "In voice & video",
-  "eGFWUV": [
+  "fLBUx7": [
+    "Last messaged today"
+  ],
+  "cHHgxI": [
+    "Last messaged yesterday"
+  ],
+  "eo4Fxh": [
+    "In voice & video"
+  ],
+  "eGFWUd": [
     "Voice Minutes — ",
     [
       2,
       "count"
     ]
   ],
-  "O/AElp": "Minutes spent in calls across direct messages, group chats, and servers",
-  "HynllZ": "Cancel parent connection request?",
-  "mK40bm": "Cancel request",
-  "czincX": "Do nothing",
+  "O/AElu": [
+    "Minutes spent in calls across direct messages, group chats, and servers"
+  ],
+  "HynllX": [
+    "Cancel parent connection request?"
+  ],
+  "mK40bk": [
+    "Cancel request"
+  ],
+  "czincX": [
+    "Do nothing"
+  ],
   "6mK5Pz": [
     "Allows us to personalize Sponsored Content, like Quests, using data we receive from advertisers and third-party data providers. If you opt out, your teen may still see Quests, but the Quests won’t be personalized using data from third parties. ",
     [
@@ -409,7 +583,7 @@
       ]
     ]
   ],
-  "Imp6Nj": [
+  "Imp6Ns": [
     "Allows us to use information, such as who your teen talks to and what games they play, to personalize Discord for them. ",
     [
       8,
@@ -425,7 +599,7 @@
       ]
     ]
   ],
-  "Z5yJZ2": [
+  "Z5yJZy": [
     "Allows us to use and process your teen's information to understand and improve our services. ",
     [
       8,
@@ -441,7 +615,7 @@
       ]
     ]
   ],
-  "i284fX": [
+  "i284fU": [
     "Some settings are managed by your guardian. Check in with them to make changes. ",
     [
       8,
@@ -465,8 +639,10 @@
     ],
     "."
   ],
-  "ZhaNu7": "Use my teen's Discord activity to personalize Sponsored Content",
-  "cnCK6e": [
+  "ZhaNu8": [
+    "Use my teen's Discord activity to personalize Sponsored Content"
+  ],
+  "cnCK6b": [
     "Allows us to personalize Sponsored Content, like Quests, using your teen's Discord activity, such as the games they play. If you opt out, your teen may still see Quests, but they won’t be personalized. ",
     [
       8,
@@ -482,10 +658,16 @@
       ]
     ]
   ],
-  "ahKIJC": "Teen Account Settings",
-  "7aYkh4": "Filter messages from server members your teen may not know",
-  "Sv236e": "You can manage certain settings for your teen’s account. Your teen will not be able to adjust these specific settings on their own. We encourage you to talk to your teen about how to customize these settings.",
-  "w0JA3N": [
+  "ahKIJO": [
+    "Teen Account Settings"
+  ],
+  "7aYkh1": [
+    "Filter messages from server members your teen may not know"
+  ],
+  "Sv236e": [
+    "You can manage certain settings for your teen’s account. Your teen will not be able to adjust these specific settings on their own. We encourage you to talk to your teen about how to customize these settings."
+  ],
+  "w0JA3P": [
     [
       6,
       "count",
@@ -501,7 +683,7 @@
       "cardinal"
     ]
   ],
-  "X9rW0t": [
+  "X9rW0j": [
     "Some ",
     [
       8,
@@ -512,52 +694,142 @@
     ],
     " are managed by your guardian. Check in with them to make changes."
   ],
-  "1xBHHR": "To protect your teen's privacy, you will not be able to see the contents of their messages or calls.",
-  "0QDVFB": "Your parents will not see the contents of your messages or calls.",
-  "82y87e": "What your teen writes or says",
-  "ASf7XF": "What you write or say",
-  "2OqtJC": "FAMILY CENTER DOES NOT SHARE:",
-  "TCzk/f": "FAMILY CENTER WILL NEVER SHARE WITH YOUR PARENTS:",
-  "DxFKkZ": "Names and avatars",
-  "S2ss5e": "New friends that your teen added or accepted",
-  "l0ChgI": "New friends that you added or accepted",
-  "/zMYZW": "Recently added friends",
-  "JvJ3Pz": "New friends",
-  "WrY56O": "Names, icons, and member counts",
-  "fEgtLS": "Includes servers your teen has recently joined, created, sent a message in, or participated in via voice or video call.",
-  "LDu4Ul": "Includes servers you have recently joined, created, sent a message in, or participated in via voice or video call.",
-  "44NEx8": "Servers joined or participated in",
-  "3Orpws": "What are connected parents able to see?",
-  "WGz9DQ": "What are connected parents and guardians able to see?",
-  "f28y/v": "What are connected parents able to see?",
-  "+yrQhY": "What are connected parents and guardians able to see?",
-  "ep6mdH": "All purchases your teen made, including Shop and subscriptions",
-  "dES/2t": "All purchases you have made, including Shop and subscriptions",
-  "PjM3r6": "Total purchases",
-  "TeNlMT": "If they choose to share a report they filed, you'll be notified via email",
-  "tHTyRk": "You have the option to share a report after you submit it. If you choose to share, your guardian will be notified via email",
-  "0cuLn5": "Reports shared by your teen",
-  "30+sio": "Reports shared by you",
-  "tdgcf3": "You can manage certain settings for your teen's account that they can't edit on their own.",
-  "wZejZm": "Your guardian will be able to manage some settings for your account that you can't edit on your own.",
-  "UCuHMz": "Teen Account Settings",
-  "KBgAra": "Names, avatars, and times of last message or call",
-  "oYf9Pz": "This includes direct messages and group chats",
-  "Z3G+8v": "Users messaged or called in direct or group chats",
-  "4SCALi": "Users messaged or called",
-  "Ief2xc": "Minutes spent in calls across direct messages, group chats, and servers",
-  "GNs2ZG": "Total time spent in voice or video",
-  "LcM8BQ": "Declining your parent’s request will send them a notification that you declined their request.",
-  "cXgKMD": "Notice",
-  "teIRCQ": "Decline parent connection request?",
-  "dKxFcn": "Decline",
-  "c5L+sr": "Disconnect",
-  "/MYCeX": "I understand that disconnecting this teen will revoke my access to their Discord activity information.",
-  "VJaHUV": "I understand that disconnecting this parent will revoke their access to my Discord activity information.",
-  "EvMGLS": "Disconnecting from your teen will send them a notification that you removed them. It will also revoke your access to their Discord activity information.",
-  "f1SUeX": "Disconnecting from your parent will send them a notification that you removed them. It will also revoke their access to your Discord activity information.",
-  "VKblNj": "Notice",
-  "NMSTb2": [
+  "1xBHHV": [
+    "To protect your teen's privacy, you will not be able to see the contents of their messages or calls."
+  ],
+  "0QDVFN": [
+    "Your parents will not see the contents of your messages or calls."
+  ],
+  "82y87X": [
+    "What your teen writes or says"
+  ],
+  "ASf7XN": [
+    "What you write or say"
+  ],
+  "2OqtJJ": [
+    "FAMILY CENTER DOES NOT SHARE:"
+  ],
+  "TCzk/e": [
+    "FAMILY CENTER WILL NEVER SHARE WITH YOUR PARENTS:"
+  ],
+  "DxFKkd": [
+    "Names and avatars"
+  ],
+  "S2ss5X": [
+    "New friends that your teen added or accepted"
+  ],
+  "l0ChgF": [
+    "New friends that you added or accepted"
+  ],
+  "/zMYZX": [
+    "Recently added friends"
+  ],
+  "JvJ3P/": [
+    "New friends"
+  ],
+  "WrY56N": [
+    "Names, icons, and member counts"
+  ],
+  "fEgtLV": [
+    "Includes servers your teen has recently joined, created, sent a message in, or participated in via voice or video call."
+  ],
+  "LDu4Uk": [
+    "Includes servers you have recently joined, created, sent a message in, or participated in via voice or video call."
+  ],
+  "44NEx6": [
+    "Servers joined or participated in"
+  ],
+  "3Orpwl": [
+    "What are connected parents able to see?"
+  ],
+  "WGz9Dc": [
+    "What are connected parents and guardians able to see?"
+  ],
+  "f28y/v": [
+    "What are connected parents able to see?"
+  ],
+  "+yrQhd": [
+    "What are connected parents and guardians able to see?"
+  ],
+  "ep6mdN": [
+    "All purchases your teen made, including Shop and subscriptions"
+  ],
+  "dES/2r": [
+    "All purchases you have made, including Shop and subscriptions"
+  ],
+  "PjM3r5": [
+    "Total purchases"
+  ],
+  "TeNlMb": [
+    "If they choose to share a report they filed, you'll be notified via email"
+  ],
+  "tHTyRh": [
+    "You have the option to share a report after you submit it. If you choose to share, your guardian will be notified via email"
+  ],
+  "0cuLn1": [
+    "Reports shared by your teen"
+  ],
+  "30+sih": [
+    "Reports shared by you"
+  ],
+  "tdgcf1": [
+    "You can manage certain settings for your teen's account that they can't edit on their own."
+  ],
+  "wZejZr": [
+    "Your guardian will be able to manage some settings for your account that you can't edit on your own."
+  ],
+  "UCuHM8": [
+    "Teen Account Settings"
+  ],
+  "KBgArX": [
+    "Names, avatars, and times of last message or call"
+  ],
+  "oYf9P7": [
+    "This includes direct messages and group chats"
+  ],
+  "Z3G+8h": [
+    "Users messaged or called in direct or group chats"
+  ],
+  "4SCALu": [
+    "Users messaged or called"
+  ],
+  "Ief2xc": [
+    "Minutes spent in calls across direct messages, group chats, and servers"
+  ],
+  "GNs2ZH": [
+    "Total time spent in voice or video"
+  ],
+  "LcM8BS": [
+    "Declining your parent’s request will send them a notification that you declined their request."
+  ],
+  "cXgKMD": [
+    "Notice"
+  ],
+  "teIRCR": [
+    "Decline parent connection request?"
+  ],
+  "dKxFcn": [
+    "Decline"
+  ],
+  "c5L+sl": [
+    "Disconnect"
+  ],
+  "/MYCee": [
+    "I understand that disconnecting this teen will revoke my access to their Discord activity information."
+  ],
+  "VJaHUb": [
+    "I understand that disconnecting this parent will revoke their access to my Discord activity information."
+  ],
+  "EvMGLT": [
+    "Disconnecting from your teen will send them a notification that you removed them. It will also revoke your access to their Discord activity information."
+  ],
+  "f1SUeW": [
+    "Disconnecting from your parent will send them a notification that you removed them. It will also revoke their access to your Discord activity information."
+  ],
+  "VKblNt": [
+    "Notice"
+  ],
+  "NMSTb/": [
     "Disconnect from ",
     [
       5,
@@ -581,9 +853,13 @@
     ],
     " days"
   ],
-  "VjIAQU": "No activity today",
-  "2a8xHR": "No activity since yesterday",
-  "GKzqWl": [
+  "VjIAQQ": [
+    "No activity today"
+  ],
+  "2a8xHY": [
+    "No activity since yesterday"
+  ],
+  "GKzqWi": [
     "You can connect up to 8 accounts in Family Center. To add another account, you must first remove a connected account. Visit our ",
     [
       8,
@@ -600,8 +876,10 @@
     ],
     " to learn more."
   ],
-  "bS5x9/": "You've reached your connection limit!",
-  "69F+eX": [
+  "bS5x94": [
+    "You've reached your connection limit!"
+  ],
+  "69F+eS": [
     "You can connect up to 3 accounts in Family Center. To add another account, you must first remove a connected account. Visit our ",
     [
       8,
@@ -618,11 +896,19 @@
     ],
     " to learn more."
   ],
-  "MzX4RE": "You've reached your connection limit!",
-  "Uss2dn": "Please try again later.",
-  "nGX8Cg": "Something went wrong!",
-  "Wu8BKy": "Something went wrong! Please try again later.",
-  "xNEkd3": [
+  "MzX4RP": [
+    "You've reached your connection limit!"
+  ],
+  "Uss2dn": [
+    "Please try again later."
+  ],
+  "nGX8Co": [
+    "Something went wrong!"
+  ],
+  "Wu8BK2": [
+    "Something went wrong! Please try again later."
+  ],
+  "xNEkdx": [
     "Your teen can accept your request in the Family Center. You'll receive an email to ",
     [
       1,
@@ -630,9 +916,13 @@
     ],
     " once they accept or deny the request."
   ],
-  "Xyjnws": "Your teen can accept your request in the Family Center. You'll receive an email to your email once they accept or deny the request.",
-  "tu0MRk": "Connection request already sent!",
-  "On5iRE": [
+  "Xyjnwn": [
+    "Your teen can accept your request in the Family Center. You'll receive an email to your email once they accept or deny the request."
+  ],
+  "tu0MRv": [
+    "Connection request already sent!"
+  ],
+  "On5iRI": [
     "Visit our ",
     [
       8,
@@ -649,21 +939,49 @@
     ],
     " to learn more."
   ],
-  "W9JLJi": "You must be over 18 to connect with this teen as a parent",
-  "6JkHSk": "Why Family Center?",
-  "bmhCnJ": "You can see who your teen is talking to, while still respecting their privacy.",
-  "5RZ8Tk": "Message contents are never shared with your parents.",
-  "qITXhY": "Guardians won't see the private contents of your messages",
-  "001l3t": "Messages stay private",
-  "1xPTwM": "Setup is as simple as using your phone to scan the QR code your teen shows you.",
-  "Rm/6a2": "Setup is as simple as having your parent scan a QR code.",
-  "+pi4Ym": "Setup is as easy as having your guardian scan the QR code you show them.",
-  "hhOuMT": "Easily connect",
-  "68zfxM": "You and your teen see the exact same information, so you're on the same page.",
-  "XKnFFh": "You and your parents see the exact same information.",
-  "t7SkFx": "You and your guardian see the same information, so you're on the same page.",
-  "yipAeH": "Transparent sharing",
-  "KOwsf3": [
+  "W9JLJh": [
+    "You must be over 18 to connect with this teen as a parent"
+  ],
+  "6JkHSg": [
+    "Why Family Center?"
+  ],
+  "bmhCnL": [
+    "You can see who your teen is talking to, while still respecting their privacy."
+  ],
+  "5RZ8Tq": [
+    "Message contents are never shared with your parents."
+  ],
+  "qITXhY": [
+    "Guardians won't see the private contents of your messages"
+  ],
+  "001l3m": [
+    "Messages stay private"
+  ],
+  "1xPTwE": [
+    "Setup is as simple as using your phone to scan the QR code your teen shows you."
+  ],
+  "Rm/6a0": [
+    "Setup is as simple as having your parent scan a QR code."
+  ],
+  "+pi4Yt": [
+    "Setup is as easy as having your guardian scan the QR code you show them."
+  ],
+  "hhOuMe": [
+    "Easily connect"
+  ],
+  "68zfxD": [
+    "You and your teen see the exact same information, so you're on the same page."
+  ],
+  "XKnFFq": [
+    "You and your parents see the exact same information."
+  ],
+  "t7SkFy": [
+    "You and your guardian see the same information, so you're on the same page."
+  ],
+  "yipAeP": [
+    "Transparent sharing"
+  ],
+  "KOwsf/": [
     "Text DISCORD to 741741 to speak to a trained volunteer crisis counselor at Crisis Text Line, available 24/7. ",
     [
       8,
@@ -680,29 +998,31 @@
     ],
     " about our partnership with Crisis Text Line"
   ],
-  "7/tVho": "Need extra support?",
-  "Q8XnAQ": [
+  "7/tVhv": [
+    "Need extra support?"
+  ],
+  "Q8XnAa": [
     "PENDING REQUESTS — ",
     [
       1,
       "count"
     ]
   ],
-  "IkAgkJ": [
+  "IkAgkG": [
     "INCOMING PARENT REQUESTS — ",
     [
       1,
       "count"
     ]
   ],
-  "MP3kho": [
+  "MP3khg": [
     "Request sent on ",
     [
       1,
       "date"
     ]
   ],
-  "pWig19": [
+  "pWig18": [
     "Request sent ",
     [
       2,
@@ -725,7 +1045,7 @@
     ],
     " ago"
   ],
-  "ErkYCA": [
+  "ErkYCI": [
     "Request sent ",
     [
       2,
@@ -748,7 +1068,7 @@
     ],
     " ago"
   ],
-  "InzMn5": [
+  "InzMn3": [
     "Request sent ",
     [
       2,
@@ -771,11 +1091,19 @@
     ],
     " ago"
   ],
-  "CJdoeX": "Request sent < 1 minute ago",
-  "GvfssL": "Request sent yesterday",
-  "wg2xwc": "Hide QR Code",
-  "10dX6e": "Reveal QR Code",
-  "LyyCsL": [
+  "CJdoee": [
+    "Request sent < 1 minute ago"
+  ],
+  "GvfssA": [
+    "Request sent yesterday"
+  ],
+  "wg2xwQ": [
+    "Hide QR Code"
+  ],
+  "10dX6U": [
+    "Reveal QR Code"
+  ],
+  "LyyCsE": [
     "When your parent scans this QR code, you will receive a connection request. If you accept this request, they will be able to view information about your activity in Family Center. ",
     [
       8,
@@ -791,11 +1119,19 @@
       ]
     ]
   ],
-  "AVTZaG": "Connect with your parent",
-  "iHYMAw": "Only allow your parents to see this QR code.",
-  "goDyoa": "You can disconnect from a connected family member at any time if you change your mind.",
-  "z4a9HB": "Connect with Teen",
-  "RcTgiI": [
+  "AVTZaN": [
+    "Connect with your parent"
+  ],
+  "iHYMAz": [
+    "Only allow your parents to see this QR code."
+  ],
+  "goDyoe": [
+    "You can disconnect from a connected family member at any time if you change your mind."
+  ],
+  "z4a9HP": [
+    "Connect with Teen"
+  ],
+  "RcTgiE": [
     "You can connect up to ",
     [
       2,
@@ -803,7 +1139,7 @@
     ],
     " teens in Family Center. To add another account, you must first remove one of the connected accounts above."
   ],
-  "1/PzIi": [
+  "1/PzIj": [
     "You can connect up to ",
     [
       2,
@@ -811,8 +1147,10 @@
     ],
     " parents in Family Center. To add another account, you must first remove one of the connected accounts above."
   ],
-  "JsAEDg": "In order to connect with your teen, use the Discord app on your phone to scan the QR code they provide. After connecting, you will see high-level information about your teen's activity on Discord.",
-  "yMnoDg": [
+  "JsAEDi": [
+    "In order to connect with your teen, use the Discord app on your phone to scan the QR code they provide. After connecting, you will see high-level information about your teen's activity on Discord."
+  ],
+  "yMnoDl": [
     "Connecting with your parent will give them limited visibility to information about your account. You will see the exact same information they do on the Activity tab! ",
     [
       8,
@@ -828,20 +1166,46 @@
       ]
     ]
   ],
-  "B0NPbm": "Easily connect with your teens!",
-  "zUCWEB": "Easily connect with your parents!",
-  "1M9So6": "Your teen can find this by going to Family Center in user settings and clicking My Family.",
-  "7xxAnp": "Ask your teen for their QR code",
-  "GzMFnZ": "This will send a connection request to your teen, like magic!",
-  "AXgx+f": "Scan the QR code with your Discord app",
-  "8rLBxM": "Once they give consent for you to view their activity data, you’re good to go.",
-  "MZn1tL": "Have your teen accept the connection request",
-  "Ta9byc": "Connect with Parent",
-  "8SLtqa": "Connect with Guardian",
-  "gVWG+/": "My Family",
-  "ISg34u": "Send Connection Request",
-  "GH11eH": "Connect with your Teen:",
-  "dVtWIS": [
+  "B0NPbp": [
+    "Easily connect with your teens!"
+  ],
+  "zUCWEL": [
+    "Easily connect with your parents!"
+  ],
+  "1M9So2": [
+    "Your teen can find this by going to Family Center in user settings and clicking My Family."
+  ],
+  "7xxAni": [
+    "Ask your teen for their QR code"
+  ],
+  "GzMFnb": [
+    "This will send a connection request to your teen, like magic!"
+  ],
+  "AXgx+a": [
+    "Scan the QR code with your Discord app"
+  ],
+  "8rLBxD": [
+    "Once they give consent for you to view their activity data, you’re good to go."
+  ],
+  "MZn1tG": [
+    "Have your teen accept the connection request"
+  ],
+  "Ta9byS": [
+    "Connect with Parent"
+  ],
+  "8SLtqb": [
+    "Connect with Guardian"
+  ],
+  "gVWG+6": [
+    "My Family"
+  ],
+  "ISg34l": [
+    "Send Connection Request"
+  ],
+  "GH11eI": [
+    "Connect with your Teen:"
+  ],
+  "dVtWId": [
     "Your teen can accept your request in the Family Center. You'll receive an email to ",
     [
       1,
@@ -849,9 +1213,13 @@
     ],
     " once they accept or deny the request."
   ],
-  "EpwfZm": "Connection request sent!",
-  "vORl9f": "Select a family member",
-  "6tsC8v": [
+  "EpwfZl": [
+    "Connection request sent!"
+  ],
+  "vORl9Q": [
+    "Select a family member"
+  ],
+  "6tsC8u": [
     "Visit ",
     [
       8,
@@ -868,7 +1236,16 @@
     ],
     " vetted directory of global helplines for free and confidential support in your country."
   ],
-  "RZqaJi": "Family Center",
-  "JNLpDQ": "What can I see?",
-  "q3IRam": "What can my parent see?"
+  "RZqaJn": [
+    "Family Center"
+  ],
+  "JNLpDZ": [
+    "What can I see?"
+  ],
+  "q3IRal": [
+    "What can my parent see?"
+  ],
+  "n6LOrh": [
+    "What can my parent or guardian see?"
+  ]
 }

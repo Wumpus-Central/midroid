@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public sealed class SearchableSelectComponent protected constructor() : SelectComponent() {
    public abstract val selectedOptions: List<SearchableSelectItem>
 

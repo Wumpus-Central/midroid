@@ -1,13 +1,13 @@
 package com.discord.billing.react.events
 
-import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {
    private final val purchaseToken: String
    private final val packageName: String
@@ -22,10 +22,14 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
 
    public open fun serialize(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a(
-            "purchase",
-            NativeMapExtensionsKt.nativeMapOf(s.a("purchaseToken", this.purchaseToken), s.a("packageName", this.packageName), s.a("productId", this.sku))
-         )
+         new Pair[]{
+            v.a(
+               "purchase",
+               NativeMapExtensionsKt.nativeMapOf(
+                  new Pair[]{v.a("purchaseToken", this.purchaseToken), v.a("packageName", this.packageName), v.a("productId", this.sku)}
+               )
+            )
+         }
       );
    }
 

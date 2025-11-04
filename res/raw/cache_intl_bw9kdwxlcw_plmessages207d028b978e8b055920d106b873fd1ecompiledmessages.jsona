@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Twoje konto zostało odblokowane",
-  "d9Ykjo": "Kod potwierdzenia",
-  "bFbsV1": "Wprowadź swój adres e-mail",
-  "RRBNpq": "Dalej",
-  "0DHxys": [
+  "/fHz9S": [
+    "Twoje konto zostało odblokowane"
+  ],
+  "d9Ykjr": [
+    "Kod potwierdzenia"
+  ],
+  "bFbsV6": [
+    "Wprowadź swój adres e-mail"
+  ],
+  "RRBNpv": [
+    "Dalej"
+  ],
+  "0DHxym": [
     "To nie Ty? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Możemy poprosić o dodatkowe informacje, na przykład czy jesteś robotem",
-  "Ks6opq": "Rozpocznij",
-  "I2Ctk5": "Wykonaj poniższe kroki, aby odblokować swoje konto",
-  "RRamMD": "Zablokowano konto",
-  "ah0EUl": "Wyślij kod ponownie",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Możemy poprosić o dodatkowe informacje, na przykład czy jesteś robotem"
+  ],
+  "Ks6opt": [
+    "Rozpocznij"
+  ],
+  "I2Ctk1": [
+    "Wykonaj poniższe kroki, aby odblokować swoje konto"
+  ],
+  "RRamMH": [
+    "Zablokowano konto"
+  ],
+  "ah0EUu": [
+    "Wyślij kod ponownie"
+  ],
+  "2+Lyn0": [
     "Wyślij kod ponownie za ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " s"
   ],
-  "3AXMYm": "Nieudane ponowne wysłanie kodu weryfikacji",
-  "dSkE/P": "Zweryfikuj grupę wiekową",
-  "o4D6fn": "Zaktualizuj",
-  "VBZJJi": "Zaktualizuj aplikację, aby kontynuować.",
-  "yxqMCA": "Wymagana aktualizacja",
-  "wq2RDg": "Zweryfikuj",
-  "PfbG6O": "Nieprawidłowy kod weryfikacji",
-  "aveKoK": "Wysłano kod weryfikacji na Twój adres e-mail. Powinien dotrzeć w ciągu kilku minut.",
-  "Qm6K/v": "Zweryfikuj adres e-mail"
+  "3AXMYu": [
+    "Nieudane ponowne wysłanie kodu weryfikacji"
+  ],
+  "dSkE/A": [
+    "Zweryfikuj grupę wiekową"
+  ],
+  "o4D6fm": [
+    "Zaktualizuj"
+  ],
+  "VBZJJg": [
+    "Zaktualizuj aplikację, aby kontynuować."
+  ],
+  "yxqMCD": [
+    "Wymagana aktualizacja"
+  ],
+  "wq2RDq": [
+    "Zweryfikuj"
+  ],
+  "PfbG6H": [
+    "Nieprawidłowy kod weryfikacji"
+  ],
+  "aveKoG": [
+    "Wysłano kod weryfikacji na Twój adres e-mail. Powinien dotrzeć w ciągu kilku minut."
+  ],
+  "Qm6K/s": [
+    "Zweryfikuj adres e-mail"
+  ]
 }

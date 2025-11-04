@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Grotte",
-  "qRFFLC": "Friture",
-  "lFIyMz": "Fantôme",
-  "fPU01d": "Mégaphone",
-  "KN+v7+": "Lapin de l'espace",
-  "kHmvdn": "Cyberboss"
+  "Xypb3z": [
+    "Grotte"
+  ],
+  "qRFFLK": [
+    "Friture"
+  ],
+  "lFIyM/": [
+    "Fantôme"
+  ],
+  "fPU01d": [
+    "Mégaphone"
+  ],
+  "KN+v77": [
+    "Lapin de l'espace"
+  ],
+  "kHmvdt": [
+    "Cyberboss"
+  ]
 }

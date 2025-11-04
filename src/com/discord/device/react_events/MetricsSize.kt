@@ -1,6 +1,5 @@
 package com.discord.device.react_events
 
-import B9.s
 import android.util.DisplayMetrics
 import androidx.window.layout.WindowMetrics
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -8,6 +7,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
+import xa.v
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -52,7 +52,9 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(s.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), s.a("height", SizeUtilsKt.getPxToDp(this.heightPixels)));
+      return NativeMapExtensionsKt.nativeMapOf(
+         new Pair[]{v.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), v.a("height", SizeUtilsKt.getPxToDp(this.heightPixels))}
+      );
    }
 
    public override fun toString(): String {

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.polls
 
-import H9.a
+import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = PollRadioStyle.Serializer::class)
+@m(with = PollRadioStyle.Serializer::class)
 public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
    CHECKMARK(3),
    FILLED(2),

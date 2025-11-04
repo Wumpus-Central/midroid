@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
 
 public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogModuleSpec(var1) {
-   public override fun checkForStallReport(): WritableMap? {
+   public open fun checkForStallReport(): WritableMap? {
       val var1: StallReport = JSWatchdogManager.INSTANCE.checkForExistingReport();
       val var2: WritableMap;
       if (var1 != null) {
@@ -18,11 +18,11 @@ public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSW
       return var2;
    }
 
-   public override fun disable() {
+   public open fun disable() {
       JSWatchdogManager.INSTANCE.disable();
    }
 
-   public override fun ping(sentTimestamp: Double, sessionId: String?, resetTimestamps: Boolean?, enableTrace: Boolean?, promise: Promise) {
+   public open fun ping(sentTimestamp: Double, sessionId: String?, resetTimestamps: Boolean?, enableTrace: Boolean?, promise: Promise) {
       val var7: Boolean;
       if (var4 != null) {
          var7 = var4;

@@ -2,7 +2,7 @@
 
 package com.discord.analytics
 
-import G9.b
+import Ca.b
 import com.android.installreferrer.api.InstallReferrerClient
 import com.android.installreferrer.api.InstallReferrerStateListener
 import kotlin.coroutines.Continuation
@@ -21,7 +21,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.C();
-   val var4: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
+   val var3: InstallReferrerStateListener = new InstallReferrerStateListener(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -40,7 +40,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.e(
+   var2.b(
       new Function1<java.lang.Throwable, Unit>(var0) {
          final InstallReferrerClient $this_await;
 
@@ -54,11 +54,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var2: kotlin.Result.a = Result.e;
+               val var6: kotlin.Result.a = Result.e;
                var5.endConnection();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: kotlin.Result.a = Result.e;
+               val var2: kotlin.Result.a = Result.e;
                Result.b(c.a(var3));
                return;
             }
@@ -68,24 +68,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: kotlin.Result.a = Result.e;
-      var0.startConnection(var4);
-      var7 = Result.b(Unit.a);
+      val var4: kotlin.Result.a = Result.e;
+      var0.startConnection(var3);
+      var8 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: kotlin.Result.a = Result.e;
-      var7 = Result.b(c.a(var5));
+      val var7: kotlin.Result.a = Result.e;
+      var8 = Result.b(c.a(var5));
       break label20;
    }
 
-   val var8: java.lang.Throwable = Result.e(var7);
-   if (var8 != null) {
-      var2.resumeWith(Result.b(c.a(var8)));
+   val var9: java.lang.Throwable = Result.e(var8);
+   if (var9 != null) {
+      var2.resumeWith(Result.b(c.a(var9)));
    }
 
-   val var9: Any = var2.z();
-   if (var9 === b.e()) {
+   val var10: Any = var2.z();
+   if (var10 === b.e()) {
       g.c(var1);
    }
 
-   return var9;
+   return var10;
 }

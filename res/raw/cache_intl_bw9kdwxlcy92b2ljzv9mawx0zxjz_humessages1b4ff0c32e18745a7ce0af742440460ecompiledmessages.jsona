@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Barlang",
-  "qRFFLC": "Olajban sült",
-  "lFIyMz": "Szellem",
-  "fPU01d": "Megafon",
-  "KN+v7+": "Űrnyuszi",
-  "kHmvdn": "Kibergóré"
+  "Xypb3z": [
+    "Barlang"
+  ],
+  "qRFFLK": [
+    "Olajban sült"
+  ],
+  "lFIyM/": [
+    "Szellem"
+  ],
+  "fPU01d": [
+    "Megafon"
+  ],
+  "KN+v77": [
+    "Űrnyuszi"
+  ],
+  "kHmvdt": [
+    "Kibergóré"
+  ]
 }

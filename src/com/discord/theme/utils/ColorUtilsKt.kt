@@ -2,7 +2,7 @@
 
 package com.discord.theme.utils
 
-import O9.a
+import Ka.a
 import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.Resources
@@ -11,7 +11,6 @@ import android.graphics.Color
 import android.graphics.PorterDuff.Mode
 import android.view.View
 import android.widget.ImageView
-import androidx.core.widget.e
 import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
@@ -23,28 +22,28 @@ private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(
 private final val hsv: FloatArray = new float[3]
 
 private fun applySaturationFactor(color: Int): Int {
-   var var4: Float = ThemeManager.INSTANCE.getSaturationFactor();
-   if (var4 != 1.0F) {
+   var var5: Float = ThemeManager.INSTANCE.getSaturationFactor();
+   if (var5 != 1.0F) {
       val var7: FloatArray = hsv;
       Color.colorToHSV(var0, hsv);
       var var1: Float = var7[1];
       val var2: Float = var7[2];
       val var6: Float = var7[2] * var1;
       val var3: Float = 2;
-      val var5: Float = var2 - var6 / 2;
+      val var4: Float = var2 - var6 / 2;
       if (var2 - var6 / 2 != 0.0F && var2 - var6 / 2 != 1.0F) {
-         var1 = var6 / (1 - Math.abs(2.0F * var5 - 1.0F));
+         var1 = var6 / (1 - Math.abs(2.0F * var4 - 1.0F));
       }
 
-      var4 = var1 * var4 * Math.min(1.0F, 1.0F - var5) + var5;
-      if (var4 == 0.0F) {
+      var5 = var1 * var5 * Math.min(1.0F, 1.0F - var4) + var4;
+      if (var5 == 0.0F) {
          var1 = 0.0F;
       } else {
-         var1 = var3 * (1.0F - var5 / var4);
+         var1 = var3 * (1.0F - var4 / var5);
       }
 
       var7[1] = var1;
-      var7[2] = var4;
+      var7[2] = var5;
       var0 = Color.HSVToColor(var7);
    }
 
@@ -87,10 +86,10 @@ public fun interpolateColors(colorA: Int, colorB: Int, t: Float, minT: Float = 0
       val var5: Int = Color.blue(var0);
       var0 = Color.alpha(var0);
       return Color.argb(
-         d.l((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         d.l((int)((float)var8 + (float)(Color.red(var1) - var8) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         d.l((int)((float)var7 + (float)(Color.green(var1) - var7) * ((var2 - var3) / (var4 - var3))), 0, 255),
-         d.l((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
+         e.m((int)((float)var0 + (float)(Color.alpha(var1) - var0) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         e.m((int)((float)var8 + (float)(Color.red(var1) - var8) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         e.m((int)((float)var7 + (float)(Color.green(var1) - var7) * ((var2 - var3) / (var4 - var3))), 0, 255),
+         e.m((int)((float)var5 + (float)(Color.blue(var1) - var5) * ((var2 - var3) / (var4 - var3))), 0, 255)
       );
    }
 }
@@ -138,7 +137,7 @@ public fun ImageView.setTintColor(colorInt: Int?) {
       var2 = null;
    }
 
-   e.c(var0, var2);
+   androidx.core.widget.e.c(var0, var2);
 }
 
 public fun SimpleDraweeView.setTintColor(colorInt: Int?) {

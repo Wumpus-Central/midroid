@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import com.discord.image.animated_image.apng.APNGImageView
-import com.discord.image.animated_image.apng.APNGView
+import com.discord.image.animated_image.apng.APNGView.Config
 import com.discord.sticker.sticker_types.PNGStickerView
 import com.discord.sticker.sticker_types.RLottieImageView
 import com.discord.sticker.sticker_types.RLottieStubView
@@ -25,7 +25,7 @@ public class StickerView  public constructor(context: Context, attrs: AttributeS
 
    public fun asApng(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean, accessibilityLabel: String?) {
       APNGImageView.inflateApngView$default(this, false, 1, null);
-      this.getApngView().loadImage(new APNGView.Config(var1, var4, false, var2, var3, "stickers", 4, null));
+      this.getApngView().loadImage(new Config(var1, var4, false, var2, var3, "stickers", 4, null));
       if (var5 != null) {
          this.getApngView().setContentDescription(var5);
       }
@@ -141,7 +141,7 @@ public class StickerView  public constructor(context: Context, attrs: AttributeS
       }
    }
 
-   public override fun recycleChild(child: View) {
+   public open fun recycleChild(child: View) {
       super.recycleChild(var1);
       val var2: RLottieImageView;
       if (var1 is RLottieImageView) {

@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Cave",
-  "qRFFLC": "Deep Fried",
-  "lFIyMz": "Ghost",
-  "fPU01d": "Megaphone",
-  "KN+v7+": "Space Bunny",
-  "kHmvdn": "Cyber Boss"
+  "Xypb3z": [
+    "Cave"
+  ],
+  "qRFFLK": [
+    "Deep Fried"
+  ],
+  "lFIyM/": [
+    "Ghost"
+  ],
+  "fPU01d": [
+    "Megaphone"
+  ],
+  "KN+v77": [
+    "Space Bunny"
+  ],
+  "kHmvdt": [
+    "Cyber Boss"
+  ]
 }

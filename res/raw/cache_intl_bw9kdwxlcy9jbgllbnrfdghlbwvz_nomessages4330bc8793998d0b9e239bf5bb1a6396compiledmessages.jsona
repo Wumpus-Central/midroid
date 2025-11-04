@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Opprettet av ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Forhåndsvisning av tilpasset tema",
-  "qZMUoK": "Slik vises temaet ditt på alle Discord-enheter.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Forhåndsvisning av tilpasset tema"
+  ],
+  "qZMUoL": [
+    "Slik vises temaet ditt på alle Discord-enheter."
+  ],
+  "v15Ipv": [
     "Når synkronisering er slått på, kan egendefinerte temaer [beta] som er laget på datamaskin, påvirke temaet på mobil. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Egendefinert tema",
-  "KSBBpK": "Egendefinert tema"
+  "yl1iMm": [
+    "Egendefinert tema"
+  ],
+  "KSBBpC": [
+    "Egendefinert tema"
+  ]
 }

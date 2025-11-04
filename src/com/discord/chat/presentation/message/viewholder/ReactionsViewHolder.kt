@@ -3,7 +3,6 @@ package com.discord.chat.presentation.message.viewholder
 import android.view.View.OnClickListener
 import com.discord.chat.bridge.reaction.MessageReaction
 import com.discord.chat.bridge.reaction.ReactionsTheme
-import com.discord.reactions.ReactionView
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.reactions.ReactionView.Reaction
 import com.discord.theme.DiscordTheme
@@ -17,13 +16,13 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
    }
 
    @JvmStatic
-   fun `bind$lambda$0`(var0: Function1, var1: ReactionView.Reaction): Unit {
+   fun `bind$lambda$0`(var0: Function1, var1: Reaction): Unit {
       var0.invoke(var1);
       return Unit.a;
    }
 
    @JvmStatic
-   fun `bind$lambda$1`(var0: Function1, var1: ReactionView.Reaction): Unit {
+   fun `bind$lambda$1`(var0: Function1, var1: Reaction): Unit {
       var0.invoke(var1);
       return Unit.a;
    }

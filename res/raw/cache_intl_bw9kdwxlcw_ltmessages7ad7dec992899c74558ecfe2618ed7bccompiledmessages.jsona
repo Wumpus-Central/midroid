@@ -15,8 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "Paprastai greičiausias ir visiškai automatinis. Tau reikės tik kameros.",
-  "2yLvkZ": "Nufilmuok asmenukės tipo vaizdo įrašą",
-  "ZdmRwc": "Tau reikės vairuotojo pažymėjimo, paso ar kito asmens dokumento. Tada padaryk asmenukę, kad patvirtintum, jog tai tu.",
-  "dwkwo6": "Nuskaityk dokumentą"
+  "eJmat5": [
+    "Paprastai greičiausias ir visiškai automatinis. Tau reikės tik kameros."
+  ],
+  "2yLvkS": [
+    "Nufilmuok asmenukės tipo vaizdo įrašą"
+  ],
+  "ZdmRwW": [
+    "Tau reikės vairuotojo pažymėjimo, paso ar kito asmens dokumento. Tada padaryk asmenukę, kad patvirtintum, jog tai tu."
+  ],
+  "dwkwo0": [
+    "Nuskaityk dokumentą"
+  ],
+  "cR6336": [
+    "Nėra pasiekiamas joks amžiaus patvirtinimo būdas. Tai gali būti klaida."
+  ],
+  "hDvmYP": [
+    "Įkelti iš naujo"
+  ]
 }

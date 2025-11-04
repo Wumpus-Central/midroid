@@ -1,6 +1,5 @@
 package com.discord.tti_measurement_view
 
-import B9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.tti_measurement_view.events.OnMeasurementEvent
 import com.facebook.react.module.annotations.ReactModule
@@ -9,10 +8,11 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
 import kotlin.jvm.functions.Function2
+import xa.v
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", OnMeasurementEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("onMeasurement", OnMeasurementEvent::class))
 
    private fun onMeasurement(view: TTIMeasurementView, timestamp: Double) {
       this.reactEvents.emitEvent(var1, new OnMeasurementEvent(var2));
@@ -36,14 +36,14 @@ internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>
    }
 
    protected open fun getDelegate(): DCDTTIMeasurementViewManagerDelegate<TTIMeasurementView, TTIMeasurementViewManager> {
-      return new DCDTTIMeasurementViewManagerDelegate(this);
+      return new DCDTTIMeasurementViewManagerDelegate<>(this);
    }
 
-   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDTTIMeasurementView";
    }
 

@@ -1,11 +1,12 @@
 package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class TapObscuredMediaToggleData(messageId: String, channelId: String, attachmentId: String, embedId: String, isReveal: Boolean) : ReactEvent {
    public final val messageId: String
    public final val channelId: String
@@ -78,21 +79,21 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
          + java.lang.Boolean.hashCode(this.isReveal);
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.channelId;
       val var2: java.lang.String = this.attachmentId;
       val var6: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapObscuredMediaToggleData(messageId=");
-      var3.append(var4);
-      var3.append(", channelId=");
       var3.append(var5);
+      var3.append(", channelId=");
+      var3.append(var4);
       var3.append(", attachmentId=");
       var3.append(var2);
       var3.append(", embedId=");

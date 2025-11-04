@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Tenemos aquí un ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Todo esto se administra de forma local y ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " ha reemplazado el sistema global i18n."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Usa conectores como ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " para el contenido especial."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Esta cadena tiene un ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     " con la URL definida en la cadena."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Este enlace utiliza un ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     " proporcionado en tiempo de ejecución."
   ],
-  "swfLzc": "Este mensaje proviene de un archivo separado"
+  "swfLzV": [
+    "Este mensaje proviene de un archivo separado"
+  ]
 }

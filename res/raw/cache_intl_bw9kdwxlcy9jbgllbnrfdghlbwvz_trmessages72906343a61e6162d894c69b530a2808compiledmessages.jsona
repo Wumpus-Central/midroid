@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     [
       1,
       "username"
     ],
     " tarafından oluşturuldu"
   ],
-  "3ej1LS": "Özel tema ön izleme",
-  "qZMUoK": "Teman tüm Discord cihazlarında bu şekilde görünecek.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Özel tema ön izleme"
+  ],
+  "qZMUoL": [
+    "Teman tüm Discord cihazlarında bu şekilde görünecek."
+  ],
+  "v15Ipv": [
     "Senkronizasyon açıkken masaüstünde oluşturulan özel temalar [Beta] mobil temanı etkileyebilir. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Özel Tema",
-  "KSBBpK": "Özel Tema"
+  "yl1iMm": [
+    "Özel Tema"
+  ],
+  "KSBBpC": [
+    "Özel Tema"
+  ]
 }

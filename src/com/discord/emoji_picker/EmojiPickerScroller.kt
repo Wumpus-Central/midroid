@@ -8,6 +8,7 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.recycler_view.scroll.DebouncedScrollListener
 import com.discord.recycler_view.scroll.DebouncedVelocityTrackingScrollListener
 import com.discord.recycler_view.scroller.Scroller
+import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -49,7 +50,6 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
             super(300L, var1, null, var2, 4, null);
          }
 
-         @Override
          public void onScrolled(RecyclerView var1, int var2, int var3) {
             if (var2 != 0 || var3 != 0) {
                super.onScrolled(var1, var2, var3);
@@ -194,7 +194,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
          }
 
          this.scrollJumpingToPosition = true;
-         Scroller.scrollToPosition$default(this.scroller, var3, new Scroller.TargetAlignment.Top(0), var2, new l(this), null, null, 48, null);
+         Scroller.scrollToPosition$default(this.scroller, var3, new Top(0), var2, new l(this), null, null, 48, null);
       }
    }
 
@@ -320,22 +320,22 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
       public override fun toString(): String {
          val var1: Int = this.x;
-         val var4: Int = this.y;
-         val var2: Int = this.width;
-         val var5: Int = this.height;
-         val var6: Int = this.contentWidth;
+         val var5: Int = this.y;
+         val var4: Int = this.width;
+         val var6: Int = this.height;
+         val var2: Int = this.contentWidth;
          val var3: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
          var7.append(var1);
          var7.append(", y=");
-         var7.append(var4);
-         var7.append(", width=");
-         var7.append(var2);
-         var7.append(", height=");
          var7.append(var5);
-         var7.append(", contentWidth=");
+         var7.append(", width=");
+         var7.append(var4);
+         var7.append(", height=");
          var7.append(var6);
+         var7.append(", contentWidth=");
+         var7.append(var2);
          var7.append(", contentHeight=");
          var7.append(var3);
          var7.append(")");

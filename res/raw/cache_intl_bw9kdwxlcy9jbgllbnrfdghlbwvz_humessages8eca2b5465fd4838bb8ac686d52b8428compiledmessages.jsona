@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Létrehozta: ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Egyedi téma előnézete",
-  "qZMUoK": "Így fog kinézni a témád az összes Discord-eszközön.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Egyedi téma előnézete"
+  ],
+  "qZMUoL": [
+    "Így fog kinézni a témád az összes Discord-eszközön."
+  ],
+  "v15Ipv": [
     "Amikor be van kapcsolva a szinkronizálás, a számítógépen létrehozott egyedi témák [béta-verziója] hatással lehet a mobilos témádra. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Egyéni téma",
-  "KSBBpK": "Egyéni téma"
+  "yl1iMm": [
+    "Egyéni téma"
+  ],
+  "KSBBpC": [
+    "Egyéni téma"
+  ]
 }

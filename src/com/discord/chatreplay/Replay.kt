@@ -1,9 +1,9 @@
 package com.discord.chatreplay
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class Replay(filename: String, lastModified: Long) {
    public final val filename: String
    public final val lastModified: Long

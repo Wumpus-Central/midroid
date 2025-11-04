@@ -3,10 +3,9 @@ package com.discord.tti_manager.react
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactMarker
 import com.facebook.react.bridge.ReactMarkerConstants
-import com.facebook.react.bridge.ReactMarker.MarkerListener
 import kotlin.properties.a
 
-public object ReactMarkerListener : MarkerListener {
+public object ReactMarkerListener : ReactMarker.MarkerListener {
    public final var bundleStartedTimestamp: Long by a.a.a()
       public final get() {
          return (bundleStartedTimestamp$delegate.getValue(this, $$delegatedProperties[0]) as java.lang.Number).longValue();
@@ -47,57 +46,46 @@ public object ReactMarkerListener : MarkerListener {
       bundleParsedTimestamp$delegate = var0.a();
    }
 
-   public open fun logMarker(marker: ReactMarkerConstants?, tag: String?, instanceKey: Int) {
+   public override fun logMarker(name: ReactMarkerConstants, tag: String?, instanceKey: Int) {
       val var4: Long = System.currentTimeMillis();
-      val var6: java.lang.String;
-      if (var1 != null) {
-         var6 = var1.name();
-      } else {
-         var6 = null;
+      val var6: java.lang.String = var1.name();
+      TTIMetrics.INSTANCE.record(var6, var4, var2, true);
+      switch (var6.hashCode()) {
+         case -1775741598:
+            if (!var6.equals("REACT_BRIDGELESS_LOADING_START")) {
+               return;
+            }
+            break;
+         case -1048597525:
+            if (!var6.equals("PRE_RUN_JS_BUNDLE_START")) {
+               return;
+            }
+            break;
+         case -351240678:
+            if (var6.equals("CONTENT_APPEARED")) {
+               this.stop();
+            }
+
+            return;
+         case 241900896:
+            if (var6.equals("RUN_JS_BUNDLE_END")) {
+               this.setBundleParsedTimestamp(var4);
+            }
+
+            return;
+         case 551634855:
+            if (var6.equals("RUN_JS_BUNDLE_START")) {
+               this.setBundleLoadedTimestamp(var4);
+            }
+
+            return;
+         default:
+            return;
       }
 
-      if (var6 != null) {
-         TTIMetrics.INSTANCE.record(var6, var4, var2, true);
-      }
-
-      if (var6 != null) {
-         switch (var6.hashCode()) {
-            case -1775741598:
-               if (!var6.equals("REACT_BRIDGELESS_LOADING_START")) {
-                  return;
-               }
-               break;
-            case -1048597525:
-               if (!var6.equals("PRE_RUN_JS_BUNDLE_START")) {
-                  return;
-               }
-               break;
-            case -351240678:
-               if (var6.equals("CONTENT_APPEARED")) {
-                  this.stop();
-               }
-
-               return;
-            case 241900896:
-               if (var6.equals("RUN_JS_BUNDLE_END")) {
-                  this.setBundleParsedTimestamp(var4);
-               }
-
-               return;
-            case 551634855:
-               if (var6.equals("RUN_JS_BUNDLE_START")) {
-                  this.setBundleLoadedTimestamp(var4);
-               }
-
-               return;
-            default:
-               return;
-         }
-
-         this.setBundleStartedTimestamp(var4);
-         this.setBundleLoadedTimestamp(var4);
-         this.setBundleParsedTimestamp(var4);
-      }
+      this.setBundleStartedTimestamp(var4);
+      this.setBundleLoadedTimestamp(var4);
+      this.setBundleParsedTimestamp(var4);
    }
 
    public fun start() {

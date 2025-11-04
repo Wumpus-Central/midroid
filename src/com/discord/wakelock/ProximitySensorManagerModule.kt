@@ -11,7 +11,7 @@ internal class ProximitySensorManagerModule(reactContext: ReactApplicationContex
       this.proximityWakeLock = new ProximitySensorWakeLock(var1, 600000L, "discord:proximitywakelock");
    }
 
-   public override fun setProximityMonitoringEnabled(enabled: Boolean) {
+   public open fun setProximityMonitoringEnabled(enabled: Boolean) {
       if (var1) {
          this.proximityWakeLock.acquire();
       } else {

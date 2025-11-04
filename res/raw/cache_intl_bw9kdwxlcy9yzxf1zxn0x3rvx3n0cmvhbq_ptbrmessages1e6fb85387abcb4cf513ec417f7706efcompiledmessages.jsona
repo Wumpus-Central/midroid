@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Pedir para a transmitir",
-  "P0wwmJ": "Transmissão em andamento",
-  "u4QmWl": "Solicitação expirado",
-  "qRXatr": "Não está no canal de voz",
-  "43zohI": "Não está executando o jogo",
-  "fac+eH": "Nenhuma permissão",
-  "8HU1Mz": "Pedido enviado",
-  "5+172d": "Transmitir",
-  "nAyuPj": "Pedido de transmissão",
-  "d/qbCw": [
+  "DKHhec": [
+    "Pedir para a transmitir"
+  ],
+  "P0wwmM": [
+    "Transmissão em andamento"
+  ],
+  "u4QmWl": [
+    "Solicitação expirado"
+  ],
+  "qRXats": [
+    "Não está no canal de voz"
+  ],
+  "43zohO": [
+    "Não está executando o jogo"
+  ],
+  "fac+eE": [
+    "Nenhuma permissão"
+  ],
+  "8HU1M2": [
+    "Pedido enviado"
+  ],
+  "5+172e": [
+    "Transmitir"
+  ],
+  "nAyuPp": [
+    "Pedido de transmissão"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " pediu para você transmitir"
   ],
-  "8B3U5O": "Você pediu para alguém transmitir"
+  "8B3U5O": [
+    "Você pediu para alguém transmitir"
+  ]
 }

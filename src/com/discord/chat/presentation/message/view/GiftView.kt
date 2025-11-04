@@ -34,7 +34,7 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nGiftView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GiftView.kt\ncom/discord/chat/presentation/message/view/GiftView\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,229:1\n13430#2,2:230\n257#3,2:232\n257#3,2:235\n257#3,2:237\n257#3,2:239\n257#3,2:241\n257#3,2:243\n257#3,2:245\n1#4:234\n*S KotlinDebug\n*F\n+ 1 GiftView.kt\ncom/discord/chat/presentation/message/view/GiftView\n*L\n105#1:230,2\n110#1:232,2\n122#1:235,2\n139#1:237,2\n145#1:239,2\n151#1:241,2\n152#1:243,2\n165#1:245,2\n*E\n"])
+@SourceDebugExtension(["SMAP\nGiftView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GiftView.kt\ncom/discord/chat/presentation/message/view/GiftView\n+ 2 _Arrays.kt\nkotlin/collections/ArraysKt___ArraysKt\n+ 3 View.kt\nandroidx/core/view/ViewKt\n+ 4 fake.kt\nkotlin/jvm/internal/FakeKt\n+ 5 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,229:1\n13430#2,2:230\n257#3,2:232\n257#3,2:235\n257#3,2:237\n257#3,2:239\n257#3,2:242\n257#3,2:244\n257#3,2:246\n1#4:234\n27#5:241\n*S KotlinDebug\n*F\n+ 1 GiftView.kt\ncom/discord/chat/presentation/message/view/GiftView\n*L\n105#1:230,2\n110#1:232,2\n122#1:235,2\n139#1:237,2\n145#1:239,2\n151#1:242,2\n152#1:244,2\n165#1:246,2\n150#1:241\n*E\n"])
 public class GiftView  public constructor(context: Context, attrs: AttributeSet? = null) : CardView(var1, var2) {
    public final val binding: GiftViewBinding
    private final var lastState: com.discord.chat.presentation.message.view.GiftView.Companion.State?
@@ -77,12 +77,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       }
 
       (this.binding.splash.getHierarchy() as GenericDraweeHierarchy).x(var3);
-      var3 = y.c.k(var1.getBackgroundColor(), O9.a.c(var1.getSplashOpacity() * (float)255));
+      var3 = q0.c.k(var1.getBackgroundColor(), Ka.a.c(var1.getSplashOpacity() * (float)255));
       val var4: SimpleDraweeView = this.binding.splash;
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var14: PipelineDraweeControllerBuilder = G2.d.g()
+         val var14: PipelineDraweeControllerBuilder = G3.d.g()
             .F(
                ImageRequestBuilder.b(var6)
                   .J(
@@ -163,15 +163,15 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var13: GradientDrawable = new GradientDrawable(
+         val var19: GradientDrawable = new GradientDrawable(
             var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
          );
-         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var19: IntArray = this.binding.gradients.getReferencedIds();
-         val var23: Int = var19.length;
+         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var13: IntArray = this.binding.gradients.getReferencedIds();
+         val var23: Int = var13.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
+            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
          }
 
          val var14: Group = this.binding.gradients;
@@ -180,7 +180,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          this.lastState = new GiftView.Companion.State.Resolving(var1.getItemId());
       } else {
          if (var9 !is GiftEmbed.Resolved) {
-            throw new B9.n();
+            throw new xa.p();
          }
 
          val var7: Boolean = this.didResolve(var1.getItemId());
@@ -199,29 +199,29 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.c((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
-         val var11: TextView = this.binding.title;
+         val var32: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
-         var11.setTextColor(var27.getTitleColor());
-         val var32: java.lang.CharSequence = var11.getText();
+         var32.setTextColor(var27.getTitleColor());
+         val var11: java.lang.CharSequence = var32.getText();
          var var20: Byte;
-         if (!StringsKt.c0(var32)) {
+         if (!StringsKt.c0(var11)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var11.setVisibility(var20);
-         val var33: TextView = this.binding.subtitle;
+         var32.setVisibility(var20);
+         val var35: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var33.setTextColor(var27.getSubtitleColor());
-         val var35: java.lang.CharSequence = var33.getText();
-         if (!StringsKt.c0(var35)) {
+         var35.setTextColor(var27.getSubtitleColor());
+         val var33: java.lang.CharSequence = var35.getText();
+         if (!StringsKt.c0(var33)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var33.setVisibility(var20);
+         var35.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));
@@ -231,7 +231,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var16.setVisibility(8);
          } else {
             if (var27 !is GiftEmbed.Resolved.Valid) {
-               throw new B9.n();
+               throw new xa.p();
             }
 
             var8 = this.binding.content;

@@ -1,6 +1,8 @@
 {
-  "rdfRys": "Egy „const static codeSpan = 2;” szerepel itt.",
-  "HMvECw": [
+  "rdfRyh": [
+    "Egy „const static codeSpan = 2;” szerepel itt."
+  ],
+  "HMvEC5": [
     "Mindezt helyileg kezeljük, és ",
     [
       8,
@@ -11,7 +13,7 @@
     ],
     " nem vette át a globális i18n rendszer helyét."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Használj például ",
     [
       8,
@@ -25,7 +27,7 @@
     ],
     " hookokat a különleges tartalmaknál."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Ez a karaktersor ",
     [
       8,
@@ -39,7 +41,7 @@
     ],
     ". Az URL-cím a karaktersorban van meghatározva."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Ez a hivatkozás a futtatási idő során megadott, ",
     [
       8,
@@ -56,5 +58,7 @@
     ],
     " használ."
   ],
-  "swfLzc": "Ez az üzenet különálló fájlból származik"
+  "swfLzV": [
+    "Ez az üzenet különálló fájlból származik"
+  ]
 }

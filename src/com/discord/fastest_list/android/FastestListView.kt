@@ -20,6 +20,7 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
+import com.discord.recycler_view.scroller.Scroller.TargetAlignment.Top
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.uimanager.events.NativeGestureUtil
 import kotlin.jvm.functions.Function2
@@ -145,7 +146,7 @@ internal class FastestListView(context: Context,
    }
 
    private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
-      Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
+      Scroller.scrollToPosition$default(this.scroller, var1, new Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
       ViewMeasureExtensionsKt.measureAndLayout(this);
    }
 

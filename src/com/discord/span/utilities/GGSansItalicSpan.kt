@@ -6,8 +6,9 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import f2.c
-import f2.d
+import com.discord.fonts.DiscordFont.Companion
+import f3.c
+import f3.d
 
 public class GGSansItalicSpan(context: Context) : StyleSpan(2) {
    private final val context: Context
@@ -17,11 +18,11 @@ public class GGSansItalicSpan(context: Context) : StyleSpan(2) {
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var5: DiscordFont.Companion = DiscordFont.Companion;
+      val var5: Companion = DiscordFont.Companion;
       val var6: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
       var var3: Typeface = null;
       if (var6 != null) {
-         val var7: DiscordFont = DiscordFont.Companion.findByStyle$default(var5, var6.getWeight(), true, false, 4, null);
+         val var7: DiscordFont = Companion.findByStyle$default(var5, var6.getWeight(), true, false, 4, null);
          var3 = null;
          if (var7 != null) {
             var3 = var7.typeface(this.context);

@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Opcija pozadine dara: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Kutija",
-  "AJ4iio": "Kolač",
-  "P5keo6": "Škrinja",
-  "w84vER": "Kava",
-  "6dCq/v": "Šalica",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Blagdanska kutija",
-  "aubYGR": "Blagdanski kolač",
-  "vjxYqa": "Blagdanska škrinja",
-  "bHuJLS": "Blagdanska kava",
-  "M6cPwM": "Snježna kugla",
-  "GzPel5": "Kutija"
+  "B9XqQk": [
+    "Kutija"
+  ],
+  "AJ4iir": [
+    "Kolač"
+  ],
+  "P5keo3": [
+    "Škrinja"
+  ],
+  "w84vET": [
+    "Kava"
+  ],
+  "6dCq/u": [
+    "Šalica"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Blagdanska kutija"
+  ],
+  "aubYGR": [
+    "Blagdanski kolač"
+  ],
+  "vjxYqU": [
+    "Blagdanska škrinja"
+  ],
+  "bHuJLa": [
+    "Blagdanska kava"
+  ],
+  "M6cPwB": [
+    "Snježna kugla"
+  ],
+  "GzPel1": [
+    "Kutija"
+  ]
 }

@@ -15,8 +15,22 @@
       ]
     ]
   ],
-  "eJmat7": "Usually fastest and totally automatic. All you need is a camera.",
-  "2yLvkZ": "Take a video selfie",
-  "ZdmRwc": "You’ll need a driver’s licence, passport or other ID. Then a photo selfie to confirm it’s you.",
-  "dwkwo6": "Scan your ID"
+  "eJmat5": [
+    "Usually fastest and totally automatic. All you need is a camera."
+  ],
+  "2yLvkS": [
+    "Take a video selfie"
+  ],
+  "ZdmRwW": [
+    "You’ll need a driver’s licence, passport or other ID. Then a photo selfie to confirm it’s you."
+  ],
+  "dwkwo0": [
+    "Scan your ID"
+  ],
+  "cR6336": [
+    "No age verification methods available. This may be an error."
+  ],
+  "hDvmYP": [
+    "Reload"
+  ]
 }

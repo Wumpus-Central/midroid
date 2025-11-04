@@ -1,14 +1,38 @@
 {
-  "RPb8Zm": "Tes retours nous aident à améliorer les fonctionnalités de sécurité de Discord.",
-  "KZw6kp": "Qu'est-ce qui ne marche pas correctement ?",
-  "eSP1Fx": "J'ai changé d'avis à propos de l'affichage de ce contenu",
-  "bC0QVV": "Les instructions n'étaient pas claires",
-  "8JFGXV": "J'ai essayé de suivre les étapes, mais ça n'a pas fonctionné",
-  "Dl4A+f": "Je n'avais pas les bons documents avec moi",
-  "ZsnNg4": "J'ai peur de partager mes données personnelles",
-  "kkKhVF": "Ça prend trop de temps",
-  "maxf2d": "Je n'étais pas sûr(e) de comprendre pourquoi c'était nécessaire",
-  "Q5cQ4+": "Décris ton problème",
-  "zApKaW": "As-tu quelque chose d'autre à nous dire ?",
-  "RqoA4u": "Comment s'est passée ton expérience de vérification d'âge ?"
+  "RPb8Zk": [
+    "Tes retours nous aident à améliorer les fonctionnalités de sécurité de Discord."
+  ],
+  "KZw6kn": [
+    "Qu'est-ce qui ne marche pas correctement ?"
+  ],
+  "eSP1F9": [
+    "J'ai changé d'avis à propos de l'affichage de ce contenu"
+  ],
+  "bC0QVX": [
+    "Les instructions n'étaient pas claires"
+  ],
+  "8JFGXc": [
+    "J'ai essayé de suivre les étapes, mais ça n'a pas fonctionné"
+  ],
+  "Dl4A+U": [
+    "Je n'avais pas les bons documents avec moi"
+  ],
+  "ZsnNgz": [
+    "J'ai peur de partager mes données personnelles"
+  ],
+  "kkKhVJ": [
+    "Ça prend trop de temps"
+  ],
+  "maxf2S": [
+    "Je n'étais pas sûr(e) de comprendre pourquoi c'était nécessaire"
+  ],
+  "Q5cQ46": [
+    "Décris ton problème"
+  ],
+  "zApKaR": [
+    "As-tu quelque chose d'autre à nous dire ?"
+  ],
+  "RqoA4v": [
+    "Comment s'est passée ton expérience de vérification d'âge ?"
+  ]
 }

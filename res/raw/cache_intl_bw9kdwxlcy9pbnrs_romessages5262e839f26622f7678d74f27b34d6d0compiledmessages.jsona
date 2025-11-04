@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Aici avem un ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Toate aceste lucruri sunt gestionate la nivel local, sistemul global i18n nefiind ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " înlocuit."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Folosește hook-uri ca ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " pentru conținutul special."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Acest string are un ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", cu url-ul definit în string."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Acest link folosește un ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     " furnizat la momentul executării."
   ],
-  "swfLzc": "Acest mesaj provine dintr-un fișier separat"
+  "swfLzV": [
+    "Acest mesaj provine dintr-un fișier separat"
+  ]
 }

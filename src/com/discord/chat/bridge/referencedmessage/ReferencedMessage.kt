@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.referencedmessage
 
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = ReferencedMessageSerializer::class)
+@m(with = ReferencedMessageSerializer::class)
 public sealed class ReferencedMessage protected constructor() {
    public companion object {
       public fun serializer(): KSerializer<ReferencedMessage> {

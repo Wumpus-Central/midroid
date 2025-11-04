@@ -27,9 +27,9 @@ import com.discord.chat.presentation.textutils.LinkStyle
 import com.discord.chat.presentation.textutils.TextUtilsKt
 import com.discord.fonts.DiscordFont
 import com.discord.primitives.MessageId
-import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan.TouchPriority
+import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration.SpacingProviderView
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.span.utilities.spannable.BoldSpan
@@ -44,10 +44,10 @@ import kotlin.jvm.functions.Function1
 public open class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : SimpleDraweeSpanTextView(
          var1, var2, var3
       ),
-   VerticalSpacingItemDecoration.SpacingProviderView {
+   SpacingProviderView {
    private final var bottomSpacingPx: Int?
 
-   private final val shadowView: SimpleDraweeSpanTextView by B9.j.b(new E0(this))
+   private final val shadowView: SimpleDraweeSpanTextView by xa.l.a(new E0(this))
       private final get() {
          return this.shadowView$delegate.getValue() as SimpleDraweeSpanTextView;
       }
@@ -67,13 +67,13 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
-      val var7: QuoteSpan = kotlin.collections.h.L(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.k.U(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -83,8 +83,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 
@@ -114,9 +114,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
+      val var8: Boolean = var2.getForceShow() == java.lang.Boolean.TRUE;
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -126,22 +126,22 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
             var11.append("\n");
             var11.append(var18);
             var4.replace(var7, var4.length(), var11.toString());
-            val var20: NestedClickableSpan.TouchPriority = NestedClickableSpan.TouchPriority.HIGH;
+            val var20: TouchPriority = TouchPriority.HIGH;
             if (var12 != null) {
                var3 = var12;
             } else {
@@ -291,7 +291,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       throw new UnsupportedOperationException("MessageContentView uses custom touch handling. click listeners are not supported");
    }
 
-   public override fun spacingPxOverride(): Int? {
+   public open fun spacingPxOverride(): Int? {
       return this.bottomSpacingPx;
    }
 
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 52: aload 5
          // 54: aload 7
          // 56: invokevirtual android/text/SpannableStringBuilder.getSpanStart (Ljava/lang/Object;)I
-         // 59: istore 4
-         // 5b: aload 5
-         // 5d: aload 7
-         // 5f: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
-         // 62: istore 3
+         // 59: istore 3
+         // 5a: aload 5
+         // 5c: aload 7
+         // 5e: invokevirtual android/text/SpannableStringBuilder.getSpanEnd (Ljava/lang/Object;)I
+         // 61: istore 4
          // 63: aload 1
          // 64: invokevirtual android/view/View.getContext ()Landroid/content/Context;
          // 67: astore 7
@@ -376,8 +376,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // 6b: ldc "getContext(...)"
          // 6d: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue (Ljava/lang/Object;Ljava/lang/String;)V
          // 70: aload 5
-         // 72: iload 4
-         // 74: iload 3
+         // 72: iload 3
+         // 73: iload 4
          // 75: aload 7
          // 77: getstatic com/discord/react_strings/I18nMessage.SPOILER_HIDDEN_A11Y_LABEL Lcom/discord/react_strings/I18nMessage;
          // 7a: aconst_null
@@ -416,7 +416,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          // c4: goto 99
          // c7: aload 2
          // c8: aload 5
-         // ca: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.V0 (Ljava/lang/CharSequence;)V
+         // ca: invokevirtual androidx/core/view/accessibility/AccessibilityNodeInfoCompat.a1 (Ljava/lang/CharSequence;)V
          // cd: return
       }
    }

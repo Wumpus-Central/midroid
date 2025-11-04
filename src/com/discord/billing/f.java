@@ -1,10 +1,14 @@
 package com.discord.billing;
 
-import kotlin.jvm.functions.Function1;
+import com.android.billingclient.api.BillingResult;
+import java.util.List;
 
 // $VF: synthetic class
-public final class f implements Function1 {
-   public final Object invoke(Object var1) {
-      return BillingManager.f((Exception)var1);
+public final class f implements c2.j {
+   public final BillingManager a;
+
+   @Override
+   public final void a(BillingResult var1, List var2) {
+      BillingManager.access$handlePurchases(this.a, var1, var2);
    }
 }

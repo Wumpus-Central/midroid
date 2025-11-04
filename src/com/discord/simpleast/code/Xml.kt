@@ -1,6 +1,5 @@
 package com.discord.simpleast.code
 
-import B9.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -11,6 +10,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import org.jetbrains.annotations.NotNull
+import xa.v
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -104,9 +104,9 @@ public object Xml {
             }
 
             val var19: java.lang.String = this.opening.substring(var5);
-            var17 = s.a(var7, var19);
+            var17 = v.a(var7, var19);
          } else {
-            var17 = s.a(this.opening, "");
+            var17 = v.a(this.opening, "");
          }
 
          val var9: java.lang.String = var17.a() as java.lang.String;

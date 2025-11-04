@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 
 public class MinimizeAppModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "MinimizeApp";
    }
 

@@ -1,0 +1,55 @@
+{
+  "RpMIT0": [
+    "Vi bruger aldersgrupper til at bestemme adgangen til visse oplevelser. ",
+    [
+      8,
+      "$link",
+      [
+        "Få mere at vide"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "1/6wta": [
+    "Gendan adgang til Discord ved at bekræfte din alder ved hjælp af en af nedenstående valgmuligheder."
+  ],
+  "eJmat5": [
+    "Normalt hurtigst og helt automatisk. Alt du behøver er et kamera."
+  ],
+  "2yLvkS": [
+    "Tag en videoselfie"
+  ],
+  "ZdmRwW": [
+    "Du skal bruge et kørekort, pas eller anden form for ID. Derefter et selfiefoto for at bekræfte, at det er dig."
+  ],
+  "dwkwo0": [
+    "Scan dit ID"
+  ],
+  "htWh1G": [
+    [
+      8,
+      "$link",
+      [
+        "Få mere at vide"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ],
+    " i vores hjælpecenter"
+  ],
+  "cR6336": [
+    "Ingen aldersbekræftelsesmetoder er tilgængelige. Dette kan være en fejl."
+  ],
+  "hDvmYP": [
+    "Genindlæs"
+  ]
+}

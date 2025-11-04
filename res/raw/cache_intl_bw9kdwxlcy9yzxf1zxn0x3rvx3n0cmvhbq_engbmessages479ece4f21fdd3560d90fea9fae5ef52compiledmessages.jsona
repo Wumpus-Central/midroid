@@ -1,19 +1,39 @@
 {
-  "DKHheX": "Ask to Stream",
-  "P0wwmJ": "Already streaming",
-  "u4QmWl": "Request expired",
-  "qRXatr": "Not in voice channel",
-  "43zohI": "Not running game",
-  "fac+eH": "No permission",
-  "8HU1Mz": "Request sent",
-  "5+172d": "Stream",
-  "nAyuPj": "Stream Request",
-  "d/qbCw": [
+  "DKHhec": [
+    "Ask to Stream"
+  ],
+  "P0wwmM": [
+    "Already streaming"
+  ],
+  "u4QmWl": [
+    "Request expired"
+  ],
+  "qRXats": [
+    "Not in voice channel"
+  ],
+  "43zohO": [
+    "Not running game"
+  ],
+  "fac+eE": [
+    "No permission"
+  ],
+  "8HU1M2": [
+    "Request sent"
+  ],
+  "5+172e": [
+    "Stream"
+  ],
+  "nAyuPp": [
+    "Stream Request"
+  ],
+  "d/qbC0": [
     [
       1,
       "username"
     ],
     " asked you to stream"
   ],
-  "8B3U5O": "You asked someone to stream"
+  "8B3U5O": [
+    "You asked someone to stream"
+  ]
 }

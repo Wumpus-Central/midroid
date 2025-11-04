@@ -1,3 +1,5 @@
+@file:SourceDebugExtension(["SMAP\nGetMediaImagePlaceholderStatesListener.kt\nKotlin\n*S Kotlin\n*F\n+ 1 GetMediaImagePlaceholderStatesListener.kt\ncom/discord/chat/presentation/message/utils/GetMediaImagePlaceholderStatesListenerKt\n+ 2 ColorDrawable.kt\nandroidx/core/graphics/drawable/ColorDrawableKt\n*L\n1#1,49:1\n27#2:50\n*S KotlinDebug\n*F\n+ 1 GetMediaImagePlaceholderStatesListener.kt\ncom/discord/chat/presentation/message/utils/GetMediaImagePlaceholderStatesListenerKt\n*L\n24#1:50\n*E\n"])
+
 package com.discord.chat.presentation.message.utils
 
 import android.graphics.drawable.ColorDrawable
@@ -11,6 +13,7 @@ import com.discord.thumbhash.ThumbhashPlaceholderControllerListener
 import com.facebook.drawee.drawable.ScalingUtils.ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import kotlin.jvm.internal.SourceDebugExtension
 
 public fun getMediaImagePlaceholderStatesListener(imageView: SimpleDraweeView, placeholder: String?, placeholderVersion: Int?): CompoundControllerListener {
    return new CompoundControllerListener(

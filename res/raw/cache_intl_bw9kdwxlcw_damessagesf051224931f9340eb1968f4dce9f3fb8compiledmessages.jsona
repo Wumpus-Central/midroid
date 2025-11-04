@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Din konto er blevet låst op",
-  "d9Ykjo": "Bekræftelseskode",
-  "bFbsV1": "Indtast din e-mail",
-  "RRBNpq": "Næste",
-  "0DHxys": [
+  "/fHz9S": [
+    "Din konto er blevet låst op"
+  ],
+  "d9Ykjr": [
+    "Bekræftelseskode"
+  ],
+  "bFbsV6": [
+    "Indtast din e-mail"
+  ],
+  "RRBNpv": [
+    "Næste"
+  ],
+  "0DHxym": [
     "Ikke dig? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Vi kan bede om flere opfølgninger undervejs, som hvis du er en robot",
-  "Ks6opq": "Begynd",
-  "I2Ctk5": "Fuldfør trinene nedenfor for at låse op for din Konto",
-  "RRamMD": "Konto blokeret",
-  "ah0EUl": "Send koden igen",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Vi kan bede om flere opfølgninger undervejs, som hvis du er en robot"
+  ],
+  "Ks6opt": [
+    "Begynd"
+  ],
+  "I2Ctk1": [
+    "Fuldfør trinene nedenfor for at låse op for din Konto"
+  ],
+  "RRamMH": [
+    "Konto blokeret"
+  ],
+  "ah0EUu": [
+    "Send koden igen"
+  ],
+  "2+Lyn0": [
     "Send koden igen om ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " sekunder"
   ],
-  "3AXMYm": "Mislykkedes at sende bekræftelseskode igen",
-  "dSkE/P": "Bekræft aldersgruppe",
-  "o4D6fn": "Opdatering",
-  "VBZJJi": "Opdater appen for at fortsætte.",
-  "yxqMCA": "Opdatering påkrævet",
-  "wq2RDg": "Bekræft",
-  "PfbG6O": "Ugyldig bekræftelseskode",
-  "aveKoK": "Vi har lige sendt en bekræftelseskode til din e-mailadresse. Det kan tage et par minutter at nå frem",
-  "Qm6K/v": "Bekræft din e-mailadresse"
+  "3AXMYu": [
+    "Mislykkedes at sende bekræftelseskode igen"
+  ],
+  "dSkE/A": [
+    "Bekræft aldersgruppe"
+  ],
+  "o4D6fm": [
+    "Opdatering"
+  ],
+  "VBZJJg": [
+    "Opdater appen for at fortsætte."
+  ],
+  "yxqMCD": [
+    "Opdatering påkrævet"
+  ],
+  "wq2RDq": [
+    "Bekræft"
+  ],
+  "PfbG6H": [
+    "Ugyldig bekræftelseskode"
+  ],
+  "aveKoG": [
+    "Vi har lige sendt en bekræftelseskode til din e-mailadresse. Det kan tage et par minutter at nå frem"
+  ],
+  "Qm6K/s": [
+    "Bekræft din e-mailadresse"
+  ]
 }

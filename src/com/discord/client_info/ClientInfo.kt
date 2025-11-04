@@ -1,10 +1,10 @@
 package com.discord.client_info
 
-import B9.j
 import android.content.Context
 import java.util.Locale
 import kotlin.jvm.internal.Intrinsics
 import kotlin.jvm.internal.SourceDebugExtension
+import xa.l
 
 @SourceDebugExtension(["SMAP\nClientInfo.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ClientInfo.kt\ncom/discord/client_info/ClientInfo\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,64:1\n1#2:65\n*E\n"])
 public object ClientInfo {
@@ -62,7 +62,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@302.6.0-0+302006"
+   public const val SENTRY_RELEASE: String = "discord_android@303.10.0-0+303010"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -88,7 +88,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by j.b(new a())
+   public final val isProdBuild: Boolean by l.a(new a())
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -107,7 +107,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "21b35fe6-99cd-4b7b-b5fc-fe59876bece2"
+   public const val PROGUARD_UUID: String = "e4285a34-d422-4873-9d31-1b461b6976d2"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {

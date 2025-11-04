@@ -1,11 +1,12 @@
 package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {
    public final val emojiName: String
    public final val emojiId: String?
@@ -55,18 +56,18 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       return var2 * 31 + var1;
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.emojiName;
-      val var1: java.lang.String = this.emojiId;
+      val var1: java.lang.String = this.emojiName;
+      val var2: java.lang.String = this.emojiId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnLongPressEmojiEvent(emojiName=");
-      var3.append(var2);
-      var3.append(", emojiId=");
       var3.append(var1);
+      var3.append(", emojiId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

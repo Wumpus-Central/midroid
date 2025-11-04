@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Opțiune fundal cadou: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Cutie",
-  "AJ4iio": "Tort",
-  "P5keo6": "Cufăr",
-  "w84vER": "Cafea",
-  "6dCq/v": "Ceașcă",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Cutie festivă",
-  "aubYGR": "Tort festiv",
-  "vjxYqa": "Cufăr festiv",
-  "bHuJLS": "Cafea festivă",
-  "M6cPwM": "Glob de zăpadă",
-  "GzPel5": "Cutie"
+  "B9XqQk": [
+    "Cutie"
+  ],
+  "AJ4iir": [
+    "Tort"
+  ],
+  "P5keo3": [
+    "Cufăr"
+  ],
+  "w84vET": [
+    "Cafea"
+  ],
+  "6dCq/u": [
+    "Ceașcă"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Cutie festivă"
+  ],
+  "aubYGR": [
+    "Tort festiv"
+  ],
+  "vjxYqU": [
+    "Cufăr festiv"
+  ],
+  "bHuJLa": [
+    "Cafea festivă"
+  ],
+  "M6cPwB": [
+    "Glob de zăpadă"
+  ],
+  "GzPel1": [
+    "Cutie"
+  ]
 }

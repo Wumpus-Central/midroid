@@ -1,14 +1,15 @@
 package com.discord.crash_reporting
 
-import B9.s
 import com.discord.crash_reporting.CrashReporting.BreadcrumbLevel
 import com.discord.logging.Log
+import xa.e
+import xa.v
 
-public class FLogDelegate : r2.c {
+public class FLogDelegate : r3.c {
    private fun addSentryBreadcrumb(level: BreadcrumbLevel, message: String, throwable: Throwable? = null) {
       label11: {
          if (var3 != null) {
-            val var4: java.lang.String = B9.c.b(var3);
+            val var4: java.lang.String = e.b(var3);
             var6 = var4;
             if (var4 != null) {
                break label11;
@@ -18,15 +19,15 @@ public class FLogDelegate : r2.c {
          var6 = "No stacktrace";
       }
 
-      CrashReporting.INSTANCE.addBreadcrumb(var2, L.e(s.a("stacktrace", var6)), "react.native", var1);
+      CrashReporting.INSTANCE.addBreadcrumb(var2, O.f(v.a("stacktrace", var6)), "react.native", var1);
    }
 
    public open fun d(tag: String, msg: String) {
-      r2.b.a().d(var1, var2);
+      r3.b.a().d(var1, var2);
    }
 
    public open fun d(tag: String, msg: String, tr: Throwable) {
-      r2.b.a().d(var1, var2, var3);
+      r3.b.a().d(var1, var2, var3);
    }
 
    public open fun e(tag: String, msg: String) {
@@ -40,7 +41,7 @@ public class FLogDelegate : r2.c {
    }
 
    public open fun getMinimumLoggingLevel(): Int {
-      return r2.b.a().b();
+      return r3.b.a().b();
    }
 
    public open fun i(tag: String, msg: String) {
@@ -52,7 +53,7 @@ public class FLogDelegate : r2.c {
    }
 
    public open fun isLoggable(level: Int): Boolean {
-      return r2.b.a().isLoggable(var1);
+      return r3.b.a().isLoggable(var1);
    }
 
    public open fun log(priority: Int, tag: String, msg: String) {
@@ -81,15 +82,15 @@ public class FLogDelegate : r2.c {
    }
 
    public open fun setMinimumLoggingLevel(level: Int) {
-      r2.b.a().k(var1);
+      r3.b.a().k(var1);
    }
 
    public open fun v(tag: String, msg: String) {
-      r2.b.a().v(var1, var2);
+      r3.b.a().v(var1, var2);
    }
 
    public open fun v(tag: String, msg: String, tr: Throwable) {
-      r2.b.a().l(var1, var2, var3);
+      r3.b.a().l(var1, var2, var3);
    }
 
    public open fun w(tag: String, msg: String) {

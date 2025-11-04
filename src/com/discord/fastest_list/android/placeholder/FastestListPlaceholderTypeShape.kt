@@ -1,12 +1,12 @@
 package com.discord.fastest_list.android.placeholder
 
-import B9.n
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
+import xa.p
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder() {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
@@ -35,7 +35,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
          this.paint = var2;
       }
 
-      public override fun draw(canvas: Canvas) {
+      public open fun draw(canvas: Canvas) {
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();
@@ -76,14 +76,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
             var var10: Int = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$1[this.config.getType().ordinal()];
             if (var10 != 1) {
                if (var10 != 2) {
-                  throw new n();
+                  throw new p();
                }
 
                var10 = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getVerticalAlignment().ordinal()];
                if (var10 != 1) {
                   if (var10 != 2) {
                      if (var10 != 3) {
-                        throw new n();
+                        throw new p();
                      }
 
                      var2 = var7 / 2.0F - var4 / 2.0F;

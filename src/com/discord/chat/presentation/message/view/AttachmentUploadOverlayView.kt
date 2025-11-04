@@ -45,14 +45,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    init {
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
-      val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
+      val var3: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
       this.onAnimationComplete = new e();
-      val var3: SimpleDraweeView = var5.uploadCancel;
-      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
-      ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
-      I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
-      val var4: SimpleDraweeView = var5.uploadComplete;
+      val var5: SimpleDraweeView = var3.uploadCancel;
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.Cancel);
+      ColorUtilsKt.setTintColor(var5, Color.argb(255, 255, 255, 255));
+      I18nUtilsKt.i18nContentDescription$default(var5, I18nMessage.CANCEL, null, 2, null);
+      val var4: SimpleDraweeView = var3.uploadComplete;
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -404,14 +404,14 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
       public override fun toString(): String {
          val var1: Int = this.backgroundSize;
-         val var3: Int = this.checkmarkButtonSize;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("CompleteViewConfig(backgroundSize=");
-         var2.append(var1);
-         var2.append(", checkmarkButtonSize=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var2: Int = this.checkmarkButtonSize;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CompleteViewConfig(backgroundSize=");
+         var3.append(var1);
+         var3.append(", checkmarkButtonSize=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 
@@ -541,27 +541,27 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var6: Int = this.backgroundSize;
-         val var1: Drawable = this.backgroundDrawable;
-         val var7: Int = this.cancelButtonSize;
-         val var2: Int = this.primaryColor;
-         val var4: Int = this.progressIndicatorSize;
-         val var3: Int = this.trackColor;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("ProgressViewConfig(backgroundSize=");
-         var5.append(var6);
-         var5.append(", backgroundDrawable=");
-         var5.append(var1);
-         var5.append(", cancelButtonSize=");
-         var5.append(var7);
-         var5.append(", primaryColor=");
-         var5.append(var2);
-         var5.append(", progressIndicatorSize=");
-         var5.append(var4);
-         var5.append(", trackColor=");
-         var5.append(var3);
-         var5.append(")");
-         return var5.toString();
+         val var2: Int = this.backgroundSize;
+         val var6: Drawable = this.backgroundDrawable;
+         val var4: Int = this.cancelButtonSize;
+         val var1: Int = this.primaryColor;
+         val var7: Int = this.progressIndicatorSize;
+         val var5: Int = this.trackColor;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ProgressViewConfig(backgroundSize=");
+         var3.append(var2);
+         var3.append(", backgroundDrawable=");
+         var3.append(var6);
+         var3.append(", cancelButtonSize=");
+         var3.append(var4);
+         var3.append(", primaryColor=");
+         var3.append(var1);
+         var3.append(", progressIndicatorSize=");
+         var3.append(var7);
+         var3.append(", trackColor=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

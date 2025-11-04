@@ -10,11 +10,13 @@ import java.util.List;
 
 public class KvStoragePackage implements ReactPackage {
    @NonNull
+   @Override
    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext var1) {
       return Collections.singletonList(new KvStorageModule(var1));
    }
 
    @NonNull
+   @Override
    public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext var1) {
       return Collections.emptyList();
    }

@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
+import xa.v
 
-@g
+@m
 internal data class TapChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null) : ReactEvent {
    public final val guildId: String?
    public final val channelId: String?
@@ -79,23 +79,28 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
       return (var1 * 31 + var2) * 31 + var3;
    }
 
-   public override fun serialize(): WritableMap {
+   public open fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("data", NativeMapExtensionsKt.nativeMapOf(s.a("guildId", this.guildId), s.a("channelId", this.channelId), s.a("messageId", this.messageId)))
+         new Pair[]{
+            v.a(
+               "data",
+               NativeMapExtensionsKt.nativeMapOf(new Pair[]{v.a("guildId", this.guildId), v.a("channelId", this.channelId), v.a("messageId", this.messageId)})
+            )
+         }
       );
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.guildId;
       val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.messageId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapChannelData(guildId=");
-      var4.append(var1);
+      var4.append(var3);
       var4.append(", channelId=");
       var4.append(var2);
       var4.append(", messageId=");
-      var4.append(var3);
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

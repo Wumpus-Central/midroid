@@ -31,6 +31,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.SourceDebugExtension
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.Json
 import org.json.JSONObject
 
@@ -39,14 +40,16 @@ import org.json.JSONObject
 public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComponentView> {
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         B9.s.a("onTapLink", TapLinkData::class),
-         B9.s.a("onLongPressLink", LongPressLinkData::class),
-         B9.s.a("onTapAttachmentLink", TapAttachmentLinkData::class),
-         B9.s.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
-         B9.s.a("onTapMention", TapMentionData::class),
-         B9.s.a("onTapTimestamp", TapTimestampEvent::class),
-         B9.s.a("onTapInlineCode", TapInlineCodeEvent::class),
-         B9.s.a("onTapEmoji", TapEmojiData::class)
+         new Pair[]{
+            xa.v.a("onTapLink", TapLinkData::class),
+            xa.v.a("onLongPressLink", LongPressLinkData::class),
+            xa.v.a("onTapAttachmentLink", TapAttachmentLinkData::class),
+            xa.v.a("onLongPressAttachmentLink", LongPressAttachmentLinkData::class),
+            xa.v.a("onTapMention", TapMentionData::class),
+            xa.v.a("onTapTimestamp", TapTimestampEvent::class),
+            xa.v.a("onTapInlineCode", TapInlineCodeEvent::class),
+            xa.v.a("onTapEmoji", TapEmojiData::class)
+         }
       )
       private final val viewToDataMapping: MutableMap<TextDisplayComponentView, PartialData> = new LinkedHashMap()
 
@@ -174,9 +177,9 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    private fun tryConfigure(view: TextDisplayComponentView) {
       val var2: PartialData = this.viewToDataMapping.get(var1);
       if (var2 != null) {
-         val var4: Data = var2.toData();
-         if (var4 != null) {
-            var1.configure(var4.getComponent(), this.createTextDisplayComponentContext(var1, var4));
+         val var3: Data = var2.toData();
+         if (var3 != null) {
+            var1.configure(var3.getComponent(), this.createTextDisplayComponentContext(var1, var3));
             ViewMeasureExtensionsKt.measureAndLayout(var1);
          }
       }
@@ -231,8 +234,8 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
    @ReactProp(name = "model")
    public fun setModel(view: TextDisplayComponentView, model: ReadableMap) {
       val var6: java.util.Map = this.viewToDataMapping;
-      var var5: Json = this.viewToDataMapping.get(var1);
-      var var4: StringBuilder = var5;
+      var var5: Any = this.viewToDataMapping.get(var1);
+      var var4: StringBuilder = (StringBuilder)var5;
       if (var5 == null) {
          var4 = new PartialData(null, null, 3, null);
          var6.put(var1, var4);
@@ -240,10 +243,10 @@ public class TextDisplayComponentViewManager : SimpleViewManager<TextDisplayComp
 
       var var3: Boolean;
       try {
-         var5 = ComponentDeserializerKt.getJson();
-         val var25: ComponentSerializer = ComponentSerializer.INSTANCE;
+         val var25: Json = ComponentDeserializerKt.getJson();
+         var5 = ComponentSerializer.INSTANCE;
          val var15: java.lang.String = new JSONObject(var2.toHashMap()).toString();
-         var16 = var5.b(var25, var15) as Component;
+         var16 = var25.b((DeserializationStrategy)var5, var15) as Component;
          var3 = var16 is TextDisplayComponent;
       } catch (var9: Exception) {
          val var10: java.lang.String = (TextDisplayComponent::class).getSimpleName();

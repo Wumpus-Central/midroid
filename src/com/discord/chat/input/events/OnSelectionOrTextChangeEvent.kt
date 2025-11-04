@@ -1,11 +1,12 @@
 package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
+import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: String, editId: String) : ReactEvent {
    public final val start: Int
    public final val end: Int
@@ -63,26 +64,26 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       return ((Integer.hashCode(this.start) * 31 + Integer.hashCode(this.end)) * 31 + this.text.hashCode()) * 31 + this.editId.hashCode();
    }
 
-   override fun serialize(): WritableMap {
-      return ReactEvent.DefaultImpls.serialize(this);
+   fun serialize(): WritableMap {
+      return DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
-      val var2: Int = this.start;
-      val var1: Int = this.end;
-      val var5: java.lang.String = this.text;
+      val var1: Int = this.start;
+      val var2: Int = this.end;
+      val var3: java.lang.String = this.text;
       val var4: java.lang.String = this.editId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnSelectionOrTextChangeEvent(start=");
-      var3.append(var2);
-      var3.append(", end=");
-      var3.append(var1);
-      var3.append(", text=");
-      var3.append(var5);
-      var3.append(", editId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("OnSelectionOrTextChangeEvent(start=");
+      var5.append(var1);
+      var5.append(", end=");
+      var5.append(var2);
+      var5.append(", text=");
+      var5.append(var3);
+      var5.append(", editId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

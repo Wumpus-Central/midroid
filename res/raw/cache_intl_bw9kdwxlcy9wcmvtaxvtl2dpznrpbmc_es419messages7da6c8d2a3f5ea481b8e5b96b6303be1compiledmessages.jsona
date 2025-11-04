@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Opción de fondo para regalar: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Caja",
-  "AJ4iio": "Pastel",
-  "P5keo6": "Cofre",
-  "w84vER": "Café",
-  "6dCq/v": "Taza",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Caja de temporada",
-  "aubYGR": "Pastel de temporada",
-  "vjxYqa": "Cofre de temporada",
-  "bHuJLS": "Café de temporada",
-  "M6cPwM": "Globo de nieve",
-  "GzPel5": "Caja"
+  "B9XqQk": [
+    "Caja"
+  ],
+  "AJ4iir": [
+    "Pastel"
+  ],
+  "P5keo3": [
+    "Cofre"
+  ],
+  "w84vET": [
+    "Café"
+  ],
+  "6dCq/u": [
+    "Taza"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Caja de temporada"
+  ],
+  "aubYGR": [
+    "Pastel de temporada"
+  ],
+  "vjxYqU": [
+    "Cofre de temporada"
+  ],
+  "bHuJLa": [
+    "Café de temporada"
+  ],
+  "M6cPwB": [
+    "Globo de nieve"
+  ],
+  "GzPel1": [
+    "Caja"
+  ]
 }

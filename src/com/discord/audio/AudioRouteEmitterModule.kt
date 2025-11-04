@@ -1,7 +1,5 @@
 package com.discord.audio
 
-import B9.s
-import android.content.Context
 import android.os.Build.VERSION
 import com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged
 import com.discord.codegen.NativeAudioRouteEmitterModuleSpec
@@ -10,6 +8,7 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.Intrinsics
+import xa.v
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterModuleSpec(var1) {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -24,12 +23,12 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var4: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            var4.emitModuleEvent(var3, var2);
+            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var2: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            var3.emitModuleEvent(var2, var4);
          }
 
          @Override
@@ -37,7 +36,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          }
       }
 
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("audio-route-changed", AudioRouteEmitterAudioRouteChanged::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{v.a("audio-route-changed", AudioRouteEmitterAudioRouteChanged::class)})
 
    public fun addListener(type: String) {
    }
@@ -52,8 +51,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
 
          var1.resolve(
             NativeMapExtensionsKt.nativeMapOf(
-               s.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
-               s.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
+               new Pair[]{
+                  v.a("routeType", AudioRouteEmitterModule.Companion.access$toRouteTypeString(Companion, var2.getEffectiveAudioDevice())),
+                  v.a("multipleRoutesAvailable", java.lang.Boolean.FALSE)
+               }
             )
          );
       }
@@ -63,16 +64,16 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
       super.initialize();
       var var3: Any;
       if (VERSION.SDK_INT >= 33) {
-         val var2: DiscordAudioManager2.Companion = DiscordAudioManager2.Companion;
-         var3 = this.getReactApplicationContext();
-         var3 = var2.getInstance((Context)var3);
+         var3 = DiscordAudioManager2.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         var3 = var3.getInstance(var2);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         var3 = this.getReactApplicationContext();
-         var3 = var5.getInstance((Context)var3);
+         val var4: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         var3 = var4.getInstance(var5);
       }
 
-      this.audioManager = (DiscordAudioManagerInterface)var3;
+      this.audioManager = var3;
       var var6: Any = var3;
       if (var3 == null) {
          Intrinsics.throwUninitializedPropertyAccessException("audioManager");

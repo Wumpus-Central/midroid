@@ -6,6 +6,6 @@ import com.facebook.react.bridge.WritableNativeMap
 
 internal class CompleteFirstLayoutData : ReactEvent {
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf();
+      return NativeMapExtensionsKt.nativeMapOf(new Pair[0]);
    }
 }

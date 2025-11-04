@@ -1,6 +1,7 @@
 package com.discord.recycler_view.scroll
 
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener
 import kotlin.jvm.internal.Intrinsics
 
 public open class DebouncedScrollListener(timeoutMillis: Long,
@@ -8,7 +9,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       onScrollStateChanged: ((RecyclerView, Int) -> Unit)? = null,
       onDragStateChanged: ((Boolean) -> Unit)? = null
    )
-   : RecyclerView.OnScrollListener {
+   : OnScrollListener {
    private final var timeoutMillis: Long
    private final val onScrolled: ((RecyclerView, Int, Int) -> Unit)?
    private final val onScrollStateChanged: ((RecyclerView, Int) -> Unit)?
@@ -44,10 +45,10 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
    @JvmStatic
    fun `scrollEvents$lambda$0`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
       val var4: RecyclerView = var1.component1();
-      val var3: Int = var1.component2();
-      val var2: Int = var1.component3();
+      val var2: Int = var1.component2();
+      val var3: Int = var1.component3();
       if (var0.onScrolled != null) {
-         var0.onScrolled.invoke(var4, var3, var2);
+         var0.onScrolled.invoke(var4, var2, var3);
       }
 
       return Unit.a;
@@ -56,10 +57,10 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
    @JvmStatic
    fun `setTimeoutMillis$lambda$1`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
       val var4: RecyclerView = var1.component1();
-      val var3: Int = var1.component2();
-      val var2: Int = var1.component3();
+      val var2: Int = var1.component2();
+      val var3: Int = var1.component3();
       if (var0.onScrolled != null) {
-         var0.onScrolled.invoke(var4, var3, var2);
+         var0.onScrolled.invoke(var4, var2, var3);
       }
 
       return Unit.a;
@@ -73,7 +74,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       return this.timeoutMillis;
    }
 
-   public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+   public open fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
       super.onScrollStateChanged(var1, var2);
       if (this.onScrollStateChanged != null) {
          this.onScrollStateChanged.invoke(var1, var2);
@@ -82,7 +83,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       this.checkDragState(var2);
    }
 
-   public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+   public open fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
       super.onScrolled(var1, var2, var3);
       if (this.lastScrollEvent == null) {
          this.lastScrollEvent = new DebouncedScrollListener.ScrollEvent(var1, var2, var3);

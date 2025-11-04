@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Kontoen din ble låst opp",
-  "d9Ykjo": "Bekreftelseskode",
-  "bFbsV1": "Skriv inn e-postadressen din",
-  "RRBNpq": "Neste",
-  "0DHxys": [
+  "/fHz9S": [
+    "Kontoen din ble låst opp"
+  ],
+  "d9Ykjr": [
+    "Bekreftelseskode"
+  ],
+  "bFbsV6": [
+    "Skriv inn e-postadressen din"
+  ],
+  "RRBNpv": [
+    "Neste"
+  ],
+  "0DHxym": [
     "Ikke deg? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Det kan hende vi stiller flere spørsmål utover, for eksempel for å finne ut om du er en robot",
-  "Ks6opq": "Start",
-  "I2Ctk5": "Følg fremgangsmåten under for å låse opp kontoen din",
-  "RRamMD": "Kontoen er låst",
-  "ah0EUl": "Send koden på nytt",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Det kan hende vi stiller flere spørsmål utover, for eksempel for å finne ut om du er en robot"
+  ],
+  "Ks6opt": [
+    "Start"
+  ],
+  "I2Ctk1": [
+    "Følg fremgangsmåten under for å låse opp kontoen din"
+  ],
+  "RRamMH": [
+    "Kontoen er låst"
+  ],
+  "ah0EUu": [
+    "Send koden på nytt"
+  ],
+  "2+Lyn0": [
     "Send kode på nytt om ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " sekunder"
   ],
-  "3AXMYm": "Bekreftelseskode kan ikke sendes på nytt",
-  "dSkE/P": "Bekreft aldersgruppe",
-  "o4D6fn": "Oppdater",
-  "VBZJJi": "Du må oppdatere appen for å fortsette.",
-  "yxqMCA": "En oppdatering kreves",
-  "wq2RDg": "Bekrefte",
-  "PfbG6O": "Bekreftelseskoden er ugyldig",
-  "aveKoK": "Vi sendte nettopp en bekreftelseskode til e-postadressen din. Det kan ta noen minutter før den kommer frem",
-  "Qm6K/v": "Bekreft e-postadressen din"
+  "3AXMYu": [
+    "Bekreftelseskode kan ikke sendes på nytt"
+  ],
+  "dSkE/A": [
+    "Bekreft aldersgruppe"
+  ],
+  "o4D6fm": [
+    "Oppdater"
+  ],
+  "VBZJJg": [
+    "Du må oppdatere appen for å fortsette."
+  ],
+  "yxqMCD": [
+    "En oppdatering kreves"
+  ],
+  "wq2RDq": [
+    "Bekrefte"
+  ],
+  "PfbG6H": [
+    "Bekreftelseskoden er ugyldig"
+  ],
+  "aveKoG": [
+    "Vi sendte nettopp en bekreftelseskode til e-postadressen din. Det kan ta noen minutter før den kommer frem"
+  ],
+  "Qm6K/s": [
+    "Bekreft e-postadressen din"
+  ]
 }

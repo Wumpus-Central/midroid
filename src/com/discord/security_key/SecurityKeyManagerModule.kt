@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Build.VERSION
 import androidx.credentials.CredentialManager
 import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.m
+import androidx.lifecycle.p
 import com.facebook.react.bridge.BaseActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -17,31 +17,32 @@ import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
+   public final val reactContext: ReactApplicationContext
    private final var currentPromise: Promise?
-
-   private final val webauthn: WebAuthn = new WebAuthn(new Function1<java.lang.String, Unit>(this) {
-      {
-         super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
-      }
-
-      public final void invoke(java.lang.String var1) {
-         SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
-      }
-   }, new Function1<java.lang.String, Unit>(this) {
-      {
-         super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
-      }
-
-      public final void invoke(java.lang.String var1) {
-         SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
-      }
-   })
-
+   private final val webauthn: WebAuthn
    private final val credentialManager: CredentialManager
    private final val activityEventListener: <unrepresentable>
 
    init {
-      val var2: CredentialManager.a = CredentialManager.a;
+      this.reactContext = var1;
+      this.webauthn = new WebAuthn(new Function1<java.lang.String, Unit>(this) {
+         {
+            super(1, var1, SecurityKeyManagerModule::class.java, "resolve", "resolve(Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke(java.lang.String var1) {
+            SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
+         }
+      }, new Function1<java.lang.String, Unit>(this) {
+         {
+            super(1, var1, SecurityKeyManagerModule::class.java, "reject", "reject(Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke(java.lang.String var1) {
+            SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
+         }
+      });
+      val var2: androidx.credentials.CredentialManager.a = CredentialManager.a;
       var1 = this.getReactApplicationContext();
       this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
@@ -51,6 +52,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             this.this$0 = var1;
          }
 
+         @Override
          public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
             SecurityKeyManagerModule.access$getWebauthn$p(this.this$0).onActivityResult(var2, var3, var4);
          }
@@ -90,13 +92,33 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("device does not support passkeys"));
       } else {
          this.currentPromise = var2;
-         val var3: Activity = this.getCurrentActivity();
-         db.f.d(
-            m.a(var3 as LifecycleOwner),
+         val var3: Activity = this.reactContext.getCurrentActivity();
+         ac.f.d(
+            p.a(var3 as LifecycleOwner),
             null,
             null,
             new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.jmpWrapper(ExprProcessor.java:829)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.IfStatement.toJava(IfStatement.java:258)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.jmpWrapper(ExprProcessor.java:829)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.IfStatement.toJava(IfStatement.java:251)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
             3,
             null
@@ -110,20 +132,20 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("already running"));
       } else {
          this.currentPromise = var2;
-         this.webauthn.authenticateSecurityKey(var1, this.getCurrentActivity());
+         this.webauthn.authenticateSecurityKey(var1, this.reactContext.getCurrentActivity());
       }
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "DCDSecurityKeyManager";
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
       this.getReactApplicationContext().addActivityEventListener(this.activityEventListener);
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       super.invalidate();
       this.getReactApplicationContext().removeActivityEventListener(this.activityEventListener);
    }
@@ -141,13 +163,33 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("device does not support passkeys"));
       } else {
          this.currentPromise = var2;
-         val var3: Activity = this.getCurrentActivity();
-         db.f.d(
-            m.a(var3 as LifecycleOwner),
+         val var3: Activity = this.reactContext.getCurrentActivity();
+         ac.f.d(
+            p.a(var3 as LifecycleOwner),
             null,
             null,
             new Function2<CoroutineScope, Continuation, Object>(var1, this, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
+   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.jmpWrapper(ExprProcessor.java:829)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.IfStatement.toJava(IfStatement.java:258)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.jmpWrapper(ExprProcessor.java:829)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.IfStatement.toJava(IfStatement.java:251)
+   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
             3,
             null
@@ -161,7 +203,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          var2.reject(new java.lang.Throwable("already running"));
       } else {
          this.currentPromise = var2;
-         this.webauthn.registerSecurityKey(var1, this.getCurrentActivity());
+         this.webauthn.registerSecurityKey(var1, this.reactContext.getCurrentActivity());
       }
    }
 

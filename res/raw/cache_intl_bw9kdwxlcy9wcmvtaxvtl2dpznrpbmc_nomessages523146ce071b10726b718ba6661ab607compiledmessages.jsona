@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Gavebakgrunnsvalg: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Eske",
-  "AJ4iio": "Kake",
-  "P5keo6": "Kiste",
-  "w84vER": "Kaffe",
-  "6dCq/v": "Kopp",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Juleeske",
-  "aubYGR": "Julebakst",
-  "vjxYqa": "Julekiste",
-  "bHuJLS": "Julekaffe",
-  "M6cPwM": "Snøkule",
-  "GzPel5": "Eske"
+  "B9XqQk": [
+    "Eske"
+  ],
+  "AJ4iir": [
+    "Kake"
+  ],
+  "P5keo3": [
+    "Kiste"
+  ],
+  "w84vET": [
+    "Kaffe"
+  ],
+  "6dCq/u": [
+    "Kopp"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Juleeske"
+  ],
+  "aubYGR": [
+    "Julebakst"
+  ],
+  "vjxYqU": [
+    "Julekiste"
+  ],
+  "bHuJLa": [
+    "Julekaffe"
+  ],
+  "M6cPwB": [
+    "Snøkule"
+  ],
+  "GzPel1": [
+    "Eske"
+  ]
 }

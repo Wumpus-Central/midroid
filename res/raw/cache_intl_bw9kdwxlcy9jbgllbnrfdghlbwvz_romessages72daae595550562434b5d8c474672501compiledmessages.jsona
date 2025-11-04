@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Creat de ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Previzualizare temă personalizată",
-  "qZMUoK": "Așa va apărea tema ta pe toate dispozitivele Discord.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Previzualizare temă personalizată"
+  ],
+  "qZMUoL": [
+    "Așa va apărea tema ta pe toate dispozitivele Discord."
+  ],
+  "v15Ipv": [
     "Cât timp este activată sincronizarea, temele personalizate [Beta] create pe desktop îți pot afecta tema de pe mobil. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Temă personalizată",
-  "KSBBpK": "Temă personalizată"
+  "yl1iMm": [
+    "Temă personalizată"
+  ],
+  "KSBBpC": [
+    "Temă personalizată"
+  ]
 }

@@ -30,10 +30,10 @@ import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
-import qb.f
+import nc.f
 
 @ReactModule(name = "DCDChatInput")
-@SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,328:1\n123#2:329\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n326#1:329\n*E\n"])
+@SourceDebugExtension(["SMAP\nChatInputViewManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n+ 2 Color.kt\nandroidx/core/graphics/ColorKt\n+ 3 SerialFormat.kt\nkotlinx/serialization/SerialFormatKt\n*L\n1#1,332:1\n404#2:333\n404#2:334\n123#3:335\n*S KotlinDebug\n*F\n+ 1 ChatInputViewManager.kt\ncom/discord/chat/input/ChatInputViewManager\n*L\n135#1:333\n155#1:334\n330#1:335\n*E\n"])
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
    private final val json: Json = b.b(null, new a(), 1, null)
    private final val delegate: DCDChatInputManagerDelegate<ChatInputRootView, ChatInputViewManager>
@@ -94,11 +94,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
          @Override
          public void onImageInserted(Uri var1) {
-            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
             val var3: ThemedReactContext = this.$reactContext;
             val var2: ChatInputRootView = this.$view;
-            val var5: java.lang.String = var1.toString();
-            var4.emitEvent(var3, var2, new OnPasteImageEvent(var5, this.$reactContext.getContentResolver().getType(var1)));
+            val var4: java.lang.String = var1.toString();
+            var5.emitEvent(var3, var2, new OnPasteImageEvent(var4, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -213,11 +213,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               val var5: Int = var3.getInt(0);
-               val var4: Int = var3.getInt(1);
+               val var4: Int = var3.getInt(0);
+               val var5: Int = var3.getInt(1);
                var2 = var3.getString(2);
                val var6: java.lang.String = var3.getString(3);
-               this.replaceRange(var1, var5, var4, var2, var6, var3.getBoolean(4), var3.getString(5));
+               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:
@@ -282,7 +282,9 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
    @ReactProp(name = "placeholderColor")
    public open fun setPlaceholderColor(view: ChatInputRootView, placeholderColor: String?) {
-      var1.setHintTextColor(Color.parseColor(var2));
+      if (var2 != null) {
+         var1.setHintTextColor(Color.parseColor(var2));
+      }
    }
 
    public open fun setSelectedRange(view: ChatInputRootView, location: Int, length: Int) {
@@ -312,7 +314,9 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
    @ReactProp(name = "textColor")
    public open fun setTextColor(view: ChatInputRootView, textColor: String?) {
-      var1.setTextColor(Color.parseColor(var2));
+      if (var2 != null) {
+         var1.setTextColor(Color.parseColor(var2));
+      }
    }
 
    public open fun updateTextBlocks(view: ChatInputRootView, blocks: String, editId: String?) {

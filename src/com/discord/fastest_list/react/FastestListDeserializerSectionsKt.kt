@@ -129,11 +129,11 @@ private fun createSectionItem(
 internal operator fun Companion.invoke(value: ReadableMap): Versioned {
    val var18: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listId");
    val var5: Boolean = var1.getBoolean("keysAreUniform");
-   val var15: ArrayList = new ArrayList();
+   val var14: ArrayList = new ArrayList();
    val var17: IntRef = new IntRef();
    val var11: ArrayList = new ArrayList();
    val var19: java.util.List = NativeArrayExtensionsKt.toIntList(NativeMapExtensionsKt.getNonNullArray(var1, "sections"));
-   val var14: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
+   val var15: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
    val var20: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemKeys");
    val var10: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemSizes");
    val var6: Int;
@@ -187,7 +187,7 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
       var29 = null;
    }
 
-   val var16: a = new a(var11, var15, var17);
+   val var16: a = new a(var11, var14, var17);
    var2 = 0;
    val var30: a = var16;
 
@@ -222,7 +222,7 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
       }
    }
 
-   return new FastestListSections.Versioned(var14, var11, var17.element, var15);
+   return new FastestListSections.Versioned(var15, var11, var17.element, var14);
 }
 
 fun `invoke$lambda$0`(var0: java.util.List, var1: java.util.List, var2: IntRef, var3: FastestListSections.Entry): Unit {

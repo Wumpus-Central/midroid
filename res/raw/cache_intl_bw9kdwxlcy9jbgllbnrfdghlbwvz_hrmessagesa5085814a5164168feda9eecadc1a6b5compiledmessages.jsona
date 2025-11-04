@@ -1,14 +1,18 @@
 {
-  "fQPSER": [
+  "fQPSEf": [
     "Izradio/la ",
     [
       1,
       "username"
     ]
   ],
-  "3ej1LS": "Pretpregled prilagođene teme",
-  "qZMUoK": "Ovako će tvoja tema izgledati na svim uređajima s Discordom.",
-  "v15Ipq": [
+  "3ej1LT": [
+    "Pretpregled prilagođene teme"
+  ],
+  "qZMUoL": [
+    "Ovako će tvoja tema izgledati na svim uređajima s Discordom."
+  ],
+  "v15Ipv": [
     "Kada je sinkronizacija uključena, prilagođene teme [Beta] koje napraviš na računalu mogu utjecati na tvoju mobilnu temu. ",
     [
       8,
@@ -24,6 +28,10 @@
       ]
     ]
   ],
-  "yl1iMj": "Prilagođena tema",
-  "KSBBpK": "Prilagođena tema"
+  "yl1iMm": [
+    "Prilagođena tema"
+  ],
+  "KSBBpC": [
+    "Prilagođena tema"
+  ]
 }

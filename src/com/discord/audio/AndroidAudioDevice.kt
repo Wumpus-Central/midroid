@@ -1,13 +1,14 @@
 package com.discord.audio
 
-import B9.s
 import android.media.AudioDeviceInfo
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
+import kc.m
 import kotlinx.serialization.KSerializer
+import xa.v
 
-@nb.g
+@m
 public class AndroidAudioDevice {
    public final var deviceType: Int
       internal set
@@ -29,10 +30,12 @@ public class AndroidAudioDevice {
 
    public fun toNativeMap(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         s.a("deviceType", this.deviceType),
-         s.a("simpleDeviceType", this.simpleDeviceType.name()),
-         s.a("deviceId", this.deviceId),
-         s.a("deviceName", this.deviceName)
+         new Pair[]{
+            v.a("deviceType", this.deviceType),
+            v.a("simpleDeviceType", this.simpleDeviceType.name()),
+            v.a("deviceId", this.deviceId),
+            v.a("deviceName", this.deviceName)
+         }
       );
    }
 

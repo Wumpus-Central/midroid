@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.embed
 
-import B9.j
-import B9.m
-import H9.a
+import Da.a
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
-import p1.e
+import p2.e
+import xa.l
+import xa.o
 
-@g
+@m
 public enum class EmbedType {
    ApplicationNews,
    Article,
@@ -29,7 +29,7 @@ public enum class EmbedType {
    @JvmStatic
    private EmbedType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = j.a(m.e, new e());
+   private Lazy $cachedSerializer$delegate = l.b(o.e, new e());
    @JvmStatic
    public EmbedType.Companion Companion = new EmbedType.Companion(null);
 

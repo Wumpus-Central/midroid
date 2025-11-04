@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import Y1.a
+import Y2.a
 import com.discord.codegen.NativeI18nModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
@@ -22,11 +22,11 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
       return var0.name();
    }
 
-   public override fun keysRequest(callback: Callback) {
-      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), new a())});
+   public open fun keysRequest(callback: Callback) {
+      var1.invoke(NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), new a()));
    }
 
-   public override fun valuesResult(values: ReadableArray) {
+   public open fun valuesResult(values: ReadableArray) {
       val var5: I18nCache = I18nCache.INSTANCE;
       val var4: ReactApplicationContext = this.reactContext;
       val var3: HashMap = new HashMap();

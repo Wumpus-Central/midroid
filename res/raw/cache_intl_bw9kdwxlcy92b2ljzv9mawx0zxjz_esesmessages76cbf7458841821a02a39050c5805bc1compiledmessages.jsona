@@ -1,8 +1,20 @@
 {
-  "Xypb39": "Cueva",
-  "qRFFLC": "Voz áspera",
-  "lFIyMz": "Fantasma",
-  "fPU01d": "Megáfono",
-  "KN+v7+": "Conejito espacial",
-  "kHmvdn": "Jefe cibernético"
+  "Xypb3z": [
+    "Cueva"
+  ],
+  "qRFFLK": [
+    "Voz áspera"
+  ],
+  "lFIyM/": [
+    "Fantasma"
+  ],
+  "fPU01d": [
+    "Megáfono"
+  ],
+  "KN+v77": [
+    "Conejito espacial"
+  ],
+  "kHmvdt": [
+    "Jefe cibernético"
+  ]
 }

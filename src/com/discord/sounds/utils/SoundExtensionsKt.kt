@@ -1,25 +1,29 @@
+@file:SourceDebugExtension(["SMAP\nSoundExtensions.kt\nKotlin\n*S Kotlin\n*F\n+ 1 SoundExtensions.kt\ncom/discord/sounds/utils/SoundExtensionsKt\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,76:1\n29#2:77\n*S KotlinDebug\n*F\n+ 1 SoundExtensions.kt\ncom/discord/sounds/utils/SoundExtensionsKt\n*L\n26#1:77\n*E\n"])
+
 package com.discord.sounds.utils
 
-import E9.a
-import G9.b
+import Aa.a
+import Ca.b
+import ac.K
+import ac.d0
+import ac.f
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
+import com.discord.file_downloader.DownloadState.Completed
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import db.K
-import db.d0
-import db.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
+import kotlin.jvm.internal.SourceDebugExtension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
@@ -71,10 +75,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                c.b(var1);
             } else {
                c.b(var1);
-               var1 = FileDownloader.downloadFile$default(
+               val var4: Flow = FileDownloader.downloadFile$default(
                   FileDownloader.INSTANCE, this.$context, this.$url, this.$fileName, this.$soundDirectory, false, 16, null
                );
-               val var4: FlowCollector = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
+               var1 = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
                   final int $key;
                   final SoundManager $soundManager;
                   final Function1<Integer, Unit> $soundResIdPrepared;
@@ -174,10 +178,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         c.b(var5);
                      } else {
                         c.b(var5);
-                        if (var1 is DownloadState.Completed) {
+                        if (var1 is Completed) {
                            try {
-                              var5 = K.c();
-                              val var6: Function2 = new Function2<CoroutineScope, Continuation, Object>(
+                              val var6: d0 = K.c();
+                              var5 = new Function2<CoroutineScope, Continuation, Object>(
                                  this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null
                               ) {
                                  final DownloadState $downloadState;
@@ -215,7 +219,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                              this.$key,
                                              this.$usage,
                                              null,
-                                             (this.$downloadState as DownloadState.Completed).getFile().getAbsolutePath(),
+                                             (this.$downloadState as Completed).getFile().getAbsolutePath(),
                                              this.$soundResIdPrepared
                                           );
                                        return Unit.a;
@@ -225,7 +229,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = f.g((CoroutineContext)var5, var6, (Continuation)var13);
+                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
                            } catch (var8: Exception) {
                               val var11: d0 = K.c();
                               var5 = new Function2<CoroutineScope, Continuation, Object>(var8, null) {
@@ -307,7 +311,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                   }
                };
                this.label = 1;
-               if (var1.collect(var4, this) === var3) {
+               if (var4.collect(var1, this) === var3) {
                   return var3;
                }
             }
@@ -335,13 +339,13 @@ internal fun Context.getSoundsCacheDirectory(): File {
 internal fun Context.tryPruneSoundsCache() {
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
-      h.y(var1, new Comparator() {
+      k.G(var1, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var2 as File).lastModified(), (var1 as File).lastModified());
          }
       });
-      val var2: File = h.l0(var1) as File;
+      val var2: File = k.u0(var1) as File;
       if (var2 != null) {
          var2.delete();
       }

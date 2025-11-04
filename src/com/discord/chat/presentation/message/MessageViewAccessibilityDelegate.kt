@@ -55,9 +55,9 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
          var3.add(var5);
       }
 
-      var2.V0(CollectionsKt.p0(var3, ", ", null, null, 0, null, null, 62, null));
-      var2.j0(AccessibilityNodeInfoCompat.a.i);
-      var2.H0(15);
+      var2.a1(CollectionsKt.r0(var3, ", ", null, null, 0, null, null, 62, null));
+      var2.k0(AccessibilityNodeInfoCompat.a.i);
+      var2.L0(15);
    }
 
    public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {

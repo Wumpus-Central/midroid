@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Tässä on koodi ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     "."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Kaikki tämä on paikallisesti hallittua eikä sitä ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " korvattu globaalilla i18n-järjestelmällä."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Hook-viittauksia (kuten ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     ") käyttämällä voi lisätä erikoissisältöä."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Tässä tekstissä on ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", jossa URL-osoite on määritetty tekstiin."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Tämä linkki käyttää käytönaikana määritettävää ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     "."
   ],
-  "swfLzc": "Tämä viesti on peräisin erillisestä tiedostosta"
+  "swfLzV": [
+    "Tämä viesti on peräisin erillisestä tiedostosta"
+  ]
 }

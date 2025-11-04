@@ -10,8 +10,7 @@ public final class a implements G {
    public final ViewGroup d;
    public final View e;
 
-   @Override
-   public final WindowInsetsCompat b(View var1, WindowInsetsCompat var2) {
+   public final WindowInsetsCompat a(View var1, WindowInsetsCompat var2) {
       return ImmersiveMode.a(this.d, this.e, var1, var2);
    }
 }

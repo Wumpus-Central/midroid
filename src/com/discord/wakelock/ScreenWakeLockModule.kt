@@ -11,14 +11,14 @@ internal class ScreenWakeLockModule(reactContext: ReactApplicationContext) : Nat
       this.reactContext = var1;
    }
 
-   public override fun releaseLock(key: String) {
+   public open fun releaseLock(key: String) {
       val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 != null) {
          ScreenWakeLock.INSTANCE.releaseLock(var2, var1);
       }
    }
 
-   public override fun requestLock(key: String) {
+   public open fun requestLock(key: String) {
       val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 != null) {
          ScreenWakeLock.INSTANCE.requestLock(var2, var1);

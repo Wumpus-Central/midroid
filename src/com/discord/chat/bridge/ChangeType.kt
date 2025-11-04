@@ -1,13 +1,13 @@
 package com.discord.chat.bridge
 
-import H9.a
+import Da.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kc.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g(with = ChangeType.Serializer::class)
+@m(with = ChangeType.Serializer::class)
 public enum class ChangeType(serialNumber: Int) : IntEnum {
    DELETE(3),
    INSERT(1),

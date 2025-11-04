@@ -1,5 +1,5 @@
 {
-  "rdfRys": [
+  "rdfRyh": [
     "Vi har en ",
     [
       8,
@@ -10,7 +10,7 @@
     ],
     " her."
   ],
-  "HMvECw": [
+  "HMvEC5": [
     "Alt dette administreres lokalt og har ",
     [
       8,
@@ -21,7 +21,7 @@
     ],
     " erstattet det globale i18n-system."
   ],
-  "XOdbAw": [
+  "XOdbAy": [
     "Use hooks like ",
     [
       8,
@@ -35,7 +35,7 @@
     ],
     " for special content."
   ],
-  "rmps8/": [
+  "rmps8y": [
     "Denne streng har et ",
     [
       8,
@@ -49,7 +49,7 @@
     ],
     ", med url'en defineret i strengen."
   ],
-  "uczI4u": [
+  "uczI4g": [
     "Dette link bruger et ",
     [
       8,
@@ -66,5 +66,7 @@
     ],
     ", der er angivet ved kørselstidspunktet."
   ],
-  "swfLzc": "Denne besked kommer fra en separat fil"
+  "swfLzV": [
+    "Denne besked kommer fra en separat fil"
+  ]
 }

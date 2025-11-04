@@ -1,6 +1,6 @@
 package com.discord.fonts
 
-import H9.a
+import Da.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -90,16 +90,16 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
+         val var6: java.util.Iterator = DiscordFont.getEntries().iterator();
 
          var var4: Any;
          do {
-            if (!var5.hasNext()) {
+            if (!var6.hasNext()) {
                var4 = null;
                break;
             }
 
-            var4 = var5.next();
+            var4 = var6.next();
          } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
          return var4 as DiscordFont;
@@ -109,17 +109,17 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          if (var1 == null) {
             return null;
          } else {
-            val var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
+            var var3: java.util.Set = DiscordFont.access$getTypefaces$cp().entrySet();
             val var4: java.util.Iterator = var3.iterator();
 
             while (true) {
                if (var4.hasNext()) {
-                  val var7: Any = var4.next();
-                  if (!((var7 as Entry).getValue() == var1)) {
+                  var3 = (java.util.Set)var4.next();
+                  if (!((var3 as Entry).getValue() == var1)) {
                      continue;
                   }
 
-                  var5 = var7;
+                  var5 = var3;
                   break;
                }
 

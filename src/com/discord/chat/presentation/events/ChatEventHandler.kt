@@ -15,6 +15,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactions.ReactionView.Reaction
+import xa.c
 
 public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
@@ -256,6 +257,7 @@ public interface ChatEventHandler {
    public abstract fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
    }
 
+   @c
    public abstract fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
    }
 
@@ -574,6 +576,7 @@ public interface ChatEventHandler {
       public override fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
       }
 
+      @c
       public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
       }
 

@@ -1,21 +1,45 @@
 {
-  "+utqa2": [
+  "+utqaz": [
     "Varianta pozadí daru: ",
     [
       1,
       "giftStyle"
     ]
   ],
-  "B9XqQk": "Krabice",
-  "AJ4iio": "Dort",
-  "P5keo6": "Truhla",
-  "w84vER": "Káva",
-  "6dCq/v": "Šálek",
-  "+HMF8v": "Nitroween",
-  "vd1fu7": "Sváteční krabice",
-  "aubYGR": "Sváteční koláč",
-  "vjxYqa": "Sváteční truhla",
-  "bHuJLS": "Sváteční káva",
-  "M6cPwM": "Sněhová koule",
-  "GzPel5": "Krabice"
+  "B9XqQk": [
+    "Krabice"
+  ],
+  "AJ4iir": [
+    "Dort"
+  ],
+  "P5keo3": [
+    "Truhla"
+  ],
+  "w84vET": [
+    "Káva"
+  ],
+  "6dCq/u": [
+    "Šálek"
+  ],
+  "+HMF8k": [
+    "Nitroween"
+  ],
+  "vd1fu/": [
+    "Sváteční krabice"
+  ],
+  "aubYGR": [
+    "Sváteční koláč"
+  ],
+  "vjxYqU": [
+    "Sváteční truhla"
+  ],
+  "bHuJLa": [
+    "Sváteční káva"
+  ],
+  "M6cPwB": [
+    "Sněhová koule"
+  ],
+  "GzPel1": [
+    "Krabice"
+  ]
 }

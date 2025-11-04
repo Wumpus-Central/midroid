@@ -1,9 +1,23 @@
 {
-  "bvzo6u": "The moderator queue feature is not accessible on mobile. Please visit on desktop.",
-  "iCIEAQ": "Mod Queue Inaccessible",
-  "6mx/DA": "Flagged for",
-  "1D+vq6": "Flag to Mods",
-  "psKFdH": "There was an error submitting this flag. Please try again.",
-  "ZUyreX": "Submit Flag",
-  "iBypeX": "Sent to mods successfully"
+  "bvzo6p": [
+    "The moderator queue feature is not accessible on mobile. Please visit on desktop."
+  ],
+  "iCIEAV": [
+    "Mod Queue Inaccessible"
+  ],
+  "6mx/DP": [
+    "Flagged for"
+  ],
+  "1D+vqy": [
+    "Flag to Mods"
+  ],
+  "psKFdJ": [
+    "There was an error submitting this flag. Please try again."
+  ],
+  "ZUyreS": [
+    "Submit Flag"
+  ],
+  "iBypeZ": [
+    "Sent to mods successfully"
+  ]
 }

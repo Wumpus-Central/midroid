@@ -1,6 +1,5 @@
 package com.discord.avatar.react
 
-import B9.s
 import com.discord.avatar.decoration.DecorationView
 import com.discord.avatar.react.events.OnImageLoadedEvent
 import com.discord.image.animated_image.apng.APNGImageView
@@ -11,11 +10,12 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
+import xa.v
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {
    private final val delegate: APNGDecorationViewManagerDelegate<DecorationView, APNGDecorationViewManager> = new APNGDecorationViewManagerDelegate(this)
-   internal final val reactEvents: ReactEvents = new ReactEvents(s.a("onLoad", OnImageLoadedEvent::class))
+   internal final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{v.a("onLoad", OnImageLoadedEvent::class)})
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): DecorationView {
       val var2: DecorationView = new DecorationView(var1, null, 0, 6, null);

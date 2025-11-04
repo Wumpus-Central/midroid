@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
+import kc.m
 import kotlinx.serialization.KSerializer
-import nb.g
 
-@g
+@m
 public data class BlockedGroupContent(message: MessageBase) {
-   @g(
+   @m(
       with = MessageSerializer.class
    )
    public final val message: MessageBase

@@ -1,15 +1,15 @@
 package com.discord.phone_verification
 
-import B9.s
-import X1.d
+import X2.d
 import com.discord.phone_verification.reactevents.VerificationCodeReceivedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import xa.v
 
 public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("verificationCodeReceived", VerificationCodeReceivedEvent::class))
+   private final val reactEvents: ReactEvents = new ReactEvents(v.a("verificationCodeReceived", VerificationCodeReceivedEvent::class))
    private final val smsAutofillManager: SmsAutofillManager
 
    init {
@@ -26,16 +26,16 @@ public class SmsAutofillManagerModule(reactContext: ReactApplicationContext) : R
    public fun addListener(type: String) {
    }
 
-   public open fun getName(): String {
+   public override fun getName(): String {
       return "SmsAutofillManager";
    }
 
-   public open fun initialize() {
+   public override fun initialize() {
       super.initialize();
       this.smsAutofillManager.registerReceiver();
    }
 
-   public open fun invalidate() {
+   public override fun invalidate() {
       this.smsAutofillManager.unregisterReceiver();
    }
 

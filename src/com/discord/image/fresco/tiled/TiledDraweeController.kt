@@ -1,7 +1,10 @@
 package com.discord.image.fresco.tiled
 
-import G2.d
-import G9.b
+import Ca.b
+import G3.d
+import ac.K
+import ac.f
+import ac.k0
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Shader.TileMode
@@ -14,9 +17,6 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
 import com.facebook.imagepipeline.request.ImageRequest
-import db.K
-import db.f
-import db.k0
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
@@ -25,7 +25,7 @@ import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
-import u3.e
+import u4.e
 
 @SourceDebugExtension(["SMAP\nTiledDraweeController.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TiledDraweeController.kt\ncom/discord/image/fresco/tiled/TiledDraweeController\n+ 2 fake.kt\nkotlin/jvm/internal/FakeKt\n*L\n1#1,107:1\n1#2:108\n*E\n"])
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
@@ -44,7 +44,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.X0(K.c().Z1()));
+      this.scope = g.a(var4.X0(K.c().a2()));
    }
 
    private fun load() {
@@ -77,36 +77,38 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             // $VF: Could not inline inconsistent finally blocks
             // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
             public final Object invokeSuspend(Object var1) {
-               var var7: Any;
-               var var8: DataSource;
-               label1424: {
-                  var8 = (DataSource)b.e();
+               var var7: DataSource;
+               var var8: Any;
+               label1566: {
+                  var7 = (DataSource)b.e();
                   val var3x: Long;
+                  var var9: Any;
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                      }
 
                      var3x = this.J$0;
+                     var7 = this.L$0 as DataSource;
                      var8 = this.L$0 as DataSource;
 
                      try {
                         c.b(var1);
-                     } catch (var25: java.lang.Throwable) {
-                        var8 = this.L$0 as DataSource;
-                        var7 = var25;
-                        break label1424;
+                     } catch (var26: java.lang.Throwable) {
+                        var7 = var26;
+                        break label1566;
                      }
+
+                     var9 = var1;
                   } else {
                      c.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
+                     var8 = this.L$0 as CoroutineScope;
                      var3x = System.currentTimeMillis();
-                     var7 = ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0));
-                     val var252: DataSource = d.a().k((ImageRequest)var7, var1);
+                     var1 = d.a().k(ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0)), var8);
 
                      try {
-                        var7 = K.b();
-                        val var9: Function2 = new Function2<CoroutineScope, Continuation, Object>(var252, null) {
+                        var9 = K.b();
+                        var8 = new Function2<CoroutineScope, Continuation, Object>(var1, null) {
                            final DataSource $dataSource;
                            int label;
 
@@ -127,159 +129,185 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               b.e();
                               if (this.label == 0) {
                                  c.b(var1);
-                                 return A2.c.c(this.$dataSource);
+                                 return A3.c.c(this.$dataSource);
                               } else {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                               }
                            }
                         };
-                        this.L$0 = var252;
+                        this.L$0 = var1;
                         this.J$0 = var3x;
                         this.label = 1;
-                        var7 = f.g((CoroutineContext)var7, var9, this);
-                     } catch (var24: java.lang.Throwable) {
-                        break label1424;
+                        var9 = (BitmapDrawable)f.g((CoroutineContext)var9, (Function2)var8, this);
+                     } catch (var25: java.lang.Throwable) {
+                        break label1566;
                      }
 
-                     if (var7 === var8) {
-                        return var8;
+                     if (var9 === var7) {
+                        return var7;
                      }
 
-                     var8 = var252;
-                     var1 = (GenericDraweeHierarchy)var7;
+                     var7 = var1;
                   }
+
+                  var8 = var7;
 
                   try {
-                     var1 = var1 as CloseableReference;
-                  } catch (var23: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var23;
-                     break label1424;
+                     var1 = var9 as CloseableReference;
+                  } catch (var24: java.lang.Throwable) {
+                     var7 = var24;
+                     break label1566;
                   }
+
+                  var8 = var7;
 
                   try {
                      TiledDraweeController.access$setMyImageReference$p(this.this$0, var1);
-                  } catch (var22: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var22;
-                     break label1424;
+                  } catch (var23: java.lang.Throwable) {
+                     var7 = var23;
+                     break label1566;
                   }
 
-                  val var254: e;
+                  val var286: e;
                   if (var1 != null) {
+                     var8 = var7;
+
                      try {
-                        var254 = var1.v0() as e;
-                     } catch (var21: java.lang.Throwable) {
-                        var8 = var8;
-                        var7 = var21;
-                        break label1424;
+                        var286 = var1.w0() as e;
+                     } catch (var22: java.lang.Throwable) {
+                        var7 = var22;
+                        break label1566;
                      }
                   } else {
-                     var254 = null;
+                     var286 = null;
                   }
 
-                  var var260: u3.d;
-                  label131: {
-                     label163: {
+                  var8 = var7;
+
+                  label139: {
+                     label172: {
                         try {
-                           if (var254 !is u3.d) {
-                              break label163;
+                           if (var286 !is u4.d) {
+                              break label172;
                            }
-                        } catch (var20: java.lang.Throwable) {
-                           var8 = var8;
-                           var7 = var20;
-                           break label1424;
+                        } catch (var21: java.lang.Throwable) {
+                           var7 = var21;
+                           break label1566;
                         }
+
+                        var8 = var7;
 
                         try {
-                           var260 = var254 as u3.d;
-                           break label131;
-                        } catch (var19: java.lang.Throwable) {
-                           var8 = var8;
-                           var7 = var19;
-                           break label1424;
+                           var1 = var286 as u4.d;
+                           break label139;
+                        } catch (var20: java.lang.Throwable) {
+                           var7 = var20;
+                           break label1566;
                         }
                      }
 
-                     var260 = null;
+                     var1 = null;
                   }
 
-                  var var255: Bitmap = null;
-                  if (var260 != null) {
+                  val var288: Bitmap;
+                  if (var1 != null) {
+                     var8 = var7;
+
                      try {
-                        var255 = var260.A1();
+                        var288 = var1.D1();
+                     } catch (var19: java.lang.Throwable) {
+                        var7 = var19;
+                        break label1566;
+                     }
+                  } else {
+                     var288 = null;
+                  }
+
+                  var9 = null;
+                  if (var288 != null) {
+                     var8 = var7;
+
+                     var var295: Resources;
+                     try {
+                        var295 = TiledDraweeController.access$getResources$p(this.this$0);
                      } catch (var18: java.lang.Throwable) {
-                        var8 = var8;
                         var7 = var18;
-                        break label1424;
+                        break label1566;
+                     }
+
+                     var8 = var7;
+
+                     try {
+                        var9 = new BitmapDrawable;
+                     } catch (var17: java.lang.Throwable) {
+                        var7 = var17;
+                        break label1566;
+                     }
+
+                     var8 = var7;
+
+                     try {
+                        var9./* $VF: Unable to resugar constructor */<init>(var295, var288);
+                     } catch (var16: java.lang.Throwable) {
+                        var7 = var16;
+                        break label1566;
+                     }
+
+                     var8 = var7;
+
+                     try {
+                        var1 = this.this$0;
+                     } catch (var15: java.lang.Throwable) {
+                        var7 = var15;
+                        break label1566;
+                     }
+
+                     var8 = var7;
+
+                     try {
+                        var9.setTileModeXY(TiledDraweeController.access$getTileMode$p(var1), TiledDraweeController.access$getTileMode$p(var1));
+                     } catch (var14: java.lang.Throwable) {
+                        var7 = var14;
+                        break label1566;
                      }
                   }
 
-                  try {
-                     var261 = new BitmapDrawable;
-                  } catch (var17: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var17;
-                     break label1424;
-                  }
-
-                  try {
-                     var261./* $VF: Unable to resugar constructor */<init>(TiledDraweeController.access$getResources$p(this.this$0), var255);
-                  } catch (var16: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var16;
-                     break label1424;
-                  }
-
-                  try {
-                     var1 = this.this$0;
-                  } catch (var15: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var15;
-                     break label1424;
-                  }
-
-                  try {
-                     var261.setTileModeXY(TiledDraweeController.access$getTileMode$p(var1), TiledDraweeController.access$getTileMode$p(var1));
-                  } catch (var14: java.lang.Throwable) {
-                     var8 = var8;
-                     var7 = var14;
-                     break label1424;
-                  }
+                  var8 = var7;
 
                   var var5: Long;
                   try {
                      var5 = System.currentTimeMillis();
                   } catch (var13: java.lang.Throwable) {
-                     var8 = var8;
                      var7 = var13;
-                     break label1424;
+                     break label1566;
                   }
 
-                  var var258: Boolean = false;
+                  var var291: Boolean = false;
                   if (var5 - var3x >= 120L) {
-                     var258 = true;
+                     var291 = true;
                   }
+
+                  var8 = var7;
 
                   try {
                      var1 = TiledDraweeController.access$getHierarchy$p(this.this$0);
                   } catch (var12: java.lang.Throwable) {
-                     var8 = var8;
                      var7 = var12;
-                     break label1424;
+                     break label1566;
                   }
 
                   if (var1 != null) {
+                     var8 = var7;
+
                      try {
-                        var1.f(var261, 1.0F, var258 xor true);
+                        var1.f(var9, 1.0F, var291 xor true);
                      } catch (var11: java.lang.Throwable) {
-                        var8 = var8;
                         var7 = var11;
-                        break label1424;
+                        break label1566;
                      }
                   }
 
-                  var8.close();
+                  var7.close();
                   return Unit.a;
                }
 
@@ -319,7 +347,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return var4 == this.url && this.myImageReference != null && this.myImageReference.z0();
+         return var4 == this.url && this.myImageReference != null && this.myImageReference.A0();
       }
    }
 

@@ -1,6 +1,5 @@
 package com.discord.channel_spine
 
-import B9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -13,10 +12,14 @@ import android.view.View
 import android.view.View.MeasureSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import com.discord.theme.R.color
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
+import kotlin.jvm.internal.SourceDebugExtension
+import xa.p
 
+@SourceDebugExtension(["SMAP\nChannelSpineView.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ChannelSpineView.kt\ncom/discord/channel_spine/ChannelSpineView\n+ 2 Canvas.kt\nandroidx/core/graphics/CanvasKt\n*L\n1#1,215:1\n27#2,7:216\n*S KotlinDebug\n*F\n+ 1 ChannelSpineView.kt\ncom/discord/channel_spine/ChannelSpineView\n*L\n91#1:216,7\n*E\n"])
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View(var1, var2) {
    private final val spinePaint: Paint
 
@@ -76,7 +79,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       if (!this.isInEditMode()) {
          var3 = ThemeManagerKt.getTheme().getBackgroundAccent();
       } else {
-         var3 = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.primary_500);
+         var3 = ColorUtilsKt.getColorCompat(var1, color.primary_500);
       }
 
       var4.setColor(var3);
@@ -118,7 +121,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       val var4: Float;
       if (var9 != 1) {
          if (var9 != 2) {
-            throw new n();
+            throw new p();
          }
 
          var4 = this.yOfRow(var1, var2 + 1);
@@ -133,24 +136,24 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          var5 = 0.5F * var1;
       }
 
-      val var7: Float = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var8: Float = this.getMeasuredWidth();
-      var5 = this.horizontalPadding;
-      var1 = this.arcPercent() * this.getMeasuredWidth();
+      var5 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
+      var1 = this.getMeasuredWidth();
+      val var8: Float = this.horizontalPadding;
+      val var7: Float = this.arcPercent() * this.getMeasuredWidth();
       var2 = var11[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
-            throw new n();
+            throw new p();
          }
 
-         this.arcRect.set(var6, var7, var6 + var1, var1 + var7);
+         this.arcRect.set(var6, var5, var6 + var7, var7 + var5);
       } else {
-         this.arcRect.set(var6, var7 - var1, var1 + var6, var7);
+         this.arcRect.set(var6, var5 - var7, var7 + var6, var5);
       }
 
       var10.moveTo(var6, var4);
       var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var10.lineTo(var8 - var5, var7);
+      var10.lineTo(var1 - var8, var5);
       return var10;
    }
 
@@ -206,15 +209,54 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      super.onDraw(var1);
-      val var2: Int = var1.save();
-      val var3: java.util.Iterator = this.paths.iterator();
-
-      while (var3.hasNext()) {
-         var1.drawPath(var3.next() as Path, this.spinePaint);
-      }
-
-      var1.restoreToCount(var2);
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.insertSemaphore(FinallyProcessor.java:350)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:99)
+      //
+      // Bytecode:
+      // 00: aload 1
+      // 01: ldc_w "canvas"
+      // 04: invokestatic kotlin/jvm/internal/Intrinsics.checkNotNullParameter (Ljava/lang/Object;Ljava/lang/String;)V
+      // 07: aload 0
+      // 08: aload 1
+      // 09: invokespecial android/view/View.onDraw (Landroid/graphics/Canvas;)V
+      // 0c: aload 1
+      // 0d: invokevirtual android/graphics/Canvas.save ()I
+      // 10: istore 2
+      // 11: aload 0
+      // 12: getfield com/discord/channel_spine/ChannelSpineView.paths Ljava/util/List;
+      // 15: invokeinterface java/util/List.iterator ()Ljava/util/Iterator; 1
+      // 1a: astore 3
+      // 1b: aload 3
+      // 1c: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 21: ifeq 3c
+      // 24: aload 1
+      // 25: aload 3
+      // 26: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 2b: checkcast android/graphics/Path
+      // 2e: aload 0
+      // 2f: getfield com/discord/channel_spine/ChannelSpineView.spinePaint Landroid/graphics/Paint;
+      // 32: invokevirtual android/graphics/Canvas.drawPath (Landroid/graphics/Path;Landroid/graphics/Paint;)V
+      // 35: goto 1b
+      // 38: astore 3
+      // 39: goto 42
+      // 3c: aload 1
+      // 3d: iload 2
+      // 3e: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 41: return
+      // 42: aload 1
+      // 43: iload 2
+      // 44: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 47: aload 3
+      // 48: athrow
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -236,7 +278,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
                var6 = MeasureSpec.getSize(var2);
             }
          } else {
-            var6 = d.g(var3, (float)MeasureSpec.getSize(var2));
+            var6 = e.h(var3, (float)MeasureSpec.getSize(var2));
          }
 
          var var8: Boolean = false;
@@ -267,7 +309,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = Da.a.a(var0);
       }
 
       init {

@@ -4,7 +4,9 @@ import android.net.Uri
 import com.facebook.react.views.imagehelper.ImageSource
 import java.io.File
 import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.SourceDebugExtension
 
+@SourceDebugExtension(["SMAP\nImageSourceOverride.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ImageSourceOverride.kt\ncom/discord/react_fork_overrides/forks/ImageSourceOverride\n+ 2 Uri.kt\nandroidx/core/net/UriKt\n*L\n1#1,48:1\n29#2:49\n*S KotlinDebug\n*F\n+ 1 ImageSourceOverride.kt\ncom/discord/react_fork_overrides/forks/ImageSourceOverride\n*L\n26#1:49\n*E\n"])
 internal object ImageSourceOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: java.lang.String): java.lang.String {
@@ -22,7 +24,7 @@ internal object ImageSourceOverride {
             return var1;
          } else {
             val var4: File = new File(var3);
-            return if (var4.exists()) var1 else L9.i.p(var4);
+            return if (var4.exists()) var1 else Ha.j.q(var4);
          }
       }
    }

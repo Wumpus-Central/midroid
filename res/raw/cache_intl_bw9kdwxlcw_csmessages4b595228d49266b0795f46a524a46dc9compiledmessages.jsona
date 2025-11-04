@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Tvůj účet byl odemčen",
-  "d9Ykjo": "Ověřovací kód",
-  "bFbsV1": "Zadej svůj e-mail",
-  "RRBNpq": "Další",
-  "0DHxys": [
+  "/fHz9S": [
+    "Tvůj účet byl odemčen"
+  ],
+  "d9Ykjr": [
+    "Ověřovací kód"
+  ],
+  "bFbsV6": [
+    "Zadej svůj e-mail"
+  ],
+  "RRBNpv": [
+    "Další"
+  ],
+  "0DHxym": [
     "Nejsi to ty? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Později tě můžeme požádat o další kontrolu, když nám budeš připadat jako robot",
-  "Ks6opq": "Začít",
-  "I2Ctk5": "Dokonči kroky níže a odemkni svůj účet",
-  "RRamMD": "Účet byl uzamčen",
-  "ah0EUl": "Poslat kód znovu",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Později tě můžeme požádat o další kontrolu, když nám budeš připadat jako robot"
+  ],
+  "Ks6opt": [
+    "Začít"
+  ],
+  "I2Ctk1": [
+    "Dokonči kroky níže a odemkni svůj účet"
+  ],
+  "RRamMH": [
+    "Účet byl uzamčen"
+  ],
+  "ah0EUu": [
+    "Poslat kód znovu"
+  ],
+  "2+Lyn0": [
     "Znovu poslat kód za ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " s"
   ],
-  "3AXMYm": "Ověřovací kód se nepodařilo znovu odeslat",
-  "dSkE/P": "Ověřit věkovou skupinu",
-  "o4D6fn": "Aktualizovat",
-  "VBZJJi": "Aktualizuj aplikaci, ať můžeš pokračovat.",
-  "yxqMCA": "Je vyžadována aktualizace",
-  "wq2RDg": "Ověřit",
-  "PfbG6O": "Neplatný ověřovací kód",
-  "aveKoK": "Právě jsme odeslali ověřovací kód na tvou e-mailovou adresu. Může trvat pár minut, než dorazí",
-  "Qm6K/v": "Ověř svůj e-mail"
+  "3AXMYu": [
+    "Ověřovací kód se nepodařilo znovu odeslat"
+  ],
+  "dSkE/A": [
+    "Ověřit věkovou skupinu"
+  ],
+  "o4D6fm": [
+    "Aktualizovat"
+  ],
+  "VBZJJg": [
+    "Aktualizuj aplikaci, ať můžeš pokračovat."
+  ],
+  "yxqMCD": [
+    "Je vyžadována aktualizace"
+  ],
+  "wq2RDq": [
+    "Ověřit"
+  ],
+  "PfbG6H": [
+    "Neplatný ověřovací kód"
+  ],
+  "aveKoG": [
+    "Právě jsme odeslali ověřovací kód na tvou e-mailovou adresu. Může trvat pár minut, než dorazí"
+  ],
+  "Qm6K/s": [
+    "Ověř svůj e-mail"
+  ]
 }

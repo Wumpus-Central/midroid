@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import H3.a;
+import H4.a;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -174,24 +174,24 @@ public abstract class NativeMediaEngineModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var1 = this.getTypedExportedConstants();
+      Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var2 = new HashSet<>(Arrays.asList("AVAudioSessionMode", "DegradationPreference", "SupportedSecureFramesProtocolVersion", "supportedFeatures"));
-         HashSet var3 = new HashSet();
-         HashSet var4 = new HashSet(var1.keySet());
-         var4.removeAll(var2);
-         var4.removeAll(var3);
-         if (!var4.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
+         HashSet var1 = new HashSet();
+         HashSet var3 = new HashSet(var4.keySet());
+         var3.removeAll(var2);
+         var3.removeAll(var1);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var2.removeAll(var1.keySet());
+         var2.removeAll(var4.keySet());
          if (!var2.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
          }
       }
 
-      return var1;
+      return var4;
    }
 
    @ReactMethod

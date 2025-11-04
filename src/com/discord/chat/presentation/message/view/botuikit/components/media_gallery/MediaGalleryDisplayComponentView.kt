@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.message.view.botuikit.components.media_gallery
 
-import A1.k
-import A1.l
-import A1.m
-import A1.n
-import A1.o
+import A2.k
+import A2.l
+import A2.m
+import A2.n
+import A2.o
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -49,16 +49,16 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
    init {
       val var5: MessageComponentMediaGalleryDisplayViewBinding = MessageComponentMediaGalleryDisplayViewBinding.inflate(LayoutInflater.from(var1), this);
       this.binding = var5;
-      val var4: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var4;
-      val var6: MediaGalleryDisplayComponentAdapter = new MediaGalleryDisplayComponentAdapter(
+      val var6: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var6;
+      val var4: MediaGalleryDisplayComponentAdapter = new MediaGalleryDisplayComponentAdapter(
          var1, new k(this), new l(this), new m(this), new n(this), new o(this)
       );
-      this.mediaGalleryAdapter = var6;
+      this.mediaGalleryAdapter = var4;
       val var7: RecyclerView = var5.mosaic;
       ViewClippingUtilsKt.clipToRoundedRectangle(var7, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
-      var7.setLayoutManager(var4);
-      var7.setAdapter(var6);
+      var7.setLayoutManager(var6);
+      var7.setAdapter(var4);
       var7.setRecycledViewPool(new AccessoriesViewPool());
    }
 

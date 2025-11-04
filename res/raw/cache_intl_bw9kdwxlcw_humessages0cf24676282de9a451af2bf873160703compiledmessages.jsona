@@ -1,9 +1,17 @@
 {
-  "/fHz9f": "Fiókod letiltását feloldottuk.",
-  "d9Ykjo": "Megerősítő kód",
-  "bFbsV1": "Add meg az e-mail-címedet",
-  "RRBNpq": "Következő",
-  "0DHxys": [
+  "/fHz9S": [
+    "Fiókod letiltását feloldottuk."
+  ],
+  "d9Ykjr": [
+    "Megerősítő kód"
+  ],
+  "bFbsV6": [
+    "Add meg az e-mail-címedet"
+  ],
+  "RRBNpv": [
+    "Következő"
+  ],
+  "0DHxym": [
     "Nem te vagy az? ",
     [
       8,
@@ -19,12 +27,22 @@
       ]
     ]
   ],
-  "0TnUrK": "Közben további kérdéseket tehetünk fel, például azzal kapcsolatban, hogy robot vagy-e",
-  "Ks6opq": "Indítás",
-  "I2Ctk5": "Végezd el az alábbi lépéseket a fiókod letiltásának feloldásához",
-  "RRamMD": "Fiók zárolva",
-  "ah0EUl": "Kód újraküldése",
-  "2+Lyn5": [
+  "0TnUrG": [
+    "Közben további kérdéseket tehetünk fel, például azzal kapcsolatban, hogy robot vagy-e"
+  ],
+  "Ks6opt": [
+    "Indítás"
+  ],
+  "I2Ctk1": [
+    "Végezd el az alábbi lépéseket a fiókod letiltásának feloldásához"
+  ],
+  "RRamMH": [
+    "Fiók zárolva"
+  ],
+  "ah0EUu": [
+    "Kód újraküldése"
+  ],
+  "2+Lyn0": [
     "Kód újraküldése ",
     [
       1,
@@ -32,13 +50,31 @@
     ],
     " másodperc múlva"
   ],
-  "3AXMYm": "Nem sikerült újraküldeni a hitelesítő kódot",
-  "dSkE/P": "Korcsoport hitelesítése",
-  "o4D6fn": "Frissítés",
-  "VBZJJi": "A folytatáshoz frissítsd az alkalmazást.",
-  "yxqMCA": "Frissítés szükséges",
-  "wq2RDg": "Hitelesítés",
-  "PfbG6O": "Érvénytelen hitelesítő kód",
-  "aveKoK": "Hitelesítő kódot küldtünk az e-mail-címedre. Lehet, hogy beletelik néhány percbe, mire megérkezik",
-  "Qm6K/v": "E-mail-cím hitelesítése"
+  "3AXMYu": [
+    "Nem sikerült újraküldeni a hitelesítő kódot"
+  ],
+  "dSkE/A": [
+    "Korcsoport hitelesítése"
+  ],
+  "o4D6fm": [
+    "Frissítés"
+  ],
+  "VBZJJg": [
+    "A folytatáshoz frissítsd az alkalmazást."
+  ],
+  "yxqMCD": [
+    "Frissítés szükséges"
+  ],
+  "wq2RDq": [
+    "Hitelesítés"
+  ],
+  "PfbG6H": [
+    "Érvénytelen hitelesítő kód"
+  ],
+  "aveKoG": [
+    "Hitelesítő kódot küldtünk az e-mail-címedre. Lehet, hogy beletelik néhány percbe, mire megérkezik"
+  ],
+  "Qm6K/s": [
+    "E-mail-cím hitelesítése"
+  ]
 }
