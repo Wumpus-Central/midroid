@@ -24,10 +24,10 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public fun get(context: Context, reactResource: Any): String {
       var var3: java.lang.String = this.reactResources.get(var2.name());
       if (var3 == null) {
-         val var4: SharedPreferences = this.getCache(var1);
-         var3 = var2.name();
+         val var8: SharedPreferences = this.getCache(var1);
+         val var4: java.lang.String = var2.name();
          var var5: java.lang.String = null;
-         var3 = var4.getString(var3, null);
+         var3 = var8.getString(var4, null);
          if (var3 != null) {
             this.reactResources.put(var2.name(), var3);
             var5 = var3;
@@ -36,12 +36,12 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          if (var5 != null) {
             return var5;
          } else {
-            val var7: java.lang.String = var2.name();
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("Unable to access ");
-            var6.append(var7);
-            var6.append(" as it has not yet been provided.");
-            throw new IllegalAccessException(var6.toString());
+            val var6: java.lang.String = var2.name();
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Unable to access ");
+            var7.append(var6);
+            var7.append(" as it has not yet been provided.");
+            throw new IllegalAccessException(var7.toString());
          }
       } else {
          return var3;
@@ -52,8 +52,8 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       val var4: Editor = this.getCache(var1).edit();
       var4.clear();
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var3 : var2.entrySet()) {
+         var4.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);

@@ -5442,6 +5442,9 @@
   "S0W8Z5": [
     "Připojit"
   ],
+  "LV+CXH": [
+    "Připojeno"
+  ],
   "LVh3/5": [
     "Přidat detaily"
   ],
@@ -15222,6 +15225,9 @@
   ],
   "aCAiGl": [
     "Server není dostupný"
+  ],
+  "3mgEQf": [
+    "Získej odměnu!"
   ],
   "LhlgY9": [
     "Začneme"
@@ -26653,33 +26659,6 @@
   "o3kmm3": [
     "Servery se zveřejněnou cílovou stránkou vyhledávání můžou vlastní URL pouze odebrat, ale nemůžou ji měnit."
   ],
-  "pDrI0m": [
-    "Varianta ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Baf!"
-  ],
-  "9PzTtM": [
-    "Pan Lucerničák"
-  ],
-  "RbkXxR": [
-    "Odpočívej v pokoji"
-  ],
-  "FW3Qp/": [
-    "Jen se poflakuju"
-  ],
-  "mMgymV": [
-    "Vyber si zdarma halloweenský vzhled avataru. Když někomu koupíš dárek, můžeš si tento vzhled nechat."
-  ],
   "h2nMp0": [
     "Získej jeden s každým nákupem dárku."
   ],
@@ -26688,118 +26667,6 @@
   ],
   "3JCuX1": [
     "Vyber si svou odměnu zdarma"
-  ],
-  "dAqTcI": [
-    "Shrábni vzhled zdarma při nákupu dárku"
-  ],
-  "F/5kFJ": [
-    "Získej vzhled zdarma, když tento měsíc daruješ Nitro. Koledu, nebo něco vyvedu: co si vybereš?"
-  ],
-  "gI6Yvv": [
-    "Daroval/a jsi Nitro na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " měsíc"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " měsíce"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " měsíců"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Skvělý způsob, jak oslavit strašidelnou sezónu!"
-  ],
-  "rSS+oo": [
-    "Daroval/a jsi Nitro na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " rok"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " roky"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " let"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Skvělý způsob, jak oslavit strašidelnou sezónu!"
-  ],
-  "9rInzW": [
-    "Je načase si vybrat: Koledu, nebo něco vyvedu! Daruj Nitro během října a získej parádní vzhled avataru, který možná nažene i husí kůži. A navíc ti zůstane napořád."
-  ],
-  "CGgAyN": [
-    "Daruj Nitro, jestli máš dost odvahy…"
-  ],
-  "ruVnPr": [
-    "Vyber si odměnu ZDARMA"
-  ],
-  "q4BJSJ": [
-    "Pokud se odvážíš, je to tvoje…"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " možnost"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " možnosti"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " možností"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " k dispozici"
   ],
   "2UeOlY": [
     "Koleda"
@@ -45996,9 +45863,6 @@
   ],
   "Ofpgwh": [
     "Zobrazit vše"
-  ],
-  "MzahXU": [
-    "Nabídka brzy skončí!"
   ],
   "TiZFqX": [
     "Otevřít dárek"

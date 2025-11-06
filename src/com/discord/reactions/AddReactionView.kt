@@ -43,9 +43,9 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       var var10: TextView;
       var var15: Int;
       label34: {
-         val var7: Int = ThemeManagerKt.getTheme().getBackgroundSecondary();
+         var15 = ThemeManagerKt.getTheme().getBackgroundSecondary();
          var8 = ReactionView.Companion;
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var7, ReactionView.Companion.getCORNER_RADIUS(), null, 0, 12, null);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, var15, ReactionView.Companion.getCORNER_RADIUS(), null, 0, 12, null);
          var var9: TextView = this.binding.addReactionText;
          DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimarySemibold);
          var9 = this.binding.addReactionText;

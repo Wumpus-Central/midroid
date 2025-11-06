@@ -8,6 +8,6 @@ public final class c implements Function0 {
 
    @Override
    public final Object invoke() {
-      return MainApplication.b(this.d);
+      return MainApplication.d(this.d);
    }
 }

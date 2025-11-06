@@ -100,11 +100,11 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
       val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var20: StringBuilder = new StringBuilder();
-      var20.append("Binding ");
-      var20.append(var9);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var20.toString(), null, 2, null);
+      val var20: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Binding ");
+      var9.append(var20);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var9.toString(), null, 2, null);
       if (var1.isCallActive() == var7) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          gu.g.d(
@@ -142,9 +142,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     val var5: CallSystemMessageView = this.this$0;
+                     var1 = this.this$0;
                      val var4: State = State.t;
-                     var1 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.$start, this.this$0, this.$message, null) {
+                     val var5: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -176,7 +176,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                            } else {
                               kotlin.c.b(var1);
                               var1 = Duration.e;
-                              val var6: Flow = ju.g.x(
+                              val var4: Flow = ju.g.x(
                                  new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, eu.b.u), Duration.e.c()), this.$start) {
                                     final long $start$inlined;
                                     final Flow $this_unsafeTransform$inlined;
@@ -201,10 +201,10 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                 public final Object emit(Object var1, @NotNull Continuation var2x) {
                                                    label23: {
                                                       if (var2x is <unrepresentable>) {
-                                                         val var4: <unrepresentable> = var2x as <unrepresentable>;
+                                                         val var4x: <unrepresentable> = var2x as <unrepresentable>;
                                                          if (((var2x as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
-                                                            var4.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
-                                                            var9 = var4;
+                                                            var4x.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
+                                                            var9 = var4x;
                                                             break label23;
                                                          }
                                                       }
@@ -261,7 +261,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  },
                                  m0.a()
                               );
-                              val var4: FlowCollector = new FlowCollector(this.this$0, this.$message) {
+                              val var6: FlowCollector = new FlowCollector(this.this$0, this.$message) {
                                  final Message $message;
                                  final CallSystemMessageView this$0;
 
@@ -271,31 +271,31 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
 
                                  public final Object emit_VtjQ1oo/* $VF was: emit-VtjQ1oo*/(long var1, Continuation<? super Unit> var3x) {
-                                    val var8: CallSystemMessageView = this.this$0;
-                                    val var9: Message = this.$message;
+                                    val var9: CallSystemMessageView = this.this$0;
+                                    val var8: Message = this.$message;
                                     val var6x: Long = Duration.s(var1);
-                                    val var4x: Int = Duration.w(var1);
-                                    val var5: Int = Duration.y(var1);
+                                    val var5: Int = Duration.w(var1);
+                                    val var4x: Int = Duration.y(var1);
                                     Duration.x(var1);
-                                    val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
-                                    val var10: java.lang.String = java.lang.String.format(
+                                    val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
+                                    val var11: java.lang.String = java.lang.String.format(
                                        "%02d:%02d:%02d%s",
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.f(var6x),
-                                             kotlin.coroutines.jvm.internal.b.e(var4x),
                                              kotlin.coroutines.jvm.internal.b.e(var5),
-                                             var9.getDescription()
+                                             kotlin.coroutines.jvm.internal.b.e(var4x),
+                                             var8.getDescription()
                                           },
                                           4
                                        )
                                     );
-                                    var11.setText(var10);
+                                    var10.setText(var11);
                                     return Unit.a;
                                  }
                               };
                               this.label = 1;
-                              if (var6.collect(var4, this) === var3) {
+                              if (var4.collect(var6, this) === var3) {
                                  return var3;
                               }
                            }
@@ -304,7 +304,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var5, var4, var1, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var4, var5, this) === var3) {
                         return var3;
                      }
                   }

@@ -87,7 +87,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // Bytecode:
       // 000: aload 0
       // 001: getfield com/discord/chat/presentation/list/SwipeHelper.currentItemViewHolder Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-      // 004: ifnull 52a
+      // 004: ifnull 525
       // 007: aload 0
       // 008: getfield com/discord/chat/presentation/list/SwipeHelper.dX F
       // 00b: fconst_0
@@ -108,97 +108,97 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 029: aload 19
       // 02b: invokevirtual android/view/View.getTranslationX ()F
       // 02e: invokestatic java/lang/Math.abs (F)F
-      // 031: fstore 3
-      // 032: aload 0
-      // 033: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
-      // 036: astore 20
-      // 038: aload 20
-      // 03a: astore 19
-      // 03c: aload 20
-      // 03e: ifnonnull 04a
-      // 041: ldc_w "mView"
-      // 044: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
-      // 047: aconst_null
-      // 048: astore 19
-      // 04a: aload 19
-      // 04c: invokevirtual android/view/View.getMeasuredHeight ()I
-      // 04f: i2f
-      // 050: fstore 5
-      // 052: new android/graphics/Paint
-      // 055: dup
-      // 056: invokespecial android/graphics/Paint.<init> ()V
-      // 059: astore 21
-      // 05b: aload 0
-      // 05c: getfield com/discord/chat/presentation/list/SwipeHelper.currentItemViewHolder Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
-      // 05f: astore 19
-      // 061: aload 19
-      // 063: ifnull 070
-      // 066: aload 19
-      // 068: getfield androidx/recyclerview/widget/RecyclerView$ViewHolder.itemView Landroid/view/View;
-      // 06b: astore 19
-      // 06d: goto 073
-      // 070: aconst_null
-      // 071: astore 19
-      // 073: aload 19
-      // 075: instanceof com/discord/chat/presentation/list/SwipeReplyInitiator
-      // 078: ifeq 085
-      // 07b: aload 19
-      // 07d: checkcast com/discord/chat/presentation/list/SwipeReplyInitiator
-      // 080: astore 19
-      // 082: goto 088
-      // 085: aconst_null
-      // 086: astore 19
-      // 088: getstatic android/graphics/Paint$Style.FILL Landroid/graphics/Paint$Style;
-      // 08b: astore 22
-      // 08d: aload 21
-      // 08f: aload 22
-      // 091: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
-      // 094: aload 19
-      // 096: ifnull 0b2
-      // 099: aload 19
-      // 09b: invokeinterface com/discord/chat/presentation/list/SwipeReplyInitiator.getUsingGradientTheme ()Z 1
-      // 0a0: bipush 1
-      // 0a1: if_icmpne 0b2
-      // 0a4: aload 21
-      // 0a6: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 0a9: invokevirtual com/discord/theme/DiscordThemeObject.getChatSwipeToReplyGradientBackground ()I
-      // 0ac: invokevirtual android/graphics/Paint.setColor (I)V
-      // 0af: goto 0bd
-      // 0b2: aload 21
-      // 0b4: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 0b7: invokevirtual com/discord/theme/DiscordThemeObject.getChatSwipeToReplyBackground ()I
-      // 0ba: invokevirtual android/graphics/Paint.setColor (I)V
-      // 0bd: aload 1
-      // 0be: invokevirtual android/graphics/Canvas.save ()I
-      // 0c1: pop
-      // 0c2: aload 0
-      // 0c3: invokespecial com/discord/chat/presentation/list/SwipeHelper.getSwipeProgress ()F
-      // 0c6: fstore 2
-      // 0c7: aload 0
-      // 0c8: fload 2
-      // 0c9: fload 5
-      // 0cb: invokespecial com/discord/chat/presentation/list/SwipeHelper.getLeftBevelRadius (FF)F
-      // 0ce: fstore 7
-      // 0d0: getstatic com/discord/chat/presentation/list/SwipeHelper.MAX_RIGHT_BEVEL_WIDTH I
-      // 0d3: i2f
-      // 0d4: fload 2
-      // 0d5: fmul
-      // 0d6: fstore 11
-      // 0d8: aload 0
-      // 0d9: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
-      // 0dc: astore 20
-      // 0de: aload 20
-      // 0e0: astore 19
-      // 0e2: aload 20
-      // 0e4: ifnonnull 0f0
-      // 0e7: ldc_w "mView"
-      // 0ea: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
-      // 0ed: aconst_null
-      // 0ee: astore 19
-      // 0f0: aload 19
-      // 0f2: invokevirtual android/view/View.getMeasuredWidth ()I
-      // 0f5: i2f
-      // 0f6: fstore 4
+      // 031: fstore 4
+      // 033: aload 0
+      // 034: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
+      // 037: astore 20
+      // 039: aload 20
+      // 03b: astore 19
+      // 03d: aload 20
+      // 03f: ifnonnull 04b
+      // 042: ldc_w "mView"
+      // 045: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
+      // 048: aconst_null
+      // 049: astore 19
+      // 04b: aload 19
+      // 04d: invokevirtual android/view/View.getMeasuredHeight ()I
+      // 050: i2f
+      // 051: fstore 5
+      // 053: new android/graphics/Paint
+      // 056: dup
+      // 057: invokespecial android/graphics/Paint.<init> ()V
+      // 05a: astore 21
+      // 05c: aload 0
+      // 05d: getfield com/discord/chat/presentation/list/SwipeHelper.currentItemViewHolder Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
+      // 060: astore 19
+      // 062: aload 19
+      // 064: ifnull 071
+      // 067: aload 19
+      // 069: getfield androidx/recyclerview/widget/RecyclerView$ViewHolder.itemView Landroid/view/View;
+      // 06c: astore 19
+      // 06e: goto 074
+      // 071: aconst_null
+      // 072: astore 19
+      // 074: aload 19
+      // 076: instanceof com/discord/chat/presentation/list/SwipeReplyInitiator
+      // 079: ifeq 086
+      // 07c: aload 19
+      // 07e: checkcast com/discord/chat/presentation/list/SwipeReplyInitiator
+      // 081: astore 19
+      // 083: goto 089
+      // 086: aconst_null
+      // 087: astore 19
+      // 089: getstatic android/graphics/Paint$Style.FILL Landroid/graphics/Paint$Style;
+      // 08c: astore 22
+      // 08e: aload 21
+      // 090: aload 22
+      // 092: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
+      // 095: aload 19
+      // 097: ifnull 0b3
+      // 09a: aload 19
+      // 09c: invokeinterface com/discord/chat/presentation/list/SwipeReplyInitiator.getUsingGradientTheme ()Z 1
+      // 0a1: bipush 1
+      // 0a2: if_icmpne 0b3
+      // 0a5: aload 21
+      // 0a7: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 0aa: invokevirtual com/discord/theme/DiscordThemeObject.getChatSwipeToReplyGradientBackground ()I
+      // 0ad: invokevirtual android/graphics/Paint.setColor (I)V
+      // 0b0: goto 0be
+      // 0b3: aload 21
+      // 0b5: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 0b8: invokevirtual com/discord/theme/DiscordThemeObject.getChatSwipeToReplyBackground ()I
+      // 0bb: invokevirtual android/graphics/Paint.setColor (I)V
+      // 0be: aload 1
+      // 0bf: invokevirtual android/graphics/Canvas.save ()I
+      // 0c2: pop
+      // 0c3: aload 0
+      // 0c4: invokespecial com/discord/chat/presentation/list/SwipeHelper.getSwipeProgress ()F
+      // 0c7: fstore 2
+      // 0c8: aload 0
+      // 0c9: fload 2
+      // 0ca: fload 5
+      // 0cc: invokespecial com/discord/chat/presentation/list/SwipeHelper.getLeftBevelRadius (FF)F
+      // 0cf: fstore 7
+      // 0d1: getstatic com/discord/chat/presentation/list/SwipeHelper.MAX_RIGHT_BEVEL_WIDTH I
+      // 0d4: i2f
+      // 0d5: fload 2
+      // 0d6: fmul
+      // 0d7: fstore 12
+      // 0d9: aload 0
+      // 0da: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
+      // 0dd: astore 20
+      // 0df: aload 20
+      // 0e1: astore 19
+      // 0e3: aload 20
+      // 0e5: ifnonnull 0f1
+      // 0e8: ldc_w "mView"
+      // 0eb: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
+      // 0ee: aconst_null
+      // 0ef: astore 19
+      // 0f1: aload 19
+      // 0f3: invokevirtual android/view/View.getMeasuredWidth ()I
+      // 0f6: i2f
+      // 0f7: fstore 3
       // 0f8: aload 0
       // 0f9: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
       // 0fc: astore 20
@@ -210,539 +210,539 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       // 10a: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
       // 10d: aconst_null
       // 10e: astore 19
-      // 110: fload 4
-      // 112: aload 19
-      // 114: invokevirtual android/view/View.getTranslationX ()F
-      // 117: fadd
-      // 118: fstore 4
-      // 11a: fload 4
-      // 11c: fload 7
-      // 11e: fsub
-      // 11f: fstore 10
-      // 121: fload 4
-      // 123: fload 3
+      // 110: fload 3
+      // 111: aload 19
+      // 113: invokevirtual android/view/View.getTranslationX ()F
+      // 116: fadd
+      // 117: fstore 6
+      // 119: fload 6
+      // 11b: fload 7
+      // 11d: fsub
+      // 11e: fstore 10
+      // 120: fload 6
+      // 122: fload 4
       // 124: fadd
-      // 125: fstore 6
-      // 127: fload 6
-      // 129: fload 11
-      // 12b: fsub
-      // 12c: fstore 13
-      // 12e: aload 0
-      // 12f: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
-      // 132: astore 20
-      // 134: aload 20
-      // 136: astore 19
-      // 138: aload 20
-      // 13a: ifnonnull 146
-      // 13d: ldc_w "mView"
-      // 140: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
-      // 143: aconst_null
-      // 144: astore 19
-      // 146: aload 19
-      // 148: invokevirtual android/view/View.getTop ()I
-      // 14b: i2f
-      // 14c: fstore 8
-      // 14e: getstatic com/discord/chat/presentation/list/SwipeHelper.RIGHT_BEVEL_HEIGHT I
-      // 151: istore 16
-      // 153: fload 8
-      // 155: iload 16
-      // 157: i2f
-      // 158: fsub
-      // 159: fstore 15
-      // 15b: fload 15
-      // 15d: iload 16
-      // 15f: i2f
-      // 160: fadd
-      // 161: fstore 9
-      // 163: fload 15
-      // 165: fload 5
-      // 167: fadd
-      // 168: iload 16
-      // 16a: bipush 2
-      // 16b: imul
-      // 16c: i2f
-      // 16d: fadd
-      // 16e: fstore 14
-      // 170: fload 14
-      // 172: iload 16
-      // 174: i2f
-      // 175: fsub
-      // 176: fstore 12
-      // 178: new android/graphics/Path
-      // 17b: dup
-      // 17c: invokespecial android/graphics/Path.<init> ()V
-      // 17f: astore 19
-      // 181: aload 19
-      // 183: fload 13
-      // 185: fload 12
-      // 187: invokevirtual android/graphics/Path.moveTo (FF)V
-      // 18a: aload 19
-      // 18c: fload 4
-      // 18e: fload 12
-      // 190: invokevirtual android/graphics/Path.lineTo (FF)V
-      // 193: aload 19
-      // 195: fload 4
-      // 197: fload 9
-      // 199: fload 7
-      // 19b: fadd
-      // 19c: invokevirtual android/graphics/Path.lineTo (FF)V
-      // 19f: bipush 2
-      // 1a0: i2f
-      // 1a1: fstore 8
-      // 1a3: aload 19
-      // 1a5: fload 10
-      // 1a7: fload 7
-      // 1a9: fsub
-      // 1aa: fload 9
-      // 1ac: fload 4
-      // 1ae: fload 9
-      // 1b0: fload 8
-      // 1b2: fload 7
-      // 1b4: fmul
-      // 1b5: fadd
-      // 1b6: fconst_0
-      // 1b7: ldc_w -90.0
-      // 1ba: invokevirtual android/graphics/Path.addArc (FFFFFF)V
-      // 1bd: aload 19
-      // 1bf: fload 13
-      // 1c1: fload 9
-      // 1c3: invokevirtual android/graphics/Path.lineTo (FF)V
-      // 1c6: fload 13
-      // 1c8: fload 11
-      // 1ca: ldc_w 0.55
-      // 1cd: fmul
-      // 1ce: fadd
-      // 1cf: fstore 11
-      // 1d1: aload 19
-      // 1d3: fload 11
-      // 1d5: fload 9
-      // 1d7: fload 6
-      // 1d9: fload 15
-      // 1db: iload 16
-      // 1dd: i2f
-      // 1de: ldc_w 0.55
-      // 1e1: fmul
-      // 1e2: fadd
-      // 1e3: fload 6
-      // 1e5: fload 15
-      // 1e7: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
-      // 1ea: aload 19
-      // 1ec: fload 6
-      // 1ee: fload 14
-      // 1f0: invokevirtual android/graphics/Path.lineTo (FF)V
-      // 1f3: aload 19
-      // 1f5: fload 6
-      // 1f7: fload 14
-      // 1f9: iload 16
-      // 1fb: i2f
-      // 1fc: ldc_w 0.55
-      // 1ff: fmul
-      // 200: fsub
+      // 125: fstore 3
+      // 126: fload 3
+      // 127: fload 12
+      // 129: fsub
+      // 12a: fstore 13
+      // 12c: aload 0
+      // 12d: getfield com/discord/chat/presentation/list/SwipeHelper.mView Landroid/view/View;
+      // 130: astore 20
+      // 132: aload 20
+      // 134: astore 19
+      // 136: aload 20
+      // 138: ifnonnull 144
+      // 13b: ldc_w "mView"
+      // 13e: invokestatic kotlin/jvm/internal/Intrinsics.throwUninitializedPropertyAccessException (Ljava/lang/String;)V
+      // 141: aconst_null
+      // 142: astore 19
+      // 144: aload 19
+      // 146: invokevirtual android/view/View.getTop ()I
+      // 149: i2f
+      // 14a: fstore 8
+      // 14c: getstatic com/discord/chat/presentation/list/SwipeHelper.RIGHT_BEVEL_HEIGHT I
+      // 14f: istore 16
+      // 151: fload 8
+      // 153: iload 16
+      // 155: i2f
+      // 156: fsub
+      // 157: fstore 14
+      // 159: fload 14
+      // 15b: iload 16
+      // 15d: i2f
+      // 15e: fadd
+      // 15f: fstore 9
+      // 161: fload 14
+      // 163: fload 5
+      // 165: fadd
+      // 166: iload 16
+      // 168: bipush 2
+      // 169: imul
+      // 16a: i2f
+      // 16b: fadd
+      // 16c: fstore 15
+      // 16e: fload 15
+      // 170: iload 16
+      // 172: i2f
+      // 173: fsub
+      // 174: fstore 11
+      // 176: new android/graphics/Path
+      // 179: dup
+      // 17a: invokespecial android/graphics/Path.<init> ()V
+      // 17d: astore 19
+      // 17f: aload 19
+      // 181: fload 13
+      // 183: fload 11
+      // 185: invokevirtual android/graphics/Path.moveTo (FF)V
+      // 188: aload 19
+      // 18a: fload 6
+      // 18c: fload 11
+      // 18e: invokevirtual android/graphics/Path.lineTo (FF)V
+      // 191: aload 19
+      // 193: fload 6
+      // 195: fload 9
+      // 197: fload 7
+      // 199: fadd
+      // 19a: invokevirtual android/graphics/Path.lineTo (FF)V
+      // 19d: bipush 2
+      // 19e: i2f
+      // 19f: fstore 8
+      // 1a1: aload 19
+      // 1a3: fload 10
+      // 1a5: fload 7
+      // 1a7: fsub
+      // 1a8: fload 9
+      // 1aa: fload 6
+      // 1ac: fload 9
+      // 1ae: fload 8
+      // 1b0: fload 7
+      // 1b2: fmul
+      // 1b3: fadd
+      // 1b4: fconst_0
+      // 1b5: ldc_w -90.0
+      // 1b8: invokevirtual android/graphics/Path.addArc (FFFFFF)V
+      // 1bb: aload 19
+      // 1bd: fload 13
+      // 1bf: fload 9
+      // 1c1: invokevirtual android/graphics/Path.lineTo (FF)V
+      // 1c4: fload 13
+      // 1c6: fload 12
+      // 1c8: ldc_w 0.55
+      // 1cb: fmul
+      // 1cc: fadd
+      // 1cd: fstore 12
+      // 1cf: aload 19
+      // 1d1: fload 12
+      // 1d3: fload 9
+      // 1d5: fload 3
+      // 1d6: fload 14
+      // 1d8: iload 16
+      // 1da: i2f
+      // 1db: ldc_w 0.55
+      // 1de: fmul
+      // 1df: fadd
+      // 1e0: fload 3
+      // 1e1: fload 14
+      // 1e3: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
+      // 1e6: aload 19
+      // 1e8: fload 3
+      // 1e9: fload 15
+      // 1eb: invokevirtual android/graphics/Path.lineTo (FF)V
+      // 1ee: aload 19
+      // 1f0: fload 3
+      // 1f1: fload 15
+      // 1f3: iload 16
+      // 1f5: i2f
+      // 1f6: ldc_w 0.55
+      // 1f9: fmul
+      // 1fa: fsub
+      // 1fb: fload 12
+      // 1fd: fload 11
+      // 1ff: fload 13
       // 201: fload 11
-      // 203: fload 12
-      // 205: fload 13
-      // 207: fload 12
-      // 209: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
-      // 20c: aload 1
-      // 20d: invokevirtual android/graphics/Canvas.save ()I
-      // 210: pop
-      // 211: aload 1
-      // 212: aload 19
-      // 214: invokevirtual android/graphics/Canvas.clipPath (Landroid/graphics/Path;)Z
-      // 217: pop
-      // 218: aload 1
-      // 219: fload 10
-      // 21b: fload 15
-      // 21d: fload 6
-      // 21f: fload 14
-      // 221: aload 21
-      // 223: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
-      // 226: aload 1
-      // 227: invokevirtual android/graphics/Canvas.restore ()V
-      // 22a: aload 1
-      // 22b: invokevirtual android/graphics/Canvas.save ()I
-      // 22e: pop
-      // 22f: aload 19
-      // 231: invokevirtual android/graphics/Path.reset ()V
-      // 234: fload 12
-      // 236: fload 7
-      // 238: fsub
-      // 239: fstore 11
-      // 23b: aload 19
-      // 23d: fload 10
-      // 23f: fload 11
-      // 241: fload 7
-      // 243: getstatic android/graphics/Path$Direction.CW Landroid/graphics/Path$Direction;
-      // 246: invokevirtual android/graphics/Path.addCircle (FFFLandroid/graphics/Path$Direction;)V
-      // 249: getstatic android/os/Build$VERSION.SDK_INT I
-      // 24c: bipush 26
-      // 24e: if_icmplt 25b
-      // 251: aload 1
-      // 252: aload 19
-      // 254: invokevirtual android/graphics/Canvas.clipOutPath (Landroid/graphics/Path;)Z
-      // 257: pop
-      // 258: goto 268
-      // 25b: aload 1
-      // 25c: aload 19
-      // 25e: getstatic android/graphics/Region$Op.DIFFERENCE Landroid/graphics/Region$Op;
-      // 261: invokevirtual android/graphics/Canvas.clipPath (Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-      // 264: pop
-      // 265: goto 258
-      // 268: aload 1
-      // 269: fload 10
-      // 26b: fload 11
-      // 26d: fload 4
-      // 26f: fload 12
-      // 271: aload 21
-      // 273: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
-      // 276: aload 1
-      // 277: invokevirtual android/graphics/Canvas.restore ()V
-      // 27a: aload 0
-      // 27b: fload 5
-      // 27d: invokespecial com/discord/chat/presentation/list/SwipeHelper.getArrowContainerBaseSize (F)F
+      // 203: invokevirtual android/graphics/Path.cubicTo (FFFFFF)V
+      // 206: aload 1
+      // 207: invokevirtual android/graphics/Canvas.save ()I
+      // 20a: pop
+      // 20b: aload 1
+      // 20c: aload 19
+      // 20e: invokevirtual android/graphics/Canvas.clipPath (Landroid/graphics/Path;)Z
+      // 211: pop
+      // 212: aload 1
+      // 213: fload 10
+      // 215: fload 14
+      // 217: fload 3
+      // 218: fload 15
+      // 21a: aload 21
+      // 21c: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
+      // 21f: aload 1
+      // 220: invokevirtual android/graphics/Canvas.restore ()V
+      // 223: aload 1
+      // 224: invokevirtual android/graphics/Canvas.save ()I
+      // 227: pop
+      // 228: aload 19
+      // 22a: invokevirtual android/graphics/Path.reset ()V
+      // 22d: fload 11
+      // 22f: fload 7
+      // 231: fsub
+      // 232: fstore 12
+      // 234: aload 19
+      // 236: fload 10
+      // 238: fload 12
+      // 23a: fload 7
+      // 23c: getstatic android/graphics/Path$Direction.CW Landroid/graphics/Path$Direction;
+      // 23f: invokevirtual android/graphics/Path.addCircle (FFFLandroid/graphics/Path$Direction;)V
+      // 242: getstatic android/os/Build$VERSION.SDK_INT I
+      // 245: bipush 26
+      // 247: if_icmplt 254
+      // 24a: aload 1
+      // 24b: aload 19
+      // 24d: invokevirtual android/graphics/Canvas.clipOutPath (Landroid/graphics/Path;)Z
+      // 250: pop
+      // 251: goto 261
+      // 254: aload 1
+      // 255: aload 19
+      // 257: getstatic android/graphics/Region$Op.DIFFERENCE Landroid/graphics/Region$Op;
+      // 25a: invokevirtual android/graphics/Canvas.clipPath (Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+      // 25d: pop
+      // 25e: goto 251
+      // 261: aload 1
+      // 262: fload 10
+      // 264: fload 12
+      // 266: fload 6
+      // 268: fload 11
+      // 26a: aload 21
+      // 26c: invokevirtual android/graphics/Canvas.drawRect (FFFFLandroid/graphics/Paint;)V
+      // 26f: aload 1
+      // 270: invokevirtual android/graphics/Canvas.restore ()V
+      // 273: aload 0
+      // 274: fload 5
+      // 276: invokespecial com/discord/chat/presentation/list/SwipeHelper.getArrowContainerBaseSize (F)F
+      // 279: fload 8
+      // 27b: fdiv
+      // 27c: fstore 7
+      // 27e: fload 4
       // 280: fload 8
       // 282: fdiv
-      // 283: fstore 7
-      // 285: fload 3
-      // 286: fload 8
-      // 288: fdiv
-      // 289: fstore 3
-      // 28a: fload 9
-      // 28c: fload 5
-      // 28e: fload 8
-      // 290: fdiv
-      // 291: fadd
-      // 292: fload 7
-      // 294: fsub
-      // 295: f2i
-      // 296: istore 17
-      // 298: sipush 192
-      // 29b: i2f
-      // 29c: fload 2
-      // 29d: fmul
-      // 29e: f2i
-      // 29f: bipush 64
-      // 2a1: iadd
-      // 2a2: bipush 0
-      // 2a3: sipush 255
-      // 2a6: invokestatic kotlin/ranges/e.n (III)I
-      // 2a9: istore 16
+      // 283: fstore 4
+      // 285: fload 9
+      // 287: fload 5
+      // 289: fload 8
+      // 28b: fdiv
+      // 28c: fadd
+      // 28d: fload 7
+      // 28f: fsub
+      // 290: f2i
+      // 291: istore 17
+      // 293: sipush 192
+      // 296: i2f
+      // 297: fload 2
+      // 298: fmul
+      // 299: f2i
+      // 29a: bipush 64
+      // 29c: iadd
+      // 29d: bipush 0
+      // 29e: sipush 255
+      // 2a1: invokestatic kotlin/ranges/e.n (III)I
+      // 2a4: istore 16
+      // 2a6: aload 1
+      // 2a7: invokevirtual android/graphics/Canvas.save ()I
+      // 2aa: pop
       // 2ab: aload 1
-      // 2ac: invokevirtual android/graphics/Canvas.save ()I
-      // 2af: pop
+      // 2ac: fload 6
+      // 2ae: fconst_0
+      // 2af: fload 3
       // 2b0: aload 1
-      // 2b1: fload 4
-      // 2b3: fconst_0
-      // 2b4: fload 6
-      // 2b6: aload 1
-      // 2b7: invokevirtual android/graphics/Canvas.getHeight ()I
-      // 2ba: i2f
-      // 2bb: invokevirtual android/graphics/Canvas.clipRect (FFFF)Z
-      // 2be: pop
-      // 2bf: aload 1
-      // 2c0: fload 4
-      // 2c2: fload 3
-      // 2c3: fadd
-      // 2c4: fload 7
-      // 2c6: fsub
-      // 2c7: fload 7
-      // 2c9: fadd
-      // 2ca: iload 17
-      // 2cc: i2f
-      // 2cd: fload 7
-      // 2cf: fadd
-      // 2d0: invokevirtual android/graphics/Canvas.translate (FF)V
-      // 2d3: aload 0
-      // 2d4: getfield com/discord/chat/presentation/list/SwipeHelper.easterEggArrowScale F
-      // 2d7: fstore 3
-      // 2d8: aload 1
-      // 2d9: fload 3
-      // 2da: fload 3
-      // 2db: invokevirtual android/graphics/Canvas.scale (FF)V
-      // 2de: aload 0
-      // 2df: getfield com/discord/chat/presentation/list/SwipeHelper.isCompleted Z
-      // 2e2: ifeq 2ea
-      // 2e5: fconst_1
+      // 2b1: invokevirtual android/graphics/Canvas.getHeight ()I
+      // 2b4: i2f
+      // 2b5: invokevirtual android/graphics/Canvas.clipRect (FFFF)Z
+      // 2b8: pop
+      // 2b9: aload 1
+      // 2ba: fload 6
+      // 2bc: fload 4
+      // 2be: fadd
+      // 2bf: fload 7
+      // 2c1: fsub
+      // 2c2: fload 7
+      // 2c4: fadd
+      // 2c5: iload 17
+      // 2c7: i2f
+      // 2c8: fload 7
+      // 2ca: fadd
+      // 2cb: invokevirtual android/graphics/Canvas.translate (FF)V
+      // 2ce: aload 0
+      // 2cf: getfield com/discord/chat/presentation/list/SwipeHelper.easterEggArrowScale F
+      // 2d2: fstore 3
+      // 2d3: aload 1
+      // 2d4: fload 3
+      // 2d5: fload 3
+      // 2d6: invokevirtual android/graphics/Canvas.scale (FF)V
+      // 2d9: aload 0
+      // 2da: getfield com/discord/chat/presentation/list/SwipeHelper.isCompleted Z
+      // 2dd: ifeq 2e5
+      // 2e0: fconst_1
+      // 2e1: fstore 3
+      // 2e2: goto 2e7
+      // 2e5: fload 2
       // 2e6: fstore 3
-      // 2e7: goto 2ec
-      // 2ea: fload 2
-      // 2eb: fstore 3
-      // 2ec: aload 21
-      // 2ee: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 2f1: invokevirtual com/discord/theme/DiscordThemeObject.getBgSurfaceOverlay ()I
-      // 2f4: aload 0
-      // 2f5: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
-      // 2f8: getstatic com/discord/theme/R$color.brand_500 I
-      // 2fb: invokestatic com/discord/theme/utils/ColorUtilsKt.getColorCompat (Landroid/content/Context;I)I
-      // 2fe: fload 3
-      // 2ff: ldc_w 0.8
-      // 302: fconst_1
-      // 303: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
-      // 306: invokevirtual android/graphics/Paint.setColor (I)V
-      // 309: aload 21
-      // 30b: aload 22
-      // 30d: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
-      // 310: aload 21
-      // 312: iload 16
-      // 314: invokevirtual android/graphics/Paint.setAlpha (I)V
-      // 317: getstatic com/discord/theme/ThemeManager.INSTANCE Lcom/discord/theme/ThemeManager;
-      // 31a: invokevirtual com/discord/theme/ThemeManager.isThemeLight ()Z
-      // 31d: ifeq 328
-      // 320: ldc_w "#16000000"
-      // 323: astore 19
-      // 325: goto 32d
-      // 328: ldc_w "#24000000"
-      // 32b: astore 19
-      // 32d: aload 21
-      // 32f: ldc_w 10.0
-      // 332: fconst_0
-      // 333: ldc_w 5.0
-      // 336: aload 19
-      // 338: invokestatic android/graphics/Color.parseColor (Ljava/lang/String;)I
-      // 33b: invokevirtual android/graphics/Paint.setShadowLayer (FFFI)V
-      // 33e: aload 1
-      // 33f: fconst_0
-      // 340: fconst_0
-      // 341: fload 7
+      // 2e7: aload 21
+      // 2e9: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 2ec: invokevirtual com/discord/theme/DiscordThemeObject.getBgSurfaceOverlay ()I
+      // 2ef: aload 0
+      // 2f0: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
+      // 2f3: getstatic com/discord/theme/R$color.brand_500 I
+      // 2f6: invokestatic com/discord/theme/utils/ColorUtilsKt.getColorCompat (Landroid/content/Context;I)I
+      // 2f9: fload 3
+      // 2fa: ldc_w 0.8
+      // 2fd: fconst_1
+      // 2fe: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
+      // 301: invokevirtual android/graphics/Paint.setColor (I)V
+      // 304: aload 21
+      // 306: aload 22
+      // 308: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
+      // 30b: aload 21
+      // 30d: iload 16
+      // 30f: invokevirtual android/graphics/Paint.setAlpha (I)V
+      // 312: getstatic com/discord/theme/ThemeManager.INSTANCE Lcom/discord/theme/ThemeManager;
+      // 315: invokevirtual com/discord/theme/ThemeManager.isThemeLight ()Z
+      // 318: ifeq 323
+      // 31b: ldc_w "#16000000"
+      // 31e: astore 19
+      // 320: goto 328
+      // 323: ldc_w "#24000000"
+      // 326: astore 19
+      // 328: aload 21
+      // 32a: ldc_w 10.0
+      // 32d: fconst_0
+      // 32e: ldc_w 5.0
+      // 331: aload 19
+      // 333: invokestatic android/graphics/Color.parseColor (Ljava/lang/String;)I
+      // 336: invokevirtual android/graphics/Paint.setShadowLayer (FFFI)V
+      // 339: aload 1
+      // 33a: fconst_0
+      // 33b: fconst_0
+      // 33c: fload 7
+      // 33e: aload 21
+      // 340: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
       // 343: aload 21
-      // 345: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
-      // 348: aload 21
-      // 34a: invokevirtual android/graphics/Paint.clearShadowLayer ()V
-      // 34d: aload 0
-      // 34e: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
-      // 351: fstore 4
-      // 353: fload 4
-      // 355: fconst_0
-      // 356: fcmpl
-      // 357: ifle 3c1
-      // 35a: aload 1
-      // 35b: invokevirtual android/graphics/Canvas.save ()I
-      // 35e: istore 17
-      // 360: aload 1
-      // 361: fload 4
-      // 363: fload 4
-      // 365: fconst_0
-      // 366: fconst_0
-      // 367: invokevirtual android/graphics/Canvas.scale (FFFF)V
-      // 36a: aload 0
-      // 36b: getfield com/discord/chat/presentation/list/SwipeHelper.isCompleted Z
-      // 36e: ifeq 377
-      // 371: fconst_1
-      // 372: fstore 4
-      // 374: goto 37a
-      // 377: fload 2
-      // 378: fstore 4
-      // 37a: aload 21
-      // 37c: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 37f: invokevirtual com/discord/theme/DiscordThemeObject.getBgSurfaceOverlay ()I
-      // 382: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 385: invokevirtual com/discord/theme/DiscordThemeObject.getBackgroundAccent ()I
-      // 388: fload 4
-      // 38a: ldc_w 0.8
-      // 38d: fconst_1
-      // 38e: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
-      // 391: invokevirtual android/graphics/Paint.setColor (I)V
-      // 394: aload 21
-      // 396: aload 22
-      // 398: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
-      // 39b: aload 21
-      // 39d: sipush 255
-      // 3a0: invokevirtual android/graphics/Paint.setAlpha (I)V
-      // 3a3: aload 1
-      // 3a4: fconst_0
-      // 3a5: fconst_0
-      // 3a6: fload 7
-      // 3a8: aload 21
-      // 3aa: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
-      // 3ad: aload 1
-      // 3ae: iload 17
-      // 3b0: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 3b3: goto 3c1
-      // 3b6: astore 19
-      // 3b8: aload 1
-      // 3b9: iload 17
-      // 3bb: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 3be: aload 19
-      // 3c0: athrow
-      // 3c1: aload 1
-      // 3c2: invokevirtual android/graphics/Canvas.save ()I
-      // 3c5: pop
-      // 3c6: fconst_0
-      // 3c7: fconst_1
-      // 3c8: bipush 1
-      // 3c9: i2f
-      // 3ca: aload 0
-      // 3cb: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
-      // 3ce: fsub
-      // 3cf: invokestatic java/lang/Float.min (FF)F
-      // 3d2: invokestatic java/lang/Math.max (FF)F
-      // 3d5: fstore 4
-      // 3d7: aload 0
-      // 3d8: fload 5
-      // 3da: invokespecial com/discord/chat/presentation/list/SwipeHelper.getArrowIconBaseSize (F)F
-      // 3dd: fstore 5
-      // 3df: new android/graphics/PorterDuffColorFilter
-      // 3e2: dup
-      // 3e3: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
-      // 3e6: invokevirtual com/discord/theme/DiscordThemeObject.getInteractiveNormal ()I
-      // 3e9: aload 0
-      // 3ea: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
-      // 3ed: getstatic com/discord/theme/R$color.white I
-      // 3f0: invokestatic com/discord/theme/utils/ColorUtilsKt.getColorCompat (Landroid/content/Context;I)I
-      // 3f3: fload 3
-      // 3f4: ldc_w 0.8
-      // 3f7: fconst_1
-      // 3f8: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
-      // 3fb: getstatic android/graphics/PorterDuff$Mode.SRC_ATOP Landroid/graphics/PorterDuff$Mode;
-      // 3fe: invokespecial android/graphics/PorterDuffColorFilter.<init> (ILandroid/graphics/PorterDuff$Mode;)V
-      // 401: astore 20
-      // 403: aload 0
-      // 404: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
-      // 407: astore 19
-      // 409: aload 19
-      // 40b: ifnull 415
-      // 40e: aload 19
-      // 410: aload 20
-      // 412: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
-      // 415: getstatic com/discord/device/utils/DeviceReducedMotion.INSTANCE Lcom/discord/device/utils/DeviceReducedMotion;
-      // 418: aload 0
-      // 419: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
-      // 41c: invokevirtual com/discord/device/utils/DeviceReducedMotion.isReducedMotionEnabled (Landroid/content/Context;)Z
-      // 41f: ifeq 427
-      // 422: fconst_0
-      // 423: fstore 2
-      // 424: goto 42f
-      // 427: fconst_1
-      // 428: fload 2
-      // 429: fsub
-      // 42a: ldc_w 90.0
-      // 42d: fmul
-      // 42e: fstore 2
-      // 42f: aload 0
-      // 430: getfield com/discord/chat/presentation/list/SwipeHelper.easterEggArrowRotationDegrees F
-      // 433: fstore 3
-      // 434: aload 1
-      // 435: ldc_w -1.0
-      // 438: ldc_w -1.0
-      // 43b: invokevirtual android/graphics/Canvas.translate (FF)V
+      // 345: invokevirtual android/graphics/Paint.clearShadowLayer ()V
+      // 348: aload 0
+      // 349: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
+      // 34c: fstore 4
+      // 34e: fload 4
+      // 350: fconst_0
+      // 351: fcmpl
+      // 352: ifle 3bc
+      // 355: aload 1
+      // 356: invokevirtual android/graphics/Canvas.save ()I
+      // 359: istore 17
+      // 35b: aload 1
+      // 35c: fload 4
+      // 35e: fload 4
+      // 360: fconst_0
+      // 361: fconst_0
+      // 362: invokevirtual android/graphics/Canvas.scale (FFFF)V
+      // 365: aload 0
+      // 366: getfield com/discord/chat/presentation/list/SwipeHelper.isCompleted Z
+      // 369: ifeq 372
+      // 36c: fconst_1
+      // 36d: fstore 4
+      // 36f: goto 375
+      // 372: fload 2
+      // 373: fstore 4
+      // 375: aload 21
+      // 377: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 37a: invokevirtual com/discord/theme/DiscordThemeObject.getBgSurfaceOverlay ()I
+      // 37d: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 380: invokevirtual com/discord/theme/DiscordThemeObject.getBackgroundAccent ()I
+      // 383: fload 4
+      // 385: ldc_w 0.8
+      // 388: fconst_1
+      // 389: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
+      // 38c: invokevirtual android/graphics/Paint.setColor (I)V
+      // 38f: aload 21
+      // 391: aload 22
+      // 393: invokevirtual android/graphics/Paint.setStyle (Landroid/graphics/Paint$Style;)V
+      // 396: aload 21
+      // 398: sipush 255
+      // 39b: invokevirtual android/graphics/Paint.setAlpha (I)V
+      // 39e: aload 1
+      // 39f: fconst_0
+      // 3a0: fconst_0
+      // 3a1: fload 7
+      // 3a3: aload 21
+      // 3a5: invokevirtual android/graphics/Canvas.drawCircle (FFFLandroid/graphics/Paint;)V
+      // 3a8: aload 1
+      // 3a9: iload 17
+      // 3ab: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 3ae: goto 3bc
+      // 3b1: astore 19
+      // 3b3: aload 1
+      // 3b4: iload 17
+      // 3b6: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 3b9: aload 19
+      // 3bb: athrow
+      // 3bc: aload 1
+      // 3bd: invokevirtual android/graphics/Canvas.save ()I
+      // 3c0: pop
+      // 3c1: fconst_0
+      // 3c2: fconst_1
+      // 3c3: bipush 1
+      // 3c4: i2f
+      // 3c5: aload 0
+      // 3c6: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
+      // 3c9: fsub
+      // 3ca: invokestatic java/lang/Float.min (FF)F
+      // 3cd: invokestatic java/lang/Math.max (FF)F
+      // 3d0: fstore 4
+      // 3d2: aload 0
+      // 3d3: fload 5
+      // 3d5: invokespecial com/discord/chat/presentation/list/SwipeHelper.getArrowIconBaseSize (F)F
+      // 3d8: fstore 5
+      // 3da: new android/graphics/PorterDuffColorFilter
+      // 3dd: dup
+      // 3de: invokestatic com/discord/theme/ThemeManagerKt.getTheme ()Lcom/discord/theme/DiscordThemeObject;
+      // 3e1: invokevirtual com/discord/theme/DiscordThemeObject.getInteractiveNormal ()I
+      // 3e4: aload 0
+      // 3e5: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
+      // 3e8: getstatic com/discord/theme/R$color.white I
+      // 3eb: invokestatic com/discord/theme/utils/ColorUtilsKt.getColorCompat (Landroid/content/Context;I)I
+      // 3ee: fload 3
+      // 3ef: ldc_w 0.8
+      // 3f2: fconst_1
+      // 3f3: invokestatic com/discord/theme/utils/ColorUtilsKt.interpolateColors (IIFFF)I
+      // 3f6: getstatic android/graphics/PorterDuff$Mode.SRC_ATOP Landroid/graphics/PorterDuff$Mode;
+      // 3f9: invokespecial android/graphics/PorterDuffColorFilter.<init> (ILandroid/graphics/PorterDuff$Mode;)V
+      // 3fc: astore 19
+      // 3fe: aload 0
+      // 3ff: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
+      // 402: astore 20
+      // 404: aload 20
+      // 406: ifnull 410
+      // 409: aload 20
+      // 40b: aload 19
+      // 40d: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
+      // 410: getstatic com/discord/device/utils/DeviceReducedMotion.INSTANCE Lcom/discord/device/utils/DeviceReducedMotion;
+      // 413: aload 0
+      // 414: getfield com/discord/chat/presentation/list/SwipeHelper.context Landroid/content/Context;
+      // 417: invokevirtual com/discord/device/utils/DeviceReducedMotion.isReducedMotionEnabled (Landroid/content/Context;)Z
+      // 41a: ifeq 422
+      // 41d: fconst_0
+      // 41e: fstore 2
+      // 41f: goto 42a
+      // 422: fconst_1
+      // 423: fload 2
+      // 424: fsub
+      // 425: ldc_w 90.0
+      // 428: fmul
+      // 429: fstore 2
+      // 42a: aload 0
+      // 42b: getfield com/discord/chat/presentation/list/SwipeHelper.easterEggArrowRotationDegrees F
+      // 42e: fstore 3
+      // 42f: aload 1
+      // 430: ldc_w -1.0
+      // 433: ldc_w -1.0
+      // 436: invokevirtual android/graphics/Canvas.translate (FF)V
+      // 439: fload 2
+      // 43a: fload 3
+      // 43b: fadd
+      // 43c: fstore 2
+      // 43d: aload 1
       // 43e: fload 2
-      // 43f: fload 3
-      // 440: fadd
-      // 441: fstore 2
+      // 43f: invokevirtual android/graphics/Canvas.rotate (F)V
       // 442: aload 1
-      // 443: fload 2
-      // 444: invokevirtual android/graphics/Canvas.rotate (F)V
-      // 447: aload 1
-      // 448: fload 4
-      // 44a: fload 4
-      // 44c: invokevirtual android/graphics/Canvas.scale (FF)V
-      // 44f: fload 5
-      // 451: fconst_2
-      // 452: fdiv
-      // 453: f2i
-      // 454: istore 18
-      // 456: iload 18
-      // 458: ineg
-      // 459: istore 17
-      // 45b: new android/graphics/Rect
-      // 45e: dup
-      // 45f: iload 17
-      // 461: iload 17
-      // 463: iload 18
-      // 465: iload 18
-      // 467: invokespecial android/graphics/Rect.<init> (IIII)V
-      // 46a: astore 19
-      // 46c: aload 0
-      // 46d: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
-      // 470: astore 21
+      // 443: fload 4
+      // 445: fload 4
+      // 447: invokevirtual android/graphics/Canvas.scale (FF)V
+      // 44a: fload 5
+      // 44c: fconst_2
+      // 44d: fdiv
+      // 44e: f2i
+      // 44f: istore 18
+      // 451: iload 18
+      // 453: ineg
+      // 454: istore 17
+      // 456: new android/graphics/Rect
+      // 459: dup
+      // 45a: iload 17
+      // 45c: iload 17
+      // 45e: iload 18
+      // 460: iload 18
+      // 462: invokespecial android/graphics/Rect.<init> (IIII)V
+      // 465: astore 20
+      // 467: aload 0
+      // 468: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
+      // 46b: astore 21
+      // 46d: aload 21
+      // 46f: ifnull 479
       // 472: aload 21
-      // 474: ifnull 47e
-      // 477: aload 21
-      // 479: aload 19
-      // 47b: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
-      // 47e: aload 0
-      // 47f: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
-      // 482: astore 21
+      // 474: aload 20
+      // 476: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
+      // 479: aload 0
+      // 47a: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
+      // 47d: astore 21
+      // 47f: aload 21
+      // 481: ifnull 48b
       // 484: aload 21
-      // 486: ifnull 490
-      // 489: aload 21
-      // 48b: iload 16
-      // 48d: invokevirtual android/graphics/drawable/Drawable.setAlpha (I)V
-      // 490: aload 0
-      // 491: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
-      // 494: astore 21
+      // 486: iload 16
+      // 488: invokevirtual android/graphics/drawable/Drawable.setAlpha (I)V
+      // 48b: aload 0
+      // 48c: getfield com/discord/chat/presentation/list/SwipeHelper.replyIcon Landroid/graphics/drawable/Drawable;
+      // 48f: astore 21
+      // 491: aload 21
+      // 493: ifnull 49c
       // 496: aload 21
-      // 498: ifnull 4a1
-      // 49b: aload 21
-      // 49d: aload 1
-      // 49e: invokevirtual android/graphics/drawable/Drawable.draw (Landroid/graphics/Canvas;)V
-      // 4a1: aload 1
-      // 4a2: invokevirtual android/graphics/Canvas.restore ()V
-      // 4a5: aload 0
-      // 4a6: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
-      // 4a9: fconst_0
-      // 4aa: fcmpl
-      // 4ab: ifle 526
-      // 4ae: aload 1
-      // 4af: invokevirtual android/graphics/Canvas.save ()I
-      // 4b2: istore 16
-      // 4b4: aload 0
-      // 4b5: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
-      // 4b8: astore 21
+      // 498: aload 1
+      // 499: invokevirtual android/graphics/drawable/Drawable.draw (Landroid/graphics/Canvas;)V
+      // 49c: aload 1
+      // 49d: invokevirtual android/graphics/Canvas.restore ()V
+      // 4a0: aload 0
+      // 4a1: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
+      // 4a4: fconst_0
+      // 4a5: fcmpl
+      // 4a6: ifle 521
+      // 4a9: aload 1
+      // 4aa: invokevirtual android/graphics/Canvas.save ()I
+      // 4ad: istore 16
+      // 4af: aload 0
+      // 4b0: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
+      // 4b3: astore 21
+      // 4b5: aload 21
+      // 4b7: ifnull 4c9
       // 4ba: aload 21
-      // 4bc: ifnull 4ce
-      // 4bf: aload 21
-      // 4c1: aload 20
-      // 4c3: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
-      // 4c6: goto 4ce
-      // 4c9: astore 19
-      // 4cb: goto 51d
-      // 4ce: aload 1
-      // 4cf: fload 2
-      // 4d0: invokevirtual android/graphics/Canvas.rotate (F)V
-      // 4d3: aload 0
-      // 4d4: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
-      // 4d7: fstore 2
-      // 4d8: aload 1
-      // 4d9: fload 2
-      // 4da: fload 2
-      // 4db: invokevirtual android/graphics/Canvas.scale (FF)V
-      // 4de: aload 0
-      // 4df: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
-      // 4e2: astore 20
-      // 4e4: aload 20
-      // 4e6: ifnull 4f0
-      // 4e9: aload 20
-      // 4eb: aload 19
-      // 4ed: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
-      // 4f0: aload 0
-      // 4f1: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
-      // 4f4: astore 19
+      // 4bc: aload 19
+      // 4be: invokevirtual android/graphics/drawable/Drawable.setColorFilter (Landroid/graphics/ColorFilter;)V
+      // 4c1: goto 4c9
+      // 4c4: astore 19
+      // 4c6: goto 518
+      // 4c9: aload 1
+      // 4ca: fload 2
+      // 4cb: invokevirtual android/graphics/Canvas.rotate (F)V
+      // 4ce: aload 0
+      // 4cf: getfield com/discord/chat/presentation/list/SwipeHelper.editCircleScale F
+      // 4d2: fstore 2
+      // 4d3: aload 1
+      // 4d4: fload 2
+      // 4d5: fload 2
+      // 4d6: invokevirtual android/graphics/Canvas.scale (FF)V
+      // 4d9: aload 0
+      // 4da: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
+      // 4dd: astore 19
+      // 4df: aload 19
+      // 4e1: ifnull 4eb
+      // 4e4: aload 19
+      // 4e6: aload 20
+      // 4e8: invokevirtual android/graphics/drawable/Drawable.setBounds (Landroid/graphics/Rect;)V
+      // 4eb: aload 0
+      // 4ec: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
+      // 4ef: astore 19
+      // 4f1: aload 19
+      // 4f3: ifnull 4fe
       // 4f6: aload 19
-      // 4f8: ifnull 503
-      // 4fb: aload 19
-      // 4fd: sipush 255
-      // 500: invokevirtual android/graphics/drawable/Drawable.setAlpha (I)V
-      // 503: aload 0
-      // 504: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
-      // 507: astore 19
+      // 4f8: sipush 255
+      // 4fb: invokevirtual android/graphics/drawable/Drawable.setAlpha (I)V
+      // 4fe: aload 0
+      // 4ff: getfield com/discord/chat/presentation/list/SwipeHelper.editIcon Landroid/graphics/drawable/Drawable;
+      // 502: astore 19
+      // 504: aload 19
+      // 506: ifnull 50f
       // 509: aload 19
-      // 50b: ifnull 514
-      // 50e: aload 19
-      // 510: aload 1
-      // 511: invokevirtual android/graphics/drawable/Drawable.draw (Landroid/graphics/Canvas;)V
-      // 514: aload 1
-      // 515: iload 16
-      // 517: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 51a: goto 526
-      // 51d: aload 1
-      // 51e: iload 16
-      // 520: invokevirtual android/graphics/Canvas.restoreToCount (I)V
-      // 523: aload 19
-      // 525: athrow
-      // 526: aload 1
-      // 527: invokevirtual android/graphics/Canvas.restore ()V
-      // 52a: return
+      // 50b: aload 1
+      // 50c: invokevirtual android/graphics/drawable/Drawable.draw (Landroid/graphics/Canvas;)V
+      // 50f: aload 1
+      // 510: iload 16
+      // 512: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 515: goto 521
+      // 518: aload 1
+      // 519: iload 16
+      // 51b: invokevirtual android/graphics/Canvas.restoreToCount (I)V
+      // 51e: aload 19
+      // 520: athrow
+      // 521: aload 1
+      // 522: invokevirtual android/graphics/Canvas.restore ()V
+      // 525: return
    }
 
    private fun easterEggStartAnimation(recyclerView: RecyclerView, viewHolder: ViewHolder) {
@@ -756,20 +756,20 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          val var5: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
-         var var7: ValueAnimator = new ValueAnimator();
+         val var7: ValueAnimator = new ValueAnimator();
          var7.setValues(new PropertyValuesHolder[]{var5});
          var7.setDuration(300L);
          var7.setInterpolator(new AccelerateDecelerateInterpolator());
          var7.addUpdateListener(new b0(this, var1));
          this.easterEggArrowAnimator = var7;
          var7.start();
-         val var6: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
-         var7 = new ValueAnimator();
-         var7.setValues(new PropertyValuesHolder[]{var6});
-         var7.setDuration(800L);
-         var7.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
-         var7.addUpdateListener(new c0(this, var1));
-         var7.addListener(new AnimatorListener(this, var2, var1) {
+         val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         val var6: ValueAnimator = new ValueAnimator();
+         var6.setValues(new PropertyValuesHolder[]{var8});
+         var6.setDuration(800L);
+         var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
+         var6.addUpdateListener(new c0(this, var1));
+         var6.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
             final ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
@@ -797,8 +797,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             public void onAnimationStart(Animator var1) {
             }
          });
-         this.easterEggArrowRotationAnimator = var7;
-         var7.start();
+         this.easterEggArrowRotationAnimator = var6;
+         var6.start();
          this.easterEggIsAnimating = true;
       }
    }
@@ -904,13 +904,13 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    private fun triggerEditExitTransition(recyclerView: RecyclerView) {
-      val var3: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
-      val var2: ValueAnimator = new ValueAnimator();
-      var2.setValues(new PropertyValuesHolder[]{var3});
-      var2.setDuration(200L);
-      var2.setInterpolator(new AccelerateDecelerateInterpolator());
-      var2.addUpdateListener(new d0(this, var1));
-      var2.addListener(new AnimatorListener(this) {
+      val var2: PropertyValuesHolder = PropertyValuesHolder.ofFloat("edit-circle-scale", new float[]{this.editCircleScale, 0.0F});
+      val var3: ValueAnimator = new ValueAnimator();
+      var3.setValues(new PropertyValuesHolder[]{var2});
+      var3.setDuration(200L);
+      var3.setInterpolator(new AccelerateDecelerateInterpolator());
+      var3.addUpdateListener(new d0(this, var1));
+      var3.addListener(new AnimatorListener(this) {
          final SwipeHelper this$0;
 
          {
@@ -930,8 +930,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.editCircleScaleAnimator = var2;
-      var2.start();
+      this.editCircleScaleAnimator = var3;
+      var3.start();
    }
 
    @JvmStatic
@@ -1042,14 +1042,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
       if (var9 != null) {
          val var4: Float = this.getSwipeProgress();
-         val var3: Float = SizeUtilsKt.getDpToPx(12);
+         val var2: Float = SizeUtilsKt.getDpToPx(12);
          if (this.mView == null) {
             Intrinsics.throwUninitializedPropertyAccessException("mView");
          } else {
             var6 = this.mView;
          }
 
-         val var2: Float = this.getLeftBevelRadius(var4, (float)var6.getMeasuredHeight());
+         val var3: Float = this.getLeftBevelRadius(var4, (float)var6.getMeasuredHeight());
          val var10: java.lang.String;
          if (ThemeManager.INSTANCE.isThemeLight()) {
             var10 = "#1F000000";
@@ -1057,7 +1057,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var10 = "#3E000000";
          }
 
-         var9.getShadowView().setParams(var3 * var4, var2, var10);
+         var9.getShadowView().setParams(var2 * var4, var3, var10);
       }
    }
 

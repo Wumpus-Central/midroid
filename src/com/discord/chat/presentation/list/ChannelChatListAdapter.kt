@@ -66,9 +66,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             access$processNextUpdate(this);
          } else {
             if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
-               val var5: Log = Log.INSTANCE;
-               val var4: java.lang.String = access$getLOGGING_TAG$cp();
-               Log.w$default(var5, var4, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+               val var4: Log = Log.INSTANCE;
+               val var5: java.lang.String = access$getLOGGING_TAG$cp();
+               Log.w$default(var4, var5, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
             }
          }
       } else {
@@ -115,9 +115,9 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
 
       var var9: java.util.List = var6;
       if (var3) {
-         val var15: java.util.Collection = var6;
-         val var10: PortalViewChatListItem = this.portalChatListItem;
-         var9 = CollectionsKt.M0(var15, var10);
+         val var10: java.util.Collection = var6;
+         val var15: PortalViewChatListItem = this.portalChatListItem;
+         var9 = CollectionsKt.M0(var10, var15);
       }
 
       this.setChatListItems$chat_release(var9);
@@ -284,11 +284,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
             }, 3, null)
          );
       } else {
-         val var4: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var4);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -354,11 +354,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit,
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

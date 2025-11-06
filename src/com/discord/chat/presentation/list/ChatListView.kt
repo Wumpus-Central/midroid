@@ -164,15 +164,15 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var3: Any = var2.get(this);
-         val var7: CrashReporting = CrashReporting.INSTANCE;
-         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("About to crash because of ChatList, dumping update log:\n");
-         var4.append(var5);
-         var4.append("\n Recycler State: ");
-         var4.append(var3);
-         CrashReporting.addBreadcrumb$default(var7, var4.toString(), null, null, null, 14, null);
+         val var7: Any = var2.get(this);
+         val var3: CrashReporting = CrashReporting.INSTANCE;
+         val var4: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("About to crash because of ChatList, dumping update log:\n");
+         var5.append(var4);
+         var5.append("\n Recycler State: ");
+         var5.append(var7);
+         CrashReporting.addBreadcrumb$default(var3, var5.toString(), null, null, null, 14, null);
          throw var6;
       }
    }
@@ -241,19 +241,19 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
                      ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .updateFirstAndLastMessageVisibilityData(this.this$0);
-                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePosition();
                      val var7: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePercentVisible();
-                     val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePosition();
                      val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePercentVisible();
-                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var1 >= 0 && var2 >= 0) {
+                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var2 >= 0 && var1 >= 0) {
                         ChatListView.access$setFirstLayout$p(this.this$0, false);
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
@@ -264,7 +264,7 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
                               var4 = null;
                            }
 
-                           var4.onFirstLayout(var2, var6, var1, var7);
+                           var4.onFirstLayout(var1, var6, var2, var7);
                         } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
@@ -273,7 +273,7 @@ public class ChatListView(context: Context, componentProvider: ComponentProvider
                               var4 = var12;
                            }
 
-                           var4.onFirstLayout(var1, var7, var2, var6);
+                           var4.onFirstLayout(var2, var7, var1, var6);
                         }
                      }
                   }

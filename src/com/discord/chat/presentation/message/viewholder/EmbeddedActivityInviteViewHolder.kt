@@ -38,13 +38,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
-      val var19: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var4: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
       val var9: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var19.getSplashUrl(), var1.getConstrainedWidth());
-      var9.setTitleText(var19.getTitleText());
-      var9.setHeaderText(var19.getHeaderText());
+      this.embeddedActivityInviteView.setSplash(var4.getSplashUrl(), var1.getConstrainedWidth());
+      var9.setTitleText(var4.getTitleText());
+      var9.setHeaderText(var4.getHeaderText());
       var9.setSubtitleText-Tu_1QLM(
-         var19.getStructurableSubtitleText(),
+         var4.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2<MessageId, LinkContentNode, Unit>(this.eventHandler) {
             {
@@ -204,9 +204,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var9.setNoParticipantsText(var19.getNoParticipantsText());
-      var9.setLaunchButton(var19.getAcceptLabelText(), var19.getAcceptLabelBackgroundColor(), var19.getCtaEnabled());
-      var9.setAvatarUris(var19.getParticipantAvatarUris());
+      var9.setNoParticipantsText(var4.getNoParticipantsText());
+      var9.setLaunchButton(var4.getAcceptLabelText(), var4.getAcceptLabelBackgroundColor(), var4.getCtaEnabled());
+      var9.setAvatarUris(var4.getParticipantAvatarUris());
       var9.setOnLaunchButtonClickListener(new com.discord.chat.presentation.message.viewholder.j(this, var1));
    }
 }

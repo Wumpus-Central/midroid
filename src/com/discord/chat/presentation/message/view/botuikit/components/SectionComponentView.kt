@@ -122,15 +122,15 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
-                  val var16: FlexboxLayout = this.binding.sectionLayoutBox;
-                  val var12: SectionAccessory = var1.getAccessory();
-                  var7 = var12 is Button;
+                  val var12: FlexboxLayout = this.binding.sectionLayoutBox;
+                  val var16: SectionAccessory = var1.getAccessory();
+                  var7 = var16 is Button;
                   var var17: Byte = 2;
-                  if (!var7 && var12 is Thumbnail) {
+                  if (!var7 && var16 is Thumbnail) {
                      var17 = 0;
                   }
 
-                  var16.setFlexDirection(var17);
+                  var12.setFlexDirection(var17);
                }
 
                val var13: ConstraintLayout = this.binding.sectionComponentViewGroupErrorRow.getRoot();

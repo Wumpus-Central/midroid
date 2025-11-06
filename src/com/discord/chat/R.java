@@ -101,7 +101,6 @@ public final class R {
       public static int actions_button;
       public static int actions_container;
       public static int add_reaction;
-      public static int alt_remix_tag;
       public static int alt_text_container;
       public static int alt_text_label;
       public static int answers;
@@ -315,7 +314,6 @@ public final class R {
       public static int media_view_alt_text_button;
       public static int media_warning_icon;
       public static int message;
-      public static int message_alt_remix_tag_view;
       public static int message_count;
       public static int message_end_guideline;
       public static int message_frame_feed_header;
@@ -367,7 +365,6 @@ public final class R {
       public static int provider;
       public static int question_text;
       public static int reactions_view;
-      public static int remix_icon;
       public static int reply_author_avatar;
       public static int reply_author_name;
       public static int reply_icon;
@@ -545,7 +542,6 @@ public final class R {
       public static int media_image_view;
       public static int media_view;
       public static int media_visual_placeholder_view;
-      public static int message_alt_remix_tag_view;
       public static int message_component_action_row_view;
       public static int message_component_button_view;
       public static int message_component_checkpoint_card_view;

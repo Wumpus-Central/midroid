@@ -5435,6 +5435,9 @@
   "S0W8Z5": [
     "Povezivanje"
   ],
+  "LV+CXH": [
+    "Povezan"
+  ],
   "LVh3/5": [
     "Dodaj podatke"
   ],
@@ -15094,6 +15097,9 @@
   ],
   "aCAiGl": [
     "Server nije dostupan"
+  ],
+  "3mgEQf": [
+    "Uzmi nagradu!"
   ],
   "LhlgY9": [
     "Započni"
@@ -26507,32 +26513,6 @@
   "o3kmm3": [
     "Serveri s objavljenom prihvatnom stranicom za otkrivanje mogu personalizirane URL-ove samo ukloniti, ali mijenjati ih ne mogu"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " varijanta: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bu!"
-  ],
-  "9PzTtM": [
-    "G. Svjetleća bundeva"
-  ],
-  "RbkXxR": [
-    "Počivaj u miru"
-  ],
-  "FW3Qp/": [
-    "Malo visim"
-  ],
-  "mMgymV": [
-    "Odaberi besplatni ukras avatara za Noć vještica. Možeš ga zadržati ako kupiš dar."
-  ],
   "h2nMp0": [
     "Uz svaku kupnju dara dobivaš jedan."
   ],
@@ -26541,117 +26521,6 @@
   ],
   "3JCuX1": [
     "Odaberi svoju besplatnu nagradu"
-  ],
-  "dAqTcI": [
-    "Zgrabi besplatni ukras uz kupnju dara"
-  ],
-  "F/5kFJ": [
-    "Dobit ćeš besplatni ukras kada ovoga mjeseca pokloniš Nitro. „Dajte nam nešto i stjerajte nas van” - što ćeš im darovati?"
-  ],
-  "gI6Yvv": [
-    "Darovao/la si ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " mjesec"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " mjeseca"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mjeseci"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitra. Sjajan način da se proslave jezivi blagdani!"
-  ],
-  "rSS+oo": [
-    "Darovao/la si ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " godinu"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " godine"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " godina"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitra. Sjajan način da se proslave jezivi blagdani!"
-  ],
-  "9rInzW": [
-    "Vrijeme je za odluku: što ćeš im darovati prije nego ih „stjeraš van”? Daruj Nitro tijekom listopada i dobit ćeš jezivo zabavan avatar ukrasa za stalno."
-  ],
-  "CGgAyN": [
-    "Daruj Nitro ako se usuđuješ..."
-  ],
-  "ruVnPr": [
-    "Odaberi BESPLATNU nagradu"
-  ],
-  "q4BJSJ": [
-    "Možeš je zadržati, ali samo ako se usuđuješ..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " dostupna opcija"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " dostupne opcije"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " dostupnih opcija"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Poslastica"
@@ -45902,9 +45771,6 @@
   ],
   "Ofpgwh": [
     "Prikaži sve"
-  ],
-  "MzahXU": [
-    "Ponuda uskoro završava!"
   ],
   "TiZFqX": [
     "Otvori Dar"

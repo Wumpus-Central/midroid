@@ -54,9 +54,9 @@ private fun fixAtSeparatorExtensions(filename: String, useUrlEncoded: Boolean): 
       var2 = "@";
    }
 
-   val var4: FilenamePatterns = FilenamePatterns.INSTANCE;
-   val var3: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var2).replace(var0, "$1.$2");
-   return if (var3 == var0) var4.atSeparatorPattern(var2).replace(var0, "$1.$2") else var3;
+   val var3: FilenamePatterns = FilenamePatterns.INSTANCE;
+   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var2).replace(var0, "$1.$2");
+   return if (var4 == var0) var3.atSeparatorPattern(var2).replace(var0, "$1.$2") else var4;
 }
 
 public fun String.getMimeTypeFromFilename(): String? {

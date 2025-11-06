@@ -4707,6 +4707,18 @@
   "rt69oo": [
     "Included with Nitro"
   ],
+  "R4q5+y": [
+    "Head In the Clouds"
+  ],
+  "s1HWnQ": [
+    "Glowing fluffy, purple clouds and stars frame your avatar, with shimmering meteor showers streaking across the sky."
+  ],
+  "ZK9IyY": [
+    "Mirage"
+  ],
+  "m/y43M": [
+    "Pink ethereal streaks and rings of light flow around your avatar like an aurora, emitting trails of shimmering particles."
+  ],
   "kWkpdG": [
     [
       1,
@@ -4778,6 +4790,12 @@
   ],
   "4wA9a5": [
     "Shop Anywhere, Anytime"
+  ],
+  "OzB7sI": [
+    "Starfall Tides"
+  ],
+  "WX49A3": [
+    "Ocean blue background with shooting stars washed up onto shore."
   ],
   "V+IE93": [
     "Join Nitro to unlock access to this nameplate!"
@@ -5450,6 +5468,9 @@
   ],
   "S0W8Z5": [
     "Connect"
+  ],
+  "LV+CXH": [
+    "Connected"
   ],
   "LVh3/5": [
     "Add details"
@@ -12009,7 +12030,7 @@
     " available"
   ],
   "m0YV7M": [
-    "Emoji Name"
+    "Emoji name"
   ],
   "WkK72v": [
     [
@@ -12020,13 +12041,13 @@
           [
             7
           ],
-          " open slot"
+          " slot"
         ],
         "other": [
           [
             7
           ],
-          " open slots"
+          " slots"
         ]
       },
       0,
@@ -15130,6 +15151,9 @@
   "aCAiGl": [
     "Server Unavailable"
   ],
+  "3mgEQf": [
+    "Get Reward!"
+  ],
   "LhlgY9": [
     "Get Started"
   ],
@@ -15148,11 +15172,20 @@
   "I5gL2H": [
     "GIF"
   ],
+  "OEtqpm": [
+    "Choose a FREE reward"
+  ],
   "3d0Nmb": [
     "Confirm Reward"
   ],
   "gNZY/B": [
     "Choose your Reward"
+  ],
+  "vPeaOS": [
+    "Get one with each gift purchase."
+  ],
+  "cMiNit": [
+    "Snag a free decoration with a gift purchase"
   ],
   "n6I6k4": [
     "Woo! Accept Gift"
@@ -15477,6 +15510,33 @@
   ],
   "mdLtb5": [
     "You couldn't claim this gift because you already have it."
+  ],
+  "6plpZi": [
+    [
+      1,
+      "applicationName"
+    ],
+    " — ",
+    [
+      6,
+      "copies",
+      {
+        "one": [
+          [
+            7
+          ],
+          " copy"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " copies"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
   ],
   "zMcvcA": [
     [
@@ -17748,6 +17808,9 @@
   "iypvFu": [
     "This server might be empty or you don’t have access to any channels."
   ],
+  "cgPbaZ": [
+    "Unknown Application"
+  ],
   "FXREhf": [
     "Joined ",
     [
@@ -17768,6 +17831,15 @@
   ],
   "PFWIYe": [
     "Welcome!"
+  ],
+  "BozOXu": [
+    "Link your external account with Discord for additional features and access in this server"
+  ],
+  "eDVMrA": [
+    "Connect your accounts"
+  ],
+  "NzCoRx": [
+    "Unknown Provider"
   ],
   "pclUFJ": [
     "Server Owner"
@@ -26610,32 +26682,6 @@
   "o3kmm3": [
     "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " variant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Boo!"
-  ],
-  "9PzTtM": [
-    "Mr. Jack O’ Lantern"
-  ],
-  "RbkXxR": [
-    "Rest in Peace"
-  ],
-  "FW3Qp/": [
-    "Just Hangin’"
-  ],
-  "mMgymV": [
-    "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase."
-  ],
   "h2nMp0": [
     "Get one with each gift purchase."
   ],
@@ -26644,99 +26690,6 @@
   ],
   "3JCuX1": [
     "Choose your free reward"
-  ],
-  "dAqTcI": [
-    "Snag a free decoration with a gift purchase"
-  ],
-  "F/5kFJ": [
-    "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?"
-  ],
-  "gI6Yvv": [
-    "You've gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " month"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " months"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of Nitro. What a way to celebrate the spooky season!"
-  ],
-  "rSS+oo": [
-    "You've gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " year"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " years"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of Nitro. What a way to celebrate the spooky season!"
-  ],
-  "9rInzW": [
-    "It's time to pick: trick or treat? Gift Nitro during October, and get your choice of a chillingly, cool avatar decoration to keep."
-  ],
-  "CGgAyN": [
-    "Gift Nitro if you dare..."
-  ],
-  "ruVnPr": [
-    "Choose a FREE reward"
-  ],
-  "q4BJSJ": [
-    "Yours to keep if you dare..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " available ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " option"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " options"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Treat"
@@ -45824,8 +45777,92 @@
   "Ofpgwh": [
     "View all"
   ],
-  "MzahXU": [
-    "Offer ends soon!"
+  "Abiuci": [
+    "Pick a free decoration. Yours to keep with a gift purchase."
+  ],
+  "Wp+i/e": [
+    "Get one of this year’s top-selling decorations for free when you gift Nitro this holiday season."
+  ],
+  "Eeqjcv": [
+    "‘Tis the season to gift Nitro"
+  ],
+  "qyhlUP": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "one": [
+          [
+            7
+          ],
+          " month"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " months"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the holiday season!"
+  ],
+  "0Z0G7m": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "one": [
+          [
+            7
+          ],
+          " year"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " years"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of Nitro. What a way to celebrate the holiday season!"
+  ],
+  "IuMZS3": [
+    "Sometimes the best gifts aren't wrapped, they're sent over Discord! Gift Nitro and get one of this year's top-selling decorations for free."
+  ],
+  "2h5M+X": [
+    [
+      1,
+      "availableCount"
+    ],
+    " available ",
+    [
+      6,
+      "availableCount",
+      {
+        "one": [
+          [
+            7
+          ],
+          " option"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " options"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
   ],
   "TiZFqX": [
     "Open Gift"
@@ -51563,6 +51600,13 @@
   ],
   "GjBNMg": [
     "Create a passkey with your Android device"
+  ],
+  "7JgxF5": [
+    "Last used ",
+    [
+      1,
+      "lastUsed"
+    ]
   ],
   "wePEBF": [
     "Interact with your security key"

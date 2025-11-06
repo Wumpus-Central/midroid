@@ -72,12 +72,12 @@ public class PerformanceTracing : ReactMarker.MarkerListener {
    private fun getMarkerName(transactionMarker: com.discord.crash_reporting.PerformanceTracing.TransactionMarker): String {
       if (var1.getTag() != null && !(var1.getName() == "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var3: java.lang.String = var1.getTag();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append(var2);
-         var4.append(" ");
-         var4.append(var3);
-         return var4.toString();
+         val var4: java.lang.String = var1.getTag();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" ");
+         var3.append(var4);
+         return var3.toString();
       } else {
          return var1.getName();
       }
@@ -541,18 +541,18 @@ public class PerformanceTracing : ReactMarker.MarkerListener {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.name;
-         val var4: java.lang.String = this.tag;
-         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("TransactionMarker(name=");
-         var2.append(var3);
-         var2.append(", tag=");
-         var2.append(var4);
-         var2.append(", markerEnd=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var4: java.lang.String = this.name;
+         val var3: java.lang.String = this.tag;
+         val var2: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("TransactionMarker(name=");
+         var1.append(var4);
+         var1.append(", tag=");
+         var1.append(var3);
+         var1.append(", markerEnd=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

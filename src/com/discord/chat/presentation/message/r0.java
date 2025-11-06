@@ -7,11 +7,8 @@ import com.discord.chat.presentation.events.ChatEventHandler;
 // $VF: synthetic class
 public final class r0 implements OnClickListener {
    public final ChatEventHandler d;
-   public final String e;
-   public final long i;
-   public final String t;
 
    public final void onClick(View var1) {
-      MessageTagView.b(this.d, this.e, this.i, this.t, var1);
+      MessageTagView.a(this.d, var1);
    }
 }

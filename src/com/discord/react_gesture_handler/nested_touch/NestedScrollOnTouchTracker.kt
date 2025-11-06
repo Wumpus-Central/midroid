@@ -113,13 +113,13 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                } else {
                   var var7: Int = (int)var2.getX() - var17.getTotalPaddingLeft() + var17.getScrollX();
                   val var23: Int = var17.getLayout().getLineForVertical((int)var2.getY() - var17.getTotalPaddingTop() + var17.getScrollY());
-                  val var5: Float = var17.getLayout().getLineRight(var23);
-                  val var4: Float = var17.getLayout().getLineLeft(var23);
-                  val var6: Float = var7;
-                  if (var7 > var5 || var7 >= 0 && var7 < var4) {
+                  val var4: Float = var17.getLayout().getLineRight(var23);
+                  val var6: Float = var17.getLayout().getLineLeft(var23);
+                  val var5: Float = var7;
+                  if (var7 > var4 || var7 >= 0 && var7 < var6) {
                      var11 = new NestedClickableSpan[0];
                   } else {
-                     var7 = var17.getLayout().getOffsetForHorizontal(var23, var6);
+                     var7 = var17.getLayout().getOffsetForHorizontal(var23, var5);
                      var11 = var26.getSpans(var7, var7, NestedClickableSpan.class);
                   }
                }
@@ -277,10 +277,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                               this.$view.setPressed(true);
                            }
 
-                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
-                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
+                           val var12: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
+                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
                            this.label = 2;
-                           if (i0.a(var5 - var12, this) === var7) {
+                           if (i0.a(var12 - var5, this) === var7) {
                               return var7;
                            }
                         }
@@ -370,10 +370,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                                  }
 
                                  NestedScrollOnTouchTracker.access$setConsideringDoubleClick$p(this.this$0, true);
-                                 val var9: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_TIME();
-                                 val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_MIN_TIME();
+                                 val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_TIME();
+                                 val var9: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getDOUBLE_CLICK_MIN_TIME();
                                  this.label = 2;
-                                 if (i0.a(var9 - var5, this) === var7) {
+                                 if (i0.a(var5 - var9, this) === var7) {
                                     return var7;
                                  }
                               }

@@ -5357,6 +5357,9 @@
   "S0W8Z5": [
     "Anslut"
   ],
+  "LV+CXH": [
+    "Ansluten"
+  ],
   "LVh3/5": [
     "Lägg till information"
   ],
@@ -14775,6 +14778,9 @@
   ],
   "aCAiGl": [
     "Servern är inte tillgänglig"
+  ],
+  "3mgEQf": [
+    "Hämta belöning!"
   ],
   "LhlgY9": [
     "Kom igång"
@@ -25944,32 +25950,6 @@
   "o3kmm3": [
     "Servrar med en publicerad landningssida för Upptäck kan endast ta bort personliga URL:er, men inte modifiera den"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " variant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bu!"
-  ],
-  "9PzTtM": [
-    "Herr Jack O' Lantern"
-  ],
-  "RbkXxR": [
-    "Vila i frid"
-  ],
-  "FW3Qp/": [
-    "Hänger bara"
-  ],
-  "mMgymV": [
-    "Välj en gratis halloween-avatardekoration. Din att behålla när du köper en gåva."
-  ],
   "h2nMp0": [
     "Få en med varje gåvoköp."
   ],
@@ -25978,99 +25958,6 @@
   ],
   "3JCuX1": [
     "Välj din gratis belöning"
-  ],
-  "dAqTcI": [
-    "Få en gratis dekoration när du köper en gåva"
-  ],
-  "F/5kFJ": [
-    "Få en gratis dekoration när du ger någon Nitro den här månaden. Bus eller godis: vad kommer du att välja?"
-  ],
-  "gI6Yvv": [
-    "Du har gett bort ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " månad"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " månader"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med Nitro. Vilket perfekt sätt att fira spöksäsongen på!"
-  ],
-  "rSS+oo": [
-    "Du har gett bort ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med Nitro. Vilket perfekt sätt att fira spöksäsongen på!"
-  ],
-  "9rInzW": [
-    "Det är dags att välja: bus eller godis? Ge någon Nitro under oktober och välj en läskigt cool avatardekoration att behålla."
-  ],
-  "CGgAyN": [
-    "Ge någon Nitro om du vågar ..."
-  ],
-  "ruVnPr": [
-    "Välj en GRATIS belöning"
-  ],
-  "q4BJSJ": [
-    "Din att behålla om du vågar ..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " tillgängliga ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " alternativ"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " alternativ"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Godis"
@@ -44835,9 +44722,6 @@
   ],
   "Ofpgwh": [
     "Visa allt"
-  ],
-  "MzahXU": [
-    "Erbjudandet upphör snart!"
   ],
   "TiZFqX": [
     "Öppna paketet"

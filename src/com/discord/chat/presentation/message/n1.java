@@ -1,13 +1,17 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.react_strings.RenderContext;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.bridge.executedcommand.ExecutedCommand;
+import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
-public final class n1 implements Function1 {
-   public final String d;
+public final class n1 implements OnClickListener {
+   public final ChatEventHandler d;
+   public final String e;
+   public final ExecutedCommand i;
 
-   public final Object invoke(Object var1) {
-      return MessageViewAccessibilityDelegate.c(this.d, (RenderContext)var1);
+   public final void onClick(View var1) {
+      MessageViewReplyPreview.m(this.d, this.e, this.i, var1);
    }
 }

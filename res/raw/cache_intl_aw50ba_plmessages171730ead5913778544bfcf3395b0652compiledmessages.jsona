@@ -5460,6 +5460,9 @@
   "S0W8Z5": [
     "Połącz"
   ],
+  "LV+CXH": [
+    "Połączono"
+  ],
   "LVh3/5": [
     "Dodaj informacje"
   ],
@@ -15130,6 +15133,9 @@
   ],
   "aCAiGl": [
     "Serwer niedostępny"
+  ],
+  "3mgEQf": [
+    "Zdobądź nagrodę!"
   ],
   "LhlgY9": [
     "Rozpocznij"
@@ -26540,32 +26546,6 @@
   "o3kmm3": [
     "Serwery z opublikowaną stroną docelową w wyszukiwaniu mogą tylko usunąć unikalne adresy URL, ale nie modyfikować jej"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    ", wariant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Buuu!"
-  ],
-  "9PzTtM": [
-    "Pan Dynia"
-  ],
-  "RbkXxR": [
-    "Spoczywaj w pokoju"
-  ],
-  "FW3Qp/": [
-    "Pajączek"
-  ],
-  "mMgymV": [
-    "Wybierz darmową halloweenową dekorację awatara. Możesz zachować ją na zawsze przy zakupie prezentu."
-  ],
   "h2nMp0": [
     "Otrzymaj jeden za każdy zakupiony prezent."
   ],
@@ -26574,84 +26554,6 @@
   ],
   "3JCuX1": [
     "Wybierz darmową nagrodę"
-  ],
-  "dAqTcI": [
-    "Zdobądź dekorację za darmo przy zakupie prezentu"
-  ],
-  "F/5kFJ": [
-    "Zdobądź darmową dekorację za podarowanie Nitro w tym miesiącu. Cukierek albo psikus! Co wybierasz?"
-  ],
-  "gI6Yvv": [
-    "Podarowano ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " miesiąc"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " miesiące"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " miesięcy"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro. Wspaniały sposób, aby uczcić sezon strachów!"
-  ],
-  "rSS+oo": [
-    "Podarowano ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " rok"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " lata"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " lat"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro. Wspaniały sposób, aby uczcić sezon strachów!"
-  ],
-  "9rInzW": [
-    "Czas na wybór: cukierek albo psikus? Podaruj Nitro w październiku, a otrzymasz na zawsze mrożącą krew w żyłach dekorację awatara."
-  ],
-  "CGgAyN": [
-    "Podaruj Nitro, jeśli się odważysz..."
-  ],
-  "ruVnPr": [
-    "Wybierz DARMOWĄ nagrodę"
-  ],
-  "q4BJSJ": [
-    "Twoje na zawsze, jeśli się odważysz..."
   ],
   "2UeOlY": [
     "Cukierek"
@@ -45838,9 +45740,6 @@
   ],
   "Ofpgwh": [
     "Wyświetl wszystkie"
-  ],
-  "MzahXU": [
-    "Oferta wkrótce wygasa!"
   ],
   "TiZFqX": [
     "Otwórz prezent"

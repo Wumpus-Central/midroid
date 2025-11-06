@@ -112,27 +112,27 @@ public data class SearchableSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.label;
-      val var5: java.lang.String = this.value;
-      val var4: SelectOptionType = this.type;
-      val var6: java.lang.String = this.iconSrc;
-      val var3: Int = this.iconColor;
-      val var1: ComponentEmoji = this.iconEmoji;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SearchableSelectItem(label=");
-      var2.append(var7);
-      var2.append(", value=");
-      var2.append(var5);
-      var2.append(", type=");
-      var2.append(var4);
-      var2.append(", iconSrc=");
-      var2.append(var6);
-      var2.append(", iconColor=");
-      var2.append(var3);
-      var2.append(", iconEmoji=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.label;
+      val var4: java.lang.String = this.value;
+      val var1: SelectOptionType = this.type;
+      val var3: java.lang.String = this.iconSrc;
+      val var5: Int = this.iconColor;
+      val var6: ComponentEmoji = this.iconEmoji;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("SearchableSelectItem(label=");
+      var7.append(var2);
+      var7.append(", value=");
+      var7.append(var4);
+      var7.append(", type=");
+      var7.append(var1);
+      var7.append(", iconSrc=");
+      var7.append(var3);
+      var7.append(", iconColor=");
+      var7.append(var5);
+      var7.append(", iconEmoji=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

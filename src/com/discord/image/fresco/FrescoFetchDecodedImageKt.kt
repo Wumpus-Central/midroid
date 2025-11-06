@@ -158,41 +158,41 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
 public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = null, onDecodedImage: (Bitmap?) -> Unit) {
    label38: {
       try {
-         val var5: kotlin.Result.a = Result.e;
+         val var20: kotlin.Result.a = Result.e;
       } catch (var8: java.lang.Throwable) {
-         val var18: kotlin.Result.a = Result.e;
-         var19 = Result.b(kotlin.c.a(var8));
+         val var5: kotlin.Result.a = Result.e;
+         var18 = Result.b(kotlin.c.a(var8));
          break label38;
       }
 
-      val var21: Uri;
+      val var19: Uri;
       if (var1 != null) {
          try {
-            var21 = Uri.parse(var1);
+            var19 = Uri.parse(var1);
          } catch (var7: java.lang.Throwable) {
-            val var20: kotlin.Result.a = Result.e;
-            var19 = Result.b(kotlin.c.a(var7));
+            val var21: kotlin.Result.a = Result.e;
+            var18 = Result.b(kotlin.c.a(var7));
             break label38;
          }
       } else {
-         var21 = null;
+         var19 = null;
       }
 
       label26:
       try {
-         var19 = Result.b(var21);
+         var18 = Result.b(var19);
       } catch (var6: java.lang.Throwable) {
          val var22: kotlin.Result.a = Result.e;
-         var19 = Result.b(kotlin.c.a(var6));
+         var18 = Result.b(kotlin.c.a(var6));
          break label26;
       }
    }
 
-   if (Result.g(var19)) {
-      var19 = null;
+   if (Result.g(var18)) {
+      var18 = null;
    }
 
-   fetchDecodedImage(var0, var19 as Uri, var2, var3);
+   fetchDecodedImage(var0, var18 as Uri, var2, var3);
 }
 
 @JvmSynthetic

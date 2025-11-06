@@ -60,7 +60,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    init {
-      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0<Unit>(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -69,9 +69,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var3;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
-      this.transitionResilientLinearLayoutManager = var4;
+      this.accessoriesAdapter = var4;
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
+      this.transitionResilientLinearLayoutManager = var3;
       this.forwardBarPaint$delegate = ht.l.b(new p0());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -85,8 +85,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var3);
+      this.setLayoutManager(var3);
+      this.setAdapter(var4);
    }
 
    @JvmStatic
@@ -167,9 +167,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var11: Resources = this.getResources();
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
+      val var11: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       val var17: java.lang.Iterable = var5;
       var9 = var5 is java.util.Collection;

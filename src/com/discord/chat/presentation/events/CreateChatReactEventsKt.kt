@@ -66,7 +66,6 @@ import com.discord.chat.reactevents.TapPostPreviewEmbedData
 import com.discord.chat.reactevents.TapPreviewSharedClientThemeData
 import com.discord.chat.reactevents.TapReactionData
 import com.discord.chat.reactevents.TapReferralRedeemData
-import com.discord.chat.reactevents.TapRemixData
 import com.discord.chat.reactevents.TapRoleIconData
 import com.discord.chat.reactevents.TapSafetyPolicyNoticeEmbed
 import com.discord.chat.reactevents.TapSafetySystemNotificationCta
@@ -158,7 +157,6 @@ internal fun createChatReactEvents(): ReactEvents {
       v.a("onTapPostPreviewEmbed", TapPostPreviewEmbedData::class),
       v.a("onTapDismissMediaPostSharePrompt", TapDismissMediaPostSharePromptData::class),
       v.a("onTapTag", TapTagData::class),
-      v.a("onTapRemix", TapRemixData::class),
       v.a("onTapChannelPromptButton", TapChannelPromptButtonData::class),
       v.a("onTapObscuredMediaLearnMore", TapObscuredMediaLearnMoreData::class),
       v.a("onTapObscuredMediaToggle", TapObscuredMediaToggleData::class),

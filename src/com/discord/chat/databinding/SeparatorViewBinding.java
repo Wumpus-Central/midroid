@@ -28,15 +28,15 @@ public final class SeparatorViewBinding implements ViewBinding {
    @NonNull
    public static SeparatorViewBinding bind(@NonNull View var0) {
       int var1 = R.id.left_bar;
-      View var3 = k5.a.a(var0, var1);
-      if (var3 != null) {
+      View var4 = k5.a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.middle_text;
-         TextView var4 = (TextView)k5.a.a(var0, var1);
-         if (var4 != null) {
+         TextView var3 = (TextView)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.right_bar;
             View var2 = k5.a.a(var0, var1);
             if (var2 != null) {
-               return new SeparatorViewBinding(var0, var3, var4, var2);
+               return new SeparatorViewBinding(var0, var4, var3, var2);
             }
          }
       }

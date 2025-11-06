@@ -5370,6 +5370,9 @@
   "S0W8Z5": [
     "Yhdistä"
   ],
+  "LV+CXH": [
+    "Yhdistetty"
+  ],
   "LVh3/5": [
     "Lisää tiedot"
   ],
@@ -14804,6 +14807,9 @@
   ],
   "aCAiGl": [
     "Palvelin ei ole käytettävissä"
+  ],
+  "3mgEQf": [
+    "Palkinto!"
   ],
   "LhlgY9": [
     "Aloita"
@@ -26018,33 +26024,6 @@
   "o3kmm3": [
     "Palvelimet, joilla on julkaistu palvelinhaun aloitussivu, eivät voi muokata personoitua osoitetta vaan sen voi tällöin vain poistaa"
   ],
-  "pDrI0m": [
-    "Luokan ",
-    [
-      1,
-      "category"
-    ],
-    " variantti: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Pöö!"
-  ],
-  "9PzTtM": [
-    "Herra Kurpitsalyhty"
-  ],
-  "RbkXxR": [
-    "Haudan lepo"
-  ],
-  "FW3Qp/": [
-    "Seitissä vartoen"
-  ],
-  "mMgymV": [
-    "Valitse ilmainen halloween-aiheinen avatar-koriste. Saat pitää sen lahjaoston yhteydessä."
-  ],
   "h2nMp0": [
     "Saat yhden jokaisen lahjaoston yhteydessä."
   ],
@@ -26053,99 +26032,6 @@
   ],
   "3JCuX1": [
     "Valitse ilmainen palkintosi"
-  ],
-  "dAqTcI": [
-    "Nappaa ilmainen koriste ostamalla lahja"
-  ],
-  "F/5kFJ": [
-    "Saat ilmaisen koristeen, kun annat Nitron lahjaksi tässä kuussa. Karkki vai kepponen, kumman valitset?"
-  ],
-  "gI6Yvv": [
-    "Olet antanut lahjaksi ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " kuukauden"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " kuukautta"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitroa. Kerrassaan upea tapa juhlistaa tätä karmivaa sesonkia!"
-  ],
-  "rSS+oo": [
-    "Olet antanut lahjaksi ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " vuoden"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " vuotta"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitroa. Kerrassaan upea tapa juhlistaa tätä karmivaa sesonkia!"
-  ],
-  "9rInzW": [
-    "On aika valita: karkki vai kepponen? Lahjoita Nitro lokakuussa, niin saat haluamasi karmivan tyylikkään avatar-koristeen."
-  ],
-  "CGgAyN": [
-    "Lahjoita Nitro, jos uskallat..."
-  ],
-  "ruVnPr": [
-    "Valitse ILMAINEN palkinto"
-  ],
-  "q4BJSJ": [
-    "Saat sen omaksi, jos kantti riittää..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " vaihtoehto käytettävissä"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " vaihtoehtoa käytettävissä"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Karkki"
@@ -44940,9 +44826,6 @@
   ],
   "Ofpgwh": [
     "Näytä kaikki"
-  ],
-  "MzahXU": [
-    "Tarjous päättyy pian!"
   ],
   "TiZFqX": [
     "Avaa lahja"

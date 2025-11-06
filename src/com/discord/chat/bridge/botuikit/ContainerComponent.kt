@@ -159,32 +159,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
-      val var7: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var8: Int = this.accentColor;
+      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.errorText;
+      val var9: java.util.List = this.components;
+      val var6: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var9: java.lang.String = this.spoilerDescription;
-      val var4: Int = this.themedBackgroundColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ContainerComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var6);
-      var5.append(", errorText=");
-      var5.append(var7);
-      var5.append(", components=");
-      var5.append(var3);
-      var5.append(", accentColor=");
-      var5.append(var8);
-      var5.append(", isSpoiler=");
-      var5.append(var2);
-      var5.append(", spoilerDescription=");
-      var5.append(var9);
-      var5.append(", themedBackgroundColor=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: java.lang.String = this.spoilerDescription;
+      val var7: Int = this.themedBackgroundColor;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ContainerComponent(type=");
+      var8.append(var1);
+      var8.append(", id=");
+      var8.append(var5);
+      var8.append(", errorText=");
+      var8.append(var4);
+      var8.append(", components=");
+      var8.append(var9);
+      var8.append(", accentColor=");
+      var8.append(var6);
+      var8.append(", isSpoiler=");
+      var8.append(var2);
+      var8.append(", spoilerDescription=");
+      var8.append(var3);
+      var8.append(", themedBackgroundColor=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

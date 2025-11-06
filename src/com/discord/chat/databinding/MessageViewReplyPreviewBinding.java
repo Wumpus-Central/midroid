@@ -72,39 +72,39 @@ public final class MessageViewReplyPreviewBinding implements ViewBinding {
    @NonNull
    public static MessageViewReplyPreviewBinding bind(@NonNull View var0) {
       int var1 = R.id.reply_author_avatar;
-      SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.reply_author_name;
-         TextView var12 = (TextView)k5.a.a(var0, var1);
-         if (var12 != null) {
+         TextView var7 = (TextView)k5.a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.reply_icon;
             SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
             if (var6 != null) {
                var1 = R.id.reply_leading_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var10 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var10 != null) {
                   var1 = R.id.reply_leading_views;
-                  LinearLayout var9 = (LinearLayout)k5.a.a(var0, var1);
-                  if (var9 != null) {
+                  LinearLayout var5 = (LinearLayout)k5.a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.reply_message_tag_view;
-                     MessageTagView var4 = (MessageTagView)k5.a.a(var0, var1);
-                     if (var4 != null) {
+                     MessageTagView var2 = (MessageTagView)k5.a.a(var0, var1);
+                     if (var2 != null) {
                         var1 = R.id.reply_role_dot;
-                        RoleDotView var5 = (RoleDotView)k5.a.a(var0, var1);
-                        if (var5 != null) {
+                        RoleDotView var8 = (RoleDotView)k5.a.a(var0, var1);
+                        if (var8 != null) {
                            var1 = R.id.reply_spline;
-                           ChannelSpineView var10 = (ChannelSpineView)k5.a.a(var0, var1);
-                           if (var10 != null) {
+                           ChannelSpineView var3 = (ChannelSpineView)k5.a.a(var0, var1);
+                           if (var3 != null) {
                               var1 = R.id.reply_text;
-                              MessageContentView var7 = (MessageContentView)k5.a.a(var0, var1);
-                              if (var7 != null) {
+                              MessageContentView var9 = (MessageContentView)k5.a.a(var0, var1);
+                              if (var9 != null) {
                                  var1 = R.id.reply_trailing_icon;
-                                 SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-                                 if (var3 != null) {
+                                 SimpleDraweeView var11 = (SimpleDraweeView)k5.a.a(var0, var1);
+                                 if (var11 != null) {
                                     var1 = R.id.tag_chiplet;
-                                    ClanTagChipletView var11 = (ClanTagChipletView)k5.a.a(var0, var1);
-                                    if (var11 != null) {
-                                       return new MessageViewReplyPreviewBinding(var0, var8, var12, var6, var2, var9, var4, var5, var10, var7, var3, var11);
+                                    ClanTagChipletView var12 = (ClanTagChipletView)k5.a.a(var0, var1);
+                                    if (var12 != null) {
+                                       return new MessageViewReplyPreviewBinding(var0, var4, var7, var6, var10, var5, var2, var8, var3, var9, var11, var12);
                                     }
                                  }
                               }

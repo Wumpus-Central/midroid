@@ -269,18 +269,18 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 063: checkcast com/discord/billing/BillingManager
       // 066: astore 6
       // 068: aload 7
-      // 06a: astore 3
-      // 06b: aload 6
-      // 06d: astore 5
+      // 06a: astore 5
+      // 06c: aload 6
+      // 06e: astore 3
       // 06f: aload 8
       // 071: invokestatic kotlin/c.b (Ljava/lang/Object;)V
       // 074: aload 7
-      // 076: astore 3
-      // 077: aload 6
-      // 079: astore 5
+      // 076: astore 5
+      // 078: aload 6
+      // 07a: astore 3
       // 07b: aload 8
       // 07d: astore 6
-      // 07f: goto 132
+      // 07f: goto 13c
       // 082: new java/lang/IllegalStateException
       // 085: dup
       // 086: ldc_w "call to 'resume' before 'invoke' with coroutine"
@@ -324,7 +324,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 0d6: aload 3
       // 0d7: areturn
       // 0d8: astore 3
-      // 0d9: goto 164
+      // 0d9: goto 177
       // 0dc: aload 0
       // 0dd: getfield com/discord/billing/BillingManager.currentConnectionState Lcom/discord/billing/BillingManager$ConnectionState;
       // 0e0: getstatic com/discord/billing/BillingManager$ConnectionState.ERROR Lcom/discord/billing/BillingManager$ConnectionState;
@@ -369,39 +369,51 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       // 12e: areturn
       // 12f: aload 0
       // 130: astore 5
-      // 132: aload 6
-      // 134: checkcast com/discord/billing/BillingManager$ClientReadyState
-      // 137: astore 6
-      // 139: aload 6
-      // 13b: areturn
-      // 13c: astore 5
-      // 13e: aload 0
-      // 13f: astore 5
-      // 141: aload 5
-      // 143: getfield com/discord/billing/BillingManager.connectionReadyListeners Ljava/util/List;
-      // 146: astore 6
-      // 148: aload 6
-      // 14a: monitorenter
-      // 14b: aload 5
-      // 14d: getfield com/discord/billing/BillingManager.connectionReadyListeners Ljava/util/List;
-      // 150: aload 3
-      // 151: invokeinterface java/util/List.remove (Ljava/lang/Object;)Z 2
-      // 156: pop
-      // 157: aload 6
-      // 159: monitorexit
-      // 15a: getstatic com/discord/billing/BillingManager$ClientReadyState.TIMEOUT Lcom/discord/billing/BillingManager$ClientReadyState;
-      // 15d: areturn
-      // 15e: astore 3
-      // 15f: aload 6
-      // 161: monitorexit
-      // 162: aload 3
-      // 163: athrow
-      // 164: aload 6
-      // 166: monitorexit
-      // 167: aload 3
-      // 168: athrow
-      // 169: astore 6
-      // 16b: goto 141
+      // 132: aload 3
+      // 133: astore 7
+      // 135: aload 5
+      // 137: astore 3
+      // 138: aload 7
+      // 13a: astore 5
+      // 13c: aload 6
+      // 13e: checkcast com/discord/billing/BillingManager$ClientReadyState
+      // 141: astore 6
+      // 143: aload 6
+      // 145: areturn
+      // 146: astore 5
+      // 148: aload 0
+      // 149: astore 5
+      // 14b: aload 3
+      // 14c: astore 6
+      // 14e: aload 5
+      // 150: astore 3
+      // 151: aload 6
+      // 153: astore 5
+      // 155: aload 3
+      // 156: getfield com/discord/billing/BillingManager.connectionReadyListeners Ljava/util/List;
+      // 159: astore 6
+      // 15b: aload 6
+      // 15d: monitorenter
+      // 15e: aload 3
+      // 15f: getfield com/discord/billing/BillingManager.connectionReadyListeners Ljava/util/List;
+      // 162: aload 5
+      // 164: invokeinterface java/util/List.remove (Ljava/lang/Object;)Z 2
+      // 169: pop
+      // 16a: aload 6
+      // 16c: monitorexit
+      // 16d: getstatic com/discord/billing/BillingManager$ClientReadyState.TIMEOUT Lcom/discord/billing/BillingManager$ClientReadyState;
+      // 170: areturn
+      // 171: astore 3
+      // 172: aload 6
+      // 174: monitorexit
+      // 175: aload 3
+      // 176: athrow
+      // 177: aload 6
+      // 179: monitorexit
+      // 17a: aload 3
+      // 17b: athrow
+      // 17c: astore 6
+      // 17e: goto 155
    }
 
    private fun trackBillingMetric(metricName: String, tags: List<String> = CollectionsKt.l()) {
@@ -520,11 +532,11 @@ internal class BillingManager(reactContext: ReactApplicationContext,
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
 
-         for (java.lang.String var4 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var6: java.lang.String = var1.i();
-            val var3: java.lang.String = var1.e();
-            var5.invoke(var6, var3, var4);
+         for (java.lang.String var7 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
+            val var3: java.lang.String = var1.i();
+            val var6: java.lang.String = var1.e();
+            var4.invoke(var3, var6, var7);
          }
       }
    }
@@ -586,7 +598,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
             @Override
             public final Object invokeSuspend(Object var1) {
                label91: {
-                  var var4: Any = ot.b.f();
+                  var var4: BillingManager.ClientReadyState = (BillingManager.ClientReadyState)ot.b.f();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -630,16 +642,16 @@ internal class BillingManager(reactContext: ReactApplicationContext,
                   }
 
                   try {
-                     val var28: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
-                     var4 = this.this$0;
-                     val var25: java.lang.String = var28.getMetricValue();
-                     val var5: StringBuilder = new StringBuilder();
-                     var5.append("client_ready:");
-                     var5.append(var25);
+                     var4 = var1 as BillingManager.ClientReadyState;
+                     val var5: BillingManager = this.this$0;
+                     val var25: java.lang.String = var4.getMetricValue();
+                     val var28: StringBuilder = new StringBuilder();
+                     var28.append("client_ready:");
+                     var28.append(var25);
                      BillingManager.access$trackBillingMetric(
-                        (BillingManager)var4, "operation", CollectionsKt.o(new java.lang.String[]{"method:consume_purchase", var5.toString()})
+                        var5, "operation", CollectionsKt.o(new java.lang.String[]{"method:consume_purchase", var28.toString()})
                      );
-                     if (var28 === BillingManager.ClientReadyState.TIMEOUT) {
+                     if (var4 === BillingManager.ClientReadyState.TIMEOUT) {
                         this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
                         return Unit.a;
                      }
@@ -652,7 +664,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
 
                   var var29: BillingClient;
                   try {
-                     var4 = g7.e.b().b(this.$purchaseToken).a();
+                     var33 = g7.e.b().b(this.$purchaseToken).a();
                      var29 = BillingManager.access$getBillingClient$p(this.this$0);
                   } catch (var12: CancellationException) {
                      throw var12;
@@ -676,7 +688,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
                   }
 
                   try {
-                     var26.b((g7.e)var4, new d(this.this$0, this.$onError, this.$onSuccess));
+                     var26.b(var33, new d(this.this$0, this.$onError, this.$onSuccess));
                      return Unit.a;
                   } catch (var8: CancellationException) {
                      throw var8;
@@ -742,7 +754,7 @@ internal class BillingManager(reactContext: ReactApplicationContext,
             @Override
             public final Object invokeSuspend(Object var1) {
                label111: {
-                  var var4: Any = ot.b.f();
+                  var var4: StringBuilder = (StringBuilder)ot.b.f();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -786,16 +798,16 @@ internal class BillingManager(reactContext: ReactApplicationContext,
                   }
 
                   try {
-                     val var27: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
-                     var4 = this.this$0;
-                     val var5: java.lang.String = var27.getMetricValue();
-                     val var31: StringBuilder = new StringBuilder();
-                     var31.append("client_ready:");
-                     var31.append(var5);
+                     val var31: BillingManager.ClientReadyState = var1 as BillingManager.ClientReadyState;
+                     val var5: BillingManager = this.this$0;
+                     val var27: java.lang.String = var31.getMetricValue();
+                     var4 = new StringBuilder();
+                     var4.append("client_ready:");
+                     var4.append(var27);
                      BillingManager.access$trackBillingMetric(
-                        (BillingManager)var4, "operation", CollectionsKt.o(new java.lang.String[]{"method:load_purchases", var31.toString()})
+                        var5, "operation", CollectionsKt.o(new java.lang.String[]{"method:load_purchases", var4.toString()})
                      );
-                     if (var27 === BillingManager.ClientReadyState.TIMEOUT) {
+                     if (var31 === BillingManager.ClientReadyState.TIMEOUT) {
                         this.$onError.invoke(new BillingManagerException.BillingClientNotReadyException());
                         return Unit.a;
                      }

@@ -23,8 +23,8 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
    }
 
    private fun fill(recycler: Recycler?) {
-      val var17: Int = 3;
-      val var18: Int = 2;
+      val var18: Int = 3;
+      val var17: Int = 2;
       if (var1 != null) {
          if (this.getChildCount() > 0) {
             try {
@@ -33,11 +33,11 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                val var21: java.lang.String = var20.getMessage();
                if (var21 != null && StringsKt.T(var21, "Scrapped or attached views may not be recycled", false, 2, null)) {
                   val var22: Log = Log.INSTANCE;
-                  val var16: java.lang.String = var20.getMessage();
-                  val var45: StringBuilder = new StringBuilder();
-                  var45.append("Skipping layout due to nested RecyclerView timing conflict: ");
-                  var45.append(var16);
-                  Log.e$default(var22, "MosaicLayoutManager", var45.toString(), null, 4, null);
+                  val var45: java.lang.String = var20.getMessage();
+                  val var16: StringBuilder = new StringBuilder();
+                  var16.append("Skipping layout due to nested RecyclerView timing conflict: ");
+                  var16.append(var45);
+                  Log.e$default(var22, "MosaicLayoutManager", var16.toString(), null, 4, null);
                   return;
                }
 
@@ -61,9 +61,9 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                   if (var3 == 3) {
                      var42 = new Pair;
                      if (var9 == 0) {
-                        var42./* $VF: Unable to resugar constructor */<init>(var18, 4);
+                        var42./* $VF: Unable to resugar constructor */<init>(var17, 4);
                      } else {
-                        var42./* $VF: Unable to resugar constructor */<init>(var18, var18);
+                        var42./* $VF: Unable to resugar constructor */<init>(var17, var17);
                      }
                      break label125;
                   }
@@ -73,13 +73,13 @@ public class MosaicLayoutManager(context: Context) : LayoutManager {
                      if (var9 < var3) {
                         var42 = new Pair(var3, 6 / var3);
                      } else {
-                        var42 = new Pair(var17, var18);
+                        var42 = new Pair(var18, var17);
                      }
                      break label125;
                   }
                }
 
-               var42 = new Pair(var18, var17);
+               var42 = new Pair(var17, var18);
             } else {
                var42 = new Pair(1, 6);
             }

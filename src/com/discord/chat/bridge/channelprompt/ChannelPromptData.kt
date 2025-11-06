@@ -151,30 +151,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.cameraButtonIcon;
-      val var3: java.lang.String = this.gifButtonIcon;
-      val var7: java.lang.String = this.emojiButtonIcon;
-      val var1: java.lang.String = this.gamingStatsButtonText;
-      val var5: java.lang.String = this.cameraButtonText;
-      val var2: java.lang.String = this.gifButtonText;
-      val var4: java.lang.String = this.emojiButtonText;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ChannelPromptData(cameraButtonIcon=");
-      var8.append(var6);
-      var8.append(", gifButtonIcon=");
-      var8.append(var3);
-      var8.append(", emojiButtonIcon=");
-      var8.append(var7);
-      var8.append(", gamingStatsButtonText=");
-      var8.append(var1);
-      var8.append(", cameraButtonText=");
-      var8.append(var5);
-      var8.append(", gifButtonText=");
-      var8.append(var2);
-      var8.append(", emojiButtonText=");
-      var8.append(var4);
-      var8.append(")");
-      return var8.toString();
+      val var3: java.lang.String = this.cameraButtonIcon;
+      val var5: java.lang.String = this.gifButtonIcon;
+      val var6: java.lang.String = this.emojiButtonIcon;
+      val var7: java.lang.String = this.gamingStatsButtonText;
+      val var8: java.lang.String = this.cameraButtonText;
+      val var4: java.lang.String = this.gifButtonText;
+      val var1: java.lang.String = this.emojiButtonText;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChannelPromptData(cameraButtonIcon=");
+      var2.append(var3);
+      var2.append(", gifButtonIcon=");
+      var2.append(var5);
+      var2.append(", emojiButtonIcon=");
+      var2.append(var6);
+      var2.append(", gamingStatsButtonText=");
+      var2.append(var7);
+      var2.append(", cameraButtonText=");
+      var2.append(var8);
+      var2.append(", gifButtonText=");
+      var2.append(var4);
+      var2.append(", emojiButtonText=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

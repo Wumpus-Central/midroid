@@ -54,27 +54,27 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
    @NonNull
    public static PollTextAndImageAnswerViewBinding bind(@NonNull View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var5 = (PollCheckboxView)k5.a.a(var0, var1);
-      if (var5 != null) {
+      PollCheckboxView var2 = (PollCheckboxView)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.image;
-         PollMediaView var2 = (PollMediaView)k5.a.a(var0, var1);
-         if (var2 != null) {
+         PollMediaView var5 = (PollMediaView)k5.a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.percentage_bar_background;
-               View var6 = k5.a.a(var0, var1);
-               if (var6 != null) {
+               View var8 = k5.a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var7 = (FrameLayout)k5.a.a(var0, var1);
-                  if (var7 != null) {
+                  FrameLayout var4 = (FrameLayout)k5.a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var3 = (TextView)k5.a.a(var0, var1);
-                     if (var3 != null) {
+                     TextView var6 = (TextView)k5.a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var4 = (TextView)k5.a.a(var0, var1);
-                        if (var4 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var5, var2, var8, var6, var7, var3, var4);
+                        TextView var7 = (TextView)k5.a.a(var0, var1);
+                        if (var7 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var2, var5, var3, var8, var4, var6, var7);
                         }
                      }
                   }

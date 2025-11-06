@@ -278,9 +278,6 @@ public interface ChatEventHandler {
    public abstract fun onTapReferralRedeem(referralId: String?) {
    }
 
-   public abstract fun onTapRemix(messageId: MessageId) {
-   }
-
    public abstract fun onTapRoleIcon(roleName: String, roleIconSource: String) {
    }
 
@@ -598,9 +595,6 @@ public interface ChatEventHandler {
       }
 
       public override fun onTapReferralRedeem(referralId: String?) {
-      }
-
-      public override fun onTapRemix(messageId: MessageId) {
       }
 
       public override fun onTapRoleIcon(roleName: String, roleIconSource: String) {

@@ -79,7 +79,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
 
          var18.setTextColor(var12);
          val var19: ConstraintLayout = this.binding.layout;
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var19, false, new r0(var6, var7, var8, var10), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var19, false, new q0(var6, var7, var8, var10), 1, null);
          val var20: SimpleDraweeView = this.binding.verifiedBotIcon;
          var var29: Byte = 8;
          if (var2 == java.lang.Boolean.TRUE) {
@@ -110,16 +110,16 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
       } else {
          if (var5 != null) {
             this.binding.tag.setText(var5);
-            val var14: TextView = this.binding.tag;
-            val var26: Context = this.getContext();
-            var14.setTextColor(ColorUtilsKt.getColorCompat(var26, R.color.brand_560));
+            val var26: TextView = this.binding.tag;
+            val var14: Context = this.getContext();
+            var26.setTextColor(ColorUtilsKt.getColorCompat(var14, R.color.brand_560));
             val var27: ConstraintLayout = this.binding.layout;
             val var15: Context = this.getContext();
             ViewBackgroundUtilsKt.setBackgroundRectangle$default(
                var27, ColorUtilsKt.getThemeColor(var15, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
             );
             val var16: ConstraintLayout = this.binding.layout;
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new s0(var6), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var16, false, new r0(var6), 1, null);
             val var17: SimpleDraweeView = this.binding.verifiedBotIcon;
             var17.setVisibility(8);
          }

@@ -109,17 +109,17 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
       val var4: java.lang.String = DirectReplyAction.Companion.access$getReplyText(Companion, var2);
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var5: Bundle = new Bundle();
-      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var5.putString("channelName", this.channelName);
-      var5.putString("channelReplyText", var4);
+      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var3.putString("channelName", this.channelName);
+      var3.putString("channelReplyText", var4);
       if (this.channelType != null) {
-         var5.putInt("channelType", this.channelType.intValue());
+         var3.putInt("channelType", this.channelType.intValue());
       }
 
-      var5.putString("guildName", this.guildName);
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DirectReply", 0L, false, var5, true, 12, null);
+      var3.putString("guildName", this.guildName);
+      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "DirectReply", 0L, false, var3, true, 12, null);
    }
 
    public override fun onNotificationActionComplete(context: Context) {
@@ -130,22 +130,22 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = this.channelName;
-      val var4: Int = this.channelType;
-      val var1: java.lang.String = this.guildName;
+      val var4: java.lang.String = this.tag;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var6: java.lang.String = this.channelName;
+      val var2: Int = this.channelType;
+      val var5: java.lang.String = this.guildName;
       val var3: StringBuilder = new StringBuilder();
       var3.append("DirectReplyAction(tag=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var6);
-      var3.append(", channelName=");
-      var3.append(var5);
-      var3.append(", channelType=");
       var3.append(var4);
-      var3.append(", guildName=");
+      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelName=");
+      var3.append(var6);
+      var3.append(", channelType=");
+      var3.append(var2);
+      var3.append(", guildName=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }

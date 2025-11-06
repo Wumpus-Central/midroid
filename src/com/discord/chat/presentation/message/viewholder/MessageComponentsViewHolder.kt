@@ -97,9 +97,9 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var11: java.lang.String = MessageId.toString-impl(var15);
+      val var14: java.lang.String = MessageId.toString-impl(var15);
       val var12: GeneralEventHandlers = new GeneralEventHandlers(new v(var7, var15), var5);
-      val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var11: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var13.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var13),
          MessageKt.shouldShowLinkDecorations(var13),
@@ -250,13 +250,13 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var30: ComponentActionEventHandlers = new ComponentActionEventHandlers(
+      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(
          new x(var7, var15), new y(var7, var15), new z(var7, var15), new a0(var7, var15), new b0(var7, var15)
       );
-      val var32: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
-      val var31: java.lang.Boolean = var13.getGifAutoPlay();
-      if (var31 != null) {
-         var9 = var31;
+      val var31: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
+      val var30: java.lang.Boolean = var13.getGifAutoPlay();
+      if (var30 != null) {
+         var9 = var30;
       } else {
          var9 = false;
       }
@@ -269,6 +269,6 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var11, var12, var14, var35, var28, var30, var32, var9, var10, false, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var14, var12, var11, var35, var28, var32, var31, var9, var10, false, false));
    }
 }

@@ -12,7 +12,6 @@ import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
-import com.discord.tti_manager.TTIModule
 import com.facebook.react.bridge.ReactContext
 
 public class MainActivity : ReactActivity {
@@ -32,15 +31,15 @@ public class MainActivity : ReactActivity {
 
          private final void parseIntent(Intent var1) {
             val var3: NotificationClient = NotificationClient.Companion.getInstance();
-            val var2: Context = this.getContext();
+            var var2: Context = this.getContext();
             var3.handleIntent(var2, var1);
             val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
             val var6: Context = this.getContext();
             var4.handleIntent(var6, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
-            val var5: BundleUpdater = BundleUpdater.Companion.instance();
-            val var7: Context = this.getContext();
-            var5.handleIntent(var7, var1);
+            val var7: BundleUpdater = BundleUpdater.Companion.instance();
+            var2 = this.getContext();
+            var7.handleIntent(var2, var1);
          }
 
          @Override
@@ -61,11 +60,6 @@ public class MainActivity : ReactActivity {
 
    public override fun getNameOfComponent(): String {
       return "Discord";
-   }
-
-   protected override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(var1);
-      TTIModule.Companion.setStaticMainActivityCreationTime(System.currentTimeMillis());
    }
 
    @ht.c

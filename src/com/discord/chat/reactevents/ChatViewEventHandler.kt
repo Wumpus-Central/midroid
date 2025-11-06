@@ -46,8 +46,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             java.lang.String var1, long var2, Integer var4, MediaType var5, java.lang.String var6, Integer var7
          ) {
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var10: java.lang.String = MessageId.toString-impl(var1);
-            val var11: java.lang.String = ChannelId.toString-impl(var2);
+            val var11: java.lang.String = MessageId.toString-impl(var1);
+            val var10: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -67,7 +67,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2<MessageId, ChannelId, Unit>(this) {
@@ -490,10 +490,6 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
    public override fun onTapReferralRedeem(referralId: String?) {
       this.emitReactEvent.invoke(new TapReferralRedeemData(var1));
-   }
-
-   public override fun onTapRemix(messageId: MessageId) {
-      this.emitReactEvent.invoke(new TapRemixData(var1, null));
    }
 
    public override fun onTapRoleIcon(roleName: String, roleIconSource: String) {

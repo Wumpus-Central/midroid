@@ -50,27 +50,27 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
    @NonNull
    public static RoleSubscriptionPurchaseViewBinding bind(@NonNull View var0) {
       int var1 = R.id.role_subscription_badge_dummy_view;
-      View var4 = k5.a.a(var0, var1);
-      if (var4 != null) {
+      View var2 = k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.role_subscription_purchase_badge;
-         SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.role_subscription_purchase_card_bg;
             SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
             if (var6 != null) {
                var1 = R.id.role_subscription_purchase_lanyard;
-               SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.role_subscription_purchaser_avatar;
-                  SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
-                  if (var5 != null) {
+                  SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.role_subscription_purchaser_username;
-                     TextView var7 = (TextView)k5.a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var5 = (TextView)k5.a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var8 = (TextView)k5.a.a(var0, var1);
-                        if (var8 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var4, var3, var6, var2, var5, var7, var8);
+                        TextView var4 = (TextView)k5.a.a(var0, var1);
+                        if (var4 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var2, var7, var6, var8, var3, var5, var4);
                         }
                      }
                   }

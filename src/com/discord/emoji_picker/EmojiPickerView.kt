@@ -168,20 +168,20 @@ internal class EmojiPickerView(context: Context,
       try {
          ViewMeasureExtensionsKt.measureAndLayout(this);
       } catch (var15: Exception) {
-         var var8: CrashReporting;
-         var var9: Pair;
-         var var10: Pair;
+         var var7: Pair;
+         var var8: Pair;
+         var var10: CrashReporting;
          var var11: Pair;
          var var12: Pair;
          var var13: Pair;
          var var14: Pair;
          label31: {
-            var8 = CrashReporting.INSTANCE;
-            var11 = ht.v.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
-            var9 = ht.v.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
-            var13 = ht.v.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var4));
-            var10 = ht.v.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
-            var12 = ht.v.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
+            var10 = CrashReporting.INSTANCE;
+            var12 = ht.v.a("isInViewTransition", java.lang.String.valueOf(this.isInViewTransition));
+            var8 = ht.v.a("isAttached", java.lang.String.valueOf(this.isAttachedToWindow()));
+            var7 = ht.v.a("wasComputingLayoutBeforeAdapter", java.lang.String.valueOf(var4));
+            var11 = ht.v.a("isComputingLayoutAfterAdapter", java.lang.String.valueOf(this.isComputingLayout()));
+            var13 = ht.v.a("isComputingLayoutNow", java.lang.String.valueOf(this.isComputingLayout()));
             var14 = ht.v.a("adapterTypeChange", var5);
             if (var1 != null) {
                val var6: java.lang.String = var1.toString();
@@ -204,9 +204,9 @@ internal class EmojiPickerView(context: Context,
          }
 
          CrashReporting.addBreadcrumb$default(
-            var8,
+            var10,
             "About to crash from EmojiPickerView.",
-            s0.m(new Pair[]{var11, var9, var13, var10, var12, var14, var19, ht.v.a("count", var17)}),
+            s0.m(new Pair[]{var12, var8, var7, var11, var13, var14, var19, ht.v.a("count", var17)}),
             null,
             null,
             12,
@@ -417,18 +417,18 @@ internal class EmojiPickerView(context: Context,
 
       public override fun toString(): String {
          val var2: Boolean = this.animateEmoji;
-         val var4: Boolean = this.scrollFastOptimizationEnabled;
+         val var3: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var3: Boolean = this.disableAnimationsOnScroll;
+         val var4: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
          var5.append(var2);
          var5.append(", scrollFastOptimizationEnabled=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var3);
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

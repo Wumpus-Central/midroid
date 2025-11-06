@@ -5333,6 +5333,9 @@
   "S0W8Z5": [
     "Bağlan"
   ],
+  "LV+CXH": [
+    "Bağlandı"
+  ],
   "LVh3/5": [
     "Bilgi ekle"
   ],
@@ -14729,6 +14732,9 @@
   ],
   "aCAiGl": [
     "Sunucuya Ulaşılamıyor"
+  ],
+  "3mgEQf": [
+    "Ödülü Al!"
   ],
   "LhlgY9": [
     "Haydi Başla"
@@ -26039,32 +26045,6 @@
   "o3kmm3": [
     "Yayınlanmış bir keşif karşılama sayfasına sahip sunucular özel URL'leri değiştiremez, yalnızca kaldırabilir"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " varyantı: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Böö!"
-  ],
-  "9PzTtM": [
-    "Bay Jack O' Lantern"
-  ],
-  "RbkXxR": [
-    "Huzur içinde yat"
-  ],
-  "FW3Qp/": [
-    "Sadece Takılıyoruz"
-  ],
-  "mMgymV": [
-    "Ücretsiz bir Cadılar Bayramı avatar dekorasyonu seç. Hediye satın al ve senin olsun."
-  ],
   "h2nMp0": [
     "Her hediye satın alımında bir tane kap."
   ],
@@ -26073,79 +26053,6 @@
   ],
   "3JCuX1": [
     "Ücretsiz ödülünü seç"
-  ],
-  "dAqTcI": [
-    "Hediye satın alımında ücretsiz bir dekorasyon kap"
-  ],
-  "F/5kFJ": [
-    "Bu ay Nitro hediye ederek ücretsiz bir dekorasyon kazan. Şeker mi şaka mı? Hangisini seçeceksin?"
-  ],
-  "gI6Yvv": [
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          "ay"
-        ],
-        "other": [
-          "ay"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro hediye ettin. Ürkütücü sezonu kutlamanın ne güzel bir yolu bu!"
-  ],
-  "rSS+oo": [
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          "yıl"
-        ],
-        "other": [
-          "yıl"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro hediye ettin. Ürkütücü sezonu kutlamanın ne güzel bir yolu bu!"
-  ],
-  "9rInzW": [
-    "Şimdi seçim zamanı: Şeker mi şaka mı? Ekim boyunca Nitro hediye et ve havalı bir avatar dekorasyonu kazan."
-  ],
-  "CGgAyN": [
-    "Cesaretin varsa Nitro hediye et..."
-  ],
-  "ruVnPr": [
-    "ÜCRETSİZ bir ödül seç"
-  ],
-  "q4BJSJ": [
-    "Cesaretin varsa senin olsun..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " mevcut ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          "seçenek"
-        ],
-        "other": [
-          "seçenek"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Şeker"
@@ -44910,9 +44817,6 @@
   ],
   "Ofpgwh": [
     "Tümünü göster"
-  ],
-  "MzahXU": [
-    "Teklif yakında sona eriyor!"
   ],
   "TiZFqX": [
     "Hediyeyi Aç"

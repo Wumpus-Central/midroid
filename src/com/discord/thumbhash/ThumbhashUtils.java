@@ -50,9 +50,9 @@ final class ThumbhashUtils {
       int var12 = var0[0] & 255 | (var0[1] & 255) << 8 | (var0[2] & 255) << 16;
       int var17 = var0[3] & 255 | (var0[4] & 255) << 8;
       float var9 = (var12 & 63) / 63.0F;
-      float var10 = (var12 >> 6 & 63) / 31.5F;
-      float var11 = (var12 >> 12 & 63) / 31.5F;
-      float var6 = (var12 >> 18 & 31) / 31.0F;
+      float var11 = (var12 >> 6 & 63) / 31.5F;
+      float var10 = (var12 >> 12 & 63) / 31.5F;
+      float var7 = (var12 >> 18 & 31) / 31.0F;
       boolean var18;
       if (var12 >> 23 != 0) {
          var18 = true;
@@ -60,8 +60,8 @@ final class ThumbhashUtils {
          var18 = false;
       }
 
-      float var5 = (var17 >> 3 & 63) / 63.0F;
-      float var7 = (var17 >> 9 & 63) / 63.0F;
+      float var6 = (var17 >> 3 & 63) / 63.0F;
+      float var5 = (var17 >> 9 & 63) / 63.0F;
       boolean var13;
       if (var17 >> 15 != 0) {
          var13 = 1;
@@ -110,7 +110,7 @@ final class ThumbhashUtils {
       ThumbhashUtils.Channel var28 = new ThumbhashUtils.Channel(var14, var13);
       ThumbhashUtils.Channel var26 = new ThumbhashUtils.Channel(3, 3);
       ThumbhashUtils.Channel var27 = new ThumbhashUtils.Channel(3, 3);
-      var15 = var27.decode(var0, var50, var26.decode(var0, var50, var28.decode(var0, var50, 0, var6), var5 * var2), var7 * var2);
+      var15 = var27.decode(var0, var50, var26.decode(var0, var50, var28.decode(var0, var50, 0, var7), var6 * var2), var5 * var2);
       float[] var24 = null;
       ThumbhashUtils.Channel var25;
       if (var18) {
@@ -197,8 +197,8 @@ final class ThumbhashUtils {
                }
             }
 
-            var7 = var10 - 1.0F;
-            var6 = var11 - 1.0F;
+            var7 = var11 - 1.0F;
+            var6 = var10 - 1.0F;
             var17 = 0;
 
             for (int var69 = 0; var17 < 3; var17++) {
@@ -292,17 +292,19 @@ final class ThumbhashUtils {
       }
 
       int decode(byte[] var1, int var2, int var3, float var4) {
-         int var5 = 0;
+         byte var6 = 0;
+         int var5 = var3;
+         var3 = var6;
 
          while (true) {
-            float[] var6 = this.ac;
-            if (var5 >= var6.length) {
-               return var3;
+            float[] var7 = this.ac;
+            if (var3 >= var7.length) {
+               return var5;
             }
 
-            var6[var5] = ((var1[(var3 >> 1) + var2] >> ((var3 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
-            var3++;
+            var7[var3] = ((var1[(var5 >> 1) + var2] >> ((var5 & 1) << 2) & 15) / 7.5F - 1.0F) * var4;
             var5++;
+            var3++;
          }
       }
    }

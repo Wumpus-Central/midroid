@@ -21,7 +21,7 @@ import java.lang.ref.WeakReference
 import java.util.NoSuchElementException
 import kotlin.jvm.internal.SourceDebugExtension
 
-@SourceDebugExtension(["SMAP\nForegroundServiceManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n+ 2 NotificationAction.kt\ncom/discord/notifications/actions/intents/NotificationAction$Companion\n+ 3 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,186:1\n86#2,2:187\n89#2,2:190\n14#3:189\n1948#4,14:192\n*S KotlinDebug\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n*L\n37#1:187,2\n37#1:190,2\n37#1:189\n169#1:192,14\n*E\n"])
+@SourceDebugExtension(["SMAP\nForegroundServiceManager.kt\nKotlin\n*S Kotlin\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n+ 2 NotificationAction.kt\ncom/discord/notifications/actions/intents/NotificationAction$Companion\n+ 3 IntentUtils.kt\ncom/discord/misc/utilities/intent/IntentUtilsKt\n+ 4 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,186:1\n96#2,2:187\n99#2,2:190\n14#3:189\n1948#4,14:192\n*S KotlinDebug\n*F\n+ 1 ForegroundServiceManager.kt\ncom/discord/foreground_service/ForegroundServiceManager\n*L\n37#1:187,2\n37#1:190,2\n37#1:189\n169#1:192,14\n*E\n"])
 public object ForegroundServiceManager {
    private final var serviceRef: WeakReference<Service>?
    private final val serviceWakelocks: Wakelocks
@@ -467,13 +467,13 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: java.util.List = this.serviceConfigurations;
+            val var2: WeakReference = this.contextRef;
+            val var1: java.util.List = this.serviceConfigurations;
             val var3: StringBuilder = new StringBuilder();
             var3.append("CreateOrUpdate(contextRef=");
-            var3.append(var1);
-            var3.append(", serviceConfigurations=");
             var3.append(var2);
+            var3.append(", serviceConfigurations=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }
@@ -509,12 +509,12 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Destroy(contextRef=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Destroy(contextRef=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

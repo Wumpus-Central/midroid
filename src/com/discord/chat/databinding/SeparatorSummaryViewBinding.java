@@ -69,39 +69,39 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
    @NonNull
    public static SeparatorSummaryViewBinding bind(@NonNull View var0) {
       int var1 = R.id.bottom_guideline;
-      Guideline var4 = (Guideline)k5.a.a(var0, var1);
-      if (var4 != null) {
+      Guideline var2 = (Guideline)k5.a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.button_wrapper;
-         FrameLayout var8 = (FrameLayout)k5.a.a(var0, var1);
-         if (var8 != null) {
+         FrameLayout var3 = (FrameLayout)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var12 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var12 != null) {
+            SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.indicator_bottom;
-               SimpleDraweeView var11 = (SimpleDraweeView)k5.a.a(var0, var1);
-               if (var11 != null) {
+               SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.indicator_end_barrier;
-                  Barrier var3 = (Barrier)k5.a.a(var0, var1);
-                  if (var3 != null) {
+                  Barrier var11 = (Barrier)k5.a.a(var0, var1);
+                  if (var11 != null) {
                      var1 = R.id.indicator_top;
-                     SimpleDraweeView var10 = (SimpleDraweeView)k5.a.a(var0, var1);
-                     if (var10 != null) {
+                     SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.jump_button;
-                        SimpleDraweeView var9 = (SimpleDraweeView)k5.a.a(var0, var1);
-                        if (var9 != null) {
+                        SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
+                        if (var6 != null) {
                            var1 = R.id.middle_text;
-                           TextView var2 = (TextView)k5.a.a(var0, var1);
-                           if (var2 != null) {
+                           TextView var9 = (TextView)k5.a.a(var0, var1);
+                           if (var9 != null) {
                               var1 = R.id.more_button;
-                              SimpleDraweeView var5 = (SimpleDraweeView)k5.a.a(var0, var1);
-                              if (var5 != null) {
+                              SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+                              if (var4 != null) {
                                  var1 = R.id.right_bar;
-                                 View var7 = k5.a.a(var0, var1);
-                                 if (var7 != null) {
+                                 View var12 = k5.a.a(var0, var1);
+                                 if (var12 != null) {
                                     var1 = R.id.top_guideline;
-                                    Guideline var6 = (Guideline)k5.a.a(var0, var1);
-                                    if (var6 != null) {
-                                       return new SeparatorSummaryViewBinding(var0, var4, var8, var12, var11, var3, var10, var9, var2, var5, var7, var6);
+                                    Guideline var10 = (Guideline)k5.a.a(var0, var1);
+                                    if (var10 != null) {
+                                       return new SeparatorSummaryViewBinding(var0, var2, var3, var5, var8, var11, var7, var6, var9, var4, var12, var10);
                                     }
                                  }
                               }

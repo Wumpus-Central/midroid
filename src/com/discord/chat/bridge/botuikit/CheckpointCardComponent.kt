@@ -55,16 +55,16 @@ public data class CheckpointCardComponent(type: Int, id: String, checkpointData:
    public override fun toString(): String {
       val var1: Int = this.type;
       val var4: java.lang.String = this.id;
-      val var2: CheckpointDataV2025 = this.checkpointData;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CheckpointCardComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", checkpointData=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: CheckpointDataV2025 = this.checkpointData;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CheckpointCardComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", checkpointData=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

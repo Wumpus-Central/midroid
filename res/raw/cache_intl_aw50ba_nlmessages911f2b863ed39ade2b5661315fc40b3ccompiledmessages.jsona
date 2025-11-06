@@ -5371,6 +5371,9 @@
   "S0W8Z5": [
     "Verbinden"
   ],
+  "LV+CXH": [
+    "Gekoppeld"
+  ],
   "LVh3/5": [
     "Details toevoegen"
   ],
@@ -14800,6 +14803,9 @@
   ],
   "aCAiGl": [
     "Server niet beschikbaar"
+  ],
+  "3mgEQf": [
+    "Claim je beloning!"
   ],
   "LhlgY9": [
     "Ga aan de slag"
@@ -26030,32 +26036,6 @@
   "o3kmm3": [
     "Servers met een gepubliceerde landingspagina kunnen persoonlijke links alleen verwijderen, niet aanpassen"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    "-variant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Boe!"
-  ],
-  "9PzTtM": [
-    "Meneer Pompoenlantaarn"
-  ],
-  "RbkXxR": [
-    "Rust in vrede"
-  ],
-  "FW3Qp/": [
-    "Ik hang een beetje rond"
-  ],
-  "mMgymV": [
-    "Kies een gratis Halloween-avatarversiering. Helemaal voor jou bij een cadeau-aankoop."
-  ],
   "h2nMp0": [
     "Ontvang er een bij elke cadeau-aankoop."
   ],
@@ -26064,99 +26044,6 @@
   ],
   "3JCuX1": [
     "Kies je gratis beloning"
-  ],
-  "dAqTcI": [
-    "Sleep een gratis versiering binnen met een cadeau-aankoop"
-  ],
-  "F/5kFJ": [
-    "Deze maand kun je een gratis versiering verdienen als je Nitro cadeau doet. Treiteren of trakteren: wat zal het worden?"
-  ],
-  "gI6Yvv": [
-    "Je hebt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " maand"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " maanden"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro gegeven. Wat een supermanier om het griezelseizoen te vieren!"
-  ],
-  "rSS+oo": [
-    "Je hebt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " jaar"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " jaar"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro gegeven. Wat een supermanier om het griezelseizoen te vieren!"
-  ],
-  "9rInzW": [
-    "Tijd om te kiezen: treiteren of trakteren? Geef Nitro tijdens oktober en kies een griezelig coole avatarversiering die je voor altijd mag houden."
-  ],
-  "CGgAyN": [
-    "Geef Nitro als je durft..."
-  ],
-  "ruVnPr": [
-    "Kies een GRATIS beloning"
-  ],
-  "q4BJSJ": [
-    "Helemaal van jou, als je durft..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " beschikbare ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " optie"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opties"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Trakteren"
@@ -44971,9 +44858,6 @@
   ],
   "Ofpgwh": [
     "Alles bekijken"
-  ],
-  "MzahXU": [
-    "De aanbieding eindigt binnenkort!"
   ],
   "TiZFqX": [
     "Cadeau openen"

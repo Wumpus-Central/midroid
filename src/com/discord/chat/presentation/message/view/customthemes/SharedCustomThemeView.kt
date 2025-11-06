@@ -113,11 +113,11 @@ public class SharedCustomThemeView  public constructor(context: Context, attrs: 
       val var3: ArrayList = new ArrayList(CollectionsKt.w(var4, 10));
 
       for (java.lang.String var6 : var4) {
-         val var8: TextView = new TextView(this.getContext());
-         var8.setText(var6);
-         var8.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-         var8.setTextSize(14.0F);
-         var3.add(var8);
+         val var5: TextView = new TextView(this.getContext());
+         var5.setText(var6);
+         var5.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+         var5.setTextSize(14.0F);
+         var3.add(var5);
       }
 
       this.binding.createdByContainer.addView(var3.get(0) as View);

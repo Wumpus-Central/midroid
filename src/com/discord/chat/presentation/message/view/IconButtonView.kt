@@ -25,11 +25,11 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
    }
 
    init {
-      val var4: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
-      val var3: FrameLayout = var4.iconContainer;
-      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
+      val var3: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var4: FrameLayout = var3.iconContainer;
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
+      (var3.iconButton.getHierarchy() as GenericDraweeHierarchy).w(0);
    }
 
    @JvmStatic

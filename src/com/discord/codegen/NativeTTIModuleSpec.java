@@ -17,10 +17,40 @@ public abstract class NativeTTIModuleSpec extends ReactContextBaseJavaModule imp
       isBlockingSynchronousMethod = true
    )
    @a
+   public abstract String getLaunchScenario();
+
+   @ReactMethod(
+      isBlockingSynchronousMethod = true
+   )
+   @a
    public abstract Double getMainActivityCreationTime();
 
    @Override
    public String getName() {
       return "NativeTTIModule";
    }
+
+   @ReactMethod(
+      isBlockingSynchronousMethod = true
+   )
+   @a
+   public abstract boolean getWasBroadcastReceiverStartedBefore();
+
+   @ReactMethod(
+      isBlockingSynchronousMethod = true
+   )
+   @a
+   public abstract boolean getWasServiceStartedBefore();
+
+   @ReactMethod(
+      isBlockingSynchronousMethod = true
+   )
+   @a
+   public abstract boolean wasInitializeCompleteWhenActivityOpened();
+
+   @ReactMethod(
+      isBlockingSynchronousMethod = true
+   )
+   @a
+   public abstract boolean wasLaunchedViaShortcut();
 }

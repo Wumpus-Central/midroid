@@ -20,14 +20,14 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
 
    public fun trackViewVisibilityChanged(parent: EmojiPickerView, child: View, visible: Boolean) {
       if (this.trackingEnabled) {
-         val var7: ViewHolder = var1.getChildViewHolder(var2);
-         val var8: EmojiPickerVisibilityTracker.Companion = Companion;
-         val var6: Boolean = var8.isNitroSectionLocked(var7);
+         val var8: ViewHolder = var1.getChildViewHolder(var2);
+         val var7: EmojiPickerVisibilityTracker.Companion = Companion;
+         val var6: Boolean = var7.isNitroSectionLocked(var8);
          var var4: Int;
          if (var6 && var3) {
-            var4 = this.getWidth(var7, var1);
+            var4 = this.getWidth(var8, var1);
          } else if (var6 && !var3) {
-            var4 = -this.getWidth(var7, var1);
+            var4 = -this.getWidth(var8, var1);
          } else {
             var4 = 0;
          }

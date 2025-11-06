@@ -171,11 +171,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var13 = var1.getTotalMonthsSubscribed();
       if (var13 != null && var13.intValue() <= 1) {
-         val var32: ArrayList = this.accessories;
-         val var44: java.lang.String = var1.getId-3Eiw7ao();
-         val var37: java.lang.String = var1.getUsername();
-         val var40: Context = this.binding.getRoot().getContext();
-         var32.add(new RoleSubscriptionPurchaseAccessory(var44, var37, MessageKt.avatarUrl(var1, var40), var3, false, null));
+         val var40: ArrayList = this.accessories;
+         val var37: java.lang.String = var1.getId-3Eiw7ao();
+         val var44: java.lang.String = var1.getUsername();
+         val var32: Context = this.binding.getRoot().getContext();
+         var40.add(new RoleSubscriptionPurchaseAccessory(var37, var44, MessageKt.avatarUrl(var1, var32), var3, false, null));
       }
 
       val var33: Sticker = var1.getSticker();

@@ -179,8 +179,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         kotlin.c.b(var5);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              val var6: c1 = m0.c();
-                              var5 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(
+                              var5 = m0.c();
+                              val var6: Function2 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(
                                  this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null
                               ) {
                                  final DownloadState $downloadState;
@@ -228,7 +228,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = gu.g.g(var6, (Function2)var5, (Continuation)var13);
+                              var12 = gu.g.g((CoroutineContext)var5, var6, (Continuation)var13);
                            } catch (var7: Exception) {
                               val var11: c1 = m0.c();
                               var5 = new Function2<CoroutineScope, Continuation<? super Unit>, Object>(var7, null) {

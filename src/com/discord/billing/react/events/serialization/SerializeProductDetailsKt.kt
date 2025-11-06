@@ -67,11 +67,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var28: ProductDetails.PricingPhase = var27.e().a().get(0) as ProductDetails.PricingPhase;
          if (var28 == null) {
-            val var23: java.lang.String = var3.d();
-            val var19: StringBuilder = new StringBuilder();
-            var19.append("Could not find pricingPhase for product: ");
-            var19.append(var23);
-            throw new AssertionError(var19.toString());
+            val var19: java.lang.String = var3.d();
+            val var23: StringBuilder = new StringBuilder();
+            var23.append("Could not find pricingPhase for product: ");
+            var23.append(var19);
+            throw new AssertionError(var23.toString());
          }
 
          var1 = var28.d();
@@ -79,11 +79,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          val var7: java.lang.String = var28.b();
          var25 = var28.e();
 
-         for (ProductDetails.d var13 : var29) {
-            val var12: java.lang.String = var13.b();
-            if (var12 != null) {
-               var10.add(var12);
-               val var30: java.util.List = var13.e().a();
+         for (ProductDetails.d var12 : var29) {
+            val var13: java.lang.String = var12.b();
+            if (var13 != null) {
+               var10.add(var13);
+               val var30: java.util.List = var12.e().a();
                val var31: java.lang.Iterable = var30;
                val var14: ArrayList = new ArrayList(CollectionsKt.w(var30, 10));
 
@@ -104,8 +104,8 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
                var11.add(
                   NativeMapExtensionsKt.nativeMapOf(
                      new Pair[]{
-                        v.a("basePlanId", var13.a()),
-                        v.a("offerId", var12),
+                        v.a("basePlanId", var12.a()),
+                        v.a("offerId", var13),
                         v.a("pricingPhases", NativeArrayExtensionsKt.toNativeArray$default(var14, null, 1, null))
                      }
                   )

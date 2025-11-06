@@ -10,6 +10,6 @@ public final class b implements Function0 {
 
    @Override
    public final Object invoke() {
-      return MainApplication.d(this.d, this.e);
+      return MainApplication.e(this.d, this.e);
    }
 }

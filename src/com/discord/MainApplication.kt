@@ -16,19 +16,23 @@ import com.discord.media_player.CacheDataSourceFactory
 import com.discord.networking.ReactNetworking
 import com.discord.play_delivery.PlayAssetDelivery
 import com.discord.react.FontManager
+import com.discord.react_activities.ReactActivity
 import com.discord.react_fork_overrides.ReactForkOverrides
 import com.discord.sticker.sticker_types.RLottieUtils
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.discord.tti_manager.TTIMetrics
+import com.discord.tti_manager.TTIModule
 import com.discord.tti_manager.react.ReactMarkerListener
 import com.discord.utils.SoLoaderUtils
 import com.facebook.hermes.reactexecutor.HermesExecutor
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
 import com.facebook.react.ReactNativeHost
-import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import com.facebook.react.defaults.DefaultReactHost
+import com.facebook.react.defaults.DefaultSoLoader
+import com.facebook.react.internal.featureflags.ReactNativeFeatureFlags
+import com.facebook.react.internal.featureflags.ReactNativeNewArchitectureFeatureFlagsDefaults
 import com.facebook.react.modules.i18nmanager.I18nUtil
 import com.facebook.react.uimanager.UIManagerConstantsCache
 import java.util.concurrent.CountDownLatch
@@ -54,18 +58,85 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    }
 
    @JvmStatic
-   fun `initialize$lambda$2`(var0: MainApplication): Unit {
-      var0.soloaderLoaded.await();
-      FrescoModuleDiscord.Companion.startFrescoInitializationAsync(var0);
-      DefaultNewArchitectureEntryPoint.load(true, true, true);
-      UIManagerConstantsCache.getInstance().init(var0);
-      var0.initializeReactNativeLatch.countDown();
-      HermesExecutor.loadLibrary();
-      return Unit.a;
+   fun `initialize$lambda$4`(var0: MainApplication): Unit {
+      label13: {
+         mt.a.b(false, false, null, "ReactNativeLoader", 10, new c(var0), 7, null);
+         val var1: TTIMetrics = TTIMetrics.INSTANCE;
+         TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
+
+         try {
+            ReactMarkerListener.INSTANCE.start();
+            Cache.Companion.quickInitCache(var0);
+            TTIMetrics.record$default(var1, "quickInitCache()", 0L, null, false, 14, null);
+            val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+            BundleUpdater.Companion.init(var0);
+            TTIMetrics.record$default(var1, "BundlerUpdater.init()", 0L, null, false, 14, null);
+            ClientInfo.INSTANCE.init(var0, "305.3", 305203, "canary", "release", var2.instance().getManifestETag(), var2.instance().getOtaVersion());
+            TTIMetrics.record$default(var1, "ClientInfo.init()", 0L, null, false, 14, null);
+            CacheDataSourceFactory.Companion.init(var0);
+            TTIMetrics.record$default(var1, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
+            val var6: Thread = mt.a.b(false, false, null, null, 0, new d(var0), 31, null);
+            PerformanceTracing.Companion.get().start();
+            ReactNetworking.INSTANCE.patchReactNetworking();
+            RLottieUtils.INSTANCE.init();
+            FontManager.INSTANCE.init(var0);
+            ThemeManager.INSTANCE.init(var0);
+            ReactForkOverrides.INSTANCE.init();
+            AudioPlayerManager.INSTANCE.init(var0);
+            TTIMetrics.record$default(var1, "AudioPlayerManager.init()", 0L, null, false, 14, null);
+            PlayAssetDelivery.INSTANCE.initialize(var0);
+            var0.initializeReactNativeLatch.await();
+            var6.join();
+         } catch (var3: java.lang.Throwable) {
+            ReactActivity.Registry.getPrepareEverythingForActivity().countDown();
+            TTIModule.Companion.markApplicationInitializeComplete();
+         }
+
+         ReactActivity.Registry.getPrepareEverythingForActivity().countDown();
+         TTIModule.Companion.markApplicationInitializeComplete();
+      }
    }
 
    @JvmStatic
-   fun `initialize$lambda$3`(var0: MainApplication): Unit {
+   fun `initialize$lambda$4$lambda$2`(var0: MainApplication): Unit {
+      label10: {
+         try {
+            var0.soloaderLoaded.await();
+            FrescoModuleDiscord.Companion.startFrescoInitializationAsync(var0);
+            ReactNativeFeatureFlags.override(new ReactNativeNewArchitectureFeatureFlagsDefaults() {
+               {
+                  super(true);
+               }
+
+               public boolean enableEventEmitterRetentionDuringGesturesOnAndroid() {
+                  return true;
+               }
+
+               public boolean useFabricInterop() {
+                  return true;
+               }
+
+               public boolean useRuntimeShadowNodeReferenceUpdate() {
+                  return true;
+               }
+
+               public boolean useTurboModules() {
+                  return true;
+               }
+            });
+            DefaultSoLoader.Companion.maybeLoadSoLibrary();
+            UIManagerConstantsCache.getInstance().init(var0);
+            HermesExecutor.loadLibrary();
+         } catch (var2: java.lang.Throwable) {
+            var0.initializeReactNativeLatch.countDown();
+         }
+
+         var0.initializeReactNativeLatch.countDown();
+      }
+   }
+
+   @JvmStatic
+   fun `initialize$lambda$4$lambda$3`(var0: MainApplication): Unit {
       var var3: TTIMetrics;
       var var4: java.lang.String;
       label11: {
@@ -83,7 +154,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var4 = "discord_android@305.1.0-2+305201";
+         var4 = "discord_android@305.3.0-2+305203";
       }
 
       CrashReporting.INSTANCE.init(var0, var4);
@@ -103,32 +174,8 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    }
 
    public open fun initialize() {
-      mt.a.b(false, false, null, "ReactNativeLoader", 10, new c(this), 7, null);
-      val var2: TTIMetrics = TTIMetrics.INSTANCE;
-      TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
-      ReactMarkerListener.INSTANCE.start();
-      Cache.Companion.quickInitCache(this);
-      TTIMetrics.record$default(var2, "quickInitCache()", 0L, null, false, 14, null);
-      val var1: BundleUpdater.Companion = BundleUpdater.Companion;
-      BundleUpdater.Companion.init(this);
-      TTIMetrics.record$default(var2, "BundlerUpdater.init()", 0L, null, false, 14, null);
-      ClientInfo.INSTANCE.init(this, "305.1", 305201, "canary", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
-      TTIMetrics.record$default(var2, "ClientInfo.init()", 0L, null, false, 14, null);
-      CacheDataSourceFactory.Companion.init(this);
-      TTIMetrics.record$default(var2, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
-      mt.a.b(false, false, null, null, 0, new d(this), 31, null);
-      PerformanceTracing.Companion.get().start();
-      ReactNetworking.INSTANCE.patchReactNetworking();
-      RLottieUtils.INSTANCE.init();
-      FontManager.INSTANCE.init(this);
-      ThemeManager.INSTANCE.init(this);
+      mt.a.b(false, false, null, "ReactNativeInitThread", 10, new e(this), 7, null);
       AppLifecycle.INSTANCE.init();
-      ReactForkOverrides.INSTANCE.init();
-      AudioPlayerManager.INSTANCE.init(this);
-      TTIMetrics.record$default(var2, "AudioPlayerManager.init()", 0L, null, false, 14, null);
-      PlayAssetDelivery.INSTANCE.initialize(this);
-      this.initializeReactNativeLatch.await();
-      TTIMetrics.record$default(var2, "Finish MainApplication.initialize()", 0L, null, false, 14, null);
    }
 
    public open fun onCreate() {

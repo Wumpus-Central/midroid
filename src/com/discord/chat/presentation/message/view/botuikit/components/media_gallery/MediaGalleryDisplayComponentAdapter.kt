@@ -172,18 +172,18 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
          if (this.component != null) {
             val var6: ComponentContext = this.componentContext;
             if (this.componentContext != null) {
-               val var9: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-               val var7: java.lang.String = this.containerId;
-               val var5: java.lang.String = this.component.getId();
+               val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+               val var5: java.lang.String = this.containerId;
+               val var9: java.lang.String = this.component.getId();
                if (this.getItemCount() == 1) {
                   var3 = true;
                } else {
                   var3 = false;
                }
 
-               var9.bindGalleryItem(
-                  var7,
+               var7.bindGalleryItem(
                   var5,
+                  var9,
                   var8,
                   var3,
                   new a(this, var10, var8, var1),
@@ -215,28 +215,28 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             throw new IllegalStateException(var17.toString().toString());
          }
 
-         val var22: MediaGalleryItem = this.items.get(var2);
-         val var21: MediaGalleryDisplayComponent = this.component;
+         val var16: MediaGalleryItem = this.items.get(var2);
+         val var22: MediaGalleryDisplayComponent = this.component;
          if (this.component != null) {
-            val var20: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
-            val var19: java.lang.String = this.containerId;
-            val var16: java.lang.String = this.component.getId();
+            val var21: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var20: java.lang.String = this.containerId;
+            val var19: java.lang.String = this.component.getId();
             if (this.getItemCount() == 1) {
                var3 = true;
             } else {
                var3 = false;
             }
 
-            var20.bindGalleryItem(
+            var21.bindGalleryItem(
+               var20,
                var19,
                var16,
-               var22,
                var3,
-               new f8.f(this, var21, var22, var1),
-               new f8.g(this, var21, var22),
-               new f8.h(this, var22),
+               new f8.f(this, var22, var16, var1),
+               new f8.g(this, var22, var16),
+               new f8.h(this, var16),
                new f8.i(this),
-               new f8.j(this, var22)
+               new f8.j(this, var16)
             );
             return;
          }

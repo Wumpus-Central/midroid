@@ -116,7 +116,7 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
    // $VF: Duplicated exception handlers to handle obfuscated exceptions
    @JvmStatic
    fun `attachPortalViewToChatList$lambda$5$lambda$4`(var0: View, var1: ChatView, var2: Pair) {
-      var var3: Pair;
+      var var3: CrashReporting;
       var var5: Pair;
       label46: {
          label50: {
@@ -126,8 +126,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
                   (var12 as ViewGroup).removeView(var0);
                }
             } catch (var9: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
@@ -139,8 +139,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
             try {
                var15 = var1.chatList;
             } catch (var8: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
@@ -154,8 +154,8 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
                try {
                   Intrinsics.throwUninitializedPropertyAccessException("chatList");
                } catch (var7: Exception) {
-                  var11 = CrashReporting.INSTANCE;
-                  var3 = v.a("portalView", var0.toString());
+                  var3 = CrashReporting.INSTANCE;
+                  var2 = v.a("portalView", var0.toString());
                   var5 = v.a("parent", var0.getParent().toString());
                   var10 = var1.chatList;
                   if (var1.chatList != null) {
@@ -169,15 +169,15 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
             try {
                var13.setPortalView(var0, var2);
-               val var14: CrashReporting = CrashReporting.INSTANCE;
-               val var16: StringBuilder = new StringBuilder();
-               var16.append("PortalView portaled into ChatListView; measuredDims=");
-               var16.append(var2);
-               CrashReporting.addBreadcrumb$default(var14, var16.toString(), null, null, null, 14, null);
+               val var16: CrashReporting = CrashReporting.INSTANCE;
+               val var14: StringBuilder = new StringBuilder();
+               var14.append("PortalView portaled into ChatListView; measuredDims=");
+               var14.append(var2);
+               CrashReporting.addBreadcrumb$default(var16, var14.toString(), null, null, null, 14, null);
                return;
             } catch (var6: Exception) {
-               var11 = CrashReporting.INSTANCE;
-               var3 = v.a("portalView", var0.toString());
+               var3 = CrashReporting.INSTANCE;
+               var2 = v.a("portalView", var0.toString());
                var5 = v.a("parent", var0.getParent().toString());
                var10 = var1.chatList;
                if (var1.chatList != null) {
@@ -191,9 +191,9 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var11,
+         var3,
          "ChatList exception: failed to reparent portalView to ChatListView",
-         s0.m(new Pair[]{var3, var5, v.a("chatListView", var10.toString())}),
+         s0.m(new Pair[]{var2, var5, v.a("chatListView", var10.toString())}),
          null,
          null,
          12,
@@ -247,11 +247,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
@@ -259,11 +259,11 @@ public class ChatView(context: Context) : ReactViewGroup(var1) {
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

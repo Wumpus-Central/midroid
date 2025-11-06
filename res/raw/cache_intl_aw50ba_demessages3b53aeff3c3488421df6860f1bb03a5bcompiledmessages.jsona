@@ -5374,6 +5374,9 @@
   "S0W8Z5": [
     "Verbinden"
   ],
+  "LV+CXH": [
+    "Verbunden"
+  ],
   "LVh3/5": [
     "Details hinzufügen"
   ],
@@ -14762,6 +14765,9 @@
   ],
   "aCAiGl": [
     "Server nicht verfügbar"
+  ],
+  "3mgEQf": [
+    "Belohnung erhalten!"
   ],
   "LhlgY9": [
     "Los geht’s"
@@ -26052,32 +26058,6 @@
   "o3kmm3": [
     "Server mit einer veröffentlichten Entdeckungsseite können Vanity-URLs nur entfernen, aber nicht ändern"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    "-Variante: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Buh!"
-  ],
-  "9PzTtM": [
-    "Mr. Jack O' Lantern"
-  ],
-  "RbkXxR": [
-    "Ruhe in Frieden"
-  ],
-  "FW3Qp/": [
-    "Häng nur rum"
-  ],
-  "mMgymV": [
-    "Wähle eine kostenlose Halloween-Avatardekoration, wenn du ein Geschenk kaufst."
-  ],
   "h2nMp0": [
     "Erhalte eine mit jedem gekauften Geschenk."
   ],
@@ -26086,99 +26066,6 @@
   ],
   "3JCuX1": [
     "Wähle deine kostenlose Belohnung"
-  ],
-  "dAqTcI": [
-    "Schnapp dir eine kostenlose Dekoration, wenn du ein Geschenk kaufst"
-  ],
-  "F/5kFJ": [
-    "Verdien dir eine kostenlose Dekoration, wenn du diesen Monat Nitro verschenkst. Süßes oder Saures: Was wählst du?"
-  ],
-  "gI6Yvv": [
-    "Du hast ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " Monat"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Monate"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro verschenkt. Eine tolle Art, die Gruselsaison zu feiern!"
-  ],
-  "rSS+oo": [
-    "Du hast ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " Jahr"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Jahre"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro verschenkt. Eine tolle Art, die Gruselsaison zu feiern!"
-  ],
-  "9rInzW": [
-    "Es ist Zeit, sich zu entscheiden: Süßes oder Saures? Verschenke Nitro im Oktober und schnapp dir eine der schaurig coolen Avatardekorationen als Bonus."
-  ],
-  "CGgAyN": [
-    "Verschenke Nitro, wenn du dich traust …"
-  ],
-  "ruVnPr": [
-    "Wähle eine kostenlose Belohnung"
-  ],
-  "q4BJSJ": [
-    "Sie gehört dir, wenn du dich traust …"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " verfügbare ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " Option"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Optionen"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Süßes"
@@ -44943,9 +44830,6 @@
   ],
   "Ofpgwh": [
     "Alles anzeigen"
-  ],
-  "MzahXU": [
-    "Angebot endet bald!"
   ],
   "TiZFqX": [
     "Geschenk öffnen"

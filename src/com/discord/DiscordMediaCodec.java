@@ -28,12 +28,12 @@ public class DiscordMediaCodec {
       if (VERSION.SDK_INT >= 29) {
          return isHardwareAccelerated_API29(var0);
       } else {
-         String var4 = var0.getName().toLowerCase(Locale.ROOT);
-         var3 = KNOWN_HARDWARE_ENCODER_PREFIXES;
-         var2 = var3.length;
+         String var7 = var0.getName().toLowerCase(Locale.ROOT);
+         String[] var4 = KNOWN_HARDWARE_ENCODER_PREFIXES;
+         var2 = var4.length;
 
          for (int var5 = 0; var5 < var2; var5++) {
-            if (var4.startsWith(var3[var5])) {
+            if (var7.startsWith(var4[var5])) {
                return true;
             }
          }

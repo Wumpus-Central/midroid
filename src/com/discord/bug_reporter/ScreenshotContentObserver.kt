@@ -79,8 +79,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 02d: ifnonnull 033
       // 030: goto 11f
       // 033: getstatic android/os/Build$VERSION.SDK_INT I
-      // 036: istore 3
-      // 037: iload 3
+      // 036: istore 2
+      // 037: iload 2
       // 038: bipush 29
       // 03a: if_icmplt 078
       // 03d: aload 7
@@ -92,8 +92,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 050: astore 6
       // 052: aload 6
       // 054: invokevirtual java/lang/Number.intValue ()I
-      // 057: istore 2
-      // 058: iload 2
+      // 057: istore 3
+      // 058: iload 3
       // 059: bipush 1
       // 05a: if_icmpne 060
       // 05d: goto 063
@@ -109,7 +109,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 072: areturn
       // 073: astore 6
       // 075: goto 112
-      // 078: iload 3
+      // 078: iload 2
       // 079: bipush 29
       // 07b: if_icmplt 093
       // 07e: aload 7
@@ -191,12 +191,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var2 != null
-         && (this.lastProcessedPath == null || !StringsKt.A(this.lastProcessedPath, var2.getPath(), false, 2, null))
-         && ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
-         && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
-         this.lastProcessedPath = var2.getPath();
+      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var3 != null
+         && (this.lastProcessedPath == null || !StringsKt.A(this.lastProcessedPath, var3.getPath(), false, 2, null))
+         && ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
+         && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
+         this.lastProcessedPath = var3.getPath();
          this.onScreenshot.invoke();
       }
    }
@@ -212,9 +212,9 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var3: java.lang.String = var2.toString();
-         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
-         if (StringsKt.N(var3, var4, false, 2, null)) {
+         val var4: java.lang.String = var2.toString();
+         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         if (StringsKt.N(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
                return;
@@ -316,19 +316,19 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var3: Long = this.id;
-         val var5: java.lang.String = this.fileName;
-         val var7: java.lang.String = this.relativePath;
-         val var8: Uri = this.uri;
+         val var7: java.lang.String = this.fileName;
+         val var8: java.lang.String = this.relativePath;
+         val var5: Uri = this.uri;
          val var1: Long = this.dateAdded;
          val var6: StringBuilder = new StringBuilder();
          var6.append("ScreenshotData(id=");
          var6.append(var3);
          var6.append(", fileName=");
-         var6.append(var5);
-         var6.append(", relativePath=");
          var6.append(var7);
-         var6.append(", uri=");
+         var6.append(", relativePath=");
          var6.append(var8);
+         var6.append(", uri=");
+         var6.append(var5);
          var6.append(", dateAdded=");
          var6.append(var1);
          var6.append(")");

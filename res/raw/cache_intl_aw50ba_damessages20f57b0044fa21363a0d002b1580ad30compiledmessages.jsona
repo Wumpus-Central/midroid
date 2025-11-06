@@ -5365,6 +5365,9 @@
   "S0W8Z5": [
     "Forbind"
   ],
+  "LV+CXH": [
+    "Tilsluttet"
+  ],
   "LVh3/5": [
     "Tilføj oplysninger"
   ],
@@ -14804,6 +14807,9 @@
   ],
   "aCAiGl": [
     "Serveren er utilgængelig"
+  ],
+  "3mgEQf": [
+    "Få belønning!"
   ],
   "LhlgY9": [
     "Kom i gang"
@@ -26095,32 +26101,6 @@
   "o3kmm3": [
     "Servere med en offentliggjort startside for opdagelse kan kun fjerne vanity-URL'er – ikke ændre dem"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " variant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bøh!"
-  ],
-  "9PzTtM": [
-    "Hr. Jack O'Lantern"
-  ],
-  "RbkXxR": [
-    "Hvil i fred"
-  ],
-  "FW3Qp/": [
-    "Hænger bare ud"
-  ],
-  "mMgymV": [
-    "Vælg en gratis Halloween-avatardekoration, som du kan beholde, med et gavekøb."
-  ],
   "h2nMp0": [
     "Få en med hvert gavekøb."
   ],
@@ -26129,99 +26109,6 @@
   ],
   "3JCuX1": [
     "Vælg din gratis belønning"
-  ],
-  "dAqTcI": [
-    "Snup en gratis dekoration med et gavekøb"
-  ],
-  "F/5kFJ": [
-    "Få en gratis dekoration, når du giver Nitro som gave denne måned. Slik eller ballade: hvilken vælger du?"
-  ],
-  "gI6Yvv": [
-    "Du har givet Nitro som gave i ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " måned"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " måneder"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Sikke en måde at fejre den uhyggelige tid!"
-  ],
-  "rSS+oo": [
-    "Du har givet Nitro som gave i ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Sikke en måde at fejre den uhyggelige tid!"
-  ],
-  "9rInzW": [
-    "Det er tid til at vælge: slik eller ballade? Giv Nitro som gave i oktober, og vælg en uhyggelig, cool avatardekoration, som du må beholde."
-  ],
-  "CGgAyN": [
-    "Giv Nitro som gave, hvis du tør ..."
-  ],
-  "ruVnPr": [
-    "Vælg en gratis belønning"
-  ],
-  "q4BJSJ": [
-    "Behold den gerne – hvis du tør ..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " til rådighed ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " valgmulighed"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " valgmuligheder"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Slik"
@@ -45077,9 +44964,6 @@
   ],
   "Ofpgwh": [
     "Se alt"
-  ],
-  "MzahXU": [
-    "Tilbuddet slutter snart!"
   ],
   "TiZFqX": [
     "Åbn gave"

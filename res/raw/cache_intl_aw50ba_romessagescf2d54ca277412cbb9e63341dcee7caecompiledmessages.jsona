@@ -5353,6 +5353,9 @@
   "S0W8Z5": [
     "Conectează-te"
   ],
+  "LV+CXH": [
+    "Conectat"
+  ],
   "LVh3/5": [
     "Adaugă detalii"
   ],
@@ -14771,6 +14774,9 @@
   ],
   "aCAiGl": [
     "Serverul nu este disponibil"
+  ],
+  "3mgEQf": [
+    "Ia-ți recompensa!"
   ],
   "LhlgY9": [
     "Să începem"
@@ -25986,33 +25992,6 @@
   "o3kmm3": [
     "Serverele care au o pagină de întâmpinare inclusă în Descoperire pot elimina URL-urile personalizate, dar nu pot modifica pagina"
   ],
-  "pDrI0m": [
-    "Variantă de ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bau!"
-  ],
-  "9PzTtM": [
-    "Domnul Dovleac"
-  ],
-  "RbkXxR": [
-    "Odihnească-se în pace"
-  ],
-  "FW3Qp/": [
-    "Regina pânzelor"
-  ],
-  "mMgymV": [
-    "Alege-ți o decorațiune gratuită de Halloween pentru avatar. O poți păstra când cumperi un cadou."
-  ],
   "h2nMp0": [
     "Primește una pentru fiecare cadou cumpărat."
   ],
@@ -26021,99 +26000,6 @@
   ],
   "3JCuX1": [
     "Alege-ți recompensa gratuită"
-  ],
-  "dAqTcI": [
-    "Primește o decorațiune gratuită când cumperi un cadou"
-  ],
-  "F/5kFJ": [
-    "Obține o decorațiune gratuită când dăruiești Nitro luna asta. Ce alegi, ceva dulce sau o mică răutate?"
-  ],
-  "gI6Yvv": [
-    "Ai dăruit ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " lună"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " luni"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. Ce mod potrivit de a sărbători sezonul înfricoșător!"
-  ],
-  "rSS+oo": [
-    "Ai dăruit ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " an"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " ani"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. Ce mod potrivit de a sărbători sezonul înfricoșător!"
-  ],
-  "9rInzW": [
-    "Este timpul să alegi: ceva dulce sau o mică răutate? Dăruiește Nitro în octombrie și alege o decorațiune înfricoșător de tare pentru avatar, pe care poți s-o păstrezi."
-  ],
-  "CGgAyN": [
-    "Dăruiește Nitro dacă ai curaj..."
-  ],
-  "ruVnPr": [
-    "Alege o recompensă GRATUITĂ"
-  ],
-  "q4BJSJ": [
-    "O poți păstra, dacă îndrăznești..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " opțiune disponibilă"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opțiuni disponibile"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Ceva dulce"
@@ -44883,9 +44769,6 @@
   ],
   "Ofpgwh": [
     "Vezi tot"
-  ],
-  "MzahXU": [
-    "Oferta se încheie în curând!"
   ],
   "TiZFqX": [
     "Deschide cadoul"

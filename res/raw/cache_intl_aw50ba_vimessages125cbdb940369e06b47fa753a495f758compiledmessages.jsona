@@ -5375,6 +5375,9 @@
   "S0W8Z5": [
     "Kết nối"
   ],
+  "LV+CXH": [
+    "Đã kết nối"
+  ],
   "LVh3/5": [
     "Thêm chi tiết"
   ],
@@ -14800,6 +14803,9 @@
   ],
   "aCAiGl": [
     "Máy chủ không khả dụng"
+  ],
+  "3mgEQf": [
+    "Nhận Phần Thưởng!"
   ],
   "LhlgY9": [
     "Bắt Đầu"
@@ -26003,33 +26009,6 @@
   "o3kmm3": [
     "Những máy chủ đã phát hành trang đích khám phá chỉ có thể gỡ bỏ URL ảo chứ không thể chỉnh sửa"
   ],
-  "pDrI0m": [
-    "Biến thể ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Hú!"
-  ],
-  "9PzTtM": [
-    "Ông Đèn Bí Ngô"
-  ],
-  "RbkXxR": [
-    "An Nghỉ"
-  ],
-  "FW3Qp/": [
-    "Đu Đưa Thôi"
-  ],
-  "mMgymV": [
-    "Chọn một trang trí ảnh đại diện Halloween miễn phí. Bạn có thể giữ lại khi mua quà tặng."
-  ],
   "h2nMp0": [
     "Nhận một với mỗi lần mua quà tặng."
   ],
@@ -26038,100 +26017,6 @@
   ],
   "3JCuX1": [
     "Chọn phần thưởng miễn phí của bạn"
-  ],
-  "dAqTcI": [
-    "Lấy trang trí miễn phí khi mua quà tặng"
-  ],
-  "F/5kFJ": [
-    "Nhận trang trí miễn phí khi bạn tặng Nitro trong tháng này. Cho kẹo hay bị ghẹo: bạn sẽ chọn món quà nào?"
-  ],
-  "gI6Yvv": [
-    "Bạn đã tặng ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " tháng"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " tháng"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro. Một cách tuyệt vời để ăn mừng mùa hội ma quái!"
-  ],
-  "rSS+oo": [
-    "Bạn đã tặng ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " năm"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " năm"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitro. Một cách tuyệt vời để ăn mừng mùa hội ma quái!"
-  ],
-  "9rInzW": [
-    "Đã đến lúc chọn: cho kẹo hay bị ghẹo? Tặng Nitro trong suốt tháng Mười và nhận một trang trí ảnh đại diện cực ngầu vĩnh viễn."
-  ],
-  "CGgAyN": [
-    "Tặng Nitro nếu bạn dám..."
-  ],
-  "ruVnPr": [
-    "Chọn một phần thưởng MIỄN PHÍ"
-  ],
-  "q4BJSJ": [
-    "Quà của bạn nếu bạn dám..."
-  ],
-  "eDBuF8": [
-    "Có ",
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " tùy chọn"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " tùy chọn"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Cho kẹo"
@@ -44929,9 +44814,6 @@
   ],
   "Ofpgwh": [
     "Xem tất cả"
-  ],
-  "MzahXU": [
-    "Ưu đãi sẽ sớm kết thúc!"
   ],
   "TiZFqX": [
     "Mở Quà Tặng"

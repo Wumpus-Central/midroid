@@ -18,11 +18,11 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout(v
    private final val binding: GameIconViewBinding
 
    init {
-      val var5: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var5;
-      val var3: SimpleDraweeView = var5.gameControllerIcon;
-      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.GameController);
-      val var4: SimpleDraweeView = var5.gameControllerIcon;
+      val var3: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var3;
+      val var5: SimpleDraweeView = var3.gameControllerIcon;
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.GameController);
+      val var4: SimpleDraweeView = var3.gameControllerIcon;
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
    }
 

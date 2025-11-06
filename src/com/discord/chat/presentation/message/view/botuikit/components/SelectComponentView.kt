@@ -133,13 +133,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.J(this.getPostProcessor());
       }
 
-      val var7: com.facebook.drawee.controller.a = (ja.d.g().E(var8.a()) as PipelineDraweeControllerBuilder).c();
-      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
+      val var9: com.facebook.drawee.controller.a = (ja.d.g().E(var8.a()) as PipelineDraweeControllerBuilder).c();
+      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
       if (var3 != null) {
-         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
@@ -224,27 +224,27 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var33 is SearchableSelectItem) {
-                        val var21: SearchableSelectItem = var33 as SearchableSelectItem;
+                        val var35: SearchableSelectItem = var33 as SearchableSelectItem;
                         if ((var33 as SearchableSelectItem).getIconSrc() != null) {
-                           val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                           val var35: java.lang.String = var21.getIconSrc();
-                           val var13: Int = var21.getIconColor();
+                           val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var13: java.lang.String = var35.getIconSrc();
+                           val var12: Int = var35.getIconColor();
                            val var16: Boolean;
-                           if (var21.getType() === SelectOptionType.USER) {
+                           if (var35.getType() === SelectOptionType.USER) {
                               var16 = true;
                            } else {
                               var16 = false;
                            }
 
-                           this.setImage(var12, var35, var13, var16);
+                           this.setImage(var22, var13, var12, var16);
                            val var23: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            var23.setVisibility(0);
                            break label71;
                         }
                      }
 
-                     val var22: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
-                     var22.setVisibility(8);
+                     val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     var21.setVisibility(8);
                   }
                }
             }
@@ -275,30 +275,30 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var4 = true;
       }
 
-      val var17: Boolean;
+      val var8: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var17 = true;
+         var8 = true;
       } else {
-         var17 = false;
+         var8 = false;
       }
 
       val var25: SimpleDraweeView = this.binding.selectComponentChevron;
-      if (!var17) {
+      if (!var8) {
          var5 = 0;
       }
 
       var25.setVisibility(var5);
-      if (var17 != this.currentIsLoading) {
+      if (var8 != this.currentIsLoading) {
          val var26: ProgressDots = this.getProgressDots();
          var5 = 8;
-         if (var17) {
+         if (var8) {
             var5 = 0;
          }
 
          var26.setVisibility(var5);
       }
 
-      this.currentIsLoading = var17;
+      this.currentIsLoading = var8;
       val var27: View = this.binding.getRoot();
       val var3: Float;
       if (var4) {
@@ -313,15 +313,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var28, false, new com.discord.chat.presentation.message.view.botuikit.components.i(var2, var1), 1, null
       );
       val var14: View = this.binding.getRoot();
-      var var8: Boolean = false;
-      if (!var17) {
-         var8 = false;
+      var var17: Boolean = false;
+      if (!var8) {
+         var17 = false;
          if (!var4) {
-            var8 = true;
+            var17 = true;
          }
       }
 
-      var14.setClickable(var8);
+      var14.setClickable(var17);
       this.binding.getRoot().setEnabled(var4 xor true);
    }
 

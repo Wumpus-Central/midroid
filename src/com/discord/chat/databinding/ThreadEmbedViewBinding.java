@@ -60,8 +60,8 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
       ClanTagChipletView var3 = (ClanTagChipletView)k5.a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.thread_embed_icon;
-         SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.thread_embed_messages_count;
             TextView var8 = (TextView)k5.a.a(var0, var1);
             if (var8 != null) {
@@ -69,8 +69,8 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
                SimpleDraweeView var9 = (SimpleDraweeView)k5.a.a(var0, var1);
                if (var9 != null) {
                   var1 = R.id.thread_embed_most_recent_message_content;
-                  SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
-                  if (var7 != null) {
+                  SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.thread_embed_most_recent_message_header;
                      LinearLayout var5 = (LinearLayout)k5.a.a(var0, var1);
                      if (var5 != null) {
@@ -80,7 +80,7 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
                            var1 = R.id.thread_embed_name;
                            TextView var2 = (TextView)k5.a.a(var0, var1);
                            if (var2 != null) {
-                              return new ThreadEmbedViewBinding(var0, var3, var6, var8, var9, var7, var5, var4, var2);
+                              return new ThreadEmbedViewBinding(var0, var3, var7, var8, var9, var6, var5, var4, var2);
                            }
                         }
                      }

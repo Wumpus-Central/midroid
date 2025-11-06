@@ -1,12 +1,21 @@
 package com.discord.notifications.fcm
 
+import android.os.Build.VERSION
 import com.discord.notifications.client.NotificationClient
 import com.discord.notifications.fcm.utils.FCMTokenHelper
+import com.discord.tti_manager.TTIModule
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import kotlin.jvm.functions.Function1
 
 public class MessagingService : FirebaseMessagingService {
+   public open fun onCreate() {
+      super.onCreate();
+      if (VERSION.SDK_INT < 28) {
+         TTIModule.Companion.markServiceInstantiation();
+      }
+   }
+
    public open fun onMessageReceived(remoteMessage: RemoteMessage) {
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
       val var3: java.util.Map = var1.b();

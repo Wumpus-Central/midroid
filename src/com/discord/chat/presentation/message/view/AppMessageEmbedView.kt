@@ -57,15 +57,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var6: java.lang.String = var2.getMessageId();
-      val var5: java.lang.String = var2.getAppId();
+      val var5: java.lang.String = var2.getMessageId();
+      val var6: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
+      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
    }
 
    @JvmStatic
@@ -213,9 +213,9 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var3 / var4;
-         val var54: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var40: SimpleDraweeView = this.view.banner;
-         var54.resizeLayoutParams(var40, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         val var40: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var54: SimpleDraweeView = this.view.banner;
+         var40.resizeLayoutParams(var54, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var41: SimpleDraweeView = this.view.banner;
          var41.setVisibility(8);

@@ -98,22 +98,22 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var6: java.lang.String = this.instanceId;
-      val var4: java.util.List = this.participantAvatarUris;
-      val var1: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var3: java.lang.String = this.participantsDescription;
+      val var3: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var1: java.lang.String = this.instanceId;
+      val var6: java.util.List = this.participantAvatarUris;
+      val var4: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var5: java.lang.String = this.participantsDescription;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ActivityInstanceEmbed(applicationId=");
-      var2.append(var5);
-      var2.append(", instanceId=");
-      var2.append(var6);
-      var2.append(", participantAvatarUris=");
-      var2.append(var4);
-      var2.append(", appMessageEmbedModel=");
-      var2.append(var1);
-      var2.append(", participantsDescription=");
       var2.append(var3);
+      var2.append(", instanceId=");
+      var2.append(var1);
+      var2.append(", participantAvatarUris=");
+      var2.append(var6);
+      var2.append(", appMessageEmbedModel=");
+      var2.append(var4);
+      var2.append(", participantsDescription=");
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

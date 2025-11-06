@@ -21,15 +21,15 @@ public object CookieValidator {
          if (var8 == null) {
             return null;
          } else {
-            val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var2: okio.ByteString.a = ByteString.t;
-            val var10: ByteString = var2.b(var9);
+            var var2: java.lang.String = URLDecoder.decode(var8, "UTF-8");
+            val var9: okio.ByteString.a = ByteString.t;
+            val var10: ByteString = var9.b(var2);
             if (var10 != null) {
-               val var13: java.lang.String = var10.N();
-               if (var13 != null) {
+               var2 = var10.N();
+               if (var2 != null) {
                   try {
                      var11 = Json.d;
-                     var14 = Json.d.g(var13);
+                     var14 = Json.d.g(var2);
                   } catch (var7: n) {
                      return null;
                   }
@@ -54,10 +54,10 @@ public object CookieValidator {
 
                   for (Entry var5 : var18.entrySet()) {
                      val var20: Any = var5.getKey();
-                     val var21: JsonElement = var5.getValue() as JsonElement;
-                     val var6: kotlinx.serialization.json.Json.a = Json.d;
+                     val var6: JsonElement = var5.getValue() as JsonElement;
+                     val var21: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
+                     var17.put(var20, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

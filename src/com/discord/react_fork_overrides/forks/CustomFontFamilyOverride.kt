@@ -73,12 +73,12 @@ internal object CustomFontFamilyOverride {
       var6 = FILE_EXTENSIONS.length;
 
       for (int var15 = 0; var15 < var6; var15++) {
-         val var9: java.lang.String = var13[var15];
-         val var20: StringBuilder = new StringBuilder();
-         var20.append("fonts/");
-         var20.append(var7);
-         var20.append(var9);
-         val var21: java.lang.String = var20.toString();
+         val var20: java.lang.String = var13[var15];
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("fonts/");
+         var9.append(var7);
+         var9.append(var20);
+         val var21: java.lang.String = var9.toString();
 
          try {
             return Typeface.createFromAsset(var3, var21);

@@ -89,16 +89,16 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var6: java.util.Iterator = DiscordFont.getEntries().iterator();
+         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
 
          var var4: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var4 = null;
                break;
             }
 
-            var4 = var6.next();
+            var4 = var5.next();
          } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
          return var4 as DiscordFont;

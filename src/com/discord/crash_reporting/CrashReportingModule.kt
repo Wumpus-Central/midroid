@@ -67,9 +67,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun addListener(type: String) {
       if (CrashReporting.INSTANCE.isCrashedLastRun() == java.lang.Boolean.TRUE) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         var3.reportLastCrash$crash_reporting_release(var2, new com.discord.crash_reporting.d(this));
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         var2.reportLastCrash$crash_reporting_release(var3, new com.discord.crash_reporting.d(this));
       }
    }
 

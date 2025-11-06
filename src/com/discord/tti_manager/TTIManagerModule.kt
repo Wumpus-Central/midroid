@@ -15,7 +15,13 @@ import kotlin.jvm.internal.SourceDebugExtension
 
 @SourceDebugExtension(["SMAP\nTTIManagerModule.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n+ 2 _Collections.kt\nkotlin/collections/CollectionsKt___CollectionsKt\n*L\n1#1,111:1\n1557#2:112\n1628#2,3:113\n*S KotlinDebug\n*F\n+ 1 TTIManagerModule.kt\ncom/discord/tti_manager/TTIManagerModule\n*L\n65#1:112\n65#1:113,3\n*E\n"])
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(var1) {
-   private final val ttiBroadcastReceiver: TTIBroadcastReceiver = new TTIBroadcastReceiver()
+   public final val reactContext: ReactApplicationContext
+   private final val ttiBroadcastReceiver: TTIBroadcastReceiver
+
+   init {
+      this.reactContext = var1;
+      this.ttiBroadcastReceiver = new TTIBroadcastReceiver();
+   }
 
    @JvmStatic
    fun `reportFullyDrawn$lambda$1`(var0: Activity) {
@@ -114,9 +120,9 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
       try {
          if (BuildConfig.logTTIMetrics) {
-            val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-            val var1: ReactApplicationContext = this.getReactApplicationContext();
-            var2.unregister(var1, this.ttiBroadcastReceiver);
+            val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+            val var2: ReactApplicationContext = this.getReactApplicationContext();
+            var1.unregister(var2, this.ttiBroadcastReceiver);
          }
       } catch (var3: Exception) {
       }
@@ -134,11 +140,11 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
    @ReactMethod
    public fun reportFullyDrawn() {
-      val var1: Activity = this.getCurrentActivity();
-      if (var1 != null) {
+      val var2: Activity = this.reactContext.getCurrentActivity();
+      if (var2 != null) {
          label12:
          try {
-            var1.runOnUiThread(new a(var1));
+            var2.runOnUiThread(new a(var2));
          } catch (var3: java.lang.Throwable) {
             ;
          }

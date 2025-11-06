@@ -146,23 +146,23 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var1: Int = this.maxRed - this.minRed;
-            val var3: Int = this.maxGreen - this.minGreen;
-            val var2: Int = this.maxBlue - this.minBlue;
-            if (var1 >= var3 && var1 >= this.maxBlue - this.minBlue) {
+            val var2: Int = this.maxRed - this.minRed;
+            val var1: Int = this.maxGreen - this.minGreen;
+            val var3: Int = this.maxBlue - this.minBlue;
+            if (var2 >= var1 && var2 >= this.maxBlue - this.minBlue) {
                return -3;
             } else {
-               return if (var3 >= var1 && var3 >= var2) -2 else -1;
+               return if (var1 >= var2 && var1 >= var3) -2 else -1;
             }
          }
 
 
       public final val averageColor: Swatch
          public final get() {
-            var var7: Int = this.lowerIndex;
+            var var6: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
             var var5: Int = 0;
-            var var6: Int = 0;
+            var var7: Int = 0;
             var var3: Int;
             var var4: Int;
             if (this.lowerIndex <= this.upperIndex) {
@@ -171,17 +171,18 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                var4 = 0;
 
                while (true) {
-                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
+                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var6];
                   val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
-                  var6 += var9;
+                  var7 += var9;
                   var5 += Color.red(var10) * var9;
                   var3 += Color.green(var10) * var9;
                   var4 += var9 * Color.blue(var10);
-                  if (var7 == var8) {
+                  if (var6 == var8) {
+                     var6 = var7;
                      break;
                   }
 
-                  var7++;
+                  var6++;
                }
             } else {
                var6 = 0;

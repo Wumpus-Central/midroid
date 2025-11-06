@@ -3,11 +3,13 @@ package com.discord.foreground_service
 import android.app.Service
 import android.content.Context
 import android.content.Intent
+import android.os.Build.VERSION
 import com.discord.crash_reporting.CrashReporting
 import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.foreground_service.utils.Log
 import com.discord.misc.utilities.threading.ThreadUtilsKt
+import com.discord.tti_manager.TTIModule
 
 internal class ForegroundService : Service {
    private fun captureTimeoutException(startId: Int, fgsType: Int? = null) {
@@ -37,20 +39,27 @@ internal class ForegroundService : Service {
       throw new IllegalStateException("bindService is not supported. Use startForegroundServiceCompat");
    }
 
+   public open fun onCreate() {
+      super.onCreate();
+      if (VERSION.SDK_INT < 28) {
+         TTIModule.Companion.markServiceInstantiation();
+      }
+   }
+
    public open fun onDestroy() {
       ForegroundServiceManager.INSTANCE.onServiceDestroyed$foreground_service_release();
    }
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-      val var5: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("onStartCommand: intent ");
-      var4.append(var1);
-      var4.append(", flags ");
-      var4.append(var2);
-      var4.append(", startId ");
-      var4.append(var3);
-      Log.i$foreground_service_release$default(var5, var4.toString(), null, 2, null);
+      val var4: Log = Log.INSTANCE;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("onStartCommand: intent ");
+      var5.append(var1);
+      var5.append(", flags ");
+      var5.append(var2);
+      var5.append(", startId ");
+      var5.append(var3);
+      Log.i$foreground_service_release$default(var4, var5.toString(), null, 2, null);
       ForegroundServiceManager.INSTANCE.onServiceCreatedOrUpdated$foreground_service_release(this);
       return 1;
    }

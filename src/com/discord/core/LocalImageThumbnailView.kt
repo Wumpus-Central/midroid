@@ -183,9 +183,9 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
                   var var22: Bitmap;
                   try {
-                     val var21: ThumbnailLoader = ThumbnailLoader.INSTANCE;
-                     val var7: Context = this.this$0.getContext();
-                     var22 = var21.loadThumbnail(var7, this.$uri, var1);
+                     val var7: ThumbnailLoader = ThumbnailLoader.INSTANCE;
+                     val var21: Context = this.this$0.getContext();
+                     var22 = var7.loadThumbnail(var21, this.$uri, var1);
                   } catch (var11: Exception) {
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,

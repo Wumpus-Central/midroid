@@ -5374,6 +5374,9 @@
   "S0W8Z5": [
     "Conectar"
   ],
+  "LV+CXH": [
+    "Conectado"
+  ],
   "LVh3/5": [
     "Añadir detalles"
   ],
@@ -14784,6 +14787,9 @@
   ],
   "aCAiGl": [
     "Servidor no disponible"
+  ],
+  "3mgEQf": [
+    "¡Recibir recompensa!"
   ],
   "LhlgY9": [
     "Comenzar"
@@ -25983,33 +25989,6 @@
   "o3kmm3": [
     "Los servidores que tengan una página de destino publicada en Descubrimiento pueden eliminar URL personalizadas, pero no modificarlas"
   ],
-  "pDrI0m": [
-    "Variante ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "¡Bu!"
-  ],
-  "9PzTtM": [
-    "Señor Calabaza"
-  ],
-  "RbkXxR": [
-    "Descansa en paz"
-  ],
-  "FW3Qp/": [
-    "Colgados"
-  ],
-  "mMgymV": [
-    "Elige una decoración de avatar de Halloween gratis. Te la podrás quedar si compras un regalo."
-  ],
   "h2nMp0": [
     "Consigue una con cada compra de un regalo."
   ],
@@ -26018,100 +25997,6 @@
   ],
   "3JCuX1": [
     "Elige tu recompensa gratis"
-  ],
-  "dAqTcI": [
-    "Consigue una decoración gratis al comprar un regalo"
-  ],
-  "F/5kFJ": [
-    "Consigue una decoración gratis al regalar Nitro este mes. Truco o trato: ¿qué eliges?"
-  ],
-  "gI6Yvv": [
-    "Has regalado ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " mes"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " meses"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. ¡Qué manera de celebrar tan espeluznante temporada!"
-  ],
-  "rSS+oo": [
-    "Has regalado ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " año"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " años"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. ¡Qué manera de celebrar tan espeluznante temporada!"
-  ],
-  "9rInzW": [
-    "Es hora de elegir: ¿truco o trato? Regala Nitro durante el mes de octubre y elige una decoración de avatar genial y espeluznante para quedártela."
-  ],
-  "CGgAyN": [
-    "Regala Nitro si te atreves..."
-  ],
-  "ruVnPr": [
-    "Elige una recompensa GRATIS"
-  ],
-  "q4BJSJ": [
-    "Quédatela si te atreves..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " opción"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opciones"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " a tu disposición"
   ],
   "2UeOlY": [
     "Trato"
@@ -44958,9 +44843,6 @@
   ],
   "Ofpgwh": [
     "Ver todo"
-  ],
-  "MzahXU": [
-    "¡La oferta termina pronto!"
   ],
   "TiZFqX": [
     "Abrir regalo"

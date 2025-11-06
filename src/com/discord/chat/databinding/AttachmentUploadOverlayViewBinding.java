@@ -52,17 +52,17 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
    @NonNull
    public static AttachmentUploadOverlayViewBinding bind(@NonNull View var0) {
       int var1 = R.id.upload_cancel;
-      SimpleDraweeView var8 = (SimpleDraweeView)k5.a.a(var0, var1);
-      if (var8 != null) {
+      SimpleDraweeView var7 = (SimpleDraweeView)k5.a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.upload_complete;
-         SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var6 = (SimpleDraweeView)k5.a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.upload_complete_background;
-            MaterialCardView var7 = (MaterialCardView)k5.a.a(var0, var1);
-            if (var7 != null) {
+            MaterialCardView var8 = (MaterialCardView)k5.a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.upload_complete_layout;
-               ConstraintLayout var6 = (ConstraintLayout)k5.a.a(var0, var1);
-               if (var6 != null) {
+               ConstraintLayout var4 = (ConstraintLayout)k5.a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.upload_progress;
                   CircularProgressIndicator var2 = (CircularProgressIndicator)k5.a.a(var0, var1);
                   if (var2 != null) {
@@ -72,7 +72,7 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
                         var1 = R.id.upload_progress_layout;
                         ConstraintLayout var3 = (ConstraintLayout)k5.a.a(var0, var1);
                         if (var3 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var8, var4, var7, var6, var2, var5, var3);
+                           return new AttachmentUploadOverlayViewBinding(var0, var7, var6, var8, var4, var2, var5, var3);
                         }
                      }
                   }

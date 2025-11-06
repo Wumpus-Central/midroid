@@ -102,23 +102,23 @@ public class CheckpointCardComponentView  public constructor(context: Context, a
    fun `binding_delegate$lambda$6`(var0: CheckpointCardComponentView, var1: Context): MessageComponentCheckpointCardViewBinding {
       val var3: MessageComponentCheckpointCardViewBinding = MessageComponentCheckpointCardViewBinding.bind(var0);
       val var9: TextView = var3.messageCount;
-      val var7: TextView = var3.voiceMinutes;
-      var var4: TextView = var3.emojiCount;
+      val var8: TextView = var3.voiceMinutes;
+      val var5: TextView = var3.emojiCount;
       val var6: TextView = var3.emojiName;
-      val var8: TextView = var3.applicationName;
-      val var5: TextView = var3.guildName;
+      val var10: TextView = var3.applicationName;
+      val var7: TextView = var3.guildName;
 
       for (int var2 = 0; var2 < 6; var2++) {
-         val var10: TextView = new TextView[]{var9, var7, var4, var6, var8, var5}[var2];
-         DiscordFontUtilsKt.setDiscordFont(var10, DiscordFont.PrimaryMedium);
+         val var4: TextView = new TextView[]{var9, var8, var5, var6, var10, var7}[var2];
+         DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryMedium);
       }
 
-      var4 = var3.title;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.DisplayExtraBold);
-      var4 = var3.cta;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
-      var4 = var3.powerLevelNumber;
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.CodeBold);
+      var var12: TextView = var3.title;
+      DiscordFontUtilsKt.setDiscordFont(var12, DiscordFont.DisplayExtraBold);
+      var12 = var3.cta;
+      DiscordFontUtilsKt.setDiscordFont(var12, DiscordFont.PrimaryBold);
+      var12 = var3.powerLevelNumber;
+      DiscordFontUtilsKt.setDiscordFont(var12, DiscordFont.CodeBold);
       val var17: ImageView = new ImageView(var1);
       var17.setId(View.generateViewId());
       var0.barIds[0] = var17.getId();
@@ -169,32 +169,31 @@ public class CheckpointCardComponentView  public constructor(context: Context, a
 
       var4.setText((java.lang.CharSequence)var3);
       val var6: SimpleDraweeView = this.getBinding().applicationImage;
-      val var9: ApplicationId;
       if (var1 != null) {
-         var9 = ApplicationId.box-impl(var1.getApplicationId-VavddsQ());
+         var3 = ApplicationId.box-impl(var1.getApplicationId-VavddsQ());
       } else {
-         var9 = null;
+         var3 = null;
       }
 
-      var3 = null;
-      if (var9 != null) {
-         var3 = null;
+      var var9: java.lang.String = null;
+      if (var3 != null) {
+         var9 = null;
          if (var1.getApplicationImageId() != null) {
-            var3 = IconUrlUtils.getApplicationIcon-weIltyw$default(
+            var9 = IconUrlUtils.getApplicationIcon-weIltyw$default(
                IconUrlUtils.INSTANCE, ApplicationId.box-impl(var1.getApplicationId-VavddsQ()), var1.getApplicationImageId(), 0, 4, null
             );
          }
       }
 
       val var2: Boolean;
-      if (var3 != null) {
+      if (var9 != null) {
          var2 = true;
       } else {
          var2 = false;
       }
 
       if (var2) {
-         var6.setImageURI((java.lang.String)var3);
+         var6.setImageURI(var9);
          var6.clearColorFilter();
       } else {
          var6.setImageResource(drawable.ic_unknown_game_icon_16dp);
@@ -416,9 +415,9 @@ public class CheckpointCardComponentView  public constructor(context: Context, a
          var4 = this.cardDefaultColor;
       }
 
-      val var6: CheckpointEmoji = var8.getTopEmoji();
+      val var5: CheckpointEmoji = var8.getTopEmoji();
       val var10: CheckpointApplication = var8.getTopGame();
-      val var5: CheckpointGuild = var8.getTopGuild();
+      val var6: CheckpointGuild = var8.getTopGuild();
       val var7: CheckpointCardComponentView = this.getBinding().getRoot();
       var7.setVisibility(0);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(var7, var4, 0.0F, 0.0F, 0.0F, 0.0F, null, 0, 126, null);
@@ -430,8 +429,8 @@ public class CheckpointCardComponentView  public constructor(context: Context, a
       this.getBinding().messageCount.setText(var8.getMessagesString());
       this.getBinding().voiceMinutes.setText(var8.getVoiceString());
       this.getBinding().emojiCount.setText(var8.getReactionString());
-      this.configureEmoji(var6);
-      this.configureGuild(var5);
+      this.configureEmoji(var5);
+      this.configureGuild(var6);
       this.configureApplication(var10);
    }
 

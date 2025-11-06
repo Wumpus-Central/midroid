@@ -78,25 +78,26 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          public void onAudioDevicesAdded(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
                val var5: DiscordAudioManager2 = this.this$0;
-               var var7: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
                val var8: ArrayList = new ArrayList();
                var var4: Int = var1.length;
 
                for (int var2 = 0; var2 < var4; var2++) {
-                  val var6: AudioDeviceInfo = var1[var2];
+                  val var7: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var8.add(var6);
+                     var8.add(var7);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var5, b1.l(var7, var8));
+               DiscordAudioManager2.access$setAudioDevices$p(var5, b1.l(var6, var8));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new e(this.this$0));
                if (DiscordAudioManager2.access$getPreferredAudioDevice$p(this.this$0) == null) {
                   var4 = var1.length;
                   var var11: Int = 0;
 
+                  val var18: Any;
                   while (true) {
-                     var7 = null;
+                     var18 = null;
                      if (var11 >= var4) {
                         var16 = null;
                         break;
@@ -115,9 +116,8 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
                   var4 = var1.length;
                   var11 = 0;
 
-                  var var17: AudioDeviceInfo;
                   while (true) {
-                     var17 = var7;
+                     var17 = (AudioDeviceInfo)var18;
                      if (var11 >= var4) {
                         break;
                      }
@@ -151,19 +151,19 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var4: DiscordAudioManager2 = this.this$0;
-               val var5: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
-               val var7: ArrayList = new ArrayList();
+               val var5: DiscordAudioManager2 = this.this$0;
+               val var6: java.util.Set = DiscordAudioManager2.access$getAudioDevices$p(this.this$0);
+               val var4: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var6: AudioDeviceInfo = var1[var2];
+                  val var7: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var7.add(var6);
+                     var4.add(var7);
                   }
                }
 
-               DiscordAudioManager2.access$setAudioDevices$p(var4, b1.j(var5, CollectionsKt.m1(var7)));
+               DiscordAudioManager2.access$setAudioDevices$p(var5, b1.j(var6, CollectionsKt.m1(var4)));
                DiscordAudioManager2.access$notifyListeners(this.this$0, new f(this.this$0));
                DiscordAudioManager2.access$emitEffectiveDevice(this.this$0);
             }
@@ -268,30 +268,30 @@ public class DiscordAudioManager2(context: Context) : DiscordAudioManagerInterfa
          );
 
          val var14: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         val var15: java.util.Iterator = this.audioDevices.iterator();
+         var var7: java.util.Iterator = this.audioDevices.iterator();
 
          do {
-            if (!var15.hasNext()) {
+            if (!var7.hasNext()) {
                var9 = null;
                break;
             }
 
-            var9 = var15.next();
+            var9 = var7.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.WIRED_HEADSET
          );
 
          val var16: AudioDeviceInfo = var9 as AudioDeviceInfo;
-         val var17: java.util.Iterator = this.audioDevices.iterator();
+         var7 = this.audioDevices.iterator();
 
          do {
             var9 = var3;
-            if (!var17.hasNext()) {
+            if (!var7.hasNext()) {
                break;
             }
 
-            var9 = var17.next();
+            var9 = var7.next();
          } while (
             AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping().getOrDefault(((AudioDeviceInfo)var9).getType(), SimpleDeviceType.INVALID)
                != SimpleDeviceType.SPEAKERPHONE

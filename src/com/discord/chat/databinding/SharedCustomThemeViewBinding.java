@@ -51,21 +51,21 @@ public final class SharedCustomThemeViewBinding implements ViewBinding {
       TextView var4 = (TextView)k5.a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.createdByContainer;
-         FlexboxLayout var5 = (FlexboxLayout)k5.a.a(var0, var1);
-         if (var5 != null) {
+         FlexboxLayout var2 = (FlexboxLayout)k5.a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.heading;
-            FlexboxLayout var2 = (FlexboxLayout)k5.a.a(var0, var1);
-            if (var2 != null) {
+            FlexboxLayout var7 = (FlexboxLayout)k5.a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.previewBtn;
                DCDButton var3 = (DCDButton)k5.a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.previewHeading;
-                  TextView var6 = (TextView)k5.a.a(var0, var1);
-                  if (var6 != null) {
+                  TextView var5 = (TextView)k5.a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.themePreview;
-                     ThemePreviewView var7 = (ThemePreviewView)k5.a.a(var0, var1);
-                     if (var7 != null) {
-                        return new SharedCustomThemeViewBinding(var0, var4, var5, var2, var3, var6, var7);
+                     ThemePreviewView var6 = (ThemePreviewView)k5.a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SharedCustomThemeViewBinding(var0, var4, var2, var7, var3, var5, var6);
                      }
                   }
                }

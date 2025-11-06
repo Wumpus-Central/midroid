@@ -46,13 +46,13 @@ private fun ListOperation.label(): String {
       var11.append(")");
       return var11.toString();
    } else if (var0 is InsertRange) {
-      val var15: Int = (var0 as InsertRange).getFirst();
-      val var18: Int = (var0 as InsertRange).getLast();
+      val var18: Int = (var0 as InsertRange).getFirst();
+      val var15: Int = (var0 as InsertRange).getLast();
       val var10: StringBuilder = new StringBuilder();
       var10.append("IRNG(");
-      var10.append(var15);
-      var10.append("-");
       var10.append(var18);
+      var10.append("-");
+      var10.append(var15);
       var10.append(")");
       return var10.toString();
    } else if (var0 is Remove) {
@@ -80,13 +80,13 @@ private fun ListOperation.label(): String {
       var5.append(")");
       return var5.toString();
    } else if (var0 is ChangeRange) {
-      val var1: Int = (var0 as ChangeRange).getFirst();
-      val var2: Int = (var0 as ChangeRange).getLast();
+      val var2: Int = (var0 as ChangeRange).getFirst();
+      val var1: Int = (var0 as ChangeRange).getLast();
       val var4: StringBuilder = new StringBuilder();
       var4.append("CRNG(");
-      var4.append(var1);
-      var4.append("-");
       var4.append(var2);
+      var4.append("-");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    } else {

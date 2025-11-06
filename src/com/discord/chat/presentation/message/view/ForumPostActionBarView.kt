@@ -157,16 +157,16 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          val var12: SimpleDraweeView = this.binding.sharePromptIcon;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
-         val var10: StructurableText = var2.getSubtitle();
-         val var14: Context = var13.getContext();
+         val var14: StructurableText = var2.getSubtitle();
+         val var10: Context = var13.getContext();
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
          val var16: TextPaint = var13.getPaint();
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var10,
                var14,
+               var10,
                var1,
                false,
                false,
@@ -230,12 +230,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       onLinkClicked: (MessageId, LinkContentNode) -> Unit
    ) {
       if (var8 != null && !var8.isEmpty()) {
-         val var39: java.util.List = CollectionsKt.a1(var8, --var2);
-         val var36: ShortcutsFlexbox = this.binding.reactionsView;
-         var36.setVisibility(0);
-         this.setReactions(var39, var12, var13, var14, var15);
+         val var36: java.util.List = CollectionsKt.a1(var8, --var2);
+         val var39: ShortcutsFlexbox = this.binding.reactionsView;
+         var39.setVisibility(0);
+         this.setReactions(var36, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
-         val var37: DCDButton = this.binding.otherReactionsCount;
+         val var34: DCDButton = this.binding.otherReactionsCount;
          var var25: Boolean;
          if (var22 != 0) {
             var25 = 1;
@@ -249,12 +249,12 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
             var25 = 8;
          }
 
-         var37.setVisibility(var25);
-         if (var37.getVisibility() == 0) {
-            val var34: Context = var37.getContext();
-            var37.setText(I18nUtilsKt.i18nFormat(var34, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
-            RippleUtilsKt.addRipple$default(var37, true, 0, 2, null);
-            var37.setOnClickButtonListener(var18);
+         var34.setVisibility(var25);
+         if (var34.getVisibility() == 0) {
+            val var37: Context = var34.getContext();
+            var34.setText(I18nUtilsKt.i18nFormat(var37, I18nMessage.FORUM_REACTIONS_OVERFLOW, new f1(var22)));
+            RippleUtilsKt.addRipple$default(var34, true, 0, 2, null);
+            var34.setOnClickButtonListener(var18);
          }
       } else {
          val var31: DCDButton = this.binding.otherReactionsCount;

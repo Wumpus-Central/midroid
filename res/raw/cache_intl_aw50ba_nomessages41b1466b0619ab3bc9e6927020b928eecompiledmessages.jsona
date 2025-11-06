@@ -5362,6 +5362,9 @@
   "S0W8Z5": [
     "Tilkoble"
   ],
+  "LV+CXH": [
+    "Tilkoblet"
+  ],
   "LVh3/5": [
     "Legg til detaljer"
   ],
@@ -14777,6 +14780,9 @@
   ],
   "aCAiGl": [
     "Serveren er ikke tilgjengelig"
+  ],
+  "3mgEQf": [
+    "Hent premie!"
   ],
   "LhlgY9": [
     "Kom igang"
@@ -25968,33 +25974,6 @@
   "o3kmm3": [
     "Servere som har en publisert Utforsk-landingsside, kan bare fjerne egendefinerte URL-adresser, ikke endre dem"
   ],
-  "pDrI0m": [
-    "Variant av ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bø!"
-  ],
-  "9PzTtM": [
-    "Herr Gresskar"
-  ],
-  "RbkXxR": [
-    "Hvil i fred"
-  ],
-  "FW3Qp/": [
-    "Bare henger"
-  ],
-  "mMgymV": [
-    "Velg en gratis halloweendekorasjon til avataren. Hvis du gir bort en gave, får du beholde dekorasjonen."
-  ],
   "h2nMp0": [
     "Du får en for hvert gavekjøp."
   ],
@@ -26003,99 +25982,6 @@
   ],
   "3JCuX1": [
     "Velg en gratis premie"
-  ],
-  "dAqTcI": [
-    "Kjøp en gave, så får du en gratis dekorasjon"
-  ],
-  "F/5kFJ": [
-    "Denne måneden får du en gratis dekorasjon når du gir Nitro i gave. Knask eller knep: Hva går du for?"
-  ],
-  "gI6Yvv": [
-    "Du har gitt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " måned"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " måneder"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med Nitro i gave. For en suveren måte å feire den nifse årstiden på!"
-  ],
-  "rSS+oo": [
-    "Du har gitt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med Nitro i gave. For en suveren måte å feire den nifse årstiden på!"
-  ],
-  "9rInzW": [
-    "Nå må du velge: knask eller knep? Gi Nitro i gave i oktober, så kan du velge en skummelt kul avatardekorasjon."
-  ],
-  "CGgAyN": [
-    "Gi Nitro i gave hvis du våger …"
-  ],
-  "ruVnPr": [
-    "Velg en GRATIS premie"
-  ],
-  "q4BJSJ": [
-    "Du kan beholde den hvis du tør …"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " tilgjengelig valg"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " tilgjengelige valg"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Knask"
@@ -44902,9 +44788,6 @@
   ],
   "Ofpgwh": [
     "Vis alle"
-  ],
-  "MzahXU": [
-    "Tilbudet er snart over!"
   ],
   "TiZFqX": [
     "Åpne gave"

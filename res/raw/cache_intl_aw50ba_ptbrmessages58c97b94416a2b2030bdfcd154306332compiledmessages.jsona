@@ -5364,6 +5364,9 @@
   "S0W8Z5": [
     "Conectar"
   ],
+  "LV+CXH": [
+    "Conectado"
+  ],
   "LVh3/5": [
     "Adicionar detalhes"
   ],
@@ -14811,6 +14814,9 @@
   ],
   "aCAiGl": [
     "Servidor não disponível"
+  ],
+  "3mgEQf": [
+    "Receber recompensa!"
   ],
   "LhlgY9": [
     "Começar agora"
@@ -26014,33 +26020,6 @@
   "o3kmm3": [
     "Servidores que tenham uma página de destino Descobrir publicada podem remover URLs personalizados, mas não os modificar"
   ],
-  "pDrI0m": [
-    "Variante de ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Buuu!"
-  ],
-  "9PzTtM": [
-    "Sr. Jack Abóbora"
-  ],
-  "RbkXxR": [
-    "Descanse em Paz"
-  ],
-  "FW3Qp/": [
-    "Tô de Boa"
-  ],
-  "mMgymV": [
-    "Escolha uma decoração de avatar de Halloween grátis. Incluída com a compra de um presente."
-  ],
   "h2nMp0": [
     "Receba ao comprar um presente."
   ],
@@ -26049,98 +26028,6 @@
   ],
   "3JCuX1": [
     "Escolha sua recompensa grátis"
-  ],
-  "dAqTcI": [
-    "Obtenha uma decoração grátis ao comprar um presente"
-  ],
-  "F/5kFJ": [
-    "Ganhe uma decoração grátis ao presentear Nitro neste mês. Gostosuras ou travessuras: qual você prefere?"
-  ],
-  "gI6Yvv": [
-    "Você presenteou ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " mês"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " meses"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. Que jeito de comemorar essa época assustadora!"
-  ],
-  "rSS+oo": [
-    "Você presenteou ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " ano"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " anos"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Nitro. Que jeito de comemorar essa época assustadora!"
-  ],
-  "9rInzW": [
-    "É hora de escolher: travessuras ou gostosuras? Presenteie Nitro nesse outubro e escolha uma decoração de avatar assustadoramente legal para ficar."
-  ],
-  "CGgAyN": [
-    "Presenteie Nitro, se você tiver coragem..."
-  ],
-  "ruVnPr": [
-    "Escolha uma recompensa grátis"
-  ],
-  "q4BJSJ": [
-    "Fica com você, se tiver coragem..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " opção disponível"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opções disponíveis"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Gostosura"
@@ -45002,9 +44889,6 @@
   ],
   "Ofpgwh": [
     "Ver tudo"
-  ],
-  "MzahXU": [
-    "A oferta termina em breve!"
   ],
   "TiZFqX": [
     "Abrir presente"

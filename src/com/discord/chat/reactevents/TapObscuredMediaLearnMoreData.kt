@@ -73,21 +73,21 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.channelId;
       val var2: java.lang.String = this.attachmentId;
-      val var5: java.lang.String = this.embedId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapObscuredMediaLearnMoreData(messageId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", attachmentId=");
-      var4.append(var2);
-      var4.append(", embedId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.embedId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapObscuredMediaLearnMoreData(messageId=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var2);
+      var5.append(", embedId=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -5369,6 +5369,9 @@
   "S0W8Z5": [
     "Se connecter"
   ],
+  "LV+CXH": [
+    "Connecté"
+  ],
   "LVh3/5": [
     "Ajouter des informations"
   ],
@@ -14783,6 +14786,9 @@
   ],
   "aCAiGl": [
     "Serveur non disponible"
+  ],
+  "3mgEQf": [
+    "Gagne une récompense !"
   ],
   "LhlgY9": [
     "Commencer"
@@ -26019,33 +26025,6 @@
   "o3kmm3": [
     "Les serveurs qui disposent d'une page de destination de la Découverte publiée peuvent retirer leurs URL personnalisées, mais pas les modifier"
   ],
-  "pDrI0m": [
-    "Variante de ",
-    [
-      1,
-      "category"
-    ],
-    " : ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Bouh !"
-  ],
-  "9PzTtM": [
-    "M. Citrouille"
-  ],
-  "RbkXxR": [
-    "R.I.P."
-  ],
-  "FW3Qp/": [
-    "Toile de fond"
-  ],
-  "mMgymV": [
-    "Choisis une décoration d'avatar d'Halloween gratuite. Elle sera à toi, en achetant simplement un cadeau."
-  ],
   "h2nMp0": [
     "Obtiens-en une avec chaque achat de cadeau."
   ],
@@ -26054,99 +26033,6 @@
   ],
   "3JCuX1": [
     "Choisis ta récompense gratuite"
-  ],
-  "dAqTcI": [
-    "Obtiens une décoration gratuite avec l'achat d'un cadeau"
-  ],
-  "F/5kFJ": [
-    "Obtiens une décoration gratuite en offrant Discord Nitro ce mois-ci. Des bonbons ou un sort : que choisiras-tu ?"
-  ],
-  "gI6Yvv": [
-    "Tu as offert ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " mois"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mois"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Discord Nitro. Quel moyen génial de célébrer la saison de l'effroi !"
-  ],
-  "rSS+oo": [
-    "Tu as offert ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " année"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " années"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de Discord Nitro. Quel moyen génial de célébrer la saison de l'effroi !"
-  ],
-  "9rInzW": [
-    "Il est temps de choisir : des bonbons ou un sort ? Offre Nitro en octobre, et obtiens une décoration d'avatar effrayante de ton choix que tu pourras garder."
-  ],
-  "CGgAyN": [
-    "Offre Nitro si tu l'oses…"
-  ],
-  "ruVnPr": [
-    "Choisis une récompense GRATUITE"
-  ],
-  "q4BJSJ": [
-    "Tu pourras la garder si tu l'oses…"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " option disponible"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " options disponibles"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Bonbon"
@@ -45029,9 +44915,6 @@
   ],
   "Ofpgwh": [
     "Afficher tout"
-  ],
-  "MzahXU": [
-    "L'offre se termine bientôt !"
   ],
   "TiZFqX": [
     "Ouvrir le cadeau"

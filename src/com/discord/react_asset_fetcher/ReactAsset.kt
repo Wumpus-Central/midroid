@@ -82,7 +82,6 @@ public enum class ReactAsset {
    RaisedHand,
    Reactions,
    Refresh,
-   Remix,
    Reply,
    RoleSubscriptionBadge,
    RoleSubscriptionLanyard,

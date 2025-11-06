@@ -126,14 +126,14 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
    } else {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var1: Long = (var0 as CustomEmojiContentNode).getId();
-      val var3: Boolean;
+      val var2: Long = (var0 as CustomEmojiContentNode).getId();
+      val var1: Boolean;
       if (!StringsKt.i0(var5.getSrc()) && !(var5.getSrc() == var5.getFrozenSrc())) {
-         var3 = true;
+         var1 = true;
       } else {
-         var3 = false;
+         var1 = false;
       }
 
-      return var4.customWithEmojiId(var1, var3, var5.getAlt());
+      return var4.customWithEmojiId(var2, var1, var5.getAlt());
    }
 }

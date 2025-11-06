@@ -185,10 +185,10 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
       val var34: MediaView = this.binding.mediaView;
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var35: SpoilerViewManager = this.spoilerViewManager;
-      val var41: ConstraintLayout = this.binding.container;
-      val var38: ConstraintLayout = this.binding.container;
-      val var42: MediaView = this.binding.mediaView;
+      val var38: SpoilerViewManager = this.spoilerViewManager;
+      val var35: ConstraintLayout = this.binding.container;
+      val var42: ConstraintLayout = this.binding.container;
+      val var41: MediaView = this.binding.mediaView;
       if (var14 && !var11) {
          var11 = true;
       } else {
@@ -201,7 +201,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var35.configureSpoiler(var13, var41, var38, var42, null, var11, var15, var12, var10, var16, var17);
+      var38.configureSpoiler(var13, var35, var42, var41, null, var11, var15, var12, var10, var16, var17);
       val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var39: ConstraintLayout = this.binding.container;
       var36.configureAttachmentOverlay(this, var39, var10, var18);
@@ -384,15 +384,15 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.sourceUrl;
-         val var3: java.lang.String = this.previewUrl;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("TargetUrl(sourceUrl=");
-         var1.append(var2);
-         var1.append(", previewUrl=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.lang.String = this.sourceUrl;
+         val var1: java.lang.String = this.previewUrl;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TargetUrl(sourceUrl=");
+         var2.append(var3);
+         var2.append(", previewUrl=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

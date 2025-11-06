@@ -37,13 +37,13 @@ public class ChatListViewManager : ViewGroupManager<ChatListView>, DCDChatListMa
    }
 
    private fun getExistingProvider(context: Context): ComponentProvider? {
-      val var2: Pair = this.weakProvider;
+      val var3: Pair = this.weakProvider;
       if (this.weakProvider != null) {
-         val var3: WeakReference = this.weakProvider.a() as WeakReference;
-         val var4: ComponentProvider = var2.b() as ComponentProvider;
-         val var5: Context = var3.get() as Context;
-         if (var5 != null && var5 === var1) {
-            return var4;
+         val var2: WeakReference = this.weakProvider.a() as WeakReference;
+         val var5: ComponentProvider = var3.b() as ComponentProvider;
+         val var4: Context = var2.get() as Context;
+         if (var4 != null && var4 === var1) {
+            return var5;
          }
       }
 

@@ -60,16 +60,16 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    init {
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      this.binding = var4;
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      this.binding = var6;
       this.progressDots$delegate = ht.l.b(new a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: FlexboxLayout.LayoutParams = new FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
+      val var5: SimpleDraweeView = var6.linkIcon;
       this.configureLinkIcon(var5);
    }
 

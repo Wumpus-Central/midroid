@@ -5376,6 +5376,9 @@
   "S0W8Z5": [
     "Csatlakozás"
   ],
+  "LV+CXH": [
+    "Csatlakozva"
+  ],
   "LVh3/5": [
     "Adatok hozzáadása"
   ],
@@ -14802,6 +14805,9 @@
   ],
   "aCAiGl": [
     "A szerver nem érhető el"
+  ],
+  "3mgEQf": [
+    "Jutalmat kaphatsz!"
   ],
   "LhlgY9": [
     "Vágjunk bele"
@@ -25991,32 +25997,6 @@
   "o3kmm3": [
     "A közzétett felfedezési kezdőlappal rendelkező szerverek csak eltávolíthatnak kreatív URL-címeket – módosítani nem tudják ezeket"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " változat: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Huhh!"
-  ],
-  "9PzTtM": [
-    "Töklámpás úr"
-  ],
-  "RbkXxR": [
-    "Nyugodjon békében"
-  ],
-  "FW3Qp/": [
-    "Egy kis lógás"
-  ],
-  "mMgymV": [
-    "Válassz ingyenes halloweeni profilkép-dekorációt. Ajándékvásárlással meg is tarthatod."
-  ],
   "h2nMp0": [
     "Minden ajándékvásárlásért kapsz egyet."
   ],
@@ -26025,97 +26005,6 @@
   ],
   "3JCuX1": [
     "Válaszd ki az ingyenes jutalmadat"
-  ],
-  "dAqTcI": [
-    "Ajándékvásárlással lecsaphatsz egy ingyenes dekorációra"
-  ],
-  "F/5kFJ": [
-    "Ebben a hónapban ingyenes dekorációt kaphatsz, ha Nitrót adsz ajándékba. Csokit vagy csalunk: melyiket választod?"
-  ],
-  "gI6Yvv": [
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " havi"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " havi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitrót adtál ajándékba. Csodálatos módja a hátborzongató szezon megünneplésének!"
-  ],
-  "rSS+oo": [
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " évnyi"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " évnyi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Nitrót adtál ajándékba. Csodálatos módja a hátborzongató szezon megünneplésének!"
-  ],
-  "9rInzW": [
-    "Ideje választani: csokit vagy csalunk? Ha októberben Nitrót adsz ajándékba, megtarthatsz egy hátborzongatóan menő profilkép-dekorációt."
-  ],
-  "CGgAyN": [
-    "Ajándékozz Nitrót, ha mersz…"
-  ],
-  "ruVnPr": [
-    "Válassz INGYENES jutalmat"
-  ],
-  "q4BJSJ": [
-    "Megtarthatod, ha mered…"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " elérhető ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " opció"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opció"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Csokit"
@@ -44898,9 +44787,6 @@
   ],
   "Ofpgwh": [
     "Összes megtekintése"
-  ],
-  "MzahXU": [
-    "Az ajánlat hamarosan véget ér!"
   ],
   "TiZFqX": [
     "Ajándék kinyitása"

@@ -3,23 +3,41 @@ package com.discord.react_activities
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
+import android.os.Build.VERSION
 import android.view.Window
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
 import com.discord.js_watchdog.JSWatchdogManager
+import com.discord.logging.Log
 import com.discord.safearea.extensions.ImmersiveMode
 import com.discord.scale.FontScaleUtilsKt
 import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
+import com.discord.tti_manager.TTIModule
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.ReactRootView
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import fd.b
+import java.util.concurrent.CountDownLatch
 import java.util.concurrent.Future
+import java.util.concurrent.TimeUnit
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    protected open fun attachBaseContext(newBase: Context) {
+      if (VERSION.SDK_INT < 28) {
+         val var2: java.lang.String = this.getClass().getName();
+         if (StringsKt.y(var2, ".MainActivity", false, 2, null)) {
+            TTIModule.Companion.markMainActivityCreation$default(TTIModule.Companion, null, 1, null);
+         } else {
+            TTIModule.Companion.markActivityBeforeMain(var2);
+         }
+      }
+
+      if (!prepareEverythingForActivity.await(30L, TimeUnit.SECONDS)) {
+         Log.e$default(Log.INSTANCE, "ReactActivity", "Timeout waiting for application initialization - proceeding anyway", null, 4, null);
+      }
+
       super.attachBaseContext(FontScaleUtilsKt.getFontScaledContext(var1));
       var1 = this.getApplicationContext();
       FontScaleUtilsKt.setFontScaleDeprecated(var1);
@@ -48,15 +66,30 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    protected override fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
+      if (VERSION.SDK_INT < 28) {
+         val var3: java.lang.String = this.getClass().getName();
+         if (StringsKt.y(var3, ".MainActivity", false, 2, null)) {
+            TTIModule.Companion.setMainActivityIntent(this.getIntent());
+         }
+      }
+
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var4: Window = this.getWindow();
+      var2.initialize(var4);
       JSWatchdogManager.INSTANCE.initialize(this);
-      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var5: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
-      var4.updateWindowBackground(this, true);
+      var5.updateWindowBackground(this, true);
+   }
+
+   protected override fun onDestroy() {
+      super.onDestroy();
+      val var1: java.lang.String = this.getClass().getName();
+      if (StringsKt.y(var1, ".MainActivity", false, 2, null) && !this.isChangingConfigurations()) {
+         TTIModule.Companion.clearMainActivityCreation();
+      }
    }
 
    protected override fun onPause() {
@@ -98,6 +131,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    }
 
    public companion object Registry {
+      public final val prepareEverythingForActivity: CountDownLatch
       public final val mainActivity: Class<*>
       public final val shareActivity: Class<*>
    }

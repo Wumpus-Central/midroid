@@ -5346,6 +5346,9 @@
   "S0W8Z5": [
     "Collegarsi alla chat vocale"
   ],
+  "LV+CXH": [
+    "Collegato"
+  ],
   "LVh3/5": [
     "Aggiungi dettagli"
   ],
@@ -14782,6 +14785,9 @@
   ],
   "aCAiGl": [
     "Server non disponibile"
+  ],
+  "3mgEQf": [
+    "Ottieni ricompensa!"
   ],
   "LhlgY9": [
     "Iniziamo"
@@ -25972,33 +25978,6 @@
   "o3kmm3": [
     "I server che hanno pubblicato una pagina di destinazione di esplora possono solo rimuovere i vanity URL ma non possono modificarli"
   ],
-  "pDrI0m": [
-    "Variante ",
-    [
-      1,
-      "category"
-    ],
-    ": ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Mi cercavi?"
-  ],
-  "9PzTtM": [
-    "Jack O' Lantern"
-  ],
-  "RbkXxR": [
-    "Riposa in pace"
-  ],
-  "FW3Qp/": [
-    "Appeso a un filo"
-  ],
-  "mMgymV": [
-    "Scegli gratis una decorazione avatar di Halloween. È tua con l'acquisto di un regalo!"
-  ],
   "h2nMp0": [
     "Ottienine una con ogni regalo che acquisti!"
   ],
@@ -26007,99 +25986,6 @@
   ],
   "3JCuX1": [
     "Scegli la tua ricompensa gratis"
-  ],
-  "dAqTcI": [
-    "Ottieni una decorazione gratis con l'acquisto di un regalo"
-  ],
-  "F/5kFJ": [
-    "Questo mese, ottieni una decorazione gratis quando regali Nitro! Dolcetto o scherzetto: cosa sceglierai?"
-  ],
-  "gI6Yvv": [
-    "Hai regalato ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " mese"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mesi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " di Nitro. Questo sì che è un bel modo di festeggiare Halloween!"
-  ],
-  "rSS+oo": [
-    "Hai regalato ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " anno"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " anni"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " di Nitro. Questo sì che è un bel modo di festeggiare Halloween!"
-  ],
-  "9rInzW": [
-    "È ora di scegliere: dolcetto o scherzetto? Regala Nitro nel mese di ottobre e scegli una bella e spaventosa decorazione avatar da fare tua per sempre."
-  ],
-  "CGgAyN": [
-    "Non avere paura di regalare Nitro!"
-  ],
-  "ruVnPr": [
-    "Scegli una ricompensa GRATIS"
-  ],
-  "q4BJSJ": [
-    "Non avere paura di farla tua per sempre!"
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " opzione disponibile"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " opzioni disponibili"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Dolcetto"
@@ -44898,9 +44784,6 @@
   ],
   "Ofpgwh": [
     "Mostra tutto"
-  ],
-  "MzahXU": [
-    "L'offerta termina presto!"
   ],
   "TiZFqX": [
     "Apri regalo"

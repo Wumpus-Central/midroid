@@ -55,15 +55,15 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var3: StructurableText = this.content;
+      val var3: java.lang.String = this.id;
+      val var4: StructurableText = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TextDisplayComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var4);
-      var2.append(", content=");
       var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

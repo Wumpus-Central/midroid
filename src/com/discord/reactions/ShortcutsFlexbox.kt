@@ -55,11 +55,11 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    private fun getOrCreateReactionView(index: Int): ReactionView {
       if (var1 < this.getChildCount() - 1) {
          val var2: View = this.getChildAt(var1);
-         val var4: ReactionView = var2 as ReactionView;
-         val var3: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
-         var4.setLayoutParams(var3 as FlexboxLayout.LayoutParams);
-         var4.setVisibility(0);
-         return var4;
+         val var3: ReactionView = var2 as ReactionView;
+         val var4: android.view.ViewGroup.LayoutParams = (var2 as ReactionView).getLayoutParams();
+         var3.setLayoutParams(var4 as FlexboxLayout.LayoutParams);
+         var3.setVisibility(0);
+         return var3;
       } else {
          return this.createAndAddReactionView(this.getChildCount() - 1);
       }

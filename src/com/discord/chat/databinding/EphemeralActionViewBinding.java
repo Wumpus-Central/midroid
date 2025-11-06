@@ -34,12 +34,12 @@ public final class EphemeralActionViewBinding implements ViewBinding {
       SimpleDraweeView var2 = (SimpleDraweeView)k5.a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.chat_list_adapter_item_text_dismiss;
-         SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)k5.a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.chat_list_adapter_item_visibility_icon;
-            SimpleDraweeView var3 = (SimpleDraweeView)k5.a.a(var0, var1);
-            if (var3 != null) {
-               return new EphemeralActionViewBinding(var0, var2, var4, var3);
+            SimpleDraweeView var4 = (SimpleDraweeView)k5.a.a(var0, var1);
+            if (var4 != null) {
+               return new EphemeralActionViewBinding(var0, var2, var3, var4);
             }
          }
       }

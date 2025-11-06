@@ -65,8 +65,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                }
 
                public final Object invokeSuspend(Object var1) {
-                  val var4: Any = b.f();
-                  val var3x: CoroutineScope;
+                  var var3x: Any = b.f();
+                  var var4: Any;
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -74,11 +74,12 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
 
                      var3x = this.L$0 as CoroutineScope;
                      kotlin.c.b(var1);
+                     var4 = var1;
                   } else {
                      kotlin.c.b(var1);
-                     var3x = this.L$0 as CoroutineScope;
+                     var1 = this.L$0 as CoroutineScope;
                      val var5: CoroutineDispatcher = m0.a();
-                     var1 = new Function2<CoroutineScope, Continuation<? super Bitmap>, Object>(this.this$0, null) {
+                     var4 = new Function2<CoroutineScope, Continuation<? super Bitmap>, Object>(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -107,21 +108,23 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                            }
                         }
                      };
-                     this.L$0 = var3x;
+                     this.L$0 = var1;
                      this.label = 1;
-                     var1 = (Function2)gu.g.g(var5, var1, this);
-                     if (var1 === var4) {
-                        return var4;
+                     var4 = gu.g.g(var5, (Function2)var4, this);
+                     if (var4 === var3x) {
+                        return var3x;
                      }
+
+                     var3x = var1;
                   }
 
-                  val var7: Bitmap = var1 as Bitmap;
-                  if (!kotlinx.coroutines.i.i(var3x)) {
+                  val var7: Bitmap = var4 as Bitmap;
+                  if (!kotlinx.coroutines.i.i((CoroutineScope)var3x)) {
                      return Unit.a;
                   } else {
-                     val var9: Resources = ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getContext().getResources();
+                     var3x = ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getContext().getResources();
                      (ThumbhashPlaceholderControllerListener.access$getDraweeView$p(this.this$0).getHierarchy() as GenericDraweeHierarchy)
-                        .z(new BitmapDrawable(var9, var7));
+                        .z(new BitmapDrawable((Resources)var3x, var7));
                      return Unit.a;
                   }
                }

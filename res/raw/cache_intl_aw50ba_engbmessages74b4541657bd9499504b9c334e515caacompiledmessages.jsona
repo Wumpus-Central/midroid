@@ -5358,6 +5358,9 @@
   "S0W8Z5": [
     "Connect"
   ],
+  "LV+CXH": [
+    "Connected"
+  ],
   "LVh3/5": [
     "Add details"
   ],
@@ -14745,6 +14748,9 @@
   ],
   "aCAiGl": [
     "Server Unavailable"
+  ],
+  "3mgEQf": [
+    "Get Reward!"
   ],
   "LhlgY9": [
     "Get Started"
@@ -25945,32 +25951,6 @@
   "o3kmm3": [
     "Servers with a published discovery landing page can only remove vanity URLs but cannot modify them"
   ],
-  "pDrI0m": [
-    [
-      1,
-      "category"
-    ],
-    " variant: ",
-    [
-      1,
-      "name"
-    ]
-  ],
-  "sBk8mT": [
-    "Boo!"
-  ],
-  "9PzTtM": [
-    "Mr Jack O’ Lantern"
-  ],
-  "RbkXxR": [
-    "Rest in Peace"
-  ],
-  "FW3Qp/": [
-    "Just Hangin’"
-  ],
-  "mMgymV": [
-    "Pick a free Halloween avatar decoration. Yours to keep with a gift purchase."
-  ],
   "h2nMp0": [
     "Get one with each gift purchase."
   ],
@@ -25979,99 +25959,6 @@
   ],
   "3JCuX1": [
     "Choose your free reward"
-  ],
-  "dAqTcI": [
-    "Snag a free decoration with a gift purchase"
-  ],
-  "F/5kFJ": [
-    "Earn a free decoration when you gift Nitro this month. Trick or treat: which will you choose?"
-  ],
-  "gI6Yvv": [
-    "You’ve gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " month"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " months"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of Nitro. What a way to celebrate the spooky season!"
-  ],
-  "rSS+oo": [
-    "You’ve gifted ",
-    [
-      6,
-      "intervalCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " year"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " years"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of Nitro. What a way to celebrate the spooky season!"
-  ],
-  "9rInzW": [
-    "It’s time to pick: trick or treat? Gift Nitro during October and get your choice of a chillingly, cool avatar decoration to keep."
-  ],
-  "CGgAyN": [
-    "Gift Nitro if you dare..."
-  ],
-  "ruVnPr": [
-    "Choose a FREE reward"
-  ],
-  "q4BJSJ": [
-    "Yours to keep if you dare..."
-  ],
-  "eDBuF8": [
-    [
-      1,
-      "rewardCount"
-    ],
-    " available ",
-    [
-      6,
-      "rewardCount",
-      {
-        "one": [
-          [
-            7
-          ],
-          " option"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " options"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
   ],
   "2UeOlY": [
     "Treat"
@@ -44804,9 +44691,6 @@
   ],
   "Ofpgwh": [
     "View all"
-  ],
-  "MzahXU": [
-    "Offer ends soon!"
   ],
   "TiZFqX": [
     "Open Gift"

@@ -85,16 +85,16 @@ public object CodeStyle {
       label16:
       try {
          val var11: kotlin.Result.a = Result.e;
-         var8 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         var9 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: kotlin.Result.a = Result.e;
-         var8 = Result.b(kotlin.c.a(var4));
+         val var8: kotlin.Result.a = Result.e;
+         var9 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
       val var12: java.util.List = CollectionsKt.e(new TextNode(var2));
-      var2 = (java.lang.String)var8;
-      if (Result.g(var8)) {
+      var2 = (java.lang.String)var9;
+      if (Result.g(var9)) {
          var2 = var12;
       }
 
@@ -143,7 +143,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var10: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -154,7 +154,7 @@ public object CodeStyle {
       );
       var5 = SizeUtilsKt.getDpToPx(4);
       val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var10: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var8: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var11: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
       val var9: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
@@ -166,7 +166,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var8, var7, var10, var11, var9}[var14];
+         val var12: Any = new Object[]{var10, var7, var8, var11, var9}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

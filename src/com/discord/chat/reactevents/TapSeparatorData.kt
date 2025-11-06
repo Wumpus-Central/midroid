@@ -55,12 +55,12 @@ public data class TapSeparatorData(type: String, context: String? = null) : Reac
    }
 
    public override fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(v.a("type", this.type));
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(v.a("type", this.type));
       if (this.context != null) {
-         var2.putString("context", this.context);
+         var1.putString("context", this.context);
       }
 
-      return var2;
+      return var1;
    }
 
    public override fun toString(): String {

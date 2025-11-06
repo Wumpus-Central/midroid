@@ -21,15 +21,15 @@ public object DeepLinks {
 
    private fun getDeepLinkDestinationWithAppsFlyerParam(deepLinkDestination: String, fromAppsFlyer: Boolean): String {
       val var3: Builder = Uri.parse(var1).buildUpon();
-      val var7: Uri = var3.build();
+      val var4: Uri = var3.build();
       var3.clearQuery();
 
-      for (java.lang.String var4 : var7.getQueryParameterNames()) {
-         if (!(var4 == "fromAppsFlyer")) {
-            val var6: java.util.Iterator = var7.getQueryParameters(var4).iterator();
+      for (java.lang.String var7 : var4.getQueryParameterNames()) {
+         if (!(var7 == "fromAppsFlyer")) {
+            val var5: java.util.Iterator = var4.getQueryParameters(var7).iterator();
 
-            while (var6.hasNext()) {
-               var3.appendQueryParameter(var4, var6.next() as java.lang.String);
+            while (var5.hasNext()) {
+               var3.appendQueryParameter(var7, var5.next() as java.lang.String);
             }
          }
       }
